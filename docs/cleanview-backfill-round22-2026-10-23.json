@@ -1,0 +1,2664 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill round 22",
+  "outcome": {
+    "audited": 12,
+    "corrected": 12,
+    "held": 0,
+    "environmentActions": 24,
+    "azureFilesVerified": 44,
+    "nativePagesVerified": 24,
+    "unpublishedPricesCleared": 12,
+    "calculatedEnergyRowsCleared": 4,
+    "replacementMaps": 30,
+    "addedProjectPhotos": 5,
+    "addedRenderings": 1,
+    "addedProjectDiagrams": 2,
+    "postedMapEntries": 1408,
+    "deployed": false
+  },
+  "plan": {
+    "solar-spring-valley-2-colbert-al": {
+      "patch": {
+        "title": "Spring Valley II Solar: TVA Decision for 200 MW Project",
+        "description": "TVA’s April 2026 record of decision selects a PPA for approximately 200 MWac of Spring Valley II solar in Colbert County. EIA plant 66858 reports February 2028 proposed operation; the operator page instead describes 178 MW and early-2028 completion.",
+        "sourceUrl": "https://www.federalregister.gov/documents/2026/04/08/2026-06773/spring-valley-ii-solar-final-environmental-impact-statement",
+        "references": [
+          {
+            "url": "https://www.federalregister.gov/documents/2026/04/08/2026-06773/spring-valley-ii-solar-final-environmental-impact-statement",
+            "title": "Spring Valley II Solar Final Environmental Impact Statement — Record of decision",
+            "confidence": 95,
+            "publishedDate": "2026-04-08"
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — Spring Valley Solar 2 66858",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.pantheragrid.com/projects/spring-valley-solar-in-colbert-county-alabama/",
+            "title": "Spring Valley Solar in Colbert County, Alabama | Panthera Grid Partners",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The ROD names Spring Valley Solar, LLC, then an Urban Grid subsidiary, and a 161 kV substation. EIA still lists approvals pending; the operator’s summer-2026 construction target is not verified actual commencement. Current branding is Panthera Grid Partners. No $230M budget is established.<cite data-ref=\"https://www.federalregister.gov/documents/2026/04/08/2026-06773/spring-valley-ii-solar-final-environmental-impact-statement\"></cite></li><li>Timeline: Confirmed April 8, 2026 publication of TVA’s record of decision, not a commissioning date. EIA February 2028 and operator early-2028 targets remain estimates.<cite data-ref=\"https://www.federalregister.gov/documents/2026/04/08/2026-06773/spring-valley-ii-solar-final-environmental-impact-statement\"></cite></li><li>Operator regional location diagram for Spring Valley II; not a project boundary or construction photograph. Operator 178 MW and ROD/EIA 200 MW scopes remain unresolved. Credit: Panthera Grid Partners.<cite data-ref=\"https://www.pantheragrid.com/projects/spring-valley-solar-in-colbert-county-alabama/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-04-08T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed April 8, 2026 publication of TVA’s record of decision, not a commissioning date. EIA February 2028 and operator early-2028 targets remain estimates.",
+        "company": "Panthera Grid Partners",
+        "companyWikiUrl": null,
+        "latitude": 34.674983,
+        "longitude": -87.66373,
+        "address": "Spring Valley Solar 2 EIA plant 66858 reporting point, Colbert County, Alabama; approximate project context",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Panthera Grid Partners",
+          "Colbert County",
+          "Alabama",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/spring-1.webp",
+            "originalWidth": 1800,
+            "originalHeight": 1800
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "generation",
+        "sourceUrl": "https://www.federalregister.gov/documents/2026/04/08/2026-06773/spring-valley-ii-solar-final-environmental-impact-statement",
+        "note": "ROD/EIA 200 MWac; current operator page says 178 MW, unresolved."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve 178 MW operator versus 200 MWac ROD/EIA scope and current construction status. Operator map is regional context, not a surveyed boundary."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "battery-alcazar-2-ny": {
+      "patch": {
+        "title": "Alcazar 2: 150 MW / 600 MWh NYISO Storage Request",
+        "description": "NYISO lists Terra-Gen’s Alcazar 2 as a 150 MW, 600 MWh, four-hour request at Central Hudson’s Hurley 345 kV substation in Ulster County. The workbook includes C24-094 and C26-0006 entries; these are not additive projects.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+            "title": "NYISO Interconnection Queue — Alcazar 2 C24-094 / C26-0006",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://ulstercleanenergy.com/",
+            "title": "Ulster County Clean Energy — Terra-Gen Alcazar proposal",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.townofulster.ny.gov/wp-content/uploads/2026-04-01_Alcazar-BESS-Project_Final-DEIS-Scope.pdf",
+            "title": "Town of Ulster — Alcazar Energy Storage Project Final Scope",
+            "confidence": 95,
+            "publishedDate": "2026-04-01"
+          },
+          {
+            "url": "https://www.nyserda.ny.gov/All-Programs/Energy-Storage-Program/Developers-and-Contractors/Bulk-Storage-Incentives/Bid-Proposal-Map",
+            "title": "NYSERDA ISCRFP25-1 Bid Proposal Map — Alcazar site coordinates",
+            "confidence": 90,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Energy-Storage/Bulk-Storage-Incentives/Alcazar_Att_B_Public_Project_Summary.pdf",
+            "title": "NYSERDA Alcazar Public Project Summary",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The wider Alcazar site proposal is 250 MW / 1,000 MWh at 430 Hurley Avenue, with review still underway. It is not all Alcazar 2. The queue proposes December 2028 COD while the broader applicant submission targets 2029. The previous 100 MW, $140M and 115 kV claims are removed.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li><li>Timeline: December 1 is month-only precision for the NYISO proposed December 2028 COD. This conflicts with the broader site’s 2029 schedule and is not confirmed operation.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li><li>Rendering of the whole proposed 250 MW Alcazar site; not a separately commissioned 150 MW Alcazar 2 phase. Credit: Terra-Gen / Ulster County Clean Energy.<cite data-ref=\"https://ulstercleanenergy.com/\"></cite></li><li>Operator locator diagram showing the whole Alcazar proposal and its substation tie-line. Not an Alcazar-2-only boundary or construction photograph. Credit: Terra-Gen / Ulster County Clean Energy; Google Earth base as shown.<cite data-ref=\"https://ulstercleanenergy.com/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 1 is month-only precision for the NYISO proposed December 2028 COD. This conflicts with the broader site’s 2029 schedule and is not confirmed operation.",
+        "company": "Terra-Gen Development Company, LLC",
+        "companyWikiUrl": null,
+        "latitude": 41.93403,
+        "longitude": -74.0434,
+        "address": "430 Hurley Avenue, Town of Ulster, New York; NYSERDA published whole-project proposal point, not an Alcazar-2-only surveyed footprint",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Terra-Gen",
+          "Ulster County",
+          "New York",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/alcazar-1.jpg",
+            "originalWidth": 768,
+            "originalHeight": 512
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/alcazar-2.jpg",
+            "originalWidth": 1000,
+            "originalHeight": 738
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "storage",
+        "sourceUrl": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. NYISO lists Terra-Gen’s Alcazar 2 as a 150 MW, 600 MWh, four-hour request at Central Hudson’s Hurley 345 kV substation in Ulster County. The workbook includes C24-094 and"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm current cluster migration and phase-to-site allocation. Full-site rendering/locator describe the 250 MW proposal, not a separately approved 150 MW construction phase."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    "battery-alta-casa-storage-ca": {
+      "patch": {
+        "title": "Alta Casa Storage: 500 MW Export Request, October 2031 Target",
+        "description": "CAISO lists active queue 1922, Alta Casa Storage, with 515.418 MW battery component capacity and 500 MW maximum export in San Joaquin County. Its current proposed completion date is October 21, 2031, at PG&E’s Tesla 500 kV point of interconnection.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue Report — Alta Casa Storage 1922",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The executed-IA field and completed studies are not proof of construction. The queue does not establish the former 200 MW / 800 MWh, $260M or October 2028 COD, nor identify an applicant or exact parcel. Native power is the 500 MW export rating, explicitly separate from component nameplate.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>Timeline: October 21, 2031 is CAISO’s proposed completion date, not a confirmed COD.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2031-10-21T00:00:00.000Z",
+        "dateConfidenceReasoning": "October 21, 2031 is CAISO’s proposed completion date, not a confirmed COD.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "San Joaquin County, California; retained approximate Stockton-area context, not a verified Alta Casa parcel",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "CAISO",
+          "San Joaquin County",
+          "California",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "storage",
+        "sourceUrl": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. CAISO lists active queue 1922, Alta Casa Storage, with 515.418 MW battery component capacity and 500 MW maximum export in San Joaquin County. Its current proposed complet"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify developer, project boundary and actual permitting. No verified project-specific official gallery was identified."
+      ]
+    },
+    "battery-arida-solar-farm-nv": {
+      "patch": {
+        "title": "Arida Solar Hybrid: 370 MW Battery; June 2029 EIA Target",
+        "description": "EIA plant 63841 lists 326FW 8me LLC’s Arida hybrid near Laughlin with a 370 MW battery and separate 370 MW solar unit. CAISO queue 1522 lists 370 MW combined export; neither component should be added to the other as export capability.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — Arida Solar Hybrid 63841",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue Report — Arida Solar Farm 1522",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://puc.nv.gov/uploadedFiles/pucnvgov/Content/Utilities/Electric/NewProposedGenerationJuly2025.pdf",
+            "title": "PUCN New and Proposed Generation — Arida 21-03016",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>EIA proposes June 2029 with approvals not initiated; CAISO instead shows September 15, 2027 and Mohave 500 kV interconnection through SCE. The former Apex location, NV Energy ownership, 300 MW / 1,200 MWh, $350M and December 2028 COD are unsupported. Distinct Arida 2/3 requests are not combined.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>Timeline: June 1 is month-only precision for EIA’s June 2029 proposed operation. CAISO September 2027 and old PUCN 2024 expectations conflict; none proves actual operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "June 1 is month-only precision for EIA’s June 2029 proposed operation. CAISO September 2027 and old PUCN 2024 expectations conflict; none proves actual operation.",
+        "company": "326FW 8me LLC",
+        "companyWikiUrl": null,
+        "latitude": 35.092036,
+        "longitude": -114.6888,
+        "address": "Arida Solar Hybrid EIA plant 63841 reporting point, southern Clark County near Laughlin, Nevada; approximate project context",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Solar",
+          "Clark County",
+          "Nevada",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 370,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. EIA plant 63841 lists 326FW 8me LLC’s Arida hybrid near Laughlin with a 370 MW battery and separate 370 MW solar unit. CAISO queue 1522 lists 370 MW combined export; neit"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve EIA/CAISO schedule and status discrepancy, applicant siting updates and MWh. No verified Arida-specific operator photograph found; do not use unrelated Avantus facilities."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-austin-bayou-storage-i-tx": {
+      "patch": {
+        "title": "Austin Bayou Storage I: 150.68 MW ERCOT Request",
+        "description": "ERCOT’s September 2026 GIS report identifies Austin Bayou Solar, LLC’s Austin Bayou Storage I as 150.68 MW in Brazoria County, queue 25INR0235, targeting June 1, 2027. It is separate from Storage II/III and the solar requests.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS Report — 25INR0235",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf",
+            "title": "ERCOT Independent Review — Texas 765-kV STEP Eastern Backbone",
+            "confidence": 95,
+            "publishedDate": "2025-12-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>The reported POI is a 345 kV Savana–Seabreeze circuit 27 tap. ERCOT reports screening complete, full study started and an IA-related status; it is not a construction finding. The $200M, 200 MW / 400 MWh and November 2028 claims lack support.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: June 1, 2027 is ERCOT’s projected COD, not confirmed energization.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "June 1, 2027 is ERCOT’s projected COD, not confirmed energization.",
+        "company": "Austin Bayou Solar, LLC",
+        "companyWikiUrl": null,
+        "address": "Brazoria County, Texas; retained approximate county-area point, exact 25INR0235 parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "ERCOT",
+          "Brazoria County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 150.68,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT’s September 2026 GIS report identifies Austin Bayou Solar, LLC’s Austin Bayou Storage I as 150.68 MW in Brazoria County, queue 25INR0235, targeting June 1, 2027. It"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify project parcel, ultimate owner and MWh. No phase-specific official gallery found; solar tax and court records are not storage photographs or completion evidence."
+      ]
+    },
+    "dc-50-madison-road-data-center-nym2-nj": {
+      "patch": {
+        "title": "CyrusOne NYM2 Totowa: 6 MW IT; Cervalis Acquisition in 2015",
+        "description": "CyrusOne identifies NYM2 in Totowa as 6 MW total IT capacity across a two-building, 200,000 sqft campus, including 50,000 sqft of data-center space. This is the existing 50 Madison Road facility, not a CoreSite Parsippany expansion.",
+        "sourceUrl": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+        "references": [
+          {
+            "url": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+            "title": "Totowa, NJ: NYM2 | CyrusOne",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1553023/000110465915049287/a15-14256_10ex99d1.htm",
+            "title": "CyrusOne Announces Closing of Cervalis Acquisition",
+            "confidence": 95,
+            "publishedDate": "2015-07-01"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1553023/000110465915030860/a15-10124_1ex2d1.htm",
+            "title": "CyrusOne–Cervalis Agreement and Plan of Merger — section 5.12 identifies 50 Madison Road",
+            "publishedDate": "2015-04-28",
+            "confidence": 95
+          }
+        ],
+        "longFormSummary": "<ul><li>The SEC-filed release confirms July 1, 2015 acquisition of the Cervalis portfolio; it is not the site’s opening date. Current operator specifications list N+1 water-cooled centrifugal chillers. The former 20 MW, $120M, 100,000 sqft, modeled water/energy and October 2027 COD are removed.<cite data-ref=\"https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2\"></cite></li><li>Timeline: Confirmed July 1, 2015 portfolio-acquisition milestone, not Totowa’s original opening or a 2027 expansion. Exact original opening remains unverified.<cite data-ref=\"https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2\"></cite></li><li>CyrusOne operator photograph of the Totowa NYM2 facility. No opening date, power consumption or expansion completion is inferred. Credit: CyrusOne.<cite data-ref=\"https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2\"></cite></li><li>The SEC-filed merger agreement section 5.12 expressly identifies the data center at 50 Madison Road, Totowa.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1553023/000110465915030860/a15-10124_1ex2d1.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2015-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed July 1, 2015 portfolio-acquisition milestone, not Totowa’s original opening or a 2027 expansion. Exact original opening remains unverified.",
+        "company": "CyrusOne",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/CyrusOne",
+        "latitude": 40.906729530868,
+        "longitude": -74.242079657906,
+        "address": "50 Madison Road, Totowa, Passaic County, New Jersey; Census-geocoded facility address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "CyrusOne",
+          "Passaic County",
+          "New Jersey"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/nym2-1.jpg",
+            "originalWidth": 608,
+            "originalHeight": 446
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 6,
+        "kind": "usage",
+        "sourceUrl": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+        "note": "Current operator: 6 MW total IT capacity, not measured draw."
+      },
+      "datacenter": {
+        "sqft": 200000,
+        "buildings": 2,
+        "cooling": "N+1 water-cooled centrifugal chillers; operator describes 2,500 tons cooling capacity",
+        "sourceUrl": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+        "note": "200,000 sqft is gross two-building campus scope; 50,000 sqft data center and 60,000 sqft recovery area. Page headline labels gross area Technical IT Space, inconsistent with detailed breakdown. No published daily water or measured power use."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Confirm original opening day and any phase expansions; operator headline area label conflicts with detailed floor breakdown. Acquisition portfolio price is not this site’s capital cost."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "dc-aep-groveport-cmh-ii-oh": {
+      "patch": {
+        "title": "Compass CMH II for AEP: Groveport Plan Approved in July 2018",
+        "description": "Groveport’s July 2, 2018 planning minutes approve Compass Datacenters–CMH II’s use variance and final development plan at 4470 South Hamilton Road. The proposal is a 22,000 sqft AEP data center with a future 15,900 sqft expansion.",
+        "sourceUrl": "https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71",
+        "references": [
+          {
+            "url": "https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71",
+            "title": "Groveport Planning and Zoning Commission — July 2, 2018 minutes",
+            "confidence": 95,
+            "publishedDate": "2018-07-02"
+          },
+          {
+            "url": "https://uptimeinstitute.com/component/tierachievement/datacenter/cmh-ii-phase-1/1069",
+            "title": "CMH II, Phase 1 | Uptime Institute",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The expansion is subject to a future traffic-impact study. Uptime independently identifies Compass CMH II Phase 1 in Groveport. Neither source supports the former 60 MW hyperscale scope, $320M, 240,000 sqft, water/energy model or November 2027 COD. No grid voltage or actual commissioned MW is inferred.<cite data-ref=\"https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71\"></cite></li><li>Timeline: Confirmed July 2, 2018 planning approval, not proof of a current construction schedule or original service date.<cite data-ref=\"https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2018-07-02T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed July 2, 2018 planning approval, not proof of a current construction schedule or original service date.",
+        "company": "Compass Datacenters",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Compass_Datacenters",
+        "latitude": 39.882727745554,
+        "longitude": -82.883460130218,
+        "address": "4470 South Hamilton Road, Groveport, Franklin County, Ohio; Census-geocoded planning address, parcel 185-001294",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Compass Datacenters",
+          "AEP",
+          "Franklin County",
+          "Ohio"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "sqft": 22000,
+        "sourceUrl": "https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71",
+        "note": "22,000 sqft is initial approved plan, not a current floor-area measurement; separate 15,900 sqft future expansion subject to traffic review. No verified MW, daily water, chip count or cooling specification."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify current operations, commissioned MW and whether the future expansion was built. Minutes open via web but plain download is blocked. Operator site lacked an identifiable CMH-II gallery; no adjacent AEP facility photograph adopted."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-aligned-atl-01-ga": {
+      "patch": {
+        "title": "Aligned ATL-01 Lithia Springs: Air-Permit Review in 2023",
+        "description": "Georgia EPD’s 2023 notice identifies Aligned ATL01 at 1551 North River Road in Douglas County under application 29094 for a new data center with emergency generators. Aligned’s current Atlanta page confirms this Lithia Springs address.",
+        "sourceUrl": "https://epd.georgia.gov/document/document/pa1123-4/download",
+        "references": [
+          {
+            "url": "https://epd.georgia.gov/document/document/pa1123-4/download",
+            "title": "Georgia EPD Public Advisory — Aligned ATL01 application 29094",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/atlanta-data-centers/",
+            "title": "Atlanta Data Centers | Aligned Data Centers",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The notice’s comment deadline was December 22, 2023; a permit application is not a permit issuance or COD. The former Fulton location, 72 MW, $420M, 300,000 sqft and December 2027 date lack verified support. The xAI QTS Atlanta chip match belongs to another operator and is removed with the modeled energy/water and generator count.<cite data-ref=\"https://epd.georgia.gov/document/document/pa1123-4/download\"></cite></li><li>Timeline: Confirmed December 22, 2023 comment deadline for the EPD application notice. Exact application filing, permit issuance and operating date remain unverified.<cite data-ref=\"https://epd.georgia.gov/document/document/pa1123-4/download\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2023-12-22T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed December 22, 2023 comment deadline for the EPD application notice. Exact application filing, permit issuance and operating date remain unverified.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 33.725558558874,
+        "longitude": -84.616438620282,
+        "address": "1551 North River Road, Lithia Springs, Douglas County, Georgia; Census-geocoded operator/EPD address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Douglas County",
+          "Georgia"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "cooling": "Operator market page describes Delta3 air cooling, liquid-cooling support and closed-loop chilled-water design",
+        "sourceUrl": "https://aligneddc.com/atlanta-data-centers/",
+        "note": "Current market-page design features, not measurements or proof every system is commissioned at ATL-01. No verified MW, area, chip count, daily water or generator count. xAI/QTS cluster attribution removed."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain final permit and commissioned capacity, floor area and opening date. Official Atlanta page has generic shared imagery and skyline; no verified ATL-01 photo adopted."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-aligned-slc-01-ut": {
+      "patch": {
+        "title": "Aligned SLC-01: Existing 34 MW, 300,000 Sqft West Jordan Facility",
+        "description": "Aligned’s October 2019 release identifies its existing West Jordan data center as 34 MW and 300,000 sqft, separate from the adjacent 48 MW second building. Its current page lists SLC-01 at 3333 West 9000 South on a shared 55-acre campus.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/",
+            "title": "Aligned Breaks Ground on Second Salt Lake Metro Data Center",
+            "confidence": 95,
+            "publishedDate": "2019-10-30"
+          },
+          {
+            "url": "https://aligneddc.com/salt-lake-city-data-centers/",
+            "title": "Scalable & Adaptive Data Centers in Salt Lake City, Utah | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/press-release/aligned-energy-experiencing-rapid-growth-announces-new-100-megawatt-salt-lake-city-data-center/",
+            "title": "Aligned Experiencing Rapid Growth Announces New 100 Megawatt Salt Lake City Data Center",
+            "confidence": 95,
+            "publishedDate": "2018-03-20"
+          }
+        ],
+        "longFormSummary": "<ul><li>The March 20, 2018 announcement concerned development of the original 300,000 sqft building, with then-forecast Q3 commissioning. Its early 100 MW headline was not the later 34 MW building rating. The former 80 MW, $450M, 350,000 sqft, water/energy model and November 2027 date are removed. Current precise available capacity is not published.<cite data-ref=\"https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/\"></cite></li><li>Timeline: Confirmed March 20, 2018 development announcement, not an inferred exact opening. By October 2019 the source explicitly describes the first 34 MW building as existing.<cite data-ref=\"https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/\"></cite></li><li>Operator Salt Lake City campus gallery photograph of the existing street entrance. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/salt-lake-city-data-centers/\"></cite></li><li>Operator Salt Lake City campus gallery photograph of the interior entry and security area. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/salt-lake-city-data-centers/\"></cite></li><li>Operator Salt Lake City campus gallery photograph of the lobby. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/salt-lake-city-data-centers/\"></cite></li><li>Operator Salt Lake City campus gallery photograph of the seating and break area. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/salt-lake-city-data-centers/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2018-03-20T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed March 20, 2018 development announcement, not an inferred exact opening. By October 2019 the source explicitly describes the first 34 MW building as existing.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 40.587674746014,
+        "longitude": -111.97021802584,
+        "address": "3333 West 9000 South, West Jordan, Utah; Census-geocoded campus street address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Salt Lake County",
+          "Utah"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-2.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-3.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-4.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-5.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 34,
+        "kind": "usage",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/",
+        "note": "Historical operator: existing first West Jordan building 34 MW. Current available capacity not published."
+      },
+      "datacenter": {
+        "acres": 55,
+        "sqft": 300000,
+        "buildings": 1,
+        "cooling": "Current operator page describes Delta3 air cooling and closed-loop chilled-water design",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/",
+        "note": "34 MW and 300,000 sqft are the first building’s published 2019 scope; 55 acres is shared campus. SLC-02/03 totals are not assigned to SLC-01. No measured consumption or water reading."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Confirm original service date and current SLC-01 capacity. Two older operator spec-sheet URLs return 404; opened historical release independently substantiates 34 MW/300,000 sqft. Shared campus photos are labeled, not represented as a new expansion."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 4
+    },
+    "solar-abeja-solar-farm-tx": {
+      "patch": {
+        "title": "Abeja Solar Farm: 200 MW EIA Plan; ERCOT June 2029 Target",
+        "description": "EIA plant 68347 lists Abeja Solar Farm LLC’s Bee County project at 200 MW, with July 2028 proposed operation and approvals not initiated. The later September 2026 ERCOT GIS request 27INR0372 instead reports 200.84 MW and June 7, 2029 projected COD.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS Report — Abeja Solar Farm 27INR0372",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — Abeja Solar Farm 68347",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://public-inspection.federalregister.gov/2026-00823.pdf",
+            "title": "FERC Combined Notice of Filings #1 — ER26-1030-000 AEPTX-Abeja interconnection filing",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>ERCOT’s study/IA status and the effective-date filing notice are not evidence of operation. The POI is a 345 kV Paladio–Tango tap, not the invented generic county voltages. The former 250 MW, $260M and November 2028 date are removed; native capacity uses EIA’s 200 MW plant rating, not an unexplained rounded queue figure.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: June 7, 2029 is the later ERCOT projected COD; EIA July 2028 conflicts. Neither date is confirmed operation.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-06-07T00:00:00.000Z",
+        "dateConfidenceReasoning": "June 7, 2029 is the later ERCOT projected COD; EIA July 2028 conflicts. Neither date is confirmed operation.",
+        "company": "Abeja Solar Farm LLC",
+        "companyWikiUrl": null,
+        "latitude": 28.288244,
+        "longitude": -97.84019,
+        "address": "Abeja Solar Farm EIA plant 68347 reporting point, Bee County, Texas; approximate project context",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "ERCOT",
+          "Bee County",
+          "Texas",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "EIA plant nameplate 200 MW; later ERCOT queue reports 200.84 MW, unexplained difference."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve EIA/ERCOT schedule and rating difference, actual permit status and current owner. No verified project-specific official gallery found."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-ac-ranch-ii-nm": {
+      "patch": {
+        "title": "AC Ranch II: 230 MW Lydian EIA Plan, June 2029 Target",
+        "description": "EIA plant 68579 lists Lydian Energy’s AC Ranch II in Lea County as 230 MW solar, with approvals pending and June 2029 proposed operation. This is separate from the 75 MW AC Ranch I plant 68578, even though their reported coordinates match.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — AC Ranch II 68579",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://lydianenergy.com/projects/",
+            "title": "Projects | Lydian Energy",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://lydianenergy.com/news/lydian-energy-announces-689-million-financing-for-solar-and-battery-storage-projects/",
+            "title": "Lydian Energy Announces $689 Million Financing for Solar and Battery Storage Projects",
+            "confidence": 95,
+            "publishedDate": "2026-02-17"
+          }
+        ],
+        "longFormSummary": "<ul><li>Lydian’s current project card and financing release concern 75 MWac AC Ranch 1. Their construction status and multi-project financing are not proof of Phase II construction or $220M Phase II cost. The former 200 MW, Eunice point and November 2028 date are removed; no grid-voltage assumption.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>Timeline: June 1 is month-only precision for EIA’s June 2029 proposed AC Ranch II operation, not confirmed COD.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "June 1 is month-only precision for EIA’s June 2029 proposed AC Ranch II operation, not confirmed COD.",
+        "company": "Lydian Energy",
+        "companyWikiUrl": null,
+        "latitude": 32.732263,
+        "longitude": -103.2748,
+        "address": "AC Ranch II EIA plant 68579 reporting point, Lea County, New Mexico; shared reporting point with AC Ranch I, not a surveyed Phase II boundary",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Lydian Energy",
+          "Lea County",
+          "New Mexico",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 230,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. EIA plant 68579 lists Lydian Energy’s AC Ranch II in Lea County as 230 MW solar, with approvals pending and June 2029 proposed operation. This is separate from the 75 MW"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm Phase II site boundary and interconnection request. Operator page opens via web but plain client returns 403. No Phase-II-specific gallery established; Phase I imagery not borrowed."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-allen-acres-solar-il": {
+      "patch": {
+        "title": "Allen Acres Solar: 150 MW EIA Plan; New Parent Filing Flags 210 MW",
+        "description": "EIA plant 70055 lists Avangrid Power LLC’s Allen Acres Solar in LaSalle County at 150 MW, targeting May 2029. Iberdrola’s September 2026 results instead describe approval to start construction of a 210 MW Allen Acres project; the rating basis is unspecified.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — Allen Acres Solar 70055",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7Bbc593021-c325-41b5-b7dc-f4aeef741d49%7D",
+            "title": "Iberdrola Results September 2026 — United States Avangrid",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The newer parent report conflicts with EIA’s approvals-not-initiated status. It does not label 210 MW as AC or DC, so no conversion is inferred. The EIA reporting point is near Ransom, not the prior Earlville estimate. The former $230M and December 2028 date are unsupported. Native capacity retains EIA 150 MW with the discrepancy explicit.<cite data-ref=\"https://www.cnmv.es/webservices/verdocumento/ver?t=%7Bbc593021-c325-41b5-b7dc-f4aeef741d49%7D\"></cite></li><li>Timeline: May 1 is month-only precision for EIA’s proposed May 2029 operation. Parent construction-start approval does not confirm commissioning or replace the target with a research date.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-05-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "May 1 is month-only precision for EIA’s proposed May 2029 operation. Parent construction-start approval does not confirm commissioning or replace the target with a research date.",
+        "company": "Avangrid Power LLC",
+        "companyWikiUrl": null,
+        "latitude": 41.11792,
+        "longitude": -88.64038,
+        "address": "Allen Acres Solar EIA plant 70055 reporting point, Allen Township / Ransom area, LaSalle County, Illinois; approximate project context",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Avangrid",
+          "LaSalle County",
+          "Illinois",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. EIA plant 70055 lists Avangrid Power LLC’s Allen Acres Solar in LaSalle County at 150 MW, targeting May 2029. Iberdrola’s September 2026 results instead describe approval"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve 150 MW versus 210 MW rating basis and reconcile new construction approval with EIA status. Locate exact county permit and project-specific gallery; no unrelated Avangrid plant image adopted."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-spring-valley-2-colbert-al",
+      "id": 16611,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 178 MW operator versus 200 MWac ROD/EIA scope and current construction status. Operator map is regional context, not a surveyed boundary."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-alcazar-2-ny",
+      "id": 16613,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm current cluster migration and phase-to-site allocation. Full-site rendering/locator describe the 250 MW proposal, not a separately approved 150 MW construction phase."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-alta-casa-storage-ca",
+      "id": 16614,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify developer, project boundary and actual permitting. No verified project-specific official gallery was identified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-arida-solar-farm-nv",
+      "id": 16615,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve EIA/CAISO schedule and status discrepancy, applicant siting updates and MWh. No verified Arida-specific operator photograph found; do not use unrelated Avantus facilities."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-austin-bayou-storage-i-tx",
+      "id": 16616,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify project parcel, ultimate owner and MWh. No phase-specific official gallery found; solar tax and court records are not storage photographs or completion evidence."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-50-madison-road-data-center-nym2-nj",
+      "id": 16621,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm original opening day and any phase expansions; operator headline area label conflicts with detailed floor breakdown. Acquisition portfolio price is not this site’s capital cost."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aep-groveport-cmh-ii-oh",
+      "id": 16626,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current operations, commissioned MW and whether the future expansion was built. Minutes open via web but plain download is blocked. Operator site lacked an identifiable CMH-II gallery; no adjacent AEP facility photograph adopted."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-atl-01-ga",
+      "id": 16630,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain final permit and commissioned capacity, floor area and opening date. Official Atlanta page has generic shared imagery and skyline; no verified ATL-01 photo adopted."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-slc-01-ut",
+      "id": 16633,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm original service date and current SLC-01 capacity. Two older operator spec-sheet URLs return 404; opened historical release independently substantiates 34 MW/300,000 sqft. Shared campus photos are labeled, not represented as a new expansion."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-abeja-solar-farm-tx",
+      "id": 16636,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve EIA/ERCOT schedule and rating difference, actual permit status and current owner. No verified project-specific official gallery found."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-ac-ranch-ii-nm",
+      "id": 16640,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm Phase II site boundary and interconnection request. Operator page opens via web but plain client returns 403. No Phase-II-specific gallery established; Phase I imagery not borrowed."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-allen-acres-solar-il",
+      "id": 16643,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 150 MW versus 210 MW rating basis and reconcile new construction approval with EIA status. Locate exact county permit and project-specific gallery; no unrelated Avangrid plant image adopted."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-spring-valley-2-colbert-al",
+      "id": 16611,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 178 MW operator versus 200 MWac ROD/EIA scope and current construction status. Operator map is regional context, not a surveyed boundary."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-alcazar-2-ny",
+      "id": 16613,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm current cluster migration and phase-to-site allocation. Full-site rendering/locator describe the 250 MW proposal, not a separately approved 150 MW construction phase."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-alta-casa-storage-ca",
+      "id": 16614,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify developer, project boundary and actual permitting. No verified project-specific official gallery was identified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-arida-solar-farm-nv",
+      "id": 16615,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve EIA/CAISO schedule and status discrepancy, applicant siting updates and MWh. No verified Arida-specific operator photograph found; do not use unrelated Avantus facilities."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-austin-bayou-storage-i-tx",
+      "id": 16616,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify project parcel, ultimate owner and MWh. No phase-specific official gallery found; solar tax and court records are not storage photographs or completion evidence."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-50-madison-road-data-center-nym2-nj",
+      "id": 16621,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm original opening day and any phase expansions; operator headline area label conflicts with detailed floor breakdown. Acquisition portfolio price is not this site’s capital cost."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aep-groveport-cmh-ii-oh",
+      "id": 16626,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current operations, commissioned MW and whether the future expansion was built. Minutes open via web but plain download is blocked. Operator site lacked an identifiable CMH-II gallery; no adjacent AEP facility photograph adopted."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-atl-01-ga",
+      "id": 16630,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain final permit and commissioned capacity, floor area and opening date. Official Atlanta page has generic shared imagery and skyline; no verified ATL-01 photo adopted."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-slc-01-ut",
+      "id": 16633,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm original service date and current SLC-01 capacity. Two older operator spec-sheet URLs return 404; opened historical release independently substantiates 34 MW/300,000 sqft. Shared campus photos are labeled, not represented as a new expansion."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-abeja-solar-farm-tx",
+      "id": 16636,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve EIA/ERCOT schedule and rating difference, actual permit status and current owner. No verified project-specific official gallery found."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-ac-ranch-ii-nm",
+      "id": 16640,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm Phase II site boundary and interconnection request. Operator page opens via web but plain client returns 403. No Phase-II-specific gallery established; Phase I imagery not borrowed."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-allen-acres-solar-il",
+      "id": 16643,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 150 MW versus 210 MW rating basis and reconcile new construction approval with EIA status. Locate exact county permit and project-specific gallery; no unrelated Avangrid plant image adopted."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16611,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16613,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16614,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16615,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16616,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16621,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16626,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16630,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16633,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16636,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16640,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16643,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16611,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16613,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16614,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16615,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16616,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16621,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16626,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16630,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16633,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16636,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16640,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16643,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-alta-casa-storage-ca-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 742416
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-alta-casa-storage-ca-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 59073
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-alta-casa-storage-ca-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 588396
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-austin-bayou-storage-i-tx-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 488144
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-austin-bayou-storage-i-tx-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 53127
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-austin-bayou-storage-i-tx-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 340959
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/alcazar-1.jpg",
+        "status": 200,
+        "bytes": 241411
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/alcazar-2.jpg",
+        "status": 200,
+        "bytes": 338646
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-aerial.jpg",
+        "status": 200,
+        "bytes": 621569
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-relief.jpg",
+        "status": 200,
+        "bytes": 221619
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-topo.jpg",
+        "status": 200,
+        "bytes": 483192
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-aerial.jpg",
+        "status": 200,
+        "bytes": 379664
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-relief.jpg",
+        "status": 200,
+        "bytes": 203017
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-topo.jpg",
+        "status": 200,
+        "bytes": 151895
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-aerial.jpg",
+        "status": 200,
+        "bytes": 599034
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-relief.jpg",
+        "status": 200,
+        "bytes": 151048
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-topo.jpg",
+        "status": 200,
+        "bytes": 585943
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-aerial.jpg",
+        "status": 200,
+        "bytes": 584503
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-relief.jpg",
+        "status": 200,
+        "bytes": 109356
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-topo.jpg",
+        "status": 200,
+        "bytes": 395362
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-aerial.jpg",
+        "status": 200,
+        "bytes": 675847
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-relief.jpg",
+        "status": 200,
+        "bytes": 216981
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-topo.jpg",
+        "status": 200,
+        "bytes": 455741
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-aerial.jpg",
+        "status": 200,
+        "bytes": 703763
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-relief.jpg",
+        "status": 200,
+        "bytes": 114677
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-topo.jpg",
+        "status": 200,
+        "bytes": 545501
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/nym2-1.jpg",
+        "status": 200,
+        "bytes": 61914
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-2.jpg",
+        "status": 200,
+        "bytes": 26891
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-3.jpg",
+        "status": 200,
+        "bytes": 22618
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-4.jpg",
+        "status": 200,
+        "bytes": 20128
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-5.jpg",
+        "status": 200,
+        "bytes": 25052
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 346453
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-relief.jpg",
+        "status": 200,
+        "bytes": 69919
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-topo.jpg",
+        "status": 200,
+        "bytes": 204371
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-aerial.jpg",
+        "status": 200,
+        "bytes": 262238
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-relief.jpg",
+        "status": 200,
+        "bytes": 64304
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-topo.jpg",
+        "status": 200,
+        "bytes": 113928
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-aerial.jpg",
+        "status": 200,
+        "bytes": 306555
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-relief.jpg",
+        "status": 200,
+        "bytes": 76528
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-topo.jpg",
+        "status": 200,
+        "bytes": 221414
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-aerial.jpg",
+        "status": 200,
+        "bytes": 450002
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-relief.jpg",
+        "status": 200,
+        "bytes": 147101
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-topo.jpg",
+        "status": 200,
+        "bytes": 366970
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/spring-1.webp",
+        "status": 200,
+        "bytes": 137300
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16611,
+        "status": 200,
+        "bytes": 320557
+      },
+      {
+        "environment": "local",
+        "id": 16613,
+        "status": 200,
+        "bytes": 326322
+      },
+      {
+        "environment": "local",
+        "id": 16614,
+        "status": 200,
+        "bytes": 308380
+      },
+      {
+        "environment": "local",
+        "id": 16615,
+        "status": 200,
+        "bytes": 316581
+      },
+      {
+        "environment": "local",
+        "id": 16616,
+        "status": 200,
+        "bytes": 310988
+      },
+      {
+        "environment": "local",
+        "id": 16621,
+        "status": 200,
+        "bytes": 326052
+      },
+      {
+        "environment": "local",
+        "id": 16626,
+        "status": 200,
+        "bytes": 323464
+      },
+      {
+        "environment": "local",
+        "id": 16630,
+        "status": 200,
+        "bytes": 326163
+      },
+      {
+        "environment": "local",
+        "id": 16633,
+        "status": 200,
+        "bytes": 339336
+      },
+      {
+        "environment": "local",
+        "id": 16636,
+        "status": 200,
+        "bytes": 315498
+      },
+      {
+        "environment": "local",
+        "id": 16640,
+        "status": 200,
+        "bytes": 314707
+      },
+      {
+        "environment": "local",
+        "id": 16643,
+        "status": 200,
+        "bytes": 313036
+      },
+      {
+        "environment": "prod",
+        "id": 16611,
+        "status": 200,
+        "bytes": 277930
+      },
+      {
+        "environment": "prod",
+        "id": 16613,
+        "status": 200,
+        "bytes": 283741
+      },
+      {
+        "environment": "prod",
+        "id": 16614,
+        "status": 200,
+        "bytes": 265215
+      },
+      {
+        "environment": "prod",
+        "id": 16615,
+        "status": 200,
+        "bytes": 274167
+      },
+      {
+        "environment": "prod",
+        "id": 16616,
+        "status": 200,
+        "bytes": 268746
+      },
+      {
+        "environment": "prod",
+        "id": 16621,
+        "status": 200,
+        "bytes": 283228
+      },
+      {
+        "environment": "prod",
+        "id": 16626,
+        "status": 200,
+        "bytes": 280183
+      },
+      {
+        "environment": "prod",
+        "id": 16630,
+        "status": 200,
+        "bytes": 282445
+      },
+      {
+        "environment": "prod",
+        "id": 16633,
+        "status": 200,
+        "bytes": 295818
+      },
+      {
+        "environment": "prod",
+        "id": 16636,
+        "status": 200,
+        "bytes": 273081
+      },
+      {
+        "environment": "prod",
+        "id": 16640,
+        "status": 200,
+        "bytes": 272715
+      },
+      {
+        "environment": "prod",
+        "id": 16643,
+        "status": 200,
+        "bytes": 270928
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1408,
+      "prod": 1408
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 200000,
+          "buildings": 2,
+          "generators": null,
+          "cooling": "N+1 water-cooled centrifugal chillers; operator describes 2,500 tons cooling capacity",
+          "powerSource": null,
+          "sourceUrl": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+          "note": "200,000 sqft is gross two-building campus scope; 50,000 sqft data center and 60,000 sqft recovery area. Page headline labels gross area Technical IT Space, inconsistent with detailed breakdown. No published daily water or measured power use.",
+          "checkedAt": "2026-10-23T22:45:45.918Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 22000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71",
+          "note": "22,000 sqft is initial approved plan, not a current floor-area measurement; separate 15,900 sqft future expansion subject to traffic review. No verified MW, daily water, chip count or cooling specification.",
+          "checkedAt": "2026-10-23T22:46:02.694Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page describes Delta3 air cooling, liquid-cooling support and closed-loop chilled-water design",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/atlanta-data-centers/",
+          "note": "Current market-page design features, not measurements or proof every system is commissioned at ATL-01. No verified MW, area, chip count, daily water or generator count. xAI/QTS cluster attribution removed.",
+          "checkedAt": "2026-10-23T22:46:04.019Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 55,
+          "sqft": 300000,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Current operator page describes Delta3 air cooling and closed-loop chilled-water design",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/",
+          "note": "34 MW and 300,000 sqft are the first building’s published 2019 scope; 55 acres is shared campus. SLC-02/03 totals are not assigned to SLC-01. No measured consumption or water reading.",
+          "checkedAt": "2026-10-23T22:46:05.223Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 200000,
+          "buildings": 2,
+          "generators": null,
+          "cooling": "N+1 water-cooled centrifugal chillers; operator describes 2,500 tons cooling capacity",
+          "powerSource": null,
+          "sourceUrl": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+          "note": "200,000 sqft is gross two-building campus scope; 50,000 sqft data center and 60,000 sqft recovery area. Page headline labels gross area Technical IT Space, inconsistent with detailed breakdown. No published daily water or measured power use.",
+          "checkedAt": "2026-10-23T22:47:10.091Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 22000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71",
+          "note": "22,000 sqft is initial approved plan, not a current floor-area measurement; separate 15,900 sqft future expansion subject to traffic review. No verified MW, daily water, chip count or cooling specification.",
+          "checkedAt": "2026-10-23T22:47:21.517Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page describes Delta3 air cooling, liquid-cooling support and closed-loop chilled-water design",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/atlanta-data-centers/",
+          "note": "Current market-page design features, not measurements or proof every system is commissioned at ATL-01. No verified MW, area, chip count, daily water or generator count. xAI/QTS cluster attribution removed.",
+          "checkedAt": "2026-10-23T22:47:33.121Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 55,
+          "sqft": 300000,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Current operator page describes Delta3 air cooling and closed-loop chilled-water design",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/",
+          "note": "34 MW and 300,000 sqft are the first building’s published 2019 scope; 55 acres is shared campus. SLC-02/03 totals are not assigned to SLC-01. No measured consumption or water reading.",
+          "checkedAt": "2026-10-23T22:47:46.836Z"
+        }
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "mediaEvidence": [
+    {
+      "key": "solar-spring-valley-2-colbert-al",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-87.678730,34.664983,-87.648730,34.684983&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-87.678730,34.664983,-87.648730,34.684983&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-spring-valley-2-colbert-al-aerial.jpg",
+      "bytes": 450002,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-aerial.jpg"
+    },
+    {
+      "key": "solar-spring-valley-2-colbert-al",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-87.695730,34.652983,-87.631730,34.696983&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-87.695730,34.652983,-87.631730,34.696983&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-spring-valley-2-colbert-al-topo.jpg",
+      "bytes": 366970,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-topo.jpg"
+    },
+    {
+      "key": "solar-spring-valley-2-colbert-al",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-87.743730,34.624983,-87.583730,34.724983&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-87.743730,34.624983,-87.583730,34.724983&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-spring-valley-2-colbert-al-relief.jpg",
+      "bytes": 147101,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-spring-valley-2-colbert-al-relief.jpg"
+    },
+    {
+      "key": "battery-alcazar-2-ny",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-74.058400,41.924030,-74.028400,41.944030&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-74.058400,41.924030,-74.028400,41.944030&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/battery-alcazar-2-ny-aerial.jpg",
+      "bytes": 621569,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-aerial.jpg"
+    },
+    {
+      "key": "battery-alcazar-2-ny",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-74.075400,41.912030,-74.011400,41.956030&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-74.075400,41.912030,-74.011400,41.956030&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/battery-alcazar-2-ny-topo.jpg",
+      "bytes": 483192,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-topo.jpg"
+    },
+    {
+      "key": "battery-alcazar-2-ny",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-74.123400,41.884030,-73.963400,41.984030&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-74.123400,41.884030,-73.963400,41.984030&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/battery-alcazar-2-ny-relief.jpg",
+      "bytes": 221619,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-alcazar-2-ny-relief.jpg"
+    },
+    {
+      "key": "battery-arida-solar-farm-nv",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-114.703800,35.082036,-114.673800,35.102036&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-114.703800,35.082036,-114.673800,35.102036&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/battery-arida-solar-farm-nv-aerial.jpg",
+      "bytes": 379664,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-aerial.jpg"
+    },
+    {
+      "key": "battery-arida-solar-farm-nv",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-114.720800,35.070036,-114.656800,35.114036&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-114.720800,35.070036,-114.656800,35.114036&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/battery-arida-solar-farm-nv-topo.jpg",
+      "bytes": 151895,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-topo.jpg"
+    },
+    {
+      "key": "battery-arida-solar-farm-nv",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-114.768800,35.042036,-114.608800,35.142036&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-114.768800,35.042036,-114.608800,35.142036&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/battery-arida-solar-farm-nv-relief.jpg",
+      "bytes": 203017,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/battery-arida-solar-farm-nv-relief.jpg"
+    },
+    {
+      "key": "dc-50-madison-road-data-center-nym2-nj",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-74.257080,40.896730,-74.227080,40.916730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-74.257080,40.896730,-74.227080,40.916730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-aerial.jpg",
+      "bytes": 599034,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-aerial.jpg"
+    },
+    {
+      "key": "dc-50-madison-road-data-center-nym2-nj",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-74.274080,40.884730,-74.210080,40.928730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-74.274080,40.884730,-74.210080,40.928730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-topo.jpg",
+      "bytes": 585943,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-topo.jpg"
+    },
+    {
+      "key": "dc-50-madison-road-data-center-nym2-nj",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-74.322080,40.856730,-74.162080,40.956730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-74.322080,40.856730,-74.162080,40.956730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-relief.jpg",
+      "bytes": 151048,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-50-madison-road-data-center-nym2-nj-relief.jpg"
+    },
+    {
+      "key": "dc-aep-groveport-cmh-ii-oh",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-82.898460,39.872728,-82.868460,39.892728&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-82.898460,39.872728,-82.868460,39.892728&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-aerial.jpg",
+      "bytes": 584503,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-aerial.jpg"
+    },
+    {
+      "key": "dc-aep-groveport-cmh-ii-oh",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-82.915460,39.860728,-82.851460,39.904728&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-82.915460,39.860728,-82.851460,39.904728&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-topo.jpg",
+      "bytes": 395362,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-topo.jpg"
+    },
+    {
+      "key": "dc-aep-groveport-cmh-ii-oh",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-82.963460,39.832728,-82.803460,39.932728&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-82.963460,39.832728,-82.803460,39.932728&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-relief.jpg",
+      "bytes": 109356,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aep-groveport-cmh-ii-oh-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-atl-01-ga",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-84.631439,33.715559,-84.601439,33.735559&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-84.631439,33.715559,-84.601439,33.735559&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aligned-atl-01-ga-aerial.jpg",
+      "bytes": 675847,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-atl-01-ga",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-84.648439,33.703559,-84.584439,33.747559&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-84.648439,33.703559,-84.584439,33.747559&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aligned-atl-01-ga-topo.jpg",
+      "bytes": 455741,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-atl-01-ga",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-84.696439,33.675559,-84.536439,33.775559&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-84.696439,33.675559,-84.536439,33.775559&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aligned-atl-01-ga-relief.jpg",
+      "bytes": 216981,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-atl-01-ga-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-111.985218,40.577675,-111.955218,40.597675&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-111.985218,40.577675,-111.955218,40.597675&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aligned-slc-01-ut-aerial.jpg",
+      "bytes": 703763,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-112.002218,40.565675,-111.938218,40.609675&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-112.002218,40.565675,-111.938218,40.609675&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aligned-slc-01-ut-topo.jpg",
+      "bytes": 545501,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-112.050218,40.537675,-111.890218,40.637675&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-112.050218,40.537675,-111.890218,40.637675&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/dc-aligned-slc-01-ut-relief.jpg",
+      "bytes": 114677,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/dc-aligned-slc-01-ut-relief.jpg"
+    },
+    {
+      "key": "solar-abeja-solar-farm-tx",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-97.855190,28.278244,-97.825190,28.298244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-97.855190,28.278244,-97.825190,28.298244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-abeja-solar-farm-tx-aerial.jpg",
+      "bytes": 346453,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-aerial.jpg"
+    },
+    {
+      "key": "solar-abeja-solar-farm-tx",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-97.872190,28.266244,-97.808190,28.310244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-97.872190,28.266244,-97.808190,28.310244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-abeja-solar-farm-tx-topo.jpg",
+      "bytes": 204371,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-topo.jpg"
+    },
+    {
+      "key": "solar-abeja-solar-farm-tx",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-97.920190,28.238244,-97.760190,28.338244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-97.920190,28.238244,-97.760190,28.338244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-abeja-solar-farm-tx-relief.jpg",
+      "bytes": 69919,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-abeja-solar-farm-tx-relief.jpg"
+    },
+    {
+      "key": "solar-ac-ranch-ii-nm",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-103.289800,32.722263,-103.259800,32.742263&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-103.289800,32.722263,-103.259800,32.742263&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-ac-ranch-ii-nm-aerial.jpg",
+      "bytes": 262238,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-aerial.jpg"
+    },
+    {
+      "key": "solar-ac-ranch-ii-nm",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-103.306800,32.710263,-103.242800,32.754263&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-103.306800,32.710263,-103.242800,32.754263&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-ac-ranch-ii-nm-topo.jpg",
+      "bytes": 113928,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-topo.jpg"
+    },
+    {
+      "key": "solar-ac-ranch-ii-nm",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-103.354800,32.682263,-103.194800,32.782263&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-103.354800,32.682263,-103.194800,32.782263&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-ac-ranch-ii-nm-relief.jpg",
+      "bytes": 64304,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-ac-ranch-ii-nm-relief.jpg"
+    },
+    {
+      "key": "solar-allen-acres-solar-il",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-88.655380,41.107920,-88.625380,41.127920&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-88.655380,41.107920,-88.625380,41.127920&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-allen-acres-solar-il-aerial.jpg",
+      "bytes": 306555,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-aerial.jpg"
+    },
+    {
+      "key": "solar-allen-acres-solar-il",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-88.672380,41.095920,-88.608380,41.139920&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-88.672380,41.095920,-88.608380,41.139920&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-allen-acres-solar-il-topo.jpg",
+      "bytes": 221414,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-topo.jpg"
+    },
+    {
+      "key": "solar-allen-acres-solar-il",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.720380,41.067920,-88.560380,41.167920&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.720380,41.067920,-88.560380,41.167920&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/solar-allen-acres-solar-il-relief.jpg",
+      "bytes": 76528,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/solar-allen-acres-solar-il-relief.jpg"
+    },
+    {
+      "key": "dc-50-madison-road-data-center-nym2-nj",
+      "layer": "nym2-photo",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/nym2-1.jpg",
+      "sourceUrl": "https://www.cyrusone.com/hubfs/CyrusOne/Locations/cyrusone-data-center-totowa-nj-nym2.jpg",
+      "sourcePage": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+      "credit": "CyrusOne",
+      "caption": "CyrusOne operator photograph of the Totowa NYM2 facility. No opening date, power consumption or expansion completion is inferred.",
+      "bytes": 61914,
+      "width": 608,
+      "height": 446,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/nym2-1.jpg"
+    },
+    {
+      "key": "solar-spring-valley-2-colbert-al",
+      "layer": "spring-map",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/spring-1.webp",
+      "sourceUrl": "https://www.pantheragrid.com/wp-content/uploads/2026/09/Project-Location-Map_Spring-Valley-II.webp",
+      "sourcePage": "https://www.pantheragrid.com/projects/spring-valley-solar-in-colbert-county-alabama/",
+      "credit": "Panthera Grid Partners",
+      "caption": "Operator regional location diagram for Spring Valley II; not a project boundary or construction photograph. Operator 178 MW and ROD/EIA 200 MW scopes remain unresolved.",
+      "bytes": 137300,
+      "width": 1800,
+      "height": 1800,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/spring-1.webp"
+    },
+    {
+      "key": "battery-alcazar-2-ny",
+      "layer": "alcazar-render",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/alcazar-1.jpg",
+      "sourceUrl": "https://ulstercleanenergy.com/wp-content/uploads/2026/08/AlcazarBESS_Rendering01-Wall_2026-06-19_v01_r05.jpg",
+      "sourcePage": "https://ulstercleanenergy.com/",
+      "credit": "Terra-Gen / Ulster County Clean Energy",
+      "caption": "Rendering of the whole proposed 250 MW Alcazar site; not a separately commissioned 150 MW Alcazar 2 phase.",
+      "bytes": 241411,
+      "width": 768,
+      "height": 512,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/alcazar-1.jpg"
+    },
+    {
+      "key": "battery-alcazar-2-ny",
+      "layer": "alcazar-locator",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/alcazar-2.jpg",
+      "sourceUrl": "https://ulstercleanenergy.com/wp-content/uploads/2025/06/Terra-Gen-BESS-Project-Google-Earth-Image.jpg",
+      "sourcePage": "https://ulstercleanenergy.com/",
+      "credit": "Terra-Gen / Ulster County Clean Energy; Google Earth base as shown",
+      "caption": "Operator locator diagram showing the whole Alcazar proposal and its substation tie-line. Not an Alcazar-2-only boundary or construction photograph.",
+      "bytes": 338646,
+      "width": 1000,
+      "height": 738,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/alcazar-2.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "slc-photo-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/slc-2.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_291-1-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/salt-lake-city-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator Salt Lake City campus gallery photograph of the existing street entrance. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date.",
+      "bytes": 26891,
+      "width": 400,
+      "height": 267,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-2.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "slc-photo-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/slc-3.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_255-1-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/salt-lake-city-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator Salt Lake City campus gallery photograph of the interior entry and security area. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date.",
+      "bytes": 22618,
+      "width": 400,
+      "height": 267,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-3.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "slc-photo-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/slc-4.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_250-1-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/salt-lake-city-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator Salt Lake City campus gallery photograph of the lobby. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date.",
+      "bytes": 20128,
+      "width": 400,
+      "height": 267,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-4.jpg"
+    },
+    {
+      "key": "dc-aligned-slc-01-ut",
+      "layer": "slc-photo-5",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round22-2026-10-23/slc-5.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_023-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/salt-lake-city-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator Salt Lake City campus gallery photograph of the seating and break area. Shared campus context; not proof of current SLC-01 MW, a new expansion or an exact commissioning date.",
+      "bytes": 25052,
+      "width": 400,
+      "height": 267,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round22-2026-10-23/slc-5.jpg"
+    }
+  ],
+  "gallerySourceChecks": [
+    {
+      "layer": "nym2-photo",
+      "url": "https://www.cyrusone.com/hubfs/CyrusOne/Locations/cyrusone-data-center-totowa-nj-nym2.jpg",
+      "bytes": 61914,
+      "sha256": "36c5fbb891cdb1f138f7f93c97ab0cf86741cce3aab682dff3b5bd4ed5780746",
+      "verified": true
+    },
+    {
+      "layer": "spring-map",
+      "url": "https://www.pantheragrid.com/wp-content/uploads/2026/09/Project-Location-Map_Spring-Valley-II.webp",
+      "bytes": 137300,
+      "sha256": "fa80e8e47948d41fcf14de2fcccdbe01032f4c3266a3da00a7cdfcf111d25d3f",
+      "verified": true
+    },
+    {
+      "layer": "alcazar-render",
+      "url": "https://ulstercleanenergy.com/wp-content/uploads/2026/08/AlcazarBESS_Rendering01-Wall_2026-06-19_v01_r05.jpg",
+      "bytes": 241411,
+      "sha256": "80e105a64618833acb8454f241bd3a5781c1fed684c251957f70283109c996ef",
+      "verified": true
+    },
+    {
+      "layer": "alcazar-locator",
+      "url": "https://ulstercleanenergy.com/wp-content/uploads/2025/06/Terra-Gen-BESS-Project-Google-Earth-Image.jpg",
+      "bytes": 338646,
+      "sha256": "9fb55653b7f71879a5696c92c798aff0d211a9b9cc7035acd21aec1d7199a42e",
+      "verified": true
+    },
+    {
+      "layer": "slc-photo-2",
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_291-1-400x267.jpg",
+      "bytes": 26891,
+      "sha256": "df4eb825ad591729c7535538d87d7eaa0f8b2e5573de5d3f71bffa259fa14fa8",
+      "verified": true
+    },
+    {
+      "layer": "slc-photo-3",
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_255-1-400x267.jpg",
+      "bytes": 22618,
+      "sha256": "03dca97244caa1aa331045ea7abe12734afbd8537b7dbc9d672eda9854376d54",
+      "verified": true
+    },
+    {
+      "layer": "slc-photo-4",
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_250-1-400x267.jpg",
+      "bytes": 20128,
+      "sha256": "6745f8ecd7905c4694444dc74d87d501a2c2828606dd0e42c1e71924a7d94774",
+      "verified": true
+    },
+    {
+      "layer": "slc-photo-5",
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/PRDS_023-400x267.jpg",
+      "bytes": 25052,
+      "sha256": "dc22d6872bc8e5bec092439bb85e6fa412922c12ad490aa4af9909a44aacb0c6",
+      "verified": true
+    }
+  ],
+  "originalSourceChecks": [
+    {
+      "id": 16611,
+      "url": "https://www.tva.com/energy/renewable-energy-solutions/spring-valley-solar",
+      "status": 403,
+      "finalUrl": "https://www.tva.com/energy/renewable-energy-solutions/spring-valley-solar",
+      "bytes": 5678
+    },
+    {
+      "id": 16613,
+      "url": "https://www.nyserda.ny.gov/All-Programs/Energy-Storage-Program/Projects/alcazar-2",
+      "status": 403,
+      "finalUrl": "https://www.nyserda.ny.gov/All-Programs/Energy-Storage-Program/Projects/alcazar-2",
+      "bytes": 5790
+    },
+    {
+      "id": 16614,
+      "url": "https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/energy-storage/alta-casa-bess",
+      "status": 404,
+      "finalUrl": "https://www.cpuc.ca.gov/Error-Pages/404?item=%2findustries-and-topics%2felectrical-energy%2fenergy-storage%2falta-casa-bess&user=extranet%5cAnonymous&site=website",
+      "bytes": 32857
+    },
+    {
+      "id": 16615,
+      "url": "https://puc.nv.gov/Dockets/Detail_24-04018/",
+      "status": 404,
+      "finalUrl": "https://www.puc.nv.gov/Dockets/Detail_24-04018/",
+      "bytes": 31089
+    },
+    {
+      "id": 16616,
+      "url": "https://www.puc.texas.gov/industry/electric/business/interconnections/austin-bayou-1",
+      "status": 404,
+      "finalUrl": "https://www.puc.texas.gov/industry/electric/business/interconnections/austin-bayou-1",
+      "bytes": 45924
+    },
+    {
+      "id": 16621,
+      "url": "https://www.coresite.com/data-centers/new-jersey/50-madison-road",
+      "status": 404,
+      "finalUrl": "https://www.coresite.com/data-centers/new-jersey/50-madison-road",
+      "bytes": 118021
+    },
+    {
+      "id": 16626,
+      "url": "https://www.aepohio.com/business/builders/data-centers/groveport-campus",
+      "status": 404,
+      "finalUrl": "https://www.aepohio.com/404?aspxerrorpath=/business/builders/data-centers/groveport-campus.aspx",
+      "bytes": 174062
+    },
+    {
+      "id": 16630,
+      "url": "https://www.aligneddc.com/data-centers/atlanta-atl-01/",
+      "status": 404,
+      "finalUrl": "https://aligneddc.com/data-centers/atlanta-atl-01/",
+      "bytes": 210828
+    },
+    {
+      "id": 16633,
+      "url": "https://www.aligneddc.com/data-centers/salt-lake-city-slc-01/",
+      "status": 404,
+      "finalUrl": "https://aligneddc.com/data-centers/salt-lake-city-slc-01/",
+      "bytes": 210842
+    },
+    {
+      "id": 16636,
+      "url": "https://www.puc.texas.gov/industry/electric/business/interconnections/abeja-solar",
+      "status": 404,
+      "finalUrl": "https://www.puc.texas.gov/industry/electric/business/interconnections/abeja-solar",
+      "bytes": 45915
+    },
+    {
+      "id": 16640,
+      "url": "https://www.prc.state.nm.us/electricity/dockets/ac-ranch-solar-review/",
+      "error": "HTTPSConnectionPool(host='www.prc.state.nm.us', port=443): Max retries exceeded with url: /electricity/dockets/ac-ranch-solar-review/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x101fefb50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "id": 16643,
+      "url": "https://www.icc.illinois.gov/docket/P2024-0518/allen-acres",
+      "error": "HTTPSConnectionPool(host='www.icc.illinois.gov', port=443): Max retries exceeded with url: /docket/P2024-0518/allen-acres (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)')))"
+    }
+  ],
+  "researchNotes": [
+    "All 12 existing pins retained and corrected on local and production. Preserved original authors (408 for power projects and 276 for datacenters). Reconciled stale local mappings by matching current title, source and author to the live production identity; re-read each pin immediately before writing. Full backups retained. No automatic merges.",
+    "Primary workbooks: valid August 2026 EIA generator inventory, September 2026 ERCOT GIS, CAISO public queue and NYISO interconnection queue. Same-day acquired files were read directly, not tracker-derived capacities. Exact row extracts and headers retained in the audit folder. Queue requests, study stages and projected dates are not actual construction or operation.",
+    "Spring Valley II is supported by TVA’s April 8, 2026 published record of decision for 200 MWac and a 161 kV substation. Current Panthera page still says 178 MW and summer-2026 construction / early-2028 completion; EIA plant 66858 reports 200 MW and February 2028 with approvals pending. Event dates the ROD publication, not a made-up COD. Operator branding and project-scope conflict remain explicit.",
+    "Alcazar 2 is NYISO C24-094 / C26-0006, 150 MW / 600 MWh / four hours, not the prior 100 MW. These queue entries are not additive. The broader site is 250 MW / 1,000 MWh; NYSERDA’s opened public summary explicitly links C24-093/C24-094 and targets 2029, versus the queue December 2028 COD. Whole-site imagery and NYSERDA map coordinates are qualified, not a claimed phase-only boundary. Town final scope includes 40 acres with about 15 acres of BESS/substation; those scopes are not silently equated.",
+    "Alta Casa queue 1922 distinguishes 515.418 MW battery component from 500 MW export, targeting October 21, 2031 at Tesla 500 kV. Native power uses export rating with explicit basis. No developer, parcel, MWh or construction finding inferred. The retained Stockton-area point is only coarse county context.",
+    "Arida plant 63841 has 370 MW solar plus a 370 MW battery; CAISO 1522 caps combined export at 370 MW. The plant is near Laughlin, not Apex. EIA June 2029 and CAISO September 2027 conflict, and the PUCN July 2025 list’s old 2024 target is stale. No sum of component capacity, assumed four-hour duration, NV Energy ownership or separate Arida 2/3 capacity.",
+    "Austin Bayou Storage I is ERCOT 25INR0235, 150.68 MW, Austin Bayou Solar LLC, June 1, 2027 target and Savana–Seabreeze 345 kV tap. Separate Storage II/III and solar requests are not combined. The older ERCOT transmission-planning PDF corroborates a rounded 150.7 MW; current GIS supplies precision. No MWh or parcel is established.",
+    "CyrusOne NYM2 is Totowa, Passaic County, not a CoreSite Parsippany project. Current operator supplies 6 MW IT, two buildings / 200,000 gross sqft, 50,000 sqft data-center space and 60,000 sqft recovery space. The headline incorrectly labels gross area Technical IT Space; the detailed breakdown controls. SEC merger agreement section 5.12 identifies 50 Madison Road. July 1, 2015 is the confirmed Cervalis acquisition milestone, not original opening; portfolio purchase price is not site capex.",
+    "Groveport’s opened July 2, 2018 minutes approve Compass CMH II at 4470 South Hamilton Road: initial 22,000 sqft and a separate 15,900 sqft future expansion conditional on traffic review. No 60 MW or $320M evidence. Native power removed and datacenter scope corrected. Uptime’s indexed certificate corroborates project identity, while direct retrieval is blocked; the municipal minutes independently support the saved approval.",
+    "Aligned ATL-01 is at 1551 North River Road in Douglas County, as Georgia EPD application 29094 and the current operator page agree. The event is the December 22, 2023 air-permit comment deadline, not construction completion. No supported 72 MW, 300,000 sqft or 2027 COD. Removed the false xAI QTS Atlanta hardware match, chip models, H100 equivalents, assumed generator count and calculated energy/water. Operator market-page cooling language remains qualified as design, not measured facility telemetry.",
+    "Aligned SLC-01’s historical first-building rating is 34 MW / 300,000 sqft in the opened October 30, 2019 operator release; adjacent SLC-02 is separate. Current 55 acres is shared campus scope. Event uses the verified March 20, 2018 development announcement, not an inferred exact opening. Both older operator spec-sheet URLs return 404; the opened historical release substantiates the retained rating independently.",
+    "Abeja’s EIA 68347 rating is 200 MW and July 2028 target, versus later ERCOT 27INR0372 at 200.84 MW and June 7, 2029. Saved date follows later ERCOT, while native power cites EIA explicitly. FERC notice ER26-1030-000 is an interconnection-agreement filing effective December 16, 2025, not a finding of operation. Some derivative sites mislabel queue projects operational; that is rejected.",
+    "AC Ranch II is EIA 68579, 230 MW, June 2029 with approvals pending. Lydian’s current portfolio and February 2026 multi-project financing concern 75 MWac AC Ranch I. Shared coordinates do not prove a shared phase footprint; Phase I construction, images and financing were not copied into Phase II.",
+    "Allen Acres is EIA 70055 near Ransom, 150 MW and May 2029 with approvals not initiated. The downloaded CNMV-hosted Iberdrola September 2026 results, page 25, say construction-start approval for 210 MW. It does not label AC/DC; no conversion inferred. Retained EIA native rating and proposed date with this newer status/rating conflict explicit. County road agreement remains a follow-up, rather than relying on an AI-generated meeting summary.",
+    "Cleared 12 unsupported price estimates and four calculated energy rows per environment. Cleared unsupported datacenter water/hardware fields through delete-and-replace metric APIs; no published measurement was removed as calculated. Preserved author and existing media structure, replacing maps only after verified new blobs.",
+    "Ten coordinate corrections required 30 USGS aerial/topographic/relief maps. Four datacenters use Census-geocoded primary addresses; Alcazar uses NYSERDA’s published proposal point. Spring Valley, Arida, Abeja, AC Ranch II and Allen Acres use EIA reporting points. Exact facility boundaries remain distinct from these approximate points. Alta Casa and Austin Bayou retain six county-context maps.",
+    "Official galleries and linked images were checked. Added eight credited assets: NYM2 building photograph; four Salt Lake City entrance/security/lobby/break-area photographs qualified as campus context; whole-site Alcazar rendering and locator diagram; Spring Valley regional location diagram. Excluded SLC-02-labeled or other-building/new-campus images, generic Aligned Atlanta aerials/skyline, Panthera stock imagery and unrelated Arida/Avangrid/Phase-I facilities. All eight adopted files passed plain-curl byte comparison and visual inspection before use.",
+    "Remaining gallery gaps: no verifiable ATL-01-specific or CMH-II-specific operator photo adopted; no queue-project photo established for Alta Casa or Austin Bayou; no Arida-specific official image or AC Ranch-II-specific gallery found; no Abeja or Allen Acres operator gallery found. Lydian pages opened through web while plain client returned 403; Groveport minutes and NYSERDA summary likewise opened through web despite direct-download blocks. Access failure alone did not trigger a hold.",
+    "Fresh verification passed all 24 environment actions, 44 current Azure files and 24 retained native pages. Both posted maps remain at 1,408 entries; no pins were deleted or added. No deployment, restart or production build. Started the local development server because localhost:3000 was initially offline. User edits to scripts/power/plantShapes.ts were left untouched."
+  ]
+}

@@ -21,6 +21,8 @@ import { saveSiteShape } from '@/server/model/pinSiteShape';
 
 const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, tags: { type: 'string', default: 'Solar,Nuclear,Hydropower' }, limit: { type: 'string' }, restore: { type: 'boolean', default: false } } });
 const MATCH_M = 1000;
+const CONCURRENCY = 1;
+const SERVER = 'https://overpass-api.de/api/interpreter';
 const KEEP = '.scrape/plant-shapes/';
 const SOURCE_OF: Record<string, string[]> = { Solar: ['solar'], Nuclear: ['nuclear'], Hydropower: ['hydro'] };
 type Pt = [number, number];
@@ -65,10 +67,16 @@ function distM(lat: number, lon: number, rs: Ring[]) {
 }
 
 async function overpass(lat: number, lon: number): Promise<El[]> {
-  const q = `[out:json][timeout:60];(way[power~"^(plant|generator)$"](around:${MATCH_M},${lat},${lon});relation[power~"^(plant|generator)$"](around:${MATCH_M},${lat},${lon}););out geom;`;
+  const src = '["plant:source"~"solar|nuclear|hydro"]';
+  const gen = '["generator:source"~"solar|nuclear|hydro"]';
+  const q = `[out:json][timeout:60];(way[power=plant]${src}(around:${MATCH_M},${lat},${lon});relation[power=plant]${src}(around:${MATCH_M},${lat},${lon});way[power=generator]${gen}(around:${MATCH_M},${lat},${lon}););out geom;`;
   for (let attempt = 1; attempt <= 3; attempt++) {
-    const res = await fetch('https://overpass-api.de/api/interpreter', { method: 'POST', headers: { 'User-Agent': 'chronopin-plants/1.0', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ data: q }) });
-    if (res.ok) return (await res.json()).elements ?? [];
+    try {
+      const res = await fetch(SERVER, { method: 'POST', headers: { 'User-Agent': 'chronopin-plants/1.0', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ data: q }), signal: AbortSignal.timeout(70000) });
+      if (res.ok) return (await res.json()).elements ?? [];
+    } catch {
+      // timed out: try again
+    }
     await sleep(5000 * attempt);
   }
   throw new Error('Overpass failed');
@@ -98,22 +106,21 @@ async function main() {
   const todo = flags.limit ? pins.slice(0, Number(flags.limit)) : pins;
   console.log(`${todo.length} candidate pins (${tags.join(', ')})`);
   let matched = 0;
-  for (const pin of todo) {
+  const handle = async (pin: (typeof todo)[number]) => {
     const wanted = SOURCE_OF[pin.tag.replace(/^./, (c) => c.toUpperCase())] ?? SOURCE_OF[pin.tag];
     let els: El[];
     try {
       els = await overpass(pin.lat, pin.lon);
     } catch (e: any) {
       console.log(pin.id, 'overpass error', e.message);
-      continue;
+      return;
     }
-    await sleep(1500);
     const cands = els
       .map((el) => ({ el, rs: rings(el) }))
       .filter(({ el, rs }) => rs.length && wanted.some((w) => (el.tags?.['plant:source'] ?? el.tags?.['generator:source'] ?? '').split(';').includes(w)) && distM(pin.lat, pin.lon, rs) <= MATCH_M && sameName(pin.title, el.tags?.name));
     const plant = cands.filter((c) => c.el.tags?.power === 'plant').sort((a, b) => distM(pin.lat, pin.lon, a.rs) - distM(pin.lat, pin.lon, b.rs))[0];
     const use = !plant ? [] : [plant, ...cands.filter((c) => c.el.tags?.power === 'generator' && c.rs.some((r) => r.some(([x, y]) => plant.rs.some((pr) => inRing(x, y, pr)))))];
-    if (!use.length) continue;
+    if (!use.length) return;
     const features: SiteFeature[] = use.map(({ el, rs }) => ({
       type: 'Feature',
       geometry: rs.length === 1 ? { type: 'Polygon', coordinates: roundCoords([rs[0]]) } : { type: 'MultiPolygon', coordinates: roundCoords(rs.map((r) => [r])) },
@@ -128,7 +135,8 @@ async function main() {
       fs.mkdirSync(KEEP, { recursive: true });
       fs.writeFileSync(`${KEEP}${pin.id}.json`, JSON.stringify(shape));
     }
-  }
+    };
+  for (let i = 0; i < todo.length; i += CONCURRENCY) await Promise.all(todo.slice(i, i + CONCURRENCY).map(handle));
   console.log(`${matched} of ${todo.length} pins ${flags.dry ? 'would get' : 'got'} outlines`);
 }
 

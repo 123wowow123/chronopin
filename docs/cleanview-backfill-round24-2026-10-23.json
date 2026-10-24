@@ -1,0 +1,2939 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill round 24",
+  "outcome": {
+    "audited": 12,
+    "corrected": 10,
+    "held": 2,
+    "environmentActions": 24,
+    "azureFilesVerified": 58,
+    "nativePagesVerified": 20,
+    "unpublishedPricesCleared": 10,
+    "calculatedEnergyRowsCleared": 4,
+    "replacementMaps": 12,
+    "addedGalleryImages": 24,
+    "addedProjectDiagrams": 4,
+    "postedMapEntries": 1406,
+    "deployed": false
+  },
+  "plan": {
+    "solar-amerada-tx": {
+      "patch": {
+        "title": "Amerada Solar: 300 MW EIA Plan, Late-2028 Queue Target",
+        "description": "EIA plant 67649 identifies Cypress Creek Renewables’ proposed 300 MW Amerada solar generator in Freestone County, with approvals pending and July 2029 planned operation. Later ERCOT request 26INR0082 reports 301.57 MW and December 30, 2028 projected COD; construction is not established.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Amerada Solar 26INR0082",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — Amerada 67649",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>ERCOT lists Amerada Solar LLC, screening completed and full study started without an IA, at Richland–Big Brown 345 kV. The separate Amerada Storage request is not added to solar export. The old $330M and April 2028 construction/COD claims have no opened support.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: December 30, 2028 is the later ERCOT projected COD, versus EIA July 2029; neither establishes actual service.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-12-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 30, 2028 is the later ERCOT projected COD, versus EIA July 2029; neither establishes actual service.",
+        "company": "Cypress Creek Renewables",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Cypress_Creek_Renewables",
+        "address": "Freestone County, Texas; retained rounded EIA 67649 reporting point, exact project footprint unverified",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Cypress Creek Renewables",
+          "Freestone County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. EIA plant 67649 identifies Cypress Creek Renewables’ proposed 300 MW Amerada solar generator in Freestone County, with approvals pending and July 2029 planned operation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve queue versus EIA target and rating basis. Find current project permit, exact footprint and project-specific operator gallery; original project URL is unverified."
+      ]
+    },
+    "battery-aramis-i-solar-project-ca": {
+      "patch": {
+        "title": "Aramis Battery: 100 MW EIA Rating; County Approval in March 2021",
+        "description": "Alameda County’s filed Notice of Determination records March 4, 2021 approval of the 347-acre Resource Management Avoidance Alternative for Aramis. EIA plant 66678 separately reports 100 MW solar and 100 MW battery, under construction at no more than 50% completion in August 2026.",
+        "sourceUrl": "https://www.acgov.org/cda/planning/landuseprojects/documents/NOD_AlamedaCountyClerk_21031011291_stamped.pdf",
+        "references": [
+          {
+            "url": "https://www.acgov.org/cda/planning/landuseprojects/documents/NOD_AlamedaCountyClerk_21031011291_stamped.pdf",
+            "title": "Aramis — County Notice of Determination, March 4 approval / March 10 filing",
+            "confidence": 95,
+            "publishedDate": "2021-03-10"
+          },
+          {
+            "url": "https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf",
+            "title": "Aramis Solar Energy Generation and Storage Project — Final EIR Volume II",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — Aramis 66678",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue — Aramis Power Plant 1349",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The county applicant is IP Aramis LLC, an Intersect Power subsidiary. The filed March 2021 determination controls the approval milestone; earlier November 2020 pages in the packet are not the latest approval. The 2020 EIR alternative diagram labels 385 acres and is historical, not the final approved 347-acre footprint.<cite data-ref=\"https://www.acgov.org/cda/planning/landuseprojects/documents/NOD_AlamedaCountyClerk_21031011291_stamped.pdf\"></cite></li><li>EIA’s September 2026 and CAISO’s July 31, 2026 targets have passed without opened proof of actual COD. CAISO lists 101.4 MW solar, 101.3 MW storage and 100 MW combined export at Cayetano 230 kV. Native 100 MW represents EIA battery only; the EIR four-hour design objective is not an explicit verified 400 MWh installed rating. Removed $140M and invented April 2027 COD.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>Timeline: Confirmed March 4, 2021 county approval in the filed Notice of Determination. This is not a COD; queue and EIA operating targets are unverified.<cite data-ref=\"https://www.acgov.org/cda/planning/landuseprojects/documents/NOD_AlamedaCountyClerk_21031011291_stamped.pdf\"></cite></li><li>2020 Final EIR Volume II Figure 5-1, PDF page 495: historical Resource Management Avoidance Alternative site plan, labeled 385-acre fenceline. The March 2021 approval describes a 347-acre alternative; this diagram is not an as-built boundary or construction photograph. Credit: HELIX Environmental Planning / Alameda County; underlying DigitalGlobe 2018 imagery as shown.<cite data-ref=\"https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2021-03-04T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed March 4, 2021 county approval in the filed Notice of Determination. This is not a COD; queue and EIA operating targets are unverified.",
+        "company": "IP Aramis LLC",
+        "companyWikiUrl": null,
+        "address": "North Livermore Avenue / Manning Road, Alameda County, California; retained rounded EIA reporting point, not a surveyed approved boundary",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Solar",
+          "Intersect Power",
+          "Alameda County",
+          "California"
+        ],
+        "media": [
+          {
+            "id": 24954,
+            "thumbName": "d7bf092e-d772-4479-bdeb-f82671e4e861.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/battery-aramis-i-solar-project-ca-aerial-ortho.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24955,
+            "thumbName": "df0f48a7-4bf0-4ca0-8837-7f4d56aa33f2.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/battery-aramis-i-solar-project-ca-usgs-topo-quad.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24956,
+            "thumbName": "b9e650b9-ac7e-44d8-8802-5509c9659247.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/battery-aramis-i-solar-project-ca-regional-corridor.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/aramis-alternative.png",
+            "originalWidth": 1546,
+            "originalHeight": 2000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 100,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Alameda County’s filed Notice of Determination records March 4, 2021 approval of the 347-acre Resource Management Avoidance Alternative for Aramis. EIA plant 66678 separa"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify actual commercial operation, current phase capacity, explicit battery MWh and current approved footprint. EIR alternatives are historical; no verified operating-facility photo found."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "battery-arida-solar-hybrid-nv": {
+      "delete": true,
+      "researchFinding": "Duplicate identity: Arida battery is already represented by retained pin 16615 on both local and production. EIA 63841 is the same 370 MW battery unit at the same reporting point, and CAISO 1522 is the same hybrid. No independent second battery phase is established. Hold redundant 16695; preserve 16615 and both original authors, with no automatic merge or claim of cancellation.",
+      "sourcesChecked": [
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.chronopin.com/api/pins/16615"
+      ],
+      "gaps": [
+        "Duplicate identity: Arida battery is already represented by retained pin 16615 on both local and production. EIA 63841 is the same 370 MW battery unit at the same reporting point, and CAISO 1522 is the same hybrid. No independent second battery phase is established. Hold redundant 16695; preserve 16615 and both original authors, with no automatic merge or claim of cancellation."
+      ]
+    },
+    "battery-arkansas-cypress-solar-station-ar": {
+      "patch": {
+        "title": "Arkansas Cypress: 350 MW Battery Under Construction, 2029 Target",
+        "description": "Entergy’s October 19, 2026 release explicitly says Arkansas Cypress Solar and Battery is under construction in Jefferson County. Its current October-2026 portfolio lists 600 MW solar and 350 MW battery targeting 2029; EIA plant 69989 reports January 2029 planned operation.",
+        "sourceUrl": "https://www.entergy.com/renewable-energy",
+        "references": [
+          {
+            "url": "https://www.entergy.com/renewable-energy",
+            "title": "Entergy Renewable Energy — Arkansas Cypress, as of October 2026",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — Arkansas Cypress Solar Station 69989",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers",
+            "title": "Entergy Arkansas announces enhanced partnership at Google West Memphis campus, delivering at least $500M in new savings for all customers",
+            "confidence": 95,
+            "publishedDate": "2026-10-19"
+          }
+        ],
+        "longFormSummary": "<ul><li>The current opened operator table says 2029, superseding stale search snippets that still say 2028. EIA’s August approvals-not-initiated code is a dated inventory report, not a current finding that no application exists. Native capacity is battery-only 350 MW; the shared 1,659 MW interconnection includes a separate 730 MW combined-cycle plant and is not battery or solar capacity.<cite data-ref=\"https://www.entergy.com/renewable-energy\"></cite></li><li>No opened support for the former $420M, 1,400 MWh, four-hour rating or November 2028 COD. Exact battery footprint and current approval remain research gaps.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>Timeline: January 1 is month-only precision for EIA January 2029; current operator says year 2029. Neither is an exact confirmed operating day.<cite data-ref=\"https://www.entergy.com/renewable-energy\"></cite></li><li>The October 19 operator construction statement supersedes EIA’s dated August approvals-not-initiated status. New Driver and Jones Mill batteries and their combined 2,800 MWh program total are not assigned to Cypress as a standalone battery energy rating.<cite data-ref=\"https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "January 1 is month-only precision for EIA January 2029; current operator says year 2029. Neither is an exact confirmed operating day.",
+        "company": "Entergy Arkansas LLC",
+        "companyWikiUrl": null,
+        "address": "Jefferson County / White Bluff area, Arkansas; retained approximate reporting point, exact battery parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Solar",
+          "Entergy",
+          "Jefferson County",
+          "Arkansas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 350,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Entergy’s current renewable-energy table, explicitly current as of October 2026, lists Arkansas Cypress in Jefferson County for 2029: 600 MW solar and 350 MW battery, own"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify exact battery parcel, current construction/approval scope, standalone published battery MWh and eventual COD. Portfolio imagery is not verified as this proposed facility."
+      ]
+    },
+    "battery-atlas-bess-iv-llc-az": {
+      "patch": {
+        "title": "Atlas IV BESS: 150 MW / 600 MWh, Mid-2027 Operator Target",
+        "description": "TransGrid Energy’s project portfolio lists Atlas IV BESS under construction in La Paz County, with 150 MW / 600 MWh and a mid-2027 commercial-operation target. It separately lists the 300 MW Atlas IV PV project targeting Q4 2026.",
+        "sourceUrl": "https://www.transgridenergy.com/projects/",
+        "references": [
+          {
+            "url": "https://www.transgridenergy.com/projects/",
+            "title": "TransGrid Energy — Atlas IV BESS / Atlas IV PV projects",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — ATLAS BESS IV LLC 68321",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>EIA reports 150 MW battery, more than 50% construction complete and March 2027 planned operation. The current operator’s mid-2027 target is recorded separately rather than silently equating schedules. Solar capacity is not added to battery discharge. The prior $180M and December 2027 date are unsupported; no WAPA interconnection is inferred.<cite data-ref=\"https://www.transgridenergy.com/projects/\"></cite></li><li>Timeline: July 1 is an explicitly approximate midyear placeholder for operator mid-2027; EIA instead reports March 2027. Actual COD remains unverified.<cite data-ref=\"https://www.transgridenergy.com/projects/\"></cite></li><li>Operator construction image: Atlas IV BESS and PV facility under construction in La Paz County, Arizona. Solar rows are shared Atlas IV PV context, not battery capacity or proof of COD. Credit: TransGrid Energy.<cite data-ref=\"https://www.transgridenergy.com/projects/\"></cite></li><li>Operator construction image: Atlas IV BESS project. Solar rows are shared Atlas IV PV context, not battery capacity or proof of COD. Credit: TransGrid Energy.<cite data-ref=\"https://www.transgridenergy.com/projects/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "July 1 is an explicitly approximate midyear placeholder for operator mid-2027; EIA instead reports March 2027. Actual COD remains unverified.",
+        "company": "ATLAS BESS IV LLC",
+        "companyWikiUrl": null,
+        "address": "La Paz County, Arizona; retained rounded EIA 68321 reporting point, not a surveyed battery boundary",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "TransGrid Energy",
+          "La Paz County",
+          "Arizona",
+          "Planned"
+        ],
+        "media": [
+          {
+            "id": 24971,
+            "thumbName": "0b5b526b-6b31-40ef-a6b1-849f70097017.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/battery-atlas-bess-iv-llc-az-aerial-ortho.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24972,
+            "thumbName": "3bda1de6-d4c8-43b6-8ab6-f26aa1cac662.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/battery-atlas-bess-iv-llc-az-usgs-topo-quad.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24973,
+            "thumbName": "ed66363b-5a41-4400-852e-4f4b2f1d2294.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/battery-atlas-bess-iv-llc-az-regional-corridor.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/atlas-1.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 900
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/atlas-2.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 890
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. TransGrid Energy’s project portfolio lists Atlas IV BESS under construction in La Paz County, with 150 MW / 600 MWh and a mid-2027 commercial-operation target. It separat"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify eventual COD, exact battery footprint and current interconnection filing. Published construction images are not energization evidence.",
+        "TransGrid Energy company resolver returns an unrelated Hanwha Group Wikipedia URL; use the EIA legal project entity and retain operator evidence in text, pending company metadata repair."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    "dc-aligned-chicago-ord-02-il": {
+      "patch": {
+        "title": "Aligned ORD-02: 36 MW, 228,768 Sqft Operator Specification",
+        "description": "Aligned’s October 15, 2024 ORD-02 specification lists 36 MW critical capacity and 228,768 gross sqft at 501 Northwest Avenue, Northlake. Its 18.5-acre campus is shared with ORD-01, a separate building at 505 Northwest Avenue.",
+        "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+        "references": [
+          {
+            "url": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+            "title": "Chicago II IL Data Center ORD-02 — Aligned specification",
+            "confidence": 95,
+            "publishedDate": "2024-10-15"
+          },
+          {
+            "url": "https://aligneddc.com/chicago-data-centers/",
+            "title": "Chicago Data Centers | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/press-release/Aligned-launches-chicago-hyperscale-data-center-campus-and-breaks-ground-on-second-adjacent-facility/",
+            "title": "Aligned Launches Chicago Hyperscale Data Center Campus and Breaks Ground on Second Adjacent Facility",
+            "confidence": 95,
+            "publishedDate": "2022-04-19"
+          }
+        ],
+        "longFormSummary": "<ul><li>The April 19, 2022 announcement records groundbreaking for the second adjacent facility, not ORD-02 opening. Campus approximately 72 MW and 170 MW substation service are distinct from building critical capacity. The former modeled 50.4 MW, $1.36B and fabricated daily consumption are removed.<cite data-ref=\"https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf\"></cite></li><li>Timeline: Confirmed April 19, 2022 second-building groundbreaking announcement. The later sheet date is not a verified opening day.<cite data-ref=\"https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf\"></cite></li><li>Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li><li>Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li><li>Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li><li>Operator ORD-02 gallery: Chicago-ORD-02-Data-Center Aligned Data Centers. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li><li>Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li><li>Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li><li>Operator ORD-02 gallery: Chicago ORD-02 Data Center Aerial Aligned. Not evidence of exact opening date or measured resource use. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/chicago-data-centers/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-04-19T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed April 19, 2022 second-building groundbreaking announcement. The later sheet date is not a verified opening day.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 41.913918308687,
+        "longitude": -87.919288029251,
+        "address": "501 Northwest Avenue, Northlake, Illinois; Census-geocoded operator building address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Cook County",
+          "Illinois"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-1.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-2.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-3.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-4.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-5.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-6.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-7.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 36,
+        "kind": "usage",
+        "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Aligned’s October 15, 2024 ORD-02 specification lists 36 MW critical capacity and 228,768 gross sqft at 501 Northwest Avenue, Northlake. Its 18.5-acre campus is shared wi"
+      },
+      "datacenter": {
+        "acres": 18.5,
+        "sqft": 228768,
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+        "note": "36 MW / 228,768 gross sqft is ORD-02; 18.5 acres is shared campus. No measured energy, daily water or installed hardware count published."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify exact ORD-02 opening/energization date and current metered usage. Do not assign shared-campus service or ORD-01 floor area to ORD-02."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 7
+    },
+    "dc-aligned-dallas-dfw-02-tx": {
+      "patch": {
+        "title": "Aligned DFW-02: 36 MW Critical Capacity, 220,000 Sqft",
+        "description": "Aligned’s September 13, 2022 announcement specifies DFW-02 at 36 MW critical capacity and 220,000 gross sqft, including 185,000 sqft of data hall, on its shared 19-acre Plano campus. A subsequent operator blog describes the building’s grand opening and new North America headquarters.",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+            "title": "Aligned to Expand Dallas-Fort Worth Metro Area Campus with Second Hyperscale Data Center",
+            "confidence": 95,
+            "publishedDate": "2022-09-13"
+          },
+          {
+            "url": "https://aligneddc.com/dallas-data-centers/",
+            "title": "Dallas Data Centers | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+            "title": "Innovation Takes Root: Aligned Opens New Data Center & HQ in DFW",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Use the primary 36 MW critical rating; the old 50.4 MW was modeled facility demand, not a published rating. Correct floor area from 188,480 to 220,000 gross sqft. The old $1.36B and March 2027 COD have no opened support. Shared-campus address and land area do not identify DFW-01 as this building.<cite data-ref=\"https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/\"></cite></li><li>Timeline: Confirmed September 13, 2022 second-building expansion announcement, not COD. The opened grand-opening blog establishes a later milestone without an exact event day adopted here.<cite data-ref=\"https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/\"></cite></li><li>Operator DFW-02 gallery: Aligned DFW-02 Lobby. Not evidence of exact opening date or installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/dallas-data-centers/\"></cite></li><li>Operator DFW-02 gallery: Aligned Data Center office lobby DFW02. Not evidence of exact opening date or installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/dallas-data-centers/\"></cite></li><li>Operator DFW-02 gallery: Aligned Data Center DFW02 meeting space. Not evidence of exact opening date or installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/dallas-data-centers/\"></cite></li><li>Operator DFW-02 gallery: Aligned DFW-02 indoor photo. Not evidence of exact opening date or installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/dallas-data-centers/\"></cite></li><li>Operator DFW-02 grand-opening / headquarters blog gallery, image 1. Event context only; no exact event date inferred. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/\"></cite></li><li>Operator DFW-02 grand-opening / headquarters blog gallery, image 2. Event context only; no exact event date inferred. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/\"></cite></li><li>Operator DFW-02 grand-opening / headquarters blog gallery, image 3. Event context only; no exact event date inferred. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/\"></cite></li><li>Operator DFW-02 grand-opening / headquarters blog gallery, image 4. Event context only; no exact event date inferred. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-09-13T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed September 13, 2022 second-building expansion announcement, not COD. The opened grand-opening blog establishes a later milestone without an exact event day adopted here.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 33.009779476163,
+        "longitude": -96.678415834692,
+        "address": "2800 Summit Avenue, Plano, Texas; Census-geocoded shared-campus address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Collin County",
+          "Texas"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-1.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-2.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-3.jpg",
+            "originalWidth": 240,
+            "originalHeight": 300
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-4.jpg",
+            "originalWidth": 214,
+            "originalHeight": 300
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-1.jpg",
+            "originalWidth": 1498,
+            "originalHeight": 1080
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-2.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 732
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-3.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 743
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-4.jpg",
+            "originalWidth": 683,
+            "originalHeight": 1024
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 36,
+        "kind": "usage",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Aligned’s September 13, 2022 announcement specifies DFW-02 at 36 MW critical capacity and 220,000 gross sqft, including 185,000 sqft of data hall, on its shared 19-acre P"
+      },
+      "datacenter": {
+        "acres": 19,
+        "sqft": 220000,
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+        "note": "36 MW critical, 220,000 gross sqft, 185,000 sqft data hall. 19 acres is shared Plano campus. No actual daily water/energy or installed hardware inferred."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify exact DFW-02 grand-opening/energization day and current installed versus design capacity. Event photos do not establish an exact operating date."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 8
+    },
+    "dc-aligned-iad01-va": {
+      "patch": {
+        "title": "Aligned IAD01: 60 MW Expansion Design; Phase One Delivered in 2019",
+        "description": "Aligned’s September 16, 2019 release describes completion of Ashburn phase one: 12 MW built out within a 368,755-sqft facility expandable to 60 MW, with formal commissioning under way. Its case study identifies IAD01 as the initial approximately 370,000-sqft, 60 MW facility, separate from IAD02.",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+            "title": "Aligned Completes Phase One of Ashburn Data Center Campus",
+            "confidence": 95,
+            "publishedDate": "2019-09-16"
+          },
+          {
+            "url": "https://aligneddc.com/wp-content/uploads/2025/10/Aligned-Ashburn-Case-Study.pdf",
+            "title": "Aligned Ashburn Data Center Campus — Case Study",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/northern-virginia-data-centers/",
+            "title": "Northern Virginia Data Centers | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 60 MW is the published IAD01 expansion/design rating, not proof all 60 MW was energized on the release date or metered consumption. The case study separately uses 80 MW in one results paragraph, while its introduction and named IAD01 summary use 60 MW; that internal discrepancy remains unresolved. Gross area uses the precise 368,755 sqft release value rather than rounding to 370,000.<cite data-ref=\"https://aligneddc.com/wp-content/uploads/2025/10/Aligned-Ashburn-Case-Study.pdf\"></cite></li><li>Current operator address is 21890 Uunet Drive, not 21535 Smith Switch Road. The campus 26 acres and separate 120 MW IAD02 are not IAD01-only land or capacity. Removed modeled 107.9 MW / 77 MW IT, $2.92B and invented daily consumption.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Timeline: Confirmed September 16, 2019 phase-one completion announcement with formal commissioning under way, not exact COD or full 60 MW energization.<cite data-ref=\"https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/\"></cite></li><li>Operator IAD01 gallery: IAD-01 Data Hall. Images do not establish energized building capacity or metered consumption. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator IAD01 gallery: IAD-01 Lobby. Images do not establish energized building capacity or metered consumption. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator IAD01 gallery: IAD-01 Kitchen. Images do not establish energized building capacity or metered consumption. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator IAD01 gallery: IAD-01 NOC. Images do not establish energized building capacity or metered consumption. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator IAD01 gallery: IAD-01 Work Area_1. Images do not establish energized building capacity or metered consumption. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator IAD01 gallery: IAD-01 Reception_3. Images do not establish energized building capacity or metered consumption. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2019-09-16T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed September 16, 2019 phase-one completion announcement with formal commissioning under way, not exact COD or full 60 MW energization.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 39.013621241468,
+        "longitude": -77.469201883139,
+        "address": "21890 Uunet Drive, Ashburn, Virginia; Census-geocoded operator IAD01 address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Loudoun County",
+          "Virginia"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-1.jpg",
+            "originalWidth": 320,
+            "originalHeight": 213
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-2.jpg",
+            "originalWidth": 320,
+            "originalHeight": 213
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-3.jpg",
+            "originalWidth": 320,
+            "originalHeight": 213
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-4.jpg",
+            "originalWidth": 320,
+            "originalHeight": 213
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-5.jpg",
+            "originalWidth": 320,
+            "originalHeight": 213
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-6.jpg",
+            "originalWidth": 320,
+            "originalHeight": 213
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 60,
+        "kind": "usage",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+        "note": "60 MW IAD01 expansion/design rating; 12 MW initial build-out in 2019. Case study has internal 80 MW wording conflict. Not measured consumption."
+      },
+      "datacenter": {
+        "acres": 26,
+        "sqft": 368755,
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+        "note": "12 MW opening build-out; 60 MW expansion/design rating. 368,755 gross sqft from release; 26 acres is shared campus. Case study contains an unresolved 80 MW paragraph."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Resolve case-study internal 60 versus 80 MW wording and verify current installed IAD01 load. No inferred metered use or exact full-building COD."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 6
+    },
+    "dc-aligned-neo-01-oh": {
+      "patch": {
+        "title": "Aligned NEO-01: Perkins Township Brownfield Campus Milestone",
+        "description": "Aligned’s September 25, 2023 announcement records acquisition of a 129-acre Perkins Township brownfield for a planned four-building campus, with NEO-01 first. The current operator page lists 2509 Hayes Avenue, Sandusky, and its redevelopment case study describes the site’s return to productive use.",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/",
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/",
+            "title": "Aligned Data Centers Expands North American Footprint with New Hyperscale Campus in Northeast Ohio",
+            "confidence": 95,
+            "publishedDate": "2023-09-25"
+          },
+          {
+            "url": "https://aligneddc.com/northeast-ohio-data-centers/",
+            "title": "Northeast Ohio Data Centers | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/case-studies/brownfield-redevelopment-perkins-township-ohio/",
+            "title": "From Brownfield to Opportunity: The Transformation of a Historic Perkins Township Site",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>No opened primary evidence assigns the former 82.8 MW to NEO-01 IT load, or supports $2.73B, a May 2027 COD or the old gross area. Native power is removed until a building-specific specification is found. Campus land is not a building footprint.<cite data-ref=\"https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/\"></cite></li><li>The operator’s projected 99% reduction in water use/discharge compares with former industrial operations; it is neither measured daily water consumption nor a generic comparison against other data centers. Do not convert it into a daily reading.<cite data-ref=\"https://aligneddc.com/case-studies/brownfield-redevelopment-perkins-township-ohio/\"></cite></li><li>Timeline: Confirmed September 25, 2023 land-acquisition/campus announcement. Current redevelopment content is not evidence of an exact NEO-01 commercial-operation date.<cite data-ref=\"https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/\"></cite></li><li>Operator case-study exterior image of NEO-01 at the redeveloped Perkins Township site, with operator text overlay. Not proof of current installed MW or exact opening day. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/case-studies/brownfield-redevelopment-perkins-township-ohio/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2023-09-25T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed September 25, 2023 land-acquisition/campus announcement. Current redevelopment content is not evidence of an exact NEO-01 commercial-operation date.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 41.430425822672,
+        "longitude": -82.716323360142,
+        "address": "2509 Hayes Avenue, Sandusky / Perkins Township, Ohio; Census-geocoded operator campus address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Erie County",
+          "Ohio"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/neo-case-1.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 576
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "acres": 129,
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://aligneddc.com/northeast-ohio-data-centers/",
+        "note": "129 acres is planned multi-building campus. NEO-01 IT capacity, gross building area, daily water, installed generators and exact COD unverified."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain exact NEO-01 building specification, energization date and measured resource readings. Current case study does not establish building MW; older water-case PDF is inaccessible. Generic Ohio-map release hero rejected."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-adamstown-solar-tx": {
+      "delete": true,
+      "researchFinding": "Duplicate identity: PUCT filing explicitly names Adams Creek Solar Project, LLC (Adamstown Solar), ERCOT 21INR0210. Retained pin 16681 already represents EIA 70300 / the same 250 MW Adams Creek project on local and production. No independent Adamstown project/phase established. Hold redundant 16730, preserve 16681 unchanged; no automatic merge or cancellation claim.",
+      "sourcesChecked": [
+        "https://interchange.puc.texas.gov/Documents/35077_2025_1453242.PDF",
+        "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://www.adamscreeksolarproject.com/",
+        "https://www.chronopin.com/api/pins/16681"
+      ],
+      "gaps": [
+        "Duplicate identity: PUCT filing explicitly names Adams Creek Solar Project, LLC (Adamstown Solar), ERCOT 21INR0210. Retained pin 16681 already represents EIA 70300 / the same 250 MW Adams Creek project on local and production. No independent Adamstown project/phase established. Hold redundant 16730, preserve 16681 unchanged; no automatic merge or cancellation claim."
+      ]
+    },
+    "solar-aes-waiawa-phase-2-solar-hi": {
+      "patch": {
+        "title": "Waiawa Phase 2: 30 MW Solar / 240 MWh Storage Construction Milestone",
+        "description": "AES’s Waiawa Phase 2 page states construction began August 21, 2023 for 30 MWac solar and 240 MWh storage on up to 387 acres. Its updated project schedule targets operation in 2026; EIA plant 66066 lists September 2026 planned operation and more than 50% construction complete as of August.",
+        "sourceUrl": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+        "references": [
+          {
+            "url": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+            "title": "AES Hawaii — Waiawa Phase 2 Solar + Storage",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — Waiawa Phase 2 66066",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>This is distinct from the existing 36 MW Waiawa Solar Power project. EIA lists 30 MW solar and 30 MW battery separately; native 30 MW represents solar only. The operator specifies interconnection to two 46 kV circuits, Waiau–Mililani and Wahiawa–Waimano, and publishes historical 2021 proposed site maps.<cite data-ref=\"https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage\"></cite></li><li>The September 2026 EIA target has passed; the July-2026 operator schedule only shows the 2026 operating year. Neither proves actual COD. No $75M project capital budget is verified; economic-output projections are not capital cost.<cite data-ref=\"https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage\"></cite></li><li>Timeline: Confirmed August 21, 2023 construction start stated by AES. Actual COD is unverified; no exact 2026 day inferred from the updated schedule.<cite data-ref=\"https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage\"></cite></li><li>Operator Phase 2 diagram: Waiawa Project Site Map March 2021. March/April 2021 maps are historical proposals; July-2026 schedule targets operation in 2026, not a verified COD. Credit: AES Hawaii; underlying imagery credits as shown.<cite data-ref=\"https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage\"></cite></li><li>Operator Phase 2 diagram: Waiawa Site Layout April 2021. March/April 2021 maps are historical proposals; July-2026 schedule targets operation in 2026, not a verified COD. Credit: AES Hawaii; underlying imagery credits as shown.<cite data-ref=\"https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage\"></cite></li><li>Operator Phase 2 diagram: A project schedule for Waiawa Phase 2 Solar + Storage.. March/April 2021 maps are historical proposals; July-2026 schedule targets operation in 2026, not a verified COD. Credit: AES Hawaii; underlying imagery credits as shown.<cite data-ref=\"https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2023-08-21T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed August 21, 2023 construction start stated by AES. Actual COD is unverified; no exact 2026 day inferred from the updated schedule.",
+        "company": "AES Distributed Energy",
+        "companyWikiUrl": null,
+        "address": "Waiawa, Oahu, Hawaii; retained rounded EIA 66066 Phase 2 reporting point, not the separate operating Waiawa Solar Power plant",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Battery Storage",
+          "AES",
+          "Honolulu County",
+          "Hawaii"
+        ],
+        "media": [
+          {
+            "id": 25015,
+            "thumbName": "1aa052dd-fac8-4a23-a447-dac4a371b09d.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/solar-aes-waiawa-phase-2-solar-hi-aerial-ortho.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 25016,
+            "thumbName": "2c14d007-7296-4f1c-84c8-92ae54c5c102.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/solar-aes-waiawa-phase-2-solar-hi-usgs-topo-quad.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 25017,
+            "thumbName": "6dd342df-c4e0-430b-9a15-58e827b01ed7.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/solar-aes-waiawa-phase-2-solar-hi-regional-corridor.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-2.webp",
+            "originalWidth": 720,
+            "originalHeight": 480
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-3.webp",
+            "originalWidth": 720,
+            "originalHeight": 480
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-4.webp",
+            "originalWidth": 1132,
+            "originalHeight": 630
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 30,
+        "kind": "generation",
+        "sourceUrl": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. AES’s Waiawa Phase 2 page states construction began August 21, 2023 for 30 MWac solar and 240 MWh storage on up to 387 acres. Its updated project schedule targets operati"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify actual Phase 2 commercial operation and current approved/as-built footprint. Historical maps and the 2026 schedule do not prove energization. No header ceremony photo adopted without independent event identification."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 3
+    },
+    "solar-antila-solar-tx": {
+      "patch": {
+        "title": "Antila Solar: 500 MW ERCOT Request, November 2027 Target",
+        "description": "ERCOT September 2026 GIS identifies Antila Solar request 27INR0500 in Borden County, with applicant Antila Solar LLC, 500 MW and November 30, 2027 projected COD. Screening is complete and full study started; this is not a construction finding.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Antila Solar 27INR0500",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.pressreporter.com/issues/2026-02-03/pages/8/",
+            "title": "WETT public notice — Buck Canyon to Juno Solar 3 and Antila Solar 345 kV transmission lines, PUCT docket 59199",
+            "confidence": 95,
+            "publishedDate": "2026-02-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The queue identifies Buck Canyon 345 kV as POI. No opened primary source establishes the former SB Energy parent attribution, $550M, 4,200 acres or construction claim. Retain the legal queue applicant and explicitly approximate county point; do not confuse an unrelated similarly named foreign company.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: November 30, 2027 is ERCOT projected COD, not confirmed service or market settlement.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>WETT’s published February 3, 2026 public notice identifies SE DC DevCo, LLC as developer of the two solar facilities totaling approximately 1 GW. Their collector stations are about one mile east-northeast of FM 1054 N / US 180. This corroborates transmission-development context, not a surveyed solar footprint, proven ultimate parent or COD. The $84.3M notice estimate is for transmission, not Antila solar construction.<cite data-ref=\"https://www.pressreporter.com/issues/2026-02-03/pages/8/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-11-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "November 30, 2027 is ERCOT projected COD, not confirmed service or market settlement.",
+        "company": "Antila Solar LLC",
+        "companyWikiUrl": null,
+        "address": "Borden County, Texas; retained approximate county/project-area point pending parcel evidence",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Borden County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT September 2026 GIS identifies Antila Solar request 27INR0500 in Borden County, with applicant Antila Solar LLC, 500 MW and November 30, 2027 projected COD. Screenin"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve legal queue applicant versus SE DC DevCo development entity and ultimate parent; obtain current PUCT 59199 outcome, exact solar parcel and project-specific gallery. No exact-name August EIA plant match."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-amerada-tx",
+      "id": 16684,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve queue versus EIA target and rating basis. Find current project permit, exact footprint and project-specific operator gallery; original project URL is unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-aramis-i-solar-project-ca",
+      "id": 16691,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual commercial operation, current phase capacity, explicit battery MWh and current approved footprint. EIR alternatives are historical; no verified operating-facility photo found."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-arida-solar-hybrid-nv",
+      "id": 16695,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-arkansas-cypress-solar-station-ar",
+      "id": 16699,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact battery parcel, current construction/approval scope, standalone published battery MWh and eventual COD. Portfolio imagery is not verified as this proposed facility."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-atlas-bess-iv-llc-az",
+      "id": 16702,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify eventual COD, exact battery footprint and current interconnection filing. Published construction images are not energization evidence.",
+        "TransGrid Energy company resolver returns an unrelated Hanwha Group Wikipedia URL; use the EIA legal project entity and retain operator evidence in text, pending company metadata repair."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-chicago-ord-02-il",
+      "id": 16706,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact ORD-02 opening/energization date and current metered usage. Do not assign shared-campus service or ORD-01 floor area to ORD-02."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "id": 16711,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact DFW-02 grand-opening/energization day and current installed versus design capacity. Event photos do not establish an exact operating date."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-iad01-va",
+      "id": 16718,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve case-study internal 60 versus 80 MW wording and verify current installed IAD01 load. No inferred metered use or exact full-building COD."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-neo-01-oh",
+      "id": 16724,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain exact NEO-01 building specification, energization date and measured resource readings. Current case study does not establish building MW; older water-case PDF is inaccessible. Generic Ohio-map release hero rejected."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-adamstown-solar-tx",
+      "id": 16730,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-aes-waiawa-phase-2-solar-hi",
+      "id": 16736,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual Phase 2 commercial operation and current approved/as-built footprint. Historical maps and the 2026 schedule do not prove energization. No header ceremony photo adopted without independent event identification."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-antila-solar-tx",
+      "id": 16743,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve legal queue applicant versus SE DC DevCo development entity and ultimate parent; obtain current PUCT 59199 outcome, exact solar parcel and project-specific gallery. No exact-name August EIA plant match."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-amerada-tx",
+      "id": 16684,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve queue versus EIA target and rating basis. Find current project permit, exact footprint and project-specific operator gallery; original project URL is unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-aramis-i-solar-project-ca",
+      "id": 16691,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual commercial operation, current phase capacity, explicit battery MWh and current approved footprint. EIR alternatives are historical; no verified operating-facility photo found."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-arida-solar-hybrid-nv",
+      "id": 16695,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-arkansas-cypress-solar-station-ar",
+      "id": 16699,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact battery parcel, current construction/approval scope, standalone published battery MWh and eventual COD. Portfolio imagery is not verified as this proposed facility."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-atlas-bess-iv-llc-az",
+      "id": 16702,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify eventual COD, exact battery footprint and current interconnection filing. Published construction images are not energization evidence.",
+        "TransGrid Energy company resolver returns an unrelated Hanwha Group Wikipedia URL; use the EIA legal project entity and retain operator evidence in text, pending company metadata repair."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-chicago-ord-02-il",
+      "id": 16706,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact ORD-02 opening/energization date and current metered usage. Do not assign shared-campus service or ORD-01 floor area to ORD-02."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "id": 16711,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact DFW-02 grand-opening/energization day and current installed versus design capacity. Event photos do not establish an exact operating date."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-iad01-va",
+      "id": 16718,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve case-study internal 60 versus 80 MW wording and verify current installed IAD01 load. No inferred metered use or exact full-building COD."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-neo-01-oh",
+      "id": 16724,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain exact NEO-01 building specification, energization date and measured resource readings. Current case study does not establish building MW; older water-case PDF is inaccessible. Generic Ohio-map release hero rejected."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-adamstown-solar-tx",
+      "id": 16730,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-aes-waiawa-phase-2-solar-hi",
+      "id": 16736,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual Phase 2 commercial operation and current approved/as-built footprint. Historical maps and the 2026 schedule do not prove energization. No header ceremony photo adopted without independent event identification."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-antila-solar-tx",
+      "id": 16743,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve legal queue applicant versus SE DC DevCo development entity and ultimate parent; obtain current PUCT 59199 outcome, exact solar parcel and project-specific gallery. No exact-name August EIA plant match."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16684,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16691,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16695,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16699,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16702,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16706,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16711,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16718,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16724,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16730,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16736,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16743,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16684,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16691,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16695,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16699,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16702,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16706,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16711,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16718,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16724,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16730,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16736,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16743,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-aramis-i-solar-project-ca-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 273114
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-aramis-i-solar-project-ca-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 248301
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-aramis-i-solar-project-ca-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 400754
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-arkansas-cypress-solar-station-ar-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 374075
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-arkansas-cypress-solar-station-ar-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 113778
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-arkansas-cypress-solar-station-ar-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 368225
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-atlas-bess-iv-llc-az-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 455825
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-atlas-bess-iv-llc-az-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 165066
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-atlas-bess-iv-llc-az-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 154281
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/aramis-alternative.png",
+        "status": 200,
+        "bytes": 855778
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/atlas-1.jpg",
+        "status": 200,
+        "bytes": 505386
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/atlas-2.jpg",
+        "status": 200,
+        "bytes": 376554
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-aerial.jpg",
+        "status": 200,
+        "bytes": 588057
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-relief.jpg",
+        "status": 200,
+        "bytes": 100843
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-topo.jpg",
+        "status": 200,
+        "bytes": 470805
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 569797
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-relief.jpg",
+        "status": 200,
+        "bytes": 111667
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-topo.jpg",
+        "status": 200,
+        "bytes": 492591
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-aerial.jpg",
+        "status": 200,
+        "bytes": 576125
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-relief.jpg",
+        "status": 200,
+        "bytes": 149134
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-topo.jpg",
+        "status": 200,
+        "bytes": 538311
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-aerial.jpg",
+        "status": 200,
+        "bytes": 600026
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-relief.jpg",
+        "status": 200,
+        "bytes": 82276
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-topo.jpg",
+        "status": 200,
+        "bytes": 431119
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-1.jpg",
+        "status": 200,
+        "bytes": 21666
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-2.jpg",
+        "status": 200,
+        "bytes": 18141
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-3.jpg",
+        "status": 200,
+        "bytes": 15643
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-4.jpg",
+        "status": 200,
+        "bytes": 17178
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-1.jpg",
+        "status": 200,
+        "bytes": 187755
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-2.jpg",
+        "status": 200,
+        "bytes": 122882
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-3.jpg",
+        "status": 200,
+        "bytes": 103086
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-4.jpg",
+        "status": 200,
+        "bytes": 155842
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-1.jpg",
+        "status": 200,
+        "bytes": 27289
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-2.jpg",
+        "status": 200,
+        "bytes": 26484
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-3.jpg",
+        "status": 200,
+        "bytes": 21595
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-4.jpg",
+        "status": 200,
+        "bytes": 28415
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-5.jpg",
+        "status": 200,
+        "bytes": 24839
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-6.jpg",
+        "status": 200,
+        "bytes": 24480
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/neo-case-1.jpg",
+        "status": 200,
+        "bytes": 52486
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-1.jpg",
+        "status": 200,
+        "bytes": 19118
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-2.jpg",
+        "status": 200,
+        "bytes": 21128
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-3.jpg",
+        "status": 200,
+        "bytes": 19601
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-4.jpg",
+        "status": 200,
+        "bytes": 19298
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-5.jpg",
+        "status": 200,
+        "bytes": 25473
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-6.jpg",
+        "status": 200,
+        "bytes": 27141
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-7.jpg",
+        "status": 200,
+        "bytes": 19957
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-2.webp",
+        "status": 200,
+        "bytes": 138622
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-3.webp",
+        "status": 200,
+        "bytes": 91564
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-4.webp",
+        "status": 200,
+        "bytes": 54172
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-aes-waiawa-phase-2-solar-hi-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 438086
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-aes-waiawa-phase-2-solar-hi-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 140711
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-aes-waiawa-phase-2-solar-hi-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 547113
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-amerada-tx-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 471897
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-amerada-tx-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 120994
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-amerada-tx-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 437122
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-antila-solar-tx-aerial-ortho.jpg",
+        "status": 200,
+        "bytes": 553524
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-antila-solar-tx-regional-corridor.jpg",
+        "status": 200,
+        "bytes": 108173
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-antila-solar-tx-usgs-topo-quad.jpg",
+        "status": 200,
+        "bytes": 322301
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16684,
+        "status": 200,
+        "bytes": 310299
+      },
+      {
+        "environment": "local",
+        "id": 16691,
+        "status": 200,
+        "bytes": 335104
+      },
+      {
+        "environment": "local",
+        "id": 16699,
+        "status": 200,
+        "bytes": 326320
+      },
+      {
+        "environment": "local",
+        "id": 16702,
+        "status": 200,
+        "bytes": 323389
+      },
+      {
+        "environment": "local",
+        "id": 16706,
+        "status": 200,
+        "bytes": 354839
+      },
+      {
+        "environment": "local",
+        "id": 16711,
+        "status": 200,
+        "bytes": 361477
+      },
+      {
+        "environment": "local",
+        "id": 16718,
+        "status": 200,
+        "bytes": 353458
+      },
+      {
+        "environment": "local",
+        "id": 16724,
+        "status": 200,
+        "bytes": 326839
+      },
+      {
+        "environment": "local",
+        "id": 16736,
+        "status": 200,
+        "bytes": 338095
+      },
+      {
+        "environment": "local",
+        "id": 16743,
+        "status": 200,
+        "bytes": 311046
+      },
+      {
+        "environment": "prod",
+        "id": 16684,
+        "status": 200,
+        "bytes": 268395
+      },
+      {
+        "environment": "prod",
+        "id": 16691,
+        "status": 200,
+        "bytes": 291671
+      },
+      {
+        "environment": "prod",
+        "id": 16699,
+        "status": 200,
+        "bytes": 283446
+      },
+      {
+        "environment": "prod",
+        "id": 16702,
+        "status": 200,
+        "bytes": 280666
+      },
+      {
+        "environment": "prod",
+        "id": 16706,
+        "status": 200,
+        "bytes": 311173
+      },
+      {
+        "environment": "prod",
+        "id": 16711,
+        "status": 200,
+        "bytes": 317712
+      },
+      {
+        "environment": "prod",
+        "id": 16718,
+        "status": 200,
+        "bytes": 309895
+      },
+      {
+        "environment": "prod",
+        "id": 16724,
+        "status": 200,
+        "bytes": 284203
+      },
+      {
+        "environment": "prod",
+        "id": 16736,
+        "status": 200,
+        "bytes": 291335
+      },
+      {
+        "environment": "prod",
+        "id": 16743,
+        "status": 200,
+        "bytes": 268707
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1406,
+      "prod": 1406
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 18.5,
+          "sqft": 228768,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+          "note": "36 MW / 228,768 gross sqft is ORD-02; 18.5 acres is shared campus. No measured energy, daily water or installed hardware count published.",
+          "checkedAt": "2026-10-24T03:15:20.952Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 19,
+          "sqft": 220000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+          "note": "36 MW critical, 220,000 gross sqft, 185,000 sqft data hall. 19 acres is shared Plano campus. No actual daily water/energy or installed hardware inferred.",
+          "checkedAt": "2026-10-24T03:15:22.939Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 26,
+          "sqft": 368755,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+          "note": "12 MW opening build-out; 60 MW expansion/design rating. 368,755 gross sqft from release; 26 acres is shared campus. Case study contains an unresolved 80 MW paragraph.",
+          "checkedAt": "2026-10-24T03:15:24.078Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 129,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/northeast-ohio-data-centers/",
+          "note": "129 acres is planned multi-building campus. NEO-01 IT capacity, gross building area, daily water, installed generators and exact COD unverified.",
+          "checkedAt": "2026-10-24T03:15:25.168Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 18.5,
+          "sqft": 228768,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+          "note": "36 MW / 228,768 gross sqft is ORD-02; 18.5 acres is shared campus. No measured energy, daily water or installed hardware count published.",
+          "checkedAt": "2026-10-24T03:15:54.148Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 19,
+          "sqft": 220000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+          "note": "36 MW critical, 220,000 gross sqft, 185,000 sqft data hall. 19 acres is shared Plano campus. No actual daily water/energy or installed hardware inferred.",
+          "checkedAt": "2026-10-24T03:16:14.854Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 26,
+          "sqft": 368755,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+          "note": "12 MW opening build-out; 60 MW expansion/design rating. 368,755 gross sqft from release; 26 acres is shared campus. Case study contains an unresolved 80 MW paragraph.",
+          "checkedAt": "2026-10-24T03:16:27.829Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 129,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/northeast-ohio-data-centers/",
+          "note": "129 acres is planned multi-building campus. NEO-01 IT capacity, gross building area, daily water, installed generators and exact COD unverified.",
+          "checkedAt": "2026-10-24T03:16:49.796Z"
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  "retainedDuplicateVerification": [
+    {
+      "environment": "local",
+      "id": 16615,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16615,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16681,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16681,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-87.934288,41.903918,-87.904288,41.923918&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-87.934288,41.903918,-87.904288,41.923918&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-chicago-ord-02-il-aerial.jpg",
+      "bytes": 588057,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-87.951288,41.891918,-87.887288,41.935918&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-87.951288,41.891918,-87.887288,41.935918&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-chicago-ord-02-il-topo.jpg",
+      "bytes": 470805,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-87.999288,41.863918,-87.839288,41.963918&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-87.999288,41.863918,-87.839288,41.963918&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-chicago-ord-02-il-relief.jpg",
+      "bytes": 100843,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-chicago-ord-02-il-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-96.693416,32.999779,-96.663416,33.019779&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-96.693416,32.999779,-96.663416,33.019779&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-aerial.jpg",
+      "bytes": 569797,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-96.710416,32.987779,-96.646416,33.031779&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-96.710416,32.987779,-96.646416,33.031779&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-topo.jpg",
+      "bytes": 492591,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-96.758416,32.959779,-96.598416,33.059779&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-96.758416,32.959779,-96.598416,33.059779&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-relief.jpg",
+      "bytes": 111667,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-dallas-dfw-02-tx-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-77.484202,39.003621,-77.454202,39.023621&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-77.484202,39.003621,-77.454202,39.023621&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-iad01-va-aerial.jpg",
+      "bytes": 576125,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-77.501202,38.991621,-77.437202,39.035621&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-77.501202,38.991621,-77.437202,39.035621&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-iad01-va-topo.jpg",
+      "bytes": 538311,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-77.549202,38.963621,-77.389202,39.063621&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-77.549202,38.963621,-77.389202,39.063621&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-iad01-va-relief.jpg",
+      "bytes": 149134,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-iad01-va-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-neo-01-oh",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-82.731323,41.420426,-82.701323,41.440426&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-82.731323,41.420426,-82.701323,41.440426&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-neo-01-oh-aerial.jpg",
+      "bytes": 600026,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-neo-01-oh",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-82.748323,41.408426,-82.684323,41.452426&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-82.748323,41.408426,-82.684323,41.452426&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-neo-01-oh-topo.jpg",
+      "bytes": 431119,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-neo-01-oh",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-82.796323,41.380426,-82.636323,41.480426&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-82.796323,41.380426,-82.636323,41.480426&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dc-aligned-neo-01-oh-relief.jpg",
+      "bytes": 82276,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dc-aligned-neo-01-oh-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-1.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-16-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use.",
+      "bytes": 19118,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-1.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-2.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-13-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use.",
+      "bytes": 21128,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-2.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-3.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-12-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use.",
+      "bytes": 19601,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-3.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-4.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-8-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago-ORD-02-Data-Center Aligned Data Centers. Not evidence of exact opening date or measured resource use.",
+      "bytes": 19298,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-4.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-5",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-5.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-7-min-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use.",
+      "bytes": 25473,
+      "width": 400,
+      "height": 267,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-5.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-6",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-6.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-6-min-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago ORD-02 Data Center Aligned. Not evidence of exact opening date or measured resource use.",
+      "bytes": 27141,
+      "width": 400,
+      "height": 267,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-6.jpg"
+    },
+    {
+      "key": "dc-aligned-chicago-ord-02-il",
+      "layer": "ord-7",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/ord-7.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-Aerial-HiRes-11-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator ORD-02 gallery: Chicago ORD-02 Data Center Aerial Aligned. Not evidence of exact opening date or measured resource use.",
+      "bytes": 19957,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/ord-7.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-1.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_006-400x225.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 gallery: Aligned DFW-02 Lobby. Not evidence of exact opening date or installed IT load.",
+      "bytes": 21666,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-1.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-2.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_005-400x225.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 gallery: Aligned Data Center office lobby DFW02. Not evidence of exact opening date or installed IT load.",
+      "bytes": 18141,
+      "width": 400,
+      "height": 225,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-2.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-3.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_007_N2-240x300.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 gallery: Aligned Data Center DFW02 meeting space. Not evidence of exact opening date or installed IT load.",
+      "bytes": 15643,
+      "width": 240,
+      "height": 300,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-3.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-4.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_003-214x300.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 gallery: Aligned DFW-02 indoor photo. Not evidence of exact opening date or installed IT load.",
+      "bytes": 17178,
+      "width": 214,
+      "height": 300,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-4.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "iad-current-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/iad-current-1.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Data-Hall_1-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator IAD01 gallery: IAD-01 Data Hall. Images do not establish energized building capacity or metered consumption.",
+      "bytes": 27289,
+      "width": 320,
+      "height": 213,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-1.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "iad-current-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/iad-current-2.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Lobby_2-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator IAD01 gallery: IAD-01 Lobby. Images do not establish energized building capacity or metered consumption.",
+      "bytes": 26484,
+      "width": 320,
+      "height": 213,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-2.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "iad-current-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/iad-current-3.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Kitchen_2-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator IAD01 gallery: IAD-01 Kitchen. Images do not establish energized building capacity or metered consumption.",
+      "bytes": 21595,
+      "width": 320,
+      "height": 213,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-3.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "iad-current-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/iad-current-4.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/NOC-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator IAD01 gallery: IAD-01 NOC. Images do not establish energized building capacity or metered consumption.",
+      "bytes": 28415,
+      "width": 320,
+      "height": 213,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-4.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "iad-current-5",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/iad-current-5.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Work-Area_1-2-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator IAD01 gallery: IAD-01 Work Area_1. Images do not establish energized building capacity or metered consumption.",
+      "bytes": 24839,
+      "width": 320,
+      "height": 213,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-5.jpg"
+    },
+    {
+      "key": "dc-aligned-iad01-va",
+      "layer": "iad-current-6",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/iad-current-6.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Reception_3-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator IAD01 gallery: IAD-01 Reception_3. Images do not establish energized building capacity or metered consumption.",
+      "bytes": 24480,
+      "width": 320,
+      "height": 213,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/iad-current-6.jpg"
+    },
+    {
+      "key": "battery-atlas-bess-iv-llc-az",
+      "layer": "atlas-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/atlas-1.jpg",
+      "sourceUrl": "https://www.transgridenergy.com/assets/project-atlas-4-pv-2026.jpg",
+      "sourcePage": "https://www.transgridenergy.com/projects/",
+      "credit": "TransGrid Energy",
+      "caption": "Operator construction image: Atlas IV BESS and PV facility under construction in La Paz County, Arizona. Solar rows are shared Atlas IV PV context, not battery capacity or proof of COD.",
+      "bytes": 505386,
+      "width": 1600,
+      "height": 900,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/atlas-1.jpg"
+    },
+    {
+      "key": "battery-atlas-bess-iv-llc-az",
+      "layer": "atlas-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/atlas-2.jpg",
+      "sourceUrl": "https://www.transgridenergy.com/assets/project-atlas-4-bess-2026.jpg",
+      "sourcePage": "https://www.transgridenergy.com/projects/",
+      "credit": "TransGrid Energy",
+      "caption": "Operator construction image: Atlas IV BESS project. Solar rows are shared Atlas IV PV context, not battery capacity or proof of COD.",
+      "bytes": 376554,
+      "width": 1600,
+      "height": 890,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/atlas-2.jpg"
+    },
+    {
+      "key": "solar-aes-waiawa-phase-2-solar-hi",
+      "layer": "waiawa-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/waiawa-2.webp",
+      "sourceUrl": "https://www.aes-hawaii.com/sites/aeshawaii.com/files/styles/fall_back_image_720_x_480/public/2023-03/Waiawa%20phase%202%20Solar%20Site%20Map%20_%20Mar%202021.jpg.webp?h=67eabc4d&itok=Y42f2ilA",
+      "sourcePage": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "credit": "AES Hawaii; underlying imagery credits as shown",
+      "caption": "Operator Phase 2 diagram: Waiawa Project Site Map March 2021. March/April 2021 maps are historical proposals; July-2026 schedule targets operation in 2026, not a verified COD.",
+      "bytes": 138622,
+      "width": 720,
+      "height": 480,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-2.webp"
+    },
+    {
+      "key": "solar-aes-waiawa-phase-2-solar-hi",
+      "layer": "waiawa-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/waiawa-3.webp",
+      "sourceUrl": "https://www.aes-hawaii.com/sites/aeshawaii.com/files/styles/fall_back_image_720_x_480/public/2023-03/Waiawa%20E101A%2004-16-2021-forweb.png.webp?h=dec22bcf&itok=Ge1EhhCU",
+      "sourcePage": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "credit": "AES Hawaii; underlying imagery credits as shown",
+      "caption": "Operator Phase 2 diagram: Waiawa Site Layout April 2021. March/April 2021 maps are historical proposals; July-2026 schedule targets operation in 2026, not a verified COD.",
+      "bytes": 91564,
+      "width": 720,
+      "height": 480,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-3.webp"
+    },
+    {
+      "key": "solar-aes-waiawa-phase-2-solar-hi",
+      "layer": "waiawa-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/waiawa-4.webp",
+      "sourceUrl": "https://www.aes-hawaii.com/sites/aeshawaii.com/files/styles/original/public/2026-07/screenshot_2026-07-22_153441_0.png.webp?itok=EIX2xjA5",
+      "sourcePage": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "credit": "AES Hawaii; underlying imagery credits as shown",
+      "caption": "Operator Phase 2 diagram: A project schedule for Waiawa Phase 2 Solar + Storage.. March/April 2021 maps are historical proposals; July-2026 schedule targets operation in 2026, not a verified COD.",
+      "bytes": 54172,
+      "width": 1132,
+      "height": 630,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/waiawa-4.webp"
+    },
+    {
+      "key": "dc-aligned-neo-01-oh",
+      "layer": "neo-case-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/neo-case-1.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2026/08/Aligned-Data-Centers-Perkins-Township-NEO-01-Data-Center-1024x576.jpg",
+      "sourcePage": "https://aligneddc.com/case-studies/brownfield-redevelopment-perkins-township-ohio/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator case-study exterior image of NEO-01 at the redeveloped Perkins Township site, with operator text overlay. Not proof of current installed MW or exact opening day.",
+      "bytes": 52486,
+      "width": 1024,
+      "height": 576,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/neo-case-1.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-open-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-open-1.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-13.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 grand-opening / headquarters blog gallery, image 1. Event context only; no exact event date inferred.",
+      "bytes": 187755,
+      "width": 1498,
+      "height": 1080,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-1.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-open-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-open-2.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-24-1024x732.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 grand-opening / headquarters blog gallery, image 2. Event context only; no exact event date inferred.",
+      "bytes": 122882,
+      "width": 1024,
+      "height": 732,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-2.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-open-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-open-3.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-39-1024x743.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 grand-opening / headquarters blog gallery, image 3. Event context only; no exact event date inferred.",
+      "bytes": 103086,
+      "width": 1024,
+      "height": 743,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-3.jpg"
+    },
+    {
+      "key": "dc-aligned-dallas-dfw-02-tx",
+      "layer": "dfw-open-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/dfw-open-4.jpg",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-3-683x1024.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "credit": "Aligned Data Centers",
+      "caption": "Operator DFW-02 grand-opening / headquarters blog gallery, image 4. Event context only; no exact event date inferred.",
+      "bytes": 155842,
+      "width": 683,
+      "height": 1024,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/dfw-open-4.jpg"
+    },
+    {
+      "key": "battery-aramis-i-solar-project-ca",
+      "layer": "aramis-alternative",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round24-2026-10-23/aramis-alternative.png",
+      "sourceUrl": "https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf",
+      "sourcePage": "https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf",
+      "credit": "HELIX Environmental Planning / Alameda County; underlying DigitalGlobe 2018 imagery as shown",
+      "caption": "2020 Final EIR Volume II Figure 5-1, PDF page 495: historical Resource Management Avoidance Alternative site plan, labeled 385-acre fenceline. The March 2021 approval describes a 347-acre alternative; this diagram is not an as-built boundary or construction photograph.",
+      "bytes": 855778,
+      "width": 1546,
+      "height": 2000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round24-2026-10-23/aramis-alternative.png"
+    }
+  ],
+  "gallerySourceChecks": [
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-16-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 19118,
+      "sha256": "bab16c35e6c13340e4c7037a429c9b043a801559c207ed827d574eb5e0c4436b",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-13-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 21128,
+      "sha256": "a49ae153b2c6927d6db06ecb5ce28d8a3af05ef7e1fd8fc0fcb59ce82bdbf644",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-12-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 19601,
+      "sha256": "f7106ffeb23b8a5765303e8f8585a7246276bbe6e9f9e9430b8669e3d75e58ee",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-8-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 19298,
+      "sha256": "e7a196da049f986f07e3af05c8af935d3e774fd46bc4ad609e66afd3f8389c5d",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-7-min-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 25473,
+      "sha256": "ef73618c7e129cead63cc97ad23d0b439d6ebbbb019f9295419d339a60449691",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-6-min-400x267.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 27141,
+      "sha256": "b371d055f66bfa61fa638ba300b362609448375ea3d6e067b2ac40aad1418160",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-Aerial-HiRes-11-min-400x225.jpg",
+      "sourcePage": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 19957,
+      "sha256": "cba0c806c19946fab6f791785adb53834b181edad264f4d5011fcd3a33fc6451",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_006-400x225.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "status": 200,
+      "bytes": 21666,
+      "sha256": "6662d21958cb75d11b356d0b8a863beeb79b89f0a856d8d8108251384125d322",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_005-400x225.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "status": 200,
+      "bytes": 18141,
+      "sha256": "a72692a6fe67a1573d5c2eae72f2e443a69de52efc51324b50e6276ccce27222",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_007_N2-240x300.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "status": 200,
+      "bytes": 15643,
+      "sha256": "a3063c93263266aba729002143bec12bf2e82d213e50dabd88f45b1ed96d0710",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/25313_003-214x300.jpeg",
+      "sourcePage": "https://aligneddc.com/dallas-data-centers/",
+      "status": 200,
+      "bytes": 17178,
+      "sha256": "eb9a7aecacc071545f82afa492ca6897295e22d892738ee1cd5bf57d836ca3f5",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Data-Hall_1-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 27289,
+      "sha256": "78c97a80c13b23c0fc1f679fee6f735fabde895e60f40b2034f0138358929500",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Lobby_2-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 26484,
+      "sha256": "80045d4bdebe774a6d05636af272d69994f652084fe5303203e8e6ce637a3a68",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Kitchen_2-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 21595,
+      "sha256": "3239789ace79ca34ad8ffa759420464cbc60ba7c8491614ad6ffb82bdd90174c",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/NOC-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 28415,
+      "sha256": "ff500a698dfed9aa91c7ad6521014144856f322589182ad080663d0a4a631a4e",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Work-Area_1-2-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 24839,
+      "sha256": "87a94e3de79a9d269fd9853570e52f4ac2ac26398a95790db79c58a653cba7d1",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Reception_3-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 24480,
+      "sha256": "ed99339adaa46e1dd37024d77f98ae88dba2fbd764a4930cfcb3660aef978679",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.transgridenergy.com/assets/project-atlas-4-pv-2026.jpg",
+      "sourcePage": "https://www.transgridenergy.com/projects/",
+      "status": 200,
+      "bytes": 505386,
+      "sha256": "0b207938fa9b5d32768911a0bc6ab43879b48b3fe398c239e7b4693baa3c95af",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.transgridenergy.com/assets/project-atlas-4-bess-2026.jpg",
+      "sourcePage": "https://www.transgridenergy.com/projects/",
+      "status": 200,
+      "bytes": 376554,
+      "sha256": "fc8e098ffcdb474fd52f58f4a6b8da88c6cd8196cdf28f8a394fd061de78d4ff",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.aes-hawaii.com/sites/aeshawaii.com/files/styles/fall_back_image_720_x_480/public/2023-03/Waiawa%20phase%202%20Solar%20Site%20Map%20_%20Mar%202021.jpg.webp?h=67eabc4d&itok=Y42f2ilA",
+      "sourcePage": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "status": 200,
+      "bytes": 138622,
+      "sha256": "0dfb75bd2b8f64270e18f2405c7997fda46b65b5548a74d4b5742846ee3491e6",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.aes-hawaii.com/sites/aeshawaii.com/files/styles/fall_back_image_720_x_480/public/2023-03/Waiawa%20E101A%2004-16-2021-forweb.png.webp?h=dec22bcf&itok=Ge1EhhCU",
+      "sourcePage": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "status": 200,
+      "bytes": 91564,
+      "sha256": "a26d3176a0a13014c4326c3887da9efc9f8dc40498db84da1f500e02946e6ac4",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.aes-hawaii.com/sites/aeshawaii.com/files/styles/original/public/2026-07/screenshot_2026-07-22_153441_0.png.webp?itok=EIX2xjA5",
+      "sourcePage": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "status": 200,
+      "bytes": 54172,
+      "sha256": "f84253e078fe9100138c4cd2f531e43d40a1ac8e9a0b4c0369c917e25fca6924",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2026/08/Aligned-Data-Centers-Perkins-Township-NEO-01-Data-Center-1024x576.jpg",
+      "sourcePage": "https://aligneddc.com/case-studies/brownfield-redevelopment-perkins-township-ohio/",
+      "status": 200,
+      "bytes": 52486,
+      "sha256": "0f8ea1b6103184933d26bfd5d4444d8d97aed944470e990478b9f0cb9d42d31e",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-13.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "status": 200,
+      "bytes": 187755,
+      "sha256": "79986d45023391ebeda81fdb80ef4069d8ddaf4339e7e466cd4f6d2fcaa5f5cf",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-24-1024x732.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "status": 200,
+      "bytes": 122882,
+      "sha256": "063f69267325d454a6620c129da8c70acf86772a9ea9ef07b91154333db9e149",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-39-1024x743.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "status": 200,
+      "bytes": 103086,
+      "sha256": "925bc7f4bfe3d43c1f79eabb931693bd10cffbe8cfe096455474af88531e5b86",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Aligned-Adaptive-Center-Event-3-683x1024.jpg",
+      "sourcePage": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "status": 200,
+      "bytes": 155842,
+      "sha256": "355d1c8e4d8bf36b002660f3d4d12a5bc6b7aad31d19f7504ff02c59cd4ac337",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf",
+      "sourcePage": "https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf",
+      "verification": "Full primary PDF downloaded and parsed; page 495 rendered by pdftoppm, visually inspected. Figure caption and legacy acreage explicitly distinguished from final approval.",
+      "bytes": 52423919
+    }
+  ],
+  "originalSourceChecks": [
+    {
+      "id": 16684,
+      "url": "https://ccrenew.com/projects/amerada-solar/",
+      "status": 403,
+      "finalUrl": "http://cypresscreekenergy.com/projects/amerada-solar/"
+    },
+    {
+      "id": 16691,
+      "url": "https://www.acgov.org/cda/planning/landuseprojects/aramis.htm",
+      "status": 404,
+      "finalUrl": "https://www.acgov.org/cda/planning/landuseprojects/aramis.htm"
+    },
+    {
+      "id": 16695,
+      "url": "https://eplanning.blm.gov/eplanning-ui/project/2018600/510",
+      "status": 200,
+      "finalUrl": "https://eplanning.blm.gov/eplanning-ui/project/2018600/510"
+    },
+    {
+      "id": 16699,
+      "url": "https://www.entergy-arkansas.com/energy-storage-cypress/",
+      "status": 403,
+      "finalUrl": "https://www.entergyarkansas.com/energy-storage-cypress/"
+    },
+    {
+      "id": 16702,
+      "url": "https://www.wapa.gov/regions/DSW/transmission/atlas-bess-iv/",
+      "status": 404,
+      "finalUrl": "https://www.wapa.gov/regions/DSW/transmission/atlas-bess-iv/"
+    },
+    {
+      "id": 16706,
+      "url": "https://www.aligneddc.com/data-centers/chicago-ord-02/",
+      "status": 404,
+      "finalUrl": "https://aligneddc.com/data-centers/chicago-ord-02/"
+    },
+    {
+      "id": 16711,
+      "url": "https://www.aligneddc.com/data-centers/dallas-dfw-02/",
+      "status": 404,
+      "finalUrl": "https://aligneddc.com/data-centers/dallas-dfw-02/"
+    },
+    {
+      "id": 16718,
+      "url": "https://www.aligneddc.com/data-centers/ashburn-iad-01/",
+      "status": 404,
+      "finalUrl": "https://aligneddc.com/data-centers/ashburn-iad-01/"
+    },
+    {
+      "id": 16724,
+      "url": "https://www.aligneddc.com/data-centers/ohio-neo-01/",
+      "status": 404,
+      "finalUrl": "https://aligneddc.com/data-centers/ohio-neo-01/"
+    },
+    {
+      "id": 16730,
+      "url": "https://savionenergy.com/projects/adamstown-solar/",
+      "status": 404,
+      "finalUrl": "https://savionenergy.com/projects/adamstown-solar/"
+    },
+    {
+      "id": 16736,
+      "url": "https://www.hawaiianelectric.com/clean-energy-hawaii/clean-energy-projects/waiawa-solar-phase-2",
+      "status": 404,
+      "finalUrl": "https://www.hawaiianelectric.com/clean-energy-hawaii/clean-energy-projects/waiawa-solar-phase-2"
+    },
+    {
+      "id": 16743,
+      "url": "https://sbenergy.com/projects/antila-solar/",
+      "status": 404,
+      "finalUrl": "https://sbenergy.com/projects/antila-solar/"
+    }
+  ],
+  "researchNotes": [
+    "Ten existing pins corrected and two duplicate identities soft-deleted/held on local and production. Preserved original authors, reconciled stale local IDs against live title/source/author snapshots, re-read records immediately before each write and retained backups. No new pins, automatic merges or deployment.",
+    "Read August 2026 EIA, September 2026 ERCOT GIS and CAISO primary workbooks. Generator MW, battery energy, combined export and campus electrical service are separate scopes. Proposed operating dates do not prove actual operation; date precision and milestone type are explicit in each saved record.",
+    "Amerada: EIA 67649 supports 300 MW solar, Cypress Creek Renewables, approvals pending and July 2029. ERCOT 26INR0082 instead gives 301.57 MW / December 30, 2028 with screening complete, study started and no IA. Separate Amerada Storage is not added. No project-specific operator gallery or precise parcel found in current searches.",
+    "Aramis: visually read the scanned county Notice of Determination. The March 4, 2021 approval of a 347-acre Resource Management Avoidance Alternative controls; March 10 is the county filing stamp and the packet also includes superseded November 2020 material. EIA 66678 supports 100 MW battery and separate 100 MW solar, no more than 50% construction complete in August 2026. EIA September and CAISO July 31, 2026 targets have passed without COD proof. CAISO reports 101.3 MW storage / 101.4 MW solar / 100 MW export. EIR four-hour design objective is not promoted to an explicit installed 400 MWh rating. The historical EIR Figure 5-1 labels 385 acres, distinguished from the later 347-acre approval.",
+    "Arida 16695 held as duplicate of corrected 16615: same EIA 63841 370 MW battery, same coordinates and CAISO 1522 hybrid. Verified the retained pin on both environments before holding the redundant identity; no independent second battery phase or cancellation inferred.",
+    "Arkansas Cypress: opened October-2026 operator table says 600 MW solar / 350 MW battery, Jefferson County and 2029 target, superseding stale 2028 search snippets. October 19 company release explicitly says under construction, superseding EIA August approvals-not-initiated coding. The 1,659 MW shared POI includes separate 730 MW CCCT. New Driver/Jones Mill battery additions and combined 2,800 MWh program total are not a standalone Cypress energy rating. No battery-only cost inferred from whole-project spending or Google customer payments. Current standalone MWh remains a gap.",
+    "Atlas IV: current TransGrid project page verifies under construction, 150 MW / 600 MWh, mid-2027 target; EIA 68321 instead gives March 2027 and over 50% complete. Solar 300 MW / Q4-2026 is a separate PV project. Both operator BESS and overall PV/BESS construction images are credited with scope qualifications. The company resolver returned an unrelated Hanwha Group Wikipedia URL for TransGrid Energy, so company uses exact EIA legal project entity ATLAS BESS IV LLC while operator attribution remains in text; no shared company metadata edited.",
+    "ORD-02: downloaded the October 15, 2024 working operator sheet: 36 MW critical, 228,768 gross sqft, 501 Northwest Avenue. Shared Northlake campus is 18.5 acres; ORD-01 at 505 is separate. April 19, 2022 is the second-building groundbreaking announcement, not a verified COD or the later specification date. Campus 72 MW / 170 MW substation service is not building IT load. Seven exact-building gallery photos inspected.",
+    "DFW-02: September 13, 2022 primary announcement specifies 36 MW critical, 220,000 gross sqft including 185,000 data hall; 19 acres is shared campus. Later operator blog confirms grand opening and new headquarters but no exact event day adopted. Four exact-building interior gallery photos and four opening-blog images inspected and credited. No modeled 50.4 MW, $1.36B or fabricated March-2027 COD retained.",
+    "IAD01: September 16, 2019 primary release states 12 MW built out in 368,755 gross sqft, expandable to 60 MW, with formal commissioning under way. Native 60 MW is explicitly expansion/design scope, not initial energized load. Downloaded case study introduction/named IAD01 summary agree with 60 MW, but one results paragraph says 80 MW; record that internal conflict. The separate 120 MW IAD02 and shared 26-acre campus are not IAD01-only scope. Current exact operator address 21890 Uunet Drive replaces wrong Smith Switch Road address. Six exact-building gallery images inspected.",
+    "NEO-01: September 25, 2023 acquisition announcement supports 129-acre Perkins Township brownfield planned four-building campus, NEO-01 first. Current address is 2509 Hayes Avenue. No building-specific support for 82.8 MW, old floor area, $2.73B or May-2027 COD: native power removed. Case-study projected 99% water/discharge reduction compares with former industrial operations, not metered daily water or all other data centers. Current exterior case-study image retained; generic Ohio-map release hero rejected. Older water-study PDF inaccessible.",
+    "Adamstown 16730 held as duplicate of 16681: downloaded January 2, 2025 PUCT filing explicitly names Adams Creek Solar Project, LLC (Adamstown Solar), request 21INR0210. Retained Adams Creek pin already represents EIA 70300 / 250 MW and 2027 target. ERCOT 250.88 MW / August 31, 2027 is queue precision, not evidence of an additional project. Both retained-pin identities verified unchanged; no automatic merge.",
+    "Waiawa Phase 2: operator states August 21, 2023 construction start, 30 MWac solar / 240 MWh battery, up to 387 acres and two 46 kV circuit interconnections. Distinct from operating 36 MW Waiawa Solar Power. Native 30 MW is solar alone. July-2026 schedule targets operation in 2026, while August EIA reports September target / construction over 50%; neither establishes actual operation by the research date. Three operator diagrams retained (March/April 2021 proposed maps and July-2026 schedule); unverified header ceremony photograph excluded.",
+    "Antila: ERCOT 27INR0500 supports legal applicant Antila Solar LLC, 500 MW, Borden County, Buck Canyon 345 kV and November 30, 2027 projected COD. WETT public notice published February 3, 2026 in Lamesa Press-Reporter identifies SE DC DevCo as developer of Juno Solar 3 and Antila totaling approximately 1 GW, and proposed collector stations east-northeast of FM 1054 N / US 180. It is primary published notice text, not an independent estimate. Its $84.3M transmission budget is not Antila solar capex. Ultimate parent and current PUCT 59199 outcome remain gaps; no unsupported SB Energy tag or acreage retained. Do not trust secondary tracker operational classification of a future queue date.",
+    "Cleared ten unsupported prices and four calculated energy rows per environment. Replaced all four datacenter metric rows to clear unverified daily water, hardware and generator assertions. Ratings remain historical/design scope rather than derived actual consumption.",
+    "Four verified operator street-address corrections required twelve new USGS maps for ORD-02, DFW-02, IAD01 and NEO-01. Census interpolation is address context, not a surveyed building or phase boundary. Six other retained pins keep eighteen legacy maps; tiny differences from rounded EIA reporting points did not justify replacement.",
+    "Added 28 gallery assets: 24 operator gallery/construction/event/exterior images and four historical project/schedule diagrams. Visually inspected candidates and rejected generic/uncertain imagery. Twenty-seven operator images passed fresh plain-curl exact-byte comparisons; the Aramis figure was rendered from the full downloaded primary EIR PDF. All forty new Azure uploads passed public exact-byte comparison before switching pin references. Source URLs, credits and precise captions remain in saved content and this report.",
+    "Freshly verified all 24 environment actions, 58 current Azure files and 20 retained native pages. Both posted maps now contain 1,406 entries. Retained duplicate counterparts 16615 and 16681 verified unchanged. No deployment, restart, production build, unrelated app edits or alteration of the user’s plantShapes.ts change."
+  ]
+}

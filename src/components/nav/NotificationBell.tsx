@@ -1013,7 +1013,7 @@ export function NotificationsFeed() {
 }
 
 const HISTORY_WEEKS = [1, 2, 4, 8, 12];
-const TOP_TICKERS = 10;
+const TOP_TICKERS = 12;
 
 const dayDate = (offset: number) => {
   const d = new Date();
@@ -1027,6 +1027,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
   const t = useT();
   const locale = useIntlLocale();
   const [weeks, setWeeks] = useState(2);
+  const [allTickers, setAllTickers] = useState(false);
   const [items, setItems] = useState<Notification[] | null>(null);
   const [failed, setFailed] = useState(false);
   const load = useCallback(() => {
@@ -1150,7 +1151,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
             <h2 className={`mb-1.5 text-xs font-semibold tracking-wide uppercase ${tone[key].split(' ')[0]}`}>{t(`notifications.${key}`)}</h2>
             {list.length ? (
               <ol className={`text-sm ${wide ? 'lg:columns-2 lg:gap-x-8' : ''}`}>
-                {list.slice(0, TOP_TICKERS).map(([ticker, st]) => (
+                {(allTickers ? list : list.slice(0, TOP_TICKERS)).map(([ticker, st]) => (
                   <li key={ticker} className="mb-1 flex items-baseline gap-2 break-inside-avoid">
                     <span className="w-5 shrink-0 text-end text-xs tabular-nums text-subtle">{st.people.size}</span>
                     <Link href={tickerHref(ticker)} className="min-w-0 truncate font-semibold text-ink hover:underline">{ticker}</Link>
@@ -1168,6 +1169,16 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
             )}
           </div>
         ))}
+        {ranked.buys.length > TOP_TICKERS || ranked.sells.length > TOP_TICKERS ? (
+          <button
+            type="button"
+            aria-expanded={allTickers}
+            onClick={() => setAllTickers((v) => !v)}
+            className="col-span-full border-t border-line px-4 py-2 text-sm font-semibold text-accent hover:bg-raised/50 sm:col-span-2"
+          >
+            {allTickers ? t('common.showLess') : t('common.showMore')}
+          </button>
+        ) : null}
       </div>
       {days.map((g) => (
         <section key={g.day} className={`surface overflow-hidden ${wide ? 'lg:col-span-3' : ''}`}>
