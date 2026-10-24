@@ -76,10 +76,28 @@ export async function searchWikiUrl(name: string): Promise<string | null> {
         return null;
       }
     }
-    return hit ? 'https://en.wikipedia.org/wiki/' + encodeURIComponent(hit.title.replace(/ /g, '_')) : null;
+    if (hit) return 'https://en.wikipedia.org/wiki/' + encodeURIComponent(hit.title.replace(/ /g, '_'));
+    return await directWikiUrl(name);
   } catch {
     return null;
   }
+}
+
+// A short name ("SLB") can fall outside the first search hits though its article
+// exists, often behind a redirect. Ask for the title itself and accept the page
+// only when it is not a disambiguation and its opening words name the company.
+async function directWikiUrl(name: string): Promise<string | null> {
+  const json = await getJson(
+    'https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&redirects=1' +
+      '&prop=extracts|pageprops&ppprop=disambiguation&exintro=1&explaintext=1&titles=' +
+      encodeURIComponent(name),
+  );
+  const page = (json.query?.pages || [])[0];
+  if (!page || page.missing || !page.extract || (page.pageprops && 'disambiguation' in page.pageprops)) {
+    return null;
+  }
+  const named = plain(page.title) === plain(name) || plain(page.extract.slice(0, name.length + 60)).includes(plain(name));
+  return named ? 'https://en.wikipedia.org/wiki/' + encodeURIComponent(page.title.replace(/ /g, '_')) : null;
 }
 
 export function faviconUrl(websiteUrl: string | null | undefined): string | null {
