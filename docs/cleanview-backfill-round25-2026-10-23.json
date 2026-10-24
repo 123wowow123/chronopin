@@ -1,0 +1,3519 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill round 25",
+  "outcome": {
+    "audited": 12,
+    "corrected": 9,
+    "held": 3,
+    "environmentActions": 24,
+    "azureFilesVerified": 38,
+    "nativePagesVerified": 18,
+    "unpublishedPricesCleared": 9,
+    "calculatedEnergyRowsCleared": 2,
+    "replacementMaps": 12,
+    "addedProjectPhotos": 10,
+    "addedRenderings": 1,
+    "postedMapEntries": 1403,
+    "deployed": false
+  },
+  "plan": {
+    "solar-athos-power-plant-ca": {
+      "patch": {
+        "title": "Athos I and II: 450 MW Solar Operating Since 2022",
+        "description": "California State Lands Commission’s October 2024 staff report describes two fully operating Athos solar facilities totaling 450 MW. EIA identifies Athos I at 250 MW, operating June 2022, and Athos II at 200 MW, operating December 2021. A later CEC filing says solar construction was completed in July 2022.",
+        "sourceUrl": "https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf",
+        "references": [
+          {
+            "url": "https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf",
+            "title": "California State Lands Commission — October 17, 2024 Staff Report 50",
+            "confidence": 95,
+            "publishedDate": "2024-10-17"
+          },
+          {
+            "url": "https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=103485&tn=266435",
+            "title": "CEC October 8, 2025 backup materials — Athos storage environmental addendum",
+            "confidence": 95,
+            "publishedDate": "2025-10-08"
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — Athos I 63300 and Athos II 64290",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://sbenergy.com/energy-projects/",
+            "title": "SB Energy — Energy Projects / Athos",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue — Athos Power Plant 1405",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 450 MW is solar-only combined AC nameplate, not 450 MWdc and not additive battery export. EIA’s generator operating months differ from July 2022 overall solar-construction completion. Separate Athos storage is not represented as already operating; CAISO’s 2027 proposed completion covers a hybrid request, not proof the existing solar is still proposed.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>The CEC materials describe the original 3,440-acre project envelope, a 3,224-acre solar footprint and separate approximately 31-acre BESS proposal. Those scopes are not silently equated to the former 3,400-acre claim. No opened $500M capital-cost evidence or May 18, 2022 COD; the BLM ePlanning landing page does not establish either.<cite data-ref=\"https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=103485&amp;tn=266435\"></cite></li><li>Timeline: July 1 is a month-only placeholder for July 2022 solar-construction completion stated in CEC materials, not an exact COD. EIA separately reports December 2021 / June 2022 operating months for II / I.<cite data-ref=\"https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf\"></cite></li><li>Historical Athos I construction image from the operator project page; not the entire combined Athos I/II project or completed battery. Credit: SB Energy.<cite data-ref=\"https://sbenergy.com/project/athos-i/\"></cite></li><li>Operator Athos solar-plant image with sheep; not a battery system or proof of a precise operating day. Credit: SB Energy.<cite data-ref=\"https://sbenergy.com/energy-projects/\"></cite></li><li>The State Lands Commission names SE Athos I, LLC and SE Athos II, LLC; SB Energy presents Athos in its current portfolio. Separate storage is not part of the solar MW.<cite data-ref=\"https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "July 1 is a month-only placeholder for July 2022 solar-construction completion stated in CEC materials, not an exact COD. EIA separately reports December 2021 / June 2022 operating months for II / I.",
+        "company": "SE Athos I, LLC and SE Athos II, LLC",
+        "companyWikiUrl": null,
+        "latitude": 33.751283,
+        "longitude": -115.355,
+        "address": "EIA shared Athos I/II reporting point near Desert Center, Riverside County, California; not a surveyed solar or battery boundary",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "SB Energy",
+          "Riverside County",
+          "California"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-9.jpg",
+            "originalWidth": 605,
+            "originalHeight": 293
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-10.jpg",
+            "originalWidth": 1120,
+            "originalHeight": 616
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 450,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "Athos I 250 MW + Athos II 200 MW EIA operating AC solar nameplate. Separate battery omitted; not 450 MWdc or measured output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify precise project-wide completion day and built solar boundary; EIA operating months and overall construction completion are different milestones. Operator Athos I legacy page still says under construction; regulator and EIA operating evidence controls.",
+        "Company resolver maps SB Energy to SoftBank Group Wikipedia; use the regulator-named project entities pending shared company metadata repair."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    "battery-18-alpha-bess-tx": {
+      "patch": {
+        "title": "18-Alpha BESS: 307.4 MW Queue Request, February 2028 Target",
+        "description": "ERCOT September 2026 GIS lists 18-Alpha BESS request 28INR0328 in Cooke County at 307.4 MW, with Scout Energy Management, LLC as applicant and February 1, 2028 projected COD. Screening is complete and full study started; no interconnection agreement is reported.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — 18-Alpha BESS 28INR0328",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The listed POI is 138 kV Valley View Substation, bus 691. This is a study-stage battery request, not a verified construction or operating finding. The old Energy Management attribution omits the legal applicant’s Scout name; no published MWh, four-hour duration, total capital cost or exact battery footprint is verified.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: February 1, 2028 is the ERCOT projected COD, not confirmed energization.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-02-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "February 1, 2028 is the ERCOT projected COD, not confirmed energization.",
+        "company": "SCOUT ENERGY MANAGEMENT, LLC",
+        "companyWikiUrl": null,
+        "address": "Cooke County, Texas; retained approximate project-area point pending parcel evidence",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Scout Energy Management",
+          "Cooke County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 307.4,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT September 2026 GIS lists 18-Alpha BESS request 28INR0328 in Cooke County at 307.4 MW, with Scout Energy Management, LLC as applicant and February 1, 2028 projected"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Find current applicant permit, exact parcel, standalone MWh and project-specific official gallery. No exact-name EIA plant match found; do not infer a four-hour battery or actual construction."
+      ]
+    },
+    "battery-18-bravo-bess-tx": {
+      "patch": {
+        "title": "18-Bravo BESS: 407 MW Queue Request, February 2028 Target",
+        "description": "ERCOT September 2026 GIS lists 18-Bravo BESS request 28INR0327 in Hunt County at 407 MW, with Scout Energy Management, LLC as applicant and February 1, 2028 projected COD. Screening is complete and full study started; no interconnection agreement is reported.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — 18-Bravo BESS 28INR0327",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The listed POI is 138 kV Commerce Switch Substation, bus 1816. This is a study-stage battery request, not a verified construction or operating finding. The old Energy Management attribution omits the legal applicant’s Scout name; no published MWh, four-hour duration, total capital cost or exact battery footprint is verified.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: February 1, 2028 is the ERCOT projected COD, not confirmed energization.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-02-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "February 1, 2028 is the ERCOT projected COD, not confirmed energization.",
+        "company": "SCOUT ENERGY MANAGEMENT, LLC",
+        "companyWikiUrl": null,
+        "address": "Hunt County, Texas; retained approximate project-area point pending parcel evidence",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Scout Energy Management",
+          "Hunt County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 407,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT September 2026 GIS lists 18-Bravo BESS request 28INR0327 in Hunt County at 407 MW, with Scout Energy Management, LLC as applicant and February 1, 2028 projected COD"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Find current applicant permit, exact parcel, standalone MWh and project-specific official gallery. No exact-name EIA plant match found; do not infer a four-hour battery or actual construction."
+      ]
+    },
+    "battery-agricola-bess-tx": {
+      "patch": {
+        "title": "Agricola BESS: 205.2 MW Study-Stage Request, May 2029 Target",
+        "description": "ERCOT September 2026 GIS identifies Agricola BESS LLC request 28INR0265 in Austin County: 205.2 MW, May 31, 2029 projected COD, screening complete and full study started without an interconnection agreement.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Agricola BESS 28INR0265",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The queue POI is a tap on the 138 kV Gebhardt–Wallis line. No current primary basis for Redeux ownership, construction, $200M, 821 MWh or four-hour duration was found. A similarly named New York wind project is unrelated and is not an EIA match.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: May 31, 2029 is ERCOT projected COD; construction and actual operating date are unverified.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-05-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "May 31, 2029 is ERCOT projected COD; construction and actual operating date are unverified.",
+        "company": "Agricola BESS LLC",
+        "companyWikiUrl": null,
+        "address": "Austin County, Texas; retained approximate county/project-area point, not a verified battery parcel",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Austin County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 205.2,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT September 2026 GIS identifies Agricola BESS LLC request 28INR0265 in Austin County: 205.2 MW, May 31, 2029 projected COD, screening complete and full study started"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify ultimate developer, permits, MWh, exact parcel and project-specific gallery. No exact Texas Agricola BESS unit found in the August EIA inventory."
+      ]
+    },
+    "battery-anila-bess-tx": {
+      "delete": true,
+      "researchFinding": "Duplicate identity: May 19, 2025 PUCT filing names Alina Energy LLC, Alina Solar and BESS, requests 26INR0074 and 26INR0077; its technical exhibit also uses Anila Solar and Storage. Retained pin 16675 already represents the same Alina battery (200 MW / 400 MWh operator scope, EIA 67250). Queue 209 MW and exhibit gross-terminal 211.14792 MW versus 200 MW battery at POI are rating differences, not an independent battery phase. Hold 16770, preserve 16675 unchanged, with no cancellation or automatic merge.",
+      "sourcesChecked": [
+        "https://interchange.puc.texas.gov/Documents/35077_2138_1500134.PDF",
+        "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://www.advanced-power.com/home/projects",
+        "https://www.chronopin.com/api/pins/16675"
+      ],
+      "gaps": [
+        "Duplicate identity: May 19, 2025 PUCT filing names Alina Energy LLC, Alina Solar and BESS, requests 26INR0074 and 26INR0077; its technical exhibit also uses Anila Solar and Storage. Retained pin 16675 already represents the same Alina battery (200 MW / 400 MWh operator scope, EIA 67250). Queue 209 MW and exhibit gross-terminal 211.14792 MW versus 200 MW battery at POI are rating differences, not an independent battery phase. Hold 16770, preserve 16675 unchanged, with no cancellation or automatic merge."
+      ]
+    },
+    "dc-aligned-iad02-va": {
+      "patch": {
+        "title": "Aligned IAD02: 120 MW Expansion Design, 2020 Topping-Out Milestone",
+        "description": "Aligned’s December 4, 2020 account records IAD02 topping out on December 3: a two-story, 513,000-sqft building expandable to 120 MW on its shared 26-acre Ashburn campus. Its current operator address is 21821 Uunet Drive, distinct from IAD01.",
+        "sourceUrl": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+        "references": [
+          {
+            "url": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+            "title": "Aligned Tops Out Its Second Ashburn, VA Hyperscale Data Center",
+            "confidence": 95,
+            "publishedDate": "2020-12-04"
+          },
+          {
+            "url": "https://aligneddc.com/northern-virginia-data-centers/",
+            "title": "Northern Virginia Data Centers | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/wp-content/uploads/2025/10/Aligned-Ashburn-Case-Study.pdf",
+            "title": "Aligned Ashburn Data Center Campus — Case Study",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 120 MW is the published expandable design, not measured consumption or proof all capacity is installed. The operator case study separately identifies IAD01 and IAD02. Removed modeled 163.1 MW / 116.5 MW IT, $4.43B, 122 acres, unsupported 624,570 sqft and invented June 2023 COD.<cite data-ref=\"https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/\"></cite></li><li>The current street address replaces Transload Road. The legacy October-2021 sheet is indexed with both 513,000 headline sqft and 438,460 building sqft, but direct PDF retrieval returns 404. The opened announcement/case-study 513,000 sqft controls as explicitly historical announced scope; current gross-building area remains a gap. Original DEQ link is inaccessible and not relied upon.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Timeline: Confirmed December 3, 2020 structural topping out in the operator account published December 4. It is not actual commissioning or full 120 MW energization.<cite data-ref=\"https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/\"></cite></li><li>Operator exact-building gallery: Aligned IAD-02 Data Center aerial. This does not establish measured consumption or full installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator exact-building gallery: IAD-02 Exterior. This does not establish measured consumption or full installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>IAD02 glazed lounge interior from the exact-building operator gallery (operator alt text labels it Exterior). No building capacity or commissioning day inferred. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator exact-building gallery: IAD-02 Kitchen. This does not establish measured consumption or full installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator exact-building gallery: IAD-02 Lobby. This does not establish measured consumption or full installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator exact-building gallery: IAD-02 Data Hall. This does not establish measured consumption or full installed IT load. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator image accompanying the December 3, 2020 IAD02 topping-out account. Historical structural milestone, not proof of operation. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2020-12-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed December 3, 2020 structural topping out in the operator account published December 4. It is not actual commissioning or full 120 MW energization.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 39.011856258023,
+        "longitude": -77.475467536968,
+        "address": "21821 Uunet Drive, Ashburn, Virginia; Census-geocoded current operator IAD02 address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Loudoun County",
+          "Virginia"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-0.jpg",
+            "originalWidth": 400,
+            "originalHeight": 225
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-1.jpg",
+            "originalWidth": 400,
+            "originalHeight": 266
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-2.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-3.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-4.jpg",
+            "originalWidth": 400,
+            "originalHeight": 267
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-5.jpg",
+            "originalWidth": 400,
+            "originalHeight": 266
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-7.jpg",
+            "originalWidth": 977,
+            "originalHeight": 650
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 120,
+        "kind": "usage",
+        "sourceUrl": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Aligned’s December 4, 2020 account records IAD02 topping out on December 3: a two-story, 513,000-sqft building expandable to 120 MW on its shared 26-acre Ashburn campus."
+      },
+      "datacenter": {
+        "acres": 26,
+        "sqft": 513000,
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+        "note": "Historical announced IAD02 scope: 513,000 sqft, expandable 120 MW. 26 acres is shared campus. Exact current gross area and installed capacity unresolved; no measured daily water or energy."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain accessible current building specification and precise commissioning date. Resolve indexed sheet 513,000 headline versus 438,460 building sqft; neither a current installed 120 MW nor daily resource reading inferred."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 7
+    },
+    "dc-aligned-iad03-va": {
+      "patch": {
+        "title": "Aligned IAD03 Sterling: July 2022 Campus Announcement",
+        "description": "Aligned’s July 26, 2022 announcement describes a 10-acre Sterling campus master-planned for two buildings, with IAD03 phase-one delivery then targeted for fall 2023. Its current exact-building listing gives 22715 Relocation Drive, Sterling.",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+            "title": "Aligned Data Centers Expands Presence in Northern Virginia with New Sterling Hyperscale Campus",
+            "confidence": 95,
+            "publishedDate": "2022-07-26"
+          },
+          {
+            "url": "https://aligneddc.com/northern-virginia-data-centers/",
+            "title": "Northern Virginia Data Centers | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The press-release dateline is July 26, despite July 25 metadata; the dated body controls the saved announcement milestone. The past fall-2023 target does not establish an actual COD. No opened primary building-specific MW or gross floor area supports 143.1 MW / 102.2 MW IT, 319,384 sqft, $3.88B or January 2025 COD, so native power is removed.<cite data-ref=\"https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/\"></cite></li><li>The current market page repeats 26-acre campus text for IAD03, conflicting with the launch’s explicit 10-acre Sterling campus. Keep ten acres as historical announced scope and record the discrepancy, not a confirmed current cadastral area. Original Beaumeade Circle address and inaccessible DEQ link are not used to locate the facility.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Timeline: Confirmed July 26, 2022 announcement dateline; not COD. Exact commissioning and current capacity remain unresolved.<cite data-ref=\"https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/\"></cite></li><li>Operator IAD-03 gallery image; no current IT rating or exact commissioning day inferred. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/northern-virginia-data-centers/\"></cite></li><li>Operator IAD03 proposed-building rendering accompanying the July 2022 announcement. A visualization, not a construction or operating photograph. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-07-26T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed July 26, 2022 announcement dateline; not COD. Exact commissioning and current capacity remain unresolved.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 38.98905722827,
+        "longitude": -77.43934379701,
+        "address": "22715 Relocation Drive, Sterling, Virginia; Census-geocoded current operator IAD03 address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Loudoun County",
+          "Virginia"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-6.jpg",
+            "originalWidth": 320,
+            "originalHeight": 256
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-8.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 576
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "acres": 10,
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+        "note": "10 acres is historical announced two-building Sterling campus; current market page repeats 26 acres, unresolved. Building MW, gross area, measured water/energy and installed generators unpublished."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Resolve 2022 ten-acre versus current 26-acre market-page campus wording. Verify building-specific capacity, gross area and exact commissioning; current gallery aerial is not COD proof."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    "dc-aligned-neo-03-oh": {
+      "delete": true,
+      "researchFinding": "Unverified building-level split: the opened December 27, 2024 Ohio EPA permit P0137086 identifies Aligned NE001 Sandusky, facility 0322022037, at 2509 Hayes Avenue and authorizes 186 emergency generators across the permitted scope. It does not establish a separately rated NEO-03 at 82.8 MW / 72 MW IT or June 2029 COD. NEO-01 is retained as 16724 and the wider NEO-02–04 expansion is already represented by 15776. Hold this redundant/unverified individual third-building tracker split until building-specific primary evidence exists. This is not cancellation; no automatic merge or changes to retained counterparts.",
+      "sourcesChecked": [
+        "https://storage.googleapis.com/data-center-source-files/campuses/615__aligned-neo-01-sandusky/2024-12-27_air-permit_ohio-epa-final-air-pti-p0137086-facility-032202203.pdf",
+        "https://aligneddc.com/northeast-ohio-data-centers/",
+        "https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/",
+        "https://www.chronopin.com/api/pins/15776"
+      ],
+      "gaps": [
+        "Unverified building-level split: the opened December 27, 2024 Ohio EPA permit P0137086 identifies Aligned NE001 Sandusky, facility 0322022037, at 2509 Hayes Avenue and authorizes 186 emergency generators across the permitted scope. It does not establish a separately rated NEO-03 at 82.8 MW / 72 MW IT or June 2029 COD. NEO-01 is retained as 16724 and the wider NEO-02–04 expansion is already represented by 15776. Hold this redundant/unverified individual third-building tracker split until building-specific primary evidence exists. This is not cancellation; no automatic merge or changes to retained counterparts."
+      ]
+    },
+    "dc-aligned-northwest-point-il": {
+      "delete": true,
+      "researchFinding": "Unverified building-level split: Northwest Point two-building campus is already represented by retained ORD-03 pin 15743. The June 21, 2024 IEPA notification covers an application for 112 emergency generator sets at 50 and 150 NW Point Blvd, not a 110.4 MW independently specified Building 2. Village reporting confirms two planned buildings and first-building topping out January 14, 2025, but not this split’s current construction, 96 MW IT, building-only cost or June 2029 COD. Hold redundant tracker split pending a separately identifiable building specification; no cancellation or automatic merge. Retained campus’s tracker-rated MW also needs a later dedicated audit.",
+      "sourcesChecked": [
+        "https://storage.googleapis.com/data-center-source-files/campuses/611__aligned-elk-grove-village-northwest-point/2024-06-21_air-permit_iepa-ej-notification-6-21-2024-aligned-data-center.pdf",
+        "https://aligneddc.com/chicago-data-centers/",
+        "https://elkgrovebusiness.org/newsletter/2024-year-in-review",
+        "https://elkgrovebusiness.org/uploads/files/Business-Matters/March-2025-Business-Matters.pdf",
+        "https://www.chronopin.com/api/pins/15743"
+      ],
+      "gaps": [
+        "Unverified building-level split: Northwest Point two-building campus is already represented by retained ORD-03 pin 15743. The June 21, 2024 IEPA notification covers an application for 112 emergency generator sets at 50 and 150 NW Point Blvd, not a 110.4 MW independently specified Building 2. Village reporting confirms two planned buildings and first-building topping out January 14, 2025, but not this split’s current construction, 96 MW IT, building-only cost or June 2029 COD. Hold redundant tracker split pending a separately identifiable building specification; no cancellation or automatic merge. Retained campus’s tracker-rated MW also needs a later dedicated audit."
+      ]
+    },
+    "solar-161kv-bus-at-karma-substation-ia": {
+      "patch": {
+        "title": "Grand Junction / Karma J1313: 100 MW Solar Development",
+        "description": "MISO J1313 identifies a 100 MW solar request in Greene County at the Karma 161 kV bus, with post-GIA status Not Started and a stale June 30, 2025 negotiated target. The IUB’s April 21, 2023 release describes Grand Junction Solar at the same substation; later county-meeting reporting identifies Alliant as the purchaser.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO live GI queue — J1313 Karma 161 kV, Greene County",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://kwbg.com/iowa-utilities-board-issues-electric-generating-certificate-for-grand-junction-solar-battery-storage-project/",
+            "title": "IUB release republished by KWBG — generating certificate for Grand Junction Solar and battery storage",
+            "confidence": 95,
+            "publishedDate": "2023-04-21"
+          },
+          {
+            "url": "https://www.greenecounty.iowa.gov/docview.aspx?docid=21487&doctype=agendaDoc",
+            "title": "Greene County Board of Supervisors — April 22, 2024 Alliant / Grand Junction agenda",
+            "confidence": 95,
+            "publishedDate": "2024-04-22"
+          },
+          {
+            "url": "https://greenecountynewsonline.com/2024/04/24/supervisors-hear-future-of-gj-solar-project/",
+            "title": "Supervisors hear future of GJ solar project",
+            "confidence": 95,
+            "publishedDate": "2024-04-24"
+          },
+          {
+            "url": "https://greenecountynewsonline.com/2026/08/14/gj-solar-project-is-back-on-track/",
+            "title": "GJ solar project is back on track",
+            "confidence": 95,
+            "publishedDate": "2026-08-14"
+          }
+        ],
+        "longFormSummary": "<ul><li>The IUB release supports a conditional certificate for up to 100 MW solar plus a separate 50 MW battery in the original 1,103-acre project area; it is not evidence of construction or current battery installation. Native 100 MW is solar only. MISO’s old negotiated target is not realized COD.<cite data-ref=\"https://kwbg.com/iowa-utilities-board-issues-electric-generating-certificate-for-grand-junction-solar-battery-storage-project/\"></cite></li><li>Alliant’s April 2024 county update is corroborated by the official agenda and meeting report; the latter says it purchased the project from National Grid Renewables. A 2026 report quotes prospective 2027/2028 construction and a possible future battery amendment; that is not a 2027 operating deadline or approved 100 MW battery. Its August 14 publication label refers to an August 17 meeting, so no precise 2026 event date is adopted.<cite data-ref=\"https://greenecountynewsonline.com/2026/08/14/gj-solar-project-is-back-on-track/\"></cite></li><li>Removed $130M, fabricated Karma Clean Solar Center branding and stale Geronimo-only ownership. The retained approximate location is county/project-area context, not a surveyed solar parcel or exact substation point.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: Confirmed April 21, 2023 conditional certificate milestone in the IUB’s republished release; not COD. The original order link currently returns a filing portal rather than downloadable order.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2023-04-21T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed April 21, 2023 conditional certificate milestone in the IUB’s republished release; not COD. The original order link currently returns a filing portal rather than downloadable order.",
+        "company": "Alliant Energy",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Alliant_Energy",
+        "address": "South of Grand Junction, Greene County, Iowa; retained approximate project-area context pending a current permitted boundary",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Alliant Energy",
+          "Greene County",
+          "Iowa",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 100,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. MISO J1313 identifies a 100 MW solar request in Greene County at the Karma 161 kV bus, with post-GIA status Not Started and a stale June 30, 2025 negotiated target. The I"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain original IUC order/transfer and current permit/status report tying J1313 explicitly to the current developer. Verify exact footprint and later schedule. Operator project page inaccessible; no project-specific photo verified."
+      ]
+    },
+    "solar-7xenia-7mtvernw-345-0kv-il": {
+      "patch": {
+        "title": "Flora Solar J1679: 125 MW, December 2027 EIA Target",
+        "description": "MISO’s MTEP23 explicitly identifies request J1679 as Flora Solar, 125 MW, connecting at new Fauna substation on the Xenia–Mount Vernon West 345 kV line. EIA plant 67937 identifies Flora Solar LLC, 125 MW, approvals not initiated and December 2027 planned operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf",
+            "title": "MISO MTEP23 Chapter 4 — New Fauna 345 kV Sub for Flora Solar J1679",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO live GI queue — J1679 Xenia–Mount Vernon West",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Inventory — Flora Solar 67937 FLOSO",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The live queue says post-GIA Not Started with an old April 20, 2026 negotiated target; the later EIA month is prospective, not an actual commissioning day. EIA lists PJM balancing authority while the request and MTEP identity are MISO/Ameren; that inventory discrepancy remains explicit. The $11M MTEP item is transmission interconnection work, not whole-project capex.<cite data-ref=\"https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf\"></cite></li><li>Removed $160M, invented Xenia Clean Solar Center branding and April 1, 2027 COD. Historical Apex project-page search text identifies Flora, but its current official domain is a Coming Soon notice and about_flora redirects to an unavailable migration page; current developer details and gallery remain gaps.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>Timeline: December 1 is month-only precision for EIA December 2027 proposed operation. MISO’s April 20, 2026 target is stale and not proof of COD.<cite data-ref=\"https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 1 is month-only precision for EIA December 2027 proposed operation. MISO’s April 20, 2026 target is stale and not proof of COD.",
+        "company": "Flora Solar, LLC",
+        "companyWikiUrl": null,
+        "latitude": 38.648852,
+        "longitude": -88.51444,
+        "address": "EIA 67937 Flora Solar reporting point in Clay County, Illinois; not a surveyed project boundary or Fauna substation point",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Clay County",
+          "Illinois",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 125,
+        "kind": "generation",
+        "sourceUrl": "https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. MISO’s MTEP23 explicitly identifies request J1679 as Flora Solar, 125 MW, connecting at new Fauna substation on the Xenia–Mount Vernon West 345 kV line. EIA plant 67937 i"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current developer/permit and site gallery after operator website migration. Resolve EIA PJM versus MISO balancing-authority discrepancy and actual completion; MTEP transmission budget is not solar capex."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-adams-345-kv-substation-mn": {
+      "patch": {
+        "title": "MISO J1072: 150 MW Solar Queue Record at Adams Substation",
+        "description": "MISO’s live J1072 record identifies a 150 MW solar project in Mower County at Adams 345 kV, transmission owner Northern States Power Company, GIA completed June 15, 2021 and post-GIA status Under Construction. Its August 1, 2023 negotiated in-service target is stale and does not prove operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO live GI queue — J1072 Adams 345 kV, Mower County",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The record does not substantiate the former Adams Clean Solar Center branding, $190M, December 2026 COD or ITC Midwest transmission-owner claim. Ultimate developer and current project name remain unverified; no exact primary project-to-applicant mapping was established.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: June 15, 2021 is the queue GIA-completion milestone (doneDate and giaToExec), not COD. Confirmed as a dated queue record; negotiated August 2023 does not establish realized operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2021-06-15T00:00:00.000Z",
+        "dateConfidenceReasoning": "June 15, 2021 is the queue GIA-completion milestone (doneDate and giaToExec), not COD. Confirmed as a dated queue record; negotiated August 2023 does not establish realized operation.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Mower County / Adams substation area, Minnesota; retained approximate POI-area context, not a surveyed solar project parcel",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Mower County",
+          "Minnesota"
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. MISO’s live J1072 record identifies a 150 MW solar project in Mower County at Adams 345 kV, transmission owner Northern States Power Company, GIA completed June 15, 2021"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify legal applicant, exact current project name, built footprint and actual COD through GIA or state permit. Resolve any link to Timberwolf without equating its later 100 MW proposal to J1072. No verified project-specific gallery."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-athos-power-plant-ca",
+      "id": 16747,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify precise project-wide completion day and built solar boundary; EIA operating months and overall construction completion are different milestones. Operator Athos I legacy page still says under construction; regulator and EIA operating evidence controls.",
+        "Company resolver maps SB Energy to SoftBank Group Wikipedia; use the regulator-named project entities pending shared company metadata repair."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-18-alpha-bess-tx",
+      "id": 16761,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Find current applicant permit, exact parcel, standalone MWh and project-specific official gallery. No exact-name EIA plant match found; do not infer a four-hour battery or actual construction."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-18-bravo-bess-tx",
+      "id": 16764,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Find current applicant permit, exact parcel, standalone MWh and project-specific official gallery. No exact-name EIA plant match found; do not infer a four-hour battery or actual construction."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-agricola-bess-tx",
+      "id": 16766,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify ultimate developer, permits, MWh, exact parcel and project-specific gallery. No exact Texas Agricola BESS unit found in the August EIA inventory."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-anila-bess-tx",
+      "id": 16770,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-iad02-va",
+      "id": 16774,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain accessible current building specification and precise commissioning date. Resolve indexed sheet 513,000 headline versus 438,460 building sqft; neither a current installed 120 MW nor daily resource reading inferred."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-iad03-va",
+      "id": 16777,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 2022 ten-acre versus current 26-acre market-page campus wording. Verify building-specific capacity, gross area and exact commissioning; current gallery aerial is not COD proof."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-neo-03-oh",
+      "id": 16783,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-northwest-point-il",
+      "id": 16787,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-161kv-bus-at-karma-substation-ia",
+      "id": 16794,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain original IUC order/transfer and current permit/status report tying J1313 explicitly to the current developer. Verify exact footprint and later schedule. Operator project page inaccessible; no project-specific photo verified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-7xenia-7mtvernw-345-0kv-il",
+      "id": 16798,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current developer/permit and site gallery after operator website migration. Resolve EIA PJM versus MISO balancing-authority discrepancy and actual completion; MTEP transmission budget is not solar capex."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-athos-power-plant-ca",
+      "id": 16747,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify precise project-wide completion day and built solar boundary; EIA operating months and overall construction completion are different milestones. Operator Athos I legacy page still says under construction; regulator and EIA operating evidence controls.",
+        "Company resolver maps SB Energy to SoftBank Group Wikipedia; use the regulator-named project entities pending shared company metadata repair."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-18-alpha-bess-tx",
+      "id": 16761,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Find current applicant permit, exact parcel, standalone MWh and project-specific official gallery. No exact-name EIA plant match found; do not infer a four-hour battery or actual construction."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-18-bravo-bess-tx",
+      "id": 16764,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Find current applicant permit, exact parcel, standalone MWh and project-specific official gallery. No exact-name EIA plant match found; do not infer a four-hour battery or actual construction."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-agricola-bess-tx",
+      "id": 16766,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify ultimate developer, permits, MWh, exact parcel and project-specific gallery. No exact Texas Agricola BESS unit found in the August EIA inventory."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-anila-bess-tx",
+      "id": 16770,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-iad02-va",
+      "id": 16774,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain accessible current building specification and precise commissioning date. Resolve indexed sheet 513,000 headline versus 438,460 building sqft; neither a current installed 120 MW nor daily resource reading inferred."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-iad03-va",
+      "id": 16777,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 2022 ten-acre versus current 26-acre market-page campus wording. Verify building-specific capacity, gross area and exact commissioning; current gallery aerial is not COD proof."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-neo-03-oh",
+      "id": 16783,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-northwest-point-il",
+      "id": 16787,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-161kv-bus-at-karma-substation-ia",
+      "id": 16794,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain original IUC order/transfer and current permit/status report tying J1313 explicitly to the current developer. Verify exact footprint and later schedule. Operator project page inaccessible; no project-specific photo verified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-7xenia-7mtvernw-345-0kv-il",
+      "id": 16798,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current developer/permit and site gallery after operator website migration. Resolve EIA PJM versus MISO balancing-authority discrepancy and actual completion; MTEP transmission budget is not solar capex."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-adams-345-kv-substation-mn",
+      "id": 16802,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify legal applicant, exact current project name, built footprint and actual COD through GIA or state permit. Resolve any link to Timberwolf without equating its later 100 MW proposal to J1072. No verified project-specific gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-adams-345-kv-substation-mn",
+      "id": 16802,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify legal applicant, exact current project name, built footprint and actual COD through GIA or state permit. Resolve any link to Timberwolf without equating its later 100 MW proposal to J1072. No verified project-specific gallery."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16747,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16761,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16764,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16766,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16770,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16774,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16777,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16783,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16787,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16794,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16798,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16747,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16761,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16764,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16766,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16770,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16774,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16777,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16783,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16787,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16794,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16798,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16802,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16802,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-18-alpha-bess-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 619799
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-18-alpha-bess-tx-relief.jpg",
+        "status": 200,
+        "bytes": 136556
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-18-alpha-bess-tx-topo.jpg",
+        "status": 200,
+        "bytes": 461226
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-18-bravo-bess-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 607651
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-18-bravo-bess-tx-relief.jpg",
+        "status": 200,
+        "bytes": 100552
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-18-bravo-bess-tx-topo.jpg",
+        "status": 200,
+        "bytes": 462590
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-agricola-bess-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 428952
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-agricola-bess-tx-relief.jpg",
+        "status": 200,
+        "bytes": 99060
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-agricola-bess-tx-topo.jpg",
+        "status": 200,
+        "bytes": 449056
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-aerial.jpg",
+        "status": 200,
+        "bytes": 578278
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-relief.jpg",
+        "status": 200,
+        "bytes": 149386
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-topo.jpg",
+        "status": 200,
+        "bytes": 541861
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-aerial.jpg",
+        "status": 200,
+        "bytes": 603653
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-relief.jpg",
+        "status": 200,
+        "bytes": 142304
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-topo.jpg",
+        "status": 200,
+        "bytes": 498946
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-0.jpg",
+        "status": 200,
+        "bytes": 21903
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-1.jpg",
+        "status": 200,
+        "bytes": 22673
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-10.jpg",
+        "status": 200,
+        "bytes": 862562
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-2.jpg",
+        "status": 200,
+        "bytes": 23676
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-3.jpg",
+        "status": 200,
+        "bytes": 24372
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-4.jpg",
+        "status": 200,
+        "bytes": 25397
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-5.jpg",
+        "status": 200,
+        "bytes": 26463
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-6.jpg",
+        "status": 200,
+        "bytes": 44005
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-7.jpg",
+        "status": 200,
+        "bytes": 57159
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-8.jpg",
+        "status": 200,
+        "bytes": 93556
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-9.jpg",
+        "status": 200,
+        "bytes": 177024
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-aerial.jpg",
+        "status": 200,
+        "bytes": 414045
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-relief.jpg",
+        "status": 200,
+        "bytes": 96441
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-topo.jpg",
+        "status": 200,
+        "bytes": 331150
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-aerial.jpg",
+        "status": 200,
+        "bytes": 405680
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-relief.jpg",
+        "status": 200,
+        "bytes": 65015
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-topo.jpg",
+        "status": 200,
+        "bytes": 113439
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-161kv-bus-at-karma-substation-ia-aerial.jpg",
+        "status": 200,
+        "bytes": 353276
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-161kv-bus-at-karma-substation-ia-relief.jpg",
+        "status": 200,
+        "bytes": 151446
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-161kv-bus-at-karma-substation-ia-topo.jpg",
+        "status": 200,
+        "bytes": 274781
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-adams-345-kv-substation-mn-aerial.jpg",
+        "status": 200,
+        "bytes": 430323
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-adams-345-kv-substation-mn-relief.jpg",
+        "status": 200,
+        "bytes": 118520
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-adams-345-kv-substation-mn-topo.jpg",
+        "status": 200,
+        "bytes": 307432
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16747,
+        "status": 200,
+        "bytes": 342241
+      },
+      {
+        "environment": "local",
+        "id": 16761,
+        "status": 200,
+        "bytes": 305326
+      },
+      {
+        "environment": "local",
+        "id": 16764,
+        "status": 200,
+        "bytes": 304960
+      },
+      {
+        "environment": "local",
+        "id": 16766,
+        "status": 200,
+        "bytes": 304710
+      },
+      {
+        "environment": "local",
+        "id": 16774,
+        "status": 200,
+        "bytes": 357575
+      },
+      {
+        "environment": "local",
+        "id": 16777,
+        "status": 200,
+        "bytes": 332118
+      },
+      {
+        "environment": "local",
+        "id": 16794,
+        "status": 200,
+        "bytes": 327586
+      },
+      {
+        "environment": "local",
+        "id": 16798,
+        "status": 200,
+        "bytes": 309656
+      },
+      {
+        "environment": "local",
+        "id": 16802,
+        "status": 200,
+        "bytes": 309635
+      },
+      {
+        "environment": "prod",
+        "id": 16747,
+        "status": 200,
+        "bytes": 291519
+      },
+      {
+        "environment": "prod",
+        "id": 16761,
+        "status": 200,
+        "bytes": 261544
+      },
+      {
+        "environment": "prod",
+        "id": 16764,
+        "status": 200,
+        "bytes": 261160
+      },
+      {
+        "environment": "prod",
+        "id": 16766,
+        "status": 200,
+        "bytes": 260593
+      },
+      {
+        "environment": "prod",
+        "id": 16774,
+        "status": 200,
+        "bytes": 310508
+      },
+      {
+        "environment": "prod",
+        "id": 16777,
+        "status": 200,
+        "bytes": 285182
+      },
+      {
+        "environment": "prod",
+        "id": 16794,
+        "status": 200,
+        "bytes": 283532
+      },
+      {
+        "environment": "prod",
+        "id": 16798,
+        "status": 200,
+        "bytes": 266151
+      },
+      {
+        "environment": "prod",
+        "id": 16802,
+        "status": 200,
+        "bytes": 267079
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1403,
+      "prod": 1403
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 26,
+          "sqft": 513000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+          "note": "Historical announced IAD02 scope: 513,000 sqft, expandable 120 MW. 26 acres is shared campus. Exact current gross area and installed capacity unresolved; no measured daily water or energy.",
+          "checkedAt": "2026-10-24T04:46:54.480Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 10,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+          "note": "10 acres is historical announced two-building Sterling campus; current market page repeats 26 acres, unresolved. Building MW, gross area, measured water/energy and installed generators unpublished.",
+          "checkedAt": "2026-10-24T04:46:55.832Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 26,
+          "sqft": 513000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+          "note": "Historical announced IAD02 scope: 513,000 sqft, expandable 120 MW. 26 acres is shared campus. Exact current gross area and installed capacity unresolved; no measured daily water or energy.",
+          "checkedAt": "2026-10-24T04:48:00.294Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 10,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+          "note": "10 acres is historical announced two-building Sterling campus; current market page repeats 26 acres, unresolved. Building MW, gross area, measured water/energy and installed generators unpublished.",
+          "checkedAt": "2026-10-24T04:48:14.298Z"
+        }
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "retainedCounterpartVerification": [
+    {
+      "environment": "local",
+      "id": 16675,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 15743,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 15776,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16724,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16675,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 15743,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 15776,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16724,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "solar-athos-power-plant-ca",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-115.370000,33.741283,-115.340000,33.761283&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-115.370000,33.741283,-115.340000,33.761283&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/solar-athos-power-plant-ca-aerial.jpg",
+      "bytes": 405680,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-aerial.jpg"
+    },
+    {
+      "key": "solar-athos-power-plant-ca",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-115.387000,33.729283,-115.323000,33.773283&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-115.387000,33.729283,-115.323000,33.773283&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/solar-athos-power-plant-ca-topo.jpg",
+      "bytes": 113439,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-topo.jpg"
+    },
+    {
+      "key": "solar-athos-power-plant-ca",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-115.435000,33.701283,-115.275000,33.801283&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-115.435000,33.701283,-115.275000,33.801283&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/solar-athos-power-plant-ca-relief.jpg",
+      "bytes": 65015,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-athos-power-plant-ca-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-77.490468,39.001856,-77.460468,39.021856&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-77.490468,39.001856,-77.460468,39.021856&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/dc-aligned-iad02-va-aerial.jpg",
+      "bytes": 578278,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-77.507468,38.989856,-77.443468,39.033856&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-77.507468,38.989856,-77.443468,39.033856&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/dc-aligned-iad02-va-topo.jpg",
+      "bytes": 541861,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-77.555468,38.961856,-77.395468,39.061856&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-77.555468,38.961856,-77.395468,39.061856&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/dc-aligned-iad02-va-relief.jpg",
+      "bytes": 149386,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad02-va-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-iad03-va",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-77.454344,38.979057,-77.424344,38.999057&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-77.454344,38.979057,-77.424344,38.999057&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/dc-aligned-iad03-va-aerial.jpg",
+      "bytes": 603653,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-iad03-va",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-77.471344,38.967057,-77.407344,39.011057&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-77.471344,38.967057,-77.407344,39.011057&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/dc-aligned-iad03-va-topo.jpg",
+      "bytes": 498946,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-iad03-va",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-77.519344,38.939057,-77.359344,39.039057&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-77.519344,38.939057,-77.359344,39.039057&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/dc-aligned-iad03-va-relief.jpg",
+      "bytes": 142304,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/dc-aligned-iad03-va-relief.jpg"
+    },
+    {
+      "key": "solar-7xenia-7mtvernw-345-0kv-il",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-88.529440,38.638852,-88.499440,38.658852&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-88.529440,38.638852,-88.499440,38.658852&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-aerial.jpg",
+      "bytes": 414045,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-aerial.jpg"
+    },
+    {
+      "key": "solar-7xenia-7mtvernw-345-0kv-il",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-88.546440,38.626852,-88.482440,38.670852&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-88.546440,38.626852,-88.482440,38.670852&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-topo.jpg",
+      "bytes": 331150,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-topo.jpg"
+    },
+    {
+      "key": "solar-7xenia-7mtvernw-345-0kv-il",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.594440,38.598852,-88.434440,38.698852&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.594440,38.598852,-88.434440,38.698852&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-relief.jpg",
+      "bytes": 96441,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/solar-7xenia-7mtvernw-345-0kv-il-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/DJI_0008-Medium-400x225.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "Operator exact-building gallery: Aligned IAD-02 Data Center aerial. This does not establish measured consumption or full installed IT load.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-0",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-0.jpg",
+      "width": 400,
+      "height": 225,
+      "bytes": 21903,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-0.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP28371-Medium-400x266.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "Operator exact-building gallery: IAD-02 Exterior. This does not establish measured consumption or full installed IT load.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-1.jpg",
+      "width": 400,
+      "height": 266,
+      "bytes": 22673,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-1.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BPI5136-Medium-400x267.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "IAD02 glazed lounge interior from the exact-building operator gallery (operator alt text labels it Exterior). No building capacity or commissioning day inferred.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-2.jpg",
+      "width": 400,
+      "height": 267,
+      "bytes": 23676,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-2.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP28103-Medium-400x267.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "Operator exact-building gallery: IAD-02 Kitchen. This does not establish measured consumption or full installed IT load.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-3.jpg",
+      "width": 400,
+      "height": 267,
+      "bytes": 24372,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-3.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP27445-Medium-400x267.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "Operator exact-building gallery: IAD-02 Lobby. This does not establish measured consumption or full installed IT load.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-4.jpg",
+      "width": 400,
+      "height": 267,
+      "bytes": 25397,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-4.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP27764-Medium-400x266.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "Operator exact-building gallery: IAD-02 Data Hall. This does not establish measured consumption or full installed IT load.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-5",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-5.jpg",
+      "width": 400,
+      "height": 266,
+      "bytes": 26463,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-5.jpg"
+    },
+    {
+      "key": "dc-aligned-iad03-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/250823-f0036-SH-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "caption": "Operator IAD-03 gallery image; no current IT rating or exact commissioning day inferred.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-6",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-6.jpg",
+      "width": 320,
+      "height": 256,
+      "bytes": 44005,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-6.jpg"
+    },
+    {
+      "key": "dc-aligned-iad02-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Topping-Out-Ashburn.jpg",
+      "sourcePage": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+      "caption": "Operator image accompanying the December 3, 2020 IAD02 topping-out account. Historical structural milestone, not proof of operation.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-7",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-7.jpg",
+      "width": 977,
+      "height": 650,
+      "bytes": 57159,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-7.jpg"
+    },
+    {
+      "key": "dc-aligned-iad03-va",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/IAD-03-PR-Image-1-1024x576.jpg",
+      "sourcePage": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+      "caption": "Operator IAD03 proposed-building rendering accompanying the July 2022 announcement. A visualization, not a construction or operating photograph.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-8",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-8.jpg",
+      "width": 1024,
+      "height": 576,
+      "bytes": 93556,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-8.jpg"
+    },
+    {
+      "key": "solar-athos-power-plant-ca",
+      "sourceUrl": "https://sbenergy.com/app/uploads/2021/05/athos-1-2021-0813.jpg",
+      "sourcePage": "https://sbenergy.com/project/athos-i/",
+      "caption": "Historical Athos I construction image from the operator project page; not the entire combined Athos I/II project or completed battery.",
+      "credit": "SB Energy",
+      "layer": "gallery-9",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-9.jpg",
+      "width": 605,
+      "height": 293,
+      "bytes": 177024,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-9.jpg"
+    },
+    {
+      "key": "solar-athos-power-plant-ca",
+      "sourceUrl": "https://sbenergy.com/app/uploads/2024/01/athos-spotlight-1120x616-1.jpg",
+      "sourcePage": "https://sbenergy.com/energy-projects/",
+      "caption": "Operator Athos solar-plant image with sheep; not a battery system or proof of a precise operating day.",
+      "credit": "SB Energy",
+      "layer": "gallery-10",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round25-2026-10-23/gallery-10.jpg",
+      "width": 1120,
+      "height": 616,
+      "bytes": 862562,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round25-2026-10-23/gallery-10.jpg"
+    }
+  ],
+  "gallerySourceChecks": [
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/DJI_0008-Medium-400x225.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 21903,
+      "sha256": "cb413cff3b5c390fcfcc36b893d419ce997f5f5ffaacea9e08f212707d4940f2",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP28371-Medium-400x266.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 22673,
+      "sha256": "25ab38761134a88f9ced30f45b0f9fb78c4df8e78388cc612b9b56ea5660723a",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BPI5136-Medium-400x267.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 23676,
+      "sha256": "1b2a11748cd13fc838a79ba7526a43a083104b2c65140650eb07f4542d8e4b78",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP28103-Medium-400x267.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 24372,
+      "sha256": "c1155b6d65a98b098b8e68d9d7c57e9a1dad11738a8f9d7acfa32b4a59a55612",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP27445-Medium-400x267.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 25397,
+      "sha256": "7f12a2eac2f0dd97edffe5369f75ad5a1550a07a848322d760de571b9b3af521",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/BP27764-Medium-400x266.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 26463,
+      "sha256": "e7dab60dbfea2041734d463f323321a352cda477ba5308431299cd78398ec7e4",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/250823-f0036-SH-Small.jpeg",
+      "sourcePage": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 44005,
+      "sha256": "b056c04f7fdbceb33e303118a54097b013e45bdd264875eedac32d0222f1ecfb",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/Topping-Out-Ashburn.jpg",
+      "sourcePage": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+      "status": 200,
+      "bytes": 57159,
+      "sha256": "5749cf9ca52b88f9fb04b735584f1c249213a6fad95ade4fc9fdd3c437d69e48",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2025/09/IAD-03-PR-Image-1-1024x576.jpg",
+      "sourcePage": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+      "status": 200,
+      "bytes": 93556,
+      "sha256": "e141462cc58ef333fc3c6e389d75e93e5c90364ecf7db7e35530017187f3327e",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://sbenergy.com/app/uploads/2021/05/athos-1-2021-0813.jpg",
+      "sourcePage": "https://sbenergy.com/project/athos-i/",
+      "status": 200,
+      "bytes": 177024,
+      "sha256": "097f05f5885ca9a9fad1d4c029695a5f45c12c1e072b799fca1875f35b44518c",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://sbenergy.com/app/uploads/2024/01/athos-spotlight-1120x616-1.jpg",
+      "sourcePage": "https://sbenergy.com/energy-projects/",
+      "status": 200,
+      "bytes": 862562,
+      "sha256": "0a7776383ac18b1a6b8bff91449678e26ff07094481215ad68e5029c6f49b02b",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "key": "iad-market",
+      "url": "https://aligneddc.com/northern-virginia-data-centers/",
+      "status": 200,
+      "bytes": 290020,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/northern-virginia-data-centers/",
+      "images": [
+        {
+          "src": "/wp-content/uploads/2025/08/artistic-colorful-bg2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Data-Hall_1-Small.jpeg",
+          "alt": "IAD-01 Data Hall"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Data-Hall_1-Small.jpeg",
+          "alt": "IAD-01 Data Hall"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Lobby_2-Small.jpeg",
+          "alt": "IAD-01 Lobby"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Lobby_2-Small.jpeg",
+          "alt": "IAD-01 Lobby"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Kitchen_2-Small.jpeg",
+          "alt": "IAD-01 Kitchen"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Kitchen_2-Small.jpeg",
+          "alt": "IAD-01 Kitchen"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/NOC-Small.jpeg",
+          "alt": "IAD-01 NOC"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/NOC-Small.jpeg",
+          "alt": "IAD-01 NOC"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Work-Area_1-2-Small.jpeg",
+          "alt": "IAD-01 Work Area_1"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Work-Area_1-2-Small.jpeg",
+          "alt": "IAD-01 Work Area_1"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Reception_3-Small.jpeg",
+          "alt": "IAD-01 Reception_3"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Reception_3-Small.jpeg",
+          "alt": "IAD-01 Reception_3"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/DJI_0008-Medium-400x225.jpeg",
+          "alt": "Aligned IAD-02 Data Center aerial"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/DJI_0008-Medium-400x225.jpeg",
+          "alt": "Aligned IAD-02 Data Center aerial"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP28371-Medium-400x266.jpeg",
+          "alt": "IAD-02 Exterior"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP28371-Medium-400x266.jpeg",
+          "alt": "IAD-02 Exterior"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BPI5136-Medium-400x267.jpeg",
+          "alt": "IAD-02 Exterior"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BPI5136-Medium-400x267.jpeg",
+          "alt": "IAD-02 Exterior"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP28103-Medium-400x267.jpeg",
+          "alt": "IAD-02 Kitchen"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP28103-Medium-400x267.jpeg",
+          "alt": "IAD-02 Kitchen"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP27445-Medium-400x267.jpeg",
+          "alt": "IAD-02 Lobby"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP27445-Medium-400x267.jpeg",
+          "alt": "IAD-02 Lobby"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP27764-Medium-400x266.jpeg",
+          "alt": "IAD-02 Data Hall"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/BP27764-Medium-400x266.jpeg",
+          "alt": "IAD-02 Data Hall"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/250823-f0036-SH-Small.jpeg",
+          "alt": "IAD-03"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/250823-f0036-SH-Small.jpeg",
+          "alt": "IAD-03"
+        },
+        {
+          "src": "/wp-content/uploads/2025/08/single-location-bg-img.jpg",
+          "alt": "render of a data center campus aerial view"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/power-icon.svg",
+          "alt": "power icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-cooling-infrastructure-light.svg",
+          "alt": "cooling infrastructure icon aligned data centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-sustainability-light.svg",
+          "alt": "sustainability icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-security-light.svg",
+          "alt": "security icon"
+        },
+        {
+          "src": "/wp-content/uploads/2025/09/Data-Hall_1.jpeg",
+          "alt": "Aligned Data Hall"
+        }
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/250823-f0036-SH-Small.jpeg"
+        }
+      ]
+    },
+    {
+      "key": "ord-market",
+      "url": "https://aligneddc.com/chicago-data-centers/",
+      "status": 200,
+      "bytes": 298326,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/chicago-data-centers/",
+      "images": [
+        {
+          "src": "/wp-content/uploads/2025/08/artistic-colorful-bg2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Lobby_Data-Center-HiRes-min-400x267.jpg",
+          "alt": "Chicago ORD-01 Lobby_Data Center HiRes-min"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Lobby_Data-Center-HiRes-min-400x267.jpg",
+          "alt": "Chicago ORD-01 Lobby_Data Center HiRes-min"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-14-min-400x225.jpg",
+          "alt": "Chicago ORD-01 Data Center HiRes-14-min"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-14-min-400x225.jpg",
+          "alt": "Chicago ORD-01 Data Center HiRes-14-min"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-9-min-400x225.jpg",
+          "alt": "Chicago ORD-01 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-9-min-400x225.jpg",
+          "alt": "Chicago ORD-01 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-3-min-400x267.jpg",
+          "alt": "Chicago ORD-01 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-3-min-400x267.jpg",
+          "alt": "Chicago ORD-01 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-2-min-400x267.jpg",
+          "alt": "Chicago ORD-01 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-2-min-400x267.jpg",
+          "alt": "Chicago ORD-01 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-Aerial-HiRes-min-400x225.jpg",
+          "alt": "Chicago ORD-01 Data Center Aerial"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-Aerial-HiRes-min-400x225.jpg",
+          "alt": "Chicago ORD-01 Data Center Aerial"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-16-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-16-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-13-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-13-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-12-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-12-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-8-min-400x225.jpg",
+          "alt": "Chicago-ORD-02-Data-Center Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-8-min-400x225.jpg",
+          "alt": "Chicago-ORD-02-Data-Center Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-7-min-400x267.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-7-min-400x267.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-6-min-400x267.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-6-min-400x267.jpg",
+          "alt": "Chicago ORD-02 Data Center Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-Aerial-HiRes-11-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aerial Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-Aerial-HiRes-11-min-400x225.jpg",
+          "alt": "Chicago ORD-02 Data Center Aerial Aligned"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/North-Corner-Night-View-400x225.jpg",
+          "alt": "Aligned Chicago ORD-03 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/North-Corner-Night-View-400x225.jpg",
+          "alt": "Aligned Chicago ORD-03 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Admin-Day-View-400x225.jpg",
+          "alt": "Aligned Chicago ORD-03 Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Admin-Day-View-400x225.jpg",
+          "alt": "Aligned Chicago ORD-03 Data Center"
+        },
+        {
+          "src": "/wp-content/uploads/2025/08/single-location-bg-img.jpg",
+          "alt": "render of a data center campus aerial view"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/power-icon.svg",
+          "alt": "power icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-cooling-infrastructure-light.svg",
+          "alt": "cooling infrastructure icon aligned data centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-sustainability-light.svg",
+          "alt": "sustainability icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-security-light.svg",
+          "alt": "security icon"
+        },
+        {
+          "src": "/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-8-min.jpg",
+          "alt": "Chicago-ORD-02-Data-Center Aligned Data Centers"
+        }
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Lobby_Data-Center-HiRes-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-14-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-9-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-3-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-HiRes-2-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-01-Data-Center-Aerial-HiRes-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-16-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-13-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-12-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-8-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-7-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-HiRes-6-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Chicago-ORD-02-Data-Center-Aerial-HiRes-11-min.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/North-Corner-Night-View.jpg"
+        },
+        {
+          "text": "",
+          "href": "https://aligneddc.com/wp-content/uploads/2025/09/Admin-Day-View.jpg"
+        }
+      ]
+    },
+    {
+      "key": "neo-market",
+      "url": "https://aligneddc.com/northeast-ohio-data-centers/",
+      "status": 200,
+      "bytes": 265619,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/northeast-ohio-data-centers/",
+      "images": [
+        {
+          "src": "/wp-content/uploads/2025/08/artistic-colorful-bg2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "/wp-content/uploads/2025/08/single-location-bg-img.jpg",
+          "alt": "render of a data center campus aerial view"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/power-icon.svg",
+          "alt": "power icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-cooling-infrastructure-light.svg",
+          "alt": "cooling infrastructure icon aligned data centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-sustainability-light.svg",
+          "alt": "sustainability icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-security-light.svg",
+          "alt": "security icon"
+        },
+        {
+          "src": "/wp-content/uploads/2025/08/contact-bg-img.jpg",
+          "alt": "image of US skyline"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "iad02-spec",
+      "url": "https://aligneddc.com/wp-content/uploads/2023/04/ALI_AshburnIIBldgSpecs211012_Web.pdf",
+      "status": 404,
+      "bytes": 209820,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/wp-content/uploads/2023/04/ALI_AshburnIIBldgSpecs211012_Web.pdf",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "iad02-top",
+      "url": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+      "status": 200,
+      "bytes": 222942,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+      "images": [
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Topping-Out-Ashburn.jpg",
+          "alt": "Aligned Tops Out Its Second Ashburn, VA Hyperscale Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/Topping-Out-Ashburn.jpg",
+          "alt": "Aligned Tops Out Its Second Ashburn, VA Hyperscale Data Center"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/08/Thats-a-Great-Question-Series-Graphic-1-1024x1024.png",
+          "alt": "How Do Data Centers Compare to Other Industrial Development?"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/08/Thats-a-Great-Question-Series-Graphic-1-1024x1024.png",
+          "alt": "How Do Data Centers Compare to Other Industrial Development?"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/Screenshot-2026-10-16-at-10.10.29-AM.png",
+          "alt": "Building Connections and Caring for Neighbors in Elk Grove Village"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/Screenshot-2026-10-16-at-10.10.29-AM.png",
+          "alt": "Building Connections and Caring for Neighbors in Elk Grove Village"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/employee-spotlight-1-1024x1024.png",
+          "alt": "Employee Spotlight: Meet Taylor Wangler"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/employee-spotlight-1-1024x1024.png",
+          "alt": "Employee Spotlight: Meet Taylor Wangler"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "iad03-launch",
+      "url": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+      "status": 200,
+      "bytes": 227263,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+      "images": [
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/IAD-03-PR-Image-1-1024x576.jpg",
+          "alt": "Aligned Data Centers Expands Presence in Northern Virginia with New Sterling Hyperscale Campus"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/IAD-03-PR-Image-1-1024x576.jpg",
+          "alt": "Aligned Data Centers Expands Presence in Northern Virginia with New Sterling Hyperscale Campus"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/Featured-Press-Website-Logo-5.png",
+          "alt": "Investing in Frederick County’s Youth: Our New Partnership with Boys & Girls Clubs"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/Featured-Press-Website-Logo-5.png",
+          "alt": "Investing in Frederick County’s Youth: Our New Partnership with Boys & Girls Clubs"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Phaidra-1024x1024.png",
+          "alt": "Phaidra and Aligned Partner to Empower Operations Teams and Strengthen Data Center Reliability with AI"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Phaidra-1024x1024.png",
+          "alt": "Phaidra and Aligned Partner to Empower Operations Teams and Strengthen Data Center Reliability with AI"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Aligned-Data-Centers-Appoints-Industry-Veteran-Chris-Drumgoole-as-Chief-Operating-Officer-1024x576.png",
+          "alt": "Aligned Data Centers Appoints Industry Veteran Chris Drumgoole as Chief Operating Officer   "
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Aligned-Data-Centers-Appoints-Industry-Veteran-Chris-Drumgoole-as-Chief-Operating-Officer-1024x576.png",
+          "alt": "Aligned Data Centers Appoints Industry Veteran Chris Drumgoole as Chief Operating Officer   "
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "elk-2024",
+      "url": "https://elkgrovebusiness.org/newsletter/2024-year-in-review",
+      "status": 200,
+      "bytes": 50902,
+      "pdf": false,
+      "finalUrl": "https://elkgrovebusiness.org/newsletter/2024-year-in-review",
+      "images": [
+        {
+          "src": "https://elkgrovebusiness.org/uploads/_newsHero/yir-image7-1.png",
+          "alt": "Yir image7 1"
+        },
+        {
+          "src": "https://elkgrovebusiness.org/uploads/images/2024-yir-for-site-2.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/egv-logo-green.svg",
+          "alt": "Elk Grove Village Business Park"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "elk-2025",
+      "url": "https://elkgrovebusiness.org/uploads/files/Business-Matters/March-2025-Business-Matters.pdf",
+      "status": 200,
+      "bytes": 3052468,
+      "pdf": true,
+      "finalUrl": "https://elkgrovebusiness.org/uploads/files/Business-Matters/March-2025-Business-Matters.pdf"
+    },
+    {
+      "key": "elk-agenda",
+      "url": "https://www.elkgrove.org/home/showpublisheddocument/14304/638429200961370000",
+      "status": 403,
+      "bytes": 469,
+      "pdf": false,
+      "finalUrl": "https://www.elkgrove.org/home/showpublisheddocument/14304/638429200961370000",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "athos",
+      "url": "https://sbenergy.com/project/athos-i/",
+      "status": 200,
+      "bytes": 46123,
+      "pdf": false,
+      "finalUrl": "https://sbenergy.com/project/athos-i/",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "sb-projects",
+      "url": "https://sbenergy.com/energy-projects/",
+      "status": 200,
+      "bytes": 146235,
+      "pdf": false,
+      "finalUrl": "https://sbenergy.com/energy-projects/",
+      "images": [
+        {
+          "src": "https://sbenergy.com/app/uploads/2024/07/nav-white.svg",
+          "alt": "SBE"
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2024/07/nav-black.svg",
+          "alt": "SBE"
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2025/09/sbe-energy-desktop-2880x720-2-scaled.png",
+          "alt": "Solar Energy"
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2025/09/sbe-energy-mobile-750x510-2.png",
+          "alt": ""
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2025/01/Cards-Proven.webp",
+          "alt": "Two workers under a solar panel"
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2025/01/Cards-Partnership.webp",
+          "alt": "Executives having a conversation in a circle."
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2025/08/innovation-image-1.png",
+          "alt": "Battery storage in dry area."
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2021/05/athosII-spotlight-1120x616-1.jpg",
+          "alt": "Battery storage units in a dry area."
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2024/01/athos-spotlight-1120x616-1.jpg",
+          "alt": "Sheep in a solar power plant."
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2024/01/pelicans-spotlight-1120x616-1.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2024/01/SBE-ATHOS-2023-5473648-1.webp",
+          "alt": null
+        },
+        {
+          "src": "http://sbenergy.spellboundclient.com/app/uploads/2024/01/Vector-3.svg",
+          "alt": ""
+        },
+        {
+          "src": "http://sbenergy.spellboundclient.com/app/uploads/2024/01/Vector.svg",
+          "alt": ""
+        },
+        {
+          "src": "https://sbenergy.com/app/uploads/2024/07/footer-black.svg",
+          "alt": "SBE"
+        },
+        {
+          "src": "https://sbenergy.com/app/themes/sbe-theme/dist//images/icons/icon-x.svg",
+          "alt": "SB Energy on X"
+        },
+        {
+          "src": "https://sbenergy.com/app/themes/sbe-theme/dist//images/icons/icon-linkedin.svg",
+          "alt": "Linkedin"
+        },
+        {
+          "src": "https://sbenergy.com/app/themes/sbe-theme/dist//images/icons/icon-x.svg",
+          "alt": "SB Energy on X"
+        },
+        {
+          "src": "https://sbenergy.com/app/themes/sbe-theme/dist//images/icons/icon-linkedin.svg",
+          "alt": "Linkedin"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "anila-ia",
+      "url": "https://interchange.puc.texas.gov/Documents/35077_2138_1500134.PDF",
+      "status": 200,
+      "bytes": 1428275,
+      "pdf": true,
+      "finalUrl": "https://interchange.puc.texas.gov/Documents/35077_2138_1500134.PDF"
+    },
+    {
+      "key": "miso",
+      "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "status": 200,
+      "bytes": 2325931,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16747",
+      "url": "https://eplanning.blm.gov/eplanning-ui/project/1502422/510",
+      "status": 200,
+      "bytes": 125806,
+      "pdf": false,
+      "finalUrl": "https://eplanning.blm.gov/eplanning-ui/project/1502422/510",
+      "images": [
+        {
+          "src": "https://gov.content.powerapps.us/resource/powerappsportal/img/web.png",
+          "alt": "web"
+        },
+        {
+          "src": "https://gov.content.powerapps.us/resource/powerappsportal/img/close.png",
+          "alt": "close"
+        },
+        {
+          "src": "/us_flag_small.png",
+          "alt": "U.S. flag"
+        },
+        {
+          "src": "/chevron_down_12_regular.svg",
+          "alt": "Chevron down"
+        },
+        {
+          "src": "/icon_dot_gov.svg",
+          "alt": "Dot gov"
+        },
+        {
+          "src": "/icon_https.svg",
+          "alt": "Https"
+        },
+        {
+          "src": "/blm_logo.svg",
+          "alt": "Home"
+        },
+        {
+          "src": "/search.svg",
+          "alt": "search"
+        },
+        {
+          "src": "/organ_mtns.jpg",
+          "alt": "The Organ Mountains-Desert Peaks National Monument"
+        },
+        {
+          "src": "/delta_wsr.jpg",
+          "alt": "The Delta Wild and Scenic River Watershed"
+        },
+        {
+          "src": "/sonoran_desert.jpg",
+          "alt": null
+        },
+        {
+          "src": "/vermilion cliffs.jpg",
+          "alt": "Vermilion Cliffs National Monument"
+        },
+        {
+          "src": "/blm_logo.svg",
+          "alt": "Home"
+        }
+      ],
+      "links": [
+        {
+          "text": "Cooperating Agency Info",
+          "href": "https://www.blm.gov/sites/blm.gov/files/Services_CADRCooperatingAgencyGuide.pdf"
+        },
+        {
+          "text": "Federal Register Notices",
+          "href": "https://www.federalregister.gov/documents/search?conditions%5Btype%5D=NOTICE&order=newest"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Cooperating Agency Info",
+          "href": "https://www.blm.gov/sites/blm.gov/files/Services_CADRCooperatingAgencyGuide.pdf"
+        },
+        {
+          "text": "Federal Register Notices",
+          "href": "https://www.federalregister.gov/documents/search?conditions%5Btype%5D=NOTICE&order=newest"
+        },
+        {
+          "text": "Flickr",
+          "href": "https://www.flickr.com/photos/mypubliclands/"
+        },
+        {
+          "text": "Flickr",
+          "href": "https://www.flickr.com/photos/mypubliclands/"
+        }
+      ]
+    },
+    {
+      "key": "original-16761",
+      "url": "https://interconnection.ercot.com/gis-reports/28INR0328",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16764",
+      "url": "https://interconnection.ercot.com/gis-reports/28INR0327",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16766",
+      "url": "https://interconnection.ercot.com/gis-reports/28INR0265",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16770",
+      "url": "https://interconnection.ercot.com/gis-reports/26INR0077",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16774",
+      "url": "https://www.deq.virginia.gov/home/showpublisheddocument/25926/638633793013470000",
+      "status": 403,
+      "bytes": 479,
+      "pdf": false,
+      "finalUrl": "https://www.deq.virginia.gov/home/showpublisheddocument/25926/638633793013470000",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16777",
+      "url": "https://www.deq.virginia.gov/home/showpublisheddocument/25992/638633943624630000",
+      "status": 403,
+      "bytes": 477,
+      "pdf": false,
+      "finalUrl": "https://www.deq.virginia.gov/home/showpublisheddocument/25992/638633943624630000",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16783",
+      "url": "https://storage.googleapis.com/data-center-source-files/campuses/615__aligned-neo-01-sandusky/2024-12-27_air-permit_ohio-epa-final-air-pti-p0137086-facility-032202203.pdf",
+      "status": 200,
+      "bytes": 17368524,
+      "pdf": true,
+      "finalUrl": "https://storage.googleapis.com/data-center-source-files/campuses/615__aligned-neo-01-sandusky/2024-12-27_air-permit_ohio-epa-final-air-pti-p0137086-facility-032202203.pdf"
+    },
+    {
+      "key": "original-16787",
+      "url": "https://storage.googleapis.com/data-center-source-files/campuses/611__aligned-elk-grove-village-northwest-point/2024-06-21_air-permit_iepa-ej-notification-6-21-2024-aligned-data-center.pdf",
+      "status": 200,
+      "bytes": 302003,
+      "pdf": true,
+      "finalUrl": "https://storage.googleapis.com/data-center-source-files/campuses/611__aligned-elk-grove-village-northwest-point/2024-06-21_air-permit_iepa-ej-notification-6-21-2024-aligned-data-center.pdf"
+    },
+    {
+      "key": "original-16794",
+      "url": "https://www.misoenergy.org/planning/generator-interconnection/GI_Queue/J1313",
+      "status": 200,
+      "bytes": 152032,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/planning/transmission-planning/mtep",
+      "images": [
+        {
+          "src": "/bundles/img/logo.png",
+          "alt": "MISO logo"
+        },
+        {
+          "src": "/globalassets/meet-miso/industry-foundations/transmission-tower-small.jpeg",
+          "alt": "Transmission Towers"
+        },
+        {
+          "src": "/globalassets/planning/mtep/mtep-guiding-principles.png",
+          "alt": "Guiding Principles"
+        },
+        {
+          "src": "/bundles/img/MISOIcon.png",
+          "alt": "MISO"
+        }
+      ],
+      "links": [
+        {
+          "text": "Interregional Coordination",
+          "href": "/planning/interregional-coordination/"
+        },
+        {
+          "text": "Distribution Interconnection Coordination",
+          "href": "/planning/resource-utilization/distribution/"
+        },
+        {
+          "text": "Regulatory Orders",
+          "href": "/legal/filings-and-orders/regulatory-orders/"
+        },
+        {
+          "text": "Regulatory Filings",
+          "href": "/legal/filings-and-orders/regulatory-filings/"
+        },
+        {
+          "text": "State Filings",
+          "href": "/legal/filings-and-orders/state-filings/"
+        },
+        {
+          "text": "Overview",
+          "href": "#accordion18355Collapse0"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse0"
+        },
+        {
+          "text": "MTEP 26 - Draft Report",
+          "href": "#accordion18355Collapse1"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse1"
+        },
+        {
+          "text": "MTEP 25",
+          "href": "#accordion18355Collapse2"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse2"
+        },
+        {
+          "text": "Application Process - Includes EPR",
+          "href": "#accordion18355Collapse3"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse3"
+        },
+        {
+          "text": "MTEP Information Exchange Schedules and Requirements.",
+          "href": "https://cdn.misoenergy.org/MTEP_Information_Exchange_Schedules_and_Requirements106316.pdf"
+        },
+        {
+          "text": ".",
+          "href": "file:///C:/Users/m04705/OneDrive%20-%20MISO%20Energy/Documents/mtep-project-alternative-submittal-form579567%20PDF.pdf"
+        },
+        {
+          "text": "Project Tracking and Monitoring",
+          "href": "#accordion18355Collapse4"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse4"
+        },
+        {
+          "text": "MVP 2011 Dashboard",
+          "href": "https://cdn.misoenergy.org/MVP%202011%20Dashboard%20Final117055.pdf?v=20251215142934"
+        },
+        {
+          "text": "Tranche 1 Dashboard",
+          "href": "https://cdn.misoenergy.org/Tranche%201%20Dashboard732077.pdf?v=20251215143928"
+        },
+        {
+          "text": "Tranche 2.1 Dashboard",
+          "href": "https://cdn.misoenergy.org/Tranche%202.1%20Dashboard732078.pdf?v=20251215144025"
+        },
+        {
+          "text": "Get Involved and FAQs",
+          "href": "#accordion18355Collapse5"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse5"
+        }
+      ]
+    },
+    {
+      "key": "original-16798",
+      "url": "https://www.misoenergy.org/planning/generator-interconnection/GI_Queue/J1679",
+      "status": 200,
+      "bytes": 152032,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/planning/transmission-planning/mtep",
+      "images": [
+        {
+          "src": "/bundles/img/logo.png",
+          "alt": "MISO logo"
+        },
+        {
+          "src": "/globalassets/meet-miso/industry-foundations/transmission-tower-small.jpeg",
+          "alt": "Transmission Towers"
+        },
+        {
+          "src": "/globalassets/planning/mtep/mtep-guiding-principles.png",
+          "alt": "Guiding Principles"
+        },
+        {
+          "src": "/bundles/img/MISOIcon.png",
+          "alt": "MISO"
+        }
+      ],
+      "links": [
+        {
+          "text": "Interregional Coordination",
+          "href": "/planning/interregional-coordination/"
+        },
+        {
+          "text": "Distribution Interconnection Coordination",
+          "href": "/planning/resource-utilization/distribution/"
+        },
+        {
+          "text": "Regulatory Orders",
+          "href": "/legal/filings-and-orders/regulatory-orders/"
+        },
+        {
+          "text": "Regulatory Filings",
+          "href": "/legal/filings-and-orders/regulatory-filings/"
+        },
+        {
+          "text": "State Filings",
+          "href": "/legal/filings-and-orders/state-filings/"
+        },
+        {
+          "text": "Overview",
+          "href": "#accordion18355Collapse0"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse0"
+        },
+        {
+          "text": "MTEP 26 - Draft Report",
+          "href": "#accordion18355Collapse1"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse1"
+        },
+        {
+          "text": "MTEP 25",
+          "href": "#accordion18355Collapse2"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse2"
+        },
+        {
+          "text": "Application Process - Includes EPR",
+          "href": "#accordion18355Collapse3"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse3"
+        },
+        {
+          "text": "MTEP Information Exchange Schedules and Requirements.",
+          "href": "https://cdn.misoenergy.org/MTEP_Information_Exchange_Schedules_and_Requirements106316.pdf"
+        },
+        {
+          "text": ".",
+          "href": "file:///C:/Users/m04705/OneDrive%20-%20MISO%20Energy/Documents/mtep-project-alternative-submittal-form579567%20PDF.pdf"
+        },
+        {
+          "text": "Project Tracking and Monitoring",
+          "href": "#accordion18355Collapse4"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse4"
+        },
+        {
+          "text": "MVP 2011 Dashboard",
+          "href": "https://cdn.misoenergy.org/MVP%202011%20Dashboard%20Final117055.pdf?v=20251215142934"
+        },
+        {
+          "text": "Tranche 1 Dashboard",
+          "href": "https://cdn.misoenergy.org/Tranche%201%20Dashboard732077.pdf?v=20251215143928"
+        },
+        {
+          "text": "Tranche 2.1 Dashboard",
+          "href": "https://cdn.misoenergy.org/Tranche%202.1%20Dashboard732078.pdf?v=20251215144025"
+        },
+        {
+          "text": "Get Involved and FAQs",
+          "href": "#accordion18355Collapse5"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse5"
+        }
+      ]
+    },
+    {
+      "key": "original-16802",
+      "url": "https://www.misoenergy.org/planning/generator-interconnection/GI_Queue/J1072",
+      "status": 200,
+      "bytes": 152032,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/planning/transmission-planning/mtep",
+      "images": [
+        {
+          "src": "/bundles/img/logo.png",
+          "alt": "MISO logo"
+        },
+        {
+          "src": "/globalassets/meet-miso/industry-foundations/transmission-tower-small.jpeg",
+          "alt": "Transmission Towers"
+        },
+        {
+          "src": "/globalassets/planning/mtep/mtep-guiding-principles.png",
+          "alt": "Guiding Principles"
+        },
+        {
+          "src": "/bundles/img/MISOIcon.png",
+          "alt": "MISO"
+        }
+      ],
+      "links": [
+        {
+          "text": "Interregional Coordination",
+          "href": "/planning/interregional-coordination/"
+        },
+        {
+          "text": "Distribution Interconnection Coordination",
+          "href": "/planning/resource-utilization/distribution/"
+        },
+        {
+          "text": "Regulatory Orders",
+          "href": "/legal/filings-and-orders/regulatory-orders/"
+        },
+        {
+          "text": "Regulatory Filings",
+          "href": "/legal/filings-and-orders/regulatory-filings/"
+        },
+        {
+          "text": "State Filings",
+          "href": "/legal/filings-and-orders/state-filings/"
+        },
+        {
+          "text": "Overview",
+          "href": "#accordion18355Collapse0"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse0"
+        },
+        {
+          "text": "MTEP 26 - Draft Report",
+          "href": "#accordion18355Collapse1"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse1"
+        },
+        {
+          "text": "MTEP 25",
+          "href": "#accordion18355Collapse2"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse2"
+        },
+        {
+          "text": "Application Process - Includes EPR",
+          "href": "#accordion18355Collapse3"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse3"
+        },
+        {
+          "text": "MTEP Information Exchange Schedules and Requirements.",
+          "href": "https://cdn.misoenergy.org/MTEP_Information_Exchange_Schedules_and_Requirements106316.pdf"
+        },
+        {
+          "text": ".",
+          "href": "file:///C:/Users/m04705/OneDrive%20-%20MISO%20Energy/Documents/mtep-project-alternative-submittal-form579567%20PDF.pdf"
+        },
+        {
+          "text": "Project Tracking and Monitoring",
+          "href": "#accordion18355Collapse4"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse4"
+        },
+        {
+          "text": "MVP 2011 Dashboard",
+          "href": "https://cdn.misoenergy.org/MVP%202011%20Dashboard%20Final117055.pdf?v=20251215142934"
+        },
+        {
+          "text": "Tranche 1 Dashboard",
+          "href": "https://cdn.misoenergy.org/Tranche%201%20Dashboard732077.pdf?v=20251215143928"
+        },
+        {
+          "text": "Tranche 2.1 Dashboard",
+          "href": "https://cdn.misoenergy.org/Tranche%202.1%20Dashboard732078.pdf?v=20251215144025"
+        },
+        {
+          "text": "Get Involved and FAQs",
+          "href": "#accordion18355Collapse5"
+        },
+        {
+          "text": "",
+          "href": "#accordion18355Collapse5"
+        }
+      ]
+    },
+    {
+      "key": "athos-staff",
+      "url": "https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf",
+      "status": 200,
+      "bytes": 166908,
+      "pdf": true,
+      "finalUrl": "https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf"
+    },
+    {
+      "key": "athos-cec",
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=103485&tn=266435",
+      "status": 200,
+      "bytes": 9358329,
+      "pdf": true,
+      "finalUrl": "https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=103485&tn=266435"
+    },
+    {
+      "key": "flora",
+      "url": "https://www.florasolarpower.com/about_flora",
+      "status": 404,
+      "bytes": 3540,
+      "pdf": false,
+      "finalUrl": "https://www.apexcleanenergyproject.com/about_flora?utm_source=florasolarpower&utm_medium=redirect&utm_campaign=site_migration",
+      "images": [
+        {
+          "src": "https://cdn.prod.website-files.com/static/page-not-found.211a85e40c.svg",
+          "alt": ""
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "flora-home",
+      "url": "https://www.florasolarpower.com/",
+      "status": 200,
+      "bytes": 7384,
+      "pdf": false,
+      "finalUrl": "https://www.apexcleanenergyproject.com/?utm_source=florasolarpower&utm_medium=redirect&utm_campaign=site_migration",
+      "images": [
+        {
+          "src": "https://cdn.prod.website-files.com/6a1348d6d24200cb849a231c/6a179131719f7ecaa287b11c_iStock-hybrid_right_sm.jpg",
+          "alt": "Solar panels reflecting sunlight with wind turbines in the background under a clear sky."
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "flora-miso",
+      "url": "https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf",
+      "status": 200,
+      "bytes": 10391350,
+      "pdf": true,
+      "finalUrl": "https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf"
+    },
+    {
+      "key": "grand-junction",
+      "url": "https://geronimopower.com/projects/grand-junction-solar/",
+      "status": 404,
+      "bytes": 128778,
+      "pdf": false,
+      "finalUrl": "https://geronimopower.com/projects/grand-junction-solar/",
+      "images": [
+        {
+          "src": "https://geronimopower.com/wp-content/uploads/2023/01/Geronimo-Power_Logo-Final-300x69.png",
+          "alt": "Geronimo Power logo"
+        },
+        {
+          "src": "https://geronimopower.com/wp-content/uploads/elementor/thumbs/Sidney-Nuese-Full-Res-scaled-repanh1llq93ltcpjlzw9binwppf48wda9mkkgx1eo.jpg",
+          "alt": "Sidney Nuese Full Res"
+        },
+        {
+          "src": "https://geronimopower.com/wp-content/uploads/elementor/thumbs/Marta_Lasch_PRINTSIZE-scaled-repaoin573oki7u3g28z1213o4k3o51mrfpzrjdahs.jpg",
+          "alt": "Marta_Lasch_PRINTSIZE"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "iup-grand",
+      "url": "https://iuc.iowa.gov/news/2023-04-21/iub-issues-electric-generating-certificate-grand-junction-solar-battery-storage-project",
+      "status": 404,
+      "bytes": 185891,
+      "pdf": false,
+      "finalUrl": "https://iuc.iowa.gov/news/2023-04-21/iub-issues-electric-generating-certificate-grand-junction-solar-battery-storage-project",
+      "images": [
+        {
+          "src": "/sites/default/files/styles/16_9_499px_x_376px/public/images/WildRose.jpg.webp?h=64c0f23f&itok=BtAq4Ds6",
+          "alt": "Wild rose"
+        }
+      ],
+      "links": [
+        {
+          "text": "Executive Order 10 - Administrative Rulemaking Review",
+          "href": "/commission-activity/rulemaking-process-proposed-rules/executive-order-10-administrative-rulemaking-review"
+        },
+        {
+          "text": "Open Records Requests",
+          "href": "/customer-assistance/open-records"
+        },
+        {
+          "text": "Records & Documents",
+          "href": "/records-documents"
+        },
+        {
+          "text": "Forms & Applications",
+          "href": "/records-documents/forms-applications"
+        },
+        {
+          "text": "Filing with the IUC",
+          "href": "/records-documents/how-do-i-filing-iuc"
+        },
+        {
+          "text": "File a Utility Annual Report",
+          "href": "/records-documents/how-do-i-filing-utility-annual-report"
+        },
+        {
+          "text": "Information about EFS",
+          "href": "/records-documents/information-about-efs"
+        },
+        {
+          "text": "Information from Utility Annual Report Filings",
+          "href": "/records-documents/information-utility-annual-report-filings"
+        },
+        {
+          "text": "Information About IUB 24/7",
+          "href": "/records-documents/iub-247"
+        },
+        {
+          "text": "Data & Reports",
+          "href": "/records-documents/data-reports"
+        },
+        {
+          "text": "IUC Annual Reports",
+          "href": "/records-documents/data-reports/iuc-annual-reports"
+        },
+        {
+          "text": "All IUC Annual Reports",
+          "href": "/records-documents/data-reports/iuc-annual-reports/all-iuc-annual-reports"
+        },
+        {
+          "text": "Reports to the Iowa General Assembly",
+          "href": "/records-documents/data-reports/reports-iowa-general-assembly"
+        },
+        {
+          "text": "Residential Past Due Accounts & Disconnection Data",
+          "href": "/records-documents/data-reports/moratorium-data"
+        },
+        {
+          "text": "Moratorium Reports",
+          "href": "/records-documents/data-reports/moratorium-data/moratorium-reports"
+        },
+        {
+          "text": "Utility Customer Contribution Funds Report",
+          "href": "/records-documents/data-reports/utility-customer-contribution-funds-report"
+        },
+        {
+          "text": "Utility tariffs filed with the IUC",
+          "href": "/records-documents/utility-tariffs-filed-iuc"
+        },
+        {
+          "text": "Docket Designations",
+          "href": "/records-documents/docket-designations"
+        }
+      ]
+    },
+    {
+      "key": "elk-notice",
+      "url": "https://epa.illinois.gov/content/dam/soi/en/web/epa/topics/environmental-justice/documents/ej%20letters/2024/aligned-data-center.pdf",
+      "status": 404,
+      "bytes": 32503,
+      "pdf": false,
+      "finalUrl": "https://epa.illinois.gov/content/dam/soi/en/web/epa/topics/environmental-justice/documents/ej%20letters/2024/aligned-data-center.pdf",
+      "images": [
+        {
+          "src": "/content/dam/soi/en/web/illinois/images/logos/illinois_gov.png",
+          "alt": "Illinois.gov"
+        },
+        {
+          "src": "/content/dam/soi/en/web/global/images/icons/bluesky-white-icon-transparent.png",
+          "alt": ""
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "iad02-spec",
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_AshburnIIBldgSpecs211012_Web.pdf",
+      "status": 404,
+      "bytes": 209820,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_AshburnIIBldgSpecs211012_Web.pdf",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "grand-2024",
+      "url": "https://greenecountynewsonline.com/2024/04/24/supervisors-hear-future-of-gj-solar-project/",
+      "status": 406,
+      "bytes": 226
+    },
+    {
+      "key": "grand-2026",
+      "url": "https://greenecountynewsonline.com/2026/08/14/gj-solar-project-is-back-on-track/",
+      "status": 406,
+      "bytes": 226
+    },
+    {
+      "key": "grand-iub-release",
+      "url": "https://kwbg.com/iowa-utilities-board-issues-electric-generating-certificate-for-grand-junction-solar-battery-storage-project/",
+      "status": 200,
+      "bytes": 84936
+    },
+    {
+      "key": "grand-agenda",
+      "url": "https://www.greenecounty.iowa.gov/docview.aspx?docid=21487&doctype=agendaDoc",
+      "status": 403,
+      "bytes": 5517
+    }
+  ],
+  "researchNotes": [
+    "Nine existing pins corrected and three soft-deleted/held on local and production. Initial title/source/author identities matched across environments; stale local IDs reconciled before writing. Re-read immediately before each mutation, preserved original authors, saved backups and synchronized draft/held catalogs and posted maps. No new pins or automatic merges.",
+    "Read the primary August 2026 EIA inventory, September 2026 ERCOT GIS workbook, CAISO queue and freshly downloaded MISO live GI JSON. Stored matching rows and complete primary filings. Queue dates, proposed ratings, generator AC capacity, gross-terminal ratings, battery MWh and actual operation are distinct.",
+    "Athos: State Lands Commission October 2024 Staff Report 50 supports two operating solar facilities totaling 450 MW. EIA separates I / 63300 / 250 MW / June 2022 and II / 64290 / 200 MW / December 2021. CEC October 2025 materials say overall solar construction completed July 2022. Saved July 1 as explicit month-only construction-completion placeholder, not an exact COD. The old May 18, 2022 day and $500M lack support. The original 3,440-acre envelope, 3,224-acre solar footprint and separate 31-acre proposed BESS are not one interchangeable acreage. CAISO 1405 hybrid timing in 2027 does not override operating solar evidence. Legacy SB Athos I page still says under construction; regulator/EIA evidence controls. Company resolver maps SB Energy to SoftBank Group, so use the regulator-named project entities and retain SB attribution in cited text. No shared company row edited.",
+    "18-Alpha / 28INR0328: 307.4 MW, Cooke County, SCOUT ENERGY MANAGEMENT LLC, Valley View 138 kV bus 691, February 1, 2028 projected COD. 18-Bravo / 28INR0327: 407 MW, Hunt County, same legal applicant, Commerce Switch 138 kV bus 1816 and same target. Both show screening complete, full study started, no IA. Removed misidentified Energy Management Inc., $300M / $400M and invented 1,230 / 1,628 MWh four-hour claims. No exact-name EIA match or verified branch-specific gallery found.",
+    "Agricola / 28INR0265: 205.2 MW, Austin County, Agricola BESS LLC, Gebhardt–Wallis 138 kV tap, May 31, 2029 target, screening completed and study started without IA. No opened primary support for Redeux parent, construction, $200M, 821 MWh or four-hour duration. The New York Agricola Wind EIA entry is unrelated. No verified exact project photograph or parcel located.",
+    "Anila 16770 held as duplicate of Alina battery 16675. Full May 19, 2025 PUCT filing names Alina Energy LLC / Alina Solar and BESS with requests 26INR0074 and 26INR0077; technical exhibit also calls it Anila. The signed agreement dates to March 2025. It specifies 200 MW battery at POI, 211.14792 MW gross inverter terminals and separate 200 MW solar; ERCOT reports 209 MW. These are rating differences, not a new battery identity or proof of 836 MWh. Retained 16675 has the operator 200 MW / 400 MWh battery and EIA 67250. Preserved it unchanged and did not silently add the new filing to another pin.",
+    "IAD02: operator December 4, 2020 blog records December 3 topping out. Published two-story 513,000 sqft, expandable 120 MW, shared 26-acre campus and current address 21821 Uunet Drive. Native rating is explicitly expandable design, not energized or measured load. Corrected 163.1 MW modeled demand / 116.5 MW IT, $4.43B, 624,570 sqft, 122 acres and June 2023 COD. Indexed 2021 sheet lists both 513,000 headline sqft and 438,460 building sqft but the actual PDF returns 404 from old and new paths; keep opened announcement/case-study historical 513,000 scope with the discrepancy recorded. Original DEQ retrieval returns 403, not proof the facility is unsupported. Six current building photos and a historical topping-out photo retained.",
+    "IAD03: July 26, 2022 release dateline controls over July 25 metadata. It announces a ten-acre Sterling campus master-planned for two buildings and then-targeted fall-2023 phase-one delivery. Current address 22715 Relocation Drive replaces Beaumeade Circle. Current market page repeats 26-acre text for IAD03, conflicting with announced ten-acre scope; save ten acres as historical and flag current land scope unresolved. No published current IT MW, gross area or COD supports old 143.1 / 102.2 MW, 319,384 sqft, $3.88B and January 2025 claims. Native power deleted. One current operator aerial and one explicitly labeled 2022 proposed-building rendering added.",
+    "NEO-03 16783 held as unverified building-level split. Downloaded and read the 17.4 MB December 27, 2024 Ohio EPA PTI P0137086, facility 0322022037, named Aligned NE001 Sandusky at 2509 Hayes Avenue: 186 emergency generators across permitted scope. It does not establish a separately rated 82.8 MW / 72 MW IT third building or June 2029 COD. NEO-01 16724 and the wider expansion 15776 already represent the site. Permit names and proposed backup scope do not validate each tracker building. Retained counterparts unchanged; their old tracker expansion ratings remain a dedicated follow-up, not validated by this hold.",
+    "Northwest Point Building 2 / 16787 held as redundant/unverified split of retained ORD-03 campus 15743. The downloaded June 21, 2024 IEPA notification is an application-under-review letter for 112 emergency generator sets at 50 and 150 NW Point Blvd, not a final permit or an individual 110.4 MW building rating. Official village 2024 review supports two buildings and $285M campus investment; March 2025 newsletter records January 14 first-building topping out. The newsletter contains an obvious 520 million sqft typo, so it was not used to assign floor area. Neither source establishes this split’s independent identity, June 2029 COD or building-only cost. The wider campus pin’s tracker-derived MW needs a later audit.",
+    "Karma J1313: MISO 100 MW solar / Greene / ITC Midwest / GIA completed January 26, 2023 / post-GIA Not Started / negotiated June 30, 2025. The IUB’s April 21, 2023 press release, republished by KWBG and linked to original docket/order, supports a conditional certificate for Grand Junction 100 MW solar plus separate original 50 MW battery at Karma, not actual construction. Original order now serves filing-portal HTML. April 2024 official county agenda and firsthand meeting reporting identify Alliant’s project update; the report says Alliant purchased it from National Grid Renewables. August 2026 reporting describes future 2027/2028 construction and a possible battery amendment, not an approved new 100 MW battery or 2027 COD. Its publication/meeting-date anomaly is explicit. Saved the verified April 2023 certificate milestone, cleared $130M and invented Karma branding, and retained a qualified approximate point. Direct newspaper requests return 406 while web-open retrieval succeeds; county agenda is web-indexed but direct requests return 403.",
+    "Flora / J1679: opened MTEP23 explicitly names New Fauna 345 kV Sub for Flora Solar and ties 125 MW to J1679 / Xenia–Mount Vernon West. EIA 67937 reports Flora Solar LLC, 125 MW, approvals not initiated, December 2027. MISO post-GIA Not Started and old April 20, 2026 negotiated date do not prove operation. EIA says PJM balancing authority despite MISO identity; that mismatch remains unresolved. Replaced invented Xenia branding, $160M and April 1, 2027 date. The $11M MTEP substation item is not total solar capex. Historical Apex site is migrating: homepage Coming Soon, about_flora redirects to inaccessible migration page. No stock photo or current ownership inference adopted.",
+    "Adams / J1072: live MISO confirms 150 MW solar, Mower County, Northern States Power Company transmission owner, GIA completion June 15, 2021 and post-GIA Under Construction, with stale August 1, 2023 negotiated target. Saved dated GIA queue milestone; no actual COD inferred. Cleared $190M, invented Adams branding, ITC Midwest attribution, December 2026 and unverified NextEra ownership. Mower County’s [February 14, 2023 minutes](https://co.mower.mn.us/AgendaCenter/ViewFile/Minutes/_02142023-390), opened through web PDF retrieval but returning 404 to a direct request, discuss NextEra’s later 100 MW Timberwolf proposal. This was not silently equated to J1072 or asserted as its developer in the saved pin; exact mapping remains a gap. No confirmed exact-name EIA match or project gallery.",
+    "Cleared nine unsupported prices and two calculated energy rows per environment. Replaced both retained data-center metric rows to remove unsupported daily water, installed hardware and generator figures. IAD03 native power removed; IAD02 uses qualified 120 MW expansion design. Held records are no longer public and are not claimed as cancelled.",
+    "Four location corrections required twelve replacement USGS maps: current Census street-address contexts for IAD02/IAD03 and EIA reporting points for Athos/Flora. These are qualified context, not surveyed footprints; basemaps can predate construction. The five remaining retained records keep fifteen legacy maps. No precise parcel inferred from county coordinates.",
+    "Added eleven credited gallery assets after visual inspection: ten operator photographs (six IAD02 current-building, one IAD02 topping-out, one IAD03 aerial, historical Athos I construction and Athos solar grazing) and one 2022 IAD03 rendering. The IAD02 image labeled Exterior by operator alt text actually shows an interior lounge and is captioned accurately. Excluded the dark Athos crew image, Athos Storage thumbnail, generic stock, other-building galleries and unsupported project imagery. All eleven passed plain-curl exact-byte comparisons. All 23 new Azure assets were publicly byte-verified before switching references.",
+    "Fresh verification covers all 24 environment actions, 38 current Azure files, 18 retained native pages and eight unchanged-counterpart checks across four retained pins on both environments. Both posted maps now contain 1,403 entries. No deployment, restart, production build or application-code changes."
+  ]
+}

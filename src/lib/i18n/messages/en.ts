@@ -139,7 +139,7 @@ const en = {
     tradePeople: 'People',
     conflict: 'Possible conflict of interest',
     conflictHint: '{tickers}: a sector overseen by {committees}',
-    tradesToday: 'Notable stock trades',
+    tradesToday: 'Notable trades',
     tradesHistory: 'See more',
     whyTrade: 'You watch {name}’s trades',
     whyWatch: 'A pin you watch',
