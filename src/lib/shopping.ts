@@ -303,10 +303,24 @@ export type ShopClickRow = {
   longitude: number | null;
 };
 
+// An AI model is not sold from a marketplace: it is bought as a subscription
+// on its maker's chat app. A pin tagged AI Models gets a button to that
+// plan page, unless a curator stored a listing on the same host.
+const MODEL_PLANS: { company: RegExp; store: string; url: string; background: string; text: string; border?: string }[] = [
+  { company: /^(spacexai|xai|x\.ai)$/i, store: 'Grok', url: 'https://grok.com/#subscribe', background: '#000000', text: '#ffffff', border: '#8a8a8a' },
+];
+
+function modelPlanLink(pin: Pick<PinJson, 'tags'> & { company?: string | null }): ShopLink | undefined {
+  if (!pin.tags?.some((t) => t.name === 'AI Models')) return undefined;
+  const plan = MODEL_PLANS.find((p) => pin.company && p.company.test(pin.company.trim()));
+  if (!plan) return undefined;
+  return { store: plan.store, url: plan.url, search: false, amazon: false, background: plan.background, text: plan.text, border: plan.border };
+}
+
 // The pin's buy buttons, in order: its stored listings, then a search of
 // every store it has no listing on. Links are ready to click: tracking
 // stripped and Amazon's tag added (affiliateUrl).
-export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags' | 'categories'>): ShopLink[] {
+export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags' | 'categories'> & { company?: string | null }): ShopLink[] {
   const listed = (pin.merchants ?? []).filter(isPurchase);
   const covered = new Set(listed.map((m) => storeOf(m.url)).filter(Boolean));
   const links: ShopLink[] = listed.map((m) => {
@@ -328,6 +342,8 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
       ...(isEbayUrl(url) && { ebay: true }),
     };
   });
+  const plan = modelPlanLink(pin);
+  if (plan && !links.some((l) => hostOf(l.url) === hostOf(plan.url))) links.unshift(plan);
   const product = pin.productName?.trim();
   // A car is not sold from a marketplace search: the stores' results for its
   // name are toys, parts and other people's cars. A vehicle keeps its stored

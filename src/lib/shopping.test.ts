@@ -143,3 +143,10 @@ describe('shopLinks for a game', () => {
     ]);
   });
 });
+
+describe('AI model plan link', () => {
+  it('sends a Grok model pin to the Grok subscribe page', () => {
+    const links = shopLinks({ company: 'SpaceXAI', categories: ['AI'], tags: [{ name: 'AI Models' } as any] });
+    expect(links.map((l) => [l.store, l.url])).toEqual([['Grok', 'https://grok.com/#subscribe']]);
+  });
+});
