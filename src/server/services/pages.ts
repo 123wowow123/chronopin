@@ -20,6 +20,7 @@ import type { PinEnergyJson } from '@/lib/energy';
 import type { PinPowerJson } from '@/lib/power';
 import type { PinDatacenterJson } from '@/lib/datacenter';
 import { candidatesForPin } from '../model/pinCandidate';
+import { competitorsForPin } from '../model/pinCompetitor';
 import { gameInfoForPin } from '../model/pinGameInfo';
 import { tasteForPin } from '../model/pinTaste';
 import { carPerfForPin } from '../model/pinCarPerf';
@@ -34,6 +35,7 @@ import type { PinAircraftPerfJson } from '@/lib/pinAircraftPerf';
 import type { PinDiningJson } from '@/lib/pinDining';
 import type { PinHotelJson } from '@/lib/pinHotel';
 import type { PinCandidateJson } from '@/lib/candidates';
+import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { AlternateNameJson } from '@/lib/alternateNames';
@@ -286,6 +288,16 @@ export async function pinCandidates(id: number): Promise<PinCandidateJson[]> {
   // them redraws this page too.
   cacheTag(TAGS.pin(id), ...candidates.flatMap((c) => (c.work ? [TAGS.pin(c.work.id)] : [])));
   return candidates;
+}
+
+// The competing products a product pin lists, empty for any other pin. Tagged
+// with the pin and its rivals' pins, so saving any of them redraws it.
+export async function pinCompetitors(id: number): Promise<PinCompetitorJson[]> {
+  'use cache';
+  cacheLife('hours');
+  const competitors = await competitorsForPin(id);
+  cacheTag(TAGS.pin(id), ...competitors.flatMap((c) => (c.pin ? [TAGS.pin(c.pin.id)] : [])));
+  return competitors;
 }
 
 // A game's maturity rating and platforms, or null when none were read.

@@ -721,6 +721,8 @@ const it: Messages = {
     candidateArtist: 'Miglior artista emergente',
     candidateNominee: 'Prezzo di mercato per la nomination',
     candidateWinner: 'Prezzo di mercato per la vittoria',
+    competitorsHeading: 'Principali concorrenti',
+    competitorSource: 'Fonte',
     ticketsOnSale: 'In vendita',
     ticketsSoldOut: 'Esauriti',
     ticketsNotYetOnSale: 'Non ancora in vendita',

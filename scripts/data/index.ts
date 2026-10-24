@@ -19,6 +19,7 @@ import PinTicker from '@/server/model/pinTicker';
 import PinTag from '@/server/model/pinTag';
 import { allFlightPaths, restoreFlightPaths } from '@/server/services/pinFlightPath';
 import { allCandidates, restoreCandidates } from '@/server/model/pinCandidate';
+import { allCompetitors, restoreCompetitors } from '@/server/model/pinCompetitor';
 import { allEventInfo, restoreEventInfo } from '@/server/model/pinEventInfo';
 import { allPlaces, restorePlaces } from '@/server/model/pinPlace';
 import { allSeries, restoreSeries } from '@/server/services/pinSeries';
@@ -63,6 +64,7 @@ const { values: flags } = parseArgs({
     placefile: { type: 'string', default: './scripts/backup/seedPlaces.json' },
     eventinfofile: { type: 'string', default: './scripts/backup/seedEventInfo.json' },
     candidatefile: { type: 'string', default: './scripts/backup/seedCandidates.json' },
+    competitorfile: { type: 'string', default: './scripts/backup/seedCompetitors.json' },
     seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json.gz' },
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
@@ -288,6 +290,10 @@ async function saveDB() {
   // work's pin.
   console.log('Backup Candidates');
   writeJson(flags.candidatefile, (await allCandidates()).filter((c) => keptPinIds.has(c.pinId)));
+
+  // The competing products on product pins (0211).
+  console.log('Backup Competitors');
+  writeJson(flags.competitorfile, (await allCompetitors()).filter((c) => keptPinIds.has(c.pinId)));
 
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
@@ -586,6 +592,14 @@ async function seedDB() {
       await restoreCandidates(readJson(flags.candidatefile));
     } catch (error) {
       log.error('Candidates Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.competitorfile)) {
+    try {
+      await restoreCompetitors(readJson(flags.competitorfile));
+    } catch (error) {
+      log.error('Competitors Save Error', JSON.stringify(error));
     }
   }
 

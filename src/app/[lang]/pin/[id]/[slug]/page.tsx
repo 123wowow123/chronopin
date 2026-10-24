@@ -44,6 +44,7 @@ import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinCandidates } from '@/components/pin/PinCandidates';
+import { PinCompetitors } from '@/components/pin/PinCompetitors';
 import { PinTags } from '@/components/pin/PinTags';
 import { PinAlternateNames } from '@/components/pin/PinAlternateNames';
 import { branchesUnder, threadNumbers } from '@/lib/thread';
@@ -103,8 +104,9 @@ import { formatMegawatts, type PinPowerJson } from '@/lib/power';
 import { ENERGY_BASIS_WORDS, formatGigawattHours, type PinEnergyJson } from '@/lib/energy';
 import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSearchPills, estimateHomesEquivalentFromMw, formatAcres, formatChips, formatSqft, formatWaterGallonsPerDay, type PinDatacenterJson } from '@/lib/datacenter';
 import type { PinCandidateJson } from '@/lib/candidates';
+import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -171,7 +173,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, dining, hotel, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -191,6 +193,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinDining(pin.id),
     pinHotel(pin.id),
     pinCandidates(pin.id),
+    pinCompetitors(pin.id),
     adPlacements(),
     adsenseSlots(),
     viewerUser(),
@@ -224,7 +227,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} isHotel={!!hotel} autoplay={autoplay} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} autoplay={autoplay} />
         </article>
 
         <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -346,6 +349,7 @@ async function PinBody({
   datacenter,
   venue,
   candidates,
+  competitors,
   isHotel,
   autoplay,
 }: {
@@ -358,6 +362,7 @@ async function PinBody({
   datacenter?: PinDatacenterJson | null;
   venue?: boolean;
   candidates?: PinCandidateJson[];
+  competitors?: PinCompetitorJson[];
   isHotel?: boolean;
   autoplay?: boolean;
 }) {
@@ -554,6 +559,7 @@ async function PinBody({
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
       {candidates?.length ? <PinCandidates candidates={candidates} t={t} /> : null}
+      {competitors?.length ? <PinCompetitors competitors={competitors} t={t} /> : null}
       <PinStocks pinId={pin.id} />
       {/* The publisher's own chart for a series this event moves (PinSeries,
           0062). The pin's JSON says whether it has one, so a pin without a

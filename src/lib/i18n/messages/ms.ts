@@ -728,6 +728,8 @@ const ms: Messages = {
     candidateArtist: 'Artis Baharu Terbaik',
     candidateNominee: 'Harga pasaran untuk dicalonkan',
     candidateWinner: 'Harga pasaran untuk menang',
+    competitorsHeading: 'Pesaing utama',
+    competitorSource: 'Sumber',
     ticketsOnSale: 'Dijual',
     ticketsSoldOut: 'Habis dijual',
     ticketsNotYetOnSale: 'Belum dijual',

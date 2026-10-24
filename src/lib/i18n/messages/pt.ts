@@ -721,6 +721,8 @@ const pt: Messages = {
     candidateArtist: 'Melhor artista revelação',
     candidateNominee: 'Preço de mercado para ser indicado',
     candidateWinner: 'Preço de mercado para vencer',
+    competitorsHeading: 'Principais concorrentes',
+    competitorSource: 'Fonte',
     ticketsOnSale: 'À venda',
     ticketsSoldOut: 'Esgotado',
     ticketsNotYetOnSale: 'Ainda não estão à venda',

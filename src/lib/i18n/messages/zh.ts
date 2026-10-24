@@ -724,6 +724,8 @@ const zh: Messages = {
     candidateArtist: '最佳新人',
     candidateNominee: '获提名的市场价格',
     candidateWinner: '获奖的市场价格',
+    competitorsHeading: '主要竞争产品',
+    competitorSource: '来源',
     ticketsOnSale: '在售',
     ticketsSoldOut: '售罄',
     ticketsNotYetOnSale: '尚未开售',

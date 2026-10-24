@@ -720,6 +720,8 @@ const th: Messages = {
     candidateArtist: 'ศิลปินหน้าใหม่ยอดเยี่ยม',
     candidateNominee: 'ราคาตลาดว่าจะได้เข้าชิง',
     candidateWinner: 'ราคาตลาดว่าจะชนะ',
+    competitorsHeading: 'คู่แข่งหลัก',
+    competitorSource: 'แหล่งที่มา',
     ticketsOnSale: 'เปิดขายแล้ว',
     ticketsSoldOut: 'บัตรหมดแล้ว',
     ticketsNotYetOnSale: 'ยังไม่เปิดขาย',

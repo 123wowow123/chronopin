@@ -728,6 +728,8 @@ const en = {
     candidateArtist: 'Best New Artist',
     candidateNominee: 'Market price to be nominated',
     candidateWinner: 'Market price to win',
+    competitorsHeading: 'Main competitors',
+    competitorSource: 'Source',
     ticketsOnSale: 'On sale',
     ticketsSoldOut: 'Sold out',
     ticketsNotYetOnSale: 'Not on sale yet',

@@ -797,6 +797,8 @@ const ar: Messages = {
     candidateArtist: 'أفضل فنان جديد',
     candidateNominee: 'سعر السوق للترشح',
     candidateWinner: 'سعر السوق للفوز',
+    competitorsHeading: 'أبرز المنافسين',
+    competitorSource: 'المصدر',
     ticketsOnSale: 'التذاكر متاحة',
     ticketsSoldOut: 'نفدت التذاكر',
     ticketsNotYetOnSale: 'لم يبدأ البيع بعد',

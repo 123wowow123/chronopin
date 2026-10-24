@@ -723,6 +723,8 @@ const de: Messages = {
     candidateArtist: 'Bester neuer Künstler',
     candidateNominee: 'Marktpreis für eine Nominierung',
     candidateWinner: 'Marktpreis für den Sieg',
+    competitorsHeading: 'Wichtigste Konkurrenten',
+    competitorSource: 'Quelle',
     ticketsOnSale: 'Im Verkauf',
     ticketsSoldOut: 'Ausverkauft',
     ticketsNotYetOnSale: 'Noch nicht im Verkauf',

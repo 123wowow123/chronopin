@@ -728,6 +728,8 @@ const id: Messages = {
     candidateArtist: 'Artis Baru Terbaik',
     candidateNominee: 'Harga pasar untuk dinominasikan',
     candidateWinner: 'Harga pasar untuk menang',
+    competitorsHeading: 'Pesaing utama',
+    competitorSource: 'Sumber',
     ticketsOnSale: 'Dijual',
     ticketsSoldOut: 'Habis terjual',
     ticketsNotYetOnSale: 'Belum dijual',

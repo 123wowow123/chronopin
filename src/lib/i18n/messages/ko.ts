@@ -723,6 +723,8 @@ const ko: Messages = {
     candidateArtist: '최우수 신인',
     candidateNominee: '후보 지명 시장 가격',
     candidateWinner: '수상 시장 가격',
+    competitorsHeading: '주요 경쟁 제품',
+    competitorSource: '출처',
     ticketsOnSale: '판매 중',
     ticketsSoldOut: '매진',
     ticketsNotYetOnSale: '아직 판매 전',

@@ -723,6 +723,8 @@ const fr: Messages = {
     candidateArtist: 'Meilleur nouvel artiste',
     candidateNominee: 'Prix du marché pour être nommé',
     candidateWinner: 'Prix du marché pour gagner',
+    competitorsHeading: 'Principaux concurrents',
+    competitorSource: 'Source',
     ticketsOnSale: 'En vente',
     ticketsSoldOut: 'Complet',
     ticketsNotYetOnSale: 'Pas encore en vente',

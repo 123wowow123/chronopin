@@ -723,6 +723,8 @@ const ja: Messages = {
     candidateArtist: '最優秀新人賞',
     candidateNominee: 'ノミネートの市場価格',
     candidateWinner: '受賞の市場価格',
+    competitorsHeading: '主な競合製品',
+    competitorSource: '出典',
     ticketsOnSale: '発売中',
     ticketsSoldOut: '完売',
     ticketsNotYetOnSale: '未発売',

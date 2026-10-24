@@ -1,0 +1,2691 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill round 26",
+  "outcome": {
+    "audited": 12,
+    "corrected": 10,
+    "held": 2,
+    "environmentActions": 24,
+    "azureFilesVerified": 38,
+    "nativePagesVerified": 20,
+    "unpublishedPricesCleared": 10,
+    "calculatedEnergyRowsCleared": 2,
+    "replacementMaps": 18,
+    "addedProjectPhotos": 4,
+    "addedDiagramPlacements": 4,
+    "postedMapEntries": 1401,
+    "deployed": false
+  },
+  "plan": {
+    "solar-buzzer-butte-2-solar-tx": {
+      "patch": {
+        "title": "Buzzer Butte 2 Solar: 242.8 MW Queue Request, September 2030 Target",
+        "description": "ERCOT September 2026 GIS identifies Buzzer Butte 2 Solar request 30INR0164 in Kent County: 242.8 MW, Origis Development LLC, screening and full study started with no IA, targeting September 1, 2030.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Buzzer Butte 2 Solar 30INR0164",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The POI is a 345 kV tap between Nova Prime bus 59908 and Mhos bus 59911. This is study-stage development, not proof of construction or operation. No $250M project budget, exact parcel or project-specific official photograph was verified.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: September 1, 2030 is ERCOT projected COD, not a confirmed service date.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-09-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "September 1, 2030 is ERCOT projected COD, not a confirmed service date.",
+        "company": "Origis Development, LLC",
+        "companyWikiUrl": null,
+        "address": "Kent County, Texas; retained approximate county/project-area context pending a sourced parcel",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Origis Energy",
+          "Kent County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 242.8,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT September 2026 GIS identifies Buzzer Butte 2 Solar request 30INR0164 in Kent County: 242.8 MW, Origis Development LLC, screening and full study started with no IA,"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current site permit, exact parcel and official project gallery. No exact-name EIA plant match found."
+      ]
+    },
+    "battery-aldrin-138-bess-tx": {
+      "patch": {
+        "title": "Aldrin 138 BESS: 207 MW Queue Scope, March 2028 Target",
+        "description": "ERCOT lists Aldrin 138 BESS request 25INR0421, Aldrin Energy Storage LLC, 207 MW in Brazoria County, targeting March 1, 2028 with studies complete and IA reported. Vesper’s current Aldrin site describes a broader 550 MW / 1,100 MWh proposal in active development, as soon as early 2028.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Aldrin 138 BESS 25INR0421",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.aldrinenergystorage.com/",
+            "title": "Vesper Energy — Aldrin Energy Storage current project scope",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.aldrinenergystorage.com/faq",
+            "title": "Aldrin Energy Storage — FAQ",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The request POI is North Alvin TNMP 138 kV, bus 39015. The two requests’ 207 MW and 362 MW are not silently equated to the operator’s broader 550 MW scope, and its 1,100 MWh is not divided between requests. No four-hour or per-request battery MWh verified. The current operator says site planning/review, not completed construction.<cite data-ref=\"https://www.aldrinenergystorage.com/\"></cite></li><li>The former $210M / $360M costs are unsupported. Aldrin 345 was incorrectly assigned 25INR0422, which is Waterloo Solar 1 in Bastrop; its correct ID is 25INR0425, and the prior June 2028 target is replaced by March 2028. Regional road photos and the operator’s Energia Basica-branded battery illustration are not verified Aldrin request-specific facility photos.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: March 1, 2028 is ERCOT projected COD. Operator says as soon as early 2028 without an exact day; neither proves actual energization.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "March 1, 2028 is ERCOT projected COD. Operator says as soon as early 2028 without an exact day; neither proves actual energization.",
+        "company": "Aldrin Energy Storage LLC",
+        "companyWikiUrl": null,
+        "address": "Brazoria County, Texas; retained approximate project-area context, exact request-specific battery footprint unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Vesper Energy",
+          "Brazoria County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 207,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT lists Aldrin 138 BESS request 25INR0421, Aldrin Energy Storage LLC, 207 MW in Brazoria County, targeting March 1, 2028 with studies complete and IA reported. Vesper"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve broader 550 MW / 1,100 MWh operator proposal versus two queue ratings; verify component footprints, explicit component MWh and eventual COD. No request-specific facility photograph identified."
+      ]
+    },
+    "battery-aldrin-345-bess-tx": {
+      "patch": {
+        "title": "Aldrin 345 BESS: 362 MW Queue Scope, March 2028 Target",
+        "description": "ERCOT lists Aldrin 345 BESS request 25INR0425, Aldrin Energy Storage LLC, 362 MW in Brazoria County, targeting March 1, 2028 with studies complete and IA reported. Vesper’s current Aldrin site describes a broader 550 MW / 1,100 MWh proposal in active development, as soon as early 2028.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Aldrin 345 BESS 25INR0425",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.aldrinenergystorage.com/",
+            "title": "Vesper Energy — Aldrin Energy Storage current project scope",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.aldrinenergystorage.com/faq",
+            "title": "Aldrin Energy Storage — FAQ",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The request POI is Meadow 345 kV, bus 43030. The two requests’ 207 MW and 362 MW are not silently equated to the operator’s broader 550 MW scope, and its 1,100 MWh is not divided between requests. No four-hour or per-request battery MWh verified. The current operator says site planning/review, not completed construction.<cite data-ref=\"https://www.aldrinenergystorage.com/\"></cite></li><li>The former $210M / $360M costs are unsupported. Aldrin 345 was incorrectly assigned 25INR0422, which is Waterloo Solar 1 in Bastrop; its correct ID is 25INR0425, and the prior June 2028 target is replaced by March 2028. Regional road photos and the operator’s Energia Basica-branded battery illustration are not verified Aldrin request-specific facility photos.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: March 1, 2028 is ERCOT projected COD. Operator says as soon as early 2028 without an exact day; neither proves actual energization.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "March 1, 2028 is ERCOT projected COD. Operator says as soon as early 2028 without an exact day; neither proves actual energization.",
+        "company": "Aldrin Energy Storage LLC",
+        "companyWikiUrl": null,
+        "address": "Brazoria County, Texas; retained approximate project-area context, exact request-specific battery footprint unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Vesper Energy",
+          "Brazoria County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 362,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT lists Aldrin 345 BESS request 25INR0425, Aldrin Energy Storage LLC, 362 MW in Brazoria County, targeting March 1, 2028 with studies complete and IA reported. Vesper"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve broader 550 MW / 1,100 MWh operator proposal versus two queue ratings; verify component footprints, explicit component MWh and eventual COD. No request-specific facility photograph identified."
+      ]
+    },
+    "battery-allthorn-bess-tx": {
+      "patch": {
+        "title": "Allthorn Battery: 200 MW / 400 MWh in 2029 Hybrid Plan",
+        "description": "Palladium’s September 2026 sale teaser publishes Allthorn at 230 MWac solar and 200 MW / 400 MWh two-hour storage, targeting Q3 2029. Its adviser says draft SGIAs await execution; ERCOT separately reports 231.5 MW solar and 205.2 MW battery, targeting January 15, 2029.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+            "title": "Palladium / Fractal — Projects Indigo and Allthorn, September 2026 teaser",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+            "title": "Palladium Portfolio Sale – ERCOT South PV+S",
+            "confidence": 95,
+            "publishedDate": "2026-09-16"
+          },
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Allthorn 28INR0230",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The teaser explicitly labels development-stage projects and publishes 436.7 MW POI available capacity, 2,500-acre maximum lease option, AEP 138 kV line and location 27°23′44.4″N 98°41′47.5″W. These are proposed commercial scopes, not surveyed as-built boundaries, installed export or a guaranteed rating. Native power uses only this pin’s component.<cite data-ref=\"https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf\"></cite></li><li>The adviser’s 2025 construction-commencement claim is accompanied by transformer purchase and December 2025 beginning-of-construction inspection for tax eligibility; it is not proof of full physical build or operation. ERCOT still says full study started/no IA, consistent with draft SGIA pending. The former four-hour / 821 MWh battery and $200M / $240M budgets are unsupported.<cite data-ref=\"https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/\"></cite></li><li>Timeline: Confirmed September 16, 2026 sale-process announcement, not COD. Teaser Q3 2029 and queue January 15, 2029 are differing projected schedules; no exact future service day adopted.<cite data-ref=\"https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/\"></cite></li><li>September 2026 preliminary Allthorn hybrid project overview, PDF page 3: proposed capacity, project location, lease-option acreage and target COD. The same hybrid diagram supplies context to solar and battery components; not an as-built boundary or photograph. Credit: Palladium Energy / Fractal Business Analytics; underlying map credits as shown.<cite data-ref=\"https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-09-16T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed September 16, 2026 sale-process announcement, not COD. Teaser Q3 2029 and queue January 15, 2029 are differing projected schedules; no exact future service day adopted.",
+        "company": "Palladium Energy, LLC",
+        "companyWikiUrl": null,
+        "latitude": 27.395666666666667,
+        "longitude": -98.69652777777779,
+        "address": "Allthorn project point published in September 2026 Palladium teaser, Duval County, Texas; shared hybrid context, not an independently surveyed component boundary",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Solar",
+          "Palladium Energy",
+          "Duval County",
+          "Texas",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/allthorn-battery-overview.png",
+            "originalWidth": 1800,
+            "originalHeight": 1013
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "sourceUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Palladium’s September 2026 sale teaser publishes Allthorn at 230 MWac solar and 200 MW / 400 MWh two-hour storage, targeting Q3 2029. Its adviser says draft SGIAs await e"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify SGIA execution, current construction scope and eventual COD; reconcile operator versus queue component ratings and schedules. Published point and lease-option acreage do not establish separate as-built battery/solar footprints."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-allthorn-solar-tx": {
+      "patch": {
+        "title": "Allthorn Solar: 230 MWac in Proposed Solar-and-Storage Hybrid",
+        "description": "Palladium’s September 2026 sale teaser publishes Allthorn at 230 MWac solar and 200 MW / 400 MWh two-hour storage, targeting Q3 2029. Its adviser says draft SGIAs await execution; ERCOT separately reports 231.5 MW solar and 205.2 MW battery, targeting January 15, 2029.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+            "title": "Palladium / Fractal — Projects Indigo and Allthorn, September 2026 teaser",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+            "title": "Palladium Portfolio Sale – ERCOT South PV+S",
+            "confidence": 95,
+            "publishedDate": "2026-09-16"
+          },
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Allthorn 28INR0229",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The teaser explicitly labels development-stage projects and publishes 436.7 MW POI available capacity, 2,500-acre maximum lease option, AEP 138 kV line and location 27°23′44.4″N 98°41′47.5″W. These are proposed commercial scopes, not surveyed as-built boundaries, installed export or a guaranteed rating. Native power uses only this pin’s component.<cite data-ref=\"https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf\"></cite></li><li>The adviser’s 2025 construction-commencement claim is accompanied by transformer purchase and December 2025 beginning-of-construction inspection for tax eligibility; it is not proof of full physical build or operation. ERCOT still says full study started/no IA, consistent with draft SGIA pending. The former four-hour / 821 MWh battery and $200M / $240M budgets are unsupported.<cite data-ref=\"https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/\"></cite></li><li>Timeline: Confirmed September 16, 2026 sale-process announcement, not COD. Teaser Q3 2029 and queue January 15, 2029 are differing projected schedules; no exact future service day adopted.<cite data-ref=\"https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/\"></cite></li><li>September 2026 preliminary Allthorn hybrid project overview, PDF page 3: proposed capacity, project location, lease-option acreage and target COD. The same hybrid diagram supplies context to solar and battery components; not an as-built boundary or photograph. Credit: Palladium Energy / Fractal Business Analytics; underlying map credits as shown.<cite data-ref=\"https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-09-16T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed September 16, 2026 sale-process announcement, not COD. Teaser Q3 2029 and queue January 15, 2029 are differing projected schedules; no exact future service day adopted.",
+        "company": "Palladium Energy, LLC",
+        "companyWikiUrl": null,
+        "latitude": 27.395666666666667,
+        "longitude": -98.69652777777779,
+        "address": "Allthorn project point published in September 2026 Palladium teaser, Duval County, Texas; shared hybrid context, not an independently surveyed component boundary",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Solar",
+          "Palladium Energy",
+          "Duval County",
+          "Texas",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/allthorn-solar-overview.png",
+            "originalWidth": 1800,
+            "originalHeight": 1013
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 230,
+        "kind": "generation",
+        "sourceUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Palladium’s September 2026 sale teaser publishes Allthorn at 230 MWac solar and 200 MW / 400 MWh two-hour storage, targeting Q3 2029. Its adviser says draft SGIAs await e"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify SGIA execution, current construction scope and eventual COD; reconcile operator versus queue component ratings and schedules. Published point and lease-option acreage do not establish separate as-built battery/solar footprints."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "battery-anatole-renewable-energy-storage-tx": {
+      "patch": {
+        "title": "Anatole Battery: 200 MW at POI; June 2027 Queue Target",
+        "description": "Anatole’s filed interconnection agreement specifies 207.82 MW at the medium-voltage bus and 200 MW at the Eustace Southeast 138 kV POI. ERCOT’s correct request is 24INR0355, targeting June 30, 2027; Vesper’s older project page still describes a proposed 200 MW facility with a 2026 target.",
+        "sourceUrl": "https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF",
+        "references": [
+          {
+            "url": "https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF",
+            "title": "PUCT — Anatole Renewable Energy LLC SGIA, 24INR0355, filed December 10, 2024",
+            "confidence": 95,
+            "publishedDate": "2024-12-10"
+          },
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Anatole Renewable Energy Storage 24INR0355",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.anatoleenergystorage.com/",
+            "title": "Vesper Energy — Anatole Energy Storage current public page",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.anatoleenergystorage.com/regional-business-partnership",
+            "title": "Anatole — Regional Business Partnership",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The original 25INR0398 ID belongs to inactive Large Pumpville Ranch 1 Solar in Val Verde, not this battery. The PUCT exhibit locates the POI approximately 2.59 miles southeast of Eustace on CR 2806, Rayburn territory; do not infer Oncor from regional context.<cite data-ref=\"https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF\"></cite></li><li>Operator up-to-20-acre proposal and older planned-2025 construction / 2026 operation are not evidence of actual construction or COD. No 831 MWh, four-hour duration or $210M budget was verified. Native 200 MW follows the explicit POI and operator rating rather than mixing it with gross 207.82 MW.<cite data-ref=\"https://www.anatoleenergystorage.com/\"></cite></li><li>Timeline: Confirmed December 10, 2024 SGIA filing milestone, not commercial operation or agreement-signature day. Later queue targets June 30, 2027 versus older operator 2026.<cite data-ref=\"https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2024-12-10T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed December 10, 2024 SGIA filing milestone, not commercial operation or agreement-signature day. Later queue targets June 30, 2027 versus older operator 2026.",
+        "company": "Anatole Renewable Energy LLC",
+        "companyWikiUrl": null,
+        "latitude": 32.271613900621,
+        "longitude": -95.960746983936,
+        "address": "County Road 2806 southeast of Eustace, Henderson County, Texas; Esri street-name geocode of the filing’s road, approximate context rather than exact battery parcel",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "Vesper Energy",
+          "Henderson County",
+          "Texas",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "sourceUrl": "https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Anatole’s filed interconnection agreement specifies 207.82 MW at the medium-voltage bus and 200 MW at the Eustace Southeast 138 kV POI. ERCOT’s correct request is 24INR03"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify exact POI/battery parcel and current physical construction/COD. Road-name geocode is coarse and not the exact 2.59-mile bearing in the filing. Standalone MWh remains unpublished."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-aligned-neo-04-oh": {
+      "delete": true,
+      "researchFinding": "Unverified individual fourth-building tracker split: synthetic building-4 PDF path returns 404. The actual Ohio EPA P0137086 document names Aligned NE001 Sandusky, facility 0322022037, and authorizes 186 backup generators across its scope; it does not independently substantiate NEO-04 at 110.4 MW / 96 MW IT or June 2030 COD. Official operator supports a planned four-building campus, already represented by retained NEO-01 16724 and broader expansion 15776. Hold redundant/unverified split, preserve counterparts unchanged, and do not infer cancellation.",
+      "sourcesChecked": [
+        "https://storage.googleapis.com/data-center-source-files/campuses/615__aligned-neo-01-sandusky/2024-12-27_air-permit_ohio-epa-final-air-pti-p0137086-facility-032202203.pdf",
+        "https://aligneddc.com/northeast-ohio-data-centers/",
+        "https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/",
+        "https://www.chronopin.com/api/pins/15776"
+      ],
+      "gaps": [
+        "Unverified individual fourth-building tracker split: synthetic building-4 PDF path returns 404. The actual Ohio EPA P0137086 document names Aligned NE001 Sandusky, facility 0322022037, and authorizes 186 backup generators across its scope; it does not independently substantiate NEO-04 at 110.4 MW / 96 MW IT or June 2030 COD. Official operator supports a planned four-building campus, already represented by retained NEO-01 16724 and broader expansion 15776. Hold redundant/unverified split, preserve counterparts unchanged, and do not infer cancellation."
+      ]
+    },
+    "dc-aligned-phoenix-phx-03-az": {
+      "delete": true,
+      "researchFinding": "Unverified standalone third-building specification: current operator groups PHX-01/02/03 at 2500 W Union Hills Drive on a shared 55-acre campus. No opened source independently supports this pin’s PHX-03 47.3 MW / 40 MW IT, $1.28B or June 30, 2024 COD; synthetic PHX03 permit PDF returns 404. Hold the specific tracker split pending a building-specific permit, specification or dated milestone. The grouped campus listing is retained as evidence of a real campus, not a cancellation finding; no automatic merge with Behrend, Waddell or Chandler sites.",
+      "sourcesChecked": [
+        "https://aligneddc.com/phoenix-data-centers/",
+        "https://storage.googleapis.com/data-center-source-files/campuses/609__aligned-phoenix/2024-03-12_air-permit_maricopa-county-air-permit-aligned-phoenix-phx03.pdf"
+      ],
+      "gaps": [
+        "Unverified standalone third-building specification: current operator groups PHX-01/02/03 at 2500 W Union Hills Drive on a shared 55-acre campus. No opened source independently supports this pin’s PHX-03 47.3 MW / 40 MW IT, $1.28B or June 30, 2024 COD; synthetic PHX03 permit PDF returns 404. Hold the specific tracker split pending a building-specific permit, specification or dated milestone. The grouped campus listing is retained as evidence of a real campus, not a cancellation finding; no automatic merge with Behrend, Waddell or Chandler sites."
+      ]
+    },
+    "dc-aligned-phoenix-phx-07-az": {
+      "patch": {
+        "title": "Aligned PHX-07: 80 MW Two-Phase Project in Waddell",
+        "description": "Aligned lists PHX-07 at 8785 N Reems Road, Waddell, separate from its Union Hills campus. Contractor Lewis describes PHX 07-2 as the second phase of an 80 MW project; that phase adds 40 MW IT across six halls within a 214,078-sqft building.",
+        "sourceUrl": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+        "references": [
+          {
+            "url": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+            "title": "PHX 07-2 Data Center — Lease Crutcher Lewis",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://aligneddc.com/phoenix-data-centers/",
+            "title": "Scalable and Adaptive Data Centers in Phoenix, AZ | Aligned",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.datacenterdynamics.com/en/news/aligned-breaks-ground-on-data-center-in-phoenix-arizona/",
+            "title": "Aligned breaks ground on data center in Phoenix, Arizona",
+            "confidence": 95,
+            "publishedDate": "2025-04-17"
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 80 MW is the contractor’s two-phase project scope, not the entire West Valley campus, measured facility demand or an additional 80 MW above phase two. The 214,078 sqft is PHX 07-2 only and is not assigned as whole PHX07 area. No installed generator count or daily water use inferred from standard module ratings.<cite data-ref=\"https://lewisbuilds.com/projects/phx-07-2-data-center-2/\"></cite></li><li>The April 17, 2025 report describes a prospective later-2025 PHX07 opening; that is not realized COD. It separately discusses PHX13 and the broader 100-acre land purchase; neither its area nor $86.5M land price is a PHX07-only building budget. Removed $3.04B, modeled 92 MW, December 2027 COD and unsupported Union Hills utility claims.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/aligned-breaks-ground-on-data-center-in-phoenix-arizona/\"></cite></li><li>Timeline: Confirmed April 17, 2025 dated report describing PHX07’s then-prospective later-2025 opening. Saved publication milestone, not exact COD; actual commissioning remains unverified.<cite data-ref=\"https://lewisbuilds.com/projects/phx-07-2-data-center-2/\"></cite></li><li>General contractor PHX 07-2 gallery: PHX 07-2 data ceneter. Phase-two construction/design context within an 80 MW project, not proof of actual COD or capacity of every campus building. Credit: Lease Crutcher Lewis / Aligned Data Centers.<cite data-ref=\"https://lewisbuilds.com/projects/phx-07-2-data-center-2/\"></cite></li><li>General contractor PHX 07-2 gallery: PHX 07-2 data center in Phoenix. Phase-two construction/design context within an 80 MW project, not proof of actual COD or capacity of every campus building. Credit: Lease Crutcher Lewis / Aligned Data Centers.<cite data-ref=\"https://lewisbuilds.com/projects/phx-07-2-data-center-2/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2025-04-17T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed April 17, 2025 dated report describing PHX07’s then-prospective later-2025 opening. Saved publication milestone, not exact COD; actual commissioning remains unverified.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 33.562970218849,
+        "longitude": -112.393534865929,
+        "address": "8785 N Reems Road, Waddell, Arizona; Census-geocoded operator street-address context, not a surveyed phase boundary",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Maricopa County",
+          "Arizona"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-3.jpg",
+            "originalWidth": 1400,
+            "originalHeight": 1049
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-4.jpg",
+            "originalWidth": 1400,
+            "originalHeight": 788
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 80,
+        "kind": "usage",
+        "sourceUrl": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Aligned lists PHX-07 at 8785 N Reems Road, Waddell, separate from its Union Hills campus. Contractor Lewis describes PHX 07-2 as the second phase of an 80 MW project; tha"
+      },
+      "datacenter": {
+        "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+        "sourceUrl": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+        "note": "80 MW is contractor-described PHX07 two-phase project. Phase 07-2 alone adds 40 MW IT / 214,078 sqft; whole-project gross area, installed capacity and measured water/energy unverified."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify exact phase-one/two commissioning dates and whole-project gross floor area. Street interpolation differs from other directory points; preserve as address context, not exact building centroid."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    "dc-aligned-project-caprock-lbb-01-tx": {
+      "patch": {
+        "title": "Aligned LBB-01: First Caprock Building, Q1 2027 Target",
+        "description": "Aligned’s April 9, 2026 groundbreaking announcement explicitly names LBB-01 as the first facility on its proposed 540 MW, 313-acre, six-facility Caprock campus, targeting Q1 2027 service. Its current LBB-01 address is 1498 County Road 315, Abernathy, rather than Plainview.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Aligned Data Centers Breaks Ground on “Project Caprock,” a Sustainable 540 MW Next-Generation Data Center Campus in Northwest Texas",
+            "confidence": 95,
+            "publishedDate": "2026-04-09"
+          },
+          {
+            "url": "https://aligneddc.com/abernathy-tx-data-center/",
+            "title": "Aligned Abernathy: Built for Scale in Northwest Texas",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The 540 MW, 1.65 million sqft, 313 acres and expected $5B regional economic infusion are campus/program scope. None establishes a 108 MW / 96 MW IT LBB01 rating, building-only area or $3.42B construction cost. Do not divide campus capacity by six to invent a building rating; native power removed.<cite data-ref=\"https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/\"></cite></li><li>Operator specifies air-cooled heat rejection and closed-loop DeltaFlow liquid cooling with dedicated power infrastructure; no current absolute daily water reading or named Xcel/SPP service basis is assigned to this building. The release announces the groundbreaking, not completion or a December 2028 COD.<cite data-ref=\"https://aligneddc.com/abernathy-tx-data-center/\"></cite></li><li>Timeline: Confirmed April 9, 2026 campus-groundbreaking announcement explicitly naming first facility LBB01; Q1 2027 remains a target, not actual COD.<cite data-ref=\"https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/\"></cite></li><li>Operator-published Project Caprock campus groundbreaking photograph. Whole-campus ceremony context; not a photograph of an energized LBB01 or a building-only budget. Credit: Aligned Data Centers.<cite data-ref=\"https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-04-09T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed April 9, 2026 campus-groundbreaking announcement explicitly naming first facility LBB01; Q1 2027 remains a target, not actual COD.",
+        "company": "Aligned Data Centers",
+        "companyWikiUrl": null,
+        "latitude": 33.861688334776,
+        "longitude": -101.836042135426,
+        "address": "1498 County Road 315, Abernathy, Texas; Census-geocoded current operator LBB01 address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Aligned Data Centers",
+          "Hale County",
+          "Texas",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-5.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 683
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "acres": 313,
+        "cooling": "Operator: DeltaFlow liquid cooling, air-cooled heat rejection and closed-loop recirculating water design",
+        "sourceUrl": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+        "note": "313 acres is shared six-facility Caprock campus, not LBB01 parcel. No building-specific IT MW, gross area, water use or installed generators verified."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain LBB01-specific electrical and gross-area specification, exact energization and current utility interconnection evidence. Campus economic impact is not building capex."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-allium-hybrid-ca": {
+      "patch": {
+        "title": "Allium Solar: 110 MW Operator Plan, Conflicting 2029–2030 Targets",
+        "description": "Longroad’s Allium page proposes 110 MW solar plus a separate 110 MW battery on approximately 945 acres north of Hollister airport. Its timeline targets operation near the end of 2029; active CAISO request 1921 instead targets December 15, 2030, with 110 MW combined export.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.longroadenergy.com/portfolio/allium-solar/",
+            "title": "Allium Solar and Energy Storage System Project — Longroad Energy",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue — active Allium Hybrid 1921 / withdrawn Allium 1711",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>CAISO reports 112.491 MW solar and 112.386 MW battery separately, export 110 MW, at Crazy Horse Canyon–Hollister 115 kV. Native 110 MW uses operator solar scope only. The prior ID 1532 and Panoche 230 kV attribution are incorrect; withdrawn Allium 1711 is a previous request, not cancellation of active 1921.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>The operator timeline image targets fall-2025 application, studies into 2027, Q2-2027 approval, end-2027 construction and near-end-2029 operation; these are targets, not completed milestones. No $150M or December 2027 COD. The map places the proposal between Bolsa/SR25 and San Felipe roads north of the airport; the old point near Panoche was far away. Operator four-hour capability statement is not an explicit installed 440 MWh rating.<cite data-ref=\"https://www.longroadenergy.com/portfolio/allium-solar/\"></cite></li><li>Timeline: December 15, 2030 is active CAISO projected completion; current operator timeline instead shows near-end-2029 operation. Both remain prospective and the conflict is explicit.<cite data-ref=\"https://www.longroadenergy.com/portfolio/allium-solar/\"></cite></li><li>Longroad proposed Allium site overlay on aerial imagery north of Hollister airport, between Bolsa and San Felipe roads; not a surveyed approved boundary or constructed solar plant. Credit: Longroad Energy; underlying map credits as shown.<cite data-ref=\"https://www.longroadenergy.com/portfolio/allium-solar/\"></cite></li><li>Longroad Allium projected timeline: end-2027 construction and near-end-2029 operations. These are prospective dates and conflict with the active CAISO December-2030 target. Credit: Longroad Energy; underlying map credits as shown.<cite data-ref=\"https://www.longroadenergy.com/portfolio/allium-solar/\"></cite></li><li>Longroad Allium community outreach booth at Hollister Farmer’s Market, as identified by the operator; community-engagement context, not a facility photograph. Credit: Longroad Energy; underlying map credits as shown.<cite data-ref=\"https://www.longroadenergy.com/portfolio/allium-solar/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-12-15T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 15, 2030 is active CAISO projected completion; current operator timeline instead shows near-end-2029 operation. Both remain prospective and the conflict is explicit.",
+        "company": "Longroad Energy",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Longroad_Energy",
+        "latitude": 36.919,
+        "longitude": -121.438,
+        "address": "North of Hollister airport, San Benito County, California; approximate Allium proposal context from operator Bolsa / SR156 / San Felipe aerial map, not a surveyed parcel centroid",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Battery Storage",
+          "Longroad Energy",
+          "San Benito County",
+          "California",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-0.webp",
+            "originalWidth": 1920,
+            "originalHeight": 1226
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-1.webp",
+            "originalWidth": 1599,
+            "originalHeight": 437
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-2.webp",
+            "originalWidth": 1200,
+            "originalHeight": 904
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 110,
+        "kind": "generation",
+        "sourceUrl": "https://www.longroadenergy.com/portfolio/allium-solar/",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. Longroad’s Allium page proposes 110 MW solar plus a separate 110 MW battery on approximately 945 acres north of Hollister airport. Its timeline targets operation near the"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve current permitting and 2029 operator versus 2030 queue schedule. Obtain exact project georeference/approved footprint and explicit battery MWh. Census intersection result was mismatched; no exact point adopted from it."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 3
+    },
+    "solar-amphion-solar-phase-2-tx": {
+      "patch": {
+        "title": "Amphion Solar Phase 2: 205.9 MW Request, May 2029 Target",
+        "description": "ERCOT September 2026 GIS identifies Amphion Solar Phase 2 as request 28INR0343, Amphion Solar LLC, 205.9 MW in Atascosa County, targeting May 15, 2029. Screening is complete and full study started without an IA; construction is not established.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT September 2026 GIS — Amphion Solar Phase 2 28INR0343",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The POI is the 345 kV Fowlerton–San Miguel circuit-2 tap, shared with separate Phase 3 and storage requests. Phase 1 is a separate 180.6 MW request. No $220M, Pine Gate ownership, December 2027 COD or construction evidence found. The former 27INR0038 ID is not the name-matched Phase 2 request.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: May 15, 2029 is ERCOT projected COD, not actual service.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-05-15T00:00:00.000Z",
+        "dateConfidenceReasoning": "May 15, 2029 is ERCOT projected COD, not actual service.",
+        "company": "Amphion Solar, LLC",
+        "companyWikiUrl": null,
+        "address": "Atascosa County, Texas; retained approximate county/project-area context, exact Phase 2 footprint unverified",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Atascosa County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 205.9,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/reported scope, not measured output or evidence of operation. ERCOT September 2026 GIS identifies Amphion Solar Phase 2 as request 28INR0343, Amphion Solar LLC, 205.9 MW in Atascosa County, targeting May 15, 2029. Screening is compl"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current ultimate developer, project permits, phase-specific parcel and official gallery. No exact-name EIA unit found; no assumed parent affiliation or phase merging."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-buzzer-butte-2-solar-tx",
+      "id": 16806,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current site permit, exact parcel and official project gallery. No exact-name EIA plant match found."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-aldrin-138-bess-tx",
+      "id": 16860,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve broader 550 MW / 1,100 MWh operator proposal versus two queue ratings; verify component footprints, explicit component MWh and eventual COD. No request-specific facility photograph identified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-aldrin-345-bess-tx",
+      "id": 16863,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve broader 550 MW / 1,100 MWh operator proposal versus two queue ratings; verify component footprints, explicit component MWh and eventual COD. No request-specific facility photograph identified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-allthorn-bess-tx",
+      "id": 16867,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify SGIA execution, current construction scope and eventual COD; reconcile operator versus queue component ratings and schedules. Published point and lease-option acreage do not establish separate as-built battery/solar footprints."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-allthorn-solar-tx",
+      "id": 16897,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify SGIA execution, current construction scope and eventual COD; reconcile operator versus queue component ratings and schedules. Published point and lease-option acreage do not establish separate as-built battery/solar footprints."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-anatole-renewable-energy-storage-tx",
+      "id": 16871,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact POI/battery parcel and current physical construction/COD. Road-name geocode is coarse and not the exact 2.59-mile bearing in the filing. Standalone MWh remains unpublished."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-neo-04-oh",
+      "id": 16876,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-phoenix-phx-03-az",
+      "id": 16881,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "id": 16886,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact phase-one/two commissioning dates and whole-project gross floor area. Street interpolation differs from other directory points; preserve as address context, not exact building centroid."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-project-caprock-lbb-01-tx",
+      "id": 16892,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain LBB01-specific electrical and gross-area specification, exact energization and current utility interconnection evidence. Campus economic impact is not building capex."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-allium-hybrid-ca",
+      "id": 16895,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve current permitting and 2029 operator versus 2030 queue schedule. Obtain exact project georeference/approved footprint and explicit battery MWh. Census intersection result was mismatched; no exact point adopted from it."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-amphion-solar-phase-2-tx",
+      "id": 16901,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current ultimate developer, project permits, phase-specific parcel and official gallery. No exact-name EIA unit found; no assumed parent affiliation or phase merging."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-buzzer-butte-2-solar-tx",
+      "id": 16806,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current site permit, exact parcel and official project gallery. No exact-name EIA plant match found."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-aldrin-138-bess-tx",
+      "id": 16860,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve broader 550 MW / 1,100 MWh operator proposal versus two queue ratings; verify component footprints, explicit component MWh and eventual COD. No request-specific facility photograph identified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-aldrin-345-bess-tx",
+      "id": 16863,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve broader 550 MW / 1,100 MWh operator proposal versus two queue ratings; verify component footprints, explicit component MWh and eventual COD. No request-specific facility photograph identified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-allthorn-bess-tx",
+      "id": 16867,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify SGIA execution, current construction scope and eventual COD; reconcile operator versus queue component ratings and schedules. Published point and lease-option acreage do not establish separate as-built battery/solar footprints."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-allthorn-solar-tx",
+      "id": 16897,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify SGIA execution, current construction scope and eventual COD; reconcile operator versus queue component ratings and schedules. Published point and lease-option acreage do not establish separate as-built battery/solar footprints."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-anatole-renewable-energy-storage-tx",
+      "id": 16871,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact POI/battery parcel and current physical construction/COD. Road-name geocode is coarse and not the exact 2.59-mile bearing in the filing. Standalone MWh remains unpublished."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-neo-04-oh",
+      "id": 16876,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-phoenix-phx-03-az",
+      "id": 16881,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "id": 16886,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact phase-one/two commissioning dates and whole-project gross floor area. Street interpolation differs from other directory points; preserve as address context, not exact building centroid."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-project-caprock-lbb-01-tx",
+      "id": 16892,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain LBB01-specific electrical and gross-area specification, exact energization and current utility interconnection evidence. Campus economic impact is not building capex."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-allium-hybrid-ca",
+      "id": 16895,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve current permitting and 2029 operator versus 2030 queue schedule. Obtain exact project georeference/approved footprint and explicit battery MWh. Census intersection result was mismatched; no exact point adopted from it."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-amphion-solar-phase-2-tx",
+      "id": 16901,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current ultimate developer, project permits, phase-specific parcel and official gallery. No exact-name EIA unit found; no assumed parent affiliation or phase merging."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16806,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16860,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16863,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16867,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16897,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16871,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16876,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16881,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16886,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16892,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16895,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16901,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16806,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16860,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16863,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16867,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16897,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16871,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16876,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16881,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16886,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16892,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16895,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16901,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-aldrin-138-bess-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 269613
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-aldrin-138-bess-tx-relief.jpg",
+        "status": 200,
+        "bytes": 53335
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-aldrin-138-bess-tx-topo.jpg",
+        "status": 200,
+        "bytes": 291848
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-aldrin-345-bess-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 276779
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-aldrin-345-bess-tx-relief.jpg",
+        "status": 200,
+        "bytes": 53618
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-battery-aldrin-345-bess-tx-topo.jpg",
+        "status": 200,
+        "bytes": 269183
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/allthorn-battery-overview.png",
+        "status": 200,
+        "bytes": 606546
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/allthorn-solar-overview.png",
+        "status": 200,
+        "bytes": 606546
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 509218
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-relief.jpg",
+        "status": 200,
+        "bytes": 71505
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-topo.jpg",
+        "status": 200,
+        "bytes": 232421
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 427707
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-relief.jpg",
+        "status": 200,
+        "bytes": 124668
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-topo.jpg",
+        "status": 200,
+        "bytes": 403653
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-aerial.jpg",
+        "status": 200,
+        "bytes": 316865
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-relief.jpg",
+        "status": 200,
+        "bytes": 92283
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-topo.jpg",
+        "status": 200,
+        "bytes": 210555
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 293353
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-relief.jpg",
+        "status": 200,
+        "bytes": 56217
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-topo.jpg",
+        "status": 200,
+        "bytes": 208477
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-0.webp",
+        "status": 200,
+        "bytes": 374280
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-1.webp",
+        "status": 200,
+        "bytes": 35174
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-2.webp",
+        "status": 200,
+        "bytes": 241850
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-3.jpg",
+        "status": 200,
+        "bytes": 322560
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-4.jpg",
+        "status": 200,
+        "bytes": 211567
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-5.jpg",
+        "status": 200,
+        "bytes": 91979
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-aerial.jpg",
+        "status": 200,
+        "bytes": 343634
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-relief.jpg",
+        "status": 200,
+        "bytes": 101517
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-topo.jpg",
+        "status": 200,
+        "bytes": 138610
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 509218
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-relief.jpg",
+        "status": 200,
+        "bytes": 71505
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-topo.jpg",
+        "status": 200,
+        "bytes": 232421
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-amphion-solar-phase-2-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 438252
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-amphion-solar-phase-2-tx-relief.jpg",
+        "status": 200,
+        "bytes": 98363
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-amphion-solar-phase-2-tx-topo.jpg",
+        "status": 200,
+        "bytes": 309361
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-buzzer-butte-2-solar-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 412087
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-buzzer-butte-2-solar-tx-relief.jpg",
+        "status": 200,
+        "bytes": 154222
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-solar-buzzer-butte-2-solar-tx-topo.jpg",
+        "status": 200,
+        "bytes": 371657
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16806,
+        "status": 200,
+        "bytes": 307132
+      },
+      {
+        "environment": "local",
+        "id": 16860,
+        "status": 200,
+        "bytes": 310217
+      },
+      {
+        "environment": "local",
+        "id": 16863,
+        "status": 200,
+        "bytes": 310795
+      },
+      {
+        "environment": "local",
+        "id": 16867,
+        "status": 200,
+        "bytes": 325117
+      },
+      {
+        "environment": "local",
+        "id": 16897,
+        "status": 200,
+        "bytes": 325255
+      },
+      {
+        "environment": "local",
+        "id": 16871,
+        "status": 200,
+        "bytes": 321869
+      },
+      {
+        "environment": "local",
+        "id": 16886,
+        "status": 200,
+        "bytes": 336738
+      },
+      {
+        "environment": "local",
+        "id": 16892,
+        "status": 200,
+        "bytes": 323472
+      },
+      {
+        "environment": "local",
+        "id": 16895,
+        "status": 200,
+        "bytes": 329511
+      },
+      {
+        "environment": "local",
+        "id": 16901,
+        "status": 200,
+        "bytes": 305906
+      },
+      {
+        "environment": "prod",
+        "id": 16806,
+        "status": 200,
+        "bytes": 264219
+      },
+      {
+        "environment": "prod",
+        "id": 16860,
+        "status": 200,
+        "bytes": 268078
+      },
+      {
+        "environment": "prod",
+        "id": 16863,
+        "status": 200,
+        "bytes": 268826
+      },
+      {
+        "environment": "prod",
+        "id": 16867,
+        "status": 200,
+        "bytes": 282717
+      },
+      {
+        "environment": "prod",
+        "id": 16897,
+        "status": 200,
+        "bytes": 282962
+      },
+      {
+        "environment": "prod",
+        "id": 16871,
+        "status": 200,
+        "bytes": 279326
+      },
+      {
+        "environment": "prod",
+        "id": 16886,
+        "status": 200,
+        "bytes": 293247
+      },
+      {
+        "environment": "prod",
+        "id": 16892,
+        "status": 200,
+        "bytes": 280807
+      },
+      {
+        "environment": "prod",
+        "id": 16895,
+        "status": 200,
+        "bytes": 287289
+      },
+      {
+        "environment": "prod",
+        "id": 16901,
+        "status": 200,
+        "bytes": 263540
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1401,
+      "prod": 1401
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+          "note": "80 MW is contractor-described PHX07 two-phase project. Phase 07-2 alone adds 40 MW IT / 214,078 sqft; whole-project gross area, installed capacity and measured water/energy unverified.",
+          "checkedAt": "2026-10-24T05:17:31.685Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 313,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator: DeltaFlow liquid cooling, air-cooled heat rejection and closed-loop recirculating water design",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+          "note": "313 acres is shared six-facility Caprock campus, not LBB01 parcel. No building-specific IT MW, gross area, water use or installed generators verified.",
+          "checkedAt": "2026-10-24T05:17:32.704Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator market page: Delta3 air arrays, closed-loop chilled-water design and liquid-cooling support",
+          "powerSource": null,
+          "sourceUrl": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+          "note": "80 MW is contractor-described PHX07 two-phase project. Phase 07-2 alone adds 40 MW IT / 214,078 sqft; whole-project gross area, installed capacity and measured water/energy unverified.",
+          "checkedAt": "2026-10-24T05:18:52.926Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 313,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Operator: DeltaFlow liquid cooling, air-cooled heat rejection and closed-loop recirculating water design",
+          "powerSource": null,
+          "sourceUrl": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+          "note": "313 acres is shared six-facility Caprock campus, not LBB01 parcel. No building-specific IT MW, gross area, water use or installed generators verified.",
+          "checkedAt": "2026-10-24T05:18:59.993Z"
+        }
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "retainedCounterpartVerification": [
+    {
+      "environment": "local",
+      "id": 15776,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16724,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 15776,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16724,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "battery-allthorn-bess-tx",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-98.711528,27.385667,-98.681528,27.405667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-98.711528,27.385667,-98.681528,27.405667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/battery-allthorn-bess-tx-aerial.jpg",
+      "bytes": 509218,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-aerial.jpg"
+    },
+    {
+      "key": "battery-allthorn-bess-tx",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-98.728528,27.373667,-98.664528,27.417667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-98.728528,27.373667,-98.664528,27.417667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/battery-allthorn-bess-tx-topo.jpg",
+      "bytes": 232421,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-topo.jpg"
+    },
+    {
+      "key": "battery-allthorn-bess-tx",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-98.776528,27.345667,-98.616528,27.445667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-98.776528,27.345667,-98.616528,27.445667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/battery-allthorn-bess-tx-relief.jpg",
+      "bytes": 71505,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-allthorn-bess-tx-relief.jpg"
+    },
+    {
+      "key": "solar-allthorn-solar-tx",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-98.711528,27.385667,-98.681528,27.405667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-98.711528,27.385667,-98.681528,27.405667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/solar-allthorn-solar-tx-aerial.jpg",
+      "bytes": 509218,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-aerial.jpg"
+    },
+    {
+      "key": "solar-allthorn-solar-tx",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-98.728528,27.373667,-98.664528,27.417667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-98.728528,27.373667,-98.664528,27.417667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/solar-allthorn-solar-tx-topo.jpg",
+      "bytes": 232421,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-topo.jpg"
+    },
+    {
+      "key": "solar-allthorn-solar-tx",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-98.776528,27.345667,-98.616528,27.445667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-98.776528,27.345667,-98.616528,27.445667&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/solar-allthorn-solar-tx-relief.jpg",
+      "bytes": 71505,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allthorn-solar-tx-relief.jpg"
+    },
+    {
+      "key": "battery-anatole-renewable-energy-storage-tx",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-95.975747,32.261614,-95.945747,32.281614&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-95.975747,32.261614,-95.945747,32.281614&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-aerial.jpg",
+      "bytes": 427707,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-aerial.jpg"
+    },
+    {
+      "key": "battery-anatole-renewable-energy-storage-tx",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-95.992747,32.249614,-95.928747,32.293614&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-95.992747,32.249614,-95.928747,32.293614&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-topo.jpg",
+      "bytes": 403653,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-topo.jpg"
+    },
+    {
+      "key": "battery-anatole-renewable-energy-storage-tx",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-96.040747,32.221614,-95.880747,32.321614&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-96.040747,32.221614,-95.880747,32.321614&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-relief.jpg",
+      "bytes": 124668,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/battery-anatole-renewable-energy-storage-tx-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-112.408535,33.552970,-112.378535,33.572970&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-112.408535,33.552970,-112.378535,33.572970&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/dc-aligned-phoenix-phx-07-az-aerial.jpg",
+      "bytes": 316865,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-112.425535,33.540970,-112.361535,33.584970&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-112.425535,33.540970,-112.361535,33.584970&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/dc-aligned-phoenix-phx-07-az-topo.jpg",
+      "bytes": 210555,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-112.473535,33.512970,-112.313535,33.612970&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-112.473535,33.512970,-112.313535,33.612970&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/dc-aligned-phoenix-phx-07-az-relief.jpg",
+      "bytes": 92283,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-phoenix-phx-07-az-relief.jpg"
+    },
+    {
+      "key": "dc-aligned-project-caprock-lbb-01-tx",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-101.851042,33.851688,-101.821042,33.871688&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-101.851042,33.851688,-101.821042,33.871688&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-aerial.jpg",
+      "bytes": 293353,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-aerial.jpg"
+    },
+    {
+      "key": "dc-aligned-project-caprock-lbb-01-tx",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-101.868042,33.839688,-101.804042,33.883688&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-101.868042,33.839688,-101.804042,33.883688&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-topo.jpg",
+      "bytes": 208477,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-topo.jpg"
+    },
+    {
+      "key": "dc-aligned-project-caprock-lbb-01-tx",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-101.916042,33.811688,-101.756042,33.911688&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-101.916042,33.811688,-101.756042,33.911688&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-relief.jpg",
+      "bytes": 56217,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/dc-aligned-project-caprock-lbb-01-tx-relief.jpg"
+    },
+    {
+      "key": "solar-allium-hybrid-ca",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-121.453000,36.909000,-121.423000,36.929000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-121.453000,36.909000,-121.423000,36.929000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/solar-allium-hybrid-ca-aerial.jpg",
+      "bytes": 343634,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-aerial.jpg"
+    },
+    {
+      "key": "solar-allium-hybrid-ca",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-121.470000,36.897000,-121.406000,36.941000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-121.470000,36.897000,-121.406000,36.941000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/solar-allium-hybrid-ca-topo.jpg",
+      "bytes": 138610,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-topo.jpg"
+    },
+    {
+      "key": "solar-allium-hybrid-ca",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-121.518000,36.869000,-121.358000,36.969000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-121.518000,36.869000,-121.358000,36.969000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/solar-allium-hybrid-ca-relief.jpg",
+      "bytes": 101517,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/solar-allium-hybrid-ca-relief.jpg"
+    },
+    {
+      "key": "solar-allium-hybrid-ca",
+      "sourceUrl": "https://www.longroadenergy.com/wp-content/uploads/2025/08/allium-site-map-0902_25.webp",
+      "sourcePage": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "caption": "Longroad proposed Allium site overlay on aerial imagery north of Hollister airport, between Bolsa and San Felipe roads; not a surveyed approved boundary or constructed solar plant.",
+      "credit": "Longroad Energy; underlying map credits as shown",
+      "layer": "gallery-0",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/gallery-0.webp",
+      "width": 1920,
+      "height": 1226,
+      "bytes": 374280,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-0.webp"
+    },
+    {
+      "key": "solar-allium-hybrid-ca",
+      "sourceUrl": "https://www.longroadenergy.com/wp-content/uploads/2023/03/allium-project-timeline.webp",
+      "sourcePage": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "caption": "Longroad Allium projected timeline: end-2027 construction and near-end-2029 operations. These are prospective dates and conflict with the active CAISO December-2030 target.",
+      "credit": "Longroad Energy; underlying map credits as shown",
+      "layer": "gallery-1",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/gallery-1.webp",
+      "width": 1599,
+      "height": 437,
+      "bytes": 35174,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-1.webp"
+    },
+    {
+      "key": "solar-allium-hybrid-ca",
+      "sourceUrl": "https://www.longroadenergy.com/wp-content/uploads/2025/08/Longroad-Energy_Allium-Farmers-Market.webp",
+      "sourcePage": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "caption": "Longroad Allium community outreach booth at Hollister Farmer’s Market, as identified by the operator; community-engagement context, not a facility photograph.",
+      "credit": "Longroad Energy; underlying map credits as shown",
+      "layer": "gallery-2",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/gallery-2.webp",
+      "width": 1200,
+      "height": 904,
+      "bytes": 241850,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-2.webp"
+    },
+    {
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "sourceUrl": "https://lewisbuilds.com/system/uploads/fae/image/asset/2036/lg_PHX07_-_Aerial.2_large.jpg",
+      "sourcePage": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "caption": "General contractor PHX 07-2 gallery: PHX 07-2 data ceneter. Phase-two construction/design context within an 80 MW project, not proof of actual COD or capacity of every campus building.",
+      "credit": "Lease Crutcher Lewis / Aligned Data Centers",
+      "layer": "gallery-3",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/gallery-3.jpg",
+      "width": 1400,
+      "height": 1049,
+      "bytes": 322560,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-3.jpg"
+    },
+    {
+      "key": "dc-aligned-phoenix-phx-07-az",
+      "sourceUrl": "https://lewisbuilds.com/system/uploads/fae/image/asset/2037/lg_DJI_20250310222240_0013_D__1__large.jpg",
+      "sourcePage": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "caption": "General contractor PHX 07-2 gallery: PHX 07-2 data center in Phoenix. Phase-two construction/design context within an 80 MW project, not proof of actual COD or capacity of every campus building.",
+      "credit": "Lease Crutcher Lewis / Aligned Data Centers",
+      "layer": "gallery-4",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/gallery-4.jpg",
+      "width": 1400,
+      "height": 788,
+      "bytes": 211567,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-4.jpg"
+    },
+    {
+      "key": "dc-aligned-project-caprock-lbb-01-tx",
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2026/04/AlignedGroundbreakingAbernathy_4226-1024x683.jpg",
+      "sourcePage": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+      "caption": "Operator-published Project Caprock campus groundbreaking photograph. Whole-campus ceremony context; not a photograph of an energized LBB01 or a building-only budget.",
+      "credit": "Aligned Data Centers",
+      "layer": "gallery-5",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/gallery-5.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 91979,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/gallery-5.jpg"
+    },
+    {
+      "key": "battery-allthorn-bess-tx",
+      "layer": "allthorn-battery-overview",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/allthorn-battery-overview.png",
+      "sourceUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+      "sourcePage": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "credit": "Palladium Energy / Fractal Business Analytics; underlying map credits as shown",
+      "caption": "September 2026 preliminary Allthorn hybrid project overview, PDF page 3: proposed capacity, project location, lease-option acreage and target COD. The same hybrid diagram supplies context to solar and battery components; not an as-built boundary or photograph.",
+      "bytes": 606546,
+      "width": 1800,
+      "height": 1013,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/allthorn-battery-overview.png"
+    },
+    {
+      "key": "solar-allthorn-solar-tx",
+      "layer": "allthorn-solar-overview",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round26-2026-10-23/allthorn-solar-overview.png",
+      "sourceUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+      "sourcePage": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "credit": "Palladium Energy / Fractal Business Analytics; underlying map credits as shown",
+      "caption": "September 2026 preliminary Allthorn hybrid project overview, PDF page 3: proposed capacity, project location, lease-option acreage and target COD. The same hybrid diagram supplies context to solar and battery components; not an as-built boundary or photograph.",
+      "bytes": 606546,
+      "width": 1800,
+      "height": 1013,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round26-2026-10-23/allthorn-solar-overview.png"
+    }
+  ],
+  "gallerySourceChecks": [
+    {
+      "sourceUrl": "https://www.longroadenergy.com/wp-content/uploads/2025/08/allium-site-map-0902_25.webp",
+      "sourcePage": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "status": 200,
+      "bytes": 374280,
+      "sha256": "19537a74d787b4d6d1ab95ff95c6a1dee06854327be26ffec877dc93f57ea50e",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.longroadenergy.com/wp-content/uploads/2023/03/allium-project-timeline.webp",
+      "sourcePage": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "status": 200,
+      "bytes": 35174,
+      "sha256": "b7710c3c0ad4a66e5922172e15b63488bdc2fefb3f964b6657d7d0912ce83eab",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.longroadenergy.com/wp-content/uploads/2025/08/Longroad-Energy_Allium-Farmers-Market.webp",
+      "sourcePage": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "status": 200,
+      "bytes": 241850,
+      "sha256": "a7019a10e830750bd5cc1c8fd767d8ea882d76815ea88939356da3c4a9ce9084",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://lewisbuilds.com/system/uploads/fae/image/asset/2036/lg_PHX07_-_Aerial.2_large.jpg",
+      "sourcePage": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "status": 200,
+      "bytes": 322560,
+      "sha256": "f0aa7bdf709c4b13e9c1f947ba12f6ae98c5f25d0872c6034316351a55b3d603",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://lewisbuilds.com/system/uploads/fae/image/asset/2037/lg_DJI_20250310222240_0013_D__1__large.jpg",
+      "sourcePage": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "status": 200,
+      "bytes": 211567,
+      "sha256": "d885adccf11cb91a6c9c8788aa3da17fbe70924c8bfdbd4522d9bb2fefff92bd",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://aligneddc.com/wp-content/uploads/2026/04/AlignedGroundbreakingAbernathy_4226-1024x683.jpg",
+      "sourcePage": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+      "status": 200,
+      "bytes": 91979,
+      "sha256": "7ebe2ede75a90f60922e14a54d1b9b8fac7f781108866a708dd00ce0972fa3d9",
+      "verification": "Plain curl download exactly matches visually inspected operator image bytes"
+    },
+    {
+      "sourceUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+      "sourcePage": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "verification": "Full primary PDF downloaded and parsed; page 3 rendered by pdftoppm, visually inspected. Preliminary proposal scope and location distinguished from an as-built boundary.",
+      "bytes": 1862565
+    },
+    {
+      "sourceUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+      "sourcePage": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "verification": "Full primary PDF downloaded and parsed; page 3 rendered by pdftoppm, visually inspected. Preliminary proposal scope and location distinguished from an as-built boundary.",
+      "bytes": 1862565
+    }
+  ],
+  "sourceChecks": [
+    {
+      "key": "phoenix",
+      "url": "https://aligneddc.com/phoenix-data-centers/",
+      "status": 200,
+      "bytes": 293782,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/phoenix-data-centers/",
+      "images": [
+        {
+          "src": "/wp-content/uploads/2025/09/PHX-Header-Image.jpeg",
+          "alt": ""
+        },
+        {
+          "src": "/wp-content/uploads/2025/08/artistic-colorful-bg2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/consistency-icon.svg",
+          "alt": "consistency icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-5-1024x683-1-400x267.jpeg",
+          "alt": "indoor image Aligned Data Centers campus"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-5-1024x683-1-400x267.jpeg",
+          "alt": "indoor image Aligned Data Centers campus"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-6-1024x683-1-400x267.jpeg",
+          "alt": "Cooling pipes image Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-6-1024x683-1-400x267.jpeg",
+          "alt": "Cooling pipes image Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-7-1024x683-1-400x267.jpeg",
+          "alt": "Cooling pipes image Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-7-1024x683-1-400x267.jpeg",
+          "alt": "Cooling pipes image Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-8-400x267.jpeg",
+          "alt": "Chilled Water Supply image Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-8-400x267.jpeg",
+          "alt": "Chilled Water Supply image Aligned Data Centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-Header-Image-1024x683-1-400x267.jpeg",
+          "alt": "Phoenix Aligned Data Centers render"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/09/PHX-Header-Image-1024x683-1-400x267.jpeg",
+          "alt": "Phoenix Aligned Data Centers render"
+        },
+        {
+          "src": "/wp-content/uploads/2025/08/single-location-bg-img.jpg",
+          "alt": "render of a data center campus aerial view"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/power-icon.svg",
+          "alt": "power icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-cooling-infrastructure-light.svg",
+          "alt": "cooling infrastructure icon aligned data centers"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-sustainability-light.svg",
+          "alt": "sustainability icon"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2025/08/icon-security-light.svg",
+          "alt": "security icon"
+        },
+        {
+          "src": "/wp-content/uploads/2025/09/PHX-2.jpeg",
+          "alt": "Phoenix PHX-02 Aligned Data Centers Lobby"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "caprock",
+      "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+      "status": 200,
+      "bytes": 230886,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+      "images": [
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/04/AlignedGroundbreakingAbernathy_4226-1024x683.jpg",
+          "alt": "Aligned Data Centers Breaks Ground on “Project Caprock,” a Sustainable 540 MW Next-Generation Data Center Campus in Northwest Texas "
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/04/AlignedGroundbreakingAbernathy_4226-1024x683.jpg",
+          "alt": "Aligned Data Centers Breaks Ground on “Project Caprock,” a Sustainable 540 MW Next-Generation Data Center Campus in Northwest Texas "
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/Featured-Press-Website-Logo-5.png",
+          "alt": "Investing in Frederick County’s Youth: Our New Partnership with Boys & Girls Clubs"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/10/Featured-Press-Website-Logo-5.png",
+          "alt": "Investing in Frederick County’s Youth: Our New Partnership with Boys & Girls Clubs"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Phaidra-1024x1024.png",
+          "alt": "Phaidra and Aligned Partner to Empower Operations Teams and Strengthen Data Center Reliability with AI"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Phaidra-1024x1024.png",
+          "alt": "Phaidra and Aligned Partner to Empower Operations Teams and Strengthen Data Center Reliability with AI"
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Aligned-Data-Centers-Appoints-Industry-Veteran-Chris-Drumgoole-as-Chief-Operating-Officer-1024x576.png",
+          "alt": "Aligned Data Centers Appoints Industry Veteran Chris Drumgoole as Chief Operating Officer   "
+        },
+        {
+          "src": "https://aligneddc.com/wp-content/uploads/2026/09/Aligned-Data-Centers-Appoints-Industry-Veteran-Chris-Drumgoole-as-Chief-Operating-Officer-1024x576.png",
+          "alt": "Aligned Data Centers Appoints Industry Veteran Chris Drumgoole as Chief Operating Officer   "
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "abernathy",
+      "url": "https://aligneddc.com/abernathy-data-centers/",
+      "status": 404,
+      "bytes": 210765,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/abernathy-data-centers/",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "allium",
+      "url": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "status": 200,
+      "bytes": 72515,
+      "pdf": false,
+      "finalUrl": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "images": [
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/Allium-Solar-Logo-RGB.svg",
+          "alt": "Allium Solar logo"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/home-sun-icon.svg",
+          "alt": "House, sun icon"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/financial-gain-icon.svg",
+          "alt": "Financial increase icon"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/hardhat-icon.svg",
+          "alt": "Hard hat icon"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/allium-site-map-0902_25.webp",
+          "alt": "Allium site map"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/allium-site-map-0902_25.webp",
+          "alt": "Allium site map"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2023/03/allium-project-timeline.webp",
+          "alt": "Allium project timeline"
+        },
+        {
+          "src": "https://www.longroadenergy.com/wp-content/uploads/2025/08/Longroad-Energy_Allium-Farmers-Market.webp",
+          "alt": "Longroad Energy, Allium-Farmer's Market"
+        }
+      ],
+      "links": [
+        {
+          "text": "What is battery storage?",
+          "href": "#"
+        },
+        {
+          "text": "Is it safe?",
+          "href": "#"
+        },
+        {
+          "text": "What is the project timeline?",
+          "href": "#"
+        },
+        {
+          "text": "Built for San Benito County",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "key": "allthorn",
+      "url": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "status": 200,
+      "bytes": 749220,
+      "pdf": false,
+      "finalUrl": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "images": [
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/fractal-energy-storage-consultants-logo-10.png",
+          "alt": "Fractal Energy Storage Consultants"
+        },
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/palladium-process-png-1024x370.png",
+          "alt": ""
+        },
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/circo-process-png-150x150.png",
+          "alt": ""
+        },
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/circo-process-png-150x150.png",
+          "alt": ""
+        },
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/energy-city-bess-150x150.png",
+          "alt": ""
+        },
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/thumbnail-25-12-png-150x150.png",
+          "alt": ""
+        },
+        {
+          "src": "https://www.energystorageconsultants.com/wp-content/uploads/blackbear-process-png-150x150.png",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "text": "Project Teaser",
+          "href": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf"
+        }
+      ]
+    },
+    {
+      "key": "anatole",
+      "url": "https://www.anatoleenergystorage.com/",
+      "status": 200,
+      "bytes": 13854,
+      "pdf": false,
+      "finalUrl": "https://www.anatoleenergystorage.com/",
+      "images": [
+        {
+          "src": "https://cdn.prod.website-files.com/659c7ad900082e7cd9105cfb/659c7ad900082e7cd9105e2b_AdobeStock_274903817-min-min.webp",
+          "alt": ""
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/659c7ad900082e7cd9105cfb/65a15e0c03d07ebf6a2705ed_1900538_AnatoleEnergyStorage-Logo-Horizontal-White_011224.png",
+          "alt": ""
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "anatole-business",
+      "url": "https://www.anatoleenergystorage.com/regional-business-partnership",
+      "status": 200,
+      "bytes": 22808,
+      "pdf": false,
+      "finalUrl": "https://www.anatoleenergystorage.com/regional-business-partnership",
+      "images": [
+        {
+          "src": "https://cdn.prod.website-files.com/659c7ad900082e7cd9105cfb/66f5d2220aeee7ed336d632d_anatole-logo.png",
+          "alt": ""
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/659c7ad900082e7cd9105cfb/65a15e0c03d07ebf6a2705ed_1900538_AnatoleEnergyStorage-Logo-Horizontal-White_011224.png",
+          "alt": ""
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "vesper",
+      "url": "https://vesperenergy.com/our-projects/",
+      "status": 403,
+      "bytes": 1084,
+      "pdf": false,
+      "finalUrl": "https://vesperenergy.com/our-projects/",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16806",
+      "url": "https://interconnection.ercot.com/gis-reports/30INR0164",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16860",
+      "url": "https://interconnection.ercot.com/gis-reports/25INR0421",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16863",
+      "url": "https://interconnection.ercot.com/gis-reports/25INR0422",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16867",
+      "url": "https://interconnection.ercot.com/gis-reports/28INR0230",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16871",
+      "url": "https://interconnection.ercot.com/gis-reports/25INR0398",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16876",
+      "url": "https://storage.googleapis.com/data-center-source-files/campuses/615__aligned-neo-01-sandusky/2024-12-27_air-permit_ohio-epa-final-air-pti-p0137086-facility-032202203-building-4.pdf",
+      "status": 404,
+      "bytes": 312,
+      "pdf": false,
+      "finalUrl": "https://storage.googleapis.com/data-center-source-files/campuses/615__aligned-neo-01-sandusky/2024-12-27_air-permit_ohio-epa-final-air-pti-p0137086-facility-032202203-building-4.pdf",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16881",
+      "url": "https://storage.googleapis.com/data-center-source-files/campuses/609__aligned-phoenix/2024-03-12_air-permit_maricopa-county-air-permit-aligned-phoenix-phx03.pdf",
+      "status": 404,
+      "bytes": 291,
+      "pdf": false,
+      "finalUrl": "https://storage.googleapis.com/data-center-source-files/campuses/609__aligned-phoenix/2024-03-12_air-permit_maricopa-county-air-permit-aligned-phoenix-phx03.pdf",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16886",
+      "url": "https://storage.googleapis.com/data-center-source-files/campuses/609__aligned-phoenix/2024-04-18_air-permit_maricopa-county-air-permit-aligned-phoenix-phx07.pdf",
+      "status": 404,
+      "bytes": 291,
+      "pdf": false,
+      "finalUrl": "https://storage.googleapis.com/data-center-source-files/campuses/609__aligned-phoenix/2024-04-18_air-permit_maricopa-county-air-permit-aligned-phoenix-phx07.pdf",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16892",
+      "url": "https://storage.googleapis.com/data-center-source-files/campuses/620__aligned-caprock/2024-08-15_economic-development_hale-county-aligned-caprock-lbb01.pdf",
+      "status": 404,
+      "bytes": 286,
+      "pdf": false,
+      "finalUrl": "https://storage.googleapis.com/data-center-source-files/campuses/620__aligned-caprock/2024-08-15_economic-development_hale-county-aligned-caprock-lbb01.pdf",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "original-16895",
+      "url": "https://www.caiso.com/planning/Pages/GeneratorInterconnection/Default.aspx?proj=1532",
+      "error": "SSLError"
+    },
+    {
+      "key": "original-16897",
+      "url": "https://interconnection.ercot.com/gis-reports/28INR0229",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-16901",
+      "url": "https://interconnection.ercot.com/gis-reports/27INR0038",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "aldrin",
+      "url": "https://www.aldrinenergystorage.com/",
+      "status": 200,
+      "bytes": 84474,
+      "pdf": false,
+      "finalUrl": "https://aldrinenergystorage.com/",
+      "images": [
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/07/anchor-TX-FM-521.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/07/aldrin-storage.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/07/648c8993d2d730821e441844_Frame-17.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/07/Brazoria-County-Route-690-1024x768.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/07/Brazoria-Bridge-1024x682.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/02/cta-bg.jpg",
+          "alt": ""
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "aldrin-business",
+      "url": "https://www.aldrinenergystorage.com/regional-business-partnership",
+      "status": 404,
+      "bytes": 56447,
+      "pdf": false,
+      "finalUrl": "https://aldrinenergystorage.com/regional-business-partnership",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "aldrin-faq",
+      "url": "https://www.aldrinenergystorage.com/faq",
+      "status": 200,
+      "bytes": 101086,
+      "pdf": false,
+      "finalUrl": "https://aldrinenergystorage.com/faq/",
+      "images": [
+        {
+          "src": "https://aldrinenergystorage.com/wp-content/uploads/sites/7/2026/02/cta-bg.jpg",
+          "alt": ""
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "anatole-faq",
+      "url": "https://www.anatoleenergystorage.com/faq",
+      "status": 404,
+      "bytes": 5897,
+      "pdf": false,
+      "finalUrl": "https://www.anatoleenergystorage.com/faq",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "allthorn-teaser",
+      "url": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+      "status": 200,
+      "bytes": 1862565,
+      "pdf": true,
+      "finalUrl": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf"
+    },
+    {
+      "key": "abernathy",
+      "url": "https://aligneddc.com/abernathy-data-center/",
+      "status": 404,
+      "bytes": 210763,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/abernathy-data-center/",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "lewis",
+      "url": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "status": 200,
+      "bytes": 90744,
+      "pdf": false,
+      "finalUrl": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "images": [
+        {
+          "src": null,
+          "alt": "PHX 07-2 data ceneter"
+        },
+        {
+          "src": null,
+          "alt": "PHX 07-2 data center in Phoenix"
+        }
+      ],
+      "links": []
+    },
+    {
+      "key": "allium-county",
+      "url": "https://www.cosb.us/departments/resource-management-agency/planning-land-use-division/environmental-review/allium-solar-project",
+      "status": 403,
+      "bytes": 572,
+      "pdf": false,
+      "finalUrl": "https://www.sanbenitocountyca.gov/departments/resource-management-agency/planning-land-use-division/environmental-review/allium-solar-project",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "phoenix07",
+      "url": "https://aligneddc.com/location/phx-07-data-center/",
+      "status": 200,
+      "bytes": 221195,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/location/phx-07-data-center/",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "caprock-market",
+      "url": "https://aligneddc.com/abernathy-data-centers/",
+      "status": 404,
+      "bytes": 210765,
+      "pdf": false,
+      "finalUrl": "https://aligneddc.com/abernathy-data-centers/",
+      "images": [],
+      "links": []
+    },
+    {
+      "key": "caprock-current",
+      "url": "https://aligneddc.com/abernathy-tx-data-center/",
+      "status": 200,
+      "bytes": 260078,
+      "verification": "Downloaded from operator navigation and read current LBB01 address and gallery"
+    },
+    {
+      "key": "anatole-ia",
+      "url": "https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF",
+      "status": 200,
+      "bytes": 1481419
+    },
+    {
+      "key": "phx-news",
+      "url": "https://www.datacenterdynamics.com/en/news/aligned-breaks-ground-on-data-center-in-phoenix-arizona/",
+      "status": 403,
+      "bytes": 5747
+    }
+  ],
+  "researchNotes": [
+    "Ten existing pins corrected and two individual-building tracker splits soft-deleted/held on local and production. Initial title/source/author identities matched across environments; reconciled stale local IDs, re-read immediately before each write, retained backups and preserved original authors. No new pins or automatic merges. Draft/held catalogs and posted maps synchronized after both environments verified.",
+    "Read primary August 2026 EIA inventory, September 2026 ERCOT GIS workbook and CAISO workbook rows. Wrong IDs are replaced by exact name-matched requests, not treated as evidence of cancellation. Queue studies, executed agreements, commercial proposals, tax commencement, actual construction and operating status are separate findings.",
+    "Buzzer Butte 2: ERCOT 30INR0164 supports 242.8 MW, Origis Development LLC, Kent County, September 1, 2030 target, screening/full study started without IA, Nova Prime–Mhos 345 kV tap. Removed $250M and unsupported construction implications. No exact-name EIA plant match, parcel filing or verified official facility photo found. County/project-area point retained with qualification.",
+    "Aldrin 138: request 25INR0421, 207 MW, North Alvin TNMP 138 kV bus 39015, Brazoria County, studies complete/IA and March 1, 2028 target. Aldrin 345 is 25INR0425, 362 MW at Meadow 345 kV bus 43030, with same target; the original 25INR0422 belongs to Waterloo Solar 1, Bastrop. Two real queue requests remain separate. Vesper’s newly refreshed Aldrin site describes the broader 550 MW / 1,100 MWh, approximately 16-acre proposal, site planning/local-state review and as soon as early-2028 operation. The earlier 2025 construction wording is stale; the old business-partnership URL now returns 404. Do not silently equate 569 MW total requests with the 550 MW operator proposal, divide 1,100 MWh between requests, or retain invented four-hour 828 / 1,448 MWh. Cleared $210M / $360M; June 2028 Aldrin 345 target corrected to March.",
+    "Allthorn: downloaded September 2026 Palladium/Fractal sale teaser and opened September 16 adviser announcement. Proposed 230 MWac PV / 200 MW battery / 400 MWh usable at POI / two-hour duration, 436.7 MW POI available capacity, Q3 2029 target, draft SGIA pending execution, 2,500-acre maximum lease option, AEP 138 kV. ERCOT separately lists 231.5 MW solar / 205.2 MW battery, January 15, 2029, full study started/no IA. Both ratings/schedules remain explicit; native components use published commercial proposal 230 and 200 MW. The adviser’s 2025 construction-commencement wording is accompanied by transformer purchase and beginning-of-construction inspection for tax eligibility; it is not proof of full physical build-out. Removed four-hour 821 MWh and $200M / $240M. No completed sale or new owner inferred from an expired bid deadline.",
+    "Allthorn published project point 27°23′44.4″N / 98°41′47.5″W replaces both far-north county guesses. It is shared hybrid location, not surveyed battery/solar component boundaries. One preliminary project-overview page is rendered from full PDF page 3 and credited on both component pins using separate Azure files; these are two placements of the same diagram. Teaser publication precision is September only, so reference publishedDate is null; the saved event dates the actual September 16 adviser announcement.",
+    "Anatole: correct request 24INR0355, Anatole Renewable Energy LLC, 207.82 MW bus / 200 MW POI. The original 25INR0398 belongs to inactive Large Pumpville Ranch 1 Solar, Val Verde. Downloaded December 10, 2024 PUCT SGIA filing identifies Eustace Southeast 138 kV, Rayburn and a POI about 2.59 miles southeast of Eustace on CR 2806. Native 200 MW follows explicit POI/operator scope; June 30, 2027 queue target differs from older operator 2026 / construction-planned-2025 statements. Saved the confirmed filing milestone, not a claim of construction or COD. Removed $210M, 831 MWh, four-hour and inferred Oncor. Operator site describes up to 20 acres but only publishes a stock Adobe image, rejected. Esri road-name geocode improves wrong county point but is explicitly road context, not exact battery parcel or the precise filing bearing.",
+    "NEO-04 16876 held: synthetic building-4 permit URL returns 404. The actual Ohio EPA P0137086 source, read in round 25, names Aligned NE001 Sandusky / 0322022037 and authorizes 186 backup generators across its scope. Operator supports a planned four-building campus, already represented by NEO-01 16724 and broader expansion 15776. No independently sourced fourth-building 110.4 MW / 96 MW IT, $3.65B or June 2030 COD. Retained counterparts unchanged. Their older tracker expansion ratings remain a dedicated follow-up, not validated by the hold.",
+    "PHX-03 16881 held: its synthetic permit URL returns 404, while current operator groups PHX-01/02/03 at 2500 W Union Hills Drive on 55 acres. This verifies the campus, not an independently rated 47.3 MW / 40 MW IT third-building pin with $1.28B and June 2024 COD. No automatic merge with Behrend, Waddell or Chandler. A dedicated building specification/permit or dated phase milestone is needed to restore this standalone tracker split. The hold does not imply campus cancellation.",
+    "PHX-07: exact operator address is 8785 N Reems Road, Waddell, not Union Hills. Opened general contractor Lewis project page describes phase PHX 07-2 as 40 MW IT / six halls / 214,078 sqft within an 80 MW two-phase project. Native 80 MW is that project scope, not all West Valley facilities, measured total demand or an additional 80 MW above phase two. Phase-two floor area is not assigned to the whole PHX07 record. Current operator gallery groups PHX01/02/03 elsewhere and is not borrowed. Two actual contractor construction aerials are used without inferring photo date, energization, generator count or completed fit-out.",
+    "PHX07 chronology: opened April 17, 2025 DCD report says it was then due to go live later in 2025, separately from PHX13 groundbreaking and the broader 100-acre land purchase. Saved the dated report/publication milestone, not actual COD; removed December 2027 and $3.04B. The $86.5M land price is not construction cost. Direct requests return 403 while web-open retrieval succeeds. Census street interpolation differs from directory points and is explicitly address context, not surveyed building centroid. No unsupported APS 69 kV Union Hills substation attribution retained.",
+    "Caprock LBB01: opened April 9, 2026 operator groundbreaking release explicitly names first facility LBB01 / Q1 2027 target on 540 MW, 313-acre, six-facility, 1.65-million-sqft campus near Abernathy. Current official page, found through operator navigation at abernathy-tx-data-center, gives 1498 County Road 315, Abernathy. Corrected Plainview location and old December 2028 COD. No building-specific 108 MW / 96 MW IT rating, $3.42B or Xcel/SPP connection basis opened; native power deleted. Campus 540 MW is not divided by six. The expected $5B regional economic infusion is not LBB01 capital cost. Campus acreage remains explicitly shared. One campus-groundbreaking photo added; it does not show an operating LBB01.",
+    "Allium: current operator publishes 110 MW solar plus 110 MW battery on approximately 945 acres north of Hollister airport. Active CAISO request is 1921, with 112.491 MW solar / 112.386 MW battery / 110 MW combined export and Crazy Horse Canyon–Hollister 115 kV, not old 1532 / Panoche 230 kV. Prior Allium 1711 is withdrawn but does not cancel active 1921. Native 110 MW is solar only; no inferred installed 440 MWh. Operator timeline image targets end-2027 construction and near-end-2029 operation, versus active queue December 15, 2030; both explicit, no silently guaranteed schedule. Saved queue target as estimated and removed $150M / December 2027. No exact-name CA EIA plant match; similarly named Minnesota/Illinois entries rejected.",
+    "Allium location: operator proposed-site aerial shows Bolsa/SR25 west, San Felipe east and SR156 south near Hollister airport; replaced distant Panoche-area point with explicitly approximate map-derived context 36.919 / -121.438. Census intersection result mismatched the requested road junction and was rejected; Esri intersection context was not promoted to a surveyed site coordinate. Exact approved footprint remains a gap. Added the proposed-site overlay, projected timeline and identified Hollister farmers-market outreach photo. The outreach image is community context, not a facility photograph. County page direct retrieval returns 403 and is not claimed as a verified permit.",
+    "Amphion Phase 2: exact request 28INR0343, Amphion Solar LLC, 205.9 MW, May 15, 2029, Atascosa, study started/no IA, Fowlerton–San Miguel 345 kV circuit-2 tap. Phase 1 180.6 MW, Phase 3 115.4 MW and separate 200 MW storage request are distinct. Corrected old 27INR0038 / December 2027, unsupported Pine Gate ownership, $220M and construction claim. No current permit, exact phase parcel, official gallery or exact-name EIA plant identified; no merger or inferred parent affiliation.",
+    "Cleared ten unsupported prices and two calculated energy rows per environment. Replaced both retained datacenter metric rows to remove unverified measured daily water, installed hardware/generator and utility assertions. LBB01 native power deleted; PHX07 uses qualified contractor project rating. Held records are no longer public, with no cancellation claims.",
+    "Six location corrections required eighteen replacement USGS maps: both Allthorn component contexts, Anatole road-name context, Census PHX07/LBB01 address contexts and qualified Allium operator-map area. Basemaps may predate construction and do not establish a surveyed footprint. Four other corrected records keep twelve legacy maps. Added eight gallery placements: four photographs (two PHX07 construction, Caprock ceremony, Allium outreach) and four diagram placements (Allium site/timeline and the same Allthorn overview on two component pins). Six source images passed fresh plain-curl byte comparisons; the two overview copies were rendered from the downloaded primary teaser. All 26 new Azure files were publicly byte-verified before reference changes.",
+    "Fresh verification covers 24 environment actions, 38 current Azure files, 20 retained native pages and four unchanged-counterpart checks for NEO01/expansion across both environments. Both posted maps now contain 1,401 entries. No deployment, restart, production build or application-code changes."
+  ]
+}

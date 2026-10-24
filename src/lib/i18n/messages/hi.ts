@@ -726,6 +726,8 @@ const hi: Messages = {
     candidateArtist: 'बेस्ट न्यू आर्टिस्ट',
     candidateNominee: 'नामांकन का बाज़ार भाव',
     candidateWinner: 'जीत का बाज़ार भाव',
+    competitorsHeading: 'मुख्य प्रतिस्पर्धी',
+    competitorSource: 'स्रोत',
     ticketsOnSale: 'बिक्री जारी',
     ticketsSoldOut: 'सोल्ड आउट',
     ticketsNotYetOnSale: 'अभी बिक्री शुरू नहीं हुई',

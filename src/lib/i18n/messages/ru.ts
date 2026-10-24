@@ -732,6 +732,8 @@ const ru: Messages = {
     candidateArtist: 'Лучший новый исполнитель',
     candidateNominee: 'Рыночная цена номинации',
     candidateWinner: 'Рыночная цена победы',
+    competitorsHeading: 'Основные конкуренты',
+    competitorSource: 'Источник',
     ticketsOnSale: 'В продаже',
     ticketsSoldOut: 'Распроданы',
     ticketsNotYetOnSale: 'Ещё не в продаже',
