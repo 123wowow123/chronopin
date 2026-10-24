@@ -27,6 +27,7 @@ import { PinCarPerf } from '@/components/pin/PinCarPerf';
 import { PinGasCarPerf } from '@/components/pin/PinGasCarPerf';
 import { PinAircraftPerf } from '@/components/pin/PinAircraftPerf';
 import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
+import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
 import { PinDining } from '@/components/pin/PinDining';
 import { getAdjacentMusicRankings, getMusicRankingByTitleOrPin } from '@/lib/music';
@@ -107,7 +108,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -174,7 +175,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, dining, hotel, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, dining, hotel, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -192,6 +193,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinGasCarPerf(pin.id),
     pinAircraftPerf(pin.id),
     pinVideoPerf(pin.id),
+    pinLlmPerf(pin.id),
     pinDining(pin.id),
     pinHotel(pin.id),
     pinCandidates(pin.id),
@@ -206,7 +208,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
   const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
-  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || aircraftPerf || videoPerf || dining || hotel || modelChart ? 'mt-4' : '';
+  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || aircraftPerf || videoPerf || llmPerf || dining || hotel || modelChart ? 'mt-4' : '';
 
   const isPredicted = isPredictedPin(pin);
   const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
@@ -276,6 +278,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {gasCarPerf ? <PinGasCarPerf perf={gasCarPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {aircraftPerf ? <PinAircraftPerf perf={aircraftPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {videoPerf ? <PinVideoPerf perf={videoPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {llmPerf ? <PinLlmPerf perf={llmPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {hotel ? (
             <PinHotel

@@ -485,3 +485,5 @@ Missing rivals: the 7 food and drink rivals with no single sourced launch (Troll
 
 tag:Predicted AND updated:>=yesterday OR tag:Predicted AND posted:today
 and add product release filter
+
+pin popular product mainland chinese people like
