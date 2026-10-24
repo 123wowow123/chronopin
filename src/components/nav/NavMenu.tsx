@@ -19,16 +19,16 @@ import type { MessageKey } from '@/lib/i18n/translate';
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2';
 const itemIconClass = 'size-4 text-subtle';
 
-type MenuItem = { href: string; label: MessageKey | 'Restaurants' | 'Products' | 'Cars' | 'Travel' | 'Activities' | 'Music' | 'People'; icon: IconName };
-type MenuGroup = { title?: string; items: MenuItem[] };
+type MenuItem = { href: string; label: MessageKey; icon: IconName };
+type MenuGroup = { title?: MessageKey; items: MenuItem[] };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
 // Profile and settings are not a row here: the block at the head of the menu
 // (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuGroup[] {
   const groups: MenuGroup[] = [
-    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'People', icon: 'users' }, { href: '/trades', label: 'notifications.tradesToday', icon: 'trending-up' }] },
-    { title: 'Curated', items: [{ href: '/restaurants', label: 'Restaurants', icon: 'map' }, { href: '/travel', label: 'Travel', icon: 'globe' }, { href: '/activities', label: 'Activities', icon: 'compass' }, { href: '/products', label: 'Products', icon: 'cart' }, { href: '/cars', label: 'Cars', icon: 'car' }, { href: '/music', label: 'Music', icon: 'music' }] },
+    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'nav.people', icon: 'users' }, { href: '/trades', label: 'notifications.tradesToday', icon: 'trending-up' }] },
+    { title: 'nav.curated', items: [{ href: '/restaurants', label: 'nav.restaurants', icon: 'map' }, { href: '/travel', label: 'nav.travel', icon: 'globe' }, { href: '/activities', label: 'nav.activities', icon: 'compass' }, { href: '/products', label: 'nav.products', icon: 'cart' }, { href: '/cars', label: 'nav.cars', icon: 'car' }, { href: '/music', label: 'nav.music', icon: 'music' }] },
   ];
   if (isAdmin) groups.push({ items: [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }] });
   return groups;
@@ -143,11 +143,11 @@ function MenuLinks({ groups }: { groups: MenuGroup[] }) {
     <>
       {groups.map((group, index) => (
         <div key={index} className="border-b border-line py-1.5">
-          {group.title ? <div className="px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase">{group.title}</div> : null}
+          {group.title ? <div className="px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t(group.title)}</div> : null}
           {group.items.map((item) => (
             <Link key={item.href} href={item.href} className={itemClass}>
               <Icon name={item.icon} className={itemIconClass} />
-              {t.dynamic(item.label, item.label)}
+              {t(item.label)}
             </Link>
           ))}
         </div>

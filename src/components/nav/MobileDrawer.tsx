@@ -350,17 +350,17 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
               <DrawerWeather onNavigate={() => setOpen(false)} />
             </DrawerSection>
           )}
-          <DrawerSection title="People" hideTitle>
-            {link('/people', 'users', 'People')}
+          <DrawerSection title={t('nav.people')} hideTitle>
+            {link('/people', 'users', t('nav.people'))}
             {link('/trades', 'trending-up', t('notifications.tradesToday'))}
           </DrawerSection>
-          <DrawerSection title="Curated" className="pb-1!">
-            {link('/restaurants', 'map', 'Restaurants')}
-            {link('/travel', 'globe', 'Travel')}
-            {link('/activities', 'compass', 'Activities')}
-            {link('/products', 'cart', 'Products')}
-            {link('/cars', 'car', 'Cars')}
-            {link('/music', 'music', 'Music')}
+          <DrawerSection title={t('nav.curated')} className="pb-1!">
+            {link('/restaurants', 'map', t('nav.restaurants'))}
+            {link('/travel', 'globe', t('nav.travel'))}
+            {link('/activities', 'compass', t('nav.activities'))}
+            {link('/products', 'cart', t('nav.products'))}
+            {link('/cars', 'car', t('nav.cars'))}
+            {link('/music', 'music', t('nav.music'))}
           </DrawerSection>
           {user && isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
         </nav>
