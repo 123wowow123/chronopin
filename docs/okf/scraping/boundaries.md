@@ -49,3 +49,18 @@ The district source explicitly describes clipping ocean areas and correcting the
 - Congressional districts require the correct Congress/election plan. [TIGERweb's current release](https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_main.html) describes 120th Congress boundaries; use the [119th Congress collection](https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.119th_Congress.html) for applicable older events. Do not substitute today's district geometry for a historical election.
 - Additional election pins (San Francisco District 4 and Holborn/St Pancras) need their own official vintage-matched district polygons before importing; they are not assigned a nearby polygon or a congressional district.
 - No automatic pin creation or recurring boundary job is installed. This importer applies reviewed matches to existing pins. No production deployment is part of this work.
+
+## Production backfill — 2026-10-25
+
+After the owner reported deploying the map code and requested the production backfill, all three targets were independently matched through the authenticated admin API by source URL, exact title and event date. Production IDs are also 3407 (Palisades), 3431 (Eaton) and 3523 (San Diego District 1). None had an existing `PinSiteShape` row.
+
+The production replay manifest is `scripts/boundaries/research-2026-10-25.prod.json`. Its authenticated dry run passed; the import saved and read-back verified all three geometries and credits. Pin authors, event dates, titles and event source URLs were verified unchanged. This was a content import through the admin API, with no deployment or VM action.
+
+```sh
+npx tsx scripts/boundaries/import.ts --manifest scripts/boundaries/research-2026-10-25.prod.json --base https://www.chronopin.com --token-file .scrape/admin-boundaries-prod.token --dry
+npx tsx scripts/boundaries/import.ts --manifest scripts/boundaries/research-2026-10-25.prod.json --base https://www.chronopin.com --token-file .scrape/admin-boundaries-prod.token
+```
+
+Public production pages were also checked in a headless browser: all three rendered their expected polygon color, translated key label, boundary name and snapshot date/plan vintage. Screenshots are saved as `.scrape/boundaries/<pinId>-<kind>-prod.png`.
+
+Pre-write production records are retained in ignored `.scrape/boundaries/prod-before-2026-10-25.json`; tokens and screenshots also remain ignored.

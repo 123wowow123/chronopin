@@ -4,6 +4,7 @@
 // by hand is never overwritten by an estimate. The sibling of ./pinCarPerf.
 
 import * as db from '../db';
+import { keepSentiment } from './reviewSentiment';
 import { reviewsProblem } from '@/lib/pinReviews';
 import { DINING_KEYS, DINING_MAX, DINING_SOURCES, MAX_DINING_REVIEWS, MAX_DINING_REVIEW_QUOTE, isDiningScore, type DiningReview, type DiningScores, type DiningSource, type PinDiningJson } from '@/lib/pinDining';
 
@@ -55,6 +56,7 @@ export async function saveDining(
   scores: DiningScores,
   { reviews, source, basis, sourceUrl }: { reviews?: DiningReview[]; source: DiningSource; basis?: string | null; sourceUrl?: string | null },
 ): Promise<boolean> {
+  if (reviews) reviews = await keepSentiment('PinDining', pinId, reviews);
   const columns = ['pinId', ...DINING_KEYS, 'source', 'basis', 'sourceUrl', ...(reviews ? ['reviews'] : [])];
   const values: unknown[] = [pinId, ...DINING_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, ...(reviews ? [JSON.stringify(reviews)] : [])];
   const updates = columns.slice(1).map((column) => `"${column}" = EXCLUDED."${column}"`);

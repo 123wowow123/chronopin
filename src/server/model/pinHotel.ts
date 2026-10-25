@@ -4,6 +4,7 @@
 // is never overwritten by an estimate. The sibling of ./pinDining.
 
 import * as db from '../db';
+import { keepSentiment } from './reviewSentiment';
 import { reviewsProblem } from '@/lib/pinReviews';
 import { HOTEL_KEYS, HOTEL_MAX, HOTEL_SOURCES, MAX_HOTEL_REVIEWS, MAX_HOTEL_REVIEW_QUOTE, isHotelScore, type HotelReview, type HotelScores, type HotelSource, type PinHotelJson } from '@/lib/pinHotel';
 
@@ -55,6 +56,7 @@ export async function saveHotel(
   scores: HotelScores,
   { reviews, source, basis, sourceUrl }: { reviews?: HotelReview[]; source: HotelSource; basis?: string | null; sourceUrl?: string | null },
 ): Promise<boolean> {
+  if (reviews) reviews = await keepSentiment('PinHotel', pinId, reviews);
   const columns = ['pinId', ...HOTEL_KEYS, 'source', 'basis', 'sourceUrl', ...(reviews ? ['reviews'] : [])];
   const values: unknown[] = [pinId, ...HOTEL_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, ...(reviews ? [JSON.stringify(reviews)] : [])];
   const updates = columns.slice(1).map((column) => `"${column}" = EXCLUDED."${column}"`);

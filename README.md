@@ -462,3 +462,14 @@ this should apply for all products
 create product production knowlege graph what supliers good coming in and output of company going out and consumed
 
 
+add substack trader position gain and lost and live notifictions
+behind paywall $20 for premium user
+non substack information available for all users
+and will show go premium to see additonal section on user page
+admin has access
+
+
+
+gemini:
+do deep research on review for all categoris that supports reviews and compute sentiment on them
+generate wiki backing on research to gound work

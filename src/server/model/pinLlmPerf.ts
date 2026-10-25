@@ -4,6 +4,7 @@
 // ./pinAircraftPerf.
 
 import * as db from '../db';
+import { keepSentiment } from './reviewSentiment';
 import { reviewsProblem, type PinReview } from '@/lib/pinReviews';
 import { rubricYearProblem } from '@/lib/rubricYear';
 import {
@@ -55,6 +56,7 @@ export async function saveLlmPerf(
   scores: LlmPerfScores,
   { reviews, rubricYear, source, basis, sourceUrl }: { reviews?: PinReview[]; rubricYear?: number; source: LlmPerfSource; basis?: string | null; sourceUrl?: string | null },
 ): Promise<boolean> {
+  if (reviews) reviews = await keepSentiment('PinLlmPerf', pinId, reviews);
   const columns = ['pinId', ...LLM_PERF_KEYS, 'source', 'basis', 'sourceUrl', 'rubricYear', ...(reviews ? ['reviews'] : [])];
   const values: unknown[] = [pinId, ...LLM_PERF_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, rubricYear ?? LLM_PERF_RUBRIC_YEAR, ...(reviews ? [JSON.stringify(reviews)] : [])];
   const updates = columns.slice(1).filter((column) => column !== 'rubricYear' || rubricYear !== undefined).map((column) => `"${column}" = EXCLUDED."${column}"`);

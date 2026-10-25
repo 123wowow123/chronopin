@@ -1,0 +1,32 @@
+[
+  {
+    "pinId": 3407,
+    "pinTitle": "The Palisades Fire Is Fully Contained After 24 Days",
+    "kind": "wildfire",
+    "name": "Palisades Fire — January 2025 heat perimeter (dissolved)",
+    "observedAt": "2025-01",
+    "source": "Los Angeles County GIS / CAL FIRE / NIFC FIRIS",
+    "sourceUrl": "https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/Eaton_and_Palisades_Dissolved_Fire_Perimeters/FeatureServer",
+    "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/Eaton_and_Palisades_Dissolved_Fire_Perimeters/FeatureServer/0/query?where=OBJECTID%3D1&outFields=*&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3431,
+    "pinTitle": "The Eaton Fire Is Fully Contained After 24 Days",
+    "kind": "wildfire",
+    "name": "Eaton Fire — January 2025 heat perimeter (dissolved)",
+    "observedAt": "2025-01",
+    "source": "Los Angeles County GIS / CAL FIRE / NIFC FIRIS",
+    "sourceUrl": "https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/Eaton_and_Palisades_Dissolved_Fire_Perimeters/FeatureServer",
+    "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/Eaton_and_Palisades_Dissolved_Fire_Perimeters/FeatureServer/0/query?where=OBJECTID%3D2&outFields=*&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3523,
+    "pinTitle": "Paloma Aguirre Wins San Diego County Supervisor Special Election",
+    "kind": "district",
+    "name": "San Diego County Supervisorial District 1 (county land boundary)",
+    "vintage": "2021 redistricting plan; technical changes approved 2022-01-12; 2025 special election",
+    "source": "County of San Diego, LUEG-GIS / Redistricting Advisory Committee",
+    "sourceUrl": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Hosted/COSD_Boundaries/FeatureServer/1",
+    "url": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Hosted/COSD_Boundaries/FeatureServer/1/query?where=distno%3D1&outFields=distno&outSR=4326&f=geojson"
+  }
+]

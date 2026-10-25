@@ -4,6 +4,7 @@
 // The sibling of ./pinCarPerf.
 
 import * as db from '../db';
+import { keepSentiment } from './reviewSentiment';
 import { reviewsProblem, type PinReview } from '@/lib/pinReviews';
 import { rubricYearProblem } from '@/lib/rubricYear';
 import {
@@ -55,6 +56,7 @@ export async function saveGasCarPerf(
   scores: GasCarPerfScores,
   { reviews, rubricYear, source, basis, sourceUrl }: { reviews?: PinReview[]; rubricYear?: number; source: GasCarPerfSource; basis?: string | null; sourceUrl?: string | null },
 ): Promise<boolean> {
+  if (reviews) reviews = await keepSentiment('PinGasCarPerf', pinId, reviews);
   const columns = ['pinId', ...GAS_CAR_PERF_KEYS, 'source', 'basis', 'sourceUrl', 'rubricYear', ...(reviews ? ['reviews'] : [])];
   const values: unknown[] = [pinId, ...GAS_CAR_PERF_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, rubricYear ?? GAS_CAR_PERF_RUBRIC_YEAR, ...(reviews ? [JSON.stringify(reviews)] : [])];
   const updates = columns.slice(1).filter((column) => column !== 'rubricYear' || rubricYear !== undefined).map((column) => `"${column}" = EXCLUDED."${column}"`);

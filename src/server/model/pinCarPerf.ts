@@ -4,6 +4,7 @@
 // overwritten by an estimate. The sibling of ./pinTaste.
 
 import * as db from '../db';
+import { keepSentiment } from './reviewSentiment';
 import { reviewsProblem } from '@/lib/pinReviews';
 import { rubricYearProblem } from '@/lib/rubricYear';
 import { CAR_PERF_KEYS, CAR_PERF_RUBRIC_YEAR, CAR_PERF_MAX, CAR_PERF_SOURCES, MAX_CAR_PERF_REVIEWS, MAX_CAR_PERF_REVIEW_QUOTE, isCarPerfScore, type CarPerfReview, type CarPerfScores, type CarPerfSource, type PinCarPerfJson } from '@/lib/pinCarPerf';
@@ -64,6 +65,7 @@ export async function saveCarPerf(
   scores: CarPerfScores,
   { reviews, rubricYear, source, basis, sourceUrl }: { reviews?: CarPerfReview[]; rubricYear?: number; source: CarPerfSource; basis?: string | null; sourceUrl?: string | null },
 ): Promise<boolean> {
+  if (reviews) reviews = await keepSentiment('PinCarPerf', pinId, reviews);
   const columns = ['pinId', ...CAR_PERF_KEYS, 'source', 'basis', 'sourceUrl', 'rubricYear', ...(reviews ? ['reviews'] : [])];
   const values: unknown[] = [pinId, ...CAR_PERF_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, rubricYear ?? CAR_PERF_RUBRIC_YEAR, ...(reviews ? [JSON.stringify(reviews)] : [])];
   const updates = columns.slice(1).filter((column) => column !== 'rubricYear' || rubricYear !== undefined).map((column) => `"${column}" = EXCLUDED."${column}"`);

@@ -124,6 +124,7 @@
     "duplicates:feed": "tsx scripts/duplicates/feed.ts",
     "comments:sentiment": "tsx scripts/comments/sentiment.ts",
     "reviews:sentiment": "tsx scripts/products/reviewSentiment.ts",
+    "reviews:sentiment:prod": "tsx scripts/products/reviewSentimentProd.ts",
     "suggestions:review": "tsx scripts/suggestions/review.ts",
     "wiki:sync": "tsx scripts/wiki/sync.ts",
     "wiki:transcripts": "tsx scripts/wiki/transcripts.ts",

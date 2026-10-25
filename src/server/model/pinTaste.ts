@@ -3,6 +3,7 @@
 // by hand is never overwritten by an estimate.
 
 import * as db from '../db';
+import { keepSentiment } from './reviewSentiment';
 import { reviewsProblem } from '@/lib/pinReviews';
 import { MAX_TASTE_REVIEWS, MAX_TASTE_REVIEW_QUOTE, TASTE_KEYS, TASTE_MAX, TASTE_SOURCES, isAbv, isTasteScore, type PinTasteJson, type TasteReview, type TasteScores, type TasteSource } from '@/lib/pinTaste';
 
@@ -43,6 +44,7 @@ export function tasteProblem(body: Record<string, unknown>): { scores: TasteScor
 
 // Resolves to whether it was stored (a hand row keeps winning over an estimate).
 export async function saveTaste(pinId: number, scores: TasteScores, { abv, abvSourceUrl, reviews, source, basis, sourceUrl }: { abv?: number | null; abvSourceUrl?: string | null; reviews?: TasteReview[]; source: TasteSource; basis?: string | null; sourceUrl?: string | null }): Promise<boolean> {
+  if (reviews) reviews = await keepSentiment('PinTaste', pinId, reviews);
   const columns = ['pinId', ...TASTE_KEYS, 'source', 'basis', 'sourceUrl', 'abv', 'abvSourceUrl', 'reviews'];
   const values = [pinId, ...TASTE_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, abv ?? null, abvSourceUrl ?? null, JSON.stringify(reviews ?? [])];
   const updates = columns.slice(1).map((column) => `"${column}" = EXCLUDED."${column}"`);
