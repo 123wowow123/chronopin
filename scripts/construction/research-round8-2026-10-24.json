@@ -1289,7 +1289,8 @@
           ],
           "expectedPinSha256": "54266732c4922c2726b069d0469b8e905172c880f297f3760dfcbcd85d831e37",
           "metadataVerified": true,
-          "savedPinSha256": "b709e2c2a5ab17bed825582e26154242b335f3fbff3c6eedc18edf281d1b5066"
+          "savedPinSha256": "b709e2c2a5ab17bed825582e26154242b335f3fbff3c6eedc18edf281d1b5066",
+          "verified": true
         },
         {
           "id": 567,
@@ -1305,7 +1306,8 @@
           "expectedPinSha256": "c8385de0f6554b7e51dfbccdf25ad1ef32c12832912021fad8e38cbcbea21169",
           "expectedOriginalTitle": "Eiffel Tower's Rust-Fighting Repaint Unveiled for the Paris Olympics",
           "metadataVerified": true,
-          "savedPinSha256": "db302f310cec40085fe11a2cc02ee1779ff6be27431eb2c33528cc642c390125"
+          "savedPinSha256": "db302f310cec40085fe11a2cc02ee1779ff6be27431eb2c33528cc642c390125",
+          "verified": true
         },
         {
           "id": 681,
@@ -1321,7 +1323,8 @@
           ],
           "expectedPinSha256": "94e6703af3db381e453c8505df9abf3145e7b23e4abac5a242f7342dbab8cefa",
           "metadataVerified": true,
-          "savedPinSha256": "a58fff1a28734d1e0e2f108c125e2092782598869984c6de831690db965044c4"
+          "savedPinSha256": "a58fff1a28734d1e0e2f108c125e2092782598869984c6de831690db965044c4",
+          "verified": true
         },
         {
           "id": 823,
@@ -1335,7 +1338,8 @@
           ],
           "expectedPinSha256": "04cfc77998695a0ea6c2bf930161282a2cc65971f201b775c7a06d24d9a1d69c",
           "metadataVerified": true,
-          "savedPinSha256": "38d5e7618be8ddd12641c47d88e9529ea44dd47ee38cbab8ec16db77b327c290"
+          "savedPinSha256": "38d5e7618be8ddd12641c47d88e9529ea44dd47ee38cbab8ec16db77b327c290",
+          "verified": true
         },
         {
           "id": 2655,
@@ -1350,7 +1354,8 @@
           ],
           "expectedPinSha256": "d4c2606c74cfeba772b90caddb574ff7c21454e9eb2732b09db5467ac0e13029",
           "metadataVerified": true,
-          "savedPinSha256": "846eebde58455837a6992f91170416689d0533ec64c416d6d5a7facd43279215"
+          "savedPinSha256": "846eebde58455837a6992f91170416689d0533ec64c416d6d5a7facd43279215",
+          "verified": true
         },
         {
           "id": 3244,
@@ -1365,7 +1370,8 @@
           ],
           "expectedPinSha256": "60946d8929878ace6ec5c1fbf86fba79196c84788969228a5736a80cfcffbdb2",
           "metadataVerified": true,
-          "savedPinSha256": "3056f2aa0de1135c9b8334ff4af3834f6ff80e429acc14ce2ecb80e7113c2f65"
+          "savedPinSha256": "3056f2aa0de1135c9b8334ff4af3834f6ff80e429acc14ce2ecb80e7113c2f65",
+          "verified": true
         },
         {
           "id": 3250,
@@ -1379,7 +1385,8 @@
           ],
           "expectedPinSha256": "826c1f0e1799dde735fdbfafbdff8320720fdac479e62df1a66501f953102205",
           "metadataVerified": true,
-          "savedPinSha256": "5256af959fdc6904d6faea7e23280b0016c72fe40ded38375ed2b0ab49961cab"
+          "savedPinSha256": "5256af959fdc6904d6faea7e23280b0016c72fe40ded38375ed2b0ab49961cab",
+          "verified": true
         },
         {
           "id": 3400,
@@ -1394,7 +1401,8 @@
           ],
           "expectedPinSha256": "a0227d0f876782b23f1846c1d496d81de630aafe449293c73aff7f44457977a8",
           "metadataVerified": true,
-          "savedPinSha256": "94990679a84af36e90964dcab39f100737c12a8ef877759c3579bfc1dd635dc9"
+          "savedPinSha256": "94990679a84af36e90964dcab39f100737c12a8ef877759c3579bfc1dd635dc9",
+          "verified": true
         },
         {
           "id": 3454,
@@ -1409,7 +1417,8 @@
           ],
           "expectedPinSha256": "909606d3adabae49e748f4f2bbb6f70143d7ec7e6c024324235d0d0820d164df",
           "metadataVerified": true,
-          "savedPinSha256": "252e847e40f39542cd55331fbda872f90812e7aecc609bcca8c508f92bd290dc"
+          "savedPinSha256": "252e847e40f39542cd55331fbda872f90812e7aecc609bcca8c508f92bd290dc",
+          "verified": true
         },
         {
           "id": 4915,
@@ -1424,7 +1433,8 @@
           ],
           "expectedPinSha256": "e98bfb2413391a921c03d21d3d23f7e9832ab8f00ba4a0f20235823638ddfd43",
           "metadataVerified": true,
-          "savedPinSha256": "f70c020cecb7f439d923d443ab435bb5eafe769e0441197d2d2b0d6b2ce8619b"
+          "savedPinSha256": "f70c020cecb7f439d923d443ab435bb5eafe769e0441197d2d2b0d6b2ce8619b",
+          "verified": true
         },
         {
           "id": 4939,
@@ -1438,7 +1448,8 @@
           ],
           "expectedPinSha256": "dc69daa1fc1fd968e5c16088ad38b8d628529bfd1e85cafbaa678b4743cb1481",
           "metadataVerified": true,
-          "savedPinSha256": "1f83a8c4d6bce20bb43ced82170fd5da4abb4b158d5e39bfb35ac4bbbca7fd37"
+          "savedPinSha256": "1f83a8c4d6bce20bb43ced82170fd5da4abb4b158d5e39bfb35ac4bbbca7fd37",
+          "verified": true
         },
         {
           "id": 4941,
@@ -1452,7 +1463,8 @@
           ],
           "expectedPinSha256": "97e4a0e6f79555864e73ef8d51708f6fbf7da5222df289c55de43f3cc4affd94",
           "metadataVerified": true,
-          "savedPinSha256": "06868385e1afafdbbf1546cc43d71b2c8a4f9fe8d7138e74379b0b1e1b2eddfd"
+          "savedPinSha256": "06868385e1afafdbbf1546cc43d71b2c8a4f9fe8d7138e74379b0b1e1b2eddfd",
+          "verified": true
         },
         {
           "id": 5907,
@@ -1466,7 +1478,8 @@
           ],
           "expectedPinSha256": "209260efc2b603189167dec4863c3599210a7fe2518d8bd001a00984d4fac03d",
           "metadataVerified": true,
-          "savedPinSha256": "a1325680bada8550098ae79202271d9d9d42996c86fee7178cc1f3361303da1f"
+          "savedPinSha256": "a1325680bada8550098ae79202271d9d9d42996c86fee7178cc1f3361303da1f",
+          "verified": true
         },
         {
           "id": 15744,
@@ -1480,7 +1493,8 @@
           ],
           "expectedPinSha256": "e3b2dc22ee255d17250d1a6f83a14d18644e4205b80994f7f7cde317ee3a6607",
           "metadataVerified": true,
-          "savedPinSha256": "9ac00b80fcfb5cd8223f91818d6e9cc6bb7925358b1509207c084c2233fe6937"
+          "savedPinSha256": "9ac00b80fcfb5cd8223f91818d6e9cc6bb7925358b1509207c084c2233fe6937",
+          "verified": true
         },
         {
           "id": 15754,
@@ -1495,7 +1509,8 @@
           ],
           "expectedPinSha256": "e5e02dbe0bba4dae88593db341506efe91c16172c65e748c598c87b2207e90c9",
           "metadataVerified": true,
-          "savedPinSha256": "8e52ae1288c1b0761915e1b613a2978d85bea90b2753b484ad9023d77ddea39c"
+          "savedPinSha256": "8e52ae1288c1b0761915e1b613a2978d85bea90b2753b484ad9023d77ddea39c",
+          "verified": true
         },
         {
           "id": 15798,
@@ -1510,7 +1525,8 @@
           ],
           "expectedPinSha256": "7efcc47de8739e0314bd0af7ca836715eff68543c9e84dbbe890f402dec5ce97",
           "metadataVerified": true,
-          "savedPinSha256": "ab5dc1c74ea8162ef0b7e2851a6a9fb34a25fa7cd0ef704fff4993d4161a6a54"
+          "savedPinSha256": "ab5dc1c74ea8162ef0b7e2851a6a9fb34a25fa7cd0ef704fff4993d4161a6a54",
+          "verified": true
         },
         {
           "id": 15814,
@@ -1524,7 +1540,8 @@
           ],
           "expectedPinSha256": "80b3ea9badbe4e1a543d508f42b55514d02453a5da826c5cd7f960a3eff249fb",
           "metadataVerified": true,
-          "savedPinSha256": "6ceab6c1026ee8d7bbb534f60972d2fef00463e586eb953ff6e15f939303bad5"
+          "savedPinSha256": "6ceab6c1026ee8d7bbb534f60972d2fef00463e586eb953ff6e15f939303bad5",
+          "verified": true
         },
         {
           "id": 15822,
@@ -1540,7 +1557,8 @@
           "expectedPinSha256": "ef5253ec243c1f75561ca8bf5435a51a8f6fb8f5a1a5f61100d921ea548ef35a",
           "expectedOriginalTitle": "Hassayampa Ranch Data Center: 25B USD, 1,500 MW Campus in Maricopa County, Arizona, Rezoned December 2025",
           "metadataVerified": true,
-          "savedPinSha256": "a86d8f781b0ec44d561722a0a09b41ec020e1a2cc92b9162f50129eac054469f"
+          "savedPinSha256": "a86d8f781b0ec44d561722a0a09b41ec020e1a2cc92b9162f50129eac054469f",
+          "verified": true
         },
         {
           "id": 15827,
@@ -1555,7 +1573,8 @@
           ],
           "expectedPinSha256": "f1a97b53f76a2113055096bb235e7f836d2dda607954fc398ea8856da1841feb",
           "metadataVerified": true,
-          "savedPinSha256": "7f7537ca39dd7594a7ac0677069386ea503c4f8ec52d888ffe1ab7c4d4f982ad"
+          "savedPinSha256": "7f7537ca39dd7594a7ac0677069386ea503c4f8ec52d888ffe1ab7c4d4f982ad",
+          "verified": true
         },
         {
           "id": 15833,
@@ -1571,7 +1590,8 @@
           "expectedPinSha256": "99f26b07d90e59bfe89949d486af38fabeea80fc9e043b58e7b6ec47bad9382e",
           "expectedOriginalTitle": "OpenAI Project Camellia: 3,200 MW, Four-Building Data Center Campus in Effingham County, Georgia, 20B USD per County (30B+ USD per OpenAI Executive), First Phase 2028",
           "metadataVerified": true,
-          "savedPinSha256": "6b7ac5b11d5cd87e80e62ff09f71c868ca98f76ff22f33f86750699f26fa5507"
+          "savedPinSha256": "6b7ac5b11d5cd87e80e62ff09f71c868ca98f76ff22f33f86750699f26fa5507",
+          "verified": true
         },
         {
           "id": 15846,
@@ -1586,7 +1606,8 @@
           "expectedPinSha256": "4b14586dfc3629f86591ee72c44f34a2f4f9039d9045ec0597fffe9ab4ada637",
           "expectedOriginalTitle": "Stak Energy North Slope Campus: 1,000-3,000 MW Gas-Powered AI Data Center Off the Dalton Highway, Alaska, 500M USD Per State Filing, Lease Pending",
           "metadataVerified": true,
-          "savedPinSha256": "615bde09c7ab422972d4ed8077a35d8a176dadc703bd5a38e871ec4da517ffad"
+          "savedPinSha256": "615bde09c7ab422972d4ed8077a35d8a176dadc703bd5a38e871ec4da517ffad",
+          "verified": true
         },
         {
           "id": 15859,
@@ -1600,7 +1621,8 @@
           ],
           "expectedPinSha256": "92617db09471f493a6b424546bde5b98c06cd48f22ced20df74c118861303c8e",
           "metadataVerified": true,
-          "savedPinSha256": "cc3168628f84e1f34d27f19eda82f8b5cf875a2ae0ad13428b0557e8e1558baf"
+          "savedPinSha256": "cc3168628f84e1f34d27f19eda82f8b5cf875a2ae0ad13428b0557e8e1558baf",
+          "verified": true
         },
         {
           "id": 15866,
@@ -1615,7 +1637,8 @@
           ],
           "expectedPinSha256": "07c0639f2ad7e4e908d935b94276cf78541deffb6beac96f6736885bbd594538",
           "metadataVerified": true,
-          "savedPinSha256": "81af01f4e9d58442b87b6ee56fa7d94cc62ebc657fa25570ef157ca1a4120b58"
+          "savedPinSha256": "81af01f4e9d58442b87b6ee56fa7d94cc62ebc657fa25570ef157ca1a4120b58",
+          "verified": true
         },
         {
           "id": 15995,
@@ -1631,7 +1654,8 @@
           "expectedPinSha256": "c2602681674a3f64fcfa15b081bc5bb8bcefc04cb673b6a6f45f47eb89921ea8",
           "expectedOriginalTitle": "Hyperscale Data Dowagiac Data Center: 30-340 MW, Operating and Expanding Toward 2029, Michigan",
           "metadataVerified": true,
-          "savedPinSha256": "f09173f6598db38208caa3f450a18f5837dc8c15b11cf21bcb63067cdb3ffbe3"
+          "savedPinSha256": "f09173f6598db38208caa3f450a18f5837dc8c15b11cf21bcb63067cdb3ffbe3",
+          "verified": true
         },
         {
           "id": 16304,
@@ -1646,7 +1670,8 @@
           ],
           "expectedPinSha256": "b52a31e40860b8c9605da9a6df33cee4bee91fd34b275df72e5867dbd6519fff",
           "metadataVerified": true,
-          "savedPinSha256": "38d7219a8b39d542f0b648273c8e683fa253a641e04920d37c909f67cc4eaa59"
+          "savedPinSha256": "38d7219a8b39d542f0b648273c8e683fa253a641e04920d37c909f67cc4eaa59",
+          "verified": true
         },
         {
           "id": 16306,
@@ -1661,7 +1686,8 @@
           ],
           "expectedPinSha256": "e290087fcfe782072d465b77e571d4e3c02ae6ad1fb9f3bff637f85208d47fc7",
           "metadataVerified": true,
-          "savedPinSha256": "f5f2b12246c21fc9f9deee1a9be8d9275766247803499c03a044fcabd9774d50"
+          "savedPinSha256": "f5f2b12246c21fc9f9deee1a9be8d9275766247803499c03a044fcabd9774d50",
+          "verified": true
         },
         {
           "id": 16308,
@@ -1676,7 +1702,8 @@
           ],
           "expectedPinSha256": "94bfaf263ae956cafc6fe3886886188e30e9aab73aeea57fe8c05d57e774e734",
           "metadataVerified": true,
-          "savedPinSha256": "d56d7a87cac45bd5785883b4a75972249ec90edde3369f44f74d99a6adbd1d31"
+          "savedPinSha256": "d56d7a87cac45bd5785883b4a75972249ec90edde3369f44f74d99a6adbd1d31",
+          "verified": true
         },
         {
           "id": 16328,
@@ -1690,7 +1717,8 @@
           ],
           "expectedPinSha256": "b9e37d0c3e4cfd18511af3ccd9b2fb2b27486870fc457886fcf09948282ef1f7",
           "metadataVerified": true,
-          "savedPinSha256": "58ff2b03e4f81e42dcca160045c1f440c45d948ebb0e5593b453568d85af6414"
+          "savedPinSha256": "58ff2b03e4f81e42dcca160045c1f440c45d948ebb0e5593b453568d85af6414",
+          "verified": true
         },
         {
           "id": 16331,
@@ -1704,7 +1732,8 @@
           ],
           "expectedPinSha256": "c49662822e4d58c91fdcf26a1814656c1eb9ca67bcc93d92ac3a8bb4c1458074",
           "metadataVerified": true,
-          "savedPinSha256": "8c2cb9ffd406ce0aaab158f9f4a8ce3a216d901d98d1d3c247693f79d9ef3a84"
+          "savedPinSha256": "8c2cb9ffd406ce0aaab158f9f4a8ce3a216d901d98d1d3c247693f79d9ef3a84",
+          "verified": true
         },
         {
           "id": 16412,
@@ -1718,7 +1747,8 @@
           ],
           "expectedPinSha256": "3835b59c5ef41dda046ea7f328dc1a0d5b718657024a3e9aad73f794ba13dd03",
           "metadataVerified": true,
-          "savedPinSha256": "c2d22d8907c083932847e669f9f96a7b57e16e3ce2e564322f21a55340aad66e"
+          "savedPinSha256": "c2d22d8907c083932847e669f9f96a7b57e16e3ce2e564322f21a55340aad66e",
+          "verified": true
         },
         {
           "id": 16333,
@@ -1732,7 +1762,8 @@
           ],
           "expectedPinSha256": "b244bedc32a17aeb568ab2263d3cff0ff2e620df0b396c3c22194c8ef2667dd8",
           "metadataVerified": true,
-          "savedPinSha256": "ff90336a4c667f979eec39e915e12f3f2e148d1713455d2488f99288d8a82a8e"
+          "savedPinSha256": "ff90336a4c667f979eec39e915e12f3f2e148d1713455d2488f99288d8a82a8e",
+          "verified": true
         },
         {
           "id": 16343,
@@ -1747,7 +1778,8 @@
           ],
           "expectedPinSha256": "89c170a84da1f4b4562295ddbb3a0609a7db31755cc76867f8c9ecfe17abc8b7",
           "metadataVerified": true,
-          "savedPinSha256": "d6b23994114ac528853bf157a1a2186c16a8e91a7b5ec3a4bd33a4e8a536ddb4"
+          "savedPinSha256": "d6b23994114ac528853bf157a1a2186c16a8e91a7b5ec3a4bd33a4e8a536ddb4",
+          "verified": true
         },
         {
           "id": 16345,
@@ -1762,7 +1794,8 @@
           ],
           "expectedPinSha256": "97540f10e21e5c417e14ca7723b4d00e4fe5a1e94b975f7cc8eb1f8a3c3b76f0",
           "metadataVerified": true,
-          "savedPinSha256": "b4c721c68df6640c022673cd4f174d734c3ec4e2dbce4fdb73018cf5cdfa0c92"
+          "savedPinSha256": "b4c721c68df6640c022673cd4f174d734c3ec4e2dbce4fdb73018cf5cdfa0c92",
+          "verified": true
         },
         {
           "id": 16372,
@@ -1777,7 +1810,8 @@
           ],
           "expectedPinSha256": "d988d75876f30eea4b7f047b486e44212b1613965f253793fdb524db5dec9040",
           "metadataVerified": true,
-          "savedPinSha256": "4b9b4056f03c068c35cc5559edaa18c964bee435805a73cd37174a77259c410e"
+          "savedPinSha256": "4b9b4056f03c068c35cc5559edaa18c964bee435805a73cd37174a77259c410e",
+          "verified": true
         },
         {
           "id": 16383,
@@ -1791,7 +1825,8 @@
           ],
           "expectedPinSha256": "4ef236fae04b3bbad5f481ad4b52a068994aa5726a577c7746319550c96351bc",
           "metadataVerified": true,
-          "savedPinSha256": "3600ec2f6a236cf50954a9dfeaf78d13c0891ae621dfd0f46715858df9ba9d4d"
+          "savedPinSha256": "3600ec2f6a236cf50954a9dfeaf78d13c0891ae621dfd0f46715858df9ba9d4d",
+          "verified": true
         },
         {
           "id": 16384,
@@ -1806,7 +1841,8 @@
           ],
           "expectedPinSha256": "eba537ab629e738aabae82f2407bf58b6b0b4d214674eef931efa74b57324740",
           "metadataVerified": true,
-          "savedPinSha256": "80ea13056a8cfca37cefa294aafb5809a9f6f7606561cd1cbaf2fe0489310a41"
+          "savedPinSha256": "80ea13056a8cfca37cefa294aafb5809a9f6f7606561cd1cbaf2fe0489310a41",
+          "verified": true
         },
         {
           "id": 16399,
@@ -1821,7 +1857,8 @@
           ],
           "expectedPinSha256": "30cdb43c2ea8814e4c207f420fb2476d4421a6b56a03700980b719eefab42dcf",
           "metadataVerified": true,
-          "savedPinSha256": "cf54aea711523ff7cc4571ec11a37aa35e33bab334dac2846b4700d43a96d8f2"
+          "savedPinSha256": "cf54aea711523ff7cc4571ec11a37aa35e33bab334dac2846b4700d43a96d8f2",
+          "verified": true
         },
         {
           "id": 16459,
@@ -1835,7 +1872,8 @@
           ],
           "expectedPinSha256": "9e085c902ba74a93a51591b5bd910b9490ad6c99b4a88019502a3e3ed871eb61",
           "metadataVerified": true,
-          "savedPinSha256": "e76cb4bbcf3fa3287989020e4a90f406a5b31da94d97324683db1e9604943f8b"
+          "savedPinSha256": "e76cb4bbcf3fa3287989020e4a90f406a5b31da94d97324683db1e9604943f8b",
+          "verified": true
         },
         {
           "id": 16469,
@@ -1849,7 +1887,8 @@
           ],
           "expectedPinSha256": "633168e69eda93a0cde91e34f03fe203c02b5ed6677c96915bb664453f56c6da",
           "metadataVerified": true,
-          "savedPinSha256": "1999c39db46c7ff72bdb7f609c23c6e37aefa76b8f331355225c1448469d068f"
+          "savedPinSha256": "1999c39db46c7ff72bdb7f609c23c6e37aefa76b8f331355225c1448469d068f",
+          "verified": true
         },
         {
           "id": 16472,
@@ -1863,7 +1902,8 @@
           ],
           "expectedPinSha256": "ec426675d5a16f8d9c855eba62264f902cfb279e8854386b32e2512207244aee",
           "metadataVerified": true,
-          "savedPinSha256": "fd3b82a1020e6d97ef07a88908dd2787cb125ce6717ad66b0e531fac790fbcb5"
+          "savedPinSha256": "fd3b82a1020e6d97ef07a88908dd2787cb125ce6717ad66b0e531fac790fbcb5",
+          "verified": true
         },
         {
           "id": 16481,
@@ -1877,7 +1917,8 @@
           ],
           "expectedPinSha256": "bd4e81799868a39a40a59270f43c0df8e0f354b76c47534282b2b4ef8c85ff54",
           "metadataVerified": true,
-          "savedPinSha256": "4d1a549d3cffa476f30b3590a37b6f36b134ca6818793b489d02bda66b6d4500"
+          "savedPinSha256": "4d1a549d3cffa476f30b3590a37b6f36b134ca6818793b489d02bda66b6d4500",
+          "verified": true
         },
         {
           "id": 16490,
@@ -1891,7 +1932,8 @@
           ],
           "expectedPinSha256": "3e7ca450cc9afadb8383b2daa58c376a8599ffa09bd92c641e521eb8f4eb18ff",
           "metadataVerified": true,
-          "savedPinSha256": "bceebef0bd0962c4374a3a15a52f2cda99d504f874053dd463c02c877cc2da6f"
+          "savedPinSha256": "bceebef0bd0962c4374a3a15a52f2cda99d504f874053dd463c02c877cc2da6f",
+          "verified": true
         },
         {
           "id": 17021,
@@ -1905,7 +1947,8 @@
           ],
           "expectedPinSha256": "329e25763bf3e006adf9f4f8c518b2bcd31c1ad69faa470bf8c2a4befec58980",
           "metadataVerified": true,
-          "savedPinSha256": "734ff7f3a2c947f90b4b074a0bc276a8a29554532337ca6a2f17d3a540085e66"
+          "savedPinSha256": "734ff7f3a2c947f90b4b074a0bc276a8a29554532337ca6a2f17d3a540085e66",
+          "verified": true
         },
         {
           "id": 18222,
@@ -1920,9 +1963,16 @@
           ],
           "expectedPinSha256": "2a6c57c5a7559830eafdcc4d05b5213e9ce01b058305e97acfc12763fbd4c1df",
           "metadataVerified": true,
-          "savedPinSha256": "bc1fe7c79b05828950e7155e09ca668174273179bff706ad10418fedf25ffc70"
+          "savedPinSha256": "bc1fe7c79b05828950e7155e09ca668174273179bff706ad10418fedf25ffc70",
+          "verified": true
         }
-      ]
+      ],
+      "verifiedCount": 44,
+      "counts": {
+        "Proposed": 23,
+        "In Progress": 16,
+        "Completed": 5
+      }
     },
     {
       "base": "https://www.chronopin.com",
@@ -1940,7 +1990,8 @@
           ],
           "expectedPinSha256": "54266732c4922c2726b069d0469b8e905172c880f297f3760dfcbcd85d831e37",
           "metadataVerified": true,
-          "savedPinSha256": "b709e2c2a5ab17bed825582e26154242b335f3fbff3c6eedc18edf281d1b5066"
+          "savedPinSha256": "b709e2c2a5ab17bed825582e26154242b335f3fbff3c6eedc18edf281d1b5066",
+          "verified": true
         },
         {
           "id": 567,
@@ -1956,7 +2007,8 @@
           "expectedPinSha256": "c8385de0f6554b7e51dfbccdf25ad1ef32c12832912021fad8e38cbcbea21169",
           "expectedOriginalTitle": "Eiffel Tower's Rust-Fighting Repaint Unveiled for the Paris Olympics",
           "metadataVerified": true,
-          "savedPinSha256": "db302f310cec40085fe11a2cc02ee1779ff6be27431eb2c33528cc642c390125"
+          "savedPinSha256": "db302f310cec40085fe11a2cc02ee1779ff6be27431eb2c33528cc642c390125",
+          "verified": true
         },
         {
           "id": 681,
@@ -1972,7 +2024,8 @@
           ],
           "expectedPinSha256": "94e6703af3db381e453c8505df9abf3145e7b23e4abac5a242f7342dbab8cefa",
           "metadataVerified": true,
-          "savedPinSha256": "a58fff1a28734d1e0e2f108c125e2092782598869984c6de831690db965044c4"
+          "savedPinSha256": "a58fff1a28734d1e0e2f108c125e2092782598869984c6de831690db965044c4",
+          "verified": true
         },
         {
           "id": 823,
@@ -1986,7 +2039,8 @@
           ],
           "expectedPinSha256": "04cfc77998695a0ea6c2bf930161282a2cc65971f201b775c7a06d24d9a1d69c",
           "metadataVerified": true,
-          "savedPinSha256": "38d5e7618be8ddd12641c47d88e9529ea44dd47ee38cbab8ec16db77b327c290"
+          "savedPinSha256": "38d5e7618be8ddd12641c47d88e9529ea44dd47ee38cbab8ec16db77b327c290",
+          "verified": true
         },
         {
           "id": 2655,
@@ -2001,7 +2055,8 @@
           ],
           "expectedPinSha256": "d4c2606c74cfeba772b90caddb574ff7c21454e9eb2732b09db5467ac0e13029",
           "metadataVerified": true,
-          "savedPinSha256": "846eebde58455837a6992f91170416689d0533ec64c416d6d5a7facd43279215"
+          "savedPinSha256": "846eebde58455837a6992f91170416689d0533ec64c416d6d5a7facd43279215",
+          "verified": true
         },
         {
           "id": 3244,
@@ -2016,7 +2071,8 @@
           ],
           "expectedPinSha256": "60946d8929878ace6ec5c1fbf86fba79196c84788969228a5736a80cfcffbdb2",
           "metadataVerified": true,
-          "savedPinSha256": "3056f2aa0de1135c9b8334ff4af3834f6ff80e429acc14ce2ecb80e7113c2f65"
+          "savedPinSha256": "3056f2aa0de1135c9b8334ff4af3834f6ff80e429acc14ce2ecb80e7113c2f65",
+          "verified": true
         },
         {
           "id": 3250,
@@ -2030,7 +2086,8 @@
           ],
           "expectedPinSha256": "826c1f0e1799dde735fdbfafbdff8320720fdac479e62df1a66501f953102205",
           "metadataVerified": true,
-          "savedPinSha256": "5256af959fdc6904d6faea7e23280b0016c72fe40ded38375ed2b0ab49961cab"
+          "savedPinSha256": "5256af959fdc6904d6faea7e23280b0016c72fe40ded38375ed2b0ab49961cab",
+          "verified": true
         },
         {
           "id": 3400,
@@ -2045,7 +2102,8 @@
           ],
           "expectedPinSha256": "41b49c49a512576bd21879d67fd2b7b39fb33b527959b4a3dd0e353c1fc7f2ed",
           "metadataVerified": true,
-          "savedPinSha256": "42dfad1432b6580ac265237c0302b82ff8fc2d11645588f3e921b143cda5dee3"
+          "savedPinSha256": "42dfad1432b6580ac265237c0302b82ff8fc2d11645588f3e921b143cda5dee3",
+          "verified": true
         },
         {
           "id": 3454,
@@ -2060,7 +2118,8 @@
           ],
           "expectedPinSha256": "67a077d700a1cb366ffbb9b17984541061dbfa5d1996d13637aa5c9ccc7b40aa",
           "metadataVerified": true,
-          "savedPinSha256": "16932f3922d7e5769c91c46dc2f9eaa51203b66b4b49723301f6ad1a097fd3c0"
+          "savedPinSha256": "16932f3922d7e5769c91c46dc2f9eaa51203b66b4b49723301f6ad1a097fd3c0",
+          "verified": true
         },
         {
           "id": 4915,
@@ -2075,7 +2134,8 @@
           ],
           "expectedPinSha256": "e98bfb2413391a921c03d21d3d23f7e9832ab8f00ba4a0f20235823638ddfd43",
           "metadataVerified": true,
-          "savedPinSha256": "f70c020cecb7f439d923d443ab435bb5eafe769e0441197d2d2b0d6b2ce8619b"
+          "savedPinSha256": "f70c020cecb7f439d923d443ab435bb5eafe769e0441197d2d2b0d6b2ce8619b",
+          "verified": true
         },
         {
           "id": 4939,
@@ -2089,7 +2149,8 @@
           ],
           "expectedPinSha256": "dc69daa1fc1fd968e5c16088ad38b8d628529bfd1e85cafbaa678b4743cb1481",
           "metadataVerified": true,
-          "savedPinSha256": "1f83a8c4d6bce20bb43ced82170fd5da4abb4b158d5e39bfb35ac4bbbca7fd37"
+          "savedPinSha256": "1f83a8c4d6bce20bb43ced82170fd5da4abb4b158d5e39bfb35ac4bbbca7fd37",
+          "verified": true
         },
         {
           "id": 4941,
@@ -2103,7 +2164,8 @@
           ],
           "expectedPinSha256": "97e4a0e6f79555864e73ef8d51708f6fbf7da5222df289c55de43f3cc4affd94",
           "metadataVerified": true,
-          "savedPinSha256": "06868385e1afafdbbf1546cc43d71b2c8a4f9fe8d7138e74379b0b1e1b2eddfd"
+          "savedPinSha256": "06868385e1afafdbbf1546cc43d71b2c8a4f9fe8d7138e74379b0b1e1b2eddfd",
+          "verified": true
         },
         {
           "id": 5907,
@@ -2117,7 +2179,8 @@
           ],
           "expectedPinSha256": "83115e8c175f306602b1e5f423c2108087ebee0c2e1d47f7cb025d304c8abd35",
           "metadataVerified": true,
-          "savedPinSha256": "a69e8af463694826b784b60b6c016c71c91c903dd78bc06cd0cda1381029fa37"
+          "savedPinSha256": "a69e8af463694826b784b60b6c016c71c91c903dd78bc06cd0cda1381029fa37",
+          "verified": true
         },
         {
           "id": 15744,
@@ -2131,7 +2194,8 @@
           ],
           "expectedPinSha256": "e3b2dc22ee255d17250d1a6f83a14d18644e4205b80994f7f7cde317ee3a6607",
           "metadataVerified": true,
-          "savedPinSha256": "9ac00b80fcfb5cd8223f91818d6e9cc6bb7925358b1509207c084c2233fe6937"
+          "savedPinSha256": "9ac00b80fcfb5cd8223f91818d6e9cc6bb7925358b1509207c084c2233fe6937",
+          "verified": true
         },
         {
           "id": 15754,
@@ -2146,7 +2210,8 @@
           ],
           "expectedPinSha256": "9b4e016fb253ba5473f59045bcf789c826898867fa544013ff16a0b4d89d4759",
           "metadataVerified": true,
-          "savedPinSha256": "0dd0f916e29dc1bea3241260eade208c75a7ced448586ee55751477d9eaea274"
+          "savedPinSha256": "0dd0f916e29dc1bea3241260eade208c75a7ced448586ee55751477d9eaea274",
+          "verified": true
         },
         {
           "id": 15798,
@@ -2161,7 +2226,8 @@
           ],
           "expectedPinSha256": "7efcc47de8739e0314bd0af7ca836715eff68543c9e84dbbe890f402dec5ce97",
           "metadataVerified": true,
-          "savedPinSha256": "ab5dc1c74ea8162ef0b7e2851a6a9fb34a25fa7cd0ef704fff4993d4161a6a54"
+          "savedPinSha256": "ab5dc1c74ea8162ef0b7e2851a6a9fb34a25fa7cd0ef704fff4993d4161a6a54",
+          "verified": true
         },
         {
           "id": 15814,
@@ -2175,7 +2241,8 @@
           ],
           "expectedPinSha256": "80b3ea9badbe4e1a543d508f42b55514d02453a5da826c5cd7f960a3eff249fb",
           "metadataVerified": true,
-          "savedPinSha256": "6ceab6c1026ee8d7bbb534f60972d2fef00463e586eb953ff6e15f939303bad5"
+          "savedPinSha256": "6ceab6c1026ee8d7bbb534f60972d2fef00463e586eb953ff6e15f939303bad5",
+          "verified": true
         },
         {
           "id": 15822,
@@ -2191,7 +2258,8 @@
           "expectedPinSha256": "ef5253ec243c1f75561ca8bf5435a51a8f6fb8f5a1a5f61100d921ea548ef35a",
           "expectedOriginalTitle": "Hassayampa Ranch Data Center: 25B USD, 1,500 MW Campus in Maricopa County, Arizona, Rezoned December 2025",
           "metadataVerified": true,
-          "savedPinSha256": "a86d8f781b0ec44d561722a0a09b41ec020e1a2cc92b9162f50129eac054469f"
+          "savedPinSha256": "a86d8f781b0ec44d561722a0a09b41ec020e1a2cc92b9162f50129eac054469f",
+          "verified": true
         },
         {
           "id": 15827,
@@ -2206,7 +2274,8 @@
           ],
           "expectedPinSha256": "f1a97b53f76a2113055096bb235e7f836d2dda607954fc398ea8856da1841feb",
           "metadataVerified": true,
-          "savedPinSha256": "7f7537ca39dd7594a7ac0677069386ea503c4f8ec52d888ffe1ab7c4d4f982ad"
+          "savedPinSha256": "7f7537ca39dd7594a7ac0677069386ea503c4f8ec52d888ffe1ab7c4d4f982ad",
+          "verified": true
         },
         {
           "id": 15833,
@@ -2222,7 +2291,8 @@
           "expectedPinSha256": "99f26b07d90e59bfe89949d486af38fabeea80fc9e043b58e7b6ec47bad9382e",
           "expectedOriginalTitle": "OpenAI Project Camellia: 3,200 MW, Four-Building Data Center Campus in Effingham County, Georgia, 20B USD per County (30B+ USD per OpenAI Executive), First Phase 2028",
           "metadataVerified": true,
-          "savedPinSha256": "6b7ac5b11d5cd87e80e62ff09f71c868ca98f76ff22f33f86750699f26fa5507"
+          "savedPinSha256": "6b7ac5b11d5cd87e80e62ff09f71c868ca98f76ff22f33f86750699f26fa5507",
+          "verified": true
         },
         {
           "id": 15846,
@@ -2237,7 +2307,8 @@
           "expectedPinSha256": "4b14586dfc3629f86591ee72c44f34a2f4f9039d9045ec0597fffe9ab4ada637",
           "expectedOriginalTitle": "Stak Energy North Slope Campus: 1,000-3,000 MW Gas-Powered AI Data Center Off the Dalton Highway, Alaska, 500M USD Per State Filing, Lease Pending",
           "metadataVerified": true,
-          "savedPinSha256": "615bde09c7ab422972d4ed8077a35d8a176dadc703bd5a38e871ec4da517ffad"
+          "savedPinSha256": "615bde09c7ab422972d4ed8077a35d8a176dadc703bd5a38e871ec4da517ffad",
+          "verified": true
         },
         {
           "id": 15859,
@@ -2251,7 +2322,8 @@
           ],
           "expectedPinSha256": "92617db09471f493a6b424546bde5b98c06cd48f22ced20df74c118861303c8e",
           "metadataVerified": true,
-          "savedPinSha256": "cc3168628f84e1f34d27f19eda82f8b5cf875a2ae0ad13428b0557e8e1558baf"
+          "savedPinSha256": "cc3168628f84e1f34d27f19eda82f8b5cf875a2ae0ad13428b0557e8e1558baf",
+          "verified": true
         },
         {
           "id": 15866,
@@ -2266,7 +2338,8 @@
           ],
           "expectedPinSha256": "07c0639f2ad7e4e908d935b94276cf78541deffb6beac96f6736885bbd594538",
           "metadataVerified": true,
-          "savedPinSha256": "81af01f4e9d58442b87b6ee56fa7d94cc62ebc657fa25570ef157ca1a4120b58"
+          "savedPinSha256": "81af01f4e9d58442b87b6ee56fa7d94cc62ebc657fa25570ef157ca1a4120b58",
+          "verified": true
         },
         {
           "id": 15995,
@@ -2282,7 +2355,8 @@
           "expectedPinSha256": "c2602681674a3f64fcfa15b081bc5bb8bcefc04cb673b6a6f45f47eb89921ea8",
           "expectedOriginalTitle": "Hyperscale Data Dowagiac Data Center: 30-340 MW, Operating and Expanding Toward 2029, Michigan",
           "metadataVerified": true,
-          "savedPinSha256": "f09173f6598db38208caa3f450a18f5837dc8c15b11cf21bcb63067cdb3ffbe3"
+          "savedPinSha256": "f09173f6598db38208caa3f450a18f5837dc8c15b11cf21bcb63067cdb3ffbe3",
+          "verified": true
         },
         {
           "id": 16304,
@@ -2297,7 +2371,8 @@
           ],
           "expectedPinSha256": "b52a31e40860b8c9605da9a6df33cee4bee91fd34b275df72e5867dbd6519fff",
           "metadataVerified": true,
-          "savedPinSha256": "38d7219a8b39d542f0b648273c8e683fa253a641e04920d37c909f67cc4eaa59"
+          "savedPinSha256": "38d7219a8b39d542f0b648273c8e683fa253a641e04920d37c909f67cc4eaa59",
+          "verified": true
         },
         {
           "id": 16306,
@@ -2312,7 +2387,8 @@
           ],
           "expectedPinSha256": "e290087fcfe782072d465b77e571d4e3c02ae6ad1fb9f3bff637f85208d47fc7",
           "metadataVerified": true,
-          "savedPinSha256": "f5f2b12246c21fc9f9deee1a9be8d9275766247803499c03a044fcabd9774d50"
+          "savedPinSha256": "f5f2b12246c21fc9f9deee1a9be8d9275766247803499c03a044fcabd9774d50",
+          "verified": true
         },
         {
           "id": 16308,
@@ -2327,7 +2403,8 @@
           ],
           "expectedPinSha256": "94bfaf263ae956cafc6fe3886886188e30e9aab73aeea57fe8c05d57e774e734",
           "metadataVerified": true,
-          "savedPinSha256": "d56d7a87cac45bd5785883b4a75972249ec90edde3369f44f74d99a6adbd1d31"
+          "savedPinSha256": "d56d7a87cac45bd5785883b4a75972249ec90edde3369f44f74d99a6adbd1d31",
+          "verified": true
         },
         {
           "id": 16328,
@@ -2341,7 +2418,8 @@
           ],
           "expectedPinSha256": "b9e37d0c3e4cfd18511af3ccd9b2fb2b27486870fc457886fcf09948282ef1f7",
           "metadataVerified": true,
-          "savedPinSha256": "58ff2b03e4f81e42dcca160045c1f440c45d948ebb0e5593b453568d85af6414"
+          "savedPinSha256": "58ff2b03e4f81e42dcca160045c1f440c45d948ebb0e5593b453568d85af6414",
+          "verified": true
         },
         {
           "id": 16331,
@@ -2355,7 +2433,8 @@
           ],
           "expectedPinSha256": "c49662822e4d58c91fdcf26a1814656c1eb9ca67bcc93d92ac3a8bb4c1458074",
           "metadataVerified": true,
-          "savedPinSha256": "8c2cb9ffd406ce0aaab158f9f4a8ce3a216d901d98d1d3c247693f79d9ef3a84"
+          "savedPinSha256": "8c2cb9ffd406ce0aaab158f9f4a8ce3a216d901d98d1d3c247693f79d9ef3a84",
+          "verified": true
         },
         {
           "id": 16412,
@@ -2367,7 +2446,10 @@
           "evidenceUrls": [
             "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/"
           ],
-          "expectedPinSha256": "3835b59c5ef41dda046ea7f328dc1a0d5b718657024a3e9aad73f794ba13dd03"
+          "expectedPinSha256": "3835b59c5ef41dda046ea7f328dc1a0d5b718657024a3e9aad73f794ba13dd03",
+          "metadataVerified": true,
+          "savedPinSha256": "c2d22d8907c083932847e669f9f96a7b57e16e3ce2e564322f21a55340aad66e",
+          "verified": true
         },
         {
           "id": 16333,
@@ -2379,7 +2461,10 @@
           "evidenceUrls": [
             "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/"
           ],
-          "expectedPinSha256": "b244bedc32a17aeb568ab2263d3cff0ff2e620df0b396c3c22194c8ef2667dd8"
+          "expectedPinSha256": "b244bedc32a17aeb568ab2263d3cff0ff2e620df0b396c3c22194c8ef2667dd8",
+          "metadataVerified": true,
+          "savedPinSha256": "ff90336a4c667f979eec39e915e12f3f2e148d1713455d2488f99288d8a82a8e",
+          "verified": true
         },
         {
           "id": 16343,
@@ -2392,7 +2477,10 @@
             "https://abc17news.com/news/2026/05/21/montgomery-county-commissioner-defends-google-data-center-amid-pushback-concerns/",
             "https://missouriindependent.com/2026/07/02/data-center-backlash-spills-into-missouri-primaries-as-gop-candidates-demand-action/"
           ],
-          "expectedPinSha256": "89c170a84da1f4b4562295ddbb3a0609a7db31755cc76867f8c9ecfe17abc8b7"
+          "expectedPinSha256": "89c170a84da1f4b4562295ddbb3a0609a7db31755cc76867f8c9ecfe17abc8b7",
+          "metadataVerified": true,
+          "savedPinSha256": "d6b23994114ac528853bf157a1a2186c16a8e91a7b5ec3a4bd33a4e8a536ddb4",
+          "verified": true
         },
         {
           "id": 16345,
@@ -2405,7 +2493,10 @@
             "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
             "https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman"
           ],
-          "expectedPinSha256": "97540f10e21e5c417e14ca7723b4d00e4fe5a1e94b975f7cc8eb1f8a3c3b76f0"
+          "expectedPinSha256": "97540f10e21e5c417e14ca7723b4d00e4fe5a1e94b975f7cc8eb1f8a3c3b76f0",
+          "metadataVerified": true,
+          "savedPinSha256": "b4c721c68df6640c022673cd4f174d734c3ec4e2dbce4fdb73018cf5cdfa0c92",
+          "verified": true
         },
         {
           "id": 16372,
@@ -2418,7 +2509,10 @@
             "https://datacenters.google/locations/storey-county-nevada/",
             "https://economicimpact.google/state/nv/"
           ],
-          "expectedPinSha256": "d988d75876f30eea4b7f047b486e44212b1613965f253793fdb524db5dec9040"
+          "expectedPinSha256": "d988d75876f30eea4b7f047b486e44212b1613965f253793fdb524db5dec9040",
+          "metadataVerified": true,
+          "savedPinSha256": "4b9b4056f03c068c35cc5559edaa18c964bee435805a73cd37174a77259c410e",
+          "verified": true
         },
         {
           "id": 16383,
@@ -2430,7 +2524,10 @@
           "evidenceUrls": [
             "https://www.datacenters.google/locations/nebraska/"
           ],
-          "expectedPinSha256": "4ef236fae04b3bbad5f481ad4b52a068994aa5726a577c7746319550c96351bc"
+          "expectedPinSha256": "4ef236fae04b3bbad5f481ad4b52a068994aa5726a577c7746319550c96351bc",
+          "metadataVerified": true,
+          "savedPinSha256": "3600ec2f6a236cf50954a9dfeaf78d13c0891ae621dfd0f46715858df9ba9d4d",
+          "verified": true
         },
         {
           "id": 16384,
@@ -2443,7 +2540,10 @@
             "https://datacenters.atmeta.com/all-locations/",
             "https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center"
           ],
-          "expectedPinSha256": "eba537ab629e738aabae82f2407bf58b6b0b4d214674eef931efa74b57324740"
+          "expectedPinSha256": "eba537ab629e738aabae82f2407bf58b6b0b4d214674eef931efa74b57324740",
+          "metadataVerified": true,
+          "savedPinSha256": "80ea13056a8cfca37cefa294aafb5809a9f6f7606561cd1cbaf2fe0489310a41",
+          "verified": true
         },
         {
           "id": 16399,
@@ -2456,7 +2556,10 @@
             "https://www.linkedin.com/posts/rowandigital_hyperscale-datacenters-constructionmilestone-activity-7432144629594091520-VDVO",
             "https://rowan.com/portfolio/bauxite-i-ii-iii/"
           ],
-          "expectedPinSha256": "30cdb43c2ea8814e4c207f420fb2476d4421a6b56a03700980b719eefab42dcf"
+          "expectedPinSha256": "30cdb43c2ea8814e4c207f420fb2476d4421a6b56a03700980b719eefab42dcf",
+          "metadataVerified": true,
+          "savedPinSha256": "cf54aea711523ff7cc4571ec11a37aa35e33bab334dac2846b4700d43a96d8f2",
+          "verified": true
         },
         {
           "id": 16459,
@@ -2468,7 +2571,10 @@
           "evidenceUrls": [
             "https://local.microsoft.com/blog/malaga-datacenter-project-overview/"
           ],
-          "expectedPinSha256": "93de697f361053d545d41e308a0e968ff151e33fc3d6a918b8f9f209b50680c6"
+          "expectedPinSha256": "93de697f361053d545d41e308a0e968ff151e33fc3d6a918b8f9f209b50680c6",
+          "metadataVerified": true,
+          "savedPinSha256": "c013b0542bb3912413cdd4a2eb98cd83c43a01c60a8e0a60e545152b6445c816",
+          "verified": true
         },
         {
           "id": 16469,
@@ -2480,7 +2586,10 @@
           "evidenceUrls": [
             "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/"
           ],
-          "expectedPinSha256": "66b9505b56209821f59e7e6fcb0292179be18c210cf53f817e3950c37a17b741"
+          "expectedPinSha256": "66b9505b56209821f59e7e6fcb0292179be18c210cf53f817e3950c37a17b741",
+          "metadataVerified": true,
+          "savedPinSha256": "c8368c00c27cd008682ada71c7ae6cf8269bd4f310b447fa186b43390a2fcb13",
+          "verified": true
         },
         {
           "id": 16472,
@@ -2492,7 +2601,10 @@
           "evidenceUrls": [
             "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3"
           ],
-          "expectedPinSha256": "99cb94b55c6b814ceb6ab5aa168800c434c731544642ea0e8075f1bbc953a8dc"
+          "expectedPinSha256": "99cb94b55c6b814ceb6ab5aa168800c434c731544642ea0e8075f1bbc953a8dc",
+          "metadataVerified": true,
+          "savedPinSha256": "350b1f002c5e26afc88cb87032a1765caf7390f278716374673da0073453f3aa",
+          "verified": true
         },
         {
           "id": 16481,
@@ -2504,7 +2616,10 @@
           "evidenceUrls": [
             "https://www.dcblox.com/nashville-data-center/"
           ],
-          "expectedPinSha256": "beea8ced15a738e977f4cbb858c45427133a43aabd81f46cc64a29a8fc1c78b1"
+          "expectedPinSha256": "beea8ced15a738e977f4cbb858c45427133a43aabd81f46cc64a29a8fc1c78b1",
+          "metadataVerified": true,
+          "savedPinSha256": "7353ef8891f99b7999415d47a9b0dd7bf76643710506bab61474b1ca15ce3307",
+          "verified": true
         },
         {
           "id": 16490,
@@ -2516,7 +2631,10 @@
           "evidenceUrls": [
             "https://faribaultmn.gov/815/Archer-Datacenters"
           ],
-          "expectedPinSha256": "e09a4e2a94e451032c37066147e6902b1b1e442d135b60eb035d385a6beb6dfc"
+          "expectedPinSha256": "e09a4e2a94e451032c37066147e6902b1b1e442d135b60eb035d385a6beb6dfc",
+          "metadataVerified": true,
+          "savedPinSha256": "b74378ea0f470ff1655f5b43e6869a28ce08072497b952166bc2ab3c028e75df",
+          "verified": true
         },
         {
           "id": 17021,
@@ -2528,7 +2646,10 @@
           "evidenceUrls": [
             "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm"
           ],
-          "expectedPinSha256": "cc81f4af472664077adf72a830cf2c4001e25b77a2d0b83ff4703cee3ba47d77"
+          "expectedPinSha256": "cc81f4af472664077adf72a830cf2c4001e25b77a2d0b83ff4703cee3ba47d77",
+          "metadataVerified": true,
+          "savedPinSha256": "b43fa674fd58541e55ea26f3400503a595053fa3fd3e2d9cc7f8eb164497f301",
+          "verified": true
         },
         {
           "id": 18222,
@@ -2541,9 +2662,18 @@
             "https://cpichile.org/aguas-maritimas-mayor-desaladora-del-pais-consigue-aprobacion-ambiental-por-us-5-000-millones/",
             "https://www.reporteminero.cl/noticia/noticias/2026/05/aprobacion-eia-desaladora-aguas-maritimas-antofagasta"
           ],
-          "expectedPinSha256": "2a6c57c5a7559830eafdcc4d05b5213e9ce01b058305e97acfc12763fbd4c1df"
+          "expectedPinSha256": "2a6c57c5a7559830eafdcc4d05b5213e9ce01b058305e97acfc12763fbd4c1df",
+          "metadataVerified": true,
+          "savedPinSha256": "bc1fe7c79b05828950e7155e09ca668174273179bff706ad10418fedf25ffc70",
+          "verified": true
         }
-      ]
+      ],
+      "verifiedCount": 44,
+      "counts": {
+        "Proposed": 23,
+        "In Progress": 16,
+        "Completed": 5
+      }
     }
   ],
   "additionalSourcesChecked": [
@@ -2566,6 +2696,807 @@
     {
       "url": "https://www.blackridgeresearch.com/blog/latest-list-top-new-upcoming-data-center-projects-new-jersey-usa",
       "result": "Secondary list claims Piscataway construction but no exact primary named-building milestone verified. Operator reservation alone does not resolve its physical stage, so PNJ remains queued."
+    },
+    {
+      "url": "https://www.prometheushyperscale.com/news/uinta-county-planning-and-zoning-commission-unanimously-recommends-approval-of-permits-for-prometheus-hyperscales-on-site-power-facility-site",
+      "openedAt": "2026-10-24",
+      "publishedDate": "2026-08-27",
+      "result": "Opened latest Evanston operator permit update. Planning commission recommended on-site-power permits; proposal still proceeds to county commission. This is not a verified groundbreaking despite a registry misclassifying it."
+    },
+    {
+      "url": "https://www.denvergazette.com/2026/10/14/vantage-looking-at-alternative-sites-for-trident-data-center-in-aurora/",
+      "openedAt": "2026-10-24",
+      "publishedDate": "2026-10-14",
+      "result": "Opened latest Trident account. Councilmember reports alternative Aurora sites being considered, without company confirmation or a relocation decision. Still a proposal in review; no verified physical work or cancellation established."
+    },
+    {
+      "url": "https://www.chavescounty.net/news/p/item/69955/data-cetner-discussion",
+      "openedAt": "2026-10-24",
+      "result": "Opened county clarification: August 10 discussion did not address any specific project including Zenith. Generic county discussion is not a project-specific construction receipt."
+    }
+  ],
+  "publicVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "checks": [
+        {
+          "id": 501,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-01-20T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 567,
+          "status": "In Progress",
+          "utcStartDateTime": "2024-06-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 681,
+          "status": "Completed",
+          "price": 750000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-04-25T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 823,
+          "status": "Completed",
+          "utcStartDateTime": "2007-09-20T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 2655,
+          "status": "Completed",
+          "utcStartDateTime": "2023-02-10T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3244,
+          "status": "Proposed",
+          "price": 4200000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3250,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-09-18T16:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3400,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3454,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 4915,
+          "status": "Proposed",
+          "price": 9900000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-11-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 4939,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 4941,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 5907,
+          "status": "Proposed",
+          "utcStartDateTime": "2025-12-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15744,
+          "status": "Proposed",
+          "price": 30000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-03-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15754,
+          "status": "In Progress",
+          "price": 132000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15798,
+          "status": "Proposed",
+          "price": 2000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-09-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15814,
+          "status": "Proposed",
+          "price": 17000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-06-25T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15822,
+          "status": "Proposed",
+          "utcStartDateTime": "2025-12-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15827,
+          "status": "Proposed",
+          "price": 50000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15833,
+          "status": "Proposed",
+          "price": 30000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15846,
+          "status": "Proposed",
+          "price": 10000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15859,
+          "status": "Proposed",
+          "utcStartDateTime": "2023-10-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15866,
+          "status": "Proposed",
+          "price": 11700000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-11-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15995,
+          "status": "Proposed",
+          "utcStartDateTime": "2029-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16304,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16306,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16308,
+          "status": "In Progress",
+          "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16328,
+          "status": "In Progress",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16331,
+          "status": "In Progress",
+          "price": 3000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16412,
+          "status": "In Progress",
+          "price": 3000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16333,
+          "status": "Proposed",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16343,
+          "status": "In Progress",
+          "price": 13400000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16345,
+          "status": "Proposed",
+          "price": 10000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16372,
+          "status": "Completed",
+          "utcStartDateTime": "2021-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16383,
+          "status": "Completed",
+          "utcStartDateTime": "2022-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16384,
+          "status": "In Progress",
+          "price": 800000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16399,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16459,
+          "status": "Proposed",
+          "utcStartDateTime": "2023-03-29T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16469,
+          "status": "Proposed",
+          "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16472,
+          "status": "Proposed",
+          "utcStartDateTime": "2025-10-27T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16481,
+          "status": "Proposed",
+          "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16490,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 17021,
+          "status": "In Progress",
+          "utcStartDateTime": "2022-11-09T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18222,
+          "status": "Proposed",
+          "price": 5000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-05-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 501,
+          "url": "http://127.0.0.1:3000/pin/501/jakarta-sets-september-2026-groundbreaking-for-its-giant-sea-wall",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 567,
+          "url": "http://127.0.0.1:3000/pin/567/eiffel-tower-repainting-continues-during-paris-olympic-preparations",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 681,
+          "url": "http://127.0.0.1:3000/pin/681/the-brooklyn-tower-finally-receives-its-certificate-of-occupancy",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 2655,
+          "url": "http://127.0.0.1:3000/pin/2655/rosatom-delivers-iter-s-last-poloidal-field-coil-to-the-cadarache-site",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 3400,
+          "url": "http://127.0.0.1:3000/pin/3400/oracle-s-lighthouse-campus-in-wisconsin-begins-customer-delivery",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 4915,
+          "url": "http://127.0.0.1:3000/pin/4915/state-water-board-votes-on-sites-reservoir-s-final-water-right-permit",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 15822,
+          "url": "http://127.0.0.1:3000/pin/15822/hassayampa-ranch-rezoned-for-data-centers-us-25-billion-is-a-potential-valuation",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 15833,
+          "url": "http://127.0.0.1:3000/pin/15833/openai-project-camellia-four-building-georgia-campus-estimated-above-us-30-billi",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 15846,
+          "url": "http://127.0.0.1:3000/pin/15846/stak-proposes-north-slope-data-center-latest-estimate-exceeds-us-10-billion",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 16306,
+          "url": "http://127.0.0.1:3000/pin/16306/crane-forest-grove-campus-100-mw-plan-275-26m-qualified-property-investment",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 16343,
+          "url": "http://127.0.0.1:3000/pin/16343/google-new-florence-new-data-center-within-15b-missouri-infrastructure-investmen",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 16399,
+          "url": "http://127.0.0.1:3000/pin/16399/rowan-bauxite-ii-verified-maryland-parcel-132-mw-and-1-1-b-unsubstantiated",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "checks": [
+        {
+          "id": 501,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-01-20T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 567,
+          "status": "In Progress",
+          "utcStartDateTime": "2024-06-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 681,
+          "status": "Completed",
+          "price": 750000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-04-25T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 823,
+          "status": "Completed",
+          "utcStartDateTime": "2007-09-20T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 2655,
+          "status": "Completed",
+          "utcStartDateTime": "2023-02-10T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3244,
+          "status": "Proposed",
+          "price": 4200000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3250,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-09-18T16:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3400,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 3454,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 4915,
+          "status": "Proposed",
+          "price": 9900000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-11-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 4939,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 4941,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 5907,
+          "status": "Proposed",
+          "utcStartDateTime": "2025-12-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15744,
+          "status": "Proposed",
+          "price": 30000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-03-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15754,
+          "status": "In Progress",
+          "price": 132000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15798,
+          "status": "Proposed",
+          "price": 2000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-09-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15814,
+          "status": "Proposed",
+          "price": 17000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-06-25T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15822,
+          "status": "Proposed",
+          "utcStartDateTime": "2025-12-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15827,
+          "status": "Proposed",
+          "price": 50000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15833,
+          "status": "Proposed",
+          "price": 30000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15846,
+          "status": "Proposed",
+          "price": 10000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15859,
+          "status": "Proposed",
+          "utcStartDateTime": "2023-10-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15866,
+          "status": "Proposed",
+          "price": 11700000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-11-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 15995,
+          "status": "Proposed",
+          "utcStartDateTime": "2029-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16304,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16306,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16308,
+          "status": "In Progress",
+          "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16328,
+          "status": "In Progress",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16331,
+          "status": "In Progress",
+          "price": 3000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16412,
+          "status": "In Progress",
+          "price": 3000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16333,
+          "status": "Proposed",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16343,
+          "status": "In Progress",
+          "price": 13400000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16345,
+          "status": "Proposed",
+          "price": 10000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16372,
+          "status": "Completed",
+          "utcStartDateTime": "2021-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16383,
+          "status": "Completed",
+          "utcStartDateTime": "2022-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16384,
+          "status": "In Progress",
+          "price": 800000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16399,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16459,
+          "status": "Proposed",
+          "utcStartDateTime": "2023-03-29T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16469,
+          "status": "Proposed",
+          "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16472,
+          "status": "Proposed",
+          "utcStartDateTime": "2025-10-27T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16481,
+          "status": "Proposed",
+          "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 16490,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 17021,
+          "status": "In Progress",
+          "utcStartDateTime": "2022-11-09T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18222,
+          "status": "Proposed",
+          "price": 5000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-05-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 501,
+          "url": "https://www.chronopin.com/pin/501/jakarta-sets-september-2026-groundbreaking-for-its-giant-sea-wall",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 567,
+          "url": "https://www.chronopin.com/pin/567/eiffel-tower-repainting-continues-during-paris-olympic-preparations",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 681,
+          "url": "https://www.chronopin.com/pin/681/the-brooklyn-tower-finally-receives-its-certificate-of-occupancy",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 2655,
+          "url": "https://www.chronopin.com/pin/2655/rosatom-delivers-iter-s-last-poloidal-field-coil-to-the-cadarache-site",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 3400,
+          "url": "https://www.chronopin.com/pin/3400/oracle-s-lighthouse-campus-in-wisconsin-begins-customer-delivery",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 4915,
+          "url": "https://www.chronopin.com/pin/4915/state-water-board-votes-on-sites-reservoir-s-final-water-right-permit",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 15822,
+          "url": "https://www.chronopin.com/pin/15822/hassayampa-ranch-rezoned-for-data-centers-us-25-billion-is-a-potential-valuation",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 15833,
+          "url": "https://www.chronopin.com/pin/15833/openai-project-camellia-four-building-georgia-campus-estimated-above-us-30-billi",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 15846,
+          "url": "https://www.chronopin.com/pin/15846/stak-proposes-north-slope-data-center-latest-estimate-exceeds-us-10-billion",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 16306,
+          "url": "https://www.chronopin.com/pin/16306/crane-forest-grove-campus-100-mw-plan-275-26m-qualified-property-investment",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 16343,
+          "url": "https://www.chronopin.com/pin/16343/google-new-florence-new-data-center-within-15b-missouri-infrastructure-investmen",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 16399,
+          "url": "https://www.chronopin.com/pin/16399/rowan-bauxite-ii-verified-maryland-parcel-132-mw-and-1-1-b-unsubstantiated",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    }
+  ],
+  "unresolvedVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "ids": [
+        16568,
+        4976,
+        4977,
+        15780,
+        15865,
+        16422
+      ],
+      "originalMetadataUnchanged": true,
+      "noConstructionStatusPresent": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "ids": [
+        16568,
+        4976,
+        4977,
+        15780,
+        15865,
+        16422
+      ],
+      "originalMetadataUnchanged": true,
+      "noConstructionStatusPresent": true
     }
   ]
 }

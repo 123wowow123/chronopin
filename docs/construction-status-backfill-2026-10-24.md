@@ -81,9 +81,9 @@ After round eight, the 829 remaining records retain their own source links and f
 | Data-center tracker parcel/phase ambiguity | 109 | Dated operator, contractor or planning evidence for the exact parcel and MW phase |
 | Epoch aggregate capacity/compute trajectory | 90 | Reconcile operating buildings with proposed future buildout before tagging the entire pinned scope |
 | Housing opening/build milestone source | 1 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
-| Conflicting, denied or halted scope | 46 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
+| Conflicting, denied or halted scope | 45 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
 | Grid/interconnection request identity | 35 | Match the exact request ID and phase to physical-work evidence; an IA or future COD alone is insufficient |
-| Other individual project/source/phase questions | 297 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
+| Other individual project/source/phase questions | 298 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
 
 Fehmarnbelt research also opened the operator's April 2026 factsheet and May 17 phased-opening announcement. The latter withdraws the single 2029 opening assumption, separates road and rail, and says a revised schedule will follow immersion experience. The April factsheet omits the budget shown in March. A new exact full-scope opening date and any revised cost require follow-up; no replacement date was invented. These limitations do not establish completion.
 
@@ -476,7 +476,7 @@ Some retained cost figures are explicitly dated and remain budget follow-ups: Br
 
 Five headlines are qualified for Eiffel, Hassayampa, Camellia, Stak and the proposed Dowagiac expansion. Hyperscale’s existing approximately 30MW operation does not complete its planned 340MW expansion. Other retained target dates remain expressly estimated, with unsupported legacy markers identified as unverified rather than promoted to operator forecasts. Current Taurus Q3-2027 delivery supersedes its release’s H1-2027 horizon. Expired Crane/East River targets never establish actual operation. Permits and procurement at Nashville, Faribault, NAS Lemoore and STEM Park do not establish physical work.
 
-Accounting per environment is **1,413 assigned + 829 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **677 Proposed, 457 In Progress and 279 Completed**. Including the original separate 68-pin batch, **1,481 reviewed eligible pins per environment** carry status tags. Remaining groups are 251 agency/project identities, 109 tracker parcels, 90 Epoch trajectories, one housing milestone, 46 conflicting/halted scopes, 35 grid-request identities and 297 individual source/phase questions. Earlier unresolved findings remain preserved.
+Accounting per environment is **1,413 assigned + 829 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **677 Proposed, 457 In Progress and 279 Completed**. Including the original separate 68-pin batch, **1,481 reviewed eligible pins per environment** carry status tags. Remaining groups are 251 agency/project identities, 109 tracker parcels, 90 Epoch trajectories, one housing milestone, 45 conflicting/halted scopes, 35 grid-request identities and 298 individual source/phase questions. Earlier unresolved findings remain preserved.
 
 Replay sequentially:
 
@@ -487,3 +487,5 @@ python3 scripts/construction/reviewQueue.py --manifest scripts/construction/rese
 ```
 
 Metadata and status saves were re-read through authenticated admin APIs. All 44 public JSON records per environment were checked for one exact status, original author, native price/currency/bounds, source citations and corrected dates/titles. Twelve authenticated native pages per environment were checked for the research block and status. Opened evidence, private before snapshots and page captures remain ignored under `.scrape/construction-status-research-round8-2026-10-24/`. Source/identity validation, catalog accounting, syntax/lint, task-file whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+Final checks also reopened Prometheus’s August 27 power-permit recommendation and October 14 Trident alternative-site reporting. Neither is a physical groundbreaking or completed relocation. Chaves County’s generic August discussion did not adjudicate Zenith’s construction. All six unresolved raw pin rows were re-read in both environments and remain unchanged and without construction-status tags.
