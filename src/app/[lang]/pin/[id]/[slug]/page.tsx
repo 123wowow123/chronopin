@@ -76,7 +76,6 @@ import { PinReferences } from '@/components/pin/PinReferences';
 import { PinPhotos } from '@/components/pin/PinPhotos';
 import { PinReviews } from '@/components/pin/PinReviews';
 import { PinCriticReviews } from '@/components/pin/PinCriticReviews';
-import { PinReviewSentiment, type ReviewSentimentPoint } from '@/components/pin/PinReviewSentiment';
 import { isReviewable } from '@/lib/userReviews';
 import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 import { PinSuggest } from '@/components/pin/PinSuggest';
@@ -210,10 +209,6 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     viewerUser(),
     pinAlternateNames(pin.id),
   ]);
-  // The scraped reviews beside the rubrics, scored and dated, for the sentiment graph.
-  const reviewSentiment: ReviewSentimentPoint[] = [taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, hotel, dining, criticReviews].flatMap((rubric) =>
-    (rubric?.reviews ?? []).flatMap((r) => (r.sentiment != null && r.publishedDate ? [{ at: Date.parse(r.publishedDate), value: r.sentiment, title: r.title || r.url, url: r.url, quote: r.quote }] : [])),
-  );
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
@@ -305,8 +300,6 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
             />
           ) : null}
           {criticReviews ? <PinCriticReviews reviews={criticReviews} t={t} locale={t.locale} className="mt-4" /> : null}
-          {/* Right under the rubric whose reviews it plots. */}
-          {reviewSentiment.length ? <PinReviewSentiment points={reviewSentiment} className="mt-4" /> : null}
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
               profile and car performance rubric; after them on phones. */}

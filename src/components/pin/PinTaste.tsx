@@ -5,7 +5,8 @@ import type { Evidence } from '@/lib/referenceConfidence';
 import { TASTE_AXES, TASTE_MAX, hasTaste, type PinTasteJson, type TasteAxis } from '@/lib/pinTaste';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import { RefineLink } from './RefineLink';
-import { ReviewList, hostOf } from './ReviewList';
+import { ReviewList } from './ReviewList';
+import { hostOf } from './reviewHost';
 import { TasteRadar } from './TasteRadar';
 
 // The citation after the basis: [n] linking to that row of the pin's

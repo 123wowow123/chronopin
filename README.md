@@ -182,6 +182,16 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Movie pins with no ticket or disc link (about 254 on prod as of 2026-10-05): hand-pick the real Fandango/Amazon page for the recent and upcoming films (about 60 days either side of today), then post with `POST /api/pins/:id/merchants`
 
+- Review sentiment graph (started 2026-10-25; scored rubric reviews plot on the pin page under "Sentiment over time"). Remaining:
+  - Deploy migration `0215_pin_critic_review.sql`, then `npm run reviews:critic:prod -- --dry` and without `--dry` to push the 36 Gaming critic reviews (15 pins) to prod. Needs Ian's admin password at the prompt.
+  - Gaming: more games (Valheim 1.0, Slay the Spire 2, Monster Hunter Wilds Switch 2, Gears of War E-Day, Crisis Core Reunion and others had no critic reviews yet); add a third review to the games stuck at 2.
+  - Movie and TV (about 750 pins), then Music albums (about 900), then Computing and Fashion: collect dated critic reviews into `PinCriticReview` (sample 20-30 first), same rules as the rubric reviews (opened HTTPS page, verbatim quote of at most 300 characters, scored -1..1). No UI strings needed.
+  - Rubric pins still below the 3-review minimum (about 90 on prod as of 2026-10-25: EV `PinCarPerf`, `PinDining`, `PinAircraftPerf`, `PinLlmPerf`, a few gas-car): no independent reviews found by search. Try Chrome reads of Motor1, Edmunds, VentureBeat and Electrek, or loosen the source rule only if Ian agrees.
+  - About 281 rubric reviews have a quote but no `publishedDate`, so they cannot be plotted: find the dates, then score them.
+  - Reviews with no date on the page (Car Magazine, 91wheels, Edmunds model pages, Trusted Reviews, TheXboxHub) count toward the minimum but stay off the graph.
+  - Add reviewing and scoring to the scrape flow so new rubric/critic reviews arrive scored (today the news job's `sentiment` task and `npm run reviews:sentiment` catch up; without API credit a session scores by hand).
+  - Fix the unrelated failing test `src/lib/okfLint.test.ts` (`docs/okf/api/factory-capability.md` and three other concepts have no frontmatter).
+
 
 ### Map
 
@@ -515,8 +525,12 @@ yes do all these
 
 
 
+do
+Review sentiment graph
 
 
 
-add industry forcast panel and should show on relavant pins
+
+
+add new industry forcast panel and should show on relavant pins
 and should show on side panel of search when searching in those categories like when searching in company view

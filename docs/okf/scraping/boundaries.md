@@ -67,10 +67,14 @@ Pre-write production records are retained in ignored `.scrape/boundaries/prod-be
 
 ## Expanded production audit
 
-The subsequent request to backfill all relevant production pins is recorded in [the expanded audit](boundaries-backfill-2026-10-25.md): 512 candidates reviewed, 62 pins with verified live layers, 10 state redraw comparisons, and 10 explicit remaining research gaps. The initial two wildfire layers were superseded by CAL FIRE’s newer historical archive. Use `scripts/boundaries/backfill-2026-10-25.prod.json` for current coverage; the initial three-pin manifest is retained as historical research evidence.
+The subsequent request to backfill all relevant production pins is recorded in [the expanded audit](boundaries-backfill-2026-10-25.md): 512 candidates reviewed, 71 pins with verified live layers, 10 state redraw comparisons, and 6 explicit remaining research gaps. The initial two wildfire layers were superseded by CAL FIRE’s newer historical archive. Use `scripts/boundaries/backfill-2026-10-25.prod.json` for current coverage; the initial three-pin manifest is retained as historical research evidence.
 
 The state comparison schema, reviewed sources, preparation workflow and deployment status are documented in [the redraw follow-up](boundary-redraws-2026-10-25.md).
 
 After the owner reported deploying the controls, [round two](boundaries-round2-2026-10-25.md) verified all state comparisons live and added Micronesia and Spain. The complete replay list includes both additions.
 
 The [large production run](boundaries-large-run-2026-10-25.md) adds verified citywide/statewide/countywide ballot jurisdictions and Bosnia’s explicitly labelled Brčko exception. Replay the two reviewed missing-coordinate entries before their boundary layers when needed. Black Summer is a research gap, not an unrelated match.
+
+The [second large run](boundaries-large2-run-2026-10-25.md) resolves Black Summer by retaining prepared coordinate precision and adds exact Taiwan recall membership, executive areas, Taipei, Lima and elected-office jurisdictions. That round reached 70 pins with seven source gaps.
+
+The [third large run](boundaries-large3-run-2026-10-25.md) adds Mexico’s 300 federal single-member districts from an official October 2026 INE download. Current coverage is 71 pins and 10,163 default features; six research gaps remain.

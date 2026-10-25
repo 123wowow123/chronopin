@@ -652,5 +652,97 @@
     "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM1/",
     "file": ".scrape/boundaries/bosnia-presidency-overview.geojson",
     "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 2450,
+    "pinTitle": "Australia Burns Through the Black Summer",
+    "kind": "wildfire",
+    "name": "Black Summer — indicative national fire extent, July 2019–June 2020; includes planned fires and unburnt pockets",
+    "observedAt": "2020-06-22",
+    "source": "Australian Government DCCEEW, NIAFED v20200623 (CC BY 3.0 AU); topology-normalized 150m overview",
+    "sourceUrl": "https://www.dcceew.gov.au/environment/biodiversity/bushfire-recovery/bushfire-impacts",
+    "file": ".scrape/boundaries/black-summer-overview.geojson"
+  },
+  {
+    "pinId": 6541,
+    "pinTitle": "Taiwan's Great Recall: Every Targeted KMT Legislator Survives the 26 July Votes",
+    "kind": "district",
+    "name": "Taiwan — 24 legislative constituencies in the July 26, 2025 recalls",
+    "vintage": "11th Legislative Yuan definitions; NCDR 2024-10-15 geographic release; 24 recall constituencies only, not the separate Hsinchu mayor recall; 50m overview",
+    "source": "Taiwan NCDR CAP geographic codes; membership: Central Election Commission",
+    "sourceUrl": "https://web.cec.gov.tw/central/article/60139",
+    "file": ".scrape/boundaries/taiwan-recall-24.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 6548,
+    "pinTitle": "Taiwan Votes in Its Nine-in-One Local Elections on 28 November",
+    "kind": "district",
+    "name": "Taiwan — 22 city/county executive voting areas; other ballot levels not drawn",
+    "vintage": "NCDR Taiwan_Geocode_113 release 2024-10-15; 50m geographic overview for 2026 city/county mayor/magistrate votes. Councillor, township, indigenous-district and village contests are not drawn; offshore source polygons retained.",
+    "source": "Taiwan NCDR CAP geographic-code cartography; election scope: Central Election Commission",
+    "sourceUrl": "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs",
+    "file": ".scrape/boundaries/taiwan-executive-22.geojson"
+  },
+  {
+    "pinId": 19425,
+    "pinTitle": "Polymarket Favours Chiang Wan-an in Taipei’s November 28 Mayoral Election",
+    "kind": "district",
+    "name": "Taipei City — citywide mayor voting area",
+    "vintage": "NCDR Taiwan_Geocode_113 release 2024-10-15; current geographic context for the 2026 citywide mayor vote; 50m overview, not council or polling districts",
+    "source": "Taiwan NCDR CAP geographic-code cartography",
+    "sourceUrl": "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs",
+    "file": ".scrape/boundaries/taipei-mayor.geojson"
+  },
+  {
+    "pinId": 5173,
+    "pinTitle": "Lima Elects a Mayor, With López Aliaga Leading From the Council List",
+    "kind": "district",
+    "name": "Lima — metropolitan mayor voting jurisdiction (Province of Lima; excludes Callao)",
+    "vintage": "2020 IGN/OCHA province geometry via geoBoundaries; 43-district Province of Lima geographic overview for the metropolitan mayor ballot, not individual district-mayor contests or the wider urban agglomeration",
+    "source": "Instituto Geográfico Nacional / OCHA ROLAC via geoBoundaries (CC BY 3.0 IGO)",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/PER/ADM2/",
+    "file": ".scrape/boundaries/lima-mayor-province.geojson"
+  },
+  {
+    "pinId": 3500,
+    "pinTitle": "Michelle Wu Is Sworn In for a Second Term at Symphony Hall",
+    "kind": "district",
+    "name": "Boston — elected mayor jurisdiction; inauguration venue marked separately",
+    "vintage": "January 1, 2025 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18",
+    "file": ".scrape/boundaries/ballot-boston.geojson"
+  },
+  {
+    "pinId": 3549,
+    "pinTitle": "New York's Next Governor Begins a Four-Year Term",
+    "kind": "district",
+    "name": "New York — governor’s statewide jurisdiction; 2026 context for the 2027 term",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-new-york-state.geojson"
+  },
+  {
+    "pinId": 3616,
+    "pinTitle": "Zohran Mamdani Is Inaugurated as New York City's 112th Mayor",
+    "kind": "district",
+    "name": "New York City — elected mayor jurisdiction; inauguration venue marked separately",
+    "vintage": "January 1, 2026 Census city outline; elected mayor jurisdiction, not the inauguration-site footprint or internal council districts",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-nyc2026.geojson"
+  },
+  {
+    "pinId": 2357,
+    "pinTitle": "Mexico Elects a New Chamber of Deputies",
+    "kind": "district",
+    "name": "Mexico — 300 federal single-member districts; proportional-list regions not drawn",
+    "vintage": "INE cartography effective 2026-10-01; 50m overview of 300 federal single-member districts for 2027 context. Five proportional-list regions, local districts and polling sections are not drawn; not a claim to the separately scheduled November election-product release.",
+    "source": "Instituto Nacional Electoral (INE)",
+    "sourceUrl": "https://pautas.ine.mx/transparencia/mapas/",
+    "file": ".scrape/boundaries/mexico-federal-300.geojson",
+    "preserveFeatureCredits": true
   }
 ]

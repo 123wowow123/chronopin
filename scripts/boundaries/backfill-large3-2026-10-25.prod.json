@@ -1,0 +1,13 @@
+[
+  {
+    "pinId": 2357,
+    "pinTitle": "Mexico Elects a New Chamber of Deputies",
+    "kind": "district",
+    "name": "Mexico — 300 federal single-member districts; proportional-list regions not drawn",
+    "vintage": "INE cartography effective 2026-10-01; 50m overview of 300 federal single-member districts for 2027 context. Five proportional-list regions, local districts and polling sections are not drawn; not a claim to the separately scheduled November election-product release.",
+    "source": "Instituto Nacional Electoral (INE)",
+    "sourceUrl": "https://pautas.ine.mx/transparencia/mapas/",
+    "file": ".scrape/boundaries/mexico-federal-300.geojson",
+    "preserveFeatureCredits": true
+  }
+]

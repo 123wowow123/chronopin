@@ -4,6 +4,8 @@
 
 The expanded discovery reviewed **512 distinct candidates**, including 169 additional keyword matches. Search terms added legislative bodies, senators/councillors, by-elections, referendums, assembly, seats and additional wildfire terms. Every new candidate's title and description was reviewed; many were manufacturing assembly, venue seating, Seattle/Trump substring matches, internal legislative decisions or entertainment. The audit records 62 mapped pins, ten research gaps and 440 outside scope.
 
+The subsequent [second large run](boundaries-large2-run-2026-10-25.md) brings current coverage to 70 pins and resolves the Black Summer and Taiwan gaps described below. This document retains the earlier run’s results and diagnosis.
+
 ## Reviewed voting jurisdictions
 
 This round expands the earlier scope to include **verified citywide, countywide and statewide public ballots**. Their maps identify a single voting jurisdiction, explicitly distinguished in the key from internal legislative, ward or polling districts. A city/state administrative polygon is used only after an election authority establishes the ballot's jurisdiction. Internal parliamentary votes, corporate votes and venue names do not qualify.

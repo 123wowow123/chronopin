@@ -4,19 +4,13 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useT } from '@/lib/client/i18n';
 import { useNow } from '@/lib/client/now';
 import { moodOf, type Mood } from '@/lib/commentMood';
+import { hostOf } from './reviewHost';
 
 export type ReviewSentimentPoint = { at: number; value: number; title: string; url: string; quote: string | null };
 
 // How close the pointer must come to a dot (in px) to pick it.
 const REACH = 14;
 
-const hostOf = (url: string) => {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
-};
 
 const signed = (value: number) => `${value > 0 ? '+' : ''}${value.toFixed(2)}`;
 
@@ -38,7 +32,21 @@ const MOOD_DOTS: Record<Mood, string> = { positive: 'bg-success', mixed: 'bg-sub
 // line through the running average so the drift shows without one review
 // dragging it. The badge is the overall tone; the numbers are also in a table
 // for screen readers.
-export function PinReviewSentiment({ points: given, className = '' }: { points: ReviewSentimentPoint[]; className?: string }) {
+export function PinReviewSentiment({
+  points: given,
+  selected = null,
+  onSelect,
+  embedded = false,
+  className = '',
+}: {
+  points: ReviewSentimentPoint[];
+  // The review chosen in the list, ringed on the graph; clicking a dot calls onSelect with its url.
+  selected?: string | null;
+  onSelect?: (url: string) => void;
+  // Part of a rubric card: no card of its own.
+  embedded?: boolean;
+  className?: string;
+}) {
   const t = useT();
   const boxRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
@@ -62,6 +70,7 @@ export function PinReviewSentiment({ points: given, className = '' }: { points: 
   }, [points]);
   if (!points.length) return null;
 
+  const selectedPoint = selected ? points.find((p) => p.url === selected) : undefined;
   const average = running[running.length - 1].value;
   const mood = moodOf(average);
 
@@ -95,7 +104,7 @@ export function PinReviewSentiment({ points: given, className = '' }: { points: 
   const dayOf = (at: number) => new Date(at).toLocaleDateString(t.locale, { dateStyle: 'medium', timeZone: 'UTC' });
 
   return (
-    <section aria-labelledby="review-sentiment-heading" className={`surface px-4 py-3 ${className}`}>
+    <section aria-labelledby="review-sentiment-heading" className={`${embedded ? '' : 'surface px-4 py-3'} ${className}`}>
       <h2 id="review-sentiment-heading" className="flex flex-wrap items-center gap-2 text-base font-semibold">
         {t('company.sentiment')}
         <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-sm font-medium ring-1 ring-inset ${MOOD_BADGES[mood]}`}>
@@ -121,7 +130,7 @@ export function PinReviewSentiment({ points: given, className = '' }: { points: 
             onPointerDown={pick}
             onPointerLeave={() => setHot(null)}
             // A dot leads to the review it stands for.
-            onClick={() => hot && window.open(hot.url, '_blank', 'noopener,noreferrer')}
+            onClick={() => hot && (onSelect ? onSelect(hot.url) : window.open(hot.url, '_blank', 'noopener,noreferrer'))}
             style={{ cursor: hot ? 'pointer' : undefined }}
           >
             {/* Good at the top, bad at the bottom, and the neutral line between. */}
@@ -151,6 +160,7 @@ export function PinReviewSentiment({ points: given, className = '' }: { points: 
             ))}
             {running.length > 1 ? <path d={line} fill="none" strokeWidth={2} strokeLinejoin="round" strokeLinecap="round" className="stroke-tone-news" /> : null}
             <circle cx={x(running[running.length - 1].at)} cy={y(average)} r={4} strokeWidth={2} className="fill-tone-news stroke-panel" />
+            {selectedPoint ? <circle cx={x(selectedPoint.at)} cy={y(selectedPoint.value)} r={6.5} strokeWidth={2} fill="none" className="stroke-tone-news" pointerEvents="none" /> : null}
             {/* The dot under the pointer, whole and ringed in the panel's colour. */}
             {hot ? <circle cx={x(hot.at)} cy={y(hot.value)} r={5} strokeWidth={2} className="fill-tone-news stroke-panel" pointerEvents="none" /> : null}
           </svg>
@@ -182,7 +192,7 @@ export function PinReviewSentiment({ points: given, className = '' }: { points: 
 }
 
 // The review a dot stands for: its score and day, the page it is on, and the
-// quoted extract. Clicking the dot opens the page.
+// quoted extract. Clicking the dot selects its review in the list.
 function ReviewTooltip({ point, x, y, width, day }: { point: ReviewSentimentPoint; x: number; y: number; width: number; day: string }) {
   const box = 224;
   const left = Math.min(Math.max(0, x - box / 2), Math.max(0, width - box));

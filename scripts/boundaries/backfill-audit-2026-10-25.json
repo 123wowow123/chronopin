@@ -75,12 +75,12 @@
   },
   "counts": {
     "audited": 512,
-    "verifiedLive": 62,
-    "wildfirePins": 17,
-    "districtPins": 45,
-    "researchGaps": 10,
-    "outsideBoundaryScope": 440,
-    "defaultBoundaryFeatures": 9811,
+    "verifiedLive": 71,
+    "wildfirePins": 18,
+    "districtPins": 53,
+    "researchGaps": 6,
+    "outsideBoundaryScope": 435,
+    "defaultBoundaryFeatures": 10163,
     "stateRedrawComparisons": 10,
     "alternatePlanFeatures": 362
   },
@@ -395,12 +395,16 @@
       "pinId": 1978,
       "title": "India's Next General Election Picks a Prime Minister",
       "status": "research_gap",
-      "reason": "Need a verified complete current Lok Sabha polygon set and explicit treatment of the predicted 2029 plan. Older 2019 parliamentary maps found require checking against subsequent delimitations; the ECI/government material checked supplies delimitation information, not a verified complete current GeoJSON set. Follow-up reviewed the original 2024_maps_supplement author’s methodology: image-georeferenced borders, acknowledged international-border inaccuracies and special treatment of unassigned disputed areas. Not accepted as a verified nationwide election plan. Round two: original government NIC election service connection timed out; no substitute geometry was saved.",
+      "reason": "Need a verified complete current Lok Sabha polygon set and explicit treatment of the predicted 2029 plan. Older 2019 parliamentary maps found require checking against subsequent delimitations; the ECI/government material checked supplies delimitation information, not a verified complete current GeoJSON set. Follow-up reviewed the original 2024_maps_supplement author’s methodology: image-georeferenced borders, acknowledged international-border inaccuracies and special treatment of unassigned disputed areas. Not accepted as a verified nationwide election plan. Round two: original government NIC election service connection timed out; no substitute geometry was saved. Third large run: Esri India Living Atlas 2024 service contains 544 records including a No Data Available area; Assam records have inconsistent constituency-name/code, legacy ID and winner assignments, and the item supplies no geometry provenance or reuse terms. Not accepted without independent delimitation validation.",
       "sourcesChecked": [
         "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1910038&lang=2&reg=48",
         "https://www.eci.gov.in/eci-publication/",
         "https://data.opencity.in/dataset/parliamentary-elections-2019-map",
         "https://webgis1.nic.in/publishing/rest/services/election/election/MapServer"
+      ],
+      "checkedSources": [
+        "https://livingatlas.esri.in/server/rest/services/Election_Results_States/India_Election_Data_Parliamentary_2024/MapServer/0",
+        "https://livingatlas.esri.in/portal/sharing/rest/content/items/6f6c8a513012402b94486cb8bb937f57?f=json"
       ]
     },
     {
@@ -608,16 +612,34 @@
     {
       "pinId": 2357,
       "title": "Mexico Elects a New Chamber of Deputies",
-      "status": "research_gap",
-      "reason": "INE’s live SIGE map states that cartographic products for the 2026–2027 concurrent elections will be published on 2026-11-12, after this audit. No older plan is relabelled as the new plan. Retry official downloads on that date; need all 300 federal single-member districts and separate proportional scope.",
+      "status": "verified_live",
+      "reason": "INE cartography effective 2026-10-01; 50m overview of 300 federal single-member districts for 2027 context. Five proportional-list regions, local districts and polling sections are not drawn; not a claim to the separately scheduled November election-product release.",
       "sourcesChecked": [
         "https://www.ine.mx/productos-geografia-electoral-descargables/",
         "https://cartografia.ine.mx/sige8/estadisticos-Geoelectorales",
-        "https://infomexine-ciudadania.ine.mx/infomex/app/cartografia/marcoGeograficoSeccional"
+        "https://infomexine-ciudadania.ine.mx/infomex/app/cartografia/marcoGeograficoSeccional",
+        "https://pautas.ine.mx/transparencia/mapas/",
+        "https://pautas.ine.mx/transparencia/mapas/cob_2025/DISTRITO_FEDERAL.zip",
+        "https://sidof.segob.gob.mx/notas/docFuente/5800306"
       ],
       "checkedSources": [
         "https://cartografia.ine.mx/sige8/mapas/conoce-tu-nuevo-distrito"
-      ]
+      ],
+      "kind": "district",
+      "source": "Instituto Nacional Electoral (INE)",
+      "sourceUrl": "https://pautas.ine.mx/transparencia/mapas/",
+      "verification": {
+        "pinId": 2357,
+        "features": 300,
+        "sha256": "f3b687c8de8e0d613da2fa132a5b3bca03e8d0ebb53ca711054fb2ee3910b678",
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "url": "https://www.chronopin.com/pin/2357/mexico-elects-a-new-chamber-of-deputies",
+          "paths": 300,
+          "hasName": true,
+          "hasKey": true
+        }
+      }
     },
     {
       "pinId": 2358,
@@ -841,13 +863,37 @@
     {
       "pinId": 2450,
       "title": "Australia Burns Through the Black Summer",
-      "status": "research_gap",
-      "reason": "Corrected prior outside-scope classification: this is a wildfire-season candidate. Full official DCCEEW NIAFED v20200623 downloaded: 33,728 source parts, 1,270 self-touching parts. Linework normalization preserves source area to floating-point precision, but the 150m overview fails validity after the importer’s six-decimal coordinate rounding (collapsed tiny component). No boundary saved; do not drop source parts or publish an invalid overview. The source covers 2019-07-01 through 2020-06-22 and includes planned fires/unburnt pockets, which must be disclosed in any future import.",
+      "status": "verified_live",
+      "reason": "NIAFED v20200623 indicative national fire extent, 2019-07-01 through 2020-06-22; planned fires/unburnt pockets included. Source linework normalized without substantive area change; coverage simplification retains all 25,354 dissolved components. Prepared coordinates are no longer rounded by the boundary importer.",
       "sourcesChecked": [
         "https://www.dcceew.gov.au/environment/biodiversity/bushfire-recovery/bushfire-impacts",
         "https://www.arcgis.com/sharing/rest/content/items/dc651afe7ec944d0a22e6c1f120f3a15/info/metadata/metadata.xml?format=default&output=html",
         "https://services1.arcgis.com/gtRkYQyUQLMTM1uS/arcgis/rest/services/NIAFED_v20200623/FeatureServer/0"
-      ]
+      ],
+      "kind": "wildfire",
+      "source": "Australian Government DCCEEW, NIAFED v20200623 (CC BY 3.0 AU); topology-normalized 150m overview",
+      "sourceUrl": "https://www.dcceew.gov.au/environment/biodiversity/bushfire-recovery/bushfire-impacts",
+      "verification": {
+        "pinId": 2450,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "19fb4fcde7a9252adb7e2aff0f1182fdee302e49b5c8ef3caf042a286bba15b0",
+        "checkedAt": "2026-10-25T21:26:08.101Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 2450,
+          "url": "https://www.chronopin.com/pin/2450/australia-burns-through-the-black-summer",
+          "paths": 1,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#dc2626"
+          ],
+          "elapsedMs": 12300,
+          "errors": []
+        }
+      }
     },
     {
       "pinId": 2451,
@@ -1397,8 +1443,35 @@
     {
       "pinId": 3500,
       "title": "Michelle Wu Is Sworn In for a Second Term at Symphony Hall",
-      "status": "outside_boundary_scope",
-      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+      "status": "verified_live",
+      "reason": "January 1, 2025 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+      "kind": "district",
+      "source": "US Census Bureau, TIGERweb",
+      "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18",
+      "verification": {
+        "pinId": 3500,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "926bab93ec7f0cf8a73049129c5eb31e7a357184482a16e0e5d94d282f398930",
+        "checkedAt": "2026-10-25T21:26:08.127Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 3500,
+          "url": "https://www.chronopin.com/pin/3500/michelle-wu-is-sworn-in-for-a-second-term-at-symphony-hall",
+          "paths": 1,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1308,
+          "errors": []
+        }
+      },
+      "sourcesChecked": [
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18"
+      ]
     },
     {
       "pinId": 3507,
@@ -1674,8 +1747,35 @@
     {
       "pinId": 3549,
       "title": "New York's Next Governor Begins a Four-Year Term",
-      "status": "outside_boundary_scope",
-      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+      "status": "verified_live",
+      "reason": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+      "kind": "district",
+      "source": "US Census Bureau, TIGERweb",
+      "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+      "verification": {
+        "pinId": 3549,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "8e42bfa330f20b25bf6431af6873a94a7289df7eccc76d83f630f43ea5d9e532",
+        "checkedAt": "2026-10-25T21:26:08.128Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 3549,
+          "url": "https://www.chronopin.com/pin/3549/new-york-s-next-governor-begins-a-four-year-term",
+          "paths": 1,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1682,
+          "errors": []
+        }
+      },
+      "sourcesChecked": [
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0"
+      ]
     },
     {
       "pinId": 3551,
@@ -1826,8 +1926,35 @@
     {
       "pinId": 3616,
       "title": "Zohran Mamdani Is Inaugurated as New York City's 112th Mayor",
-      "status": "outside_boundary_scope",
-      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+      "status": "verified_live",
+      "reason": "January 1, 2026 Census city outline; elected mayor jurisdiction, not the inauguration-site footprint or internal council districts",
+      "kind": "district",
+      "source": "US Census Bureau, TIGERweb",
+      "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+      "verification": {
+        "pinId": 3616,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "b2ad460e3e3f878707d2db504fed2b47336226fdd782188fbdd5c728bb0cc5d7",
+        "checkedAt": "2026-10-25T21:26:08.128Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 3616,
+          "url": "https://www.chronopin.com/pin/3616/zohran-mamdani-is-inaugurated-as-new-york-city-s-112th-mayor",
+          "paths": 1,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1324,
+          "errors": []
+        }
+      },
+      "sourcesChecked": [
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4"
+      ]
     },
     {
       "pinId": 3618,
@@ -2702,8 +2829,35 @@
     {
       "pinId": 5173,
       "title": "Lima Elects a Mayor, With López Aliaga Leading From the Council List",
-      "status": "outside_boundary_scope",
-      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+      "status": "verified_live",
+      "reason": "2020 IGN/OCHA province geometry via geoBoundaries; 43-district Province of Lima geographic overview for the metropolitan mayor ballot, not individual district-mayor contests or the wider urban agglomeration",
+      "kind": "district",
+      "source": "Instituto Geográfico Nacional / OCHA ROLAC via geoBoundaries (CC BY 3.0 IGO)",
+      "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/PER/ADM2/",
+      "verification": {
+        "pinId": 5173,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "45d8a842fcc08412266371abf95a8ded9398ba62346cdcd9cfc2b73b9cafd10a",
+        "checkedAt": "2026-10-25T21:26:08.127Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 5173,
+          "url": "https://www.chronopin.com/pin/5173/lima-elects-a-mayor-with-lopez-aliaga-leading-from-the-council-list",
+          "paths": 1,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1304,
+          "errors": []
+        }
+      },
+      "sourcesChecked": [
+        "https://www.geoboundaries.org/api/current/gbOpen/PER/ADM2/"
+      ]
     },
     {
       "pinId": 5174,
@@ -3020,25 +3174,77 @@
     {
       "pinId": 6541,
       "title": "Taiwan's Great Recall: Every Targeted KMT Legislator Survives the 26 July Votes",
-      "status": "research_gap",
-      "reason": "The CEC provides the exact 24 July-26 recall constituencies and the 11th-Legislative-Yuan district definitions, but the official download is descriptive CSV, not polygons. A community atlas was inspected, but its district composition was not independently reconciled to all 24 current village-level splits. Do not draw whole cities/counties in place of split districts. The inspected taiwan-atlas district composition was last committed in February 2021; it still needs reconciliation to the current CEC village-level definitions. Large run: the current MOI village-boundary download linked from government dataset 7438 returned 403; a current complete version-matched village set was not obtained.",
+      "status": "verified_live",
+      "reason": "11th Legislative Yuan definitions; NCDR 2024-10-15 geographic release; 24 recall constituencies only, not the separate Hsinchu mayor recall; 50m overview",
       "sourcesChecked": [
         "https://web.cec.gov.tw/central/article/60139",
         "https://data.gov.tw/en/datasets/170247",
         "https://github.com/dkaoster/taiwan-atlas",
-        "https://data.gov.tw/dataset/7438"
-      ]
+        "https://data.gov.tw/dataset/7438",
+        "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs",
+        "https://data.cec.gov.tw/%E7%AC%AC11%E5%B1%86%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1%E9%81%B8%E8%88%89%E5%8D%80%E7%AF%84%E5%9C%8D/%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1%E9%81%B8%E8%88%89%E5%8D%80%E7%AF%84%E5%9C%8D.csv"
+      ],
+      "kind": "district",
+      "source": "Taiwan NCDR CAP geographic codes; membership: Central Election Commission",
+      "sourceUrl": "https://web.cec.gov.tw/central/article/60139",
+      "verification": {
+        "pinId": 6541,
+        "kind": "district",
+        "features": 24,
+        "geojsonSha256": "5830c8904b3e7b055ae9a63c9ad011dff5a23cc8067a064834d6261d5c889a29",
+        "checkedAt": "2026-10-25T21:26:08.105Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 6541,
+          "url": "https://www.chronopin.com/pin/6541/taiwan-s-great-recall-every-targeted-kmt-legislator-survives-the-26-july-votes",
+          "paths": 24,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1465,
+          "errors": []
+        }
+      }
     },
     {
       "pinId": 6548,
       "title": "Taiwan Votes in Its Nine-in-One Local Elections on 28 November",
-      "status": "research_gap",
-      "reason": "This pin spans multiple levels of local elections. Need separately identified mayor/county, councillor and other district scopes plus version-matched CEC geometry; a single set of 22 county/city polygons does not represent every race named by the pin. Large run: the current MOI village-boundary download linked from government dataset 7438 returned 403; a current complete version-matched village set was not obtained.",
+      "status": "verified_live",
+      "reason": "NCDR Taiwan_Geocode_113 release 2024-10-15; 50m geographic overview for 2026 city/county mayor/magistrate votes. Councillor, township, indigenous-district and village contests are not drawn; offshore source polygons retained.",
       "sourcesChecked": [
         "https://web.cec.gov.tw/central/menu/2",
         "https://data.gov.tw/en/datasets/170247",
-        "https://data.gov.tw/dataset/7438"
-      ]
+        "https://data.gov.tw/dataset/7438",
+        "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs"
+      ],
+      "kind": "district",
+      "source": "Taiwan NCDR CAP geographic-code cartography; election scope: Central Election Commission",
+      "sourceUrl": "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs",
+      "verification": {
+        "pinId": 6548,
+        "kind": "district",
+        "features": 22,
+        "geojsonSha256": "1846750deb40531220ce31e0a697b8f27143f5e69792cf6d8adf6989b9950e93",
+        "checkedAt": "2026-10-25T21:26:08.114Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": true,
+        "publicPage": {
+          "pinId": 6548,
+          "url": "https://www.chronopin.com/pin/6548/taiwan-votes-in-its-nine-in-one-local-elections-on-28-november",
+          "paths": 22,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1385,
+          "errors": []
+        }
+      },
+      "scopeLimitations": "City/county executives only; councillor, township, indigenous-district and village ballot areas are not mapped. All offshore source polygons are retained."
     },
     {
       "pinId": 6558,
@@ -3974,8 +4180,36 @@
     {
       "pinId": 19425,
       "title": "Polymarket Favours Chiang Wan-an in Taipei’s November 28 Mayoral Election",
-      "status": "outside_boundary_scope",
-      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+      "status": "verified_live",
+      "reason": "NCDR Taiwan_Geocode_113 release 2024-10-15; current geographic context for the 2026 citywide mayor vote; 50m overview, not council or polling districts",
+      "kind": "district",
+      "source": "Taiwan NCDR CAP geographic-code cartography",
+      "sourceUrl": "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs",
+      "verification": {
+        "pinId": 19425,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "21a378d17364d5e43eda3e27a97759101dd744885640bd1becbd26270a842437",
+        "checkedAt": "2026-10-25T21:26:08.115Z",
+        "contentAuthorDatesPreserved": true,
+        "pinFieldsPreserved": false,
+        "locationFilled": true,
+        "publicPage": {
+          "pinId": 19425,
+          "url": "https://www.chronopin.com/pin/19425/polymarket-favours-chiang-wan-an-in-taipei-s-november-28-mayoral-election",
+          "paths": 1,
+          "name": true,
+          "key": true,
+          "colors": [
+            "#0f766e"
+          ],
+          "elapsedMs": 1310,
+          "errors": []
+        }
+      },
+      "sourcesChecked": [
+        "https://alerts.ncdr.nat.gov.tw/web/developer/cap-docs"
+      ]
     },
     {
       "pinId": 19434,
@@ -4263,7 +4497,9 @@
     "scripts/boundaries/backfill-resolved-2026-10-25.prod.json",
     "scripts/boundaries/backfill-round2-2026-10-25.prod.json",
     "scripts/boundaries/backfill-large-2026-10-25.prod.json",
-    "scripts/boundaries/backfill-large-resolved-2026-10-25.prod.json"
+    "scripts/boundaries/backfill-large-resolved-2026-10-25.prod.json",
+    "scripts/boundaries/backfill-large2-2026-10-25.prod.json",
+    "scripts/boundaries/backfill-large3-2026-10-25.prod.json"
   ],
   "uiDeployment": "Owner reported code deployed. All 30 state/view combinations browser-verified on production 2026-10-25. No deployment performed by this round.",
   "secondRoundVerification": {
@@ -4285,5 +4521,35 @@
     ],
     "originalContentAuthorDatesPreserved": true,
     "notes": "docs/okf/scraping/boundaries-large-run-2026-10-25.md"
+  },
+  "large2RunVerification": {
+    "newPins": 8,
+    "researchGapsResolved": [
+      2450,
+      6541,
+      6548
+    ],
+    "publicPagesVerified": 8,
+    "allSavedMapsVerified": 70,
+    "filledMissingCoordinates": [
+      19425
+    ],
+    "originalContentAuthorDatesPreserved": true,
+    "discoveryNewCandidates": 0,
+    "notes": "docs/okf/scraping/boundaries-large2-run-2026-10-25.md"
+  },
+  "large3RunVerification": {
+    "newPins": 1,
+    "newFeatures": 300,
+    "researchGapsResolved": [
+      2357
+    ],
+    "publicPagesVerified": 1,
+    "allSavedMapsVerified": 71,
+    "originalContentAuthorDatesPreserved": true,
+    "discoveryNewCandidates": 0,
+    "notes": "docs/okf/scraping/boundaries-large3-run-2026-10-25.md",
+    "stateRedrawComparisonsVerified": 10,
+    "redrawViewsVerified": 30
   }
 }

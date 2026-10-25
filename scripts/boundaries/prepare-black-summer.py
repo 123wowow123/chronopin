@@ -56,7 +56,10 @@ if not prepared.is_valid or prepared.is_empty:
     from shapely.validation import explain_validity
     raise ValueError('Invalid prepared overview: '+explain_validity(prepared))
 assert len(prepared.geoms)==len(merged.geoms)
+source_holes=sum(len(p.interiors) for p in merged.geoms)
+output_holes=sum(len(p.interiors) for p in prepared.geoms)
+assert output_holes==source_holes, (source_holes,output_holes)
 (root/'black-summer-overview.geojson').write_text(json.dumps({'type':'FeatureCollection','features':[{'type':'Feature','properties':{},'geometry':geometry}]},separators=(',',':')))
-report={'sourceParts':len(source.geoms),'normalizedParts':len(changes),'dissolvedParts':len(merged.geoms),'outputParts':len(prepared.geoms),'sourceUnionAreaM2':projected.area,'overviewAreaM2':simple.area,'overviewNormalizationAreaDeltaM2':simplified_delta,'reprojectionNormalizationAreaDeltaDegrees2':geographic_delta,'normalizedAreaDeltas':changes}
+report={'sourceParts':len(source.geoms),'normalizedParts':len(changes),'dissolvedParts':len(merged.geoms),'outputParts':len(prepared.geoms),'sourceUnionAreaM2':projected.area,'overviewAreaM2':simple.area,'overviewNormalizationAreaDeltaM2':simplified_delta,'reprojectionNormalizationAreaDeltaDegrees2':geographic_delta,'sourceHoles':source_holes,'outputHoles':output_holes,'normalizedAreaDeltas':changes}
 (root/'black-summer-preparation.json').write_text(json.dumps(report,indent=2))
 print({k:v for k,v in report.items() if k!='normalizedAreaDeltas'})
