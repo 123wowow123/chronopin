@@ -1,0 +1,2811 @@
+{
+  "runId": 22,
+  "job": "news",
+  "requestedSlot": "2026-10-25 06:00 America/Los_Angeles",
+  "created": [
+    {
+      "created": 19804,
+      "title": "M 6.5 Earthquake Strikes the Bonin Islands Region of Japan"
+    },
+    {
+      "created": 19805,
+      "title": "Kimi K3.1 Pro Released on the API, With Weights Promised by November 4"
+    },
+    {
+      "created": 19806,
+      "title": "Audi Announces a Proposed $4 Billion Georgia Plant and 4,500 Planned Jobs"
+    },
+    {
+      "created": 19807,
+      "title": "Sutcliffe Is Favoured in the Forecast as Ottawa Votes on October 26"
+    }
+  ],
+  "existingPinUpdates": [
+    2978,
+    16017,
+    19531
+  ],
+  "events": {
+    "4619": {
+      "reason": "UGCB2027 dates verified; professional invitation and2026vintage event are not a2027 paid price or admission claim.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://ugcb.net/en/evenement/en-primeurs-week/",
+        "checkedAt": "2026-10-25T15:02:35.409Z"
+      }
+    },
+    "5505": {
+      "reason": "NASCAR final schedule verified; donations displayed on encyclopedia are not tickets and no full2026entry list inferred.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2026_Straight_Talk_Wireless_400",
+        "checkedAt": "2026-10-25T15:02:37.462Z"
+      }
+    },
+    "4367": {
+      "reason": "HarryStyles headliner verified. Ticketmaster markup points to April3Glendale while thispin covers April2local, so reject next-night inventory/support and preserve existing tickets.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [
+          {
+            "name": "Harry Styles",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://seatgeek.com/harry-styles-tickets/glendale-arizona-state-farm-stadium-2027-04-02-7-45-pm/concert/18570444",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.ticketmaster.com/harry-styles-tickets/artist/2366444",
+        "checkedAt": "2026-10-25T15:02:39.769Z"
+      }
+    },
+    "5110": {
+      "reason": "Official third batch includes fees from October 7; exclude sold-out half-price tiers and non-admission Thunder/Omelete add-ons. Social donation/half eligibility labeled.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [
+          {
+            "name": "Elijah Wood",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://new.ccxp.com.br/en/tickets-en",
+        "lowPrice": 240,
+        "highPrice": 2550,
+        "priceCurrency": "BRL",
+        "tiers": [
+          {
+            "note": "Third batch including fees; only with documented half-price eligibility.",
+            "label": "Thursday half-price",
+            "price": 240
+          },
+          {
+            "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+            "label": "Thursday social",
+            "price": 290
+          },
+          {
+            "note": "Third batch including fees.",
+            "label": "Thursday full-price",
+            "price": 480
+          },
+          {
+            "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+            "label": "Friday social",
+            "price": 310
+          },
+          {
+            "note": "Third batch including fees.",
+            "label": "Friday full-price",
+            "price": 520
+          },
+          {
+            "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+            "label": "Saturday social",
+            "price": 350
+          },
+          {
+            "note": "Third batch including fees.",
+            "label": "Saturday full-price",
+            "price": 600
+          },
+          {
+            "note": "Third batch including fees; only with documented half-price eligibility.",
+            "label": "Sunday half-price",
+            "price": 290
+          },
+          {
+            "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+            "label": "Sunday social",
+            "price": 340
+          },
+          {
+            "note": "Third batch including fees.",
+            "label": "Sunday full-price",
+            "price": 580
+          },
+          {
+            "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+            "label": "Four-day pass social",
+            "price": 1120
+          },
+          {
+            "note": "Third batch including fees.",
+            "label": "Four-day pass full-price",
+            "price": 1900
+          },
+          {
+            "note": "Operator Joker option; check included access and choice conditions.",
+            "label": "Coringa",
+            "price": 699
+          },
+          {
+            "note": "Operator premium admission package; check inclusions.",
+            "label": "Epic",
+            "price": 2550
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://new.ccxp.com.br/en/tickets-en",
+        "checkedAt": "2026-10-25T15:18:21.365Z"
+      }
+    },
+    "5109": {
+      "reason": "Guangzhou operator reports registration closed September11; no current price or inventory verified. Preserved prior details.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 180,
+        "highPrice": 180,
+        "priceCurrency": "CNY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "http://www.eguangzhou.gov.cn/gzwhatson/content/post_44820.html",
+        "checkedAt": "2026-10-25T14:49:33.674Z"
+      }
+    },
+    "4369": {
+      "reason": "Exact Metallica Ticketmaster pages unreadable; residency reference verifies Metallica, without dated face-value inventory. Preserved saved tickets.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [
+          {
+            "name": "Metallica",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.ticketmaster.com/metallica-life-burns-faster-las-vegas-nevada-03-13-2027/event/17006461A5E3E208",
+        "checkedAt": "2026-10-25T14:49:35.703Z"
+      }
+    },
+    "5190": {
+      "reason": "Exact Tamiya Fair2026 operator page says exhibitions and spectating free; race qualification is separate.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "JPY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.tamiya.com/english/tamiyafair2026.html",
+        "checkedAt": "2026-10-25T14:49:38.049Z"
+      }
+    },
+    "5157": {
+      "reason": "November8 final verified in calendar; generic regional entry charges do not establish final-specific ticket prices. Preserved saved fields.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.tamiya.com/japan/mini4wd/japancup.html",
+        "checkedAt": "2026-10-25T14:49:40.338Z"
+      }
+    },
+    "4902": {
+      "reason": "RSAC2027 Moscone confirms dates; registration-interest is not tickets on sale and no speakers billed.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": "2026-10-19T00:00:00.000Z",
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/RSAC_Conference",
+        "checkedAt": "2026-10-25T14:59:44.477Z"
+      }
+    },
+    "4617": {
+      "reason": "Exact operator page states Vinitaly 2027 ticketing will soon be available. No sale date or price invented.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.vinitaly.com/en/verona/buyer/ticketing/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.vinitaly.com/en/verona/buyer/ticketing/",
+        "checkedAt": "2026-10-25T15:18:23.652Z"
+      }
+    },
+    "4680": {
+      "reason": "SeafoodExpoGlobal2027 dates confirmed;2026awards/attendance do not establish2027ticketprice or speakers.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.seafoodexpo.com/global/",
+        "checkedAt": "2026-10-25T14:59:48.887Z"
+      }
+    },
+    "4904": {
+      "reason": "PAXEast2027 dates confirmed; newsletter signup is not badge-sale status. Preserve saved admission details.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://east.paxsite.com/en-us/registration.html",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://east.paxsite.com/",
+        "checkedAt": "2026-10-25T14:59:51.491Z"
+      }
+    },
+    "4871": {
+      "reason": "Tokyo Auto Salon2027 operator dates confirmed; linked2026 English ticket page is a different edition,2027 tickets require exact page.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.tokyoautosalon.jp/2027/ticket/",
+        "lowPrice": 3000,
+        "highPrice": 4000,
+        "priceCurrency": "JPY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.tokyoautosalon.jp/2027/ticket/",
+        "checkedAt": "2026-10-25T14:50:59.846Z"
+      }
+    },
+    "4676": {
+      "reason": "NASF2027 dates verified; homepage still labels2026 speakers and registration checkout edition not established; preserve saved details.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://invitepeople.com/events/da3c46a7b6",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://nor-seafood.com/",
+        "checkedAt": "2026-10-25T14:58:00.039Z"
+      }
+    },
+    "5033": {
+      "reason": "Paris2027 updated coverage says April4 and closed initiallottery; olderJuly source targetsApril11. EUR420 fundraising threshold is not race-ticketprice. Preserve existing admission and log operator/date conflict.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.asicsmarathondeparis.com/fr/inscription",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/articles/50290-paris-marathon-2027-the-date-of-the-city-s-biggest-race-and-the-registration-details",
+        "checkedAt": "2026-10-25T14:58:02.139Z"
+      }
+    },
+    "4875": {
+      "reason": "Avalon2027 officialdomain inaccessible; no current tickets or performers established from trade/encyclopedia pages.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.defenceconnect.com.au/air/17897-dates-confirmed-for-avalon-australian-international-airshow-in-2027",
+        "checkedAt": "2026-10-25T14:58:04.471Z"
+      }
+    },
+    "4878": {
+      "reason": "NYIAS2027 operator and dated pressrelease agree March26–April4; plan-your-visit lists no ticketprices. Earlyaccess reference alone does not prove sale.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://autoshowny.com/plan-your-visit/",
+        "checkedAt": "2026-10-25T14:58:06.744Z"
+      }
+    },
+    "4614": {
+      "reason": "WineParis2027 exact operator current Oct14–Jan31 rateEUR80; expiredEUR35 not minimum. LaterFeb1–14EUR95 and onsiteEUR120 stated with dates; trade-only18+.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://vinexposium.mybadgeonline.com/Pro-Login-en-US?trk=OWEBHOMGB&utm_source=siteweb&utm_medium=organic&utm_campaign=wp27_vis_gb_homepage_gb_wp27_vis_homepage",
+        "lowPrice": 80,
+        "highPrice": 120,
+        "priceCurrency": "EUR",
+        "tiers": [
+          {
+            "note": "14 October2026–31 January2027 inclusive; trade professionals18+",
+            "label": "Regular registration",
+            "price": 80
+          },
+          {
+            "note": "1–14 February2027 inclusive",
+            "label": "Late registration",
+            "price": 95
+          },
+          {
+            "note": "15–17 February2027",
+            "label": "During-show online registration",
+            "price": 120
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.wineparis.com/en/opening-hours-access-and-map",
+        "checkedAt": "2026-10-25T15:05:00.827Z"
+      }
+    },
+    "6600": {
+      "reason": "TaiwanPride exact news body unreadable; general history and marriage law do not establish2026 admission or performers.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.taiwannews.com.tw/news/6448957",
+        "checkedAt": "2026-10-25T15:05:02.611Z"
+      }
+    },
+    "6613": {
+      "reason": "WICWuzhen2026 dates verified; thirdparty expo reservation language does not establish operator admission or billed speakers.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://news.cgtn.com/news/2026-09-30/China-s-World-Internet-Conference-summit-to-focus-on-open-source-AI-1QQPSohYhjO/share_amp.html",
+        "checkedAt": "2026-10-25T15:05:04.986Z"
+      }
+    },
+    "17026": {
+      "reason": "SITC2026 exact operator accepts registration; retained prices until category-specific ratepage read.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://sitc.landing.showcare.io/2026-annual-conference/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.sitcancer.org/2026/home",
+        "checkedAt": "2026-10-25T15:05:07.992Z"
+      }
+    },
+    "6356": {
+      "reason": "Rolex24 schedule verified; source press releases have no exact2027 ticket prices, retain details.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.endurance-info.com/auto/article/119029-daytona-international-speedway-announces-2027-rolex-24-date",
+        "checkedAt": "2026-10-25T14:51:54.896Z"
+      }
+    },
+    "4339": {
+      "reason": "AeroIndia operator domain inaccessible and references concern past editions; no2027 tickets inferred.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://aeroindia.gov.in/",
+        "checkedAt": "2026-10-25T14:51:56.846Z"
+      }
+    },
+    "4294": {
+      "reason": "MSC2027 operator dates verified; newsletter/login and2026 attendee list do not establish2027 paid admission or speakers.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://securityconference.org/en/",
+        "checkedAt": "2026-10-25T14:51:59.154Z"
+      }
+    },
+    "4898": {
+      "reason": "ExpoWest2027 only save-date/notify-me; no sale status inferred from interest form.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.expowest.com/",
+        "checkedAt": "2026-10-25T14:52:01.394Z"
+      }
+    },
+    "4876": {
+      "reason": "Amelia2027 exact operator page offers tickets; past2026 coverage is not a2027 price source.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://ameliaconcours.com/tickets-experiences/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://ameliaconcours.com/",
+        "checkedAt": "2026-10-25T14:56:27.727Z"
+      }
+    },
+    "17028": {
+      "reason": "Exact 2026 AASLD registration open and operator checkout linked; category rates not present on opened home page.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.compusystems.com/servlet/sar?evt_uid=417",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.aasld.org/tlm-26/home",
+        "checkedAt": "2026-10-25T15:12:14.611Z"
+      }
+    },
+    "4682": {
+      "reason": "SeafoodExpo2027 homepage explicitly REGISTER NOW with2027-specific checkout; prior2026/2025 press releases do not establish2027 speakers or prices.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://registration.experientevent.com/ShowSNA271/flow/ATT#!/registrant//Member/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.seafoodexpo.com/north-america/",
+        "checkedAt": "2026-10-25T14:56:29.259Z"
+      }
+    },
+    "4877": {
+      "reason": "DaytonaBikeWeek2027 dates verified; no common ticket or billed headline act established from pages.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.daytonabeach.com/bike-week/",
+        "checkedAt": "2026-10-25T14:56:31.511Z"
+      }
+    },
+    "4659": {
+      "reason": "BassmasterClassic2027 dates/venue confirmed; historical economic-impact amount is not a ticket price; final field/admission unpublished in read pages.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.bassmaster.com/classic/news/lake-hartwell-to-host-2027-bass-pro-shops-bassmaster-classic-presented-by-under-armour/",
+        "checkedAt": "2026-10-25T14:56:36.268Z"
+      }
+    },
+    "17011": {
+      "reason": "Exact BIO-Europe 2026 operator offers registration; Canadian delegation application closure is not general admission closure. Preserve existing rates until exact pass checkout checked.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://informaconnect.com/bioeurope/article/bio-europe-2026-to-convene-global-biopharma-decision-makers-in-cologne/",
+        "checkedAt": "2026-10-25T15:12:16.752Z"
+      }
+    },
+    "6612": {
+      "reason": "Read APEC operator and summit references; no verified public admission tiers or exact participant roster supplied.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.apec.org/",
+        "checkedAt": "2026-10-25T15:12:19.640Z"
+      }
+    },
+    "17013": {
+      "reason": "ASH explicitly says registration open. Exclude third-party advance rates with expired October 21 cutoff and spurious Organization performer.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://ash.spargoinc.com/ash26/reg/login.asp",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.hematology.org/meetings/annual-meeting",
+        "checkedAt": "2026-10-25T15:12:21.899Z"
+      }
+    },
+    "6604": {
+      "reason": "Read Taipei marathon coverage: lottery guide lists NT$2200 but no verified current selection inventory. Preserve prior details; stadium construction cost is not admission.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.taipeicitymarathon.com/en/",
+        "lowPrice": 2200,
+        "highPrice": 2200,
+        "priceCurrency": "TWD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://fatmarathoner.com/taipei-marathon-guide/",
+        "checkedAt": "2026-10-25T15:14:10.664Z"
+      }
+    },
+    "6616": {
+      "reason": "Spring Festival is a public observance; no ticket price or lineup on sources. Do not copy Chunyun train-ticket conditions as festival admission.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+        "checkedAt": "2026-10-25T15:14:12.653Z"
+      }
+    },
+    "6606": {
+      "reason": "Miaoli lantern festival reference pages provide no verified ticket tiers or performer roster; unrelated recommendation ads excluded.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://udn.com/news/story/7241/9464732",
+        "checkedAt": "2026-10-25T15:14:15.309Z"
+      }
+    },
+    "6570": {
+      "reason": "Read exact 2027 show coverage and references; no verified 2027 sale price or opening date. Do not borrow an older edition.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://view.asiae.co.kr/en/article/2026090915254540957",
+        "checkedAt": "2026-10-25T15:14:17.819Z"
+      }
+    },
+    "4869": {
+      "reason": "2026 Guangzhou dates verified; 2025 report and encyclopedia publish no2026 tickets. Preserve saved details.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://cnevpost.com/2025/11/30/2025-guangzhou-auto-show-wraps-up/",
+        "checkedAt": "2026-10-25T14:50:54.848Z"
+      }
+    },
+    "5512": {
+      "reason": "Dakar2027 official route confirmed; pages do not establish spectator tickets or exact2027 entrants.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-25T14:50:56.862Z"
+      }
+    },
+    "5509": {
+      "reason": "Jeddah Gen4 operator calendar and contingency reporting verified; register-interest link does not prove sale status.",
+      "verifiedEnvironments": [
+        "local",
+        "prod"
+      ],
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.fiaformulae.com/en/news/1074657",
+        "checkedAt": "2026-10-25T14:51:02.090Z"
+      }
+    }
+  },
+  "modelRubrics": [
+    {
+      "pinId": 15273,
+      "kind": "llm",
+      "scores": {
+        "reasoning": 4.5,
+        "coding": 4,
+        "context": 4,
+        "price": 2.5,
+        "speed": null,
+        "modalities": 5
+      },
+      "basis": "Muse Wonder standard (muse-wonder-1.0), max effort at Oct12 launch; not Wonder Full. AA Intelligence Index v4.3=52; Terminal-Bench4.0=52%; context1M; launchUSD4input/20output per1M givesUSD8blended(3:1). Text,image,audio,video inputs. Speed null:no verified launch tokens/s. Full has separate56index/57%coding and noAPI token price, so none borrowed. AA and Quantslant are independent evaluators; Puter sells AI access but contributes a disclosed140-run first-hand medium-effort test, not an independent frontier ranking.",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/articles/muse-wonder",
+          "title": "Muse Wonder and Muse Wonder Full: a material jump in intelligence over previous Meta models",
+          "publishedDate": "2026-10-12",
+          "quote": "Knowledge remains a relative weakness for both models, but this is mitigated by very low hallucination rates."
+        },
+        {
+          "url": "https://quantslant.com/meta-muse-wonder-benchmarks-pricing-test/",
+          "title": "Meta Muse Wonder: Benchmarks, API Pricing, and Full Test",
+          "publishedDate": "2026-10-12",
+          "quote": "Summarization and translation were standout tasks."
+        },
+        {
+          "url": "https://developer.puter.com/blog/muse-wonder-review/",
+          "title": "Muse Wonder Review: Asking When a Request Is Unclear",
+          "publishedDate": "2026-10-20",
+          "quote": "Wonder cost about 3 times as much per run."
+        }
+      ]
+    },
+    {
+      "pinId": 4813,
+      "kind": "llm",
+      "scores": {
+        "reasoning": 3,
+        "coding": 3,
+        "context": 4,
+        "price": 5,
+        "speed": null,
+        "modalities": 5
+      },
+      "basis": "MiMo-V2.6-Pro flagship as launched Sep21UTC/Sep22China, not Flash or UltraSpeed. Launch AA Intelligence Index v4.3.2=46.32; maker model card Terminal-Bench4=34.9% (not Terminal-Bench2.1=89.9%); 1M input; text/image/video/audio inputs. Published launch USD0.435 input/0.87 output per1M givesUSD0.54375 blended(3:1). Speed null: current provider throughput and later test latency cannot establish launch tokens/s. Reviews are disclosed direct tests; DataLLM sells inference, tested viaOpenRouter independently of its gateway; nine simple Python tasks do not establish agentic quality. Later bugs and differing harnesses remain qualified.",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "reviews": [
+        {
+          "url": "https://quantslant.com/xiaomi-mimo-v2-6-review/",
+          "title": "Xiaomi MiMo-V2.6 Review: Benchmarks, Pricing and Real Tests",
+          "publishedDate": "2026-09-30",
+          "quote": "MiMo-V2.6 Pro excels at data tasks and fails at longer texts - at least through OpenRouter."
+        },
+        {
+          "url": "https://computingforgeeks.com/xiaomi-mimo-v2-6-pro-flash/",
+          "title": "Xiaomi MiMo-V2.6 Pro and Flash Tested: Benchmarks, Pricing",
+          "publishedDate": "2026-09-25",
+          "quote": "Only one of the three Kubernetes manifests MiMo-V2.6-Pro wrote for us actually served a page."
+        },
+        {
+          "url": "https://www.datallmlab.com/blog/mimo-v2-6.html",
+          "title": "MiMo v2.6 Review: Three Endpoints, Three 9/9s, and a 16.6x Speed Tax",
+          "publishedDate": "2026-10-03",
+          "quote": "Nine self-contained Python functions cannot separate a flagship from a competent small model."
+        }
+      ]
+    },
+    {
+      "pinId": 15128,
+      "kind": "llm",
+      "scores": {
+        "reasoning": 3,
+        "coding": 2.5,
+        "context": 4,
+        "price": 5,
+        "speed": null,
+        "modalities": 4
+      },
+      "basis": "Step 5 Preview at Sep20 launch, high reasoning: launch-page AA Intelligence Index44 (v4.3.2), maker Terminal-Bench v4=33.3%,1M input,text/image/video. USD1input/2.70output per1M givesUSD1.425 blended(3:1). Speed null: current AA228.7t/s does not establish launch speed; earlier88.5 report is unverified here. AA is independent benchmarking; RuntimeWire and AIToolsReview are launch analyses, not hands-on tests (the latter explicitly says it has not run Step5). Fewer than3 independent hands-on tests verified after targeted search; no review claim used to fabricate a benchmark. API-only launch is distinct from later open weights.",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview/",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/models/step-5",
+          "title": "Step 5 Preview - Intelligence, Performance & Price Analysis",
+          "publishedDate": null,
+          "quote": "It's also notably fast, however somewhat verbose."
+        },
+        {
+          "url": "https://runtimewire.com/article/stepfun-step-5-preview-600b-agent-model-pricing",
+          "title": "StepFun launches a 600B agent model at $1 per million input tokens",
+          "publishedDate": "2026-09-20",
+          "quote": "StepFun is pairing open-weight models with a proprietary flagship, using low agent costs as its wedge while its own benchmarks still show a capability gap."
+        },
+        {
+          "url": "https://aitoolsreview.co.uk/insights/stepfun-step-5-preview",
+          "title": "StepFun Step 5 Preview: Specs, Pricing & Verdict",
+          "publishedDate": "2026-10-10",
+          "quote": "We have not run Step 5 ourselves."
+        }
+      ]
+    },
+    {
+      "pinId": 4805,
+      "kind": "llm",
+      "scores": {
+        "reasoning": 5,
+        "coding": null,
+        "context": 4,
+        "price": 4.5,
+        "speed": null,
+        "modalities": 4
+      },
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark/",
+      "basis": "September 2 launch, generally available xhigh variant: Artificial Analysis launch Index 61 (contemporary index), 1M context, text/image/video. Standard API USD1.25 input/4.25 output per million gives USD2 blended at 3:1. Limited-preview max 62 is not the shipping variant. Terminal-Bench 2.1 85% cannot populate the Terminal-Bench 4 coding axis. Launch throughput not established, so speed null. Current rebased Index values and later speed are not substituted. DataCamp tested six runs on three coding tasks; IonWarp is a review-tool vendor reporting its own benchmark, not an independent laboratory.",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/articles/muse-spark-1-3",
+          "title": "Muse Spark 1.3: Meta reaches the frontier",
+          "publishedDate": "2026-09-02",
+          "quote": "Both variants' gains come primarily from improvements in agentic work and scientific capabilities"
+        },
+        {
+          "url": "https://www.datacamp.com/tutorial/muse-spark-1-3-tutorial",
+          "title": "Muse Spark 1.3 Tutorial: A Hands-On Developer Guide",
+          "publishedDate": "2026-09-07",
+          "quote": "Across 6 runs on 3 coding tasks, 1.3 was cheaper on 2 and 38% more expensive on the third, for a net 12% cost increase over the set."
+        },
+        {
+          "url": "https://ionwarp.com/for/muse-spark-code-review",
+          "title": "Muse Spark code review: Muse Spark 1.3 benchmarks on real pull requests",
+          "publishedDate": "2026-10-05",
+          "quote": "Muse Spark 1.3 is the best model we have run on general code review."
+        }
+      ]
+    },
+    {
+      "pinId": 19805,
+      "kind": "llm",
+      "scores": {
+        "reasoning": 5,
+        "coding": 5,
+        "context": 4,
+        "price": 3.5,
+        "speed": null,
+        "modalities": 3
+      },
+      "basis": "October 23 launch: AA Index 55; AA Terminal-Bench 4.0 67%, separate vendor run 65.7% and Vals 63.64%, all above 60% coding anchor. One-million-token context. Standard USD2 input/10 output per million gives USD4 blended 3:1. AA launch documents text and image; some later listings add video, so the launch rubric conservatively uses text/image. Throughput at launch not established, speed null. Weights not published at observation. AA and Vals are primary independent evaluations; Atomic Agent is a vendor reporting an explicit firsthand small-task test, not broad proof. Vals open-weight label conflicts with primary promised release, so not used as release evidence.",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/zh/articles/kimi-k3-1-pro-launch-benchmarks",
+          "title": "Kimi K3.1 Pro launches at 4th on the Intelligence Index and will lead open weights models",
+          "publishedDate": "2026-10-23",
+          "quote": "Kimi K3.1 Pro also achieves the highest score of any model on Terminal-Bench 4.0."
+        },
+        {
+          "url": "https://atomicagent.io/blog/kimi-k3-1-pro/",
+          "title": "Kimi K3.1 Pro vs Claude Opus 5.5: Pricing, Benchmarks, and What a Coding Task Really Costs",
+          "publishedDate": "2026-10-23",
+          "quote": "The cheaper token price only turns into a cheaper task if you turn the reasoning down."
+        },
+        {
+          "url": "https://www.vals.ai/models/kimi_kimi-k3.1-pro",
+          "title": "Kimi K3.1 Pro Benchmarks, Cost and Capabilities",
+          "publishedDate": null,
+          "quote": "Its best result is #3 of 55 on Terminal-Bench 4.0 ."
+        }
+      ]
+    }
+  ],
+  "sentiments": {
+    "preparedScores": [
+      {
+        "id": 463,
+        "sentiment": -0.5,
+        "product": "New Manila International Airport",
+        "textHash": "a3d58f439991"
+      },
+      {
+        "id": 567,
+        "sentiment": 0,
+        "product": "Eiffel Tower",
+        "textHash": "a4d8f1878fc0"
+      },
+      {
+        "id": 571,
+        "sentiment": -0.5,
+        "product": "New Terminal One",
+        "textHash": "eca53478acf4"
+      },
+      {
+        "id": 628,
+        "sentiment": 0.5,
+        "product": "Golden Gate Bridge",
+        "textHash": "ac3bf4322304"
+      },
+      {
+        "id": 711,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "9157178615d3"
+      },
+      {
+        "id": 2166,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "7d568fc7df41"
+      },
+      {
+        "id": 2211,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "fbabbe5c4f17"
+      },
+      {
+        "id": 3340,
+        "sentiment": -0.5,
+        "product": "",
+        "textHash": "11667e937198"
+      },
+      {
+        "id": 4917,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "d933efbccefa"
+      },
+      {
+        "id": 5506,
+        "sentiment": -0.1,
+        "product": "Palisades",
+        "textHash": "c674e0e6d7ee"
+      },
+      {
+        "id": 5517,
+        "sentiment": 0.2,
+        "product": "Duane Arnold",
+        "textHash": "0b9bbe1fe59d"
+      },
+      {
+        "id": 6594,
+        "sentiment": -0.5,
+        "product": "",
+        "textHash": "09b2fed9e10e"
+      },
+      {
+        "id": 7151,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "f614ae84588e"
+      },
+      {
+        "id": 7158,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "400124a92005"
+      },
+      {
+        "id": 15708,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "173671b1519e"
+      },
+      {
+        "id": 15822,
+        "sentiment": 0.3,
+        "product": "Hassayampa Ranch",
+        "textHash": "80434ed3d093"
+      },
+      {
+        "id": 15833,
+        "sentiment": 0.3,
+        "product": "Project Camellia",
+        "textHash": "9e3908b9d5d0"
+      },
+      {
+        "id": 15846,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "7081003e8baa"
+      },
+      {
+        "id": 15868,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "0a61cf7399fd"
+      },
+      {
+        "id": 15995,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "e3bc28f863a8"
+      },
+      {
+        "id": 16340,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "ff13333c887f"
+      },
+      {
+        "id": 16968,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "f17f04333806"
+      },
+      {
+        "id": 16982,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "8dad5ca0fb7c"
+      },
+      {
+        "id": 16985,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "ce6f6001b3c1"
+      },
+      {
+        "id": 16991,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "caac6412de34"
+      },
+      {
+        "id": 16996,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "7e9902da2553"
+      },
+      {
+        "id": 17001,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "b0da88195ca5"
+      },
+      {
+        "id": 17005,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "6e60057dd979"
+      },
+      {
+        "id": 17008,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "fd8aa869e77e"
+      },
+      {
+        "id": 17010,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "210d3d1c7959"
+      },
+      {
+        "id": 17012,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "ee48b5c1887b"
+      },
+      {
+        "id": 17019,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "2b9892525d39"
+      },
+      {
+        "id": 17020,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "556ee8e78c5b"
+      },
+      {
+        "id": 17021,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "db553dc61c48"
+      },
+      {
+        "id": 17027,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "5af5559b52ae"
+      },
+      {
+        "id": 17029,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "673f95f884fa"
+      },
+      {
+        "id": 17033,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "d22edcfab55b"
+      },
+      {
+        "id": 17036,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "ffb397cd84a9"
+      },
+      {
+        "id": 17039,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "45bfba17f65e"
+      },
+      {
+        "id": 17042,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "cb584120d940"
+      },
+      {
+        "id": 17043,
+        "sentiment": -0.1,
+        "product": "",
+        "textHash": "d7a67e937586"
+      },
+      {
+        "id": 17044,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "caf2cf075ee8"
+      },
+      {
+        "id": 17048,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "d05880c04e57"
+      },
+      {
+        "id": 17049,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "b335b04fd4ab"
+      },
+      {
+        "id": 17051,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "036ffd8dd168"
+      },
+      {
+        "id": 17052,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "f68d175fac1d"
+      },
+      {
+        "id": 17055,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "cfbbc956a5a2"
+      },
+      {
+        "id": 17057,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "769dc1c451c6"
+      },
+      {
+        "id": 17058,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "e7800fb51aa1"
+      },
+      {
+        "id": 17062,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "583deb9d7338"
+      },
+      {
+        "id": 17063,
+        "sentiment": 0.5,
+        "product": "",
+        "textHash": "34de34a91d24"
+      },
+      {
+        "id": 17064,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "e2058a36d289"
+      },
+      {
+        "id": 17067,
+        "sentiment": -0.5,
+        "product": "",
+        "textHash": "52405c4a51d6"
+      },
+      {
+        "id": 17068,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "23367eda7073"
+      },
+      {
+        "id": 17069,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "ba83c088a5e7"
+      },
+      {
+        "id": 17070,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "61a11e57eda8"
+      },
+      {
+        "id": 17075,
+        "sentiment": -0.5,
+        "product": "",
+        "textHash": "be021e8fd8d9"
+      },
+      {
+        "id": 18263,
+        "sentiment": -0.1,
+        "product": "",
+        "textHash": "c34deae7a32a"
+      },
+      {
+        "id": 18282,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "2b8c49ce0525"
+      },
+      {
+        "id": 18283,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "e51eaf79c3db"
+      },
+      {
+        "id": 18285,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "adf4908c7759"
+      },
+      {
+        "id": 18286,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "e25a71a5f1e1"
+      },
+      {
+        "id": 18307,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "8bb29aa8a4bd"
+      },
+      {
+        "id": 18322,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "3cbb968ecd81"
+      },
+      {
+        "id": 18323,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "66276482cfd2"
+      },
+      {
+        "id": 18332,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "6260f3e95aad"
+      },
+      {
+        "id": 18346,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "e3fdc68d1bdc"
+      },
+      {
+        "id": 18360,
+        "sentiment": 0,
+        "product": "",
+        "textHash": "c0ed79713828"
+      },
+      {
+        "id": 18482,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "f264a62d53ca"
+      },
+      {
+        "id": 18589,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "b52156b957f2"
+      },
+      {
+        "id": 19632,
+        "sentiment": 0.5,
+        "product": "Seedance",
+        "textHash": "7d251cf33e56"
+      },
+      {
+        "id": 19633,
+        "sentiment": 0.5,
+        "product": "Seedance",
+        "textHash": "9ac4407172e0"
+      },
+      {
+        "id": 19634,
+        "sentiment": 0.5,
+        "product": "Seedance",
+        "textHash": "31154be5685a"
+      },
+      {
+        "id": 19635,
+        "sentiment": 0.3,
+        "product": "Seedance",
+        "textHash": "1331c89aefd6"
+      },
+      {
+        "id": 19636,
+        "sentiment": 0.5,
+        "product": "Seedance",
+        "textHash": "8eca6ace55c2"
+      },
+      {
+        "id": 19658,
+        "sentiment": 0.3,
+        "product": "Sora",
+        "textHash": "b0e9fe9f751e"
+      },
+      {
+        "id": 19659,
+        "sentiment": 0.5,
+        "product": "Sora",
+        "textHash": "a82217f282bd"
+      },
+      {
+        "id": 19660,
+        "sentiment": 0.5,
+        "product": "Sora",
+        "textHash": "aea5c1b11bda"
+      },
+      {
+        "id": 19661,
+        "sentiment": 0.3,
+        "product": "Veo",
+        "textHash": "9a6b20ada982"
+      },
+      {
+        "id": 19662,
+        "sentiment": 0.5,
+        "product": "Veo",
+        "textHash": "af53fa7fc5c6"
+      },
+      {
+        "id": 19663,
+        "sentiment": 0.5,
+        "product": "Veo",
+        "textHash": "710af77b0b42"
+      },
+      {
+        "id": 19664,
+        "sentiment": 0.5,
+        "product": "Veo",
+        "textHash": "3be9a1c39a59"
+      },
+      {
+        "id": 19665,
+        "sentiment": 0.5,
+        "product": "Veo",
+        "textHash": "0ccd20c61415"
+      },
+      {
+        "id": 19666,
+        "sentiment": 0.5,
+        "product": "Veo",
+        "textHash": "1677426445ff"
+      },
+      {
+        "id": 19667,
+        "sentiment": 0.3,
+        "product": "Grok Imagine",
+        "textHash": "14c1d99e5f4d"
+      },
+      {
+        "id": 19668,
+        "sentiment": 0.5,
+        "product": "Grok Imagine",
+        "textHash": "fec118b35645"
+      },
+      {
+        "id": 19669,
+        "sentiment": 0.5,
+        "product": "Sora",
+        "textHash": "48defae07185"
+      },
+      {
+        "id": 19670,
+        "sentiment": 0.5,
+        "product": "Sora",
+        "textHash": "6c10361dd2fb"
+      },
+      {
+        "id": 19671,
+        "sentiment": 0.5,
+        "product": "Grok Imagine",
+        "textHash": "14346b31a6a8"
+      },
+      {
+        "id": 19672,
+        "sentiment": 0.5,
+        "product": "Grok Imagine",
+        "textHash": "a1997b4fcffc"
+      },
+      {
+        "id": 19673,
+        "sentiment": 0.3,
+        "product": "Grok Imagine",
+        "textHash": "8650ceff12f3"
+      },
+      {
+        "id": 19674,
+        "sentiment": 0.5,
+        "product": "Grok Imagine",
+        "textHash": "c1e0b865fbfb"
+      },
+      {
+        "id": 19675,
+        "sentiment": 0.5,
+        "product": "Grok Imagine",
+        "textHash": "0c3299952dd7"
+      },
+      {
+        "id": 19676,
+        "sentiment": 0.3,
+        "product": "Kling",
+        "textHash": "3c7051fe3e0e"
+      },
+      {
+        "id": 19677,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "3c43917eeecf"
+      },
+      {
+        "id": 19678,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "5673c9d753a9"
+      },
+      {
+        "id": 19679,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "832a28f3c386"
+      },
+      {
+        "id": 19680,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "1db21533b2c4"
+      },
+      {
+        "id": 19681,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "85377f39c897"
+      },
+      {
+        "id": 19682,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "95c8a0a2782f"
+      },
+      {
+        "id": 19683,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "fc1c05be93b3"
+      },
+      {
+        "id": 19684,
+        "sentiment": 0.5,
+        "product": "Kling",
+        "textHash": "c464b2cdb24f"
+      },
+      {
+        "id": 19690,
+        "sentiment": 0.1,
+        "product": "Seedance",
+        "textHash": "3feba99a7889"
+      },
+      {
+        "id": 19691,
+        "sentiment": 0.1,
+        "product": "Kling",
+        "textHash": "2ba74addae5f"
+      },
+      {
+        "id": 19692,
+        "sentiment": 0.1,
+        "product": "Veo",
+        "textHash": "e800d8c0d129"
+      },
+      {
+        "id": 19693,
+        "sentiment": 0.1,
+        "product": "Grok Imagine",
+        "textHash": "c7b9939d2bb9"
+      },
+      {
+        "id": 19789,
+        "sentiment": 0.6,
+        "product": "Boya Jiexian",
+        "textHash": "8b096551b233"
+      },
+      {
+        "id": 19791,
+        "sentiment": 0.6,
+        "product": "Raw Coconut Latte",
+        "textHash": "98318907b03f"
+      },
+      {
+        "id": 19792,
+        "sentiment": 0.6,
+        "product": "Luosifen",
+        "textHash": "54c24f2aaf9b"
+      },
+      {
+        "id": 19793,
+        "sentiment": 0.6,
+        "product": "Kiss Burn",
+        "textHash": "66bc916444f4"
+      },
+      {
+        "id": 19794,
+        "sentiment": 0.6,
+        "product": "Feitian",
+        "textHash": "bce2b24d5b2d"
+      },
+      {
+        "id": 19795,
+        "sentiment": 0.6,
+        "product": "Succulent Grapes",
+        "textHash": "47ca88f0e572"
+      },
+      {
+        "id": 19796,
+        "sentiment": 0.6,
+        "product": "Osmo Pocket",
+        "textHash": "b15d23f62896"
+      },
+      {
+        "id": 19798,
+        "sentiment": 0.6,
+        "product": "The Monsters",
+        "textHash": "f0f52236223f"
+      },
+      {
+        "id": 19800,
+        "sentiment": 0.6,
+        "product": "Yurong Air Loose Powder",
+        "textHash": "8bc980a7d469"
+      },
+      {
+        "id": 19801,
+        "sentiment": 0.6,
+        "product": "Soothing Moisturizing Special Care Cream",
+        "textHash": "7a07c5e3aae0"
+      },
+      {
+        "id": 2978,
+        "textHash": "405b4082e621",
+        "sentiment": 0,
+        "product": ""
+      },
+      {
+        "id": 19805,
+        "textHash": "8c099bb44564",
+        "sentiment": 0.6,
+        "product": "Kimi"
+      },
+      {
+        "id": 19806,
+        "textHash": "66c0bbd39197",
+        "sentiment": 0.5,
+        "product": ""
+      }
+    ],
+    "receipts": [
+      {
+        "env": "local",
+        "ids": [
+          463,
+          567,
+          571,
+          628,
+          711,
+          2166,
+          2211,
+          3340,
+          4917,
+          5506
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          5517,
+          6594,
+          7151,
+          7158,
+          15708,
+          15822,
+          15833,
+          15846,
+          15868,
+          15995
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          16340,
+          16968,
+          16982,
+          16985,
+          16991,
+          16996,
+          17001,
+          17005,
+          17008,
+          17010
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          17012,
+          17019,
+          17020,
+          17021,
+          17027,
+          17029,
+          17033,
+          17036,
+          17039,
+          17042
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          17043,
+          17044,
+          17048,
+          17049,
+          17051,
+          17052,
+          17055,
+          17057,
+          17058,
+          17062
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          17063,
+          17064,
+          17067,
+          17068,
+          17069,
+          17070,
+          17075,
+          18263,
+          18282,
+          18283
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          18285,
+          18286,
+          18307,
+          18322,
+          18323,
+          18332,
+          18346,
+          18360,
+          18482,
+          18589
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          19632,
+          19633,
+          19634,
+          19635,
+          19636,
+          19658,
+          19659,
+          19660,
+          19661,
+          19662
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          19663,
+          19664,
+          19665,
+          19666,
+          19667,
+          19668,
+          19669,
+          19670,
+          19671,
+          19672
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          19673,
+          19674,
+          19675,
+          19676,
+          19677,
+          19678,
+          19679,
+          19680,
+          19681,
+          19682
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          19683,
+          19684,
+          19690,
+          19691,
+          19692,
+          19693,
+          19789,
+          19791,
+          19792,
+          19793
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "local",
+        "ids": [
+          19794,
+          19795,
+          19796,
+          19798,
+          19800,
+          19801,
+          19805
+        ],
+        "result": {
+          "saved": 7,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          463,
+          567,
+          571,
+          628,
+          711,
+          2166,
+          2211,
+          3340,
+          4917,
+          5506
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          5517,
+          6594,
+          7151,
+          7158,
+          15708,
+          15822,
+          15833,
+          15846,
+          15868,
+          15995
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          16340,
+          16968,
+          16982,
+          16985,
+          16991,
+          16996,
+          17001,
+          17005,
+          17008,
+          17010
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          17012,
+          17019,
+          17020,
+          17021,
+          17027,
+          17029,
+          17033,
+          17036,
+          17039,
+          17042
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          17043,
+          17044,
+          17048,
+          17049,
+          17051,
+          17052,
+          17055,
+          17057,
+          17058,
+          17062
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          17063,
+          17064,
+          17067,
+          17068,
+          17069,
+          17070,
+          17075,
+          18263,
+          18282,
+          18283
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          18285,
+          18286,
+          18307,
+          18322,
+          18323,
+          18332,
+          18346,
+          18360,
+          18482,
+          18589
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          19632,
+          19633,
+          19634,
+          19635,
+          19636,
+          19658,
+          19659,
+          19660,
+          19661,
+          19662
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          19663,
+          19664,
+          19665,
+          19666,
+          19667,
+          19668,
+          19669,
+          19670,
+          19671,
+          19672
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          19673,
+          19674,
+          19675,
+          19676,
+          19677,
+          19678,
+          19679,
+          19680,
+          19681,
+          19682
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          19683,
+          19684,
+          19690,
+          19691,
+          19692,
+          19693,
+          19789,
+          19791,
+          19792,
+          19793
+        ],
+        "result": {
+          "saved": 10,
+          "refused": []
+        }
+      },
+      {
+        "env": "prod",
+        "ids": [
+          19794,
+          19795,
+          19796,
+          19798,
+          19800,
+          19801,
+          2978,
+          19805,
+          19806
+        ],
+        "result": {
+          "saved": 9,
+          "refused": []
+        }
+      }
+    ],
+    "remainingProduction": [
+      {
+        "id": 15801,
+        "textHash": "22c84ba98e6c"
+      },
+      {
+        "id": 15802,
+        "textHash": "c40878743619"
+      },
+      {
+        "id": 15803,
+        "textHash": "60d33be899eb"
+      }
+    ],
+    "correction": {
+      "pinId": 2978,
+      "sentiment": 0,
+      "reason": "Neutral for Elections BC; political-party winner is not the pin company."
+    },
+    "finalAudit": {
+      "verified": 119,
+      "remaining": [
+        {
+          "id": 15801,
+          "textHash": "22c84ba98e6c"
+        },
+        {
+          "id": 15802,
+          "textHash": "c40878743619"
+        },
+        {
+          "id": 15803,
+          "textHash": "60d33be899eb"
+        }
+      ]
+    }
+  },
+  "ads": {
+    "PinAd": {
+      "verified": 55,
+      "skipped": []
+    },
+    "ProductAd": {
+      "verified": 35,
+      "skipped": []
+    },
+    "HolidayAd": {
+      "verified": 67,
+      "skipped": [
+        187,
+        188,
+        189
+      ]
+    }
+  },
+  "adTitleTranslations": [
+    {
+      "table": "PinAd",
+      "env": "local",
+      "verified": 30
+    },
+    {
+      "table": "PinAd",
+      "env": "prod",
+      "verified": 30
+    },
+    {
+      "table": "HolidayAd",
+      "env": "local",
+      "verified": 30
+    },
+    {
+      "table": "HolidayAd",
+      "env": "prod",
+      "verified": 30
+    }
+  ],
+  "personTradeVerification": [
+    {
+      "filingId": "20035487",
+      "chamber": "house",
+      "verified": 1
+    },
+    {
+      "filingId": "20035490",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "20035539",
+      "chamber": "house",
+      "verified": 1
+    },
+    {
+      "filingId": "20035551",
+      "chamber": "house",
+      "verified": 6
+    },
+    {
+      "filingId": "20035562",
+      "chamber": "house",
+      "verified": 37
+    },
+    {
+      "filingId": "20035580",
+      "chamber": "house",
+      "verified": 4
+    },
+    {
+      "filingId": "20035585",
+      "chamber": "house",
+      "verified": 9
+    },
+    {
+      "filingId": "20035588",
+      "chamber": "house",
+      "verified": 23
+    },
+    {
+      "filingId": "20035590",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "20035622",
+      "chamber": "house",
+      "verified": 57
+    },
+    {
+      "filingId": "20035627",
+      "chamber": "house",
+      "verified": 4
+    },
+    {
+      "filingId": "20035635",
+      "chamber": "house",
+      "verified": 4
+    },
+    {
+      "filingId": "20035637",
+      "chamber": "house",
+      "verified": 4
+    },
+    {
+      "filingId": "20035648",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "20035651",
+      "chamber": "house",
+      "verified": 1
+    },
+    {
+      "filingId": "20035652",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "20035660",
+      "chamber": "house",
+      "verified": 4
+    },
+    {
+      "filingId": "20035669",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "20035671",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "20035687",
+      "chamber": "house",
+      "verified": 1
+    },
+    {
+      "filingId": "20035691",
+      "chamber": "house",
+      "verified": 1
+    },
+    {
+      "filingId": "20035700",
+      "chamber": "house",
+      "verified": 2
+    },
+    {
+      "filingId": "0541be4f-4f96-4d84-8d6f-d349f218bb2a",
+      "chamber": "senate",
+      "verified": 2
+    },
+    {
+      "filingId": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84",
+      "chamber": "senate",
+      "verified": 7
+    },
+    {
+      "filingId": "94c5f7b9-cdbc-40b4-aeba-de920da58588",
+      "chamber": "senate",
+      "verified": 10
+    }
+  ],
+  "nativePinVerification": {
+    "2978": {
+      "id": 2978,
+      "title": "Doerkson’s Conservatives Win a Projected B.C. Majority on October 24",
+      "author": "@PoliticsDesk",
+      "company": "Elections BC",
+      "utcStartDateTime": "2026-10-24T15:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "tags": [
+        {
+          "name": "BC Election",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "British Columbia",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Eby",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Polymarket",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Prediction Market",
+          "kind": "topic",
+          "source": "auto"
+        },
+        {
+          "name": "Snap Election",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Trade War",
+          "kind": "topic",
+          "source": "user"
+        }
+      ],
+      "media": 3
+    },
+    "16017": {
+      "id": 16017,
+      "title": "Brent Crude Oil Price — October 2026",
+      "author": "@EnergyDesk",
+      "utcStartDateTime": "2026-10-30T21:00:00.000Z",
+      "dateConfidence": "estimated",
+      "parentId": 17133,
+      "tags": [
+        {
+          "name": "Brent",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Commodities",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Crude Oil",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Kalshi",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Oil Price",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Prediction Market",
+          "kind": "topic",
+          "source": "auto"
+        },
+        {
+          "name": "Thread",
+          "kind": "reserved",
+          "source": "thread"
+        }
+      ],
+      "media": 1
+    },
+    "19531": {
+      "id": 19531,
+      "title": "Students Win Leads the Forecast as Serbia Votes on October 25",
+      "author": "@PoliticsDesk",
+      "utcStartDateTime": "2026-10-25T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "tags": [
+        {
+          "name": "Polymarket",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Prediction Market",
+          "kind": "topic",
+          "source": "auto"
+        },
+        {
+          "name": "Serbia",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Serbian parliamentary election",
+          "kind": "topic",
+          "source": "user"
+        }
+      ],
+      "media": 3
+    },
+    "19804": {
+      "id": 19804,
+      "title": "M 6.5 Earthquake Strikes the Bonin Islands Region of Japan",
+      "author": "@QuakeDesk",
+      "utcStartDateTime": "2026-10-25T02:09:23.818Z",
+      "dateConfidence": "confirmed",
+      "tags": [
+        {
+          "name": "Bonin Islands",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Earthquake",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Ogasawara Islands",
+          "kind": "topic",
+          "source": "user"
+        }
+      ],
+      "media": 3
+    },
+    "19805": {
+      "id": 19805,
+      "title": "Kimi K3.1 Pro Released on the API, With Weights Promised by November 4",
+      "author": "@AIDesk",
+      "company": "Moonshot AI",
+      "utcStartDateTime": "2026-10-23T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "parentId": 15111,
+      "tags": [
+        {
+          "name": "Kimi",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Large Language Model",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Released",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Thread",
+          "kind": "reserved",
+          "source": "thread"
+        }
+      ],
+      "media": 3
+    },
+    "19806": {
+      "id": 19806,
+      "title": "Audi Announces a Proposed $4 Billion Georgia Plant and 4,500 Planned Jobs",
+      "author": "@BuildDesk",
+      "company": "Audi",
+      "utcStartDateTime": "2026-10-24T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "price": 4000000000,
+      "priceCurrency": "USD",
+      "tags": [
+        {
+          "name": "Job Creation",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Manufacturing",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Proposed",
+          "kind": "topic",
+          "source": "user"
+        }
+      ],
+      "media": 1
+    },
+    "19807": {
+      "id": 19807,
+      "title": "Sutcliffe Is Favoured in the Forecast as Ottawa Votes on October 26",
+      "author": "@PoliticsDesk",
+      "utcStartDateTime": "2026-10-26T14:00:00.000Z",
+      "dateConfidence": "estimated",
+      "tags": [
+        {
+          "name": "Municipal Election",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Ottawa",
+          "kind": "topic",
+          "source": "user"
+        },
+        {
+          "name": "Polymarket",
+          "kind": "topic",
+          "source": "auto"
+        },
+        {
+          "name": "Prediction Market",
+          "kind": "topic",
+          "source": "auto"
+        }
+      ],
+      "media": 3
+    },
+    "job": [
+      {
+        "id": 22,
+        "status": "running",
+        "utcStartedDateTime": "2026-10-25T14:47:12.780Z",
+        "actions": 67
+      }
+    ]
+  },
+  "sourceGaps": {
+    "WTI": "KXWTIMONTHLY returns no markets; available KXWTI daily/Election Day contracts do not support a monthly ladder. Dry helper fallback not applied.",
+    "models": [
+      "15159 Solar Pro 4 official Arena1387 but helper awaiting",
+      "15145/15146/15147 historical Mistral Small3 mapped to Small4"
+    ],
+    "Senate": "Import response HTML instead of JSON; not evidence of no filings.",
+    "executive": "Bryan Bedford derivative filing unsupported/unreadable; not fabricated.",
+    "identityConflicts": [
+      15801,
+      15802,
+      15803
+    ]
+  },
+  "runClosure": {
+    "id": 22,
+    "status": "ok",
+    "utcStartedDateTime": "2026-10-25T14:47:12.780Z",
+    "utcFinishedDateTime": "2026-10-25T15:27:05.301Z",
+    "actions": 78,
+    "learnings": 7,
+    "reportVerified": true
+  },
+  "publicRenderVerification": [
+    {
+      "pin": "audi",
+      "title": "Audi Announces a Proposed $4 Billion Georgia Plant and 4,500 Planned Jobs · Chronopin",
+      "length": 5102
+    },
+    {
+      "pin": "kimi",
+      "title": "Kimi K3.1 Pro Released on the API, With Weights Promised by November 4 · Chronopin",
+      "length": 6681
+    },
+    {
+      "pin": "ottawa",
+      "title": "Sutcliffe Is Favoured in the Forecast as Ottawa Votes on October 26 · Chronopin",
+      "length": 5016
+    },
+    {
+      "pin": "quake",
+      "title": "M 6.5 Earthquake Strikes the Bonin Islands Region of Japan · Chronopin",
+      "length": 5078
+    }
+  ]
+}
