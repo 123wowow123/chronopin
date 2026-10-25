@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Third large production boundary run — 2026-10-25"
+description: "Added Mexico's 300 federal single-member districts to production pin 2357."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Third large production boundary run — 2026-10-25
 
 **Added Mexico's 300 federal single-member districts to production pin 2357. Coverage is now 71 pins and 10,163 default boundary features: 18 wildfire pins and 53 district/voting-area pins. Six source gaps remain.** The refreshed broad production search found no new candidates beyond the 512 already reviewed. This round adds one national map, not hundreds of new pins.

@@ -1,0 +1,113 @@
+[
+  {
+    "pinId": 1967,
+    "pinTitle": "Russians Vote for a New State Duma",
+    "checkedAt": "2026-10-25",
+    "paragraphs": [
+      "The required map is the 225 single-member constituencies for the 2026 State Duma election. Older Duma district plans cannot establish the current boundaries.",
+      "The inspected Yabloko 2026 map bundle contains 99 constituency records across 43 regional diagrams. Its rings use local image coordinates rather than geographic longitude/latitude. It therefore does not supply a complete georeferenced national layer.",
+      "Still needed: all 225 geographic district polygons, matched to the enacted 2026 plan. No unverified boundary layer has been attached."
+    ],
+    "references": [
+      {
+        "url": "https://www.yabloko.ru/okruga-gd-2026",
+        "title": "Yabloko: 2026 Duma district maps"
+      },
+      {
+        "url": "https://www.yabloko.ru/themes/yabloko2018/okruga2026-map.json?v=14",
+        "title": "Yabloko: inspected map data"
+      }
+    ]
+  },
+  {
+    "pinId": 1978,
+    "pinTitle": "India's Next General Election Picks a Prime Minister",
+    "checkedAt": "2026-10-25",
+    "paragraphs": [
+      "The map requires 543 Lok Sabha constituencies, incorporating the subsequent Assam and Jammu & Kashmir delimitations. The geography applicable to this future election must also be checked when its plan is settled.",
+      "Inspected national datasets retained legacy Assam geography or inconsistent constituency assignments. Bharat Survey explicitly describes its public map as 2019 boundaries and says Assam and Jammu & Kashmir await new open boundaries.",
+      "Still needed: verified current Assam and Jammu & Kashmir polygons and a checked national constituency crosswalk. A 2019 map has not been substituted for the current plan."
+    ],
+    "references": [
+      {
+        "url": "https://bharatsurvey.org/constituency-mapping",
+        "title": "Bharat Survey: constituency mapping and boundary limitations"
+      },
+      {
+        "url": "https://www.eci.gov.in/Documents/Delimitation/DELIMITATIONASSAM_UPDATED.pdf",
+        "title": "ECI: Assam delimitation document"
+      }
+    ]
+  },
+  {
+    "pinId": 2350,
+    "pinTitle": "Nigeria Votes for a President and National Assembly",
+    "checkedAt": "2026-10-25",
+    "paragraphs": [
+      "The House of Representatives map requires 360 federal constituencies, including constituencies that divide a local government area. States and local government areas alone are insufficient.",
+      "GRID3 Operational Wards v4.0 includes Lagos and Rivers, but its 376 Lagos and 316 Rivers operational divisions differ from the electoral registers of 245 and 319 wards. The source explicitly describes its boundaries as operational rather than authoritative and warns that government validation is incomplete. Its license is CC BY-SA 4.0.",
+      "Research-only unions of the 20 numbered Port Harcourt operational wards produced two valid, non-overlapping candidate polygons using the indexed INEC 2015 composition. These candidates still require current electoral-plan and geographic validation; a complete primary PDF download was not obtained in this pass. They have not been published as election boundaries.",
+      "Still needed: an electoral-to-operational ward crosswalk and verified splits for Lagos Island, Mushin, Oshodi/Isolo, Surulere and Port Harcourt, followed by validation of the full 360-seat layer."
+    ],
+    "references": [
+      {
+        "url": "https://www.arcgis.com/home/item.html?id=74cf76766bec4481aa03523e0e1fdddc",
+        "title": "GRID3 Nigeria Operational Wards v4.0"
+      },
+      {
+        "url": "https://www.inecnigeria.org/wp-content/uploads/2019/02/2015-GENERAL-ELECTIONS-INFO-KIT-.pdf",
+        "title": "INEC 2015 Info Kit: indexed composition evidence; download unavailable during review"
+      }
+    ]
+  },
+  {
+    "pinId": 2354,
+    "pinTitle": "The Gambia Elects a National Assembly",
+    "checkedAt": "2026-10-25",
+    "paragraphs": [
+      "The IEC ward roster establishes 53 named constituencies. It supplies membership information, rather than geographic polygon boundaries.",
+      "Two geographic sources were inspected: 115 valid NDMA/OCHA ward polygons, marked valid on 1 September 2022, and 120 valid World Bank-derived geoBoundaries ward polygons representing 2020. Neither has a verified crosswalk to the current IEC electoral wards. Similar ward counts do not establish equivalent boundaries.",
+      "Busumbala, Old Yundum and Sanneh Mentereng divide older coastal ward groupings. Whole-ward unions would therefore need additional verified cut lines.",
+      "Still needed: current IEC/GBOS ward polygons or georeferenced legal boundaries, particularly for those three coastal seats, reconciled with all 53 constituencies. No administrative map has been relabelled as a complete electoral layer."
+    ],
+    "references": [
+      {
+        "url": "https://iec.gm/wp-content/uploads/2026/03/Wards.docx",
+        "title": "IEC: official constituency and ward roster"
+      },
+      {
+        "url": "https://data.humdata.org/dataset/cod-ab-gmb",
+        "title": "NDMA/OCHA: Gambia administrative boundaries"
+      },
+      {
+        "url": "https://www.geoboundaries.org/api/current/gbOpen/GMB/ADM3/",
+        "title": "geoBoundaries: Gambia ADM3 ward metadata"
+      }
+    ]
+  },
+  {
+    "pinId": 2979,
+    "pinTitle": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
+    "checkedAt": "2026-10-25",
+    "paragraphs": [
+      "The required geography distinguishes 92 local constituencies from the 12 regional-list areas. A map of 75 provinces alone cannot represent all local seats.",
+      "The downloaded annex to decree 2-11-603 of 19 October 2011 supplies local constituency composition. Its continued applicability to the 2026 election still requires confirmation. The inspected open geometry contains 41 arrondissements.",
+      "Rabat El Mouhit includes Hassan administrative annexes 3 and 4; Rabat Chellah includes Hassan annexes 1, 2 and 22. Available arrondissement geometry contains a single whole Hassan polygon. Assigning that entire polygon to either seat would not reproduce the legal split.",
+      "Still needed: Hassan administrative-annex boundaries, a complete commune/province crosswalk and confirmation of the legal plan for this election. The source geometry is OSM-derived under ODbL; attribution and derivative-database obligations must be addressed before publication."
+    ],
+    "references": [
+      {
+        "url": "https://www.sgg.gov.ma/BO/bo_fr/2011/bo_5992_fr.pdf",
+        "title": "SGG: Bulletin officiel 5992"
+      },
+      {
+        "url": "https://archive.gazettes.africa/archive/ma/2011/ma-bulletin-officiel-dated-2011-11-03-no-5992.pdf",
+        "title": "Gazette mirror: downloaded legal composition annex"
+      },
+      {
+        "url": "https://communes.pages.dev/fr/docs/downloads/",
+        "title": "Morocco communes: open geographic downloads"
+      }
+    ]
+  }
+]

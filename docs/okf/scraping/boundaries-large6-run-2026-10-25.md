@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Sixth large production boundary review — 2026-10-25"
+description: "Reviewed 80 additional candidates and new source leads; no verified new layers were available to import."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Sixth large production boundary review — 2026-10-25
 
 **Reviewed 80 additional candidates and new source leads; no verified new layers were available to import.** Coverage remains 74 production pins and 10,245 default boundary features. All 74 saved maps still match their reviewed geometry and credits. The audit now covers 592 candidates: 74 mapped, five unresolved country gaps and 513 outside boundary scope. No production content or geometry was written, and no deployment, build, restart or VM operation occurred.

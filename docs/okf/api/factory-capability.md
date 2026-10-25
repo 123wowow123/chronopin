@@ -1,3 +1,11 @@
+---
+type: API Endpoint
+title: "Factory buildout and capability profiles"
+description: "GET, PUT, DELETE /api/pins/:id/factory store a PinFactory profile independently of a pin's title, author, dates, media and construction price."
+resource: "../../../src/app/api/pins/[id]/factory/route.ts"
+tags: [api, pins, factory]
+---
+
 # Factory buildout and capability profiles
 
 `GET`, `PUT`, `DELETE /api/pins/:id/factory` store a `PinFactory` profile independently of a pin's title, author, dates, media and construction price. Reads of deleted/nonexistent pins return 404; a live pin without a profile returns 204. Writes require the pin author or an administrator. A `session` assessment cannot overwrite a `hand` assessment (409). PUT replaces the full profile and expires the pin page immediately; omission does not silently erase individual fields.

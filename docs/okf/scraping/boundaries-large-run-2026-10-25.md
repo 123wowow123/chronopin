@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Large production boundary run — 2026-10-25"
+description: "25 more production pins are mapped: 62 total, with 9,811 default boundary features."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Large production boundary run — 2026-10-25
 
 **25 more production pins are mapped: 62 total, with 9,811 default boundary features.** All 25 new public pages were checked for rendered geometry, teal styling, scope labels and source attribution. All 62 saved production maps were read back against their reviewed geometry. Ten state redraw comparisons remain available; these additions introduce no new legislative plans. No deployment, build, restart or VM operation was performed.

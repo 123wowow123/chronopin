@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Fourth large production boundary run — 2026-10-25"
+description: "Added 61 boundary features across two production pins."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Fourth large production boundary run — 2026-10-25
 
 **Added 61 boundary features across two production pins. Coverage is now 73 pins and 10,224 default features: 18 wildfire pins and 55 district/voting-area pins. Six source gaps remain.** The refreshed production search found no new candidates beyond the 512 already reviewed. Both additions are previously reviewed candidates whose electoral scope is now established; this is not a claim to 61 new pins.

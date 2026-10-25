@@ -1,0 +1,209 @@
+{
+  "checkedAt": "2026-10-25",
+  "usableForBoundaryImport": false,
+  "productionWrites": 0,
+  "resolvedCountryGaps": 0,
+  "remainingCountryGaps": 5,
+  "productionReadback": {
+    "maps": 74,
+    "defaultFeatures": 10245,
+    "evidence": {
+      "path": ".scrape/boundaries/gap-resolution-all-saved-verified.json",
+      "sha256": "63e43ed9872a4fe3f11eb75a74872ad35e36293d254e78718a4579714bc537a2"
+    }
+  },
+  "countries": [
+    {
+      "pinId": 1967,
+      "country": "Russia",
+      "requiredFeatures": 225,
+      "finding": "Previously inspected Yabloko bundle has 99 constituency records in 43 pixel-coordinate diagrams. No new complete georeferenced source established this pass.",
+      "nextRequired": "Complete 2026 Duma geographic rings matched to the enacted plan; older election maps do not qualify.",
+      "status": "research_gap",
+      "usableForBoundaryImport": false
+    },
+    {
+      "pinId": 1978,
+      "country": "India",
+      "requiredFeatures": 543,
+      "finding": "Previously inspected national layers retain legacy Assam geography or inconsistent assignments. Bharat Survey labels its map 2019 and says Assam/J&K await new open boundaries. No new verified geometry established this pass.",
+      "sources": [
+        "https://bharatsurvey.org/constituency-mapping"
+      ],
+      "nextRequired": "Current Assam/J&K polygons, independently validated national crosswalk and explicit treatment of the predicted future election plan.",
+      "status": "research_gap",
+      "usableForBoundaryImport": false
+    },
+    {
+      "pinId": 2350,
+      "country": "Nigeria",
+      "requiredFeatures": 360,
+      "sources": [
+        "https://www.arcgis.com/home/item.html?id=74cf76766bec4481aa03523e0e1fdddc",
+        "https://www.inecnigeria.org/wp-content/uploads/2019/02/2015-GENERAL-ELECTIONS-INFO-KIT-.pdf",
+        "https://ournigeria.ng/constituencies/fed_rivers_port_harcourt_i"
+      ],
+      "dataset": "GRID3 Operational Wards v4.0",
+      "license": "CC BY-SA 4.0",
+      "sourceLimitations": "Operational rather than authoritative; source says not fully government validated.",
+      "operationalFeaturesByState": {
+        "Lagos": 376,
+        "Rivers": 316
+      },
+      "electoralWardRegisterCounts": {
+        "Lagos": 245,
+        "Rivers": 319
+      },
+      "finding": "New v4 includes Lagos/Rivers, but its 376/316 operational divisions differ from the 245/319 electoral registers. OurNigeria lists all 20 Port Harcourt wards under constituency I, conflicting with the indexed INEC 10/10 composition.",
+      "portHarcourtCandidate": {
+        "membership": {
+          "Port Harcourt I": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            19,
+            20
+          ],
+          "Port Harcourt II": [
+            5,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        "validInputFeatures": 20,
+        "validUnions": 2,
+        "overlapArea": 0.0,
+        "compositionEvidence": "Indexed primary INEC 2015 Info Kit; full PDF download not obtained this pass. Current-plan and geographic validation still required.",
+        "evidence": {
+          "path": ".scrape/boundaries/nigeria-portharcourt-candidate-unions.geojson",
+          "sha256": "86bcfc332e650d600b055ccdd4330bb97c89acf3dce173c9018183b7e7f1d295"
+        },
+        "usableForBoundaryImport": false
+      },
+      "evidence": [
+        {
+          "path": ".scrape/boundaries/nigeria-grid4item.json",
+          "sha256": "0258f89a5c8590386e05b6ddfa7f6bf564810d6e59a7ec2d14fc71fd13375c34"
+        },
+        {
+          "path": ".scrape/boundaries/nigeria-grid4-lagos-rivers-attributes.json",
+          "sha256": "bee801a8a6b392c6e6d052d0cbcb4a4c52187def264dce87b4f6b1aec78636fe"
+        },
+        {
+          "path": ".scrape/boundaries/nigeria-grid4-portharcourt-20.geojson",
+          "sha256": "da1144941e29d31f80e079452b2898fbd82d4646feaf68c1e384a7a8ced0ed88"
+        }
+      ],
+      "nextRequired": "Electoral/operational crosswalk and verified splits in Lagos Island, Mushin, Oshodi/Isolo, Surulere and Port Harcourt; validate the complete 360-seat layer.",
+      "status": "research_gap",
+      "usableForBoundaryImport": false
+    },
+    {
+      "pinId": 2354,
+      "country": "Gambia",
+      "requiredFeatures": 53,
+      "sources": [
+        "https://data.humdata.org/dataset/cod-ab-gmb",
+        "https://www.geoboundaries.org/api/current/gbOpen/GMB/ADM3/",
+        "https://iec.gm/wp-content/uploads/2026/03/Wards.docx",
+        "https://nea.gm/wp-content/uploads/2024/05/NEA-data-management-mission-report-Phase-I.pdf"
+      ],
+      "ndmaHdx": {
+        "validFeatures": 115,
+        "admin2Names": 49,
+        "validOn": "2022-09-01",
+        "license": "CC BY-IGO"
+      },
+      "geoBoundaries": {
+        "boundaryId": "GMB-ADM3-80922684",
+        "validFeatures": 120,
+        "boundaryYear": 2020,
+        "license": "CC BY 4.0"
+      },
+      "finding": "NDMA/OCHA wards retain older administrative groupings. World Bank-derived wards include A/B/C labels without a verified IEC crosswalk. Busumbala, Old Yundum and Sanneh Mentereng cut older coastal wards. Similar ward counts cannot establish electoral equivalence.",
+      "evidence": [
+        {
+          "path": ".scrape/boundaries/gambia-ndma-wards-2022.geojson",
+          "sha256": "ffd12b68ce6082389f4057b5dba79720f88b7c1bb634bec73d7a03fd396e1544"
+        },
+        {
+          "path": ".scrape/boundaries/gambia-wards-2020.geojson",
+          "sha256": "5723aaed64c27e0400a2c3ab7c3612af86f8337e99a0cfa64dadb2c3e401ae09"
+        }
+      ],
+      "nextRequired": "Current IEC/GBOS ward polygons or georeferenced legal cut lines, especially for the three coastal seats; reconcile with the saved official 53-seat roster.",
+      "status": "research_gap",
+      "usableForBoundaryImport": false
+    },
+    {
+      "pinId": 2979,
+      "country": "Morocco",
+      "requiredFeatures": {
+        "local": 92,
+        "regionalList": 12
+      },
+      "sources": [
+        "https://www.sgg.gov.ma/BO/bo_fr/2011/bo_5992_fr.pdf",
+        "https://archive.gazettes.africa/archive/ma/2011/ma-bulletin-officiel-dated-2011-11-03-no-5992.pdf",
+        "https://communes.pages.dev/fr/docs/downloads/"
+      ],
+      "legalComposition": "Decree 2-11-603, 19 October 2011; downloaded gazette mirror. Current-plan continuity still requires validation.",
+      "availableArrondissements": 41,
+      "arrondissementLicense": "OSM ODbL; HCP names/codes. Attribution and derivative database obligations require review before publication.",
+      "rabatSplit": {
+        "Rabat El Mouhit": {
+          "HassanAnnexes": [
+            3,
+            4
+          ],
+          "otherUnits": [
+            "Yacoub El Mansour",
+            "Agdal Riyad"
+          ]
+        },
+        "Rabat Chellah": {
+          "HassanAnnexes": [
+            1,
+            2,
+            22
+          ],
+          "otherUnits": [
+            "El Youssoufia",
+            "Souissi",
+            "Touarga"
+          ]
+        }
+      },
+      "finding": "Available geometry has a single Hassan arrondissement. The legal annex splits Hassan between two Rabat seats at administrative-annex level; whole-arrondissement dissolves cannot create both correct seats. Historical commune/name crosswalks also need verification.",
+      "evidence": [
+        {
+          "path": ".scrape/boundaries/morocco-decree-2011-bo5992-mirror.pdf",
+          "sha256": "d493e276c2f1bc648a115e3046e1085653c9580302754efa0053888c800f6555"
+        },
+        {
+          "path": ".scrape/boundaries/morocco-decree-2011-bo5992.txt",
+          "sha256": "3ef42b355c3217620dfc2935ae99f486839550c880a91a4e1b65a3b67e03115f"
+        },
+        {
+          "path": ".scrape/boundaries/morocco-arrondissements-current.geojson",
+          "sha256": "90dcba771d633f7bf663ff11faacece56f86b93bf1a66ab1ae26e3cf14b50116"
+        }
+      ],
+      "nextRequired": "Rabat Hassan administrative-annex geometry, complete commune/province crosswalk and confirmation of the legal composition applicable to the 2026 pin.",
+      "status": "research_gap",
+      "usableForBoundaryImport": false
+    }
+  ]
+}

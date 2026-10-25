@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Boundary follow-up and state redraws — 2026-10-25"
+description: "Production data now covers 35 pins, including five additional resolved candidates: US midterms (1648), Kenya (2360), El Salvador (2352), Latvia (5171) and Guatemala (2358)."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Boundary follow-up and state redraws — 2026-10-25
 
 Production data now covers 35 pins, including five additional resolved candidates: US midterms (1648), Kenya (2360), El Salvador (2352), Latvia (5171) and Guatemala (2358). All five were saved through the authenticated admin API, read back against the prepared geometry, and checked on their public pages. Their authors, titles, descriptions, summaries, dates, locations, source URLs and parents remain unchanged. The expanded audit records 12 remaining source gaps; coverage is not complete for those pins.

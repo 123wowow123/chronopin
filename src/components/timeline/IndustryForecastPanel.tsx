@@ -50,21 +50,26 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
     const t1 = Math.max(...pts.map((p) => p.t));
     const lo = Math.min(0, ...pts.map((p) => p.v));
     const hi = Math.max(...pts.map((p) => p.v)) * 1.05;
-    const x = (t: number) => PAD.left + ((t - t0) / (t1 - t0 || 1)) * PLOT.w;
+    // The axis labels set the left margin: four-digit values need more room.
+    const tickLabel = (v: number) => formatForecastValue(forecast, hi - lo >= 10 ? Math.round(v) : Math.round(v * 10) / 10);
+    const ticks = Array.from({ length: TICKS + 1 }, (_, k) => lo + ((hi - lo) * k) / TICKS);
+    const padLeft = Math.max(PAD.left, Math.max(...ticks.map((v) => tickLabel(v).length)) * (large ? 8 : 7) + 12);
+    const plotW = VIEW.w - padLeft - PAD.right;
+    const x = (t: number) => padLeft + ((t - t0) / (t1 - t0 || 1)) * plotW;
     const y = (v: number) => PAD.top + PLOT.h - ((v - lo) / (hi - lo || 1)) * PLOT.h;
     // Every time any line has a point: the hover snaps to one of them.
     const times = [...new Set(pts.map((p) => p.t))].sort((a, b) => a - b);
-    return { t0, t1, lo, hi, x, y, times };
+    return { t0, t1, lo, hi, x, y, times, ticks, tickLabel, padLeft, plotW };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [forecast, large]);
   if (!geo) return null;
-  const { x, y, lo, hi, t0, t1, times } = geo;
+  const { x, y, t0, t1, times, ticks, tickLabel, padLeft, plotW } = geo;
 
   const move = (event: React.PointerEvent<SVGSVGElement>) => {
     const box = svg.current?.getBoundingClientRect();
     if (!box) return;
     const px = ((event.clientX - box.left) / box.width) * VIEW.w;
-    const t = t0 + ((px - PAD.left) / PLOT.w) * (t1 - t0);
+    const t = t0 + ((px - padLeft) / plotW) * (t1 - t0);
     setHover(times.reduce((best, c) => (Math.abs(c - t) < Math.abs(best - t) ? c : best), times[0]));
   };
   // The point of each line at the hovered time (a line with none there is left out).
@@ -83,15 +88,12 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
         onPointerMove={move}
         onPointerLeave={() => setHover(null)}
       >
-        {Array.from({ length: TICKS + 1 }, (_, k) => {
-          const v = lo + ((hi - lo) * k) / TICKS;
-          return (
-            <g key={k}>
-              <line x1={PAD.left} x2={PAD.left + PLOT.w} y1={y(v)} y2={y(v)} className="stroke-line" strokeWidth="1" />
-              <text x={PAD.left - 8} y={y(v) + 4} textAnchor="end" className="fill-current text-[13px] text-faint tabular-nums">{formatForecastValue(forecast, hi - lo >= 10 ? Math.round(v) : Math.round(v * 10) / 10)}</text>
-            </g>
-          );
-        })}
+        {ticks.map((v, k) => (
+          <g key={k}>
+            <line x1={padLeft} x2={padLeft + plotW} y1={y(v)} y2={y(v)} className="stroke-line" strokeWidth="1" />
+            <text x={padLeft - 8} y={y(v) + 4} textAnchor="end" className="fill-current text-[13px] text-faint tabular-nums">{tickLabel(v)}</text>
+          </g>
+        ))}
         {lines.map(({ line, kind }, i) => {
           const d = line.points.map((p, j) => `${j ? 'L' : 'M'}${x(at(p.x)).toFixed(1)} ${y(p.value).toFixed(1)}`).join(' ');
           return (
@@ -107,8 +109,8 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
             {hit.map(({ i, p }) => <circle key={i} cx={x(hover)} cy={y(p!.value)} r="4.5" className={`${toneOf(lines, i).fill} stroke-panel`} strokeWidth="2" />)}
           </g>
         ) : null}
-        <text x={PAD.left} y={VIEW.h - 6} className="fill-current text-[13px] text-faint">{yearOf(t0)}</text>
-        <text x={PAD.left + PLOT.w} y={VIEW.h - 6} textAnchor="end" className="fill-current text-[13px] text-faint">{yearOf(t1)}</text>
+        <text x={padLeft} y={VIEW.h - 6} className="fill-current text-[13px] text-faint">{yearOf(t0)}</text>
+        <text x={padLeft + plotW} y={VIEW.h - 6} textAnchor="end" className="fill-current text-[13px] text-faint">{yearOf(t1)}</text>
       </svg>
       {hover != null && hit.length ? (
         <div
@@ -219,8 +221,10 @@ function Forecast({ forecast }: { forecast: IndustryForecastJson }) {
 // (IndustryForecast, 0216): published series (Ramp AI Index via FRED, Census
 // BTOS) with sourced projections (Goldman Sachs, Gartner) dashed beyond them.
 // `slugs` come from the page's tags, so nothing renders when none match.
-export function IndustryForecastPanel({ slugs, compact = false }: { slugs: string[]; compact?: boolean }) {
+export function IndustryForecastPanel({ slugs, compact = false, limit }: { slugs: string[]; compact?: boolean; limit?: number }) {
+  const t = useT();
   const [forecasts, setForecasts] = useState<IndustryForecastJson[]>([]);
+  const [all, setAll] = useState(false);
   const key = slugs.join(',');
   useEffect(() => {
     let cancelled = false;
@@ -235,7 +239,12 @@ export function IndustryForecastPanel({ slugs, compact = false }: { slugs: strin
   if (!forecasts.length) return null;
   return (
     <div className={compact ? 'flex flex-col gap-3' : 'mt-4 flex flex-col gap-3'} data-industry-forecast>
-      {forecasts.map((f) => <Forecast key={f.slug} forecast={f} />)}
+      {(limit && !all ? forecasts.slice(0, limit) : forecasts).map((f) => <Forecast key={f.slug} forecast={f} />)}
+      {limit && !all && forecasts.length > limit ? (
+        <button type="button" onClick={() => setAll(true)} className="self-start rounded-full px-3 py-1 text-xs text-muted ring-1 ring-line ring-inset hover:text-ink">
+          {t('common.showMore')} ({forecasts.length - limit})
+        </button>
+      ) : null}
     </div>
   );
 }

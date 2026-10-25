@@ -290,7 +290,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {llmPerf ? <PinLlmPerf perf={llmPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {factory ? <PinFactoryBuildout factory={factory} t={t} className="mt-4" /> : null}
           {factory ? <PinFactory factory={factory} t={t} className="mt-4" /> : null}
-          {industries.length ? <IndustryForecastPanel slugs={industries} /> : null}
+          {industries.length ? <IndustryForecastPanel slugs={industries} limit={3} /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {hotel ? (
             <PinHotel

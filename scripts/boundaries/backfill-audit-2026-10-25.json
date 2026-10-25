@@ -481,7 +481,9 @@
       "checkedSources": [
         "https://www.yabloko.ru/okruga-gd-2026",
         "https://www.yabloko.ru/themes/yabloko2018/okruga2026-map.json?v=14"
-      ]
+      ],
+      "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
+      "nextRequired": "Complete 2026 Duma geographic rings matched to the enacted plan; older election maps do not qualify."
     },
     {
       "pinId": 1968,
@@ -584,7 +586,9 @@
         "https://gist.github.com/planemad/1e2b63f6b9806970db749f19980ffd25",
         "https://www.eci.gov.in/Documents/Delimitation/DELIMITATIONASSAM_UPDATED.pdf",
         "https://bharatsurvey.org/constituency-mapping"
-      ]
+      ],
+      "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
+      "nextRequired": "Current Assam/J&K polygons, independently validated national crosswalk and explicit treatment of the predicted future election plan."
     },
     {
       "pinId": 1979,
@@ -688,8 +692,13 @@
         "https://github.com/bengelsma/Constituencies",
         "https://www.stears.co/article/where-is-my-constituency-stears-journey-to-mapping-nigerias-boundaries/",
         "https://ournigeria.ng/roadmap",
-        "https://ournigeria.ng/constituencies"
-      ]
+        "https://ournigeria.ng/constituencies",
+        "https://www.arcgis.com/home/item.html?id=74cf76766bec4481aa03523e0e1fdddc",
+        "https://www.inecnigeria.org/wp-content/uploads/2019/02/2015-GENERAL-ELECTIONS-INFO-KIT-.pdf",
+        "https://ournigeria.ng/constituencies/fed_rivers_port_harcourt_i"
+      ],
+      "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
+      "nextRequired": "Electoral/operational crosswalk and verified splits in Lagos Island, Mushin, Oshodi/Isolo, Surulere and Port Harcourt; validate the complete 360-seat layer."
     },
     {
       "pinId": 2351,
@@ -765,8 +774,13 @@
         "https://iec.gm/download/",
         "https://iec.gm/ova_doc/21246/",
         "https://iec.gm/wp-content/uploads/2026/03/Wards.docx",
-        "https://iec.gm/wp-content/uploads/2026/03/Wards.pdf"
-      ]
+        "https://iec.gm/wp-content/uploads/2026/03/Wards.pdf",
+        "https://data.humdata.org/dataset/cod-ab-gmb",
+        "https://www.geoboundaries.org/api/current/gbOpen/GMB/ADM3/",
+        "https://nea.gm/wp-content/uploads/2024/05/NEA-data-management-mission-report-Phase-I.pdf"
+      ],
+      "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
+      "nextRequired": "Current IEC/GBOS ward polygons or georeferenced legal cut lines, especially for the three coastal seats; reconcile with the saved official 53-seat roster."
     },
     {
       "pinId": 2355,
@@ -1232,8 +1246,13 @@
       "checkedSources": [
         "https://election.lemillenaire.org/soiree/maroc/legislatives/2026/",
         "https://election.lemillenaire.org/geo/MAR/manifeste.json",
-        "https://www.moroccoelections.com/ar/"
-      ]
+        "https://www.moroccoelections.com/ar/",
+        "https://www.sgg.gov.ma/BO/bo_fr/2011/bo_5992_fr.pdf",
+        "https://archive.gazettes.africa/archive/ma/2011/ma-bulletin-officiel-dated-2011-11-03-no-5992.pdf",
+        "https://communes.pages.dev/fr/docs/downloads/"
+      ],
+      "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
+      "nextRequired": "Rabat Hassan administrative-annex geometry, complete commune/province crosswalk and confirmation of the legal composition applicable to the 2026 pin."
     },
     {
       "pinId": 2982,
@@ -5276,7 +5295,8 @@
     "notes": "docs/okf/scraping/boundaries-large6-run-2026-10-25.md"
   },
   "researchCatalogs": [
-    "scripts/boundaries/research-gambia-wards-2026-10-25.json"
+    "scripts/boundaries/research-gambia-wards-2026-10-25.json",
+    "scripts/boundaries/research-country-gaps-2026-10-25.json"
   ],
   "large7RunVerification": {
     "newPins": 0,
@@ -5290,5 +5310,14 @@
     "gambiaRosterImportable": false,
     "researchCatalog": "scripts/boundaries/research-gambia-wards-2026-10-25.json",
     "notes": "docs/okf/scraping/boundaries-large7-run-2026-10-25.md"
+  },
+  "countryGapResearch": {
+    "checkedAt": "2026-10-25",
+    "catalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
+    "resolved": 0,
+    "remaining": 5,
+    "productionWrites": 0,
+    "verifiedLiveMaps": 74,
+    "defaultBoundaryFeatures": 10245
   }
 }

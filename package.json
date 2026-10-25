@@ -110,6 +110,7 @@
     "models:frontier-tag": "tsx scripts/models/frontierTag.ts",
     "series:attach": "tsx scripts/series/attach.ts",
     "industry:forecasts": "tsx scripts/industry/apply.ts",
+    "industry:forecasts:prod": "tsx scripts/industry/prod.ts",
     "translations:sync": "tsx scripts/translations/sync.ts",
     "threads:prequels": "tsx scripts/threads/prequels.ts",
     "threads:models": "tsx scripts/threads/models.ts",

@@ -530,14 +530,6 @@ Review sentiment graph
 
 
 
-https://ramp.com/data/ai-index#adoption#overall
-like
-track projected ai spend in usa
-
-add new industry forcast panel and should show on relavant pins
-and should show on side panel of search when searching in those categories like when searching in company view
-
-
 
 Chronopin organic search growth
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com

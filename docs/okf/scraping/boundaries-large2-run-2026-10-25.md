@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Second large production boundary run — 2026-10-25"
+description: "Eight additional pins are verified live, bringing coverage to 70 pins and 9,863 default features."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Second large production boundary run — 2026-10-25
 
 **Eight additional pins are verified live, bringing coverage to 70 pins and 9,863 default features.** The expanded discovery was rerun and found no new candidates beyond the 512 already reviewed. This round resolves three existing research gaps and adds five reviewed jurisdiction matches. Seven source gaps remain: Russia, India, Nigeria, Gambia, Mexico, Angola and Morocco.

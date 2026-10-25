@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Second production boundary round — 2026-10-25"
+description: "After the owner reported deploying the redraw code, all ten US state comparisons were checked on production in Earlier plan, Later plan and Compare plans modes."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Second production boundary round — 2026-10-25
 
 After the owner reported deploying the redraw code, all ten US state comparisons were checked on production in Earlier plan, Later plan and Compare plans modes. All 30 combinations rendered the expected district counts and colors, and Missouri retained its blocked-plan warning. The default still shows 435 voting House districts. The NCSL tracker and AP's map release notes were reopened; neither required changing the stored ten-state comparison catalog. No deployment, build, restart or VM operation was performed in this round.

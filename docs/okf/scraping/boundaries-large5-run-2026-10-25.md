@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Fifth large production boundary run — 2026-10-25"
+description: "Resolved Angola's geometry gap: 21 current provincial areas and a live 18-to-21 comparison are saved on production pin 2361."
+tags: [scraping, maps, boundaries, production]
+---
+
 # Fifth large production boundary run — 2026-10-25
 
 **Resolved Angola's geometry gap: 21 current provincial areas and a live 18-to-21 comparison are saved on production pin 2361. Coverage is now 74 pins and 10,245 default boundary features. Five country source gaps remain.** The refreshed broad production search found no new candidates beyond the 512 already reviewed. This round adds one mapped pin, not 21 new pins.
