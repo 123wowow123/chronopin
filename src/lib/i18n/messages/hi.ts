@@ -1813,6 +1813,8 @@ const hi: Messages = {
     pictureRemoved: 'फ़ोटो हटा दी गई।',
     removeFailed: 'आपकी फ़ोटो हटाई नहीं जा सकी।',
     pictureHint: 'आपके पिन और कमेंट पर दिखती है। JPEG, PNG या GIF, ज़्यादा से ज़्यादा 5 MB।',
+    about: 'आपके बारे में (वैकल्पिक)',
+    aboutHint: 'आपकी प्रोफ़ाइल पर दिखने वाला छोटा विवरण। ज़्यादा से ज़्यादा 500 अक्षर।',
     saveChanges: 'बदलाव सेव करें',
     preferencesSaved: 'पसंद सेव हो गई।',
     preferencesFailed: 'आपकी पसंद सेव नहीं हो सकी।',

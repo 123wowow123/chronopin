@@ -1806,6 +1806,8 @@ const id: Messages = {
     pictureRemoved: 'Gambar dihapus.',
     removeFailed: 'Gagal menghapus gambar Anda.',
     pictureHint: 'Ditampilkan di pin dan komentar Anda. JPEG, PNG, atau GIF, maksimal 5 MB.',
+    about: 'Tentang Anda (opsional)',
+    aboutHint: 'Deskripsi singkat yang ditampilkan di profil Anda. Maksimal 500 karakter.',
     saveChanges: 'Simpan perubahan',
     preferencesSaved: 'Preferensi disimpan.',
     preferencesFailed: 'Gagal menyimpan preferensi Anda.',

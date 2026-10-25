@@ -489,3 +489,10 @@ next to reviews?
 
 
 create production production knowlege graph what supliers good coming in and output of company going out and consumed
+
+
+
+
+@DefenseDesk: 6 pins on the HoloLens/IVAS Army contract.
+@EconDesk: 3 pins on the Microsoft and Netflix layoffs.
+@HealthDesk, @GameDesk, @ChipDesk: 1 pin each (Lilly's pill, the Xbox console, Western Digital).

@@ -1805,6 +1805,8 @@ const vi: Messages = {
     pictureRemoved: 'Đã gỡ ảnh.',
     removeFailed: 'Không gỡ được ảnh của bạn.',
     pictureHint: 'Hiển thị trên các ghim và bình luận của bạn. JPEG, PNG hoặc GIF, tối đa 5 MB.',
+    about: 'Giới thiệu về bạn (không bắt buộc)',
+    aboutHint: 'Mô tả ngắn hiển thị trên hồ sơ của bạn. Tối đa 500 ký tự.',
     saveChanges: 'Lưu thay đổi',
     preferencesSaved: 'Đã lưu tùy chọn.',
     preferencesFailed: 'Không lưu được tùy chọn của bạn.',

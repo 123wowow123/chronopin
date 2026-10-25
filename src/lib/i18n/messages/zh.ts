@@ -1796,6 +1796,8 @@ const zh: Messages = {
     pictureRemoved: '头像已移除。',
     removeFailed: '无法移除你的头像。',
     pictureHint: '显示在你的图钉和评论上。支持 JPEG、PNG 或 GIF，最大 5 MB。',
+    about: '个人简介（选填）',
+    aboutHint: '显示在你个人资料上的简短介绍。最多 500 个字符。',
     saveChanges: '保存更改',
     preferencesSaved: '偏好设置已保存。',
     preferencesFailed: '无法保存你的偏好设置。',

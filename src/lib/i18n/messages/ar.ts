@@ -2167,6 +2167,8 @@ const ar: Messages = {
     pictureRemoved: 'تمت إزالة الصورة.',
     removeFailed: 'تعذّرت إزالة صورتك.',
     pictureHint: 'تظهر في دبابيسك وتعليقاتك. JPEG أو PNG أو GIF، حتى 5 MB.',
+    about: 'نبذة عنك (اختياري)',
+    aboutHint: 'وصف قصير يظهر في ملفك الشخصي. حتى 500 حرف.',
     saveChanges: 'حفظ التغييرات',
     preferencesSaved: 'تم حفظ التفضيلات.',
     preferencesFailed: 'تعذّر حفظ تفضيلاتك.',

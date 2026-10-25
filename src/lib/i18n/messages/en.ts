@@ -1806,6 +1806,8 @@ const en = {
     pictureRemoved: 'Picture removed.',
     removeFailed: 'Could not remove your picture.',
     pictureHint: 'Shown on your pins and comments. JPEG, PNG or GIF, up to 5 MB.',
+    about: 'About you (optional)',
+    aboutHint: 'A short description shown on your profile. Up to 500 characters.',
     saveChanges: 'Save changes',
     preferencesSaved: 'Preferences saved.',
     preferencesFailed: 'Could not save your preferences.',

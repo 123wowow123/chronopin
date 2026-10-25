@@ -1793,6 +1793,8 @@ const it: Messages = {
     pictureRemoved: 'Immagine rimossa.',
     removeFailed: 'Impossibile rimuovere l’immagine.',
     pictureHint: 'Mostrata sui tuoi pin e commenti. JPEG, PNG o GIF, fino a 5 MB.',
+    about: 'Su di te (facoltativo)',
+    aboutHint: 'Una breve descrizione mostrata sul tuo profilo. Fino a 500 caratteri.',
     saveChanges: 'Salva modifiche',
     preferencesSaved: 'Preferenze salvate.',
     preferencesFailed: 'Impossibile salvare le preferenze.',

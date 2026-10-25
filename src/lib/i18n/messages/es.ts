@@ -1802,6 +1802,8 @@ const es: Messages = {
     pictureRemoved: 'Imagen quitada.',
     removeFailed: 'No se pudo quitar tu imagen.',
     pictureHint: 'Se muestra en tus pines y comentarios. JPEG, PNG o GIF, hasta 5 MB.',
+    about: 'Sobre ti (opcional)',
+    aboutHint: 'Una breve descripción que se muestra en tu perfil. Hasta 500 caracteres.',
     saveChanges: 'Guardar cambios',
     preferencesSaved: 'Preferencias guardadas.',
     preferencesFailed: 'No se pudieron guardar tus preferencias.',

@@ -1,6 +1,6 @@
 # Construction status backfill — October 24, 2026
 
-**Current: 972 candidates remain in the status research queue per environment.** Three opened-source rounds resolved 30 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
+**Current: 932 candidates remain in the status research queue per environment.** Five opened-source rounds resolved 70 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
 
 Read the complete live-pin inventories through authenticated admin APIs: 12,909 local and 12,963 production records. Screened 2,587 project/physical-facility candidates in each snapshot, including infrastructure, housing, factories, power generation, storage and data centers. Previously reviewed nuclear/factory pins were preserved rather than treated as new assignments. The inventory is a dated snapshot; the candidate screen is broad and includes false positives such as events hosted at stadiums.
 
@@ -73,17 +73,17 @@ After the first follow-up, accounting per environment was **1,250 assigned + 992
 
 ### Remaining source and phase gaps
 
-After round three, the 972 remaining records retain their own source links and follow-up reason in the backfill catalog:
+After round five, the 932 remaining records retain their own source links and follow-up reason in the backfill catalog:
 
 | Gap | Records per environment | Required next evidence |
 | --- | ---: | --- |
 | Agency/county landing page without project-specific evidence | 251 | Verify project identity, developer, docket/parcel and capacity, then obtain a dated phase record; unsourced engineering and COD prose is not evidence |
 | Data-center tracker parcel/phase ambiguity | 109 | Dated operator, contractor or planning evidence for the exact parcel and MW phase |
 | Epoch aggregate capacity/compute trajectory | 90 | Reconcile operating buildings with proposed future buildout before tagging the entire pinned scope |
-| Housing opening/build milestone source | 21 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
-| Conflicting, denied or halted scope | 42 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
+| Housing opening/build milestone source | 5 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
+| Conflicting, denied or halted scope | 43 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
 | Grid/interconnection request identity | 35 | Match the exact request ID and phase to physical-work evidence; an IA or future COD alone is insufficient |
-| Other individual project/source/phase questions | 424 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
+| Other individual project/source/phase questions | 399 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
 
 Fehmarnbelt research also opened the operator's April 2026 factsheet and May 17 phased-opening announcement. The latter withdraws the single 2029 opening assumption, separates road and rail, and says a revised schedule will follow immersion experience. The April factsheet omits the budget shown in March. A new exact full-scope opening date and any revised cost require follow-up; no replacement date was invented. These limitations do not establish completion.
 
@@ -172,3 +172,99 @@ python3 scripts/construction/reviewQueue.py --manifest scripts/construction/rese
 ```
 
 Both environments passed metadata, status, author and unrelated-field preservation checks. All eight public pin JSON responses per environment expose the saved statuses, native costs, citations and corrected date. Authenticated native pages for Regent Terrace, Phare, Bridgeside and Cottage Hill returned HTTP 200 with their research and Completed tags. Before snapshots and page captures are ignored under `.scrape/construction-status-research-round3-2026-10-24/`. Syntax, lint, catalog accounting and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+
+## Fourth research round — 25 records
+
+Saved and verified **25 additional records in each environment: 18 Completed, six In Progress and one Proposed**. The queue decreases from **972 to 947**. Nineteen records have source-quoted native costs, while six retain null costs with specific evidence gaps. The [round-four research/replay catalog](../scripts/construction/research-round4-2026-10-24.json) records opened HTTPS sources, short verbatim quotes, exact phase/cost qualifications, original row hashes, metadata and status receipts, and public verification. Original authors, parents and unrelated tags/metadata were preserved.
+
+| Pin | Represented scope/milestone | Status | Native cost |
+| --- | --- | --- | --- |
+| 484 | BT Tower communications opening, October 1965 | Completed | GBP 2.5 million original construction; not inflation adjusted, sale price or hotel conversion |
+| 546 | Egypt Stadium inauguration, March 2024 | Completed | EGP 900 million stadium only; excludes the larger sports complex |
+| 618 | Icon of the Seas passenger-service debut, January 2024 | Completed | USD 2 billion, stated by Royal Caribbean for the ship build |
+| 670 | LaGuardia redevelopment, Terminal C completion in 2024 | Completed | USD 8 billion full represented redevelopment |
+| 677 | Millennium Tower foundation-stabilization success announcement, June 2023 | Completed | USD 100 million retrofit; excludes original tower construction |
+| 678 | Hong Kong three-runway simultaneous operations, November 2024 | Completed | HKD 141.5 billion project estimate in money-of-the-day prices; later Terminal 2 delivery is distinct |
+| 711 | Allegiant Stadium occupancy handover, July 31, 2020 | Completed | USD 1.99 billion revised overall project cost, including third-party work |
+| 800 | Mjøstårnet opening, March 2019 | Completed | Rounded NOK 500 million Hent contract, excluding VAT; not the timber subcontract or all-in audited total |
+| 887 | Tønsberg shipyard launch, October 2010 | In Progress | Null: no exact individual-vessel construction price verified |
+| 891 | SANY Lingang excavator-factory opening report, August 2012 | Completed | USD 818.5 million published factory build cost |
+| 937 | Oleg Strashnov completed-vessel delivery, April 2011 | Completed | Approximately USD 500 million actual cost outcome quoted by Seaway’s CEO |
+| 7027 | Pointe at Thomas, 67-home groundbreaking, June 2026 | In Progress | Null: capital and construction-financing amounts are not a project total |
+| 7041 | Cielo / Sunnydale Block 7, 89 homes under construction | In Progress | USD 107,600,554 April 2025 Total Uses, superseding the opened March 2024 estimate |
+| 7042 | Amani / Sunnydale Block 3A, 80 homes | Completed | USD 95,315,920 individual-block development cost with acquisition in the March 2024 city comparison |
+| 7074 | Nia / Sunnydale Block 3B, 90 homes | Completed | USD 90,943,827 individual-block development cost with acquisition in the March 2024 city comparison |
+| 7062 | 600 Seventh, 220 resident homes plus manager apartment | Completed | USD 145,333,464 total development cost with acquisition in the August 2024 city comparison |
+| 7066 | The Edmonson / Barry Farm Building 1A, 139 homes | In Progress | Null: bonds, tax-credit equity and city loan are financing components |
+| 7070 | Atlantic Square, 616-home tower grand opening | Completed | Null: opened ceremony reporting explicitly says cost was not disclosed |
+| 7081 | Henderson Place, March 2024 pre-start redevelopment announcement | Proposed | USD 20 million exact 76-home proposal estimate; later work is a separate historical milestone |
+| 7086 | 1633 Valencia, 145 senior supportive homes | Completed | Null: latest completion reporting gives only an approximate per-apartment figure |
+| 7106 | Saint Luke’s Manor residential conversion, 137 senior homes | Completed | Rounded USD 39 million developer-profile development figure; excludes broader school/commercial phase |
+| 7126 | Square at Merritt Mill, December 2018 groundbreaking for 75 homes | In Progress | Approximately USD 13.5 million construction estimate |
+| 7131 | West Point Village Phase I, November 2022 groundbreaking report, 72 homes | In Progress | USD 13.45 million exact construction-project figure; Phase II and Texas property excluded |
+| 7175 | Oaks at Park Pointe, Griffin, 84-home redevelopment | Completed | USD 13,841,017 total development budget in the developer’s RAD/LIHTC case study |
+| 7230 | River Pointe I and II, Savannah, rehabilitation of 280 homes | Completed | Null: exact 2017 rehabilitation cost not established; later infill and other Savannah projects excluded |
+
+The three historical construction-start/launch records—Merritt Mill, West Point and Tønsberg—remain In Progress at their represented milestones even though later completion exists. Tønsberg’s October 2010 hull launch is distinct from the owner’s March 2011 operation announcement. Henderson Place’s March 2024 announcement says construction is still set to begin that month, so Proposed describes that pre-start event; it does not claim construction remained unstarted in October 2026. Cielo and The Edmonson have explicit architect/builder evidence of current construction, independently of future opening dates.
+
+Corrected two housing dates with qualified precision. **Saint Luke’s Manor (7106)** moves from its October 2026 listing-review date to **December 31, 2012**, an estimated year anchor for the opening reported in the dated 2013 housing-finance account. The later developer portfolio’s 2011 redevelopment history is retained separately; this does not date every later hospital-campus phase. **Oaks at Park Pointe (7175)** moves from November 2018 to **December 31, 2015**: the housing authority confirms 2015, while the architect says October and BLOC says December. The conflicting completion months remain explicit; no exact opening day was invented. Both date changes preserve original event duration. River Pointe’s existing December 31, 2017 anchor remains, with reasoning improved from year to month precision because Savannah’s report explicitly states December 2017.
+
+**Allegiant Stadium (711)** previously called July 31 the Raiders’ first home game. Corrected the description and date reasoning to the source-supported **Certificate of Occupancy**, after construction wrapped July 30. The date itself is retained. Mortenson’s later account gives **USD 1.99 billion overall cost**, including third-party work, distinct from the reduced USD 1.944 billion construction budget and the older USD 1.97 billion estimate. Earlier pin evidence remains visible under a clearly marked earlier-evidence block; the new research explains the correction.
+
+Amani and Nia have separate municipal block budgets; their builder’s USD 138 million combined construction contract was not apportioned by unit count. Cielo’s April 2025 USD 107,600,554 Block 7 budget supersedes the opened March 2024 USD 108,646,076 estimate, and excludes Luca/Block 9. Saint Luke’s rounded developer-profile development figure is distinguished from the engineer’s narrower USD 23.5 million project scope. Six cost gaps remain explicit: Pointe financing, Edmonson financing, Atlantic Square’s undisclosed total, Valencia’s approximate per-unit reporting, Tønsberg’s unpublished individual-vessel cost, and River Pointe’s missing exact rehabilitation budget. No rounded unit figure, monthly rent, loan sum or FX conversion was used to manufacture a price.
+
+**MahaNakhon (745) remains queued.** Its saved August 2016 ceremony narrative must be reconciled with the structural designer’s full mixed-use completion in 2018/19 and the timing of observation/hotel components. The designer’s THB 20 billion broader-scope estimate is not silently substituted for the saved THB 21 billion project value. The primary ceremony PDF timed out. This newly researched issue moves from the individual-source group into the conflict/scope group, with its own follow-up reason.
+
+Accounting per environment is now **1,295 assigned + 947 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **633 Proposed, 398 In Progress and 264 Completed**. With the separate original 68-pin batch, **1,363 reviewed eligible pins per environment** carry status tags. Remaining gap groups are 251 agency/project identity, 109 tracker parcels, 90 Epoch trajectories, seven housing milestones, 43 conflicting/halted scopes, 35 grid-request identities and 412 individual source/phase questions.
+
+Replay sequentially:
+
+```sh
+node --env-file=.env.local scripts/construction/research.mjs --manifest scripts/construction/research-round4-2026-10-24.json
+node --env-file=.env.local scripts/construction/status.mjs --manifest scripts/construction/research-round4-2026-10-24.json
+python3 scripts/construction/reviewQueue.py --manifest scripts/construction/research-round4-2026-10-24.json
+```
+
+Both environments passed metadata, source-reference, status and unrelated-field checks. All 25 public JSON records per environment expose the saved status, cost/currency, source links and date corrections. Authenticated native pages for Allegiant, Tønsberg, Cielo, Amani, Henderson Place, Saint Luke’s Manor and Oaks at Park Pointe returned HTTP 200 and showed their research and correct statuses. Before snapshots, downloaded evidence and page captures remain ignored under `.scrape/construction-status-research-round4-2026-10-24/`. Syntax/lint, catalog accounting, whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+
+## Fifth research round — 15 records
+
+Saved and verified **15 additional records in each environment: nine In Progress, three Proposed and three Completed**. The queue decreases from **947 to 932**. Eight records have quoted native costs; seven retain null costs with specific scope or publication gaps. The [round-five research/replay catalog](../scripts/construction/research-round5-2026-10-24.json) retains opened HTTPS sources, short verbatim quotes, phase reasoning, original pin hashes and verification receipts. Original authors, parent links, unrelated tags and other pin fields were preserved.
+
+| Pin | Represented scope/milestone | Status | Native cost |
+| --- | --- | --- | --- |
+| 230 | Al Maktoum first operational phase, with actual enabling and foundation work | In Progress | Null: previously stored AED 128 billion covers the broader airport plan; first-phase total unverified |
+| 458 | Gross Dam June 2026 topping milestone, with additional work remaining | In Progress | Just under USD 602 million revised construction contract; rounded price and upper bound, not all-in audited cost |
+| 493 | 400 Lake Shore North Tower, 635 homes | In Progress | USD 543,305,000 total development cost in June 2026 SEC filing; South Tower excluded |
+| 592 | Río Indio reservoir legal approval | Proposed | USD 1.6 billion, including construction and relocation, in Panama’s 2025 government filing |
+| 628 | Golden Gate seismic Contract 1 budget/award approval, towers and side spans | Proposed | USD 1,011,726,000 exact Project 2520 budget; later main-span contract separate |
+| 660 | Egypt initial 660-km rail-system contract signing | Proposed | Approximately USD 4.5 billion consortium contract, including maintenance; corrected from USD 4.50 |
+| 801 | Frankfurt Sky Line first-vehicle presentation before testing | In Progress | Null: EUR 300 million broader system/operations contract is not an individual vehicle price |
+| 828 | Port Waratah shiploader 7.09 overhaul start | In Progress | Null: AUD 270 million program and AUD 50 million outage cover multiple projects |
+| 841 | Marzahn first concrete-panel placement, July 1977 | In Progress | Null: exact first-building or installation-phase cost not established |
+| 883 | Edda Freya hull launch, August 2015 | In Progress | Approximately NOK 1.4 billion individual newbuild cost |
+| 930 | MOSE last-gate installation, January 2019, before full-system operation | In Progress | Approximately EUR 6.2 billion whole-project retrospective estimate in a May 2026 review; not an audited gate contract |
+| 970 | Original Bori Bunder–Thane passenger railway opening, April 1853 | Completed | Null: original section’s exact construction total not established |
+| 2167 | Kindred, San Diego, 126 homes under construction toward May 2027 | In Progress | USD 102 million reported full development cost |
+| 7103 | Oaks at Liberty, Baltimore, 75 apartments placed in service | Completed | Null: exact residential-conversion total unverified |
+| 7152 | Gloria Robinson Court Homes final-phase opening, completing the community | Completed | Null: USD 20.9/25.1 million descriptions cover only the final 70-home phase |
+
+Historical installation, hull-launch and overhaul-start pins remain In Progress at those milestones, independently of later delivery or operation. The signed Egyptian contract and Golden Gate board approval establish Proposed at the represented events; completing a contract or approval does not complete the build. MOSE’s January 2019 gate placement precedes the documented October 2020 protective operation. Kindred’s actual groundbreaking establishes construction independently of its future target date.
+
+Date corrections preserve each original event duration and explicitly state precision. **Al Maktoum (230)** moves to **December 31, 2032**, an estimated year anchor because the government update gives only 2032. **Río Indio (592)** moves from June to **July 31, 2024**, an estimated month anchor: Panama’s filing dates the ruling July 3 while earlier reporting says July 2. **Shiploader 7.09 (828)** moves from a July 1 placeholder to **July 31, 2025**, an estimated actual-start-month anchor supported by the operator’s July–November outage account; an indexed planned July 28 start was not promoted to a verified actual day. **Oaks at Liberty (7103)** moves from its October 2026 listing-review date to **December 31, 2001**, an estimated year anchor for HUD’s placed-in-service record MDA20010040. HUD’s Liberty Heights Avenue address and the operator’s Howard Park Avenue address identify the same corner property. **Gloria Robinson (7152)** moves from June 2016 to the confirmed **July 15, 2016** fourth/final-phase grand opening. Gross Dam’s June 3 date is retained with estimated confidence because the operator body and final-placement photo caption differ by one day; the discrepancy remains explicit.
+
+Costs preserve source currency and scope without FX conversion. Golden Gate’s project budget is distinct from its construction contract, contingency and reserve increase; those figures are not added together. The 400 Lake Shore filing supersedes older USD 500 million descriptions for the exact North Tower. Gross Dam’s revised operator contract is distinguished from approximate court-record costs and an unverified higher counsel assertion. Edda Freya’s NOK estimate is retained rather than its dollar equivalent; differing February/April 2016 delivery accounts do not alter the 2015 launch. MOSE’s newer rounded review estimate is qualified against older figures and complementary-work scopes. Al Maktoum’s broader AED 128 billion and Gloria Robinson’s final-phase-only budgets are not assigned to mismatched scopes. Null costs retain specific follow-up reasons.
+
+Accounting per environment is **1,310 assigned + 932 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **636 Proposed, 407 In Progress and 267 Completed**. Including the separate original 68-pin batch, **1,378 reviewed eligible pins per environment** carry status tags. Remaining groups are 251 agency/project identities, 109 tracker parcels, 90 Epoch trajectories, five housing milestones, 43 conflicting/halted scopes, 35 grid-request identities and 399 individual source/phase questions. Prior unresolved findings for Grace, Thatcher Flats, Northside Village and MahaNakhon remain queued.
+
+Replay sequentially:
+
+```sh
+node --env-file=.env.local scripts/construction/research.mjs --manifest scripts/construction/research-round5-2026-10-24.json
+node --env-file=.env.local scripts/construction/status.mjs --manifest scripts/construction/research-round5-2026-10-24.json
+python3 scripts/construction/reviewQueue.py --manifest scripts/construction/research-round5-2026-10-24.json
+```
+
+All 15 public JSON records per environment passed status, author, native cost/currency, citation and corrected-date checks. Authenticated native pages for Al Maktoum, Gross Dam, Egypt’s initial railway contract, shiploader 7.09, Oaks at Liberty and Gloria Robinson returned HTTP 200 with their research and correct statuses. Metadata and status saves were re-read and unrelated fields checked. Before snapshots, opened evidence and page captures remain ignored under `.scrape/construction-status-research-round5-2026-10-24/`. Syntax/lint, catalog accounting, whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.

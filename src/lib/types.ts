@@ -387,7 +387,7 @@ export type SearchedPerson = {
 export type SearchPage = {
   pins: PinJson[];
   queryCount?: number;
-  user?: { id: number; userName: string };
+  user?: { id: number; userName: string; about?: string | null };
   company?: SearchedCompany;
   person?: SearchedPerson;
   // Query strings for /api/pins/search: the pages before and after this one.
@@ -426,6 +426,8 @@ export type SessionUser = {
   birthday?: string | null;
   // Given at sign-up or on the profile, or absent; seen by the same two.
   phone?: string | null;
+  // A short public description of the account, shown with its pins; optional.
+  about?: string | null;
   email?: string;
   role: string;
   provider?: string;

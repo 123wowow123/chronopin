@@ -263,7 +263,7 @@ async function attachSearchedUser(pins: Pins, query: SearchQuery) {
   if (query.userNames.length === 1) {
     const { user } = await User.getUserByUserName(query.userNames[0]);
     if (user) {
-      (pins as Pins & { user?: unknown }).user = { id: user.id, userName: user.userName };
+      (pins as Pins & { user?: unknown }).user = { id: user.id, userName: user.userName, about: user.about || null };
     }
   }
 }

@@ -627,7 +627,8 @@
           ],
           "expectedPinSha256": "8a88bfc9a433e5d85252f8caecd4e858888aa4d0a54f1193986e28b5c127ba91",
           "metadataVerified": true,
-          "savedPinSha256": "cf4d6dbeba8843de9148bd3c9857f09d85aed58c08015e9ceac0ca4bcbc87b9e"
+          "savedPinSha256": "cf4d6dbeba8843de9148bd3c9857f09d85aed58c08015e9ceac0ca4bcbc87b9e",
+          "verified": true
         },
         {
           "id": 546,
@@ -641,7 +642,8 @@
           ],
           "expectedPinSha256": "410e8c5aa62c380dd1c17f09dec22e3ae96ee9f6ce716e21a6eea418aa7fd50e",
           "metadataVerified": true,
-          "savedPinSha256": "21de69f73a245eb32b2eef720d2ddbc1adf50884c1a0e4a6ff2c1e81cabde20f"
+          "savedPinSha256": "21de69f73a245eb32b2eef720d2ddbc1adf50884c1a0e4a6ff2c1e81cabde20f",
+          "verified": true
         },
         {
           "id": 618,
@@ -656,7 +658,8 @@
           ],
           "expectedPinSha256": "0b0ca063e0390809010a03ffce985005bb261e775b2f7e2c7122e4c47039d219",
           "metadataVerified": true,
-          "savedPinSha256": "6902fd32dbc10d459303e6f53a65c93e7bee89f6563633fae11e5bdd73fd3f6d"
+          "savedPinSha256": "6902fd32dbc10d459303e6f53a65c93e7bee89f6563633fae11e5bdd73fd3f6d",
+          "verified": true
         },
         {
           "id": 670,
@@ -670,7 +673,8 @@
           ],
           "expectedPinSha256": "96af6e54b7b1b112f130ea0d5d5947dc5478ac4dd2a2e1b77b7b6b1c97147cc2",
           "metadataVerified": true,
-          "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3"
+          "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3",
+          "verified": true
         },
         {
           "id": 677,
@@ -684,7 +688,8 @@
           ],
           "expectedPinSha256": "03b6f42be3907d7f842458bd580d727e806d209378050ace2d0d67125344ed4b",
           "metadataVerified": true,
-          "savedPinSha256": "01f5fbeb62e6c5df386edb8c7d0d71d6b8c065e6c0f90f55d960bfb3201c1d48"
+          "savedPinSha256": "01f5fbeb62e6c5df386edb8c7d0d71d6b8c065e6c0f90f55d960bfb3201c1d48",
+          "verified": true
         },
         {
           "id": 678,
@@ -699,7 +704,8 @@
           ],
           "expectedPinSha256": "544d15f10d87552e7958d159d64a4462697362c3fd41a393ce102c0599dbc4bd",
           "metadataVerified": true,
-          "savedPinSha256": "a6acecbf35a00a9ac5661cf5b0257c2b1a8d1a2a66f67061b6a14bdc49ab7ae2"
+          "savedPinSha256": "a6acecbf35a00a9ac5661cf5b0257c2b1a8d1a2a66f67061b6a14bdc49ab7ae2",
+          "verified": true
         },
         {
           "id": 711,
@@ -714,7 +720,8 @@
           ],
           "expectedPinSha256": "39cb3c07c8e1f8887c9f29fd279a6eb2149b21b687da20474375b5c062e6abc8",
           "metadataVerified": true,
-          "savedPinSha256": "e177456077695316835236431dcc547aed9cbf30f1bd98d7050297f45c68a30d"
+          "savedPinSha256": "e177456077695316835236431dcc547aed9cbf30f1bd98d7050297f45c68a30d",
+          "verified": true
         },
         {
           "id": 800,
@@ -729,7 +736,8 @@
           ],
           "expectedPinSha256": "6c237548dbad40fe9ff946acb23a6fe1a1399438925aff96e3a308946b6487c1",
           "metadataVerified": true,
-          "savedPinSha256": "d99f34e8b7f0d687a838039425d6c0aad95f0bc6a6bedd415fb95b2f993d7384"
+          "savedPinSha256": "d99f34e8b7f0d687a838039425d6c0aad95f0bc6a6bedd415fb95b2f993d7384",
+          "verified": true
         },
         {
           "id": 887,
@@ -744,7 +752,8 @@
           ],
           "expectedPinSha256": "538fc73c1bab6521a4bde645ee40436f4f5b08caa9f6d6ab1023e2eb94d1d9bd",
           "metadataVerified": true,
-          "savedPinSha256": "aeeeee15f29d93f0210af542375e58fc22686464afb6795fa598c246524189fa"
+          "savedPinSha256": "aeeeee15f29d93f0210af542375e58fc22686464afb6795fa598c246524189fa",
+          "verified": true
         },
         {
           "id": 891,
@@ -759,7 +768,8 @@
           ],
           "expectedPinSha256": "e307f08c9319a28213089200798325730321228041c45a83a791282c25f9d87b",
           "metadataVerified": true,
-          "savedPinSha256": "870cb91edd76f72afdaf6f7c9d9266e94a0b597c025763648cbb649370324a42"
+          "savedPinSha256": "870cb91edd76f72afdaf6f7c9d9266e94a0b597c025763648cbb649370324a42",
+          "verified": true
         },
         {
           "id": 937,
@@ -773,7 +783,8 @@
           ],
           "expectedPinSha256": "278e540db5df200a64b866ef84d92ee96f4ff5954f95c45be559cd7a46452735",
           "metadataVerified": true,
-          "savedPinSha256": "8b6eff4e22f95964cdc6ace86249fc0576d721d86c788747980e2f208bdcccb7"
+          "savedPinSha256": "8b6eff4e22f95964cdc6ace86249fc0576d721d86c788747980e2f208bdcccb7",
+          "verified": true
         },
         {
           "id": 7027,
@@ -787,7 +798,8 @@
           ],
           "expectedPinSha256": "85bab634aaf5fa792e7848c68525bdb09d9d481f4deb8053e6ac63b0d7ccd29c",
           "metadataVerified": true,
-          "savedPinSha256": "2da517901e261a750dc83463b86c85e95424fe495bc2113a3b02934d3bfd2f00"
+          "savedPinSha256": "2da517901e261a750dc83463b86c85e95424fe495bc2113a3b02934d3bfd2f00",
+          "verified": true
         },
         {
           "id": 7041,
@@ -802,7 +814,8 @@
           ],
           "expectedPinSha256": "51d1ad1ab4c044f73a2c37dbba6a9743daf9a0fd9a100f7852d76d3a343f4697",
           "metadataVerified": true,
-          "savedPinSha256": "2e2fd5007f3837c65e42047586f0300bf13d59065b3f6208fab7e921224c8d4f"
+          "savedPinSha256": "2e2fd5007f3837c65e42047586f0300bf13d59065b3f6208fab7e921224c8d4f",
+          "verified": true
         },
         {
           "id": 7042,
@@ -817,7 +830,8 @@
           ],
           "expectedPinSha256": "72cadb9a49e8254cf9819d8b3a70364d51a6fc6571421e30c9d21734e479902a",
           "metadataVerified": true,
-          "savedPinSha256": "61d388779a46135a6b859561ac4b4d7bfb702ad4890a03bd9b875ad6afe9d49d"
+          "savedPinSha256": "61d388779a46135a6b859561ac4b4d7bfb702ad4890a03bd9b875ad6afe9d49d",
+          "verified": true
         },
         {
           "id": 7074,
@@ -832,7 +846,8 @@
           ],
           "expectedPinSha256": "d20676d778e8e67b1ece390099f9bddc54d78ef52d72e06549fd9a45d5e3dfc5",
           "metadataVerified": true,
-          "savedPinSha256": "3ad921c61e00fe3f3ea15b510759ceae8a59b907857988606a61bf627f73d1e7"
+          "savedPinSha256": "3ad921c61e00fe3f3ea15b510759ceae8a59b907857988606a61bf627f73d1e7",
+          "verified": true
         },
         {
           "id": 7062,
@@ -847,7 +862,8 @@
           ],
           "expectedPinSha256": "223f6d76e9f43268d6d553fe8b903400e392b6c4fb9ffa3a4626cf96a2a9533d",
           "metadataVerified": true,
-          "savedPinSha256": "e989bcadd2dea984f2c71a23d7839e3fc3a82d72d2394a6112f9b32d56e5054c"
+          "savedPinSha256": "e989bcadd2dea984f2c71a23d7839e3fc3a82d72d2394a6112f9b32d56e5054c",
+          "verified": true
         },
         {
           "id": 7066,
@@ -862,7 +878,8 @@
           ],
           "expectedPinSha256": "413cd61a688a651b9a748e5204811575e63ce94bbbb545d63aaa61e0de165379",
           "metadataVerified": true,
-          "savedPinSha256": "26acb367f6e9355826a6cd9938ad3872cc2becb921ee102350b2dac803596633"
+          "savedPinSha256": "26acb367f6e9355826a6cd9938ad3872cc2becb921ee102350b2dac803596633",
+          "verified": true
         },
         {
           "id": 7070,
@@ -877,7 +894,8 @@
           ],
           "expectedPinSha256": "646fee42a9bc20eeada629d23e34a7e520b6a1a2e2cee664f07f00d33ab53461",
           "metadataVerified": true,
-          "savedPinSha256": "764082f074d8a4c6a94cc52041138ef880131824de294c175de3876075a33b54"
+          "savedPinSha256": "764082f074d8a4c6a94cc52041138ef880131824de294c175de3876075a33b54",
+          "verified": true
         },
         {
           "id": 7081,
@@ -892,7 +910,8 @@
           ],
           "expectedPinSha256": "d3b0f3c110f395fd1b506b6c0ef4ead1ff545b058d338307b36502419a8e28a5",
           "metadataVerified": true,
-          "savedPinSha256": "f9a487867a102743b936313ba9715502c7712f3fbae0437e5cbecb0492cfb712"
+          "savedPinSha256": "f9a487867a102743b936313ba9715502c7712f3fbae0437e5cbecb0492cfb712",
+          "verified": true
         },
         {
           "id": 7086,
@@ -907,7 +926,8 @@
           ],
           "expectedPinSha256": "ff39ea14b4cc11426e57980bdd5b671ab1a0644884785f711bc326b12ae15efe",
           "metadataVerified": true,
-          "savedPinSha256": "830cc1ac6c247ab6d2f7a9871a4c3358fbd3b0d5aa077b10c1c40a8fb6e9f457"
+          "savedPinSha256": "830cc1ac6c247ab6d2f7a9871a4c3358fbd3b0d5aa077b10c1c40a8fb6e9f457",
+          "verified": true
         },
         {
           "id": 7106,
@@ -922,7 +942,8 @@
           ],
           "expectedPinSha256": "c17e066c6229348ec9cba8beb509f6a086a9bf6a501e2b0162ac2083396a6f9f",
           "metadataVerified": true,
-          "savedPinSha256": "5cb00ac26467a54a99fa0ca78c0a560f52bc055d59045710c0ed5906baeda831"
+          "savedPinSha256": "5cb00ac26467a54a99fa0ca78c0a560f52bc055d59045710c0ed5906baeda831",
+          "verified": true
         },
         {
           "id": 7126,
@@ -937,7 +958,8 @@
           ],
           "expectedPinSha256": "15d2de578eccb8c6107530c7c765adc71382f391a5aad13ad9232b234e917c30",
           "metadataVerified": true,
-          "savedPinSha256": "f9a95f2ce1533fe58eb090b62fb4dc9be533fe6fb22457474ed580bf4b6e7115"
+          "savedPinSha256": "f9a95f2ce1533fe58eb090b62fb4dc9be533fe6fb22457474ed580bf4b6e7115",
+          "verified": true
         },
         {
           "id": 7131,
@@ -952,7 +974,8 @@
           ],
           "expectedPinSha256": "f69d397e700df6a7448c95088c80bb6704f919be5796b23de464c8cda4286662",
           "metadataVerified": true,
-          "savedPinSha256": "549c95d12376edf38b96fe66b8eba9ba39bf81036944617d40267c0819892f6e"
+          "savedPinSha256": "549c95d12376edf38b96fe66b8eba9ba39bf81036944617d40267c0819892f6e",
+          "verified": true
         },
         {
           "id": 7175,
@@ -969,7 +992,8 @@
           ],
           "expectedPinSha256": "6df51d01d9112a64c78b1f49a5b8925c823b92f76e62f5b8af4ec4af8783b963",
           "metadataVerified": true,
-          "savedPinSha256": "d213d26572e40d396f3a4d426c382ab16b5d1484c4c66dbbcaf26f649580232a"
+          "savedPinSha256": "d213d26572e40d396f3a4d426c382ab16b5d1484c4c66dbbcaf26f649580232a",
+          "verified": true
         },
         {
           "id": 7230,
@@ -983,9 +1007,16 @@
           ],
           "expectedPinSha256": "6dcc8d585a45b7608a5b447efd18ef7c54889769b79a28a7f9ecef25a894260e",
           "metadataVerified": true,
-          "savedPinSha256": "eab53db29e864c05e5b16f96b9d249abe9e0361af50a5d2f4a92afb381ab4d30"
+          "savedPinSha256": "eab53db29e864c05e5b16f96b9d249abe9e0361af50a5d2f4a92afb381ab4d30",
+          "verified": true
         }
-      ]
+      ],
+      "verifiedCount": 25,
+      "counts": {
+        "Proposed": 1,
+        "In Progress": 6,
+        "Completed": 18
+      }
     },
     {
       "base": "https://www.chronopin.com",
@@ -1003,7 +1034,8 @@
           ],
           "expectedPinSha256": "c920e8a2ebf40b7c6e909b12e89fc5719f6f1e66b6d59caf48d40247d595ba5d",
           "metadataVerified": true,
-          "savedPinSha256": "cf4d6dbeba8843de9148bd3c9857f09d85aed58c08015e9ceac0ca4bcbc87b9e"
+          "savedPinSha256": "cf4d6dbeba8843de9148bd3c9857f09d85aed58c08015e9ceac0ca4bcbc87b9e",
+          "verified": true
         },
         {
           "id": 546,
@@ -1017,7 +1049,8 @@
           ],
           "expectedPinSha256": "b950e6b94e3d838555d26b0693c5bf53596a1664ea6da8c580014876a278de57",
           "metadataVerified": true,
-          "savedPinSha256": "21de69f73a245eb32b2eef720d2ddbc1adf50884c1a0e4a6ff2c1e81cabde20f"
+          "savedPinSha256": "21de69f73a245eb32b2eef720d2ddbc1adf50884c1a0e4a6ff2c1e81cabde20f",
+          "verified": true
         },
         {
           "id": 618,
@@ -1032,7 +1065,8 @@
           ],
           "expectedPinSha256": "0b0ca063e0390809010a03ffce985005bb261e775b2f7e2c7122e4c47039d219",
           "metadataVerified": true,
-          "savedPinSha256": "6902fd32dbc10d459303e6f53a65c93e7bee89f6563633fae11e5bdd73fd3f6d"
+          "savedPinSha256": "6902fd32dbc10d459303e6f53a65c93e7bee89f6563633fae11e5bdd73fd3f6d",
+          "verified": true
         },
         {
           "id": 670,
@@ -1046,7 +1080,8 @@
           ],
           "expectedPinSha256": "96af6e54b7b1b112f130ea0d5d5947dc5478ac4dd2a2e1b77b7b6b1c97147cc2",
           "metadataVerified": true,
-          "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3"
+          "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3",
+          "verified": true
         },
         {
           "id": 677,
@@ -1060,7 +1095,8 @@
           ],
           "expectedPinSha256": "03b6f42be3907d7f842458bd580d727e806d209378050ace2d0d67125344ed4b",
           "metadataVerified": true,
-          "savedPinSha256": "01f5fbeb62e6c5df386edb8c7d0d71d6b8c065e6c0f90f55d960bfb3201c1d48"
+          "savedPinSha256": "01f5fbeb62e6c5df386edb8c7d0d71d6b8c065e6c0f90f55d960bfb3201c1d48",
+          "verified": true
         },
         {
           "id": 678,
@@ -1075,7 +1111,8 @@
           ],
           "expectedPinSha256": "544d15f10d87552e7958d159d64a4462697362c3fd41a393ce102c0599dbc4bd",
           "metadataVerified": true,
-          "savedPinSha256": "a6acecbf35a00a9ac5661cf5b0257c2b1a8d1a2a66f67061b6a14bdc49ab7ae2"
+          "savedPinSha256": "a6acecbf35a00a9ac5661cf5b0257c2b1a8d1a2a66f67061b6a14bdc49ab7ae2",
+          "verified": true
         },
         {
           "id": 711,
@@ -1090,7 +1127,8 @@
           ],
           "expectedPinSha256": "39cb3c07c8e1f8887c9f29fd279a6eb2149b21b687da20474375b5c062e6abc8",
           "metadataVerified": true,
-          "savedPinSha256": "e177456077695316835236431dcc547aed9cbf30f1bd98d7050297f45c68a30d"
+          "savedPinSha256": "e177456077695316835236431dcc547aed9cbf30f1bd98d7050297f45c68a30d",
+          "verified": true
         },
         {
           "id": 800,
@@ -1105,7 +1143,8 @@
           ],
           "expectedPinSha256": "6c237548dbad40fe9ff946acb23a6fe1a1399438925aff96e3a308946b6487c1",
           "metadataVerified": true,
-          "savedPinSha256": "d99f34e8b7f0d687a838039425d6c0aad95f0bc6a6bedd415fb95b2f993d7384"
+          "savedPinSha256": "d99f34e8b7f0d687a838039425d6c0aad95f0bc6a6bedd415fb95b2f993d7384",
+          "verified": true
         },
         {
           "id": 887,
@@ -1120,7 +1159,8 @@
           ],
           "expectedPinSha256": "538fc73c1bab6521a4bde645ee40436f4f5b08caa9f6d6ab1023e2eb94d1d9bd",
           "metadataVerified": true,
-          "savedPinSha256": "aeeeee15f29d93f0210af542375e58fc22686464afb6795fa598c246524189fa"
+          "savedPinSha256": "aeeeee15f29d93f0210af542375e58fc22686464afb6795fa598c246524189fa",
+          "verified": true
         },
         {
           "id": 891,
@@ -1135,7 +1175,8 @@
           ],
           "expectedPinSha256": "dc5c226842e6d844ab9525122abf74e471183a86e734fe97859dee3d4753114d",
           "metadataVerified": true,
-          "savedPinSha256": "870cb91edd76f72afdaf6f7c9d9266e94a0b597c025763648cbb649370324a42"
+          "savedPinSha256": "870cb91edd76f72afdaf6f7c9d9266e94a0b597c025763648cbb649370324a42",
+          "verified": true
         },
         {
           "id": 937,
@@ -1149,7 +1190,8 @@
           ],
           "expectedPinSha256": "278e540db5df200a64b866ef84d92ee96f4ff5954f95c45be559cd7a46452735",
           "metadataVerified": true,
-          "savedPinSha256": "8b6eff4e22f95964cdc6ace86249fc0576d721d86c788747980e2f208bdcccb7"
+          "savedPinSha256": "8b6eff4e22f95964cdc6ace86249fc0576d721d86c788747980e2f208bdcccb7",
+          "verified": true
         },
         {
           "id": 7027,
@@ -1163,7 +1205,8 @@
           ],
           "expectedPinSha256": "85bab634aaf5fa792e7848c68525bdb09d9d481f4deb8053e6ac63b0d7ccd29c",
           "metadataVerified": true,
-          "savedPinSha256": "2da517901e261a750dc83463b86c85e95424fe495bc2113a3b02934d3bfd2f00"
+          "savedPinSha256": "2da517901e261a750dc83463b86c85e95424fe495bc2113a3b02934d3bfd2f00",
+          "verified": true
         },
         {
           "id": 7041,
@@ -1178,7 +1221,8 @@
           ],
           "expectedPinSha256": "51d1ad1ab4c044f73a2c37dbba6a9743daf9a0fd9a100f7852d76d3a343f4697",
           "metadataVerified": true,
-          "savedPinSha256": "2e2fd5007f3837c65e42047586f0300bf13d59065b3f6208fab7e921224c8d4f"
+          "savedPinSha256": "2e2fd5007f3837c65e42047586f0300bf13d59065b3f6208fab7e921224c8d4f",
+          "verified": true
         },
         {
           "id": 7042,
@@ -1193,7 +1237,8 @@
           ],
           "expectedPinSha256": "72cadb9a49e8254cf9819d8b3a70364d51a6fc6571421e30c9d21734e479902a",
           "metadataVerified": true,
-          "savedPinSha256": "61d388779a46135a6b859561ac4b4d7bfb702ad4890a03bd9b875ad6afe9d49d"
+          "savedPinSha256": "61d388779a46135a6b859561ac4b4d7bfb702ad4890a03bd9b875ad6afe9d49d",
+          "verified": true
         },
         {
           "id": 7074,
@@ -1208,7 +1253,8 @@
           ],
           "expectedPinSha256": "d20676d778e8e67b1ece390099f9bddc54d78ef52d72e06549fd9a45d5e3dfc5",
           "metadataVerified": true,
-          "savedPinSha256": "3ad921c61e00fe3f3ea15b510759ceae8a59b907857988606a61bf627f73d1e7"
+          "savedPinSha256": "3ad921c61e00fe3f3ea15b510759ceae8a59b907857988606a61bf627f73d1e7",
+          "verified": true
         },
         {
           "id": 7062,
@@ -1223,7 +1269,8 @@
           ],
           "expectedPinSha256": "223f6d76e9f43268d6d553fe8b903400e392b6c4fb9ffa3a4626cf96a2a9533d",
           "metadataVerified": true,
-          "savedPinSha256": "e989bcadd2dea984f2c71a23d7839e3fc3a82d72d2394a6112f9b32d56e5054c"
+          "savedPinSha256": "e989bcadd2dea984f2c71a23d7839e3fc3a82d72d2394a6112f9b32d56e5054c",
+          "verified": true
         },
         {
           "id": 7066,
@@ -1238,7 +1285,8 @@
           ],
           "expectedPinSha256": "413cd61a688a651b9a748e5204811575e63ce94bbbb545d63aaa61e0de165379",
           "metadataVerified": true,
-          "savedPinSha256": "26acb367f6e9355826a6cd9938ad3872cc2becb921ee102350b2dac803596633"
+          "savedPinSha256": "26acb367f6e9355826a6cd9938ad3872cc2becb921ee102350b2dac803596633",
+          "verified": true
         },
         {
           "id": 7070,
@@ -1253,7 +1301,8 @@
           ],
           "expectedPinSha256": "646fee42a9bc20eeada629d23e34a7e520b6a1a2e2cee664f07f00d33ab53461",
           "metadataVerified": true,
-          "savedPinSha256": "764082f074d8a4c6a94cc52041138ef880131824de294c175de3876075a33b54"
+          "savedPinSha256": "764082f074d8a4c6a94cc52041138ef880131824de294c175de3876075a33b54",
+          "verified": true
         },
         {
           "id": 7081,
@@ -1268,7 +1317,8 @@
           ],
           "expectedPinSha256": "d3b0f3c110f395fd1b506b6c0ef4ead1ff545b058d338307b36502419a8e28a5",
           "metadataVerified": true,
-          "savedPinSha256": "f9a487867a102743b936313ba9715502c7712f3fbae0437e5cbecb0492cfb712"
+          "savedPinSha256": "f9a487867a102743b936313ba9715502c7712f3fbae0437e5cbecb0492cfb712",
+          "verified": true
         },
         {
           "id": 7086,
@@ -1283,7 +1333,8 @@
           ],
           "expectedPinSha256": "ff39ea14b4cc11426e57980bdd5b671ab1a0644884785f711bc326b12ae15efe",
           "metadataVerified": true,
-          "savedPinSha256": "830cc1ac6c247ab6d2f7a9871a4c3358fbd3b0d5aa077b10c1c40a8fb6e9f457"
+          "savedPinSha256": "830cc1ac6c247ab6d2f7a9871a4c3358fbd3b0d5aa077b10c1c40a8fb6e9f457",
+          "verified": true
         },
         {
           "id": 7106,
@@ -1298,7 +1349,8 @@
           ],
           "expectedPinSha256": "c17e066c6229348ec9cba8beb509f6a086a9bf6a501e2b0162ac2083396a6f9f",
           "metadataVerified": true,
-          "savedPinSha256": "5cb00ac26467a54a99fa0ca78c0a560f52bc055d59045710c0ed5906baeda831"
+          "savedPinSha256": "5cb00ac26467a54a99fa0ca78c0a560f52bc055d59045710c0ed5906baeda831",
+          "verified": true
         },
         {
           "id": 7126,
@@ -1313,7 +1365,8 @@
           ],
           "expectedPinSha256": "15d2de578eccb8c6107530c7c765adc71382f391a5aad13ad9232b234e917c30",
           "metadataVerified": true,
-          "savedPinSha256": "f9a95f2ce1533fe58eb090b62fb4dc9be533fe6fb22457474ed580bf4b6e7115"
+          "savedPinSha256": "f9a95f2ce1533fe58eb090b62fb4dc9be533fe6fb22457474ed580bf4b6e7115",
+          "verified": true
         },
         {
           "id": 7131,
@@ -1328,7 +1381,8 @@
           ],
           "expectedPinSha256": "f69d397e700df6a7448c95088c80bb6704f919be5796b23de464c8cda4286662",
           "metadataVerified": true,
-          "savedPinSha256": "549c95d12376edf38b96fe66b8eba9ba39bf81036944617d40267c0819892f6e"
+          "savedPinSha256": "549c95d12376edf38b96fe66b8eba9ba39bf81036944617d40267c0819892f6e",
+          "verified": true
         },
         {
           "id": 7175,
@@ -1343,7 +1397,10 @@
             "https://www.blocglobal.com/meriwether-homes/",
             "https://www.housingonline.com/wp-content/uploads/2018/02/Richelle-Patton.pdf"
           ],
-          "expectedPinSha256": "6df51d01d9112a64c78b1f49a5b8925c823b92f76e62f5b8af4ec4af8783b963"
+          "expectedPinSha256": "6df51d01d9112a64c78b1f49a5b8925c823b92f76e62f5b8af4ec4af8783b963",
+          "metadataVerified": true,
+          "savedPinSha256": "d213d26572e40d396f3a4d426c382ab16b5d1484c4c66dbbcaf26f649580232a",
+          "verified": true
         },
         {
           "id": 7230,
@@ -1355,9 +1412,18 @@
           "evidenceUrls": [
             "https://www.savannahga.gov/DocumentCenter/View/27364"
           ],
-          "expectedPinSha256": "6dcc8d585a45b7608a5b447efd18ef7c54889769b79a28a7f9ecef25a894260e"
+          "expectedPinSha256": "6dcc8d585a45b7608a5b447efd18ef7c54889769b79a28a7f9ecef25a894260e",
+          "metadataVerified": true,
+          "savedPinSha256": "eab53db29e864c05e5b16f96b9d249abe9e0361af50a5d2f4a92afb381ab4d30",
+          "verified": true
         }
-      ]
+      ],
+      "verifiedCount": 25,
+      "counts": {
+        "Proposed": 1,
+        "In Progress": 6,
+        "Completed": 18
+      }
     }
   ],
   "unresolved": [
@@ -1398,6 +1464,482 @@
     {
       "url": "https://www.huduser.gov/portal/casestudies/study_06132013_1.html",
       "result": "Opened page shell did not expose case-study text; plain request returned empty challenge HTML. Saint Luke evidence instead obtained from developer portfolio, engineer and dated housing-finance reporting."
+    }
+  ],
+  "publicVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "checks": [
+        {
+          "id": 484,
+          "status": "Completed",
+          "price": 2500000,
+          "priceCurrency": "GBP",
+          "utcStartDateTime": "1965-10-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 546,
+          "status": "Completed",
+          "price": 900000000,
+          "priceCurrency": "EGP",
+          "utcStartDateTime": "2024-03-22T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 618,
+          "status": "Completed",
+          "price": 2000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-01-27T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 670,
+          "status": "Completed",
+          "price": 8000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 677,
+          "status": "Completed",
+          "price": 100000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2023-06-21T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 678,
+          "status": "Completed",
+          "price": 141500000000,
+          "priceCurrency": "HKD",
+          "utcStartDateTime": "2024-11-28T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 711,
+          "status": "Completed",
+          "price": 1990000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2020-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 800,
+          "status": "Completed",
+          "price": 500000000,
+          "priceCurrency": "NOK",
+          "utcStartDateTime": "2019-03-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 887,
+          "status": "In Progress",
+          "utcStartDateTime": "2010-10-02T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 891,
+          "status": "Completed",
+          "price": 818500000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2012-08-24T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 937,
+          "status": "Completed",
+          "price": 500000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2011-04-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7027,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-06-12T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7041,
+          "status": "In Progress",
+          "price": 107600554,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-05-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7042,
+          "status": "Completed",
+          "price": 95315920,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-18T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7074,
+          "status": "Completed",
+          "price": 90943827,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-18T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7062,
+          "status": "Completed",
+          "price": 145333464,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-12-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7066,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-11-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7070,
+          "status": "Completed",
+          "utcStartDateTime": "2026-06-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7081,
+          "status": "Proposed",
+          "price": 20000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-03-20T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7086,
+          "status": "Completed",
+          "utcStartDateTime": "2026-07-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7106,
+          "status": "Completed",
+          "price": 39000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2012-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7126,
+          "status": "In Progress",
+          "price": 13500000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2018-12-14T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7131,
+          "status": "In Progress",
+          "price": 13450000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2022-11-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7175,
+          "status": "Completed",
+          "price": 13841017,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2015-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7230,
+          "status": "Completed",
+          "utcStartDateTime": "2017-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 711,
+          "url": "http://127.0.0.1:3000/pin/711/las-vegas-1-9bn-mega-stadium",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 887,
+          "url": "http://127.0.0.1:3000/pin/887/wilhelmsen-launches-t-nsberg-as-the-world-s-largest-ro-ro-ship",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7041,
+          "url": "http://127.0.0.1:3000/pin/7041/cielo-at-sunnydale-san-francisco-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7042,
+          "url": "http://127.0.0.1:3000/pin/7042/amani-apartments-san-francisco-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7081,
+          "url": "http://127.0.0.1:3000/pin/7081/henderson-place-atlanta-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7106,
+          "url": "http://127.0.0.1:3000/pin/7106/saint-luke-s-manor-cleveland-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7175,
+          "url": "http://127.0.0.1:3000/pin/7175/oaks-at-park-pointe-griffin-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "checks": [
+        {
+          "id": 484,
+          "status": "Completed",
+          "price": 2500000,
+          "priceCurrency": "GBP",
+          "utcStartDateTime": "1965-10-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 546,
+          "status": "Completed",
+          "price": 900000000,
+          "priceCurrency": "EGP",
+          "utcStartDateTime": "2024-03-22T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 618,
+          "status": "Completed",
+          "price": 2000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-01-27T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 670,
+          "status": "Completed",
+          "price": 8000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 677,
+          "status": "Completed",
+          "price": 100000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2023-06-21T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 678,
+          "status": "Completed",
+          "price": 141500000000,
+          "priceCurrency": "HKD",
+          "utcStartDateTime": "2024-11-28T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 711,
+          "status": "Completed",
+          "price": 1990000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2020-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 800,
+          "status": "Completed",
+          "price": 500000000,
+          "priceCurrency": "NOK",
+          "utcStartDateTime": "2019-03-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 887,
+          "status": "In Progress",
+          "utcStartDateTime": "2010-10-02T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 891,
+          "status": "Completed",
+          "price": 818500000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2012-08-24T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 937,
+          "status": "Completed",
+          "price": 500000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2011-04-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7027,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-06-12T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7041,
+          "status": "In Progress",
+          "price": 107600554,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-05-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7042,
+          "status": "Completed",
+          "price": 95315920,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-18T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7074,
+          "status": "Completed",
+          "price": 90943827,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-18T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7062,
+          "status": "Completed",
+          "price": 145333464,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-12-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7066,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-11-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7070,
+          "status": "Completed",
+          "utcStartDateTime": "2026-06-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7081,
+          "status": "Proposed",
+          "price": 20000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-03-20T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7086,
+          "status": "Completed",
+          "utcStartDateTime": "2026-07-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7106,
+          "status": "Completed",
+          "price": 39000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2012-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7126,
+          "status": "In Progress",
+          "price": 13500000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2018-12-14T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7131,
+          "status": "In Progress",
+          "price": 13450000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2022-11-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7175,
+          "status": "Completed",
+          "price": 13841017,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2015-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7230,
+          "status": "Completed",
+          "utcStartDateTime": "2017-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 711,
+          "url": "https://www.chronopin.com/pin/711/las-vegas-1-9bn-mega-stadium",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 887,
+          "url": "https://www.chronopin.com/pin/887/wilhelmsen-launches-t-nsberg-as-the-world-s-largest-ro-ro-ship",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7041,
+          "url": "https://www.chronopin.com/pin/7041/cielo-at-sunnydale-san-francisco-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7042,
+          "url": "https://www.chronopin.com/pin/7042/amani-apartments-san-francisco-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7081,
+          "url": "https://www.chronopin.com/pin/7081/henderson-place-atlanta-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7106,
+          "url": "https://www.chronopin.com/pin/7106/saint-luke-s-manor-cleveland-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7175,
+          "url": "https://www.chronopin.com/pin/7175/oaks-at-park-pointe-griffin-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
     }
   ]
 }

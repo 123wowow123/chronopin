@@ -1797,6 +1797,8 @@ const ko: Messages = {
     pictureRemoved: '사진을 삭제했습니다.',
     removeFailed: '사진을 삭제하지 못했습니다.',
     pictureHint: '내 핀과 댓글에 표시됩니다. JPEG, PNG, GIF, 최대 5MB.',
+    about: '소개 (선택)',
+    aboutHint: '프로필에 표시되는 짧은 설명입니다. 최대 500자.',
     saveChanges: '변경사항 저장',
     preferencesSaved: '환경설정을 저장했습니다.',
     preferencesFailed: '환경설정을 저장하지 못했습니다.',

@@ -1802,6 +1802,8 @@ const fr: Messages = {
     pictureRemoved: 'Photo supprimée.',
     removeFailed: 'Impossible de supprimer votre photo.',
     pictureHint: 'Affichée sur vos épingles et commentaires. JPEG, PNG ou GIF, jusqu’à 5 Mo.',
+    about: 'À propos de vous (facultatif)',
+    aboutHint: 'Une courte description affichée sur votre profil. 500 caractères maximum.',
     saveChanges: 'Enregistrer les modifications',
     preferencesSaved: 'Préférences enregistrées.',
     preferencesFailed: 'Impossible d’enregistrer vos préférences.',

@@ -1,0 +1,1226 @@
+{
+  "checkedAt": "2026-10-24",
+  "round": 5,
+  "snapshotDirectory": ".scrape/construction-status-research-round5-2026-10-24",
+  "scope": "15 exact construction milestones: three Proposed, nine In Progress, three Completed; eight source-quoted costs, seven cost gaps and qualified date corrections.",
+  "research": [
+    {
+      "id": 230,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The June 15, 2026 WAM government update confirms actual enabling works, runway infrastructure and initial passenger-terminal foundations for Al Maktoum’s first phase. It targets operations in 2032, without a month or day: the native date moves to December 31, 2032 as an estimated year anchor. The previously stored AED128 billion figure describes the broader terminal/airport plan, including ultimate capacity, not a separately verified budget for the pinned first operational phase; native price/currency are cleared pending a phase budget.",
+      "sources": [
+        {
+          "url": "https://en.aletihad.ae/news/uae/4672584/al-maktoum-international-airport-development-project-achieve",
+          "title": "Al Maktoum International Airport development project achieves significant milestones",
+          "quote": "the initial structural foundations for passenger terminals and gates.",
+          "publishedDate": "2026-06-15",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "WAM’s June 15, 2026 government update says the first phase is on course to commence operations in 2032. December 31 is a year-precision timeline anchor, not an announced opening day; no June target month is published. The existing airport and ultimate full buildout are separate."
+      },
+      "costGap": "No separately verified first-phase budget. Prior AED128bn whole-plan figure and AED13bn contracts under execution are not substituted for the 2032 operational phase cost."
+    },
+    {
+      "id": 458,
+      "status": "In Progress",
+      "price": 602000000,
+      "priceCurrency": "USD",
+      "note": "Denver Water’s topping-out account states June 3, 2026 roller-compacted-concrete completion at 470 feet, while additional protective concrete and other work continue. It is In Progress at that milestone, not complete reservoir expansion. The operator’s revised construction contract is just under US$602 million after 2023/2026 amendments; native price is the rounded upper figure with an upper-bound field, not an exact audited total. The September court record’s approximate US$600 million and counsel’s over-US$800 million assertion are retained as differing cost descriptions rather than overriding the operator’s contract scope.",
+      "sources": [
+        {
+          "url": "https://www.denverwater.org/tap/gross-dam-construction-milestone",
+          "title": "Gross Dam construction milestone",
+          "quote": "Additional work to complete the dam will take place over the next year",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.denverwater.org/grossreservoir/about-the-project",
+          "title": "About the Project — Gross Reservoir Expansion",
+          "quote": "increased to just under $602 million through budget amendments approved in 2023 and 2026.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111508514.pdf",
+          "title": "Save the Colorado v. Graham — Tenth Circuit opinion, September 15, 2026",
+          "quote": "the project cost around $600,000,000",
+          "publishedDate": "2026-09-15",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 3, footnote 1 also records environmental counsel’s over-$800m assertion; no operator-confirmed revised all-in total established."
+        }
+      ],
+      "patch": {
+        "priceUpperBound": 602000000,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Denver Water’s own milestone account states June 3, 2026 in the body, but captions its June 2 photograph as the final day of RCC placement. June 3 is retained as the operator’s reported milestone with estimated confidence pending reconciliation of this one-day inconsistency; topping out does not complete remaining work."
+      }
+    },
+    {
+      "id": 493,
+      "status": "In Progress",
+      "price": 543305000,
+      "priceCurrency": "USD",
+      "note": "The exact 635-home North Tower at 400 Lake Shore remains a construction scope, distinct from the unstarted South Tower and predecessor Chicago Spire. The HIT’s June 2026 SEC filing lists it under construction as of April 30, 2026 and publishes US$543,305,000 total development cost. This supersedes older US$500 million descriptions and is separate from the US$55 million HIT commitment or the whole two-tower master plan. The existing estimated spring-2027 anchor is retained; finished façade/topping out does not prove passenger or resident opening.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm",
+          "title": "AFL-CIO Housing Investment Trust — Projects Under Construction as of April 30, 2026",
+          "quote": "$543,305,000",
+          "publishedDate": "2026-06-03",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Row 400 Lake Shore Drive, Chicago IL: 635 units, 127 affordable; Total Development Cost, not HIT Commitment."
+        },
+        {
+          "url": "https://chicagoyimby.com/2026/01/400-lake-shore-opens-2026-ready-to-pour-the-66th-floor.html",
+          "title": "400 Lake Shore Opens 2026 Ready To Pour The 66th Floor",
+          "quote": "ready to pour the 66th floor",
+          "publishedDate": "2026-01-05",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Article title describes construction entering 2026, not an operational opening."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 592,
+      "status": "Proposed",
+      "price": 1600000000,
+      "priceCurrency": "USD",
+      "note": "This pin represents legal approval for the proposed Río Indio reservoir, not construction completion. Panama’s September 2025 government filing states US$1.6 billion including reservoir construction and relocation. It dates the court ruling July 3, 2024, while retained 2024 trade reporting says July 2; both place it in July, not the saved June 30. Native date changes to July 31, 2024 as an estimated month anchor pending exact court-date reconciliation. Later road/enabling procurements do not complete the dam and transfer tunnel.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/76027/000119312525225282/d83390dex99d.htm",
+          "title": "Republic of Panama — September 30, 2025 description, Form 18-K Exhibit D",
+          "quote": "an investment of U.S.$1.6 billion",
+          "publishedDate": "2025-09-30",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Río Indio paragraph includes reservoir construction and relocation; same section dates ruling July 3, 2024. Earlier retained trade accounts say July 2."
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2024-07-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Panama’s September 2025 government filing dates the watershed court ruling July 3, 2024, while earlier trade reporting dates it July 2. July 31 is a month-precision timeline anchor, not a claimed exact ruling day; replaces the unsupported June 30 date. Exact ruling/publication date remains a research gap."
+      }
+    },
+    {
+      "id": 628,
+      "status": "Proposed",
+      "price": 1011726000,
+      "priceCurrency": "USD",
+      "note": "The October 24, 2025 board action authorizes award and budget for Contract 1, North/South Towers and Side Spans. It is Proposed at that approval milestone; signing and funding do not establish physical work at the vote. The exact Project 2520 budget is US$1,011,726,000, distinct from its US$863,949,008 construction contract, US$41.35 million contingency, reserve increase or later Main Span contract. The full final seismic program is not represented as costing only US$1.01 billion.",
+      "sources": [
+        {
+          "url": "https://www.goldengate.org/assets/1/25/2025-1024-boardmeeting-summaryactions1.pdf?13496",
+          "title": "Golden Gate Bridge District — Summary of Actions, October 24, 2025",
+          "quote": "a total Project #2520 budget of $1,011,726,000",
+          "publishedDate": "2025-10-24",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Resolution 2025-070, PDF page 0: authorizes award subject to Caltrans/FHWA concurrence; Project 2520 covers Contract 1 towers and side spans."
+        }
+      ],
+      "patch": {
+        "description": "The Golden Gate Bridge District authorized Contract 1 of the final seismic retrofit phase on October 24, 2025, covering the north and south towers and side spans with a US$1,011,726,000 Project 2520 budget. Later main-span work is separate."
+      }
+    },
+    {
+      "id": 660,
+      "status": "Proposed",
+      "price": 4500000000,
+      "priceCurrency": "USD",
+      "note": "Siemens’ September 1, 2021 signing release states the initial 660-km Egyptian rail-system contract at approximately US$4.5 billion, with Siemens’ share around US$3 billion and order intake largely after financial closing. This is Proposed at the signed-contract milestone, not completed construction. Native price is corrected from US$4.50 to US$4,500,000,000. The source states dollars, not euros. The later roughly 2,000-km network agreement has a different scope and is not substituted for the first-line contract, which includes 15 years of maintenance.",
+      "sources": [
+        {
+          "url": "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn",
+          "title": "Siemens Mobility Signs Historic Contract for Turnkey Rail System in Egypt worth USD 3 bn",
+          "quote": "The total contract value is approximately USD 4.5 billion",
+          "publishedDate": "2021-09-01",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 801,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Fraport’s November 3, 2022 presentation was of the first of 12 Sky Line vehicles, with its first test trips still planned for 2023 and route works underway since 2019. This is In Progress for the new people-mover build, not completion of Terminal 3 or the entire transport system. No individual first-vehicle price was published in the presentation. The opened EUR300 million contract covers the system, some route works and up to ten years of operations, so it is not assigned as the first vehicle’s construction price.",
+      "sources": [
+        {
+          "url": "https://www.fraport.com/en/newsroom/press-releases/2022/q4/terminal-3--first-vehicle-for-new-sky-line-presented.html",
+          "title": "Terminal 3: First Vehicle for New Sky Line Presented",
+          "quote": "its first test trips, which are scheduled to take place in 2023.",
+          "publishedDate": "2022-11-03",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.fraport.com/en/newsroom/press-releases/2018/q1-2018/fraport-awards-contract-for-construction-of-new-people-mover-sys.html",
+          "title": "Fraport Awards Contract for Construction of New People-Mover System Connecting Terminals 1 and 2 with Future Terminal 3",
+          "quote": "around €300 million comprising delivery of the system and its operational management for up to ten years.",
+          "publishedDate": "2018-03-20",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "No published cost for the presented first vehicle; EUR300m includes all-system delivery, track works and up to ten operating years. Neither that sum nor the whole Terminal 3 budget is an individual vehicle price."
+    },
+    {
+      "id": 828,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The operator’s final-2025 newsletter confirms actual shiploader 7.09 upgrades during the July–November outage. This pin represents the start of that historical work, so In Progress applies at the milestone even though the outage later finished. The native July 1 placeholder changes to July 31 as an estimated start-month anchor; a July 28 planned start is not treated as a verified exact actual start day. The AUD270 million multi-shiploader program and AUD50 million multi-project outage are broader scopes; no separately quoted 7.09 cost was established.",
+      "sources": [
+        {
+          "url": "https://pwcs.com.au/documents/PDFs-Documents/Community-Newsletters/2025-edition-4-port-waratah-community-news.pdf",
+          "title": "Port Waratah Community News — Edition Four 2025",
+          "quote": "From July to November, Port Waratah has undertaken its first ever",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 4 describes the four-month outage and specifically the encapsulation and upgrade of shiploader 7.09; $50m covers several projects."
+        },
+        {
+          "url": "https://pwcs.com.au/news/fit-long-term-port-waratah-invests-270-million-shiploaders",
+          "title": "Fit for the long term: Port Waratah invests $270 Million in shiploaders",
+          "quote": "a four-month outage of Shiploader 7.09.",
+          "publishedDate": "2025-05-06",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2025-07-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Port Waratah’s Edition Four 2025 newsletter confirms the outage and upgrades ran July to November 2025. July 31 is an estimated start-month anchor, not an exact start day. The July 23 industry bulletin planned July 28, but exact actual commencement was not independently established; replaces the July 1 placeholder."
+      },
+      "costGap": "No exact 7.09 refurbishment cost established: AUD270m covers three shiploaders and AUD50m covers multiple outage projects. Do not allocate either total."
+    },
+    {
+      "id": 841,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The Marchwitzastraße commemorative plaque and local housing-cooperative history establish the first concrete-panel placement on July 8, 1977. In Progress describes this historical start, not completion of the building or entire Marzahn/Hellersdorf estate. Later topping out and resident move-ins are separate milestones. No exact first-building or installation-phase construction cost was published in the opened plaque, cooperative or municipal histories; historical rents and later property prices are not costs.",
+      "sources": [
+        {
+          "url": "https://www.gedenktafeln-in-berlin.de/gedenktafeln/detail/sozialistischer-wohnungsbau/2654",
+          "title": "Gedenktafeln in Berlin — Sozialistischer Wohnungsbau",
+          "quote": "MIT DEM SETZEN DER ERSTEN PLATTE",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Plaque dates the event AM 8. JULI 1977 at Marchwitzastraße 45."
+        },
+        {
+          "url": "https://www.felix-wg.de/aktuelles/informationen/40-jahre-marzahn-hellersdorf",
+          "title": "40 JAHRE Marzahn-Hellersdorf",
+          "quote": "1. Platte der Großsiedlung wurde am 8.7.1977 gesetzt",
+          "publishedDate": "2019-07-02",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "No quoted first-building or first-panel-phase cost in the plaque, cooperative history or municipal history; rents and whole-district spending cannot substitute."
+    },
+    {
+      "id": 883,
+      "status": "In Progress",
+      "price": 1400000000,
+      "priceCurrency": "NOK",
+      "note": "Edda Freya’s August 15, 2015 yard launch preceded delivery and service, so it is In Progress at the pinned hull-launch milestone. The opened financing-industry account publishes approximately NOK1.4 billion newbuild cost for this exact vessel; native currency follows kroner, without converting its dollar equivalent. Delivery accounts disagree on February versus April 2016, but both place delivery after this launch; no 2016 date is moved onto the 2015 pin.",
+      "sources": [
+        {
+          "url": "https://www.rivieramm.com/opinion/norwegian-unit-is-first-subsea-vessel-with-batteries-31298",
+          "title": "Norwegian unit is first subsea vessel with batteries",
+          "quote": "was launched by builder Kleven Verft on 15 August 2015.",
+          "publishedDate": "2016-10-06",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://raederbing.no/en/insights/engelsk/iclg-lending-and-secured-finance-2017/",
+          "title": "ICLG: Lending and Secured Finance 2017",
+          "quote": "an estimated new build cost of approximately NOK 1.4bn",
+          "publishedDate": "2017-04-03",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Same account dates owner delivery April 2016; differs from Riviera’s February delivery date, not from the August 2015 launch."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 930,
+      "status": "In Progress",
+      "price": 6200000000,
+      "priceCurrency": "EUR",
+      "note": "Installing the last of MOSE’s 78 gates on January 30, 2019 did not complete controls, testing and full-system commissioning: the opened adaptation case study documents first successful protective operation only in October 2020. In Progress describes the historical installation milestone. A May 2026 project-management review gives approximately EUR6.2 billion for the whole MOSE project; native price records that rounded published retrospective estimate, not a final audited gate-installation contract. Earlier EUR5.493/5.5 billion accounts and complementary works use different dates/scopes.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/MOSE",
+          "title": "MOSE",
+          "quote": "On 30 January 2019, the last of the 78 gates was put in place.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+          "title": "Integrated system for the protection of Venice and its lagoon against flooding",
+          "quote": "MOSE was firstly and successfully operated on the 3rd of October 2020",
+          "publishedDate": "2022-01-27",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Superscript day suffix normalized; testing and other works postdate the pinned 2019 gate installation."
+        },
+        {
+          "url": "https://pmworldjournal.com/wp-content/uploads/2026/05/PMWJ-May2026-Lehmann-Building_Bridges.pdf",
+          "title": "Building Bridges Across Organizations in Project Business",
+          "quote": "approximately 6.2 billion euros",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "May 2026 issue; exact publication day not established. PDF page 5 gives a rounded whole-project retrospective cost, not an operator-audited final account or individual-gate cost."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 970,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The Indian Ministry of Railways’ heritage account confirms the first Bori Bunder–Thane train on April 16, 1853, establishing an opened passenger-railway scope. Completed applies to that original approximately 34-km section, not every later Great Indian Peninsula Railway extension. No exact source-quoted construction total for only the original section was established in opened government/railway histories and cost searches; share capital, later extensions and a later station building are not substituted.",
+      "sources": [
+        {
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1547828&lang=2&reg=48",
+          "title": "Shri Piyush Goyal Launches Rail Heritage Digitisation Project of Indian Railways in collaboration with Google Arts & Culture",
+          "quote": "on 16th April, 1853 when the first train ran between Bori Bunder and Thane.",
+          "publishedDate": "2018-09-28",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Original Bombay–Thane section cost not established. GIPR capital, later network budgets and Victoria Terminus construction are different scopes."
+    },
+    {
+      "id": 2167,
+      "status": "In Progress",
+      "price": 102000000,
+      "priceCurrency": "USD",
+      "note": "Kindred’s developer and housing-commission accounts confirm actual groundbreaking of 126 apartments, while the current developer page schedules completion in May 2027. This future-completion pin is In Progress; framing/topping out does not establish finished homes. The existing May 31, 2027 estimated month anchor is retained, without claiming an exact completion day. Opened project reporting states US$102 million for the full development, separate from loans, bond allocations or the similarly named Norfolk community.",
+      "sources": [
+        {
+          "url": "https://bridgehousing.com/press_releases/bridge-housing-celebrates-groundbreaking-of-new-san-diego-affordable-housing-community/",
+          "title": "BRIDGE Housing Celebrates Groundbreaking of New San Diego Affordable Housing Community",
+          "quote": "to celebrate the groundbreaking",
+          "publishedDate": "2025-04-29",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Article header April 28, dateline April 29; event is explicitly April 29."
+        },
+        {
+          "url": "https://bridgehousing.com/properties/kindred/",
+          "title": "Kindred Affordable Apartments",
+          "quote": "Scheduled for completion in May of 2027",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://hoodline.com/2025/04/san-diego-s-downtown-to-welcome-kindred-apartments-affordable-housing-development-breaks-ground-at-cortez-hill/",
+          "title": "San Diego's Downtown to Welcome 'Kindred Apartments': Affordable Housing Development Breaks Ground at Cortez Hill",
+          "quote": "this $102 million development project",
+          "publishedDate": "2025-04-30",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7103,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "HUD’s LIHTC record MDA20010040 identifies Oaks at Liberty, 75 apartments at 4801 Liberty Heights Avenue, as placed in service in 2001. The current operator markets the same corner property using 3501 Howard Park Avenue. This establishes Completed independently of rents or applications. The native October 2026 listing-review date moves to December 31, 2001 as an estimated placed-in-service-year anchor, not an exact opening day or original school construction. No exact residential-conversion total was established; tax-credit allocation and monthly rents are not development cost.",
+      "sources": [
+        {
+          "url": "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=HUD_ID+%3D+%27MDA20010040%27&outFields=PROJECT%2CHUD_ID%2CPROJ_ADD%2CPROJ_CTY%2CYR_PIS%2CN_UNITS&f=json",
+          "title": "HUD LIHTC database — Oaks at Liberty, MDA20010040",
+          "quote": "\"YR_PIS\": \"2001\"",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Opened HTTPS ArcGIS query; JSON whitespace normalized. 75 units, Baltimore; alternate street address reconciled with operator and school corner site."
+        },
+        {
+          "url": "https://www.pennrose.com/apartments/maryland/oaks-at-liberty/",
+          "title": "Oaks at Liberty",
+          "quote": "3501 Howard Park Avenue, Baltimore, MD, 21207",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2001-12-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "HUD LIHTC record MDA20010040 identifies 75 Oaks at Liberty apartments at 4801 Liberty Heights Avenue with YR_PIS 2001. Operator uses the same corner property’s 3501 Howard Park Avenue address. December 31 is a placed-in-service year anchor, not an exact opening day or original school construction; replaces the October 2026 listing-review date."
+      },
+      "costGap": "No source-quoted exact residential-conversion total established from operator, HUD LIHTC and school-history material; LIHTC allocation and rents are not project cost."
+    },
+    {
+      "id": 7152,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "New Jersey’s July 15, 2016 release explicitly celebrates the fourth and final phase of Gloria Robinson Court Homes and calls it completed. This establishes Completed for the represented whole redevelopment; the native unsupported June month anchor moves to the confirmed July 15 final-phase opening. The release’s approximately US$20.9 million and later trade report’s US$25.1 million concern only the final 70-home phase, not the entire four-phase community; no cumulative project total was established, so native price remains null.",
+      "sources": [
+        {
+          "url": "https://nj.gov/dca/news/news/2016/approved/20160715.html",
+          "title": "Christie Administration Marks Grand Opening of Gloria Robinson Court Homes in Hudson County",
+          "quote": "Today’s grand opening marks the fourth and final phase",
+          "publishedDate": "2016-07-15",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.housingfinance.com/developments/public-housing-community-reborn-in-jersey-city_o",
+          "title": "Public Housing Community Reborn in Jersey City",
+          "quote": "The $25.1 million development",
+          "publishedDate": "2017-07-07",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Article explicitly scopes fourth phase to 70 homes plus Head Start; not a whole-community total."
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2016-07-15T00:00:00.000Z",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "New Jersey DCA/HMFA’s July 15, 2016 release says officials today celebrated the grand opening of 70 homes in the fourth and final phase. This date represents completion/opening of the final phase of the whole community; replaces the unsupported June 2016 month-end anchor."
+      },
+      "costGap": "Whole four-phase redevelopment total not established. Official $20.9m and later $25.1m reporting scope the final 70-home phase and cannot be assigned to all phases."
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 230,
+          "title": "Al Maktoum International Airport New Terminal",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "The June 15, 2026 WAM government update confirms actual enabling works, runway infrastructure and initial passenger-terminal foundations for Al Maktoum’s first phase. It targets operations in 2032, without a month or day: the native date moves to December 31, 2032 as an estimated year anchor. The previously stored AED128 billion figure describes the broader terminal/airport plan, including ultimate capacity, not a separately verified budget for the pinned first operational phase; native price/currency are cleared pending a phase budget.",
+          "evidence": "the initial structural foundations for passenger terminals and gates.",
+          "evidenceUrls": [
+            "https://en.aletihad.ae/news/uae/4672584/al-maktoum-international-airport-development-project-achieve"
+          ],
+          "expectedPinSha256": "1dd6dd172866b48e12f0d52633ee39162668817b190c4b314040adcf78cbb0c0",
+          "metadataVerified": true,
+          "savedPinSha256": "e8fa4e2bd0a9f9133676373a43e893620fae86049ac74957655cfbd80e5219ac",
+          "verified": true
+        },
+        {
+          "id": 458,
+          "title": "Gross Dam Raise Tops Out at 470 Feet",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Denver Water’s topping-out account states June 3, 2026 roller-compacted-concrete completion at 470 feet, while additional protective concrete and other work continue. It is In Progress at that milestone, not complete reservoir expansion. The operator’s revised construction contract is just under US$602 million after 2023/2026 amendments; native price is the rounded upper figure with an upper-bound field, not an exact audited total. The September court record’s approximate US$600 million and counsel’s over-US$800 million assertion are retained as differing cost descriptions rather than overriding the operator’s contract scope.",
+          "evidence": "Additional work to complete the dam will take place over the next year",
+          "evidenceUrls": [
+            "https://www.denverwater.org/tap/gross-dam-construction-milestone",
+            "https://www.denverwater.org/grossreservoir/about-the-project",
+            "https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111508514.pdf"
+          ],
+          "expectedPinSha256": "c0899f4863203783ebbca061bee437ab7e270fc9483fa418103f4df4bdbe1878",
+          "metadataVerified": true,
+          "savedPinSha256": "371fd23cbc21a4a816f6ca0a4e33d322bde29ef1c4a4208d607bf7e23967bddb",
+          "verified": true
+        },
+        {
+          "id": 493,
+          "title": "400 Lake Shore Drive's North Tower Rises From Chicago's Old Spire Hole",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The exact 635-home North Tower at 400 Lake Shore remains a construction scope, distinct from the unstarted South Tower and predecessor Chicago Spire. The HIT’s June 2026 SEC filing lists it under construction as of April 30, 2026 and publishes US$543,305,000 total development cost. This supersedes older US$500 million descriptions and is separate from the US$55 million HIT commitment or the whole two-tower master plan. The existing estimated spring-2027 anchor is retained; finished façade/topping out does not prove passenger or resident opening.",
+          "evidence": "$543,305,000",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm",
+            "https://chicagoyimby.com/2026/01/400-lake-shore-opens-2026-ready-to-pour-the-66th-floor.html"
+          ],
+          "expectedPinSha256": "9638d46cb2a00d1ef5570c10154a1d231313641f0e0f45a0c72ce6918d15d8ae",
+          "metadataVerified": true,
+          "savedPinSha256": "8ee50b629c27caea80a07116278b4c1fe6424a3ea2e1c1d2f42c9327d561f6c9",
+          "verified": true
+        },
+        {
+          "id": 592,
+          "title": "Panama Canal Wins Approval for Rio Indio Reservoir",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "This pin represents legal approval for the proposed Río Indio reservoir, not construction completion. Panama’s September 2025 government filing states US$1.6 billion including reservoir construction and relocation. It dates the court ruling July 3, 2024, while retained 2024 trade reporting says July 2; both place it in July, not the saved June 30. Native date changes to July 31, 2024 as an estimated month anchor pending exact court-date reconciliation. Later road/enabling procurements do not complete the dam and transfer tunnel.",
+          "evidence": "an investment of U.S.$1.6 billion",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/76027/000119312525225282/d83390dex99d.htm"
+          ],
+          "expectedPinSha256": "3cb4a17156d0b2f9ca1c9fcdf2e12c41fb6d787c5f69e5f20c13576dd9f10aad",
+          "metadataVerified": true,
+          "savedPinSha256": "41ff4edbd376bfe1a970ae33a8fca4d345fa456a3284261ac03f4dac7cf40c5e",
+          "verified": true
+        },
+        {
+          "id": 628,
+          "title": "Golden Gate Bridge District Approves Final $1BN Seismic Retrofit Phase",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The October 24, 2025 board action authorizes award and budget for Contract 1, North/South Towers and Side Spans. It is Proposed at that approval milestone; signing and funding do not establish physical work at the vote. The exact Project 2520 budget is US$1,011,726,000, distinct from its US$863,949,008 construction contract, US$41.35 million contingency, reserve increase or later Main Span contract. The full final seismic program is not represented as costing only US$1.01 billion.",
+          "evidence": "a total Project #2520 budget of $1,011,726,000",
+          "evidenceUrls": [
+            "https://www.goldengate.org/assets/1/25/2025-1024-boardmeeting-summaryactions1.pdf?13496"
+          ],
+          "expectedPinSha256": "dbbc7ab44bb66c2c4940a1d8b680ad572955d6c8bf8649f7a7deb5c28b08a9a6",
+          "metadataVerified": true,
+          "savedPinSha256": "efecb1e86aa97ffa5f369bd852ef73dd6ae83ebc6daa4eefdec525ad8df1bbd9",
+          "verified": true
+        },
+        {
+          "id": 660,
+          "title": "Egypt Signs $4.5BN Contract for Its First High-Speed Rail Line",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "Siemens’ September 1, 2021 signing release states the initial 660-km Egyptian rail-system contract at approximately US$4.5 billion, with Siemens’ share around US$3 billion and order intake largely after financial closing. This is Proposed at the signed-contract milestone, not completed construction. Native price is corrected from US$4.50 to US$4,500,000,000. The source states dollars, not euros. The later roughly 2,000-km network agreement has a different scope and is not substituted for the first-line contract, which includes 15 years of maintenance.",
+          "evidence": "The total contract value is approximately USD 4.5 billion",
+          "evidenceUrls": [
+            "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn"
+          ],
+          "expectedPinSha256": "63eb2f3716ed77211e99f9be45050659b0af206fea86a42a05166991c78f960c",
+          "metadataVerified": true,
+          "savedPinSha256": "4bdfaecd0669e962eaac2fb6b98c5df0e4dcdf03370d38e6774cc92c99aa2b7e",
+          "verified": true
+        },
+        {
+          "id": 801,
+          "title": "Fraport Presents Frankfurt Terminal 3's First Sky Line Train",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Fraport’s November 3, 2022 presentation was of the first of 12 Sky Line vehicles, with its first test trips still planned for 2023 and route works underway since 2019. This is In Progress for the new people-mover build, not completion of Terminal 3 or the entire transport system. No individual first-vehicle price was published in the presentation. The opened EUR300 million contract covers the system, some route works and up to ten years of operations, so it is not assigned as the first vehicle’s construction price.",
+          "evidence": "its first test trips, which are scheduled to take place in 2023.",
+          "evidenceUrls": [
+            "https://www.fraport.com/en/newsroom/press-releases/2022/q4/terminal-3--first-vehicle-for-new-sky-line-presented.html",
+            "https://www.fraport.com/en/newsroom/press-releases/2018/q1-2018/fraport-awards-contract-for-construction-of-new-people-mover-sys.html"
+          ],
+          "expectedPinSha256": "badb94b869490397477a475758e1b3849aa876129d8b39f89ce81aad2b9eec04",
+          "metadataVerified": true,
+          "savedPinSha256": "1d4c244a66035f683712d1b8be956d37b251bff2d85c7b75555994c9f442bea4",
+          "verified": true
+        },
+        {
+          "id": 828,
+          "title": "Port Waratah Begins Shiploader 7.09 Overhaul at Kooragang Terminal",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The operator’s final-2025 newsletter confirms actual shiploader 7.09 upgrades during the July–November outage. This pin represents the start of that historical work, so In Progress applies at the milestone even though the outage later finished. The native July 1 placeholder changes to July 31 as an estimated start-month anchor; a July 28 planned start is not treated as a verified exact actual start day. The AUD270 million multi-shiploader program and AUD50 million multi-project outage are broader scopes; no separately quoted 7.09 cost was established.",
+          "evidence": "From July to November, Port Waratah has undertaken its first ever",
+          "evidenceUrls": [
+            "https://pwcs.com.au/documents/PDFs-Documents/Community-Newsletters/2025-edition-4-port-waratah-community-news.pdf",
+            "https://pwcs.com.au/news/fit-long-term-port-waratah-invests-270-million-shiploaders"
+          ],
+          "expectedPinSha256": "0681ca89bda30966e3c33b81b5f3d869099fa10268c25a8d3de3392703973019",
+          "metadataVerified": true,
+          "savedPinSha256": "82cfa54fe7b86efc6ba17d97c001c5b18279d22fb5cb70e84d373a846f1c049e",
+          "verified": true
+        },
+        {
+          "id": 841,
+          "title": "First Prefab Panel Goes Up at Berlin-Marzahn, Founding Europe's Largest Housing Estate",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The Marchwitzastraße commemorative plaque and local housing-cooperative history establish the first concrete-panel placement on July 8, 1977. In Progress describes this historical start, not completion of the building or entire Marzahn/Hellersdorf estate. Later topping out and resident move-ins are separate milestones. No exact first-building or installation-phase construction cost was published in the opened plaque, cooperative or municipal histories; historical rents and later property prices are not costs.",
+          "evidence": "MIT DEM SETZEN DER ERSTEN PLATTE",
+          "evidenceUrls": [
+            "https://www.gedenktafeln-in-berlin.de/gedenktafeln/detail/sozialistischer-wohnungsbau/2654",
+            "https://www.felix-wg.de/aktuelles/informationen/40-jahre-marzahn-hellersdorf"
+          ],
+          "expectedPinSha256": "ce3ec9398a425c4a183e9d3d146a7e524fb2263d981dc8eb77690188a59568c1",
+          "metadataVerified": true,
+          "savedPinSha256": "7fa8c71d894e99ede526e51766f3c96f12c7822ed59783db207de0f08c6b5ead",
+          "verified": true
+        },
+        {
+          "id": 883,
+          "title": "Edda Freya Launches as a Hybrid-Powered Subsea Construction Vessel",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Edda Freya’s August 15, 2015 yard launch preceded delivery and service, so it is In Progress at the pinned hull-launch milestone. The opened financing-industry account publishes approximately NOK1.4 billion newbuild cost for this exact vessel; native currency follows kroner, without converting its dollar equivalent. Delivery accounts disagree on February versus April 2016, but both place delivery after this launch; no 2016 date is moved onto the 2015 pin.",
+          "evidence": "was launched by builder Kleven Verft on 15 August 2015.",
+          "evidenceUrls": [
+            "https://www.rivieramm.com/opinion/norwegian-unit-is-first-subsea-vessel-with-batteries-31298",
+            "https://raederbing.no/en/insights/engelsk/iclg-lending-and-secured-finance-2017/"
+          ],
+          "expectedPinSha256": "7119ed058da1b9d1d4ceb7573c1c716e2ec5f6fa336d4c4351156657f573f8d0",
+          "metadataVerified": true,
+          "savedPinSha256": "970b45b461021d38bd041210627670cbeb922bdd09853b431ea63943a47697c3",
+          "verified": true
+        },
+        {
+          "id": 930,
+          "title": "Consorzio Venezia Nuova Installs the Last of MOSE's 78 Flood Gates",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Installing the last of MOSE’s 78 gates on January 30, 2019 did not complete controls, testing and full-system commissioning: the opened adaptation case study documents first successful protective operation only in October 2020. In Progress describes the historical installation milestone. A May 2026 project-management review gives approximately EUR6.2 billion for the whole MOSE project; native price records that rounded published retrospective estimate, not a final audited gate-installation contract. Earlier EUR5.493/5.5 billion accounts and complementary works use different dates/scopes.",
+          "evidence": "On 30 January 2019, the last of the 78 gates was put in place.",
+          "evidenceUrls": [
+            "https://en.wikipedia.org/wiki/MOSE",
+            "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "https://pmworldjournal.com/wp-content/uploads/2026/05/PMWJ-May2026-Lehmann-Building_Bridges.pdf"
+          ],
+          "expectedPinSha256": "f5db72b8848e0431d42a5cb7374329101cec191e5f3db325992553471be203d6",
+          "metadataVerified": true,
+          "savedPinSha256": "e6ab2d1a85cca547051486d9015d76c499fae22de2de486c18bae7f6de480c24",
+          "verified": true
+        },
+        {
+          "id": 970,
+          "title": "Great Indian Peninsula Railway Runs India's First Passenger Train",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Indian Ministry of Railways’ heritage account confirms the first Bori Bunder–Thane train on April 16, 1853, establishing an opened passenger-railway scope. Completed applies to that original approximately 34-km section, not every later Great Indian Peninsula Railway extension. No exact source-quoted construction total for only the original section was established in opened government/railway histories and cost searches; share capital, later extensions and a later station building are not substituted.",
+          "evidence": "on 16th April, 1853 when the first train ran between Bori Bunder and Thane.",
+          "evidenceUrls": [
+            "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1547828&lang=2&reg=48"
+          ],
+          "expectedPinSha256": "f51fb9e7bc9c4aae0d7c22e6eff54ed2e2a5d9c2b8df36d7ef89ff34bf0ca7f6",
+          "metadataVerified": true,
+          "savedPinSha256": "9a22d5645b8c130cb07e16fb140790fffe11d007a1b225fb2e5e432d84bc76e3",
+          "verified": true
+        },
+        {
+          "id": 2167,
+          "title": "Kindred Affordable Apartments Completes in Cortez Hill",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Kindred’s developer and housing-commission accounts confirm actual groundbreaking of 126 apartments, while the current developer page schedules completion in May 2027. This future-completion pin is In Progress; framing/topping out does not establish finished homes. The existing May 31, 2027 estimated month anchor is retained, without claiming an exact completion day. Opened project reporting states US$102 million for the full development, separate from loans, bond allocations or the similarly named Norfolk community.",
+          "evidence": "to celebrate the groundbreaking",
+          "evidenceUrls": [
+            "https://bridgehousing.com/press_releases/bridge-housing-celebrates-groundbreaking-of-new-san-diego-affordable-housing-community/",
+            "https://bridgehousing.com/properties/kindred/",
+            "https://hoodline.com/2025/04/san-diego-s-downtown-to-welcome-kindred-apartments-affordable-housing-development-breaks-ground-at-cortez-hill/"
+          ],
+          "expectedPinSha256": "032a0cbcc7a7263b544b801bc64a18e2fcf29d00914eb442c51d8a934ffca6ed",
+          "metadataVerified": true,
+          "savedPinSha256": "576d5194f2fe143e5de9e079fb6cd3b6ea19b5337950a37f2d3b455eb7f1b6a6",
+          "verified": true
+        },
+        {
+          "id": 7103,
+          "title": "Oaks at Liberty — Baltimore affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "HUD’s LIHTC record MDA20010040 identifies Oaks at Liberty, 75 apartments at 4801 Liberty Heights Avenue, as placed in service in 2001. The current operator markets the same corner property using 3501 Howard Park Avenue. This establishes Completed independently of rents or applications. The native October 2026 listing-review date moves to December 31, 2001 as an estimated placed-in-service-year anchor, not an exact opening day or original school construction. No exact residential-conversion total was established; tax-credit allocation and monthly rents are not development cost.",
+          "evidence": "\"YR_PIS\": \"2001\"",
+          "evidenceUrls": [
+            "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=HUD_ID+%3D+%27MDA20010040%27&outFields=PROJECT%2CHUD_ID%2CPROJ_ADD%2CPROJ_CTY%2CYR_PIS%2CN_UNITS&f=json",
+            "https://www.pennrose.com/apartments/maryland/oaks-at-liberty/"
+          ],
+          "expectedPinSha256": "6a50b115ddc1f1031dd4db2f93353ac319cb754372b0b6cbe603306240ab3536",
+          "metadataVerified": true,
+          "savedPinSha256": "2a28d0bcf81c0f221c39e1268713e8fc73bc2e8c1391c1b33192a76896563796",
+          "verified": true
+        },
+        {
+          "id": 7152,
+          "title": "Gloria Robinson Court Homes — Jersey City affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "New Jersey’s July 15, 2016 release explicitly celebrates the fourth and final phase of Gloria Robinson Court Homes and calls it completed. This establishes Completed for the represented whole redevelopment; the native unsupported June month anchor moves to the confirmed July 15 final-phase opening. The release’s approximately US$20.9 million and later trade report’s US$25.1 million concern only the final 70-home phase, not the entire four-phase community; no cumulative project total was established, so native price remains null.",
+          "evidence": "Today’s grand opening marks the fourth and final phase",
+          "evidenceUrls": [
+            "https://nj.gov/dca/news/news/2016/approved/20160715.html",
+            "https://www.housingfinance.com/developments/public-housing-community-reborn-in-jersey-city_o"
+          ],
+          "expectedPinSha256": "d5bf8694a76ebf3941e52c6cb3a7dc2b1ce4143d1b4a37e3fd211ec42bc5e52a",
+          "metadataVerified": true,
+          "savedPinSha256": "1365c250f2b0c14149af02ef24be778d7167ae919b322d0cd08f8e96b2c57d98",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 15,
+      "counts": {
+        "Proposed": 3,
+        "In Progress": 9,
+        "Completed": 3
+      }
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 230,
+          "title": "Al Maktoum International Airport New Terminal",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "The June 15, 2026 WAM government update confirms actual enabling works, runway infrastructure and initial passenger-terminal foundations for Al Maktoum’s first phase. It targets operations in 2032, without a month or day: the native date moves to December 31, 2032 as an estimated year anchor. The previously stored AED128 billion figure describes the broader terminal/airport plan, including ultimate capacity, not a separately verified budget for the pinned first operational phase; native price/currency are cleared pending a phase budget.",
+          "evidence": "the initial structural foundations for passenger terminals and gates.",
+          "evidenceUrls": [
+            "https://en.aletihad.ae/news/uae/4672584/al-maktoum-international-airport-development-project-achieve"
+          ],
+          "expectedPinSha256": "1dd6dd172866b48e12f0d52633ee39162668817b190c4b314040adcf78cbb0c0",
+          "metadataVerified": true,
+          "savedPinSha256": "e8fa4e2bd0a9f9133676373a43e893620fae86049ac74957655cfbd80e5219ac",
+          "verified": true
+        },
+        {
+          "id": 458,
+          "title": "Gross Dam Raise Tops Out at 470 Feet",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Denver Water’s topping-out account states June 3, 2026 roller-compacted-concrete completion at 470 feet, while additional protective concrete and other work continue. It is In Progress at that milestone, not complete reservoir expansion. The operator’s revised construction contract is just under US$602 million after 2023/2026 amendments; native price is the rounded upper figure with an upper-bound field, not an exact audited total. The September court record’s approximate US$600 million and counsel’s over-US$800 million assertion are retained as differing cost descriptions rather than overriding the operator’s contract scope.",
+          "evidence": "Additional work to complete the dam will take place over the next year",
+          "evidenceUrls": [
+            "https://www.denverwater.org/tap/gross-dam-construction-milestone",
+            "https://www.denverwater.org/grossreservoir/about-the-project",
+            "https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111508514.pdf"
+          ],
+          "expectedPinSha256": "4ba2f13596816abbc626b0f3df37db2dd37c1af9f3a71e6d16cfb3b959ace1c0",
+          "metadataVerified": true,
+          "savedPinSha256": "371fd23cbc21a4a816f6ca0a4e33d322bde29ef1c4a4208d607bf7e23967bddb",
+          "verified": true
+        },
+        {
+          "id": 493,
+          "title": "400 Lake Shore Drive's North Tower Rises From Chicago's Old Spire Hole",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The exact 635-home North Tower at 400 Lake Shore remains a construction scope, distinct from the unstarted South Tower and predecessor Chicago Spire. The HIT’s June 2026 SEC filing lists it under construction as of April 30, 2026 and publishes US$543,305,000 total development cost. This supersedes older US$500 million descriptions and is separate from the US$55 million HIT commitment or the whole two-tower master plan. The existing estimated spring-2027 anchor is retained; finished façade/topping out does not prove passenger or resident opening.",
+          "evidence": "$543,305,000",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm",
+            "https://chicagoyimby.com/2026/01/400-lake-shore-opens-2026-ready-to-pour-the-66th-floor.html"
+          ],
+          "expectedPinSha256": "001d0f51d750591ec83a4474ae120ab1e74a74c76d4ce88a4c82f0c23693c3ba",
+          "metadataVerified": true,
+          "savedPinSha256": "8ee50b629c27caea80a07116278b4c1fe6424a3ea2e1c1d2f42c9327d561f6c9",
+          "verified": true
+        },
+        {
+          "id": 592,
+          "title": "Panama Canal Wins Approval for Rio Indio Reservoir",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "This pin represents legal approval for the proposed Río Indio reservoir, not construction completion. Panama’s September 2025 government filing states US$1.6 billion including reservoir construction and relocation. It dates the court ruling July 3, 2024, while retained 2024 trade reporting says July 2; both place it in July, not the saved June 30. Native date changes to July 31, 2024 as an estimated month anchor pending exact court-date reconciliation. Later road/enabling procurements do not complete the dam and transfer tunnel.",
+          "evidence": "an investment of U.S.$1.6 billion",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/76027/000119312525225282/d83390dex99d.htm"
+          ],
+          "expectedPinSha256": "3cb4a17156d0b2f9ca1c9fcdf2e12c41fb6d787c5f69e5f20c13576dd9f10aad",
+          "metadataVerified": true,
+          "savedPinSha256": "41ff4edbd376bfe1a970ae33a8fca4d345fa456a3284261ac03f4dac7cf40c5e",
+          "verified": true
+        },
+        {
+          "id": 628,
+          "title": "Golden Gate Bridge District Approves Final $1BN Seismic Retrofit Phase",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The October 24, 2025 board action authorizes award and budget for Contract 1, North/South Towers and Side Spans. It is Proposed at that approval milestone; signing and funding do not establish physical work at the vote. The exact Project 2520 budget is US$1,011,726,000, distinct from its US$863,949,008 construction contract, US$41.35 million contingency, reserve increase or later Main Span contract. The full final seismic program is not represented as costing only US$1.01 billion.",
+          "evidence": "a total Project #2520 budget of $1,011,726,000",
+          "evidenceUrls": [
+            "https://www.goldengate.org/assets/1/25/2025-1024-boardmeeting-summaryactions1.pdf?13496"
+          ],
+          "expectedPinSha256": "dbbc7ab44bb66c2c4940a1d8b680ad572955d6c8bf8649f7a7deb5c28b08a9a6",
+          "metadataVerified": true,
+          "savedPinSha256": "efecb1e86aa97ffa5f369bd852ef73dd6ae83ebc6daa4eefdec525ad8df1bbd9",
+          "verified": true
+        },
+        {
+          "id": 660,
+          "title": "Egypt Signs $4.5BN Contract for Its First High-Speed Rail Line",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "Siemens’ September 1, 2021 signing release states the initial 660-km Egyptian rail-system contract at approximately US$4.5 billion, with Siemens’ share around US$3 billion and order intake largely after financial closing. This is Proposed at the signed-contract milestone, not completed construction. Native price is corrected from US$4.50 to US$4,500,000,000. The source states dollars, not euros. The later roughly 2,000-km network agreement has a different scope and is not substituted for the first-line contract, which includes 15 years of maintenance.",
+          "evidence": "The total contract value is approximately USD 4.5 billion",
+          "evidenceUrls": [
+            "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn"
+          ],
+          "expectedPinSha256": "63eb2f3716ed77211e99f9be45050659b0af206fea86a42a05166991c78f960c",
+          "metadataVerified": true,
+          "savedPinSha256": "4bdfaecd0669e962eaac2fb6b98c5df0e4dcdf03370d38e6774cc92c99aa2b7e",
+          "verified": true
+        },
+        {
+          "id": 801,
+          "title": "Fraport Presents Frankfurt Terminal 3's First Sky Line Train",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Fraport’s November 3, 2022 presentation was of the first of 12 Sky Line vehicles, with its first test trips still planned for 2023 and route works underway since 2019. This is In Progress for the new people-mover build, not completion of Terminal 3 or the entire transport system. No individual first-vehicle price was published in the presentation. The opened EUR300 million contract covers the system, some route works and up to ten years of operations, so it is not assigned as the first vehicle’s construction price.",
+          "evidence": "its first test trips, which are scheduled to take place in 2023.",
+          "evidenceUrls": [
+            "https://www.fraport.com/en/newsroom/press-releases/2022/q4/terminal-3--first-vehicle-for-new-sky-line-presented.html",
+            "https://www.fraport.com/en/newsroom/press-releases/2018/q1-2018/fraport-awards-contract-for-construction-of-new-people-mover-sys.html"
+          ],
+          "expectedPinSha256": "badb94b869490397477a475758e1b3849aa876129d8b39f89ce81aad2b9eec04",
+          "metadataVerified": true,
+          "savedPinSha256": "1d4c244a66035f683712d1b8be956d37b251bff2d85c7b75555994c9f442bea4",
+          "verified": true
+        },
+        {
+          "id": 828,
+          "title": "Port Waratah Begins Shiploader 7.09 Overhaul at Kooragang Terminal",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The operator’s final-2025 newsletter confirms actual shiploader 7.09 upgrades during the July–November outage. This pin represents the start of that historical work, so In Progress applies at the milestone even though the outage later finished. The native July 1 placeholder changes to July 31 as an estimated start-month anchor; a July 28 planned start is not treated as a verified exact actual start day. The AUD270 million multi-shiploader program and AUD50 million multi-project outage are broader scopes; no separately quoted 7.09 cost was established.",
+          "evidence": "From July to November, Port Waratah has undertaken its first ever",
+          "evidenceUrls": [
+            "https://pwcs.com.au/documents/PDFs-Documents/Community-Newsletters/2025-edition-4-port-waratah-community-news.pdf",
+            "https://pwcs.com.au/news/fit-long-term-port-waratah-invests-270-million-shiploaders"
+          ],
+          "expectedPinSha256": "0681ca89bda30966e3c33b81b5f3d869099fa10268c25a8d3de3392703973019",
+          "metadataVerified": true,
+          "savedPinSha256": "82cfa54fe7b86efc6ba17d97c001c5b18279d22fb5cb70e84d373a846f1c049e",
+          "verified": true
+        },
+        {
+          "id": 841,
+          "title": "First Prefab Panel Goes Up at Berlin-Marzahn, Founding Europe's Largest Housing Estate",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The Marchwitzastraße commemorative plaque and local housing-cooperative history establish the first concrete-panel placement on July 8, 1977. In Progress describes this historical start, not completion of the building or entire Marzahn/Hellersdorf estate. Later topping out and resident move-ins are separate milestones. No exact first-building or installation-phase construction cost was published in the opened plaque, cooperative or municipal histories; historical rents and later property prices are not costs.",
+          "evidence": "MIT DEM SETZEN DER ERSTEN PLATTE",
+          "evidenceUrls": [
+            "https://www.gedenktafeln-in-berlin.de/gedenktafeln/detail/sozialistischer-wohnungsbau/2654",
+            "https://www.felix-wg.de/aktuelles/informationen/40-jahre-marzahn-hellersdorf"
+          ],
+          "expectedPinSha256": "ce3ec9398a425c4a183e9d3d146a7e524fb2263d981dc8eb77690188a59568c1",
+          "metadataVerified": true,
+          "savedPinSha256": "7fa8c71d894e99ede526e51766f3c96f12c7822ed59783db207de0f08c6b5ead",
+          "verified": true
+        },
+        {
+          "id": 883,
+          "title": "Edda Freya Launches as a Hybrid-Powered Subsea Construction Vessel",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Edda Freya’s August 15, 2015 yard launch preceded delivery and service, so it is In Progress at the pinned hull-launch milestone. The opened financing-industry account publishes approximately NOK1.4 billion newbuild cost for this exact vessel; native currency follows kroner, without converting its dollar equivalent. Delivery accounts disagree on February versus April 2016, but both place delivery after this launch; no 2016 date is moved onto the 2015 pin.",
+          "evidence": "was launched by builder Kleven Verft on 15 August 2015.",
+          "evidenceUrls": [
+            "https://www.rivieramm.com/opinion/norwegian-unit-is-first-subsea-vessel-with-batteries-31298",
+            "https://raederbing.no/en/insights/engelsk/iclg-lending-and-secured-finance-2017/"
+          ],
+          "expectedPinSha256": "7119ed058da1b9d1d4ceb7573c1c716e2ec5f6fa336d4c4351156657f573f8d0",
+          "metadataVerified": true,
+          "savedPinSha256": "970b45b461021d38bd041210627670cbeb922bdd09853b431ea63943a47697c3",
+          "verified": true
+        },
+        {
+          "id": 930,
+          "title": "Consorzio Venezia Nuova Installs the Last of MOSE's 78 Flood Gates",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Installing the last of MOSE’s 78 gates on January 30, 2019 did not complete controls, testing and full-system commissioning: the opened adaptation case study documents first successful protective operation only in October 2020. In Progress describes the historical installation milestone. A May 2026 project-management review gives approximately EUR6.2 billion for the whole MOSE project; native price records that rounded published retrospective estimate, not a final audited gate-installation contract. Earlier EUR5.493/5.5 billion accounts and complementary works use different dates/scopes.",
+          "evidence": "On 30 January 2019, the last of the 78 gates was put in place.",
+          "evidenceUrls": [
+            "https://en.wikipedia.org/wiki/MOSE",
+            "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "https://pmworldjournal.com/wp-content/uploads/2026/05/PMWJ-May2026-Lehmann-Building_Bridges.pdf"
+          ],
+          "expectedPinSha256": "f5db72b8848e0431d42a5cb7374329101cec191e5f3db325992553471be203d6",
+          "metadataVerified": true,
+          "savedPinSha256": "e6ab2d1a85cca547051486d9015d76c499fae22de2de486c18bae7f6de480c24",
+          "verified": true
+        },
+        {
+          "id": 970,
+          "title": "Great Indian Peninsula Railway Runs India's First Passenger Train",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Indian Ministry of Railways’ heritage account confirms the first Bori Bunder–Thane train on April 16, 1853, establishing an opened passenger-railway scope. Completed applies to that original approximately 34-km section, not every later Great Indian Peninsula Railway extension. No exact source-quoted construction total for only the original section was established in opened government/railway histories and cost searches; share capital, later extensions and a later station building are not substituted.",
+          "evidence": "on 16th April, 1853 when the first train ran between Bori Bunder and Thane.",
+          "evidenceUrls": [
+            "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1547828&lang=2&reg=48"
+          ],
+          "expectedPinSha256": "f51fb9e7bc9c4aae0d7c22e6eff54ed2e2a5d9c2b8df36d7ef89ff34bf0ca7f6",
+          "metadataVerified": true,
+          "savedPinSha256": "9a22d5645b8c130cb07e16fb140790fffe11d007a1b225fb2e5e432d84bc76e3",
+          "verified": true
+        },
+        {
+          "id": 2167,
+          "title": "Kindred Affordable Apartments Completes in Cortez Hill",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Kindred’s developer and housing-commission accounts confirm actual groundbreaking of 126 apartments, while the current developer page schedules completion in May 2027. This future-completion pin is In Progress; framing/topping out does not establish finished homes. The existing May 31, 2027 estimated month anchor is retained, without claiming an exact completion day. Opened project reporting states US$102 million for the full development, separate from loans, bond allocations or the similarly named Norfolk community.",
+          "evidence": "to celebrate the groundbreaking",
+          "evidenceUrls": [
+            "https://bridgehousing.com/press_releases/bridge-housing-celebrates-groundbreaking-of-new-san-diego-affordable-housing-community/",
+            "https://bridgehousing.com/properties/kindred/",
+            "https://hoodline.com/2025/04/san-diego-s-downtown-to-welcome-kindred-apartments-affordable-housing-development-breaks-ground-at-cortez-hill/"
+          ],
+          "expectedPinSha256": "032a0cbcc7a7263b544b801bc64a18e2fcf29d00914eb442c51d8a934ffca6ed",
+          "metadataVerified": true,
+          "savedPinSha256": "576d5194f2fe143e5de9e079fb6cd3b6ea19b5337950a37f2d3b455eb7f1b6a6",
+          "verified": true
+        },
+        {
+          "id": 7103,
+          "title": "Oaks at Liberty — Baltimore affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "HUD’s LIHTC record MDA20010040 identifies Oaks at Liberty, 75 apartments at 4801 Liberty Heights Avenue, as placed in service in 2001. The current operator markets the same corner property using 3501 Howard Park Avenue. This establishes Completed independently of rents or applications. The native October 2026 listing-review date moves to December 31, 2001 as an estimated placed-in-service-year anchor, not an exact opening day or original school construction. No exact residential-conversion total was established; tax-credit allocation and monthly rents are not development cost.",
+          "evidence": "\"YR_PIS\": \"2001\"",
+          "evidenceUrls": [
+            "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=HUD_ID+%3D+%27MDA20010040%27&outFields=PROJECT%2CHUD_ID%2CPROJ_ADD%2CPROJ_CTY%2CYR_PIS%2CN_UNITS&f=json",
+            "https://www.pennrose.com/apartments/maryland/oaks-at-liberty/"
+          ],
+          "expectedPinSha256": "6a50b115ddc1f1031dd4db2f93353ac319cb754372b0b6cbe603306240ab3536",
+          "metadataVerified": true,
+          "savedPinSha256": "2a28d0bcf81c0f221c39e1268713e8fc73bc2e8c1391c1b33192a76896563796",
+          "verified": true
+        },
+        {
+          "id": 7152,
+          "title": "Gloria Robinson Court Homes — Jersey City affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "New Jersey’s July 15, 2016 release explicitly celebrates the fourth and final phase of Gloria Robinson Court Homes and calls it completed. This establishes Completed for the represented whole redevelopment; the native unsupported June month anchor moves to the confirmed July 15 final-phase opening. The release’s approximately US$20.9 million and later trade report’s US$25.1 million concern only the final 70-home phase, not the entire four-phase community; no cumulative project total was established, so native price remains null.",
+          "evidence": "Today’s grand opening marks the fourth and final phase",
+          "evidenceUrls": [
+            "https://nj.gov/dca/news/news/2016/approved/20160715.html",
+            "https://www.housingfinance.com/developments/public-housing-community-reborn-in-jersey-city_o"
+          ],
+          "expectedPinSha256": "d5bf8694a76ebf3941e52c6cb3a7dc2b1ce4143d1b4a37e3fd211ec42bc5e52a",
+          "metadataVerified": true,
+          "savedPinSha256": "1365c250f2b0c14149af02ef24be778d7167ae919b322d0cd08f8e96b2c57d98",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 15,
+      "counts": {
+        "Proposed": 3,
+        "In Progress": 9,
+        "Completed": 3
+      }
+    }
+  ],
+  "additionalSourcesChecked": [
+    {
+      "url": "https://www.mediaoffice.ae/en/news/2026/june/15-06/hamdan-bin-mohammed-approves-al-maktoum-airport",
+      "result": "502; same government/WAM milestone account opened through Aletihad."
+    },
+    {
+      "url": "https://www.heavyliftnews.com/fagiolis-big-operations-in-the-venice-lagoon/",
+      "result": "404; MOSE stage distinguished using opened adaptation case study and gate chronology."
+    },
+    {
+      "url": "https://dhcd.maryland.gov/HousingDevelopment/Documents/lihtc/LIHTC-EOY-2025-list-by-property-name.pdf",
+      "result": "404; HUD native LIHTC placed-in-service year obtained directly instead."
+    },
+    {
+      "url": "https://www.organojudicial.gob.pa/",
+      "result": "Court-date search did not resolve July 2 versus July 3 Río Indio ruling accounts; native date remains estimated at month precision."
+    },
+    {
+      "url": "https://www.worldports.org/shiploader-major-outage-23-jul-2025-port-waratah-australia/",
+      "result": "403 on opening; indexed July 28 planned date not treated as confirmed actual start. Operator newsletter directly supports July-November actual outage."
+    },
+    {
+      "url": "https://www.hushstreet.com/brooklyn-tower/",
+      "result": "Secondary occupancy-date search did not establish a primary DOB certificate; Brooklyn Tower remains outside the saved 15-record batch pending exact completion/amenity scope evidence."
+    }
+  ],
+  "publicVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "checks": [
+        {
+          "id": 230,
+          "status": "In Progress",
+          "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 458,
+          "status": "In Progress",
+          "price": 602000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 493,
+          "status": "In Progress",
+          "price": 543305000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 592,
+          "status": "Proposed",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 628,
+          "status": "Proposed",
+          "price": 1011726000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-10-24T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 660,
+          "status": "Proposed",
+          "price": 4500000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2021-09-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 801,
+          "status": "In Progress",
+          "utcStartDateTime": "2022-11-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 828,
+          "status": "In Progress",
+          "utcStartDateTime": "2025-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 841,
+          "status": "In Progress",
+          "utcStartDateTime": "1977-07-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 883,
+          "status": "In Progress",
+          "price": 1400000000,
+          "priceCurrency": "NOK",
+          "utcStartDateTime": "2015-08-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 930,
+          "status": "In Progress",
+          "price": 6200000000,
+          "priceCurrency": "EUR",
+          "utcStartDateTime": "2019-01-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 970,
+          "status": "Completed",
+          "utcStartDateTime": "1853-04-16T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 2167,
+          "status": "In Progress",
+          "price": 102000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-05-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7103,
+          "status": "Completed",
+          "utcStartDateTime": "2001-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7152,
+          "status": "Completed",
+          "utcStartDateTime": "2016-07-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 230,
+          "url": "http://127.0.0.1:3000/pin/230/al-maktoum-international-airport-new-terminal",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 458,
+          "url": "http://127.0.0.1:3000/pin/458/gross-dam-raise-tops-out-at-470-feet",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 660,
+          "url": "http://127.0.0.1:3000/pin/660/egypt-signs-4-5bn-contract-for-its-first-high-speed-rail-line",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 828,
+          "url": "http://127.0.0.1:3000/pin/828/port-waratah-begins-shiploader-7-09-overhaul-at-kooragang-terminal",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7103,
+          "url": "http://127.0.0.1:3000/pin/7103/oaks-at-liberty-baltimore-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7152,
+          "url": "http://127.0.0.1:3000/pin/7152/gloria-robinson-court-homes-jersey-city-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "checks": [
+        {
+          "id": 230,
+          "status": "In Progress",
+          "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 458,
+          "status": "In Progress",
+          "price": 602000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 493,
+          "status": "In Progress",
+          "price": 543305000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 592,
+          "status": "Proposed",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 628,
+          "status": "Proposed",
+          "price": 1011726000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-10-24T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 660,
+          "status": "Proposed",
+          "price": 4500000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2021-09-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 801,
+          "status": "In Progress",
+          "utcStartDateTime": "2022-11-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 828,
+          "status": "In Progress",
+          "utcStartDateTime": "2025-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 841,
+          "status": "In Progress",
+          "utcStartDateTime": "1977-07-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 883,
+          "status": "In Progress",
+          "price": 1400000000,
+          "priceCurrency": "NOK",
+          "utcStartDateTime": "2015-08-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 930,
+          "status": "In Progress",
+          "price": 6200000000,
+          "priceCurrency": "EUR",
+          "utcStartDateTime": "2019-01-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 970,
+          "status": "Completed",
+          "utcStartDateTime": "1853-04-16T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 2167,
+          "status": "In Progress",
+          "price": 102000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-05-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7103,
+          "status": "Completed",
+          "utcStartDateTime": "2001-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7152,
+          "status": "Completed",
+          "utcStartDateTime": "2016-07-15T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 230,
+          "url": "https://www.chronopin.com/pin/230/al-maktoum-international-airport-new-terminal",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 458,
+          "url": "https://www.chronopin.com/pin/458/gross-dam-raise-tops-out-at-470-feet",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 660,
+          "url": "https://www.chronopin.com/pin/660/egypt-signs-4-5bn-contract-for-its-first-high-speed-rail-line",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 828,
+          "url": "https://www.chronopin.com/pin/828/port-waratah-begins-shiploader-7-09-overhaul-at-kooragang-terminal",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7103,
+          "url": "https://www.chronopin.com/pin/7103/oaks-at-liberty-baltimore-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7152,
+          "url": "https://www.chronopin.com/pin/7152/gloria-robinson-court-homes-jersey-city-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    }
+  ]
+}

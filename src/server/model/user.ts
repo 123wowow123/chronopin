@@ -61,6 +61,7 @@ export const pickUserProps = [
   'lastName',
   'birthday',
   'phone',
+  'about',
   'email',
   'role',
   'provider',
@@ -80,7 +81,7 @@ export const pickUserProps = [
 // What somebody may change about themselves through the generic patch route.
 // Without this, every truthy property in the model's own list is writable
 // straight from the request body - `role` included.
-export const patchableUserProps = ['userName', 'firstName', 'lastName', 'birthday', 'phone', 'email'];
+export const patchableUserProps = ['userName', 'firstName', 'lastName', 'birthday', 'phone', 'about', 'email'];
 
 // Which unique index (0046) a failed insert or update hit: another live
 // account already has this email or @handle. Null for any other error.

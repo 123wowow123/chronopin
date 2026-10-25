@@ -1796,6 +1796,8 @@ const ja: Messages = {
     pictureRemoved: '画像を削除しました。',
     removeFailed: '画像を削除できませんでした。',
     pictureHint: 'ピンやコメントに表示されます。JPEG、PNG、GIF、5 MBまで。',
+    about: '自己紹介（任意）',
+    aboutHint: 'プロフィールに表示される短い説明です。500文字まで。',
     saveChanges: '変更を保存',
     preferencesSaved: '設定を保存しました。',
     preferencesFailed: '設定を保存できませんでした。',

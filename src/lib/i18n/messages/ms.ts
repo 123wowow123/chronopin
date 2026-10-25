@@ -1806,6 +1806,8 @@ const ms: Messages = {
     pictureRemoved: 'Gambar dialih keluar.',
     removeFailed: 'Tidak dapat mengalih keluar gambar anda.',
     pictureHint: 'Ditunjukkan pada pin dan ulasan anda. JPEG, PNG atau GIF, sehingga 5 MB.',
+    about: 'Tentang anda (pilihan)',
+    aboutHint: 'Penerangan ringkas yang dipaparkan pada profil anda. Sehingga 500 aksara.',
     saveChanges: 'Simpan perubahan',
     preferencesSaved: 'Keutamaan disimpan.',
     preferencesFailed: 'Tidak dapat menyimpan keutamaan anda.',

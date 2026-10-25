@@ -147,7 +147,7 @@ export function SearchResults({
   initialPage: { sort: SortBy; pins: CardPin[]; links: Links };
   serverTimeZone: string;
   serverNow: string;
-  searchedUser?: { id: number; userName: string };
+  searchedUser?: { id: number; userName: string; about?: string | null };
   // The one company a company: search names, for the panel about it.
   searchedCompany?: SearchedCompany;
   // The one person a person: search names, for the panel about them.
@@ -605,6 +605,7 @@ export function SearchResults({
                         </span>
                       ) : null}
                     </div>
+                    {searchedUser.about ? <p className="whitespace-pre-line text-sm text-muted">{searchedUser.about}</p> : null}
                     {/* Blocking ends a follow and keeps a new one from starting, so
                         the button gives way to what is so (and, back after an
                         unblock, reads the counts afresh). */}

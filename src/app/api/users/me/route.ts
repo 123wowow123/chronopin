@@ -19,7 +19,10 @@ export const GET = route(async (request: NextRequest) => {
   return json({ ...user.pick(pickUserProps), ...((await AdFreeSubscription.isActive(user.id)) ? { adFree: true } : {}) });
 });
 
-// Change handle, name, birthday, phone or email. Only those: a patch that took every
+// The longest profile description, in characters.
+const ABOUT_MAX = 500;
+
+// Change handle, name, birthday, phone, description or email. Only those: a patch that took every
 // field would let anyone make themselves an admin.
 export const PATCH = route(async (request: NextRequest) => {
   const signedIn = await requireUser(request);
@@ -30,6 +33,8 @@ export const PATCH = route(async (request: NextRequest) => {
   const badPhone = phoneProblem(body.phone);
   if (badPhone) return json({ code: `phone.${badPhone}`, message: phoneMessage() }, 422);
   if ('phone' in body) body.phone = normalizePhone(body.phone);
+  if ('about' in body) body.about = String(body.about ?? '').trim();
+  if (body.about && body.about.length > ABOUT_MAX) return json({ code: 'about.long', message: `The description can be at most ${ABOUT_MAX} characters.` }, 422);
 
   const user = (await loadUser(signedIn.id)).patchSet(new User(body));
   // citext: a change of case is the same address, and stays confirmed.
@@ -38,6 +43,7 @@ export const PATCH = route(async (request: NextRequest) => {
   // phone back off the account has to be said outright.
   if ('birthday' in body && !body.birthday) user.birthday = null;
   if ('phone' in body && !body.phone) user.phone = null;
+  if ('about' in body && !body.about) user.about = null;
 
   try {
     await user.patchWithoutPassword();

@@ -1802,6 +1802,8 @@ const de: Messages = {
     pictureRemoved: 'Bild entfernt.',
     removeFailed: 'Das Bild konnte nicht entfernt werden.',
     pictureHint: 'Wird bei deinen Pins und Kommentaren angezeigt. JPEG, PNG oder GIF, bis 5 MB.',
+    about: 'Über dich (optional)',
+    aboutHint: 'Eine kurze Beschreibung, die in deinem Profil angezeigt wird. Bis zu 500 Zeichen.',
     saveChanges: 'Änderungen speichern',
     preferencesSaved: 'Einstellungen gespeichert.',
     preferencesFailed: 'Deine Einstellungen konnten nicht gespeichert werden.',

@@ -29,6 +29,7 @@ export function ProfileForm({ user, children }: { user: SessionUser; children?: 
     lastName: user.lastName || '',
     birthday: user.birthday || '',
     phone: user.phone || '',
+    about: user.about || '',
     email: user.email || '',
   });
   const [pictureUrl, setPictureUrl] = useState(user.pictureUrl || '');
@@ -45,7 +46,7 @@ export function ProfileForm({ user, children }: { user: SessionUser; children?: 
   const t = useT();
   const fileRef = useRef<HTMLInputElement>(null);
 
-  const set = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) => setForm((f) => ({ ...f, [key]: e.target.value }));
+  const set = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
   async function upload(file: File) {
     // A new picture replaces the one held back, which the upload deletes
@@ -217,6 +218,13 @@ export function ProfileForm({ user, children }: { user: SessionUser; children?: 
           </label>
           <input id="phone" type="tel" autoComplete="tel" className="field" value={form.phone} onChange={set('phone')} />
           <p className="mt-1.5 text-sm text-subtle">{t('signup.phoneHint')}</p>
+        </div>
+        <div>
+          <label htmlFor="about" className="field-label">
+            {t('profile.about')}
+          </label>
+          <textarea id="about" rows={4} maxLength={500} className="field" value={form.about} onChange={set('about')} />
+          <p className="mt-1.5 text-sm text-subtle">{t('profile.aboutHint')}</p>
         </div>
         <div>
           <label htmlFor="email" className="field-label">
