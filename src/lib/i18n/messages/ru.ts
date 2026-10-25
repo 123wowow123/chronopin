@@ -797,6 +797,8 @@ const ru: Messages = {
     flightPath: 'Траектория',
     flightPathSimulation: 'Полная симуляция',
     siteKey: {
+      wildfire: 'Периметр лесного пожара',
+      district: 'Граница избирательного округа',
       site: 'Граница участка',
       building: 'Здания',
       cooling: 'Система охлаждения',
@@ -1150,6 +1152,8 @@ const ru: Messages = {
     trendDown: '{label} {percent} на {source}, −{points} п. за неделю',
     heading: 'Рыночные шансы',
     closed: 'Закрыто',
+    showResolved: 'Показать завершённые: {count}',
+    hideResolved: 'Скрыть завершённые',
     updated: 'Обновлено {time}',
     live: 'В реальном времени',
     moreOutcomes: { one: 'ещё {count} исход', few: 'ещё {count} исхода', many: 'ещё {count} исходов', other: 'ещё {count} исхода' },
@@ -1643,6 +1647,10 @@ const ru: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Отзывы',
+    sentiment: 'Настроение',
+    sentimentPositive: 'Положительное',
+    sentimentMixed: 'Смешанное',
+    sentimentNegative: 'Отрицательное',
     summary: { one: '{average} на основе {count} отзыва', few: '{average} на основе {count} отзывов', many: '{average} на основе {count} отзывов', other: '{average} на основе {count} отзывов' },
     none: 'Отзывов пока нет. Оцените первым.',
     yourRating: 'Ваша оценка',

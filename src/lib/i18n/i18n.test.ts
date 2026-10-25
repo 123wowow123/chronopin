@@ -21,6 +21,7 @@ import zh from './messages/zh';
 import { CATEGORIES, slugify } from '../categories';
 import { createTranslator, type Messages } from './translate';
 import { markerLabel } from './labels';
+import { SITE_KINDS } from '../siteShape';
 
 describe('splitLocale', () => {
   it('reads the language prefix off a path', () => {
@@ -222,6 +223,12 @@ describe('dictionaries', () => {
       if (want.join() !== have.join()) problems.push(`${key}: ${want.join(' ')} != ${have.join(' ')}`);
     }
     expect(problems).toEqual([]);
+  });
+
+  it('names every mapped shape kind in all 16 languages', () => {
+    for (const dictionary of [en, ...Object.values(others)]) {
+      for (const kind of SITE_KINDS) expect((dictionary.pin.siteKey as Record<string, unknown>)[kind]).toEqual(expect.any(String));
+    }
   });
 
   it('covers every supported language', () => {

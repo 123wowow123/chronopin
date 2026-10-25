@@ -786,6 +786,8 @@ const pt: Messages = {
     flightPath: 'Trajetória',
     flightPathSimulation: 'Simulação completa',
     siteKey: {
+      wildfire: 'Perímetro do incêndio florestal',
+      district: 'Limite do distrito eleitoral',
       site: 'Limite do terreno',
       building: 'Edifícios',
       cooling: 'Central de refrigeração',
@@ -1104,6 +1106,8 @@ const pt: Messages = {
     trendDown: '{label} {percent} no {source}, queda de {points} pontos esta semana',
     heading: 'Probabilidades de mercado',
     closed: 'Encerrado',
+    showResolved: 'Mostrar {count} resolvidos',
+    hideResolved: 'Ocultar resolvidos',
     updated: 'Atualizado {time}',
     live: 'Ao vivo',
     moreOutcomes: { one: 'mais {count} resultado', other: 'mais {count} resultados' },
@@ -1567,6 +1571,10 @@ const pt: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Avaliações',
+    sentiment: 'Sentimento',
+    sentimentPositive: 'Positivo',
+    sentimentMixed: 'Misto',
+    sentimentNegative: 'Negativo',
     summary: { one: '{average} de {count} avaliação', other: '{average} de {count} avaliações' },
     none: 'Ainda não há avaliações. Seja a primeira pessoa a avaliar.',
     yourRating: 'Sua avaliação',

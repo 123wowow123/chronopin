@@ -64,8 +64,41 @@ function Chart({ chart: base, t, locale }: { chart: PerfChart; t: Translator; lo
   );
 }
 
+const TILE_DOTS = ['bg-amber-400', 'bg-sky-400', 'bg-emerald-400', 'bg-violet-400', 'bg-rose-400', 'bg-teal-400'];
+
+// A three-column table (measure, figure, basis) as the datacenter panel's
+// telemetry tiles: the figure large, the basis beneath it.
+function Tiles({ table, t }: { table: PerfTable; t: Translator }) {
+  return (
+    <section className="surface rounded-2xl border border-line bg-raised/40 p-4 shadow-sm" aria-label={table.title}>
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-xs font-semibold tracking-wider text-subtle uppercase">{table.title}</h2>
+        {table.sourceUrl ? (
+          <a href={table.sourceUrl} rel="noopener nofollow" target="_blank" className="inline-flex items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-link ring-1 ring-line ring-inset hover:no-underline">
+            {t('pin.perf.source')}
+          </a>
+        ) : null}
+      </div>
+      <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+        {table.rows.map(([label, figure, basis], i) => (
+          <li key={label} className="flex flex-col rounded-xl border border-line/70 bg-panel/70 p-3">
+            <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+              <span className={`size-2 shrink-0 rounded-full ${TILE_DOTS[i % TILE_DOTS.length]}`} aria-hidden />
+              {label}
+            </div>
+            <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-ink">{figure}</div>
+            <div className="mt-1 text-xs text-muted">{basis}</div>
+          </li>
+        ))}
+      </ul>
+      {table.note ? <p className="mt-3 text-xs text-muted">{table.note}</p> : null}
+    </section>
+  );
+}
+
 function Table({ table: base, t, locale }: { table: PerfTable; t: Translator; locale: string }) {
   const table = { ...base, ...base.i18n?.[locale] };
+  if (base.display === 'tiles' && table.columns.length === 3) return <Tiles table={table} t={t} />;
   return (
     <div className="surface rounded-lg px-3 py-2">
       <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">{table.title}</h2>

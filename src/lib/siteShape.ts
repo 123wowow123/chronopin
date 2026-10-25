@@ -1,17 +1,21 @@
 // A pin's mapped outlines (PinSiteShape, 0203): a data centre's campus boundary
-// and its parts, a course as a 'route', or a pipeline or power line, drawn on the pin page's map.
+// and its parts, a course, pipeline, power line, wildfire perimeter or election
+// district boundary, drawn on the pin page's map.
 
-export const SITE_KINDS = ['site', 'building', 'cooling', 'generator', 'substation', 'power', 'pipeline', 'powerline', 'route'] as const;
+export const SITE_KINDS = ['site', 'wildfire', 'district', 'building', 'cooling', 'generator', 'substation', 'power', 'pipeline', 'powerline', 'route'] as const;
 export type SiteKind = (typeof SITE_KINDS)[number];
 
 // What a route feature may say about its course: a circuit's length, altitude
 // and first seasons, and a profile of [km along the course, metres] points.
 export type RouteFacts = { lengthM?: number; altitudeM?: number; opened?: number; firstGp?: number; profile?: [number, number][] };
 
+// Boundary snapshots retain their own credit when mixed with other map layers.
+export type BoundaryFacts = { name?: string; observedAt?: string; vintage?: string; source?: string; sourceUrl?: string };
+
 export type SiteFeature = {
   type: 'Feature';
   geometry: { type: 'Polygon' | 'MultiPolygon' | 'LineString' | 'MultiLineString'; coordinates: unknown };
-  properties: { kind: SiteKind } & RouteFacts;
+  properties: { kind: SiteKind } & RouteFacts & BoundaryFacts;
 };
 
 export type PinSiteShapeJson = {
@@ -23,6 +27,8 @@ export type PinSiteShapeJson = {
 // How each kind is drawn (its name in the key is the pin.siteKey.<kind> message).
 export const SITE_STYLE: Record<SiteKind, { color: string; fill: number; dash?: string }> = {
   site: { color: '#2563eb', fill: 0.06, dash: '6 4' },
+  wildfire: { color: '#dc2626', fill: 0.18 },
+  district: { color: '#0f766e', fill: 0.08, dash: '5 3' },
   building: { color: '#7c3aed', fill: 0.45 },
   cooling: { color: '#0891b2', fill: 0.45 },
   generator: { color: '#ea580c', fill: 0.55 },

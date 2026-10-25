@@ -793,6 +793,8 @@ const ms: Messages = {
     flightPath: 'Laluan penerbangan',
     flightPathSimulation: 'Simulasi penuh',
     siteKey: {
+      wildfire: 'Perimeter kebakaran hutan',
+      district: 'Sempadan kawasan pilihan raya',
       site: 'Sempadan tapak',
       building: 'Bangunan',
       cooling: 'Loji penyejukan',
@@ -1114,6 +1116,8 @@ const ms: Messages = {
     trendDown: '{label} {percent} di {source}, turun {points} mata minggu ini',
     heading: 'Kebarangkalian pasaran',
     closed: 'Tutup',
+    showResolved: 'Tunjukkan {count} yang selesai',
+    hideResolved: 'Sembunyikan yang selesai',
     updated: 'Dikemas kini {time}',
     live: 'Langsung',
     moreOutcomes: '{count} lagi hasil',
@@ -1580,6 +1584,10 @@ const ms: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Ulasan',
+    sentiment: 'Sentimen',
+    sentimentPositive: 'Positif',
+    sentimentMixed: 'Bercampur',
+    sentimentNegative: 'Negatif',
     summary: '{average} daripada {count} ulasan',
     none: 'Belum ada ulasan. Jadilah yang pertama memberi penilaian.',
     yourRating: 'Penilaian anda',

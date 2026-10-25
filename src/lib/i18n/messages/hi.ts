@@ -791,6 +791,8 @@ const hi: Messages = {
     flightPath: 'उड़ान पथ',
     flightPathSimulation: 'पूरा सिमुलेशन',
     siteKey: {
+      wildfire: 'जंगल की आग की परिधि',
+      district: 'निर्वाचन क्षेत्र की सीमा',
       site: 'साइट की सीमा',
       building: 'इमारतें',
       cooling: 'कूलिंग प्लांट',
@@ -1120,6 +1122,8 @@ const hi: Messages = {
     trendDown: '{source} पर {label} {percent}, इस हफ़्ते {points} पॉइंट नीचे',
     heading: 'मार्केट ऑड्स',
     closed: 'बंद',
+    showResolved: '{count} समाधानित दिखाएँ',
+    hideResolved: 'समाधानित छिपाएँ',
     updated: '{time} अपडेट किया गया',
     live: 'लाइव',
     moreOutcomes: { one: '{count} और नतीजा', other: '{count} और नतीजे' },
@@ -1586,6 +1590,10 @@ const hi: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'समीक्षाएँ',
+    sentiment: 'भावना',
+    sentimentPositive: 'सकारात्मक',
+    sentimentMixed: 'मिला-जुला',
+    sentimentNegative: 'नकारात्मक',
     summary: '{count} समीक्षाओं में से {average}',
     none: 'अभी कोई समीक्षा नहीं है। सबसे पहले रेटिंग दें।',
     yourRating: 'आपकी रेटिंग',

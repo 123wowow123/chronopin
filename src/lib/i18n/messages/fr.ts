@@ -788,6 +788,8 @@ const fr: Messages = {
     flightPath: 'Trajectoire',
     flightPathSimulation: 'Simulation complète',
     siteKey: {
+      wildfire: 'Périmètre de l’incendie de forêt',
+      district: 'Limite de la circonscription électorale',
       site: 'Limite du site',
       building: 'Bâtiments',
       cooling: 'Centrale de refroidissement',
@@ -1113,6 +1115,8 @@ const fr: Messages = {
     trendDown: '{label} {percent} sur {source}, en baisse de {points} points cette semaine',
     heading: 'Cotes du marché',
     closed: 'Clôturé',
+    showResolved: 'Afficher {count} résolus',
+    hideResolved: 'Masquer les résolus',
     updated: 'Mis à jour à {time}',
     live: 'En direct',
     moreOutcomes: { one: '{count} autre issue', other: '{count} autres issues' },
@@ -1576,6 +1580,10 @@ const fr: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Avis',
+    sentiment: 'Sentiment',
+    sentimentPositive: 'Positif',
+    sentimentMixed: 'Mitigé',
+    sentimentNegative: 'Négatif',
     summary: { one: '{average} sur {count} avis', other: '{average} sur {count} avis' },
     none: 'Pas encore d’avis. Soyez le premier à le noter.',
     yourRating: 'Votre note',

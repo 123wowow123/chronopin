@@ -789,6 +789,8 @@ const zh: Messages = {
     flightPath: '飞行轨迹',
     flightPathSimulation: '完整模拟',
     siteKey: {
+      wildfire: '野火边界',
+      district: '选区边界',
       site: '场地边界',
       building: '建筑',
       cooling: '冷却设施',
@@ -1107,6 +1109,8 @@ const zh: Messages = {
     trendDown: '{source} 上 {label} 为 {percent}，本周下跌 {points} 个百分点',
     heading: '市场赔率',
     closed: '已结束',
+    showResolved: '显示 {count} 个已结算',
+    hideResolved: '隐藏已结算',
     updated: '{time} 更新',
     live: '实时',
     moreOutcomes: '另有 {count} 个结果',
@@ -1570,6 +1574,10 @@ const zh: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: '评价',
+    sentiment: '口碑倾向',
+    sentimentPositive: '正面',
+    sentimentMixed: '褒贬不一',
+    sentimentNegative: '负面',
     summary: '基于{count}条评价，平均{average}',
     none: '暂无评价，快来第一个评分吧。',
     yourRating: '你的评分',

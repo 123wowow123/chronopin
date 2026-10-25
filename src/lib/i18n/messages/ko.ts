@@ -788,6 +788,8 @@ const ko: Messages = {
     flightPath: '비행 경로',
     flightPathSimulation: '전체 시뮬레이션',
     siteKey: {
+      wildfire: '산불 경계',
+      district: '선거구 경계',
       site: '부지 경계',
       building: '건물',
       cooling: '냉각 설비',
@@ -1107,6 +1109,8 @@ const ko: Messages = {
     trendDown: '{source}의 {label} {percent}, 이번 주 {points}포인트 하락',
     heading: '시장 예측 확률',
     closed: '종료',
+    showResolved: '종료된 {count}개 보기',
+    hideResolved: '종료된 항목 숨기기',
     updated: '{time} 업데이트',
     live: '실시간',
     moreOutcomes: '그 외 결과 {count}건',
@@ -1570,6 +1574,10 @@ const ko: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: '리뷰',
+    sentiment: '감성',
+    sentimentPositive: '긍정적',
+    sentimentMixed: '엇갈림',
+    sentimentNegative: '부정적',
     summary: '리뷰 {count}개 기준 {average}',
     none: '아직 리뷰가 없습니다. 가장 먼저 평가해 보세요.',
     yourRating: '내 평점',

@@ -16,7 +16,7 @@ import path from 'node:path';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { epochKind, roundCoords, type PinSiteShapeJson, type SiteFeature } from '@/lib/siteShape';
-import { saveSiteShape } from '@/server/model/pinSiteShape';
+import { saveSiteShape, siteShapeForPin } from '@/server/model/pinSiteShape';
 
 const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, prod: { type: 'boolean', default: false }, base: { type: 'string' } } });
 const DIR = '.scrape/datacenter-stats-2026-10-21/';
@@ -163,10 +163,17 @@ async function main() {
     return;
   }
   if (!flags.prod) {
-    // Only the outlines this script draws: a pin's route (scripts/routes) and a
-    // power plant's OpenStreetMap outline (scripts/power/plantShapes.ts) stay.
-    await db.query(`DELETE FROM "PinSiteShape" WHERE "source" <> 'OpenStreetMap' AND NOT jsonb_path_exists("geojson", '$.features[*] ? (@.properties.kind == "route")')`);
-    for (const [id, shape] of result) await saveSiteShape(id, shape);
+    // Only this importer's own source rows: routes, boundaries and OSM plants stay.
+    await db.query(`DELETE FROM "PinSiteShape" WHERE "source" IN ('Data Center Tracker', 'Epoch AI', 'Data Center Tracker + Epoch AI') AND NOT jsonb_path_exists("geojson", '$.features[*] ? (@.properties.kind == "route" || @.properties.kind == "wildfire" || @.properties.kind == "district")')`);
+    for (const [id, shape] of result) {
+      const old = await siteShapeForPin(id);
+      const keep = old?.geojson.features.filter((f) => ['route', 'pipeline', 'powerline', 'wildfire', 'district'].includes(f.properties.kind)) ?? [];
+      await saveSiteShape(id, keep.length && old ? {
+        geojson: { type: 'FeatureCollection', features: [...shape.geojson.features, ...keep] },
+        source: old.source.includes(shape.source) ? old.source : `${old.source} + ${shape.source}`,
+        sourceUrl: old.sourceUrl ?? shape.sourceUrl,
+      } : shape);
+    }
     console.log(`saved ${result.size} PinSiteShape rows locally`);
     return;
   }

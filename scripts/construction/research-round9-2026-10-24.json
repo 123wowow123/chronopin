@@ -1,0 +1,3122 @@
+{
+  "checkedAt": "2026-10-24",
+  "round": 9,
+  "snapshotDirectory": ".scrape/construction-status-research-round9-2026-10-24",
+  "scope": "50 queued records researched: 35 resolved (18 Proposed, 14 In Progress, three Completed), 15 specific withdrawn/conflicting/inspection/phase gaps retained; 16 sourced native costs and 19 null exact-scope costs; both environments saved and publicly verified.",
+  "research": [
+    {
+      "id": 276,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Ositrán verifies active tunnelling and unfinished systems on Line 2 in February 2026. The completed 1A starter section does not complete the full line. The old 2028 forecast is not actual operation; the regulator has no agreed construction schedule. The saved USD5.364bn concession amount is not verified as a latest Line-2-only budget excluding the Line 4 branch.",
+      "sources": [
+        {
+          "url": "https://www.gob.pe/institucion/ositran/noticias/1358951-ositran-propone-interconexion-indirecta-con-la-linea-1-para-acelerar-operatividad-de-la-linea-2-del-metro",
+          "title": "Ositrán propone interconexión indirecta con la línea 1 para acelerar operatividad de la línea 2 del metro - Noticias - Organismo Supervisor de la Inversión en Infraestructura de Transporte de Uso Público - Plataforma del Estado Peruano",
+          "quote": "La tuneladora Delia se encuentra construyendo el túnel",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 2028 remains a legacy estimated full-opening forecast, not verified commercial operation. February 2026 regulator reporting states no current agreed construction schedule."
+      },
+      "costGap": "Latest exact full-Line-2 cost excluding the separate Line 4 branch is unverified; no concession-wide amount apportioned."
+    },
+    {
+      "id": 424,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The Victorian Premier explicitly confirms February 25, 2026 construction beginning between West Footscray and Albion as the first Airport Rail stage. In Progress applies to the railway with ongoing enabling works, not an airport opening. AUD4.1bn is the shared Sunshine interchange package, including other services, not an updated total for the entire airport link; the older AUD12bn is not retained without a current exact-scope source.",
+      "sources": [
+        {
+          "url": "https://www.premier.vic.gov.au/airport-rail-works-start-first-stop-sunshine",
+          "title": "Airport Rail Works Start – First Stop Sunshine | Premier",
+          "quote": "Work to build the Melbourne Airport Rail Link is underway.",
+          "publishedDate": "2026-02-25",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2033 remains an unverified legacy estimated opening marker. The opened government release establishes actual first-stage construction, not a firm full-link opening."
+      },
+      "costGap": "Updated whole-link construction budget unverified; shared Sunshine/Melton works are not substituted."
+    },
+    {
+      "id": 426,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Opened current airport reporting verifies concrete piling, excavation and ongoing infrastructure works. In Progress applies to the first operating phase before its 2032 target. The USD35bn/AED128bn final airport development budget is wider than the named first phase; AED13bn under execution and AED55bn prospective contracts are not added into a fabricated phase total.",
+      "sources": [
+        {
+          "url": "https://gulfnews.com/business/aviation/dubais-al-maktoum-airport-expansion-on-track-for-2032-launch-1.500574719",
+          "title": "Dubai’s Al Maktoum Airport Expansion on Track for 2032 Launch, Set to Become World’s Largest Passenger Hub",
+          "quote": "installation of more than 17,000 concrete piles",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2032 is an estimated year-end first-phase operating target, not a published exact opening day or completed full airport."
+      },
+      "costGap": "Exact first-phase all-in budget not established; full airport and separate contracts are broader/different bases."
+    },
+    {
+      "id": 433,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The Sydney-Newcastle high-speed rail corridor is in a two-year design, approvals and development phase before construction. Proposed applies to the unbuilt railway; AUD659.6m is development funding, not the railway construction budget. AUD250bn economic benefit is not capital cost, and the 2039 target does not establish a completed railway.",
+      "sources": [
+        {
+          "url": "https://railway-news.com/australia-begins-development-for-newcastle-sydney-high-speed-rail/",
+          "title": "Australia Begins Development for Newcastle–Sydney High-Speed Rail | Railway-News",
+          "quote": "before construction begins on a project of this scale.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2039 is a legacy estimated railway-delivery marker; no exact opening day established. The two-year funded development phase is not construction."
+      },
+      "costGap": "Construction total remains to be costed; development funding/economic benefits are not construction price."
+    },
+    {
+      "id": 494,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Caixin explicitly reports the Tianjin 117 Tower has resumed construction after a decade of stagnation. In Progress is supported by actual resumed work, not merely a state takeover or the tower’s structural top-out. The tall-building register still gives expected 2027 completion. Creditor exposures, debt restructuring and the surrounding estate are not an exact updated tower construction budget.",
+      "sources": [
+        {
+          "url": "https://www.caixinglobal.com/2026-06-08/cover-story-china-restarts-stalled-property-megaproject-in-state-led-takeover-102452011.html",
+          "title": "Cover Story: China Restarts Stalled Property Megaproject in State-Led Takeover - Caixin Global",
+          "quote": "has resumed construction after a decade of stagnation.",
+          "publishedDate": "2026-06-08",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.skyscrapercenter.com/building/goldin-finance-117/73",
+          "title": "Tianjin 117 - The Skyscraper Center",
+          "quote": "Expected Completion 2027",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 30, 2027 remains an estimated target anchor, not a verified completion day; the register supplies only expected completion year."
+      },
+      "costGap": "Exact revised tower-only construction total not established; outstanding loans and entire mixed-use estate costs excluded."
+    },
+    {
+      "id": 570,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "At the July 7 policy reversal, the government proposes rebuilding the existing wall in place instead of a replacement downstream. Proposed applies to that revised permanent reconstruction scope. AUD60m primarily funds geotechnical investigation, not a source-quoted all-in rebuild budget; old replacement-wall estimates are different designs.",
+      "sources": [
+        {
+          "url": "https://www.abc.net.au/news/2026-07-07/government-to-fix-paradise-dam-wall-but-new-build-plan-scrapped/106887994",
+          "title": "Government commits to restore current Paradise Dam wall over new build - ABC News",
+          "quote": "$60 million has been allocated in the state government budget, primarily for geotechnical works.",
+          "publishedDate": "2026-07-07",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "No published full revised in-place wall budget verified; geotechnical allocation and cancelled replacement design are not substituted."
+    },
+    {
+      "id": 2969,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The August 17 NVIDIA guarantee/lease announcement states SB Energy will build, own and operate PORTS-Pike. Proposed applies to the announced future campus, not existing site infrastructure or a completed financing announcement. NVIDIA’s USD1.5bn corporate investment, grid infrastructure commitments and community fund do not establish a full data-center construction price.",
+      "sources": [
+        {
+          "url": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+          "title": "NVIDIA Secures AI Compute at PORTS-Pike Technology Campus",
+          "quote": "SB Energy will build, own and operate the data center under a 20-year lease to OpenAI.",
+          "publishedDate": "2026-08-17",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "No exact campus construction budget in opened issuer releases; corporate equity, power infrastructure and community benefits excluded."
+    },
+    {
+      "id": 6117,
+      "status": "Proposed",
+      "price": 273000000,
+      "priceCurrency": "EUR",
+      "note": "The February 2, 2016 award precedes signing and actual repair works, so Proposed describes the historical contract-award milestone. Trevi’s March 2 signed contract supplies the later exact EUR273m repair/maintenance scope cost, replacing an unconfirmed anonymous USD estimate. This is structural rehabilitation, not new hydroelectric generation or an assertion of the dam’s present operating output.",
+      "sources": [
+        {
+          "url": "https://www.rferl.org/a/iraq-mosul-dam-repair-italian-firm-trevi/27528136.html",
+          "title": "Italian Firm Wins Contract To Repair Unstable Mosul Dam",
+          "quote": "Authorities have not specified how much Trevi would be paid for the work.",
+          "publishedDate": "2016-02-02",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://trevispa.com/en/2016/03/02/trevi-signs-the-contract-for-the-maintenance-works-of-mosul-dam/",
+          "title": "TREVI SIGNS THE CONTRACT FOR THE MAINTENANCE WORKS OF MOSUL DAM",
+          "quote": "of a total value of 273 million euros",
+          "publishedDate": "2016-03-02",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    },
+    {
+      "id": 7151,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Pennrose explicitly identifies March 2019 completion of Phase I and its 114 family/senior homes plus community building. Completed applies to this first phase, matching the saved March 2019 milestone; the later 430-home masterplan is not completed by Phase I. The headline is made phase-specific. USD108m is all phases, not this phase’s price; scanned county budget evidence remains a verification follow-up.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/portfolio/glenarden-hills/",
+          "title": "Glenarden Hills",
+          "quote": "Completion Date - March 2019 (phase I)",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Glenarden Hills Phase I Completes 114 Family and Senior Homes",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "March 31, 2019 is a month-end estimated anchor for Pennrose’s March 2019 phase-I completion, not a published exact day."
+      },
+      "costGap": "County board material lists a USD34.1m Phase-I budget, but the scanned body was not independently readable in this pass; do not assign USD108m whole-masterplan cost."
+    },
+    {
+      "id": 18225,
+      "status": "Proposed",
+      "price": 431500000,
+      "priceCurrency": "USD",
+      "note": "AIIB’s September 26 financing approval concerns the proposed 300,000m³/day main desalination plant. Its September 28 summary updates full project cost to USD431.5m, superseding the older USD418m operator figure and distinguishing the USD45m loan. Construction-stage accommodation and site welfare arrangements do not independently prove the main desalination train has started; the approval does not complete the plant.",
+      "sources": [
+        {
+          "url": "https://www.aiib.org/en/projects/details/2026/approved/azerbaijan-caspian-sea-desalination-project.html",
+          "title": "Azerbaijan: Azerbaijan Caspian Sea Desalination Project",
+          "quote": "FINANCING APPROVAL September 26, 2026",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.aiib.org/en/projects/details/2026/_download/Azerbaijan/PSI-P001126-Azerbaijan-Caspian-Sea-Desalination-Project_29-Sep-2026-clean.pdf",
+          "title": "AIIB — Azerbaijan Caspian Sea Desalination Project Summary Information",
+          "quote": "Estimated Project cost: USD431.5 million.",
+          "publishedDate": "2026-09-28",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Main plant scope; on-site accommodation under construction is disclosed separately."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    },
+    {
+      "id": 18226,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Water Corporation explicitly confirms both undersea tunnels completed on September 3. Completed applies only to the 2.5km intake and 4km outfall tunnelling milestone, not the full desalination plant or all subsequent connections and commissioning. AUD2.8bn belongs to the whole Alkimos plant and is cleared from this component milestone.",
+      "sources": [
+        {
+          "url": "https://www.watercorporation.com.au/about-us/media-releases/2026/september/alkimos-desalination-plant-marks-marine-milestone",
+          "title": "Alkimos Desalination Plant marks marine milestone",
+          "quote": "Two of the longest undersea tunnels in Australia have been completed",
+          "publishedDate": "2026-09-03",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "No exact two-tunnel package price verified; the AUD2.8bn full plant budget is broader."
+    },
+    {
+      "id": 18244,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The agriculture ministry account explicitly states the Limassol-port 10,000m³/day mobile unit is in full normal operation after completed tests. Completed applies to this individual mobile plant, not Cyprus’s entire permanent desalination program. No exact unit cost is established; multi-unit emergency contracts and wider national spending are not allocated.",
+      "sources": [
+        {
+          "url": "https://cyprus-mail.com/2026/04/05/mobile-desalination-unit-in-full-operation-at-limassol-port",
+          "title": "Mobile desalination unit in full operation at Limassol port | Cyprus Mail",
+          "quote": "A mobile desalination plant in Limassol port has been put into full operation",
+          "publishedDate": "2026-04-05",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "Exact Limassol-port mobile unit cost not published in verified opened material; multi-site program figures excluded."
+    },
+    {
+      "id": 18248,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The May 2026 environmental determination and July construction-management procurement describe a proposed 5MGD project, with physical construction after 60% design. Proposed applies before the forecast November notice. A procurement experience threshold and USD6.8m design-services award are not the whole plant construction cost.",
+      "sources": [
+        {
+          "url": "https://app.govly.com/public/opportunities/16895810",
+          "title": "South Coast Water District Planet bids #RFQ 27-0004 | Govly",
+          "quote": "Construction anticipated to begin after 60% design completion",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://ceqanet.lci.ca.gov/2016031038/8",
+          "title": "Doheny Ocean Desalination Project (Project)",
+          "quote": "Approved On 5/14/2026",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "November 1, 2026 remains an estimated anticipated notice-to-proceed marker, not a verified construction start or exact opening day."
+      },
+      "costGap": "Latest exact 5MGD project capital total not verified; consultant/design contract and bidder qualification thresholds excluded."
+    },
+    {
+      "id": 18251,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Energy Recovery’s October 8 release is an award to supply PX Q650 devices for a new Saudi plant, not delivery or completed installation. Proposed applies to the awarded future equipment-supply scope; no claim is made that the unnamed whole desalination plant is completed. Order value is not disclosed; industry energy savings do not establish project cost.",
+      "sources": [
+        {
+          "url": "https://finviz.com/news/400335/energy-recovery-secures-contract-to-supply-new-px-q650-energy-recovery-device-to-major-saudi-arabia-desalination-plant",
+          "title": "Energy Recovery Secures Contract to Supply New PX Q650 Energy Recovery Device to Major Saudi Arabia Desalination Plant",
+          "quote": "PX Q650 devices will deliver industry-leading energy efficiency",
+          "publishedDate": "2026-10-08",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "Exact device-order value and named plant construction budget undisclosed; savings are not cost."
+    },
+    {
+      "id": 18252,
+      "status": "Proposed",
+      "price": 3200000000,
+      "priceCurrency": "EUR",
+      "note": "Opened steel-industry reporting says construction may slip to spring 2027 while permits and financing are finalized. Proposed applies to the new Piombino EAF steelworks, not a completed investment review. The reported EUR3.2bn overall investment already includes EUR285m public funding; these amounts are not added. The saved energy demand is industrial consumption, not power generation.",
+      "sources": [
+        {
+          "url": "https://eurometal.net/metinvest-adria-seeks-third-partner-for-piombino-eaf-project-construction-may-slip-to-2027/",
+          "title": "Metinvest Adria seeks third partner for Piombino EAF project, construction may slip to 2027 - EUROMETAL",
+          "quote": "construction work could be postponed to spring 2027",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.steelorbis.com/steel-news/latest-news/metinvest-adria-seeks-third-partner-for-piombino-eaf-project-construction-may-slip-to-2027-1473168.htm",
+          "title": "Metinvest Adria seeks third partner for Piombino EAF project, construction may slip to 2027",
+          "quote": "The overall investment is estimated at approximately €3.2 billion, including €285 million in public funding.",
+          "publishedDate": "2026-08-26",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2029 is a year-only legacy estimated operating target. Permitting/financial closure and a prospective 2027 construction start do not establish a firm opening."
+      }
+    },
+    {
+      "id": 18253,
+      "status": "Proposed",
+      "price": 2100000000,
+      "priceCurrency": "NAD",
+      "note": "The JV and early-2026 tender account describe Erongo Sunam before verified plant construction. Proposed applies to the planned second desalination plant, not the operating Orano plant. The source states at least NAD2.1bn, based on a 2021 feasibility study pending final tender cost; the lower bound is preserved. Equity and debt components are not added again, and an elapsed June/July start target is not proof of works.",
+      "sources": [
+        {
+          "url": "https://neweralive.na/?p=378346",
+          "title": "N$2.1b desalination plant ...NamWater 30%, Swakop Uranium 70% - New Era",
+          "quote": "at least N$ 2.1 billion for the construction of the new desalination plant in Erongo.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 2100000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is a legacy estimated build-start anchor. The source’s June 2026–June 2028 construction schedule was a tender-stage target, not a verified start."
+      },
+      "costGap": "Final tender-priced/revised estimate remains a gap; NAD2.1bn is explicitly the older feasibility lower threshold."
+    },
+    {
+      "id": 18256,
+      "status": "In Progress",
+      "price": 127000000,
+      "priceCurrency": "OMR",
+      "note": "The consortium partner explicitly verifies Ghubrah III construction in progress. The opened December 2024 report quotes RO127m for this desalination plant, separately from its adjoining pumping-station upgrade. The newer USD370m financial-close release is a project-finance package rather than an explicit replacement construction estimate, so it is not substituted. Q1 2027 remains a target.",
+      "sources": [
+        {
+          "url": "https://www.sogexoman.com/construction-of-ghubrah-3-iwp-the-largest-desalination-project-in-oman-is-in-progress/",
+          "title": "Construction of Ghubrah 3 IWP, the largest desalination project in Oman is in progress",
+          "quote": "Construction of Ghubrah 3 IWP, the largest desalination project in Oman is in progress",
+          "publishedDate": "2025-02-27",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.omanobserver.om/article/1162794/business/economy/new-pumping-station-project-to-bolster-muscat-citys-water-supply",
+          "title": "New pumping station project to bolster Muscat City’s water supply",
+          "quote": "currently under construction at a cost of RO 127 million",
+          "publishedDate": "2024-12-01",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://inima.com/en/gs-inima-aljomaih-energy-water-and-sogex-oman-have-reached-financial-close-for-the-ghubrah-iii-desalination-plant-in-oman/",
+          "title": "Financial closure of the Ghubrah III desalination plant in Oman",
+          "quote": "USD 370 million of project finance investment",
+          "publishedDate": "2025-01-09",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "March 31, 2027 is an estimated quarter-end anchor for the operator’s first-quarter commercial-operation target, not actual commissioning."
+      },
+      "costGap": "A newer exact construction-only cost remains unverified; OMR127m is the dated source estimate, distinct from the later financing package."
+    },
+    {
+      "id": 18258,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The May 2026 letter of intent is for a potential 2030 restart of idle NZAS Line 4, not verified physical refurbishment or a resumed smelting line. Proposed applies to the restart project, not the existing smelter. Fifty MW is electrical demand, and NZD100m annually is forecast export revenue, not construction cost or generation output.",
+      "sources": [
+        {
+          "url": "https://aluminiumtoday.com/news/rio-tinto-plans-to-restart-nzas-potline",
+          "title": "Rio Tinto plans to restart NZAS potline",
+          "quote": "could see the potline restart in 2030.",
+          "publishedDate": "2026-05-27",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2030 is a year-only estimated proposed restart anchor. The power-purchase letter of intent does not establish physical works or actual reopening."
+      },
+      "costGap": "No exact Line-4 restart/refurbishment budget verified; annual export revenue and power purchases excluded."
+    },
+    {
+      "id": 18263,
+      "status": "Proposed",
+      "price": 6000000000,
+      "priceCurrency": "USD",
+      "note": "September reporting explicitly says formal construction awaits financial close. Proposed applies to the Aqaba-Amman desalination/conveyance project, not a finished financing event. IFC’s current project disclosure estimates approximately USD6bn subject to optimization, superseding the saved USD5.8bn. Loan amounts are not the project total; renewable power facilities included in the broader scheme are not independently commissioned generation.",
+      "sources": [
+        {
+          "url": "https://www.jordannews.jo/Section-109/News/Jordan-s-national-water-carrier-edges-toward-construction-phase-55051",
+          "title": "Jordan's national water carrier edges toward construction phas...",
+          "quote": "it does not mean construction on the carrier has formally begun.",
+          "publishedDate": "2026-09-01",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://disclosures.ifc.org/project-detail/SII/47924/aqaba-amman-water-desalination-conveyance-aawdc",
+          "title": "47924 - Aqaba Amman Water Desalination & Conveyance (AAWDC)",
+          "quote": "The total project cost is currently estimated at approximately US$6 billion subject to further optimizations.",
+          "publishedDate": "2026-02-25",
+          "openedAt": "2026-10-24",
+          "quoteNote": "IFC discloses last update February 25, 2026; September stage report supplies no revised cost."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Jordan’s Aqaba-Amman Desalination Project Targets Q4 Financial Close",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2026 is an estimated Q4 financial-close anchor, not an actual financing receipt or construction-start day."
+      }
+    },
+    {
+      "id": 18264,
+      "status": "In Progress",
+      "price": 58140000000,
+      "priceCurrency": "INR",
+      "note": "July 2026 reporting documents ongoing transmission-pipeline laying and unfinished Perur delivery despite completed offshore components. In Progress applies to the 400MLD project. INR58.14bn is the source-quoted design-build-operate project estimate, with twenty years of O&M in its scope, not an invented plant-only construction number or FX conversion.",
+      "sources": [
+        {
+          "url": "https://indianinfrastructure.com/2026/07/03/construction-work-on-perur-water-desalination-plant-project-in-tamil-nadu-likely-to-be-completed-by-end-2026/",
+          "title": "Construction work on Perur Water Desalination Plant Project in Tamil Nadu likely to be completed by end 2026 - Indian Infrastructure",
+          "quote": "The project is being implemented at an estimated cost of Rs 58.14 billion.",
+          "publishedDate": "2026-07-03",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2026 is an estimated end-of-year completion target, not a completed operation receipt."
+      }
+    },
+    {
+      "id": 18267,
+      "status": "Proposed",
+      "price": 5291565898.31,
+      "priceCurrency": "MXN",
+      "note": "The August 14 award precedes the planned August 17 signature and August 18 construction start. Proposed describes the historical award milestone, not completion. The exact MXN5,291,565,898.31 contract excludes IVA and covers desalination plus pumping works; no USD conversion, broader prior scheme budget or duplicate contract components are added.",
+      "sources": [
+        {
+          "url": "https://zetatijuana.com/2026/08/cox-energy-hara-desaladora-de-rosarito-en-tres-anos/",
+          "title": "Cox Energy hará desaladora de Rosarito en tres años - Semanario ZETA",
+          "quote": "el contrato por 5 mil 291 millones 565 mil 898.31 pesos más IVA.",
+          "publishedDate": "2026-08-14",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    },
+    {
+      "id": 19193,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "WBHM’s September interview account explicitly describes Nebius building the Oxmoor campus. In Progress applies before first-phase energization and full buildout. The operator’s timeline distinguishes first commissioning from works through 2028. The tracker’s unverified 300MW is removed; nearly USD36bn over thirty years includes recurring investment, not an exact construction budget.",
+      "sources": [
+        {
+          "url": "https://www.wbhm.org/local-news/2026-09-03/data-center-dilemma-what-nebius-has-to-say-about-its-controversial-birmingham-project",
+          "title": "Data Center Dilemma: What Nebius has to say about its controversial Birmingham project",
+          "quote": "That’s where tech company Nebius is building a hyperscale data center.",
+          "publishedDate": "2026-09-03",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://nebius.com/birminghamal",
+          "title": "Nebius x Birmingham, Alabama",
+          "quote": "Ongoing construction activities for full build-out.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Operator anticipated timeline through 2028; generic planning language and commissioning targets are not actual completion."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Nebius Birmingham AI Factory Under Construction",
+        "description": "WBHM’s September interview account explicitly describes Nebius building the Oxmoor campus. In Progress applies before first-phase energization and full buildout. The operator’s timeline distinguishes first commissioning from works through 2028. The tracker’s unverified 300MW is removed; nearly USD36bn over thirty years includes recurring investment, not an exact construction budget.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      },
+      "costGap": "Exact all-in construction budget unpublished; multi-decade investment/tax projections excluded."
+    },
+    {
+      "id": 19203,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "May 30 local reporting explicitly verifies construction underway, blowing dust and contractor truck movements at Granger. In Progress applies to physical site works before vertical building, not to March surveying or later completed operation. The unverified tracker 1,000MW is removed. USD12.5m preconstruction work and USD6m shared water extension are not a campus total.",
+      "sources": [
+        {
+          "url": "https://www.wvpe.org/wvpe-news/2026-05-30/st-joseph-county-officials-respond-to-data-center-construction-concerns",
+          "title": "St. Joseph County officials respond to data center construction concerns",
+          "quote": "Now that construction is underway on Microsoft’s Granger data center",
+          "publishedDate": "2026-05-30",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Microsoft Granger Data Center Enters Site Construction",
+        "description": "May 30 local reporting explicitly verifies construction underway, blowing dust and contractor truck movements at Granger. In Progress applies to physical site works before vertical building, not to March surveying or later completed operation. The unverified tracker 1,000MW is removed. USD12.5m preconstruction work and USD6m shared water extension are not a campus total.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      },
+      "costGap": "Exact campus budget unverified; surveying and shared utilities are separate scopes."
+    },
+    {
+      "id": 19211,
+      "status": "Proposed",
+      "price": 500000000,
+      "priceCurrency": "USD",
+      "note": "The opened April 1 commission approval describes a USD500m, nearly fourteen-acre proposal still awaiting further city consideration. Proposed describes the planned development, not a completed approval or built facility. The operator’s high rack density does not substantiate the tracker’s 72MW campus figure, which is removed from the headline and description.",
+      "sources": [
+        {
+          "url": "https://mirrorindy.org/martindale-brightwood-metrobloks-data-center-east-indianapolis/",
+          "title": "Indy officials OK Martindale Brightwood data center",
+          "quote": "approved the $500-million, nearly 14 acre project after a 6-2 vote at its April 1 meeting.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Metrobloks Martindale-Brightwood Data Center Proposal",
+        "description": "The opened April 1 commission approval describes a USD500m, nearly fourteen-acre proposal still awaiting further city consideration. Proposed describes the planned development, not a completed approval or built facility. The operator’s high rack density does not substantiate the tracker’s 72MW campus figure, which is removed from the headline and description.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "February 12, 2026 remains a legacy estimated proposal marker, not verified construction or opening. The opened April approval is later planning evidence."
+      }
+    },
+    {
+      "id": 19216,
+      "status": "In Progress",
+      "price": 187000000,
+      "priceCurrency": "USD",
+      "note": "The operator confirms May 6, 2025 groundbreaking of the Ankeny facility and 13.2MW critical capacity. In Progress applies before its forecast delivery; no completion is inferred from an old tracker date. Greater Des Moines Partnership identifies USD187m for Edged Energy’s data-center project, reconciling the previously different local and production prices without borrowing another campus budget.",
+      "sources": [
+        {
+          "url": "https://www.edged.es/news/des-moines-iowa",
+          "title": "Edged Breaks Ground on Data Center in Des Moines, Iowa Optimized for Next-Generation AI Training and Inference",
+          "quote": "celebrated the groundbreaking of its newest state-of-the-art data center in Ankeny, Iowa.",
+          "publishedDate": "2025-05-06",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.dsmpartnership.com/economic-development/economic-climate/recent-projects",
+          "title": "Recent Projects in Greater Des Moines",
+          "quote": "Data Center, $187 million",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Specifically the Edged Energy block, not the Apple/Meta listings."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Edged Des Moines 13.2MW Data Center Under Construction",
+        "description": "The operator confirms May 6, 2025 groundbreaking of the Ankeny facility and 13.2MW critical capacity. In Progress applies before its forecast delivery; no completion is inferred from an old tracker date. Greater Des Moines Partnership identifies USD187m for Edged Energy’s data-center project, reconciling the previously different local and production prices without borrowing another campus budget.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      }
+    },
+    {
+      "id": 19217,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Davenport’s FY2025 financial report explicitly says Vemerald is planning a northwest Davenport campus for Meta while negotiating utility service. Proposed applies to that planned campus; later directories do not establish actual works. The generic tracker 100MW is removed. A USD420m assessed-valuation assumption for tax analysis is not construction expenditure, and no precise opening date is established.",
+      "sources": [
+        {
+          "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_6481372/File/Departments/Finance/Accounting/CAR/FY25%20ACFR.pdf",
+          "title": "City of Davenport — FY2025 Annual Comprehensive Financial Report",
+          "quote": "Vemerald, LLC is planning to develop a large high-tech data center campus in northwest Davenport for its parent company, Meta.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Full 12MB PDF downloaded and converted locally; planning and utility-negotiation paragraph, distinct from nearby buildings nearing completion."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Meta Davenport Data Center Planning",
+        "description": "Davenport’s FY2025 financial report explicitly says Vemerald is planning a northwest Davenport campus for Meta while negotiating utility service. Proposed applies to that planned campus; later directories do not establish actual works. The generic tracker 100MW is removed. A USD420m assessed-valuation assumption for tax analysis is not construction expenditure, and no precise opening date is established.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      },
+      "costGap": "Exact current campus construction budget unverified; assessed valuation/incentive basis not treated as capital cost."
+    },
+    {
+      "id": 19223,
+      "status": "In Progress",
+      "price": 1000000000,
+      "priceCurrency": "USD",
+      "note": "Microsoft’s July 2026 update confirms active grading by Ryan Central at La Porte. In Progress applies before vertical building, not completed operation. Indiana’s June 2024 announcement identifies a planned USD1bn investment for the initial campus; the newer update supplies no revised total. The unverified tracker 100MW and combined later-parcel dimensions are removed.",
+      "sources": [
+        {
+          "url": "https://local.microsoft.com/blog/la-porte-public-meeting-recap/",
+          "title": "La Porte datacenter construction updates",
+          "quote": "Construction in La Porte continues to move forward steadily",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "July 2026 update has month precision; no exact post day asserted."
+        },
+        {
+          "url": "https://www.iedc.in.gov/events/news/details/2024/06/04/gov-holcomb-announces-plans-for-new-1b-microsoft-data-center-in-northwest-indiana",
+          "title": "Gov. Holcomb announces plans for new $1B Microsoft Data Center in Northwest Indiana",
+          "quote": "$1B Microsoft Data Center",
+          "publishedDate": "2024-06-04",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Historical initial-campus investment basis; not a fresh cost estimate for all later adjoining land."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Microsoft La Porte Data Center Site Works",
+        "description": "Microsoft’s July 2026 update confirms active grading by Ryan Central at La Porte. In Progress applies before vertical building, not completed operation. Indiana’s June 2024 announcement identifies a planned USD1bn investment for the initial campus; the newer update supplies no revised total. The unverified tracker 100MW and combined later-parcel dimensions are removed.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      },
+      "costGap": "Revised initial-campus all-in estimate remains unverified; historical USD1bn is explicitly dated and not extended to the later adjoining buildout."
+    },
+    {
+      "id": 19235,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The county-hosted planning market analysis names TPC Data Center MidAtlantic at 6201 Frost Place and explicitly proposes 2027 development. Proposed applies to that named parcel, not a completed data center or nearby Konterra project. The tracker’s 20MW is unverified and removed. Planning floor area and a projected delivery year do not establish commissioning or cost.",
+      "sources": [
+        {
+          "url": "https://www.pgplanning.org/wp-content/uploads/2026/01/Subregion-1-Minor-Plan-Amendment-Market-Analysis_final_1.16.26.pdf",
+          "title": "Prince George’s County — Subregion 1 Minor Plan Amendment Market Analysis",
+          "quote": "TPC Data Center Study Area MidAtlantic is proposed to be developed in 2027.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Whitespace-normalized PDF text; market-analysis body names the facility and address."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "TPC Data Center MidAtlantic Laurel Proposal",
+        "description": "The county-hosted planning market analysis names TPC Data Center MidAtlantic at 6201 Frost Place and explicitly proposes 2027 development. Proposed applies to that named parcel, not a completed data center or nearby Konterra project. The tracker’s 20MW is unverified and removed. Planning floor area and a projected delivery year do not establish commissioning or cost.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      },
+      "costGap": "Exact named-facility construction cost not published in opened planning evidence."
+    },
+    {
+      "id": 19241,
+      "status": "In Progress",
+      "price": 10000000000,
+      "priceCurrency": "USD",
+      "note": "The governor explicitly confirms having broken ground on Compass Meridian, and the July 2026 issuer workforce release retains the USD10bn full-campus investment. In Progress applies before full phased delivery, not to an already operating entire campus. The generic tracker 500MW is not independently verified here and is removed. This cost is the digital-infrastructure project, not a separate Mississippi power plant.",
+      "sources": [
+        {
+          "url": "https://governorreeves.ms.gov/governor-reeves-gives-state-of-the-state-address-4/",
+          "title": "Governor Reeves Gives State of the State Address",
+          "quote": "break ground on the new Compass Datacenters project",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "January 2025 address explicitly describes preceding-day groundbreaking; full investment USD10bn."
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program-302839615.html",
+          "title": "Compass Datacenters and Meridian Community College Launch Mississippi's First Data Center Workforce Training Program",
+          "quote": "$10 billion digital infrastructure investment in Meridian",
+          "publishedDate": "2026-07-31",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Compass Meridian Data Center Campus Construction",
+        "description": "The governor explicitly confirms having broken ground on Compass Meridian, and the July 2026 issuer workforce release retains the USD10bn full-campus investment. In Progress applies before full phased delivery, not to an already operating entire campus. The generic tracker 500MW is not independently verified here and is removed. This cost is the digital-infrastructure project, not a separate Mississippi power plant.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      }
+    },
+    {
+      "id": 19244,
+      "status": "Proposed",
+      "price": 1250000000,
+      "priceCurrency": "USD",
+      "note": "U-M explicitly places its research computing center in planning/design, with late-2027 construction and initial operations in 2030. Proposed applies to the planned center. The university states USD1.25bn total investment; the USD100m state grant is only one contribution. The planned initial 50MW and eventual 100MW are demand rather than generation. The July 2026 tracker date is not an opening.",
+      "sources": [
+        {
+          "url": "https://research.umich.edu/research-at-michigan/lanl-faq/",
+          "title": "University of Michigan × Los Alamos Research Computing Center",
+          "quote": "The total investment for the project is estimated at $1.25 billion.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "University of Michigan–Los Alamos Research Computing Center Plans",
+        "description": "U-M explicitly places its research computing center in planning/design, with late-2027 construction and initial operations in 2030. Proposed applies to the planned center. The university states USD1.25bn total investment; the USD100m state grant is only one contribution. The planned initial 50MW and eventual 100MW are demand rather than generation. The July 2026 tracker date is not an opening.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      }
+    },
+    {
+      "id": 19248,
+      "status": "Proposed",
+      "price": 1400000000,
+      "priceCurrency": "USD",
+      "note": "Liberty’s March 24 announcement and municipal FAQ describe a planned three-building data center with projected 150MW demand. Proposed applies to the announced project before verified physical works. The city states USD1.4bn total investment including real and personal property; the components are not added again. This source reconciles the previously different local and production prices.",
+      "sources": [
+        {
+          "url": "https://www.libertymissouri.gov/2793/Metrobloks-FAQs",
+          "title": "Metrobloks FAQs | the City of Liberty Official Website!",
+          "quote": "The total cost of the project is estimated to be $1.4 billion",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://libertymissouri.gov/m/newsflash/home/detail/5426",
+          "title": "Metrobloks Selects Liberty, Missouri for $1.4 Billion Data Center Investment • Liberty",
+          "quote": "Metrobloks Selects Liberty, Missouri for $1.4 Billion Data Center Investment",
+          "publishedDate": "2026-03-24",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Metrobloks Liberty Planned 150MW Data Center",
+        "description": "Liberty’s March 24 announcement and municipal FAQ describe a planned three-building data center with projected 150MW demand. Proposed applies to the announced project before verified physical works. The city states USD1.4bn total investment including real and personal property; the components are not added again. This source reconciles the previously different local and production prices.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      }
+    },
+    {
+      "id": 19275,
+      "status": "In Progress",
+      "price": 1000000000,
+      "priceCurrency": "USD",
+      "note": "The county-hosted June 2025 report explicitly states land preparation well underway for Cologix’s USD1bn Lewis Center COL5 complex, planned eventually for 120MW. In Progress applies to the full phased complex, not completed operation based on the first-phase fall-2026 target. The source describes a following building; it does not verify the tracker’s later phase dimensions or full service date.",
+      "sources": [
+        {
+          "url": "https://regionalplanning.co.delaware.oh.us/wp-content/uploads/sites/17/2025/06/ORA-Cologix-starts-work-06.18.25.pdf",
+          "title": "Columbus Dispatch — Data center operator starts work on $1 billion Delaware complex, part of larger expansion",
+          "quote": "The data company Cologix has started work on a $1 billion AI data center complex",
+          "publishedDate": "2025-06-18",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Cologix COL5 Lewis Center Campus Under Construction",
+        "description": "The county-hosted June 2025 report explicitly states land preparation well underway for Cologix’s USD1bn Lewis Center COL5 complex, planned eventually for 120MW. In Progress applies to the full phased complex, not completed operation based on the first-phase fall-2026 target. The source describes a following building; it does not verify the tracker’s later phase dimensions or full service date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      }
+    },
+    {
+      "id": 19277,
+      "status": "In Progress",
+      "price": 1300000000,
+      "priceCurrency": "USD",
+      "note": "August reporting explicitly verifies 5C constructing the USD1.3bn Prime Ohio Corporate Park facility by retrofitting and expanding the former LexisNexis center. In Progress applies to that phased build, not all capacity complete. The operator’s campus catalog distinguishes committed capacity from future delivery; the tracker’s 150MW and parcel number are not independently verified and are removed.",
+      "sources": [
+        {
+          "url": "https://wysu.org/ohio-news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism",
+          "title": "Springfield's $1.3B data center brings economic hope — and environmental skepticism",
+          "quote": "5C Group is constructing the $1.3 billion data center facility at Prime Ohio Corporate Park.",
+          "publishedDate": "2026-08-14",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "5C Springfield Data Center Retrofit and Expansion",
+        "description": "August reporting explicitly verifies 5C constructing the USD1.3bn Prime Ohio Corporate Park facility by retrofitting and expanding the former LexisNexis center. In Progress applies to that phased build, not all capacity complete. The operator’s campus catalog distinguishes committed capacity from future delivery; the tracker’s 150MW and parcel number are not independently verified and are removed.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      }
+    },
+    {
+      "id": 19284,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "RadiusDC explicitly dates Nashville I’s groundbreaking to September 4, 2025. In Progress describes that historical physical-start milestone, not a completed first service from a 2026 target. Native date is corrected from September 9 to the exact operator ceremony date while preserving duration. No published exact construction budget is established; financing partner participation is not a cost.",
+      "sources": [
+        {
+          "url": "https://www.radius-dc.com/newsroom-and-events/radiusdc-breaks-ground-on-largest-data-center-in-nashville",
+          "title": "RadiusDC Breaks Ground on Largest Data Center in Nashville | RadiusDC",
+          "quote": "The groundbreaking ceremony, held Thursday, September 4",
+          "publishedDate": "2025-09-04",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "RadiusDC Nashville I Groundbreaking",
+        "description": "RadiusDC explicitly dates Nashville I’s groundbreaking to September 4, 2025. In Progress describes that historical physical-start milestone, not a completed first service from a 2026 target. Native date is corrected from September 9 to the exact operator ceremony date while preserving duration. No published exact construction budget is established; financing partner participation is not a cost.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator explicitly dates the groundbreaking ceremony to Thursday September 4, 2025; September 9 was not the actual ceremony date.",
+        "utcStartDateTime": "2025-09-04T00:00:00.000Z"
+      },
+      "costGap": "No exact Nashville-I construction total in opened operator release."
+    },
+    {
+      "id": 19297,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Google’s statement confirms land acquired for a potential Buffalo campus while due diligence tests site viability. Proposed applies to that planned development, not a completed campus. The tracker’s generic 100MW is removed. No exact whole-campus budget or opening day is published in the opened announcement; reported single-building estimates cannot become a full-campus price.",
+      "sources": [
+        {
+          "url": "https://www.wvva.com/2026/03/27/google-build-data-center-putnam-county/?outputType=amp",
+          "title": "Google purchases land for a potential data center in Putnam County",
+          "quote": "The company has and continues to conduct thorough due diligence to determine whether this site is a viable location.",
+          "publishedDate": "2026-03-27",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Google Buffalo Putnam County Data Center Planning",
+        "description": "Google’s statement confirms land acquired for a potential Buffalo campus while due diligence tests site viability. Proposed applies to that planned development, not a completed campus. The tracker’s generic 100MW is removed. No exact whole-campus budget or opening day is published in the opened announcement; reported single-building estimates cannot become a full-campus price.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2026 is an unverified legacy tracker timeline anchor, not an operator-published opening day. Stage is supported separately by the cited evidence."
+      },
+      "costGap": "No exact whole-campus construction total in opened announcement; individual building estimates and tax-authority ceilings excluded."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": 712,
+      "title": "LA's $14BN Airport Upgrade",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "LAX record mixes a USD14bn airport-wide headline, a USD3.34bn people-mover amount and an October 2026 target. Opened July reporting describes continuing APM delivery uncertainty, not exact whole-program completion. Map the pin to APM or the full airport program and verify that scope’s physical/service milestone and current cost before tagging.",
+      "sources": [
+        {
+          "url": "https://crankyflier.com/2026/07/23/lets-dig-in-to-the-lax-people-mover-saga/",
+          "title": "Let’s Dig In to the LAX People Mover Saga – Cranky Flier",
+          "quote": "Let’s Dig In to the LAX People Mover Saga",
+          "publishedDate": "2026-07-23",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 4736,
+      "title": "Sable Starts Digging Up 12 Spots on Its Pipeline to Check for Corrosion",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Sable excavation is inspection to determine whether repairs are needed, not verified construction/refurbishment. Opened Noozhawk account distinguishes exploratory validation digs from possible future repairs. Verify an actual authorized physical repair scope before applying a construction tag; no exact repair budget verified.",
+      "sources": [
+        {
+          "url": "https://www.noozhawk.com/sable-seeks-permission-for-pipeline-excavation-to-check-for-anomalies/",
+          "title": "Sable Seeks Permission for Pipeline Excavation to Check for Anomalies | Local News | Noozhawk",
+          "quote": "the company is checking to see whether repairs are required.",
+          "publishedDate": "2026-09-18",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 18962,
+      "title": "TECfusions Keystone Connect: 1,000 MW Adaptive Reuse AI Data Center on 1,395 Acres in Upper Burrell, PA",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "TECfusions Keystone campus mixes the live first building, ongoing adaptive reuse and 1–3GW future buildout. The August issuer release verifies live GPU service only for the initial facility, not construction/completion of the pin’s whole 1,000MW scope. Reconcile phases and confirm actual buildout and exact cost before tagging; marketing power capacity and corporate financing are insufficient.",
+      "sources": [
+        {
+          "url": "https://tecfusions.com/wp-content/uploads/2025/11/KEYSTONE-CONNECT-FLYER.pdf",
+          "title": "TECfusions Keystone Connect: 1,000 MW Adaptive Reuse AI Data Center on 1,395 Acres in Upper Burrell, PA",
+          "quote": "1 GW leased today; 3 GW total",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/08/27/3351973/0/en/tecfusions-announces-new-kensington-data-center-is-live-delivering-gpu-capacity-and-responsible-on-site-power-plan.html",
+          "title": "TECfusions Announces New Kensington Data Center is Live, Delivering GPU Capacity and Responsible On-Site Power Plan",
+          "quote": "New Kensington, Pennsylvania data center is live",
+          "publishedDate": "2026-08-27",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 18963,
+      "title": "CoreWeave Lancaster AI Data Center: $6B, 300 MW Frontier GPU Supercomputer Campus in PA",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "CoreWeave Lancaster’s contractor release says it will build an initial 100MW with potential to scale to 300MW. It does not establish actual physical work on the full pinned 300MW expansion. Verify initial versus full-campus stage and schedule. More than USD6bn is explicitly an equipment commitment, not a source-quoted standalone construction budget.",
+      "sources": [
+        {
+          "url": "https://www.hochtief.com/fileadmin/aktuelles_medien/press-releases/250721_Turner_CoreWeave_Data_Center.pdf",
+          "title": "CoreWeave Announces Multi-Billion-Dollar Commitment to AI Infrastructure in Pennsylvania — Turner-Wohlsen",
+          "quote": "more than $6 billion to equip a new, state-of-the-art data center",
+          "publishedDate": "2025-07-21",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19209,
+      "title": "AUBix + Core Scientific Data Center: 16 MW Data Center Campus in Alabama",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Core Scientific Auburn mixes the operating AUBix shell with a new 16MW HPC conversion and later expansions. The opened issuer release states planned initial USD135m investment, total expected to exceed USD400m with future partner capex, but does not establish exact July-2026 conversion/handover stage. Verify actual refurbishment or completed service and correct phase budget before tagging; a cooling permit is not completion.",
+      "sources": [
+        {
+          "url": "https://investors.corescientific.com/news-events/press-releases/detail/107/core-scientific-announces-expansion-into-auburn-alabama-with-new-high-performance-computing-facility",
+          "title": "Core Scientific Announces Expansion into Auburn, Alabama with New High-Performance Computing Facility",
+          "quote": "total investment in the project expected to exceed $400 million",
+          "publishedDate": "2025-02-19",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19226,
+      "title": "TeraWulf Hawesville: 480 MW Data Center Campus in Kentucky",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Hawesville’s issuer update distinguishes 480MW gross available power, 401MW leased critical IT and future phased 2027–2028 delivery. The energized former-smelter substation does not establish the new compute campus stage. Local early-works/demolition accounts could not be opened successfully; obtain exact site-work evidence and reconcile phase before tagging. Acquisition, lease revenue and corporate financing are not construction cost.",
+      "sources": [
+        {
+          "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+          "title": "TeraWulf Reports Second Quarter 2026 Results",
+          "quote": "initial delivery expected in the second half of 2027 and full delivery expected in early 2028.",
+          "publishedDate": "2026-08-05",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19228,
+      "title": "DartPoints Former Lexmark Data Center Redevelopment: 100 MW Data Center Campus in Kentucky",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "DartPoints Lexmark record mixes an existing legacy data center with a proposed expansion, and Lexington moratorium reporting requires a verified permitting/exception decision for this parcel. Opened June report states planned 20–30MW then 70MW, not tracker 100MW. Verify actual physical expansion or binding halt before tagging; USD29m property acquisition is not construction cost.",
+      "sources": [
+        {
+          "url": "https://www.weku.org/lexington-richmond/2026-06-04/data-center-company-plans-to-expand-former-lexmark-property-for-cloud-ai-computing?_amp=true",
+          "title": "Data center company plans to expand former Lexmark property for cloud, AI computing | WEKU",
+          "quote": "DartPoints plans to expand a data center campus in Lexington formerly owned by Lexmark.",
+          "publishedDate": "2026-06-04",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19229,
+      "title": "Holyoke Data Center: 20 MW Data Center Campus in Massachusetts",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "Holyoke’s proposed 20MW paper-mill conversion conflicts with the city’s later outright ban on future data centers. Do not force Proposed or Completed at the saved June milestone. Obtain the exact parcel’s permit/vested-rights decision and any revised live proposal before tagging; USD200m proposal estimate is not spent construction.",
+      "sources": [
+        {
+          "url": "https://www.oceanstatemedia.org/new-england-news-collaborative/2026-10-20/in-new-england-towns-are-using-a-very-old-approach-to-take-on-data-centers",
+          "title": "In New England, towns are using a very old approach to take on data centers",
+          "quote": "Holyoke became the first town in that state to ban future data centers outright",
+          "publishedDate": "2026-10-20",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19238,
+      "title": "Deep Green Lansing Data Center: 24 MW Data Center Campus in Michigan",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "Deep Green withdrew the Lansing application on April 6. The prior 24MW/USD120m proposal and February announcement do not justify forcing an active construction status after withdrawal. Verify a revived application and actual physical scope before tagging.",
+      "sources": [
+        {
+          "url": "https://www.wkar.org/michigans-data-center-divide/2026-04-06/proposed-data-center-wont-move-forward-in-lansing-as-deep-green-withdraws",
+          "title": "Proposed data center won't move forward in Lansing as Deep Green withdraws | WKAR Public Media",
+          "quote": "Deep Green is withdrawing its application",
+          "publishedDate": "2026-04-06",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19240,
+      "title": "Amazon Clinton: 100 MW Data Center Campus in Mississippi",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Amazon Clinton tracker parcel remains unmapped to a primary named-campus phase. Opened Amazon USD25bn Mississippi release covers multiple sites; Clinton-based Birdsong is a contractor location, not proof a named Clinton data center is under construction. Local/prod previously differ on an unsupported USD1bn. Obtain exact parcel/operator site announcement, physical milestone and standalone budget before any metadata/tag write.",
+      "sources": [
+        {
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-25-billion-mississippi-data-centers",
+          "title": "Amazon to invest $25 billion in Mississippi data centers",
+          "quote": "Birdsong Construction, a second-generation company based in Clinton, Mississippi.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19252,
+      "title": "American Tower Mount Royal: 4 MW Data Center Campus in New Jersey",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "American Tower formally withdrew the Mount Royal/East Greenwich application, and its special June 30 hearing was cancelled. Do not force an active construction tag from the earlier application or infer completion of a 4MW edge facility. Verify a revived application and exact facility scope/cost before tagging.",
+      "sources": [
+        {
+          "url": "https://woodburywarbler.com/category/data-centers/",
+          "title": "Data Centers Archives — The Woodbury Warbler",
+          "quote": "American Tower Company has formally withdrawn its proposed East Greenwich Township data center application.",
+          "publishedDate": "2026-06-09",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19257,
+      "title": "Andover Data Center: 100 MW Data Center Campus in New Jersey",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "Andover’s airport-site redevelopment concept conflicts with a subsequent proposed AI-data-center ban and reported litigation. Opened ordinance concept and May 10 ban announcement do not establish a buildable permitted scope or actual construction. Verify adopted ordinance, applicability and lawsuit/permit outcome before tagging; the generic 100MW is unverified.",
+      "sources": [
+        {
+          "url": "https://newjersey.news12.com/2026/05/10/andover-plans-ban-on-ai-data-centers-after-tense-meeting-and-viral-video/5ouXiKxrUSaKWwCIz4Fflg",
+          "title": "News 12 | New Jersey | Andover Plans Ban On Ai Data Centers After Tense Meeting And Viral Video",
+          "quote": "Andover officials said they plan to introduce an ordinance to ban artificial intelligence data centers",
+          "publishedDate": "2026-05-10",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19263,
+      "title": "Natelli Investments New Hill Digital Campus: 250 MW Data Center Campus in North Carolina",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "Apex’s approved March 9 board minutes explicitly record withdrawal of Natelli’s New Hill annexation, rezoning and UDO applications. The developer’s older concept page conflicts with that later primary withdrawal; no active construction tag is forced. Verify a new application outside/inside the moratorium and reconcile 250/300MW scopes and exact budget before tagging.",
+      "sources": [
+        {
+          "url": "https://www.apexnc.org/DocumentCenter/View/54779/PB-2026---20260309---Planning-Board-Minutes-Approved",
+          "title": "Town of Apex — Approved March 9, 2026 Planning Board Minutes",
+          "quote": "Investments, LLC for the New Hill Data Center have been withdrawn.",
+          "publishedDate": "2026-03-09",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Primary minutes, items of information, page 2; quotation continues Natelli’s name from preceding line."
+        }
+      ]
+    },
+    {
+      "id": 19271,
+      "title": "AWS Hillard Scioto Campus: 382 MW Data Center Campus in Ohio",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "AWS Scioto tracker aggregates 382MW without mapping the campus buildings to operating versus expansion phases. AEP’s new 72.9MW fuel-cell component and its 2026–2027 schedule do not establish the compute campus’s full build stage. Reconcile exact buildings/IT versus utility demand and verify work/operation before tagging; no full-campus construction cost verified.",
+      "sources": [
+        {
+          "url": "https://www.aepohio.com/community/projects/scioto-darby-creek/",
+          "title": "Scioto Darby Creek",
+          "quote": "Scioto Darby Creek",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 19295,
+      "title": "5C Memphis Data Center: 60 MW Data Center Campus in Tennessee",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "5C Memphis catalog lists committed 20MW and future 64MW, not a receipt that the pinned 60MW is fully operating or all in construction. The phase-four permit report could not be fully opened; obtain dated exact conversion/commissioning evidence and reconcile phase totals before tagging. USD575m phase permit and prior permits are not summed into a campus budget.",
+      "sources": [
+        {
+          "url": "https://5c.ai/datacenters",
+          "title": "Next-Gen AI Data Centers | 5C",
+          "quote": "MEM01 Memphis, TN GRID BTM 20 MW",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 276,
+          "title": "Lima Metro Line 2 Fully Open",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Ositrán verifies active tunnelling and unfinished systems on Line 2 in February 2026. The completed 1A starter section does not complete the full line. The old 2028 forecast is not actual operation; the regulator has no agreed construction schedule. The saved USD5.364bn concession amount is not verified as a latest Line-2-only budget excluding the Line 4 branch.",
+          "evidence": "La tuneladora Delia se encuentra construyendo el túnel",
+          "evidenceUrls": [
+            "https://www.gob.pe/institucion/ositran/noticias/1358951-ositran-propone-interconexion-indirecta-con-la-linea-1-para-acelerar-operatividad-de-la-linea-2-del-metro"
+          ],
+          "expectedPinSha256": "7722c90383430e7f119f6ec15b91b0aae046599efe17ed4cc04b769a67105f9c",
+          "metadataVerified": true,
+          "savedPinSha256": "0cb65cc4c121246528247748032a2dbe46149720a7c37feb7723e6c6f2099634",
+          "verified": true
+        },
+        {
+          "id": 424,
+          "title": "Melbourne Airport Rail Link",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The Victorian Premier explicitly confirms February 25, 2026 construction beginning between West Footscray and Albion as the first Airport Rail stage. In Progress applies to the railway with ongoing enabling works, not an airport opening. AUD4.1bn is the shared Sunshine interchange package, including other services, not an updated total for the entire airport link; the older AUD12bn is not retained without a current exact-scope source.",
+          "evidence": "Work to build the Melbourne Airport Rail Link is underway.",
+          "evidenceUrls": [
+            "https://www.premier.vic.gov.au/airport-rail-works-start-first-stop-sunshine"
+          ],
+          "expectedPinSha256": "59473a1b683fca41f613064e980eb53873bcb0600d15e0f610c0e38575a96866",
+          "metadataVerified": true,
+          "savedPinSha256": "af1e0f5a608cea6aee3803a3f6731382d5afab6f8d0614fd59ac07a360101807",
+          "verified": true
+        },
+        {
+          "id": 426,
+          "title": "Al Maktoum International Airport Phase 1",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Opened current airport reporting verifies concrete piling, excavation and ongoing infrastructure works. In Progress applies to the first operating phase before its 2032 target. The USD35bn/AED128bn final airport development budget is wider than the named first phase; AED13bn under execution and AED55bn prospective contracts are not added into a fabricated phase total.",
+          "evidence": "installation of more than 17,000 concrete piles",
+          "evidenceUrls": [
+            "https://gulfnews.com/business/aviation/dubais-al-maktoum-airport-expansion-on-track-for-2032-launch-1.500574719"
+          ],
+          "expectedPinSha256": "63fa1898bbb7163b8076bb9b08c1187f69e962c8e0f5b48b17915d0142b3f988",
+          "metadataVerified": true,
+          "savedPinSha256": "aba0709643912b6b9f92b623040dd1940ff8edb1fc04e3029e03c0ebd72b33ed",
+          "verified": true
+        },
+        {
+          "id": 433,
+          "title": "Australia High Speed Rail Reaches Sydney",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The Sydney-Newcastle high-speed rail corridor is in a two-year design, approvals and development phase before construction. Proposed applies to the unbuilt railway; AUD659.6m is development funding, not the railway construction budget. AUD250bn economic benefit is not capital cost, and the 2039 target does not establish a completed railway.",
+          "evidence": "before construction begins on a project of this scale.",
+          "evidenceUrls": [
+            "https://railway-news.com/australia-begins-development-for-newcastle-sydney-high-speed-rail/"
+          ],
+          "expectedPinSha256": "790d729c49ad773e00f7cc7bc75e4174c70c292105bb997e114c9d2f12a78640",
+          "metadataVerified": true,
+          "savedPinSha256": "8be0aabbd072f8b680578433c2d97ca94d48ee6c3422832b061198bc1b675178",
+          "verified": true
+        },
+        {
+          "id": 494,
+          "title": "Goldin Finance 117 Targeted to Finally Complete in Tianjin",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Caixin explicitly reports the Tianjin 117 Tower has resumed construction after a decade of stagnation. In Progress is supported by actual resumed work, not merely a state takeover or the tower’s structural top-out. The tall-building register still gives expected 2027 completion. Creditor exposures, debt restructuring and the surrounding estate are not an exact updated tower construction budget.",
+          "evidence": "has resumed construction after a decade of stagnation.",
+          "evidenceUrls": [
+            "https://www.caixinglobal.com/2026-06-08/cover-story-china-restarts-stalled-property-megaproject-in-state-led-takeover-102452011.html",
+            "https://www.skyscrapercenter.com/building/goldin-finance-117/73"
+          ],
+          "expectedPinSha256": "477175843c155e9c72a78fc58c52a70afd9b2988569e0d3f6acb3f4ac060c3da",
+          "metadataVerified": true,
+          "savedPinSha256": "ce6d5344133ba5e1cb9b7475d20906e3e68a5334755b032870ab7c88359c22ef",
+          "verified": true
+        },
+        {
+          "id": 570,
+          "title": "Queensland Reverses Course, Commits to Rebuilding Paradise Dam Wall in Place",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "At the July 7 policy reversal, the government proposes rebuilding the existing wall in place instead of a replacement downstream. Proposed applies to that revised permanent reconstruction scope. AUD60m primarily funds geotechnical investigation, not a source-quoted all-in rebuild budget; old replacement-wall estimates are different designs.",
+          "evidence": "$60 million has been allocated in the state government budget, primarily for geotechnical works.",
+          "evidenceUrls": [
+            "https://www.abc.net.au/news/2026-07-07/government-to-fix-paradise-dam-wall-but-new-build-plan-scrapped/106887994"
+          ],
+          "expectedPinSha256": "fbc817902b2016361591e20c2b15ae81ffc1ec3c465712da845895ba4c01498d",
+          "metadataVerified": true,
+          "savedPinSha256": "20c05bac4188dee0897a191de70cbb7cf9bc7d00609f545d3e9dfffc529895ad",
+          "verified": true
+        },
+        {
+          "id": 2969,
+          "title": "NVIDIA Secures the PORTS-Pike AI Campus in Ohio With SB Energy and OpenAI",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "The August 17 NVIDIA guarantee/lease announcement states SB Energy will build, own and operate PORTS-Pike. Proposed applies to the announced future campus, not existing site infrastructure or a completed financing announcement. NVIDIA’s USD1.5bn corporate investment, grid infrastructure commitments and community fund do not establish a full data-center construction price.",
+          "evidence": "SB Energy will build, own and operate the data center under a 20-year lease to OpenAI.",
+          "evidenceUrls": [
+            "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+          ],
+          "expectedPinSha256": "a3c31294c064e10fb009c679eb7498aca1f873d5fabf0da7d433e36ddbc50d9d",
+          "metadataVerified": true,
+          "savedPinSha256": "3a24cbd089feb5166664011f474f4ae630df07a4278fdc96a920564b7e9f9475",
+          "verified": true
+        },
+        {
+          "id": 6117,
+          "title": "Iraq Awards Italy's Trevi the Contract to Repair Mosul Dam",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The February 2, 2016 award precedes signing and actual repair works, so Proposed describes the historical contract-award milestone. Trevi’s March 2 signed contract supplies the later exact EUR273m repair/maintenance scope cost, replacing an unconfirmed anonymous USD estimate. This is structural rehabilitation, not new hydroelectric generation or an assertion of the dam’s present operating output.",
+          "evidence": "Authorities have not specified how much Trevi would be paid for the work.",
+          "evidenceUrls": [
+            "https://www.rferl.org/a/iraq-mosul-dam-repair-italian-firm-trevi/27528136.html",
+            "https://trevispa.com/en/2016/03/02/trevi-signs-the-contract-for-the-maintenance-works-of-mosul-dam/"
+          ],
+          "expectedPinSha256": "475695ffa7cd8986374add0aff5aa6adee83034fb5ca3f6520dafdc3d6df9428",
+          "metadataVerified": true,
+          "savedPinSha256": "e9047bc2b91ef4fe5315c75f33bad6a269c9d790e023f99555d2a8a4a7f9fc4e",
+          "verified": true
+        },
+        {
+          "id": 7151,
+          "title": "Glenarden Hills Phase I Completes 114 Family and Senior Homes",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose explicitly identifies March 2019 completion of Phase I and its 114 family/senior homes plus community building. Completed applies to this first phase, matching the saved March 2019 milestone; the later 430-home masterplan is not completed by Phase I. The headline is made phase-specific. USD108m is all phases, not this phase’s price; scanned county budget evidence remains a verification follow-up.",
+          "evidence": "Completion Date - March 2019 (phase I)",
+          "evidenceUrls": [
+            "https://www.pennrose.com/portfolio/glenarden-hills/"
+          ],
+          "expectedPinSha256": "e7d084223874a701ac043ba5943f023932db9a593d272d88bc53864d41cf29b9",
+          "expectedOriginalTitle": "Glenarden Hills (family and 55+ senior housing) — Glenarden affordable housing",
+          "metadataVerified": true,
+          "savedPinSha256": "557c573bc1d52078469de5f41d216f19a6537f4b7e661d59c3d5c0a76be04547",
+          "verified": true
+        },
+        {
+          "id": 18225,
+          "title": "AIIB Approves $45M for ACWA Power's Caspian Desalination Plant in Azerbaijan",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "AIIB’s September 26 financing approval concerns the proposed 300,000m³/day main desalination plant. Its September 28 summary updates full project cost to USD431.5m, superseding the older USD418m operator figure and distinguishing the USD45m loan. Construction-stage accommodation and site welfare arrangements do not independently prove the main desalination train has started; the approval does not complete the plant.",
+          "evidence": "FINANCING APPROVAL September 26, 2026",
+          "evidenceUrls": [
+            "https://www.aiib.org/en/projects/details/2026/approved/azerbaijan-caspian-sea-desalination-project.html",
+            "https://www.aiib.org/en/projects/details/2026/_download/Azerbaijan/PSI-P001126-Azerbaijan-Caspian-Sea-Desalination-Project_29-Sep-2026-clean.pdf"
+          ],
+          "expectedPinSha256": "74931eb46607a46834e688772335fde4a1a24a1553f4eb26ec1ae0882bbb0833",
+          "metadataVerified": true,
+          "savedPinSha256": "4d87cc17a020aaa7760cf97ef4288cb6c8f2d658b55b92b4a48c1fbff0dd0107",
+          "verified": true
+        },
+        {
+          "id": 18226,
+          "title": "Alkimos Desalination Plant Finishes Its Two Undersea Tunnels",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "Water Corporation explicitly confirms both undersea tunnels completed on September 3. Completed applies only to the 2.5km intake and 4km outfall tunnelling milestone, not the full desalination plant or all subsequent connections and commissioning. AUD2.8bn belongs to the whole Alkimos plant and is cleared from this component milestone.",
+          "evidence": "Two of the longest undersea tunnels in Australia have been completed",
+          "evidenceUrls": [
+            "https://www.watercorporation.com.au/about-us/media-releases/2026/september/alkimos-desalination-plant-marks-marine-milestone"
+          ],
+          "expectedPinSha256": "2e107f3ced1eb8c301aa2bf5452c5a2e009416cddd270efc93b5781aab621467",
+          "metadataVerified": true,
+          "savedPinSha256": "a6e8a89e95499b122d6488bcd3c0e724f92884fb15580bc80fe3b8722c01687b",
+          "verified": true
+        },
+        {
+          "id": 18244,
+          "title": "Cyprus Brings 10,000 m3/Day Mobile Desalination Unit Online at Limassol Port",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "The agriculture ministry account explicitly states the Limassol-port 10,000m³/day mobile unit is in full normal operation after completed tests. Completed applies to this individual mobile plant, not Cyprus’s entire permanent desalination program. No exact unit cost is established; multi-unit emergency contracts and wider national spending are not allocated.",
+          "evidence": "A mobile desalination plant in Limassol port has been put into full operation",
+          "evidenceUrls": [
+            "https://cyprus-mail.com/2026/04/05/mobile-desalination-unit-in-full-operation-at-limassol-port"
+          ],
+          "expectedPinSha256": "63c9f185a4ade6458b5b7f56cee5bc4f3d98790da5de5d36d49b1541210b382a",
+          "metadataVerified": true,
+          "savedPinSha256": "6767a99aa2ea091453b33da69161a04715da3ad4608dad990420356cf3adf33b",
+          "verified": true
+        },
+        {
+          "id": 18248,
+          "title": "Doheny Ocean Desalination Plant Heads Toward Construction Notice in Nov 2026",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The May 2026 environmental determination and July construction-management procurement describe a proposed 5MGD project, with physical construction after 60% design. Proposed applies before the forecast November notice. A procurement experience threshold and USD6.8m design-services award are not the whole plant construction cost.",
+          "evidence": "Construction anticipated to begin after 60% design completion",
+          "evidenceUrls": [
+            "https://app.govly.com/public/opportunities/16895810",
+            "https://ceqanet.lci.ca.gov/2016031038/8"
+          ],
+          "expectedPinSha256": "bf9dcdbc6d90acfae76add7105880938a7ee8d5c4de751e726a4b2830146a31a",
+          "metadataVerified": true,
+          "savedPinSha256": "348b77e2c017f19b79b57491272ef9e48be1c3a20186002cbd0974276d952722",
+          "verified": true
+        },
+        {
+          "id": 18251,
+          "title": "Energy Recovery Wins PX Q650 Order for a Top-10 Saudi Desalination Plant",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Energy Recovery’s October 8 release is an award to supply PX Q650 devices for a new Saudi plant, not delivery or completed installation. Proposed applies to the awarded future equipment-supply scope; no claim is made that the unnamed whole desalination plant is completed. Order value is not disclosed; industry energy savings do not establish project cost.",
+          "evidence": "PX Q650 devices will deliver industry-leading energy efficiency",
+          "evidenceUrls": [
+            "https://finviz.com/news/400335/energy-recovery-secures-contract-to-supply-new-px-q650-energy-recovery-device-to-major-saudi-arabia-desalination-plant"
+          ],
+          "expectedPinSha256": "3836942acc683310c1785b9a2d5f6f3f1d210727c516e5b6696ea5b6777e1c9e",
+          "metadataVerified": true,
+          "savedPinSha256": "adf89abff642625b90957bcc57cd429675a8b1f91d5466fb356c85fe7c965d68",
+          "verified": true
+        },
+        {
+          "id": 18252,
+          "title": "Metinvest Adria Piombino Electric Steel Plant: 3.2B EUR, 2.7 Mt/yr, About 1.8 TWh/yr of Power, Construction May Slip to 2027, Italy",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Opened steel-industry reporting says construction may slip to spring 2027 while permits and financing are finalized. Proposed applies to the new Piombino EAF steelworks, not a completed investment review. The reported EUR3.2bn overall investment already includes EUR285m public funding; these amounts are not added. The saved energy demand is industrial consumption, not power generation.",
+          "evidence": "construction work could be postponed to spring 2027",
+          "evidenceUrls": [
+            "https://eurometal.net/metinvest-adria-seeks-third-partner-for-piombino-eaf-project-construction-may-slip-to-2027/",
+            "https://www.steelorbis.com/steel-news/latest-news/metinvest-adria-seeks-third-partner-for-piombino-eaf-project-construction-may-slip-to-2027-1473168.htm"
+          ],
+          "expectedPinSha256": "fdce12b140cd1dc1ed69bd86a93f666b111ba5d844c4f87f45db25508933382a",
+          "metadataVerified": true,
+          "savedPinSha256": "d8c6743bea43aee8d572f73c85c36fed694f6f9d02185e7e4d2fb1af06023ec3",
+          "verified": true
+        },
+        {
+          "id": 18253,
+          "title": "Namibia's Erongo Sunam Desalination Plant Targets 2026-2028 Build",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The JV and early-2026 tender account describe Erongo Sunam before verified plant construction. Proposed applies to the planned second desalination plant, not the operating Orano plant. The source states at least NAD2.1bn, based on a 2021 feasibility study pending final tender cost; the lower bound is preserved. Equity and debt components are not added again, and an elapsed June/July start target is not proof of works.",
+          "evidence": "at least N$ 2.1 billion for the construction of the new desalination plant in Erongo.",
+          "evidenceUrls": [
+            "https://neweralive.na/?p=378346"
+          ],
+          "expectedPinSha256": "5850803536fc459aa7108cec72a6a2500cb17d82d389e87dd53be07bcc7f4138",
+          "metadataVerified": true,
+          "savedPinSha256": "4bc1991ef59a8f3a289042af5b4ad5184e6565ab17b21e4ed6a64ab88dad6769",
+          "verified": true
+        },
+        {
+          "id": 18256,
+          "title": "Oman's 300,000 m3/Day Ghubrah III Desalination Plant Targets Q1 2027",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "The consortium partner explicitly verifies Ghubrah III construction in progress. The opened December 2024 report quotes RO127m for this desalination plant, separately from its adjoining pumping-station upgrade. The newer USD370m financial-close release is a project-finance package rather than an explicit replacement construction estimate, so it is not substituted. Q1 2027 remains a target.",
+          "evidence": "Construction of Ghubrah 3 IWP, the largest desalination project in Oman is in progress",
+          "evidenceUrls": [
+            "https://www.sogexoman.com/construction-of-ghubrah-3-iwp-the-largest-desalination-project-in-oman-is-in-progress/",
+            "https://www.omanobserver.om/article/1162794/business/economy/new-pumping-station-project-to-bolster-muscat-citys-water-supply",
+            "https://inima.com/en/gs-inima-aljomaih-energy-water-and-sogex-oman-have-reached-financial-close-for-the-ghubrah-iii-desalination-plant-in-oman/"
+          ],
+          "expectedPinSha256": "5f94695fc5fc4a0ec2390853c30144d7ae6cd5aa80c1a57e9eedf28c0fb751c6",
+          "metadataVerified": true,
+          "savedPinSha256": "4ba2bba975207a4d67dc76eb695b30a66052fd248eff377fe1274b31215c4815",
+          "verified": true
+        },
+        {
+          "id": 18258,
+          "title": "Tiwai Point Smelter Line 4 Restart: 50 MW More Power for New Zealand's 572 MW Aluminium Smelter, Contact Energy Deal Targets 2030",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The May 2026 letter of intent is for a potential 2030 restart of idle NZAS Line 4, not verified physical refurbishment or a resumed smelting line. Proposed applies to the restart project, not the existing smelter. Fifty MW is electrical demand, and NZD100m annually is forecast export revenue, not construction cost or generation output.",
+          "evidence": "could see the potline restart in 2030.",
+          "evidenceUrls": [
+            "https://aluminiumtoday.com/news/rio-tinto-plans-to-restart-nzas-potline"
+          ],
+          "expectedPinSha256": "db13c5aba035af07775036030d1a009db6cc61f111b262f8fe0b269ab8ccd64d",
+          "metadataVerified": true,
+          "savedPinSha256": "eba981837a977b8fc057950d93e470e0d4575c71dacf1fcfa5dec7235e255869",
+          "verified": true
+        },
+        {
+          "id": 18263,
+          "title": "Jordan’s Aqaba-Amman Desalination Project Targets Q4 Financial Close",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "September reporting explicitly says formal construction awaits financial close. Proposed applies to the Aqaba-Amman desalination/conveyance project, not a finished financing event. IFC’s current project disclosure estimates approximately USD6bn subject to optimization, superseding the saved USD5.8bn. Loan amounts are not the project total; renewable power facilities included in the broader scheme are not independently commissioned generation.",
+          "evidence": "it does not mean construction on the carrier has formally begun.",
+          "evidenceUrls": [
+            "https://www.jordannews.jo/Section-109/News/Jordan-s-national-water-carrier-edges-toward-construction-phase-55051",
+            "https://disclosures.ifc.org/project-detail/SII/47924/aqaba-amman-water-desalination-conveyance-aawdc"
+          ],
+          "expectedPinSha256": "803f51029b699178f22d3521cad38137e76c22dca5cd931d816817bc3055755c",
+          "expectedOriginalTitle": "Jordan's $5.8B Aqaba-Amman Desalination Project Slips to Q4 Financial Close",
+          "metadataVerified": true,
+          "savedPinSha256": "71101c53dc147ed77e15e8989b48c8fc91c3d1eb83228d28dc17147c3d6d5425",
+          "verified": true
+        },
+        {
+          "id": 18264,
+          "title": "Chennai's 400 MLD Perur Desalination Plant Heads Toward End-2026 Finish",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "July 2026 reporting documents ongoing transmission-pipeline laying and unfinished Perur delivery despite completed offshore components. In Progress applies to the 400MLD project. INR58.14bn is the source-quoted design-build-operate project estimate, with twenty years of O&M in its scope, not an invented plant-only construction number or FX conversion.",
+          "evidence": "pipeline-laying work is progressing along a 10.32 km stretch.",
+          "evidenceUrls": [
+            "https://indianinfrastructure.com/2026/07/03/construction-work-on-perur-water-desalination-plant-project-in-tamil-nadu-likely-to-be-completed-by-end-2026/"
+          ],
+          "expectedPinSha256": "9541d5040b4196fa2545bbaa10d28c6818631819f87728ee46be411c6355a3fa",
+          "metadataVerified": true,
+          "savedPinSha256": "3345a642efcce1f5632ed2de9f9557e96cbc16afb70c353e4a8d789f550faaef",
+          "verified": true
+        },
+        {
+          "id": 18267,
+          "title": "Conagua Awards Rosarito Desalination Plant to Cox, Lowest of Three Bids",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The August 14 award precedes the planned August 17 signature and August 18 construction start. Proposed describes the historical award milestone, not completion. The exact MXN5,291,565,898.31 contract excludes IVA and covers desalination plus pumping works; no USD conversion, broader prior scheme budget or duplicate contract components are added.",
+          "evidence": "el contrato por 5 mil 291 millones 565 mil 898.31 pesos más IVA.",
+          "evidenceUrls": [
+            "https://zetatijuana.com/2026/08/cox-energy-hara-desaladora-de-rosarito-en-tres-anos/"
+          ],
+          "expectedPinSha256": "163c2717260d2f314422b398b4184a4ac56da1ea2b218c01ef2ebd9a6de2994d",
+          "metadataVerified": true,
+          "savedPinSha256": "bd9f50b93ca107a6fa0deac203d4d468bbdc953d0125f941f15a3b6e808c7410",
+          "verified": true
+        },
+        {
+          "id": 19193,
+          "title": "Nebius Birmingham AI Factory Under Construction",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "WBHM’s September interview account explicitly describes Nebius building the Oxmoor campus. In Progress applies before first-phase energization and full buildout. The operator’s timeline distinguishes first commissioning from works through 2028. The tracker’s unverified 300MW is removed; nearly USD36bn over thirty years includes recurring investment, not an exact construction budget.",
+          "evidence": "That’s where tech company Nebius is building a hyperscale data center.",
+          "evidenceUrls": [
+            "https://www.wbhm.org/local-news/2026-09-03/data-center-dilemma-what-nebius-has-to-say-about-its-controversial-birmingham-project",
+            "https://nebius.com/birminghamal"
+          ],
+          "expectedPinSha256": "defda125592f3172b0cf5c77f1dde8ff31a6576e07ce33d2fd1961f136f3d573",
+          "expectedOriginalTitle": "Project Nebius: 300 MW Data Center Campus in Alabama",
+          "metadataVerified": true,
+          "savedPinSha256": "db5c3c0929197334a0f962c7bcc333e9b4fd4b2782f869cbd3e7686f19bf7c92",
+          "verified": true
+        },
+        {
+          "id": 19203,
+          "title": "Microsoft Granger Data Center Enters Site Construction",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "May 30 local reporting explicitly verifies construction underway, blowing dust and contractor truck movements at Granger. In Progress applies to physical site works before vertical building, not to March surveying or later completed operation. The unverified tracker 1,000MW is removed. USD12.5m preconstruction work and USD6m shared water extension are not a campus total.",
+          "evidence": "Now that construction is underway on Microsoft’s Granger data center",
+          "evidenceUrls": [
+            "https://www.wvpe.org/wvpe-news/2026-05-30/st-joseph-county-officials-respond-to-data-center-construction-concerns"
+          ],
+          "expectedPinSha256": "1735c09722fe8b6a372daef361eeacbab80723005d9e57ac3982db310a06e20d",
+          "expectedOriginalTitle": "Microsoft Granger: 1000 MW Data Center Campus in Indiana",
+          "metadataVerified": true,
+          "savedPinSha256": "253ab8f8abcb351dcd5202d2f18b46dd02d557d914dcbfc6a5ad721dfea511c7",
+          "verified": true
+        },
+        {
+          "id": 19211,
+          "title": "Metrobloks Martindale-Brightwood Data Center Proposal",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "The opened April 1 commission approval describes a USD500m, nearly fourteen-acre proposal still awaiting further city consideration. Proposed describes the planned development, not a completed approval or built facility. The operator’s high rack density does not substantiate the tracker’s 72MW campus figure, which is removed from the headline and description.",
+          "evidence": "approved the $500-million, nearly 14 acre project after a 6-2 vote at its April 1 meeting.",
+          "evidenceUrls": [
+            "https://mirrorindy.org/martindale-brightwood-metrobloks-data-center-east-indianapolis/"
+          ],
+          "expectedPinSha256": "fd7904881740b75f158eb362fc4acc4965c9ef794fde18567d257eb1e3e207b3",
+          "expectedOriginalTitle": "Metrobloks Martindale-Brightwood: 72 MW Data Center Campus in Indiana",
+          "metadataVerified": true,
+          "savedPinSha256": "de72cce299fff27ac8739b52dd95bfb0f45e4ffeddc7ae8fdbf9bac11ffd0d47",
+          "verified": true
+        },
+        {
+          "id": 19216,
+          "title": "Edged Des Moines 13.2MW Data Center Under Construction",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "The operator confirms May 6, 2025 groundbreaking of the Ankeny facility and 13.2MW critical capacity. In Progress applies before its forecast delivery; no completion is inferred from an old tracker date. Greater Des Moines Partnership identifies USD187m for Edged Energy’s data-center project, reconciling the previously different local and production prices without borrowing another campus budget.",
+          "evidence": "celebrated the groundbreaking of its newest state-of-the-art data center in Ankeny, Iowa.",
+          "evidenceUrls": [
+            "https://www.edged.es/news/des-moines-iowa",
+            "https://www.dsmpartnership.com/economic-development/economic-climate/recent-projects"
+          ],
+          "expectedPinSha256": "a1d86d51c5fc48aad44ddc27e370f6528c74a24c06d5bc1e7159b0ab4bbff521",
+          "expectedOriginalTitle": "Edged Des Moines: 13 MW Data Center Campus in Iowa",
+          "metadataVerified": true,
+          "savedPinSha256": "da47ffcda7567702e79fc46767e72abb198e1ebc54a0ffbfc059b955b270f972",
+          "verified": true
+        },
+        {
+          "id": 19217,
+          "title": "Meta Davenport Data Center Planning",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "Davenport’s FY2025 financial report explicitly says Vemerald is planning a northwest Davenport campus for Meta while negotiating utility service. Proposed applies to that planned campus; later directories do not establish actual works. The generic tracker 100MW is removed. A USD420m assessed-valuation assumption for tax analysis is not construction expenditure, and no precise opening date is established.",
+          "evidence": "Vemerald, LLC is planning to develop a large high-tech data center campus in northwest Davenport for its parent company, Meta.",
+          "evidenceUrls": [
+            "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_6481372/File/Departments/Finance/Accounting/CAR/FY25%20ACFR.pdf"
+          ],
+          "expectedPinSha256": "3991ed119388bd85d2fddbae0be3ded1312bb57b8113822c8ffe881c1eccf8b0",
+          "expectedOriginalTitle": "Meta Davenport Data Center: 100 MW Data Center Campus in Iowa",
+          "metadataVerified": true,
+          "savedPinSha256": "b6d1d95431ddac2bb4909f024ff0a552e782f25cf033eb625a4d531522cdb28e",
+          "verified": true
+        },
+        {
+          "id": 19223,
+          "title": "Microsoft La Porte Data Center Site Works",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "Microsoft’s July 2026 update confirms active grading by Ryan Central at La Porte. In Progress applies before vertical building, not completed operation. Indiana’s June 2024 announcement identifies a planned USD1bn investment for the initial campus; the newer update supplies no revised total. The unverified tracker 100MW and combined later-parcel dimensions are removed.",
+          "evidence": "Construction in La Porte continues to move forward steadily",
+          "evidenceUrls": [
+            "https://local.microsoft.com/blog/la-porte-public-meeting-recap/",
+            "https://www.iedc.in.gov/events/news/details/2024/06/04/gov-holcomb-announces-plans-for-new-1b-microsoft-data-center-in-northwest-indiana"
+          ],
+          "expectedPinSha256": "6b87bb1ed809dea111624ffee33b0ef23f7a020c5165eab2eaf48ff97d5e4b6a",
+          "expectedOriginalTitle": "Microsoft La Porte: 100 MW Data Center Campus in Indiana",
+          "metadataVerified": true,
+          "savedPinSha256": "c41a47f18bc94ead39878e3f2ed45fde026cff521bcdbe52cc6e783f9818b162",
+          "verified": true
+        },
+        {
+          "id": 19235,
+          "title": "TPC Data Center MidAtlantic Laurel Proposal",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "The county-hosted planning market analysis names TPC Data Center MidAtlantic at 6201 Frost Place and explicitly proposes 2027 development. Proposed applies to that named parcel, not a completed data center or nearby Konterra project. The tracker’s 20MW is unverified and removed. Planning floor area and a projected delivery year do not establish commissioning or cost.",
+          "evidence": "TPC Data Center Study Area MidAtlantic is proposed to be developed in 2027.",
+          "evidenceUrls": [
+            "https://www.pgplanning.org/wp-content/uploads/2026/01/Subregion-1-Minor-Plan-Amendment-Market-Analysis_final_1.16.26.pdf"
+          ],
+          "expectedPinSha256": "e5b14d50f4b626349bbbb4e2e2dda9101c5547271c079af4b24736e83996b9d3",
+          "expectedOriginalTitle": "TPC Laurel: 20 MW Data Center Campus in Maryland",
+          "metadataVerified": true,
+          "savedPinSha256": "553c3579a7d86b1a5bd44cd95fcf6d8449f08e392dfce49f68bbb8adba961443",
+          "verified": true
+        },
+        {
+          "id": 19241,
+          "title": "Compass Meridian Data Center Campus Construction",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "The governor explicitly confirms having broken ground on Compass Meridian, and the July 2026 issuer workforce release retains the USD10bn full-campus investment. In Progress applies before full phased delivery, not to an already operating entire campus. The generic tracker 500MW is not independently verified here and is removed. This cost is the digital-infrastructure project, not a separate Mississippi power plant.",
+          "evidence": "break ground on the new Compass Datacenters project",
+          "evidenceUrls": [
+            "https://governorreeves.ms.gov/governor-reeves-gives-state-of-the-state-address-4/",
+            "https://www.prnewswire.com/news-releases/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program-302839615.html"
+          ],
+          "expectedPinSha256": "a3033a1db673749415969285921cc51e0ba054f7654ef9142b64e32834f4e5ab",
+          "expectedOriginalTitle": "Meridian Compass Data Center: 500 MW Data Center Campus in Mississippi",
+          "metadataVerified": true,
+          "savedPinSha256": "a65196cdbacff23b08d5f9ad6146996f051a25b232012b52c1f0b8f44a3489ed",
+          "verified": true
+        },
+        {
+          "id": 19244,
+          "title": "University of Michigan–Los Alamos Research Computing Center Plans",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "U-M explicitly places its research computing center in planning/design, with late-2027 construction and initial operations in 2030. Proposed applies to the planned center. The university states USD1.25bn total investment; the USD100m state grant is only one contribution. The planned initial 50MW and eventual 100MW are demand rather than generation. The July 2026 tracker date is not an opening.",
+          "evidence": "The project remains in the planning and design phase.",
+          "evidenceUrls": [
+            "https://research.umich.edu/research-at-michigan/lanl-faq/"
+          ],
+          "expectedPinSha256": "ac200bef54aee603696ccb10ccb6b33588fb7ff67e4e32c62d2d29f7c1923113",
+          "expectedOriginalTitle": "Ypsilanti University of Michigan × Los Alamos Supercomputing Research Center: 100 MW Data Center Campus in Michigan",
+          "metadataVerified": true,
+          "savedPinSha256": "4aeeaf1a8605c3bf956988e7e900fde61e4962bce772e9fed69fc4fefc446a7e",
+          "verified": true
+        },
+        {
+          "id": 19248,
+          "title": "Metrobloks Liberty Planned 150MW Data Center",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "Liberty’s March 24 announcement and municipal FAQ describe a planned three-building data center with projected 150MW demand. Proposed applies to the announced project before verified physical works. The city states USD1.4bn total investment including real and personal property; the components are not added again. This source reconciles the previously different local and production prices.",
+          "evidence": "The total cost of the project is estimated to be $1.4 billion",
+          "evidenceUrls": [
+            "https://www.libertymissouri.gov/2793/Metrobloks-FAQs",
+            "https://libertymissouri.gov/m/newsflash/home/detail/5426"
+          ],
+          "expectedPinSha256": "d99980e21e2da8c85dbbef4357d969fefeaf423ce31f5db26f2a4a3776390b48",
+          "expectedOriginalTitle": "Metrobloks Liberty: 150 MW Data Center Campus in Missouri",
+          "metadataVerified": true,
+          "savedPinSha256": "5c43583fa3f2ef8e8c037090ea77294470a87c0b74f60ec1516a8922a6b3e518",
+          "verified": true
+        },
+        {
+          "id": 19275,
+          "title": "Cologix COL5 Lewis Center Campus Under Construction",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "The county-hosted June 2025 report explicitly states land preparation well underway for Cologix’s USD1bn Lewis Center COL5 complex, planned eventually for 120MW. In Progress applies to the full phased complex, not completed operation based on the first-phase fall-2026 target. The source describes a following building; it does not verify the tracker’s later phase dimensions or full service date.",
+          "evidence": "Land preparation is well under way on the site",
+          "evidenceUrls": [
+            "https://regionalplanning.co.delaware.oh.us/wp-content/uploads/sites/17/2025/06/ORA-Cologix-starts-work-06.18.25.pdf"
+          ],
+          "expectedPinSha256": "63d10ee3339099879cb230ccb1af60cb7181fd3a3254b83d6a460bad2fcf0ccb",
+          "expectedOriginalTitle": "Cologix Lewis Center: 120 MW Data Center Campus in Ohio",
+          "metadataVerified": true,
+          "savedPinSha256": "375d8bdd83660dd7d3c40b03177960bf0790e089ec304b4863cc59d9ef6ce1e2",
+          "verified": true
+        },
+        {
+          "id": 19277,
+          "title": "5C Springfield Data Center Retrofit and Expansion",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "August reporting explicitly verifies 5C constructing the USD1.3bn Prime Ohio Corporate Park facility by retrofitting and expanding the former LexisNexis center. In Progress applies to that phased build, not all capacity complete. The operator’s campus catalog distinguishes committed capacity from future delivery; the tracker’s 150MW and parcel number are not independently verified and are removed.",
+          "evidence": "5C Group is constructing the $1.3 billion data center facility at Prime Ohio Corporate Park.",
+          "evidenceUrls": [
+            "https://wysu.org/ohio-news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism"
+          ],
+          "expectedPinSha256": "3838b50444684977128beff045446f520be49e4cd8021508f0bdb2d1805a3a32",
+          "expectedOriginalTitle": "5C Springfield: 150 MW Data Center Campus in Ohio",
+          "metadataVerified": true,
+          "savedPinSha256": "e5f3fbf692e79f9376b48aed7b57756088062ec6409b082c8e4f38ee3eb85e94",
+          "verified": true
+        },
+        {
+          "id": 19284,
+          "title": "RadiusDC Nashville I Groundbreaking",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "RadiusDC explicitly dates Nashville I’s groundbreaking to September 4, 2025. In Progress describes that historical physical-start milestone, not a completed first service from a 2026 target. Native date is corrected from September 9 to the exact operator ceremony date while preserving duration. No published exact construction budget is established; financing partner participation is not a cost.",
+          "evidence": "The groundbreaking ceremony, held Thursday, September 4",
+          "evidenceUrls": [
+            "https://www.radius-dc.com/newsroom-and-events/radiusdc-breaks-ground-on-largest-data-center-in-nashville"
+          ],
+          "expectedPinSha256": "e33b0de09c96d5451571d57f794b2c24d54eabd2bb6ed2a7b020304a56ef43cf",
+          "expectedOriginalTitle": "RadiusDC Nashville I: 12 MW Data Center Campus in Tennessee",
+          "metadataVerified": true,
+          "savedPinSha256": "5d678618a8e566d8be701598f226ae6f228cda77e186939d9c0f64e6aad644a5",
+          "verified": true
+        },
+        {
+          "id": 19297,
+          "title": "Google Buffalo Putnam County Data Center Planning",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "Google’s statement confirms land acquired for a potential Buffalo campus while due diligence tests site viability. Proposed applies to that planned development, not a completed campus. The tracker’s generic 100MW is removed. No exact whole-campus budget or opening day is published in the opened announcement; reported single-building estimates cannot become a full-campus price.",
+          "evidence": "The company has and continues to conduct thorough due diligence to determine whether this site is a viable location.",
+          "evidenceUrls": [
+            "https://www.wvva.com/2026/03/27/google-build-data-center-putnam-county/?outputType=amp"
+          ],
+          "expectedPinSha256": "006f67528b904085d9d75e3601fff12747d6e718576267f6ee8028b26e39e9b9",
+          "expectedOriginalTitle": "Google Buffalo Data Center: 100 MW Data Center Campus in West Virginia",
+          "metadataVerified": true,
+          "savedPinSha256": "f83bf4f46a9cf228cc77c4c25939a18350322484b4939b3a4c7e7d3ee121ed57",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 35,
+      "counts": {
+        "Proposed": 18,
+        "In Progress": 14,
+        "Completed": 3
+      }
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 276,
+          "title": "Lima Metro Line 2 Fully Open",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Ositrán verifies active tunnelling and unfinished systems on Line 2 in February 2026. The completed 1A starter section does not complete the full line. The old 2028 forecast is not actual operation; the regulator has no agreed construction schedule. The saved USD5.364bn concession amount is not verified as a latest Line-2-only budget excluding the Line 4 branch.",
+          "evidence": "La tuneladora Delia se encuentra construyendo el túnel",
+          "evidenceUrls": [
+            "https://www.gob.pe/institucion/ositran/noticias/1358951-ositran-propone-interconexion-indirecta-con-la-linea-1-para-acelerar-operatividad-de-la-linea-2-del-metro"
+          ],
+          "expectedPinSha256": "7722c90383430e7f119f6ec15b91b0aae046599efe17ed4cc04b769a67105f9c",
+          "metadataVerified": true,
+          "savedPinSha256": "0cb65cc4c121246528247748032a2dbe46149720a7c37feb7723e6c6f2099634",
+          "verified": true
+        },
+        {
+          "id": 424,
+          "title": "Melbourne Airport Rail Link",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The Victorian Premier explicitly confirms February 25, 2026 construction beginning between West Footscray and Albion as the first Airport Rail stage. In Progress applies to the railway with ongoing enabling works, not an airport opening. AUD4.1bn is the shared Sunshine interchange package, including other services, not an updated total for the entire airport link; the older AUD12bn is not retained without a current exact-scope source.",
+          "evidence": "Work to build the Melbourne Airport Rail Link is underway.",
+          "evidenceUrls": [
+            "https://www.premier.vic.gov.au/airport-rail-works-start-first-stop-sunshine"
+          ],
+          "expectedPinSha256": "1b5c5c3d44730c835bf5e7d4fc7041dc16c19a49c01c63ade7d81113795340eb",
+          "metadataVerified": true,
+          "savedPinSha256": "536c3adffb61b4eeda17e5cffe125482dc149b98940811253e89e35c9e3bd8ea",
+          "verified": true
+        },
+        {
+          "id": 426,
+          "title": "Al Maktoum International Airport Phase 1",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Opened current airport reporting verifies concrete piling, excavation and ongoing infrastructure works. In Progress applies to the first operating phase before its 2032 target. The USD35bn/AED128bn final airport development budget is wider than the named first phase; AED13bn under execution and AED55bn prospective contracts are not added into a fabricated phase total.",
+          "evidence": "installation of more than 17,000 concrete piles",
+          "evidenceUrls": [
+            "https://gulfnews.com/business/aviation/dubais-al-maktoum-airport-expansion-on-track-for-2032-launch-1.500574719"
+          ],
+          "expectedPinSha256": "63fa1898bbb7163b8076bb9b08c1187f69e962c8e0f5b48b17915d0142b3f988",
+          "metadataVerified": true,
+          "savedPinSha256": "aba0709643912b6b9f92b623040dd1940ff8edb1fc04e3029e03c0ebd72b33ed",
+          "verified": true
+        },
+        {
+          "id": 433,
+          "title": "Australia High Speed Rail Reaches Sydney",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The Sydney-Newcastle high-speed rail corridor is in a two-year design, approvals and development phase before construction. Proposed applies to the unbuilt railway; AUD659.6m is development funding, not the railway construction budget. AUD250bn economic benefit is not capital cost, and the 2039 target does not establish a completed railway.",
+          "evidence": "before construction begins on a project of this scale.",
+          "evidenceUrls": [
+            "https://railway-news.com/australia-begins-development-for-newcastle-sydney-high-speed-rail/"
+          ],
+          "expectedPinSha256": "790d729c49ad773e00f7cc7bc75e4174c70c292105bb997e114c9d2f12a78640",
+          "metadataVerified": true,
+          "savedPinSha256": "8be0aabbd072f8b680578433c2d97ca94d48ee6c3422832b061198bc1b675178",
+          "verified": true
+        },
+        {
+          "id": 494,
+          "title": "Goldin Finance 117 Targeted to Finally Complete in Tianjin",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Caixin explicitly reports the Tianjin 117 Tower has resumed construction after a decade of stagnation. In Progress is supported by actual resumed work, not merely a state takeover or the tower’s structural top-out. The tall-building register still gives expected 2027 completion. Creditor exposures, debt restructuring and the surrounding estate are not an exact updated tower construction budget.",
+          "evidence": "has resumed construction after a decade of stagnation.",
+          "evidenceUrls": [
+            "https://www.caixinglobal.com/2026-06-08/cover-story-china-restarts-stalled-property-megaproject-in-state-led-takeover-102452011.html",
+            "https://www.skyscrapercenter.com/building/goldin-finance-117/73"
+          ],
+          "expectedPinSha256": "477175843c155e9c72a78fc58c52a70afd9b2988569e0d3f6acb3f4ac060c3da",
+          "metadataVerified": true,
+          "savedPinSha256": "ce6d5344133ba5e1cb9b7475d20906e3e68a5334755b032870ab7c88359c22ef",
+          "verified": true
+        },
+        {
+          "id": 570,
+          "title": "Queensland Reverses Course, Commits to Rebuilding Paradise Dam Wall in Place",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "At the July 7 policy reversal, the government proposes rebuilding the existing wall in place instead of a replacement downstream. Proposed applies to that revised permanent reconstruction scope. AUD60m primarily funds geotechnical investigation, not a source-quoted all-in rebuild budget; old replacement-wall estimates are different designs.",
+          "evidence": "$60 million has been allocated in the state government budget, primarily for geotechnical works.",
+          "evidenceUrls": [
+            "https://www.abc.net.au/news/2026-07-07/government-to-fix-paradise-dam-wall-but-new-build-plan-scrapped/106887994"
+          ],
+          "expectedPinSha256": "fbc817902b2016361591e20c2b15ae81ffc1ec3c465712da845895ba4c01498d",
+          "metadataVerified": true,
+          "savedPinSha256": "20c05bac4188dee0897a191de70cbb7cf9bc7d00609f545d3e9dfffc529895ad",
+          "verified": true
+        },
+        {
+          "id": 2969,
+          "title": "NVIDIA Secures the PORTS-Pike AI Campus in Ohio With SB Energy and OpenAI",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "The August 17 NVIDIA guarantee/lease announcement states SB Energy will build, own and operate PORTS-Pike. Proposed applies to the announced future campus, not existing site infrastructure or a completed financing announcement. NVIDIA’s USD1.5bn corporate investment, grid infrastructure commitments and community fund do not establish a full data-center construction price.",
+          "evidence": "SB Energy will build, own and operate the data center under a 20-year lease to OpenAI.",
+          "evidenceUrls": [
+            "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+          ],
+          "expectedPinSha256": "576ada669266fffa596a8293a5b1bd079a7a7ca3cf9fa798477b12c0c24475bb",
+          "metadataVerified": true,
+          "savedPinSha256": "0400d8fe641cbbed4b554ef5ce3c5f7d2a940709d8f01d69da3df8be053459aa",
+          "verified": true
+        },
+        {
+          "id": 6117,
+          "title": "Iraq Awards Italy's Trevi the Contract to Repair Mosul Dam",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The February 2, 2016 award precedes signing and actual repair works, so Proposed describes the historical contract-award milestone. Trevi’s March 2 signed contract supplies the later exact EUR273m repair/maintenance scope cost, replacing an unconfirmed anonymous USD estimate. This is structural rehabilitation, not new hydroelectric generation or an assertion of the dam’s present operating output.",
+          "evidence": "Authorities have not specified how much Trevi would be paid for the work.",
+          "evidenceUrls": [
+            "https://www.rferl.org/a/iraq-mosul-dam-repair-italian-firm-trevi/27528136.html",
+            "https://trevispa.com/en/2016/03/02/trevi-signs-the-contract-for-the-maintenance-works-of-mosul-dam/"
+          ],
+          "expectedPinSha256": "475695ffa7cd8986374add0aff5aa6adee83034fb5ca3f6520dafdc3d6df9428",
+          "metadataVerified": true,
+          "savedPinSha256": "e9047bc2b91ef4fe5315c75f33bad6a269c9d790e023f99555d2a8a4a7f9fc4e",
+          "verified": true
+        },
+        {
+          "id": 7151,
+          "title": "Glenarden Hills Phase I Completes 114 Family and Senior Homes",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose explicitly identifies March 2019 completion of Phase I and its 114 family/senior homes plus community building. Completed applies to this first phase, matching the saved March 2019 milestone; the later 430-home masterplan is not completed by Phase I. The headline is made phase-specific. USD108m is all phases, not this phase’s price; scanned county budget evidence remains a verification follow-up.",
+          "evidence": "Completion Date - March 2019 (phase I)",
+          "evidenceUrls": [
+            "https://www.pennrose.com/portfolio/glenarden-hills/"
+          ],
+          "expectedPinSha256": "e7d084223874a701ac043ba5943f023932db9a593d272d88bc53864d41cf29b9",
+          "expectedOriginalTitle": "Glenarden Hills (family and 55+ senior housing) — Glenarden affordable housing",
+          "metadataVerified": true,
+          "savedPinSha256": "557c573bc1d52078469de5f41d216f19a6537f4b7e661d59c3d5c0a76be04547",
+          "verified": true
+        },
+        {
+          "id": 18225,
+          "title": "AIIB Approves $45M for ACWA Power's Caspian Desalination Plant in Azerbaijan",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "AIIB’s September 26 financing approval concerns the proposed 300,000m³/day main desalination plant. Its September 28 summary updates full project cost to USD431.5m, superseding the older USD418m operator figure and distinguishing the USD45m loan. Construction-stage accommodation and site welfare arrangements do not independently prove the main desalination train has started; the approval does not complete the plant.",
+          "evidence": "FINANCING APPROVAL September 26, 2026",
+          "evidenceUrls": [
+            "https://www.aiib.org/en/projects/details/2026/approved/azerbaijan-caspian-sea-desalination-project.html",
+            "https://www.aiib.org/en/projects/details/2026/_download/Azerbaijan/PSI-P001126-Azerbaijan-Caspian-Sea-Desalination-Project_29-Sep-2026-clean.pdf"
+          ],
+          "expectedPinSha256": "74931eb46607a46834e688772335fde4a1a24a1553f4eb26ec1ae0882bbb0833",
+          "metadataVerified": true,
+          "savedPinSha256": "4d87cc17a020aaa7760cf97ef4288cb6c8f2d658b55b92b4a48c1fbff0dd0107",
+          "verified": true
+        },
+        {
+          "id": 18226,
+          "title": "Alkimos Desalination Plant Finishes Its Two Undersea Tunnels",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "Water Corporation explicitly confirms both undersea tunnels completed on September 3. Completed applies only to the 2.5km intake and 4km outfall tunnelling milestone, not the full desalination plant or all subsequent connections and commissioning. AUD2.8bn belongs to the whole Alkimos plant and is cleared from this component milestone.",
+          "evidence": "Two of the longest undersea tunnels in Australia have been completed",
+          "evidenceUrls": [
+            "https://www.watercorporation.com.au/about-us/media-releases/2026/september/alkimos-desalination-plant-marks-marine-milestone"
+          ],
+          "expectedPinSha256": "2e107f3ced1eb8c301aa2bf5452c5a2e009416cddd270efc93b5781aab621467",
+          "metadataVerified": true,
+          "savedPinSha256": "a6e8a89e95499b122d6488bcd3c0e724f92884fb15580bc80fe3b8722c01687b",
+          "verified": true
+        },
+        {
+          "id": 18244,
+          "title": "Cyprus Brings 10,000 m3/Day Mobile Desalination Unit Online at Limassol Port",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "The agriculture ministry account explicitly states the Limassol-port 10,000m³/day mobile unit is in full normal operation after completed tests. Completed applies to this individual mobile plant, not Cyprus’s entire permanent desalination program. No exact unit cost is established; multi-unit emergency contracts and wider national spending are not allocated.",
+          "evidence": "A mobile desalination plant in Limassol port has been put into full operation",
+          "evidenceUrls": [
+            "https://cyprus-mail.com/2026/04/05/mobile-desalination-unit-in-full-operation-at-limassol-port"
+          ],
+          "expectedPinSha256": "63c9f185a4ade6458b5b7f56cee5bc4f3d98790da5de5d36d49b1541210b382a",
+          "metadataVerified": true,
+          "savedPinSha256": "6767a99aa2ea091453b33da69161a04715da3ad4608dad990420356cf3adf33b",
+          "verified": true
+        },
+        {
+          "id": 18248,
+          "title": "Doheny Ocean Desalination Plant Heads Toward Construction Notice in Nov 2026",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The May 2026 environmental determination and July construction-management procurement describe a proposed 5MGD project, with physical construction after 60% design. Proposed applies before the forecast November notice. A procurement experience threshold and USD6.8m design-services award are not the whole plant construction cost.",
+          "evidence": "Construction anticipated to begin after 60% design completion",
+          "evidenceUrls": [
+            "https://app.govly.com/public/opportunities/16895810",
+            "https://ceqanet.lci.ca.gov/2016031038/8"
+          ],
+          "expectedPinSha256": "bf9dcdbc6d90acfae76add7105880938a7ee8d5c4de751e726a4b2830146a31a",
+          "metadataVerified": true,
+          "savedPinSha256": "348b77e2c017f19b79b57491272ef9e48be1c3a20186002cbd0974276d952722",
+          "verified": true
+        },
+        {
+          "id": 18251,
+          "title": "Energy Recovery Wins PX Q650 Order for a Top-10 Saudi Desalination Plant",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Energy Recovery’s October 8 release is an award to supply PX Q650 devices for a new Saudi plant, not delivery or completed installation. Proposed applies to the awarded future equipment-supply scope; no claim is made that the unnamed whole desalination plant is completed. Order value is not disclosed; industry energy savings do not establish project cost.",
+          "evidence": "PX Q650 devices will deliver industry-leading energy efficiency",
+          "evidenceUrls": [
+            "https://finviz.com/news/400335/energy-recovery-secures-contract-to-supply-new-px-q650-energy-recovery-device-to-major-saudi-arabia-desalination-plant"
+          ],
+          "expectedPinSha256": "3836942acc683310c1785b9a2d5f6f3f1d210727c516e5b6696ea5b6777e1c9e",
+          "metadataVerified": true,
+          "savedPinSha256": "adf89abff642625b90957bcc57cd429675a8b1f91d5466fb356c85fe7c965d68",
+          "verified": true
+        },
+        {
+          "id": 18252,
+          "title": "Metinvest Adria Piombino Electric Steel Plant: 3.2B EUR, 2.7 Mt/yr, About 1.8 TWh/yr of Power, Construction May Slip to 2027, Italy",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Opened steel-industry reporting says construction may slip to spring 2027 while permits and financing are finalized. Proposed applies to the new Piombino EAF steelworks, not a completed investment review. The reported EUR3.2bn overall investment already includes EUR285m public funding; these amounts are not added. The saved energy demand is industrial consumption, not power generation.",
+          "evidence": "construction work could be postponed to spring 2027",
+          "evidenceUrls": [
+            "https://eurometal.net/metinvest-adria-seeks-third-partner-for-piombino-eaf-project-construction-may-slip-to-2027/",
+            "https://www.steelorbis.com/steel-news/latest-news/metinvest-adria-seeks-third-partner-for-piombino-eaf-project-construction-may-slip-to-2027-1473168.htm"
+          ],
+          "expectedPinSha256": "fdce12b140cd1dc1ed69bd86a93f666b111ba5d844c4f87f45db25508933382a",
+          "metadataVerified": true,
+          "savedPinSha256": "d8c6743bea43aee8d572f73c85c36fed694f6f9d02185e7e4d2fb1af06023ec3",
+          "verified": true
+        },
+        {
+          "id": 18253,
+          "title": "Namibia's Erongo Sunam Desalination Plant Targets 2026-2028 Build",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The JV and early-2026 tender account describe Erongo Sunam before verified plant construction. Proposed applies to the planned second desalination plant, not the operating Orano plant. The source states at least NAD2.1bn, based on a 2021 feasibility study pending final tender cost; the lower bound is preserved. Equity and debt components are not added again, and an elapsed June/July start target is not proof of works.",
+          "evidence": "at least N$ 2.1 billion for the construction of the new desalination plant in Erongo.",
+          "evidenceUrls": [
+            "https://neweralive.na/?p=378346"
+          ],
+          "expectedPinSha256": "5850803536fc459aa7108cec72a6a2500cb17d82d389e87dd53be07bcc7f4138",
+          "metadataVerified": true,
+          "savedPinSha256": "4bc1991ef59a8f3a289042af5b4ad5184e6565ab17b21e4ed6a64ab88dad6769",
+          "verified": true
+        },
+        {
+          "id": 18256,
+          "title": "Oman's 300,000 m3/Day Ghubrah III Desalination Plant Targets Q1 2027",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "The consortium partner explicitly verifies Ghubrah III construction in progress. The opened December 2024 report quotes RO127m for this desalination plant, separately from its adjoining pumping-station upgrade. The newer USD370m financial-close release is a project-finance package rather than an explicit replacement construction estimate, so it is not substituted. Q1 2027 remains a target.",
+          "evidence": "Construction of Ghubrah 3 IWP, the largest desalination project in Oman is in progress",
+          "evidenceUrls": [
+            "https://www.sogexoman.com/construction-of-ghubrah-3-iwp-the-largest-desalination-project-in-oman-is-in-progress/",
+            "https://www.omanobserver.om/article/1162794/business/economy/new-pumping-station-project-to-bolster-muscat-citys-water-supply",
+            "https://inima.com/en/gs-inima-aljomaih-energy-water-and-sogex-oman-have-reached-financial-close-for-the-ghubrah-iii-desalination-plant-in-oman/"
+          ],
+          "expectedPinSha256": "5f94695fc5fc4a0ec2390853c30144d7ae6cd5aa80c1a57e9eedf28c0fb751c6",
+          "metadataVerified": true,
+          "savedPinSha256": "4ba2bba975207a4d67dc76eb695b30a66052fd248eff377fe1274b31215c4815",
+          "verified": true
+        },
+        {
+          "id": 18258,
+          "title": "Tiwai Point Smelter Line 4 Restart: 50 MW More Power for New Zealand's 572 MW Aluminium Smelter, Contact Energy Deal Targets 2030",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The May 2026 letter of intent is for a potential 2030 restart of idle NZAS Line 4, not verified physical refurbishment or a resumed smelting line. Proposed applies to the restart project, not the existing smelter. Fifty MW is electrical demand, and NZD100m annually is forecast export revenue, not construction cost or generation output.",
+          "evidence": "could see the potline restart in 2030.",
+          "evidenceUrls": [
+            "https://aluminiumtoday.com/news/rio-tinto-plans-to-restart-nzas-potline"
+          ],
+          "expectedPinSha256": "db13c5aba035af07775036030d1a009db6cc61f111b262f8fe0b269ab8ccd64d",
+          "metadataVerified": true,
+          "savedPinSha256": "eba981837a977b8fc057950d93e470e0d4575c71dacf1fcfa5dec7235e255869",
+          "verified": true
+        },
+        {
+          "id": 18263,
+          "title": "Jordan’s Aqaba-Amman Desalination Project Targets Q4 Financial Close",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "September reporting explicitly says formal construction awaits financial close. Proposed applies to the Aqaba-Amman desalination/conveyance project, not a finished financing event. IFC’s current project disclosure estimates approximately USD6bn subject to optimization, superseding the saved USD5.8bn. Loan amounts are not the project total; renewable power facilities included in the broader scheme are not independently commissioned generation.",
+          "evidence": "it does not mean construction on the carrier has formally begun.",
+          "evidenceUrls": [
+            "https://www.jordannews.jo/Section-109/News/Jordan-s-national-water-carrier-edges-toward-construction-phase-55051",
+            "https://disclosures.ifc.org/project-detail/SII/47924/aqaba-amman-water-desalination-conveyance-aawdc"
+          ],
+          "expectedPinSha256": "eb42d43ffcdc98ce6070df73607386b1bbfbb37f5c15ee8b4a8dbdf514e8eebb",
+          "expectedOriginalTitle": "Jordan's $5.8B Aqaba-Amman Desalination Project Slips to Q4 Financial Close",
+          "metadataVerified": true,
+          "savedPinSha256": "6d29fcf899984e921fae8d0d85d2392cf6be3e7c30be064acbee677affb0356c",
+          "verified": true
+        },
+        {
+          "id": 18264,
+          "title": "Chennai's 400 MLD Perur Desalination Plant Heads Toward End-2026 Finish",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "July 2026 reporting documents ongoing transmission-pipeline laying and unfinished Perur delivery despite completed offshore components. In Progress applies to the 400MLD project. INR58.14bn is the source-quoted design-build-operate project estimate, with twenty years of O&M in its scope, not an invented plant-only construction number or FX conversion.",
+          "evidence": "pipeline-laying work is progressing along a 10.32 km stretch.",
+          "evidenceUrls": [
+            "https://indianinfrastructure.com/2026/07/03/construction-work-on-perur-water-desalination-plant-project-in-tamil-nadu-likely-to-be-completed-by-end-2026/"
+          ],
+          "expectedPinSha256": "9541d5040b4196fa2545bbaa10d28c6818631819f87728ee46be411c6355a3fa",
+          "metadataVerified": true,
+          "savedPinSha256": "3345a642efcce1f5632ed2de9f9557e96cbc16afb70c353e4a8d789f550faaef",
+          "verified": true
+        },
+        {
+          "id": 18267,
+          "title": "Conagua Awards Rosarito Desalination Plant to Cox, Lowest of Three Bids",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The August 14 award precedes the planned August 17 signature and August 18 construction start. Proposed describes the historical award milestone, not completion. The exact MXN5,291,565,898.31 contract excludes IVA and covers desalination plus pumping works; no USD conversion, broader prior scheme budget or duplicate contract components are added.",
+          "evidence": "el contrato por 5 mil 291 millones 565 mil 898.31 pesos más IVA.",
+          "evidenceUrls": [
+            "https://zetatijuana.com/2026/08/cox-energy-hara-desaladora-de-rosarito-en-tres-anos/"
+          ],
+          "expectedPinSha256": "163c2717260d2f314422b398b4184a4ac56da1ea2b218c01ef2ebd9a6de2994d",
+          "metadataVerified": true,
+          "savedPinSha256": "bd9f50b93ca107a6fa0deac203d4d468bbdc953d0125f941f15a3b6e808c7410",
+          "verified": true
+        },
+        {
+          "id": 19193,
+          "title": "Nebius Birmingham AI Factory Under Construction",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "WBHM’s September interview account explicitly describes Nebius building the Oxmoor campus. In Progress applies before first-phase energization and full buildout. The operator’s timeline distinguishes first commissioning from works through 2028. The tracker’s unverified 300MW is removed; nearly USD36bn over thirty years includes recurring investment, not an exact construction budget.",
+          "evidence": "That’s where tech company Nebius is building a hyperscale data center.",
+          "evidenceUrls": [
+            "https://www.wbhm.org/local-news/2026-09-03/data-center-dilemma-what-nebius-has-to-say-about-its-controversial-birmingham-project",
+            "https://nebius.com/birminghamal"
+          ],
+          "expectedPinSha256": "f158b1ee4a4bf8930bb60a2c68c0d387770e523eaeff4db77800a7f801462245",
+          "expectedOriginalTitle": "Project Nebius: 300 MW Data Center Campus in Alabama",
+          "metadataVerified": true,
+          "savedPinSha256": "7147dd3d2abadbf01148aad4a16886848860039663a5897b0a0d032a67b30c25",
+          "verified": true
+        },
+        {
+          "id": 19203,
+          "title": "Microsoft Granger Data Center Enters Site Construction",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "May 30 local reporting explicitly verifies construction underway, blowing dust and contractor truck movements at Granger. In Progress applies to physical site works before vertical building, not to March surveying or later completed operation. The unverified tracker 1,000MW is removed. USD12.5m preconstruction work and USD6m shared water extension are not a campus total.",
+          "evidence": "Now that construction is underway on Microsoft’s Granger data center",
+          "evidenceUrls": [
+            "https://www.wvpe.org/wvpe-news/2026-05-30/st-joseph-county-officials-respond-to-data-center-construction-concerns"
+          ],
+          "expectedPinSha256": "e7d08b9e5c2300686b10134bb87cfdea8c5a0462f2398cacf776aea82e6b4d40",
+          "expectedOriginalTitle": "Microsoft Granger: 1000 MW Data Center Campus in Indiana",
+          "metadataVerified": true,
+          "savedPinSha256": "9f52c691f9c706af8171b728603861f79485f9c516fa5c110be32e1f559a671f",
+          "verified": true
+        },
+        {
+          "id": 19211,
+          "title": "Metrobloks Martindale-Brightwood Data Center Proposal",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "The opened April 1 commission approval describes a USD500m, nearly fourteen-acre proposal still awaiting further city consideration. Proposed describes the planned development, not a completed approval or built facility. The operator’s high rack density does not substantiate the tracker’s 72MW campus figure, which is removed from the headline and description.",
+          "evidence": "approved the $500-million, nearly 14 acre project after a 6-2 vote at its April 1 meeting.",
+          "evidenceUrls": [
+            "https://mirrorindy.org/martindale-brightwood-metrobloks-data-center-east-indianapolis/"
+          ],
+          "expectedPinSha256": "c6365afc3bcfad1a212b9bb21f5fe28dc7ad27417f5f5f04f15907829012d9d4",
+          "expectedOriginalTitle": "Metrobloks Martindale-Brightwood: 72 MW Data Center Campus in Indiana",
+          "metadataVerified": true,
+          "savedPinSha256": "540a80e70c2c434a04271df119ccaaa5850f53376d02510ad5e4da89ca020ca8",
+          "verified": true
+        },
+        {
+          "id": 19216,
+          "title": "Edged Des Moines 13.2MW Data Center Under Construction",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "The operator confirms May 6, 2025 groundbreaking of the Ankeny facility and 13.2MW critical capacity. In Progress applies before its forecast delivery; no completion is inferred from an old tracker date. Greater Des Moines Partnership identifies USD187m for Edged Energy’s data-center project, reconciling the previously different local and production prices without borrowing another campus budget.",
+          "evidence": "celebrated the groundbreaking of its newest state-of-the-art data center in Ankeny, Iowa.",
+          "evidenceUrls": [
+            "https://www.edged.es/news/des-moines-iowa",
+            "https://www.dsmpartnership.com/economic-development/economic-climate/recent-projects"
+          ],
+          "expectedPinSha256": "eba84bff9f19f276ac4087d30e84d60e71564d7eddd0842760f07962732d8639",
+          "expectedOriginalTitle": "Edged Des Moines: 13 MW Data Center Campus in Iowa",
+          "metadataVerified": true,
+          "savedPinSha256": "e81b80c7fe33888424ffc47bfef5fa19d90413b196dc8d57cafff0d856c810c1",
+          "verified": true
+        },
+        {
+          "id": 19217,
+          "title": "Meta Davenport Data Center Planning",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "Davenport’s FY2025 financial report explicitly says Vemerald is planning a northwest Davenport campus for Meta while negotiating utility service. Proposed applies to that planned campus; later directories do not establish actual works. The generic tracker 100MW is removed. A USD420m assessed-valuation assumption for tax analysis is not construction expenditure, and no precise opening date is established.",
+          "evidence": "Vemerald, LLC is planning to develop a large high-tech data center campus in northwest Davenport for its parent company, Meta.",
+          "evidenceUrls": [
+            "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_6481372/File/Departments/Finance/Accounting/CAR/FY25%20ACFR.pdf"
+          ],
+          "expectedPinSha256": "435a54a1a85d1b1af3a16bc77b3242b453a31a5fd70331ed10eba20aae74fe8d",
+          "expectedOriginalTitle": "Meta Davenport Data Center: 100 MW Data Center Campus in Iowa",
+          "metadataVerified": true,
+          "savedPinSha256": "2845c9e3a0b9bf3eb682b6509e413dc3dd1de6aeb8f91f5cdd865d8c7e944f6d",
+          "verified": true
+        },
+        {
+          "id": 19223,
+          "title": "Microsoft La Porte Data Center Site Works",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "Microsoft’s July 2026 update confirms active grading by Ryan Central at La Porte. In Progress applies before vertical building, not completed operation. Indiana’s June 2024 announcement identifies a planned USD1bn investment for the initial campus; the newer update supplies no revised total. The unverified tracker 100MW and combined later-parcel dimensions are removed.",
+          "evidence": "Construction in La Porte continues to move forward steadily",
+          "evidenceUrls": [
+            "https://local.microsoft.com/blog/la-porte-public-meeting-recap/",
+            "https://www.iedc.in.gov/events/news/details/2024/06/04/gov-holcomb-announces-plans-for-new-1b-microsoft-data-center-in-northwest-indiana"
+          ],
+          "expectedPinSha256": "f055d8deeca90f4fa944752f10672c1c2189d2eb6d0f1564c1a42fb5047538e6",
+          "expectedOriginalTitle": "Microsoft La Porte: 100 MW Data Center Campus in Indiana",
+          "metadataVerified": true,
+          "savedPinSha256": "b1021587319d61363c30aa9e9d475ca5fe06f89002f81a759a1877b406929cb7",
+          "verified": true
+        },
+        {
+          "id": 19235,
+          "title": "TPC Data Center MidAtlantic Laurel Proposal",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "The county-hosted planning market analysis names TPC Data Center MidAtlantic at 6201 Frost Place and explicitly proposes 2027 development. Proposed applies to that named parcel, not a completed data center or nearby Konterra project. The tracker’s 20MW is unverified and removed. Planning floor area and a projected delivery year do not establish commissioning or cost.",
+          "evidence": "TPC Data Center Study Area MidAtlantic is proposed to be developed in 2027.",
+          "evidenceUrls": [
+            "https://www.pgplanning.org/wp-content/uploads/2026/01/Subregion-1-Minor-Plan-Amendment-Market-Analysis_final_1.16.26.pdf"
+          ],
+          "expectedPinSha256": "9024a8553d3c14690f7e42ea4016a51c16148d3ea9edcfd97c57734be8e7da84",
+          "expectedOriginalTitle": "TPC Laurel: 20 MW Data Center Campus in Maryland",
+          "metadataVerified": true,
+          "savedPinSha256": "5c5d3b41a1148ae909bc9e6debe3fb8e0629c88f7b58670289176b7bf4587b69",
+          "verified": true
+        },
+        {
+          "id": 19241,
+          "title": "Compass Meridian Data Center Campus Construction",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "The governor explicitly confirms having broken ground on Compass Meridian, and the July 2026 issuer workforce release retains the USD10bn full-campus investment. In Progress applies before full phased delivery, not to an already operating entire campus. The generic tracker 500MW is not independently verified here and is removed. This cost is the digital-infrastructure project, not a separate Mississippi power plant.",
+          "evidence": "break ground on the new Compass Datacenters project",
+          "evidenceUrls": [
+            "https://governorreeves.ms.gov/governor-reeves-gives-state-of-the-state-address-4/",
+            "https://www.prnewswire.com/news-releases/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program-302839615.html"
+          ],
+          "expectedPinSha256": "347213d7716760e3ae03f75827faa98da599e230e98109da3e48059992ce3446",
+          "expectedOriginalTitle": "Meridian Compass Data Center: 500 MW Data Center Campus in Mississippi",
+          "metadataVerified": true,
+          "savedPinSha256": "026c30b3c55b20b153bf10c8408cf5f772343dc698f1a3d365a0eb723c47b3fd",
+          "verified": true
+        },
+        {
+          "id": 19244,
+          "title": "University of Michigan–Los Alamos Research Computing Center Plans",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "U-M explicitly places its research computing center in planning/design, with late-2027 construction and initial operations in 2030. Proposed applies to the planned center. The university states USD1.25bn total investment; the USD100m state grant is only one contribution. The planned initial 50MW and eventual 100MW are demand rather than generation. The July 2026 tracker date is not an opening.",
+          "evidence": "The project remains in the planning and design phase.",
+          "evidenceUrls": [
+            "https://research.umich.edu/research-at-michigan/lanl-faq/"
+          ],
+          "expectedPinSha256": "982cbd8fe4201117cf79182e9b628b76aab6e84c952e85fedf2a67656fffae40",
+          "expectedOriginalTitle": "Ypsilanti University of Michigan × Los Alamos Supercomputing Research Center: 100 MW Data Center Campus in Michigan",
+          "metadataVerified": true,
+          "savedPinSha256": "e209f21955e77c64c2309f1c9de1cbdc7bdfd30fd077466821e1af2cb1ddade1",
+          "verified": true
+        },
+        {
+          "id": 19248,
+          "title": "Metrobloks Liberty Planned 150MW Data Center",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "Liberty’s March 24 announcement and municipal FAQ describe a planned three-building data center with projected 150MW demand. Proposed applies to the announced project before verified physical works. The city states USD1.4bn total investment including real and personal property; the components are not added again. This source reconciles the previously different local and production prices.",
+          "evidence": "The total cost of the project is estimated to be $1.4 billion",
+          "evidenceUrls": [
+            "https://www.libertymissouri.gov/2793/Metrobloks-FAQs",
+            "https://libertymissouri.gov/m/newsflash/home/detail/5426"
+          ],
+          "expectedPinSha256": "b73d166d89f106a4849894216885c1c4a81cf244608a8ea1317a80adcca66855",
+          "expectedOriginalTitle": "Metrobloks Liberty: 150 MW Data Center Campus in Missouri",
+          "metadataVerified": true,
+          "savedPinSha256": "fdc6e08e7241a0271e6bcd81f2cd2746dd579366bcbe6683a9a43bc26c292a01",
+          "verified": true
+        },
+        {
+          "id": 19275,
+          "title": "Cologix COL5 Lewis Center Campus Under Construction",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "The county-hosted June 2025 report explicitly states land preparation well underway for Cologix’s USD1bn Lewis Center COL5 complex, planned eventually for 120MW. In Progress applies to the full phased complex, not completed operation based on the first-phase fall-2026 target. The source describes a following building; it does not verify the tracker’s later phase dimensions or full service date.",
+          "evidence": "Land preparation is well under way on the site",
+          "evidenceUrls": [
+            "https://regionalplanning.co.delaware.oh.us/wp-content/uploads/sites/17/2025/06/ORA-Cologix-starts-work-06.18.25.pdf"
+          ],
+          "expectedPinSha256": "4301787c16c0ba430b591f57d4182a3b6e86d088f44248d173e44b6ed8c387ad",
+          "expectedOriginalTitle": "Cologix Lewis Center: 120 MW Data Center Campus in Ohio",
+          "metadataVerified": true,
+          "savedPinSha256": "6bf27b677f4c3b6f63aa2aef5d12b98b341f960146f326562f1d98b8a37fb9e1",
+          "verified": true
+        },
+        {
+          "id": 19277,
+          "title": "5C Springfield Data Center Retrofit and Expansion",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "August reporting explicitly verifies 5C constructing the USD1.3bn Prime Ohio Corporate Park facility by retrofitting and expanding the former LexisNexis center. In Progress applies to that phased build, not all capacity complete. The operator’s campus catalog distinguishes committed capacity from future delivery; the tracker’s 150MW and parcel number are not independently verified and are removed.",
+          "evidence": "5C Group is constructing the $1.3 billion data center facility at Prime Ohio Corporate Park.",
+          "evidenceUrls": [
+            "https://wysu.org/ohio-news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism"
+          ],
+          "expectedPinSha256": "bc391988930d44db8e9f76dd9af3cb1b588c2b60caa82e0dc9e5fc1391c96f6d",
+          "expectedOriginalTitle": "5C Springfield: 150 MW Data Center Campus in Ohio",
+          "metadataVerified": true,
+          "savedPinSha256": "edfdd5729198a1a5bc9c5743367597e8b4900e72396d0c78d23276226d68f818",
+          "verified": true
+        },
+        {
+          "id": 19284,
+          "title": "RadiusDC Nashville I Groundbreaking",
+          "expectedAuthorId": 439,
+          "status": "In Progress",
+          "reason": "RadiusDC explicitly dates Nashville I’s groundbreaking to September 4, 2025. In Progress describes that historical physical-start milestone, not a completed first service from a 2026 target. Native date is corrected from September 9 to the exact operator ceremony date while preserving duration. No published exact construction budget is established; financing partner participation is not a cost.",
+          "evidence": "The groundbreaking ceremony, held Thursday, September 4",
+          "evidenceUrls": [
+            "https://www.radius-dc.com/newsroom-and-events/radiusdc-breaks-ground-on-largest-data-center-in-nashville"
+          ],
+          "expectedPinSha256": "f91dbbcbb59073f915bc3c2ebf4346e6bfafcad46dc4e4416faa8f89845ff0b0",
+          "expectedOriginalTitle": "RadiusDC Nashville I: 12 MW Data Center Campus in Tennessee",
+          "metadataVerified": true,
+          "savedPinSha256": "f78805b5bb306402aa366f2c5674d83e6c4565cf9e7d88e2ffaafb67f346d93c",
+          "verified": true
+        },
+        {
+          "id": 19297,
+          "title": "Google Buffalo Putnam County Data Center Planning",
+          "expectedAuthorId": 439,
+          "status": "Proposed",
+          "reason": "Google’s statement confirms land acquired for a potential Buffalo campus while due diligence tests site viability. Proposed applies to that planned development, not a completed campus. The tracker’s generic 100MW is removed. No exact whole-campus budget or opening day is published in the opened announcement; reported single-building estimates cannot become a full-campus price.",
+          "evidence": "The company has and continues to conduct thorough due diligence to determine whether this site is a viable location.",
+          "evidenceUrls": [
+            "https://www.wvva.com/2026/03/27/google-build-data-center-putnam-county/?outputType=amp"
+          ],
+          "expectedPinSha256": "e1b099ebb78993b7618405a0aaa59e644f47db282e6c4e36530fd97fc04922cb",
+          "expectedOriginalTitle": "Google Buffalo Data Center: 100 MW Data Center Campus in West Virginia",
+          "metadataVerified": true,
+          "savedPinSha256": "5733bf53224e79cf743ae6087406b58a96633668e94aa7056e3c7cf2be78875e",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 35,
+      "counts": {
+        "Proposed": 18,
+        "In Progress": 14,
+        "Completed": 3
+      }
+    }
+  ],
+  "sourceAccessNotes": [
+    {
+      "url": "https://minister.infrastructure.gov.au/c-king/media-release/newcastle-sydney-1-hour-albanese-government-lays-foundation-high-speed-rail-australia",
+      "result": "The read operation timed out"
+    },
+    {
+      "url": "https://www.scmp.com/economy/china-economy/article/3348901/chinas-long-delayed-skyscraper-goldin-finance-117-nears-completion-amid-property-woes",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://acwapower.com/en/what-we-do/projects/caspian-seawater-desalination-project/",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://idrawater.org/?p=12204",
+      "result": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "url": "https://thebrief.com.na/2026/06/namwater-swakop-uranium-target-july-financial-close-for-n2-1bn-desalination-plant/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://thebrief.com.na/?p=23844",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://smartwatermagazine.com/news/smart-water-magazine/nama-pwp-wins-325-million-deal-ghubrah-3-desalination-plant-oman",
+      "result": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://thesouthfirst.com/pti/tamil-nadu-chief-minister-mk-stalin-lays-foundation-stone-for-₹4276-crore-desalination-plant",
+      "result": "'ascii' codec can't encode character '\\u20b9' in position 71: ordinal not in range(128)"
+    },
+    {
+      "url": "https://mexiconewsdaily.com/business/cox-desalination-plant-baja-california/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://smartwatermagazine.com/news/smart-water-magazine/mexico-relaunches-bidding-840-million-rosarito-desalination-plant-after",
+      "result": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://trackdatacenters.com/usa/iowa#edged-des-moines",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://trackdatacenters.com/usa/iowa#meta-davenport-data-center",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://trackdatacenters.com/usa/north-carolina#natelli-investments-new-hill-digital-campus",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://bigbuild.vic.gov.au/projects/melbourne-airport-rail",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://minister.infrastructure.gov.au/c-king/media-release/full-steam-ahead-melbourne-airport-rail",
+      "result": "The read operation timed out"
+    },
+    {
+      "url": "https://www.hsra.gov.au/industry-update",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://trevispa.com/en/2016/03/02/trevi-signs-the-contract-for-the-maintenance-works-of-mosul-dam/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.princegeorgescountymd.gov/sites/default/files/Agenda_03052019-1413.pdf",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Multi-Billion-Dollar-Commitment-to-AI-Infrastructure-in-Pennsylvania/default.aspx",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/edged-tops-out-data-center-in-des-moines-iowa/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://bistateonline.org/documents/economic-development/5132-bi-state-region-comprehensive-economic-development-strategy-ceds-2026-draft/file",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://local.microsoft.com/communities/americas/indiana/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.publicnow.com/view/933A46138B953545938E190D6076C1143C752917",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.owensborotimes.com/news/2026/05/terawulf-project-could-reshape-former-century-aluminum-site/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://mississippitoday.org/2026/04/09/data-centers-amazon-investments/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://research.umich.edu/research-at-michigan/lanl-faq/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://woodburywarbler.com/category/data-centers/",
+      "result": "Non-200 response 202"
+    },
+    {
+      "url": "https://newhilldigitalcampus.com/faqs/",
+      "result": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://newhilldigitalcampus.com/",
+      "result": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.bizjournals.com/memphis/news/2026/10/06/5c-permit-data-center-phase-four-getwell.html",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://wvpublic.org/story/economy/google-launches-data-center-website-for-putnam-county-campus/amp/",
+      "result": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "referenceDateVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "id": 50547,
+      "pinId": 19223,
+      "publishedDate": null,
+      "verified": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "id": 50837,
+      "pinId": 19223,
+      "publishedDate": null,
+      "verified": true
+    }
+  ],
+  "unresolvedVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "ids": [
+        712,
+        4736,
+        18962,
+        18963,
+        19209,
+        19226,
+        19228,
+        19229,
+        19238,
+        19240,
+        19252,
+        19257,
+        19263,
+        19271,
+        19295
+      ],
+      "originalMetadataUnchanged": true,
+      "noConstructionStatusPresent": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "ids": [
+        712,
+        4736,
+        18962,
+        18963,
+        19209,
+        19226,
+        19228,
+        19229,
+        19238,
+        19240,
+        19252,
+        19257,
+        19263,
+        19271,
+        19295
+      ],
+      "originalMetadataUnchanged": true,
+      "noConstructionStatusPresent": true
+    }
+  ],
+  "publicVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "checks": [
+        {
+          "id": 276,
+          "status": "In Progress",
+          "utcStartDateTime": "2028-12-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 424,
+          "status": "In Progress",
+          "utcStartDateTime": "2033-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 426,
+          "status": "In Progress",
+          "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 433,
+          "status": "Proposed",
+          "utcStartDateTime": "2039-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 494,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 570,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 2969,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-08-17T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 6117,
+          "status": "Proposed",
+          "price": 273000000,
+          "priceCurrency": "EUR",
+          "utcStartDateTime": "2016-02-02T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7151,
+          "status": "Completed",
+          "utcStartDateTime": "2019-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18225,
+          "status": "Proposed",
+          "price": 431500000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-09-26T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18226,
+          "status": "Completed",
+          "utcStartDateTime": "2026-09-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18244,
+          "status": "Completed",
+          "utcStartDateTime": "2026-04-05T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18248,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18251,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-10-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18252,
+          "status": "Proposed",
+          "price": 3200000000,
+          "priceCurrency": "EUR",
+          "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18253,
+          "status": "Proposed",
+          "price": 2100000000,
+          "priceCurrency": "NAD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18256,
+          "status": "In Progress",
+          "price": 127000000,
+          "priceCurrency": "OMR",
+          "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18258,
+          "status": "Proposed",
+          "utcStartDateTime": "2030-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18263,
+          "status": "Proposed",
+          "price": 6000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18264,
+          "status": "In Progress",
+          "price": 58140000000,
+          "priceCurrency": "INR",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18267,
+          "status": "Proposed",
+          "price": 5291565898.31,
+          "priceCurrency": "MXN",
+          "utcStartDateTime": "2026-08-14T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19193,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19203,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19211,
+          "status": "Proposed",
+          "price": 500000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-02-12T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19216,
+          "status": "In Progress",
+          "price": 187000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19217,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19223,
+          "status": "In Progress",
+          "price": 1000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19235,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19241,
+          "status": "In Progress",
+          "price": 10000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19244,
+          "status": "Proposed",
+          "price": 1250000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19248,
+          "status": "Proposed",
+          "price": 1400000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19275,
+          "status": "In Progress",
+          "price": 1000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19277,
+          "status": "In Progress",
+          "price": 1300000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19284,
+          "status": "In Progress",
+          "utcStartDateTime": "2025-09-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19297,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 276,
+          "url": "http://127.0.0.1:3000/pin/276/lima-metro-line-2-fully-open",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 424,
+          "url": "http://127.0.0.1:3000/pin/424/melbourne-airport-rail-link",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 6117,
+          "url": "http://127.0.0.1:3000/pin/6117/iraq-awards-italy-s-trevi-the-contract-to-repair-mosul-dam",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7151,
+          "url": "http://127.0.0.1:3000/pin/7151/glenarden-hills-phase-i-completes-114-family-and-senior-homes",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18225,
+          "url": "http://127.0.0.1:3000/pin/18225/aiib-approves-45m-for-acwa-power-s-caspian-desalination-plant-in-azerbaijan",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18226,
+          "url": "http://127.0.0.1:3000/pin/18226/alkimos-desalination-plant-finishes-its-two-undersea-tunnels",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18256,
+          "url": "http://127.0.0.1:3000/pin/18256/oman-s-300-000-m3-day-ghubrah-iii-desalination-plant-targets-q1-2027",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18267,
+          "url": "http://127.0.0.1:3000/pin/18267/conagua-awards-rosarito-desalination-plant-to-cox-lowest-of-three-bids",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19216,
+          "url": "http://127.0.0.1:3000/pin/19216/edged-des-moines-13-2mw-data-center-under-construction",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19244,
+          "url": "http://127.0.0.1:3000/pin/19244/university-of-michigan-los-alamos-research-computing-center-plans",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19248,
+          "url": "http://127.0.0.1:3000/pin/19248/metrobloks-liberty-planned-150mw-data-center",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19284,
+          "url": "http://127.0.0.1:3000/pin/19284/radiusdc-nashville-i-groundbreaking",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "checks": [
+        {
+          "id": 276,
+          "status": "In Progress",
+          "utcStartDateTime": "2028-12-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 424,
+          "status": "In Progress",
+          "utcStartDateTime": "2033-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 426,
+          "status": "In Progress",
+          "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 433,
+          "status": "Proposed",
+          "utcStartDateTime": "2039-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 494,
+          "status": "In Progress",
+          "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 570,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 2969,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-08-17T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 6117,
+          "status": "Proposed",
+          "price": 273000000,
+          "priceCurrency": "EUR",
+          "utcStartDateTime": "2016-02-02T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7151,
+          "status": "Completed",
+          "utcStartDateTime": "2019-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18225,
+          "status": "Proposed",
+          "price": 431500000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-09-26T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18226,
+          "status": "Completed",
+          "utcStartDateTime": "2026-09-03T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18244,
+          "status": "Completed",
+          "utcStartDateTime": "2026-04-05T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18248,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18251,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-10-08T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18252,
+          "status": "Proposed",
+          "price": 3200000000,
+          "priceCurrency": "EUR",
+          "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18253,
+          "status": "Proposed",
+          "price": 2100000000,
+          "priceCurrency": "NAD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18256,
+          "status": "In Progress",
+          "price": 127000000,
+          "priceCurrency": "OMR",
+          "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18258,
+          "status": "Proposed",
+          "utcStartDateTime": "2030-01-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18263,
+          "status": "Proposed",
+          "price": 6000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18264,
+          "status": "In Progress",
+          "price": 58140000000,
+          "priceCurrency": "INR",
+          "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 18267,
+          "status": "Proposed",
+          "price": 5291565898.31,
+          "priceCurrency": "MXN",
+          "utcStartDateTime": "2026-08-14T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19193,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19203,
+          "status": "In Progress",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19211,
+          "status": "Proposed",
+          "price": 500000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-02-12T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19216,
+          "status": "In Progress",
+          "price": 187000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19217,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19223,
+          "status": "In Progress",
+          "price": 1000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19235,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19241,
+          "status": "In Progress",
+          "price": 10000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19244,
+          "status": "Proposed",
+          "price": 1250000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19248,
+          "status": "Proposed",
+          "price": 1400000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19275,
+          "status": "In Progress",
+          "price": 1000000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19277,
+          "status": "In Progress",
+          "price": 1300000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19284,
+          "status": "In Progress",
+          "utcStartDateTime": "2025-09-04T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 19297,
+          "status": "Proposed",
+          "utcStartDateTime": "2026-07-01T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 276,
+          "url": "https://www.chronopin.com/pin/276/lima-metro-line-2-fully-open",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 424,
+          "url": "https://www.chronopin.com/pin/424/melbourne-airport-rail-link",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 6117,
+          "url": "https://www.chronopin.com/pin/6117/iraq-awards-italy-s-trevi-the-contract-to-repair-mosul-dam",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7151,
+          "url": "https://www.chronopin.com/pin/7151/glenarden-hills-phase-i-completes-114-family-and-senior-homes",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18225,
+          "url": "https://www.chronopin.com/pin/18225/aiib-approves-45m-for-acwa-power-s-caspian-desalination-plant-in-azerbaijan",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18226,
+          "url": "https://www.chronopin.com/pin/18226/alkimos-desalination-plant-finishes-its-two-undersea-tunnels",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18256,
+          "url": "https://www.chronopin.com/pin/18256/oman-s-300-000-m3-day-ghubrah-iii-desalination-plant-targets-q1-2027",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 18267,
+          "url": "https://www.chronopin.com/pin/18267/conagua-awards-rosarito-desalination-plant-to-cox-lowest-of-three-bids",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19216,
+          "url": "https://www.chronopin.com/pin/19216/edged-des-moines-13-2mw-data-center-under-construction",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19244,
+          "url": "https://www.chronopin.com/pin/19244/university-of-michigan-los-alamos-research-computing-center-plans",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19248,
+          "url": "https://www.chronopin.com/pin/19248/metrobloks-liberty-planned-150mw-data-center",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 19284,
+          "url": "https://www.chronopin.com/pin/19284/radiusdc-nashville-i-groundbreaking",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    }
+  ],
+  "quoteVerification": {
+    "downloadedLiteralQuotesVerified": 52,
+    "failures": []
+  }
+}

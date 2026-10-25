@@ -2,11 +2,14 @@ import { SITE_KINDS, SITE_STYLE, routeFacts, type PinSiteShapeJson } from '@/lib
 import type { Translator } from '@/lib/i18n/translate';
 import Anchor from '@/components/ui/Anchor';
 
-// The key under a data centre's map: a swatch and name for each kind of outline
+// The key under a pin's map: a swatch and name for each kind of outline
 // drawn on it, how many of each, and who traced them.
 export function SiteShapeKey({ shape, t }: { shape: PinSiteShapeJson; t: Translator }) {
   const counts = new Map<string, number>();
   for (const f of shape.geojson.features) counts.set(f.properties.kind, (counts.get(f.properties.kind) ?? 0) + 1);
+  const boundaries = [...new Map(shape.geojson.features
+    .filter((f) => f.properties.kind === 'wildfire' || f.properties.kind === 'district')
+    .map((f) => [JSON.stringify(f.properties), f.properties])).values()];
   const facts = routeFacts(shape);
   const number = new Intl.NumberFormat(t.locale, { maximumFractionDigits: 2 });
   const profile = facts?.profile;
@@ -20,13 +23,25 @@ export function SiteShapeKey({ shape, t }: { shape: PinSiteShapeJson; t: Transla
             <span
               aria-hidden
               className="inline-block size-3 rounded-sm border"
-              style={{ borderColor: SITE_STYLE[kind].color, backgroundColor: `${SITE_STYLE[kind].color}${kind === 'site' ? '22' : '88'}` }}
+              style={{ borderColor: SITE_STYLE[kind].color, backgroundColor: `${SITE_STYLE[kind].color}${Math.round(SITE_STYLE[kind].fill * 255).toString(16).padStart(2, '0')}`, borderStyle: SITE_STYLE[kind].dash ? 'dashed' : 'solid' }}
             />
             {t(`pin.siteKey.${kind}`)}
             {kind === 'site' ? null : <span className="tabular-nums">({counts.get(kind)})</span>}
           </li>
         ))}
       </ul>
+      {boundaries.length ? (
+        <ul className="mt-1.5 space-y-1">
+          {boundaries.map((boundary, i) => (
+            <li key={i}>
+              {boundary.name || t(`pin.siteKey.${boundary.kind}`)}
+              {boundary.observedAt ? <> · <time dateTime={boundary.observedAt}>{boundary.observedAt}</time></> : null}
+              {boundary.vintage ? <> · {boundary.vintage}</> : null}
+              {boundary.source ? <> · {boundary.sourceUrl ? <Anchor href={boundary.sourceUrl} target="_blank" rel="noopener noreferrer">{boundary.source}</Anchor> : boundary.source}</> : null}
+            </li>
+          ))}
+        </ul>
+      ) : null}
       {facts ? (
         <dl className="mt-1.5 flex flex-wrap gap-x-4 gap-y-0.5">
           {[

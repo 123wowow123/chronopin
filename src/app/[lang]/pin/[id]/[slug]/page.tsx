@@ -41,7 +41,7 @@ import { PinHotel } from '@/components/pin/PinHotel';
 import { getResortPricePerNight } from '@/lib/travel';
 import { PinModelChart } from '@/components/pin/PinModelChart';
 import { PinTaste } from '@/components/pin/PinTaste';
-import { PinOdds } from '@/components/pin/PinOdds';
+import { PinOdds, ResolvedToggle } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
 import { PinRestaurantMenu } from '@/components/pin/PinRestaurantMenu';
 import { PinRestaurantDetails } from '@/components/pin/PinRestaurantDetails';
@@ -75,6 +75,7 @@ import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinPhotos } from '@/components/pin/PinPhotos';
 import { PinReviews } from '@/components/pin/PinReviews';
+import { PinReviewSentiment, type ReviewSentimentPoint } from '@/components/pin/PinReviewSentiment';
 import { isReviewable } from '@/lib/userReviews';
 import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 import { PinSuggest } from '@/components/pin/PinSuggest';
@@ -207,6 +208,10 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     viewerUser(),
     pinAlternateNames(pin.id),
   ]);
+  // The scraped reviews beside the rubrics, scored and dated, for the sentiment graph.
+  const reviewSentiment: ReviewSentimentPoint[] = [taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, hotel, dining].flatMap((rubric) =>
+    (rubric?.reviews ?? []).flatMap((r) => (r.sentiment != null && r.publishedDate ? [{ at: Date.parse(r.publishedDate), value: r.sentiment, title: r.title || r.url, url: r.url, quote: r.quote }] : [])),
+  );
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
@@ -297,6 +302,8 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
               className="mt-4"
             />
           ) : null}
+          {/* Right under the rubric whose reviews it plots. */}
+          {reviewSentiment.length ? <PinReviewSentiment points={reviewSentiment} className="mt-4" /> : null}
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
               profile and car performance rubric; after them on phones. */}
@@ -484,6 +491,11 @@ async function PinBody({
             <Icon name="timeline" className="size-3.5 text-link" />
             {t('pin.toTimeline')}
           </Link>
+          {/* Share, Not interested (or Show this pin again), Block. */}
+          <PinMenu
+            pin={{ id: pin.id, title: pin.title, originalTitle: pin.originalTitle, user: pin.user, companyId: pin.companyId, company: pin.company, companyLogoUrl: pin.companyLogoUrl }}
+            onPage
+          />
         </div>
       </div>
 
@@ -567,6 +579,7 @@ async function PinBody({
         {hasPlace(pin.place) ? null : <PinRatings ratings={pin.ratings} search className="" />}
         <EpisodeCount pin={pin} />
         <MarketVolume pin={pin} />
+        {pinMarketRefs(pin).length ? <ResolvedToggle pinId={pin.id} /> : null}
       </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
@@ -668,11 +681,6 @@ async function PinBody({
           <ViewCount pinId={pin.id} initial={pin.viewCount} track />
           <WatchButton pin={pin} loadForViewer />
           <PinAdminLink pinId={pin.id} />
-          {/* Share, Not interested (or Show this pin again), Block. */}
-          <PinMenu
-            pin={{ id: pin.id, title: pin.title, originalTitle: pin.originalTitle, user: pin.user, companyId: pin.companyId, company: pin.company, companyLogoUrl: pin.companyLogoUrl }}
-            onPage
-          />
         </div>
       </div>
 

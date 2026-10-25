@@ -10,7 +10,8 @@ export type PerfBar = { label: string; value: number; highlight?: boolean };
 export type PerfChartText = { title: string; unit: string; note?: string };
 export type PerfTableText = { title: string; columns: string[]; rows: string[][]; note?: string };
 export type PerfChart = PerfChartText & { higherIsBetter?: boolean; sourceUrl?: string; bars: PerfBar[]; i18n?: Record<string, PerfChartText> };
-export type PerfTable = PerfTableText & { sourceUrl?: string; i18n?: Record<string, PerfTableText> };
+// display: 'tiles' shows a three-column table (measure, figure, basis) as telemetry tiles.
+export type PerfTable = PerfTableText & { sourceUrl?: string; display?: 'tiles'; i18n?: Record<string, PerfTableText> };
 export type PinPerfJson = { charts: PerfChart[]; tables: PerfTable[]; checkedAt: string };
 
 export const MAX_PERF_CHARTS = 6;
@@ -104,7 +105,7 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
     if (tb.note && !note) return `table ${i + 1}: note is at most 500 characters.`;
     const i18n = tb.i18n === undefined ? undefined : i18nProblem(tb.i18n, (v) => tableText(v, columns.length, rows.length));
     if (typeof i18n === 'string') return `table ${i + 1}: ${i18n}`;
-    tables.push({ title, columns: columns as string[], rows, ...(i18n ? { i18n } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}) });
+    tables.push({ title, columns: columns as string[], rows, ...(tb.display === 'tiles' && columns.length === 3 ? { display: 'tiles' as const } : {}), ...(i18n ? { i18n } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}) });
   }
   if (!charts.length && !tables.length) return 'At least one chart or table.';
   return { charts, tables };

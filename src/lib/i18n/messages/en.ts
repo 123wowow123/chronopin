@@ -793,6 +793,8 @@ const en = {
     flightPath: 'Flight path',
     flightPathSimulation: 'Full simulation',
     siteKey: {
+      wildfire: 'Wildfire perimeter',
+      district: 'Election district boundary',
       site: 'Site boundary',
       building: 'Buildings',
       cooling: 'Cooling plant',
@@ -1114,6 +1116,8 @@ const en = {
     trendDown: '{label} {percent} on {source}, down {points} points this week',
     heading: 'Market odds',
     closed: 'Closed',
+    showResolved: 'Show {count} resolved',
+    hideResolved: 'Hide resolved',
     updated: 'Updated {time}',
     live: 'Live',
     moreOutcomes: { one: '{count} more outcome', other: '{count} more outcomes' },
@@ -1580,6 +1584,10 @@ const en = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Reviews',
+    sentiment: 'Sentiment',
+    sentimentPositive: 'Positive',
+    sentimentMixed: 'Mixed',
+    sentimentNegative: 'Negative',
     summary: { one: '{average} from {count} review', other: '{average} from {count} reviews' },
     none: 'No reviews yet. Be the first to rate it.',
     yourRating: 'Your rating',

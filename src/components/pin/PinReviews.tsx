@@ -12,8 +12,6 @@ import { StarInput } from './ReviewParts';
 
 type Loaded = { summary: ReviewSummary; reviews: PinReviewJson[] };
 
-// What readers think of the pin: an overall star rating with an optional
-// comment, one per reader (rating again replaces it), and everyone's below.
 export function PinReviews({ pinId }: { pinId: number }) {
   const t = useT();
   const { isLoggedIn } = useSession();

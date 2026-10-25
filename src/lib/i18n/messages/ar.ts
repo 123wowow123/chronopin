@@ -862,6 +862,8 @@ const ar: Messages = {
     flightPath: 'مسار الرحلة',
     flightPathSimulation: 'المحاكاة الكاملة',
     siteKey: {
+      wildfire: 'محيط حريق الغابات',
+      district: 'حدود الدائرة الانتخابية',
       site: 'حدود الموقع',
       building: 'المباني',
       cooling: 'محطة التبريد',
@@ -1318,6 +1320,8 @@ const ar: Messages = {
     trendDown: '{label} {percent} على {source}، بانخفاض {points} نقطة هذا الأسبوع',
     heading: 'احتمالات السوق',
     closed: 'مغلق',
+    showResolved: 'عرض {count} أسواق منتهية',
+    hideResolved: 'إخفاء المنتهية',
     updated: 'حُدّث {time}',
     live: 'مباشر',
     moreOutcomes: {
@@ -1905,6 +1909,10 @@ const ar: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'المراجعات',
+    sentiment: 'الانطباع العام',
+    sentimentPositive: 'إيجابي',
+    sentimentMixed: 'متباين',
+    sentimentNegative: 'سلبي',
     summary: '{average} من {count} مراجعة',
     none: 'لا توجد مراجعات بعد. كن أول من يقيّم.',
     yourRating: 'تقييمك',

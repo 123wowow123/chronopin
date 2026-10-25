@@ -1,7 +1,7 @@
 'use client';
 
 import Anchor from '@/components/ui/Anchor';
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
 import { pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
@@ -40,6 +40,41 @@ function reducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
+// Whether a pin's resolved markets are unfolded. The toggle sits in the pin's
+// facts row, away from the tables it controls, so the two share this.
+const unfolded = new Set<number>();
+const foldListeners = new Set<() => void>();
+function useUnfolded(pinId: number) {
+  return useSyncExternalStore(
+    (notify) => {
+      foldListeners.add(notify);
+      return () => void foldListeners.delete(notify);
+    },
+    () => unfolded.has(pinId),
+    () => false,
+  );
+}
+
+// "Show 3 resolved": resolved (closed) markets are history, so PinOdds keeps
+// them folded away until this is pressed. Nothing when the pin has none.
+export function ResolvedToggle({ pinId }: { pinId: number }) {
+  const markets = useMarketOdds(pinId);
+  const open = useUnfolded(pinId);
+  const t = useT();
+  const count = markets?.filter((m) => m.closed).length ?? 0;
+  if (!count) return null;
+  const toggle = () => {
+    if (open) unfolded.delete(pinId);
+    else unfolded.add(pinId);
+    foldListeners.forEach((notify) => notify());
+  };
+  return (
+    <button type="button" aria-expanded={open} onClick={toggle} className="ms-auto text-xs font-medium text-subtle hover:text-link">
+      {open ? t('odds.hideResolved') : t('odds.showResolved', { count })}
+    </button>
+  );
+}
+
 // Odds from the Kalshi and Polymarket markets the pin cites, pushed by the
 // server as they refresh (at least once a minute) for as long as the page is
 // in view. Nothing when none of them answer.
@@ -48,7 +83,11 @@ export function PinOdds({ pinId }: { pinId: number }) {
   const t = useT();
   useEffect(() => watchMarketOdds(pinId), [pinId]);
 
+  const showResolved = useUnfolded(pinId);
   if (!markets?.length) return null;
+  // Resolved markets are history: they stay folded away until asked for.
+  const open = markets.filter((m) => !m.closed);
+  const visible = showResolved ? markets : open;
   // Two to a row from sm up; an odd one out at the end takes the full row.
   // (The sr-only heading is absolutely positioned, so it takes no cell.)
   return (
@@ -56,7 +95,7 @@ export function PinOdds({ pinId }: { pinId: number }) {
       <h2 id="odds-heading" className="sr-only">
         {t('odds.heading')}
       </h2>
-      {markets.map((market) => (
+      {visible.map((market) => (
         <Market key={market.url} market={market} />
       ))}
     </section>

@@ -788,6 +788,8 @@ const de: Messages = {
     flightPath: 'Flugbahn',
     flightPathSimulation: 'Vollständige Simulation',
     siteKey: {
+      wildfire: 'Waldbrandumriss',
+      district: 'Wahlkreisgrenze',
       site: 'Grundstücksgrenze',
       building: 'Gebäude',
       cooling: 'Kühlanlage',
@@ -1113,6 +1115,8 @@ const de: Messages = {
     trendDown: '{label} {percent} auf {source}, diese Woche {points} Punkte gefallen',
     heading: 'Marktquoten',
     closed: 'Geschlossen',
+    showResolved: '{count} abgeschlossene anzeigen',
+    hideResolved: 'Abgeschlossene ausblenden',
     updated: 'Aktualisiert um {time}',
     live: 'Live',
     moreOutcomes: { one: '{count} weiterer Ausgang', other: '{count} weitere Ausgänge' },
@@ -1576,6 +1580,10 @@ const de: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Bewertungen',
+    sentiment: 'Stimmung',
+    sentimentPositive: 'Positiv',
+    sentimentMixed: 'Gemischt',
+    sentimentNegative: 'Negativ',
     summary: { one: '{average} aus {count} Bewertung', other: '{average} aus {count} Bewertungen' },
     none: 'Noch keine Bewertungen. Gib die erste ab.',
     yourRating: 'Deine Bewertung',

@@ -4,7 +4,10 @@
 // extract. Shared by the taste and car performance rubrics, so both validate
 // and draw them the same way.
 
-export type PinReview = { url: string; title: string | null; publishedDate: string | null; quote: string | null };
+// sentiment: how the review feels about the product, -1..1, scored from its
+// quote (src/server/extract/reviewSentiment.ts); absent until scored. The
+// sentiment graph on a pin plots it at publishedDate.
+export type PinReview = { url: string; title: string | null; publishedDate: string | null; quote: string | null; sentiment?: number | null };
 
 // A review is a web page; nothing else is stored or linked.
 const WEB_URL = /^https?:\/\/\S+$/i;
@@ -40,7 +43,9 @@ export function reviewsProblem(value: unknown, { max, maxQuote }: { max: number;
     if (quote && typeof quote === 'object') return quote.problem;
     const publishedDate = raw.publishedDate == null || raw.publishedDate === '' ? null : String(raw.publishedDate);
     if (publishedDate && !isIsoDay(publishedDate)) return 'A review publishedDate must be YYYY-MM-DD.';
-    reviews.push({ url, title, publishedDate, quote });
+    const given = raw.sentiment;
+    if (given != null && (typeof given !== 'number' || !Number.isFinite(given) || given < -1 || given > 1)) return 'A review sentiment is a number from -1 to 1.';
+    reviews.push(given == null ? { url, title, publishedDate, quote } : { url, title, publishedDate, quote, sentiment: Math.round(given * 100) / 100 });
   }
   return reviews;
 }

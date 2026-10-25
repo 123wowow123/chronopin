@@ -1,0 +1,86 @@
+{
+ "pinId": 2834,
+ "tables": [
+  {
+   "title": "Energy & Footprint Telemetry",
+   "display": "tiles",
+   "columns": [
+    "Measure",
+    "Figure",
+    "Basis"
+   ],
+   "rows": [
+    [
+     "Energy per prompt",
+     "0.24 Wh",
+     "median Gemini Apps text prompt, all models, May 2025"
+    ],
+    [
+     "Carbon per prompt",
+     "0.03 gCO2e",
+     "same prompt, same basis"
+    ],
+    [
+     "Water per prompt",
+     "0.26 mL",
+     "about five drops, same prompt"
+    ],
+    [
+     "Efficiency gain",
+     "33x energy, 44x carbon",
+     "over the 12 months to May 2025, Google claim not independently verified"
+    ],
+    [
+     "Gemini 3.8 Flash alone",
+     "Not published",
+     "the launch post gives no energy, carbon or water figure"
+    ]
+   ],
+   "note": "Google's only first-party per-prompt figure; it covers text prompts, not heavy agentic or multimodal use, or training.",
+   "sourceUrl": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference"
+  },
+  {
+   "title": "Deployment & Usage Telemetry",
+   "display": "tiles",
+   "columns": [
+    "Measure",
+    "Figure",
+    "Basis"
+   ],
+   "rows": [
+    [
+     "Gemini app users",
+     "950 million",
+     "monthly active, Google-wide, 22 Jul 2026"
+    ],
+    [
+     "API throughput",
+     "22 billion tokens/min",
+     "up from 16 billion a quarter earlier"
+    ],
+    [
+     "Developers",
+     "9 million+",
+     "building each month across Google's APIs and products"
+    ],
+    [
+     "Gemini Enterprise",
+     "~90% of Fortune 100",
+     "Google-wide adoption"
+    ],
+    [
+     "Fairwind partners",
+     "650+",
+     "Flash Cyber, trusted defenders only"
+    ],
+    [
+     "3.8 Flash surfaces",
+     "7",
+     "app, AI Mode, Sheets, Antigravity, AI Studio, API, Enterprise"
+    ]
+   ],
+   "note": "Usage figures predate the 2 Sep 2026 launch and are not split by model, so they are not 3.8 Flash alone.",
+   "sourceUrl": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/"
+  }
+ ]
+}

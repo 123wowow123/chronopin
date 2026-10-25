@@ -788,6 +788,8 @@ const ja: Messages = {
     flightPath: '飛行経路',
     flightPathSimulation: '詳細シミュレーション',
     siteKey: {
+      wildfire: '山火事の延焼範囲',
+      district: '選挙区の境界',
       site: '敷地境界',
       building: '建物',
       cooling: '冷却設備',
@@ -1107,6 +1109,8 @@ const ja: Messages = {
     trendDown: '{source}で{label} {percent}、今週 {points} ポイント下落',
     heading: '市場の予想確率',
     closed: '終了',
+    showResolved: '決着済み {count} 件を表示',
+    hideResolved: '決着済みを隠す',
     updated: '{time} 更新',
     live: 'ライブ',
     moreOutcomes: 'ほか {count} 件の結果',
@@ -1570,6 +1574,10 @@ const ja: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'レビュー',
+    sentiment: '評価の傾向',
+    sentimentPositive: '好意的',
+    sentimentMixed: '賛否両論',
+    sentimentNegative: '否定的',
     summary: '{count}件のレビューで{average}',
     none: 'まだレビューがありません。最初に評価してみましょう。',
     yourRating: 'あなたの評価',

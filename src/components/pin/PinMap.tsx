@@ -76,7 +76,7 @@ export default function PinMap({
       }).addTo(map);
       map.fitBounds(line.getBounds().extend([latitude, longitude]), { padding: [24, 24], maxZoom: 6 });
     }
-    // A data centre's traced outlines: the campus boundary under, its parts over
+    // Traced outlines: boundaries under, their parts over
     // (SITE_KINDS is in drawing order), the map framed on the whole site.
     if (siteShape?.geojson.features.length) {
       const site = L.featureGroup().addTo(map);
@@ -85,7 +85,7 @@ export default function PinMap({
         const features = siteShape.geojson.features.filter((f) => f.properties.kind === kind);
         if (!features.length) continue;
         L.geoJSON({ type: 'FeatureCollection', features } as never, {
-          style: () => ({ color: style.color, weight: kind === 'site' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: style.fill, dashArray: style.dash }),
+          style: () => ({ color: style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: style.fill, dashArray: style.dash }),
           interactive: false,
         }).addTo(site);
       }

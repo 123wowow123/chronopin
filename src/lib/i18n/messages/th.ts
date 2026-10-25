@@ -785,6 +785,8 @@ const th: Messages = {
     flightPath: 'เส้นทางการบิน',
     flightPathSimulation: 'การจำลองทั้งหมด',
     siteKey: {
+      wildfire: 'ขอบเขตไฟป่า',
+      district: 'แนวเขตเลือกตั้ง',
       site: 'ขอบเขตพื้นที่',
       building: 'อาคาร',
       cooling: 'โรงทำความเย็น',
@@ -1103,6 +1105,8 @@ const th: Messages = {
     trendDown: '{label} {percent} บน {source} ลดลง {points} จุดในสัปดาห์นี้',
     heading: 'อัตราต่อรองของตลาด',
     closed: 'ปิดแล้ว',
+    showResolved: 'แสดงที่สิ้นสุดแล้ว {count}',
+    hideResolved: 'ซ่อนที่สิ้นสุดแล้ว',
     updated: 'อัปเดต {time}',
     live: 'สด',
     moreOutcomes: 'อีก {count} ผลลัพธ์',
@@ -1566,6 +1570,10 @@ const th: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'รีวิว',
+    sentiment: 'ความรู้สึก',
+    sentimentPositive: 'เชิงบวก',
+    sentimentMixed: 'ปนกัน',
+    sentimentNegative: 'เชิงลบ',
     summary: '{average} จาก {count} รีวิว',
     none: 'ยังไม่มีรีวิว เป็นคนแรกที่ให้คะแนนสิ',
     yourRating: 'คะแนนของคุณ',

@@ -792,6 +792,8 @@ const vi: Messages = {
     flightPath: 'Đường bay',
     flightPathSimulation: 'Mô phỏng đầy đủ',
     siteKey: {
+      wildfire: 'Chu vi cháy rừng',
+      district: 'Ranh giới khu vực bầu cử',
       site: 'Ranh giới khu đất',
       building: 'Tòa nhà',
       cooling: 'Nhà máy làm mát',
@@ -1113,6 +1115,8 @@ const vi: Messages = {
     trendDown: '{label} {percent} trên {source}, giảm {points} điểm tuần này',
     heading: 'Tỷ lệ thị trường',
     closed: 'Đã đóng',
+    showResolved: 'Hiện {count} đã kết thúc',
+    hideResolved: 'Ẩn đã kết thúc',
     updated: 'Cập nhật {time}',
     live: 'Trực tiếp',
     moreOutcomes: '{count} kết quả nữa',
@@ -1579,6 +1583,10 @@ const vi: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Đánh giá',
+    sentiment: 'Cảm nhận',
+    sentimentPositive: 'Tích cực',
+    sentimentMixed: 'Trái chiều',
+    sentimentNegative: 'Tiêu cực',
     summary: '{average} từ {count} đánh giá',
     none: 'Chưa có đánh giá nào. Hãy là người đầu tiên chấm điểm.',
     yourRating: 'Đánh giá của bạn',

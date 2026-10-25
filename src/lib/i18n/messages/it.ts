@@ -786,6 +786,8 @@ const it: Messages = {
     flightPath: 'Traiettoria',
     flightPathSimulation: 'Simulazione completa',
     siteKey: {
+      wildfire: 'Perimetro dell’incendio boschivo',
+      district: 'Confine del collegio elettorale',
       site: 'Confine del sito',
       building: 'Edifici',
       cooling: 'Impianto di raffreddamento',
@@ -1104,6 +1106,8 @@ const it: Messages = {
     trendDown: '{label} {percent} su {source}, -{points} punti questa settimana',
     heading: 'Quote di mercato',
     closed: 'Chiuso',
+    showResolved: 'Mostra {count} risolti',
+    hideResolved: 'Nascondi risolti',
     updated: 'Aggiornato {time}',
     live: 'In diretta',
     moreOutcomes: { one: '{count} altro esito', other: '{count} altri esiti' },
@@ -1567,6 +1571,10 @@ const it: Messages = {
   // Reader reviews, photo ratings and menu-item tags (0209; PinReviews, ReviewParts).
   reviews: {
     heading: 'Recensioni',
+    sentiment: 'Sentimento',
+    sentimentPositive: 'Positivo',
+    sentimentMixed: 'Misto',
+    sentimentNegative: 'Negativo',
     summary: { one: '{average} da {count} recensione', other: '{average} da {count} recensioni' },
     none: 'Ancora nessuna recensione. Sii il primo a valutarlo.',
     yourRating: 'La tua valutazione',
