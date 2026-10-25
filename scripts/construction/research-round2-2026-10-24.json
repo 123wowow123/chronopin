@@ -1,0 +1,1013 @@
+{
+  "checkedAt": "2026-10-24",
+  "round": 2,
+  "snapshotDirectory": ".scrape/construction-status-research-round2-2026-10-24",
+  "scope": "Second opened-source round: exact housing building/phase statuses and costs; no loan, monthly rent, combined-campus or per-unit figure substituted for a project total.",
+  "research": [
+    {
+      "id": 7021,
+      "status": "In Progress",
+      "price": 140000000,
+      "priceCurrency": "USD",
+      "note": "The Becker is the 190-home, three-building affordable-housing scope within Riverwalk, not the whole mixed-use redevelopment. Opened trade reporting confirms actual groundbreaking and construction, with delivery targeted for 2027. Its published development cost is US$140 million. The earlier operator update URL now returns 404; no completion is inferred from the opening-title wording or target date.",
+      "sources": [
+        {
+          "url": "https://rebusinessonline.com/wakeland-housing-mve-partners-break-ground-on-140m-affordable-housing-complex-in-san-diego/",
+          "title": "Wakeland Housing, MVE + Partners Break Ground on $140M Affordable Housing Complex in San Diego",
+          "quote": "The Becker, a $140 million affordable housing complex",
+          "publishedDate": "2025-08-18",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7043,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Plymouth and Bellwether’s May 23, 2023 opening release establishes completion of The Rise on Madison’s 250-home component, separate from Blake House. The architect also records completion in 2023. The reported US$150.7 million tower cost covers both operators’ combined building; it is not assigned to this 250-home component. No separately published cost for the pinned component was established in the operator release, property page, architect page or tower-cost reporting.",
+      "sources": [
+        {
+          "url": "https://plymouthhousing.org/wp-content/uploads/2023/09/Plymouth-Bellwether_Press-Release-052323.pdf",
+          "title": "Plymouth Housing and Bellwether Housing Celebrate First Affordable High-Rise Development in 50 Years",
+          "quote": "celebrated the opening of the first affordable high-rise",
+          "publishedDate": "2023-05-23",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.weberthompson.com/project/the-rise-on-madison-blake-house/",
+          "title": "The Rise on Madison / Blake House | Weber Thompson",
+          "quote": "Bellwether Housing provides 250 apartments",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Published tower-wide costs combine The Rise and Blake House. A separate budget for Bellwether’s 250-home portion was not established; do not allocate the combined cost proportionally."
+    },
+    {
+      "id": 7048,
+      "status": "In Progress",
+      "price": 108420430,
+      "priceCurrency": "USD",
+      "note": "This pin covers the new 94-apartment Mary Ellen McCormack Building A, not all 3,300 proposed homes or the 1938 estate. The developer’s June 2025 release describes newly poured footings and foundations; the HIT SEC filing still lists this exact 94-home project under construction as of April 30, 2026. The latest opened total development cost is US$108,420,430 in that filing. The earlier US$62 million building and US$8 million infrastructure figures are narrower historical cost descriptions. No verified occupancy/completion source was established, so the fall-2026 target alone does not make it Completed.",
+      "sources": [
+        {
+          "url": "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+          "title": "Federal, State and City Leaders Mark the Start of Construction to Redevelop Mary Ellen McCormack Public Housing Complex",
+          "quote": "newly poured footings and foundations",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm",
+          "title": "AFL-CIO Housing Investment Trust — Projects Under Construction as of April 30, 2026",
+          "quote": "$108,420,430",
+          "publishedDate": "2026-06-03",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Row: Mary Ellen McCormack - Building A, Boston MA, 94 total and affordable units; value is Total Development Cost, not HIT Commitment."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7055,
+      "status": "Completed",
+      "price": 57000000,
+      "priceCurrency": "USD",
+      "note": "Capstone’s August 2026 completion release identifies the exact 201-home Herndon Square Phase II / Legacy community and says it has opened to residents. Its US$57 million investment includes this phase and supporting infrastructure. The neighboring 178-home Phase III remains separate and does not prevent the pinned Phase II being Completed.",
+      "sources": [
+        {
+          "url": "https://www.multifamilybiz.com/pressreleases/18645/capstone_building_corp_completes_construction_on_5...",
+          "title": "Capstone Building Corp. Completes Construction on $57 Million Herndon Square Phase II Multifamily Development in Atlanta, Georgia",
+          "quote": "The community has officially opened to residents.",
+          "publishedDate": "2026-08-19",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://atlanta.urbanize.city/post/affordable-housing-build-finished-northside-drive-images",
+          "title": "Images: Affordable housing build declared finished on Northside Drive",
+          "quote": "$57-million Herndon Square Phase II",
+          "publishedDate": "2026-08-03",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7060,
+      "status": "Completed",
+      "price": 22204143,
+      "priceCurrency": "USD",
+      "note": "HACLA confirms the May 19, 2022 opening of Venice’s 35-unit Rose Apartments. The March 2026 Los Angeles HHH report lists the same HIMS project 18-125046, 35 total units and 34 supportive units, as ready for occupancy/permanent conversion, with a March 18, 2022 ready-to-occupy date. Its updated total development cost is US$22,204,143, superseding older US$20.6 million reporting; this is neither the HHH loan nor the per-unit cost. The pin retains its opening-ceremony date.",
+      "sources": [
+        {
+          "url": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+          "title": "Mayor Garcetti joins HACLA to celebrate Grand Opening of HHH Rose Apartments in Venice",
+          "quote": "the grand opening and ribbon cutting for the Rose Apartments",
+          "publishedDate": "2022-05-19",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://ens.lacity.org/cao/prophhhcitizen/caoprophhhcitizen3531195866_03202026.pdf",
+          "title": "Los Angeles Proposition HHH Citizens Oversight Committee — March 20, 2026 — HHH PSH Projects",
+          "quote": "$22,204,143",
+          "publishedDate": "2026-03-20",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 37 (zero-based page 36), row 48, HIMS 18-125046: Total Development Cost; HHH loan is separately $6,888,468."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7076,
+      "status": "In Progress",
+      "price": 36000000,
+      "priceCurrency": "USD",
+      "note": "The pinned 70-home Chrysalis replacement building at 1777 Franklin Street has an actual November 2025 groundbreaking documented by Pinkard, with demolition and construction activity confirmed in January 2026 reporting. The newer published total is a little more than US$36 million; the native price stores the rounded US$36 million figure, with the lower-bound field and this qualification. The 2024 US$20 million announcement is superseded. A 14-month construction forecast does not prove completion.",
+      "sources": [
+        {
+          "url": "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+          "title": "Pinkard Construction Breaks Ground on Chrysalis Affordable Housing Project in Denver",
+          "quote": "today celebrated the groundbreaking of Chrysalis",
+          "publishedDate": "2025-11-21",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://hoodline.com/2026/01/century-old-city-park-west-apartments-leveled-for-36-million-homeless-housing-bet/",
+          "title": "Century-Old City Park West Apartments Leveled For $36 Million Homeless Housing Bet",
+          "quote": "total development cost at a little more than $36 million",
+          "publishedDate": "2026-01-15",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 36000000
+      }
+    },
+    {
+      "id": 7078,
+      "status": "Completed",
+      "price": 35000000,
+      "priceCurrency": "USD",
+      "note": "The District’s February 13, 2023 opening announcement and the builder’s completed-2023 project page support Completed for The Ethel’s 100 supportive apartments, separate from neighboring Park Kennedy. The builder publishes a US$35 million construction contract for this exact 100-unit building. Native price records that construction-contract value, not total all-in development cost: the US$70 million financing and later approximate per-unit development-cost reporting measure different amounts.",
+      "sources": [
+        {
+          "url": "https://dmped.dc.gov/release/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+          "title": "Mayor Bowser Celebrates the Opening of The Ethel, a Permanent Supportive Housing Building in Hill East",
+          "quote": "celebrated the opening of The Ethel",
+          "publishedDate": "2023-02-13",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.mccullough-construction.com/portfolio-item/the-ethel/",
+          "title": "The Ethel – 1900 C St. SE – McCullough Construction",
+          "quote": "Contract Value: $35M",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7080,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Berry’s architect records the 180-home community completed in 2025. May 2025 KPRC reporting explicitly says the apartments opened in March, with a May 16 ribbon cutting. This opening pin moves from the May month-end placeholder to March 31, 2025 as a month-precision anchor, not an invented opening day. The later preschool-service opening is separate from completion of the residential homes. No full residential-project cost was established: the TDLR record explicitly describes community and preschool buildings, while the reported US$49 million capital stack and bank loans are financing.",
+      "sources": [
+        {
+          "url": "https://www.gsmarchitects.net/portfolio/nhh-berry",
+          "title": "New Hope Housing Berry — GSMA",
+          "quote": "Completed 2025",
+          "publishedDate": "2025-07-02",
+          "openedAt": "2026-10-24",
+          "quoteNote": "The displayed Completed field is 2025; whitespace normalized."
+        },
+        {
+          "url": "https://www.click2houston.com/features/2025/05/16/new-hope-housing-berry-a-new-chapter-in-affordable-housing-for-houstons-northside/",
+          "title": "New Hope Housing Berry: A new chapter in affordable housing for Houston’s Northside",
+          "quote": "The apartments opened in March of this year",
+          "publishedDate": "2025-05-15",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2023011107",
+          "title": "TDLR TABS — Project TABS2023011107 — New Hope Housing Berry",
+          "quote": "Community Building: Leasing, management offices and Amenity areas",
+          "publishedDate": "2023-02-06",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2025-03-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "KPRC’s May 15, 2025 report says apartments opened in March 2025; May 16 was the ribbon cutting. March 31 is a month-precision timeline anchor, not an announced exact opening day."
+      },
+      "costGap": "Full 180-home development total not established. TDLR’s US$34,315,675 record scopes community/Bezos Academy buildings; US$49m capital-stack and US$25m bank reports are financing, not a quoted total project cost."
+    },
+    {
+      "id": 7084,
+      "status": "Completed",
+      "price": 33700000,
+      "priceCurrency": "USD",
+      "note": "Community Corporation’s 2024 property sheet explicitly says the 50-home Vista Ballona development was built in 2022. This supersedes older under-construction marketing. Opened March 2022 reporting states a US$33.7 million development cost for this same 50-unit scope; no later revised total was established. Existing year-precision date remains estimated.",
+      "sources": [
+        {
+          "url": "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+          "title": "Vista Ballona — Community Corporation of Santa Monica",
+          "quote": "Built in 2022",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Built in field is 2022; whitespace normalized. The PDF path supplies April 2024, not an exact publication day."
+        },
+        {
+          "url": "https://smmirror.com/community-corp-of-santa-monicas-vista-ballona-development-nearing-completion/",
+          "title": "Community Corp. of Santa Monica’s Vista Ballona Development Nearing Completion",
+          "quote": "Vista Ballona is a $33.7 million development",
+          "publishedDate": "2022-03-19",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7087,
+      "status": "Completed",
+      "price": 76300000,
+      "priceCurrency": "USD",
+      "note": "The Seattle Foundation’s January 23, 2024 release documents The Aries grand opening; independent housing-finance reporting confirms the 200-home community opened in fall 2023. The pin retains the specifically stated January 23 ceremony milestone. The published US$76.3 million development cost applies to The Aries, not the separate neighboring North Star or the sum of temporary construction loans and permanent financing.",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html?tc=eml_cleartime",
+          "title": "New Bellwether Housing project brings 200 affordable apartments to Seattle's Bitter Lake neighborhood",
+          "quote": "gathered for the grand opening of The Aries earlier today",
+          "publishedDate": "2024-01-23",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.housingfinance.com/developments/nonprofit-brings-affordable-housing-to-north-seattle-neighborhood_o",
+          "title": "Nonprofit Brings Affordable Housing to North Seattle Neighborhood",
+          "quote": "The $76.3 million development",
+          "publishedDate": "2024-03-25",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7198,
+      "status": "Completed",
+      "price": 23000000,
+      "priceCurrency": "USD",
+      "note": "Pennrose’s January 21, 2020 release confirms actual first resident move-ins at the newly constructed 65-home Village at Nauset Green. Its later developer account describes the US$23 million development as created housing, establishing completed residential scope rather than relying on rents or a passed target. The pin retains the first-resident milestone, distinct from the later full construction closeout.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+          "title": "Pennrose Welcomes First Residents to Village at Nauset Green in Eastham",
+          "quote": "the first residents have begun moving into Village at Nauset Green",
+          "publishedDate": "2020-01-21",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.pennrose.com/news-views/blog/2021/supporting-essential-workers-through-affordable-housing/",
+          "title": "Supporting Essential Workers Through Affordable Housing",
+          "quote": "The $23 million development created 65 affordable and workforce housing apartments",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7208,
+      "status": "Completed",
+      "price": 25000000,
+      "priceCurrency": "USD",
+      "note": "Pennrose and the Housing Commission of Talbot’s November 7, 2025 release confirms the grand opening of the rebuilt 64-home Doverbrook community, replacing 50 older public-housing homes and adding 14. The developer’s project-specific budget is US$25 million; the later November 2025 Daily Record report retains that total. Grants, loans and the cost of the older estate are not substituted for the complete redevelopment.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+          "title": "Pennrose and Housing Commission of Talbot Celebrate Doverbrook Apartments Grand Opening",
+          "quote": "today celebrated the grand opening of Doverbrook Apartments",
+          "publishedDate": "2025-11-07",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.pennrose.com/news-views/news/2024/pennrose-and-housing-commission-of-talbot-break-ground-on-doverbrook-apartments-redevelopment/",
+          "title": "Pennrose and Housing Commission of Talbot Break Ground on Doverbrook Apartments Redevelopment",
+          "quote": "The $25 million project",
+          "publishedDate": "2024-04-04",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 7021,
+          "title": "The Becker Opens Affordable Homes at Riverwalk",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The Becker is the 190-home, three-building affordable-housing scope within Riverwalk, not the whole mixed-use redevelopment. Opened trade reporting confirms actual groundbreaking and construction, with delivery targeted for 2027. Its published development cost is US$140 million. The earlier operator update URL now returns 404; no completion is inferred from the opening-title wording or target date.",
+          "evidence": "The Becker, a $140 million affordable housing complex",
+          "evidenceUrls": [
+            "https://rebusinessonline.com/wakeland-housing-mve-partners-break-ground-on-140m-affordable-housing-complex-in-san-diego/"
+          ],
+          "expectedPinSha256": "8af8e3e4e3112e8a9ff0ee9cec91927131fd631cf14786e49e5028c87b001f02",
+          "metadataVerified": true,
+          "savedPinSha256": "e783f4292a6ea32b0a02fd06b8d9fd449f058ea8c198f593684c6bab829dbc89",
+          "verified": true
+        },
+        {
+          "id": 7043,
+          "title": "The Rise on Madison — Seattle affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Plymouth and Bellwether’s May 23, 2023 opening release establishes completion of The Rise on Madison’s 250-home component, separate from Blake House. The architect also records completion in 2023. The reported US$150.7 million tower cost covers both operators’ combined building; it is not assigned to this 250-home component. No separately published cost for the pinned component was established in the operator release, property page, architect page or tower-cost reporting.",
+          "evidence": "celebrated the opening of the first affordable high-rise",
+          "evidenceUrls": [
+            "https://plymouthhousing.org/wp-content/uploads/2023/09/Plymouth-Bellwether_Press-Release-052323.pdf",
+            "https://www.weberthompson.com/project/the-rise-on-madison-blake-house/"
+          ],
+          "expectedPinSha256": "d7eabadf8ec1c6ff02b94ee50ed4e7e0cdc6ab242ee49dc4fbda85c7a3a689a1",
+          "metadataVerified": true,
+          "savedPinSha256": "55eb60c15088528cb9412d6b0a0cabd7a586fc86649512d9da6448b667ac5e4c",
+          "verified": true
+        },
+        {
+          "id": 7048,
+          "title": "Mary Ellen McCormack Building A — Boston affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "This pin covers the new 94-apartment Mary Ellen McCormack Building A, not all 3,300 proposed homes or the 1938 estate. The developer’s June 2025 release describes newly poured footings and foundations; the HIT SEC filing still lists this exact 94-home project under construction as of April 30, 2026. The latest opened total development cost is US$108,420,430 in that filing. The earlier US$62 million building and US$8 million infrastructure figures are narrower historical cost descriptions. No verified occupancy/completion source was established, so the fall-2026 target alone does not make it Completed.",
+          "evidence": "newly poured footings and foundations",
+          "evidenceUrls": [
+            "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm"
+          ],
+          "expectedPinSha256": "b116746ce577b0a73b26451f210959a80cee709916ea029b58caf2a9425a94f9",
+          "metadataVerified": true,
+          "savedPinSha256": "bd0c9fe3c00f4f76a0ca6ebf58000968f20fd727e1ac0f376f634bbd3a601fbf",
+          "verified": true
+        },
+        {
+          "id": 7055,
+          "title": "Legacy at Herndon Square — Atlanta affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Capstone’s August 2026 completion release identifies the exact 201-home Herndon Square Phase II / Legacy community and says it has opened to residents. Its US$57 million investment includes this phase and supporting infrastructure. The neighboring 178-home Phase III remains separate and does not prevent the pinned Phase II being Completed.",
+          "evidence": "The community has officially opened to residents.",
+          "evidenceUrls": [
+            "https://www.multifamilybiz.com/pressreleases/18645/capstone_building_corp_completes_construction_on_5...",
+            "https://atlanta.urbanize.city/post/affordable-housing-build-finished-northside-drive-images"
+          ],
+          "expectedPinSha256": "eb989a1ccd4171382a677daa04adec95089ea6c01337af837cc18035dd49fbd6",
+          "metadataVerified": true,
+          "savedPinSha256": "e9413fca75996cf026df845040708b78df47e7995d33be56fa6d014e5a4aad20",
+          "verified": true
+        },
+        {
+          "id": 7060,
+          "title": "Rose Apartments (Venice) — Los Angeles affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "HACLA confirms the May 19, 2022 opening of Venice’s 35-unit Rose Apartments. The March 2026 Los Angeles HHH report lists the same HIMS project 18-125046, 35 total units and 34 supportive units, as ready for occupancy/permanent conversion, with a March 18, 2022 ready-to-occupy date. Its updated total development cost is US$22,204,143, superseding older US$20.6 million reporting; this is neither the HHH loan nor the per-unit cost. The pin retains its opening-ceremony date.",
+          "evidence": "the grand opening and ribbon cutting for the Rose Apartments",
+          "evidenceUrls": [
+            "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+            "https://ens.lacity.org/cao/prophhhcitizen/caoprophhhcitizen3531195866_03202026.pdf"
+          ],
+          "expectedPinSha256": "eec78fdef72c071a695c71f0678f103b0b9c9e638b279e7eb8c035fc6caf73b8",
+          "metadataVerified": true,
+          "savedPinSha256": "8505530942e319364022b0987fe57444303a3122d7fe0d80e92175b60bb7c7eb",
+          "verified": true
+        },
+        {
+          "id": 7076,
+          "title": "Chrysalis Apartments — Denver affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The pinned 70-home Chrysalis replacement building at 1777 Franklin Street has an actual November 2025 groundbreaking documented by Pinkard, with demolition and construction activity confirmed in January 2026 reporting. The newer published total is a little more than US$36 million; the native price stores the rounded US$36 million figure, with the lower-bound field and this qualification. The 2024 US$20 million announcement is superseded. A 14-month construction forecast does not prove completion.",
+          "evidence": "today celebrated the groundbreaking of Chrysalis",
+          "evidenceUrls": [
+            "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+            "https://hoodline.com/2026/01/century-old-city-park-west-apartments-leveled-for-36-million-homeless-housing-bet/"
+          ],
+          "expectedPinSha256": "56942912ce448a41230a53d983e4372af51b4b93f611763a2073a26b8aea17ea",
+          "metadataVerified": true,
+          "savedPinSha256": "9fc32c2de24559112f3ee3d2cfbd99a2cccb6e95a8dd5663eceea36a4c441f74",
+          "verified": true
+        },
+        {
+          "id": 7078,
+          "title": "The Ethel — Washington, DC affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The District’s February 13, 2023 opening announcement and the builder’s completed-2023 project page support Completed for The Ethel’s 100 supportive apartments, separate from neighboring Park Kennedy. The builder publishes a US$35 million construction contract for this exact 100-unit building. Native price records that construction-contract value, not total all-in development cost: the US$70 million financing and later approximate per-unit development-cost reporting measure different amounts.",
+          "evidence": "celebrated the opening of The Ethel",
+          "evidenceUrls": [
+            "https://dmped.dc.gov/release/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+            "https://www.mccullough-construction.com/portfolio-item/the-ethel/"
+          ],
+          "expectedPinSha256": "4bf38bb1e2cba6567b48e3cce9e0ebbffab60bb607bbf800d5045e42ab4de8c9",
+          "metadataVerified": true,
+          "savedPinSha256": "8c9c6db00726fa0d8ffc9ff7e51b5608b2ad2e150267cb2c8dcc26d4657fe148",
+          "verified": true
+        },
+        {
+          "id": 7080,
+          "title": "New Hope Housing Berry — Houston affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Berry’s architect records the 180-home community completed in 2025. May 2025 KPRC reporting explicitly says the apartments opened in March, with a May 16 ribbon cutting. This opening pin moves from the May month-end placeholder to March 31, 2025 as a month-precision anchor, not an invented opening day. The later preschool-service opening is separate from completion of the residential homes. No full residential-project cost was established: the TDLR record explicitly describes community and preschool buildings, while the reported US$49 million capital stack and bank loans are financing.",
+          "evidence": "Completed 2025",
+          "evidenceUrls": [
+            "https://www.gsmarchitects.net/portfolio/nhh-berry",
+            "https://www.click2houston.com/features/2025/05/16/new-hope-housing-berry-a-new-chapter-in-affordable-housing-for-houstons-northside/",
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2023011107"
+          ],
+          "expectedPinSha256": "551e1e1dfd224c879f211f368a769dcb9fad02ffa49bd245426a6f2eee98b0c7",
+          "metadataVerified": true,
+          "savedPinSha256": "cb2d5b53e0dc6d7e30b4b9b6e1c135b6a27e309526d45337cb6b19ce97a831ae",
+          "verified": true
+        },
+        {
+          "id": 7084,
+          "title": "Vista Ballona — Los Angeles affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Community Corporation’s 2024 property sheet explicitly says the 50-home Vista Ballona development was built in 2022. This supersedes older under-construction marketing. Opened March 2022 reporting states a US$33.7 million development cost for this same 50-unit scope; no later revised total was established. Existing year-precision date remains estimated.",
+          "evidence": "Built in 2022",
+          "evidenceUrls": [
+            "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+            "https://smmirror.com/community-corp-of-santa-monicas-vista-ballona-development-nearing-completion/"
+          ],
+          "expectedPinSha256": "1e8dcbd475ef8113198d31391c45476c854be103e0006b55eec9de9f132c6e82",
+          "metadataVerified": true,
+          "savedPinSha256": "a6e39fc45a34df7d39212568d0fa0179ae108dfe948108f9e19e8da5a3a290d0",
+          "verified": true
+        },
+        {
+          "id": 7087,
+          "title": "The Aries at Bitter Lake — Seattle affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Seattle Foundation’s January 23, 2024 release documents The Aries grand opening; independent housing-finance reporting confirms the 200-home community opened in fall 2023. The pin retains the specifically stated January 23 ceremony milestone. The published US$76.3 million development cost applies to The Aries, not the separate neighboring North Star or the sum of temporary construction loans and permanent financing.",
+          "evidence": "gathered for the grand opening of The Aries earlier today",
+          "evidenceUrls": [
+            "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html?tc=eml_cleartime",
+            "https://www.housingfinance.com/developments/nonprofit-brings-affordable-housing-to-north-seattle-neighborhood_o"
+          ],
+          "expectedPinSha256": "5e8ac74ee65ed017fd715fd4eae8abb1256617b2c8f542ebe64d120ecede05e0",
+          "metadataVerified": true,
+          "savedPinSha256": "2dd9cd883aa1948a96fffb17b456d5b5d289ca840323237d924899814be31bce",
+          "verified": true
+        },
+        {
+          "id": 7198,
+          "title": "Village at Nauset Green — Eastham affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose’s January 21, 2020 release confirms actual first resident move-ins at the newly constructed 65-home Village at Nauset Green. Its later developer account describes the US$23 million development as created housing, establishing completed residential scope rather than relying on rents or a passed target. The pin retains the first-resident milestone, distinct from the later full construction closeout.",
+          "evidence": "the first residents have begun moving into Village at Nauset Green",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+            "https://www.pennrose.com/news-views/blog/2021/supporting-essential-workers-through-affordable-housing/"
+          ],
+          "expectedPinSha256": "9edfc11398f1ddd2adec9625f33197a8937e4e000f8c3893bee7a4fa2272854b",
+          "metadataVerified": true,
+          "savedPinSha256": "eabe8cdfd6a868c7f78a485f329fa5f7f3f12a2d90146ed24b1940a7a35274a5",
+          "verified": true
+        },
+        {
+          "id": 7208,
+          "title": "Doverbrook — Easton affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose and the Housing Commission of Talbot’s November 7, 2025 release confirms the grand opening of the rebuilt 64-home Doverbrook community, replacing 50 older public-housing homes and adding 14. The developer’s project-specific budget is US$25 million; the later November 2025 Daily Record report retains that total. Grants, loans and the cost of the older estate are not substituted for the complete redevelopment.",
+          "evidence": "today celebrated the grand opening of Doverbrook Apartments",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+            "https://www.pennrose.com/news-views/news/2024/pennrose-and-housing-commission-of-talbot-break-ground-on-doverbrook-apartments-redevelopment/"
+          ],
+          "expectedPinSha256": "d8c35b5e1c5b4f9e4e0d91eba2be0a1ee5c4d4bb577975f6523cef73539d42b6",
+          "metadataVerified": true,
+          "savedPinSha256": "563bce8618c32fabac19d0fb57809ff34064e462deec4ab60c8927a6616a2115",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 12,
+      "counts": {
+        "Proposed": 0,
+        "In Progress": 3,
+        "Completed": 9
+      }
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 7021,
+          "title": "The Becker Opens Affordable Homes at Riverwalk",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The Becker is the 190-home, three-building affordable-housing scope within Riverwalk, not the whole mixed-use redevelopment. Opened trade reporting confirms actual groundbreaking and construction, with delivery targeted for 2027. Its published development cost is US$140 million. The earlier operator update URL now returns 404; no completion is inferred from the opening-title wording or target date.",
+          "evidence": "The Becker, a $140 million affordable housing complex",
+          "evidenceUrls": [
+            "https://rebusinessonline.com/wakeland-housing-mve-partners-break-ground-on-140m-affordable-housing-complex-in-san-diego/"
+          ],
+          "expectedPinSha256": "5ed7b8efbc557929f9597f8fe0185b7551aec0c4d5a55a342a4d3fd02a6df2b0",
+          "metadataVerified": true,
+          "savedPinSha256": "e783f4292a6ea32b0a02fd06b8d9fd449f058ea8c198f593684c6bab829dbc89",
+          "verified": true
+        },
+        {
+          "id": 7043,
+          "title": "The Rise on Madison — Seattle affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Plymouth and Bellwether’s May 23, 2023 opening release establishes completion of The Rise on Madison’s 250-home component, separate from Blake House. The architect also records completion in 2023. The reported US$150.7 million tower cost covers both operators’ combined building; it is not assigned to this 250-home component. No separately published cost for the pinned component was established in the operator release, property page, architect page or tower-cost reporting.",
+          "evidence": "celebrated the opening of the first affordable high-rise",
+          "evidenceUrls": [
+            "https://plymouthhousing.org/wp-content/uploads/2023/09/Plymouth-Bellwether_Press-Release-052323.pdf",
+            "https://www.weberthompson.com/project/the-rise-on-madison-blake-house/"
+          ],
+          "expectedPinSha256": "d7eabadf8ec1c6ff02b94ee50ed4e7e0cdc6ab242ee49dc4fbda85c7a3a689a1",
+          "metadataVerified": true,
+          "savedPinSha256": "55eb60c15088528cb9412d6b0a0cabd7a586fc86649512d9da6448b667ac5e4c",
+          "verified": true
+        },
+        {
+          "id": 7048,
+          "title": "Mary Ellen McCormack Building A — Boston affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "This pin covers the new 94-apartment Mary Ellen McCormack Building A, not all 3,300 proposed homes or the 1938 estate. The developer’s June 2025 release describes newly poured footings and foundations; the HIT SEC filing still lists this exact 94-home project under construction as of April 30, 2026. The latest opened total development cost is US$108,420,430 in that filing. The earlier US$62 million building and US$8 million infrastructure figures are narrower historical cost descriptions. No verified occupancy/completion source was established, so the fall-2026 target alone does not make it Completed.",
+          "evidence": "newly poured footings and foundations",
+          "evidenceUrls": [
+            "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm"
+          ],
+          "expectedPinSha256": "b116746ce577b0a73b26451f210959a80cee709916ea029b58caf2a9425a94f9",
+          "metadataVerified": true,
+          "savedPinSha256": "bd0c9fe3c00f4f76a0ca6ebf58000968f20fd727e1ac0f376f634bbd3a601fbf",
+          "verified": true
+        },
+        {
+          "id": 7055,
+          "title": "Legacy at Herndon Square — Atlanta affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Capstone’s August 2026 completion release identifies the exact 201-home Herndon Square Phase II / Legacy community and says it has opened to residents. Its US$57 million investment includes this phase and supporting infrastructure. The neighboring 178-home Phase III remains separate and does not prevent the pinned Phase II being Completed.",
+          "evidence": "The community has officially opened to residents.",
+          "evidenceUrls": [
+            "https://www.multifamilybiz.com/pressreleases/18645/capstone_building_corp_completes_construction_on_5...",
+            "https://atlanta.urbanize.city/post/affordable-housing-build-finished-northside-drive-images"
+          ],
+          "expectedPinSha256": "eb989a1ccd4171382a677daa04adec95089ea6c01337af837cc18035dd49fbd6",
+          "metadataVerified": true,
+          "savedPinSha256": "e9413fca75996cf026df845040708b78df47e7995d33be56fa6d014e5a4aad20",
+          "verified": true
+        },
+        {
+          "id": 7060,
+          "title": "Rose Apartments (Venice) — Los Angeles affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "HACLA confirms the May 19, 2022 opening of Venice’s 35-unit Rose Apartments. The March 2026 Los Angeles HHH report lists the same HIMS project 18-125046, 35 total units and 34 supportive units, as ready for occupancy/permanent conversion, with a March 18, 2022 ready-to-occupy date. Its updated total development cost is US$22,204,143, superseding older US$20.6 million reporting; this is neither the HHH loan nor the per-unit cost. The pin retains its opening-ceremony date.",
+          "evidence": "the grand opening and ribbon cutting for the Rose Apartments",
+          "evidenceUrls": [
+            "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+            "https://ens.lacity.org/cao/prophhhcitizen/caoprophhhcitizen3531195866_03202026.pdf"
+          ],
+          "expectedPinSha256": "eec78fdef72c071a695c71f0678f103b0b9c9e638b279e7eb8c035fc6caf73b8",
+          "metadataVerified": true,
+          "savedPinSha256": "8505530942e319364022b0987fe57444303a3122d7fe0d80e92175b60bb7c7eb",
+          "verified": true
+        },
+        {
+          "id": 7076,
+          "title": "Chrysalis Apartments — Denver affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The pinned 70-home Chrysalis replacement building at 1777 Franklin Street has an actual November 2025 groundbreaking documented by Pinkard, with demolition and construction activity confirmed in January 2026 reporting. The newer published total is a little more than US$36 million; the native price stores the rounded US$36 million figure, with the lower-bound field and this qualification. The 2024 US$20 million announcement is superseded. A 14-month construction forecast does not prove completion.",
+          "evidence": "today celebrated the groundbreaking of Chrysalis",
+          "evidenceUrls": [
+            "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+            "https://hoodline.com/2026/01/century-old-city-park-west-apartments-leveled-for-36-million-homeless-housing-bet/"
+          ],
+          "expectedPinSha256": "56942912ce448a41230a53d983e4372af51b4b93f611763a2073a26b8aea17ea",
+          "metadataVerified": true,
+          "savedPinSha256": "9fc32c2de24559112f3ee3d2cfbd99a2cccb6e95a8dd5663eceea36a4c441f74",
+          "verified": true
+        },
+        {
+          "id": 7078,
+          "title": "The Ethel — Washington, DC affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The District’s February 13, 2023 opening announcement and the builder’s completed-2023 project page support Completed for The Ethel’s 100 supportive apartments, separate from neighboring Park Kennedy. The builder publishes a US$35 million construction contract for this exact 100-unit building. Native price records that construction-contract value, not total all-in development cost: the US$70 million financing and later approximate per-unit development-cost reporting measure different amounts.",
+          "evidence": "celebrated the opening of The Ethel",
+          "evidenceUrls": [
+            "https://dmped.dc.gov/release/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+            "https://www.mccullough-construction.com/portfolio-item/the-ethel/"
+          ],
+          "expectedPinSha256": "4bf38bb1e2cba6567b48e3cce9e0ebbffab60bb607bbf800d5045e42ab4de8c9",
+          "metadataVerified": true,
+          "savedPinSha256": "8c9c6db00726fa0d8ffc9ff7e51b5608b2ad2e150267cb2c8dcc26d4657fe148",
+          "verified": true
+        },
+        {
+          "id": 7080,
+          "title": "New Hope Housing Berry — Houston affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Berry’s architect records the 180-home community completed in 2025. May 2025 KPRC reporting explicitly says the apartments opened in March, with a May 16 ribbon cutting. This opening pin moves from the May month-end placeholder to March 31, 2025 as a month-precision anchor, not an invented opening day. The later preschool-service opening is separate from completion of the residential homes. No full residential-project cost was established: the TDLR record explicitly describes community and preschool buildings, while the reported US$49 million capital stack and bank loans are financing.",
+          "evidence": "Completed 2025",
+          "evidenceUrls": [
+            "https://www.gsmarchitects.net/portfolio/nhh-berry",
+            "https://www.click2houston.com/features/2025/05/16/new-hope-housing-berry-a-new-chapter-in-affordable-housing-for-houstons-northside/",
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2023011107"
+          ],
+          "expectedPinSha256": "551e1e1dfd224c879f211f368a769dcb9fad02ffa49bd245426a6f2eee98b0c7",
+          "metadataVerified": true,
+          "savedPinSha256": "cb2d5b53e0dc6d7e30b4b9b6e1c135b6a27e309526d45337cb6b19ce97a831ae",
+          "verified": true
+        },
+        {
+          "id": 7084,
+          "title": "Vista Ballona — Los Angeles affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Community Corporation’s 2024 property sheet explicitly says the 50-home Vista Ballona development was built in 2022. This supersedes older under-construction marketing. Opened March 2022 reporting states a US$33.7 million development cost for this same 50-unit scope; no later revised total was established. Existing year-precision date remains estimated.",
+          "evidence": "Built in 2022",
+          "evidenceUrls": [
+            "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+            "https://smmirror.com/community-corp-of-santa-monicas-vista-ballona-development-nearing-completion/"
+          ],
+          "expectedPinSha256": "1e8dcbd475ef8113198d31391c45476c854be103e0006b55eec9de9f132c6e82",
+          "metadataVerified": true,
+          "savedPinSha256": "a6e39fc45a34df7d39212568d0fa0179ae108dfe948108f9e19e8da5a3a290d0",
+          "verified": true
+        },
+        {
+          "id": 7087,
+          "title": "The Aries at Bitter Lake — Seattle affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Seattle Foundation’s January 23, 2024 release documents The Aries grand opening; independent housing-finance reporting confirms the 200-home community opened in fall 2023. The pin retains the specifically stated January 23 ceremony milestone. The published US$76.3 million development cost applies to The Aries, not the separate neighboring North Star or the sum of temporary construction loans and permanent financing.",
+          "evidence": "gathered for the grand opening of The Aries earlier today",
+          "evidenceUrls": [
+            "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html?tc=eml_cleartime",
+            "https://www.housingfinance.com/developments/nonprofit-brings-affordable-housing-to-north-seattle-neighborhood_o"
+          ],
+          "expectedPinSha256": "5e8ac74ee65ed017fd715fd4eae8abb1256617b2c8f542ebe64d120ecede05e0",
+          "metadataVerified": true,
+          "savedPinSha256": "2dd9cd883aa1948a96fffb17b456d5b5d289ca840323237d924899814be31bce",
+          "verified": true
+        },
+        {
+          "id": 7198,
+          "title": "Village at Nauset Green — Eastham affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose’s January 21, 2020 release confirms actual first resident move-ins at the newly constructed 65-home Village at Nauset Green. Its later developer account describes the US$23 million development as created housing, establishing completed residential scope rather than relying on rents or a passed target. The pin retains the first-resident milestone, distinct from the later full construction closeout.",
+          "evidence": "the first residents have begun moving into Village at Nauset Green",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+            "https://www.pennrose.com/news-views/blog/2021/supporting-essential-workers-through-affordable-housing/"
+          ],
+          "expectedPinSha256": "9edfc11398f1ddd2adec9625f33197a8937e4e000f8c3893bee7a4fa2272854b",
+          "metadataVerified": true,
+          "savedPinSha256": "eabe8cdfd6a868c7f78a485f329fa5f7f3f12a2d90146ed24b1940a7a35274a5",
+          "verified": true
+        },
+        {
+          "id": 7208,
+          "title": "Doverbrook — Easton affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose and the Housing Commission of Talbot’s November 7, 2025 release confirms the grand opening of the rebuilt 64-home Doverbrook community, replacing 50 older public-housing homes and adding 14. The developer’s project-specific budget is US$25 million; the later November 2025 Daily Record report retains that total. Grants, loans and the cost of the older estate are not substituted for the complete redevelopment.",
+          "evidence": "today celebrated the grand opening of Doverbrook Apartments",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+            "https://www.pennrose.com/news-views/news/2024/pennrose-and-housing-commission-of-talbot-break-ground-on-doverbrook-apartments-redevelopment/"
+          ],
+          "expectedPinSha256": "d8c35b5e1c5b4f9e4e0d91eba2be0a1ee5c4d4bb577975f6523cef73539d42b6",
+          "metadataVerified": true,
+          "savedPinSha256": "563bce8618c32fabac19d0fb57809ff34064e462deec4ab60c8927a6616a2115",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 12,
+      "counts": {
+        "Proposed": 0,
+        "In Progress": 3,
+        "Completed": 9
+      }
+    }
+  ],
+  "unresolved": [
+    {
+      "id": 7073,
+      "title": "Grace Manor — Chicago affordable housing",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "Grace Manor’s CHA announcement dated December 1, 2025 reports its opening, but the HIT SEC list explicitly labels the same 65-unit Chicago project under construction as of April 30, 2026. The newer filing gives US$30,215,493 total development cost versus the earlier US$40m trade report. Confirm the reporting dates, any closeout lag and exact financing/build scope before choosing a status and cost; do not silently discard either primary source.",
+      "openedAt": "2026-10-24",
+      "sources": [
+        {
+          "url": "https://www.thecha.org/news/development-updates-cha-cuts-ribbons-grace-manor-and-westhaven-park-station",
+          "title": "Development Updates: CHA Cuts the Ribbons at Grace Manor and Westhaven Park Station",
+          "publishedDate": "2025-12-01",
+          "quote": "celebrated the openings of Grace Manor"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/225030/000199937126012044/hitpucl430-497_060326.htm",
+          "title": "AFL-CIO Housing Investment Trust — Projects Under Construction as of April 30, 2026",
+          "publishedDate": "2026-06-03",
+          "quote": "$30,215,493"
+        }
+      ]
+    }
+  ],
+  "additionalSourcesChecked": [
+    {
+      "pinId": 7043,
+      "url": "https://www.connectcre.com/stories/plymouth-bellwether-break-ground-on-151m-seattle-tower/",
+      "openedAt": "2026-10-24",
+      "finding": "US$150.7m is for combined two-operator tower, not the separately pinned 250-home Rise component."
+    },
+    {
+      "pinId": 7078,
+      "url": "https://www.mccullough-construction.com/hill-east-redevelopment/",
+      "openedAt": "2026-10-24",
+      "finding": "US$70m is financing; use the builder’s separately stated construction contract value as explicitly labelled."
+    },
+    {
+      "pinId": 7080,
+      "url": "https://www.costar.com/article/1952721856/affordable-housing-project-shines-as-beacon-of-hope-for-community",
+      "openedAt": "2026-10-24",
+      "access": "Web source open failed; indexed result identifies US$49m capital stack. Not used as a cost assignment."
+    },
+    {
+      "pinId": 7021,
+      "url": "https://riverwalksd.com/construction-update-q2-2026/",
+      "openedAt": "2026-10-24",
+      "access": "HTTP 404; used opened REBusinessOnline project-specific construction and cost reporting instead."
+    }
+  ],
+  "publicVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "checks": [
+        {
+          "id": 7021,
+          "status": "In Progress",
+          "price": 140000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7043,
+          "status": "Completed",
+          "utcStartDateTime": "2023-05-23T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7048,
+          "status": "In Progress",
+          "price": 108420430,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-11-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7055,
+          "status": "Completed",
+          "price": 57000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-08-28T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7060,
+          "status": "Completed",
+          "price": 22204143,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2022-05-19T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7076,
+          "status": "In Progress",
+          "price": 36000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-21T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7078,
+          "status": "Completed",
+          "price": 35000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2023-02-13T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7080,
+          "status": "Completed",
+          "utcStartDateTime": "2025-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7084,
+          "status": "Completed",
+          "price": 33700000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2022-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7087,
+          "status": "Completed",
+          "price": 76300000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-01-23T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7198,
+          "status": "Completed",
+          "price": 23000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2020-01-21T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7208,
+          "status": "Completed",
+          "price": 25000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 7021,
+          "url": "http://127.0.0.1:3000/pin/7021/the-becker-opens-affordable-homes-at-riverwalk",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7043,
+          "url": "http://127.0.0.1:3000/pin/7043/the-rise-on-madison-seattle-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7060,
+          "url": "http://127.0.0.1:3000/pin/7060/rose-apartments-venice-los-angeles-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7080,
+          "url": "http://127.0.0.1:3000/pin/7080/new-hope-housing-berry-houston-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "checks": [
+        {
+          "id": 7021,
+          "status": "In Progress",
+          "price": 140000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2027-07-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7043,
+          "status": "Completed",
+          "utcStartDateTime": "2023-05-23T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7048,
+          "status": "In Progress",
+          "price": 108420430,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-11-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7055,
+          "status": "Completed",
+          "price": 57000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2026-08-28T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7060,
+          "status": "Completed",
+          "price": 22204143,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2022-05-19T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7076,
+          "status": "In Progress",
+          "price": 36000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-21T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7078,
+          "status": "Completed",
+          "price": 35000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2023-02-13T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7080,
+          "status": "Completed",
+          "utcStartDateTime": "2025-03-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7084,
+          "status": "Completed",
+          "price": 33700000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2022-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7087,
+          "status": "Completed",
+          "price": 76300000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-01-23T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7198,
+          "status": "Completed",
+          "price": 23000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2020-01-21T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7208,
+          "status": "Completed",
+          "price": 25000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-11-07T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 7021,
+          "url": "https://www.chronopin.com/pin/7021/the-becker-opens-affordable-homes-at-riverwalk",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7043,
+          "url": "https://www.chronopin.com/pin/7043/the-rise-on-madison-seattle-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7060,
+          "url": "https://www.chronopin.com/pin/7060/rose-apartments-venice-los-angeles-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7080,
+          "url": "https://www.chronopin.com/pin/7080/new-hope-housing-berry-houston-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    }
+  ]
+}

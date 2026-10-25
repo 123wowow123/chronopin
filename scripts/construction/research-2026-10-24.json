@@ -1,0 +1,804 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Newly opened source research for status-queue follow-up. Costs in source currency without FX conversion. Date corrections limited to supported events.",
+  "research": [
+    {
+      "id": 224,
+      "status": "In Progress",
+      "price": 25300000000,
+      "priceCurrency": "AUD",
+      "note": "Sydney Metro West has completed tunnelling, with station excavation and rail-system delivery continuing. The 2032 target is for the complete passenger railway, not just bored tunnels. The published project budget is A$25.3 billion; contract prices are not substituted for the whole line.",
+      "sources": [
+        {
+          "url": "https://www.sydneymetro.info/sites/default/files/2026-04/Project%20Update%20-%20April%202026.pdf",
+          "title": "Sydney Metro West project update — April 2026",
+          "quote": "Tunnelling construction teams will remain at several station sites until late 2026 to complete major station excavation works.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.parliament.nsw.gov.au/lcdocs/other/21129/Transcript%20-%20UNCORRECTED%20-%20PC6%20-%20Budget%20Estimates%202024-2025%20-%2012%20March%202025.PDF",
+          "title": "Budget Estimates 2024–2025 — Transport and the Arts — 12 March 2025",
+          "quote": "I am confirming that the project budget has not changed and is still $25.3 billion.",
+          "publishedDate": "2025-03-12",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 225,
+      "status": "In Progress",
+      "price": 11700000000,
+      "priceCurrency": "EUR",
+      "note": "BBT SE reports three active construction lots. Its October 20–21, 2026 revision places construction completion in 2033 and regular train service in 2034, at approximately EUR 11.7 billion. The date uses the end of 2034 as a year-precision timeline anchor, not an announced opening day.",
+      "sources": [
+        {
+          "url": "https://www.bbt-se.com/en/project-progress/project-progress/",
+          "title": "Project progress BBT SE",
+          "quote": "There are currently three active construction lots, one of which is located in Italy and two in Austria.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.bbt-se.com/en/newsroom/detail/vom-tunnel-zum-bahnsystem-neuplanung-staerkt-sicherheit-des-infrastrukturprojekts-und-bringt-anpassung-von-bauzeiten-und-kosten/",
+          "title": "From Tunnel to Rail System: Revised Plan Enhances Safety and Adjusts Timeline and Costs",
+          "quote": "Total cost forecasts amount to around 11.7 billion euros.",
+          "publishedDate": "2026-10-21",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2034-12-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "BBT SE revised regular train service to 2034 on October 20–21, 2026. December 31 is a year-precision timeline anchor; no exact opening day is published."
+      }
+    },
+    {
+      "id": 268,
+      "status": "Completed",
+      "price": 5493000000,
+      "priceCurrency": "NZD",
+      "note": "CRL Ltd confirms practical completion and handover in June 2026, formal opening September 11 and public passenger services September 13, 2026. This passenger-opening pin is corrected from November 1 to September 13. Operator-reported build cost is NZ$5.493 billion.",
+      "sources": [
+        {
+          "url": "https://www.cityraillink.co.nz/",
+          "title": "City Rail Link (CRL) — Official site",
+          "quote": "The CRL was officially opened on 11 September 2026 and services for the public began on Sunday 13 September 2026.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.cityraillink.co.nz/social-innovation",
+          "title": "Social Innovation — City Rail Link",
+          "quote": "The City Rail Link cost $5.493 billion to build, a significant investment in infrastructure and into the economy.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2026-09-13T00:00:00.000Z",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "CRL Ltd confirms public passenger services began Sunday September 13, 2026; September 11 was the formal ceremony."
+      }
+    },
+    {
+      "id": 442,
+      "status": "In Progress",
+      "price": 29290000000,
+      "priceCurrency": "NOK",
+      "note": "Statens vegvesen reports active tunnelling and a February 2026 ventilation-shaft breakthrough. Norway’s 2026–2027 transport budget retains the 2033 opening target and forecasts final cost of NOK 29,290 million, distinct from its NOK 35,233 million upper cost framework and the older 2020-price estimate. No FX conversion.",
+      "sources": [
+        {
+          "url": "https://www.vegvesen.no/Vegprosjekter/Europaveg/E39Rogfast",
+          "title": "E39 Rogfast | Statens vegvesen",
+          "quote": "20,60 milliarder. (2020-kr)",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/?ch=2",
+          "title": "Prop. 1 S (2026–2027), Samferdselsdepartementet — Table 4.9 E39 Stavanger–Bergen–Ålesund",
+          "quote": "29 290",
+          "quoteNote": "Verbatim forecast cell in Table 4.9, units Mill. kr: NOK 29,290 million. Separate upper cost framework: NOK 35,233 million.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 449,
+      "status": "In Progress",
+      "price": 3900000000,
+      "priceCurrency": "USD",
+      "note": "The full HRBT expansion includes the new tunnels, trestles and widened highway. Boring and partial road openings do not complete that scope. VDOT’s newsroom continues to describe the US$3.9 billion expansion, with road and tunnel finishing works continuing into 2027.",
+      "sources": [
+        {
+          "url": "https://hrbtexpansion.vdot.virginia.gov/newsroom/",
+          "title": "Newsroom | HRBT Expansion",
+          "quote": "another major part of the $3.9 billion project is taking down much of the decades-old infrastructure",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://hrbtexpansion.vdot.virginia.gov/about/",
+          "title": "About | HRBT Expansion",
+          "quote": "including the $3.9 billion Hampton Roads Bridge-Tunnel Expansion",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 462,
+      "status": "In Progress",
+      "price": 2200000000,
+      "priceCurrency": "USD",
+      "note": "Titans construction updates show cooling towers, stairwells and roof works. September 30, 2026 reporting quotes the project executive and retains a February 2027 completion expectation and US$2.2 billion rounded project cost. This is construction, not an operating stadium.",
+      "sources": [
+        {
+          "url": "https://www.tennesseetitans.com/video/new-nissan-stadium-construction-update-cooling-towers",
+          "title": "New Nissan Stadium Construction Update | Cooling Towers",
+          "quote": "Construction continues at New Nissan Stadium with another important piece of the project taking shape.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.bizjournals.com/nashville/news/2026/09/30/titans-stadium-milestones-numbers-update.html",
+          "title": "8 million labor hours logged: Here's what's next for the new Titans stadium (including a super flush)",
+          "quote": "eye-popping figures surrounding the $2.2 billion project.",
+          "publishedDate": "2026-09-30",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 476,
+      "status": "In Progress",
+      "price": 2140000000,
+      "priceCurrency": "CHF",
+      "note": "FEDRO’s project site documents active second-tube excavation, including the May 2026 restart of TBM Paulina. The second tube targets opening in 2030, before renovation of the original tube. The second-tube budget is CHF 2.14 billion, ±15%, excluding VAT; it is not the cost of both tubes.",
+      "sources": [
+        {
+          "url": "https://gotthardtunnel.ch/en/media-centre",
+          "title": "A2 Second Gotthard Tube — Media centre",
+          "quote": "Today, Monday, the tunnel boring machine ‘Paulina’ will resume operations.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://gotthardtunnel.ch/en/the-second-tube/project-details-aim-purpose",
+          "title": "Project details, aim, purpose — A2 Second Gotthard tube",
+          "quote": "CHF 2.14 billion has been earmarked for the construction of the second Gotthard tunnel tube (estimate +/-15% excl. VAT).",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 516,
+      "status": "In Progress",
+      "price": 870000000,
+      "priceCurrency": "CAD",
+      "note": "The October 8, 2026 operator update says the new roof is assembled on the playing field and preparations for lifting are underway. Assembly is not completed roof replacement or stadium reopening. The operator’s total replacement-project cost is C$870 million, including public and private costs and contingencies.",
+      "sources": [
+        {
+          "url": "https://toiture.parcolympique.qc.ca/2026/10/une-etape-majeure-franchie-la-nouvelle-toiture-est-assemblee/",
+          "title": "Une étape majeure franchie : la nouvelle toiture du Stade olympique est assemblée",
+          "quote": "Les préparatifs sont désormais en cours en vue de la levée de la toiture",
+          "publishedDate": "2026-10-08",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://toiture.parcolympique.qc.ca/2024/03/signature-du-contrat-regissant-le-remplacement-de-la-toiture-du-stade-olympique/",
+          "title": "Signature du Contrat régissant le remplacement de la toiture du Stade olympique",
+          "quote": "Le coût total du projet de 870 M$ inclut le prix du contrat",
+          "publishedDate": "2024-03-07",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 573,
+      "status": "In Progress",
+      "price": 51500000000,
+      "priceCurrency": "SEK",
+      "note": "Trafikverket describes ongoing construction and installation, a December 2026 partial opening and full completion around 2030. Its current probable final cost is SEK 51.5 billion within a SEK 51.0–53.5 billion range, in 2021 prices. A completed excavation or first partial opening does not complete the whole bypass.",
+      "sources": [
+        {
+          "url": "https://www.trafikverket.se/vara-projekt/projekt-i-stockholms-lan/e4-forbifart-stockholm/",
+          "title": "E4 Förbifart Stockholm — Trafikverket",
+          "quote": "Trafikverkets bedömning är ett spann från 51,0–53,5 miljarder kronor, med en trolig slutkostnad på 51,5 miljarder kronor (2021 års prisnivå).",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 637,
+      "status": "In Progress",
+      "price": 7400000000,
+      "priceCurrency": "AUD",
+      "note": "NSW’s August 11, 2026 release confirms both tunnel-boring machines working and mechanical/electrical fit-out progressing, with full opening targeted for 2028. Delivery engineer ADG reports A$7.4 billion for the Western Harbour Tunnel project, excluding the separate Warringah Freeway upgrade.",
+      "sources": [
+        {
+          "url": "https://www.nsw.gov.au/ministerial-releases/second-giant-tunnel-boring-machine-begins-excavating-for-western-harbour-tunnel",
+          "title": "Second giant Tunnel Boring Machine begins excavating for the Western Harbour Tunnel",
+          "quote": "With both tunnel boring machines now in action, we are making strong progress on the final stage of excavation",
+          "publishedDate": "2026-08-11",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.adgce.com/projects/western-harbour-crossing-tbm/",
+          "title": "Gantry Crane Design for Underground TBM — ADG",
+          "quote": "The Western Harbour Tunnel, a $7.4 billion city-shaping project",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 224,
+          "title": "Sydney Metro West Opens",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Sydney Metro West has completed tunnelling, with station excavation and rail-system delivery continuing. The 2032 target is for the complete passenger railway, not just bored tunnels. The published project budget is A$25.3 billion; contract prices are not substituted for the whole line.",
+          "evidence": "Tunnelling construction teams will remain at several station sites until late 2026 to complete major station excavation works.",
+          "evidenceUrls": [
+            "https://www.sydneymetro.info/sites/default/files/2026-04/Project%20Update%20-%20April%202026.pdf",
+            "https://www.parliament.nsw.gov.au/lcdocs/other/21129/Transcript%20-%20UNCORRECTED%20-%20PC6%20-%20Budget%20Estimates%202024-2025%20-%2012%20March%202025.PDF"
+          ],
+          "expectedPinSha256": "e3248cd51c774545e7f95d30272067613944ba15bc5ab2e88298aceb69ef03dc",
+          "metadataVerified": true,
+          "savedPinSha256": "357621535c789adc2ed69ac967af729b86e993bbdd0a23be6bbbf784c7618924",
+          "verified": true
+        },
+        {
+          "id": 225,
+          "title": "Brenner Base Tunnel Opens",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "BBT SE reports three active construction lots. Its October 20–21, 2026 revision places construction completion in 2033 and regular train service in 2034, at approximately EUR 11.7 billion. The date uses the end of 2034 as a year-precision timeline anchor, not an announced opening day.",
+          "evidence": "There are currently three active construction lots, one of which is located in Italy and two in Austria.",
+          "evidenceUrls": [
+            "https://www.bbt-se.com/en/project-progress/project-progress/",
+            "https://www.bbt-se.com/en/newsroom/detail/vom-tunnel-zum-bahnsystem-neuplanung-staerkt-sicherheit-des-infrastrukturprojekts-und-bringt-anpassung-von-bauzeiten-und-kosten/"
+          ],
+          "expectedPinSha256": "4b90bb49360abdc16a23b12d75cd17e6728c37ff0b1d079ff08210acb2bb9edd",
+          "metadataVerified": true,
+          "savedPinSha256": "bfb3b00f8039b65e336450b654243726a71dcba7fe1c2e4169fd8dc44cabdef4",
+          "verified": true
+        },
+        {
+          "id": 268,
+          "title": "Auckland City Rail Link Opens",
+          "expectedAuthorId": 1,
+          "status": "Completed",
+          "reason": "CRL Ltd confirms practical completion and handover in June 2026, formal opening September 11 and public passenger services September 13, 2026. This passenger-opening pin is corrected from November 1 to September 13. Operator-reported build cost is NZ$5.493 billion.",
+          "evidence": "The CRL was officially opened on 11 September 2026 and services for the public began on Sunday 13 September 2026.",
+          "evidenceUrls": [
+            "https://www.cityraillink.co.nz/",
+            "https://www.cityraillink.co.nz/social-innovation"
+          ],
+          "expectedPinSha256": "ee5d4050c375c5e29a2fa474b601cbcc8227913c77c387286bf27642cac20638",
+          "metadataVerified": true,
+          "savedPinSha256": "dfd352a94021d15c676046867cc96ad2becdbf7ee4292d8cfdd11cbf20bee975",
+          "verified": true
+        },
+        {
+          "id": 442,
+          "title": "Rogfast Undersea Tunnel",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Statens vegvesen reports active tunnelling and a February 2026 ventilation-shaft breakthrough. Norway’s 2026–2027 transport budget retains the 2033 opening target and forecasts final cost of NOK 29,290 million, distinct from its NOK 35,233 million upper cost framework and the older 2020-price estimate. No FX conversion.",
+          "evidence": "20,60 milliarder. (2020-kr)",
+          "evidenceUrls": [
+            "https://www.vegvesen.no/Vegprosjekter/Europaveg/E39Rogfast",
+            "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/?ch=2"
+          ],
+          "expectedPinSha256": "fac719da9af3a27d0ffd61c65d3370f52cb621b22b55fd972b9f9cf05bfcc332",
+          "metadataVerified": true,
+          "savedPinSha256": "732aa6f4193ab8ede790b1a7b51e8e343525f602e966f7607257048fd74a35cc",
+          "verified": true
+        },
+        {
+          "id": 449,
+          "title": "Hampton Roads Bridge-Tunnel Expansion",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The full HRBT expansion includes the new tunnels, trestles and widened highway. Boring and partial road openings do not complete that scope. VDOT’s newsroom continues to describe the US$3.9 billion expansion, with road and tunnel finishing works continuing into 2027.",
+          "evidence": "another major part of the $3.9 billion project is taking down much of the decades-old infrastructure",
+          "evidenceUrls": [
+            "https://hrbtexpansion.vdot.virginia.gov/newsroom/",
+            "https://hrbtexpansion.vdot.virginia.gov/about/"
+          ],
+          "expectedPinSha256": "df9af837733e91d749bcc1ead14fb78d1b29dab6a833df5bdfa839b64e1e625b",
+          "metadataVerified": true,
+          "savedPinSha256": "ff977019bcd353bd0450c80ac5d8e96295d6f712f4f4400c2053585ef4d61c2c",
+          "verified": true
+        },
+        {
+          "id": 462,
+          "title": "New Nissan Stadium Set to Open for the Titans",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Titans construction updates show cooling towers, stairwells and roof works. September 30, 2026 reporting quotes the project executive and retains a February 2027 completion expectation and US$2.2 billion rounded project cost. This is construction, not an operating stadium.",
+          "evidence": "Construction continues at New Nissan Stadium with another important piece of the project taking shape.",
+          "evidenceUrls": [
+            "https://www.tennesseetitans.com/video/new-nissan-stadium-construction-update-cooling-towers",
+            "https://www.bizjournals.com/nashville/news/2026/09/30/titans-stadium-milestones-numbers-update.html"
+          ],
+          "expectedPinSha256": "8a69bd309a4efdf5b91a4e8fdf65dc5e1207c6e6136379a78227f6a66b4189b9",
+          "metadataVerified": true,
+          "savedPinSha256": "455ce13463a2d4e368952d726b3b5a4d6bbeecc3c758cd9227cba4c7a25b5968",
+          "verified": true
+        },
+        {
+          "id": 476,
+          "title": "Second Gotthard Road Tunnel Due to Complete",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "FEDRO’s project site documents active second-tube excavation, including the May 2026 restart of TBM Paulina. The second tube targets opening in 2030, before renovation of the original tube. The second-tube budget is CHF 2.14 billion, ±15%, excluding VAT; it is not the cost of both tubes.",
+          "evidence": "Today, Monday, the tunnel boring machine ‘Paulina’ will resume operations.",
+          "evidenceUrls": [
+            "https://gotthardtunnel.ch/en/media-centre",
+            "https://gotthardtunnel.ch/en/the-second-tube/project-details-aim-purpose"
+          ],
+          "expectedPinSha256": "9b386956213a59d910873f15832019fa37afca6014593c92a6b907003b8d6be4",
+          "metadataVerified": true,
+          "savedPinSha256": "caf80784182215c1c1062cf28cd98eba929469c4cd6f520b0a7a1b2d8817b510",
+          "verified": true
+        },
+        {
+          "id": 516,
+          "title": "Montreal's Olympic Stadium Roof Targeted to Reopen in 2028",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The October 8, 2026 operator update says the new roof is assembled on the playing field and preparations for lifting are underway. Assembly is not completed roof replacement or stadium reopening. The operator’s total replacement-project cost is C$870 million, including public and private costs and contingencies.",
+          "evidence": "Les préparatifs sont désormais en cours en vue de la levée de la toiture",
+          "evidenceUrls": [
+            "https://toiture.parcolympique.qc.ca/2026/10/une-etape-majeure-franchie-la-nouvelle-toiture-est-assemblee/",
+            "https://toiture.parcolympique.qc.ca/2024/03/signature-du-contrat-regissant-le-remplacement-de-la-toiture-du-stade-olympique/"
+          ],
+          "expectedPinSha256": "b7e8f046dc21f4b91a2df51932d64e39792352ba9fa5785b8d3375ee5a6d8d5c",
+          "metadataVerified": true,
+          "savedPinSha256": "095f45a72433bbdfe85792dcfa418988b6cb91482c1021b13e337a1f121e3213",
+          "verified": true
+        },
+        {
+          "id": 573,
+          "title": "Stockholm's Förbifart Bypass Tunnel Now Targets 2030",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Trafikverket describes ongoing construction and installation, a December 2026 partial opening and full completion around 2030. Its current probable final cost is SEK 51.5 billion within a SEK 51.0–53.5 billion range, in 2021 prices. A completed excavation or first partial opening does not complete the whole bypass.",
+          "evidence": "Trafikverkets bedömning är ett spann från 51,0–53,5 miljarder kronor, med en trolig slutkostnad på 51,5 miljarder kronor (2021 års prisnivå).",
+          "evidenceUrls": [
+            "https://www.trafikverket.se/vara-projekt/projekt-i-stockholms-lan/e4-forbifart-stockholm/"
+          ],
+          "expectedPinSha256": "82cc2300594d9d152c2ea7f99d2b825588c33166b0bc24e5a4648ef6809ae8b9",
+          "metadataVerified": true,
+          "savedPinSha256": "2d1bb170996765e1ab47fe520a5b5afef4828f267c1ea4cd6a695dd6043b1b40",
+          "verified": true
+        },
+        {
+          "id": 637,
+          "title": "Sydney Western Harbour Tunnel Set to Open",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "NSW’s August 11, 2026 release confirms both tunnel-boring machines working and mechanical/electrical fit-out progressing, with full opening targeted for 2028. Delivery engineer ADG reports A$7.4 billion for the Western Harbour Tunnel project, excluding the separate Warringah Freeway upgrade.",
+          "evidence": "With both tunnel boring machines now in action, we are making strong progress on the final stage of excavation",
+          "evidenceUrls": [
+            "https://www.nsw.gov.au/ministerial-releases/second-giant-tunnel-boring-machine-begins-excavating-for-western-harbour-tunnel",
+            "https://www.adgce.com/projects/western-harbour-crossing-tbm/"
+          ],
+          "expectedPinSha256": "0fd1a06b0aed8a6b37246a538fa86c326004cd27cfa22e9c833da72c03011e92",
+          "metadataVerified": true,
+          "savedPinSha256": "f02ca2264e400e505edaf5f0730be2377319d4c13bd1bfdb8f41c1ac4553569b",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 10,
+      "counts": {
+        "Proposed": 0,
+        "In Progress": 9,
+        "Completed": 1
+      },
+      "followUpPublicVerification": {
+        "checkedAt": "2026-10-24",
+        "publicPinCount": 10,
+        "pinChecks": [
+          {
+            "id": 224,
+            "status": "In Progress",
+            "price": 25300000000,
+            "priceCurrency": "AUD",
+            "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 225,
+            "status": "In Progress",
+            "price": 11700000000,
+            "priceCurrency": "EUR",
+            "utcStartDateTime": "2034-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 268,
+            "status": "Completed",
+            "price": 5493000000,
+            "priceCurrency": "NZD",
+            "utcStartDateTime": "2026-09-13T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 442,
+            "status": "In Progress",
+            "price": 29290000000,
+            "priceCurrency": "NOK",
+            "utcStartDateTime": "2033-06-01T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 449,
+            "status": "In Progress",
+            "price": 3900000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2027-08-27T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 462,
+            "status": "In Progress",
+            "price": 2200000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2027-02-28T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 476,
+            "status": "In Progress",
+            "price": 2140000000,
+            "priceCurrency": "CHF",
+            "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 516,
+            "status": "In Progress",
+            "price": 870000000,
+            "priceCurrency": "CAD",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 573,
+            "status": "In Progress",
+            "price": 51500000000,
+            "priceCurrency": "SEK",
+            "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 637,
+            "status": "In Progress",
+            "price": 7400000000,
+            "priceCurrency": "AUD",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          }
+        ],
+        "nativePages": [
+          {
+            "id": 225,
+            "url": "http://127.0.0.1:3000/pin/225/brenner-base-tunnel-opens",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 268,
+            "url": "http://127.0.0.1:3000/pin/268/auckland-city-rail-link-opens",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 516,
+            "url": "http://127.0.0.1:3000/pin/516/montreal-s-olympic-stadium-roof-targeted-to-reopen-in-2028",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          }
+        ],
+        "pageAccess": "Authenticated admin session; JSON checks unauthenticated"
+      }
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 224,
+          "title": "Sydney Metro West Opens",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Sydney Metro West has completed tunnelling, with station excavation and rail-system delivery continuing. The 2032 target is for the complete passenger railway, not just bored tunnels. The published project budget is A$25.3 billion; contract prices are not substituted for the whole line.",
+          "evidence": "Tunnelling construction teams will remain at several station sites until late 2026 to complete major station excavation works.",
+          "evidenceUrls": [
+            "https://www.sydneymetro.info/sites/default/files/2026-04/Project%20Update%20-%20April%202026.pdf",
+            "https://www.parliament.nsw.gov.au/lcdocs/other/21129/Transcript%20-%20UNCORRECTED%20-%20PC6%20-%20Budget%20Estimates%202024-2025%20-%2012%20March%202025.PDF"
+          ],
+          "expectedPinSha256": "42242a7ca2b5b668ac08b1c9d7610398e88bcf7fc202100145adfd911a0b9fa4",
+          "metadataVerified": true,
+          "savedPinSha256": "163b3093d835afb86b3740e43876281e9cd1b143e2c2647793da164e853619c8",
+          "verified": true
+        },
+        {
+          "id": 225,
+          "title": "Brenner Base Tunnel Opens",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "BBT SE reports three active construction lots. Its October 20–21, 2026 revision places construction completion in 2033 and regular train service in 2034, at approximately EUR 11.7 billion. The date uses the end of 2034 as a year-precision timeline anchor, not an announced opening day.",
+          "evidence": "There are currently three active construction lots, one of which is located in Italy and two in Austria.",
+          "evidenceUrls": [
+            "https://www.bbt-se.com/en/project-progress/project-progress/",
+            "https://www.bbt-se.com/en/newsroom/detail/vom-tunnel-zum-bahnsystem-neuplanung-staerkt-sicherheit-des-infrastrukturprojekts-und-bringt-anpassung-von-bauzeiten-und-kosten/"
+          ],
+          "expectedPinSha256": "4b90bb49360abdc16a23b12d75cd17e6728c37ff0b1d079ff08210acb2bb9edd",
+          "metadataVerified": true,
+          "savedPinSha256": "bfb3b00f8039b65e336450b654243726a71dcba7fe1c2e4169fd8dc44cabdef4",
+          "verified": true
+        },
+        {
+          "id": 268,
+          "title": "Auckland City Rail Link Opens",
+          "expectedAuthorId": 1,
+          "status": "Completed",
+          "reason": "CRL Ltd confirms practical completion and handover in June 2026, formal opening September 11 and public passenger services September 13, 2026. This passenger-opening pin is corrected from November 1 to September 13. Operator-reported build cost is NZ$5.493 billion.",
+          "evidence": "The CRL was officially opened on 11 September 2026 and services for the public began on Sunday 13 September 2026.",
+          "evidenceUrls": [
+            "https://www.cityraillink.co.nz/",
+            "https://www.cityraillink.co.nz/social-innovation"
+          ],
+          "expectedPinSha256": "ee5d4050c375c5e29a2fa474b601cbcc8227913c77c387286bf27642cac20638",
+          "metadataVerified": true,
+          "savedPinSha256": "dfd352a94021d15c676046867cc96ad2becdbf7ee4292d8cfdd11cbf20bee975",
+          "verified": true
+        },
+        {
+          "id": 442,
+          "title": "Rogfast Undersea Tunnel",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Statens vegvesen reports active tunnelling and a February 2026 ventilation-shaft breakthrough. Norway’s 2026–2027 transport budget retains the 2033 opening target and forecasts final cost of NOK 29,290 million, distinct from its NOK 35,233 million upper cost framework and the older 2020-price estimate. No FX conversion.",
+          "evidence": "20,60 milliarder. (2020-kr)",
+          "evidenceUrls": [
+            "https://www.vegvesen.no/Vegprosjekter/Europaveg/E39Rogfast",
+            "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/?ch=2"
+          ],
+          "expectedPinSha256": "fac719da9af3a27d0ffd61c65d3370f52cb621b22b55fd972b9f9cf05bfcc332",
+          "metadataVerified": true,
+          "savedPinSha256": "732aa6f4193ab8ede790b1a7b51e8e343525f602e966f7607257048fd74a35cc",
+          "verified": true
+        },
+        {
+          "id": 449,
+          "title": "Hampton Roads Bridge-Tunnel Expansion",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The full HRBT expansion includes the new tunnels, trestles and widened highway. Boring and partial road openings do not complete that scope. VDOT’s newsroom continues to describe the US$3.9 billion expansion, with road and tunnel finishing works continuing into 2027.",
+          "evidence": "another major part of the $3.9 billion project is taking down much of the decades-old infrastructure",
+          "evidenceUrls": [
+            "https://hrbtexpansion.vdot.virginia.gov/newsroom/",
+            "https://hrbtexpansion.vdot.virginia.gov/about/"
+          ],
+          "expectedPinSha256": "df9af837733e91d749bcc1ead14fb78d1b29dab6a833df5bdfa839b64e1e625b",
+          "metadataVerified": true,
+          "savedPinSha256": "ff977019bcd353bd0450c80ac5d8e96295d6f712f4f4400c2053585ef4d61c2c",
+          "verified": true
+        },
+        {
+          "id": 462,
+          "title": "New Nissan Stadium Set to Open for the Titans",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Titans construction updates show cooling towers, stairwells and roof works. September 30, 2026 reporting quotes the project executive and retains a February 2027 completion expectation and US$2.2 billion rounded project cost. This is construction, not an operating stadium.",
+          "evidence": "Construction continues at New Nissan Stadium with another important piece of the project taking shape.",
+          "evidenceUrls": [
+            "https://www.tennesseetitans.com/video/new-nissan-stadium-construction-update-cooling-towers",
+            "https://www.bizjournals.com/nashville/news/2026/09/30/titans-stadium-milestones-numbers-update.html"
+          ],
+          "expectedPinSha256": "8a69bd309a4efdf5b91a4e8fdf65dc5e1207c6e6136379a78227f6a66b4189b9",
+          "metadataVerified": true,
+          "savedPinSha256": "455ce13463a2d4e368952d726b3b5a4d6bbeecc3c758cd9227cba4c7a25b5968",
+          "verified": true
+        },
+        {
+          "id": 476,
+          "title": "Second Gotthard Road Tunnel Due to Complete",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "FEDRO’s project site documents active second-tube excavation, including the May 2026 restart of TBM Paulina. The second tube targets opening in 2030, before renovation of the original tube. The second-tube budget is CHF 2.14 billion, ±15%, excluding VAT; it is not the cost of both tubes.",
+          "evidence": "Today, Monday, the tunnel boring machine ‘Paulina’ will resume operations.",
+          "evidenceUrls": [
+            "https://gotthardtunnel.ch/en/media-centre",
+            "https://gotthardtunnel.ch/en/the-second-tube/project-details-aim-purpose"
+          ],
+          "expectedPinSha256": "9b386956213a59d910873f15832019fa37afca6014593c92a6b907003b8d6be4",
+          "metadataVerified": true,
+          "savedPinSha256": "caf80784182215c1c1062cf28cd98eba929469c4cd6f520b0a7a1b2d8817b510",
+          "verified": true
+        },
+        {
+          "id": 516,
+          "title": "Montreal's Olympic Stadium Roof Targeted to Reopen in 2028",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The October 8, 2026 operator update says the new roof is assembled on the playing field and preparations for lifting are underway. Assembly is not completed roof replacement or stadium reopening. The operator’s total replacement-project cost is C$870 million, including public and private costs and contingencies.",
+          "evidence": "Les préparatifs sont désormais en cours en vue de la levée de la toiture",
+          "evidenceUrls": [
+            "https://toiture.parcolympique.qc.ca/2026/10/une-etape-majeure-franchie-la-nouvelle-toiture-est-assemblee/",
+            "https://toiture.parcolympique.qc.ca/2024/03/signature-du-contrat-regissant-le-remplacement-de-la-toiture-du-stade-olympique/"
+          ],
+          "expectedPinSha256": "b7e8f046dc21f4b91a2df51932d64e39792352ba9fa5785b8d3375ee5a6d8d5c",
+          "metadataVerified": true,
+          "savedPinSha256": "095f45a72433bbdfe85792dcfa418988b6cb91482c1021b13e337a1f121e3213",
+          "verified": true
+        },
+        {
+          "id": 573,
+          "title": "Stockholm's Förbifart Bypass Tunnel Now Targets 2030",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Trafikverket describes ongoing construction and installation, a December 2026 partial opening and full completion around 2030. Its current probable final cost is SEK 51.5 billion within a SEK 51.0–53.5 billion range, in 2021 prices. A completed excavation or first partial opening does not complete the whole bypass.",
+          "evidence": "Trafikverkets bedömning är ett spann från 51,0–53,5 miljarder kronor, med en trolig slutkostnad på 51,5 miljarder kronor (2021 års prisnivå).",
+          "evidenceUrls": [
+            "https://www.trafikverket.se/vara-projekt/projekt-i-stockholms-lan/e4-forbifart-stockholm/"
+          ],
+          "expectedPinSha256": "1af9faf0c98e4721b60bf12dda82219e690176139fc617ed2622a7a414809248",
+          "metadataVerified": true,
+          "savedPinSha256": "a42ff709ff71bffa72ba0da17fc549aaeea2065b95c13f5f1aa2f905f445e051",
+          "verified": true
+        },
+        {
+          "id": 637,
+          "title": "Sydney Western Harbour Tunnel Set to Open",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "NSW’s August 11, 2026 release confirms both tunnel-boring machines working and mechanical/electrical fit-out progressing, with full opening targeted for 2028. Delivery engineer ADG reports A$7.4 billion for the Western Harbour Tunnel project, excluding the separate Warringah Freeway upgrade.",
+          "evidence": "With both tunnel boring machines now in action, we are making strong progress on the final stage of excavation",
+          "evidenceUrls": [
+            "https://www.nsw.gov.au/ministerial-releases/second-giant-tunnel-boring-machine-begins-excavating-for-western-harbour-tunnel",
+            "https://www.adgce.com/projects/western-harbour-crossing-tbm/"
+          ],
+          "expectedPinSha256": "0fd1a06b0aed8a6b37246a538fa86c326004cd27cfa22e9c833da72c03011e92",
+          "metadataVerified": true,
+          "savedPinSha256": "f02ca2264e400e505edaf5f0730be2377319d4c13bd1bfdb8f41c1ac4553569b",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 10,
+      "counts": {
+        "Proposed": 0,
+        "In Progress": 9,
+        "Completed": 1
+      },
+      "followUpPublicVerification": {
+        "checkedAt": "2026-10-24",
+        "publicPinCount": 10,
+        "pinChecks": [
+          {
+            "id": 224,
+            "status": "In Progress",
+            "price": 25300000000,
+            "priceCurrency": "AUD",
+            "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 225,
+            "status": "In Progress",
+            "price": 11700000000,
+            "priceCurrency": "EUR",
+            "utcStartDateTime": "2034-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 268,
+            "status": "Completed",
+            "price": 5493000000,
+            "priceCurrency": "NZD",
+            "utcStartDateTime": "2026-09-13T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 442,
+            "status": "In Progress",
+            "price": 29290000000,
+            "priceCurrency": "NOK",
+            "utcStartDateTime": "2033-06-01T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 449,
+            "status": "In Progress",
+            "price": 3900000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2027-08-27T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 462,
+            "status": "In Progress",
+            "price": 2200000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2027-02-28T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 476,
+            "status": "In Progress",
+            "price": 2140000000,
+            "priceCurrency": "CHF",
+            "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 516,
+            "status": "In Progress",
+            "price": 870000000,
+            "priceCurrency": "CAD",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 573,
+            "status": "In Progress",
+            "price": 51500000000,
+            "priceCurrency": "SEK",
+            "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 637,
+            "status": "In Progress",
+            "price": 7400000000,
+            "priceCurrency": "AUD",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          }
+        ],
+        "nativePages": [
+          {
+            "id": 225,
+            "url": "https://www.chronopin.com/pin/225/brenner-base-tunnel-opens",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 268,
+            "url": "https://www.chronopin.com/pin/268/auckland-city-rail-link-opens",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 516,
+            "url": "https://www.chronopin.com/pin/516/montreal-s-olympic-stadium-roof-targeted-to-reopen-in-2028",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          }
+        ],
+        "pageAccess": "Authenticated admin session; JSON checks unauthenticated"
+      }
+    }
+  ]
+}
