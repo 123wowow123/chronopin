@@ -75,8 +75,32 @@ export function mergeBoundary(old: PinSiteShapeJson | null, incoming: PinSiteSha
   if (incoming.geojson.features.some((f) => f.properties.kind !== kind)) throw new Error('Expected one boundary kind');
   const keep = old?.geojson.features.filter((f) => f.properties.kind !== kind) ?? [];
   return {
-    geojson: { type: 'FeatureCollection', features: [...keep, ...incoming.geojson.features] },
+    geojson: {
+      ...(old?.geojson ?? {}), ...incoming.geojson,
+      type: 'FeatureCollection', features: [...keep, ...incoming.geojson.features],
+    },
     source: keep.length && old ? old.source : incoming.source,
     sourceUrl: keep.length && old ? old.sourceUrl : incoming.sourceUrl,
   };
+}
+
+// A prepared comparison is validated independently from the default map. Its
+// alternate plans are GeoJSON foreign members, never default map features.
+export function validateDistrictRedraws(value: unknown): import('./siteShape').DistrictRedraw[] {
+  if (!Array.isArray(value)) throw new Error('Expected district redraw comparisons');
+  const ids = new Set<string>();
+  return value.map((item: unknown) => {
+    if (!item || typeof item !== 'object') throw new Error('Invalid district redraw');
+    const redraw = item as import('./siteShape').DistrictRedraw;
+    if (!/^[a-z0-9-]{1,80}$/.test(redraw.id) || ids.has(redraw.id) || !redraw.name?.trim()) throw new Error('Redraw needs a unique id and name');
+    ids.add(redraw.id);
+    const plan = (p: import('./siteShape').DistrictPlan): import('./siteShape').DistrictPlan => {
+      if (!p || !p.label?.trim() || !['inEffect', 'superseded', 'proposed', 'blocked'].includes(p.status)) throw new Error('Redraw plan needs a label and verified status');
+      const shape = boundaryShape({ type: 'FeatureCollection', features: p.features }, {
+        kind: 'district', name: p.label, vintage: p.vintage, source: p.source, sourceUrl: p.sourceUrl,
+      });
+      return { label: p.label.trim(), vintage: p.vintage.trim(), status: p.status, source: shape.source, sourceUrl: p.sourceUrl, features: shape.geojson.features };
+    };
+    return { id: redraw.id, name: redraw.name.trim(), before: plan(redraw.before), after: plan(redraw.after) };
+  });
 }

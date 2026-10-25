@@ -787,6 +787,20 @@ const de: Messages = {
     flightPathEstimated: 'Geschätzte Flugbahn',
     flightPath: 'Flugbahn',
     flightPathSimulation: 'Vollständige Simulation',
+    redraw: {
+      title: "Wahlkreisänderungen vergleichen",
+      jurisdiction: "Bundesstaat oder Gebiet",
+      allDistricts: "Alle dargestellten Wahlkreise",
+      before: "Früherer Plan",
+      after: "Späterer Plan",
+      compare: "Pläne vergleichen",
+      status: {
+        inEffect: "In Kraft",
+        superseded: "Abgelöst",
+        proposed: "Vorgeschlagen",
+        blocked: "Blockiert",
+      },
+    },
     siteKey: {
       wildfire: 'Waldbrandumriss',
       district: 'Wahlkreisgrenze',

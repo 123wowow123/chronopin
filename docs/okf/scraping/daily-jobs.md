@@ -922,12 +922,20 @@ Keep the numbers the pages graph up to date. Last, so they cover the pins the ru
 ### sentiment
 
 **Reads** `pending_sentiment`: the company pins whose title or summary
-changed since their tone was scored (or that never were) and the comments
-with no tone yet, each with its rubric.
+changed since their tone was scored (or that never were), the comments
+with no tone yet and the scraped rubric reviews with no sentiment yet (the
+`reviews` column of PinTaste, PinCarPerf, PinGasCarPerf, PinAircraftPerf,
+PinLlmPerf, PinVideoPerf, PinHotel and PinDining; only a review with a quote and
+a publication day), each with its rubric.
 **Does** score each from -1 to 1 by its rubric - a pin by how its event reads
 as news for its company, a comment by the commenter's tone - and save them
-with `record_sentiment`, then ask again until nothing is left. The scores feed
-the sentiment graph on a company search.
+with `record_sentiment`, then ask again until nothing is left. A review is
+scored by how it feels about the product it reviews (`reviewRubric`), and handed
+back as `{ table, pinId, url, sentiment }`; it is saved on the rubric row's
+review of that url, and on production through the admin table API when the run
+writes there, so a review the rubric tasks just saved is on its pin's
+"Sentiment over time" graph by the end of the run. The scores feed the sentiment
+graph on a company search and on the pins.
 **When.** Last in the news job, so it scores the pins that run just added: a
 company pinned at 6pm has its point on the company's graph by the end of that
 run (owner, 2026-09-23). It is off for the midnight job by default - the

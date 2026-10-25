@@ -785,6 +785,20 @@ const it: Messages = {
     flightPathEstimated: 'Traiettoria stimata',
     flightPath: 'Traiettoria',
     flightPathSimulation: 'Simulazione completa',
+    redraw: {
+      title: "Confronto dei confini elettorali",
+      jurisdiction: "Stato o territorio",
+      allDistricts: "Tutti i collegi sulla mappa",
+      before: "Piano precedente",
+      after: "Piano successivo",
+      compare: "Confronta i piani",
+      status: {
+        inEffect: "In vigore",
+        superseded: "Sostituito",
+        proposed: "Proposto",
+        blocked: "Bloccato",
+      },
+    },
     siteKey: {
       wildfire: 'Perimetro dell’incendio boschivo',
       district: 'Confine del collegio elettorale',

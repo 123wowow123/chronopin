@@ -53,6 +53,7 @@ import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { modelRubricGaps } from './modelRubrics';
+import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { llmPerfProblem, saveLlmPerf } from '../model/pinLlmPerf';
 import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
 import { savePerf } from '../model/pinPerf';
@@ -338,7 +339,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'pending_sentiment',
     description:
-      "The company pins whose title or summary changed since their tone was scored, or that were never scored, and the comments with no tone yet - with the rubric for each. Score each from -1 to 1 by its rubric, name each pin's product (reusing one of its company's knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
+      "The company pins whose title or summary changed since their tone was scored, or that were never scored, the comments with no tone yet, and the scraped rubric reviews with no sentiment yet (the ones kept beside a taste, car, aircraft, model, hotel or dining rubric, each with its quote and publication day) - with the rubric for each. Score each from -1 to 1 by its rubric, name each pin's product (reusing one of its company's knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
     input_schema: obj({ limit: num('At most this many of each, default 50, at most 200') }),
     run: async (input) => {
       const limit = int(input.limit, 50, 1, 200);
@@ -347,6 +348,7 @@ export const TOOLS: JobTool[] = [
         .filter((c) => c.context)
         .map(({ id, context }) => ({ id, pin: context!.pinTitle, replyingTo: context!.parentText ?? undefined, text: context!.text }));
       const batch = pins.slice(0, limit);
+      const reviews = await pendingReviewSentiment(limit);
       // Each company's product names once, not with every one of its pins,
       // and a short hash: the call's tokens go on the pins' own text.
       const knownProducts: { [company: string]: string[] } = {};
@@ -354,17 +356,19 @@ export const TOOLS: JobTool[] = [
       return {
         pinRubric: PIN_SENTIMENT_PROMPT,
         commentRubric: COMMENT_SENTIMENT_PROMPT,
+        reviewRubric: REVIEW_SENTIMENT_PROMPT,
         knownProducts,
         pins: batch.map((p) => ({ id: p.id, company: p.company, title: p.title, summary: p.description ?? '', textHash: shortHash(p) })),
         comments,
-        remaining: { pins: Math.max(0, pins.length - limit), comments: Math.max(0, commentIds.length - limit) },
+        reviews: reviews.reviews,
+        remaining: { pins: Math.max(0, pins.length - limit), comments: Math.max(0, commentIds.length - limit), reviews: reviews.remaining },
       };
     },
   },
   {
     name: 'record_sentiment',
     description:
-      'Saves tones from pending_sentiment: pins as { id, sentiment, product, textHash } (textHash exactly as given, product empty for none) and comments as { id, sentiment, text } (text exactly as given). A pin or comment edited since it was handed out is skipped, to be scored again.',
+      'Saves tones from pending_sentiment: pins as { id, sentiment, product, textHash } (textHash exactly as given, product empty for none) comments as { id, sentiment, text } (text exactly as given) and rubric reviews as { table, pinId, url, sentiment } (as given; saved on production too when the run writes there). A pin or comment edited since it was handed out is skipped, to be scored again.',
     input_schema: obj({
       pins: {
         type: 'array',
@@ -374,6 +378,7 @@ export const TOOLS: JobTool[] = [
         ),
       },
       comments: { type: 'array', items: obj({ id: num('Comment id'), sentiment: { type: 'number', description: '-1 to 1' }, text: str('As given') }, ['id', 'sentiment', 'text']) },
+      reviews: { type: 'array', items: obj({ table: str('As given'), pinId: num('As given'), url: str('As given'), sentiment: { type: 'number', description: '-1 to 1' } }, ['table', 'pinId', 'url', 'sentiment']) },
     }),
     run: async (input, ctx) => {
       const score = (value: unknown) => (typeof value === 'number' && Number.isFinite(value) ? clampSentiment(value) : null);
@@ -396,8 +401,10 @@ export const TOOLS: JobTool[] = [
         if (value != null && (await Comment.setSentiment(int(c.id, 0, 1, 2 ** 31 - 1), String(c.text ?? ''), value))) comments++;
         else skipped++;
       }
-      if (pins || comments) {
-        await act(ctx, { tool: 'record_sentiment', detail: `scored ${pins} pin(s) and ${comments} comment(s)${skipped ? `, ${skipped} skipped` : ''}` });
+      const scoredReviews = await saveReviewSentiments(Array.isArray(input.reviews) ? input.reviews : []);
+      skipped += scoredReviews.skipped;
+      if (pins || comments || scoredReviews.saved) {
+        await act(ctx, { tool: 'record_sentiment', detail: `scored ${pins} pin(s), ${comments} comment(s) and ${scoredReviews.saved} review(s)${skipped ? `, ${skipped} skipped` : ''}` });
         // The company graphs ride in the cached search results.
         try {
           invalidateTimeline();
@@ -405,7 +412,7 @@ export const TOOLS: JobTool[] = [
           // Outside a request the cache is not ours to expire; it lapses in minutes.
         }
       }
-      return { pins, comments, skipped };
+      return { pins, comments, reviews: scoredReviews.saved, skipped };
     },
   },
   // --- Arena scores (the modelScores task) ---------------------------------

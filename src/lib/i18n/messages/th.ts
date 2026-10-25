@@ -784,6 +784,20 @@ const th: Messages = {
     flightPathEstimated: 'เส้นทางการบินโดยประมาณ',
     flightPath: 'เส้นทางการบิน',
     flightPathSimulation: 'การจำลองทั้งหมด',
+    redraw: {
+      title: "เปรียบเทียบการแบ่งเขตเลือกตั้งใหม่",
+      jurisdiction: "รัฐหรือเขตพื้นที่",
+      allDistricts: "เขตทั้งหมดบนแผนที่",
+      before: "แผนก่อนหน้า",
+      after: "แผนภายหลัง",
+      compare: "เปรียบเทียบแผน",
+      status: {
+        inEffect: "มีผลบังคับใช้",
+        superseded: "ถูกแทนที่แล้ว",
+        proposed: "เสนอ",
+        blocked: "ระงับ",
+      },
+    },
     siteKey: {
       wildfire: 'ขอบเขตไฟป่า',
       district: 'แนวเขตเลือกตั้ง',

@@ -1,0 +1,42 @@
+[
+  {
+    "pinId": 2360,
+    "pinTitle": "Kenya Votes for a President, Senate and Assembly",
+    "kind": "district",
+    "name": "Kenya — 290 National Assembly constituencies; Senate seats are countywide",
+    "vintage": "IEBC 2012 delimitation via OCHA HDX; current plan for 2027 under IEBC January 2026 statement; 75m overview. Five unnamed code-0 source pieces have no district assignment and are not drawn.",
+    "source": "IEBC / OCHA Humanitarian Data Exchange",
+    "sourceUrl": "https://data.humdata.org/dataset/kenya-elections",
+    "file": ".scrape/boundaries/kenya-iebc-290.geojson"
+  },
+  {
+    "pinId": 2352,
+    "pinTitle": "El Salvador Votes Under Its New Re-election Rules",
+    "kind": "district",
+    "name": "El Salvador — 14 departmental legislative constituencies (geographic overview)",
+    "vintage": "geoBoundaries 2021 department geometry, built 2023; matches the 14 departmental legislative constituencies. Overview only, not municipal districts or polling boundaries.",
+    "source": "geoBoundaries / OpenStreetMap contributors (CC BY-SA 2.0)",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/SLV/ADM1/",
+    "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SLV/ADM1/geoBoundaries-SLV-ADM1_simplified.geojson"
+  },
+  {
+    "pinId": 5171,
+    "pinTitle": "Latvia Elects Its 15th Saeima, With Kulbergs' United List Far Ahead",
+    "kind": "district",
+    "name": "Latvia — five Saeima constituencies; overseas votes count in Riga",
+    "vintage": "2026 Ministry administrative boundaries aggregated exactly by Saeima Election Law section 7(2), current August–December 2026 edition; 75m overview",
+    "source": "Latvia VARAM / State Land Service (CC0); Saeima Election Law section 7",
+    "sourceUrl": "https://data.gov.lv/dati/dataset/atr",
+    "file": ".scrape/boundaries/latvia-2026-saeima.geojson"
+  },
+  {
+    "pinId": 2358,
+    "pinTitle": "Guatemala Votes for a President and Congress",
+    "kind": "district",
+    "name": "Guatemala — 23 congressional districts, including the separate capital district",
+    "vintage": "CONRED/OCHA administrative geometry valid 2019-02-07; department GT01 split by exact capital municipality GT0101. Current district structure, 75m overview; national-list seats are nationwide.",
+    "source": "CONRED / OCHA HDX (CC BY 3.0 IGO)",
+    "sourceUrl": "https://data.humdata.org/dataset/cod-ab-gtm",
+    "file": ".scrape/boundaries/guatemala-23-districts.geojson"
+  }
+]

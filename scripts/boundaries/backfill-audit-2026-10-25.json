@@ -1,0 +1,2449 @@
+{
+  "checkedAt": "2026-10-25",
+  "environment": "production",
+  "base": "https://www.chronopin.com",
+  "discovery": {
+    "titleTerms": [
+      "fire",
+      "election",
+      "district",
+      "constituency",
+      "redistrict",
+      "runoff",
+      "recall",
+      "votes",
+      "parliament",
+      "ballot",
+      "mayor",
+      "governor",
+      "burn",
+      "blaze",
+      "supervisor",
+      "constituenc",
+      "legislator"
+    ],
+    "descriptionTerms": [
+      "wildfire",
+      "Palisades",
+      "Eaton",
+      "constituency"
+    ],
+    "tags": [
+      "Elections",
+      "Disaster",
+      "Wildfire",
+      "Wildfires"
+    ],
+    "deletedPinsExcluded": true
+  },
+  "counts": {
+    "audited": 342,
+    "verifiedLive": 30,
+    "wildfirePins": 17,
+    "districtPins": 13,
+    "researchGaps": 17,
+    "outsideBoundaryScope": 295
+  },
+  "replayManifest": "scripts/boundaries/backfill-2026-10-25.prod.json",
+  "records": [
+    {
+      "pinId": 54,
+      "title": "BioLite BaseCamp Stove | Turn Fire into Electricity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 487,
+      "title": "Parliament Hill's Centre Block excavation begins",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 517,
+      "title": "The Grenfell Tower Fire",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 566,
+      "title": "Notre-Dame de Paris Reopens After 2019 Fire",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 628,
+      "title": "Golden Gate Bridge District Approves Final $1BN Seismic Retrofit Phase",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 632,
+      "title": "Zaha Hadid's Port House Opens Above Antwerp's Old Fire Station",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 810,
+      "title": "Gilmour Space Test-Fires Record Rocket Engine on the Gold Coast",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1042,
+      "title": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1145,
+      "title": "Grave of the Fireflies Releases in Japanese Theaters",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1246,
+      "title": "Star Blazers: Space Battleship Yamato 2199 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1261,
+      "title": "Into the Forest of Fireflies' Light Releases in Japanese Theaters",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1333,
+      "title": "Genshin Impact: The Song Burning in the Embers Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1501,
+      "title": "Star Blazers: Space Battleship Yamato 3199 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1518,
+      "title": "Master Keaton OVA Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1585,
+      "title": "Fire Force Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1637,
+      "title": "Magical Girl Lyrical Nanoha EXCEEDS: Gun Blaze Vengeance Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1648,
+      "title": "2026 U.S. Midterm Elections Decide Control of Congress",
+      "status": "research_gap",
+      "reason": "The Census January 2026 120th-Congress snapshot predates later state redraws. The provisional 435-district layer was removed and its original absent row restored. Reconcile the final ballot maps and court status state by state, including Florida’s May 2026 revision, before restoring a nationwide layer.",
+      "sourcesChecked": [
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/0",
+        "https://www.edr.state.fl.us/Content/redistricting/2026redistricting/index.cfm",
+        "https://www.flsenate.gov/Session/Redistricting/Congressional"
+      ]
+    },
+    {
+      "pinId": 1734,
+      "title": "Firefly Wedding Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1950,
+      "title": "Americans Vote in the 2028 U.S. Presidential Election",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1951,
+      "title": "Venezuela's Leader Is Decided at the End of 2026",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1952,
+      "title": "Will the US-Iran Ceasefire Last Through October 31?",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1967,
+      "title": "Russians Vote for a New State Duma",
+      "status": "research_gap",
+      "reason": "Need a complete verified 2026 State Duma single-member district polygon set. Region/address lists and legal descriptions found do not establish reusable national geometry; older Duma plans cannot be substituted.",
+      "sourcesChecked": [
+        "https://kolomnagrad.ru/index.php?area=static&do=download&id=1887",
+        "https://vybory2026.ru/izbiratelnye-okruga-vybory-2026-v-rossii/"
+      ]
+    },
+    {
+      "pinId": 1968,
+      "title": "Brazil Votes in the First Round of Its Presidential Election",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1969,
+      "title": "Israelis Elect the Next Knesset",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1970,
+      "title": "California Elects Its Next Governor",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1971,
+      "title": "Texas Picks a U.S. Senator in the 2026 Midterms",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1973,
+      "title": "Will a Russia-Ukraine Ceasefire Hold by the End of 2026?",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1975,
+      "title": "The New House of Representatives Elects Its Speaker",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1976,
+      "title": "France Votes in the 2027 Presidential Election",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 1977,
+      "title": "Germany Elects Its Next Bundestag",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://bundeswahlleiterin.de/bundestagswahlen/2025/wahlkreiseinteilung/downloads.html",
+      "verification": {
+        "pinId": 1977,
+        "kind": "district",
+        "features": 299,
+        "geojsonSha256": "ce4936565b0abeb0581f80377a7689ff7d474bdb19a8e79d2573a91e6208061d",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T16:04:43.849Z"
+      }
+    },
+    {
+      "pinId": 1978,
+      "title": "India's Next General Election Picks a Prime Minister",
+      "status": "research_gap",
+      "reason": "Need a verified complete current Lok Sabha polygon set and explicit treatment of the predicted 2029 plan. Older 2019 parliamentary maps found require checking against subsequent delimitations; the ECI/government material checked supplies delimitation information, not a verified complete current GeoJSON set.",
+      "sourcesChecked": [
+        "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1910038&lang=2&reg=48",
+        "https://www.eci.gov.in/eci-publication/",
+        "https://data.opencity.in/dataset/parliamentary-elections-2019-map"
+      ]
+    },
+    {
+      "pinId": 1979,
+      "title": "Canadians Vote in the Next Federal Election",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://www.elections.ca/content.aspx?dir=cir/mapsCorner/edb&document=index&lang=e&section=res",
+      "verification": {
+        "pinId": 1979,
+        "kind": "district",
+        "features": 343,
+        "geojsonSha256": "24309cb03cc848ac8a818399d635533da62e761e8afea951500dadd1b2ec7982",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:54:21.549Z"
+      }
+    },
+    {
+      "pinId": 2015,
+      "title": "Chicago Fire Season 15 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2021,
+      "title": "Fire Country Season 5 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2037,
+      "title": "Line of Fire Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2174,
+      "title": "GRB Houston South Opens as the Convention District's First Phase",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2209,
+      "title": "Broncos Target the 2031 Season to Open Their Burnham Yard Stadium",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2245,
+      "title": "New Murabba's Riyadh District Completes With the Mukaab on Hold",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2257,
+      "title": "Ground Broken on the Yongsan International Business District",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2350,
+      "title": "Nigeria Votes for a President and National Assembly",
+      "status": "research_gap",
+      "reason": "Need actual federal constituency polygons, not states or LGAs. INEC material establishes 360 House constituencies, but a complete version-matched public geometry set was not verified from the sources checked.",
+      "sourcesChecked": [
+        "https://wp1.inecnigeria.org/wp-content/uploads/Activity-Report-Election-Management-Body.pdf",
+        "https://www.naijagov.org/data"
+      ]
+    },
+    {
+      "pinId": 2351,
+      "title": "Kyrgyzstan Elects a President",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2352,
+      "title": "El Salvador Votes Under Its New Re-election Rules",
+      "status": "research_gap",
+      "reason": "Need public department geometry verified against the 2027 legislative constituencies. The USAID-hosted department service returned ArcGIS 499 Token Required; third-party administrative mirrors were not validated as the election plan.",
+      "sourcesChecked": [
+        "https://tse.gob.sv/publico/prensa/388",
+        "https://tse.gob.sv/publico/documentos",
+        "https://services.arcgis.com/Djjoop3BmZekEtDo/arcgis/rest/services/Departamentos_de_El_Salvador1/FeatureServer"
+      ]
+    },
+    {
+      "pinId": 2353,
+      "title": "Micronesia Elects Its Congress",
+      "status": "research_gap",
+      "reason": "Need the ten congressional district boundaries for the 2027 district-seat contests. Four state boundaries do not substitute for these districts, and the four state-wide seats are not the pin’s 2027 district races. Official-site searches did not supply a retrievable matching polygon set.",
+      "sourcesChecked": [
+        "https://en.wikipedia.org/wiki/2027_Micronesian_general_election"
+      ]
+    },
+    {
+      "pinId": 2354,
+      "title": "The Gambia Elects a National Assembly",
+      "status": "research_gap",
+      "reason": "Need the 53 constituency polygons. The National Assembly source establishes 53 elected constituencies, while IEC searches and the electoral-disclosure study checked did not yield a verified current national polygon set; administrative regions are not substitutes.",
+      "sourcesChecked": [
+        "https://assembly.gm/about/elections",
+        "https://iec.gm/",
+        "https://www.chr.up.ac.za/images/researchunits/dgdr/documents/resources/Proactiive_Disclosure_of_Information_During_Elections_Gambia.pdf"
+      ]
+    },
+    {
+      "pinId": 2355,
+      "title": "Finland Elects Its First Post-NATO Parliament",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://stat.fi/en/luokitukset/vaalipiiri/vaalipiiri_1_20260101",
+      "verification": {
+        "pinId": 2355,
+        "kind": "district",
+        "features": 13,
+        "geojsonSha256": "8077bb859044932d0ef820dd3d7e0c1bca91cffb2f53ef92d7455b3531605e34",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:54:08.016Z"
+      }
+    },
+    {
+      "pinId": 2356,
+      "title": "Spain Holds Its Nationwide Local Election Day",
+      "status": "research_gap",
+      "reason": "Need a verified nationwide set of municipal electoral units applicable to the 2027 local elections. INE exposes census-section geography; these statistical units cannot be imported directly as municipal electoral districts without a validated mapping/aggregation and election scope.",
+      "sourcesChecked": [
+        "https://www.ine.es/dyngs/DAB/es/index.htm?cid=1389",
+        "https://www.ine.es/geoserver/ogc/features/v1/collections?f=text%2Fhtml"
+      ]
+    },
+    {
+      "pinId": 2357,
+      "title": "Mexico Elects a New Chamber of Deputies",
+      "status": "research_gap",
+      "reason": "Need the current 300 single-member federal districts (and separately identify the five proportional-representation constituencies). INE’s older product-download page includes 2005-era material; SIGE and the digital-cartography download flow checked did not yield a verified complete 2027-applicable polygon set in this run.",
+      "sourcesChecked": [
+        "https://www.ine.mx/productos-geografia-electoral-descargables/",
+        "https://cartografia.ine.mx/sige8/estadisticos-Geoelectorales",
+        "https://infomexine-ciudadania.ine.mx/infomex/app/cartografia/marcoGeograficoSeccional"
+      ]
+    },
+    {
+      "pinId": 2358,
+      "title": "Guatemala Votes for a President and Congress",
+      "status": "research_gap",
+      "reason": "Need the 23 congressional districts, including a separate capital municipality and the remainder of Guatemala department. The TSE/Congress/INE sources checked did not yield a validated complete current vector set; importing only 22 department polygons would miss this split.",
+      "sourcesChecked": [
+        "https://www.tse.org.gt/direccion-electoral/cartografia",
+        "https://www.congreso.gob.gt/diputados_distrito",
+        "https://geoportal.ine.gob.gt/"
+      ]
+    },
+    {
+      "pinId": 2359,
+      "title": "Mongolia Elects a President",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2360,
+      "title": "Kenya Votes for a President, Senate and Assembly",
+      "status": "research_gap",
+      "reason": "The IEBC-attributed 2013 hosted dataset has 290 features but only 285 unique CONST_NO codes, and both generalised and full-resolution imports failed closed-ring validation. A separate USAID boundary service requires an ArcGIS token. Obtain or repair and independently verify a complete authoritative set before writing. IEBC’s January 2026 statement says no review before the 2027 election; this does not fix the malformed source geometry.",
+      "sourcesChecked": [
+        "https://www.iebc.or.ke/uploads/resources/jmFjJrsim3.pdf",
+        "https://www.arcgis.com/home/item.html?id=bae48d6479a8418e8502b07d4ee1f692",
+        "https://services.arcgis.com/CmINIEzurW7Tagtl/arcgis/rest/services/Kenya_Constituencies_2013/FeatureServer/0",
+        "https://services.arcgis.com/Djjoop3BmZekEtDo/arcgis/rest/services/Kenya_Boundaries/FeatureServer"
+      ]
+    },
+    {
+      "pinId": 2361,
+      "title": "Angola Elects a National Assembly and President",
+      "status": "research_gap",
+      "reason": "Need the post-reorganisation provincial electoral geometry and the 2027 electoral scope. The electoral law links provincial constituencies to provinces, but old 18-province boundary sets cannot be assumed to represent the newer 21-province division.",
+      "sourcesChecked": [
+        "https://www.cne.ao/storage/legislations/CNE-Legisla%C3%A7%C3%A3o-561ebf28f6d7b4.pdf",
+        "https://www.tribunalconstitucional.ao/pt/artigos-da-constituicao/"
+      ]
+    },
+    {
+      "pinId": 2362,
+      "title": "Argentina Votes for a President and Congress",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://www.argentina.gob.ar/georef/descarga-de-la-base-completa",
+      "verification": {
+        "pinId": 2362,
+        "kind": "district",
+        "features": 24,
+        "geojsonSha256": "e86c7c06123ebd879cb97def706fd820f85cea877ca01887b840c8991d690c6b",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:54:24.615Z"
+      }
+    },
+    {
+      "pinId": 2429,
+      "title": "Vesuvius Buries Pompeii and Herculaneum",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2430,
+      "title": "The Great Lisbon Earthquake Destroys Lisbon",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2431,
+      "title": "Mount Tambora Erupts and Steals the Following Summer",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2432,
+      "title": "Krakatoa Explodes and Is Heard 4,800 km Away",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2433,
+      "title": "The 1906 Earthquake and Fire Destroy San Francisco",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2434,
+      "title": "The Strongest Earthquake Ever Recorded Hits Valdivia",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2435,
+      "title": "The Ancash Earthquake Buries Yungay Under Huascaran",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2436,
+      "title": "The Tangshan Earthquake Levels a City of a Million",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2437,
+      "title": "Mount St. Helens Blows Out Its North Face",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2438,
+      "title": "Lake Nyos Suffocates 1,746 People With Carbon Dioxide",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2439,
+      "title": "The Indian Ocean Tsunami Kills Across Fourteen Countries",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2440,
+      "title": "The Haiti Earthquake Wrecks Port-au-Prince",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2441,
+      "title": "Eyjafjallajokull's Ash Cloud Closes European Airspace",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2442,
+      "title": "The Kahramanmaras Earthquakes Devastate Turkey and Syria",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2443,
+      "title": "The Galveston Hurricane Becomes the Deadliest US Disaster",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2444,
+      "title": "The Yangtze and Huai Rivers Flood Central China",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2445,
+      "title": "Black Sunday Turns the Dust Bowl Sky Black",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2446,
+      "title": "The Bhola Cyclone Kills at Least 300,000 in the Ganges Delta",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2448,
+      "title": "Hurricane Katrina Makes Landfall in Louisiana",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2449,
+      "title": "Typhoon Haiyan Makes Landfall at Guiuan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2450,
+      "title": "Australia Burns Through the Black Summer",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2451,
+      "title": "Storm Daniel Bursts the Derna Dams",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2551,
+      "title": "Jungsik Opens in Seoul's Gangnam District",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2614,
+      "title": "Katrina Empties 11 Million Barrels From the Reserve",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2690,
+      "title": "Punk Noir Opens in the Dallas Design District",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2779,
+      "title": "Chef's Counter at Burnt Hill Farm Opens in Clarksburg",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2829,
+      "title": "Tesla Recalls and Buys Back 15 Imported Model 3 and Y Cars Missing Knee Airbags",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2872,
+      "title": "Amazon Cargo Jet Overruns Miami Runway, Killing Five",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2901,
+      "title": "J&J Completes Its $1 Billion Acquisition of Firefly Bio",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2978,
+      "title": "Doerkson’s Conservatives Win a Projected B.C. Majority on October 24",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 2979,
+      "title": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
+      "status": "research_gap",
+      "reason": "Need verified 2026 local constituency polygons and separate regional-list scope. Current election pages describe local and regional constituencies; the older 2011 list or a generic province/region layer does not establish the complete 2026 plan.",
+      "sourcesChecked": [
+        "https://www.maroc.ma/fr/actualites/elections-legislatives-2026-trois-moyens-pour-localiser-votre-bureau-de-vote",
+        "https://www.listeselectorales.ma/fr/Index.aspx",
+        "https://www.medi1news.com/fr/elections-legislatives-2026/decoupage-electoral"
+      ]
+    },
+    {
+      "pinId": 3014,
+      "title": "Aramco Helicopter Crash Near Ras Tanura Kills All 14 Aboard",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3016,
+      "title": "Senate Votes to End Debate on the Protect College Sports Act",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3064,
+      "title": "Nestlé Q1 2026 Sales: 3.5% Organic Growth Despite Infant Formula Recall",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3068,
+      "title": "Nestlé Fires CEO Laurent Freixe, Names Nespresso's Philipp Navratil CEO",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3091,
+      "title": "Nestlé Recalls 25 Infant Formula Batches in 16 European Countries",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3093,
+      "title": "Nestlé Extends Its Infant Formula Recall Worldwide Over Tainted ARA Oil",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3096,
+      "title": "French MPs' Report Faults Nestlé's Slow Infant Formula Recalls",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3144,
+      "title": "Aldi Nord and Aldi Süd Recall All Seasons Frozen Herbs Over Salmonella",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3146,
+      "title": "Aldi Nord and Aldi Süd Recall All Seasons Frozen Herbs Over STEC E. coli",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3151,
+      "title": "Aldi Nord Recalls Fresh Turkey Schnitzel Over Sharp Plastic Pieces",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3185,
+      "title": "M5.2 Earthquake Near Julian Shakes San Diego County",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3192,
+      "title": "Business Jet Crashes Into Murphy Canyon Homes, Killing All Six Aboard",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3199,
+      "title": "M7.8 Mindanao Earthquake Hits PLDT and Smart Networks",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3215,
+      "title": "Border 2 Fire Burns 6,625 Acres on Otay Mountain",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3215,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "1682a9ffa59f247ea493483f427708d926a1095869ac2c8ba29f7729fcc1b33a",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:06.456Z"
+      }
+    },
+    {
+      "pinId": 3250,
+      "title": "SANDAG Committee Votes to Seek Proposals for an Airport Rail Link",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3290,
+      "title": "Wu Routs Kraft in Boston's Preliminary Mayoral Election",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3298,
+      "title": "Josh Kraft Drops Out of the Boston Mayor's Race",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3306,
+      "title": "Michelle Wu Wins a Second Term as Boston Mayor, Unopposed",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3324,
+      "title": "Blizzard of 2026 Buries Boston Under 17 Inches of Snow",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3326,
+      "title": "Ferrero Recalls Belgian-Made Kinder Surprise in UK Over Salmonella",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3335,
+      "title": "Ferrero USA Recalls Kinder Happy Moments and Kinder Mix Over Salmonella",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3341,
+      "title": "Belgium Shuts Ferrero's Arlon Kinder Plant and Orders Full Recall",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3371,
+      "title": "Blue Bunny Maker Wells Recalls 22 Ice Cream Flavors Over Plastic",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3388,
+      "title": "Ferrero Recalls Frozen Nutella Croissants and Muffins Over Metal",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3403,
+      "title": "The Palisades Fire Ignites Above Pacific Palisades",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3403,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "b282a42e299620fdee8213e37fd6e3abab56fb57c14f3e10578a2965bc12de45",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:07.322Z"
+      }
+    },
+    {
+      "pinId": 3407,
+      "title": "The Palisades Fire Is Fully Contained After 24 Days",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3407,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "3261397a45d5dc18f78e7f3b6895289179983f839be26609dc7f17ded0a433fd",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:08.384Z"
+      }
+    },
+    {
+      "pinId": 3411,
+      "title": "Palisades Fire Suspect Jonathan Rinderknecht Is Arrested",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3411,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "3261397a45d5dc18f78e7f3b6895289179983f839be26609dc7f17ded0a433fd",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:09.426Z"
+      }
+    },
+    {
+      "pinId": 3417,
+      "title": "Judge Declares Mistrial in the Palisades Fire Arson Trial",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3417,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "3261397a45d5dc18f78e7f3b6895289179983f839be26609dc7f17ded0a433fd",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:10.486Z"
+      }
+    },
+    {
+      "pinId": 3421,
+      "title": "Palisades Fire Arson Retrial of Jonathan Rinderknecht Begins",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3421,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "3261397a45d5dc18f78e7f3b6895289179983f839be26609dc7f17ded0a433fd",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:11.484Z"
+      }
+    },
+    {
+      "pinId": 3427,
+      "title": "The Eaton Fire Ignites in Eaton Canyon Above Altadena",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3427,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "20d48cc7f584dc9fe1c1dc090788db0378b32187bc3700f03a5d799503506648",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:12.633Z"
+      }
+    },
+    {
+      "pinId": 3431,
+      "title": "The Eaton Fire Is Fully Contained After 24 Days",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3431,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "fdc47eca629944300172bbf196d0e755d0d3eb677a3f7bf3b2dbc7dcf82f8086",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:13.636Z"
+      }
+    },
+    {
+      "pinId": 3437,
+      "title": "LA County Sues Southern California Edison Over the Eaton Fire",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3437,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "fdc47eca629944300172bbf196d0e755d0d3eb677a3f7bf3b2dbc7dcf82f8086",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:14.374Z"
+      }
+    },
+    {
+      "pinId": 3442,
+      "title": "US Justice Department Sues Edison Over the Eaton Fire",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3442,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "fdc47eca629944300172bbf196d0e755d0d3eb677a3f7bf3b2dbc7dcf82f8086",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:15.480Z"
+      }
+    },
+    {
+      "pinId": 3445,
+      "title": "Metallica Opens Its 'Life Burns Faster' Residency at Sphere",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3448,
+      "title": "SCE Opens Its Eaton Fire Compensation Program to Claims",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3448,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "fdc47eca629944300172bbf196d0e755d0d3eb677a3f7bf3b2dbc7dcf82f8086",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:19.162Z"
+      }
+    },
+    {
+      "pinId": 3453,
+      "title": "LA County Fire Finds Edison Tower Arcing Caused the Eaton Fire",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3453,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "fdc47eca629944300172bbf196d0e755d0d3eb677a3f7bf3b2dbc7dcf82f8086",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:19.446Z"
+      }
+    },
+    {
+      "pinId": 3458,
+      "title": "First Eaton Fire Bellwether Trial Against Edison Begins",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3458,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "fdc47eca629944300172bbf196d0e755d0d3eb677a3f7bf3b2dbc7dcf82f8086",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:21.040Z"
+      }
+    },
+    {
+      "pinId": 3461,
+      "title": "LA Fire Debris Removal Declared Substantially Complete",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3461,
+        "kind": "wildfire",
+        "features": 2,
+        "geojsonSha256": "fd349efbe73462a3728510d51e816c65777921eb68f92424f8deb41b7ff5b58b",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:21.349Z"
+      }
+    },
+    {
+      "pinId": 3466,
+      "title": "First Rebuilt Palisades Home Gets Its Certificate of Occupancy",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3466,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "3261397a45d5dc18f78e7f3b6895289179983f839be26609dc7f17ded0a433fd",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:22.558Z"
+      }
+    },
+    {
+      "pinId": 3500,
+      "title": "Michelle Wu Is Sworn In for a Second Term at Symphony Hall",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3507,
+      "title": "Boston Elects Its City Council in the 2027 Municipal Election",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/CityCouncilDistricts_2023_5_25/FeatureServer/0",
+      "verification": {
+        "pinId": 3507,
+        "kind": "district",
+        "features": 9,
+        "geojsonSha256": "6bfbb509f250f076843ab609847c4468fd15db7d831856ffc5f49240c73891c1",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:23.940Z"
+      }
+    },
+    {
+      "pinId": 3510,
+      "title": "Boston School Committee Votes to Close Four Schools and Merge Two",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3516,
+      "title": "Boston School Committee Votes to Close Three More Schools by 2027",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3523,
+      "title": "Paloma Aguirre Wins San Diego County Supervisor Special Election",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Hosted/COSD_Boundaries/FeatureServer/1",
+      "verification": {
+        "pinId": 3523,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "947e590ad36dbdb43a2ea4de6f2f48d0aef0595adaf4215cf3580d0747afe330",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:24.553Z"
+      }
+    },
+    {
+      "pinId": 3525,
+      "title": "San Diego Voters Reject Measure A Empty Homes Tax",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3530,
+      "title": "San Diego County Votes on Measure B Half-Cent Sales Tax",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3532,
+      "title": "San Diego County Votes on Measure A Charter Reform and Term Limits",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3535,
+      "title": "Zohran Mamdani Wins New York City's Democratic Mayoral Primary",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3539,
+      "title": "Zohran Mamdani Is Elected Mayor of New York City",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3541,
+      "title": "New Yorkers Vote on Five City Charter Amendments to Cut Red Tape",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3545,
+      "title": "New York Elects Its Governor: Hochul vs. Blakeman",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3549,
+      "title": "New York's Next Governor Begins a Four-Year Term",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3552,
+      "title": "Judge Dismisses Mayor Eric Adams's Corruption Case With Prejudice",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3570,
+      "title": "Bass and Raman Advance to a Runoff in the LA Mayoral Primary",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3584,
+      "title": "Los Angeles Chooses Between Karen Bass and Nithya Raman for Mayor",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3596,
+      "title": "Mayor Bass Removes LAFD Chief Kristin Crowley",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3596,
+        "kind": "wildfire",
+        "features": 2,
+        "geojsonSha256": "fd349efbe73462a3728510d51e816c65777921eb68f92424f8deb41b7ff5b58b",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:24.858Z"
+      }
+    },
+    {
+      "pinId": 3599,
+      "title": "LAFD Releases Its Palisades Fire After-Action Report",
+      "status": "verified_live",
+      "kind": "wildfire",
+      "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "verification": {
+        "pinId": 3599,
+        "kind": "wildfire",
+        "features": 1,
+        "geojsonSha256": "3261397a45d5dc18f78e7f3b6895289179983f839be26609dc7f17ded0a433fd",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:25.673Z"
+      }
+    },
+    {
+      "pinId": 3604,
+      "title": "Mayor Bass Imposes a Downtown LA Curfew After Looting",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3607,
+      "title": "Mayor Bass Signs a $13.9B Budget to Close a $1B Deficit",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3614,
+      "title": "Mayor Bass Signs LA's $14.85B Budget for 2026-27",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3616,
+      "title": "Zohran Mamdani Is Inaugurated as New York City's 112th Mayor",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3618,
+      "title": "LA Votes on Charter Reform and an LAFD Sales Tax",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3643,
+      "title": "Sightseeing Helicopter Breaks Up Over the Hudson River, Killing Six",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3644,
+      "title": "Sunset Voters Recall Supervisor Joel Engardio",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+      "verification": {
+        "pinId": 3644,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "6b68086d752d0d5892febca95ee91463b985a8992ed4bb670daf7b6dbe32e3e0",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:26.524Z"
+      }
+    },
+    {
+      "pinId": 3645,
+      "title": "Mexican Navy Tall Ship Cuauhtémoc Strikes the Brooklyn Bridge",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3648,
+      "title": "Record Rain Floods New York City, Killing Two in Basements",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3650,
+      "title": "Alan Wong Sworn In as the Sunset's Supervisor After the Engardio Recall",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+      "verification": {
+        "pinId": 3650,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "6b68086d752d0d5892febca95ee91463b985a8992ed4bb670daf7b6dbe32e3e0",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:26.693Z"
+      }
+    },
+    {
+      "pinId": 3668,
+      "title": "Alan Wong Wins the Sunset's Special Election for Supervisor",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+      "verification": {
+        "pinId": 3668,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "6b68086d752d0d5892febca95ee91463b985a8992ed4bb670daf7b6dbe32e3e0",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:27.657Z"
+      }
+    },
+    {
+      "pinId": 3670,
+      "title": "San Francisco Voters Reject the Overpaid CEO Tax",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3676,
+      "title": "Connect Bay Area Transit Tax Qualifies for the November 2026 Ballot",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3684,
+      "title": "San Francisco Votes on Props A-J and Five Supervisor Seats",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+      "verification": {
+        "pinId": 3684,
+        "kind": "district",
+        "features": 5,
+        "geojsonSha256": "0b67fd8c0d1afc96ffacb0795017593f3364f4bc049d783492a0d2385f7c9e44",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:28.680Z"
+      }
+    },
+    {
+      "pinId": 3686,
+      "title": "Bay Area Votes on the Connect Bay Area Transit Sales Tax",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3756,
+      "title": "Nike's 2026 Annual Meeting Sees 349 Million Votes Against Executive Pay",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3970,
+      "title": "Missouri Voters Pass Amendment 3, Restoring Abortion Rights",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3972,
+      "title": "Missouri Votes on Amendment 3 to Repeal 2024 Abortion Rights",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3974,
+      "title": "Nevada Voters Approve Question 6 Abortion-Rights Amendment",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3976,
+      "title": "Nevada Holds Its Second Vote on the Question 6 Abortion Amendment",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3979,
+      "title": "Virginia Votes on Question 1 Reproductive Freedom Amendment",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 3981,
+      "title": "Idaho Votes on Proposition 1 to Overturn Its Abortion Ban",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4012,
+      "title": "Portland Fire Debut Before a Record 19,335 at Moda Center",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4023,
+      "title": "Japan's Diet Elects Sanae Takaichi as Its First Woman Prime Minister",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4024,
+      "title": "Claudia Sheinbaum Is Sworn In as Mexico's First Woman President",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4025,
+      "title": "Netumbo Nandi-Ndaitwah Is Sworn In as Namibia's First Woman President",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4026,
+      "title": "Alabama Governor Kay Ivey Signs IVF Immunity Law",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4047,
+      "title": "Italy's Parliament Makes Femicide a Crime Punishable by Life in Prison",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4169,
+      "title": "California Governor Signs First US Textile Extended-Producer-Responsibility Law",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4179,
+      "title": "French Parliament Definitively Adopts the Anti-Fast-Fashion Law",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4253,
+      "title": "Frasers Group Votes Against ASOS Board at Annual Meeting",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4278,
+      "title": "Gaza Ceasefire Takes Effect as Israeli Troops Pull Back to the Yellow Line",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4279,
+      "title": "US Declares Phase Two of the Gaza Ceasefire Plan Launched",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4285,
+      "title": "US and Iran Agree to a Two-Week Ceasefire Brokered by Pakistan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4288,
+      "title": "Trump Declares the Iran Ceasefire Over as Fighting Resumes",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4327,
+      "title": "China Stages 'Justice Mission-2025' Live-Fire Drills Around Taiwan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4369,
+      "title": "Metallica Close Their 'Life Burns Faster' Residency at Sphere",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4413,
+      "title": "Pharrell x adidas Adistar Jellyfish “Auburn Timber” Releases",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4523,
+      "title": "Hot Wheels RLC sELECTIONs Porsche 959 Made-to-Order Window",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4542,
+      "title": "MoonSwatch Mission to the Moon 1969 Ballot Opens",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4720,
+      "title": "Plains' Line 901 Ruptures, Spilling Crude Onto the Coast at Refugio",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4738,
+      "title": "Santa Barbara County Supervisors Vote 3-1 to Oppose the Hunt Amendment",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4746,
+      "title": "Tesla Recalls 46,096 Cybertrucks Over a Stainless Panel That Can Fall Off",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4760,
+      "title": "Tesla Recalls Nearly 3 Million Cars in China Over Hard-to-Find Door Releases",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4831,
+      "title": "Oliver County Zoning Board Votes Against Base Electron Power Plant",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4915,
+      "title": "State Water Board Votes on Sites Reservoir's Final Water Right Permit",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4958,
+      "title": "South Bronx Legionnaires' Cluster Declared, Cooling Towers Tested",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4960,
+      "title": "Broccoli Sprouts Recalled in Multistate Salmonella Outbreak",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4965,
+      "title": "Uganda Declares Its Bundibugyo Ebola Outbreak Over",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 4967,
+      "title": "Bundibugyo Ebola Reaches Sud Ubangi and Dungu, Nearing South Sudan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5009,
+      "title": "Amazon Fire TV Stick 4K Launches on Vega OS",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5077,
+      "title": "Fed Holds Rates at 5.25%-5.50% at the May 2024 FOMC Meeting and Slows Its Balance Sheet Runoff",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5084,
+      "title": "Fed Holds Rates at 4.25%-4.50% at the March 2025 FOMC Meeting and Slows Its Balance Sheet Runoff",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5087,
+      "title": "Fed Holds Rates at 4.25%-4.50% at the July 2025 FOMC Meeting With Two Governors Dissenting for a Cut",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5089,
+      "title": "Fed Cuts Rates a Quarter Point to 3.75%-4.00% at the October 2025 FOMC Meeting and Will End Balance Sheet Runoff",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5100,
+      "title": "Floods and Landslides Kill at Least 56 in Uttar Pradesh and 12 in Nepal",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5105,
+      "title": "The Great ShakeOut Has Millions Drop, Cover and Hold On on 15 October",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5170,
+      "title": "Quebec Votes, With the Parti Québécois Favoured to Return on a Sovereignty Promise",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://www.dgeq.org/donnees.html",
+      "verification": {
+        "pinId": 5170,
+        "kind": "district",
+        "features": 127,
+        "geojsonSha256": "78dcc478193e7e26a906469907d474e786444fb695bcf9e77fc648b644d88d98",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:54:16.439Z"
+      }
+    },
+    {
+      "pinId": 5171,
+      "title": "Latvia Elects Its 15th Saeima, With Kulbergs' United List Far Ahead",
+      "status": "research_gap",
+      "reason": "CVK establishes five Saeima electoral districts, but the official map page checked exposes polling-station locations. Need polygon boundaries verified against the 2026 constituency composition; planning regions or polling points are not equivalent.",
+      "sourcesChecked": [
+        "https://www.cvk.lv/jaunums/3-oktobri-latvija-un-arvalstis-notiks-15-saeimas-velesanas",
+        "https://www.cvk.lv/velesanu-iecirkni"
+      ]
+    },
+    {
+      "pinId": 5172,
+      "title": "Bosnia and Herzegovina Elects a Three-Member Presidency, the First Vote Since Dodik's Removal",
+      "status": "research_gap",
+      "reason": "Presidency electoral eligibility is not a simple partition into two entity polygons: Brčko residents vote according to entity citizenship/option. Need a sourced map treatment that handles Brčko explicitly instead of assigning its entire territory to one constituency.",
+      "sourcesChecked": [
+        "https://izbori.ba/Default.aspx?CategoryID=183&Id=1288&Lang=6",
+        "https://www.izbori.ba/Documents/2022/Final_report_2022.pdf"
+      ]
+    },
+    {
+      "pinId": 5173,
+      "title": "Lima Elects a Mayor, With López Aliaga Leading From the Council List",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5174,
+      "title": "Brazil Holds a Lula vs Flávio Bolsonaro Presidential Runoff",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5234,
+      "title": "MASTER Keaton Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5244,
+      "title": "October 2024 Jobs Report: Strikes and Hurricanes Hold Payrolls to 12,000 Four Days Before the Election",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5470,
+      "title": "French Socialists Hold Round One of Their Primary to Pick a 2027 Challenger",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5473,
+      "title": "Czechs Vote in Municipal and Senate Elections, With Prague's Mayor at Stake",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://geodata.csu.gov.cz/server/rest/services/Hosted/Senátní_volební_obvody_2026/FeatureServer/1",
+      "verification": {
+        "pinId": 5473,
+        "kind": "district",
+        "features": 27,
+        "geojsonSha256": "b2df90facd01bb59489167a0b830fd082513b8d1bf331a6a5d25807157a9bfa8",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:58:40.898Z"
+      }
+    },
+    {
+      "pinId": 5514,
+      "title": "Homer City's Gas-Fired Data Center Campus Targets First Power in Late 2027",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5814,
+      "title": "Exxon Valdez Tanker Runs Aground in Prince William Sound",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5851,
+      "title": "Chicago Fire's New US$750 Million Stadium Will Be Named McDonald's Park",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5943,
+      "title": "Adobe Unveils Firefly, Its Family of Generative AI Models",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 5962,
+      "title": "The First Ferrari, the 125 S, Is Fired Up at Maranello",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6030,
+      "title": "Ford Recalls 1.4 Million F-150 Pickups Over Unexpected Downshifts",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6031,
+      "title": "Ford Recalls 4.3 Million Trucks and SUVs Over a Trailer-Module Software Fault",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6070,
+      "title": "UPS Flight 2976, an MD-11 Freighter, Crashes After Takeoff in Louisville",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6073,
+      "title": "Holborn and St Pancras Votes in the By-Election to Replace Keir Starmer",
+      "status": "verified_live",
+      "kind": "district",
+      "sourceUrl": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Westminster_Parliamentary_Constituencies_July_2024_Boundaries_UK_BGC/FeatureServer/0",
+      "verification": {
+        "pinId": 6073,
+        "kind": "district",
+        "features": 1,
+        "geojsonSha256": "55f096a56feb3ce6339b4b4052e3cfc5e65d421abffcae462e5c38db0c4063f7",
+        "pinFieldsPreserved": true,
+        "checkedAt": "2026-10-25T15:48:30.225Z"
+      }
+    },
+    {
+      "pinId": 6101,
+      "title": "St. Francis Dam Collapses Near Los Angeles, Killing Over 400",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6102,
+      "title": "Malpasset Dam Bursts Above Fréjus, Killing 423",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6103,
+      "title": "Landslide Wave Overtops Vajont Dam, Wiping Out Longarone",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6104,
+      "title": "Banqiao Dam Collapses in China as Typhoon Nina's Rains Hit Henan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6105,
+      "title": "Teton Dam Fails During First Filling, Flooding Eastern Idaho",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6106,
+      "title": "Oroville Dam Spillway Crisis Forces 188,000 to Evacuate in California",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6107,
+      "title": "Kakhovka Dam Is Destroyed, Flooding the Lower Dnipro",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6108,
+      "title": "New Mexico's McLeod Dam Nears Failure, Forcing Evacuations in Doña Ana County",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6295,
+      "title": "Avatar: Fire and Ash Opens in US Theaters",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6305,
+      "title": "Tim Burton's Dumbo Opens in US Theaters",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6519,
+      "title": "Taiwan Holds Its First Direct Presidential Election, Re-Electing Lee Teng-hui",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6530,
+      "title": "Lai Ching-te Wins Taiwan's Presidency for a Third Straight DPP Term",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6538,
+      "title": "Lai Ching-te Is Sworn In as Taiwan's President",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6541,
+      "title": "Taiwan's Great Recall: Every Targeted KMT Legislator Survives the 26 July Votes",
+      "status": "research_gap",
+      "reason": "The CEC provides the exact 24 July-26 recall constituencies and the 11th-Legislative-Yuan district definitions, but the official download is descriptive CSV, not polygons. A community atlas was inspected, but its district composition was not independently reconciled to all 24 current village-level splits. Do not draw whole cities/counties in place of split districts.",
+      "sourcesChecked": [
+        "https://web.cec.gov.tw/central/article/60139",
+        "https://data.gov.tw/en/datasets/170247",
+        "https://github.com/dkaoster/taiwan-atlas"
+      ]
+    },
+    {
+      "pinId": 6548,
+      "title": "Taiwan Votes in Its Nine-in-One Local Elections on 28 November",
+      "status": "research_gap",
+      "reason": "This pin spans multiple levels of local elections. Need separately identified mayor/county, councillor and other district scopes plus version-matched CEC geometry; a single set of 22 county/city polygons does not represent every race named by the pin.",
+      "sourcesChecked": [
+        "https://web.cec.gov.tw/central/menu/2",
+        "https://data.gov.tw/en/datasets/170247"
+      ]
+    },
+    {
+      "pinId": 6558,
+      "title": "The 921 Chi-Chi Earthquake Strikes Central Taiwan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6565,
+      "title": "Typhoon Morakot Makes Landfall as Taiwan's Deadliest Typhoon",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6569,
+      "title": "A Magnitude 7.4 Earthquake Strikes Hualien, Taiwan's Strongest in 25 Years",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6571,
+      "title": "IIMS 2027 Plans a Bigger Show at JIExpo Kemayoran on 6-16 May",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6573,
+      "title": "Xi Jinping Wins a Third Term as Party Leader With a Loyalist Standing Committee",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6574,
+      "title": "Typhoon Ragasa Bursts the Matai'an Barrier Lake and Floods Guangfu",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6597,
+      "title": "Han Kuang 42, Taiwan's Annual Live-Fire Defence Exercise, Runs 5-14 August",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6622,
+      "title": "Magnitude 7.9 Earthquake Strikes Wenchuan, Sichuan, Killing Over 69,000",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6635,
+      "title": "Heathrow Closes for a Day After a Substation Fire Cuts Its Power",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6678,
+      "title": "Spacca Tutto Plans an Opening in Pacific Palisades",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6693,
+      "title": "Shinka Plans an Opening in Financial District",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6727,
+      "title": "Docent Steak & Lounge Plans an Opening in Harwood District",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6801,
+      "title": "Honey Boy Pizzeria Opens in University District",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6915,
+      "title": "Chicago Fire Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6916,
+      "title": "Chicago Fire Season 2 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6917,
+      "title": "Chicago Fire Season 3 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6918,
+      "title": "Chicago Fire Season 4 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6919,
+      "title": "Chicago Fire Season 5 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6920,
+      "title": "Chicago Fire Season 6 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6921,
+      "title": "Chicago Fire Season 7 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6922,
+      "title": "Chicago Fire Season 8 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6923,
+      "title": "Chicago Fire Season 9 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6924,
+      "title": "Chicago Fire Season 10 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6925,
+      "title": "Chicago Fire Season 11 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6926,
+      "title": "Chicago Fire Season 12 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6927,
+      "title": "Chicago Fire Season 13 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 6928,
+      "title": "Chicago Fire Season 14 Premieres",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 7125,
+      "title": "Julia Bancroft Apartments — Auburn affordable housing",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 7168,
+      "title": "Mary D. Stone Apartments — Auburn affordable housing",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 7436,
+      "title": "Arcade Fire Upsets Eminem for Album of the Year at the 53rd Grammys",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 7453,
+      "title": "Vancouver Votes for Mayor, Council, Parks and Schools on October 17",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 7642,
+      "title": "Spirits Selection by CMB 2026 Judging in Madeira",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14083,
+      "title": "NIO Day 2024 Launches the ET9 and Unveils the firefly Brand in Guangzhou",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14094,
+      "title": "Li Auto Recalls 11,411 Mega MPVs After a Battery Fire Incident",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14129,
+      "title": "Xiaomi Recalls 116,887 SU7 Sedans Over Driver-Assistance Software",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14130,
+      "title": "Xiaomi SU7 Ultra Burns in Chengdu Crash as Door Handle Safety Is Questioned",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14173,
+      "title": "China's \"No Fire, No Explosion\" EV Battery Standard Takes Effect on 1 July 2026",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14212,
+      "title": "Geely Recalls 92,915 Galaxy M9 and Lynk & Co Cars Over LiDAR Defect",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14215,
+      "title": "Volvo Recalls 2,501 China-Built EX30 SUVs Over Battery Thermal-Runaway Risk",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14249,
+      "title": "XPeng Recalls 33,473 X9 MPVs in China Over Front Air Spring Leaks",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 14694,
+      "title": "Lao Fengtian Fire-Roasted Chicken Rack (Baiyunshan Road Branch) — Shenyang restaurant guide",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15586,
+      "title": "Chocotto Sushi Kiwami Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15587,
+      "title": "Curry Udon Oni wa Soto Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15588,
+      "title": "Miyanomori Coffee — Sapporo Link Tower Cafe Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15589,
+      "title": "Q — Ramen / Ryoriya Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15590,
+      "title": "NorthContinent — Akaren ga Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15591,
+      "title": "Mr. Fish by Hyatt Centric Sapporo Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15592,
+      "title": "Izakaya Furusato — Akaren ga Minami Opens in Odori / Red Brick district",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15627,
+      "title": "Ishiya Shiroi Koibito Celebrates Multi-Decade Monde Selection Grand Gold Legacy",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15689,
+      "title": "Taaleri Amador BESS: 100 MW Battery in Van Zandt County, Texas, Stalled by a Fire-Code Restraining Order",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15694,
+      "title": "Backbone Creek BESS: 121-124 MW Battery Near Max Starcke Dam in Burnet County, Texas, 85M USD, Planned for December 2026",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15737,
+      "title": "Eaton Invests More Than US$30 Million in Nebraska Switchgear Manufacturing",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15738,
+      "title": "Eaton Commits More Than US$242 Million to Arkansas Electrical-Enclosure Manufacturing",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15755,
+      "title": "Banita Creek-Spindlepop (Middlebrook) Solar Battery: 302.9 MW Storage Dropped by Parliament Energy in Nacogdoches County, Texas",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15766,
+      "title": "BD Solar Auburn: 14.6 MW Approved, 5 MW Now Listed, Solar Array at the Port of Auburn, Maine, Targeted for 2028",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15781,
+      "title": "Tokyo Banana \"Miitsuketa\" Wins Top Tokyo Station Omiyage and Monde Selection Grand Gold",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15800,
+      "title": "CleanArc VA1 Campus: 900 MW (Nearly 1 GW per Governor), Three-Building Data Center Campus in Caroline County, Virginia, 8.8B USD Total, First 300 MW Targeted for 2027",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15827,
+      "title": "IREN Project Emerald: 1,200-1,600 MW AI Data Center Campus on 2,000 Acres Near Kiowa, Oklahoma, 50B USD in Two Phases, Tax Districts Tabled in June 2026, Power From 2028",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 15856,
+      "title": "Tract Mountain Road Technology Park: 900 MW Data Center Campus Denied by Hanover County, Virginia Supervisors in May 2026, No Cost Published",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 16359,
+      "title": "New Lenox: Mayor Says No Data Center Being Entertained; Cielo Concept Unconfirmed",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 16468,
+      "title": "Sherburne CO Battery Request J4194: 500 MW in Meeker, Status Conflict",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 16530,
+      "title": "Fireboy DML & Ed Sheeran — \"Peru\" (Official Charts UK Singles #3 2022)",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 16572,
+      "title": "Firefly Solar PA: 401.6 MW EIA Plan, Interconnection Status Unresolved",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 16667,
+      "title": "Shallipopi & Burna Boy — \"Laho II\" (TurnTable Official Nigeria Top 100 #3 2025)",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 16801,
+      "title": "Fireboy DML & Asake — \"Bandana\" (TurnTable Official Nigeria Top 100 #2 2022)",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17365,
+      "title": "Governors Island — New York seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17382,
+      "title": "Boston Pops Fireworks Spectacular — Boston seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17419,
+      "title": "Stone Mountain Summer Light Show and Fireworks — Atlanta seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17446,
+      "title": "Kemah Boardwalk summer fireworks and concerts — Houston seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17515,
+      "title": "Navy Pier New Year's Eve Fireworks — Chicago seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17673,
+      "title": "WaterFire Providence — Boston seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17774,
+      "title": "Valley of Fire State Park Hiking and Scenery — Las Vegas seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17873,
+      "title": "Fire Island Lighthouse and National Seashore — New York seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17881,
+      "title": "Wave Hill public garden and cultural center — New York seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 17919,
+      "title": "Saguaro National Park (Rincon Mountain District) — Phoenix seasonal activity",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18389,
+      "title": "Starfire Mountain Solar: 410 MW Solar Center in Perry County, Kentucky",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18415,
+      "title": "Sherco Battery Energy Storage Project: 600 MW BESS in Sherburne County, Minnesota",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18521,
+      "title": "Eaton Solar Center: 70 MWac Solar in Preble County, Ohio",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18750,
+      "title": "Auburn Solar Project: 50 MWac Solar in Androscoggin County, Maine",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18794,
+      "title": "Spooner Clean Energy Solar Center: 5 MWac Solar in Washburn County, Wisconsin",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18836,
+      "title": "Charlotte Clean Energy Storage Center: 100 MW / 400 MWh BESS in Eaton County, Michigan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 18959,
+      "title": "Iotova Is Favoured as Bulgaria Opens Presidential Voting on October 25",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19010,
+      "title": "Fort Cherry Development District: 250 MW 875-Acre Data Center Campus in Washington County",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19299,
+      "title": "Amazon/AWS: 600 MW Facility with 250 Diesel backup generators in Sherburne County",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19425,
+      "title": "Polymarket Favours Chiang Wan-an in Taipei’s November 28 Mayoral Election",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19434,
+      "title": "FAA Grounds the Boeing 737 MAX After the Ethiopian Airlines Crash",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19525,
+      "title": "Qantas A380 Suffers Uncontained Engine Failure on QF32 Out of Singapore",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19531,
+      "title": "Students Win Leads the Forecast as Serbia Votes on October 25",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19535,
+      "title": "Air France Concorde Flight 4590 Crashes at Gonesse, Killing 113",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19540,
+      "title": "Tu-144S Breaks Up at the Paris Air Show, Killing 14",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19615,
+      "title": "Chow Is Favoured as Toronto Votes for Mayor on October 26",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19616,
+      "title": "M 6.7 earthquake strikes near Tadine, New Caledonia",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19617,
+      "title": "M 5.5 earthquake strikes near Aleneva, Alaska",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19618,
+      "title": "M 6.3 earthquake strikes near Norsup, Vanuatu",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19619,
+      "title": "M 7.7 earthquake strikes near Pitaloza Arriba, Panama",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19620,
+      "title": "M 5.8 earthquake strikes near El Cacao, Panama",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19621,
+      "title": "M 6.6 earthquake strikes near Río Grande, Panama",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19622,
+      "title": "M 6.0 earthquake strikes near La Tronosa, Panama",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19623,
+      "title": "M 6.1 earthquake strikes near Río Grande, Panama",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19624,
+      "title": "M 6.7 earthquake strikes central Mid-Atlantic Ridge",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19625,
+      "title": "M 6.8 earthquake strikes central Mid-Atlantic Ridge",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19626,
+      "title": "M 6.9 earthquake strikes near Ozernovskiy, Russia",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19627,
+      "title": "M 5.7 earthquake strikes near Khuzdar, Pakistan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19628,
+      "title": "M 6.3 earthquake strikes near Port-Olry, Vanuatu",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19629,
+      "title": "M 7.0 earthquake strikes near Nagqu, China",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19630,
+      "title": "M 6.9 earthquake strikes near Port-Olry, Vanuatu",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19631,
+      "title": "M 6.3 earthquake strikes near Port-Olry, Vanuatu",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19655,
+      "title": "Firestone Walker Releases Parabola Imperial Stout in Bottles for the First Time",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19709,
+      "title": "Palisades Shuts Down for Decommissioning",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19793,
+      "title": "Weilong Kiss Burn Spicy Gluten — Mainland China’s Quintessential Nostalgic Snack",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19804,
+      "title": "M 6.5 Earthquake Strikes the Bonin Islands Region of Japan",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    },
+    {
+      "pinId": 19807,
+      "title": "Sutcliffe Is Favoured in the Forecast as Ottawa Votes on October 26",
+      "status": "outside_boundary_scope",
+      "reason": "No wildfire perimeter or district-ballot scope established in this audit: includes at-large/citywide or presidential contests, internal legislative votes, other disasters, and unrelated keyword matches. No geographic district was inferred from an administrative or venue name."
+    }
+  ]
+}

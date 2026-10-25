@@ -787,6 +787,20 @@ const ja: Messages = {
     flightPathEstimated: '推定飛行経路',
     flightPath: '飛行経路',
     flightPathSimulation: '詳細シミュレーション',
+    redraw: {
+      title: "選挙区再編の比較",
+      jurisdiction: "州・地域",
+      allDistricts: "地図上の全選挙区",
+      before: "以前の区割り",
+      after: "後の区割り",
+      compare: "区割りを比較",
+      status: {
+        inEffect: "適用中",
+        superseded: "旧区割り",
+        proposed: "提案中",
+        blocked: "適用停止",
+      },
+    },
     siteKey: {
       wildfire: '山火事の延焼範囲',
       district: '選挙区の境界',

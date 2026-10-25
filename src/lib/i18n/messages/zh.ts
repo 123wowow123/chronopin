@@ -788,6 +788,20 @@ const zh: Messages = {
     flightPathEstimated: '预估飞行轨迹',
     flightPath: '飞行轨迹',
     flightPathSimulation: '完整模拟',
+    redraw: {
+      title: "选区重划对比",
+      jurisdiction: "州或辖区",
+      allDistricts: "地图上的所有选区",
+      before: "较早方案",
+      after: "较晚方案",
+      compare: "对比方案",
+      status: {
+        inEffect: "生效中",
+        superseded: "已替代",
+        proposed: "提案",
+        blocked: "已暂停",
+      },
+    },
     siteKey: {
       wildfire: '野火边界',
       district: '选区边界',

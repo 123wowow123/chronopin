@@ -1,0 +1,331 @@
+[
+  {
+    "pinId": 1977,
+    "pinTitle": "Germany Elects Its Next Bundestag",
+    "kind": "district",
+    "name": "Germany — 299 Bundestag constituencies (current published 2025 plan)",
+    "vintage": "2025 plan; current context for the predicted 2029 election. © Die Bundeswahlleiterin, Statistisches Bundesamt, Wiesbaden 2024, Wahlkreiskarte für die Wahl zum 21. Deutschen Bundestag. Grundlage der Geoinformationen © Geobasis-DE / BKG 2024. Datenlizenz Deutschland Namensnennung 2.0.",
+    "source": "Die Bundeswahlleiterin / Statistisches Bundesamt; Geobasis-DE / BKG",
+    "sourceUrl": "https://bundeswahlleiterin.de/bundestagswahlen/2025/wahlkreiseinteilung/downloads.html",
+    "file": ".scrape/boundaries/germany2025.geojson"
+  },
+  {
+    "pinId": 1979,
+    "pinTitle": "Canadians Vote in the Next Federal Election",
+    "kind": "district",
+    "name": "Canada — 343 federal electoral districts (current published plan)",
+    "vintage": "2023 Representation Orders, in use for the 2025 election; current plan context for the predicted 2029 election; 250m overview simplification",
+    "source": "Elections Canada, 2023 Representation Orders",
+    "sourceUrl": "https://www.elections.ca/content.aspx?dir=cir/mapsCorner/edb&document=index&lang=e&section=res",
+    "file": ".scrape/boundaries/canada-2023.geojson"
+  },
+  {
+    "pinId": 2355,
+    "kind": "district",
+    "name": "Finland — 13 parliamentary constituencies (current published plan)",
+    "vintage": "Statistics Finland constituency division valid 2026-01-01; 1:1,000,000 overview; current context for the 2027 election",
+    "source": "Statistics Finland (CC BY 4.0)",
+    "sourceUrl": "https://stat.fi/en/luokitukset/vaalipiiri/vaalipiiri_1_20260101",
+    "url": "https://geo.stat.fi/geoserver/tilastointialueet/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=tilastointialueet%3Avaalipiiri1000k_2026&srsName=EPSG%3A4326&outputFormat=application%2Fjson",
+    "pinTitle": "Finland Elects Its First Post-NATO Parliament"
+  },
+  {
+    "pinId": 2362,
+    "pinTitle": "Argentina Votes for a President and Congress",
+    "kind": "district",
+    "name": "Argentina — 24 congressional electoral districts (23 provinces and Buenos Aires city)",
+    "vintage": "Current published IGN/Georef provincial boundaries, checked 2026-10-25; congressional districts, not smaller voting circuits",
+    "source": "Argentina Georef / Instituto Geográfico Nacional",
+    "sourceUrl": "https://www.argentina.gob.ar/georef/descarga-de-la-base-completa",
+    "url": "https://apis.datos.gob.ar/georef/api/v2.0/provincias.geojson"
+  },
+  {
+    "pinId": 3215,
+    "pinTitle": "Border 2 Fire Burns 6,625 Acres on Otay Mountain",
+    "kind": "wildfire",
+    "name": "BORDER 2 — historical full-incident perimeter (not ignition-time extent)",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27BORDER+2%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3403,
+    "pinTitle": "The Palisades Fire Ignites Above Pacific Palisades",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter (not ignition-time extent)",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3407,
+    "pinTitle": "The Palisades Fire Is Fully Contained After 24 Days",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3411,
+    "pinTitle": "Palisades Fire Suspect Jonathan Rinderknecht Is Arrested",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3417,
+    "pinTitle": "Judge Declares Mistrial in the Palisades Fire Arson Trial",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3421,
+    "pinTitle": "Palisades Fire Arson Retrial of Jonathan Rinderknecht Begins",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3427,
+    "pinTitle": "The Eaton Fire Ignites in Eaton Canyon Above Altadena",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter (not ignition-time extent)",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3431,
+    "pinTitle": "The Eaton Fire Is Fully Contained After 24 Days",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3437,
+    "pinTitle": "LA County Sues Southern California Edison Over the Eaton Fire",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3442,
+    "pinTitle": "US Justice Department Sues Edison Over the Eaton Fire",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3448,
+    "pinTitle": "SCE Opens Its Eaton Fire Compensation Program to Claims",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3453,
+    "pinTitle": "LA County Fire Finds Edison Tower Arcing Caused the Eaton Fire",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3458,
+    "pinTitle": "First Eaton Fire Bellwether Trial Against Edison Begins",
+    "kind": "wildfire",
+    "name": "EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3461,
+    "pinTitle": "LA Fire Debris Removal Declared Substantially Complete",
+    "kind": "wildfire",
+    "name": "PALISADES / EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%2C%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3466,
+    "pinTitle": "First Rebuilt Palisades Home Gets Its Certificate of Occupancy",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3507,
+    "pinTitle": "Boston Elects Its City Council in the 2027 Municipal Election",
+    "kind": "district",
+    "name": "Boston City Council Districts 1–9 (four at-large seats are citywide)",
+    "vintage": "25 May 2023 approved plan; in effect from the November 2023 municipal election; current published 2023–2032 plan",
+    "source": "City of Boston GIS / City Council",
+    "sourceUrl": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/CityCouncilDistricts_2023_5_25/FeatureServer/0",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/CityCouncilDistricts_2023_5_25/FeatureServer/0/query?where=DISTRICT%3E%3D1+AND+DISTRICT%3C%3D9&outFields=DISTRICT%2CLONGNAME&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3523,
+    "pinTitle": "Paloma Aguirre Wins San Diego County Supervisor Special Election",
+    "kind": "district",
+    "name": "San Diego County Supervisorial District 1 (county land boundary)",
+    "vintage": "2021 redistricting plan; technical changes approved 2022-01-12; 2025 special election",
+    "source": "County of San Diego, LUEG-GIS / Redistricting Advisory Committee",
+    "sourceUrl": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Hosted/COSD_Boundaries/FeatureServer/1",
+    "url": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Hosted/COSD_Boundaries/FeatureServer/1/query?where=distno%3D1&outFields=distno&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3596,
+    "pinTitle": "Mayor Bass Removes LAFD Chief Kristin Crowley",
+    "kind": "wildfire",
+    "name": "PALISADES / EATON — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%2C%27EATON%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3599,
+    "pinTitle": "LAFD Releases Its Palisades Fire After-Action Report",
+    "kind": "wildfire",
+    "name": "PALISADES — historical full-incident perimeter",
+    "observedAt": "2025",
+    "vintage": "CAL FIRE FRAP Firep25_1; April 2026 archive release",
+    "source": "CAL FIRE FRAP and cooperating agencies",
+    "sourceUrl": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+    "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_%3D2025+AND+FIRE_NAME+IN+%28%27PALISADES%27%29&outFields=YEAR_%2CFIRE_NAME%2CINC_NUM%2CUNIT_ID%2CGIS_ACRES%2CALARM_DATE%2CCONT_DATE%2CGlobalID&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 3644,
+    "pinTitle": "Sunset Voters Recall Supervisor Joel Engardio",
+    "kind": "district",
+    "name": "San Francisco Supervisorial District 4",
+    "vintage": "April 2022 redistricting plan (2020 Census); land-trimmed boundary",
+    "source": "San Francisco Redistricting Task Force / DataSF",
+    "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+    "url": "https://data.sfgov.org/resource/f2zs-jevy.geojson",
+    "match": {
+      "field": "sup_dist",
+      "value": "4"
+    }
+  },
+  {
+    "pinId": 3650,
+    "pinTitle": "Alan Wong Sworn In as the Sunset's Supervisor After the Engardio Recall",
+    "kind": "district",
+    "name": "San Francisco Supervisorial District 4",
+    "vintage": "April 2022 redistricting plan (2020 Census); land-trimmed boundary",
+    "source": "San Francisco Redistricting Task Force / DataSF",
+    "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+    "url": "https://data.sfgov.org/resource/f2zs-jevy.geojson",
+    "match": {
+      "field": "sup_dist",
+      "value": "4"
+    }
+  },
+  {
+    "pinId": 3668,
+    "pinTitle": "Alan Wong Wins the Sunset's Special Election for Supervisor",
+    "kind": "district",
+    "name": "San Francisco Supervisorial District 4",
+    "vintage": "April 2022 redistricting plan (2020 Census); land-trimmed boundary",
+    "source": "San Francisco Redistricting Task Force / DataSF",
+    "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+    "url": "https://data.sfgov.org/resource/f2zs-jevy.geojson",
+    "match": {
+      "field": "sup_dist",
+      "value": "4"
+    }
+  },
+  {
+    "pinId": 3684,
+    "pinTitle": "San Francisco Votes on Props A-J and Five Supervisor Seats",
+    "kind": "district",
+    "name": "San Francisco supervisor seats on the November 2026 ballot: Districts 2, 4, 6, 8 and 10",
+    "vintage": "April 2022 redistricting plan (2020 Census); land-trimmed boundaries",
+    "source": "San Francisco Redistricting Task Force / DataSF",
+    "sourceUrl": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Supervisor-Districts-2022-/f2zs-jevy/data",
+    "url": "https://data.sfgov.org/resource/f2zs-jevy.geojson?%24where=sup_dist+in+%28%272%27%2C%274%27%2C%276%27%2C%278%27%2C%2710%27%29"
+  },
+  {
+    "pinId": 5170,
+    "kind": "district",
+    "name": "Quebec — 127 National Assembly constituencies",
+    "vintage": "2026 electoral map; January 2026 final boundaries; water-trimmed 50m generalisation",
+    "source": "Élections Québec / Commission de la représentation électorale",
+    "sourceUrl": "https://www.dgeq.org/donnees.html",
+    "url": "https://donnees.electionsquebec.qc.ca/autres/provincial/circonscriptions_electorales_sans_eau_2026.json",
+    "pinTitle": "Quebec Votes, With the Parti Québécois Favoured to Return on a Sovereignty Promise"
+  },
+  {
+    "pinId": 5473,
+    "pinTitle": "Czechs Vote in Municipal and Senate Elections, With Prague's Mayor at Stake",
+    "kind": "district",
+    "name": "Czech Senate — 27 districts voting in October 2026 (municipal council contests are separate)",
+    "vintage": "Czech Statistical Office 2026 Senate district boundaries; selected by source rok_voleb=2026",
+    "source": "Český statistický úřad (Czech Statistical Office)",
+    "sourceUrl": "https://geodata.csu.gov.cz/server/rest/services/Hosted/Senátní_volební_obvody_2026/FeatureServer/1",
+    "url": "https://geodata.csu.gov.cz/server/rest/services/Hosted/Senátní_volební_obvody_2026/FeatureServer/1/query?where=rok_voleb%3D2026&outFields=obvod%2Csidlo%2Cnazev_vo%2Crok_voleb&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 6073,
+    "pinTitle": "Holborn and St Pancras Votes in the By-Election to Replace Keir Starmer",
+    "kind": "district",
+    "name": "Holborn and St Pancras — Westminster constituency E14001290",
+    "vintage": "Westminster parliamentary constituencies, 4 July 2024; generalised to 20m and coastline-clipped",
+    "source": "Office for National Statistics / Ordnance Survey (Open Government Licence)",
+    "sourceUrl": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Westminster_Parliamentary_Constituencies_July_2024_Boundaries_UK_BGC/FeatureServer/0",
+    "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Westminster_Parliamentary_Constituencies_July_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=PCON24CD%3D%27E14001290%27&outFields=PCON24CD%2CPCON24NM&outSR=4326&f=geojson"
+  }
+]

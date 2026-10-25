@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { boundaryShape, mergeBoundary, type BoundaryInput } from './boundaryShape';
+import { boundaryShape, mergeBoundary, validateDistrictRedraws, type BoundaryInput } from './boundaryShape';
 import type { PinSiteShapeJson } from './siteShape';
 
 const ring = [[-118, 34], [-117, 34], [-117, 35], [-118, 34]];
@@ -62,5 +62,26 @@ describe('mergeBoundary', () => {
     expect(merged.geojson.features[1].properties.sourceUrl).toBe(input.sourceUrl);
     expect(mergeBoundary(merged, incoming)).toEqual(merged);
     expect(mergeBoundary(null, incoming)).toEqual(incoming);
+  });
+});
+
+describe('district comparison validation', () => {
+  const plan = (status = 'inEffect') => ({ label: '2026 plan', status, vintage: '2026-05-04', source: 'Election office', sourceUrl: 'https://example.com/plan', features: [feature()] });
+  const comparison = () => ({ id: 'florida', name: 'Florida', before: plan('superseded'), after: plan() });
+  it('validates each alternate plan and preserves its legal status and credit', () => {
+    const [redraw] = validateDistrictRedraws([comparison()]);
+    expect(redraw.before.status).toBe('superseded');
+    expect(redraw.after.features[0].properties).toMatchObject({ kind: 'district', sourceUrl: 'https://example.com/plan', vintage: '2026-05-04' });
+    const incoming = boundaryShape(feature(), { ...input, kind: 'district', vintage: '2026 plan' });
+    incoming.geojson.districtRedraws = [redraw];
+    const saved = mergeBoundary(null, incoming);
+    const updatedFire = mergeBoundary(saved, shape());
+    expect(updatedFire.geojson.districtRedraws).toEqual([redraw]);
+  });
+  it('rejects duplicate states, unverified statuses, unsafe sources and nonpolygons', () => {
+    expect(() => validateDistrictRedraws([comparison(), comparison()])).toThrow();
+    expect(() => validateDistrictRedraws([{ ...comparison(), after: plan('approved') }])).toThrow();
+    expect(() => validateDistrictRedraws([{ ...comparison(), after: { ...plan(), sourceUrl: 'http://example.com' } }])).toThrow();
+    expect(() => validateDistrictRedraws([{ ...comparison(), after: { ...plan(), features: [feature('LineString', ring)] } }])).toThrow();
   });
 });

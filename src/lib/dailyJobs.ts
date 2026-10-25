@@ -176,7 +176,7 @@ export const TASKS = {
   sentiment: {
     group: 'scores',
     label: 'Refresh sentiment',
-    summary: 'Score the company pins whose title or summary changed since they were scored, or never were, and comments with no tone yet, for the company sentiment graphs.',
+    summary: 'Score the company pins whose title or summary changed since they were scored, or never were, comments with no tone yet, and scraped rubric reviews with no sentiment yet, for the company and pin sentiment graphs.',
   },
 } as const satisfies Record<string, TaskDef>;
 

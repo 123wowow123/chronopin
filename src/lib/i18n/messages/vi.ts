@@ -791,6 +791,20 @@ const vi: Messages = {
     flightPathEstimated: 'Đường bay ước tính',
     flightPath: 'Đường bay',
     flightPathSimulation: 'Mô phỏng đầy đủ',
+    redraw: {
+      title: "So sánh phân chia lại khu vực bầu cử",
+      jurisdiction: "Bang hoặc khu vực",
+      allDistricts: "Tất cả khu vực trên bản đồ",
+      before: "Phương án trước",
+      after: "Phương án sau",
+      compare: "So sánh phương án",
+      status: {
+        inEffect: "Có hiệu lực",
+        superseded: "Đã thay thế",
+        proposed: "Đề xuất",
+        blocked: "Bị đình chỉ",
+      },
+    },
     siteKey: {
       wildfire: 'Chu vi cháy rừng',
       district: 'Ranh giới khu vực bầu cử',

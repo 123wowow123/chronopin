@@ -861,6 +861,20 @@ const ar: Messages = {
     flightPathEstimated: 'مسار الرحلة التقديري',
     flightPath: 'مسار الرحلة',
     flightPathSimulation: 'المحاكاة الكاملة',
+    redraw: {
+      title: "مقارنة إعادة ترسيم الدوائر",
+      jurisdiction: "الولاية أو المنطقة",
+      allDistricts: "كل الدوائر على الخريطة",
+      before: "الخطة الأقدم",
+      after: "الخطة الأحدث",
+      compare: "مقارنة الخطط",
+      status: {
+        inEffect: "سارية",
+        superseded: "مستبدلة",
+        proposed: "مقترحة",
+        blocked: "موقوفة",
+      },
+    },
     siteKey: {
       wildfire: 'محيط حريق الغابات',
       district: 'حدود الدائرة الانتخابية',

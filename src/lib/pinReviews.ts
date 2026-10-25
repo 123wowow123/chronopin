@@ -49,3 +49,7 @@ export function reviewsProblem(value: unknown, { max, maxQuote }: { max: number;
   }
   return reviews;
 }
+
+// The rubric tables that keep scraped reviews in a `reviews` column.
+export const REVIEW_TABLES = ['PinTaste', 'PinCarPerf', 'PinGasCarPerf', 'PinAircraftPerf', 'PinLlmPerf', 'PinVideoPerf', 'PinHotel', 'PinDining'] as const;
+export type ReviewTable = (typeof REVIEW_TABLES)[number];

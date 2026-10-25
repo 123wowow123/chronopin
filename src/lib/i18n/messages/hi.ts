@@ -790,6 +790,20 @@ const hi: Messages = {
     flightPathEstimated: 'अनुमानित उड़ान पथ',
     flightPath: 'उड़ान पथ',
     flightPathSimulation: 'पूरा सिमुलेशन',
+    redraw: {
+      title: "निर्वाचन क्षेत्र पुनर्सीमांकन की तुलना",
+      jurisdiction: "राज्य या क्षेत्र",
+      allDistricts: "मानचित्र के सभी निर्वाचन क्षेत्र",
+      before: "पहले की योजना",
+      after: "बाद की योजना",
+      compare: "योजनाओं की तुलना",
+      status: {
+        inEffect: "लागू",
+        superseded: "प्रतिस्थापित",
+        proposed: "प्रस्तावित",
+        blocked: "रोक लगी",
+      },
+    },
     siteKey: {
       wildfire: 'जंगल की आग की परिधि',
       district: 'निर्वाचन क्षेत्र की सीमा',

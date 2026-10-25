@@ -64,3 +64,7 @@ npx tsx scripts/boundaries/import.ts --manifest scripts/boundaries/research-2026
 Public production pages were also checked in a headless browser: all three rendered their expected polygon color, translated key label, boundary name and snapshot date/plan vintage. Screenshots are saved as `.scrape/boundaries/<pinId>-<kind>-prod.png`.
 
 Pre-write production records are retained in ignored `.scrape/boundaries/prod-before-2026-10-25.json`; tokens and screenshots also remain ignored.
+
+## Expanded production audit
+
+The subsequent request to backfill all relevant production pins is recorded in [the expanded audit](boundaries-backfill-2026-10-25.md): 342 candidates examined, 30 pins with verified live layers, and 17 explicit remaining research gaps. The initial two wildfire layers were superseded by CAL FIRE’s newer historical archive. Use `scripts/boundaries/backfill-2026-10-25.prod.json` for current coverage; the initial three-pin manifest is retained as historical research evidence.

@@ -792,6 +792,20 @@ const ms: Messages = {
     flightPathEstimated: 'Anggaran laluan penerbangan',
     flightPath: 'Laluan penerbangan',
     flightPathSimulation: 'Simulasi penuh',
+    redraw: {
+      title: "Perbandingan persempadanan semula",
+      jurisdiction: "Negeri atau wilayah",
+      allDistricts: "Semua kawasan pada peta",
+      before: "Pelan terdahulu",
+      after: "Pelan kemudian",
+      compare: "Bandingkan pelan",
+      status: {
+        inEffect: "Berkuat kuasa",
+        superseded: "Digantikan",
+        proposed: "Dicadangkan",
+        blocked: "Disekat",
+      },
+    },
     siteKey: {
       wildfire: 'Perimeter kebakaran hutan',
       district: 'Sempadan kawasan pilihan raya',

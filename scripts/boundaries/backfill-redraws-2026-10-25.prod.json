@@ -1,0 +1,14 @@
+[
+  {
+    "pinId": 1648,
+    "pinTitle": "2026 U.S. Midterm Elections Decide Control of Congress",
+    "kind": "district",
+    "name": "US House — 435 voting districts; 2026 election maps with state redraw comparisons",
+    "vintage": "Reviewed 2026-10-25: 120th-Congress Census geometry with Alabama, California, Florida and Louisiana official state geometry and Missouri general-election restoration. Senate contests are statewide.",
+    "source": "US Census Bureau and state redistricting authorities",
+    "sourceUrl": "https://www.ncsl.org/redistricting-and-census/changing-the-maps-tracking-mid-decade-redistricting?maptype=tile",
+    "file": ".scrape/boundaries/us2026-defaults.geojson",
+    "redrawFile": ".scrape/boundaries/us2026-redraws.json",
+    "preserveFeatureCredits": true
+  }
+]

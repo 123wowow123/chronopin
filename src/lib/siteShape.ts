@@ -18,8 +18,21 @@ export type SiteFeature = {
   properties: { kind: SiteKind } & RouteFacts & BoundaryFacts;
 };
 
+export type DistrictPlanStatus = 'inEffect' | 'superseded' | 'proposed' | 'blocked';
+export type DistrictPlan = {
+  label: string;
+  vintage: string;
+  status: DistrictPlanStatus;
+  source: string;
+  sourceUrl: string;
+  features: SiteFeature[];
+};
+export type DistrictRedraw = { id: string; name: string; before: DistrictPlan; after: DistrictPlan };
+export type DistrictView = 'before' | 'after' | 'compare';
+
 export type PinSiteShapeJson = {
-  geojson: { type: 'FeatureCollection'; features: SiteFeature[] };
+  // Foreign GeoJSON member: older renderers safely draw only the in-effect features.
+  geojson: { type: 'FeatureCollection'; features: SiteFeature[]; districtRedraws?: DistrictRedraw[] };
   source: string;
   sourceUrl: string | null;
 };
@@ -89,4 +102,26 @@ export function alongLine(line: [number, number][], everyKm: number): { marks: {
     total += km;
   }
   return { marks, totalKm: total };
+}
+
+// Alternate plans never enter the default feature set. In a comparison, the
+// non-district layers stay, with both dated plans available independently.
+export function districtLayers(shape: PinSiteShapeJson, redraw: DistrictRedraw | null, view: DistrictView): { version: 'before' | 'after' | null; features: SiteFeature[] }[] {
+  if (!redraw) return [{ version: null, features: shape.geojson.features }];
+  return [
+    { version: null, features: shape.geojson.features.filter((f) => f.properties.kind !== 'district') },
+    ...(view !== 'after' ? [{ version: 'before' as const, features: redraw.before.features }] : []),
+    ...(view !== 'before' ? [{ version: 'after' as const, features: redraw.after.features }] : []),
+  ];
+}
+
+// Leaflet accepts longitudes outside ±180. Wrap only the displayed copy near
+// the pin so Aleutian islands do not make a US map span the entire world.
+export function mapFeaturesNear(features: SiteFeature[], longitude: number): SiteFeature[] {
+  const wrap = (value: unknown): unknown => {
+    if (!Array.isArray(value)) return value;
+    if (typeof value[0] === 'number') return [value[0] + 360 * Math.round((longitude - value[0]) / 360), ...value.slice(1)];
+    return value.map(wrap);
+  };
+  return features.map((f) => ({ ...f, geometry: { ...f.geometry, coordinates: wrap(f.geometry.coordinates) } }));
 }

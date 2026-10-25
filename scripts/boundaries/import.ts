@@ -4,7 +4,7 @@
 import '../env';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
-import { boundaryShape, mergeBoundary, type BoundaryInput } from '@/lib/boundaryShape';
+import { boundaryShape, mergeBoundary, validateDistrictRedraws, type BoundaryInput } from '@/lib/boundaryShape';
 import type { PinSiteShapeJson } from '@/lib/siteShape';
 
 const { values: flags } = parseArgs({ options: {
@@ -20,6 +20,9 @@ type Entry = BoundaryInput & {
   url?: string;
   // Select the specific incident/district from a larger collection, if needed.
   match?: { field: string; value: string | number };
+  // Prepared, source-credited before/after plan pairs (GeoJSON foreign member).
+  redrawFile?: string;
+  preserveFeatureCredits?: boolean;
 };
 
 async function main() {
@@ -62,6 +65,15 @@ async function main() {
       data = { ...collection, features: collection.features.filter((f) => f.properties?.[entry.match!.field] === entry.match!.value) };
     }
     const shape = boundaryShape(data, entry);
+    if (entry.preserveFeatureCredits) {
+      const raw = (data as { features: { properties?: Record<string, unknown> }[] }).features;
+      shape.geojson.features = shape.geojson.features.map((f, index) => {
+        const p = raw[index]?.properties;
+        if (!p || typeof p.name !== 'string' || typeof p.vintage !== 'string' || typeof p.source !== 'string' || typeof p.sourceUrl !== 'string') throw new Error('Every reviewed feature needs a name, vintage and HTTPS credit');
+        return boundaryShape(f, { kind: entry.kind, name: p.name, vintage: p.vintage, source: p.source, sourceUrl: p.sourceUrl }).geojson.features[0];
+      });
+    }
+    if (entry.redrawFile) shape.geojson.districtRedraws = validateDistrictRedraws(JSON.parse(readFileSync(entry.redrawFile, 'utf8')));
     if (!flags.dry || token) {
       const pins = await call(`/api/admin/db/Pin?id=${entry.pinId}&utcDeletedDateTime.null=true&limit=2`);
       if (pins.rows.length !== 1 || pins.rows[0].title !== entry.pinTitle) throw new Error(`Pin ${entry.pinId}: missing or title mismatch; check this environment's pin ID`);

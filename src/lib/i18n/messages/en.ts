@@ -792,6 +792,20 @@ const en = {
     flightPathEstimated: 'Estimated flight path',
     flightPath: 'Flight path',
     flightPathSimulation: 'Full simulation',
+    redraw: {
+      title: "Redistricting comparison",
+      jurisdiction: "State or jurisdiction",
+      allDistricts: "All mapped districts",
+      before: "Earlier plan",
+      after: "Later plan",
+      compare: "Compare plans",
+      status: {
+        inEffect: "In effect",
+        superseded: "Superseded",
+        proposed: "Proposed",
+        blocked: "Blocked",
+      },
+    },
     siteKey: {
       wildfire: 'Wildfire perimeter',
       district: 'Election district boundary',

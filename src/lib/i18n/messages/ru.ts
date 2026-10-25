@@ -796,6 +796,20 @@ const ru: Messages = {
     flightPathEstimated: 'Расчётная траектория',
     flightPath: 'Траектория',
     flightPathSimulation: 'Полная симуляция',
+    redraw: {
+      title: "Сравнение границ округов",
+      jurisdiction: "Штат или территория",
+      allDistricts: "Все округа на карте",
+      before: "Более ранний план",
+      after: "Более поздний план",
+      compare: "Сравнить планы",
+      status: {
+        inEffect: "Действует",
+        superseded: "Заменён",
+        proposed: "Предложен",
+        blocked: "Приостановлен",
+      },
+    },
     siteKey: {
       wildfire: 'Периметр лесного пожара',
       district: 'Граница избирательного округа',

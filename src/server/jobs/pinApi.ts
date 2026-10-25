@@ -2,6 +2,7 @@ import * as db from '../db';
 import { SignJWT } from 'jose';
 import { signToken } from '../auth';
 import { sentimentHash, type SentimentText } from '../model/pinSentiment';
+import { REVIEW_TABLES, type PinReview, type ReviewTable } from '@/lib/pinReviews';
 import { curatorId, isCurator } from './curators';
 export { isCurator };
 import { productionWrite } from './productionWrites';
@@ -229,4 +230,33 @@ export async function adminDbRequest<T = Record<string, any>>(method: 'GET' | 'P
   if (!admin) throw new Error('No admin account available');
   const token = await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET));
   return call<T>(method, path, { token, body, base: prodBase()! });
+}
+
+// A scraped review's sentiment (PinReview.sentiment) on production: the row's
+// reviews are read there, the score goes on the review with this url when it
+// has none, and the column is patched through the admin table API, so nothing
+// else in the rubric is replaced. Nothing unless the run writes to production;
+// the job database shares production's pin ids.
+export async function pushReviewSentiment(table: ReviewTable, pinId: number, scores: { url: string; sentiment: number }[]): Promise<boolean> {
+  const base = prodBase();
+  if (!base || !(REVIEW_TABLES as readonly string[]).includes(table)) return false;
+  const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
+  if (!admin) throw new Error('No admin account available');
+  const token = await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET));
+  const there = await call<{ rows: { reviews: PinReview[] | string }[] }>('GET', `/api/admin/db/${table}?pinId=${pinId}&limit=1`, { token, base });
+  const row = there.rows?.[0];
+  if (!row) return false;
+  const reviews: PinReview[] = typeof row.reviews === 'string' ? JSON.parse(row.reviews) : row.reviews;
+  const byUrl = new Map(scores.map((s) => [s.url, s.sentiment]));
+  let changed = 0;
+  for (const review of reviews) {
+    const value = byUrl.get(review.url);
+    if (review.sentiment == null && value != null) {
+      review.sentiment = value;
+      changed++;
+    }
+  }
+  if (!changed) return false;
+  await call('PATCH', `/api/admin/db/${table}?pinId=${pinId}`, { token, base, body: { reviews } });
+  return true;
 }

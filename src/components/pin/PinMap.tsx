@@ -5,7 +5,8 @@ import L from 'leaflet';
 import { useEffect, useRef, useState } from 'react';
 import { useT } from '@/lib/client/i18n';
 import type { PinFlightPathJson } from '@/lib/types';
-import { SITE_KINDS, SITE_STYLE, alongLine, type PinSiteShapeJson } from '@/lib/siteShape';
+import { DistrictRedrawControls } from './DistrictRedrawControls';
+import { SITE_KINDS, SITE_STYLE, alongLine, districtLayers, mapFeaturesNear, type DistrictView, type PinSiteShapeJson } from '@/lib/siteShape';
 
 // Leaflet's default marker images are resolved relative to its CSS, which a
 // bundler breaks; point them at the CDN copies instead.
@@ -39,6 +40,11 @@ export default function PinMap({
   siteShape?: PinSiteShapeJson;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const [redrawId, setRedrawId] = useState('');
+  const [districtView, setDistrictView] = useState<DistrictView>('compare');
+  const redraws = siteShape?.geojson.districtRedraws;
+  const redraw = redraws?.find((r) => r.id === redrawId) ?? null;
+  const viewport = useRef<{ scope: string; shape: PinSiteShapeJson | undefined; center: L.LatLng; zoom: number } | null>(null);
   const [armed, setArmed] = useState(false);
   const t = useT();
   const [startLabel, finishLabel, loopLabel] = [t('pin.routeStart'), t('pin.routeFinish'), t('pin.routeStartFinish')];
@@ -80,14 +86,16 @@ export default function PinMap({
     // (SITE_KINDS is in drawing order), the map framed on the whole site.
     if (siteShape?.geojson.features.length) {
       const site = L.featureGroup().addTo(map);
-      for (const kind of SITE_KINDS) {
-        const style = SITE_STYLE[kind];
-        const features = siteShape.geojson.features.filter((f) => f.properties.kind === kind);
-        if (!features.length) continue;
-        L.geoJSON({ type: 'FeatureCollection', features } as never, {
-          style: () => ({ color: style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: style.fill, dashArray: style.dash }),
-          interactive: false,
-        }).addTo(site);
+      for (const layer of districtLayers(siteShape, redraw, districtView)) {
+        for (const kind of SITE_KINDS) {
+          const style = SITE_STYLE[kind];
+          const features = layer.features.filter((f) => f.properties.kind === kind);
+          if (!features.length) continue;
+          L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear(features, longitude) } as never, {
+            style: () => ({ color: layer.version === 'before' ? '#b45309' : style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: layer.version === 'before' ? 0 : style.fill, dashArray: layer.version === 'before' ? '7 4' : layer.version === 'after' ? undefined : style.dash }),
+            interactive: false,
+          }).addTo(site);
+        }
       }
       // A course (a single line) gets its start and finish, and a number every
       // 5 km when it is a long one, a marathon but not a circuit.
@@ -113,14 +121,19 @@ export default function PinMap({
           }
         }
       }
-      const bounds = site.getBounds();
-      if (bounds.isValid()) map.fitBounds(bounds.extend([latitude, longitude]), { padding: [24, 24], maxZoom: 17 });
+      // Use the union of both plans so switching sides does not change the framing.
+      const bounds = redraw ? L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear([...redraw.before.features, ...redraw.after.features], longitude) } as never).getBounds() : site.getBounds();
+      if (bounds.isValid()) map.fitBounds(redraw ? bounds : bounds.extend([latitude, longitude]), { padding: [24, 24], maxZoom: 17 });
+      const previous = viewport.current;
+      if (redraw && previous?.scope === redraw.id && previous.shape === siteShape) map.setView(previous.center, previous.zoom);
+
     }
     return () => {
+      viewport.current = { scope: redraw?.id ?? '', shape: siteShape, center: map.getCenter(), zoom: map.getZoom() };
       map.getContainer().removeEventListener('mouseleave', disarm);
       map.remove();
     };
-  }, [latitude, longitude, title, flightPath, siteShape, startLabel, finishLabel, loopLabel]);
+  }, [latitude, longitude, title, flightPath, siteShape, startLabel, finishLabel, loopLabel, redraw, districtView]);
 
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.
@@ -128,6 +141,8 @@ export default function PinMap({
   // puts the zoom buttons inside it, so role="img" there would announce an
   // image with focusable children.
   return (
+    <div className="space-y-2">
+      {redraws?.length ? <DistrictRedrawControls redraws={redraws} selected={redraw?.id ?? ''} view={districtView} onSelect={setRedrawId} onView={setDistrictView} /> : null}
     <div
       role="group"
       aria-label={t('pin.mapOf', { title })}
@@ -138,6 +153,7 @@ export default function PinMap({
       }`}
     >
       <div ref={ref} className="size-full" />
+    </div>
     </div>
   );
 }

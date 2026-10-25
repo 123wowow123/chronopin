@@ -785,6 +785,20 @@ const pt: Messages = {
     flightPathEstimated: 'Trajetória estimada',
     flightPath: 'Trajetória',
     flightPathSimulation: 'Simulação completa',
+    redraw: {
+      title: "Comparar a redefinição dos distritos",
+      jurisdiction: "Estado ou território",
+      allDistricts: "Todos os distritos no mapa",
+      before: "Plano anterior",
+      after: "Plano posterior",
+      compare: "Comparar planos",
+      status: {
+        inEffect: "Em vigor",
+        superseded: "Substituído",
+        proposed: "Proposto",
+        blocked: "Suspenso",
+      },
+    },
     siteKey: {
       wildfire: 'Perímetro do incêndio florestal',
       district: 'Limite do distrito eleitoral',

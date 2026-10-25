@@ -787,6 +787,20 @@ const es: Messages = {
     flightPathEstimated: 'Trayectoria estimada',
     flightPath: 'Trayectoria',
     flightPathSimulation: 'Simulación completa',
+    redraw: {
+      title: "Comparar cambios de distritos",
+      jurisdiction: "Estado o jurisdicción",
+      allDistricts: "Todos los distritos del mapa",
+      before: "Plan anterior",
+      after: "Plan posterior",
+      compare: "Comparar planes",
+      status: {
+        inEffect: "En vigor",
+        superseded: "Sustituido",
+        proposed: "Propuesto",
+        blocked: "Bloqueado",
+      },
+    },
     siteKey: {
       wildfire: 'Perímetro del incendio forestal',
       district: 'Límite del distrito electoral',

@@ -787,6 +787,20 @@ const fr: Messages = {
     flightPathEstimated: 'Trajectoire estimée',
     flightPath: 'Trajectoire',
     flightPathSimulation: 'Simulation complète',
+    redraw: {
+      title: "Comparer les redécoupages",
+      jurisdiction: "État ou territoire",
+      allDistricts: "Toutes les circonscriptions cartographiées",
+      before: "Plan antérieur",
+      after: "Plan ultérieur",
+      compare: "Comparer les plans",
+      status: {
+        inEffect: "En vigueur",
+        superseded: "Remplacé",
+        proposed: "Proposé",
+        blocked: "Bloqué",
+      },
+    },
     siteKey: {
       wildfire: 'Périmètre de l’incendie de forêt',
       district: 'Limite de la circonscription électorale',

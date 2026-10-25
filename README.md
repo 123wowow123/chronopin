@@ -434,7 +434,7 @@ https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-gr
 
 
 https://www.chronopin.com/pin/19327/lehigh-county-data-center-150-mw-facility-with-356-diesel-backup-generators-in-l
-are they keywards in Datacenter & Infrastructure Telemetry that can be used for search pills?
+are their additional keywards in Datacenter & Infrastructure Telemetry that can be used for search pills?
 
 
 
@@ -473,3 +473,7 @@ admin has access
 gemini:
 do deep research on review for all categoris that supports reviews and compute sentiment on them
 generate wiki backing on research to gound work
+
+
+ask for redesign of pin detail page to look nicer
+ask for anything more to add to pin detail page

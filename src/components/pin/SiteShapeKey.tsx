@@ -17,6 +17,7 @@ export function SiteShapeKey({ shape, t }: { shape: PinSiteShapeJson; t: Transla
   const lastKm = profile?.length ? profile[profile.length - 1][0] : 0;
   return (
     <div className="mt-2 text-xs text-muted">
+      {shape.geojson.districtRedraws?.length ? <p className="mb-1 font-medium">{t('pin.redraw.allDistricts')}</p> : null}
       <ul className="flex flex-wrap items-center gap-x-3 gap-y-1">
         {SITE_KINDS.filter((kind) => counts.has(kind)).map((kind) => (
           <li key={kind} className="inline-flex items-center gap-1.5">

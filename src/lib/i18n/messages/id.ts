@@ -792,6 +792,20 @@ const id: Messages = {
     flightPathEstimated: 'Perkiraan jalur penerbangan',
     flightPath: 'Jalur penerbangan',
     flightPathSimulation: 'Simulasi lengkap',
+    redraw: {
+      title: "Perbandingan penataan daerah pemilihan",
+      jurisdiction: "Negara bagian atau wilayah",
+      allDistricts: "Semua daerah pada peta",
+      before: "Rencana sebelumnya",
+      after: "Rencana setelahnya",
+      compare: "Bandingkan rencana",
+      status: {
+        inEffect: "Berlaku",
+        superseded: "Digantikan",
+        proposed: "Diusulkan",
+        blocked: "Ditangguhkan",
+      },
+    },
     siteKey: {
       wildfire: 'Perimeter kebakaran hutan',
       district: 'Batas daerah pemilihan',

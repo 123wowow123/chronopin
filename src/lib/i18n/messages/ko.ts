@@ -787,6 +787,20 @@ const ko: Messages = {
     flightPathEstimated: '예상 비행 경로',
     flightPath: '비행 경로',
     flightPathSimulation: '전체 시뮬레이션',
+    redraw: {
+      title: "선거구 개편 비교",
+      jurisdiction: "주 또는 관할구역",
+      allDistricts: "지도에 표시된 모든 선거구",
+      before: "이전 구획안",
+      after: "이후 구획안",
+      compare: "구획안 비교",
+      status: {
+        inEffect: "시행 중",
+        superseded: "대체됨",
+        proposed: "제안됨",
+        blocked: "시행 정지",
+      },
+    },
     siteKey: {
       wildfire: '산불 경계',
       district: '선거구 경계',
