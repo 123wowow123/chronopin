@@ -1,0 +1,1403 @@
+{
+  "checkedAt": "2026-10-24",
+  "round": 4,
+  "snapshotDirectory": ".scrape/construction-status-research-round4-2026-10-24",
+  "scope": "25 researched construction records: exact historical milestone/phase statuses, native source currencies, 19 sourced costs, six explicit cost gaps and corrected housing dates/occupancy wording.",
+  "research": [
+    {
+      "id": 484,
+      "status": "Completed",
+      "price": 2500000,
+      "priceCurrency": "GBP",
+      "note": "BT’s distributed press release confirms the October 8, 1965 opening and approximately GBP 2.5 million original construction cost. This pin represents the completed communications tower, separate from its May 1966 public opening, later sale and proposed hotel conversion. No inflation adjustment or FX conversion is applied.",
+      "sources": [
+        {
+          "url": "https://www.webwire.com/ViewPressRel.asp?aId=121441",
+          "title": "BT Tower open day for the public",
+          "quote": "£2.5 million – Approximate cost to construct.",
+          "publishedDate": "2010-08-16",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/post-office-tower",
+          "title": "Post Office Tower (BT Tower)",
+          "quote": "opened in the Fitzrovia area of central London in 1965",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 546,
+      "status": "Completed",
+      "price": 900000000,
+      "priceCurrency": "EGP",
+      "note": "Egypt Stadium’s opened venue record confirms inauguration on March 22, 2024 and EGP 900 million stadium construction cost. The EGP 2.28 billion Olympic sports complex is a broader scope and is not assigned to this stadium pin. Native currency follows the Egyptian-pound figure, without converting its dollar equivalent.",
+      "sources": [
+        {
+          "url": "https://stadiumdb.com/stadiums/egy/egypt_stadium",
+          "title": "Egypt Stadium – StadiumDB.com",
+          "quote": "Cost EGP 900 M",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Table whitespace normalized; Inauguration field is 22/03/2024. Stadium cost is distinct from the surrounding complex."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 618,
+      "status": "Completed",
+      "price": 2000000000,
+      "priceCurrency": "USD",
+      "note": "Icon of the Seas entered passenger service with its January 27, 2024 inaugural voyage, after construction and delivery. Royal Caribbean’s own shipbuilding guide states a US$2 billion build cost. This whole-ship figure is separate from ticket prices and future Icon-class sister ships; the earlier christening is a separate milestone.",
+      "sources": [
+        {
+          "url": "https://www.cruisemapper.com/news/12885-icon-of-the-seas-begins-inaugural-journey",
+          "title": "Royal Caribbean's/world's biggest vessel Icon of the Seas begins inaugural cruise from Florida",
+          "quote": "on Saturday, January 27.",
+          "publishedDate": "2024-01-28",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.royalcaribbean.com/guides/how-cruise-ships-built",
+          "title": "How Cruise Ships Are Built",
+          "quote": "costs $2 billion.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Sentence explicitly concerns Icon of the Seas; source states dollars, no FX conversion."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 670,
+      "status": "Completed",
+      "price": 8000000000,
+      "priceCurrency": "USD",
+      "note": "The Port Authority’s project account explicitly says LaGuardia’s transformation is completed, with Terminal B completed in 2022 and Delta’s Terminal C completed in 2024. US$8 billion is the full represented redevelopment, not the cost of only one terminal. The existing estimated 2024 year-end anchor is retained; later Terminal A work is separate.",
+      "sources": [
+        {
+          "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/lga.html",
+          "title": "LaGuardia Airport Transformation: A World-Class Experience",
+          "quote": "The $8 billion redevelopment",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Same operator page states the transformation completed and Terminal C completed in 2024."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 677,
+      "status": "Completed",
+      "price": 100000000,
+      "priceCurrency": "USD",
+      "note": "June 21, 2023 reporting quotes the homeowners association that the foundation stabilization was substantially completed and its pile/load-transfer engineering project finished earlier that month. This supports Completed for the pinned retrofit success announcement, not the original tower build or a promise to reverse every inch of its lean. US$100 million is the retrofit cost; the announcement date remains distinct from later closeout.",
+      "sources": [
+        {
+          "url": "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/",
+          "title": "San Francisco’s infamous leaning tower has been fixed",
+          "quote": "A $100 million construction effort",
+          "publishedDate": "2023-06-21",
+          "openedAt": "2026-10-24",
+          "quoteNote": "The same opened article explicitly confirms finished work/delivery; the quoted cost applies to that exact scope."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 678,
+      "status": "Completed",
+      "price": 141500000000,
+      "priceCurrency": "HKD",
+      "note": "The November 28, 2024 inauguration marks simultaneous North, South and Centre runway operations, establishing completion of the pinned three-runway operational system. The airport’s own funding FAQ states HK$141.5 billion in money-of-the-day prices. Later passenger-building/Terminal 2 delivery is distinguished from the represented runway commissioning milestone and is not inferred complete.",
+      "sources": [
+        {
+          "url": "https://www.thestandard.com.hk/news/article/223251/Hong-Kong-International-Airport-inaugurates-Three-Runway-System",
+          "title": "Hong Kong International Airport inaugurates Three-Runway System",
+          "quote": "The North, South, and Centre Runways commenced simultaneous operations",
+          "publishedDate": "2024-11-28",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://threerunwaysystem.hongkongairport.com/en/information-centre/frequently-asked-questions/",
+          "title": "Frequently Asked Questions | Three Runway System",
+          "quote": "The estimated construction cost is HK$141.5 billion at money-of-the-day prices.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 711,
+      "status": "Completed",
+      "price": 1990000000,
+      "priceCurrency": "USD",
+      "note": "The Raiders’ July 31, 2020 release confirms the Certificate of Occupancy after construction wrapped July 30. July 31 is the occupancy handover milestone, not a Raiders game or fans’ first visit; the description and date reasoning are corrected accordingly. Mortenson’s December 2020 account gives a revised US$1.99 billion overall stadium cost, including third-party work, distinct from its US$1.944 billion construction budget and earlier US$1.97 billion estimate.",
+      "sources": [
+        {
+          "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+          "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+          "quote": "received a Certificate of Occupancy on Allegiant Stadium",
+          "publishedDate": "2020-07-31",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.mortenson.com/news-insights/allegiant-stadium-construction-25m-under-budget",
+          "title": "Allegiant Stadium Construction to End Up $25M Under Budget",
+          "quote": "the final overall cost of the stadium will be $1.99 billion.",
+          "publishedDate": "2020-12-09",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "description": "Allegiant Stadium received its Certificate of Occupancy after construction wrapped on July 30, 2020. The completed 65,000-seat venue became the new home of the Las Vegas Raiders; July 31 records the occupancy milestone.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The Raiders’ July 31, 2020 release confirms the Certificate of Occupancy following construction completion July 30. This pin records occupancy handover on July 31, not the first Raiders game or a public opening with fans."
+      }
+    },
+    {
+      "id": 800,
+      "status": "Completed",
+      "price": 500000000,
+      "priceCurrency": "NOK",
+      "note": "Mjøstårnet opened March 15, 2019, establishing the completed tower scope. Timber supplier Moelven states Hent’s contract at about NOK 500 million excluding VAT. Native price stores that rounded main-contract figure, not Moelven’s separate NOK 47 million subcontract or an FX equivalent. The source does not establish an audited all-in development total.",
+      "sources": [
+        {
+          "url": "https://materialdistrict.com/article/worlds-tallest-wooden-tower/",
+          "title": "The world’s tallest wooden tower",
+          "quote": "Opened on 15 March",
+          "publishedDate": "2019-03-27",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.moelven.com/mjostarnet/qa-about-mjostarnet/",
+          "title": "Q&A about Mjøstårnet",
+          "quote": "Hent AS's contract is valued at about NOK 500 million excluding VAT.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 887,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "This pin represents Tønsberg’s October 2, 2010 shipyard launch while construction/outfitting remained underway. It is In Progress at that historical milestone, not Completed merely because the hull floated. The owner’s subsequent March 23, 2011 announcement establishes entry into operation after delivery in March 2011; that later milestone is not moved onto the 2010 pin. No exact individual-vessel build cost was verified; fleet investments and ship capacities are not costs.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/MV_T%C3%B8nsberg",
+          "title": "MV Tønsberg",
+          "quote": "Launched 2 October 2010",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Infobox label/value whitespace normalized; later owner release independently establishes March 2011 operation."
+        },
+        {
+          "url": "https://www.marinelink.com/news/wilhelmsen-generation337684",
+          "title": "Wilh. Wilhelmsen Launches Next Generation Cargo Vessel",
+          "quote": "has launched its 150th anniversary vessel, MV Tønsberg, into operation.",
+          "publishedDate": "2011-03-23",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Individual vessel construction price not established in owner announcement, opened annual report or vessel-cost searches; no allocation from multi-vessel orders."
+    },
+    {
+      "id": 891,
+      "status": "Completed",
+      "price": 818500000,
+      "priceCurrency": "USD",
+      "note": "SANY America’s August 23, 2012 factory-opening release and August 24 trade report establish the completed Lingang excavator factory near Shanghai. The stated build cost is US$818.5 million, separate from SANY’s Georgia assembly plant, annual output value or wider investment agreements. The pin retains its August 24 reporting milestone; no currency conversion is performed.",
+      "sources": [
+        {
+          "url": "https://www.oemoffhighway.com/market-analysis/press-release/10764553/sany-opens-worlds-largest-excavator-factory-in-china",
+          "title": "SANY Opens World's Largest Excavator Factory in China",
+          "quote": "The facility cost $818.5 million to build.",
+          "publishedDate": "2012-08-23",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai",
+          "title": "Sany Opens “World’s Largest Excavator Factory” Near Shanghai",
+          "quote": "Sany has opened",
+          "publishedDate": "2012-08-24",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 937,
+      "status": "Completed",
+      "price": 500000000,
+      "priceCurrency": "USD",
+      "note": "The April 2011 interview with Seaway’s CEO states the vessel was delivered after its sea trials and crane commissioning and quotes its approximately US$500 million actual cost outcome, within 2% of budget. This supports Completed for the Oleg Strashnov delivery pin, distinct from its October 2009 hull launch or an installation contract. No later vessel refit or project charter cost is substituted.",
+      "sources": [
+        {
+          "url": "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov",
+          "title": "Seaway set to go global with high-speed Oleg Strashnov",
+          "quote": "The actual cost outcome was within 2% of our budget. At $500 million",
+          "publishedDate": "2011-04-02",
+          "openedAt": "2026-10-24",
+          "quoteNote": "The same opened article explicitly confirms finished work/delivery; the quoted cost applies to that exact scope."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7027,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Amazon and C&A’s June 12, 2026 announcement explicitly marks the groundbreaking of the exact 67-home Pointe at Thomas project, supporting In Progress at this milestone. Amazon’s US$6.7 million low-cost capital and Seattle Credit Union’s US$11.4 million construction financing are financing components, not a source-quoted project cost. No full construction or development total was verified in the release, contractor page or project-cost reporting.",
+      "sources": [
+        {
+          "url": "https://press.aboutamazon.com/2026/6/c-a-development-and-amazon-bring-new-affordable-homes-to-seattles-capitol-hill",
+          "title": "C&A Development and Amazon Bring New Affordable Homes to Seattle's Capitol Hill",
+          "quote": "announce the groundbreaking of The Pointe at Thomas Apartments",
+          "publishedDate": "2026-06-12",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "No quoted total project cost established; do not add the $6.7m capital and $11.4m construction financing or use either as development cost."
+    },
+    {
+      "id": 7041,
+      "status": "In Progress",
+      "price": 107600554,
+      "priceCurrency": "USD",
+      "note": "Cielo is the 89-home Sunnydale Block 7, separate from 95-home Luca/Block 9. The architect explicitly lists it In Construction, and Mercy’s opening report confirms construction of Cielo and Luca started. The April 2025 city analyst’s budget gives US$107,600,554 Total Uses for Block 7, superseding the opened March 2024 US$108,646,076 estimate. The spring 2027 target remains estimated and is not proof of completion.",
+      "sources": [
+        {
+          "url": "https://saidasullivan.com/cms/work/150/",
+          "title": "SUNNYDALE HOPE SF- Cielo | Saida + Sullivan Design Partners",
+          "quote": "In Construction",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://sfgov.legistar.com/View.ashx?GUID=659F8C90-7212-40CF-B6AC-28BB4E231286&ID=14004911&M=F",
+          "title": "San Francisco Budget and Legislative Analyst — April 9, 2025 meeting",
+          "quote": "$107,600,554",
+          "publishedDate": "2025-04-04",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 37, Exhibit 2: Block 7 Total Uses, 89 units; not combined Block 7/9 total or the city loan."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7042,
+      "status": "Completed",
+      "price": 95315920,
+      "priceCurrency": "USD",
+      "note": "The developer’s November 18, 2025 opening report and builder’s February 2025 completion record establish Completed for Amani’s 80 homes, Sunnydale Block 3A. The March 2024 municipal comparison table publishes US$95,315,920 total development cost with acquisition for this exact block. The separate US$138 million combined Amani/Nia construction contract is not assigned to either building or apportioned by unit count. No later exact individual-block total was established in the opened completion sources.",
+      "sources": [
+        {
+          "url": "https://www.mercyhousing.org/2025/11/grand-opening-170-affordable-apartments/",
+          "title": "Celebrating the Grand Opening of 170 New Affordable Apartment Homes as Part of San Francisco’s Largest Public Housing Transformation",
+          "quote": "celebrate the grand opening of Amani and Nia",
+          "publishedDate": "2025-11-18",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://media.api.sf.gov/documents/Approved-Sunnydale_Block_7_Prelimanary_Gap_Loan_Evaluation_LC_3-15-2024_0.pdf",
+          "title": "Sunnydale HOPE SF Block 7 — March 15, 2024 loan evaluation",
+          "quote": "$ 95,315,920",
+          "publishedDate": "2024-03-15",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 55, row Sunnydale Block 3A, 80 units, Total Dev. Cost with acquisition; whitespace normalized."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7074,
+      "status": "Completed",
+      "price": 90943827,
+      "priceCurrency": "USD",
+      "note": "The developer’s November 18, 2025 opening report and builder’s February 2025 completion record establish Completed for Nia’s 90 homes, Sunnydale Block 3B. The March 2024 municipal comparison table publishes US$90,943,827 total development cost with acquisition for this exact block. The separate US$138 million combined Amani/Nia construction contract is not assigned to either building or apportioned by unit count. No later exact individual-block total was established in the opened completion sources.",
+      "sources": [
+        {
+          "url": "https://www.mercyhousing.org/2025/11/grand-opening-170-affordable-apartments/",
+          "title": "Celebrating the Grand Opening of 170 New Affordable Apartment Homes as Part of San Francisco’s Largest Public Housing Transformation",
+          "quote": "celebrate the grand opening of Amani and Nia",
+          "publishedDate": "2025-11-18",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://media.api.sf.gov/documents/Approved-Sunnydale_Block_7_Prelimanary_Gap_Loan_Evaluation_LC_3-15-2024_0.pdf",
+          "title": "Sunnydale HOPE SF Block 7 — March 15, 2024 loan evaluation",
+          "quote": "$ 90,943,827",
+          "publishedDate": "2024-03-15",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 55, row Sunnydale Block 3B, 90 units, Total Dev. Cost with acquisition; whitespace normalized."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7062,
+      "status": "Completed",
+      "price": 145333464,
+      "priceCurrency": "USD",
+      "note": "Mercy’s December 2025 report confirms 600 Seventh’s opening, covering 220 resident homes plus its manager apartment. The August 2024 city comparison table gives US$145,333,464 total development cost with acquisition for the exact 221-apartment building, including its ground-floor commercial shell. The native cost is neither the city gap loan nor a per-unit calculation. The pin retains the dated opening-report milestone rather than turning an old forecast into an exact opening date.",
+      "sources": [
+        {
+          "url": "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+          "title": "600 Seventh Street Opens in San Francisco",
+          "quote": "to celebrate the opening of 600 Seventh",
+          "publishedDate": "2025-12-03",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://media.api.sf.gov/documents/Approved_-_PREDEVELOPMENT_FINANCING_FOR_MISSION_BAY_SOUTH_BLOCK_4_EAST_-_LC_8-2-2024_0.pdf",
+          "title": "Mission Bay South Block 4 East — August 2, 2024 loan evaluation",
+          "quote": "$ 145,333,464",
+          "publishedDate": "2024-08-02",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 81 (zero-based): comparison row 600 7th Street / formerly 801 Brannan; Total Dev. Cost with acquisition, 221 units; whitespace normalized."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7066,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Hamel’s exact 139-home Edmonson / Barry Farm Building 1A portfolio page explicitly says Currently Under Construction. This establishes In Progress independently of a projected late-2026 opening or floorplan availability labels. The DCHFA release’s US$61.1 million bonds, US$52 million tax-credit equity and US$21 million loan are financing, not an explicit total cost; no full exact-building development cost was verified.",
+      "sources": [
+        {
+          "url": "https://www.hamelbuilders.com/portfolio-hb/the-edmonson-barry-farm-building-1a/",
+          "title": "The Edmonson (Barry Farm Building 1A) | Hamel Builders",
+          "quote": "Project is Currently Under Construction",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://dchfa.org/wp-content/uploads/2024/06/Edmonson-Press-Release-FINAL.pdf",
+          "title": "DCHFA finances 139 affordable apartments in the Second Phase of Development in Ward 8’s Barry Farm",
+          "quote": "The Edmonson will consist of 139",
+          "publishedDate": "2024-06-06",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Builder page and agency financing release do not state an exact-building total; bonds, equity and DMPED loan must not be summed or substituted."
+    },
+    {
+      "id": 7070,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Atlantic Pacific’s June 4, 2026 grand-opening announcement and independent June 2026 ceremony reporting establish completion of the exact 616-home Atlantic Square tower. The cost was explicitly not disclosed in the opened reporting. Published workforce rents, tax-exempt bonds and other Overtown projects’ budgets do not establish its construction or development cost.",
+      "sources": [
+        {
+          "url": "https://apcompanies.com/news/atlantic-square-celebrated-its-grand-opening-as-miami-dadecountys-largest-mixed-income-transit-orienteddevelopment/",
+          "title": "Atlantic Square Celebrated Its Grand Opening as Miami-DadeCounty’s Largest Mixed-Income Transit-OrientedDevelopment",
+          "quote": "Atlantic Square Celebrated Its Grand Opening",
+          "publishedDate": "2026-06-04",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.sfltimes.com/news/overtown-is-home-to-largest-mixed-use-transit-oriented-affordable-housing-development",
+          "title": "Overtown is home to largest mixed-use transit-oriented, affordable housing development",
+          "quote": "The cost of the project was not disclosed.",
+          "publishedDate": "2026-06-23",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Opened grand-opening reporting explicitly says cost not disclosed. No verified total from developer release, property material or exact-project cost search."
+    },
+    {
+      "id": 7081,
+      "status": "Proposed",
+      "price": 20000000,
+      "priceCurrency": "USD",
+      "note": "This pin records Mercy’s March 20, 2024 redevelopment announcement for 76 new Henderson Place homes, not an opening of the old 58-home property. At that announcement construction was still set to begin that month, so Proposed describes the represented pre-start milestone. Later construction reporting and the elapsed early-2025 forecast do not retroactively make the announcement a completed build. Opened permit reporting gives a US$20 million exact 76-home development estimate; financing loans are not substituted.",
+      "sources": [
+        {
+          "url": "https://mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+          "title": "New Homes in Atlanta’s Old Fourth Ward",
+          "quote": "Construction is set to begin this month",
+          "publishedDate": "2024-03-20",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.bisnow.com/news/atlanta/affordable-housing/affordable-housing-operator-coretta-scott-king-organization-partner-to-redevelop-affordable-old-fourth-ward-apartments-116592",
+          "title": "Affordable Complex Owned By Coretta Scott King-Founded Group To Be Redeveloped",
+          "quote": "a $20M, 76-unit affordable housing project",
+          "publishedDate": "2022-11-30",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7086,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Mercy’s July 2026 report explicitly says 1633 Valencia moved from groundbreaking to completion in 19 months and was nearly fully leased at opening. The pin retains the July 15 operator-report date, distinct from the June ribbon-cutting report. Newer reporting gives roughly US$525,000 per apartment but no quoted whole-project total; older estimates and financing loans use different scopes. Native cost stays null rather than multiplying a rounded per-unit figure.",
+      "sources": [
+        {
+          "url": "https://www.mercyhousing.org/2026/07/opening-doors-for-seniors-at-1633-valencia/",
+          "title": "Opening doors for seniors at 1633 Valencia",
+          "quote": "from groundbreaking to completion in just 19 months.",
+          "publishedDate": "2026-07-15",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.sfchronicle.com/realestate/article/1633-valencia-affordable-housing-22287408.php/",
+          "title": "An S.F. affordable housing project cost half as much as usual. Can it be replicated?",
+          "quote": "at a cost of roughly $525,000 per apartment",
+          "publishedDate": "2026-06-02",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Latest opened completion reporting gives a rounded per-apartment cost, not a source-quoted full total. Older 2024 estimates/loans are not treated as a newly verified final total."
+    },
+    {
+      "id": 7106,
+      "status": "Completed",
+      "price": 39000000,
+      "priceCurrency": "USD",
+      "note": "The opened 2013 housing-finance account identifies Saint Luke’s Manor’s 137 senior homes as opened in 2012; the developer’s later portfolio records the completed residential conversion. Its rounded US$39 million, 137-unit profile is used as development cost, separate from McHugh’s US$23.5 million engineering-project construction scope and the later school/commercial phase. The October 2026 listing-review date moves to December 31, 2012 as an estimated opening-year anchor; no exact day or completion of every hospital-campus phase is claimed.",
+      "sources": [
+        {
+          "url": "https://www.housingfinance.com/developments/pennroses-growth-curve_o",
+          "title": "Pennrose's Growth Curve",
+          "quote": "In 2012, it opened Saint Luke’s Manor",
+          "publishedDate": "2013-04-15",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://newhaven-ct.legistar.com/View.ashx?GUID=67126FEC-AA03-4C2B-995B-C235BC619AEC&ID=11809033&M=F",
+          "title": "Pennrose — Horace H. Strong School redevelopment proposal",
+          "quote": "$39M | 137 Units",
+          "publishedDate": "2022-07-26",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Developer profile, printed page 29. Historical redevelopment account uses 2011, while dated opening reporting says 2012; native date represents reported opening year, not original construction or all-campus completion."
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2012-12-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Affordable Housing Finance’s April 15, 2013 account reports Saint Luke’s Manor opened in 2012, identifying 137 senior homes. December 31 is an estimated year-precision opening anchor, not an exact ceremony day or completion date for all later hospital-campus phases. Replaces the October 2026 listing-review date; developer portfolio’s 2011 refers to historical redevelopment."
+      }
+    },
+    {
+      "id": 7126,
+      "status": "In Progress",
+      "price": 13500000,
+      "priceCurrency": "USD",
+      "note": "This pin records the December 14, 2018 groundbreaking for Square at Merritt Mill’s 75 homes. The builder confirms that historical milestone, so it is In Progress at the pinned event even though the community later operated. Opened 2018 local reporting states roughly US$13.5 million construction costs. That is a construction estimate for the exact development, not an all-in budget or the US$25 million cost of the unrelated Roosevelt project mentioned in some coverage.",
+      "sources": [
+        {
+          "url": "https://harkinsbuilders.com/news/new-townhome-community-breaks-ground-in-salisbury-md/",
+          "title": "The Square at Merritt Mill Breaks Ground",
+          "quote": "Harkins attended the groundbreaking of the Square at Merritt Mill",
+          "publishedDate": "2018-12-14",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.wboc.com/news/regional/maryland/groundbreaking-scheduled-for-the-square-at-merritt-mill-in-salisbury/article_f8beba76-8c78-5509-9088-5d1ecc205be5.html",
+          "title": "Groundbreaking Scheduled for The Square at Merritt Mill in Salisbury",
+          "quote": "construction costs are roughly $13.5 million.",
+          "publishedDate": "2018-08-06",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7131,
+      "status": "In Progress",
+      "price": 13450000,
+      "priceCurrency": "USD",
+      "note": "The November 1, 2022 developer report marks groundbreaking of West Point Village Phase I’s 72 homes. Its historical construction-start scope is In Progress; later occupancy is a separate milestone. The builder’s September 2022 coverage quotes a US$13.45 million exact housing project, superseding the opened-index 2021 US$12 million proposal estimate. This native construction-project figure is separate from proposed Phase II’s additional homes and the similarly named Texas property.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/news-views/news/2022/groundbreaking-of-west-point-village-redevelopment/",
+          "title": "Groundbreaking of West Point Village Redevelopment",
+          "quote": "Construction begins on phase 1",
+          "publishedDate": "2022-11-01",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://businessalabama.com/capstone-building-corp-breaks-ground-on-west-point-village/",
+          "title": "Capstone Building Corp. breaks ground on West Point Village",
+          "quote": "The $13.45 million housing project has 72 garden-style units",
+          "publishedDate": "2022-09-14",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7175,
+      "status": "Completed",
+      "price": 13841017,
+      "priceCurrency": "USD",
+      "note": "Griffin Housing Authority states Oaks at Park Pointe completed in 2015; the architect gives October 2015 and BLOC gives December 2015 for the same 84-home scope. The existing November 2018 date is corrected to December 31, 2015 as an estimated year anchor because the precise completion month conflicts. The developer’s RAD/LIHTC case study publishes US$13,841,017 Total Development Budget for Oaks, separate from the Iris/Terraces senior phases and its US$10,427,168 construction component.",
+      "sources": [
+        {
+          "url": "https://www.griffinhousingauthority.com/the-oaks",
+          "title": "The Oaks at Park Pointe — Griffin Housing Authority",
+          "quote": "Completed in 2015",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://thriven.design/project/oaks-at-park-pointe/",
+          "title": "Oaks at Park Pointe — Thriven Design",
+          "quote": "Completed October 2015",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.blocglobal.com/meriwether-homes/",
+          "title": "Meriwether Homes — BLOC Global Group",
+          "quote": "completed in December 2015",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.housingonline.com/wp-content/uploads/2018/02/Richelle-Patton.pdf",
+          "title": "RAD/LIHTC Transaction Case Study — Oaks at Park Pointe",
+          "quote": "TOTAL DEVELOPMENT BUDGET $ 13,841,017",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 3, Development Uses total, 84-home Phase I; whitespace normalized."
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "2015-12-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Griffin Housing Authority confirms the 84-home Oaks at Park Pointe completed in 2015. Architect Thriven says October 2015; BLOC says December 2015. December 31, 2015 is a year-precision anchor pending reconciliation of the completion month, not a verified exact opening day. Replaces the unsupported November 2018 anchor."
+      }
+    },
+    {
+      "id": 7230,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Savannah’s 2022 CAPER explicitly states that in December 2017 the Housing Authority completed rehabilitation of 280 former Wessels/Blackshear units, renamed River Pointe I and II. This exact existing scope is Completed; later infill development and its halted agreements are separate. No quoted cost for the 280-home rehabilitation was established in the city report, authority material or cost searches; broader East Savannah budgets are not allocated to it.",
+      "sources": [
+        {
+          "url": "https://www.savannahga.gov/DocumentCenter/View/27364",
+          "title": "Savannah 2022 Consolidated Annual Performance and Evaluation Report",
+          "quote": "completed the rehabilitation of 280 units",
+          "publishedDate": "2023-03-30",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Printed CAPER page 25 (PDF page 24); sentence dates completion to December 2017."
+        }
+      ],
+      "patch": {
+        "dateConfidenceReasoning": "Savannah’s 2022 CAPER explicitly dates completion of the 280-home River Pointe I and II rehabilitation to December 2017. December 31 is an estimated month-precision anchor, not an exact announced opening day. Later infill phases are separate."
+      },
+      "costGap": "Exact 280-home 2017 rehabilitation total not established; later 53-home infill, wider East Savannah redevelopment and other Savannah properties have distinct scopes."
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 484,
+          "title": "BT Tower Goes Live as a Cold War Microwave Relay Hub",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "BT’s distributed press release confirms the October 8, 1965 opening and approximately GBP 2.5 million original construction cost. This pin represents the completed communications tower, separate from its May 1966 public opening, later sale and proposed hotel conversion. No inflation adjustment or FX conversion is applied.",
+          "evidence": "£2.5 million – Approximate cost to construct.",
+          "evidenceUrls": [
+            "https://www.webwire.com/ViewPressRel.asp?aId=121441",
+            "https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/post-office-tower"
+          ],
+          "expectedPinSha256": "8a88bfc9a433e5d85252f8caecd4e858888aa4d0a54f1193986e28b5c127ba91",
+          "metadataVerified": true,
+          "savedPinSha256": "cf4d6dbeba8843de9148bd3c9857f09d85aed58c08015e9ceac0ca4bcbc87b9e"
+        },
+        {
+          "id": 546,
+          "title": "New Administrative Capital Stadium Opens in Egypt",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Egypt Stadium’s opened venue record confirms inauguration on March 22, 2024 and EGP 900 million stadium construction cost. The EGP 2.28 billion Olympic sports complex is a broader scope and is not assigned to this stadium pin. Native currency follows the Egyptian-pound figure, without converting its dollar equivalent.",
+          "evidence": "Cost EGP 900 M",
+          "evidenceUrls": [
+            "https://stadiumdb.com/stadiums/egy/egypt_stadium"
+          ],
+          "expectedPinSha256": "410e8c5aa62c380dd1c17f09dec22e3ae96ee9f6ce716e21a6eea418aa7fd50e",
+          "metadataVerified": true,
+          "savedPinSha256": "21de69f73a245eb32b2eef720d2ddbc1adf50884c1a0e4a6ff2c1e81cabde20f"
+        },
+        {
+          "id": 618,
+          "title": "Icon of the Seas Enters Service as World's Largest Cruise Ship",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Icon of the Seas entered passenger service with its January 27, 2024 inaugural voyage, after construction and delivery. Royal Caribbean’s own shipbuilding guide states a US$2 billion build cost. This whole-ship figure is separate from ticket prices and future Icon-class sister ships; the earlier christening is a separate milestone.",
+          "evidence": "on Saturday, January 27.",
+          "evidenceUrls": [
+            "https://www.cruisemapper.com/news/12885-icon-of-the-seas-begins-inaugural-journey",
+            "https://www.royalcaribbean.com/guides/how-cruise-ships-built"
+          ],
+          "expectedPinSha256": "0b0ca063e0390809010a03ffce985005bb261e775b2f7e2c7122e4c47039d219",
+          "metadataVerified": true,
+          "savedPinSha256": "6902fd32dbc10d459303e6f53a65c93e7bee89f6563633fae11e5bdd73fd3f6d"
+        },
+        {
+          "id": 670,
+          "title": "LaGuardia Airport's $8BN Redevelopment Fully Wraps Up",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Port Authority’s project account explicitly says LaGuardia’s transformation is completed, with Terminal B completed in 2022 and Delta’s Terminal C completed in 2024. US$8 billion is the full represented redevelopment, not the cost of only one terminal. The existing estimated 2024 year-end anchor is retained; later Terminal A work is separate.",
+          "evidence": "The $8 billion redevelopment",
+          "evidenceUrls": [
+            "https://www.portauthoritybuilds.com/redevelopment/us/en/lga.html"
+          ],
+          "expectedPinSha256": "96af6e54b7b1b112f130ea0d5d5947dc5478ac4dd2a2e1b77b7b6b1c97147cc2",
+          "metadataVerified": true,
+          "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3"
+        },
+        {
+          "id": 677,
+          "title": "San Francisco's Millennium Tower Fix Declared a Success",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "June 21, 2023 reporting quotes the homeowners association that the foundation stabilization was substantially completed and its pile/load-transfer engineering project finished earlier that month. This supports Completed for the pinned retrofit success announcement, not the original tower build or a promise to reverse every inch of its lean. US$100 million is the retrofit cost; the announcement date remains distinct from later closeout.",
+          "evidence": "A $100 million construction effort",
+          "evidenceUrls": [
+            "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/"
+          ],
+          "expectedPinSha256": "03b6f42be3907d7f842458bd580d727e806d209378050ace2d0d67125344ed4b",
+          "metadataVerified": true,
+          "savedPinSha256": "01f5fbeb62e6c5df386edb8c7d0d71d6b8c065e6c0f90f55d960bfb3201c1d48"
+        },
+        {
+          "id": 678,
+          "title": "Hong Kong Airport's Three-Runway System Reaches Full Operation",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The November 28, 2024 inauguration marks simultaneous North, South and Centre runway operations, establishing completion of the pinned three-runway operational system. The airport’s own funding FAQ states HK$141.5 billion in money-of-the-day prices. Later passenger-building/Terminal 2 delivery is distinguished from the represented runway commissioning milestone and is not inferred complete.",
+          "evidence": "The North, South, and Centre Runways commenced simultaneous operations",
+          "evidenceUrls": [
+            "https://www.thestandard.com.hk/news/article/223251/Hong-Kong-International-Airport-inaugurates-Three-Runway-System",
+            "https://threerunwaysystem.hongkongairport.com/en/information-centre/frequently-asked-questions/"
+          ],
+          "expectedPinSha256": "544d15f10d87552e7958d159d64a4462697362c3fd41a393ce102c0599dbc4bd",
+          "metadataVerified": true,
+          "savedPinSha256": "a6acecbf35a00a9ac5661cf5b0257c2b1a8d1a2a66f67061b6a14bdc49ab7ae2"
+        },
+        {
+          "id": 711,
+          "title": "Las Vegas' $1.9BN Mega Stadium",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Raiders’ July 31, 2020 release confirms the Certificate of Occupancy after construction wrapped July 30. July 31 is the occupancy handover milestone, not a Raiders game or fans’ first visit; the description and date reasoning are corrected accordingly. Mortenson’s December 2020 account gives a revised US$1.99 billion overall stadium cost, including third-party work, distinct from its US$1.944 billion construction budget and earlier US$1.97 billion estimate.",
+          "evidence": "received a Certificate of Occupancy on Allegiant Stadium",
+          "evidenceUrls": [
+            "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "https://www.mortenson.com/news-insights/allegiant-stadium-construction-25m-under-budget"
+          ],
+          "expectedPinSha256": "39cb3c07c8e1f8887c9f29fd279a6eb2149b21b687da20474375b5c062e6abc8",
+          "metadataVerified": true,
+          "savedPinSha256": "e177456077695316835236431dcc547aed9cbf30f1bd98d7050297f45c68a30d"
+        },
+        {
+          "id": 800,
+          "title": "Mjøstårnet Becomes the World's Tallest Timber Tower in Brumunddal",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Mjøstårnet opened March 15, 2019, establishing the completed tower scope. Timber supplier Moelven states Hent’s contract at about NOK 500 million excluding VAT. Native price stores that rounded main-contract figure, not Moelven’s separate NOK 47 million subcontract or an FX equivalent. The source does not establish an audited all-in development total.",
+          "evidence": "Opened on 15 March",
+          "evidenceUrls": [
+            "https://materialdistrict.com/article/worlds-tallest-wooden-tower/",
+            "https://www.moelven.com/mjostarnet/qa-about-mjostarnet/"
+          ],
+          "expectedPinSha256": "6c237548dbad40fe9ff946acb23a6fe1a1399438925aff96e3a308946b6487c1",
+          "metadataVerified": true,
+          "savedPinSha256": "d99f34e8b7f0d687a838039425d6c0aad95f0bc6a6bedd415fb95b2f993d7384"
+        },
+        {
+          "id": 887,
+          "title": "Wilhelmsen Launches Tønsberg as the World's Largest Ro-Ro Ship",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "This pin represents Tønsberg’s October 2, 2010 shipyard launch while construction/outfitting remained underway. It is In Progress at that historical milestone, not Completed merely because the hull floated. The owner’s subsequent March 23, 2011 announcement establishes entry into operation after delivery in March 2011; that later milestone is not moved onto the 2010 pin. No exact individual-vessel build cost was verified; fleet investments and ship capacities are not costs.",
+          "evidence": "Launched 2 October 2010",
+          "evidenceUrls": [
+            "https://en.wikipedia.org/wiki/MV_T%C3%B8nsberg",
+            "https://www.marinelink.com/news/wilhelmsen-generation337684"
+          ],
+          "expectedPinSha256": "538fc73c1bab6521a4bde645ee40436f4f5b08caa9f6d6ab1023e2eb94d1d9bd",
+          "metadataVerified": true,
+          "savedPinSha256": "aeeeee15f29d93f0210af542375e58fc22686464afb6795fa598c246524189fa"
+        },
+        {
+          "id": 891,
+          "title": "Sany Opens Its Lingang Excavator Factory Near Shanghai",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "SANY America’s August 23, 2012 factory-opening release and August 24 trade report establish the completed Lingang excavator factory near Shanghai. The stated build cost is US$818.5 million, separate from SANY’s Georgia assembly plant, annual output value or wider investment agreements. The pin retains its August 24 reporting milestone; no currency conversion is performed.",
+          "evidence": "The facility cost $818.5 million to build.",
+          "evidenceUrls": [
+            "https://www.oemoffhighway.com/market-analysis/press-release/10764553/sany-opens-worlds-largest-excavator-factory-in-china",
+            "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai"
+          ],
+          "expectedPinSha256": "e307f08c9319a28213089200798325730321228041c45a83a791282c25f9d87b",
+          "metadataVerified": true,
+          "savedPinSha256": "870cb91edd76f72afdaf6f7c9d9266e94a0b597c025763648cbb649370324a42"
+        },
+        {
+          "id": 937,
+          "title": "IHC Merwede Delivers the Oleg Strashnov Crane Vessel to Seaway Heavy Lifting",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The April 2011 interview with Seaway’s CEO states the vessel was delivered after its sea trials and crane commissioning and quotes its approximately US$500 million actual cost outcome, within 2% of budget. This supports Completed for the Oleg Strashnov delivery pin, distinct from its October 2009 hull launch or an installation contract. No later vessel refit or project charter cost is substituted.",
+          "evidence": "the vessel was eventually delivered nearly a year behind schedule.",
+          "evidenceUrls": [
+            "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov"
+          ],
+          "expectedPinSha256": "278e540db5df200a64b866ef84d92ee96f4ff5954f95c45be559cd7a46452735",
+          "metadataVerified": true,
+          "savedPinSha256": "8b6eff4e22f95964cdc6ace86249fc0576d721d86c788747980e2f208bdcccb7"
+        },
+        {
+          "id": 7027,
+          "title": "The Pointe at Thomas Affordable Housing Groundbreaking Announced in Seattle",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Amazon and C&A’s June 12, 2026 announcement explicitly marks the groundbreaking of the exact 67-home Pointe at Thomas project, supporting In Progress at this milestone. Amazon’s US$6.7 million low-cost capital and Seattle Credit Union’s US$11.4 million construction financing are financing components, not a source-quoted project cost. No full construction or development total was verified in the release, contractor page or project-cost reporting.",
+          "evidence": "announce the groundbreaking of The Pointe at Thomas Apartments",
+          "evidenceUrls": [
+            "https://press.aboutamazon.com/2026/6/c-a-development-and-amazon-bring-new-affordable-homes-to-seattles-capitol-hill"
+          ],
+          "expectedPinSha256": "85bab634aaf5fa792e7848c68525bdb09d9d481f4deb8053e6ac63b0d7ccd29c",
+          "metadataVerified": true,
+          "savedPinSha256": "2da517901e261a750dc83463b86c85e95424fe495bc2113a3b02934d3bfd2f00"
+        },
+        {
+          "id": 7041,
+          "title": "Cielo at Sunnydale — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Cielo is the 89-home Sunnydale Block 7, separate from 95-home Luca/Block 9. The architect explicitly lists it In Construction, and Mercy’s opening report confirms construction of Cielo and Luca started. The April 2025 city analyst’s budget gives US$107,600,554 Total Uses for Block 7, superseding the opened March 2024 US$108,646,076 estimate. The spring 2027 target remains estimated and is not proof of completion.",
+          "evidence": "In Construction",
+          "evidenceUrls": [
+            "https://saidasullivan.com/cms/work/150/",
+            "https://sfgov.legistar.com/View.ashx?GUID=659F8C90-7212-40CF-B6AC-28BB4E231286&ID=14004911&M=F"
+          ],
+          "expectedPinSha256": "51d1ad1ab4c044f73a2c37dbba6a9743daf9a0fd9a100f7852d76d3a343f4697",
+          "metadataVerified": true,
+          "savedPinSha256": "2e2fd5007f3837c65e42047586f0300bf13d59065b3f6208fab7e921224c8d4f"
+        },
+        {
+          "id": 7042,
+          "title": "Amani Apartments — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The developer’s November 18, 2025 opening report and builder’s February 2025 completion record establish Completed for Amani’s 80 homes, Sunnydale Block 3A. The March 2024 municipal comparison table publishes US$95,315,920 total development cost with acquisition for this exact block. The separate US$138 million combined Amani/Nia construction contract is not assigned to either building or apportioned by unit count. No later exact individual-block total was established in the opened completion sources.",
+          "evidence": "celebrate the grand opening of Amani and Nia",
+          "evidenceUrls": [
+            "https://www.mercyhousing.org/2025/11/grand-opening-170-affordable-apartments/",
+            "https://media.api.sf.gov/documents/Approved-Sunnydale_Block_7_Prelimanary_Gap_Loan_Evaluation_LC_3-15-2024_0.pdf"
+          ],
+          "expectedPinSha256": "72cadb9a49e8254cf9819d8b3a70364d51a6fc6571421e30c9d21734e479902a",
+          "metadataVerified": true,
+          "savedPinSha256": "61d388779a46135a6b859561ac4b4d7bfb702ad4890a03bd9b875ad6afe9d49d"
+        },
+        {
+          "id": 7074,
+          "title": "Nia Apartments — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The developer’s November 18, 2025 opening report and builder’s February 2025 completion record establish Completed for Nia’s 90 homes, Sunnydale Block 3B. The March 2024 municipal comparison table publishes US$90,943,827 total development cost with acquisition for this exact block. The separate US$138 million combined Amani/Nia construction contract is not assigned to either building or apportioned by unit count. No later exact individual-block total was established in the opened completion sources.",
+          "evidence": "celebrate the grand opening of Amani and Nia",
+          "evidenceUrls": [
+            "https://www.mercyhousing.org/2025/11/grand-opening-170-affordable-apartments/",
+            "https://media.api.sf.gov/documents/Approved-Sunnydale_Block_7_Prelimanary_Gap_Loan_Evaluation_LC_3-15-2024_0.pdf"
+          ],
+          "expectedPinSha256": "d20676d778e8e67b1ece390099f9bddc54d78ef52d72e06549fd9a45d5e3dfc5",
+          "metadataVerified": true,
+          "savedPinSha256": "3ad921c61e00fe3f3ea15b510759ceae8a59b907857988606a61bf627f73d1e7"
+        },
+        {
+          "id": 7062,
+          "title": "600 Seventh — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Mercy’s December 2025 report confirms 600 Seventh’s opening, covering 220 resident homes plus its manager apartment. The August 2024 city comparison table gives US$145,333,464 total development cost with acquisition for the exact 221-apartment building, including its ground-floor commercial shell. The native cost is neither the city gap loan nor a per-unit calculation. The pin retains the dated opening-report milestone rather than turning an old forecast into an exact opening date.",
+          "evidence": "to celebrate the opening of 600 Seventh",
+          "evidenceUrls": [
+            "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+            "https://media.api.sf.gov/documents/Approved_-_PREDEVELOPMENT_FINANCING_FOR_MISSION_BAY_SOUTH_BLOCK_4_EAST_-_LC_8-2-2024_0.pdf"
+          ],
+          "expectedPinSha256": "223f6d76e9f43268d6d553fe8b903400e392b6c4fb9ffa3a4626cf96a2a9533d",
+          "metadataVerified": true,
+          "savedPinSha256": "e989bcadd2dea984f2c71a23d7839e3fc3a82d72d2394a6112f9b32d56e5054c"
+        },
+        {
+          "id": 7066,
+          "title": "The Edmonson at Barry Farm — Washington DC affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Hamel’s exact 139-home Edmonson / Barry Farm Building 1A portfolio page explicitly says Currently Under Construction. This establishes In Progress independently of a projected late-2026 opening or floorplan availability labels. The DCHFA release’s US$61.1 million bonds, US$52 million tax-credit equity and US$21 million loan are financing, not an explicit total cost; no full exact-building development cost was verified.",
+          "evidence": "Project is Currently Under Construction",
+          "evidenceUrls": [
+            "https://www.hamelbuilders.com/portfolio-hb/the-edmonson-barry-farm-building-1a/",
+            "https://dchfa.org/wp-content/uploads/2024/06/Edmonson-Press-Release-FINAL.pdf"
+          ],
+          "expectedPinSha256": "413cd61a688a651b9a748e5204811575e63ce94bbbb545d63aaa61e0de165379",
+          "metadataVerified": true,
+          "savedPinSha256": "26acb367f6e9355826a6cd9938ad3872cc2becb921ee102350b2dac803596633"
+        },
+        {
+          "id": 7070,
+          "title": "Atlantic Square — Miami affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Atlantic Pacific’s June 4, 2026 grand-opening announcement and independent June 2026 ceremony reporting establish completion of the exact 616-home Atlantic Square tower. The cost was explicitly not disclosed in the opened reporting. Published workforce rents, tax-exempt bonds and other Overtown projects’ budgets do not establish its construction or development cost.",
+          "evidence": "Atlantic Square Celebrated Its Grand Opening",
+          "evidenceUrls": [
+            "https://apcompanies.com/news/atlantic-square-celebrated-its-grand-opening-as-miami-dadecountys-largest-mixed-income-transit-orienteddevelopment/",
+            "https://www.sfltimes.com/news/overtown-is-home-to-largest-mixed-use-transit-oriented-affordable-housing-development"
+          ],
+          "expectedPinSha256": "646fee42a9bc20eeada629d23e34a7e520b6a1a2e2cee664f07f00d33ab53461",
+          "metadataVerified": true,
+          "savedPinSha256": "764082f074d8a4c6a94cc52041138ef880131824de294c175de3876075a33b54"
+        },
+        {
+          "id": 7081,
+          "title": "Henderson Place — Atlanta affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "This pin records Mercy’s March 20, 2024 redevelopment announcement for 76 new Henderson Place homes, not an opening of the old 58-home property. At that announcement construction was still set to begin that month, so Proposed describes the represented pre-start milestone. Later construction reporting and the elapsed early-2025 forecast do not retroactively make the announcement a completed build. Opened permit reporting gives a US$20 million exact 76-home development estimate; financing loans are not substituted.",
+          "evidence": "Construction is set to begin this month",
+          "evidenceUrls": [
+            "https://mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "https://www.bisnow.com/news/atlanta/affordable-housing/affordable-housing-operator-coretta-scott-king-organization-partner-to-redevelop-affordable-old-fourth-ward-apartments-116592"
+          ],
+          "expectedPinSha256": "d3b0f3c110f395fd1b506b6c0ef4ead1ff545b058d338307b36502419a8e28a5",
+          "metadataVerified": true,
+          "savedPinSha256": "f9a487867a102743b936313ba9715502c7712f3fbae0437e5cbecb0492cfb712"
+        },
+        {
+          "id": 7086,
+          "title": "1633 Valencia — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Mercy’s July 2026 report explicitly says 1633 Valencia moved from groundbreaking to completion in 19 months and was nearly fully leased at opening. The pin retains the July 15 operator-report date, distinct from the June ribbon-cutting report. Newer reporting gives roughly US$525,000 per apartment but no quoted whole-project total; older estimates and financing loans use different scopes. Native cost stays null rather than multiplying a rounded per-unit figure.",
+          "evidence": "from groundbreaking to completion in just 19 months.",
+          "evidenceUrls": [
+            "https://www.mercyhousing.org/2026/07/opening-doors-for-seniors-at-1633-valencia/",
+            "https://www.sfchronicle.com/realestate/article/1633-valencia-affordable-housing-22287408.php/"
+          ],
+          "expectedPinSha256": "ff39ea14b4cc11426e57980bdd5b671ab1a0644884785f711bc326b12ae15efe",
+          "metadataVerified": true,
+          "savedPinSha256": "830cc1ac6c247ab6d2f7a9871a4c3358fbd3b0d5aa077b10c1c40a8fb6e9f457"
+        },
+        {
+          "id": 7106,
+          "title": "Saint Luke’s Manor — Cleveland affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The opened 2013 housing-finance account identifies Saint Luke’s Manor’s 137 senior homes as opened in 2012; the developer’s later portfolio records the completed residential conversion. Its rounded US$39 million, 137-unit profile is used as development cost, separate from McHugh’s US$23.5 million engineering-project construction scope and the later school/commercial phase. The October 2026 listing-review date moves to December 31, 2012 as an estimated opening-year anchor; no exact day or completion of every hospital-campus phase is claimed.",
+          "evidence": "In 2012, it opened Saint Luke’s Manor",
+          "evidenceUrls": [
+            "https://www.housingfinance.com/developments/pennroses-growth-curve_o",
+            "https://newhaven-ct.legistar.com/View.ashx?GUID=67126FEC-AA03-4C2B-995B-C235BC619AEC&ID=11809033&M=F"
+          ],
+          "expectedPinSha256": "c17e066c6229348ec9cba8beb509f6a086a9bf6a501e2b0162ac2083396a6f9f",
+          "metadataVerified": true,
+          "savedPinSha256": "5cb00ac26467a54a99fa0ca78c0a560f52bc055d59045710c0ed5906baeda831"
+        },
+        {
+          "id": 7126,
+          "title": "Square at Merritt Mill — Salisbury affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "This pin records the December 14, 2018 groundbreaking for Square at Merritt Mill’s 75 homes. The builder confirms that historical milestone, so it is In Progress at the pinned event even though the community later operated. Opened 2018 local reporting states roughly US$13.5 million construction costs. That is a construction estimate for the exact development, not an all-in budget or the US$25 million cost of the unrelated Roosevelt project mentioned in some coverage.",
+          "evidence": "Harkins attended the groundbreaking of the Square at Merritt Mill",
+          "evidenceUrls": [
+            "https://harkinsbuilders.com/news/new-townhome-community-breaks-ground-in-salisbury-md/",
+            "https://www.wboc.com/news/regional/maryland/groundbreaking-scheduled-for-the-square-at-merritt-mill-in-salisbury/article_f8beba76-8c78-5509-9088-5d1ecc205be5.html"
+          ],
+          "expectedPinSha256": "15d2de578eccb8c6107530c7c765adc71382f391a5aad13ad9232b234e917c30",
+          "metadataVerified": true,
+          "savedPinSha256": "f9a95f2ce1533fe58eb090b62fb4dc9be533fe6fb22457474ed580bf4b6e7115"
+        },
+        {
+          "id": 7131,
+          "title": "West Point Village — West Point affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The November 1, 2022 developer report marks groundbreaking of West Point Village Phase I’s 72 homes. Its historical construction-start scope is In Progress; later occupancy is a separate milestone. The builder’s September 2022 coverage quotes a US$13.45 million exact housing project, superseding the opened-index 2021 US$12 million proposal estimate. This native construction-project figure is separate from proposed Phase II’s additional homes and the similarly named Texas property.",
+          "evidence": "Construction begins on phase 1",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2022/groundbreaking-of-west-point-village-redevelopment/",
+            "https://businessalabama.com/capstone-building-corp-breaks-ground-on-west-point-village/"
+          ],
+          "expectedPinSha256": "f69d397e700df6a7448c95088c80bb6704f919be5796b23de464c8cda4286662",
+          "metadataVerified": true,
+          "savedPinSha256": "549c95d12376edf38b96fe66b8eba9ba39bf81036944617d40267c0819892f6e"
+        },
+        {
+          "id": 7175,
+          "title": "Oaks at Park Pointe — Griffin affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Griffin Housing Authority states Oaks at Park Pointe completed in 2015; the architect gives October 2015 and BLOC gives December 2015 for the same 84-home scope. The existing November 2018 date is corrected to December 31, 2015 as an estimated year anchor because the precise completion month conflicts. The developer’s RAD/LIHTC case study publishes US$13,841,017 Total Development Budget for Oaks, separate from the Iris/Terraces senior phases and its US$10,427,168 construction component.",
+          "evidence": "Completed in 2015",
+          "evidenceUrls": [
+            "https://www.griffinhousingauthority.com/the-oaks",
+            "https://thriven.design/project/oaks-at-park-pointe/",
+            "https://www.blocglobal.com/meriwether-homes/",
+            "https://www.housingonline.com/wp-content/uploads/2018/02/Richelle-Patton.pdf"
+          ],
+          "expectedPinSha256": "6df51d01d9112a64c78b1f49a5b8925c823b92f76e62f5b8af4ec4af8783b963",
+          "metadataVerified": true,
+          "savedPinSha256": "d213d26572e40d396f3a4d426c382ab16b5d1484c4c66dbbcaf26f649580232a"
+        },
+        {
+          "id": 7230,
+          "title": "River Pointe — Savannah affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Savannah’s 2022 CAPER explicitly states that in December 2017 the Housing Authority completed rehabilitation of 280 former Wessels/Blackshear units, renamed River Pointe I and II. This exact existing scope is Completed; later infill development and its halted agreements are separate. No quoted cost for the 280-home rehabilitation was established in the city report, authority material or cost searches; broader East Savannah budgets are not allocated to it.",
+          "evidence": "completed the rehabilitation of 280 units",
+          "evidenceUrls": [
+            "https://www.savannahga.gov/DocumentCenter/View/27364"
+          ],
+          "expectedPinSha256": "6dcc8d585a45b7608a5b447efd18ef7c54889769b79a28a7f9ecef25a894260e",
+          "metadataVerified": true,
+          "savedPinSha256": "eab53db29e864c05e5b16f96b9d249abe9e0361af50a5d2f4a92afb381ab4d30"
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 484,
+          "title": "BT Tower Goes Live as a Cold War Microwave Relay Hub",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "BT’s distributed press release confirms the October 8, 1965 opening and approximately GBP 2.5 million original construction cost. This pin represents the completed communications tower, separate from its May 1966 public opening, later sale and proposed hotel conversion. No inflation adjustment or FX conversion is applied.",
+          "evidence": "£2.5 million – Approximate cost to construct.",
+          "evidenceUrls": [
+            "https://www.webwire.com/ViewPressRel.asp?aId=121441",
+            "https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/post-office-tower"
+          ],
+          "expectedPinSha256": "c920e8a2ebf40b7c6e909b12e89fc5719f6f1e66b6d59caf48d40247d595ba5d",
+          "metadataVerified": true,
+          "savedPinSha256": "cf4d6dbeba8843de9148bd3c9857f09d85aed58c08015e9ceac0ca4bcbc87b9e"
+        },
+        {
+          "id": 546,
+          "title": "New Administrative Capital Stadium Opens in Egypt",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Egypt Stadium’s opened venue record confirms inauguration on March 22, 2024 and EGP 900 million stadium construction cost. The EGP 2.28 billion Olympic sports complex is a broader scope and is not assigned to this stadium pin. Native currency follows the Egyptian-pound figure, without converting its dollar equivalent.",
+          "evidence": "Cost EGP 900 M",
+          "evidenceUrls": [
+            "https://stadiumdb.com/stadiums/egy/egypt_stadium"
+          ],
+          "expectedPinSha256": "b950e6b94e3d838555d26b0693c5bf53596a1664ea6da8c580014876a278de57",
+          "metadataVerified": true,
+          "savedPinSha256": "21de69f73a245eb32b2eef720d2ddbc1adf50884c1a0e4a6ff2c1e81cabde20f"
+        },
+        {
+          "id": 618,
+          "title": "Icon of the Seas Enters Service as World's Largest Cruise Ship",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Icon of the Seas entered passenger service with its January 27, 2024 inaugural voyage, after construction and delivery. Royal Caribbean’s own shipbuilding guide states a US$2 billion build cost. This whole-ship figure is separate from ticket prices and future Icon-class sister ships; the earlier christening is a separate milestone.",
+          "evidence": "on Saturday, January 27.",
+          "evidenceUrls": [
+            "https://www.cruisemapper.com/news/12885-icon-of-the-seas-begins-inaugural-journey",
+            "https://www.royalcaribbean.com/guides/how-cruise-ships-built"
+          ],
+          "expectedPinSha256": "0b0ca063e0390809010a03ffce985005bb261e775b2f7e2c7122e4c47039d219",
+          "metadataVerified": true,
+          "savedPinSha256": "6902fd32dbc10d459303e6f53a65c93e7bee89f6563633fae11e5bdd73fd3f6d"
+        },
+        {
+          "id": 670,
+          "title": "LaGuardia Airport's $8BN Redevelopment Fully Wraps Up",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Port Authority’s project account explicitly says LaGuardia’s transformation is completed, with Terminal B completed in 2022 and Delta’s Terminal C completed in 2024. US$8 billion is the full represented redevelopment, not the cost of only one terminal. The existing estimated 2024 year-end anchor is retained; later Terminal A work is separate.",
+          "evidence": "The $8 billion redevelopment",
+          "evidenceUrls": [
+            "https://www.portauthoritybuilds.com/redevelopment/us/en/lga.html"
+          ],
+          "expectedPinSha256": "96af6e54b7b1b112f130ea0d5d5947dc5478ac4dd2a2e1b77b7b6b1c97147cc2",
+          "metadataVerified": true,
+          "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3"
+        },
+        {
+          "id": 677,
+          "title": "San Francisco's Millennium Tower Fix Declared a Success",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "June 21, 2023 reporting quotes the homeowners association that the foundation stabilization was substantially completed and its pile/load-transfer engineering project finished earlier that month. This supports Completed for the pinned retrofit success announcement, not the original tower build or a promise to reverse every inch of its lean. US$100 million is the retrofit cost; the announcement date remains distinct from later closeout.",
+          "evidence": "A $100 million construction effort",
+          "evidenceUrls": [
+            "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/"
+          ],
+          "expectedPinSha256": "03b6f42be3907d7f842458bd580d727e806d209378050ace2d0d67125344ed4b",
+          "metadataVerified": true,
+          "savedPinSha256": "01f5fbeb62e6c5df386edb8c7d0d71d6b8c065e6c0f90f55d960bfb3201c1d48"
+        },
+        {
+          "id": 678,
+          "title": "Hong Kong Airport's Three-Runway System Reaches Full Operation",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The November 28, 2024 inauguration marks simultaneous North, South and Centre runway operations, establishing completion of the pinned three-runway operational system. The airport’s own funding FAQ states HK$141.5 billion in money-of-the-day prices. Later passenger-building/Terminal 2 delivery is distinguished from the represented runway commissioning milestone and is not inferred complete.",
+          "evidence": "The North, South, and Centre Runways commenced simultaneous operations",
+          "evidenceUrls": [
+            "https://www.thestandard.com.hk/news/article/223251/Hong-Kong-International-Airport-inaugurates-Three-Runway-System",
+            "https://threerunwaysystem.hongkongairport.com/en/information-centre/frequently-asked-questions/"
+          ],
+          "expectedPinSha256": "544d15f10d87552e7958d159d64a4462697362c3fd41a393ce102c0599dbc4bd",
+          "metadataVerified": true,
+          "savedPinSha256": "a6acecbf35a00a9ac5661cf5b0257c2b1a8d1a2a66f67061b6a14bdc49ab7ae2"
+        },
+        {
+          "id": 711,
+          "title": "Las Vegas' $1.9BN Mega Stadium",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The Raiders’ July 31, 2020 release confirms the Certificate of Occupancy after construction wrapped July 30. July 31 is the occupancy handover milestone, not a Raiders game or fans’ first visit; the description and date reasoning are corrected accordingly. Mortenson’s December 2020 account gives a revised US$1.99 billion overall stadium cost, including third-party work, distinct from its US$1.944 billion construction budget and earlier US$1.97 billion estimate.",
+          "evidence": "received a Certificate of Occupancy on Allegiant Stadium",
+          "evidenceUrls": [
+            "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "https://www.mortenson.com/news-insights/allegiant-stadium-construction-25m-under-budget"
+          ],
+          "expectedPinSha256": "39cb3c07c8e1f8887c9f29fd279a6eb2149b21b687da20474375b5c062e6abc8",
+          "metadataVerified": true,
+          "savedPinSha256": "e177456077695316835236431dcc547aed9cbf30f1bd98d7050297f45c68a30d"
+        },
+        {
+          "id": 800,
+          "title": "Mjøstårnet Becomes the World's Tallest Timber Tower in Brumunddal",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Mjøstårnet opened March 15, 2019, establishing the completed tower scope. Timber supplier Moelven states Hent’s contract at about NOK 500 million excluding VAT. Native price stores that rounded main-contract figure, not Moelven’s separate NOK 47 million subcontract or an FX equivalent. The source does not establish an audited all-in development total.",
+          "evidence": "Opened on 15 March",
+          "evidenceUrls": [
+            "https://materialdistrict.com/article/worlds-tallest-wooden-tower/",
+            "https://www.moelven.com/mjostarnet/qa-about-mjostarnet/"
+          ],
+          "expectedPinSha256": "6c237548dbad40fe9ff946acb23a6fe1a1399438925aff96e3a308946b6487c1",
+          "metadataVerified": true,
+          "savedPinSha256": "d99f34e8b7f0d687a838039425d6c0aad95f0bc6a6bedd415fb95b2f993d7384"
+        },
+        {
+          "id": 887,
+          "title": "Wilhelmsen Launches Tønsberg as the World's Largest Ro-Ro Ship",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "This pin represents Tønsberg’s October 2, 2010 shipyard launch while construction/outfitting remained underway. It is In Progress at that historical milestone, not Completed merely because the hull floated. The owner’s subsequent March 23, 2011 announcement establishes entry into operation after delivery in March 2011; that later milestone is not moved onto the 2010 pin. No exact individual-vessel build cost was verified; fleet investments and ship capacities are not costs.",
+          "evidence": "Launched 2 October 2010",
+          "evidenceUrls": [
+            "https://en.wikipedia.org/wiki/MV_T%C3%B8nsberg",
+            "https://www.marinelink.com/news/wilhelmsen-generation337684"
+          ],
+          "expectedPinSha256": "538fc73c1bab6521a4bde645ee40436f4f5b08caa9f6d6ab1023e2eb94d1d9bd",
+          "metadataVerified": true,
+          "savedPinSha256": "aeeeee15f29d93f0210af542375e58fc22686464afb6795fa598c246524189fa"
+        },
+        {
+          "id": 891,
+          "title": "Sany Opens Its Lingang Excavator Factory Near Shanghai",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "SANY America’s August 23, 2012 factory-opening release and August 24 trade report establish the completed Lingang excavator factory near Shanghai. The stated build cost is US$818.5 million, separate from SANY’s Georgia assembly plant, annual output value or wider investment agreements. The pin retains its August 24 reporting milestone; no currency conversion is performed.",
+          "evidence": "The facility cost $818.5 million to build.",
+          "evidenceUrls": [
+            "https://www.oemoffhighway.com/market-analysis/press-release/10764553/sany-opens-worlds-largest-excavator-factory-in-china",
+            "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai"
+          ],
+          "expectedPinSha256": "dc5c226842e6d844ab9525122abf74e471183a86e734fe97859dee3d4753114d",
+          "metadataVerified": true,
+          "savedPinSha256": "870cb91edd76f72afdaf6f7c9d9266e94a0b597c025763648cbb649370324a42"
+        },
+        {
+          "id": 937,
+          "title": "IHC Merwede Delivers the Oleg Strashnov Crane Vessel to Seaway Heavy Lifting",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The April 2011 interview with Seaway’s CEO states the vessel was delivered after its sea trials and crane commissioning and quotes its approximately US$500 million actual cost outcome, within 2% of budget. This supports Completed for the Oleg Strashnov delivery pin, distinct from its October 2009 hull launch or an installation contract. No later vessel refit or project charter cost is substituted.",
+          "evidence": "the vessel was eventually delivered nearly a year behind schedule.",
+          "evidenceUrls": [
+            "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov"
+          ],
+          "expectedPinSha256": "278e540db5df200a64b866ef84d92ee96f4ff5954f95c45be559cd7a46452735",
+          "metadataVerified": true,
+          "savedPinSha256": "8b6eff4e22f95964cdc6ace86249fc0576d721d86c788747980e2f208bdcccb7"
+        },
+        {
+          "id": 7027,
+          "title": "The Pointe at Thomas Affordable Housing Groundbreaking Announced in Seattle",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Amazon and C&A’s June 12, 2026 announcement explicitly marks the groundbreaking of the exact 67-home Pointe at Thomas project, supporting In Progress at this milestone. Amazon’s US$6.7 million low-cost capital and Seattle Credit Union’s US$11.4 million construction financing are financing components, not a source-quoted project cost. No full construction or development total was verified in the release, contractor page or project-cost reporting.",
+          "evidence": "announce the groundbreaking of The Pointe at Thomas Apartments",
+          "evidenceUrls": [
+            "https://press.aboutamazon.com/2026/6/c-a-development-and-amazon-bring-new-affordable-homes-to-seattles-capitol-hill"
+          ],
+          "expectedPinSha256": "85bab634aaf5fa792e7848c68525bdb09d9d481f4deb8053e6ac63b0d7ccd29c",
+          "metadataVerified": true,
+          "savedPinSha256": "2da517901e261a750dc83463b86c85e95424fe495bc2113a3b02934d3bfd2f00"
+        },
+        {
+          "id": 7041,
+          "title": "Cielo at Sunnydale — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Cielo is the 89-home Sunnydale Block 7, separate from 95-home Luca/Block 9. The architect explicitly lists it In Construction, and Mercy’s opening report confirms construction of Cielo and Luca started. The April 2025 city analyst’s budget gives US$107,600,554 Total Uses for Block 7, superseding the opened March 2024 US$108,646,076 estimate. The spring 2027 target remains estimated and is not proof of completion.",
+          "evidence": "In Construction",
+          "evidenceUrls": [
+            "https://saidasullivan.com/cms/work/150/",
+            "https://sfgov.legistar.com/View.ashx?GUID=659F8C90-7212-40CF-B6AC-28BB4E231286&ID=14004911&M=F"
+          ],
+          "expectedPinSha256": "51d1ad1ab4c044f73a2c37dbba6a9743daf9a0fd9a100f7852d76d3a343f4697",
+          "metadataVerified": true,
+          "savedPinSha256": "2e2fd5007f3837c65e42047586f0300bf13d59065b3f6208fab7e921224c8d4f"
+        },
+        {
+          "id": 7042,
+          "title": "Amani Apartments — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The developer’s November 18, 2025 opening report and builder’s February 2025 completion record establish Completed for Amani’s 80 homes, Sunnydale Block 3A. The March 2024 municipal comparison table publishes US$95,315,920 total development cost with acquisition for this exact block. The separate US$138 million combined Amani/Nia construction contract is not assigned to either building or apportioned by unit count. No later exact individual-block total was established in the opened completion sources.",
+          "evidence": "celebrate the grand opening of Amani and Nia",
+          "evidenceUrls": [
+            "https://www.mercyhousing.org/2025/11/grand-opening-170-affordable-apartments/",
+            "https://media.api.sf.gov/documents/Approved-Sunnydale_Block_7_Prelimanary_Gap_Loan_Evaluation_LC_3-15-2024_0.pdf"
+          ],
+          "expectedPinSha256": "72cadb9a49e8254cf9819d8b3a70364d51a6fc6571421e30c9d21734e479902a",
+          "metadataVerified": true,
+          "savedPinSha256": "61d388779a46135a6b859561ac4b4d7bfb702ad4890a03bd9b875ad6afe9d49d"
+        },
+        {
+          "id": 7074,
+          "title": "Nia Apartments — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The developer’s November 18, 2025 opening report and builder’s February 2025 completion record establish Completed for Nia’s 90 homes, Sunnydale Block 3B. The March 2024 municipal comparison table publishes US$90,943,827 total development cost with acquisition for this exact block. The separate US$138 million combined Amani/Nia construction contract is not assigned to either building or apportioned by unit count. No later exact individual-block total was established in the opened completion sources.",
+          "evidence": "celebrate the grand opening of Amani and Nia",
+          "evidenceUrls": [
+            "https://www.mercyhousing.org/2025/11/grand-opening-170-affordable-apartments/",
+            "https://media.api.sf.gov/documents/Approved-Sunnydale_Block_7_Prelimanary_Gap_Loan_Evaluation_LC_3-15-2024_0.pdf"
+          ],
+          "expectedPinSha256": "d20676d778e8e67b1ece390099f9bddc54d78ef52d72e06549fd9a45d5e3dfc5",
+          "metadataVerified": true,
+          "savedPinSha256": "3ad921c61e00fe3f3ea15b510759ceae8a59b907857988606a61bf627f73d1e7"
+        },
+        {
+          "id": 7062,
+          "title": "600 Seventh — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Mercy’s December 2025 report confirms 600 Seventh’s opening, covering 220 resident homes plus its manager apartment. The August 2024 city comparison table gives US$145,333,464 total development cost with acquisition for the exact 221-apartment building, including its ground-floor commercial shell. The native cost is neither the city gap loan nor a per-unit calculation. The pin retains the dated opening-report milestone rather than turning an old forecast into an exact opening date.",
+          "evidence": "to celebrate the opening of 600 Seventh",
+          "evidenceUrls": [
+            "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+            "https://media.api.sf.gov/documents/Approved_-_PREDEVELOPMENT_FINANCING_FOR_MISSION_BAY_SOUTH_BLOCK_4_EAST_-_LC_8-2-2024_0.pdf"
+          ],
+          "expectedPinSha256": "223f6d76e9f43268d6d553fe8b903400e392b6c4fb9ffa3a4626cf96a2a9533d",
+          "metadataVerified": true,
+          "savedPinSha256": "e989bcadd2dea984f2c71a23d7839e3fc3a82d72d2394a6112f9b32d56e5054c"
+        },
+        {
+          "id": 7066,
+          "title": "The Edmonson at Barry Farm — Washington DC affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Hamel’s exact 139-home Edmonson / Barry Farm Building 1A portfolio page explicitly says Currently Under Construction. This establishes In Progress independently of a projected late-2026 opening or floorplan availability labels. The DCHFA release’s US$61.1 million bonds, US$52 million tax-credit equity and US$21 million loan are financing, not an explicit total cost; no full exact-building development cost was verified.",
+          "evidence": "Project is Currently Under Construction",
+          "evidenceUrls": [
+            "https://www.hamelbuilders.com/portfolio-hb/the-edmonson-barry-farm-building-1a/",
+            "https://dchfa.org/wp-content/uploads/2024/06/Edmonson-Press-Release-FINAL.pdf"
+          ],
+          "expectedPinSha256": "413cd61a688a651b9a748e5204811575e63ce94bbbb545d63aaa61e0de165379",
+          "metadataVerified": true,
+          "savedPinSha256": "26acb367f6e9355826a6cd9938ad3872cc2becb921ee102350b2dac803596633"
+        },
+        {
+          "id": 7070,
+          "title": "Atlantic Square — Miami affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Atlantic Pacific’s June 4, 2026 grand-opening announcement and independent June 2026 ceremony reporting establish completion of the exact 616-home Atlantic Square tower. The cost was explicitly not disclosed in the opened reporting. Published workforce rents, tax-exempt bonds and other Overtown projects’ budgets do not establish its construction or development cost.",
+          "evidence": "Atlantic Square Celebrated Its Grand Opening",
+          "evidenceUrls": [
+            "https://apcompanies.com/news/atlantic-square-celebrated-its-grand-opening-as-miami-dadecountys-largest-mixed-income-transit-orienteddevelopment/",
+            "https://www.sfltimes.com/news/overtown-is-home-to-largest-mixed-use-transit-oriented-affordable-housing-development"
+          ],
+          "expectedPinSha256": "646fee42a9bc20eeada629d23e34a7e520b6a1a2e2cee664f07f00d33ab53461",
+          "metadataVerified": true,
+          "savedPinSha256": "764082f074d8a4c6a94cc52041138ef880131824de294c175de3876075a33b54"
+        },
+        {
+          "id": 7081,
+          "title": "Henderson Place — Atlanta affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "This pin records Mercy’s March 20, 2024 redevelopment announcement for 76 new Henderson Place homes, not an opening of the old 58-home property. At that announcement construction was still set to begin that month, so Proposed describes the represented pre-start milestone. Later construction reporting and the elapsed early-2025 forecast do not retroactively make the announcement a completed build. Opened permit reporting gives a US$20 million exact 76-home development estimate; financing loans are not substituted.",
+          "evidence": "Construction is set to begin this month",
+          "evidenceUrls": [
+            "https://mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "https://www.bisnow.com/news/atlanta/affordable-housing/affordable-housing-operator-coretta-scott-king-organization-partner-to-redevelop-affordable-old-fourth-ward-apartments-116592"
+          ],
+          "expectedPinSha256": "d3b0f3c110f395fd1b506b6c0ef4ead1ff545b058d338307b36502419a8e28a5",
+          "metadataVerified": true,
+          "savedPinSha256": "f9a487867a102743b936313ba9715502c7712f3fbae0437e5cbecb0492cfb712"
+        },
+        {
+          "id": 7086,
+          "title": "1633 Valencia — San Francisco affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Mercy’s July 2026 report explicitly says 1633 Valencia moved from groundbreaking to completion in 19 months and was nearly fully leased at opening. The pin retains the July 15 operator-report date, distinct from the June ribbon-cutting report. Newer reporting gives roughly US$525,000 per apartment but no quoted whole-project total; older estimates and financing loans use different scopes. Native cost stays null rather than multiplying a rounded per-unit figure.",
+          "evidence": "from groundbreaking to completion in just 19 months.",
+          "evidenceUrls": [
+            "https://www.mercyhousing.org/2026/07/opening-doors-for-seniors-at-1633-valencia/",
+            "https://www.sfchronicle.com/realestate/article/1633-valencia-affordable-housing-22287408.php/"
+          ],
+          "expectedPinSha256": "ff39ea14b4cc11426e57980bdd5b671ab1a0644884785f711bc326b12ae15efe",
+          "metadataVerified": true,
+          "savedPinSha256": "830cc1ac6c247ab6d2f7a9871a4c3358fbd3b0d5aa077b10c1c40a8fb6e9f457"
+        },
+        {
+          "id": 7106,
+          "title": "Saint Luke’s Manor — Cleveland affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The opened 2013 housing-finance account identifies Saint Luke’s Manor’s 137 senior homes as opened in 2012; the developer’s later portfolio records the completed residential conversion. Its rounded US$39 million, 137-unit profile is used as development cost, separate from McHugh’s US$23.5 million engineering-project construction scope and the later school/commercial phase. The October 2026 listing-review date moves to December 31, 2012 as an estimated opening-year anchor; no exact day or completion of every hospital-campus phase is claimed.",
+          "evidence": "In 2012, it opened Saint Luke’s Manor",
+          "evidenceUrls": [
+            "https://www.housingfinance.com/developments/pennroses-growth-curve_o",
+            "https://newhaven-ct.legistar.com/View.ashx?GUID=67126FEC-AA03-4C2B-995B-C235BC619AEC&ID=11809033&M=F"
+          ],
+          "expectedPinSha256": "c17e066c6229348ec9cba8beb509f6a086a9bf6a501e2b0162ac2083396a6f9f",
+          "metadataVerified": true,
+          "savedPinSha256": "5cb00ac26467a54a99fa0ca78c0a560f52bc055d59045710c0ed5906baeda831"
+        },
+        {
+          "id": 7126,
+          "title": "Square at Merritt Mill — Salisbury affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "This pin records the December 14, 2018 groundbreaking for Square at Merritt Mill’s 75 homes. The builder confirms that historical milestone, so it is In Progress at the pinned event even though the community later operated. Opened 2018 local reporting states roughly US$13.5 million construction costs. That is a construction estimate for the exact development, not an all-in budget or the US$25 million cost of the unrelated Roosevelt project mentioned in some coverage.",
+          "evidence": "Harkins attended the groundbreaking of the Square at Merritt Mill",
+          "evidenceUrls": [
+            "https://harkinsbuilders.com/news/new-townhome-community-breaks-ground-in-salisbury-md/",
+            "https://www.wboc.com/news/regional/maryland/groundbreaking-scheduled-for-the-square-at-merritt-mill-in-salisbury/article_f8beba76-8c78-5509-9088-5d1ecc205be5.html"
+          ],
+          "expectedPinSha256": "15d2de578eccb8c6107530c7c765adc71382f391a5aad13ad9232b234e917c30",
+          "metadataVerified": true,
+          "savedPinSha256": "f9a95f2ce1533fe58eb090b62fb4dc9be533fe6fb22457474ed580bf4b6e7115"
+        },
+        {
+          "id": 7131,
+          "title": "West Point Village — West Point affordable housing",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "The November 1, 2022 developer report marks groundbreaking of West Point Village Phase I’s 72 homes. Its historical construction-start scope is In Progress; later occupancy is a separate milestone. The builder’s September 2022 coverage quotes a US$13.45 million exact housing project, superseding the opened-index 2021 US$12 million proposal estimate. This native construction-project figure is separate from proposed Phase II’s additional homes and the similarly named Texas property.",
+          "evidence": "Construction begins on phase 1",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2022/groundbreaking-of-west-point-village-redevelopment/",
+            "https://businessalabama.com/capstone-building-corp-breaks-ground-on-west-point-village/"
+          ],
+          "expectedPinSha256": "f69d397e700df6a7448c95088c80bb6704f919be5796b23de464c8cda4286662",
+          "metadataVerified": true,
+          "savedPinSha256": "549c95d12376edf38b96fe66b8eba9ba39bf81036944617d40267c0819892f6e"
+        },
+        {
+          "id": 7175,
+          "title": "Oaks at Park Pointe — Griffin affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Griffin Housing Authority states Oaks at Park Pointe completed in 2015; the architect gives October 2015 and BLOC gives December 2015 for the same 84-home scope. The existing November 2018 date is corrected to December 31, 2015 as an estimated year anchor because the precise completion month conflicts. The developer’s RAD/LIHTC case study publishes US$13,841,017 Total Development Budget for Oaks, separate from the Iris/Terraces senior phases and its US$10,427,168 construction component.",
+          "evidence": "Completed in 2015",
+          "evidenceUrls": [
+            "https://www.griffinhousingauthority.com/the-oaks",
+            "https://thriven.design/project/oaks-at-park-pointe/",
+            "https://www.blocglobal.com/meriwether-homes/",
+            "https://www.housingonline.com/wp-content/uploads/2018/02/Richelle-Patton.pdf"
+          ],
+          "expectedPinSha256": "6df51d01d9112a64c78b1f49a5b8925c823b92f76e62f5b8af4ec4af8783b963"
+        },
+        {
+          "id": 7230,
+          "title": "River Pointe — Savannah affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Savannah’s 2022 CAPER explicitly states that in December 2017 the Housing Authority completed rehabilitation of 280 former Wessels/Blackshear units, renamed River Pointe I and II. This exact existing scope is Completed; later infill development and its halted agreements are separate. No quoted cost for the 280-home rehabilitation was established in the city report, authority material or cost searches; broader East Savannah budgets are not allocated to it.",
+          "evidence": "completed the rehabilitation of 280 units",
+          "evidenceUrls": [
+            "https://www.savannahga.gov/DocumentCenter/View/27364"
+          ],
+          "expectedPinSha256": "6dcc8d585a45b7608a5b447efd18ef7c54889769b79a28a7f9ecef25a894260e"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "id": 745,
+      "title": "MahaNakhon Tower Holds Grand Opening as Thailand's Tallest Building",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "The pin represents the August 2016 grand-opening ceremony, while the structural designer records full mixed-use completion in 2018/19. Establish which residential, observation and hotel components were finished at the 2016 ceremony before assigning one whole-tower status. The saved THB21bn project value is not automatically construction cost; the opened designer profile gives THB20bn for its broader completed scope. Primary ceremony PDF timed out; do not silently equate a light show with all-component completion.",
+      "sources": [
+        {
+          "url": "https://www.civilpark.com/projects/buildings/mahanakorn-thailand",
+          "title": "Mahanakorn — CivilPark International",
+          "quote": "Completed 2018/19",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Same profile states estimated cost 20 billion Baht; scope includes retail, condominium and hotel."
+        }
+      ]
+    }
+  ],
+  "additionalSourcesChecked": [
+    {
+      "url": "https://hddc.org/wp-content/uploads/2024/03/Henderson_Place_Infosheet.pdf",
+      "result": "HTTP 202 challenge HTML, not an opened PDF. Cost instead sourced to opened Bisnow permit reporting."
+    },
+    {
+      "url": "https://www.wilhelmsen.com/globalassets/investor-relations/annual-report/2011-annual-report-wwh.pdf",
+      "result": "Opened HTTPS by plain Python request: HTTP 200 PDF, 12,270,936 bytes; downloaded and pdftotext inspected. Confirms March 2011 vessel delivery; no individual-vessel cost established."
+    },
+    {
+      "url": "https://sfgov.legistar.com/View.ashx?GUID=DDA5E392-BDB0-4DFA-8785-C894B174254C&ID=12865419&M=F",
+      "result": "Web open timed out; plain HTTPS download returned HTTP 200 PDF, 4,571,156 bytes; pdftotext table inspected. Per-unit comparison data not multiplied into native project costs."
+    },
+    {
+      "url": "https://www.rcr-bangkok.com/images/upload/PACE_MHNK_success_%28EN%29.pdf",
+      "result": "Timed out; MahaNakhon ceremony versus full-scope completion remains queued."
+    },
+    {
+      "url": "https://www.huduser.gov/portal/casestudies/study_06132013_1.html",
+      "result": "Opened page shell did not expose case-study text; plain request returned empty challenge HTML. Saint Luke evidence instead obtained from developer portfolio, engineer and dated housing-finance reporting."
+    }
+  ]
+}
