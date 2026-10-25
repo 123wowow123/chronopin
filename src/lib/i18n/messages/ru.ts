@@ -695,6 +695,15 @@ const ru: Messages = {
       showAll: 'Показать все пины с оценкой характеристик автомобиля',
       reviews: 'Независимые обзоры',
     },
+    industry: {
+      heading: "Прогноз по отрасли",
+      projected: "Прогноз",
+      reported: "Факт",
+      sources: "Источники",
+      checked: "Проверено {date}",
+      revised: "Позже пересмотрено",
+      caveat: "Прогнозы принадлежат указанным издателям, а не ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Строительство завода",
       projectTimeline: "График проекта",

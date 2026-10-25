@@ -390,6 +390,8 @@ export type SearchPage = {
   user?: { id: number; userName: string; about?: string | null };
   company?: SearchedCompany;
   person?: SearchedPerson;
+  // Industry forecast panels (IndustryForecast, 0216) filed under the searched tags.
+  industries?: string[];
   // Query strings for /api/pins/search: the pages before and after this one.
   links?: { previous?: string; next?: string };
 };

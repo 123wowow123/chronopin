@@ -683,6 +683,15 @@ const th: Messages = {
       showAll: 'แสดงพินทั้งหมดที่มีการประเมินสมรรถนะรถยนต์',
       reviews: 'รีวิวอิสระ',
     },
+    industry: {
+      heading: "คาดการณ์อุตสาหกรรม",
+      projected: "คาดการณ์",
+      reported: "ที่รายงาน",
+      sources: "แหล่งที่มา",
+      checked: "ตรวจสอบเมื่อ {date}",
+      revised: "แก้ไขภายหลัง",
+      caveat: "ตัวเลขคาดการณ์เป็นของผู้เผยแพร่ที่อ้างอิง ไม่ใช่ของ ChronoPin",
+    },
     factory: {
       buildoutHeading: "โครงการโรงงาน",
       projectTimeline: "กำหนดการโครงการ",

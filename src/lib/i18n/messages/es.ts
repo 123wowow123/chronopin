@@ -686,6 +686,15 @@ const es: Messages = {
       showAll: 'Ver todos los pines con evaluación del rendimiento',
       reviews: 'Reseñas independientes',
     },
+    industry: {
+      heading: "Previsión del sector",
+      projected: "Proyectado",
+      reported: "Registrado",
+      sources: "Fuentes",
+      checked: "Consultado {date}",
+      revised: "Revisado después",
+      caveat: "Las proyecciones son previsiones de los editores citados, no de ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Proyecto de fábrica",
       projectTimeline: "Cronograma del proyecto",

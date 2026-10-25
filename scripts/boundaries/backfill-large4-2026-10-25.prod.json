@@ -1,0 +1,24 @@
+[
+  {
+    "pinId": 1950,
+    "pinTitle": "Americans Vote in the 2028 U.S. Presidential Election",
+    "kind": "district",
+    "name": "US presidential election — 51 statewide/DC areas plus five Maine/Nebraska district areas; current geography for 2028",
+    "vintage": "January 2026 Census state geography and current 120th-Congress district geography as 2028 context; current electoral-allocation rules checked 2026-10-25, not a guarantee of future district lines or laws. Maine and Nebraska statewide two-elector areas intentionally overlap their one-elector congressional districts.",
+    "source": "US Census Bureau; allocation scope: National Archives",
+    "sourceUrl": "https://www.archives.gov/electoral-college/allocation",
+    "file": ".scrape/boundaries/electoral-college-56.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 3676,
+    "pinTitle": "Connect Bay Area Transit Tax Qualifies for the November 2026 Ballot",
+    "kind": "district",
+    "name": "Connect Bay Area — five-county voting district",
+    "vintage": "January 2026 Census counties; five-county Public Transit Revenue Measure District for the November 2026 ballot, not the nine-county MTC region or internal council/precinct boundaries",
+    "source": "US Census Bureau; ballot scope: Metropolitan Transportation Commission",
+    "sourceUrl": "https://mtc.ca.gov/news/connect-bay-area-transit-measure-certified-november-2026-ballot",
+    "file": ".scrape/boundaries/large4-connect-bay-area.geojson",
+    "preserveFeatureCredits": true
+  }
+]

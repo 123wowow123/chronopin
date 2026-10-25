@@ -1,0 +1,14 @@
+[
+  {
+    "pinId": 2361,
+    "pinTitle": "Angola Elects a National Assembly and President",
+    "kind": "district",
+    "name": "Angola — 21 provincial electoral areas; current geography for 2027",
+    "vintage": "World Bank GAD service updated 2026-09-16; post-2024 division effective 2025-01-01, checked 2026-10-25. Current 21 provincial electoral areas as context for 2027; national-list and presidential geography not drawn separately; not a final 2027 polling map or seat allocation.",
+    "source": "World Bank Global Administrative Divisions (CC BY 4.0)",
+    "sourceUrl": "https://services.arcgis.com/iQ1dY19aHwbSDYIF/ArcGIS/rest/services/WB_GAD/FeatureServer/17",
+    "file": ".scrape/boundaries/angola-provinces-21.geojson",
+    "preserveFeatureCredits": true,
+    "redrawFile": ".scrape/boundaries/angola-province-redraws.json"
+  }
+]

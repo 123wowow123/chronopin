@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -1011,6 +1011,16 @@ returns nothing the tool errors rather than reporting every pin as awaiting.
 A pin that is not a release (an announcement whose release pin carries the rubric, a feature update, a family pin whose flagship is scored: say which in `basis`) goes in `skip` on the next call and a `record_learning` note.
 **When.** In the news job just after modelScores (owner, 2026-10-24: "add this strategy to scrapper and 6am/pm job"), so a model pinned by the scrapes or the news run gets its rubric by the next check. Limit: about five pins a run; the queue clears over a few runs.
 **Traps.** Artificial Analysis rebases its index and its live pages show today's lower numbers: use the figure published at launch and name the version. openai.com is Cloudflare-walled (use developers.openai.com, press and Artificial Analysis); VentureBeat and Medium often block curl, so use the page only if it opened. A rubric set by hand is never overwritten. Never invent a review, a score or a spec to fill an axis.
+
+### industryForecasts
+
+**Reads** `industry_forecast_status` (every forecast panel: tags, FRED handles, newest survey day, projection points, earlier editions, sources, last check). See [industry-forecasts.md](../../industry-forecasts.md).
+**Does**
+1. `refresh_btos`: downloads the Census BTOS national file and replaces the AI adoption panel's two survey lines, here and on production. Mechanical; needs python3 with openpyxl. If it fails, say so in the run notes and carry on.
+2. For each projection row (Gartner worldwide AI spending and infrastructure, Goldman Sachs US AI investment, FactSet hyperscaler capex, IDC US spending), look for the publisher's newest edition (Gartner's newsroom releases a quarterly forecast; Goldman and FactSet publish ad hoc). Open the page (Chrome through `@browser` when gartner.com or businesswire.com answer 403 to fetches), and only when it states a figure that differs from the row, call `save_industry_forecast`: the new figures in `projection`, the figures they replace appended to `earlier` as `{ label: "Gartner, May 2026", publishedDate, points }` (oldest first, never dropped), and every source opened with a verbatim quote of at most 300 characters (a table row counts). The panel draws earlier editions as a grey dotted line and says they were revised.
+3. A new industry sector or publisher worth a panel (a Ramp/FRED series for another sector, a new forecaster's US figure) is added the same way, with its tags.
+**Traps.** Never convert currencies or years, never turn a "more than" floor into a point estimate in the note, never put a search-snippet figure in a row: only pages opened in this run. A 2025 value Gartner labels an estimate stays labelled so in `note`.
+**When.** In the news job after modelRubrics (owner, 2026-10-25: "fill the gaps ... and add job"). Limit: a few rows a run.
 
 
 ## adTranslations

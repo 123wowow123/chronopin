@@ -1,4 +1,5 @@
 import { factoryForPin } from '../model/pinFactory';
+import { forecastSlugsForNames } from '../model/industryForecast';
 // Data for server-rendered pages, cached with Cache Components. Every function
 // here returns plain JSON (no model instances), keyed by its arguments. Those
 // that return pins take the page's language, and swap in the pins'
@@ -566,6 +567,14 @@ export async function pinComments(id: number) {
   cacheTag(TAGS.pin(id));
   const { default: Comment } = await import('../model/comment');
   return toJson<import('@/lib/types').CommentJson[]>(await Comment.getByPinId(id));
+}
+
+// The industry forecast panels a pin's tags and categories file it under.
+export async function pinIndustries(id: number, names: string[]) {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return forecastSlugsForNames(names);
 }
 
 // A factory capability profile; missing axes remain explicit research gaps.

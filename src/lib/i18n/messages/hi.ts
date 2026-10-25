@@ -689,6 +689,15 @@ const hi: Messages = {
       showAll: 'कार प्रदर्शन मूल्यांकन वाले सभी पिन दिखाएँ',
       reviews: 'स्वतंत्र समीक्षाएँ',
     },
+    industry: {
+      heading: "उद्योग पूर्वानुमान",
+      projected: "अनुमानित",
+      reported: "दर्ज",
+      sources: "स्रोत",
+      checked: "जाँच: {date}",
+      revised: "बाद में संशोधित",
+      caveat: "अनुमान उद्धृत प्रकाशकों के हैं, ChronoPin के नहीं।",
+    },
     factory: {
       buildoutHeading: "कारखाना परियोजना",
       projectTimeline: "परियोजना की समयरेखा",

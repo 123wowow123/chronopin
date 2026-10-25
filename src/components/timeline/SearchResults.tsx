@@ -34,6 +34,7 @@ import { CompanyExecutivesPanel } from './CompanyExecutives';
 import { CompanyParentsPanel } from './CompanyParents';
 import { CompanyProductsPanel } from './CompanyProducts';
 import { SearchedCompanyPanel } from './SearchedCompany';
+import { IndustryForecastPanel } from './IndustryForecastPanel';
 import { StockPanel } from './StockPanel';
 import { SearchedPersonPanel } from './SearchedPerson';
 import { TagCloud, tagPillSummary } from './TagCloud';
@@ -132,6 +133,7 @@ export function SearchResults({
   searchedUser,
   searchedCompany,
   searchedPerson,
+  searchedIndustries,
   specialtyDays: initialSpecialtyDays,
   culturalDays: initialCulturalDays,
   searchedDays = [],
@@ -152,6 +154,8 @@ export function SearchResults({
   searchedCompany?: SearchedCompany;
   // The one person a person: search names, for the panel about them.
   searchedPerson?: SearchedPerson;
+  // Slugs of the industry forecast panels filed under the searched tags.
+  searchedIndustries?: string[];
   specialtyDays: Record<string, SpecialtyDay[]>;
   culturalDays: Record<string, CulturalDay[]>;
   // The days a date: search keeps to; today is on the timeline only when it is one of them.
@@ -588,7 +592,7 @@ export function SearchResults({
               : undefined
           }
           cards={
-            searchedUser || searchedCompany || searchedPerson ? (
+            searchedUser || searchedCompany || searchedPerson || searchedIndustries?.length ? (
               <>
                 {searchedUser ? (
                   <div className="floating flex flex-col gap-3 px-4 py-3.5">
@@ -646,6 +650,7 @@ export function SearchResults({
                 ) : null}
                 {searchedCompany?.ticker ? <StockPanel symbol={searchedCompany.ticker} /> : null}
                 {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}
+                {searchedIndustries?.length ? <IndustryForecastPanel slugs={searchedIndustries} compact /> : null}
                 {searchedCompany?.executives?.length ? <CompanyExecutivesPanel name={searchedCompany.name} executives={searchedCompany.executives} /> : null}
               </>
             ) : undefined

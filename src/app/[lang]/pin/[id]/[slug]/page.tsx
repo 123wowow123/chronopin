@@ -32,6 +32,7 @@ import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
 import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
 import { PinFactory } from '@/components/pin/PinFactory';
+import { IndustryForecastPanel } from '@/components/timeline/IndustryForecastPanel';
 import { PinDining } from '@/components/pin/PinDining';
 import { getAdjacentMusicRankings, getMusicRankingByTitleOrPin } from '@/lib/music';
 import { MusicPinNav } from '@/components/music/MusicPinNav';
@@ -112,7 +113,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -179,7 +180,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, dining, factory, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -200,6 +201,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinLlmPerf(pin.id),
     pinDining(pin.id),
     pinFactory(pin.id),
+    pinIndustries(pin.id, [...(pin.categories ?? []), ...(pin.tags?.map((tag) => tag.name) ?? [])]),
     pinHotel(pin.id),
     pinCriticReviews(pin.id),
     pinCandidates(pin.id),
@@ -288,6 +290,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {llmPerf ? <PinLlmPerf perf={llmPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {factory ? <PinFactoryBuildout factory={factory} t={t} className="mt-4" /> : null}
           {factory ? <PinFactory factory={factory} t={t} className="mt-4" /> : null}
+          {industries.length ? <IndustryForecastPanel slugs={industries} /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {hotel ? (
             <PinHotel

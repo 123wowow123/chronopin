@@ -686,6 +686,15 @@ const de: Messages = {
       showAll: 'Alle Pins mit Fahrleistungs-Bewertung anzeigen',
       reviews: 'Unabhängige Testberichte',
     },
+    industry: {
+      heading: "Branchenprognose",
+      projected: "Prognose",
+      reported: "Gemeldet",
+      sources: "Quellen",
+      checked: "Geprüft am {date}",
+      revised: "Seither revidiert",
+      caveat: "Prognosen stammen von den genannten Herausgebern, nicht von ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Fabrikprojekt",
       projectTimeline: "Projektzeitplan",

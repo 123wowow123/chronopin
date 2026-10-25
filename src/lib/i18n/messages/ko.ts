@@ -686,6 +686,15 @@ const ko: Messages = {
       showAll: '자동차 성능 평가가 있는 모든 핀 보기',
       reviews: '독립 매체 리뷰',
     },
+    industry: {
+      heading: "산업 전망",
+      projected: "전망",
+      reported: "실적",
+      sources: "출처",
+      checked: "확인일 {date}",
+      revised: "이후 수정됨",
+      caveat: "전망은 인용된 발행처의 것이며 ChronoPin의 전망이 아닙니다.",
+    },
     factory: {
       buildoutHeading: "공장 건설 현황",
       projectTimeline: "사업 일정",

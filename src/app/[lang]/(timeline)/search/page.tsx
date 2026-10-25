@@ -93,6 +93,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         searchedUser={page.user}
         searchedCompany={page.company}
         searchedPerson={page.person}
+        searchedIndustries={page.industries}
         specialtyDays={days}
         culturalDays={culturalDays}
         searchedDays={searchedDays}

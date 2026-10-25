@@ -691,6 +691,15 @@ const ms: Messages = {
       showAll: 'Tunjukkan semua pin dengan penilaian prestasi kereta',
       reviews: 'Ulasan bebas',
     },
+    industry: {
+      heading: "Ramalan industri",
+      projected: "Unjuran",
+      reported: "Dilaporkan",
+      sources: "Sumber",
+      checked: "Disemak {date}",
+      revised: "Disemak kemudian",
+      caveat: "Unjuran ialah ramalan penerbit yang dipetik, bukan ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Projek kilang",
       projectTimeline: "Jadual projek",

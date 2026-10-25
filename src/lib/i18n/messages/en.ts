@@ -691,6 +691,15 @@ const en = {
       showAll: 'Show every pin with a car performance rubric',
       reviews: 'Independent reviews',
     },
+    industry: {
+      heading: "Industry forecast",
+      projected: "Projected",
+      reported: "Reported",
+      sources: "Sources",
+      checked: "Checked {date}",
+      revised: "Revised since",
+      caveat: "Projections are the cited publishers’ forecasts, not ChronoPin’s.",
+    },
     factory: {
       buildoutHeading: "Factory buildout",
       projectTimeline: "Project timeline",

@@ -744,5 +744,39 @@
     "sourceUrl": "https://pautas.ine.mx/transparencia/mapas/",
     "file": ".scrape/boundaries/mexico-federal-300.geojson",
     "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 1950,
+    "pinTitle": "Americans Vote in the 2028 U.S. Presidential Election",
+    "kind": "district",
+    "name": "US presidential election — 51 statewide/DC areas plus five Maine/Nebraska district areas; current geography for 2028",
+    "vintage": "January 2026 Census state geography and current 120th-Congress district geography as 2028 context; current electoral-allocation rules checked 2026-10-25, not a guarantee of future district lines or laws. Maine and Nebraska statewide two-elector areas intentionally overlap their one-elector congressional districts.",
+    "source": "US Census Bureau; allocation scope: National Archives",
+    "sourceUrl": "https://www.archives.gov/electoral-college/allocation",
+    "file": ".scrape/boundaries/electoral-college-56.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 3676,
+    "pinTitle": "Connect Bay Area Transit Tax Qualifies for the November 2026 Ballot",
+    "kind": "district",
+    "name": "Connect Bay Area — five-county voting district",
+    "vintage": "January 2026 Census counties; five-county Public Transit Revenue Measure District for the November 2026 ballot, not the nine-county MTC region or internal council/precinct boundaries",
+    "source": "US Census Bureau; ballot scope: Metropolitan Transportation Commission",
+    "sourceUrl": "https://mtc.ca.gov/news/connect-bay-area-transit-measure-certified-november-2026-ballot",
+    "file": ".scrape/boundaries/large4-connect-bay-area.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 2361,
+    "pinTitle": "Angola Elects a National Assembly and President",
+    "kind": "district",
+    "name": "Angola — 21 provincial electoral areas; current geography for 2027",
+    "vintage": "World Bank GAD service updated 2026-09-16; post-2024 division effective 2025-01-01, checked 2026-10-25. Current 21 provincial electoral areas as context for 2027; national-list and presidential geography not drawn separately; not a final 2027 polling map or seat allocation.",
+    "source": "World Bank Global Administrative Divisions (CC BY 4.0)",
+    "sourceUrl": "https://services.arcgis.com/iQ1dY19aHwbSDYIF/ArcGIS/rest/services/WB_GAD/FeatureServer/17",
+    "file": ".scrape/boundaries/angola-provinces-21.geojson",
+    "preserveFeatureCredits": true,
+    "redrawFile": ".scrape/boundaries/angola-province-redraws.json"
   }
 ]

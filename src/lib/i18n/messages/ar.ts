@@ -760,6 +760,15 @@ const ar: Messages = {
       showAll: 'عرض كل الدبابيس التي لها تقييم أداء السيارة',
       reviews: 'مراجعات مستقلة',
     },
+    industry: {
+      heading: "توقعات القطاع",
+      projected: "متوقع",
+      reported: "مُسجَّل",
+      sources: "المصادر",
+      checked: "تم التحقق {date}",
+      revised: "جرت مراجعتها لاحقًا",
+      caveat: "التوقعات من الجهات الناشرة المذكورة وليست من ChronoPin.",
+    },
     factory: {
       buildoutHeading: "مشروع المصنع",
       projectTimeline: "الجدول الزمني للمشروع",

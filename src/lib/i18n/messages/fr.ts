@@ -686,6 +686,15 @@ const fr: Messages = {
       showAll: 'Afficher tous les pins avec une grille de performances',
       reviews: 'Avis indépendants',
     },
+    industry: {
+      heading: "Prévisions du secteur",
+      projected: "Projeté",
+      reported: "Observé",
+      sources: "Sources",
+      checked: "Consulté le {date}",
+      revised: "Révisé depuis",
+      caveat: "Les projections sont celles des éditeurs cités, pas de ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Projet industriel",
       projectTimeline: "Calendrier du projet",

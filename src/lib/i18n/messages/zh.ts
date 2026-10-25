@@ -687,6 +687,15 @@ const zh: Messages = {
       showAll: '显示所有带汽车性能评分的图钉',
       reviews: '独立评测',
     },
+    industry: {
+      heading: "行业预测",
+      projected: "预测",
+      reported: "实际",
+      sources: "来源",
+      checked: "核查于 {date}",
+      revised: "此后已修订",
+      caveat: "预测来自所引用机构，并非 ChronoPin 的预测。",
+    },
     factory: {
       buildoutHeading: "工厂建设概况",
       projectTimeline: "项目时间线",

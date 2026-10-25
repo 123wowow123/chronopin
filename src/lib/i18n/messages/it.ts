@@ -684,6 +684,15 @@ const it: Messages = {
       showAll: 'Mostra tutti i pin con una griglia delle prestazioni',
       reviews: 'Recensioni indipendenti',
     },
+    industry: {
+      heading: "Previsioni di settore",
+      projected: "Previsto",
+      reported: "Rilevato",
+      sources: "Fonti",
+      checked: "Verificato il {date}",
+      revised: "Rivisto in seguito",
+      caveat: "Le proiezioni sono previsioni degli editori citati, non di ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Progetto della fabbrica",
       projectTimeline: "Calendario del progetto",

@@ -690,6 +690,15 @@ const vi: Messages = {
       showAll: 'Hiện mọi ghim có đánh giá hiệu năng xe',
       reviews: 'Đánh giá độc lập',
     },
+    industry: {
+      heading: "Dự báo ngành",
+      projected: "Dự báo",
+      reported: "Thực tế",
+      sources: "Nguồn",
+      checked: "Kiểm tra {date}",
+      revised: "Đã điều chỉnh sau đó",
+      caveat: "Dự báo là của các nhà xuất bản được trích dẫn, không phải của ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Dự án nhà máy",
       projectTimeline: "Tiến độ dự án",

@@ -53,6 +53,7 @@ import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { modelRubricGaps } from './modelRubrics';
+import { forecastStatus, refreshBtos, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { llmPerfProblem, saveLlmPerf } from '../model/pinLlmPerf';
 import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
@@ -439,6 +440,54 @@ export const TOOLS: JobTool[] = [
     run: async (_input, ctx) => {
       const result = await syncProductLifecycle();
       await act(ctx, { tool: 'product_lifecycle_sync', detail: `local ${result.local.tagged} tagged / ${result.local.untagged} untagged of ${result.local.goods}${result.production ? `; production ${result.production.tagged} / ${result.production.untagged} of ${result.production.goods}` : ''}` });
+      return result;
+    },
+  },
+  // --- Industry forecast panels (the industryForecasts task) ----------------
+  {
+    name: 'industry_forecast_status',
+    description:
+      "Every industry forecast panel (IndustryForecast): its tags, FRED handles, newest survey date, current projection points, earlier editions, sources and when it was last checked. Compare each projection with its publisher's newest edition (Gartner, Goldman Sachs, FactSet, IDC, Census) by the rules in daily-jobs.md#industryforecasts.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const rows = await forecastStatus();
+      await act(ctx, { tool: 'industry_forecast_status', detail: `${rows.length} forecast panel(s)` });
+      return rows;
+    },
+  },
+  {
+    name: 'refresh_btos',
+    description:
+      "Downloads the Census Bureau's Business Trends and Outlook Survey national file and replaces the AI adoption panel's two survey lines (AI used now, expected in six months), here and on production when the run writes there. Mechanical: nothing to review. Returns the newest reference day.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const result = await refreshBtos();
+      await act(ctx, { tool: 'refresh_btos', detail: `BTOS through ${result.through}, ${result.points} points${result.production ? '; prod saved' : ''}` });
+      return result;
+    },
+  },
+  {
+    name: 'save_industry_forecast',
+    description:
+      "Saves one industry forecast row whole, here and on production when the run writes there. When a publisher has revised a projection (a newer Gartner edition, say), put the figures being replaced in `earlier` as { label ('Gartner, May 2026'), publishedDate, points } and the new figures in `projection`: the panel draws earlier editions grey and dotted and says they were revised. Never drop an earlier edition. `sources` are pages you opened this run, each { label, url (https), date, quote (verbatim, at most 300 characters, the sentence or table row stating the figure) }; a projection needs at least one quote. `points` are { x: '2027', value } in the row's unit (prefix/suffix, e.g. '$' and 'T'). Never invent or convert a figure; leave a projection null when none is published.",
+    input_schema: obj(
+      {
+        slug: str('Row slug, an existing one from industry_forecast_status or a new lowercase-hyphen one'),
+        industry: str('Industry label'),
+        title: str('Panel title'),
+        tags: { type: 'array', items: { type: 'string' }, description: 'Pin tag or category names the panel appears under' },
+        prefix: str("Value prefix, e.g. '$'"),
+        suffix: str("Value suffix, e.g. 'T', 'B' or '%'"),
+        projection: { type: 'object', description: '{ label, points: [{ x, value }] } or null' },
+        earlier: { type: 'array', items: { type: 'object' }, description: 'Earlier editions: [{ label, publishedDate, points }], oldest first' },
+        sources: { type: 'array', items: { type: 'object' }, description: '[{ label, url, date, quote }]' },
+        note: str('A line on what the figures are, at most 1500 characters'),
+      },
+      ['slug', 'industry', 'title', 'tags', 'sources'],
+    ),
+    run: async (input, ctx) => {
+      const result = await saveResearched(input);
+      await act(ctx, { tool: 'save_industry_forecast', detail: `${result.slug}${result.production ? '; prod saved' : ''}` });
       return result;
     },
   },

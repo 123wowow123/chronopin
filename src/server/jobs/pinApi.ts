@@ -203,6 +203,15 @@ async function adminToken(why: string): Promise<string> {
     : await signToken(admin.id);
 }
 
+// An industry forecast row, or a replacement of its survey lines, on
+// production's admin endpoint (the industryForecasts task). Nothing happens
+// unless the run writes to production.
+export async function industryForecastRequest(body: Record<string, unknown>): Promise<boolean> {
+  if (!prodBase()) return false;
+  await call('PUT', '/api/admin/industry-forecasts', { token: await adminToken('industry forecasts'), body });
+  return true;
+}
+
 // Sends campaign finance (a batch of people with their cycles, named by
 // bioguide id) to production's admin endpoint (the personCampaigns task).
 export async function personCampaignsRequest(people: unknown[]) {

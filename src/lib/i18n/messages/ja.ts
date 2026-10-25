@@ -686,6 +686,15 @@ const ja: Messages = {
       showAll: '車の性能評価のあるピンをすべて表示',
       reviews: '第三者レビュー',
     },
+    industry: {
+      heading: "業界予測",
+      projected: "予測",
+      reported: "実績",
+      sources: "出典",
+      checked: "確認日 {date}",
+      revised: "その後改定",
+      caveat: "予測は引用元の発表によるもので、ChronoPin のものではありません。",
+    },
     factory: {
       buildoutHeading: "工場建設計画",
       projectTimeline: "事業スケジュール",

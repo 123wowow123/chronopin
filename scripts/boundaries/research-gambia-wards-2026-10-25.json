@@ -1,0 +1,1007 @@
+{
+  "checkedAt": "2026-10-25",
+  "pinId": 2354,
+  "source": "Independent Electoral Commission, The Gambia — Wards",
+  "sourcePage": "https://iec.gm/ova_doc/21246/",
+  "sourceUrl": "https://iec.gm/wp-content/uploads/2026/03/Wards.docx",
+  "sourceSha256": "ae07376fcc1a3368d31c01e9f0b691db5fb032f17951b500f51c1126924197aa",
+  "documentCreatedAt": "2023-03-09T07:42:00Z",
+  "documentModifiedAt": "2026-03-24T14:29:00Z",
+  "scope": "Constituency and ward labels as printed in IEC’s hosted document; whitespace trimmed only. Polling-code prefixes are derived grouping aids, not asserted official constituency identifiers.",
+  "usableForBoundaryImport": false,
+  "remainingGap": "Need complete source-matched ward/constituency polygon geometry and current-plan validation; this roster does not define geographic rings.",
+  "counts": {
+    "constituencies": 53,
+    "sourceRows": 1555,
+    "distinctPollingCodes": 1554,
+    "distinctConstituencyWardLabels": 121
+  },
+  "issues": [
+    "Polling code 608061 appears twice with identical Upper Saloum / Njau rows. Both occurrences are retained in source-row counts.",
+    "Tallinding Kunjang includes TALLINDING NORTH, TALLINDING NOUTH and TALLINDING SOUTH. The apparent spelling variant is retained, not silently merged; 121 labels must not be reported as 121 verified wards.",
+    "The source file metadata is not proof that all membership reflects subsequent registration or the final 2027 election plan."
+  ],
+  "duplicatePollingCodes": [
+    {
+      "pollingCode": "608061",
+      "occurrences": 2,
+      "sourceRows": [
+        {
+          "region": "JANJANBUREH",
+          "constituency": "UPPER SALOUM",
+          "ward": "NJAU",
+          "station": "NJAU"
+        },
+        {
+          "region": "JANJANBUREH",
+          "constituency": "UPPER SALOUM",
+          "ward": "NJAU",
+          "station": "NJAU"
+        }
+      ]
+    }
+  ],
+  "constituencies": [
+    {
+      "name": "BAKAU",
+      "region": "KANIFING",
+      "pollingCodePrefix": "207",
+      "sourceRows": 24,
+      "distinctPollingCodes": 24,
+      "wardLabels": [
+        {
+          "name": "BAKAU NEW TOWN/FAJARA",
+          "sourceRows": 10
+        },
+        {
+          "name": "BAKAU/CAPE POINT",
+          "sourceRows": 14
+        }
+      ]
+    },
+    {
+      "name": "BANJUL CENTRAL",
+      "region": "BANJUL",
+      "pollingCodePrefix": "102",
+      "sourceRows": 13,
+      "distinctPollingCodes": 13,
+      "wardLabels": [
+        {
+          "name": "NEW TOWN EAST",
+          "sourceRows": 4
+        },
+        {
+          "name": "NEW TOWN WEST",
+          "sourceRows": 4
+        },
+        {
+          "name": "SOLDIER TOWN",
+          "sourceRows": 5
+        }
+      ]
+    },
+    {
+      "name": "BANJUL NORTH",
+      "region": "BANJUL",
+      "pollingCodePrefix": "103",
+      "sourceRows": 11,
+      "distinctPollingCodes": 11,
+      "wardLabels": [
+        {
+          "name": "BOX BAR",
+          "sourceRows": 3
+        },
+        {
+          "name": "CAMPAMA",
+          "sourceRows": 5
+        },
+        {
+          "name": "CRAB ISLAND",
+          "sourceRows": 3
+        }
+      ]
+    },
+    {
+      "name": "BANJUL SOUTH",
+      "region": "BANJUL",
+      "pollingCodePrefix": "101",
+      "sourceRows": 12,
+      "distinctPollingCodes": 12,
+      "wardLabels": [
+        {
+          "name": "HALF DIE",
+          "sourceRows": 3
+        },
+        {
+          "name": "JOLLOF TOWN",
+          "sourceRows": 4
+        },
+        {
+          "name": "PORTUGUESE TOWN",
+          "sourceRows": 5
+        }
+      ]
+    },
+    {
+      "name": "BASSE",
+      "region": "BASSE",
+      "pollingCodePrefix": "702",
+      "sourceRows": 35,
+      "distinctPollingCodes": 35,
+      "wardLabels": [
+        {
+          "name": "BASSE",
+          "sourceRows": 22
+        },
+        {
+          "name": "SABI",
+          "sourceRows": 13
+        }
+      ]
+    },
+    {
+      "name": "BRIKAMA NORTH",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "305",
+      "sourceRows": 58,
+      "distinctPollingCodes": 58,
+      "wardLabels": [
+        {
+          "name": "KEMBUJEH",
+          "sourceRows": 30
+        },
+        {
+          "name": "NYAMBAI",
+          "sourceRows": 28
+        }
+      ]
+    },
+    {
+      "name": "BRIKAMA SOUTH",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "306",
+      "sourceRows": 58,
+      "distinctPollingCodes": 58,
+      "wardLabels": [
+        {
+          "name": "MARAKISSA",
+          "sourceRows": 27
+        },
+        {
+          "name": "SUBA",
+          "sourceRows": 31
+        }
+      ]
+    },
+    {
+      "name": "BUNDUNGKA KUNDA",
+      "region": "KANIFING",
+      "pollingCodePrefix": "203",
+      "sourceRows": 35,
+      "distinctPollingCodes": 35,
+      "wardLabels": [
+        {
+          "name": "BANTABA/BOREHOLE",
+          "sourceRows": 24
+        },
+        {
+          "name": "SIX JUNCTION",
+          "sourceRows": 11
+        }
+      ]
+    },
+    {
+      "name": "BUSUMBALA",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "303",
+      "sourceRows": 78,
+      "distinctPollingCodes": 78,
+      "wardLabels": [
+        {
+          "name": "BANJULUNDING",
+          "sourceRows": 40
+        },
+        {
+          "name": "LAMIN",
+          "sourceRows": 38
+        }
+      ]
+    },
+    {
+      "name": "CENTRAL BADDIBU",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "405",
+      "sourceRows": 16,
+      "distinctPollingCodes": 16,
+      "wardLabels": [
+        {
+          "name": "NJABA KUNDA",
+          "sourceRows": 8
+        },
+        {
+          "name": "SALIKENNE",
+          "sourceRows": 8
+        }
+      ]
+    },
+    {
+      "name": "FONI BINTANG",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "309",
+      "sourceRows": 19,
+      "distinctPollingCodes": 19,
+      "wardLabels": [
+        {
+          "name": "KUSAMAI",
+          "sourceRows": 8
+        },
+        {
+          "name": "SIBANOR",
+          "sourceRows": 11
+        }
+      ]
+    },
+    {
+      "name": "FONI BONDALI",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "311",
+      "sourceRows": 8,
+      "distinctPollingCodes": 8,
+      "wardLabels": [
+        {
+          "name": "BANTANJANG",
+          "sourceRows": 3
+        },
+        {
+          "name": "MAYORK",
+          "sourceRows": 5
+        }
+      ]
+    },
+    {
+      "name": "FONI BREFET",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "308",
+      "sourceRows": 16,
+      "distinctPollingCodes": 16,
+      "wardLabels": [
+        {
+          "name": "BULOCK",
+          "sourceRows": 9
+        },
+        {
+          "name": "SOMITA",
+          "sourceRows": 7
+        }
+      ]
+    },
+    {
+      "name": "FONI JARROL",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "312",
+      "sourceRows": 8,
+      "distinctPollingCodes": 8,
+      "wardLabels": [
+        {
+          "name": "SINTET",
+          "sourceRows": 4
+        },
+        {
+          "name": "WASSADOU",
+          "sourceRows": 4
+        }
+      ]
+    },
+    {
+      "name": "FONI KANSALA",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "310",
+      "sourceRows": 16,
+      "distinctPollingCodes": 16,
+      "wardLabels": [
+        {
+          "name": "BWIAM",
+          "sourceRows": 6
+        },
+        {
+          "name": "KANILAI",
+          "sourceRows": 10
+        }
+      ]
+    },
+    {
+      "name": "ILLIASSA",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "406",
+      "sourceRows": 42,
+      "distinctPollingCodes": 42,
+      "wardLabels": [
+        {
+          "name": "FARAFENNI",
+          "sourceRows": 17
+        },
+        {
+          "name": "KATCHANG",
+          "sourceRows": 8
+        },
+        {
+          "name": "KUBANDAR",
+          "sourceRows": 11
+        },
+        {
+          "name": "NOO KUNDA",
+          "sourceRows": 6
+        }
+      ]
+    },
+    {
+      "name": "JANJANBUREH",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "605",
+      "sourceRows": 2,
+      "distinctPollingCodes": 2,
+      "wardLabels": [
+        {
+          "name": "McCARTHY",
+          "sourceRows": 2
+        }
+      ]
+    },
+    {
+      "name": "JARRA CENTRAL",
+      "region": "MANSAKONKO",
+      "pollingCodePrefix": "502",
+      "sourceRows": 11,
+      "distinctPollingCodes": 11,
+      "wardLabels": [
+        {
+          "name": "BUIBA",
+          "sourceRows": 7
+        },
+        {
+          "name": "JALAMBEREH",
+          "sourceRows": 4
+        }
+      ]
+    },
+    {
+      "name": "JARRA EAST",
+      "region": "MANSAKONKO",
+      "pollingCodePrefix": "503",
+      "sourceRows": 21,
+      "distinctPollingCodes": 21,
+      "wardLabels": [
+        {
+          "name": "BURENG",
+          "sourceRows": 14
+        },
+        {
+          "name": "PAKALIBA",
+          "sourceRows": 7
+        }
+      ]
+    },
+    {
+      "name": "JARRA WEST",
+      "region": "MANSAKONKO",
+      "pollingCodePrefix": "501",
+      "sourceRows": 28,
+      "distinctPollingCodes": 28,
+      "wardLabels": [
+        {
+          "name": "GIKOKO",
+          "sourceRows": 20
+        },
+        {
+          "name": "JADUMA",
+          "sourceRows": 8
+        }
+      ]
+    },
+    {
+      "name": "JESHWANG",
+      "region": "KANIFING",
+      "pollingCodePrefix": "206",
+      "sourceRows": 44,
+      "distinctPollingCodes": 44,
+      "wardLabels": [
+        {
+          "name": "KANIFING",
+          "sourceRows": 5
+        },
+        {
+          "name": "NEW JESHWANG/EBO TOWN",
+          "sourceRows": 27
+        },
+        {
+          "name": "OLD JESHWANG",
+          "sourceRows": 12
+        }
+      ]
+    },
+    {
+      "name": "JIMARA",
+      "region": "BASSE",
+      "pollingCodePrefix": "701",
+      "sourceRows": 38,
+      "distinctPollingCodes": 38,
+      "wardLabels": [
+        {
+          "name": "GAMBISARA",
+          "sourceRows": 19
+        },
+        {
+          "name": "JULANGEL",
+          "sourceRows": 19
+        }
+      ]
+    },
+    {
+      "name": "JOKADOU",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "403",
+      "sourceRows": 22,
+      "distinctPollingCodes": 22,
+      "wardLabels": [
+        {
+          "name": "DASILAMEH",
+          "sourceRows": 11
+        },
+        {
+          "name": "KERR JARGA",
+          "sourceRows": 11
+        }
+      ]
+    },
+    {
+      "name": "KANTORA",
+      "region": "BASSE",
+      "pollingCodePrefix": "704",
+      "sourceRows": 32,
+      "distinctPollingCodes": 32,
+      "wardLabels": [
+        {
+          "name": "GARAWOL",
+          "sourceRows": 16
+        },
+        {
+          "name": "KOINA",
+          "sourceRows": 16
+        }
+      ]
+    },
+    {
+      "name": "KIANG CENTRAL",
+      "region": "MANSAKONKO",
+      "pollingCodePrefix": "505",
+      "sourceRows": 12,
+      "distinctPollingCodes": 12,
+      "wardLabels": [
+        {
+          "name": "JIROFF",
+          "sourceRows": 6
+        },
+        {
+          "name": "KWINELLA",
+          "sourceRows": 6
+        }
+      ]
+    },
+    {
+      "name": "KIANG EAST",
+      "region": "MANSAKONKO",
+      "pollingCodePrefix": "504",
+      "sourceRows": 10,
+      "distinctPollingCodes": 10,
+      "wardLabels": [
+        {
+          "name": "KAIAF",
+          "sourceRows": 6
+        },
+        {
+          "name": "MASSEMBEH",
+          "sourceRows": 4
+        }
+      ]
+    },
+    {
+      "name": "KIANG WEST",
+      "region": "MANSAKONKO",
+      "pollingCodePrefix": "506",
+      "sourceRows": 21,
+      "distinctPollingCodes": 21,
+      "wardLabels": [
+        {
+          "name": "KIANG BANTA",
+          "sourceRows": 9
+        },
+        {
+          "name": "KIANG JULAFAR",
+          "sourceRows": 12
+        }
+      ]
+    },
+    {
+      "name": "KOMBO EAST",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "307",
+      "sourceRows": 38,
+      "distinctPollingCodes": 38,
+      "wardLabels": [
+        {
+          "name": "GIBORO",
+          "sourceRows": 15
+        },
+        {
+          "name": "KAFUTA",
+          "sourceRows": 12
+        },
+        {
+          "name": "PIRANG",
+          "sourceRows": 11
+        }
+      ]
+    },
+    {
+      "name": "KOMBO SOUTH",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "304",
+      "sourceRows": 90,
+      "distinctPollingCodes": 90,
+      "wardLabels": [
+        {
+          "name": "GUNJUR",
+          "sourceRows": 15
+        },
+        {
+          "name": "KARTONG",
+          "sourceRows": 18
+        },
+        {
+          "name": "SANYANG",
+          "sourceRows": 57
+        }
+      ]
+    },
+    {
+      "name": "LATRIKUNDA SABIJI",
+      "region": "KANIFING",
+      "pollingCodePrefix": "201",
+      "sourceRows": 54,
+      "distinctPollingCodes": 54,
+      "wardLabels": [
+        {
+          "name": "ABUKO",
+          "sourceRows": 14
+        },
+        {
+          "name": "FAJIKUNDA",
+          "sourceRows": 24
+        },
+        {
+          "name": "SABIJIE",
+          "sourceRows": 16
+        }
+      ]
+    },
+    {
+      "name": "LOWER BADDIBU",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "404",
+      "sourceRows": 14,
+      "distinctPollingCodes": 14,
+      "wardLabels": [
+        {
+          "name": "KEREWAN",
+          "sourceRows": 7
+        },
+        {
+          "name": "SAABA",
+          "sourceRows": 7
+        }
+      ]
+    },
+    {
+      "name": "LOWER FULLADU WEST",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "604",
+      "sourceRows": 35,
+      "distinctPollingCodes": 35,
+      "wardLabels": [
+        {
+          "name": "BRIKAMABA",
+          "sourceRows": 12
+        },
+        {
+          "name": "FULABANTANG",
+          "sourceRows": 10
+        },
+        {
+          "name": "KEREWAN",
+          "sourceRows": 13
+        }
+      ]
+    },
+    {
+      "name": "LOWER NUIMI",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "401",
+      "sourceRows": 49,
+      "distinctPollingCodes": 49,
+      "wardLabels": [
+        {
+          "name": "ESSAU",
+          "sourceRows": 32
+        },
+        {
+          "name": "MEDINA SERING MASS",
+          "sourceRows": 17
+        }
+      ]
+    },
+    {
+      "name": "LOWER SALOUM",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "607",
+      "sourceRows": 16,
+      "distinctPollingCodes": 16,
+      "wardLabels": [
+        {
+          "name": "BALLANGHAR",
+          "sourceRows": 5
+        },
+        {
+          "name": "KAUR",
+          "sourceRows": 11
+        }
+      ]
+    },
+    {
+      "name": "NIAMINA DANKUNKU",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "601",
+      "sourceRows": 9,
+      "distinctPollingCodes": 9,
+      "wardLabels": [
+        {
+          "name": "DANKUNKU",
+          "sourceRows": 9
+        }
+      ]
+    },
+    {
+      "name": "NIAMINA EAST",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "603",
+      "sourceRows": 24,
+      "distinctPollingCodes": 24,
+      "wardLabels": [
+        {
+          "name": "JARENG",
+          "sourceRows": 10
+        },
+        {
+          "name": "KUDANG",
+          "sourceRows": 14
+        }
+      ]
+    },
+    {
+      "name": "NIAMINA WEST",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "602",
+      "sourceRows": 10,
+      "distinctPollingCodes": 10,
+      "wardLabels": [
+        {
+          "name": "CATAMINA",
+          "sourceRows": 10
+        }
+      ]
+    },
+    {
+      "name": "NIANI",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "610",
+      "sourceRows": 26,
+      "distinctPollingCodes": 26,
+      "wardLabels": [
+        {
+          "name": "KUNTAUR",
+          "sourceRows": 13
+        },
+        {
+          "name": "NYANGA",
+          "sourceRows": 13
+        }
+      ]
+    },
+    {
+      "name": "NIANIJA",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "609",
+      "sourceRows": 8,
+      "distinctPollingCodes": 8,
+      "wardLabels": [
+        {
+          "name": "CHAMEN",
+          "sourceRows": 8
+        }
+      ]
+    },
+    {
+      "name": "OLD YUNDUM",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "302",
+      "sourceRows": 71,
+      "distinctPollingCodes": 71,
+      "wardLabels": [
+        {
+          "name": "JABANG",
+          "sourceRows": 22
+        },
+        {
+          "name": "KUNKUJANG KEITA YA",
+          "sourceRows": 27
+        },
+        {
+          "name": "WELLINGARA/NEMA",
+          "sourceRows": 22
+        }
+      ]
+    },
+    {
+      "name": "SABACH SANJAL",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "407",
+      "sourceRows": 24,
+      "distinctPollingCodes": 24,
+      "wardLabels": [
+        {
+          "name": "SABACH",
+          "sourceRows": 9
+        },
+        {
+          "name": "SANJAL",
+          "sourceRows": 15
+        }
+      ]
+    },
+    {
+      "name": "SAMI",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "611",
+      "sourceRows": 25,
+      "distinctPollingCodes": 25,
+      "wardLabels": [
+        {
+          "name": "BANNI",
+          "sourceRows": 11
+        },
+        {
+          "name": "KARANTABA",
+          "sourceRows": 6
+        },
+        {
+          "name": "PACHONKI",
+          "sourceRows": 8
+        }
+      ]
+    },
+    {
+      "name": "SANDU",
+      "region": "BASSE",
+      "pollingCodePrefix": "705",
+      "sourceRows": 22,
+      "distinctPollingCodes": 22,
+      "wardLabels": [
+        {
+          "name": "DIABUGU",
+          "sourceRows": 10
+        },
+        {
+          "name": "MISSERA",
+          "sourceRows": 12
+        }
+      ]
+    },
+    {
+      "name": "SANNEH MENTERENG",
+      "region": "BRIKAMA",
+      "pollingCodePrefix": "301",
+      "sourceRows": 73,
+      "distinctPollingCodes": 73,
+      "wardLabels": [
+        {
+          "name": "BIJILO",
+          "sourceRows": 14
+        },
+        {
+          "name": "BRUFUT",
+          "sourceRows": 32
+        },
+        {
+          "name": "SUKUTA",
+          "sourceRows": 27
+        }
+      ]
+    },
+    {
+      "name": "SEREKUNDA",
+      "region": "KANIFING",
+      "pollingCodePrefix": "204",
+      "sourceRows": 20,
+      "distinctPollingCodes": 20,
+      "wardLabels": [
+        {
+          "name": "BARTEZ",
+          "sourceRows": 10
+        },
+        {
+          "name": "LONDON CORNER",
+          "sourceRows": 10
+        }
+      ]
+    },
+    {
+      "name": "SEREKUNDA WEST",
+      "region": "KANIFING",
+      "pollingCodePrefix": "205",
+      "sourceRows": 68,
+      "distinctPollingCodes": 68,
+      "wardLabels": [
+        {
+          "name": "BAKOTEH",
+          "sourceRows": 15
+        },
+        {
+          "name": "DIPPAKUNDA",
+          "sourceRows": 12
+        },
+        {
+          "name": "KOLOLI",
+          "sourceRows": 9
+        },
+        {
+          "name": "LATRIKUNDA YIRIGANYA",
+          "sourceRows": 15
+        },
+        {
+          "name": "MANJAIKUNDA/KOTU",
+          "sourceRows": 17
+        }
+      ]
+    },
+    {
+      "name": "TALLINDING KUNJANG",
+      "region": "KANIFING",
+      "pollingCodePrefix": "202",
+      "sourceRows": 31,
+      "distinctPollingCodes": 31,
+      "wardLabels": [
+        {
+          "name": "TALLINDING NORTH",
+          "sourceRows": 8
+        },
+        {
+          "name": "TALLINDING NOUTH",
+          "sourceRows": 6
+        },
+        {
+          "name": "TALLINDING SOUTH",
+          "sourceRows": 17
+        }
+      ]
+    },
+    {
+      "name": "TUMANA",
+      "region": "BASSE",
+      "pollingCodePrefix": "703",
+      "sourceRows": 28,
+      "distinctPollingCodes": 28,
+      "wardLabels": [
+        {
+          "name": "DAMPHA KUNDA",
+          "sourceRows": 16
+        },
+        {
+          "name": "KULARI",
+          "sourceRows": 12
+        }
+      ]
+    },
+    {
+      "name": "UPPER FULLADU WEST",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "606",
+      "sourceRows": 42,
+      "distinctPollingCodes": 42,
+      "wardLabels": [
+        {
+          "name": "BANSANG",
+          "sourceRows": 11
+        },
+        {
+          "name": "DARU",
+          "sourceRows": 10
+        },
+        {
+          "name": "GALLEH",
+          "sourceRows": 9
+        },
+        {
+          "name": "SARE SOFIE",
+          "sourceRows": 12
+        }
+      ]
+    },
+    {
+      "name": "UPPER NUIMI",
+      "region": "KEREWAN",
+      "pollingCodePrefix": "402",
+      "sourceRows": 29,
+      "distinctPollingCodes": 29,
+      "wardLabels": [
+        {
+          "name": "PAKAU",
+          "sourceRows": 14
+        },
+        {
+          "name": "PRINCE",
+          "sourceRows": 15
+        }
+      ]
+    },
+    {
+      "name": "UPPER SALOUM",
+      "region": "JANJANBUREH",
+      "pollingCodePrefix": "608",
+      "sourceRows": 16,
+      "distinctPollingCodes": 15,
+      "wardLabels": [
+        {
+          "name": "NJAU",
+          "sourceRows": 10
+        },
+        {
+          "name": "PANCHANG",
+          "sourceRows": 6
+        }
+      ]
+    },
+    {
+      "name": "WULLI EAST",
+      "region": "BASSE",
+      "pollingCodePrefix": "707",
+      "sourceRows": 22,
+      "distinctPollingCodes": 22,
+      "wardLabels": [
+        {
+          "name": "BAJA KUNDA",
+          "sourceRows": 11
+        },
+        {
+          "name": "FODAY KUNDA",
+          "sourceRows": 11
+        }
+      ]
+    },
+    {
+      "name": "WULLI WEST",
+      "region": "BASSE",
+      "pollingCodePrefix": "706",
+      "sourceRows": 21,
+      "distinctPollingCodes": 21,
+      "wardLabels": [
+        {
+          "name": "SARE NGAI",
+          "sourceRows": 12
+        },
+        {
+          "name": "SUTUKONDING",
+          "sourceRows": 9
+        }
+      ]
+    }
+  ]
+}

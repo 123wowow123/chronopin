@@ -691,6 +691,15 @@ const id: Messages = {
       showAll: 'Tampilkan semua pin dengan penilaian performa mobil',
       reviews: 'Ulasan independen',
     },
+    industry: {
+      heading: "Prakiraan industri",
+      projected: "Proyeksi",
+      reported: "Tercatat",
+      sources: "Sumber",
+      checked: "Diperiksa {date}",
+      revised: "Direvisi kemudian",
+      caveat: "Proyeksi adalah perkiraan penerbit yang dikutip, bukan ChronoPin.",
+    },
     factory: {
       buildoutHeading: "Proyek pabrik",
       projectTimeline: "Jadwal proyek",

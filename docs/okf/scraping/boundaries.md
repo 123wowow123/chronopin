@@ -67,7 +67,7 @@ Pre-write production records are retained in ignored `.scrape/boundaries/prod-be
 
 ## Expanded production audit
 
-The subsequent request to backfill all relevant production pins is recorded in [the expanded audit](boundaries-backfill-2026-10-25.md): 512 candidates reviewed, 71 pins with verified live layers, 10 state redraw comparisons, and 6 explicit remaining research gaps. The initial two wildfire layers were superseded by CAL FIRE’s newer historical archive. Use `scripts/boundaries/backfill-2026-10-25.prod.json` for current coverage; the initial three-pin manifest is retained as historical research evidence.
+The subsequent request to backfill all relevant production pins is recorded in [the expanded audit](boundaries-backfill-2026-10-25.md): 592 candidates reviewed, 74 pins with verified live layers, 10 US state redraw comparisons plus one Angola provincial comparison, and 5 explicit remaining research gaps. The initial two wildfire layers were superseded by CAL FIRE’s newer historical archive. Use `scripts/boundaries/backfill-2026-10-25.prod.json` for current coverage; the initial three-pin manifest is retained as historical research evidence.
 
 The state comparison schema, reviewed sources, preparation workflow and deployment status are documented in [the redraw follow-up](boundary-redraws-2026-10-25.md).
 
@@ -77,4 +77,12 @@ The [large production run](boundaries-large-run-2026-10-25.md) adds verified cit
 
 The [second large run](boundaries-large2-run-2026-10-25.md) resolves Black Summer by retaining prepared coordinate precision and adds exact Taiwan recall membership, executive areas, Taipei, Lima and elected-office jurisdictions. That round reached 70 pins with seven source gaps.
 
-The [third large run](boundaries-large3-run-2026-10-25.md) adds Mexico’s 300 federal single-member districts from an official October 2026 INE download. Current coverage is 71 pins and 10,163 default features; six research gaps remain.
+The [third large run](boundaries-large3-run-2026-10-25.md) adds Mexico’s 300 federal single-member districts from an official October 2026 INE download. That round reached 71 pins and 10,163 default features with six research gaps.
+
+The [fourth large run](boundaries-large4-run-2026-10-25.md) adds 56 Electoral College areas and the five-county Connect Bay Area qualification map. That round reached 73 pins and 10,224 default features with six source gaps.
+
+The [fifth large run](boundaries-large5-run-2026-10-25.md) resolves Angola with 21 current provincial areas and an 18-to-21 comparison toggle. Current coverage is 74 pins and 10,245 default features, with five source gaps and 11 total jurisdiction comparisons.
+
+The [sixth large review](boundaries-large6-run-2026-10-25.md) reviews 80 additional candidates and new source leads. No verified layers were available to add; coverage remains 74 pins and 10,245 default features, with five unresolved country gaps.
+
+The [seventh review](boundaries-large7-run-2026-10-25.md) finds no new production candidates or importable geometry, but extracts IEC’s 53-constituency Gambia membership roster with source anomalies preserved. All 74 saved maps remain verified; geometry coverage is unchanged.

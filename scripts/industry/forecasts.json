@@ -1,0 +1,607 @@
+[
+ {
+  "slug": "us-ai-adoption",
+  "industry": "AI",
+  "title": "AI adoption among US businesses",
+  "tags": [
+   "AI",
+   "Software",
+   "Telecom",
+   "Computing"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAIALL",
+    "label": "Ramp: all businesses paying for AI"
+   },
+   {
+    "fredId": "RAMPAITECH",
+    "label": "Ramp: Information sector"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "U.S. Census Bureau, Business Trends and Outlook Survey (national estimates)",
+    "url": "https://www.census.gov/hfp/btos/data_downloads",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Ramp counts businesses with a card or invoice payment for AI; the Census BTOS lines (fortnightly, all employer firms) ask whether the business used AI in the last two weeks and expects to in the next six months."
+ },
+ {
+  "slug": "us-ai-investment-gdp",
+  "industry": "AI",
+  "title": "US AI investment as a share of GDP",
+  "tags": [
+   "AI",
+   "Economy",
+   "Business",
+   "Computing",
+   "Semiconductors",
+   "Finance"
+  ],
+  "suffix": "%",
+  "projection": {
+   "label": "Goldman Sachs",
+   "points": [
+    {
+     "x": "2026",
+     "value": 1.8
+    },
+    {
+     "x": "2027",
+     "value": 2.5
+    },
+    {
+     "x": "2028",
+     "value": 2.8
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Goldman Sachs Research: Global AI investment is forecast to exceed $1 trillion in 2026",
+    "url": "https://www.goldmansachs.com/insights/articles/global-investment-is-forecast-to-exceed-1-trillion-in-2026",
+    "date": "2026-08-07",
+    "quote": "Those estimates imply that AI capex will rise from 1.8% of GDP in the US (with global AI investment totaling 0.9% of global GDP) in 2026 to 2.5% of GDP in the US (1.3% globally) in 2027, with a further increase to 2.8% (1.4% globally) in 2028."
+   }
+  ],
+  "note": "Goldman Sachs Research's extrapolation of its preferred estimates; it notes consensus 2027 capex projections are likely too conservative."
+ },
+ {
+  "slug": "us-ai-investment-usd",
+  "industry": "AI",
+  "title": "US AI-related investment, 2026",
+  "tags": [
+   "AI",
+   "Economy",
+   "Business",
+   "Computing",
+   "Semiconductors",
+   "Finance"
+  ],
+  "prefix": "$",
+  "suffix": "B",
+  "projection": {
+   "label": "Goldman Sachs",
+   "points": [
+    {
+     "x": "2026",
+     "value": 581
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Goldman Sachs Research: Global AI investment is forecast to exceed $1 trillion in 2026",
+    "url": "https://www.goldmansachs.com/insights/articles/global-investment-is-forecast-to-exceed-1-trillion-in-2026",
+    "date": "2026-08-07",
+    "quote": "That projection points to $1 trillion of AI-related investment around the globe in 2026, including $581 billion in the US"
+   }
+  ],
+  "note": "Investment (capex and related spending), not only software or subscription spend."
+ },
+ {
+  "slug": "worldwide-ai-infrastructure",
+  "industry": "AI",
+  "title": "Worldwide AI infrastructure spending",
+  "tags": [
+   "AI",
+   "Computing",
+   "Semiconductors",
+   "Telecom"
+  ],
+  "prefix": "$",
+  "suffix": "B",
+  "projection": {
+   "label": "Gartner",
+   "points": [
+    {
+     "x": "2025",
+     "value": 981.9
+    },
+    {
+     "x": "2026",
+     "value": 1484.4
+    },
+    {
+     "x": "2027",
+     "value": 1977.7
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Gartner: Gartner Forecasts Worldwide AI Spending to Grow 49.5% in 2026",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026",
+    "date": "2026-09-16",
+    "quote": "AI Infrastructure 981,920 1,484,397 1,977,685 (millions of U.S. dollars, 2025, 2026, 2027)"
+   },
+   {
+    "label": "Gartner: Gartner Forecasts Worldwide AI Spending to Grow 47% in 2026 (May edition)",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026",
+    "date": "2026-05-19",
+    "quote": "AI Infrastructure 975,581 1,431,509 1,890,310 (millions of U.S. dollars, 2025, 2026, 2027)"
+   }
+  ],
+  "note": "AI-optimized IaaS, servers, network fabric, AI processing semiconductors and devices; the largest segment of Gartner's AI spending forecast.",
+  "earlier": [
+   {
+    "label": "Gartner, May 2026",
+    "publishedDate": "2026-05-19",
+    "points": [
+     {
+      "x": "2025",
+      "value": 975.6
+     },
+     {
+      "x": "2026",
+      "value": 1431.5
+     },
+     {
+      "x": "2027",
+      "value": 1890.3
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "hyperscaler-capex",
+  "industry": "AI",
+  "title": "Hyperscaler cash capex (Alphabet, Amazon, Meta, Microsoft, Oracle)",
+  "tags": [
+   "AI",
+   "Computing",
+   "Semiconductors",
+   "Business",
+   "Finance",
+   "Infrastructure"
+  ],
+  "prefix": "$",
+  "suffix": "B",
+  "projection": {
+   "label": "FactSet estimates (at least)",
+   "points": [
+    {
+     "x": "2026",
+     "value": 690
+    },
+    {
+     "x": "2028",
+     "value": 900
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "FactSet Insight: Hyperscalers Tap External Financing as AI Capex Outruns Cash Flow",
+    "url": "https://insight.factset.com/hyperscalers-tap-external-financing-as-ai-capex-outruns-cash-flow",
+    "date": "2026-07-23",
+    "quote": "Aggregate cash capex of five hyperscalers is expected to exceed $690bn across their respective FY26 periods"
+   }
+  ],
+  "note": "Both figures are floors (\"more than\"), across each company's own fiscal year; FactSet's FY28 estimate is more than $900bn. Not a US-only total."
+ },
+ {
+  "slug": "us-ai-spending-idc",
+  "industry": "AI",
+  "title": "US AI spending, IDC 2028 forecast",
+  "tags": [
+   "AI",
+   "Economy",
+   "Business",
+   "Software"
+  ],
+  "prefix": "$",
+  "suffix": "B",
+  "projection": {
+   "label": "IDC (2028)",
+   "points": [
+    {
+     "x": "2028",
+     "value": 336
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "IDC via Business Wire: Worldwide Spending on AI Forecast to Reach $632 Billion in 2028",
+    "url": "https://www.businesswire.com/news/home/20240819177906/en",
+    "date": "2024-08-19",
+    "quote": "AI spending in the United States will reach $336 billion in 2028, making it the largest geographic region for AI investment"
+   }
+  ],
+  "note": "An August 2024 forecast (software, hardware and services, GenAI is $108B of it); later Gartner and Goldman estimates are far higher, and IDC's newer US totals are paywalled."
+ },
+ {
+  "slug": "worldwide-ai-spending",
+  "industry": "AI",
+  "title": "Worldwide AI spending",
+  "tags": [
+   "AI",
+   "Economy",
+   "Business",
+   "Computing"
+  ],
+  "prefix": "$",
+  "suffix": "T",
+  "projection": {
+   "label": "Gartner",
+   "points": [
+    {
+     "x": "2025",
+     "value": 1.787
+    },
+    {
+     "x": "2026",
+     "value": 2.67
+    },
+    {
+     "x": "2027",
+     "value": 3.637
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Gartner: Gartner Forecasts Worldwide AI Spending to Grow 49.5% in 2026",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026",
+    "date": "2026-09-16",
+    "quote": "Total AI Spending 1,786,671 2,670,460 3,637,292 (millions of U.S. dollars, 2025, 2026, 2027)"
+   },
+   {
+    "label": "Yahoo Finance: AI spending to hit $2.53 trillion in 2026, $3.33 trillion in 2027 (Gartner, January forecast)",
+    "url": "https://finance.yahoo.com/news/ai-spending-to-hit-253-trillion-in-2026-333-trillion-in-2027-201834333.html",
+    "date": "2026-01-15",
+    "quote": "global AI spending will hit $2.53 trillion in 2026 and reach a staggering $3.33 trillion in 2027."
+   },
+   {
+    "label": "Gartner: Gartner Forecasts Worldwide AI Spending to Grow 47% in 2026 (May edition)",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026",
+    "date": "2026-05-19",
+    "quote": "Total AI Spending 1,764,947 2,595,667 3,493,358 (millions of U.S. dollars, 2025, 2026, 2027)"
+   }
+  ],
+  "note": "Gartner's September 2026 forecast, its third of the year: January and May editions (grey dotted) were both revised up. The 2025 value is Gartner's estimate.",
+  "earlier": [
+   {
+    "label": "Gartner, Jan 2026",
+    "publishedDate": "2026-01-15",
+    "points": [
+     {
+      "x": "2026",
+      "value": 2.53
+     },
+     {
+      "x": "2027",
+      "value": 3.33
+     }
+    ]
+   },
+   {
+    "label": "Gartner, May 2026",
+    "publishedDate": "2026-05-19",
+    "points": [
+     {
+      "x": "2025",
+      "value": 1.765
+     },
+     {
+      "x": "2026",
+      "value": 2.596
+     },
+     {
+      "x": "2027",
+      "value": 3.493
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ai-labour-footprint",
+  "industry": "Labour",
+  "title": "AI's footprint on the US labour market",
+  "tags": [
+   "Labour",
+   "AI",
+   "Economy"
+  ],
+  "sources": [
+   {
+    "label": "Stanford HAI: Tracking AI's Real-Time Footprint on the Labor Market",
+    "url": "https://hai.stanford.edu/news/tracking-ais-real-time-footprint-on-the-labor-market",
+    "date": "2026-10-21",
+    "quote": null
+   },
+   {
+    "label": "Stanford Digital Economy Lab: AI Economic Indicators (monthly dashboards)",
+    "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Stanford HAI reports employment in AI-exposed jobs down more than 4% this year, and for workers aged 22 to 25 in software development and customer service, employment down over 3% a year since ChatGPT's release, recently 4.4% (ADP payroll data; the authors call some findings preliminary)."
+ },
+ {
+  "slug": "us-ai-adoption-finance",
+  "industry": "Finance",
+  "title": "AI adoption: Finance & insurance",
+  "tags": [
+   "Finance"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAIFINANCE",
+    "label": "Finance & insurance"
+   },
+   {
+    "fredId": "RAMPAIALL",
+    "label": "All US businesses"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, Finance & insurance (FRED RAMPAIFINANCE)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIFINANCE",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Share of US businesses on Ramp with a payment for an AI product or service in the month."
+ },
+ {
+  "slug": "us-ai-adoption-health",
+  "industry": "Health",
+  "title": "AI adoption: Health care & social assistance",
+  "tags": [
+   "Health"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAIHEALTHCARE",
+    "label": "Health care & social assistance"
+   },
+   {
+    "fredId": "RAMPAIALL",
+    "label": "All US businesses"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, Health care & social assistance (FRED RAMPAIHEALTHCARE)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIHEALTHCARE",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Share of US businesses on Ramp with a payment for an AI product or service in the month."
+ },
+ {
+  "slug": "us-ai-adoption-retail",
+  "industry": "Retail",
+  "title": "AI adoption: Retail trade",
+  "tags": [
+   "Retail"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAIRETAIL",
+    "label": "Retail trade"
+   },
+   {
+    "fredId": "RAMPAIALL",
+    "label": "All US businesses"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, Retail trade (FRED RAMPAIRETAIL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIRETAIL",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Share of US businesses on Ramp with a payment for an AI product or service in the month."
+ },
+ {
+  "slug": "us-ai-adoption-manufacturing",
+  "industry": "Manufacturing",
+  "title": "AI adoption: Manufacturing",
+  "tags": [
+   "Automotive",
+   "Electronics",
+   "Robotics",
+   "Aerospace"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAIMANUFACTURING",
+    "label": "Manufacturing"
+   },
+   {
+    "fredId": "RAMPAIALL",
+    "label": "All US businesses"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, Manufacturing (FRED RAMPAIMANUFACTURING)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIMANUFACTURING",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Share of US businesses on Ramp with a payment for an AI product or service in the month."
+ },
+ {
+  "slug": "us-ai-adoption-construction",
+  "industry": "Construction",
+  "title": "AI adoption: Construction",
+  "tags": [
+   "Infrastructure",
+   "Architecture",
+   "Property"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAICONSTRUCTION",
+    "label": "Construction"
+   },
+   {
+    "fredId": "RAMPAIALL",
+    "label": "All US businesses"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, Construction (FRED RAMPAICONSTRUCTION)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAICONSTRUCTION",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Share of US businesses on Ramp with a payment for an AI product or service in the month."
+ },
+ {
+  "slug": "us-ai-adoption-hospitality",
+  "industry": "Hospitality",
+  "title": "AI adoption: Accommodation & food services",
+  "tags": [
+   "Travel",
+   "Food"
+  ],
+  "suffix": "%",
+  "live": [
+   {
+    "fredId": "RAMPAIHOSPITALITY",
+    "label": "Accommodation & food services"
+   },
+   {
+    "fredId": "RAMPAIALL",
+    "label": "All US businesses"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ramp AI Index",
+    "url": "https://ramp.com/data/ai-index",
+    "date": "2026-10-25",
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, Accommodation & food services (FRED RAMPAIHOSPITALITY)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIHOSPITALITY",
+    "date": null,
+    "quote": null
+   },
+   {
+    "label": "Ramp AI adoption, overall (FRED RAMPAIALL)",
+    "url": "https://fred.stlouisfed.org/series/RAMPAIALL",
+    "date": null,
+    "quote": null
+   }
+  ],
+  "note": "Share of US businesses on Ramp with a payment for an AI product or service in the month."
+ }
+]

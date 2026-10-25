@@ -8,6 +8,7 @@ import config from '../config';
 import Comment from '../model/comment';
 import Company from '../model/company';
 import CompanyFollow from '../model/companyFollow';
+import { forecastSlugsForNames } from '../model/industryForecast';
 import Person from '../model/person';
 import PinSentiment from '../model/pinSentiment';
 import Pins, { type SearchFilter, type SearchRank } from '../model/pins';
@@ -182,7 +183,7 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
   }
 
   const pins = await Pins.querySearchRanked(ranked, request.userId || 0);
-  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query), attachSearchedPerson(pins, query)]);
+  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query), attachSearchedPerson(pins, query), attachIndustryForecasts(pins, query)]);
   return { pins, links };
 }
 
@@ -286,6 +287,16 @@ async function attachSearchedPerson(pins: Pins, query: SearchQuery) {
       .reverse(),
   };
   (pins as Pins & { person?: unknown }).person = { ...person, sentiment: sentiment.pins.length || sentiment.comments.length ? sentiment : null };
+}
+
+// A search for a tag or category an industry forecast is filed under (tag:AI,
+// tag:Finance) gets that forecast's panel beside the results. Only the slugs
+// ride in the cached payload; the panel asks /api/industry-forecasts for the
+// lines, which read the publishers' live series.
+async function attachIndustryForecasts(pins: Pins, query: SearchQuery) {
+  if (!query.tags.length) return;
+  const slugs = await forecastSlugsForNames(query.tags);
+  if (slugs.length) (pins as Pins & { industries?: string[] }).industries = slugs;
 }
 
 // How many of a company's comments its mood is read from. Plenty for a trend

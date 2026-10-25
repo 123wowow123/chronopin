@@ -173,6 +173,11 @@ export const TASKS = {
     label: 'Rubrics, reviews and spec tables for AI models',
     summary: 'For each new AI language-model or video-model release pin, research its published specs and independent reviews, then save its six-axis rubric (and, for video models, its spec tables).',
   },
+  industryForecasts: {
+    group: 'scores',
+    label: 'Industry forecast panels',
+    summary: "Refresh the Census BTOS AI-adoption lines, then check each forecast panel's projection against its publisher's newest edition (Gartner, Goldman Sachs, FactSet, IDC) and save revisions, keeping the replaced figures as a grey dotted earlier edition.",
+  },
   sentiment: {
     group: 'scores',
     label: 'Refresh sentiment',
@@ -260,7 +265,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'productLifecycle', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'productLifecycle', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'industryForecasts', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -309,7 +314,7 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'earthquakes', 'modelRubrics'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'earthquakes', 'modelRubrics', 'industryForecasts'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];
