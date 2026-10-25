@@ -8,6 +8,15 @@ const input: BoundaryInput = { kind: 'wildfire', name: 'Test fire final perimete
 const shape = () => boundaryShape(feature(), input);
 
 describe('boundaryShape', () => {
+  it('preserves small polygon parts that six-decimal rounding would collapse', () => {
+    const tiny = [[141.04079001, -34.60129901], [141.04079002, -34.60129901], [141.04079002, -34.60129902], [141.04079001, -34.60129901]];
+    const data = feature('MultiPolygon', [[ring], [tiny]]);
+    const expected = structuredClone(data.geometry.coordinates);
+    const result = boundaryShape(data, input);
+    expect(result.geojson.features[0].geometry.coordinates).toEqual(expected);
+    (data.geometry.coordinates as number[][][][])[1][0][0][0] = 140;
+    expect(result.geojson.features[0].geometry.coordinates).toEqual(expected);
+  });
   it('keeps holes and disjoint polygons without converting them to a hull', () => {
     const hole = [[-117.8, 34.1], [-117.7, 34.1], [-117.7, 34.2], [-117.8, 34.1]];
     const s = boundaryShape(feature('MultiPolygon', [[ring, hole], [ring]]), input);

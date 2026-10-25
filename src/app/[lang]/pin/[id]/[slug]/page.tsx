@@ -75,6 +75,7 @@ import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinPhotos } from '@/components/pin/PinPhotos';
 import { PinReviews } from '@/components/pin/PinReviews';
+import { PinCriticReviews } from '@/components/pin/PinCriticReviews';
 import { PinReviewSentiment, type ReviewSentimentPoint } from '@/components/pin/PinReviewSentiment';
 import { isReviewable } from '@/lib/userReviews';
 import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
@@ -112,7 +113,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -179,7 +180,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, dining, factory, hotel, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, dining, factory, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -201,6 +202,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinDining(pin.id),
     pinFactory(pin.id),
     pinHotel(pin.id),
+    pinCriticReviews(pin.id),
     pinCandidates(pin.id),
     pinCompetitors(pin.id),
     adPlacements(),
@@ -209,7 +211,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinAlternateNames(pin.id),
   ]);
   // The scraped reviews beside the rubrics, scored and dated, for the sentiment graph.
-  const reviewSentiment: ReviewSentimentPoint[] = [taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, hotel, dining].flatMap((rubric) =>
+  const reviewSentiment: ReviewSentimentPoint[] = [taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, hotel, dining, criticReviews].flatMap((rubric) =>
     (rubric?.reviews ?? []).flatMap((r) => (r.sentiment != null && r.publishedDate ? [{ at: Date.parse(r.publishedDate), value: r.sentiment, title: r.title || r.url, url: r.url, quote: r.quote }] : [])),
   );
   // Google ads only for a viewer old enough, like the Amazon ones.
@@ -217,7 +219,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
   const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
-  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || aircraftPerf || videoPerf || llmPerf || dining || hasFactoryBuildout(factory) || hasFactoryRubric(factory) || hotel || modelChart ? 'mt-4' : '';
+  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || aircraftPerf || videoPerf || llmPerf || dining || hasFactoryBuildout(factory) || hasFactoryRubric(factory) || hotel || criticReviews || modelChart ? 'mt-4' : '';
 
   const isPredicted = isPredictedPin(pin);
   const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
@@ -302,6 +304,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
               className="mt-4"
             />
           ) : null}
+          {criticReviews ? <PinCriticReviews reviews={criticReviews} t={t} locale={t.locale} className="mt-4" /> : null}
           {/* Right under the rubric whose reviews it plots. */}
           {reviewSentiment.length ? <PinReviewSentiment points={reviewSentiment} className="mt-4" /> : null}
 

@@ -925,7 +925,7 @@ Keep the numbers the pages graph up to date. Last, so they cover the pins the ru
 changed since their tone was scored (or that never were), the comments
 with no tone yet and the scraped rubric reviews with no sentiment yet (the
 `reviews` column of PinTaste, PinCarPerf, PinGasCarPerf, PinAircraftPerf,
-PinLlmPerf, PinVideoPerf, PinHotel and PinDining; only a review with a quote and
+PinLlmPerf, PinVideoPerf, PinHotel and PinDining, and PinCriticReview for pins with no rubric of their own, such as games; only a review with a quote and
 a publication day), each with its rubric.
 **Does** score each from -1 to 1 by its rubric - a pin by how its event reads
 as news for its company, a comment by the commenter's tone - and save them

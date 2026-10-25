@@ -14,11 +14,12 @@ export const hostOf = (url: string) => {
 // each a link titled by the page (its host when it has no title), the host and
 // publication day beside it, and the short extract quoted beneath. Nothing
 // when there are none.
-export function ReviewList({ reviews, heading, locale }: { reviews: PinReview[]; heading: string; locale: string }) {
+// `bare` drops the rule and gap above it, for a list that stands in a card of its own.
+export function ReviewList({ reviews, heading, locale, bare = false }: { reviews: PinReview[]; heading: string; locale: string; bare?: boolean }) {
   if (!reviews.length) return null;
   const dates = new Intl.DateTimeFormat(INTL_LOCALES[locale as Locale] ?? 'en', { dateStyle: 'medium', timeZone: 'UTC' });
   return (
-    <div className="mt-2 border-t border-line pt-2">
+    <div className={bare ? '' : 'mt-2 border-t border-line pt-2'}>
       <h3 className="mb-1 text-xs font-semibold text-muted">{heading}</h3>
       <ul className="grid gap-1.5 text-xs">
         {reviews.map((review) => (

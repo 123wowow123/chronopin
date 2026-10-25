@@ -18,7 +18,7 @@ import * as db from '@/server/db';
 import { scoreReviewSentiment } from '@/server/extract/reviewSentiment';
 import type { PinReview } from '@/lib/pinReviews';
 
-const TABLES = ['PinTaste', 'PinCarPerf', 'PinGasCarPerf', 'PinAircraftPerf', 'PinLlmPerf', 'PinVideoPerf', 'PinHotel', 'PinDining'];
+const TABLES = ['PinTaste', 'PinCarPerf', 'PinGasCarPerf', 'PinAircraftPerf', 'PinLlmPerf', 'PinVideoPerf', 'PinHotel', 'PinDining', 'PinCriticReview'];
 
 const { values: flags } = parseArgs({ options: { limit: { type: 'string' }, 'dry-run': { type: 'boolean' } } });
 

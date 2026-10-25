@@ -27,7 +27,8 @@ for (const { e, p, location } of prepared) {
   if (flags.dry) { console.log(`DRY missing coordinate ${e.pinId}`); continue; }
   fs.mkdirSync('.scrape/boundary-centres', { recursive: true });
   fs.writeFileSync(`.scrape/boundary-centres/${e.pinId}-before.json`, JSON.stringify(p));
-  const q = new URLSearchParams({ id: String(e.pinId), title: e.pinTitle, address: e.address, 'location.null': 'true' });
+  const q = new URLSearchParams({ id: String(e.pinId), title: e.pinTitle, 'location.null': 'true' });
+  q.set(e.address === null ? 'address.null' : 'address', e.address === null ? 'true' : e.address);
   const rows = (await call('/api/admin/db/Pin?' + q, { location })).rows;
   if (rows.length !== 1 || rows[0].location !== location || fields.some(field => !isDeepStrictEqual(p[field], rows[0][field]))) throw new Error('Coordinate save verification failed ' + e.pinId);
   console.log(`Verified missing coordinate ${e.pinId}`);

@@ -477,3 +477,46 @@ generate wiki backing on research to gound work
 
 ask for redesign of pin detail page to look nicer
 ask for anything more to add to pin detail page
+
+
+
+
+
+
+
+
+Yes, several categories have no scraped reviews at all. The numbers are local pins that have at least one review in the eight rubric tables; production should be similar.
+
+Category	Pins	With reviews
+Anime	1,020	1
+Music	899	0
+Computing	573	3
+Fashion	515	0
+Movie	424	0
+TV	324	0
+Retail	267	18
+Software	190	2
+Gaming	166	0
+For comparison, Food has 265 of 2,655 covered, Automotive 131 of 485, Aerospace 150 of 306, and AI 150 of 756. Infrastructure and Energy have almost none, but they aren't products you'd review. Finance, Health, Economy, Geopolitics and Conference don't fit reviews either.
+
+These categories aren't blank. Movies, TV, anime and games already carry aggregate scores (Rotten Tomatoes, OpenCritic, manga scores). What's missing is the dated critic quotes the sentiment graph plots. There's also no rubric table to store them in, since the graph reads the eight rubric tables. So this needs a place to keep reviews on those pins first, which is a schema change, or the review list would have to hang off something else.
+
+My ranking by value for effort:
+
+Gaming (166): critic reviews are plentiful and dated, and the pins are few.
+Movie and TV (748): critic reviews are easy to find and long-lived, so the graph would be rich.
+Music (899), if they are albums: Metacritic and Pitchfork-style reviews.
+Computing and Fashion (about 1,090): hardware and product reviews exist, but matching them to the right variant is harder.
+Anime is already covered by MAL scores, and I'd skip it.
+
+Do you want me to build the storage and the scraping for Gaming first? That would be a schema change plus review adds for roughly 20 to 30 games as a sample, as I did for cars.
+
+yes do all these
+
+
+
+
+
+
+add industry forcast panel and should show on relavant pins
+and should show on side panel of search when searching in those categories like when searching in company view

@@ -31,6 +31,7 @@ import { videoPerfForPin } from '../model/pinVideoPerf';
 import { llmPerfForPin } from '../model/pinLlmPerf';
 import { diningForPin } from '../model/pinDining';
 import { hotelForPin } from '../model/pinHotel';
+import { criticReviewsForPin } from '../model/pinCriticReview';
 import type { PinTasteJson } from '@/lib/pinTaste';
 import type { PinCarPerfJson } from '@/lib/pinCarPerf';
 import type { PinGasCarPerfJson } from '@/lib/pinGasCarPerf';
@@ -39,6 +40,7 @@ import type { PinVideoPerfJson } from '@/lib/pinVideoPerf';
 import type { PinLlmPerfJson } from '@/lib/pinLlmPerf';
 import type { PinDiningJson } from '@/lib/pinDining';
 import type { PinHotelJson } from '@/lib/pinHotel';
+import type { PinCriticReviewsJson } from '@/lib/pinCriticReviews';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
@@ -375,6 +377,14 @@ export async function pinHotel(id: number): Promise<PinHotelJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return hotelForPin(id);
+}
+
+// A pin's independent critic reviews (a game, a film, an album), or null when it has none.
+export async function pinCriticReviews(id: number): Promise<PinCriticReviewsJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return criticReviewsForPin(id);
 }
 
 // All alternate titles, native names, translations and aliases for a pin.

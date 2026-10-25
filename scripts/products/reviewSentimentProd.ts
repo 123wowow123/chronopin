@@ -25,7 +25,7 @@ import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import type { PinReview } from '@/lib/pinReviews';
 
-const TABLES = ['PinTaste', 'PinCarPerf', 'PinGasCarPerf', 'PinAircraftPerf', 'PinLlmPerf', 'PinVideoPerf', 'PinHotel', 'PinDining'];
+const TABLES = ['PinTaste', 'PinCarPerf', 'PinGasCarPerf', 'PinAircraftPerf', 'PinLlmPerf', 'PinVideoPerf', 'PinHotel', 'PinDining', 'PinCriticReview'];
 
 const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, base: { type: 'string' } } });
 const BASE = (flags.base ?? 'https://www.chronopin.com').replace(/\/$/, '');

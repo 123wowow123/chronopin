@@ -9,7 +9,7 @@
 import * as db from '../db';
 import type { PinReview } from '@/lib/pinReviews';
 
-type Table = 'PinTaste' | 'PinCarPerf' | 'PinGasCarPerf' | 'PinAircraftPerf' | 'PinLlmPerf' | 'PinVideoPerf' | 'PinHotel' | 'PinDining';
+type Table = 'PinTaste' | 'PinCarPerf' | 'PinGasCarPerf' | 'PinAircraftPerf' | 'PinLlmPerf' | 'PinVideoPerf' | 'PinHotel' | 'PinDining' | 'PinCriticReview';
 
 // The reviews with the stored score of each url that arrives without one, and
 // a pass at scoring the rest once the save has landed.

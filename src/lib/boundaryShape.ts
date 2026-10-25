@@ -1,4 +1,4 @@
-import { roundCoords, type BoundaryFacts, type PinSiteShapeJson, type SiteFeature } from './siteShape';
+import { type BoundaryFacts, type PinSiteShapeJson, type SiteFeature } from './siteShape';
 
 export type BoundaryKind = 'wildfire' | 'district';
 export type BoundaryInput = {
@@ -59,7 +59,9 @@ export function boundaryShape(data: unknown, input: BoundaryInput): PinSiteShape
     const f = feature as Record<string, unknown>;
     const g = f.geometry as Record<string, unknown> | null;
     if (f.type !== 'Feature' || !g || !['Polygon', 'MultiPolygon'].includes(String(g.type))) throw new Error('Boundaries must be Polygon or MultiPolygon features');
-    const coordinates = roundCoords(g.coordinates);
+    // Preparation controls cartographic simplification. Rounding here can
+    // collapse small islands or close narrow gaps in otherwise valid polygons.
+    const coordinates = structuredClone(g.coordinates);
     const valid = g.type === 'Polygon' ? polygon(coordinates) : Array.isArray(coordinates) && coordinates.length > 0 && coordinates.every(polygon);
     if (!valid) throw new Error('Invalid boundary: use closed, nonempty WGS84 polygon rings in [longitude, latitude] order');
     return { type: 'Feature', geometry: { type: g.type as 'Polygon' | 'MultiPolygon', coordinates }, properties: { ...properties } };
