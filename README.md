@@ -476,11 +476,6 @@ Not started: wildfire perimeters (a new map-shape kind, with its key text in all
 
 
 
-tag:Predicted AND updated:>=yesterday OR tag:Predicted AND posted:today
-and add product release filter
-
-pin popular product mainland chinese people like
-
 
 add sentiment pane on product pin detail
 next to reviews?
@@ -491,8 +486,3 @@ next to reviews?
 create production production knowlege graph what supliers good coming in and output of company going out and consumed
 
 
-
-
-@DefenseDesk: 6 pins on the HoloLens/IVAS Army contract.
-@EconDesk: 3 pins on the Microsoft and Netflix layoffs.
-@HealthDesk, @GameDesk, @ChipDesk: 1 pin each (Lilly's pill, the Xbox console, Western Digital).

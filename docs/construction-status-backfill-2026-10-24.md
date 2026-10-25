@@ -1,6 +1,6 @@
 # Construction status backfill — October 24, 2026
 
-**Current: 922 candidates remain in the status research queue per environment.** Six opened-source rounds resolved 80 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
+**Current: 829 candidates remain in the status research queue per environment.** Eight opened-source rounds resolved 173 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
 
 Read the complete live-pin inventories through authenticated admin APIs: 12,909 local and 12,963 production records. Screened 2,587 project/physical-facility candidates in each snapshot, including infrastructure, housing, factories, power generation, storage and data centers. Previously reviewed nuclear/factory pins were preserved rather than treated as new assignments. The inventory is a dated snapshot; the candidate screen is broad and includes false positives such as events hosted at stadiums.
 
@@ -73,17 +73,17 @@ After the first follow-up, accounting per environment was **1,250 assigned + 992
 
 ### Remaining source and phase gaps
 
-After round six, the 922 remaining records retain their own source links and follow-up reason in the backfill catalog:
+After round eight, the 829 remaining records retain their own source links and follow-up reason in the backfill catalog:
 
 | Gap | Records per environment | Required next evidence |
 | --- | ---: | --- |
 | Agency/county landing page without project-specific evidence | 251 | Verify project identity, developer, docket/parcel and capacity, then obtain a dated phase record; unsourced engineering and COD prose is not evidence |
 | Data-center tracker parcel/phase ambiguity | 109 | Dated operator, contractor or planning evidence for the exact parcel and MW phase |
 | Epoch aggregate capacity/compute trajectory | 90 | Reconcile operating buildings with proposed future buildout before tagging the entire pinned scope |
-| Housing opening/build milestone source | 5 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
-| Conflicting, denied or halted scope | 43 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
+| Housing opening/build milestone source | 1 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
+| Conflicting, denied or halted scope | 46 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
 | Grid/interconnection request identity | 35 | Match the exact request ID and phase to physical-work evidence; an IA or future COD alone is insufficient |
-| Other individual project/source/phase questions | 389 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
+| Other individual project/source/phase questions | 297 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
 
 Fehmarnbelt research also opened the operator's April 2026 factsheet and May 17 phased-opening announcement. The latter withdraws the single 2029 opening assumption, separates road and rail, and says a revised schedule will follow immersion experience. The April factsheet omits the budget shown in March. A new exact full-scope opening date and any revised cost require follow-up; no replacement date was invented. These limitations do not establish completion.
 
@@ -308,3 +308,182 @@ python3 scripts/construction/reviewQueue.py --manifest scripts/construction/rese
 ```
 
 The metadata writer now accepts an explicitly recorded original title when applying a source-supported headline correction; the original row hash, author guard, affected-field comparison and unrelated-field verification remain required. Both original and saved title states passed replay validation. All ten public JSON records per environment passed status, author, native cost/currency, citation, corrected-date and revised-headline checks. Authenticated native pages for Sites, New Manila, Kvesheti–Kobi, JFK Phase 1, Messina, Hillcrest and CHOP returned HTTP 200 with research and correct statuses. Before snapshots, opened evidence and page captures remain ignored under `.scrape/construction-status-research-round6-2026-10-24/`. Syntax/lint, accounting, whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+
+## Seventh research round — 50 records reviewed
+
+Reviewed **50 queued records** and saved/verified **49 in both environments: 15 Proposed, 27 In Progress and seven Completed**. Freedom Village I & II (7149) remains untagged pending exact phase evidence. The queue decreases from **922 to 873**. The [round-seven research/replay catalog](../scripts/construction/research-round7-2026-10-24.json) retains opened HTTPS sources, short verbatim excerpts, cost qualifications, original pin hashes, field patches and per-environment verification receipts. Thirty-two records have sourced native costs; seventeen retain null cost/currency with explicit scope or source-access gaps. Original authors, threads, unrelated tags and unpatched fields were preserved.
+
+| Pin | Reviewed scope | Status | Native cost |
+| --- | --- | --- | --- |
+| 2163 | SAN complete 30-gate New Terminal 1 | In Progress | USD 3.834 billion |
+| 2180 | Fort Worth convention-center Phase 2 | Proposed | USD 606 million |
+| 2184 | Austin Concourse B and tunnel construction authorization | Proposed | USD 1.031 billion construction authorization; design separate |
+| 2191 | SEA S Concourse major-construction start | Proposed | USD 2.5 billion |
+| 2193 | LAX SkyLink systems testing | In Progress | USD 3.34 billion |
+| 2198 | Mass General Ragon first tower | In Progress | Null: exact scope/source gap recorded |
+| 2199 | White Stadium rebuild | In Progress | USD 325 million |
+| 2201 | Capital One Arena rebuild | In Progress | USD 1 billion (published lower threshold) |
+| 2209 | Broncos Burnham Yard stadium | Proposed | Null: exact scope/source gap recorded |
+| 2211 | National Western Equestrian Center planned actual start | Proposed | Null: exact scope/source gap recorded |
+| 2214 | Hard Rock guitar-tower topping out | In Progress | Null: exact scope/source gap recorded |
+| 2237 | Trunk Road T2 / Cha Kwo Ling Tunnel opening | In Progress | HKD 16.017 billion construction estimate; investigation/design separate |
+| 2244 | King Salman Stadium design/preconstruction | Proposed | Null: exact scope/source gap recorded |
+| 2248 | Mumbai Aqua Line final Phase 2B opening | Completed | INR 122 billion |
+| 2254 | GTX-A Samseong station and reinforcement | In Progress | Null: exact scope/source gap recorded |
+| 2257 | Yongsan public site/infrastructure groundbreaking | In Progress | KRW 12 trillion |
+| 2264 | Noida Airport Phase I commercial opening | Completed | INR 112 billion |
+| 2278 | Congonhas terminal expansion | In Progress | BRL 2 billion (published lower threshold) |
+| 2279 | São Paulo Line 2 Vila Prudente–Penha | In Progress | BRL 15 billion |
+| 2281 | Scarborough subway extension | In Progress | Null: exact scope/source gap recorded |
+| 2287 | Cablebús Line 4 | In Progress | MXN 4.7 billion (published lower threshold) |
+| 2290 | Hillingdon replacement-hospital main build | Proposed | GBP 1–1.5 billion capital envelope; native price is lower endpoint |
+| 2626 | Mailuu-Suu remediation through final work parts | In Progress | EUR 40.1 million |
+| 2633 | LNG Canada initial commercial-export opening | Completed | Null: exact scope/source gap recorded |
+| 2653 | Hebron topsides mating/integration | In Progress | Null: exact scope/source gap recorded |
+| 2932 | B&W Canadian refinery scrubber contract | Proposed | USD 40 million |
+| 2938 | B&W CO2-capture engineering/long-lead notice | Proposed | USD 80 million |
+| 2940 | B&W air-quality retrofit development/engineering notice | Proposed | USD 130 million |
+| 2960 | ESMC Dresden fab topping out | In Progress | EUR 10 billion (published lower threshold) |
+| 3340 | Ocean Beach adaptation major-construction start | Proposed | USD 175 million |
+| 3376 | LAX Terminal 4 topping out | In Progress | Null: exact scope/source gap recorded |
+| 3391 | Lighthouse campus October 2025 announcement | Proposed | USD 15 billion |
+| 3395 | Metro D Line Section 3 to Westwood/VA | In Progress | USD 3.6 billion including finance charges, December 2024 phase report |
+| 3406 | Saline campus October 2025 announcement | Proposed | USD 16 billion |
+| 3415 | Saline April 2026 financing milestone with actual work | In Progress | USD 16 billion |
+| 3444 | Saline June 2026 active campus construction | In Progress | USD 16 billion |
+| 3834 | Vuori original Encinitas store opening | Completed | Null: exact scope/source gap recorded |
+| 4916 | METRO Green Line Extension passenger opening | In Progress | USD 2.86 billion |
+| 4917 | Tapia bridge first-half opening | In Progress | Null: exact scope/source gap recorded |
+| 4918 | Île-aux-Tourtes first-structure opening | In Progress | Null: exact scope/source gap recorded |
+| 4919 | Hassyan 180MIGD water plant, all phases | In Progress | AED 3.377 billion |
+| 5101 | Long Thanh Airport Phase I | In Progress | VND 109.1 trillion |
+| 14012 | BYD Szeged December 2023 factory announcement | Proposed | EUR 4 billion |
+| 15657 | LG Paraná February 2026 investment announcement | In Progress | USD 310 million |
+| 15674 | CATL Debrecen first two cell lines in trial | In Progress | Null: exact scope/source gap recorded |
+| 19330 | Amazon Toaster civil/core-and-shell package | Proposed | USD 100 million |
+| 7101 | Renaissance at Reservoir Hill, 64 placed-in-service homes | Completed | Null: exact scope/source gap recorded |
+| 7112 | The Allegheny at 401 W Commons | Completed | Null: exact scope/source gap recorded |
+| 7158 | Imani Village Phase I, 74 homes | Completed | Null: exact scope/source gap recorded |
+| 7149 | Freedom Village I & II combined scope | Still queued | Phase I USD 17.5m is not a verified combined-phase total |
+
+Historical events retain their own stage. The Lighthouse, Saline and BYD factory announcements remain **Proposed** at announcement, even where later campus work is verified. The separate Saline April/June milestones are **In Progress** because their releases explicitly describe actual construction. B&W limited notices cover engineering, development and procurement; those notices alone do not establish installation at the unnamed host plants. These are equipment-retrofit scopes, with no invented host generation capacity. ESMC, Hard Rock, LAX Terminal 4, Hebron and CATL testing/topping/mating milestones remain **In Progress**, rather than completed plants or venues.
+
+Several exact-scope costs differ from the saved broad totals. SAN’s **USD 3.834bn** covers all 30 New T1 gates, excluding the wider capital program. Austin’s **USD 1.031bn** authorization excludes its separately approved design amount. Mumbai’s approximately **INR 12,200 crore** is Phase 2B, while Noida’s approximately **INR 11,200 crore** is the opened Phase I. Long Thanh Phase I is approximately **VND 109.1 trillion**. Native units expand source-stated crore/trillion figures without FX conversion. The Saline campus’s **USD 16bn** project value corrects the unsupported USD 7bn on its June milestone; debt, equity and equipment are not added to that value. Yongsan’s approximately **KRW 12tn** is the public site/infrastructure stage, separate from the entire district. IAEA’s revised Mailuu-Suu table separates **EUR 40.1m remediation**, **EUR 2.5m studies** and **EUR 42.6m combined total**; the remediation figure replaces an older grant amount.
+
+Published whole-project costs are withheld from narrower phases: Ragon’s first tower, Hard Rock’s guitar tower, LAX Terminal 4, Hebron mating, Tapia’s first bridge half, Île-aux-Tourtes’ first structure and CATL’s first two trial lines do not receive a whole-campus/project total. LNG Canada’s first-export milestone is distinguished from later train ramp-up and the broader pipeline/upstream investment. Scarborough’s stations/rail/systems contract is not an invented all-in extension cost. Hillingdon’s **GBP 1–1.5bn** envelope is saved with both bounds; other unsupported old bounds are cleared. Source dates and continuing budget gaps are explicit, including Metro Section 3’s December 2024 budget and Ocean Beach’s approval-era estimate. No newer figure for another phase silently replaces those costs.
+
+Date corrections preserve the original event duration. The official T2 banner moves its opening target to **December 6, 2026**, still estimated before commissioning. After initial research-tool timeouts, the complete 2026 government budget PDF downloaded successfully over HTTPS. Its exact project row verifies **HKD 16.017bn construction cost/approved estimate**, with **HKD 133.6m investigation/design** separately stated. The native cost uses the published construction figure, without adding separate contract values. Ragon’s first tower moves to an estimated **2027 year anchor**. Fort Worth uses an estimated early-2030 quarter anchor, and National Western uses an estimated early-2027 quarter anchor for actual construction, separate from its ceremonial groundbreaking. Mailuu-Suu moves to an estimated **2032 year anchor**. Metro Section 3 uses an estimated fall-2027 anchor; Tapia’s first half uses an estimated spring-2027 anchor, with the second half separately due in 2030. Austin’s early-2030s and Samseong’s conflicting 2028 dates remain expressly provisional. Scarborough’s 2033 date remains an unconfirmed reported estimate, not an official opening promise.
+
+LNG Canada’s native opening moves from its July 1 publication date to the operator-confirmed **June 30, 2025** initial export event. HUD’s exact Renaissance record MDA20060090 confirms **2006 placed in service**, while the branch-specific Allegheny property record gives **built in 2000**. Both replace October 2026 listing-check dates with explicitly estimated year anchors. Allegheny’s 75 total units and 71 income-restricted apartments are distinguished. Imani’s historical August 16, 2022 opening covers **Phase I’s 74 homes**; the title now identifies that scope. Vuori’s original completed Encinitas store is verified, but the exact retained June 2016 party timestamp remains estimated because the contemporary article is inaccessible.
+
+**Freedom Village I & II (7149)** remains queued under conflicting/mixed-phase scope. The opened New Jersey release verifies the 70-home first building and USD 17.5m development cost. The combined operator listing also describes a separate 55+ Phase II building; it does not establish both buildings were completed at the pin’s 2015 milestone. The release date is not assumed to be the ceremony day. Obtain separate Phase II completion/opening evidence and reconcile the combined timeline and cost before assigning a status. Earlier unresolved findings remain preserved.
+
+Accounting per environment is **1,369 assigned + 873 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **654 Proposed, 441 In Progress and 274 Completed**. Including the original separate 68-pin batch, **1,437 reviewed eligible pins per environment** carry status tags. Remaining groups are 251 agency/project identities, 109 tracker parcels, 90 Epoch trajectories, one housing milestone, 44 conflicting/halted scopes, 35 grid-request identities and 343 individual source/phase questions.
+
+Replay sequentially:
+
+```sh
+node --env-file=.env.local scripts/construction/research.mjs --manifest scripts/construction/research-round7-2026-10-24.json
+node --env-file=.env.local scripts/construction/status.mjs --manifest scripts/construction/research-round7-2026-10-24.json
+python3 scripts/construction/reviewQueue.py --manifest scripts/construction/research-round7-2026-10-24.json
+```
+
+Metadata and status writes were re-read through authenticated admin APIs. All 49 public JSON records per environment were checked for one exact status, original author, native price/currency/bounds, citations and corrected dates/titles. Twelve authenticated native pages per environment were checked for the research block and status. Private snapshots, downloaded evidence and page captures remain ignored under `.scrape/construction-status-research-round7-2026-10-24/`. Catalog accounting, source validation, syntax/lint, whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+
+## Eighth research round — 50 records reviewed
+
+Reviewed **50 queued records** and saved/verified **44 in both environments: 23 Proposed, 16 In Progress and five Completed**. Six retain specific physical-stage or phase gaps without forced tags. The queue decreases from **873 to 829**. The [round-eight research/replay catalog](../scripts/construction/research-round8-2026-10-24.json) retains 69 source entries for resolved records, short verbatim excerpts, native cost qualifications, original row hashes, field patches and verification receipts, plus opened evidence and precise follow-ups for all six unresolved records. Seventeen records have source-quoted native costs; twenty-seven retain null exact-scope costs. No FX conversion was performed. Original authors, parent links, unrelated tags and unpatched fields were preserved.
+
+| Pin | Exact reviewed scope | Status | Native cost |
+| --- | --- | --- | --- |
+| 501 | Jakarta sea-wall start announcement, January 2026 | Proposed | Null: exact scope/source gap recorded |
+| 567 | Eiffel twentieth painting campaign during Olympic preparations | In Progress | Null: exact scope/source gap recorded |
+| 681 | Brooklyn Tower built and occupied residential scope | Completed | USD 750 million published development estimate; takeover/debt separate |
+| 823 | Volvo Ghent truck-factory CO2-free conversion | Completed | Null: exact scope/source gap recorded |
+| 2655 | ITER PF1 manufactured coil and completed delivery | Completed | Null: exact scope/source gap recorded |
+| 3244 | Midway Rising whole redevelopment at deal negotiation | Proposed | USD 4.2 billion |
+| 3250 | SANDAG airport rail-link procurement/planning | Proposed | Null: exact scope/source gap recorded |
+| 3400 | Lighthouse first customer-delivery milestone | In Progress | Null: exact scope/source gap recorded |
+| 3454 | Saline first customer-delivery milestone | In Progress | Null: exact scope/source gap recorded |
+| 4915 | Sites Reservoir water-right vote before construction | Proposed | USD 9.9 billion |
+| 4939 | Caprock LBB-01 first-building service target | In Progress | Null: exact scope/source gap recorded |
+| 4941 | Kazakhstan Data Center Valley first 50MW facility | In Progress | Null: exact scope/source gap recorded |
+| 5907 | NextEra/Google new-campus partnership announcement | Proposed | Null: exact scope/source gap recorded |
+| 15744 | GE Vernova Sesto factory expansion announcement | Proposed | USD 30 million |
+| 15754 | East River battery-storage construction | In Progress | USD 132 million July 2021 estimate; updated account remains a gap |
+| 15798 | Fort Bliss conditional campus/lease selection | Proposed | USD 2 billion |
+| 15814 | EdgeCore Shannon Hill land/development announcement | Proposed | USD 17 billion |
+| 15822 | Hassayampa Ranch rezoning | Proposed | Null: exact scope/source gap recorded |
+| 15827 | IREN Emerald two-phase campus plan | Proposed | USD 50 billion reported two-phase infrastructure/server plan value |
+| 15833 | OpenAI Camellia full four-building campus plan | Proposed | USD 30 billion (published lower threshold) |
+| 15846 | Stak North Slope proposed campus | Proposed | USD 10 billion (published lower threshold) |
+| 15859 | Tract South Valley acquisition/master planning | Proposed | Null: exact scope/source gap recorded |
+| 15866 | Zenith Roswell county-approved campus proposal | Proposed | USD 11.7 billion |
+| 15995 | Hyperscale Dowagiac proposed expansion to 340MW | Proposed | Null: exact scope/source gap recorded |
+| 16304 | AVAIO Taurus initial 116MW delivery | In Progress | Null: exact scope/source gap recorded |
+| 16306 | Crane Forest Grove campus construction | In Progress | Null: exact scope/source gap recorded |
+| 16308 | Microsoft Alviso/San Jose actual site construction | In Progress | Null: exact scope/source gap recorded |
+| 16328 | Aligned Phoenix Shippingport groundbreaking | In Progress | Null: exact scope/source gap recorded |
+| 16331 | Prime full five-building Avondale campus | In Progress | USD 3 billion (published lower threshold) |
+| 16412 | Prime full five-building Avondale campus, separate existing pin | In Progress | USD 3 billion (published lower threshold) |
+| 16333 | Vantage Trident third city review | Proposed | Null: exact scope/source gap recorded |
+| 16343 | Google New Florence campus construction | In Progress | USD 13.4 billion real-property improvements; equipment/bonds separate |
+| 16345 | Prometheus Evanston permitted proposal | Proposed | USD 10 billion historical operator flagship estimate; revised design budget remains a gap |
+| 16372 | Google Storey County existing operating campus | Completed | Null: exact scope/source gap recorded |
+| 16383 | Google Omaha existing built campus | Completed | Null: exact scope/source gap recorded |
+| 16384 | Meta Aiken build before spring-2027 operation | In Progress | USD 800 million (published lower threshold) |
+| 16399 | Rowan Bauxite II construction/topping out | In Progress | Null: exact scope/source gap recorded |
+| 16459 | Microsoft Malaga March-2023 concept session | Proposed | Null: exact scope/source gap recorded |
+| 16469 | NAS Lemoore data-center/energy plan | Proposed | Null: exact scope/source gap recorded |
+| 16472 | Prologis STEM Park Building D concept | Proposed | Null: exact scope/source gap recorded |
+| 16481 | DC BLOX Nashville Grassmere evaluation | Proposed | Null: exact scope/source gap recorded |
+| 16490 | Archer Faribault environmental review | Proposed | Null: exact scope/source gap recorded |
+| 17021 | Switch Tahoe Reno 3 historical site development | In Progress | Null: exact scope/source gap recorded |
+| 18222 | Aguas Marítimas desalination/conveyance approval | Proposed | USD 5 billion |
+| 16568 | Chirisa Piscataway PNJ-01/02: 90 MW Campus Power, 2027 Delivery Plan | Still queued | Exact stage/phase and cost follow-up retained |
+| 4976 | Bitdeer AI's 21.7MW A201 Johor Data Center Energizes | Still queued | Exact stage/phase and cost follow-up retained |
+| 4977 | Bitdeer AI's 9.5MW A102 Malaysia Data Center Energizes | Still queued | Exact stage/phase and cost follow-up retained |
+| 15780 | Aligned West Jordan SLC-05 to SLC-07: 198-338 MW Data Center Expansion in Utah, Gas-Turbine Powered, Cost Not Published | Still queued | Exact stage/phase and cost follow-up retained |
+| 15865 | xAI Colossus 2 Data Center: 735 to 1,300 MW in Memphis, Tennessee, Powered by Gas Turbines in Southaven, NAACP Sues Over Permits | Still queued | Exact stage/phase and cost follow-up retained |
+| 16422 | Rowan Bauxite I:Substantial Completion in 2025; Financing Is Not Campus Cost | Still queued | Exact stage/phase and cost follow-up retained |
+
+**Historical stage and physical progress.** EdgeCore’s June 2025 development announcement, Tract’s October 2023 land acquisition, GE Vernova’s factory-expansion announcement, the NextEra/Google partnership and Malaga’s March 2023 concept session remain Proposed at those historical milestones. Later work on another phase does not rewrite the announcement. Actual progress is separately supported for Lighthouse by Wisconsin DNR, Saline by Oracle, Crane by its contractor/investor, Microsoft Alviso by Microsoft’s earthmoving/soil-remediation update, Bauxite II by Rowan’s topping-out post, and Tahoe Reno 3 by Switch’s dated issuer filing. Prime’s commissioned substation does not complete its five-building campus. Caprock’s first building and Kazakhstan’s first 50MW facility are separated from later campus buildout. The latter’s August 13, 2026 report explicitly documents excavation and foundations; purchased substation capacity is not operating compute.
+
+**Costs follow their own scope and basis.** Midway Rising’s latest opened October reporting gives **USD 4.2bn whole-redevelopment construction cost**, superseding USD 3.9bn, with a proposed early-2028 start rather than the older 2027 aspiration. Sites uses the Authority’s **USD 9.9bn** October baseline Governance Forecast in year-of-expenditure dollars through 2035, including contingency. Stak’s chief strategy officer now estimates **more than USD 10bn**, replacing the earlier USD 500m state-document figure. OpenAI’s compute-strategy vice president is reported estimating Camellia at **more than USD 30bn full buildout**, replacing the earlier USD 20bn county figure. Native lower bounds preserve those published thresholds; no amount is manufactured by adding finance, equipment, infrastructure contributions or benefits.
+
+Google New Florence is **In Progress** based on actual July construction reporting. The May 21 cost-benefit-plan account separately quotes **approximately USD 13.4bn in real-property improvements**. That is the saved construction/development basis, distinguished from **USD 56–87.5bn personal-property/equipment investment**, **USD 100bn bond authorization ceiling**, and the operator’s broader **USD 15bn Missouri infrastructure announcement**. These bases are not interchangeable. Prime’s own full-campus investment is **more than USD 3bn**, excluding its customers’ separate computing investment. Both existing Prime pins receive the same verified whole-campus scope without deleting or merging them. Meta’s **USD 800m-plus** Aiken investment retains its lower threshold and a spring-2027 target, not completed operation. Fort Bliss’s attributed **USD 2bn per base project** is not the combined USD 4bn two-site figure.
+
+Hassayampa’s **USD 25bn** is a potential completed-site **valuation**, not construction expenditure; native price/currency are cleared and the headline makes that distinction. Crane’s **USD 275,259,195** is qualified-property investment in a tax agreement, not a source-quoted all-in campus budget; it is cleared from the native price while the tax figure remains evidence context. Taurus’s **USD 6bn** is the whole campus, not the pinned first 116MW delivery phase, so native price becomes null. Lighthouse/Saline first customer-delivery phases do not receive the USD 15bn/USD 16bn whole-campus totals from their separate project-announcement pins. Caprock’s regional USD 5bn, Kazakhstan’s broader investment agreements, Bauxite construction debt, Switch’s USD 65.3m quarterly multi-building spending, and forecast cloud revenue are not assigned as individual building costs.
+
+Some retained cost figures are explicitly dated and remain budget follow-ups: Brooklyn Tower’s published **USD 750m** development estimate is distinct from loans and the USD 672m takeover; East River’s **USD 132m** is the July 2021 exact battery-project estimate, with later construction but no newer exact budget established; Evanston’s **USD 10bn** is the older operator flagship estimate, with a revised design and conditional future construction. Emerald’s **USD 50bn** is an attributed two-phase economic-development plan including infrastructure and servers, not a new operator tender. A later revised county-plan estimate remains unverified. The native cost notes retain these dates and limitations. No unrelated power-generation project’s cost or capacity was imported into a factory retrofit, battery, data-center or ITER-coil scope.
+
+**Jakarta’s date correction.** Pin 501 previously used **September 30, 2026**, the end of the proposed construction month. Its own event is the governor’s announcement, explicitly dated **January 20, 2026** in both opened accounts. Native start moves to that confirmed announcement date, preserving the original duration. Later reporting still awaited central direction. Ongoing NCICD walls and Demak’s separate mangrove/sea-wall projects do not prove the announced Jakarta 19km scope actually started. USD 1bn annual spending over eight years is not multiplied into a source quote, and the Java-wide up-to-USD 80bn estimate is not allocated to Jakarta.
+
+**Eiffel’s repaint is not completed by ring installation.** The operator confirms **June 7, 2024** as the Olympic-ring installation, not repaint completion. The opened public audit says almost all of the twentieth painting campaign was done before the Games and lists the wider campaign horizon through 2026. The historical painting scope is therefore In Progress, the headline is qualified, and June 7 remains expressly an estimated Olympic-preparation anchor rather than a finished-repaint day. The old **USD 60m** is cleared: older reporting stated **EUR 60m**, while the newer audited **EUR 142.5m** painting envelope also includes the next campaign and contingencies. Individual contract amendments are not summed into an invented twentieth-campaign total.
+
+**Completed scopes remain precise.** Volvo explicitly presents its Ghent truck factory’s CO2-free conversion as operational in September 2007; the separate Volvo Cars factory, Tuve conversion and prize fund are excluded. ITER’s Completed status applies only to PF1’s manufactured-and-delivered coil, not ITER installation, fusion operation or a commercial power plant. Brooklyn Tower’s residential building is built and occupied; its permit’s permanent/extended-temporary descriptions and later amenities remain explicit caveats, with April 25, 2025 estimated as the certificate milestone rather than first occupancy. Google’s Storey County and Omaha campuses are explicitly built/operating. Storey County’s 2020/2021 operator-year discrepancy and Omaha’s 2022 built/announcement wording remain date-precision gaps; statewide investment is not apportioned into campus prices or unverified future expansions.
+
+**Six unresolved cases retain opened-source follow-ups:**
+
+- **4976, Bitdeer A201:** contracted revenue, procured racks and future energization do not establish the host building’s exact construction/fit-out/commissioning stage. Verify the named site and actual works; USD 1.7bn is expected five-year revenue.
+- **4977, Bitdeer A102:** sold-out capacity/customer prepayments and Q1-2027 service target do not establish a physical-stage receipt. USD 800m-plus is expected revenue, not cost.
+- **15780, Aligned SLC-05–07:** shared-site turbine permission does not map the three tracker building phases to actual work; verify exact operator/contractor/building evidence and separate scope costs.
+- **15865, xAI Colossus 2:** compute buildings, Southaven turbines and operating/expansion capacity are mixed. Turbine operation or litigation is not a full compute-campus completion receipt; the adjacent-building permit is not campus cost.
+- **16422, Bauxite I:** substantial completion in 2025 does not establish full four-building final completion, all capacity energized or commercial operation at the precise pinned milestone. Verify handover/occupancy/commissioning, or exact remaining works; financing is not total cost.
+- **16568, Chirisa PNJ-01/02:** reserved 2027 delivery and campus power availability do not distinguish planned shells from active fit-out or commissioning. Verify the exact existing-shell and adjacent-greenfield phases; other Chirisa campuses explicitly in construction are not evidence for PNJ.
+
+Five headlines are qualified for Eiffel, Hassayampa, Camellia, Stak and the proposed Dowagiac expansion. Hyperscale’s existing approximately 30MW operation does not complete its planned 340MW expansion. Other retained target dates remain expressly estimated, with unsupported legacy markers identified as unverified rather than promoted to operator forecasts. Current Taurus Q3-2027 delivery supersedes its release’s H1-2027 horizon. Expired Crane/East River targets never establish actual operation. Permits and procurement at Nashville, Faribault, NAS Lemoore and STEM Park do not establish physical work.
+
+Accounting per environment is **1,413 assigned + 829 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **677 Proposed, 457 In Progress and 279 Completed**. Including the original separate 68-pin batch, **1,481 reviewed eligible pins per environment** carry status tags. Remaining groups are 251 agency/project identities, 109 tracker parcels, 90 Epoch trajectories, one housing milestone, 46 conflicting/halted scopes, 35 grid-request identities and 297 individual source/phase questions. Earlier unresolved findings remain preserved.
+
+Replay sequentially:
+
+```sh
+node --env-file=.env.local scripts/construction/research.mjs --manifest scripts/construction/research-round8-2026-10-24.json
+node --env-file=.env.local scripts/construction/status.mjs --manifest scripts/construction/research-round8-2026-10-24.json
+python3 scripts/construction/reviewQueue.py --manifest scripts/construction/research-round8-2026-10-24.json
+```
+
+Metadata and status saves were re-read through authenticated admin APIs. All 44 public JSON records per environment were checked for one exact status, original author, native price/currency/bounds, source citations and corrected dates/titles. Twelve authenticated native pages per environment were checked for the research block and status. Opened evidence, private before snapshots and page captures remain ignored under `.scrape/construction-status-research-round8-2026-10-24/`. Source/identity validation, catalog accounting, syntax/lint, task-file whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.

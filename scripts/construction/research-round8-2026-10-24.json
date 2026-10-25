@@ -1,0 +1,2571 @@
+{
+  "checkedAt": "2026-10-24",
+  "round": 8,
+  "snapshotDirectory": ".scrape/construction-status-research-round8-2026-10-24",
+  "scope": "50 queued records researched: 44 resolved (23 Proposed, 16 In Progress, five Completed), six specific physical-stage/phase gaps retained. 17 sourced native costs, 27 null exact-scope costs, five qualified headlines and the Jakarta announcement-date correction.",
+  "research": [
+    {
+      "id": 501,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The pin represents Pramono’s January 20, 2026 announcement of a proposed Jakarta sea-wall start, not verified September construction. September reporting still awaited central direction; existing NCICD works and Demak mangrove projects are different scopes. Native date changes from the expired forecast to the dated announcement. US$1bn annually for eight years is not a source-quoted total, and the up-to-US$80bn Java-wide project is not Jakarta’s 19km segment.",
+      "sources": [
+        {
+          "url": "https://www.thejakartapost.com/indonesia/2026/01/22/jakarta-to-break-ground-on-giant-sea-wall-in-september.html",
+          "title": "Jakarta to break ground on giant sea wall in September - Jakarta - The Jakarta Post",
+          "quote": "US$1 billion annually over the eight years of construction.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.cnnindonesia.com/nasional/20260903121020-20-1399547/pramono-tunggu-arahan-pemerintah-pusat-terkait-giant-sea-wall",
+          "title": "Pramono Tunggu Arahan Pemerintah Pusat Terkait Giant Sea Wall",
+          "quote": "Pramono Tunggu Arahan Pemerintah Pusat Terkait Giant Sea Wall",
+          "publishedDate": "2026-09-03",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "utcStartDateTime": "2026-01-20T00:00:00.000Z",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Both opened reports explicitly date the governor’s September-start announcement to Tuesday January 20, 2026. This is the announcement event, not evidence of an actual September groundbreaking."
+      },
+      "costGap": "No published exact Jakarta-segment total verified; annual spending is not multiplied into an invented quote and Java-wide totals are not assigned."
+    },
+    {
+      "id": 567,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Eiffel’s 20th painting campaign was still In Progress at the June 2024 Olympic preparations. The official June 7 date concerns the Olympic rings, not finished repainting. The public audit says only almost all of the campaign was finished before the Games and the wider campaign horizon extended to 2026. The old USD60m is cleared: older reporting stated EUR60m; the audit’s EUR142.5m painting envelope also includes the 21st campaign and contingencies, not this exact scope.",
+      "sources": [
+        {
+          "url": "https://www.ccomptes.fr/sites/default/files/2025-10/IDR2025-39.pdf",
+          "title": "Chambre régionale des comptes Île-de-France — Société d’exploitation de la tour Eiffel",
+          "quote": "la quasi-totalité de la campagne de peinture avant les Jeux olympiques et paralympiques.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Opened full audit PDF, printed pages 36 and 40–41: remaining twentieth campaign through 2026; EUR142.5m broader painting envelope includes the next campaign, so not an exact current twentieth-campaign price."
+        },
+        {
+          "url": "https://www.toureiffel.paris/fr/actualites/evenements/la-tour-eiffel-porte-les-anneaux-olympiques",
+          "title": "La tour Eiffel porte les anneaux olympiques !",
+          "quote": "Le 7 juin 2024 au matin",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Eiffel Tower Repainting Continues During Paris Olympic Preparations",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 7, 2024 is verified as Olympic-ring installation, not repaint completion. Retained as an estimated Olympic-preparation timeline anchor for ongoing repainting; exact finished-repaint date is not claimed."
+      },
+      "costGap": "Latest audited painting envelope combines campaigns and contingency. No source-quoted updated all-in twentieth-campaign-only total established; component contracts are not summed."
+    },
+    {
+      "id": 681,
+      "status": "Completed",
+      "price": 750000000,
+      "priceCurrency": "USD",
+      "note": "Completed applies to Brooklyn Tower’s built and occupied residential tower, supported by operator-hosted completed-building coverage, not solely by an occupancy permit. The April 25, 2025 certificate milestone is retained as estimated because sources differ on permanent versus extended temporary status; unfinished amenities are a separate caveat. The source-quoted US$750m development cost is distinct from mezzanine debt and the US$672m takeover.",
+      "sources": [
+        {
+          "url": "https://brooklyntowercondos.com/app/uploads/2026/01/1.10.26_RobbReport.pdf",
+          "title": "Brooklyn’s Highest Residence, a 92nd-Floor Penthouse, Lists for $17 Million",
+          "quote": "was completed in 2022",
+          "publishedDate": "2026-01-10",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Operator-hosted full Robb Report article; built residential tower, not proof every amenity was complete at April 2025."
+        },
+        {
+          "url": "https://verticalurbanism.org/news-article/supertall-skyscraper-structurally-tops-out-in-new-york-city/",
+          "title": "Supertall Skyscraper Structurally Tops Out in New York City",
+          "quote": "cost US$750 million to develop.",
+          "publishedDate": "2021-11-16",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Published 2021 development-cost account; not a newly audited 2026 final cost or the separate loan/takeover amount."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/The_Brooklyn_Tower",
+          "title": "Brooklyn Tower - Wikipedia",
+          "quote": "April 25, 2025",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "April 25, 2025 is the reported occupancy-certificate milestone, with conflicting permanent/temporary descriptions. It is retained as estimated, not the original first-resident date or a claim all later amenity fit-out had finished."
+      }
+    },
+    {
+      "id": 823,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Volvo’s September 20, 2007 release explicitly presents the Ghent truck factory’s completed CO2-free conversion. Completed applies to the factory retrofit, not Tuve’s still-ongoing conversion, a new vehicle model or the original factory opening. The operator’s heritage account corroborates actual operation. No exact combined conversion cost was established; unrelated Volvo prize funds and the separate Volvo Cars factory are excluded.",
+      "sources": [
+        {
+          "url": "https://www.volvogroup.com/en/news-and-media/news/2007/sep/news-29067.html",
+          "title": "Volvo’s plant in Ghent first in the world with carbon-dioxide-free vehicle production",
+          "quote": "the first vehicle plant in the world that is completely free from carbon dioxide (CO2)",
+          "publishedDate": "2007-09-20",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "Exact Ghent truck-factory CO2-free conversion total not published in opened announcement/heritage pages; individual wind installations and other factories are different scopes."
+    },
+    {
+      "id": 2655,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "ITER confirms PF1 physically arrived February 10, 2023, after completed manufacture and delivery. Completed applies only to the manufactured poloidal coil and its supply scope; it does not mark ITER construction, magnet installation, plasma or commercial power complete. No separate source-quoted PF1 fabrication/delivery cost was established; reactor-wide costs and theoretical magnet-system estimates are not allocated to this coil.",
+      "sources": [
+        {
+          "url": "https://www.world-nuclear-news.org/Articles/ITER-Russian-poloidal-field-coil-arrives-at-constr",
+          "title": "ITER: Russian poloidal field coil arrives at construction site - World Nuclear News",
+          "quote": "successfully completed the production and supply of the poloidal field coil.",
+          "publishedDate": "2023-02-13",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.iter.org/newsline/-/3842",
+          "title": "All ring-shaped magnets now \"home\" at ITER",
+          "quote": "PF1 passed the ITER gates at around 4:15 a.m. on Friday 10 February.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "PF1-specific manufacture/delivery total unverified; ITER-wide budget, generic magnet shares and model-coil cost estimates are not used."
+    },
+    {
+      "id": 3244,
+      "status": "Proposed",
+      "price": 4200000000,
+      "priceCurrency": "USD",
+      "note": "Midway Rising remains Proposed at the negotiation/development-agreement milestone: October 13, 2026 reporting places construction in early 2028 subject to council approval. The newest opened estimate is US$4.2bn for the entire mixed-use redevelopment, superseding US$3.9bn, not just the arena. The December 4 deal deadline is not construction start or completion, and completed legislation does not finish the project.",
+      "sources": [
+        {
+          "url": "https://www.kpbs.org/news/politics/2026/10/13/officials-to-consider-san-diegos-midway-rising-development-agreement-friday",
+          "title": "San Diego Midway Rising project faces final hurdles",
+          "quote": "The total estimated construction cost is now $4.2 billion.",
+          "publishedDate": "2026-10-13",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.kpbs.org/news/politics/2026/08/31/california-lawmakers-greenlight-a-new-san-diego-sports-arena-bypassing-environmental-hurdles",
+          "title": "California lawmakers greenlight a new San Diego sports arena, bypassing environmental hurdles | KPBS Public Media",
+          "quote": "a deal to make a deal by Dec. 4",
+          "publishedDate": "2026-08-31",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    },
+    {
+      "id": 3250,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "SANDAG’s committee vote starts further procurement/planning for an airport rail connection. Proposed describes the unbuilt link, not existing airport buses. Five alignment/technology options remain; opened September reporting gives different cost ranges for trolley and people-mover concepts. No selected project budget is established, so neither an option’s endpoint nor the airport’s US$350m transit contribution becomes the native construction price.",
+      "sources": [
+        {
+          "url": "https://www.kpbs.org/news/economy/2026/09/22/as-sandag-moves-forward-with-airport-transit-connection-board-members-push-to-speed-up-the-process",
+          "title": "As SANDAG moves forward with airport transit connection, board members push to speed up the process | KPBS Public Media",
+          "quote": "The committee ultimately voted 6-2 in favor of Anderson’s motion.",
+          "publishedDate": "2026-09-22",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "No final alignment/technology selected; option ranges, study cost and airport funding contribution do not establish an exact link construction total."
+    },
+    {
+      "id": 3400,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Wisconsin DNR explicitly confirms Lighthouse is being constructed. In Progress applies before the proposed first customer delivery, not Completed from generator permits or a contract. Oracle’s tracker gives H2 2027 while the full campus announcement gives 2028 completion; those milestones differ. No exact first-delivery phase cost is verified; the US$15bn four-building campus value and US$11bn economic impact are broader scopes.",
+      "sources": [
+        {
+          "url": "https://dnr.wisconsin.gov/topic/EIA/Portwashington.html",
+          "title": "Port Washington Data Center Proposal — Wisconsin DNR",
+          "quote": "is being constructed on 672 acres of previously agricultural land",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.oracle.com/data-centers/",
+          "title": "Data Centers",
+          "quote": "Port Washington",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Operator tracker supplies contracted September 2025 / expected delivery H2 2027; contract is not physical work."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2027 is an estimated H2-2027 first-delivery anchor from Oracle’s tracker, not an exact opening day or whole-campus 2028 completion."
+      },
+      "costGap": "No source-quoted exact initial customer-delivery phase budget; US$15bn is the full four-building campus and economic impact/infrastructure commitments are not phase costs."
+    },
+    {
+      "id": 3454,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Oracle confirms all Saline buildings are actively under construction, establishing In Progress before first customer delivery. Its H2 2027 delivery forecast and end-2026 network core are separate from complete campus operation. No price is allocated to the initial-delivery phase: US$16bn covers the three-building campus, while finance, equipment and utility benefits are different bases.",
+      "sources": [
+        {
+          "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+          "title": "Oracle, Related Digital, Blackstone, OpenAI, Walbridge and Governor Whitmer Celebrate Construction of Stargate Campus in Saline Township",
+          "quote": "All campus buildings are now actively under construction",
+          "publishedDate": "2026-06-01",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.oracle.com/data-centers/",
+          "title": "Data Centers",
+          "quote": "Saline Township",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Operator tracker supplies expected H2 2027 delivery; not completed operation."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2027 remains an estimated H2-2027 first-delivery anchor. It is not a published exact opening day or proof all campus phases are complete."
+      },
+      "costGap": "No exact first-delivery phase total; US$16bn full campus, debt/equity and equipment values are not allocated to the initial service milestone."
+    },
+    {
+      "id": 4915,
+      "status": "Proposed",
+      "price": 9900000000,
+      "priceCurrency": "USD",
+      "note": "Sites Reservoir remains Proposed before verified physical construction; the November 4 permit vote is a regulatory milestone, not a completed reservoir. The Authority’s October 8 baseline updates the whole-project Governance Forecast to approximately US$9.9bn year-of-expenditure through 2035, including contingency. This supersedes the saved US$6.5bn; state funding is only part of finance. Actual construction is expected in 2027.",
+      "sources": [
+        {
+          "url": "https://www.waterboards.ca.gov/press_room/press_releases/2026/pr20260903-state-water-board-revises-draft-water-right-decision-for-proposed-sites-reservoir.html",
+          "title": "State Water Board revises draft water right decision for proposed Sites Reservoir, a major California water project | California State Water Resources Control Board",
+          "quote": "Nov. 4 public meeting.",
+          "publishedDate": "2026-09-03",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://sitesproject.org/wp-content/uploads/2026/10/Sites-Reservoir-Project-Baseline-Report.pdf",
+          "title": "Sites Project Baseline Report — October 8, 2026",
+          "quote": "approximately $9.9 billion in year-of-expenditure dollars",
+          "publishedDate": "2026-10-08",
+          "openedAt": "2026-10-24",
+          "quoteNote": "PDF page 10, executive summary: Governance Forecast through 2035; includes governance contingency, excludes ongoing operating cost."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "November 4, 2026 is the scheduled Board vote, not a verified vote result or construction start. Retained as an estimated future regulatory milestone."
+      }
+    },
+    {
+      "id": 4939,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Aligned’s April 2026 groundbreaking release establishes the Caprock first-building build stage before LBB-01’s targeted Q1 2027 service. In Progress does not complete the remaining five facilities or the whole 540MW campus. The US$5bn figure is regional economic investment across the development, not an exact LBB-01 building budget. Native cost remains null; March 31 is an estimated quarter-end anchor.",
+      "sources": [
+        {
+          "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+          "title": "Aligned Breaks Ground on Project Caprock",
+          "quote": "with an anticipated service date of Q1 2027.",
+          "publishedDate": "2026-04-09",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Operator targets Q1 2027 for inaugural LBB-01. March 31 is an estimated quarter anchor, not an exact announced service day; full multi-year campus remains separate."
+      },
+      "costGap": "LBB-01 construction total not separately published; US$5bn regional development/economic investment is not allocated to the first building."
+    },
+    {
+      "id": 4941,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Kazakhstan Today’s August 13, 2026 meeting report explicitly documents active excavation and foundations, so the first 50MW facility is In Progress before June 2027 launch. A purchased 215MW substation does not prove the data center operates. The US$10bn related agreements and prospective annual exports cover broader investment, not an exact first-50MW construction total.",
+      "sources": [
+        {
+          "url": "https://www.kt.kz/eng/government/kazakhstan_to_launch_first_50_mw_data_center_valley_1377997031.html",
+          "title": "Kazakhstan to Launch First 50 MW Data Center Valley Facility in June 2027 | Kazakhstan Today",
+          "quote": "Excavation work for the energy centre and AI factory buildings is 90% complete, while foundation work has begun.",
+          "publishedDate": "2026-08-13",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 30, 2027 is an estimated month-end anchor for the reported June 2027 first-facility launch, not an exact commissioned opening day."
+      },
+      "costGap": "No separately quoted first-50MW facility cost; broader US$10bn agreements, substation capacity and export revenue are not construction price."
+    },
+    {
+      "id": 5907,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The December 8, 2025 NextEra/Google partnership announces development of new campuses. Proposed describes those newly planned scopes; previously operating or contracted 3.5GW and the separate Duane Arnold restart do not establish these campuses’ physical construction. No exact campus identities or standalone construction totals are quoted. Enterprise AI products and corporate forecasts are not facility completion or cost.",
+      "sources": [
+        {
+          "url": "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-and-Google-Cloud-Announce-Landmark-Strategic-Energy-and-Technology-Partnership-to-Accelerate-AI-Growth-and-Transform-the-Energy-Industry",
+          "title": "NextEra Energy and Google Cloud Announce Landmark Strategic Energy and Technology Partnership to Accelerate AI Growth and Transform the Energy Industry - Dec 8, 2025",
+          "quote": "will partner to develop multiple, new gigawatt (GW)-scale data center campuses",
+          "publishedDate": "2025-12-08",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "New campuses not individually identified/budgeted in opened joint release; corporate outlook, contracted power and technology-product values are not build costs."
+    },
+    {
+      "id": 15744,
+      "status": "Proposed",
+      "price": 30000000,
+      "priceCurrency": "USD",
+      "note": "GE Vernova’s March 3, 2026 announcement is a planned Sesto San Giovanni manufacturing expansion, so Proposed describes this investment milestone before verified physical work. The operator states approximately US$30m; no euro conversion is substituted. This is a bushing-factory expansion, not construction or operation of the power stations its products serve.",
+      "sources": [
+        {
+          "url": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+          "title": "GE Vernova expands manufacturing capacity in Italy to support growing global electrification demand | GE Vernova News",
+          "quote": "approximately $30 million investment",
+          "publishedDate": "2026-03-03",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    },
+    {
+      "id": 15754,
+      "status": "In Progress",
+      "price": 132000000,
+      "priceCurrency": "USD",
+      "note": "NYPA’s May 2025 release quotes the developer beginning East River Energy Storage construction, establishing In Progress. No actual commissioning report supports the old October 2026 target as completion. The opened July 2021 report states US$132m for the exact 100MW battery; the later NYPA source gives no replacement budget. The former Poletti generating plant is not current battery generation, and its capacity is not imported.",
+      "sources": [
+        {
+          "url": "https://www.nypa.gov/News/Press-Releases/2025/20250520-award",
+          "title": "East River Energy Storage System: 100 MW / 400 MWh Battery at the Former Poletti Plant Site in Astoria, New York, 132M USD",
+          "quote": "As we begin construction of the East River Energy Storage project",
+          "publishedDate": "2025-05-20",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.tdworld.com/distributed-energy-resources/energy-storage/article/21169928/new-york-commission-authorizes-construction-of-100-mw-battery-storage-facility",
+          "title": "New York Commission Authorizes Construction of 100-MW Battery Storage Facility | TD World",
+          "quote": "The US$132 million facility",
+          "publishedDate": "2021-07-19",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "October 1, 2026 is retained only as an unverified legacy tracker estimate. Opened NYPA May 2025 source confirms construction, not a revised commissioning date; target passage is not completion."
+      },
+      "costGap": "Newer exact battery all-in budget remains unverified; USD132m retains explicitly dated July 2021 project estimate, not a claimed 2026 final account."
+    },
+    {
+      "id": 15798,
+      "status": "Proposed",
+      "price": 2000000000,
+      "priceCurrency": "USD",
+      "note": "The Army’s Fort Bliss selection remains a conditional lease negotiation, so Proposed applies to the planned campus before physical work. Bisnow explicitly reports US$2bn for each base’s project; US$4bn is the two-site combined figure. FY2027 initial capability is not a completed lease or exact opening, and the Army itself publishes no construction budget.",
+      "sources": [
+        {
+          "url": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+          "title": "DVIDS - News - Army reaches conditional agreement with private industry for hyperscaled data centers",
+          "quote": "conditionally selected two companies",
+          "publishedDate": "2026-03-26",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.bisnow.com/news/national/data-center-development/us-army-data-center-kkr-cyrusone-carlyle-133840",
+          "title": "Army Taps KKR And Carlyle For $4B Of Data Centers On U.S. Bases",
+          "quote": "expected to cost $2B each",
+          "publishedDate": "2026-03-26",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "September 1, 2027 is retained only as an estimated fiscal-year-2027 initial-capability anchor, not an exact day or final full-campus operation. Army lease negotiations and environmental review remain conditional."
+      }
+    },
+    {
+      "id": 15814,
+      "status": "Proposed",
+      "price": 17000000000,
+      "priceCurrency": "USD",
+      "note": "EdgeCore’s June 25, 2025 pin is the land-purchase/development announcement. Proposed describes that historical milestone; an acquired, zoned business park is not completed data-center construction. The operator release quotes US$17bn investment for the 1.1+GW campus, distinct from its US$42m land transaction and public incentives. Later Phase II filings do not rewrite the announcement as actual construction.",
+      "sources": [
+        {
+          "url": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+          "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus | EdgeCore",
+          "quote": "their $17 billion investment",
+          "publishedDate": "2025-06-25",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    },
+    {
+      "id": 15822,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Hassayampa Ranch’s December 2025 land-use approval is a Proposed data-center build. The developer’s US$25bn is potential completed-site worth, not construction expenditure; native price/currency are cleared. The US$51m land assembly is also not the campus budget. Entitlement and access to prospective power do not prove a tenant, construction or energization.",
+      "sources": [
+        {
+          "url": "https://www.connectcre.com/stories/25b-data-center-greenlit-near-buckeye/",
+          "title": "$25B Data Center Greenlit Near Buckeye - Connect CRE",
+          "quote": "approved zoning for a data center",
+          "publishedDate": "2025-12-15",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.datacenterknowledge.com/data-center-construction/venture-capitalist-palihapitiya-places-data-center-bet-in-arizona",
+          "title": "Venture Capitalist Palihapitiya Places Data Center Bet in Arizona",
+          "quote": "potential to be worth $25 billion when completed for data centers",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Hassayampa Ranch Rezoned for Data Centers; US$25 Billion Is a Potential Valuation",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 15, 2025 is the reporting-date anchor for the December rezoning milestone, not a verified exact board-vote or construction-start day."
+      },
+      "costGap": "No source-quoted construction total; USD25bn completed-site valuation and USD51m land acquisition are different measures."
+    },
+    {
+      "id": 15827,
+      "status": "Proposed",
+      "price": 50000000000,
+      "priceCurrency": "USD",
+      "note": "Project Emerald remains Proposed: local reporting explicitly says construction has not begun, while IREN describes Oklahoma as in development. The June tax-district delay is not a physical construction halt. The US$50bn is a reported two-phase economic-development plan value, including infrastructure and servers, not an operator-published final contract; later cost-review uncertainty is retained. First-power timing from 2028 does not prove campus completion.",
+      "sources": [
+        {
+          "url": "https://www.newson6.com/data-centers-in-oklahoma/what-to-know-kiowa-data-center-planned-for-pittsburg-county",
+          "title": "What to Know: Kiowa Data Center planned for Pittsburg County - NewsOn6.com",
+          "quote": "Construction and development have not yet begun on this facility.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://hoodline.com/2026/05/pittsburg-county-fast-tracks-2-000-acre-project-emerald-data-hub-gamble/",
+          "title": "Pittsburg County Fast-Tracks 2,000-Acre ‘Project Emerald’ Data Hub Gamble",
+          "quote": "about $50 billion, or roughly $25 billion per phase.",
+          "publishedDate": "2026-05-14",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Opened secondary account of NonDoc economic-development plan; IREN has no quoted project-dollar estimate in its operator release."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2028 is an estimated year anchor for earliest proposed power, not a completed two-phase campus date. Tax-district approval and actual build timing remain unsettled."
+      },
+      "costGap": "Later revised county-plan cost remains a follow-up; USD50bn retains the dated reported two-phase infrastructure/server planning value, not a current tendered construction account."
+    },
+    {
+      "id": 15833,
+      "status": "Proposed",
+      "price": 30000000000,
+      "priceCurrency": "USD",
+      "note": "Project Camellia is Proposed in the opened operator development announcement, before verified physical work. W.Media reports OpenAI’s compute-strategy vice president estimating more than US$30bn at full buildout, superseding the earlier US$20bn county figure; native price/lower bound use that threshold. This is the four-building project estimate, not 2028’s first phase alone, power payments, community benefits or annual impact.",
+      "sources": [
+        {
+          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+          "title": "Building AI infrastructure with the Effingham County community",
+          "quote": "a long-term datacenter project that OpenAI is designing and developing",
+          "publishedDate": "2026-07-22",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://w.media/openai-plans-to-build-its-own-3-2-gw-data-center-campus-in-georgia/",
+          "title": "OpenAI plans to build its own 3.2 GW data center campus in Georgia – w.media",
+          "quote": "more than US$ 30 billion at full build out.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 30000000000,
+        "priceUpperBound": null,
+        "title": "OpenAI Project Camellia: Four-Building Georgia Campus Estimated Above US$30 Billion",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2028 remains an estimated first-phase power/service year anchor; operator gives phased supply between 2028 and 2032, not an exact opening or full-campus completion date."
+      }
+    },
+    {
+      "id": 15846,
+      "status": "Proposed",
+      "price": 10000000000,
+      "priceCurrency": "USD",
+      "note": "Stak’s North Slope campus remains Proposed during the state lease process, before verified physical work. Its chief strategy officer’s July 6, 2026 estimate is more than US$10bn, superseding US$500m in the earlier state documents. Price/lower bound preserve the newer developer threshold without an invented final bid. Proposed gas generation and unknown turbines are not operating plant capacity.",
+      "sources": [
+        {
+          "url": "https://thealaskacurrent.com/?p=24821",
+          "title": "Data center critics flood Alaska land managers with opposition to North Slope project - The Alaska Current",
+          "quote": "Boyle said would cost more than $10 billion",
+          "publishedDate": "2026-07-06",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 10000000000,
+        "priceUpperBound": null,
+        "title": "Stak Proposes North Slope Data Center; Latest Estimate Exceeds US$10 Billion",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2028 is an estimated proposed initial-operations year anchor, conditional on lease, permits, finance and equipment; no exact day or full-campus commissioning is established."
+      }
+    },
+    {
+      "id": 15859,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The pin’s October 2023 milestone is Tract’s land acquisition and master planning, so Proposed describes South Valley at that historical point. Later May 2026 Fleet groundbreaking reports conflict on South Valley versus Peru Shelf parcel identity and are not used to declare the whole 985MW park operating or under construction in 2023. No standalone park construction budget was established; the US$4.6bn first project is a narrower, ambiguously located scope.",
+      "sources": [
+        {
+          "url": "https://thetechcapital.com/tract-to-develop-2gw-tahoe-reno-mega-data-centre-park/",
+          "title": "Tract to develop 2GW Tahoe-Reno mega data centre park",
+          "quote": "has acquired more than 2,200 acres",
+          "publishedDate": "2023-10-03",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "October 3, 2023 is the opened acquisition-announcement publication, not a verified transaction-closing or groundbreaking day. Retained as estimated timing for the preconstruction acquisition milestone."
+      },
+      "costGap": "No exact South Valley park-wide cost; Fleet first-project value and combined parks’ power commitments do not establish the pinned park total."
+    },
+    {
+      "id": 15866,
+      "status": "Proposed",
+      "price": 11700000000,
+      "priceCurrency": "USD",
+      "note": "Zenith’s Roswell development is Proposed in the verified county-approval evidence: opened reporting still schedules the first solar/battery construction for the coming weeks. An elapsed forecast does not prove it began. The same report attributes US$11.7bn capital investment to the company for the full campus. November 2027 is a proposed operating month, not completed off-grid facilities or confirmed anchor tenants.",
+      "sources": [
+        {
+          "url": "https://www.abqjournal.com/business/chaves-county-approves-data-center-project-amid-rising-demand-for-computing-infrastructure/2896546",
+          "title": "Chaves County approves data center project amid rising demand for computing infrastructure | Business | abqjournal.com",
+          "quote": "estimated $11.7 billion in capital investment",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+          "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+          "quote": "Fully operational by November 2027",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "November 1, 2027 is an estimated month anchor for the developer’s November 2027 full-operation target, not an announced exact day. County approval and scheduled works are not proof of construction start."
+      }
+    },
+    {
+      "id": 15995,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Proposed applies specifically to Hyperscale’s intended 340MW Dowagiac expansion beyond its operating approximately 30MW facility. March 2026 land acquisition plans and a roadmap contingent on a utility agreement do not establish physical construction of that full expansion. Existing AI/mining operations do not complete the added capacity. No exact expansion total was published; a US$125m shelf registration is financing, not construction cost.",
+      "sources": [
+        {
+          "url": "https://seekingalpha.com/pr/20171525-hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029",
+          "title": "Hyperscale Data Targets Full Buildout of 340 MW Michigan AI Data Center Campus in 2029 (2025-07-21) | Seeking Alpha",
+          "quote": "340 MW",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://digital-release.kxan.com/business/press-releases/cision/20260330SF21893/hyperscale-data-enters-into-agreement-to-expand-michigan-ai-data-center-campus-with-48-5-acre-acquisition",
+          "title": "Hyperscale Data Enters into Agreement to Expand Michigan AI Data Center Campus with 48.5 Acre Acquisition",
+          "quote": "48.5 acres",
+          "publishedDate": "2026-03-30",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "title": "Hyperscale Data Plans 340MW Dowagiac Buildout Beyond Its Operating Facility",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2029 remains an unverified estimated buildout-year anchor. Issuer roadmap depends on a utility agreement and 44-month interval, not a fixed July completion date. Existing operations are separate from the proposed 340MW expansion."
+      },
+      "costGap": "No expansion-specific total in opened issuer roadmap/acquisition releases; general shelf financing and land area are not a construction price."
+    },
+    {
+      "id": 16304,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "AVAIO explicitly confirms site work began for Taurus with Yates Construction, establishing In Progress before the initial 116MW delivery. The current operator listing updates first-phase energization to Q3 2027, replacing the release’s H1 horizon. Native US$6bn is cleared because it covers the full multi-year campus, not the first 116MW phase represented by the target. No exact first-phase budget was verified.",
+      "sources": [
+        {
+          "url": "https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work",
+          "title": "AVAIO Digital Breaks Ground on $6 Billion Brandon Data Center Campus; Leading Mississippi Contractor Begins Site Work",
+          "quote": "Leading Mississippi Contractor Begins Site Work",
+          "publishedDate": "2025-09-10",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.avaiodigital.com/projects",
+          "title": "Projects",
+          "quote": "116 MW energized Q3 2027",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "July 1, 2027 is an estimated Q3-start anchor from the current operator project list, not an exact energization day. The September 2025 release’s H1 2027 target is superseded."
+      },
+      "costGap": "USD6bn is the whole Taurus campus; no source-quoted first-116MW phase total. Financing and service-agreement values are not substituted."
+    },
+    {
+      "id": 16306,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Crane’s Forest Grove campus is In Progress: the contractor describes active construction and the investor’s year-end 2025 report documents actual foundations, enclosed walls/roof and continuing slab/panel work. Passing the operator’s Q3 2026 ready-for-service forecast does not establish commissioning. Native US$275,259,195 is qualified-property investment in a tax agreement, not an exact all-in campus construction budget, and is cleared.",
+      "sources": [
+        {
+          "url": "https://fortisconstruction.com/project/crane-pdx01-data-center-campus/",
+          "title": "Crane, PDX01 Data Center Campus",
+          "quote": "being meticulously designed and constructed",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.forestgrove-or.gov/DocumentCenter/View/2881/250605---Enterprise-Zone-Contract---Heather-Street-Owner-LLC---Crane-Data-Centers-Inc---City-of-Forest-Grove",
+          "title": "Forest Grove — Heather Street Owner / Crane Enterprise Zone Contract",
+          "quote": "The Company's estimated investment is $275,259,195",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Enterprise-zone agreement: qualified-property investment, not all-in campus construction price."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2026 remains only an unverified legacy year-end placeholder. Operator Q3 2026 RFS forecast and investor mid-2027 stabilization differ in scope; neither is a verified actual full-campus opening."
+      },
+      "costGap": "No exact all-in campus construction budget established. Qualified-property investment, Building 1A permit value and fund financing are separate scopes/bases."
+    },
+    {
+      "id": 16308,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Microsoft’s own Alviso update confirms actual earthmoving and soil-remediation construction began in fall 2025. In Progress applies to this San Jose project; the CEC exemption is not operation. The official project address and docket match 1657 Alviso-Milpitas Road. No exact current campus budget was established; a secondary permit/job valuation is not assumed all-in cost and land price is separate.",
+      "sources": [
+        {
+          "url": "https://local.microsoft.com/blog/alviso-datacenter-construction-update/",
+          "title": "Alviso datacenter construction update",
+          "quote": "Construction began in fall 2025 with initial work focused on earthmoving and soil remediation.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center",
+          "title": "San Jose Data Center — California Energy Commission",
+          "quote": "1657 Alviso-Milpitas Road",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 1, 2028 remains an unverified legacy tracker estimate, not an operator-published COD. Microsoft confirms physical work, but its summer-2026 site-preparation target is not full data-center opening."
+      },
+      "costGap": "Exact current all-in campus cost not established; land acquisition and secondary USD385.6m job/permit valuation are not assumed the total project budget."
+    },
+    {
+      "id": 16328,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Aligned’s September 10, 2026 release explicitly marks Project Phoenix groundbreaking, establishing In Progress for the planned Shippingport campus. Dedicated power arrangements and a former coal station’s redevelopment do not mark data-center operation. The quoted US$10bn is regional economic investment anchored by the development, not a separately stated data-center construction cost; native price stays null.",
+      "sources": [
+        {
+          "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+          "title": "Project Phoenix Data Center Campus Breaks Ground | Aligned",
+          "quote": "Groundbreaking of 2 GW “Project Phoenix” Campus",
+          "publishedDate": "2026-09-10",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2028 remains explicitly an unverified legacy estimated marker: the operator release gives no commercial-operation date. Groundbreaking is not full campus completion."
+      },
+      "costGap": "USD10bn is regional economic investment, not an exact campus construction estimate; co-located generation and data-center costs are not silently combined."
+    },
+    {
+      "id": 16331,
+      "status": "In Progress",
+      "price": 3000000000,
+      "priceCurrency": "USD",
+      "note": "Prime’s May 21, 2026 release confirms actual groundbreaking on the first three of five Phoenix/Avondale buildings. In Progress applies to the full 240MW campus; the commissioned substation is not completed data-center operation. Published Prime investment exceeds US$3bn, saved as a lower threshold; customers’ additional equipment investment is not added. No exact campus COD is published.",
+      "sources": [
+        {
+          "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+          "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+          "quote": "This more than $3 billion investment",
+          "publishedDate": "2026-05-21",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Exact five-building campus investment by Prime; customer computing investment is separate. Actual first-three-building groundbreaking is confirmed in the same opened release."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 3000000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2026 remains an unverified legacy estimated placeholder. Operator confirms May 2026 construction but publishes no exact campus opening date; substation commissioning is separate."
+      }
+    },
+    {
+      "id": 16412,
+      "status": "In Progress",
+      "price": 3000000000,
+      "priceCurrency": "USD",
+      "note": "Prime’s May 21, 2026 release confirms actual groundbreaking on the first three of five Phoenix/Avondale buildings. In Progress applies to the full 240MW campus; the commissioned substation is not completed data-center operation. Published Prime investment exceeds US$3bn, saved as a lower threshold; customers’ additional equipment investment is not added. No exact campus COD is published.",
+      "sources": [
+        {
+          "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+          "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+          "quote": "This more than $3 billion investment",
+          "publishedDate": "2026-05-21",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Exact five-building campus investment by Prime; customer computing investment is separate. Actual first-three-building groundbreaking is confirmed in the same opened release."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 3000000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "December 31, 2026 remains an unverified legacy estimated placeholder. Operator confirms May 2026 construction but publishes no exact campus opening date; substation commissioning is separate."
+      }
+    },
+    {
+      "id": 16333,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Vantage Trident remained a proposal in its third city review in September 2026, so Proposed applies before verified physical work. The source identifies the Aurora parcel and city administrative process, but conflicting directory dimensions, MW and future phases do not establish actual construction or a firm 2028 opening. No verified exact construction budget is published in the checked reporting.",
+      "sources": [
+        {
+          "url": "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/",
+          "title": "Aurora residents gather to oppose data center near them",
+          "quote": "two formal city reviews and a third is underway",
+          "publishedDate": "2026-09-23",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2028 remains a year-only estimated directory first-building target, not an operator commitment or completed campus date. City review precedes construction."
+      },
+      "costGap": "No exact operator/planning project budget established; former USD1.5bn tracker amount is unsupported and remains null."
+    },
+    {
+      "id": 16343,
+      "status": "In Progress",
+      "price": 13400000000,
+      "priceCurrency": "USD",
+      "note": "Google New Florence is In Progress: July 2026 local reporting explicitly describes physical campus construction. The May 21 cost-benefit-plan account states approximately US$13.4bn real-property improvements, distinct from US$56–87.5bn equipment, a US$100bn bond ceiling and the broader US$15bn Missouri infrastructure announcement. Native price uses the specifically reported real-property construction/development basis, not combined equipment or financing. No exact opening day is published.",
+      "sources": [
+        {
+          "url": "https://abc17news.com/news/2026/05/21/montgomery-county-commissioner-defends-google-data-center-amid-pushback-concerns/",
+          "title": "Montgomery County Commissioner defends Google data center amid pushback, concerns",
+          "quote": "about $13.4 billion in real property improvements",
+          "publishedDate": "2026-05-21",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://missouriindependent.com/2026/07/02/data-center-backlash-spills-into-missouri-primaries-as-gop-candidates-demand-action/",
+          "title": "Data center backlash spills into Missouri primaries as GOP candidates demand action",
+          "quote": "Google data center project under construction outside of New Florence.",
+          "publishedDate": "2026-07-02",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Full July 2 report opened after the archive excerpt; explicitly identifies the Google project as under construction."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2028 remains an unverified legacy estimated marker, not an operator-published opening day. Actual construction is verified separately; bond and tax-analysis years do not establish COD."
+      }
+    },
+    {
+      "id": 16345,
+      "status": "Proposed",
+      "price": 10000000000,
+      "priceCurrency": "USD",
+      "note": "Prometheus’s June 2026 county permit release still anticipates construction after final permitting, establishing Proposed for the planned Evanston campus. The opened 2024 operator announcement states a US$10bn flagship project; this is a historical planning estimate, not a current final contract. The newer release gives economic-impact/tax figures rather than a replacement construction total. An elapsed old 2025/26 opening target proves nothing.",
+      "sources": [
+        {
+          "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+          "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners | PrometheusHyperscale",
+          "quote": "Construction is anticipated to begin within six months of final permitting",
+          "publishedDate": "2026-06-17",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman",
+          "title": "Bernard Looney Appointed Chairman of the Board of Directors at Prometheus Hyperscale | PrometheusHyperscale",
+          "quote": "$10B flagship data center in Evanston, Wyoming",
+          "publishedDate": "2024-11-24",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 1, 2030 remains an unverified legacy estimated anchor. Construction is conditional on final permits, then 48–60 months phased buildout; no exact schedule can be calculated from an unknown final-permit date."
+      },
+      "costGap": "Updated exact budget for the revised 506-acre/1.25GW design remains unverified. USD10bn is explicitly the older operator flagship estimate, not the separate USD3.1bn economic impact."
+    },
+    {
+      "id": 16372,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Google explicitly identifies Storey County’s built, operating campus, establishing Completed despite conflicting operator construction-year descriptions. Native 2021 stays estimated; the economic-impact page separately says construction finished in 2020. Neither page supports a standalone campus construction cost; more than US$6bn statewide investment covers multiple sites and equipment and is not allocated here.",
+      "sources": [
+        {
+          "url": "https://datacenters.google/locations/storey-county-nevada/",
+          "title": "Storey County, Nevada – Google Data Center Location",
+          "quote": "Storey County, Nevada data center was built in 2021",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://economicimpact.google/state/nv/",
+          "title": "Google Economic Impact | State detail: Nevada - Google - Google Economic Impact",
+          "quote": "Google completed construction of its data center in Storey County in 2020.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2021 remains a year-only estimate from the dedicated campus page. Operator economic-impact text also says 2020 completion; exact construction/opening year remains conflicting, while actual built/operating status is explicit."
+      },
+      "costGap": "No separately published Storey County project total in opened operator material; USD6bn-plus Nevada investment is statewide and includes equipment/other campuses."
+    },
+    {
+      "id": 16383,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Google’s dedicated Nebraska page explicitly states the Omaha campus was built in 2022, establishing Completed for the existing facility. The same page’s timeline describes a 2022 announcement; no precise first-service day is established, so the existing year anchor remains estimated. This does not complete an unverified 2028 expansion. Statewide US$15bn-plus investment across Nebraska sites is not an Omaha-only construction cost.",
+      "sources": [
+        {
+          "url": "https://www.datacenters.google/locations/nebraska/",
+          "title": "Nebraska, USA – Google Data Center Location",
+          "quote": "the Omaha, Nebraska data center was built in 2022",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2022 is only a year-precision operator built/announcement marker, not an exact first-service day. The page also calls 2022 the announcement year; no separate 2028 expansion opening is established."
+      },
+      "costGap": "Omaha-only construction total not published in opened operator page; Nebraska-wide multi-campus/equipment investment is not apportioned."
+    },
+    {
+      "id": 16384,
+      "status": "In Progress",
+      "price": 800000000,
+      "priceCurrency": "USD",
+      "note": "Meta’s current location catalog confirms a 2024 Aiken groundbreaking, establishing In Progress before the state’s spring-2027 operating target. The operator states US$800m-plus investment; price and lower bound preserve that threshold. Off-site renewable generation and closed-loop cooling do not establish commissioned campus capacity or complete operation.",
+      "sources": [
+        {
+          "url": "https://datacenters.atmeta.com/all-locations/",
+          "title": "Global Data Center Fleet — Meta Data Centers",
+          "quote": "$800 million+ investment",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Aiken block states 2024 break ground, distinct from other campuses on the page."
+        },
+        {
+          "url": "https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center",
+          "title": "Meta selects Aiken County for first South Carolina data center | South Carolina Department of Commerce",
+          "quote": "expected to be operational in spring 2027.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": 800000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "April 1, 2027 is an estimated spring-season anchor for the state’s target, not a published exact opening day. Operator confirms prior groundbreaking, not completed operation."
+      }
+    },
+    {
+      "id": 16399,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Rowan’s Bauxite II is a physical construction/delivery scope rather than merely the Maryland remediation parcel: the operator’s milestone post confirms its structural progress, and its portfolio distinguishes II/III delivery from Bauxite I substantial completion. In Progress does not imply the entire campus is energized. US$1.24bn construction financing is not a source-quoted full Bauxite II development cost; native price remains null.",
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/posts/rowandigital_hyperscale-datacenters-constructionmilestone-activity-7432144629594091520-VDVO",
+          "title": "Rowan Digital Infrastructure — Bauxite II construction milestone",
+          "quote": "Major milestone at Bauxite II in Frederick County, Maryland, last week, as we officially topped out the project!",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://rowan.com/portfolio/bauxite-i-ii-iii/",
+          "title": "Bauxite I, II & III — Rowan",
+          "quote": "Bauxite II and III advancing toward delivery in 2026 and 2027.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 1, 2027 remains an unverified legacy estimated marker. Rowan gives 2026/2027 delivery horizons for II/III but no exact phase-II commissioning day; substantial completion of I is a different phase."
+      },
+      "costGap": "Standalone Bauxite II all-in cost not published in opened operator/financing material; USD1.24bn debt financing and whole-portfolio costs are not substituted."
+    },
+    {
+      "id": 16459,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The pinned March 29, 2023 Malaga community concept session is Proposed before Microsoft’s stated June 2023 construction start. Later first-building work does not rewrite this historical presentation as construction or operation of EAT13. The operator distinguishes building completion from availability and does not commit the other two buildings’ timing. No exact EAT13 construction total is published.",
+      "sources": [
+        {
+          "url": "https://local.microsoft.com/blog/malaga-datacenter-project-overview/",
+          "title": "Malaga datacenter project overview",
+          "quote": "March 29, 2023 community info session recap",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Operator page separately says construction will begin June 2023; later first-building schedule is not this historical concept-session milestone."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "No separate EAT13 construction total in operator concept overview; campus power allocation and old unsupported tracker budget are not allocated to the named concept building."
+    },
+    {
+      "id": 16469,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Ameresco describes NAS Lemoore as a planned development while agreements are still being finalized. Proposed applies to the data-center/energy plan before actual works. First-portion 2027 service is only a target, and the source’s 100MW is not asserted as IT capacity or electrical-generation output. No exact construction cost is published; the unsupported former US$750m remains cleared.",
+      "sources": [
+        {
+          "url": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+          "title": "NAS Lemoore Data Center Energy Project",
+          "quote": "the agreements for this development are being finalized",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "January 1, 2027 remains a year-only estimate for the first portion, not a firm opening day or full-campus commissioning. Agreements and construction timing are still conditional."
+      },
+      "costGap": "No source-quoted exact development total in opened Ameresco project overview; no inferred USD750m or power-scaled budget."
+    },
+    {
+      "id": 16472,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "San José’s October 27, 2025 memorandum presents the STEM Park developer-selection concept. Proposed applies to documented Building D, not an approved building permit or completed data center. Four-building campus power/phasing is not an individual building’s operating supply. The memorandum does not establish a Building D construction budget or opening; former US$800m remains unsupported.",
+      "sources": [
+        {
+          "url": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+          "title": "City of San José — Prologis STEM Park developer-selection memorandum, October 27, 2025",
+          "quote": "development and ground lease agreement with Prologis.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Staff memorandum and Attachment A identify concept buildings A–D; developer selection precedes construction."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "No Building D-specific construction estimate in opened staff memorandum/Attachment A; whole-campus concepts and utility plans are not an exact phase budget."
+    },
+    {
+      "id": 16481,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "DC BLOX explicitly lists Nashville Grassmere in evaluation and says construction begins upon project approval. Proposed applies to the planned new 10MW building, not an existing office tenant’s small data center at the site. No exact project price or opening is published; native cost stays null. The existing June 2027 marker is explicitly unverified, not an operator forecast.",
+      "sources": [
+        {
+          "url": "https://www.dcblox.com/nashville-data-center/",
+          "title": "DC BLOX Nashville Data Center",
+          "quote": "Our Nashville project is currently in the evaluation phase.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "June 30, 2027 is an unverified legacy estimated placeholder. The current operator publishes no opening date and conditions construction on approval; no COD is inferred."
+      },
+      "costGap": "No exact construction cost in opened operator project/FAQ material; former USD280m is unsupported and remains null."
+    },
+    {
+      "id": 16490,
+      "status": "Proposed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Faribault states Archer’s proposal is in environmental review and no formal development applications have been submitted, establishing Proposed at the July 2026 review milestone. The approximately 120MW is potential power, not completed IT supply. Conceptual layouts and review deadlines are not construction or opening. No published exact project budget supports the former US$850m estimate.",
+      "sources": [
+        {
+          "url": "https://faribaultmn.gov/815/Archer-Datacenters",
+          "title": "Archer Datacenters — City of Faribault",
+          "quote": "there have been no formal applications submitted to the City.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "Exact project budget not published in opened city review page or operator conceptual site; former USD850m tracker figure remains unsupported."
+    },
+    {
+      "id": 17021,
+      "status": "In Progress",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Switch’s November 9, 2022 filing explicitly records Tahoe Reno 3 site development, establishing In Progress at this historical physical-work milestone. It does not establish later commissioning, operation or a Tier certificate for the individual building. US$65.3m is quarterly Citadel spending across Reno 2 and Reno 3 site work, not a Reno 3 total, so native price stays null.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+          "title": "Switch Announces Third Quarter 2022 Financial Results",
+          "quote": "site development activities related to TAHOE RENO 3",
+          "publishedDate": "2022-11-09",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Issuer report explicitly names site development; joint Citadel quarterly spend is not this building’s all-in budget."
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "costGap": "Standalone Reno 3 construction total not established; USD65.3m quarterly Citadel capex includes Reno 2 and Reno 3 site development, not exact building cost."
+    },
+    {
+      "id": 18222,
+      "status": "Proposed",
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "note": "Aguas Marítimas’ May 4, 2026 environmental approval establishes Proposed before physical construction. The published US$5bn investment covers the desalination and conveyance project, not an isolated plant or annual operating cost. Opened accounts differ on 2027 versus 2028 construction starts; neither elapsed planning nor approval means the 700,000m³/day project is complete.",
+      "sources": [
+        {
+          "url": "https://cpichile.org/aguas-maritimas-mayor-desaladora-del-pais-consigue-aprobacion-ambiental-por-us-5-000-millones/",
+          "title": "Aguas Marítimas: mayor desaladora del país consigue aprobación ambiental por US$ 5.000 millones - CPI",
+          "quote": "US$ 5.000 millones",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Project investment including desalination and conveyance; construction/operation stages remain future."
+        },
+        {
+          "url": "https://www.reporteminero.cl/noticia/noticias/2026/05/aprobacion-eia-desaladora-aguas-maritimas-antofagasta",
+          "title": "Aprueban ambientalmente proyecto desalador Aguas Marítimas por US$5.000 millones en Antofagasta - Reporte Minero | El portal de minería en Chile",
+          "quote": "contempla una inversión de US$5.000 millones",
+          "publishedDate": "2026-05-06",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      }
+    }
+  ],
+  "unresolved": [
+    {
+      "id": 16568,
+      "title": "Chirisa Piscataway PNJ-01/02: 90 MW Campus Power, 2027 Delivery Plan",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Chirisa Piscataway PNJ-01/02: reopened operator page reserves 2027 delivery and distinguishes existing-shell reuse from adjacent greenfield development, but does not state whether either named PNJ building is physically under construction or in commissioning. Other campuses explicitly marked in construction do not settle PNJ. Verify exact building permits, contractor progress and per-phase cost before tagging; power availability and reservations are insufficient.",
+      "sources": [
+        {
+          "url": "https://chirisatechnologyparks.com/",
+          "title": "Chirisa Technology Parks — Piscataway PNJ-01 / -02",
+          "quote": "Status: Reserved for 2027 delivery",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Specific Piscataway block; no actual-work milestone or exact phase budget supplied."
+        }
+      ]
+    },
+    {
+      "id": 4976,
+      "title": "Bitdeer AI's 21.7MW A201 Johor Data Center Energizes",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Bitdeer A201 Johor: opened September 29 issuer release confirms contracted revenue, procured GPU racks and future Q1 2027 energization, but does not establish the building’s physical-construction versus completed-shell/fit-out/commissioning stage. Reconcile exact host facility and operator/contractor progress before choosing Proposed or In Progress. More than USD1.7bn is five-year expected revenue, not construction cost; no phase total verified.",
+      "sources": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/09/29/3371380/0/en/bitdeer-ai-further-expands-ai-cloud-services-with-off-take-commitments-of-more-than-70-of-its-21-7mw-a201-malaysia-data-center.html",
+          "title": "Bitdeer AI Further Expands AI Cloud Services with Off-take Commitments of more than 70% of Its 21.7MW A201 Malaysia Data Center",
+          "quote": "ahead of energization in Q1 2027.",
+          "publishedDate": "2026-09-29",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 4977,
+      "title": "Bitdeer AI's 9.5MW A102 Malaysia Data Center Energizes",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Bitdeer A102 Malaysia: opened August 31/September 1 issuer release establishes sold capacity and a Q1 2027 service target, not the exact physical stage of its host building or fit-out. Verify the named 9.5MW site’s construction/commissioning milestone before assigning a status; do not infer it from sold-out capacity or customer prepayments. USD800m-plus is expected five-year revenue, not a project budget.",
+      "sources": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/08/31/3353668/0/en/bitdeer-ai-announces-sell-out-of-its-9-5mw-a102-malaysia-data-center-with-total-expected-ai-cloud-revenue-of-over-800-million.html",
+          "title": "Bitdeer AI Announces Sell-out of its 9.5MW A102 Malaysia Data Center with Total Expected AI Cloud Revenue of Over $800 million",
+          "quote": "ahead of energization in Q1 2027.",
+          "publishedDate": "2026-08-31",
+          "openedAt": "2026-10-24",
+          "quoteNote": "Page timestamp August 31 ET, issuer dateline September 1 Singapore; neither is facility commissioning."
+        }
+      ]
+    },
+    {
+      "id": 15780,
+      "title": "Aligned West Jordan SLC-05 to SLC-07: 198-338 MW Data Center Expansion in Utah, Gas-Turbine Powered, Cost Not Published",
+      "gapCategory": "individual-source-or-phase",
+      "reason": "Aligned West Jordan SLC-05–07: opened December 2025 air permit authorizes gas turbines for the shared 9800 South site, but does not map the three tracker building labels to a verified physical stage. SLC-05 tracker construction and SLC-06/07 future phases need exact operator/contractor or building-permit evidence. Existing Salt Lake campuses, permit issuance and expired targets are not completion; no exact three-building construction total verified.",
+      "sources": [
+        {
+          "url": "https://storage.googleapis.com/data-center-source-files/campuses/599__aligned-west-jordan-9800-south/2025-12-18_air-permit_utah-daq-ao-daqe-an162210002-25-aligned-data-cente.pdf",
+          "title": "Utah DAQ — Aligned West Jordan Approval Order DAQE-AN162210002-25",
+          "quote": "The owner/operator shall submit documentation of the status of construction or modification",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "December 18, 2025 approval order governs shared turbine scope; not a dated construction receipt for all three named data-center buildings."
+        }
+      ]
+    },
+    {
+      "id": 15865,
+      "title": "xAI Colossus 2 Data Center: 735 to 1,300 MW in Memphis, Tennessee, Powered by Gas Turbines in Southaven, NAACP Sues Over Permits",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "xAI Colossus 2: opened turbine-litigation reporting and the saved capacity account mix the Memphis compute buildings, Southaven turbine plant and different 735–1300MW scopes. Turbine operation/litigation does not independently establish completion of the entire pinned compute capacity. Verify a dated operator compute-service milestone and reconcile operating versus expansion scope; separate March 2026 USD659m adjacent-building permit is not a campus budget.",
+      "sources": [
+        {
+          "url": "https://www.wsmv.com/2026/04/14/naacp-sues-xai-alleging-unlawful-operation-gas-turbines-southaven",
+          "title": "NAACP sues xAI, alleging unlawful operation of gas turbines in Southaven",
+          "quote": "gas turbines",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Opened turbine-litigation report, not an exact compute-campus operating receipt."
+        }
+      ]
+    },
+    {
+      "id": 16422,
+      "title": "Rowan Bauxite I:Substantial Completion in 2025; Financing Is Not Campus Cost",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "Rowan Bauxite I: opened operator page verifies substantial completion in 2025, not full four-building final completion or commercial operation at all stated capacity. Current tracker operational claims conflict in unit/year and cannot establish the exact January 2025 milestone. Obtain dated operator handover/occupancy/commissioning evidence before assigning Completed, or a dated remaining-works record for In Progress. USD975m is financing, not total development cost.",
+      "sources": [
+        {
+          "url": "https://rowan.com/portfolio/bauxite-i-ii-iii/",
+          "title": "Bauxite I, II & III — Rowan",
+          "quote": "Bauxite I reaching substantial completion in 2025",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 501,
+          "title": "Jakarta Sets September 2026 Groundbreaking for Its Giant Sea Wall",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The pin represents Pramono’s January 20, 2026 announcement of a proposed Jakarta sea-wall start, not verified September construction. September reporting still awaited central direction; existing NCICD works and Demak mangrove projects are different scopes. Native date changes from the expired forecast to the dated announcement. US$1bn annually for eight years is not a source-quoted total, and the up-to-US$80bn Java-wide project is not Jakarta’s 19km segment.",
+          "evidence": "US$1 billion annually over the eight years of construction.",
+          "evidenceUrls": [
+            "https://www.thejakartapost.com/indonesia/2026/01/22/jakarta-to-break-ground-on-giant-sea-wall-in-september.html",
+            "https://www.cnnindonesia.com/nasional/20260903121020-20-1399547/pramono-tunggu-arahan-pemerintah-pusat-terkait-giant-sea-wall"
+          ],
+          "expectedPinSha256": "54266732c4922c2726b069d0469b8e905172c880f297f3760dfcbcd85d831e37",
+          "metadataVerified": true,
+          "savedPinSha256": "b709e2c2a5ab17bed825582e26154242b335f3fbff3c6eedc18edf281d1b5066"
+        },
+        {
+          "id": 567,
+          "title": "Eiffel Tower Repainting Continues During Paris Olympic Preparations",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Eiffel’s 20th painting campaign was still In Progress at the June 2024 Olympic preparations. The official June 7 date concerns the Olympic rings, not finished repainting. The public audit says only almost all of the campaign was finished before the Games and the wider campaign horizon extended to 2026. The old USD60m is cleared: older reporting stated EUR60m; the audit’s EUR142.5m painting envelope also includes the 21st campaign and contingencies, not this exact scope.",
+          "evidence": "la quasi-totalité de la campagne de peinture avant les Jeux olympiques et paralympiques.",
+          "evidenceUrls": [
+            "https://www.ccomptes.fr/sites/default/files/2025-10/IDR2025-39.pdf",
+            "https://www.toureiffel.paris/fr/actualites/evenements/la-tour-eiffel-porte-les-anneaux-olympiques"
+          ],
+          "expectedPinSha256": "c8385de0f6554b7e51dfbccdf25ad1ef32c12832912021fad8e38cbcbea21169",
+          "expectedOriginalTitle": "Eiffel Tower's Rust-Fighting Repaint Unveiled for the Paris Olympics",
+          "metadataVerified": true,
+          "savedPinSha256": "db302f310cec40085fe11a2cc02ee1779ff6be27431eb2c33528cc642c390125"
+        },
+        {
+          "id": 681,
+          "title": "The Brooklyn Tower Finally Receives Its Certificate of Occupancy",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Completed applies to Brooklyn Tower’s built and occupied residential tower, supported by operator-hosted completed-building coverage, not solely by an occupancy permit. The April 25, 2025 certificate milestone is retained as estimated because sources differ on permanent versus extended temporary status; unfinished amenities are a separate caveat. The source-quoted US$750m development cost is distinct from mezzanine debt and the US$672m takeover.",
+          "evidence": "was completed in 2022",
+          "evidenceUrls": [
+            "https://brooklyntowercondos.com/app/uploads/2026/01/1.10.26_RobbReport.pdf",
+            "https://verticalurbanism.org/news-article/supertall-skyscraper-structurally-tops-out-in-new-york-city/",
+            "https://en.wikipedia.org/wiki/The_Brooklyn_Tower"
+          ],
+          "expectedPinSha256": "94e6703af3db381e453c8505df9abf3145e7b23e4abac5a242f7342dbab8cefa",
+          "metadataVerified": true,
+          "savedPinSha256": "a58fff1a28734d1e0e2f108c125e2092782598869984c6de831690db965044c4"
+        },
+        {
+          "id": 823,
+          "title": "Volvo's Ghent Truck Plant Becomes the World's First CO2-Free Vehicle Factory",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Volvo’s September 20, 2007 release explicitly presents the Ghent truck factory’s completed CO2-free conversion. Completed applies to the factory retrofit, not Tuve’s still-ongoing conversion, a new vehicle model or the original factory opening. The operator’s heritage account corroborates actual operation. No exact combined conversion cost was established; unrelated Volvo prize funds and the separate Volvo Cars factory are excluded.",
+          "evidence": "the first vehicle plant in the world that is completely free from carbon dioxide (CO2)",
+          "evidenceUrls": [
+            "https://www.volvogroup.com/en/news-and-media/news/2007/sep/news-29067.html"
+          ],
+          "expectedPinSha256": "04cfc77998695a0ea6c2bf930161282a2cc65971f201b775c7a06d24d9a1d69c",
+          "metadataVerified": true,
+          "savedPinSha256": "38d5e7618be8ddd12641c47d88e9529ea44dd47ee38cbab8ec16db77b327c290"
+        },
+        {
+          "id": 2655,
+          "title": "Rosatom Delivers ITER's Last Poloidal Field Coil to the Cadarache Site",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "ITER confirms PF1 physically arrived February 10, 2023, after completed manufacture and delivery. Completed applies only to the manufactured poloidal coil and its supply scope; it does not mark ITER construction, magnet installation, plasma or commercial power complete. No separate source-quoted PF1 fabrication/delivery cost was established; reactor-wide costs and theoretical magnet-system estimates are not allocated to this coil.",
+          "evidence": "successfully completed the production and supply of the poloidal field coil.",
+          "evidenceUrls": [
+            "https://www.world-nuclear-news.org/Articles/ITER-Russian-poloidal-field-coil-arrives-at-constr",
+            "https://www.iter.org/newsline/-/3842"
+          ],
+          "expectedPinSha256": "d4c2606c74cfeba772b90caddb574ff7c21454e9eb2732b09db5467ac0e13029",
+          "metadataVerified": true,
+          "savedPinSha256": "846eebde58455837a6992f91170416689d0533ec64c416d6d5a7facd43279215"
+        },
+        {
+          "id": 3244,
+          "title": "Deadline for a Midway Rising Deal on the Sports Arena Site",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "Midway Rising remains Proposed at the negotiation/development-agreement milestone: October 13, 2026 reporting places construction in early 2028 subject to council approval. The newest opened estimate is US$4.2bn for the entire mixed-use redevelopment, superseding US$3.9bn, not just the arena. The December 4 deal deadline is not construction start or completion, and completed legislation does not finish the project.",
+          "evidence": "The total estimated construction cost is now $4.2 billion.",
+          "evidenceUrls": [
+            "https://www.kpbs.org/news/politics/2026/10/13/officials-to-consider-san-diegos-midway-rising-development-agreement-friday",
+            "https://www.kpbs.org/news/politics/2026/08/31/california-lawmakers-greenlight-a-new-san-diego-sports-arena-bypassing-environmental-hurdles"
+          ],
+          "expectedPinSha256": "60946d8929878ace6ec5c1fbf86fba79196c84788969228a5736a80cfcffbdb2",
+          "metadataVerified": true,
+          "savedPinSha256": "3056f2aa0de1135c9b8334ff4af3834f6ff80e429acc14ce2ecb80e7113c2f65"
+        },
+        {
+          "id": 3250,
+          "title": "SANDAG Committee Votes to Seek Proposals for an Airport Rail Link",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "SANDAG’s committee vote starts further procurement/planning for an airport rail connection. Proposed describes the unbuilt link, not existing airport buses. Five alignment/technology options remain; opened September reporting gives different cost ranges for trolley and people-mover concepts. No selected project budget is established, so neither an option’s endpoint nor the airport’s US$350m transit contribution becomes the native construction price.",
+          "evidence": "The committee ultimately voted 6-2 in favor of Anderson’s motion.",
+          "evidenceUrls": [
+            "https://www.kpbs.org/news/economy/2026/09/22/as-sandag-moves-forward-with-airport-transit-connection-board-members-push-to-speed-up-the-process"
+          ],
+          "expectedPinSha256": "826c1f0e1799dde735fdbfafbdff8320720fdac479e62df1a66501f953102205",
+          "metadataVerified": true,
+          "savedPinSha256": "5256af959fdc6904d6faea7e23280b0016c72fe40ded38375ed2b0ab49961cab"
+        },
+        {
+          "id": 3400,
+          "title": "Oracle's Lighthouse Campus in Wisconsin Begins Customer Delivery",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "Wisconsin DNR explicitly confirms Lighthouse is being constructed. In Progress applies before the proposed first customer delivery, not Completed from generator permits or a contract. Oracle’s tracker gives H2 2027 while the full campus announcement gives 2028 completion; those milestones differ. No exact first-delivery phase cost is verified; the US$15bn four-building campus value and US$11bn economic impact are broader scopes.",
+          "evidence": "is being constructed on 672 acres of previously agricultural land",
+          "evidenceUrls": [
+            "https://dnr.wisconsin.gov/topic/EIA/Portwashington.html",
+            "https://www.oracle.com/data-centers/"
+          ],
+          "expectedPinSha256": "a0227d0f876782b23f1846c1d496d81de630aafe449293c73aff7f44457977a8",
+          "metadataVerified": true,
+          "savedPinSha256": "94990679a84af36e90964dcab39f100737c12a8ef877759c3579bfc1dd635dc9"
+        },
+        {
+          "id": 3454,
+          "title": "Oracle's Saline Township Stargate Campus Begins Customer Delivery",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "Oracle confirms all Saline buildings are actively under construction, establishing In Progress before first customer delivery. Its H2 2027 delivery forecast and end-2026 network core are separate from complete campus operation. No price is allocated to the initial-delivery phase: US$16bn covers the three-building campus, while finance, equipment and utility benefits are different bases.",
+          "evidence": "All campus buildings are now actively under construction",
+          "evidenceUrls": [
+            "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+            "https://www.oracle.com/data-centers/"
+          ],
+          "expectedPinSha256": "909606d3adabae49e748f4f2bbb6f70143d7ec7e6c024324235d0d0820d164df",
+          "metadataVerified": true,
+          "savedPinSha256": "252e847e40f39542cd55331fbda872f90812e7aecc609bcca8c508f92bd290dc"
+        },
+        {
+          "id": 4915,
+          "title": "State Water Board Votes on Sites Reservoir's Final Water Right Permit",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "Sites Reservoir remains Proposed before verified physical construction; the November 4 permit vote is a regulatory milestone, not a completed reservoir. The Authority’s October 8 baseline updates the whole-project Governance Forecast to approximately US$9.9bn year-of-expenditure through 2035, including contingency. This supersedes the saved US$6.5bn; state funding is only part of finance. Actual construction is expected in 2027.",
+          "evidence": "Nov. 4 public meeting.",
+          "evidenceUrls": [
+            "https://www.waterboards.ca.gov/press_room/press_releases/2026/pr20260903-state-water-board-revises-draft-water-right-decision-for-proposed-sites-reservoir.html",
+            "https://sitesproject.org/wp-content/uploads/2026/10/Sites-Reservoir-Project-Baseline-Report.pdf"
+          ],
+          "expectedPinSha256": "e98bfb2413391a921c03d21d3d23f7e9832ab8f00ba4a0f20235823638ddfd43",
+          "metadataVerified": true,
+          "savedPinSha256": "f70c020cecb7f439d923d443ab435bb5eafe769e0441197d2d2b0d6b2ce8619b"
+        },
+        {
+          "id": 4939,
+          "title": "Aligned's Project Caprock LBB-01 Data Center Enters Service",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Aligned’s April 2026 groundbreaking release establishes the Caprock first-building build stage before LBB-01’s targeted Q1 2027 service. In Progress does not complete the remaining five facilities or the whole 540MW campus. The US$5bn figure is regional economic investment across the development, not an exact LBB-01 building budget. Native cost remains null; March 31 is an estimated quarter-end anchor.",
+          "evidence": "with an anticipated service date of Q1 2027.",
+          "evidenceUrls": [
+            "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/"
+          ],
+          "expectedPinSha256": "dc69daa1fc1fd968e5c16088ad38b8d628529bfd1e85cafbaa678b4743cb1481",
+          "metadataVerified": true,
+          "savedPinSha256": "1f83a8c4d6bce20bb43ced82170fd5da4abb4b158d5e39bfb35ac4bbbca7fd37"
+        },
+        {
+          "id": 4941,
+          "title": "Kazakhstan's Data Center Valley Opens Its First 50 MW Facility",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Kazakhstan Today’s August 13, 2026 meeting report explicitly documents active excavation and foundations, so the first 50MW facility is In Progress before June 2027 launch. A purchased 215MW substation does not prove the data center operates. The US$10bn related agreements and prospective annual exports cover broader investment, not an exact first-50MW construction total.",
+          "evidence": "Excavation work for the energy centre and AI factory buildings is 90% complete, while foundation work has begun.",
+          "evidenceUrls": [
+            "https://www.kt.kz/eng/government/kazakhstan_to_launch_first_50_mw_data_center_valley_1377997031.html"
+          ],
+          "expectedPinSha256": "97e4a0e6f79555864e73ef8d51708f6fbf7da5222df289c55de43f3cc4affd94",
+          "metadataVerified": true,
+          "savedPinSha256": "06868385e1afafdbbf1546cc43d71b2c8a4f9fe8d7138e74379b0b1e1b2eddfd"
+        },
+        {
+          "id": 5907,
+          "title": "NextEra and Google Cloud Team Up on Gigawatt-Scale Data Center Campuses",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "The December 8, 2025 NextEra/Google partnership announces development of new campuses. Proposed describes those newly planned scopes; previously operating or contracted 3.5GW and the separate Duane Arnold restart do not establish these campuses’ physical construction. No exact campus identities or standalone construction totals are quoted. Enterprise AI products and corporate forecasts are not facility completion or cost.",
+          "evidence": "will partner to develop multiple, new gigawatt (GW)-scale data center campuses",
+          "evidenceUrls": [
+            "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-and-Google-Cloud-Announce-Landmark-Strategic-Energy-and-Technology-Partnership-to-Accelerate-AI-Growth-and-Transform-the-Energy-Industry"
+          ],
+          "expectedPinSha256": "209260efc2b603189167dec4863c3599210a7fe2518d8bd001a00984d4fac03d",
+          "metadataVerified": true,
+          "savedPinSha256": "a1325680bada8550098ae79202271d9d9d42996c86fee7178cc1f3361303da1f"
+        },
+        {
+          "id": 15744,
+          "title": "GE Vernova Plans Approximately US$30 Million Italy Electrification-Factory Expansion",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "GE Vernova’s March 3, 2026 announcement is a planned Sesto San Giovanni manufacturing expansion, so Proposed describes this investment milestone before verified physical work. The operator states approximately US$30m; no euro conversion is substituted. This is a bushing-factory expansion, not construction or operation of the power stations its products serve.",
+          "evidence": "approximately $30 million investment",
+          "evidenceUrls": [
+            "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy"
+          ],
+          "expectedPinSha256": "e3b2dc22ee255d17250d1a6f83a14d18644e4205b80994f7f7cde317ee3a6607",
+          "metadataVerified": true,
+          "savedPinSha256": "9ac00b80fcfb5cd8223f91818d6e9cc6bb7925358b1509207c084c2233fe6937"
+        },
+        {
+          "id": 15754,
+          "title": "East River Energy Storage System: 100 MW / 400 MWh Battery at the Former Poletti Plant Site in Astoria, New York, 132M USD",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "NYPA’s May 2025 release quotes the developer beginning East River Energy Storage construction, establishing In Progress. No actual commissioning report supports the old October 2026 target as completion. The opened July 2021 report states US$132m for the exact 100MW battery; the later NYPA source gives no replacement budget. The former Poletti generating plant is not current battery generation, and its capacity is not imported.",
+          "evidence": "As we begin construction of the East River Energy Storage project",
+          "evidenceUrls": [
+            "https://www.nypa.gov/News/Press-Releases/2025/20250520-award",
+            "https://www.tdworld.com/distributed-energy-resources/energy-storage/article/21169928/new-york-commission-authorizes-construction-of-100-mw-battery-storage-facility"
+          ],
+          "expectedPinSha256": "e5e02dbe0bba4dae88593db341506efe91c16172c65e748c598c87b2207e90c9",
+          "metadataVerified": true,
+          "savedPinSha256": "8e52ae1288c1b0761915e1b613a2978d85bea90b2753b484ad9023d77ddea39c"
+        },
+        {
+          "id": 15798,
+          "title": "Carlyle Fort Bliss Data Center: 2,500-3,000 MW Army Enhanced-Use-Lease Campus on 1,384 Acres Near El Paso, Texas, About 2B USD, Lease Not Final",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The Army’s Fort Bliss selection remains a conditional lease negotiation, so Proposed applies to the planned campus before physical work. Bisnow explicitly reports US$2bn for each base’s project; US$4bn is the two-site combined figure. FY2027 initial capability is not a completed lease or exact opening, and the Army itself publishes no construction budget.",
+          "evidence": "conditionally selected two companies",
+          "evidenceUrls": [
+            "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "https://www.bisnow.com/news/national/data-center-development/us-army-data-center-kkr-cyrusone-carlyle-133840"
+          ],
+          "expectedPinSha256": "7efcc47de8739e0314bd0af7ca836715eff68543c9e84dbbe890f402dec5ce97",
+          "metadataVerified": true,
+          "savedPinSha256": "ab5dc1c74ea8162ef0b7e2851a6a9fb34a25fa7cd0ef704fff4993d4161a6a54"
+        },
+        {
+          "id": 15814,
+          "title": "EdgeCore Shannon Hill Campus: 1,100 MW, 3.9 Million Sq Ft Data Center in Louisa County, Virginia, 17B USD",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "EdgeCore’s June 25, 2025 pin is the land-purchase/development announcement. Proposed describes that historical milestone; an acquired, zoned business park is not completed data-center construction. The operator release quotes US$17bn investment for the 1.1+GW campus, distinct from its US$42m land transaction and public incentives. Later Phase II filings do not rewrite the announcement as actual construction.",
+          "evidence": "their $17 billion investment",
+          "evidenceUrls": [
+            "https://edgecore.com/new-louisa-county-virginia-data-center-campus/"
+          ],
+          "expectedPinSha256": "80b3ea9badbe4e1a543d508f42b55514d02453a5da826c5cd7f960a3eff249fb",
+          "metadataVerified": true,
+          "savedPinSha256": "6ceab6c1026ee8d7bbb534f60972d2fef00463e586eb953ff6e15f939303bad5"
+        },
+        {
+          "id": 15822,
+          "title": "Hassayampa Ranch Rezoned for Data Centers; US$25 Billion Is a Potential Valuation",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Hassayampa Ranch’s December 2025 land-use approval is a Proposed data-center build. The developer’s US$25bn is potential completed-site worth, not construction expenditure; native price/currency are cleared. The US$51m land assembly is also not the campus budget. Entitlement and access to prospective power do not prove a tenant, construction or energization.",
+          "evidence": "approved zoning for a data center",
+          "evidenceUrls": [
+            "https://www.connectcre.com/stories/25b-data-center-greenlit-near-buckeye/",
+            "https://www.datacenterknowledge.com/data-center-construction/venture-capitalist-palihapitiya-places-data-center-bet-in-arizona"
+          ],
+          "expectedPinSha256": "ef5253ec243c1f75561ca8bf5435a51a8f6fb8f5a1a5f61100d921ea548ef35a",
+          "expectedOriginalTitle": "Hassayampa Ranch Data Center: 25B USD, 1,500 MW Campus in Maricopa County, Arizona, Rezoned December 2025",
+          "metadataVerified": true,
+          "savedPinSha256": "a86d8f781b0ec44d561722a0a09b41ec020e1a2cc92b9162f50129eac054469f"
+        },
+        {
+          "id": 15827,
+          "title": "IREN Project Emerald: 1,200-1,600 MW AI Data Center Campus on 2,000 Acres Near Kiowa, Oklahoma, 50B USD in Two Phases, Tax Districts Tabled in June 2026, Power From 2028",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Project Emerald remains Proposed: local reporting explicitly says construction has not begun, while IREN describes Oklahoma as in development. The June tax-district delay is not a physical construction halt. The US$50bn is a reported two-phase economic-development plan value, including infrastructure and servers, not an operator-published final contract; later cost-review uncertainty is retained. First-power timing from 2028 does not prove campus completion.",
+          "evidence": "Construction and development have not yet begun on this facility.",
+          "evidenceUrls": [
+            "https://www.newson6.com/data-centers-in-oklahoma/what-to-know-kiowa-data-center-planned-for-pittsburg-county",
+            "https://hoodline.com/2026/05/pittsburg-county-fast-tracks-2-000-acre-project-emerald-data-hub-gamble/"
+          ],
+          "expectedPinSha256": "f1a97b53f76a2113055096bb235e7f836d2dda607954fc398ea8856da1841feb",
+          "metadataVerified": true,
+          "savedPinSha256": "7f7537ca39dd7594a7ac0677069386ea503c4f8ec52d888ffe1ab7c4d4f982ad"
+        },
+        {
+          "id": 15833,
+          "title": "OpenAI Project Camellia: Four-Building Georgia Campus Estimated Above US$30 Billion",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Project Camellia is Proposed in the opened operator development announcement, before verified physical work. W.Media reports OpenAI’s compute-strategy vice president estimating more than US$30bn at full buildout, superseding the earlier US$20bn county figure; native price/lower bound use that threshold. This is the four-building project estimate, not 2028’s first phase alone, power payments, community benefits or annual impact.",
+          "evidence": "a long-term datacenter project that OpenAI is designing and developing",
+          "evidenceUrls": [
+            "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "https://w.media/openai-plans-to-build-its-own-3-2-gw-data-center-campus-in-georgia/"
+          ],
+          "expectedPinSha256": "99f26b07d90e59bfe89949d486af38fabeea80fc9e043b58e7b6ec47bad9382e",
+          "expectedOriginalTitle": "OpenAI Project Camellia: 3,200 MW, Four-Building Data Center Campus in Effingham County, Georgia, 20B USD per County (30B+ USD per OpenAI Executive), First Phase 2028",
+          "metadataVerified": true,
+          "savedPinSha256": "6b7ac5b11d5cd87e80e62ff09f71c868ca98f76ff22f33f86750699f26fa5507"
+        },
+        {
+          "id": 15846,
+          "title": "Stak Proposes North Slope Data Center; Latest Estimate Exceeds US$10 Billion",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Stak’s North Slope campus remains Proposed during the state lease process, before verified physical work. Its chief strategy officer’s July 6, 2026 estimate is more than US$10bn, superseding US$500m in the earlier state documents. Price/lower bound preserve the newer developer threshold without an invented final bid. Proposed gas generation and unknown turbines are not operating plant capacity.",
+          "evidence": "Boyle said would cost more than $10 billion",
+          "evidenceUrls": [
+            "https://thealaskacurrent.com/?p=24821"
+          ],
+          "expectedPinSha256": "4b14586dfc3629f86591ee72c44f34a2f4f9039d9045ec0597fffe9ab4ada637",
+          "expectedOriginalTitle": "Stak Energy North Slope Campus: 1,000-3,000 MW Gas-Powered AI Data Center Off the Dalton Highway, Alaska, 500M USD Per State Filing, Lease Pending",
+          "metadataVerified": true,
+          "savedPinSha256": "615bde09c7ab422972d4ed8077a35d8a176dadc703bd5a38e871ec4da517ffad"
+        },
+        {
+          "id": 15859,
+          "title": "Tract South Valley Technology Park: 985 MW Data Center Park (Cleanview) on About 1,500 Acres in Storey County, Nevada, Tract Land Bought in 2023 With 2 GW NV Energy Commitment",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The pin’s October 2023 milestone is Tract’s land acquisition and master planning, so Proposed describes South Valley at that historical point. Later May 2026 Fleet groundbreaking reports conflict on South Valley versus Peru Shelf parcel identity and are not used to declare the whole 985MW park operating or under construction in 2023. No standalone park construction budget was established; the US$4.6bn first project is a narrower, ambiguously located scope.",
+          "evidence": "has acquired more than 2,200 acres",
+          "evidenceUrls": [
+            "https://thetechcapital.com/tract-to-develop-2gw-tahoe-reno-mega-data-centre-park/"
+          ],
+          "expectedPinSha256": "92617db09471f493a6b424546bde5b98c06cd48f22ced20df74c118861303c8e",
+          "metadataVerified": true,
+          "savedPinSha256": "cc3168628f84e1f34d27f19eda82f8b5cf875a2ae0ad13428b0557e8e1558baf"
+        },
+        {
+          "id": 15866,
+          "title": "Zenith Volts Roswell Data Center: 1,250-1,300 MW Off-Grid Campus 20 Miles South of Roswell, New Mexico, 11.7B USD, Targeted for November 2027",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Zenith’s Roswell development is Proposed in the verified county-approval evidence: opened reporting still schedules the first solar/battery construction for the coming weeks. An elapsed forecast does not prove it began. The same report attributes US$11.7bn capital investment to the company for the full campus. November 2027 is a proposed operating month, not completed off-grid facilities or confirmed anchor tenants.",
+          "evidence": "estimated $11.7 billion in capital investment",
+          "evidenceUrls": [
+            "https://www.abqjournal.com/business/chaves-county-approves-data-center-project-amid-rising-demand-for-computing-infrastructure/2896546",
+            "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html"
+          ],
+          "expectedPinSha256": "07c0639f2ad7e4e908d935b94276cf78541deffb6beac96f6736885bbd594538",
+          "metadataVerified": true,
+          "savedPinSha256": "81af01f4e9d58442b87b6ee56fa7d94cc62ebc657fa25570ef157ca1a4120b58"
+        },
+        {
+          "id": 15995,
+          "title": "Hyperscale Data Plans 340MW Dowagiac Buildout Beyond Its Operating Facility",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Proposed applies specifically to Hyperscale’s intended 340MW Dowagiac expansion beyond its operating approximately 30MW facility. March 2026 land acquisition plans and a roadmap contingent on a utility agreement do not establish physical construction of that full expansion. Existing AI/mining operations do not complete the added capacity. No exact expansion total was published; a US$125m shelf registration is financing, not construction cost.",
+          "evidence": "340 MW",
+          "evidenceUrls": [
+            "https://seekingalpha.com/pr/20171525-hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029",
+            "https://digital-release.kxan.com/business/press-releases/cision/20260330SF21893/hyperscale-data-enters-into-agreement-to-expand-michigan-ai-data-center-campus-with-48-5-acre-acquisition"
+          ],
+          "expectedPinSha256": "c2602681674a3f64fcfa15b081bc5bb8bcefc04cb673b6a6f45f47eb89921ea8",
+          "expectedOriginalTitle": "Hyperscale Data Dowagiac Data Center: 30-340 MW, Operating and Expanding Toward 2029, Michigan",
+          "metadataVerified": true,
+          "savedPinSha256": "f09173f6598db38208caa3f450a18f5837dc8c15b11cf21bcb63067cdb3ffbe3"
+        },
+        {
+          "id": 16304,
+          "title": "AVAIO Taurus: $6 Billion Campus, Initial 116 MW Phase in Brandon, Mississippi",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "AVAIO explicitly confirms site work began for Taurus with Yates Construction, establishing In Progress before the initial 116MW delivery. The current operator listing updates first-phase energization to Q3 2027, replacing the release’s H1 horizon. Native US$6bn is cleared because it covers the full multi-year campus, not the first 116MW phase represented by the target. No exact first-phase budget was verified.",
+          "evidence": "Leading Mississippi Contractor Begins Site Work",
+          "evidenceUrls": [
+            "https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work",
+            "https://www.avaiodigital.com/projects"
+          ],
+          "expectedPinSha256": "b52a31e40860b8c9605da9a6df33cee4bee91fd34b275df72e5867dbd6519fff",
+          "metadataVerified": true,
+          "savedPinSha256": "38d7219a8b39d542f0b648273c8e683fa253a641e04920d37c909f67cc4eaa59"
+        },
+        {
+          "id": 16306,
+          "title": "Crane Forest Grove Campus: 100+ MW Plan; $275.26M Qualified-Property Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Crane’s Forest Grove campus is In Progress: the contractor describes active construction and the investor’s year-end 2025 report documents actual foundations, enclosed walls/roof and continuing slab/panel work. Passing the operator’s Q3 2026 ready-for-service forecast does not establish commissioning. Native US$275,259,195 is qualified-property investment in a tax agreement, not an exact all-in campus construction budget, and is cleared.",
+          "evidence": "being meticulously designed and constructed",
+          "evidenceUrls": [
+            "https://fortisconstruction.com/project/crane-pdx01-data-center-campus/",
+            "https://www.forestgrove-or.gov/DocumentCenter/View/2881/250605---Enterprise-Zone-Contract---Heather-Street-Owner-LLC---Crane-Data-Centers-Inc---City-of-Forest-Grove"
+          ],
+          "expectedPinSha256": "e290087fcfe782072d465b77e571d4e3c02ae6ad1fb9f3bff637f85208d47fc7",
+          "metadataVerified": true,
+          "savedPinSha256": "f5f2b12246c21fc9f9deee1a9be8d9275766247803499c03a044fcabd9774d50"
+        },
+        {
+          "id": 16308,
+          "title": "Microsoft San Jose Data Center: Up to 99 MW at 1657 Alviso-Milpitas Road",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Microsoft’s own Alviso update confirms actual earthmoving and soil-remediation construction began in fall 2025. In Progress applies to this San Jose project; the CEC exemption is not operation. The official project address and docket match 1657 Alviso-Milpitas Road. No exact current campus budget was established; a secondary permit/job valuation is not assumed all-in cost and land price is separate.",
+          "evidence": "Construction began in fall 2025 with initial work focused on earthmoving and soil remediation.",
+          "evidenceUrls": [
+            "https://local.microsoft.com/blog/alviso-datacenter-construction-update/",
+            "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center"
+          ],
+          "expectedPinSha256": "94bfaf263ae956cafc6fe3886886188e30e9aab73aeea57fe8c05d57e774e734",
+          "metadataVerified": true,
+          "savedPinSha256": "d56d7a87cac45bd5785883b4a75972249ec90edde3369f44f74d99a6adbd1d31"
+        },
+        {
+          "id": 16328,
+          "title": "Aligned Project Phoenix: Announced 2 GW Shippingport Campus; $10B Regional Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Aligned’s September 10, 2026 release explicitly marks Project Phoenix groundbreaking, establishing In Progress for the planned Shippingport campus. Dedicated power arrangements and a former coal station’s redevelopment do not mark data-center operation. The quoted US$10bn is regional economic investment anchored by the development, not a separately stated data-center construction cost; native price stays null.",
+          "evidence": "Groundbreaking of 2 GW “Project Phoenix” Campus",
+          "evidenceUrls": [
+            "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/"
+          ],
+          "expectedPinSha256": "b9e37d0c3e4cfd18511af3ccd9b2fb2b27486870fc457886fcf09948282ef1f7",
+          "metadataVerified": true,
+          "savedPinSha256": "58ff2b03e4f81e42dcca160045c1f440c45d948ebb0e5593b453568d85af6414"
+        },
+        {
+          "id": 16331,
+          "title": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3B+ Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Prime’s May 21, 2026 release confirms actual groundbreaking on the first three of five Phoenix/Avondale buildings. In Progress applies to the full 240MW campus; the commissioned substation is not completed data-center operation. Published Prime investment exceeds US$3bn, saved as a lower threshold; customers’ additional equipment investment is not added. No exact campus COD is published.",
+          "evidence": "This more than $3 billion investment",
+          "evidenceUrls": [
+            "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/"
+          ],
+          "expectedPinSha256": "c49662822e4d58c91fdcf26a1814656c1eb9ca67bcc93d92ac3a8bb4c1458074",
+          "metadataVerified": true,
+          "savedPinSha256": "8c2cb9ffd406ce0aaab158f9f4a8ce3a216d901d98d1d3c247693f79d9ef3a84"
+        },
+        {
+          "id": 16412,
+          "title": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3 B+ Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Prime’s May 21, 2026 release confirms actual groundbreaking on the first three of five Phoenix/Avondale buildings. In Progress applies to the full 240MW campus; the commissioned substation is not completed data-center operation. Published Prime investment exceeds US$3bn, saved as a lower threshold; customers’ additional equipment investment is not added. No exact campus COD is published.",
+          "evidence": "This more than $3 billion investment",
+          "evidenceUrls": [
+            "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/"
+          ],
+          "expectedPinSha256": "3835b59c5ef41dda046ea7f328dc1a0d5b718657024a3e9aad73f794ba13dd03",
+          "metadataVerified": true,
+          "savedPinSha256": "c2d22d8907c083932847e669f9f96a7b57e16e3ce2e564322f21a55340aad66e"
+        },
+        {
+          "id": 16333,
+          "title": "Vantage Trident at Windler: Aurora Proposal Under Review; Capacity and Budget Unverified",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Vantage Trident remained a proposal in its third city review in September 2026, so Proposed applies before verified physical work. The source identifies the Aurora parcel and city administrative process, but conflicting directory dimensions, MW and future phases do not establish actual construction or a firm 2028 opening. No verified exact construction budget is published in the checked reporting.",
+          "evidence": "two formal city reviews and a third is underway",
+          "evidenceUrls": [
+            "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/"
+          ],
+          "expectedPinSha256": "b244bedc32a17aeb568ab2263d3cff0ff2e620df0b396c3c22194c8ef2667dd8",
+          "metadataVerified": true,
+          "savedPinSha256": "ff90336a4c667f979eec39e915e12f3f2e148d1713455d2488f99288d8a82a8e"
+        },
+        {
+          "id": 16343,
+          "title": "Google New Florence: New Data Center Within $15B Missouri Infrastructure Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Google New Florence is In Progress: July 2026 local reporting explicitly describes physical campus construction. The May 21 cost-benefit-plan account states approximately US$13.4bn real-property improvements, distinct from US$56–87.5bn equipment, a US$100bn bond ceiling and the broader US$15bn Missouri infrastructure announcement. Native price uses the specifically reported real-property construction/development basis, not combined equipment or financing. No exact opening day is published.",
+          "evidence": "about $13.4 billion in real property improvements",
+          "evidenceUrls": [
+            "https://abc17news.com/news/2026/05/21/montgomery-county-commissioner-defends-google-data-center-amid-pushback-concerns/",
+            "https://missouriindependent.com/2026/07/02/data-center-backlash-spills-into-missouri-primaries-as-gop-candidates-demand-action/"
+          ],
+          "expectedPinSha256": "89c170a84da1f4b4562295ddbb3a0609a7db31755cc76867f8c9ecfe17abc8b7",
+          "metadataVerified": true,
+          "savedPinSha256": "d6b23994114ac528853bf157a1a2186c16a8e91a7b5ec3a4bd33a4e8a536ddb4"
+        },
+        {
+          "id": 16345,
+          "title": "Prometheus Evanston: 1.25 GW Initial Campus Plan; Conditional Use Permit Approved",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Prometheus’s June 2026 county permit release still anticipates construction after final permitting, establishing Proposed for the planned Evanston campus. The opened 2024 operator announcement states a US$10bn flagship project; this is a historical planning estimate, not a current final contract. The newer release gives economic-impact/tax figures rather than a replacement construction total. An elapsed old 2025/26 opening target proves nothing.",
+          "evidence": "Construction is anticipated to begin within six months of final permitting",
+          "evidenceUrls": [
+            "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman"
+          ],
+          "expectedPinSha256": "97540f10e21e5c417e14ca7723b4d00e4fe5a1e94b975f7cc8eb1f8a3c3b76f0",
+          "metadataVerified": true,
+          "savedPinSha256": "b4c721c68df6640c022673cd4f174d734c3ec4e2dbce4fdb73018cf5cdfa0c92"
+        },
+        {
+          "id": 16372,
+          "title": "Google Storey County: Operating Campus; Primary Sources Differ on 2020/2021 Completion",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "Google explicitly identifies Storey County’s built, operating campus, establishing Completed despite conflicting operator construction-year descriptions. Native 2021 stays estimated; the economic-impact page separately says construction finished in 2020. Neither page supports a standalone campus construction cost; more than US$6bn statewide investment covers multiple sites and equipment and is not allocated here.",
+          "evidence": "Storey County, Nevada data center was built in 2021",
+          "evidenceUrls": [
+            "https://datacenters.google/locations/storey-county-nevada/",
+            "https://economicimpact.google/state/nv/"
+          ],
+          "expectedPinSha256": "d988d75876f30eea4b7f047b486e44212b1613965f253793fdb524db5dec9040",
+          "metadataVerified": true,
+          "savedPinSha256": "4b9b4056f03c068c35cc5559edaa18c964bee435805a73cd37174a77259c410e"
+        },
+        {
+          "id": 16383,
+          "title": "Google Omaha Campus: Operator Gives 2022 Build Year; 2028 Expansion Unverified",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "Google’s dedicated Nebraska page explicitly states the Omaha campus was built in 2022, establishing Completed for the existing facility. The same page’s timeline describes a 2022 announcement; no precise first-service day is established, so the existing year anchor remains estimated. This does not complete an unverified 2028 expansion. Statewide US$15bn-plus investment across Nebraska sites is not an Omaha-only construction cost.",
+          "evidence": "the Omaha, Nebraska data center was built in 2022",
+          "evidenceUrls": [
+            "https://www.datacenters.google/locations/nebraska/"
+          ],
+          "expectedPinSha256": "4ef236fae04b3bbad5f481ad4b52a068994aa5726a577c7746319550c96351bc",
+          "metadataVerified": true,
+          "savedPinSha256": "3600ec2f6a236cf50954a9dfeaf78d13c0891ae621dfd0f46715858df9ba9d4d"
+        },
+        {
+          "id": 16384,
+          "title": "Meta Aiken: $800M+ Campus; Spring 2027 Target and Closed-Loop Cooling",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Meta’s current location catalog confirms a 2024 Aiken groundbreaking, establishing In Progress before the state’s spring-2027 operating target. The operator states US$800m-plus investment; price and lower bound preserve that threshold. Off-site renewable generation and closed-loop cooling do not establish commissioned campus capacity or complete operation.",
+          "evidence": "$800 million+ investment",
+          "evidenceUrls": [
+            "https://datacenters.atmeta.com/all-locations/",
+            "https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center"
+          ],
+          "expectedPinSha256": "eba537ab629e738aabae82f2407bf58b6b0b4d214674eef931efa74b57324740",
+          "metadataVerified": true,
+          "savedPinSha256": "80ea13056a8cfca37cefa294aafb5809a9f6f7606561cd1cbaf2fe0489310a41"
+        },
+        {
+          "id": 16399,
+          "title": "Rowan Bauxite II: Verified Maryland Parcel;132 MW and$1.1 B Unsubstantiated",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Rowan’s Bauxite II is a physical construction/delivery scope rather than merely the Maryland remediation parcel: the operator’s milestone post confirms its structural progress, and its portfolio distinguishes II/III delivery from Bauxite I substantial completion. In Progress does not imply the entire campus is energized. US$1.24bn construction financing is not a source-quoted full Bauxite II development cost; native price remains null.",
+          "evidence": "Major milestone at Bauxite II in Frederick County, Maryland, last week, as we officially topped out the project!",
+          "evidenceUrls": [
+            "https://www.linkedin.com/posts/rowandigital_hyperscale-datacenters-constructionmilestone-activity-7432144629594091520-VDVO",
+            "https://rowan.com/portfolio/bauxite-i-ii-iii/"
+          ],
+          "expectedPinSha256": "30cdb43c2ea8814e4c207f420fb2476d4421a6b56a03700980b719eefab42dcf",
+          "metadataVerified": true,
+          "savedPinSha256": "cf54aea711523ff7cc4571ec11a37aa35e33bab334dac2846b4700d43a96d8f2"
+        },
+        {
+          "id": 16459,
+          "title": "Microsoft Malaga EAT13: Concept Plan Verified; Separate COD and MW Unpublished",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "The pinned March 29, 2023 Malaga community concept session is Proposed before Microsoft’s stated June 2023 construction start. Later first-building work does not rewrite this historical presentation as construction or operation of EAT13. The operator distinguishes building completion from availability and does not commit the other two buildings’ timing. No exact EAT13 construction total is published.",
+          "evidence": "March 29, 2023 community info session recap",
+          "evidenceUrls": [
+            "https://local.microsoft.com/blog/malaga-datacenter-project-overview/"
+          ],
+          "expectedPinSha256": "9e085c902ba74a93a51591b5bd910b9490ad6c99b4a88019502a3e3ed871eb61",
+          "metadataVerified": true,
+          "savedPinSha256": "e76cb4bbcf3fa3287989020e4a90f406a5b31da94d97324683db1e9604943f8b"
+        },
+        {
+          "id": 16469,
+          "title": "Ameresco / CyrusOne NAS Lemoore: 100 MW Data Center and Energy Plan",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "Ameresco describes NAS Lemoore as a planned development while agreements are still being finalized. Proposed applies to the data-center/energy plan before actual works. First-portion 2027 service is only a target, and the source’s 100MW is not asserted as IT capacity or electrical-generation output. No exact construction cost is published; the unsupported former US$750m remains cleared.",
+          "evidence": "the agreements for this development are being finalized",
+          "evidenceUrls": [
+            "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/"
+          ],
+          "expectedPinSha256": "633168e69eda93a0cde91e34f03fe203c02b5ed6677c96915bb664453f56c6da",
+          "metadataVerified": true,
+          "savedPinSha256": "1999c39db46c7ff72bdb7f609c23c6e37aefa76b8f331355225c1448469d068f"
+        },
+        {
+          "id": 16472,
+          "title": "Prologis STEM Park Building D Concept: 99 MW Utility / 72 MW IT",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "San José’s October 27, 2025 memorandum presents the STEM Park developer-selection concept. Proposed applies to documented Building D, not an approved building permit or completed data center. Four-building campus power/phasing is not an individual building’s operating supply. The memorandum does not establish a Building D construction budget or opening; former US$800m remains unsupported.",
+          "evidence": "development and ground lease agreement with Prologis.",
+          "evidenceUrls": [
+            "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3"
+          ],
+          "expectedPinSha256": "ec426675d5a16f8d9c855eba62264f902cfb279e8854386b32e2512207244aee",
+          "metadataVerified": true,
+          "savedPinSha256": "fd3b82a1020e6d97ef07a88908dd2787cb125ce6717ad66b0e531fac790fbcb5"
+        },
+        {
+          "id": 16481,
+          "title": "DC BLOX Nashville Grassmere: 10 MW Proposal in Evaluation",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "DC BLOX explicitly lists Nashville Grassmere in evaluation and says construction begins upon project approval. Proposed applies to the planned new 10MW building, not an existing office tenant’s small data center at the site. No exact project price or opening is published; native cost stays null. The existing June 2027 marker is explicitly unverified, not an operator forecast.",
+          "evidence": "Our Nashville project is currently in the evaluation phase.",
+          "evidenceUrls": [
+            "https://www.dcblox.com/nashville-data-center/"
+          ],
+          "expectedPinSha256": "bd4e81799868a39a40a59270f43c0df8e0f354b76c47534282b2b4ef8c85ff54",
+          "metadataVerified": true,
+          "savedPinSha256": "4d1a549d3cffa476f30b3590a37b6f36b134ca6818793b489d02bda66b6d4500"
+        },
+        {
+          "id": 16490,
+          "title": "Archer Faribault: 120 MW Potential Campus in Environmental Review",
+          "expectedAuthorId": 276,
+          "status": "Proposed",
+          "reason": "Faribault states Archer’s proposal is in environmental review and no formal development applications have been submitted, establishing Proposed at the July 2026 review milestone. The approximately 120MW is potential power, not completed IT supply. Conceptual layouts and review deadlines are not construction or opening. No published exact project budget supports the former US$850m estimate.",
+          "evidence": "there have been no formal applications submitted to the City.",
+          "evidenceUrls": [
+            "https://faribaultmn.gov/815/Archer-Datacenters"
+          ],
+          "expectedPinSha256": "3e7ca450cc9afadb8383b2daa58c376a8599ffa09bd92c641e521eb8f4eb18ff",
+          "metadataVerified": true,
+          "savedPinSha256": "bceebef0bd0962c4374a3a15a52f2cda99d504f874053dd463c02c877cc2da6f"
+        },
+        {
+          "id": 17021,
+          "title": "Switch Tahoe Reno 3: Independently Named Site-Development Project",
+          "expectedAuthorId": 276,
+          "status": "In Progress",
+          "reason": "Switch’s November 9, 2022 filing explicitly records Tahoe Reno 3 site development, establishing In Progress at this historical physical-work milestone. It does not establish later commissioning, operation or a Tier certificate for the individual building. US$65.3m is quarterly Citadel spending across Reno 2 and Reno 3 site work, not a Reno 3 total, so native price stays null.",
+          "evidence": "site development activities related to TAHOE RENO 3",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm"
+          ],
+          "expectedPinSha256": "329e25763bf3e006adf9f4f8c518b2bcd31c1ad69faa470bf8c2a4befec58980",
+          "metadataVerified": true,
+          "savedPinSha256": "734ff7f3a2c947f90b4b074a0bc276a8a29554532337ca6a2f17d3a540085e66"
+        },
+        {
+          "id": 18222,
+          "title": "Chile Approves US$5B Aguas Maritimas, Its Largest Desalination Plant",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Aguas Marítimas’ May 4, 2026 environmental approval establishes Proposed before physical construction. The published US$5bn investment covers the desalination and conveyance project, not an isolated plant or annual operating cost. Opened accounts differ on 2027 versus 2028 construction starts; neither elapsed planning nor approval means the 700,000m³/day project is complete.",
+          "evidence": "US$ 5.000 millones",
+          "evidenceUrls": [
+            "https://cpichile.org/aguas-maritimas-mayor-desaladora-del-pais-consigue-aprobacion-ambiental-por-us-5-000-millones/",
+            "https://www.reporteminero.cl/noticia/noticias/2026/05/aprobacion-eia-desaladora-aguas-maritimas-antofagasta"
+          ],
+          "expectedPinSha256": "2a6c57c5a7559830eafdcc4d05b5213e9ce01b058305e97acfc12763fbd4c1df",
+          "metadataVerified": true,
+          "savedPinSha256": "bc1fe7c79b05828950e7155e09ca668174273179bff706ad10418fedf25ffc70"
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 501,
+          "title": "Jakarta Sets September 2026 Groundbreaking for Its Giant Sea Wall",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "The pin represents Pramono’s January 20, 2026 announcement of a proposed Jakarta sea-wall start, not verified September construction. September reporting still awaited central direction; existing NCICD works and Demak mangrove projects are different scopes. Native date changes from the expired forecast to the dated announcement. US$1bn annually for eight years is not a source-quoted total, and the up-to-US$80bn Java-wide project is not Jakarta’s 19km segment.",
+          "evidence": "US$1 billion annually over the eight years of construction.",
+          "evidenceUrls": [
+            "https://www.thejakartapost.com/indonesia/2026/01/22/jakarta-to-break-ground-on-giant-sea-wall-in-september.html",
+            "https://www.cnnindonesia.com/nasional/20260903121020-20-1399547/pramono-tunggu-arahan-pemerintah-pusat-terkait-giant-sea-wall"
+          ],
+          "expectedPinSha256": "54266732c4922c2726b069d0469b8e905172c880f297f3760dfcbcd85d831e37",
+          "metadataVerified": true,
+          "savedPinSha256": "b709e2c2a5ab17bed825582e26154242b335f3fbff3c6eedc18edf281d1b5066"
+        },
+        {
+          "id": 567,
+          "title": "Eiffel Tower Repainting Continues During Paris Olympic Preparations",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "reason": "Eiffel’s 20th painting campaign was still In Progress at the June 2024 Olympic preparations. The official June 7 date concerns the Olympic rings, not finished repainting. The public audit says only almost all of the campaign was finished before the Games and the wider campaign horizon extended to 2026. The old USD60m is cleared: older reporting stated EUR60m; the audit’s EUR142.5m painting envelope also includes the 21st campaign and contingencies, not this exact scope.",
+          "evidence": "la quasi-totalité de la campagne de peinture avant les Jeux olympiques et paralympiques.",
+          "evidenceUrls": [
+            "https://www.ccomptes.fr/sites/default/files/2025-10/IDR2025-39.pdf",
+            "https://www.toureiffel.paris/fr/actualites/evenements/la-tour-eiffel-porte-les-anneaux-olympiques"
+          ],
+          "expectedPinSha256": "c8385de0f6554b7e51dfbccdf25ad1ef32c12832912021fad8e38cbcbea21169",
+          "expectedOriginalTitle": "Eiffel Tower's Rust-Fighting Repaint Unveiled for the Paris Olympics",
+          "metadataVerified": true,
+          "savedPinSha256": "db302f310cec40085fe11a2cc02ee1779ff6be27431eb2c33528cc642c390125"
+        },
+        {
+          "id": 681,
+          "title": "The Brooklyn Tower Finally Receives Its Certificate of Occupancy",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Completed applies to Brooklyn Tower’s built and occupied residential tower, supported by operator-hosted completed-building coverage, not solely by an occupancy permit. The April 25, 2025 certificate milestone is retained as estimated because sources differ on permanent versus extended temporary status; unfinished amenities are a separate caveat. The source-quoted US$750m development cost is distinct from mezzanine debt and the US$672m takeover.",
+          "evidence": "was completed in 2022",
+          "evidenceUrls": [
+            "https://brooklyntowercondos.com/app/uploads/2026/01/1.10.26_RobbReport.pdf",
+            "https://verticalurbanism.org/news-article/supertall-skyscraper-structurally-tops-out-in-new-york-city/",
+            "https://en.wikipedia.org/wiki/The_Brooklyn_Tower"
+          ],
+          "expectedPinSha256": "94e6703af3db381e453c8505df9abf3145e7b23e4abac5a242f7342dbab8cefa",
+          "metadataVerified": true,
+          "savedPinSha256": "a58fff1a28734d1e0e2f108c125e2092782598869984c6de831690db965044c4"
+        },
+        {
+          "id": 823,
+          "title": "Volvo's Ghent Truck Plant Becomes the World's First CO2-Free Vehicle Factory",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Volvo’s September 20, 2007 release explicitly presents the Ghent truck factory’s completed CO2-free conversion. Completed applies to the factory retrofit, not Tuve’s still-ongoing conversion, a new vehicle model or the original factory opening. The operator’s heritage account corroborates actual operation. No exact combined conversion cost was established; unrelated Volvo prize funds and the separate Volvo Cars factory are excluded.",
+          "evidence": "the first vehicle plant in the world that is completely free from carbon dioxide (CO2)",
+          "evidenceUrls": [
+            "https://www.volvogroup.com/en/news-and-media/news/2007/sep/news-29067.html"
+          ],
+          "expectedPinSha256": "04cfc77998695a0ea6c2bf930161282a2cc65971f201b775c7a06d24d9a1d69c",
+          "metadataVerified": true,
+          "savedPinSha256": "38d5e7618be8ddd12641c47d88e9529ea44dd47ee38cbab8ec16db77b327c290"
+        },
+        {
+          "id": 2655,
+          "title": "Rosatom Delivers ITER's Last Poloidal Field Coil to the Cadarache Site",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "ITER confirms PF1 physically arrived February 10, 2023, after completed manufacture and delivery. Completed applies only to the manufactured poloidal coil and its supply scope; it does not mark ITER construction, magnet installation, plasma or commercial power complete. No separate source-quoted PF1 fabrication/delivery cost was established; reactor-wide costs and theoretical magnet-system estimates are not allocated to this coil.",
+          "evidence": "successfully completed the production and supply of the poloidal field coil.",
+          "evidenceUrls": [
+            "https://www.world-nuclear-news.org/Articles/ITER-Russian-poloidal-field-coil-arrives-at-constr",
+            "https://www.iter.org/newsline/-/3842"
+          ],
+          "expectedPinSha256": "d4c2606c74cfeba772b90caddb574ff7c21454e9eb2732b09db5467ac0e13029",
+          "metadataVerified": true,
+          "savedPinSha256": "846eebde58455837a6992f91170416689d0533ec64c416d6d5a7facd43279215"
+        },
+        {
+          "id": 3244,
+          "title": "Deadline for a Midway Rising Deal on the Sports Arena Site",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "Midway Rising remains Proposed at the negotiation/development-agreement milestone: October 13, 2026 reporting places construction in early 2028 subject to council approval. The newest opened estimate is US$4.2bn for the entire mixed-use redevelopment, superseding US$3.9bn, not just the arena. The December 4 deal deadline is not construction start or completion, and completed legislation does not finish the project.",
+          "evidence": "The total estimated construction cost is now $4.2 billion.",
+          "evidenceUrls": [
+            "https://www.kpbs.org/news/politics/2026/10/13/officials-to-consider-san-diegos-midway-rising-development-agreement-friday",
+            "https://www.kpbs.org/news/politics/2026/08/31/california-lawmakers-greenlight-a-new-san-diego-sports-arena-bypassing-environmental-hurdles"
+          ],
+          "expectedPinSha256": "60946d8929878ace6ec5c1fbf86fba79196c84788969228a5736a80cfcffbdb2",
+          "metadataVerified": true,
+          "savedPinSha256": "3056f2aa0de1135c9b8334ff4af3834f6ff80e429acc14ce2ecb80e7113c2f65"
+        },
+        {
+          "id": 3250,
+          "title": "SANDAG Committee Votes to Seek Proposals for an Airport Rail Link",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "SANDAG’s committee vote starts further procurement/planning for an airport rail connection. Proposed describes the unbuilt link, not existing airport buses. Five alignment/technology options remain; opened September reporting gives different cost ranges for trolley and people-mover concepts. No selected project budget is established, so neither an option’s endpoint nor the airport’s US$350m transit contribution becomes the native construction price.",
+          "evidence": "The committee ultimately voted 6-2 in favor of Anderson’s motion.",
+          "evidenceUrls": [
+            "https://www.kpbs.org/news/economy/2026/09/22/as-sandag-moves-forward-with-airport-transit-connection-board-members-push-to-speed-up-the-process"
+          ],
+          "expectedPinSha256": "826c1f0e1799dde735fdbfafbdff8320720fdac479e62df1a66501f953102205",
+          "metadataVerified": true,
+          "savedPinSha256": "5256af959fdc6904d6faea7e23280b0016c72fe40ded38375ed2b0ab49961cab"
+        },
+        {
+          "id": 3400,
+          "title": "Oracle's Lighthouse Campus in Wisconsin Begins Customer Delivery",
+          "expectedAuthorId": 442,
+          "status": "In Progress",
+          "reason": "Wisconsin DNR explicitly confirms Lighthouse is being constructed. In Progress applies before the proposed first customer delivery, not Completed from generator permits or a contract. Oracle’s tracker gives H2 2027 while the full campus announcement gives 2028 completion; those milestones differ. No exact first-delivery phase cost is verified; the US$15bn four-building campus value and US$11bn economic impact are broader scopes.",
+          "evidence": "is being constructed on 672 acres of previously agricultural land",
+          "evidenceUrls": [
+            "https://dnr.wisconsin.gov/topic/EIA/Portwashington.html",
+            "https://www.oracle.com/data-centers/"
+          ],
+          "expectedPinSha256": "41b49c49a512576bd21879d67fd2b7b39fb33b527959b4a3dd0e353c1fc7f2ed",
+          "metadataVerified": true,
+          "savedPinSha256": "42dfad1432b6580ac265237c0302b82ff8fc2d11645588f3e921b143cda5dee3"
+        },
+        {
+          "id": 3454,
+          "title": "Oracle's Saline Township Stargate Campus Begins Customer Delivery",
+          "expectedAuthorId": 442,
+          "status": "In Progress",
+          "reason": "Oracle confirms all Saline buildings are actively under construction, establishing In Progress before first customer delivery. Its H2 2027 delivery forecast and end-2026 network core are separate from complete campus operation. No price is allocated to the initial-delivery phase: US$16bn covers the three-building campus, while finance, equipment and utility benefits are different bases.",
+          "evidence": "All campus buildings are now actively under construction",
+          "evidenceUrls": [
+            "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+            "https://www.oracle.com/data-centers/"
+          ],
+          "expectedPinSha256": "67a077d700a1cb366ffbb9b17984541061dbfa5d1996d13637aa5c9ccc7b40aa",
+          "metadataVerified": true,
+          "savedPinSha256": "16932f3922d7e5769c91c46dc2f9eaa51203b66b4b49723301f6ad1a097fd3c0"
+        },
+        {
+          "id": 4915,
+          "title": "State Water Board Votes on Sites Reservoir's Final Water Right Permit",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "reason": "Sites Reservoir remains Proposed before verified physical construction; the November 4 permit vote is a regulatory milestone, not a completed reservoir. The Authority’s October 8 baseline updates the whole-project Governance Forecast to approximately US$9.9bn year-of-expenditure through 2035, including contingency. This supersedes the saved US$6.5bn; state funding is only part of finance. Actual construction is expected in 2027.",
+          "evidence": "Nov. 4 public meeting.",
+          "evidenceUrls": [
+            "https://www.waterboards.ca.gov/press_room/press_releases/2026/pr20260903-state-water-board-revises-draft-water-right-decision-for-proposed-sites-reservoir.html",
+            "https://sitesproject.org/wp-content/uploads/2026/10/Sites-Reservoir-Project-Baseline-Report.pdf"
+          ],
+          "expectedPinSha256": "e98bfb2413391a921c03d21d3d23f7e9832ab8f00ba4a0f20235823638ddfd43",
+          "metadataVerified": true,
+          "savedPinSha256": "f70c020cecb7f439d923d443ab435bb5eafe769e0441197d2d2b0d6b2ce8619b"
+        },
+        {
+          "id": 4939,
+          "title": "Aligned's Project Caprock LBB-01 Data Center Enters Service",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Aligned’s April 2026 groundbreaking release establishes the Caprock first-building build stage before LBB-01’s targeted Q1 2027 service. In Progress does not complete the remaining five facilities or the whole 540MW campus. The US$5bn figure is regional economic investment across the development, not an exact LBB-01 building budget. Native cost remains null; March 31 is an estimated quarter-end anchor.",
+          "evidence": "with an anticipated service date of Q1 2027.",
+          "evidenceUrls": [
+            "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/"
+          ],
+          "expectedPinSha256": "dc69daa1fc1fd968e5c16088ad38b8d628529bfd1e85cafbaa678b4743cb1481",
+          "metadataVerified": true,
+          "savedPinSha256": "1f83a8c4d6bce20bb43ced82170fd5da4abb4b158d5e39bfb35ac4bbbca7fd37"
+        },
+        {
+          "id": 4941,
+          "title": "Kazakhstan's Data Center Valley Opens Its First 50 MW Facility",
+          "expectedAuthorId": 1,
+          "status": "In Progress",
+          "reason": "Kazakhstan Today’s August 13, 2026 meeting report explicitly documents active excavation and foundations, so the first 50MW facility is In Progress before June 2027 launch. A purchased 215MW substation does not prove the data center operates. The US$10bn related agreements and prospective annual exports cover broader investment, not an exact first-50MW construction total.",
+          "evidence": "Excavation work for the energy centre and AI factory buildings is 90% complete, while foundation work has begun.",
+          "evidenceUrls": [
+            "https://www.kt.kz/eng/government/kazakhstan_to_launch_first_50_mw_data_center_valley_1377997031.html"
+          ],
+          "expectedPinSha256": "97e4a0e6f79555864e73ef8d51708f6fbf7da5222df289c55de43f3cc4affd94",
+          "metadataVerified": true,
+          "savedPinSha256": "06868385e1afafdbbf1546cc43d71b2c8a4f9fe8d7138e74379b0b1e1b2eddfd"
+        },
+        {
+          "id": 5907,
+          "title": "NextEra and Google Cloud Team Up on Gigawatt-Scale Data Center Campuses",
+          "expectedAuthorId": 441,
+          "status": "Proposed",
+          "reason": "The December 8, 2025 NextEra/Google partnership announces development of new campuses. Proposed describes those newly planned scopes; previously operating or contracted 3.5GW and the separate Duane Arnold restart do not establish these campuses’ physical construction. No exact campus identities or standalone construction totals are quoted. Enterprise AI products and corporate forecasts are not facility completion or cost.",
+          "evidence": "will partner to develop multiple, new gigawatt (GW)-scale data center campuses",
+          "evidenceUrls": [
+            "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-and-Google-Cloud-Announce-Landmark-Strategic-Energy-and-Technology-Partnership-to-Accelerate-AI-Growth-and-Transform-the-Energy-Industry"
+          ],
+          "expectedPinSha256": "83115e8c175f306602b1e5f423c2108087ebee0c2e1d47f7cb025d304c8abd35",
+          "metadataVerified": true,
+          "savedPinSha256": "a69e8af463694826b784b60b6c016c71c91c903dd78bc06cd0cda1381029fa37"
+        },
+        {
+          "id": 15744,
+          "title": "GE Vernova Plans Approximately US$30 Million Italy Electrification-Factory Expansion",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "GE Vernova’s March 3, 2026 announcement is a planned Sesto San Giovanni manufacturing expansion, so Proposed describes this investment milestone before verified physical work. The operator states approximately US$30m; no euro conversion is substituted. This is a bushing-factory expansion, not construction or operation of the power stations its products serve.",
+          "evidence": "approximately $30 million investment",
+          "evidenceUrls": [
+            "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy"
+          ],
+          "expectedPinSha256": "e3b2dc22ee255d17250d1a6f83a14d18644e4205b80994f7f7cde317ee3a6607",
+          "metadataVerified": true,
+          "savedPinSha256": "9ac00b80fcfb5cd8223f91818d6e9cc6bb7925358b1509207c084c2233fe6937"
+        },
+        {
+          "id": 15754,
+          "title": "East River Energy Storage System: 100 MW / 400 MWh Battery at the Former Poletti Plant Site in Astoria, New York, 132M USD",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "NYPA’s May 2025 release quotes the developer beginning East River Energy Storage construction, establishing In Progress. No actual commissioning report supports the old October 2026 target as completion. The opened July 2021 report states US$132m for the exact 100MW battery; the later NYPA source gives no replacement budget. The former Poletti generating plant is not current battery generation, and its capacity is not imported.",
+          "evidence": "As we begin construction of the East River Energy Storage project",
+          "evidenceUrls": [
+            "https://www.nypa.gov/News/Press-Releases/2025/20250520-award",
+            "https://www.tdworld.com/distributed-energy-resources/energy-storage/article/21169928/new-york-commission-authorizes-construction-of-100-mw-battery-storage-facility"
+          ],
+          "expectedPinSha256": "9b4e016fb253ba5473f59045bcf789c826898867fa544013ff16a0b4d89d4759",
+          "metadataVerified": true,
+          "savedPinSha256": "0dd0f916e29dc1bea3241260eade208c75a7ced448586ee55751477d9eaea274"
+        },
+        {
+          "id": 15798,
+          "title": "Carlyle Fort Bliss Data Center: 2,500-3,000 MW Army Enhanced-Use-Lease Campus on 1,384 Acres Near El Paso, Texas, About 2B USD, Lease Not Final",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The Army’s Fort Bliss selection remains a conditional lease negotiation, so Proposed applies to the planned campus before physical work. Bisnow explicitly reports US$2bn for each base’s project; US$4bn is the two-site combined figure. FY2027 initial capability is not a completed lease or exact opening, and the Army itself publishes no construction budget.",
+          "evidence": "conditionally selected two companies",
+          "evidenceUrls": [
+            "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "https://www.bisnow.com/news/national/data-center-development/us-army-data-center-kkr-cyrusone-carlyle-133840"
+          ],
+          "expectedPinSha256": "7efcc47de8739e0314bd0af7ca836715eff68543c9e84dbbe890f402dec5ce97",
+          "metadataVerified": true,
+          "savedPinSha256": "ab5dc1c74ea8162ef0b7e2851a6a9fb34a25fa7cd0ef704fff4993d4161a6a54"
+        },
+        {
+          "id": 15814,
+          "title": "EdgeCore Shannon Hill Campus: 1,100 MW, 3.9 Million Sq Ft Data Center in Louisa County, Virginia, 17B USD",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "EdgeCore’s June 25, 2025 pin is the land-purchase/development announcement. Proposed describes that historical milestone; an acquired, zoned business park is not completed data-center construction. The operator release quotes US$17bn investment for the 1.1+GW campus, distinct from its US$42m land transaction and public incentives. Later Phase II filings do not rewrite the announcement as actual construction.",
+          "evidence": "their $17 billion investment",
+          "evidenceUrls": [
+            "https://edgecore.com/new-louisa-county-virginia-data-center-campus/"
+          ],
+          "expectedPinSha256": "80b3ea9badbe4e1a543d508f42b55514d02453a5da826c5cd7f960a3eff249fb",
+          "metadataVerified": true,
+          "savedPinSha256": "6ceab6c1026ee8d7bbb534f60972d2fef00463e586eb953ff6e15f939303bad5"
+        },
+        {
+          "id": 15822,
+          "title": "Hassayampa Ranch Rezoned for Data Centers; US$25 Billion Is a Potential Valuation",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Hassayampa Ranch’s December 2025 land-use approval is a Proposed data-center build. The developer’s US$25bn is potential completed-site worth, not construction expenditure; native price/currency are cleared. The US$51m land assembly is also not the campus budget. Entitlement and access to prospective power do not prove a tenant, construction or energization.",
+          "evidence": "approved zoning for a data center",
+          "evidenceUrls": [
+            "https://www.connectcre.com/stories/25b-data-center-greenlit-near-buckeye/",
+            "https://www.datacenterknowledge.com/data-center-construction/venture-capitalist-palihapitiya-places-data-center-bet-in-arizona"
+          ],
+          "expectedPinSha256": "ef5253ec243c1f75561ca8bf5435a51a8f6fb8f5a1a5f61100d921ea548ef35a",
+          "expectedOriginalTitle": "Hassayampa Ranch Data Center: 25B USD, 1,500 MW Campus in Maricopa County, Arizona, Rezoned December 2025",
+          "metadataVerified": true,
+          "savedPinSha256": "a86d8f781b0ec44d561722a0a09b41ec020e1a2cc92b9162f50129eac054469f"
+        },
+        {
+          "id": 15827,
+          "title": "IREN Project Emerald: 1,200-1,600 MW AI Data Center Campus on 2,000 Acres Near Kiowa, Oklahoma, 50B USD in Two Phases, Tax Districts Tabled in June 2026, Power From 2028",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Project Emerald remains Proposed: local reporting explicitly says construction has not begun, while IREN describes Oklahoma as in development. The June tax-district delay is not a physical construction halt. The US$50bn is a reported two-phase economic-development plan value, including infrastructure and servers, not an operator-published final contract; later cost-review uncertainty is retained. First-power timing from 2028 does not prove campus completion.",
+          "evidence": "Construction and development have not yet begun on this facility.",
+          "evidenceUrls": [
+            "https://www.newson6.com/data-centers-in-oklahoma/what-to-know-kiowa-data-center-planned-for-pittsburg-county",
+            "https://hoodline.com/2026/05/pittsburg-county-fast-tracks-2-000-acre-project-emerald-data-hub-gamble/"
+          ],
+          "expectedPinSha256": "f1a97b53f76a2113055096bb235e7f836d2dda607954fc398ea8856da1841feb",
+          "metadataVerified": true,
+          "savedPinSha256": "7f7537ca39dd7594a7ac0677069386ea503c4f8ec52d888ffe1ab7c4d4f982ad"
+        },
+        {
+          "id": 15833,
+          "title": "OpenAI Project Camellia: Four-Building Georgia Campus Estimated Above US$30 Billion",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Project Camellia is Proposed in the opened operator development announcement, before verified physical work. W.Media reports OpenAI’s compute-strategy vice president estimating more than US$30bn at full buildout, superseding the earlier US$20bn county figure; native price/lower bound use that threshold. This is the four-building project estimate, not 2028’s first phase alone, power payments, community benefits or annual impact.",
+          "evidence": "a long-term datacenter project that OpenAI is designing and developing",
+          "evidenceUrls": [
+            "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "https://w.media/openai-plans-to-build-its-own-3-2-gw-data-center-campus-in-georgia/"
+          ],
+          "expectedPinSha256": "99f26b07d90e59bfe89949d486af38fabeea80fc9e043b58e7b6ec47bad9382e",
+          "expectedOriginalTitle": "OpenAI Project Camellia: 3,200 MW, Four-Building Data Center Campus in Effingham County, Georgia, 20B USD per County (30B+ USD per OpenAI Executive), First Phase 2028",
+          "metadataVerified": true,
+          "savedPinSha256": "6b7ac5b11d5cd87e80e62ff09f71c868ca98f76ff22f33f86750699f26fa5507"
+        },
+        {
+          "id": 15846,
+          "title": "Stak Proposes North Slope Data Center; Latest Estimate Exceeds US$10 Billion",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Stak’s North Slope campus remains Proposed during the state lease process, before verified physical work. Its chief strategy officer’s July 6, 2026 estimate is more than US$10bn, superseding US$500m in the earlier state documents. Price/lower bound preserve the newer developer threshold without an invented final bid. Proposed gas generation and unknown turbines are not operating plant capacity.",
+          "evidence": "Boyle said would cost more than $10 billion",
+          "evidenceUrls": [
+            "https://thealaskacurrent.com/?p=24821"
+          ],
+          "expectedPinSha256": "4b14586dfc3629f86591ee72c44f34a2f4f9039d9045ec0597fffe9ab4ada637",
+          "expectedOriginalTitle": "Stak Energy North Slope Campus: 1,000-3,000 MW Gas-Powered AI Data Center Off the Dalton Highway, Alaska, 500M USD Per State Filing, Lease Pending",
+          "metadataVerified": true,
+          "savedPinSha256": "615bde09c7ab422972d4ed8077a35d8a176dadc703bd5a38e871ec4da517ffad"
+        },
+        {
+          "id": 15859,
+          "title": "Tract South Valley Technology Park: 985 MW Data Center Park (Cleanview) on About 1,500 Acres in Storey County, Nevada, Tract Land Bought in 2023 With 2 GW NV Energy Commitment",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The pin’s October 2023 milestone is Tract’s land acquisition and master planning, so Proposed describes South Valley at that historical point. Later May 2026 Fleet groundbreaking reports conflict on South Valley versus Peru Shelf parcel identity and are not used to declare the whole 985MW park operating or under construction in 2023. No standalone park construction budget was established; the US$4.6bn first project is a narrower, ambiguously located scope.",
+          "evidence": "has acquired more than 2,200 acres",
+          "evidenceUrls": [
+            "https://thetechcapital.com/tract-to-develop-2gw-tahoe-reno-mega-data-centre-park/"
+          ],
+          "expectedPinSha256": "92617db09471f493a6b424546bde5b98c06cd48f22ced20df74c118861303c8e",
+          "metadataVerified": true,
+          "savedPinSha256": "cc3168628f84e1f34d27f19eda82f8b5cf875a2ae0ad13428b0557e8e1558baf"
+        },
+        {
+          "id": 15866,
+          "title": "Zenith Volts Roswell Data Center: 1,250-1,300 MW Off-Grid Campus 20 Miles South of Roswell, New Mexico, 11.7B USD, Targeted for November 2027",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Zenith’s Roswell development is Proposed in the verified county-approval evidence: opened reporting still schedules the first solar/battery construction for the coming weeks. An elapsed forecast does not prove it began. The same report attributes US$11.7bn capital investment to the company for the full campus. November 2027 is a proposed operating month, not completed off-grid facilities or confirmed anchor tenants.",
+          "evidence": "estimated $11.7 billion in capital investment",
+          "evidenceUrls": [
+            "https://www.abqjournal.com/business/chaves-county-approves-data-center-project-amid-rising-demand-for-computing-infrastructure/2896546",
+            "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html"
+          ],
+          "expectedPinSha256": "07c0639f2ad7e4e908d935b94276cf78541deffb6beac96f6736885bbd594538",
+          "metadataVerified": true,
+          "savedPinSha256": "81af01f4e9d58442b87b6ee56fa7d94cc62ebc657fa25570ef157ca1a4120b58"
+        },
+        {
+          "id": 15995,
+          "title": "Hyperscale Data Plans 340MW Dowagiac Buildout Beyond Its Operating Facility",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Proposed applies specifically to Hyperscale’s intended 340MW Dowagiac expansion beyond its operating approximately 30MW facility. March 2026 land acquisition plans and a roadmap contingent on a utility agreement do not establish physical construction of that full expansion. Existing AI/mining operations do not complete the added capacity. No exact expansion total was published; a US$125m shelf registration is financing, not construction cost.",
+          "evidence": "340 MW",
+          "evidenceUrls": [
+            "https://seekingalpha.com/pr/20171525-hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029",
+            "https://digital-release.kxan.com/business/press-releases/cision/20260330SF21893/hyperscale-data-enters-into-agreement-to-expand-michigan-ai-data-center-campus-with-48-5-acre-acquisition"
+          ],
+          "expectedPinSha256": "c2602681674a3f64fcfa15b081bc5bb8bcefc04cb673b6a6f45f47eb89921ea8",
+          "expectedOriginalTitle": "Hyperscale Data Dowagiac Data Center: 30-340 MW, Operating and Expanding Toward 2029, Michigan",
+          "metadataVerified": true,
+          "savedPinSha256": "f09173f6598db38208caa3f450a18f5837dc8c15b11cf21bcb63067cdb3ffbe3"
+        },
+        {
+          "id": 16304,
+          "title": "AVAIO Taurus: $6 Billion Campus, Initial 116 MW Phase in Brandon, Mississippi",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "AVAIO explicitly confirms site work began for Taurus with Yates Construction, establishing In Progress before the initial 116MW delivery. The current operator listing updates first-phase energization to Q3 2027, replacing the release’s H1 horizon. Native US$6bn is cleared because it covers the full multi-year campus, not the first 116MW phase represented by the target. No exact first-phase budget was verified.",
+          "evidence": "Leading Mississippi Contractor Begins Site Work",
+          "evidenceUrls": [
+            "https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work",
+            "https://www.avaiodigital.com/projects"
+          ],
+          "expectedPinSha256": "b52a31e40860b8c9605da9a6df33cee4bee91fd34b275df72e5867dbd6519fff",
+          "metadataVerified": true,
+          "savedPinSha256": "38d7219a8b39d542f0b648273c8e683fa253a641e04920d37c909f67cc4eaa59"
+        },
+        {
+          "id": 16306,
+          "title": "Crane Forest Grove Campus: 100+ MW Plan; $275.26M Qualified-Property Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Crane’s Forest Grove campus is In Progress: the contractor describes active construction and the investor’s year-end 2025 report documents actual foundations, enclosed walls/roof and continuing slab/panel work. Passing the operator’s Q3 2026 ready-for-service forecast does not establish commissioning. Native US$275,259,195 is qualified-property investment in a tax agreement, not an exact all-in campus construction budget, and is cleared.",
+          "evidence": "being meticulously designed and constructed",
+          "evidenceUrls": [
+            "https://fortisconstruction.com/project/crane-pdx01-data-center-campus/",
+            "https://www.forestgrove-or.gov/DocumentCenter/View/2881/250605---Enterprise-Zone-Contract---Heather-Street-Owner-LLC---Crane-Data-Centers-Inc---City-of-Forest-Grove"
+          ],
+          "expectedPinSha256": "e290087fcfe782072d465b77e571d4e3c02ae6ad1fb9f3bff637f85208d47fc7",
+          "metadataVerified": true,
+          "savedPinSha256": "f5f2b12246c21fc9f9deee1a9be8d9275766247803499c03a044fcabd9774d50"
+        },
+        {
+          "id": 16308,
+          "title": "Microsoft San Jose Data Center: Up to 99 MW at 1657 Alviso-Milpitas Road",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Microsoft’s own Alviso update confirms actual earthmoving and soil-remediation construction began in fall 2025. In Progress applies to this San Jose project; the CEC exemption is not operation. The official project address and docket match 1657 Alviso-Milpitas Road. No exact current campus budget was established; a secondary permit/job valuation is not assumed all-in cost and land price is separate.",
+          "evidence": "Construction began in fall 2025 with initial work focused on earthmoving and soil remediation.",
+          "evidenceUrls": [
+            "https://local.microsoft.com/blog/alviso-datacenter-construction-update/",
+            "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center"
+          ],
+          "expectedPinSha256": "94bfaf263ae956cafc6fe3886886188e30e9aab73aeea57fe8c05d57e774e734",
+          "metadataVerified": true,
+          "savedPinSha256": "d56d7a87cac45bd5785883b4a75972249ec90edde3369f44f74d99a6adbd1d31"
+        },
+        {
+          "id": 16328,
+          "title": "Aligned Project Phoenix: Announced 2 GW Shippingport Campus; $10B Regional Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Aligned’s September 10, 2026 release explicitly marks Project Phoenix groundbreaking, establishing In Progress for the planned Shippingport campus. Dedicated power arrangements and a former coal station’s redevelopment do not mark data-center operation. The quoted US$10bn is regional economic investment anchored by the development, not a separately stated data-center construction cost; native price stays null.",
+          "evidence": "Groundbreaking of 2 GW “Project Phoenix” Campus",
+          "evidenceUrls": [
+            "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/"
+          ],
+          "expectedPinSha256": "b9e37d0c3e4cfd18511af3ccd9b2fb2b27486870fc457886fcf09948282ef1f7",
+          "metadataVerified": true,
+          "savedPinSha256": "58ff2b03e4f81e42dcca160045c1f440c45d948ebb0e5593b453568d85af6414"
+        },
+        {
+          "id": 16331,
+          "title": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3B+ Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Prime’s May 21, 2026 release confirms actual groundbreaking on the first three of five Phoenix/Avondale buildings. In Progress applies to the full 240MW campus; the commissioned substation is not completed data-center operation. Published Prime investment exceeds US$3bn, saved as a lower threshold; customers’ additional equipment investment is not added. No exact campus COD is published.",
+          "evidence": "This more than $3 billion investment",
+          "evidenceUrls": [
+            "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/"
+          ],
+          "expectedPinSha256": "c49662822e4d58c91fdcf26a1814656c1eb9ca67bcc93d92ac3a8bb4c1458074",
+          "metadataVerified": true,
+          "savedPinSha256": "8c2cb9ffd406ce0aaab158f9f4a8ce3a216d901d98d1d3c247693f79d9ef3a84"
+        },
+        {
+          "id": 16412,
+          "title": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3 B+ Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Prime’s May 21, 2026 release confirms actual groundbreaking on the first three of five Phoenix/Avondale buildings. In Progress applies to the full 240MW campus; the commissioned substation is not completed data-center operation. Published Prime investment exceeds US$3bn, saved as a lower threshold; customers’ additional equipment investment is not added. No exact campus COD is published.",
+          "evidence": "This more than $3 billion investment",
+          "evidenceUrls": [
+            "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/"
+          ],
+          "expectedPinSha256": "3835b59c5ef41dda046ea7f328dc1a0d5b718657024a3e9aad73f794ba13dd03"
+        },
+        {
+          "id": 16333,
+          "title": "Vantage Trident at Windler: Aurora Proposal Under Review; Capacity and Budget Unverified",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Vantage Trident remained a proposal in its third city review in September 2026, so Proposed applies before verified physical work. The source identifies the Aurora parcel and city administrative process, but conflicting directory dimensions, MW and future phases do not establish actual construction or a firm 2028 opening. No verified exact construction budget is published in the checked reporting.",
+          "evidence": "two formal city reviews and a third is underway",
+          "evidenceUrls": [
+            "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/"
+          ],
+          "expectedPinSha256": "b244bedc32a17aeb568ab2263d3cff0ff2e620df0b396c3c22194c8ef2667dd8"
+        },
+        {
+          "id": 16343,
+          "title": "Google New Florence: New Data Center Within $15B Missouri Infrastructure Investment",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Google New Florence is In Progress: July 2026 local reporting explicitly describes physical campus construction. The May 21 cost-benefit-plan account states approximately US$13.4bn real-property improvements, distinct from US$56–87.5bn equipment, a US$100bn bond ceiling and the broader US$15bn Missouri infrastructure announcement. Native price uses the specifically reported real-property construction/development basis, not combined equipment or financing. No exact opening day is published.",
+          "evidence": "about $13.4 billion in real property improvements",
+          "evidenceUrls": [
+            "https://abc17news.com/news/2026/05/21/montgomery-county-commissioner-defends-google-data-center-amid-pushback-concerns/",
+            "https://missouriindependent.com/2026/07/02/data-center-backlash-spills-into-missouri-primaries-as-gop-candidates-demand-action/"
+          ],
+          "expectedPinSha256": "89c170a84da1f4b4562295ddbb3a0609a7db31755cc76867f8c9ecfe17abc8b7"
+        },
+        {
+          "id": 16345,
+          "title": "Prometheus Evanston: 1.25 GW Initial Campus Plan; Conditional Use Permit Approved",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Prometheus’s June 2026 county permit release still anticipates construction after final permitting, establishing Proposed for the planned Evanston campus. The opened 2024 operator announcement states a US$10bn flagship project; this is a historical planning estimate, not a current final contract. The newer release gives economic-impact/tax figures rather than a replacement construction total. An elapsed old 2025/26 opening target proves nothing.",
+          "evidence": "Construction is anticipated to begin within six months of final permitting",
+          "evidenceUrls": [
+            "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman"
+          ],
+          "expectedPinSha256": "97540f10e21e5c417e14ca7723b4d00e4fe5a1e94b975f7cc8eb1f8a3c3b76f0"
+        },
+        {
+          "id": 16372,
+          "title": "Google Storey County: Operating Campus; Primary Sources Differ on 2020/2021 Completion",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "Google explicitly identifies Storey County’s built, operating campus, establishing Completed despite conflicting operator construction-year descriptions. Native 2021 stays estimated; the economic-impact page separately says construction finished in 2020. Neither page supports a standalone campus construction cost; more than US$6bn statewide investment covers multiple sites and equipment and is not allocated here.",
+          "evidence": "Storey County, Nevada data center was built in 2021",
+          "evidenceUrls": [
+            "https://datacenters.google/locations/storey-county-nevada/",
+            "https://economicimpact.google/state/nv/"
+          ],
+          "expectedPinSha256": "d988d75876f30eea4b7f047b486e44212b1613965f253793fdb524db5dec9040"
+        },
+        {
+          "id": 16383,
+          "title": "Google Omaha Campus: Operator Gives 2022 Build Year; 2028 Expansion Unverified",
+          "expectedAuthorId": 408,
+          "status": "Completed",
+          "reason": "Google’s dedicated Nebraska page explicitly states the Omaha campus was built in 2022, establishing Completed for the existing facility. The same page’s timeline describes a 2022 announcement; no precise first-service day is established, so the existing year anchor remains estimated. This does not complete an unverified 2028 expansion. Statewide US$15bn-plus investment across Nebraska sites is not an Omaha-only construction cost.",
+          "evidence": "the Omaha, Nebraska data center was built in 2022",
+          "evidenceUrls": [
+            "https://www.datacenters.google/locations/nebraska/"
+          ],
+          "expectedPinSha256": "4ef236fae04b3bbad5f481ad4b52a068994aa5726a577c7746319550c96351bc"
+        },
+        {
+          "id": 16384,
+          "title": "Meta Aiken: $800M+ Campus; Spring 2027 Target and Closed-Loop Cooling",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Meta’s current location catalog confirms a 2024 Aiken groundbreaking, establishing In Progress before the state’s spring-2027 operating target. The operator states US$800m-plus investment; price and lower bound preserve that threshold. Off-site renewable generation and closed-loop cooling do not establish commissioned campus capacity or complete operation.",
+          "evidence": "$800 million+ investment",
+          "evidenceUrls": [
+            "https://datacenters.atmeta.com/all-locations/",
+            "https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center"
+          ],
+          "expectedPinSha256": "eba537ab629e738aabae82f2407bf58b6b0b4d214674eef931efa74b57324740"
+        },
+        {
+          "id": 16399,
+          "title": "Rowan Bauxite II: Verified Maryland Parcel;132 MW and$1.1 B Unsubstantiated",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Rowan’s Bauxite II is a physical construction/delivery scope rather than merely the Maryland remediation parcel: the operator’s milestone post confirms its structural progress, and its portfolio distinguishes II/III delivery from Bauxite I substantial completion. In Progress does not imply the entire campus is energized. US$1.24bn construction financing is not a source-quoted full Bauxite II development cost; native price remains null.",
+          "evidence": "Major milestone at Bauxite II in Frederick County, Maryland, last week, as we officially topped out the project!",
+          "evidenceUrls": [
+            "https://www.linkedin.com/posts/rowandigital_hyperscale-datacenters-constructionmilestone-activity-7432144629594091520-VDVO",
+            "https://rowan.com/portfolio/bauxite-i-ii-iii/"
+          ],
+          "expectedPinSha256": "30cdb43c2ea8814e4c207f420fb2476d4421a6b56a03700980b719eefab42dcf"
+        },
+        {
+          "id": 16459,
+          "title": "Microsoft Malaga EAT13: Concept Plan Verified; Separate COD and MW Unpublished",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "The pinned March 29, 2023 Malaga community concept session is Proposed before Microsoft’s stated June 2023 construction start. Later first-building work does not rewrite this historical presentation as construction or operation of EAT13. The operator distinguishes building completion from availability and does not commit the other two buildings’ timing. No exact EAT13 construction total is published.",
+          "evidence": "March 29, 2023 community info session recap",
+          "evidenceUrls": [
+            "https://local.microsoft.com/blog/malaga-datacenter-project-overview/"
+          ],
+          "expectedPinSha256": "93de697f361053d545d41e308a0e968ff151e33fc3d6a918b8f9f209b50680c6"
+        },
+        {
+          "id": 16469,
+          "title": "Ameresco / CyrusOne NAS Lemoore: 100 MW Data Center and Energy Plan",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Ameresco describes NAS Lemoore as a planned development while agreements are still being finalized. Proposed applies to the data-center/energy plan before actual works. First-portion 2027 service is only a target, and the source’s 100MW is not asserted as IT capacity or electrical-generation output. No exact construction cost is published; the unsupported former US$750m remains cleared.",
+          "evidence": "the agreements for this development are being finalized",
+          "evidenceUrls": [
+            "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/"
+          ],
+          "expectedPinSha256": "66b9505b56209821f59e7e6fcb0292179be18c210cf53f817e3950c37a17b741"
+        },
+        {
+          "id": 16472,
+          "title": "Prologis STEM Park Building D Concept: 99 MW Utility / 72 MW IT",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "San José’s October 27, 2025 memorandum presents the STEM Park developer-selection concept. Proposed applies to documented Building D, not an approved building permit or completed data center. Four-building campus power/phasing is not an individual building’s operating supply. The memorandum does not establish a Building D construction budget or opening; former US$800m remains unsupported.",
+          "evidence": "development and ground lease agreement with Prologis.",
+          "evidenceUrls": [
+            "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3"
+          ],
+          "expectedPinSha256": "99cb94b55c6b814ceb6ab5aa168800c434c731544642ea0e8075f1bbc953a8dc"
+        },
+        {
+          "id": 16481,
+          "title": "DC BLOX Nashville Grassmere: 10 MW Proposal in Evaluation",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "DC BLOX explicitly lists Nashville Grassmere in evaluation and says construction begins upon project approval. Proposed applies to the planned new 10MW building, not an existing office tenant’s small data center at the site. No exact project price or opening is published; native cost stays null. The existing June 2027 marker is explicitly unverified, not an operator forecast.",
+          "evidence": "Our Nashville project is currently in the evaluation phase.",
+          "evidenceUrls": [
+            "https://www.dcblox.com/nashville-data-center/"
+          ],
+          "expectedPinSha256": "beea8ced15a738e977f4cbb858c45427133a43aabd81f46cc64a29a8fc1c78b1"
+        },
+        {
+          "id": 16490,
+          "title": "Archer Faribault: 120 MW Potential Campus in Environmental Review",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Faribault states Archer’s proposal is in environmental review and no formal development applications have been submitted, establishing Proposed at the July 2026 review milestone. The approximately 120MW is potential power, not completed IT supply. Conceptual layouts and review deadlines are not construction or opening. No published exact project budget supports the former US$850m estimate.",
+          "evidence": "there have been no formal applications submitted to the City.",
+          "evidenceUrls": [
+            "https://faribaultmn.gov/815/Archer-Datacenters"
+          ],
+          "expectedPinSha256": "e09a4e2a94e451032c37066147e6902b1b1e442d135b60eb035d385a6beb6dfc"
+        },
+        {
+          "id": 17021,
+          "title": "Switch Tahoe Reno 3: Independently Named Site-Development Project",
+          "expectedAuthorId": 408,
+          "status": "In Progress",
+          "reason": "Switch’s November 9, 2022 filing explicitly records Tahoe Reno 3 site development, establishing In Progress at this historical physical-work milestone. It does not establish later commissioning, operation or a Tier certificate for the individual building. US$65.3m is quarterly Citadel spending across Reno 2 and Reno 3 site work, not a Reno 3 total, so native price stays null.",
+          "evidence": "site development activities related to TAHOE RENO 3",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm"
+          ],
+          "expectedPinSha256": "cc81f4af472664077adf72a830cf2c4001e25b77a2d0b83ff4703cee3ba47d77"
+        },
+        {
+          "id": 18222,
+          "title": "Chile Approves US$5B Aguas Maritimas, Its Largest Desalination Plant",
+          "expectedAuthorId": 408,
+          "status": "Proposed",
+          "reason": "Aguas Marítimas’ May 4, 2026 environmental approval establishes Proposed before physical construction. The published US$5bn investment covers the desalination and conveyance project, not an isolated plant or annual operating cost. Opened accounts differ on 2027 versus 2028 construction starts; neither elapsed planning nor approval means the 700,000m³/day project is complete.",
+          "evidence": "US$ 5.000 millones",
+          "evidenceUrls": [
+            "https://cpichile.org/aguas-maritimas-mayor-desaladora-del-pais-consigue-aprobacion-ambiental-por-us-5-000-millones/",
+            "https://www.reporteminero.cl/noticia/noticias/2026/05/aprobacion-eia-desaladora-aguas-maritimas-antofagasta"
+          ],
+          "expectedPinSha256": "2a6c57c5a7559830eafdcc4d05b5213e9ce01b058305e97acfc12763fbd4c1df"
+        }
+      ]
+    }
+  ],
+  "additionalSourcesChecked": [
+    {
+      "url": "https://www.ccomptes.fr/sites/default/files/2025-10/IDR2025-39.pdf",
+      "result": "Opened full public audit PDF: almost all twentieth repaint completed before Games, campaign extended to 2026; EUR142.5m broader painting envelope also includes next campaign and contingency. No invented sum of component contracts."
+    },
+    {
+      "url": "https://www.principal.cl/sites/default/files/2026-03/PrinRE_Digital_Real_Estate_Fund_%28A%29_2025_Annual_Report.pdf",
+      "result": "Opened full investor PDF: Crane actual construction began June 2025, enclosed shell and continuing slab/panel work. Mid-2027 stabilization is not a completed Q3 2026 commissioning receipt."
+    },
+    {
+      "url": "https://www.nondoc.com/2026/05/14/pittsburg-county-committee-endorses-deal-tied-to-2000-acre-50-billion-data-center-site/",
+      "result": "403; opened Hoodline’s explicitly attributed economic-plan account instead, plus independent local stage reporting and operator development page. Later revised plan cost remains a follow-up."
+    },
+    {
+      "url": "https://www.primeminister.kz/en/news/olzas-bektenov-provel-soveshhanie-po-realizacii-proekta-dolina-codov-v-ramkax-ispolneniia-porucenii-prezidenta-31285",
+      "result": "Direct response did not contain the project report body; opened August 13 Kazakhstan Today government-meeting account documents actual foundations. No generic-page quote presented as primary stage evidence."
+    },
+    {
+      "url": "https://www.blackridgeresearch.com/blog/latest-list-top-new-upcoming-data-center-projects-new-jersey-usa",
+      "result": "Secondary list claims Piscataway construction but no exact primary named-building milestone verified. Operator reservation alone does not resolve its physical stage, so PNJ remains queued."
+    }
+  ]
+}
