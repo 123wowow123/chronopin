@@ -1,6 +1,6 @@
 # Construction status backfill — October 24, 2026
 
-**Current: 980 candidates remain in the status research queue per environment.** Two opened-source rounds resolved 22 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
+**Current: 972 candidates remain in the status research queue per environment.** Three opened-source rounds resolved 30 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
 
 Read the complete live-pin inventories through authenticated admin APIs: 12,909 local and 12,963 production records. Screened 2,587 project/physical-facility candidates in each snapshot, including infrastructure, housing, factories, power generation, storage and data centers. Previously reviewed nuclear/factory pins were preserved rather than treated as new assignments. The inventory is a dated snapshot; the candidate screen is broad and includes false positives such as events hosted at stadiums.
 
@@ -73,15 +73,15 @@ After the first follow-up, accounting per environment was **1,250 assigned + 992
 
 ### Remaining source and phase gaps
 
-After round two, the 980 remaining records retain their own source links and follow-up reason in the backfill catalog:
+After round three, the 972 remaining records retain their own source links and follow-up reason in the backfill catalog:
 
 | Gap | Records per environment | Required next evidence |
 | --- | ---: | --- |
 | Agency/county landing page without project-specific evidence | 251 | Verify project identity, developer, docket/parcel and capacity, then obtain a dated phase record; unsourced engineering and COD prose is not evidence |
 | Data-center tracker parcel/phase ambiguity | 109 | Dated operator, contractor or planning evidence for the exact parcel and MW phase |
 | Epoch aggregate capacity/compute trajectory | 90 | Reconcile operating buildings with proposed future buildout before tagging the entire pinned scope |
-| Housing opening/build milestone source | 31 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
-| Conflicting, denied or halted scope | 40 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
+| Housing opening/build milestone source | 21 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
+| Conflicting, denied or halted scope | 42 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
 | Grid/interconnection request identity | 35 | Match the exact request ID and phase to physical-work evidence; an IA or future COD alone is insufficient |
 | Other individual project/source/phase questions | 424 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
 
@@ -138,3 +138,37 @@ python3 scripts/construction/reviewQueue.py --manifest scripts/construction/rese
 ```
 
 Both environments passed the saved metadata, status and unrelated-field checks. All 12 public JSON responses were verified per environment, and authenticated native pages for The Becker, The Rise, Rose and Berry returned HTTP 200 with their saved research and statuses. Before snapshots and page captures are ignored under `.scrape/construction-status-research-round2-2026-10-24/`. The replay writer accepts a manifest and separate snapshot directory; queue reconciliation preserves newly researched unresolved reasons on later reruns. Node syntax, ESLint, Python syntax, catalog accounting and idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+
+## Third research round — completed housing scopes
+
+Saved and verified **eight more Completed records in each environment**, reducing the queue from **980 to 972**. The [round-three research/replay catalog](../scripts/construction/research-round3-2026-10-24.json) retains opened HTTPS sources, verbatim quotes, cost qualifications, original row hashes and verification receipts.
+
+| Pin | Exact scope | Native price and evidence |
+| --- | --- | --- |
+| 7097 | Regent Terrace rehabilitation, 36 old apartments converted into 80 homes | USD 6.3 million total development cost; NJIT records completion in January 1989 |
+| 7115 | Residences at Hayes, 150 homes | USD 34.9 million reported for the 2018 opening; developer confirms ribbon cutting and resident move-ins |
+| 7124 | Phare, Orleans, 62 homes | USD 37 million; municipal materials confirm complete and leasing, and reporting explicitly corrects the earlier USD 71.6 million error |
+| 7134 | Aston Heights / Montgomery Heights II, 154 homes | Rounded USD 45 million in the developer profile; permanent-loan reporting independently describes the property as newly constructed |
+| 7138 | Bridgeside Estates / Little Lehigh Phase I, 50 homes | Rounded USD 24 million in the newer developer profile; contractor confirms December 19, 2024 grand opening |
+| 7143 | Cottage Hill Place, Mobile, 80 homes | Null cost; builder explicitly records Complete, May 2018 |
+| 7207 | Don Coppedge Village / former Fairview Village, Phoenixville, 36 homes | Null cost; developer portfolio and community property record establish built in 2013 |
+| 7224 | Oaks Intown rehabilitation Phase I, 279 homes across four Albany communities | Null cost; developer confirms grand opening and completed interior modernization in November 2021 |
+
+Regent Terrace's October 2026 listing-review date was not its construction milestone. Corrected the native date to **January 31, 1989**, with estimated confidence and an explicit month-precision explanation. This anchors the sourced January 1989 rehabilitation completion, not an invented opening day or the original building's construction. Original event duration was preserved. Other estimated month/year anchors remain qualified; newly opened evidence does not justify inventing exact event days.
+
+Cost figures retain their published scope. Aston Heights' USD 45 million and Bridgeside's USD 24 million are rounded developer-profile values in the URA-hosted 2025 RFQ materials. Bridgeside's older Fall 2023 authority newsletter gave USD 27 million; that variation is retained in the saved research rather than calling the later profile an audited final account. Hayes retains the developer's opening-project cost: a later indexed municipal proposal could not be opened to verify its table or revised scope. Don Coppedge's indexed USD 9 million and USD 10.8 million values remain unverified because the original PDFs/articles were inaccessible. No search snippet was promoted to cost evidence. Cottage Hill searches did not establish an exact-project cost, and Oaks Intown equity/loans and other Albany master-plan budgets were excluded. These three native costs remain null with specific research gaps.
+
+Two further records remain queued with more precise opened-source findings. **Thatcher Flats (7109)** mixes the October 2024 opening of 50-home Phase I and groundbreaking of 36-home Phase II; the builder later documents final-phase completion in November 2025. Clarify the represented phase and historical milestone before applying one status or cost. **Northside Village (7174)** covers 300 homes, while the operator's November 2020 completion and USD 29,716,977 cost fields cover only the first 89 homes; the remaining 211-home phase needs its own dated evidence. Neither received a forced tag. These move from generic housing gaps into the conflict/scope group, now 42; the housing milestone group is now 21.
+
+Accounting per environment is **1,270 assigned + 972 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **632 Proposed, 392 In Progress and 246 Completed**. Including the separate original 68-pin batch, **1,338 reviewed eligible pins per environment** carry status tags.
+
+Replay sequentially:
+
+```sh
+node --env-file=.env.local scripts/construction/research.mjs --manifest scripts/construction/research-round3-2026-10-24.json
+node --env-file=.env.local scripts/construction/status.mjs --manifest scripts/construction/research-round3-2026-10-24.json
+python3 scripts/construction/reviewQueue.py --manifest scripts/construction/research-round3-2026-10-24.json
+```
+
+Both environments passed metadata, status, author and unrelated-field preservation checks. All eight public pin JSON responses per environment expose the saved statuses, native costs, citations and corrected date. Authenticated native pages for Regent Terrace, Phare, Bridgeside and Cottage Hill returned HTTP 200 with their research and Completed tags. Before snapshots and page captures are ignored under `.scrape/construction-status-research-round3-2026-10-24/`. Syntax, lint, catalog accounting and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.

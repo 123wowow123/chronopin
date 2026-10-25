@@ -213,7 +213,8 @@
           ],
           "expectedPinSha256": "c756688e155335d9b93ea5d89fc3d54534191999307252651d1c72dc4189b977",
           "metadataVerified": true,
-          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091"
+          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091",
+          "verified": true
         },
         {
           "id": 7115,
@@ -228,7 +229,8 @@
           ],
           "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332",
           "metadataVerified": true,
-          "savedPinSha256": "c8bf9f6300825612821b87e98b0d1d383579bdfe4989771f59df0a873e39af2d"
+          "savedPinSha256": "c8bf9f6300825612821b87e98b0d1d383579bdfe4989771f59df0a873e39af2d",
+          "verified": true
         },
         {
           "id": 7124,
@@ -243,7 +245,8 @@
           ],
           "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d",
           "metadataVerified": true,
-          "savedPinSha256": "061bac2636eaf634d4d867f672aa9e0df0b0cfa1b0fc8feb58c9093246e5472c"
+          "savedPinSha256": "061bac2636eaf634d4d867f672aa9e0df0b0cfa1b0fc8feb58c9093246e5472c",
+          "verified": true
         },
         {
           "id": 7134,
@@ -258,7 +261,8 @@
           ],
           "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781",
           "metadataVerified": true,
-          "savedPinSha256": "6c5180b823665481fc812d1f5dce1409a89712ad65045042a5de9244754abbe7"
+          "savedPinSha256": "6c5180b823665481fc812d1f5dce1409a89712ad65045042a5de9244754abbe7",
+          "verified": true
         },
         {
           "id": 7138,
@@ -274,7 +278,8 @@
           ],
           "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32",
           "metadataVerified": true,
-          "savedPinSha256": "e1ed7ef5e3d0b64aaeb5e66b4628245e9f1bdf2f6ec8b6d72fb83b9f51a3e074"
+          "savedPinSha256": "e1ed7ef5e3d0b64aaeb5e66b4628245e9f1bdf2f6ec8b6d72fb83b9f51a3e074",
+          "verified": true
         },
         {
           "id": 7143,
@@ -288,7 +293,8 @@
           ],
           "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221",
           "metadataVerified": true,
-          "savedPinSha256": "464838ebe6605f402ccc9680b82e8810ef2ee8ba7d53510d5b259670abebcf96"
+          "savedPinSha256": "464838ebe6605f402ccc9680b82e8810ef2ee8ba7d53510d5b259670abebcf96",
+          "verified": true
         },
         {
           "id": 7207,
@@ -303,7 +309,8 @@
           ],
           "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9",
           "metadataVerified": true,
-          "savedPinSha256": "fb3a9afe69c8d189ebb6fb495a66f2583c8830bb6a7f8a86ccc0303c7f973582"
+          "savedPinSha256": "fb3a9afe69c8d189ebb6fb495a66f2583c8830bb6a7f8a86ccc0303c7f973582",
+          "verified": true
         },
         {
           "id": 7224,
@@ -317,9 +324,16 @@
           ],
           "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad",
           "metadataVerified": true,
-          "savedPinSha256": "b1fe4f75bff7e5e5c27dbc9f32d736073b408413941f497c77edf2fd8466b466"
+          "savedPinSha256": "b1fe4f75bff7e5e5c27dbc9f32d736073b408413941f497c77edf2fd8466b466",
+          "verified": true
         }
-      ]
+      ],
+      "verifiedCount": 8,
+      "counts": {
+        "Proposed": 0,
+        "In Progress": 0,
+        "Completed": 8
+      }
     },
     {
       "base": "https://www.chronopin.com",
@@ -336,7 +350,8 @@
           ],
           "expectedPinSha256": "c756688e155335d9b93ea5d89fc3d54534191999307252651d1c72dc4189b977",
           "metadataVerified": true,
-          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091"
+          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091",
+          "verified": true
         },
         {
           "id": 7115,
@@ -349,7 +364,10 @@
             "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
             "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-welcomes-first-residents/"
           ],
-          "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332"
+          "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332",
+          "metadataVerified": true,
+          "savedPinSha256": "c8bf9f6300825612821b87e98b0d1d383579bdfe4989771f59df0a873e39af2d",
+          "verified": true
         },
         {
           "id": 7124,
@@ -362,7 +380,10 @@
             "https://www.town.orleans.ma.us/DocumentCenter/View/10455/AHT-Meeting-Materials-12-16",
             "https://provincetownindependent.org/featured/2025/02/26/lottery-open-for-62-affordable-units-at-phare-in-orleans/"
           ],
-          "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d"
+          "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d",
+          "metadataVerified": true,
+          "savedPinSha256": "061bac2636eaf634d4d867f672aa9e0df0b0cfa1b0fc8feb58c9093246e5472c",
+          "verified": true
         },
         {
           "id": 7134,
@@ -375,7 +396,10 @@
             "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
             "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf"
           ],
-          "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781"
+          "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781",
+          "metadataVerified": true,
+          "savedPinSha256": "6c5180b823665481fc812d1f5dce1409a89712ad65045042a5de9244754abbe7",
+          "verified": true
         },
         {
           "id": 7138,
@@ -389,7 +413,10 @@
             "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
             "https://www.allentownhousing.org/pdf/aha-newsletter-fall.pdf"
           ],
-          "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32"
+          "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32",
+          "metadataVerified": true,
+          "savedPinSha256": "e1ed7ef5e3d0b64aaeb5e66b4628245e9f1bdf2f6ec8b6d72fb83b9f51a3e074",
+          "verified": true
         },
         {
           "id": 7143,
@@ -401,7 +428,10 @@
           "evidenceUrls": [
             "https://capstonebuilding.com/projects/cottage-hill-place/"
           ],
-          "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221"
+          "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221",
+          "metadataVerified": true,
+          "savedPinSha256": "464838ebe6605f402ccc9680b82e8810ef2ee8ba7d53510d5b259670abebcf96",
+          "verified": true
         },
         {
           "id": 7207,
@@ -414,7 +444,10 @@
             "https://chescoplanning.com/Housing/pdf/2022HousingForumPresentation.pdf",
             "https://www.forrent.com/pa/phoenixville/don-coppedge-village/cj8tt8d"
           ],
-          "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9"
+          "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9",
+          "metadataVerified": true,
+          "savedPinSha256": "fb3a9afe69c8d189ebb6fb495a66f2583c8830bb6a7f8a86ccc0303c7f973582",
+          "verified": true
         },
         {
           "id": 7224,
@@ -426,9 +459,18 @@
           "evidenceUrls": [
             "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga/"
           ],
-          "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad"
+          "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad",
+          "metadataVerified": true,
+          "savedPinSha256": "b1fe4f75bff7e5e5c27dbc9f32d736073b408413941f497c77edf2fd8466b466",
+          "verified": true
         }
-      ]
+      ],
+      "verifiedCount": 8,
+      "counts": {
+        "Proposed": 0,
+        "In Progress": 0,
+        "Completed": 8
+      }
     }
   ],
   "unresolved": [
@@ -491,6 +533,186 @@
     {
       "url": "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
       "result": "Redirect to orleansma.gov inaccessible; Don Coppedge budget not verified."
+    }
+  ],
+  "publicVerification": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "checks": [
+        {
+          "id": 7097,
+          "status": "Completed",
+          "price": 6300000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "1989-01-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7115,
+          "status": "Completed",
+          "price": 34900000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2018-09-19T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7124,
+          "status": "Completed",
+          "price": 37000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7134,
+          "status": "Completed",
+          "price": 45000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2019-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7138,
+          "status": "Completed",
+          "price": 24000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-12-19T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7143,
+          "status": "Completed",
+          "utcStartDateTime": "2018-05-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7207,
+          "status": "Completed",
+          "utcStartDateTime": "2013-08-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7224,
+          "status": "Completed",
+          "utcStartDateTime": "2021-11-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 7097,
+          "url": "http://127.0.0.1:3000/pin/7097/regent-terrace-philadelphia-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7124,
+          "url": "http://127.0.0.1:3000/pin/7124/phare-orleans-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7138,
+          "url": "http://127.0.0.1:3000/pin/7138/bridgeside-estates-allentown-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7143,
+          "url": "http://127.0.0.1:3000/pin/7143/cottage-hill-place-mobile-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "checks": [
+        {
+          "id": 7097,
+          "status": "Completed",
+          "price": 6300000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "1989-01-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7115,
+          "status": "Completed",
+          "price": 34900000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2018-09-19T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7124,
+          "status": "Completed",
+          "price": 37000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2025-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7134,
+          "status": "Completed",
+          "price": 45000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2019-12-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7138,
+          "status": "Completed",
+          "price": 24000000,
+          "priceCurrency": "USD",
+          "utcStartDateTime": "2024-12-19T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7143,
+          "status": "Completed",
+          "utcStartDateTime": "2018-05-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7207,
+          "status": "Completed",
+          "utcStartDateTime": "2013-08-31T00:00:00.000Z",
+          "publicJsonVerified": true
+        },
+        {
+          "id": 7224,
+          "status": "Completed",
+          "utcStartDateTime": "2021-11-30T00:00:00.000Z",
+          "publicJsonVerified": true
+        }
+      ],
+      "pages": [
+        {
+          "id": 7097,
+          "url": "https://www.chronopin.com/pin/7097/regent-terrace-philadelphia-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7124,
+          "url": "https://www.chronopin.com/pin/7124/phare-orleans-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7138,
+          "url": "https://www.chronopin.com/pin/7138/bridgeside-estates-allentown-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        },
+        {
+          "id": 7143,
+          "url": "https://www.chronopin.com/pin/7143/cottage-hill-place-mobile-affordable-housing",
+          "httpStatus": 200,
+          "researchAndStatusPresent": true
+        }
+      ]
     }
   ]
 }

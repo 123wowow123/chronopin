@@ -4814,6 +4814,49 @@
           "researchManifest": "scripts/construction/research-round2-2026-10-24.json"
         },
         {
+          "id": 7097,
+          "title": "Regent Terrace — Philadelphia affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/regent-terrace/",
+          "date": "2026-10-09",
+          "reason": "NJIT’s Affordable Housing Design Advisor documents completion in January 1989 of Regent Terrace’s rehabilitation and conversion from 36 apartments into 80 affordable homes. Its total development cost was US$6.3 million, distinct from US$4.22 million construction alone. The native date moves from an October 2026 listing-check date to January 31, 1989, an estimated month-precision anchor for the rehabilitation, not an exact opening day or the original building construction.",
+          "evidence": "Total development costs: $6,300,000 ($77,500/unit); Completed January 1989.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://web.njit.edu/abs/gallery/regent.html"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "c756688e155335d9b93ea5d89fc3d54534191999307252651d1c72dc4189b977",
+          "metadataVerified": true,
+          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
+          "id": 7115,
+          "title": "Residences at Hayes — Washington DC affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
+          "date": "2018-09-19",
+          "reason": "Pennrose’s September 19, 2018 release documents the ribbon cutting of the completed 150-home Residences at Hayes; its October release confirms residents moving in. Both report US$34.9 million for this project, separate from the neighboring Lincoln Heights redevelopment. The pin retains the ceremony date. This is the source-reported development figure for the pinned opening; a later indexed municipal proposal could not be opened to verify its table or any revised scope.",
+          "evidence": "Funding for the $34.9 million project",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-welcomes-first-residents/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332",
+          "metadataVerified": true,
+          "savedPinSha256": "c8bf9f6300825612821b87e98b0d1d383579bdfe4989771f59df0a873e39af2d",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
           "id": 7120,
           "title": "Kite Route Crossing — Superior affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/colorado/kite-route-crossing/",
@@ -4827,6 +4870,73 @@
             "https://www.pennrose.com/news-views/news/2026/pennrose-breaks-ground-on-kite-route-crossing-superior-s-first-affordable-housing-development/"
           ],
           "verified": true
+        },
+        {
+          "id": 7124,
+          "title": "Phare — Orleans affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/phare/",
+          "date": "2025-12-31",
+          "reason": "Orleans Affordable Housing Trust’s December 2025 materials describe Pennrose’s exact 62-home Phare development as now complete and leasing and give US$37 million total cost. The Independent’s February 2025 article explicitly corrects its earlier US$71.6 million figure to US$37 million. Native cost follows the corrected total, not the land purchase or CPA contribution. The existing estimated year-end anchor is retained; no exact opening day is invented.",
+          "evidence": "now complete and leasing.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://www.town.orleans.ma.us/DocumentCenter/View/10455/AHT-Meeting-Materials-12-16",
+            "https://provincetownindependent.org/featured/2025/02/26/lottery-open-for-62-affordable-units-at-phare-in-orleans/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d",
+          "metadataVerified": true,
+          "savedPinSha256": "061bac2636eaf634d4d867f672aa9e0df0b0cfa1b0fc8feb58c9093246e5472c",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
+          "id": 7134,
+          "title": "Aston Heights — Newark affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+          "date": "2019-12-31",
+          "reason": "The May 2021 permanent-loan report describes Aston Heights as newly constructed with 154 apartments, establishing completion independently of old target dates. Pennrose’s developer profile hosted in the URA’s 2025 RFQ materials gives US$45 million for the exact 154-home Aston Heights / Montgomery Heights II scope. This rounded project-profile figure is not the US$7.9 million permanent loan. The existing estimated 2019 year anchor remains; the newly opened sources establish completion by 2021 but do not independently establish an exact 2019 opening date.",
+          "evidence": "Aston Heights, a newly constructed mixed-income property",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781",
+          "metadataVerified": true,
+          "savedPinSha256": "6c5180b823665481fc812d1f5dce1409a89712ad65045042a5de9244754abbe7",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
+          "id": 7138,
+          "title": "Bridgeside Estates — Allentown affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
+          "date": "2024-12-19",
+          "reason": "Harkins documents the December 19, 2024 grand opening of Bridgeside Estates, the completed 50-home first phase of Little Lehigh redevelopment. Pennrose’s 2025 developer profile lists US$24 million for this exact 50-home scope. Native price records that rounded profile figure; an older Fall 2023 AHA newsletter described US$27 million, so this is not represented as an audited final account. Phase II and the full master plan remain separate. The contractor’s ceremony date is retained rather than the following day’s press-release date.",
+          "evidence": "celebrate the grand opening of Bridgeside Estates",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
+            "https://www.allentownhousing.org/pdf/aha-newsletter-fall.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32",
+          "metadataVerified": true,
+          "savedPinSha256": "e1ed7ef5e3d0b64aaeb5e66b4628245e9f1bdf2f6ec8b6d72fb83b9f51a3e074",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7140,
@@ -4856,6 +4966,27 @@
             "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf"
           ],
           "verified": true
+        },
+        {
+          "id": 7143,
+          "title": "Cottage Hill Place — Mobile affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
+          "date": "2018-05-31",
+          "reason": "Capstone’s project page explicitly marks the exact Mobile, Alabama 80-home Cottage Hill Place project Complete, with May 2017 / May 2018 start/completion. The existing May 31, 2018 estimated month anchor is retained. No full development or construction cost was verified in the builder page, operator material or project-cost searches; published rents and unrelated similarly named developments are not project costs.",
+          "evidence": "Project Status: Complete",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://capstonebuilding.com/projects/cottage-hill-place/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221",
+          "metadataVerified": true,
+          "savedPinSha256": "464838ebe6605f402ccc9680b82e8810ef2ee8ba7d53510d5b259670abebcf96",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7165,
@@ -4937,6 +5068,28 @@
           "verified": true
         },
         {
+          "id": 7207,
+          "title": "Don Coppedge Village — Phoenixville affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
+          "date": "2013-08-31",
+          "reason": "The developer’s Chester County 2022 Housing Forum presentation identifies Don Coppedge Village as the Phoenixville 2013 project with 36 homes; the community-supplied property record explicitly says Built in 2013. This supports Completed for the former Fairview Village, not an inference from current rents. The existing estimated August 2013 milestone remains from earlier research. The newly checked Inquirer and proposal/budget sources could not be opened; indexed US$9 million and US$10.8 million figures are not newly verified and native cost stays null.",
+          "evidence": "Phoenixville, PA| 2013 | 36 units",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://chescoplanning.com/Housing/pdf/2022HousingForumPresentation.pdf",
+            "https://www.forrent.com/pa/phoenixville/don-coppedge-village/cj8tt8d"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9",
+          "metadataVerified": true,
+          "savedPinSha256": "fb3a9afe69c8d189ebb6fb495a66f2583c8830bb6a7f8a86ccc0303c7f973582",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
           "id": 7208,
           "title": "Doverbrook — Easton affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/maryland/doverbrook/",
@@ -5015,6 +5168,27 @@
             "https://www.pennrose.com/news-views/news/2026/governor-hochul-announces-start-of-construction-on-225-million-north-aud-block-in-buffalo-s-canalside/"
           ],
           "verified": true
+        },
+        {
+          "id": 7224,
+          "title": "Oaks Intown — Albany affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-intown/",
+          "date": "2021-11-30",
+          "reason": "Pennrose’s November 2021 grand-opening release confirms completed modernization of the exact 279-home Oaks Intown Phase I: McIntosh, O.B. Hines, Thronateeska and Golden Age. This is separate from the broader Albany portfolio conversion and Oaks at North Intown master plan. The existing estimated November month anchor is retained; publication day alone does not establish the ceremony day. No exact 279-home total cost was verified; tax-credit equity, loans and budgets for other Albany phases are not substituted.",
+          "evidence": "celebrated the grand opening of Oaks Intown",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad",
+          "metadataVerified": true,
+          "savedPinSha256": "b1fe4f75bff7e5e5c27dbc9f32d736073b408413941f497c77edf2fd8466b466",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7226,
@@ -21797,21 +21971,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 7097,
-          "title": "Regent Terrace — Philadelphia affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/regent-terrace/",
-          "date": "2026-10-09",
-          "reason": "Regent Terrace — Philadelphia affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/pennsylvania/regent-terrace/",
-            "https://www.pennrose.com/media/53kpesyj/pennrose-2024-2025-corporate-responsibility-report-no-email.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 7101,
           "title": "Renaissance at Reservoir Hill — Baltimore affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/maryland/renaissance-at-reservoir-hill/",
@@ -21861,15 +22020,17 @@
           "title": "Thatcher Flats — Cincinnati affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/ohio/thatcher-flats/",
           "date": "2024-10-07",
-          "reason": "Thatcher Flats — Cincinnati affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
+          "reason": "The October 7, 2024 milestone mixes the opening of 50-home Phase I with groundbreaking of 36-home Phase II; the saved pin focuses on Phase II but its generic title covers both. The builder later reports Phase II finished in November 2025. Clarify the pinned phase/milestone before selecting one status or cost; the $16.5m combined construction contract is not a phase development budget.",
           "evidence": null,
           "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
+          "gapCategory": "conflicting-or-halted-scope",
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/ohio/thatcher-flats/",
-            "https://www.pennrose.com/news-views/news/2024/pennrose-celebrates-grand-opening-of-thatcher-flats-phase-i-begins-construction-on-phase-ii/"
+            "https://www.pennrose.com/news-views/news/2024/pennrose-celebrates-grand-opening-of-thatcher-flats-phase-i-begins-construction-on-phase-ii/",
+            "https://www.douglascompany.com/thatcher-flats-marks-final-phase-completion-expanding-affordable-housing-in-cincinnati/"
           ],
-          "scopeReviewedAt": "2026-10-24"
+          "scopeReviewedAt": "2026-10-24",
+          "openedResearchFollowUp": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7112,
@@ -21883,36 +22044,6 @@
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/pennsylvania/allegheny-the/",
             "https://www.alleghenydwellingschoice.org/_files/ugd/653fab_dcdfd8ffcbb64c31836a7f2bb6bae12a.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7115,
-          "title": "Residences at Hayes — Washington DC affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
-          "date": "2018-09-19",
-          "reason": "Residences at Hayes — Washington DC affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
-            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7124,
-          "title": "Phare — Orleans affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/phare/",
-          "date": "2025-12-31",
-          "reason": "Phare — Orleans affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/massachusetts/phare/",
-            "https://www.town.orleans.ma.us/DocumentCenter/View/8249/Housing-Lotteries-and-Upcoming"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -21943,56 +22074,6 @@
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/georgia/west-point-village/",
             "https://www.pennrose.com/news-views/news/2022/groundbreaking-of-west-point-village-redevelopment/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7134,
-          "title": "Aston Heights — Newark affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
-          "date": "2019-12-31",
-          "reason": "Aston Heights — Newark affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
-            "https://www.pennrose.com/news-views/media/2018/2018-pennrose-nears-opening-of-all-affordable-apartment-building-in-newark/",
-            "https://www.pennrose.com/media/lz4ihry5/aston-heights-pre-app-2022.pdf",
-            "https://www.pennrose.com/media/umcaash0/aston-heights-flyer_2025.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7138,
-          "title": "Bridgeside Estates — Allentown affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
-          "date": "2024-12-19",
-          "reason": "Bridgeside Estates — Allentown affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
-            "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
-            "https://www.pennrose.com/media/ofkaetyf/bridgeside-estates-2025-flyer.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7143,
-          "title": "Cottage Hill Place — Mobile affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
-          "date": "2018-05-31",
-          "reason": "Cottage Hill Place — Mobile affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
-            "https://capstonebuilding.com/projects/cottage-hill-place/",
-            "https://cottage-hill-rentcafewebsite.securecafe.com/onlineleasing/cottage-hill/guestlogin.aspx",
-            "https://www.pennrose.com/media/ggvjwz20/cottage-hill-flyer_62026.pdf"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -22065,15 +22146,17 @@
           "title": "Northside Village — Schenectady affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/new-york/northside-village/",
           "date": "2020-11-30",
-          "reason": "Northside Village — Schenectady affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
+          "reason": "The saved Northside Village pin covers 300 homes, while the opened Pennrose portfolio establishes November 2020 completion and $29,716,977 only for 89-home Phase I. Obtain dated evidence for the remaining phase or narrow the represented scope before assigning a whole-project status or budget.",
           "evidence": null,
           "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
+          "gapCategory": "conflicting-or-halted-scope",
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/new-york/northside-village/",
-            "https://www.pennrose.com/media/0a5ftqpe/northside-village-flyer_2026.pdf"
+            "https://www.pennrose.com/media/0a5ftqpe/northside-village-flyer_2026.pdf",
+            "https://www.pennrose.com/portfolio/northside-village/"
           ],
-          "scopeReviewedAt": "2026-10-24"
+          "scopeReviewedAt": "2026-10-24",
+          "openedResearchFollowUp": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7175,
@@ -22088,40 +22171,6 @@
             "https://www.pennrose.com/apartments/georgia/oaks-at-park-pointe/",
             "https://oaks-at-park-pointe-rentcafewebsite.securecafe.com/onlineleasing/oaks-at-park-pointe/guestlogin.aspx",
             "https://www.pennrose.com/media/1m1bxdnt/oaks-at-park-pointe-flyer_2026.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7207,
-          "title": "Don Coppedge Village — Phoenixville affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
-          "date": "2013-08-31",
-          "reason": "Don Coppedge Village — Phoenixville affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
-            "https://inquirer.com/philly/news/20131225_Affordable_housing_opens_doors_in_Phoenixville.html",
-            "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
-            "https://don-coppedge-village-rentcafewebsite.securecafe.com/onlineleasing/don-coppedge-village/guestlogin.aspx"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7224,
-          "title": "Oaks Intown — Albany affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-intown/",
-          "date": "2021-11-30",
-          "reason": "Oaks Intown — Albany affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/georgia/oaks-intown/",
-            "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga",
-            "https://www.pennrose.com/media/53dosnyt/oaks-intown-pre-app-2021.pdf",
-            "https://www.pennrose.com/media/uo1b1ddv/oaks-intown-flyer_2026.pdf"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -38061,11 +38110,11 @@
           "title": "Embalse Shuts for Reactor Retubing and Life Extension"
         }
       ],
-      "verifiedCount": 1262,
+      "verifiedCount": 1270,
       "counts": {
         "Proposed": 632,
         "In Progress": 392,
-        "Completed": 238
+        "Completed": 246
       },
       "publicSamples": [
         {
@@ -38097,8 +38146,8 @@
       "queueReviewOriginalCount": 1132,
       "queueGapCounts": {
         "individual-source-or-phase": 424,
-        "conflicting-or-halted-scope": 40,
-        "housing-milestone-source": 31,
+        "conflicting-or-halted-scope": 42,
+        "housing-milestone-source": 21,
         "grid-request-identity": 35,
         "project-source-not-established": 251,
         "tracker-parcel-phase": 109,
@@ -38330,6 +38379,95 @@
           {
             "id": 7080,
             "url": "http://127.0.0.1:3000/pin/7080/new-hope-housing-berry-houston-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          }
+        ]
+      },
+      "round3PublicVerification": {
+        "base": "http://127.0.0.1:3000",
+        "checks": [
+          {
+            "id": 7097,
+            "status": "Completed",
+            "price": 6300000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "1989-01-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7115,
+            "status": "Completed",
+            "price": 34900000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2018-09-19T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7124,
+            "status": "Completed",
+            "price": 37000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2025-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7134,
+            "status": "Completed",
+            "price": 45000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2019-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7138,
+            "status": "Completed",
+            "price": 24000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2024-12-19T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7143,
+            "status": "Completed",
+            "utcStartDateTime": "2018-05-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7207,
+            "status": "Completed",
+            "utcStartDateTime": "2013-08-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7224,
+            "status": "Completed",
+            "utcStartDateTime": "2021-11-30T00:00:00.000Z",
+            "publicJsonVerified": true
+          }
+        ],
+        "pages": [
+          {
+            "id": 7097,
+            "url": "http://127.0.0.1:3000/pin/7097/regent-terrace-philadelphia-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 7124,
+            "url": "http://127.0.0.1:3000/pin/7124/phare-orleans-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 7138,
+            "url": "http://127.0.0.1:3000/pin/7138/bridgeside-estates-allentown-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 7143,
+            "url": "http://127.0.0.1:3000/pin/7143/cottage-hill-place-mobile-affordable-housing",
             "httpStatus": 200,
             "researchAndStatusPresent": true
           }
@@ -43148,6 +43286,49 @@
           "researchManifest": "scripts/construction/research-round2-2026-10-24.json"
         },
         {
+          "id": 7097,
+          "title": "Regent Terrace — Philadelphia affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/regent-terrace/",
+          "date": "2026-10-09",
+          "reason": "NJIT’s Affordable Housing Design Advisor documents completion in January 1989 of Regent Terrace’s rehabilitation and conversion from 36 apartments into 80 affordable homes. Its total development cost was US$6.3 million, distinct from US$4.22 million construction alone. The native date moves from an October 2026 listing-check date to January 31, 1989, an estimated month-precision anchor for the rehabilitation, not an exact opening day or the original building construction.",
+          "evidence": "Total development costs: $6,300,000 ($77,500/unit); Completed January 1989.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://web.njit.edu/abs/gallery/regent.html"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "c756688e155335d9b93ea5d89fc3d54534191999307252651d1c72dc4189b977",
+          "metadataVerified": true,
+          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
+          "id": 7115,
+          "title": "Residences at Hayes — Washington DC affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
+          "date": "2018-09-19",
+          "reason": "Pennrose’s September 19, 2018 release documents the ribbon cutting of the completed 150-home Residences at Hayes; its October release confirms residents moving in. Both report US$34.9 million for this project, separate from the neighboring Lincoln Heights redevelopment. The pin retains the ceremony date. This is the source-reported development figure for the pinned opening; a later indexed municipal proposal could not be opened to verify its table or any revised scope.",
+          "evidence": "Funding for the $34.9 million project",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-welcomes-first-residents/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332",
+          "metadataVerified": true,
+          "savedPinSha256": "c8bf9f6300825612821b87e98b0d1d383579bdfe4989771f59df0a873e39af2d",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
           "id": 7120,
           "title": "Kite Route Crossing — Superior affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/colorado/kite-route-crossing/",
@@ -43161,6 +43342,73 @@
             "https://www.pennrose.com/news-views/news/2026/pennrose-breaks-ground-on-kite-route-crossing-superior-s-first-affordable-housing-development/"
           ],
           "verified": true
+        },
+        {
+          "id": 7124,
+          "title": "Phare — Orleans affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/phare/",
+          "date": "2025-12-31",
+          "reason": "Orleans Affordable Housing Trust’s December 2025 materials describe Pennrose’s exact 62-home Phare development as now complete and leasing and give US$37 million total cost. The Independent’s February 2025 article explicitly corrects its earlier US$71.6 million figure to US$37 million. Native cost follows the corrected total, not the land purchase or CPA contribution. The existing estimated year-end anchor is retained; no exact opening day is invented.",
+          "evidence": "now complete and leasing.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://www.town.orleans.ma.us/DocumentCenter/View/10455/AHT-Meeting-Materials-12-16",
+            "https://provincetownindependent.org/featured/2025/02/26/lottery-open-for-62-affordable-units-at-phare-in-orleans/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d",
+          "metadataVerified": true,
+          "savedPinSha256": "061bac2636eaf634d4d867f672aa9e0df0b0cfa1b0fc8feb58c9093246e5472c",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
+          "id": 7134,
+          "title": "Aston Heights — Newark affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+          "date": "2019-12-31",
+          "reason": "The May 2021 permanent-loan report describes Aston Heights as newly constructed with 154 apartments, establishing completion independently of old target dates. Pennrose’s developer profile hosted in the URA’s 2025 RFQ materials gives US$45 million for the exact 154-home Aston Heights / Montgomery Heights II scope. This rounded project-profile figure is not the US$7.9 million permanent loan. The existing estimated 2019 year anchor remains; the newly opened sources establish completion by 2021 but do not independently establish an exact 2019 opening date.",
+          "evidence": "Aston Heights, a newly constructed mixed-income property",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781",
+          "metadataVerified": true,
+          "savedPinSha256": "6c5180b823665481fc812d1f5dce1409a89712ad65045042a5de9244754abbe7",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
+          "id": 7138,
+          "title": "Bridgeside Estates — Allentown affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
+          "date": "2024-12-19",
+          "reason": "Harkins documents the December 19, 2024 grand opening of Bridgeside Estates, the completed 50-home first phase of Little Lehigh redevelopment. Pennrose’s 2025 developer profile lists US$24 million for this exact 50-home scope. Native price records that rounded profile figure; an older Fall 2023 AHA newsletter described US$27 million, so this is not represented as an audited final account. Phase II and the full master plan remain separate. The contractor’s ceremony date is retained rather than the following day’s press-release date.",
+          "evidence": "celebrate the grand opening of Bridgeside Estates",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
+            "https://www.allentownhousing.org/pdf/aha-newsletter-fall.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32",
+          "metadataVerified": true,
+          "savedPinSha256": "e1ed7ef5e3d0b64aaeb5e66b4628245e9f1bdf2f6ec8b6d72fb83b9f51a3e074",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7140,
@@ -43190,6 +43438,27 @@
             "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf"
           ],
           "verified": true
+        },
+        {
+          "id": 7143,
+          "title": "Cottage Hill Place — Mobile affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
+          "date": "2018-05-31",
+          "reason": "Capstone’s project page explicitly marks the exact Mobile, Alabama 80-home Cottage Hill Place project Complete, with May 2017 / May 2018 start/completion. The existing May 31, 2018 estimated month anchor is retained. No full development or construction cost was verified in the builder page, operator material or project-cost searches; published rents and unrelated similarly named developments are not project costs.",
+          "evidence": "Project Status: Complete",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://capstonebuilding.com/projects/cottage-hill-place/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221",
+          "metadataVerified": true,
+          "savedPinSha256": "464838ebe6605f402ccc9680b82e8810ef2ee8ba7d53510d5b259670abebcf96",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7165,
@@ -43271,6 +43540,28 @@
           "verified": true
         },
         {
+          "id": 7207,
+          "title": "Don Coppedge Village — Phoenixville affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
+          "date": "2013-08-31",
+          "reason": "The developer’s Chester County 2022 Housing Forum presentation identifies Don Coppedge Village as the Phoenixville 2013 project with 36 homes; the community-supplied property record explicitly says Built in 2013. This supports Completed for the former Fairview Village, not an inference from current rents. The existing estimated August 2013 milestone remains from earlier research. The newly checked Inquirer and proposal/budget sources could not be opened; indexed US$9 million and US$10.8 million figures are not newly verified and native cost stays null.",
+          "evidence": "Phoenixville, PA| 2013 | 36 units",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://chescoplanning.com/Housing/pdf/2022HousingForumPresentation.pdf",
+            "https://www.forrent.com/pa/phoenixville/don-coppedge-village/cj8tt8d"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9",
+          "metadataVerified": true,
+          "savedPinSha256": "fb3a9afe69c8d189ebb6fb495a66f2583c8830bb6a7f8a86ccc0303c7f973582",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
+        },
+        {
           "id": 7208,
           "title": "Doverbrook — Easton affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/maryland/doverbrook/",
@@ -43349,6 +43640,27 @@
             "https://www.pennrose.com/news-views/news/2026/governor-hochul-announces-start-of-construction-on-225-million-north-aud-block-in-buffalo-s-canalside/"
           ],
           "verified": true
+        },
+        {
+          "id": 7224,
+          "title": "Oaks Intown — Albany affordable housing",
+          "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-intown/",
+          "date": "2021-11-30",
+          "reason": "Pennrose’s November 2021 grand-opening release confirms completed modernization of the exact 279-home Oaks Intown Phase I: McIntosh, O.B. Hines, Thronateeska and Golden Age. This is separate from the broader Albany portfolio conversion and Oaks at North Intown master plan. The existing estimated November month anchor is retained; publication day alone does not establish the ceremony day. No exact 279-home total cost was verified; tax-credit equity, loans and budgets for other Albany phases are not substituted.",
+          "evidence": "celebrated the grand opening of Oaks Intown",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "housing-milestone-source",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad",
+          "metadataVerified": true,
+          "savedPinSha256": "b1fe4f75bff7e5e5c27dbc9f32d736073b408413941f497c77edf2fd8466b466",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7226,
@@ -60131,21 +60443,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 7097,
-          "title": "Regent Terrace — Philadelphia affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/regent-terrace/",
-          "date": "2026-10-09",
-          "reason": "Regent Terrace — Philadelphia affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/pennsylvania/regent-terrace/",
-            "https://www.pennrose.com/media/53kpesyj/pennrose-2024-2025-corporate-responsibility-report-no-email.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 7101,
           "title": "Renaissance at Reservoir Hill — Baltimore affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/maryland/renaissance-at-reservoir-hill/",
@@ -60195,15 +60492,17 @@
           "title": "Thatcher Flats — Cincinnati affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/ohio/thatcher-flats/",
           "date": "2024-10-07",
-          "reason": "Thatcher Flats — Cincinnati affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
+          "reason": "The October 7, 2024 milestone mixes the opening of 50-home Phase I with groundbreaking of 36-home Phase II; the saved pin focuses on Phase II but its generic title covers both. The builder later reports Phase II finished in November 2025. Clarify the pinned phase/milestone before selecting one status or cost; the $16.5m combined construction contract is not a phase development budget.",
           "evidence": null,
           "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
+          "gapCategory": "conflicting-or-halted-scope",
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/ohio/thatcher-flats/",
-            "https://www.pennrose.com/news-views/news/2024/pennrose-celebrates-grand-opening-of-thatcher-flats-phase-i-begins-construction-on-phase-ii/"
+            "https://www.pennrose.com/news-views/news/2024/pennrose-celebrates-grand-opening-of-thatcher-flats-phase-i-begins-construction-on-phase-ii/",
+            "https://www.douglascompany.com/thatcher-flats-marks-final-phase-completion-expanding-affordable-housing-in-cincinnati/"
           ],
-          "scopeReviewedAt": "2026-10-24"
+          "scopeReviewedAt": "2026-10-24",
+          "openedResearchFollowUp": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7112,
@@ -60217,36 +60516,6 @@
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/pennsylvania/allegheny-the/",
             "https://www.alleghenydwellingschoice.org/_files/ugd/653fab_dcdfd8ffcbb64c31836a7f2bb6bae12a.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7115,
-          "title": "Residences at Hayes — Washington DC affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
-          "date": "2018-09-19",
-          "reason": "Residences at Hayes — Washington DC affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
-            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7124,
-          "title": "Phare — Orleans affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/phare/",
-          "date": "2025-12-31",
-          "reason": "Phare — Orleans affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/massachusetts/phare/",
-            "https://www.town.orleans.ma.us/DocumentCenter/View/8249/Housing-Lotteries-and-Upcoming"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -60277,56 +60546,6 @@
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/georgia/west-point-village/",
             "https://www.pennrose.com/news-views/news/2022/groundbreaking-of-west-point-village-redevelopment/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7134,
-          "title": "Aston Heights — Newark affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
-          "date": "2019-12-31",
-          "reason": "Aston Heights — Newark affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
-            "https://www.pennrose.com/news-views/media/2018/2018-pennrose-nears-opening-of-all-affordable-apartment-building-in-newark/",
-            "https://www.pennrose.com/media/lz4ihry5/aston-heights-pre-app-2022.pdf",
-            "https://www.pennrose.com/media/umcaash0/aston-heights-flyer_2025.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7138,
-          "title": "Bridgeside Estates — Allentown affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
-          "date": "2024-12-19",
-          "reason": "Bridgeside Estates — Allentown affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
-            "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
-            "https://www.pennrose.com/media/ofkaetyf/bridgeside-estates-2025-flyer.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7143,
-          "title": "Cottage Hill Place — Mobile affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
-          "date": "2018-05-31",
-          "reason": "Cottage Hill Place — Mobile affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
-            "https://capstonebuilding.com/projects/cottage-hill-place/",
-            "https://cottage-hill-rentcafewebsite.securecafe.com/onlineleasing/cottage-hill/guestlogin.aspx",
-            "https://www.pennrose.com/media/ggvjwz20/cottage-hill-flyer_62026.pdf"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -60399,15 +60618,17 @@
           "title": "Northside Village — Schenectady affordable housing",
           "sourceUrl": "https://www.pennrose.com/apartments/new-york/northside-village/",
           "date": "2020-11-30",
-          "reason": "Northside Village — Schenectady affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
+          "reason": "The saved Northside Village pin covers 300 homes, while the opened Pennrose portfolio establishes November 2020 completion and $29,716,977 only for 89-home Phase I. Obtain dated evidence for the remaining phase or narrow the represented scope before assigning a whole-project status or budget.",
           "evidence": null,
           "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
+          "gapCategory": "conflicting-or-halted-scope",
           "evidenceUrls": [
             "https://www.pennrose.com/apartments/new-york/northside-village/",
-            "https://www.pennrose.com/media/0a5ftqpe/northside-village-flyer_2026.pdf"
+            "https://www.pennrose.com/media/0a5ftqpe/northside-village-flyer_2026.pdf",
+            "https://www.pennrose.com/portfolio/northside-village/"
           ],
-          "scopeReviewedAt": "2026-10-24"
+          "scopeReviewedAt": "2026-10-24",
+          "openedResearchFollowUp": "scripts/construction/research-round3-2026-10-24.json"
         },
         {
           "id": 7175,
@@ -60422,40 +60643,6 @@
             "https://www.pennrose.com/apartments/georgia/oaks-at-park-pointe/",
             "https://oaks-at-park-pointe-rentcafewebsite.securecafe.com/onlineleasing/oaks-at-park-pointe/guestlogin.aspx",
             "https://www.pennrose.com/media/1m1bxdnt/oaks-at-park-pointe-flyer_2026.pdf"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7207,
-          "title": "Don Coppedge Village — Phoenixville affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
-          "date": "2013-08-31",
-          "reason": "Don Coppedge Village — Phoenixville affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
-            "https://inquirer.com/philly/news/20131225_Affordable_housing_opens_doors_in_Phoenixville.html",
-            "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
-            "https://don-coppedge-village-rentcafewebsite.securecafe.com/onlineleasing/don-coppedge-village/guestlogin.aspx"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 7224,
-          "title": "Oaks Intown — Albany affordable housing",
-          "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-intown/",
-          "date": "2021-11-30",
-          "reason": "Oaks Intown — Albany affordable housing: reopen the branch/development-specific opening, placed-in-service or active-build source cited in the saved housing timeline. Distinguish this building/phase from later campus phases; leasing, rents and applications alone are not completion.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "housing-milestone-source",
-          "evidenceUrls": [
-            "https://www.pennrose.com/apartments/georgia/oaks-intown/",
-            "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga",
-            "https://www.pennrose.com/media/53dosnyt/oaks-intown-pre-app-2021.pdf",
-            "https://www.pennrose.com/media/uo1b1ddv/oaks-intown-flyer_2026.pdf"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -76395,11 +76582,11 @@
           "title": "Embalse Shuts for Reactor Retubing and Life Extension"
         }
       ],
-      "verifiedCount": 1262,
+      "verifiedCount": 1270,
       "counts": {
         "Proposed": 632,
         "In Progress": 392,
-        "Completed": 238
+        "Completed": 246
       },
       "publicSamples": [
         {
@@ -76431,8 +76618,8 @@
       "queueReviewOriginalCount": 1132,
       "queueGapCounts": {
         "individual-source-or-phase": 424,
-        "conflicting-or-halted-scope": 40,
-        "housing-milestone-source": 31,
+        "conflicting-or-halted-scope": 42,
+        "housing-milestone-source": 21,
         "grid-request-identity": 35,
         "project-source-not-established": 251,
         "tracker-parcel-phase": 109,
@@ -76668,6 +76855,95 @@
             "researchAndStatusPresent": true
           }
         ]
+      },
+      "round3PublicVerification": {
+        "base": "https://www.chronopin.com",
+        "checks": [
+          {
+            "id": 7097,
+            "status": "Completed",
+            "price": 6300000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "1989-01-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7115,
+            "status": "Completed",
+            "price": 34900000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2018-09-19T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7124,
+            "status": "Completed",
+            "price": 37000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2025-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7134,
+            "status": "Completed",
+            "price": 45000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2019-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7138,
+            "status": "Completed",
+            "price": 24000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2024-12-19T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7143,
+            "status": "Completed",
+            "utcStartDateTime": "2018-05-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7207,
+            "status": "Completed",
+            "utcStartDateTime": "2013-08-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 7224,
+            "status": "Completed",
+            "utcStartDateTime": "2021-11-30T00:00:00.000Z",
+            "publicJsonVerified": true
+          }
+        ],
+        "pages": [
+          {
+            "id": 7097,
+            "url": "https://www.chronopin.com/pin/7097/regent-terrace-philadelphia-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 7124,
+            "url": "https://www.chronopin.com/pin/7124/phare-orleans-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 7138,
+            "url": "https://www.chronopin.com/pin/7138/bridgeside-estates-allentown-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 7143,
+            "url": "https://www.chronopin.com/pin/7143/cottage-hill-place-mobile-affordable-housing",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          }
+        ]
       }
     }
   ],
@@ -76704,6 +76980,7 @@
   },
   "openedSourceResearchManifests": [
     "scripts/construction/research-2026-10-24.json",
-    "scripts/construction/research-round2-2026-10-24.json"
+    "scripts/construction/research-round2-2026-10-24.json",
+    "scripts/construction/research-round3-2026-10-24.json"
   ]
 }

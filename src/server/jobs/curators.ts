@@ -16,6 +16,7 @@ export const CURATORS: Record<string, string> = {
   '@PolicyDesk': 'technology and data center legislation and regulation',
   '@ChipDesk': 'semiconductors, chipmakers and computing hardware',
   '@EnterpriseDesk': 'enterprise software and cloud vendors: results, products, conferences',
+  '@TelecomDesk': 'telecom operators: results, networks, deals',
   '@BuildDesk': 'buildings, infrastructure, transport projects, space launches',
   '@OddsDesk': 'prediction markets (Kalshi, Polymarket)',
   '@SneakerDesk': 'sneaker and apparel drops',
