@@ -1,0 +1,496 @@
+{
+  "checkedAt": "2026-10-24",
+  "round": 3,
+  "snapshotDirectory": ".scrape/construction-status-research-round3-2026-10-24",
+  "scope": "Eight exact housing completion scopes, five sourced costs and one corrected rehabilitation date; unresolved mixed phases retained.",
+  "research": [
+    {
+      "id": 7097,
+      "status": "Completed",
+      "price": 6300000,
+      "priceCurrency": "USD",
+      "note": "NJIT’s Affordable Housing Design Advisor documents completion in January 1989 of Regent Terrace’s rehabilitation and conversion from 36 apartments into 80 affordable homes. Its total development cost was US$6.3 million, distinct from US$4.22 million construction alone. The native date moves from an October 2026 listing-check date to January 31, 1989, an estimated month-precision anchor for the rehabilitation, not an exact opening day or the original building construction.",
+      "sources": [
+        {
+          "url": "https://web.njit.edu/abs/gallery/regent.html",
+          "title": "Affordable Housing Design Advisor — Project Summary: Regent Terrace",
+          "quote": "Total development costs: $6,300,000 ($77,500/unit); Completed January 1989.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {
+        "utcStartDateTime": "1989-01-31T00:00:00.000Z",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "NJIT’s Affordable Housing Design Advisor records Regent Terrace rehabilitation completed January 1989. January 31 is a month-precision timeline anchor, not a verified exact opening day. This replaces the October 2026 listing-review date and does not date the original building construction."
+      }
+    },
+    {
+      "id": 7115,
+      "status": "Completed",
+      "price": 34900000,
+      "priceCurrency": "USD",
+      "note": "Pennrose’s September 19, 2018 release documents the ribbon cutting of the completed 150-home Residences at Hayes; its October release confirms residents moving in. Both report US$34.9 million for this project, separate from the neighboring Lincoln Heights redevelopment. The pin retains the ceremony date. This is the source-reported development figure for the pinned opening; a later indexed municipal proposal could not be opened to verify its table or any revised scope.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+          "title": "Residences at Hayes Affordable Housing Community Celebrates Ribbon Cutting",
+          "quote": "Funding for the $34.9 million project",
+          "publishedDate": "2018-09-19",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-welcomes-first-residents/",
+          "title": "Residences at Hayes Affordable Housing Community Welcomes First Residents",
+          "quote": "residents have begun moving in to The Residences at Hayes",
+          "publishedDate": "2018-10-23",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7124,
+      "status": "Completed",
+      "price": 37000000,
+      "priceCurrency": "USD",
+      "note": "Orleans Affordable Housing Trust’s December 2025 materials describe Pennrose’s exact 62-home Phare development as now complete and leasing and give US$37 million total cost. The Independent’s February 2025 article explicitly corrects its earlier US$71.6 million figure to US$37 million. Native cost follows the corrected total, not the land purchase or CPA contribution. The existing estimated year-end anchor is retained; no exact opening day is invented.",
+      "sources": [
+        {
+          "url": "https://www.town.orleans.ma.us/DocumentCenter/View/10455/AHT-Meeting-Materials-12-16",
+          "title": "Orleans Affordable Housing Trust meeting materials — December 16, 2025",
+          "quote": "now complete and leasing.",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Page 13 (zero-based), November 18 application concerning completed 62-home Phare; same page states $37M total cost."
+        },
+        {
+          "url": "https://provincetownindependent.org/featured/2025/02/26/lottery-open-for-62-affordable-units-at-phare-in-orleans/",
+          "title": "Lottery Open for 62 Affordable Units at ‘Phare’ in Orleans",
+          "quote": "The total price tag for Phare’s construction was $37 million",
+          "publishedDate": "2025-02-26",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7134,
+      "status": "Completed",
+      "price": 45000000,
+      "priceCurrency": "USD",
+      "note": "The May 2021 permanent-loan report describes Aston Heights as newly constructed with 154 apartments, establishing completion independently of old target dates. Pennrose’s developer profile hosted in the URA’s 2025 RFQ materials gives US$45 million for the exact 154-home Aston Heights / Montgomery Heights II scope. This rounded project-profile figure is not the US$7.9 million permanent loan. The existing estimated 2019 year anchor remains; the newly opened sources establish completion by 2021 but do not independently establish an exact 2019 opening date.",
+      "sources": [
+        {
+          "url": "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+          "title": "Bellwether Provides $7.9M Agency Perm Loan for Newark Mixed-Income Property",
+          "quote": "Aston Heights, a newly constructed mixed-income property",
+          "publishedDate": "2021-05-18",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
+          "title": "Lexington Technology Park RFQ — Development Team Profiles",
+          "quote": "$45M | 154 units",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Page 1 (zero-based), Aston Heights, Newark NJ / Montgomery Heights II. Rounded developer profile project figure, not the permanent loan; publication day not established."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7138,
+      "status": "Completed",
+      "price": 24000000,
+      "priceCurrency": "USD",
+      "note": "Harkins documents the December 19, 2024 grand opening of Bridgeside Estates, the completed 50-home first phase of Little Lehigh redevelopment. Pennrose’s 2025 developer profile lists US$24 million for this exact 50-home scope. Native price records that rounded profile figure; an older Fall 2023 AHA newsletter described US$27 million, so this is not represented as an audited final account. Phase II and the full master plan remain separate. The contractor’s ceremony date is retained rather than the following day’s press-release date.",
+      "sources": [
+        {
+          "url": "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+          "title": "Harkins Celebrates the Grand Opening of Bridgeside Estates",
+          "quote": "celebrate the grand opening of Bridgeside Estates",
+          "publishedDate": "2024-12-19",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
+          "title": "Lexington Technology Park RFQ — Development Team Profiles",
+          "quote": "$24M | 50 Units",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Page 0, Bridgeside Estates, Allentown PA. Rounded developer profile project figure; leading + is a profile bullet, not treated as a price lower bound."
+        },
+        {
+          "url": "https://www.allentownhousing.org/pdf/aha-newsletter-fall.pdf",
+          "title": "Allentown Housing Authority — Fall 2023 newsletter",
+          "quote": "arrangements that made the $27 million project possible",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Historical Phase I budget on page 3, superseded here by the newer developer profile; difference retained explicitly."
+        }
+      ],
+      "patch": {}
+    },
+    {
+      "id": 7143,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Capstone’s project page explicitly marks the exact Mobile, Alabama 80-home Cottage Hill Place project Complete, with May 2017 / May 2018 start/completion. The existing May 31, 2018 estimated month anchor is retained. No full development or construction cost was verified in the builder page, operator material or project-cost searches; published rents and unrelated similarly named developments are not project costs.",
+      "sources": [
+        {
+          "url": "https://capstonebuilding.com/projects/cottage-hill-place/",
+          "title": "Cottage Hill Place - Capstone Building Corp.",
+          "quote": "Project Status: Complete",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Label/value whitespace normalized; Start/Completion is May 2017 / May 2018, 80 units, Mobile AL."
+        }
+      ],
+      "patch": {},
+      "costGap": "No exact-scope cost established from builder/operator pages and Mobile project-cost searches. Exclude Cottage Hill Place/Pointe projects in other cities and monthly rent figures."
+    },
+    {
+      "id": 7207,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "The developer’s Chester County 2022 Housing Forum presentation identifies Don Coppedge Village as the Phoenixville 2013 project with 36 homes; the community-supplied property record explicitly says Built in 2013. This supports Completed for the former Fairview Village, not an inference from current rents. The existing estimated August 2013 milestone remains from earlier research. The newly checked Inquirer and proposal/budget sources could not be opened; indexed US$9 million and US$10.8 million figures are not newly verified and native cost stays null.",
+      "sources": [
+        {
+          "url": "https://chescoplanning.com/Housing/pdf/2022HousingForumPresentation.pdf",
+          "title": "2022 Chester County Housing Forum — Pennrose presentation",
+          "quote": "Phoenixville, PA| 2013 | 36 units",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Page 6 (zero-based), Don Coppedge Village."
+        },
+        {
+          "url": "https://www.forrent.com/pa/phoenixville/don-coppedge-village/cj8tt8d",
+          "title": "Don Coppedge Village | Phoenixville, PA | ForRent.com",
+          "quote": "Built in 2013",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Community-supplied property information, 170 Persimmon Lane; matched to developer’s 36-unit portfolio record."
+        }
+      ],
+      "patch": {},
+      "costGap": "Budget PDFs and original news article inaccessible; conflicting indexed $9m/$10.8m amounts have not been verified in opened sources. Do not import a search snippet as cost evidence."
+    },
+    {
+      "id": 7224,
+      "status": "Completed",
+      "price": null,
+      "priceCurrency": null,
+      "note": "Pennrose’s November 2021 grand-opening release confirms completed modernization of the exact 279-home Oaks Intown Phase I: McIntosh, O.B. Hines, Thronateeska and Golden Age. This is separate from the broader Albany portfolio conversion and Oaks at North Intown master plan. The existing estimated November month anchor is retained; publication day alone does not establish the ceremony day. No exact 279-home total cost was verified; tax-credit equity, loans and budgets for other Albany phases are not substituted.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga/",
+          "title": "Grand Opening of Oaks Intown in Albany, GA",
+          "quote": "celebrated the grand opening of Oaks Intown",
+          "publishedDate": "2021-11-04",
+          "openedAt": "2026-10-24"
+        }
+      ],
+      "patch": {},
+      "costGap": "Opening release does not give a project total. Reported $16.5m equity is financing; larger Albany/master-plan budgets concern different scopes. Keep native cost null pending exact 279-home Phase I cost evidence."
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 7097,
+          "title": "Regent Terrace — Philadelphia affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "NJIT’s Affordable Housing Design Advisor documents completion in January 1989 of Regent Terrace’s rehabilitation and conversion from 36 apartments into 80 affordable homes. Its total development cost was US$6.3 million, distinct from US$4.22 million construction alone. The native date moves from an October 2026 listing-check date to January 31, 1989, an estimated month-precision anchor for the rehabilitation, not an exact opening day or the original building construction.",
+          "evidence": "Total development costs: $6,300,000 ($77,500/unit); Completed January 1989.",
+          "evidenceUrls": [
+            "https://web.njit.edu/abs/gallery/regent.html"
+          ],
+          "expectedPinSha256": "c756688e155335d9b93ea5d89fc3d54534191999307252651d1c72dc4189b977",
+          "metadataVerified": true,
+          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091"
+        },
+        {
+          "id": 7115,
+          "title": "Residences at Hayes — Washington DC affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose’s September 19, 2018 release documents the ribbon cutting of the completed 150-home Residences at Hayes; its October release confirms residents moving in. Both report US$34.9 million for this project, separate from the neighboring Lincoln Heights redevelopment. The pin retains the ceremony date. This is the source-reported development figure for the pinned opening; a later indexed municipal proposal could not be opened to verify its table or any revised scope.",
+          "evidence": "Funding for the $34.9 million project",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-welcomes-first-residents/"
+          ],
+          "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332",
+          "metadataVerified": true,
+          "savedPinSha256": "c8bf9f6300825612821b87e98b0d1d383579bdfe4989771f59df0a873e39af2d"
+        },
+        {
+          "id": 7124,
+          "title": "Phare — Orleans affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Orleans Affordable Housing Trust’s December 2025 materials describe Pennrose’s exact 62-home Phare development as now complete and leasing and give US$37 million total cost. The Independent’s February 2025 article explicitly corrects its earlier US$71.6 million figure to US$37 million. Native cost follows the corrected total, not the land purchase or CPA contribution. The existing estimated year-end anchor is retained; no exact opening day is invented.",
+          "evidence": "now complete and leasing.",
+          "evidenceUrls": [
+            "https://www.town.orleans.ma.us/DocumentCenter/View/10455/AHT-Meeting-Materials-12-16",
+            "https://provincetownindependent.org/featured/2025/02/26/lottery-open-for-62-affordable-units-at-phare-in-orleans/"
+          ],
+          "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d",
+          "metadataVerified": true,
+          "savedPinSha256": "061bac2636eaf634d4d867f672aa9e0df0b0cfa1b0fc8feb58c9093246e5472c"
+        },
+        {
+          "id": 7134,
+          "title": "Aston Heights — Newark affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The May 2021 permanent-loan report describes Aston Heights as newly constructed with 154 apartments, establishing completion independently of old target dates. Pennrose’s developer profile hosted in the URA’s 2025 RFQ materials gives US$45 million for the exact 154-home Aston Heights / Montgomery Heights II scope. This rounded project-profile figure is not the US$7.9 million permanent loan. The existing estimated 2019 year anchor remains; the newly opened sources establish completion by 2021 but do not independently establish an exact 2019 opening date.",
+          "evidence": "Aston Heights, a newly constructed mixed-income property",
+          "evidenceUrls": [
+            "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf"
+          ],
+          "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781",
+          "metadataVerified": true,
+          "savedPinSha256": "6c5180b823665481fc812d1f5dce1409a89712ad65045042a5de9244754abbe7"
+        },
+        {
+          "id": 7138,
+          "title": "Bridgeside Estates — Allentown affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Harkins documents the December 19, 2024 grand opening of Bridgeside Estates, the completed 50-home first phase of Little Lehigh redevelopment. Pennrose’s 2025 developer profile lists US$24 million for this exact 50-home scope. Native price records that rounded profile figure; an older Fall 2023 AHA newsletter described US$27 million, so this is not represented as an audited final account. Phase II and the full master plan remain separate. The contractor’s ceremony date is retained rather than the following day’s press-release date.",
+          "evidence": "celebrate the grand opening of Bridgeside Estates",
+          "evidenceUrls": [
+            "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
+            "https://www.allentownhousing.org/pdf/aha-newsletter-fall.pdf"
+          ],
+          "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32",
+          "metadataVerified": true,
+          "savedPinSha256": "e1ed7ef5e3d0b64aaeb5e66b4628245e9f1bdf2f6ec8b6d72fb83b9f51a3e074"
+        },
+        {
+          "id": 7143,
+          "title": "Cottage Hill Place — Mobile affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Capstone’s project page explicitly marks the exact Mobile, Alabama 80-home Cottage Hill Place project Complete, with May 2017 / May 2018 start/completion. The existing May 31, 2018 estimated month anchor is retained. No full development or construction cost was verified in the builder page, operator material or project-cost searches; published rents and unrelated similarly named developments are not project costs.",
+          "evidence": "Project Status: Complete",
+          "evidenceUrls": [
+            "https://capstonebuilding.com/projects/cottage-hill-place/"
+          ],
+          "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221",
+          "metadataVerified": true,
+          "savedPinSha256": "464838ebe6605f402ccc9680b82e8810ef2ee8ba7d53510d5b259670abebcf96"
+        },
+        {
+          "id": 7207,
+          "title": "Don Coppedge Village — Phoenixville affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The developer’s Chester County 2022 Housing Forum presentation identifies Don Coppedge Village as the Phoenixville 2013 project with 36 homes; the community-supplied property record explicitly says Built in 2013. This supports Completed for the former Fairview Village, not an inference from current rents. The existing estimated August 2013 milestone remains from earlier research. The newly checked Inquirer and proposal/budget sources could not be opened; indexed US$9 million and US$10.8 million figures are not newly verified and native cost stays null.",
+          "evidence": "Phoenixville, PA| 2013 | 36 units",
+          "evidenceUrls": [
+            "https://chescoplanning.com/Housing/pdf/2022HousingForumPresentation.pdf",
+            "https://www.forrent.com/pa/phoenixville/don-coppedge-village/cj8tt8d"
+          ],
+          "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9",
+          "metadataVerified": true,
+          "savedPinSha256": "fb3a9afe69c8d189ebb6fb495a66f2583c8830bb6a7f8a86ccc0303c7f973582"
+        },
+        {
+          "id": 7224,
+          "title": "Oaks Intown — Albany affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose’s November 2021 grand-opening release confirms completed modernization of the exact 279-home Oaks Intown Phase I: McIntosh, O.B. Hines, Thronateeska and Golden Age. This is separate from the broader Albany portfolio conversion and Oaks at North Intown master plan. The existing estimated November month anchor is retained; publication day alone does not establish the ceremony day. No exact 279-home total cost was verified; tax-credit equity, loans and budgets for other Albany phases are not substituted.",
+          "evidence": "celebrated the grand opening of Oaks Intown",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga/"
+          ],
+          "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad",
+          "metadataVerified": true,
+          "savedPinSha256": "b1fe4f75bff7e5e5c27dbc9f32d736073b408413941f497c77edf2fd8466b466"
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 7097,
+          "title": "Regent Terrace — Philadelphia affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "NJIT’s Affordable Housing Design Advisor documents completion in January 1989 of Regent Terrace’s rehabilitation and conversion from 36 apartments into 80 affordable homes. Its total development cost was US$6.3 million, distinct from US$4.22 million construction alone. The native date moves from an October 2026 listing-check date to January 31, 1989, an estimated month-precision anchor for the rehabilitation, not an exact opening day or the original building construction.",
+          "evidence": "Total development costs: $6,300,000 ($77,500/unit); Completed January 1989.",
+          "evidenceUrls": [
+            "https://web.njit.edu/abs/gallery/regent.html"
+          ],
+          "expectedPinSha256": "c756688e155335d9b93ea5d89fc3d54534191999307252651d1c72dc4189b977",
+          "metadataVerified": true,
+          "savedPinSha256": "8f9c99bb9de748971fbd1e8d13b68eec9fe8ab8487483f7371b975b949f09091"
+        },
+        {
+          "id": 7115,
+          "title": "Residences at Hayes — Washington DC affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose’s September 19, 2018 release documents the ribbon cutting of the completed 150-home Residences at Hayes; its October release confirms residents moving in. Both report US$34.9 million for this project, separate from the neighboring Lincoln Heights redevelopment. The pin retains the ceremony date. This is the source-reported development figure for the pinned opening; a later indexed municipal proposal could not be opened to verify its table or any revised scope.",
+          "evidence": "Funding for the $34.9 million project",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-welcomes-first-residents/"
+          ],
+          "expectedPinSha256": "71ca73e4f73eafde1ff084f19af42b24ab3f2ef5ede3188fd87fa521daa18332"
+        },
+        {
+          "id": 7124,
+          "title": "Phare — Orleans affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Orleans Affordable Housing Trust’s December 2025 materials describe Pennrose’s exact 62-home Phare development as now complete and leasing and give US$37 million total cost. The Independent’s February 2025 article explicitly corrects its earlier US$71.6 million figure to US$37 million. Native cost follows the corrected total, not the land purchase or CPA contribution. The existing estimated year-end anchor is retained; no exact opening day is invented.",
+          "evidence": "now complete and leasing.",
+          "evidenceUrls": [
+            "https://www.town.orleans.ma.us/DocumentCenter/View/10455/AHT-Meeting-Materials-12-16",
+            "https://provincetownindependent.org/featured/2025/02/26/lottery-open-for-62-affordable-units-at-phare-in-orleans/"
+          ],
+          "expectedPinSha256": "bb7181d66d948655c71e59cd7144c094586f919283df362ac5e6bb6f157ae54d"
+        },
+        {
+          "id": 7134,
+          "title": "Aston Heights — Newark affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The May 2021 permanent-loan report describes Aston Heights as newly constructed with 154 apartments, establishing completion independently of old target dates. Pennrose’s developer profile hosted in the URA’s 2025 RFQ materials gives US$45 million for the exact 154-home Aston Heights / Montgomery Heights II scope. This rounded project-profile figure is not the US$7.9 million permanent loan. The existing estimated 2019 year anchor remains; the newly opened sources establish completion by 2021 but do not independently establish an exact 2019 opening date.",
+          "evidence": "Aston Heights, a newly constructed mixed-income property",
+          "evidenceUrls": [
+            "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf"
+          ],
+          "expectedPinSha256": "3d84da7fc409facc07630f5db0ba4bfe8a13588bd0eff1c4d6c59208693ad781"
+        },
+        {
+          "id": 7138,
+          "title": "Bridgeside Estates — Allentown affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Harkins documents the December 19, 2024 grand opening of Bridgeside Estates, the completed 50-home first phase of Little Lehigh redevelopment. Pennrose’s 2025 developer profile lists US$24 million for this exact 50-home scope. Native price records that rounded profile figure; an older Fall 2023 AHA newsletter described US$27 million, so this is not represented as an audited final account. Phase II and the full master plan remain separate. The contractor’s ceremony date is retained rather than the following day’s press-release date.",
+          "evidence": "celebrate the grand opening of Bridgeside Estates",
+          "evidenceUrls": [
+            "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "https://www.ura.org/media/W1siZiIsIjIwMjUvMDcvMDkvOW81dmJ4ODIya19MZXhpbmd0b25fVGVjaF9SRlFfRGV2ZWxvcG1lbnRfVGVhbV9Qcm9maWxlcy5wZGYiXV0/Lexington%20Tech%20RFQ%20-%20Development%20Team%20Profiles.pdf",
+            "https://www.allentownhousing.org/pdf/aha-newsletter-fall.pdf"
+          ],
+          "expectedPinSha256": "cafb185b9abd544891ac2c45adce51ac393916c50f3568da5b5f08006cbf7d32"
+        },
+        {
+          "id": 7143,
+          "title": "Cottage Hill Place — Mobile affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Capstone’s project page explicitly marks the exact Mobile, Alabama 80-home Cottage Hill Place project Complete, with May 2017 / May 2018 start/completion. The existing May 31, 2018 estimated month anchor is retained. No full development or construction cost was verified in the builder page, operator material or project-cost searches; published rents and unrelated similarly named developments are not project costs.",
+          "evidence": "Project Status: Complete",
+          "evidenceUrls": [
+            "https://capstonebuilding.com/projects/cottage-hill-place/"
+          ],
+          "expectedPinSha256": "bb0d87dc4a2d634f6e62c21cabe0915dfc280bc8d366450313f417c022ef7221"
+        },
+        {
+          "id": 7207,
+          "title": "Don Coppedge Village — Phoenixville affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "The developer’s Chester County 2022 Housing Forum presentation identifies Don Coppedge Village as the Phoenixville 2013 project with 36 homes; the community-supplied property record explicitly says Built in 2013. This supports Completed for the former Fairview Village, not an inference from current rents. The existing estimated August 2013 milestone remains from earlier research. The newly checked Inquirer and proposal/budget sources could not be opened; indexed US$9 million and US$10.8 million figures are not newly verified and native cost stays null.",
+          "evidence": "Phoenixville, PA| 2013 | 36 units",
+          "evidenceUrls": [
+            "https://chescoplanning.com/Housing/pdf/2022HousingForumPresentation.pdf",
+            "https://www.forrent.com/pa/phoenixville/don-coppedge-village/cj8tt8d"
+          ],
+          "expectedPinSha256": "9d525cbb58b6ceae09c5ae980766af84af1815cc5eca6f0a3b9e3d0504b137c9"
+        },
+        {
+          "id": 7224,
+          "title": "Oaks Intown — Albany affordable housing",
+          "expectedAuthorId": 76,
+          "status": "Completed",
+          "reason": "Pennrose’s November 2021 grand-opening release confirms completed modernization of the exact 279-home Oaks Intown Phase I: McIntosh, O.B. Hines, Thronateeska and Golden Age. This is separate from the broader Albany portfolio conversion and Oaks at North Intown master plan. The existing estimated November month anchor is retained; publication day alone does not establish the ceremony day. No exact 279-home total cost was verified; tax-credit equity, loans and budgets for other Albany phases are not substituted.",
+          "evidence": "celebrated the grand opening of Oaks Intown",
+          "evidenceUrls": [
+            "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga/"
+          ],
+          "expectedPinSha256": "e63b41d6aea7e779c0c2f44970ab2cc5d2d067053b96b38c3871d5c233cc5dad"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "id": 7109,
+      "title": "Thatcher Flats — Cincinnati affordable housing",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "The October 7, 2024 milestone mixes the opening of 50-home Phase I with groundbreaking of 36-home Phase II; the saved pin focuses on Phase II but its generic title covers both. The builder later reports Phase II finished in November 2025. Clarify the pinned phase/milestone before selecting one status or cost; the $16.5m combined construction contract is not a phase development budget.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/news-views/news/2024/pennrose-celebrates-grand-opening-of-thatcher-flats-phase-i-begins-construction-on-phase-ii/",
+          "title": "Pennrose Celebrates Grand Opening of Thatcher Flats Phase I, Begins Construction on Phase II",
+          "quote": "Begins Construction on Phase II",
+          "publishedDate": "2024-10-07",
+          "openedAt": "2026-10-24"
+        },
+        {
+          "url": "https://www.douglascompany.com/thatcher-flats-marks-final-phase-completion-expanding-affordable-housing-in-cincinnati/",
+          "title": "Thatcher Flats Marks Final Phase Completion, Expanding Affordable Housing in Cincinnati",
+          "quote": "November 2025",
+          "publishedDate": "2026-03-12",
+          "openedAt": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "id": 7174,
+      "title": "Northside Village — Schenectady affordable housing",
+      "gapCategory": "conflicting-or-halted-scope",
+      "reason": "The saved Northside Village pin covers 300 homes, while the opened Pennrose portfolio establishes November 2020 completion and $29,716,977 only for 89-home Phase I. Obtain dated evidence for the remaining phase or narrow the represented scope before assigning a whole-project status or budget.",
+      "sources": [
+        {
+          "url": "https://www.pennrose.com/portfolio/northside-village/",
+          "title": "Northside Village",
+          "quote": "89 Units (Phase I)",
+          "publishedDate": null,
+          "openedAt": "2026-10-24",
+          "quoteNote": "Portfolio completion and cost fields explicitly refer to Phase I; not proof of full 300-home completion."
+        }
+      ]
+    }
+  ],
+  "additionalSourcesChecked": [
+    {
+      "url": "https://cms3.revize.com/revize/hudsonny/Affordable%20Housing%20RFQ-MPACT%20%26%20Pennrose.pdf",
+      "result": "Open failed; curl HTTP 404. Indexed Hayes table not verified; no indexed revised cost assigned."
+    },
+    {
+      "url": "https://housingforum.phfa.org/slides/2017/session%2015_ramirez.pdf",
+      "result": "HTTP 404; indexed Fairview Village budget not treated as opened evidence."
+    },
+    {
+      "url": "https://livinginphoenixville.com/real-estate-growth-development/",
+      "result": "Open timeout; indexed Fairview cost not verified."
+    },
+    {
+      "url": "https://www.inquirer.com/philly/news/20131225_Affordable_housing_opens_doors_in_Phoenixville.html",
+      "result": "Article inaccessible; prior date provenance retained, cost not newly verified."
+    },
+    {
+      "url": "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "result": "Redirect to orleansma.gov inaccessible; Don Coppedge budget not verified."
+    }
+  ]
+}
