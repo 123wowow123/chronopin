@@ -23,7 +23,7 @@ async function run() {
        AND EXISTS (SELECT 1 FROM "PinTagView" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" <> 'reserved' AND "c"."name" = ANY($1::citext[]))
        AND NOT EXISTS (SELECT 1 FROM "PinTagView" AS "x" WHERE "x"."pinId" = "p"."id" AND "x"."name" = ANY($2::citext[]))
      ORDER BY "p"."id"`,
-    [[...PRODUCT_SHELVES.map((s) => s.name), 'Product'], NOT_GOODS],
+    [[...PRODUCT_SHELVES.map((s) => s.name), 'Automotive', 'Product'], NOT_GOODS],
   );
   console.log(`${pins.length} goods pins`);
   if (flags['dry-run']) return;

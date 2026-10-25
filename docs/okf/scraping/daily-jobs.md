@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -574,6 +574,15 @@ the midnight job's [personCampaigns](#personcampaigns), not this task.
 **When.** In the news job, morning and evening (owner, 2026-10-14: "6am and 6pm job should add job to pin predicted pins to thread if available"). `npm run threads:predicted` does the same from a terminal (`--apply` to change).
 **Duplicate pins and 'same event' (owner, 2026-10-14).** Once a pin is marked as the same event (a confirmed duplicate in a duplicate group), the 6am and 6pm job rethreads it so that the duplicate is not showing up on the thread: a duplicate pin must never answer the pin it duplicates, and duplicate pins must not appear in the thread. Detach the duplicate pin (`parentId: null`), and re-parent any child pins that answered the duplicate pin to the canonical/primary pin of that duplicate group instead. Never choose a parent that is in the pin's duplicate group.
 **Traps.** A thread connects events in the same recurring story, series, or franchise; do not thread loosely related events just because they share a category or topic. A parent pin must have happened before or on the predicted start date (`utcStartDateTime`), and must not be a descendant or confirmed duplicate of the pin.
+
+### productLifecycle
+
+Added 2026-10-24 (owner: product pins carry Announced and Released; a future launch gets Released once its date passes).
+
+**Reads** nothing: one call, `product_lifecycle_sync` ([productLifecycle.ts](../../../src/server/jobs/productLifecycle.ts)).
+**Does** tag every goods pin (a live pin with a `productName` on a /products shelf, tagged `Automotive` or tagged `Product`; restaurants, films, festivals and conferences are left out) `Announced`, and `Released` once its start date has come. A pin still to launch has only `Announced`, so a product gains `Released` on the first run after its date. It runs on this database and, when the run writes to production, on production through the admin DB API (`PinTag` rows only; ids differ, so each side is read for itself). Returns `goods`, `tagged` and `untagged` for each side. Nothing to review.
+**When.** In the news job, morning and evening. `npx tsx scripts/tags/productLifecycle.ts` (local) and `node scripts/tags/productLifecycleProd.mjs` (production) do the same by hand; `--dry-run` only counts.
+**Traps.** New goods pins get both tags from the extraction prompt; this task catches the rest and the dates that have since passed. A start date that moves later takes `Released` off.
 
 ## Find new events
 

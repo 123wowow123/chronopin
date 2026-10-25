@@ -58,6 +58,7 @@ import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
 import { savePerf } from '../model/pinPerf';
 import { perfProblem } from '@/lib/pinPerf';
 import { predictedPins } from './threadPredicted';
+import { syncProductLifecycle } from './productLifecycle';
 import { trendCandidates } from './trends';
 
 export type JobContext = {
@@ -419,6 +420,18 @@ export const TOOLS: JobTool[] = [
         tool: 'model_scores',
         detail: `${result.awaiting.length} model pin(s) still awaiting an arena score, ${result.needsFrontierTag.length} frontier pin(s) to tag`,
       });
+      return result;
+    },
+  },
+  // --- Announced and Released tags on goods pins (the productLifecycle task) ---
+  {
+    name: 'product_lifecycle_sync',
+    description:
+      "The productLifecycle task's only call. Tags every goods pin (a productName on a /products shelf, or tagged Automotive or Product; not restaurants, films or events) Announced, and Released once its start date has come, taking Released off a pin still to launch. Runs on this database and, when the run writes to production, on production. Returns, for each side, goods (pins checked), tagged (tags added) and untagged (Released taken off). Mechanical: nothing to review.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const result = await syncProductLifecycle();
+      await act(ctx, { tool: 'product_lifecycle_sync', detail: `local ${result.local.tagged} tagged / ${result.local.untagged} untagged of ${result.local.goods}${result.production ? `; production ${result.production.tagged} / ${result.production.untagged} of ${result.production.goods}` : ''}` });
       return result;
     },
   },

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 const BASE = 'https://www.chronopin.com';
 const TOKEN = readFileSync(new URL('../../.scrape/admin.token', import.meta.url), 'utf8').trim();
 const dry = process.argv.includes('--dry-run');
-const SHELVES = ['Electronics', 'Audio', 'Fashion', 'Watches', 'Gaming', 'Tabletop', 'Collectibles', 'Ice Cream', 'Snack', 'Alcoholic Drinks', 'Comics', 'Product'];
+const SHELVES = ['Electronics', 'Audio', 'Fashion', 'Watches', 'Gaming', 'Tabletop', 'Collectibles', 'Ice Cream', 'Snack', 'Alcoholic Drinks', 'Comics', 'Automotive', 'Product'];
 const NOT_GOODS = ['Restaurant', 'Restaurant Opening', 'Top Restaurants', 'Movie', 'Festival', 'Conference'];
 
 async function api(method, path, body) {

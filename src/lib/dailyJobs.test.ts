@@ -162,6 +162,14 @@ describe('task groups', () => {
 });
 
 
+describe('productLifecycle task', () => {
+  it('runs in the news job upkeep', () => {
+    expect(TASKS.productLifecycle.group).toBe('upkeep');
+    expect(news.tasks).toContain('productLifecycle');
+    expect(midnight.tasks).not.toContain('productLifecycle');
+  });
+});
+
 describe('ad translation task', () => {
   it('runs inside midnight and the 6am/6pm news job without a separate job', () => {
     expect(midnight.tasks).toContain('adTranslations');

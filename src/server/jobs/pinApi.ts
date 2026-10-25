@@ -218,3 +218,15 @@ export async function personTradesRequest(filings: unknown[]) {
     : await signToken(admin.id);
   return call<{ added: number; missing: string[] }>('POST', '/api/admin/person-trades', { token, body: { filings } });
 }
+
+// The tag backfill for goods pins (productLifecycle.ts): reads of Pin and
+// PinTag and writes of PinTag rows through the admin DB API, signed as the
+// existing admin. Nothing else.
+export async function adminDbRequest<T = Record<string, any>>(method: 'GET' | 'POST' | 'DELETE', path: string, body?: unknown): Promise<T> {
+  if (!/^\/api\/admin\/db\/(?:Pin|PinTag)(?:\?[^#]*)?$/.test(path)) throw new Error('Not a Pin or PinTag admin table path');
+  if (method !== 'GET' && !path.startsWith('/api/admin/db/PinTag')) throw new Error('Only PinTag rows may be written');
+  const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
+  if (!admin) throw new Error('No admin account available');
+  const token = await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET));
+  return call<T>(method, path, { token, body, base: prodBase()! });
+}

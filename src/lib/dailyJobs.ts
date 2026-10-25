@@ -103,6 +103,11 @@ export const TASKS = {
     label: 'Thread predicted pins',
     summary: 'Check predicted pins for an earlier pin or thread in their story, series or franchise, and attach them with parentId if available.',
   },
+  productLifecycle: {
+    group: 'upkeep',
+    label: 'Product lifecycle tags',
+    summary: 'Tag goods pins Announced, and Released once their start date has come, locally and on production.',
+  },
   trends: {
     group: 'discover',
     label: 'Google Trends',
@@ -255,7 +260,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'productLifecycle', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
