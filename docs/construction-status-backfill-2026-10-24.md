@@ -1,6 +1,6 @@
 # Construction status backfill — October 24, 2026
 
-**Current: 932 candidates remain in the status research queue per environment.** Five opened-source rounds resolved 70 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
+**Current: 922 candidates remain in the status research queue per environment.** Six opened-source rounds resolved 80 project records; a saved-subject audit excluded 130 non-construction records. See the follow-up below for evidence, corrections and the remaining gaps.
 
 Read the complete live-pin inventories through authenticated admin APIs: 12,909 local and 12,963 production records. Screened 2,587 project/physical-facility candidates in each snapshot, including infrastructure, housing, factories, power generation, storage and data centers. Previously reviewed nuclear/factory pins were preserved rather than treated as new assignments. The inventory is a dated snapshot; the candidate screen is broad and includes false positives such as events hosted at stadiums.
 
@@ -73,7 +73,7 @@ After the first follow-up, accounting per environment was **1,250 assigned + 992
 
 ### Remaining source and phase gaps
 
-After round five, the 932 remaining records retain their own source links and follow-up reason in the backfill catalog:
+After round six, the 922 remaining records retain their own source links and follow-up reason in the backfill catalog:
 
 | Gap | Records per environment | Required next evidence |
 | --- | ---: | --- |
@@ -83,7 +83,7 @@ After round five, the 932 remaining records retain their own source links and fo
 | Housing opening/build milestone source | 5 | Reopen the exact development/building's opening, placed-in-service or physical-build source; rents and applications alone do not establish completion |
 | Conflicting, denied or halted scope | 43 | Resolve the specific conflict or verify resumed physical work; do not force a three-way status |
 | Grid/interconnection request identity | 35 | Match the exact request ID and phase to physical-work evidence; an IA or future COD alone is insufficient |
-| Other individual project/source/phase questions | 399 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
+| Other individual project/source/phase questions | 389 | Follow the retained project-specific reason and citations; distinguish the pinned unit or phase from predecessor facilities |
 
 Fehmarnbelt research also opened the operator's April 2026 factsheet and May 17 phased-opening announcement. The latter withdraws the single 2029 opening assumption, separates road and rail, and says a revised schedule will follow immersion experience. The April factsheet omits the budget shown in March. A new exact full-scope opening date and any revised cost require follow-up; no replacement date was invented. These limitations do not establish completion.
 
@@ -268,3 +268,43 @@ python3 scripts/construction/reviewQueue.py --manifest scripts/construction/rese
 ```
 
 All 15 public JSON records per environment passed status, author, native cost/currency, citation and corrected-date checks. Authenticated native pages for Al Maktoum, Gross Dam, Egypt’s initial railway contract, shiploader 7.09, Oaks at Liberty and Gloria Robinson returned HTTP 200 with their research and correct statuses. Metadata and status saves were re-read and unrelated fields checked. Before snapshots, opened evidence and page captures remain ignored under `.scrape/construction-status-research-round5-2026-10-24/`. Syntax/lint, catalog accounting, whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.
+
+
+## Sixth research round — 10 records
+
+Saved and verified **10 additional records in each environment: seven In Progress and three Proposed**. The queue decreases from **932 to 922**. Six pins have source-quoted native costs; four retain null cost/currency because the exact phase total is unverified. The [round-six research/replay catalog](../scripts/construction/research-round6-2026-10-24.json) retains opened HTTPS sources, verbatim excerpts, precise budget qualifications, original hashes and verification receipts. Original authors, parent links, unrelated tags and unpatched fields were preserved.
+
+| Pin | Reviewed scope | Status | Native cost |
+| --- | --- | --- | --- |
+| 192 | Sites Reservoir planned construction start | Proposed | Approximately USD 9.9 billion year-of-expenditure Governance Forecast through 2035, including contingency |
+| 463 | New Manila airport first-runway delivery | In Progress | Null: PHP 735/740 billion airport/aerotropolis totals are not a runway-phase budget |
+| 475 | Entire Nouvelle Route du Littoral completion | In Progress | Approximately EUR 2.5 billion latest opened explicit whole-road estimate, dated September 2024; newer Phase 2 appraisal separate |
+| 530 | Complete 23-km Kvesheti–Kobi road | In Progress | Approximately GEL 1.2 billion, confirmed in project FAQ and October 2026 reporting |
+| 571 | JFK New Terminal One first 14-gate phase | In Progress | Null: USD 9.5 billion covers the full 23-gate terminal |
+| 619 | Messina bridge final-design approval, August 2025 | Proposed | EUR 13.532 billion whole link, including road and railway connections |
+| 636 | McCook Reservoir Stage 2 | In Progress | Null: combined-stage tables and individual contracts do not establish a Stage 2-only total |
+| 674 | O’Hare terminal redevelopment program | In Progress | USD 12.5 billion in August 2026 aviation reporting; narrower approvals/contracts distinguished |
+| 2166 | Hillcrest replacement hospital major-construction start | Proposed | Null: five-phase campus range is not the redesigned approximately 300-bed hospital budget |
+| 2220 | CHOP Roberts Children’s Health tower topping out | In Progress | USD 2.59 billion new patient tower, distinct from the USD 125 million gift |
+
+**Sites Reservoir (192)** was still carrying a 2024 start headline and date. The Authority’s October 2026 baseline and contractor-outreach page now anticipate construction in **2027**, so the headline/description are corrected and the native date becomes **December 31, 2027**, an estimated year anchor. This remains a construction-start pin, not a reservoir-opening pin. The latest baseline distinguishes the **USD 9.9 billion year-of-expenditure Governance Forecast** from the **USD 7.5 billion constant-2024-dollar Governance Estimate** and **USD 6.6 billion Management Estimate**. The source itself supplies those bases; no inflation calculation or FX conversion was performed. The forecast includes governance contingency and construction/noncontract scope, not recurring operating costs.
+
+**New Manila (463)** moves from the older Q2 2028 target to **December 31, 2028**, an estimated year-end anchor for the CEO’s September 2026 first-runway target. June reporting explicitly describes runway land surcharging, establishing actual work. **Kvesheti–Kobi (530)** moves from spring 2027 to **December 31, 2028**, an estimated year anchor for October 2026 reporting; tunnel excavation is finished but bridge and tunnel-system work continues. **JFK Phase 1 (571)** moves from November 2026 to **March 31, 2027**, an estimated first-quarter anchor for the terminal’s early-2027 update. Its headline and description are corrected. None of these anchors is presented as an exact announced opening day, and every changed start date preserves the original event duration.
+
+**Hillcrest (2166)** is specifically the replacement inpatient hospital, not the already opened outpatient pavilion or the whole campus. UC San Diego lists **Design Development**, with major construction anticipated in summer 2027; the advance-work phase is only described as expected in late summer 2026. No elapsed target establishes actual commencement. Its headline/description now say the start is targeted; June 21, 2027 remains explicitly an estimated seasonal anchor. Campus-wide USD 2.5–3 billion, older differently sized hospital estimates, multi-project capital needs and unverified aggregator ranges are not assigned as the new hospital’s current budget.
+
+**Messina (619)** remains Proposed at its historical final-design approval. The project company conditioned works on legal effectiveness, and its 2025 accounts record the later Court of Auditors registration refusal. The approval does not establish construction or current legal effectiveness. **CHOP (2220)** remains In Progress at the January 28, 2026 final-beam placement, before its planned 2028 patient opening; the operator page was successfully opened by a direct HTTPS request after the research tool returned 403.
+
+Costs retain their exact scope and evidence date. Nouvelle Route du Littoral’s **EUR 2.5 billion** is the latest opened explicit whole-road estimate, reported in September 2024; the **EUR 1.07 billion** July 2026 EIB estimate is Phase 2-only, not a cumulative replacement or a figure to add to the already inclusive whole-road estimate. A revised cumulative budget remains a follow-up. Its unsupported USD-denominated lower/upper bounds are cleared when saving the sourced EUR figure. O’Hare’s **USD 12.5 billion** August 2026 report supersedes the saved USD 12 billion; narrower ORDNext approvals and the individual Concourse D contract have different scopes/cost bases. Its 2034 estimated terminal-program anchor remains qualified against component schedules. McCook retains the operator’s explicitly estimated **December 31, 2032** target; Stage 1 operation does not complete the excavated Stage 2. No airport master-plan figure, shared-stage budget, gift or loan was allocated to an unsupported individual phase.
+
+Accounting per environment is **1,320 assigned + 922 queued + 334 excluded + 11 previously reviewed overlaps = 2,587 screened candidates**. Assigned statuses are **639 Proposed, 414 In Progress and 267 Completed**. Including the separate original 68-pin batch, **1,388 reviewed eligible pins per environment** carry status tags. Remaining groups are 251 agency/project identities, 109 tracker parcels, 90 Epoch trajectories, five housing milestones, 43 conflicting/halted scopes, 35 grid-request identities and 389 individual source/phase questions. Earlier unresolved research findings remain preserved.
+
+Replay sequentially:
+
+```sh
+node --env-file=.env.local scripts/construction/research.mjs --manifest scripts/construction/research-round6-2026-10-24.json
+node --env-file=.env.local scripts/construction/status.mjs --manifest scripts/construction/research-round6-2026-10-24.json
+python3 scripts/construction/reviewQueue.py --manifest scripts/construction/research-round6-2026-10-24.json
+```
+
+The metadata writer now accepts an explicitly recorded original title when applying a source-supported headline correction; the original row hash, author guard, affected-field comparison and unrelated-field verification remain required. Both original and saved title states passed replay validation. All ten public JSON records per environment passed status, author, native cost/currency, citation, corrected-date and revised-headline checks. Authenticated native pages for Sites, New Manila, Kvesheti–Kobi, JFK Phase 1, Messina, Hillcrest and CHOP returned HTTP 200 with research and correct statuses. Before snapshots, opened evidence and page captures remain ignored under `.scrape/construction-status-research-round6-2026-10-24/`. Syntax/lint, accounting, whitespace and reconciliation idempotence checks passed. No deployment, production build, VM restart or resize was performed.

@@ -605,7 +605,13 @@ export function SearchResults({
                         </span>
                       ) : null}
                     </div>
-                    {searchedUser.about ? <p className="whitespace-pre-line text-sm text-muted">{searchedUser.about}</p> : null}
+                    {searchedUser.about ? (
+                      // A bio in the curator's own voice: set as a quote, with an
+                      // accent rule, so it reads as someone talking and not a label.
+                      <blockquote className="whitespace-pre-line border-s-2 border-accent/50 ps-3 text-[0.9375rem] italic leading-snug text-ink/90">
+                        {searchedUser.about}
+                      </blockquote>
+                    ) : null}
                     {/* Blocking ends a follow and keeps a new one from starting, so
                         the button gives way to what is so (and, back after an
                         unblock, reads the counts afresh). */}

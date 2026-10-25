@@ -44,7 +44,8 @@ for (const env of report.environments) {
     const research = report.research.find((r) => r.id === entry.id);
     const { rows } = await call('GET', `/api/admin/db/Pin?id=${entry.id}`);
     const before = rows[0];
-    if (rows.length !== 1 || before.title !== entry.title || before.userId !== entry.expectedAuthorId) throw Error(`Identity mismatch ${entry.id}`);
+    const originalTitle = entry.expectedOriginalTitle || entry.title;
+    if (rows.length !== 1 || ![originalTitle, research.patch.title || originalTitle].includes(before.title) || before.userId !== entry.expectedAuthorId) throw Error(`Identity mismatch ${entry.id}`);
     const receiptPath = `${directory}/${new URL(env.base).hostname}-${entry.id}-before.json`;
     let original;
     try { original = JSON.parse(await fs.readFile(receiptPath, 'utf8')); }

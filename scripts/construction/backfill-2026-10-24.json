@@ -133,6 +133,29 @@
           "verified": true
         },
         {
+          "id": 192,
+          "title": "Sites Reservoir Targets Construction Start in 2027",
+          "sourceUrl": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
+          "date": "2024-12-31",
+          "reason": "Sites Authority still describes construction as future, beginning in 2027; permits, investment decisions and a CMAR award do not establish physical work. The old 2024 start headline/date are superseded. The October 8, 2026 baseline forecasts approximately US$9.9 billion in year-of-expenditure project funding through 2035, including governance contingency. This differs from US$7.5 billion in constant 2024 dollars and the US$6.6 billion management estimate; no independent inflation or FX adjustment is made.",
+          "evidence": "expected to begin construction in 2027 in a limited capacity",
+          "originalReason": "Announced groundbreaking is not proof it took place; verify physical start",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://sitesproject.org/contractor-outreach/",
+            "https://sitesproject.org/wp-content/uploads/2026/10/Sites-Reservoir-Project-Baseline-Report.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 1,
+          "status": "Proposed",
+          "expectedPinSha256": "07e8050d91523cbc3eb8a986d859a67a3ddd7ce2e4f4a00239db346c74a29928",
+          "expectedOriginalTitle": "Sites Reservoir still on tract to break ground in 2024",
+          "metadataVerified": true,
+          "savedPinSha256": "d119a1c2058b6389d816235935cb751e4277646b97fae54003b8a7cc3ac3af97",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 209,
           "title": "UC San Diego adding 3,310 dorm beds to deal with growth, housing shortage,",
           "sourceUrl": "https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds",
@@ -788,6 +811,29 @@
           "researchManifest": "scripts/construction/research-2026-10-24.json"
         },
         {
+          "id": 463,
+          "title": "New Manila International Airport Runway Delayed to 2028",
+          "sourceUrl": "https://www.youtube.com/watch?v=nRUShCQt_5E",
+          "date": "2028-06-30",
+          "reason": "New Manila’s runway scope is In Progress: June 2026 reporting describes actual land surcharging, while the September CEO briefing targets the first runway toward end-2028. Native date moves from the older Q2 target to an estimated December 31 year-end anchor. Published PHP735/740 billion descriptions cover the airport/aerotropolis, not the first runway alone; the old US$15 billion native figure is cleared pending a separately quoted runway-phase total.",
+          "evidence": "the runway is currently undergoing surcharging",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://tfa.ph/property_news/smcs-nmia-runway-seen-ready-in-28/",
+            "https://insiderph.com/ramon-ang-eyes-end-2028-opening-for-bulacan-airports-first-runway",
+            "https://pia.gov.ph/news/construction-of-bulakan-airport-terminal-building-set-to-begin-in-2026/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "a7fb3f5eae5dcac736b96b2c142465f47c3f97e6e363994ae3cb7721c291a932",
+          "metadataVerified": true,
+          "savedPinSha256": "9481a87494f2f07389f0e06b4cfa9c5a4d07c6ccacd487cd7eb6da207ee8562c",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 472,
           "title": "Navi Mumbai International Airport Opens on a Reclaimed Swamp",
           "sourceUrl": "https://www.youtube.com/watch?v=zoqKwqM7wkQ",
@@ -818,6 +864,29 @@
             "https://vietnamnet.vn/en/vietnam-unveils-timeline-for-67-billion-high-speed-railway-2517429.html"
           ],
           "verified": true
+        },
+        {
+          "id": 475,
+          "title": "Réunion's Nouvelle Route du Littoral Set for Full Completion",
+          "sourceUrl": "https://www.youtube.com/watch?v=00BHXAzYRTA",
+          "date": "2030-06-30",
+          "reason": "The complete Nouvelle Route du Littoral remains In Progress: May 2026 site reporting describes continuing interchange work and the final viaduct still ahead. The June 2030 estimated anchor is retained, not treated as an exact opening day. The latest opened explicit whole-road estimate is approximately EUR2.5 billion in September 2024 reporting. EIB’s July 2026 EUR1.07 billion estimate covers Phase 2 only; it is recorded separately, not added to a whole-road estimate that already includes finishing work. A revised cumulative total remains a cost follow-up.",
+          "evidence": "avant l’achèvement complet du chantier annoncé pour 2030.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.linfo.re/la-reunion/faits-divers/nouvelle-route-du-littoral-visite-et-point-sur-l-avancement-des-travaux",
+            "https://www.lemonde.fr/economie/article/2024/09/18/a-la-reunion-les-litiges-de-la-nouvelle-route-du-littoral-une-lourde-menace-pour-les-finances-du-conseil-regional_6322695_3234.html",
+            "https://www.eib.org/en/projects/all/20260076"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "7e6cfc6c16cc8d497ca3fd5b2fe579359a59458d7f4ab335cbd4f8fa64ba625e",
+          "metadataVerified": true,
+          "savedPinSha256": "a80fff6d97bf8cb2b5aa07d567ed6dcd6affe0bcecd4c48d06c5d5d0a7db55b7",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 476,
@@ -1124,6 +1193,28 @@
           "verified": true
         },
         {
+          "id": 530,
+          "title": "Kvesheti-Kobi Highway Nears Completion in Georgia",
+          "sourceUrl": "https://www.youtube.com/watch?v=yajklD0QvAI",
+          "date": "2027-03-31",
+          "reason": "Kvesheti–Kobi remains In Progress: October 5, 2026 reporting describes ongoing arch-bridge construction and tunnel electromechanical installation, with full road opening expected in 2028. The date moves from spring 2027 to an estimated 2028 year anchor. The project’s own FAQ and current reporting both give approximately GEL1.2 billion construction/project cost; the old FAQ’s 2024 schedule is superseded. Financing amounts, individual lots and the completed tunnel excavation are not full-project completion.",
+          "evidence": "expected to be completed and opened to traffic in 2028.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://bm.ge/en/news/kvesheti-kobi-road-project-tunnel-and-bridge-construction-progress",
+            "https://kveshetikobiroad.ge/en/faq-page/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "f13fbb6c591a749287bae9285bcd06502ad40249431d73efc540ed0d87608e97",
+          "metadataVerified": true,
+          "savedPinSha256": "2b8ccd1513afc153ff22dc1aa083861a463f842073ba380ffbdcbcf3d7f8be07",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 535,
           "title": "The Millau Viaduct Opens to Traffic",
           "sourceUrl": "https://www.youtube.com/watch?v=gQA8303vxjE",
@@ -1267,6 +1358,29 @@
             "https://simpleflying.com/nuuk-international-airport-opening/"
           ],
           "verified": true
+        },
+        {
+          "id": 571,
+          "title": "JFK’s New Terminal One Phase 1 Slips to Early 2027",
+          "sourceUrl": "https://www.youtube.com/watch?v=3roesY4BJR8",
+          "date": "2026-11-30",
+          "reason": "JFK’s first 14-gate New Terminal One phase is In Progress, not operating. The Port Authority now gives 2027, and the terminal told TPG in September it was finalizing construction for early 2027. The old November 2026 headline/date are superseded by an estimated March 31, 2027 quarter anchor. The published US$9.5 billion is the full 23-gate terminal budget, not Phase 1 alone; native price/currency are cleared rather than allocating the whole-terminal figure to the first phase.",
+          "evidence": "is expected to open in 2027.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "https://thepointsguy.com/news/new-york-jfk-new-terminal-one-delayed-2027/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "9423c8f7bb33dce77fae3a66653946ddd5088eedc6122e18b575ab2c29bea001",
+          "expectedOriginalTitle": "JFK's New Terminal One Phase 1 Slips to Late 2026",
+          "metadataVerified": true,
+          "savedPinSha256": "07066b61d18455eef73771f569b0a7148a9f2e04f680a05c959beb438ccfa8af",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 573,
@@ -1551,6 +1665,29 @@
           "researchManifest": "scripts/construction/research-round4-2026-10-24.json"
         },
         {
+          "id": 619,
+          "title": "Messina Strait Bridge Wins Final Design Approval",
+          "sourceUrl": "https://www.youtube.com/watch?v=Rqx0RH7cUY8",
+          "date": "2025-08-06",
+          "reason": "The August 6, 2025 Messina pin represents final-design approval, so Proposed describes that historical pre-construction milestone. The CIPESS record states EUR13.532 billion for the complete bridge and associated road/rail connections, distinct from the Eurolink contract alone. Initial works were conditional on the approval becoming effective. The company’s 2025 accounts later record refusal of Court of Auditors registration; the approval is not represented as proof that physical bridge work began.",
+          "evidence": "Il costo dell’opera è di 13,532 miliardi di euro",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.programmazioneeconomica.gov.it/media/3eel5sg1/esito-cipess-6-agosto-2025.pdf",
+            "https://strettodimessina.it/web/ponte-stretto-con-efficacia-delibera-cipess-partono-le-prime-opere/",
+            "https://strettodimessina.it/web/wp-content/uploads/2026/05/SITO-Fascicolo-BILANCIO-2025-Approv-Ass-29-04-2026.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "expectedPinSha256": "84fbec181ba39b5321cf63e09bbfe33ac18e1f01042a2214bb9ef196ca7a4718",
+          "metadataVerified": true,
+          "savedPinSha256": "f700332ee0918047e335b8c8fbf55ea556862e251bb9d58878ed05dd6ab6c4b0",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 624,
           "title": "Taipei Performing Arts Center Officially Opens",
           "sourceUrl": "https://www.youtube.com/watch?v=7iZJmzffB7w",
@@ -1634,6 +1771,28 @@
             "https://www.skyscrapercenter.com/building/mori-jp-tower/35022"
           ],
           "verified": true
+        },
+        {
+          "id": 636,
+          "title": "McCook Reservoir's Second Stage Delayed to 2032",
+          "sourceUrl": "https://www.youtube.com/watch?v=2klS1diYMWU",
+          "date": "2032-12-31",
+          "reason": "McCook Stage 2 is In Progress: MWRD’s August 15, 2025 release explicitly describes active quarry excavation and a December 31, 2032 operational estimate. The native date is retained with estimated confidence; Stage 1’s 2017 operation does not complete Stage 2. The current TARP budgets mix shared Stages 1/2 works, mining and individual future preparation contracts. Neither the whole-reservoir budget nor a mining-change-order ceiling establishes a separately quoted all-in Stage 2 total.",
+          "evidence": "McCook Stage 2 is an active stone quarry that is being excavated",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://mwrd.org/news/mwrd-issues-update-tunnel-and-reservoir-plan",
+            "https://mwrd.org/sites/default/files/2024-10/Tarp_Status_Report_2024.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "df53dfa3d8b21e7e643cc8180abdc62f561e1199b3a5f20b0899b542b28c8113",
+          "metadataVerified": true,
+          "savedPinSha256": "3a3aad7e5a4101400bbd11ce61d91695560e7c94952b68edb2c4a14135beb48a",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 637,
@@ -1915,6 +2074,28 @@
           "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3",
           "verified": true,
           "researchManifest": "scripts/construction/research-round4-2026-10-24.json"
+        },
+        {
+          "id": 674,
+          "title": "O'Hare 21 Terminal Program Slips to 2034",
+          "sourceUrl": "https://www.youtube.com/watch?v=_Pnea6PrMmI",
+          "date": "2034-12-31",
+          "reason": "O’Hare’s terminal program remains In Progress: Concourse D construction is active while the Global Terminal and Concourse E remain future scopes. August 25, 2026 reporting gives US$12.5 billion for the redevelopment, superseding the saved rounded US$12 billion; narrower ORDNext approvals and the Concourse D contract have different cost bases/scopes. The estimated 2034 year anchor is retained for the reported Global Terminal/core terminal horizon, not an exact opening day or a guarantee every later optional package finishes together.",
+          "evidence": "$12.5 billion",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://thepointsguy.com/news/chicago-ohare-airport-ordnext-construction-update/",
+            "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public-1/2026%20Budget%20Overview_0.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "cc7a66d3f7f566b9bae3dfa00f38327a3b3353349387a3950faccc837b7a45b7",
+          "metadataVerified": true,
+          "savedPinSha256": "862ac282f2e1bca20b9808c9b1716180d6dbeff91e9349af2c5ba341d8956073",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 677,
@@ -3006,6 +3187,28 @@
           "verified": true
         },
         {
+          "id": 2166,
+          "title": "UC San Diego Targets Summer 2027 Start for New Hillcrest Hospital",
+          "sourceUrl": "https://health.ucsd.edu/about-us/hillcrest-redevelopment/",
+          "date": "2027-06-21",
+          "reason": "The exact replacement Hillcrest hospital is Proposed: UC San Diego lists Design Development and anticipates major construction in summer 2027. Advance works are only described as expected in late summer 2026, so elapsed dates do not prove commencement. The existing June 21 seasonal anchor is explicitly estimated and the headline is qualified. The campus-wide US$2.5–3 billion covers five phases; no current, source-verified total for the redesigned approximately 300-bed hospital is assigned from that campus range.",
+          "evidence": "major construction activities anticipated to begin summer 2027.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://plandesignbuild.ucsd.edu/projects/current.html"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "expectedPinSha256": "3fd7099f303174defbc06967668cc35a52675c0256a0c56944c29459f7fdb253",
+          "expectedOriginalTitle": "UC San Diego Starts Building Its New Hillcrest Hospital",
+          "metadataVerified": true,
+          "savedPinSha256": "79e3e5432ce62dfc127497703f8c3b4b11c75e1aa8a0f128376cf01191aa4c26",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 2167,
           "title": "Kindred Affordable Apartments Completes in Cortez Hill",
           "sourceUrl": "https://bridgehousing.com/properties/kindred/",
@@ -3336,6 +3539,28 @@
             "https://en.wikipedia.org/wiki/Port_Authority_Bus_Terminal"
           ],
           "verified": true
+        },
+        {
+          "id": 2220,
+          "title": "CHOP Tops Out the Roberts Children's Health Tower",
+          "sourceUrl": "https://www.chop.edu/giving/roberts-childrens-health",
+          "date": "2026-01-28",
+          "reason": "CHOP’s own page confirms the final structural beam was placed January 28, 2026 and targets Roberts Children’s Health opening in 2028. In Progress describes this historical topping-out milestone, not patient opening. March 2025 reporting states US$2.59 billion for the new patient tower; the US$125 million Roberts gift is only partial funding. The represented new tower is distinguished from the older Roberts research building and the adjacent existing inpatient building.",
+          "evidence": "On January 28, 2026, the final structural beam was placed at the top of Roberts Children’s Health.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.chop.edu/giving/roberts-childrens-health",
+            "https://www.inquirer.com/health/chop-brian-roberts-donation-new-hospital-philadelphia-20250313.html"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "b00133f4841ae08d80978ef4f521a24e987bb799c741b461f56b76e53da51a20",
+          "metadataVerified": true,
+          "savedPinSha256": "c8eff72fd4c81537b16830f108e8044b67ad62a6f6935e6bd0657e253c342fc6",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 2221,
@@ -20728,23 +20953,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 192,
-          "title": "Sites Reservoir still on tract to break ground in 2024",
-          "sourceUrl": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
-          "date": "2024-12-31",
-          "reason": "Sites Reservoir still on tract to break ground in 2024: Announced groundbreaking is not proof it took place; verify physical start. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Announced groundbreaking is not proof it took place; verify physical start",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
-            "https://krcrtv.com/news/local/sites-reservoir-project-moves-forward-with-new-developments-friends-of-the-river-react",
-            "https://www.capradio.org/articles/2023/11/24/sites-reservoir-project-finally-gets-green-light-construction-expected-to-begin-in-2024/",
-            "https://en.wikipedia.org/wiki/Sites_Reservoir"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 220,
           "title": "Fehmarnbelt Tunnel Opens",
           "sourceUrl": "https://en.wikipedia.org/wiki/Fehmarn_Belt_Fixed_Link",
@@ -20843,37 +21051,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 463,
-          "title": "New Manila International Airport Runway Delayed to 2028",
-          "sourceUrl": "https://www.youtube.com/watch?v=nRUShCQt_5E",
-          "date": "2028-06-30",
-          "reason": "New Manila International Airport Runway Delayed to 2028: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=nRUShCQt_5E",
-            "https://www.khaleejtimes.com/world/asia/philippines-new-manila-international-airports-completion-delayed-to-2028"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 475,
-          "title": "Réunion's Nouvelle Route du Littoral Set for Full Completion",
-          "sourceUrl": "https://www.youtube.com/watch?v=00BHXAzYRTA",
-          "date": "2030-06-30",
-          "reason": "Réunion's Nouvelle Route du Littoral Set for Full Completion: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=00BHXAzYRTA",
-            "https://en.wikipedia.org/wiki/Nouvelle_route_du_Littoral",
-            "https://la1ere.franceinfo.fr/reunion/le-second-viaduc-de-la-nrl-prevu-pour-2030-l-auto-pont-de-la-possession-demonte-en-novembre-prochain-1635305.html"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 494,
           "title": "Goldin Finance 117 Targeted to Finally Complete in Tianjin",
           "sourceUrl": "https://www.youtube.com/watch?v=Ko25P88bWFY",
@@ -20924,22 +21101,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 530,
-          "title": "Kvesheti-Kobi Highway Nears Completion in Georgia",
-          "sourceUrl": "https://www.youtube.com/watch?v=yajklD0QvAI",
-          "date": "2027-03-31",
-          "reason": "Kvesheti-Kobi Highway Nears Completion in Georgia: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=yajklD0QvAI",
-            "https://georgiatoday.ge/first-section-of-kvesheti-kobi-road-to-open-in-2025/",
-            "https://kveshetikobiroad.ge/en/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 567,
           "title": "Eiffel Tower's Rust-Fighting Repaint Unveiled for the Paris Olympics",
           "sourceUrl": "https://www.youtube.com/watch?v=WqEvwuU8pJs",
@@ -20969,39 +21130,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 571,
-          "title": "JFK's New Terminal One Phase 1 Slips to Late 2026",
-          "sourceUrl": "https://www.youtube.com/watch?v=3roesY4BJR8",
-          "date": "2026-11-30",
-          "reason": "JFK's New Terminal One Phase 1 Slips to Late 2026: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=3roesY4BJR8",
-            "https://simpleflying.com/6-billion-debt-clock-ticking-new-york-jfk-delayed-new-terminal-1/",
-            "https://www.bloomberg.com/news/articles/2026-05-15/jfk-terminal-developer-faces-downgrade-risk-after-opening-delay",
-            "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk.html"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 619,
-          "title": "Messina Strait Bridge Wins Final Design Approval",
-          "sourceUrl": "https://www.youtube.com/watch?v=Rqx0RH7cUY8",
-          "date": "2025-08-06",
-          "reason": "Messina Strait Bridge Wins Final Design Approval: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=Rqx0RH7cUY8",
-            "https://www.governo.it/en/articolo/cipess-meeting-6-august-2025/29450",
-            "https://www.webuildgroup.com/en/media/press-releases/eurolink-and-stretto-di-messina-signed-strait-messina-bridge-contract/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 633,
           "title": "Contractor Sues Over 161 Maiden Lane's Leaning Foundation",
           "sourceUrl": "https://www.youtube.com/watch?v=7QrvbUxOamo",
@@ -21014,38 +21142,6 @@
             "https://www.youtube.com/watch?v=7QrvbUxOamo",
             "https://therealdeal.com/new-york/2019/04/03/leaning-tower-of-pizzarotti-contractor-sues-fortis-over-alignment-issues-at-seaport-project/",
             "https://www.bisnow.com/new-york/news/construction-development/fortis-fidi-condo-building-is-leaning-contractor-claims-98352"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 636,
-          "title": "McCook Reservoir's Second Stage Delayed to 2032",
-          "sourceUrl": "https://www.youtube.com/watch?v=2klS1diYMWU",
-          "date": "2032-12-31",
-          "reason": "McCook Reservoir's Second Stage Delayed to 2032: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=2klS1diYMWU",
-            "https://mwrd.org/news/mwrd-issues-update-tunnel-and-reservoir-plan",
-            "https://municipalwaterleader.com/mccook-reservoir/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 674,
-          "title": "O'Hare 21 Terminal Program Slips to 2034",
-          "sourceUrl": "https://www.youtube.com/watch?v=_Pnea6PrMmI",
-          "date": "2034-12-31",
-          "reason": "O'Hare 21 Terminal Program Slips to 2034: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=_Pnea6PrMmI",
-            "https://simpleflying.com/chicago-ohare-global-terminal-modernization-project/",
-            "https://chicago.urbanize.city/post/ohare-redevelopment-timeline-pushes-back-2034"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -21142,20 +21238,6 @@
           "gapCategory": "individual-source-or-phase",
           "evidenceUrls": [
             "https://www.san.org/terminal-projects/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 2166,
-          "title": "UC San Diego Starts Building Its New Hillcrest Hospital",
-          "sourceUrl": "https://health.ucsd.edu/about-us/hillcrest-redevelopment/",
-          "date": "2027-06-21",
-          "reason": "UC San Diego Starts Building Its New Hillcrest Hospital: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://health.ucsd.edu/about-us/hillcrest-redevelopment/"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -21296,20 +21378,6 @@
           "gapCategory": "individual-source-or-phase",
           "evidenceUrls": [
             "https://en.wikipedia.org/wiki/Hard_Rock_Las_Vegas"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 2220,
-          "title": "CHOP Tops Out the Roberts Children's Health Tower",
-          "sourceUrl": "https://www.chop.edu/giving/roberts-childrens-health",
-          "date": "2026-01-28",
-          "reason": "CHOP Tops Out the Roberts Children's Health Tower: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.chop.edu/giving/roberts-childrens-health"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -38356,10 +38424,10 @@
           "title": "Embalse Shuts for Reactor Retubing and Life Extension"
         }
       ],
-      "verifiedCount": 1310,
+      "verifiedCount": 1320,
       "counts": {
-        "Proposed": 636,
-        "In Progress": 407,
+        "Proposed": 639,
+        "In Progress": 414,
         "Completed": 267
       },
       "publicSamples": [
@@ -38391,7 +38459,7 @@
       "inventorySha256": "c89a569f9710641fc282945980b1099301ea46feb50f24b18ab94b02fdf74fcc",
       "queueReviewOriginalCount": 1132,
       "queueGapCounts": {
-        "individual-source-or-phase": 399,
+        "individual-source-or-phase": 389,
         "conflicting-or-halted-scope": 43,
         "housing-milestone-source": 5,
         "grid-request-identity": 35,
@@ -39104,6 +39172,127 @@
             "researchAndStatusPresent": true
           }
         ]
+      },
+      "round6PublicVerification": {
+        "base": "http://127.0.0.1:3000",
+        "checks": [
+          {
+            "id": 192,
+            "status": "Proposed",
+            "price": 9900000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 463,
+            "status": "In Progress",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 475,
+            "status": "In Progress",
+            "price": 2500000000,
+            "priceCurrency": "EUR",
+            "utcStartDateTime": "2030-06-30T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 530,
+            "status": "In Progress",
+            "price": 1200000000,
+            "priceCurrency": "GEL",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 571,
+            "status": "In Progress",
+            "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 619,
+            "status": "Proposed",
+            "price": 13532000000,
+            "priceCurrency": "EUR",
+            "utcStartDateTime": "2025-08-06T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 636,
+            "status": "In Progress",
+            "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 674,
+            "status": "In Progress",
+            "price": 12500000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2034-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 2166,
+            "status": "Proposed",
+            "utcStartDateTime": "2027-06-21T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 2220,
+            "status": "In Progress",
+            "price": 2590000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2026-01-28T00:00:00.000Z",
+            "publicJsonVerified": true
+          }
+        ],
+        "pages": [
+          {
+            "id": 192,
+            "url": "http://127.0.0.1:3000/pin/192/sites-reservoir-targets-construction-start-in-2027",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 463,
+            "url": "http://127.0.0.1:3000/pin/463/new-manila-international-airport-runway-delayed-to-2028",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 530,
+            "url": "http://127.0.0.1:3000/pin/530/kvesheti-kobi-highway-nears-completion-in-georgia",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 571,
+            "url": "http://127.0.0.1:3000/pin/571/jfk-s-new-terminal-one-phase-1-slips-to-early-2027",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 619,
+            "url": "http://127.0.0.1:3000/pin/619/messina-strait-bridge-wins-final-design-approval",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 2166,
+            "url": "http://127.0.0.1:3000/pin/2166/uc-san-diego-targets-summer-2027-start-for-new-hillcrest-hospital",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 2220,
+            "url": "http://127.0.0.1:3000/pin/2220/chop-tops-out-the-roberts-children-s-health-tower",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          }
+        ]
       }
     },
     {
@@ -39235,6 +39424,29 @@
             "https://en.wikipedia.org/wiki/Hudson_Yards_(development)"
           ],
           "verified": true
+        },
+        {
+          "id": 192,
+          "title": "Sites Reservoir Targets Construction Start in 2027",
+          "sourceUrl": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
+          "date": "2024-12-31",
+          "reason": "Sites Authority still describes construction as future, beginning in 2027; permits, investment decisions and a CMAR award do not establish physical work. The old 2024 start headline/date are superseded. The October 8, 2026 baseline forecasts approximately US$9.9 billion in year-of-expenditure project funding through 2035, including governance contingency. This differs from US$7.5 billion in constant 2024 dollars and the US$6.6 billion management estimate; no independent inflation or FX adjustment is made.",
+          "evidence": "expected to begin construction in 2027 in a limited capacity",
+          "originalReason": "Announced groundbreaking is not proof it took place; verify physical start",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://sitesproject.org/contractor-outreach/",
+            "https://sitesproject.org/wp-content/uploads/2026/10/Sites-Reservoir-Project-Baseline-Report.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 1,
+          "status": "Proposed",
+          "expectedPinSha256": "07e8050d91523cbc3eb8a986d859a67a3ddd7ce2e4f4a00239db346c74a29928",
+          "expectedOriginalTitle": "Sites Reservoir still on tract to break ground in 2024",
+          "metadataVerified": true,
+          "savedPinSha256": "d119a1c2058b6389d816235935cb751e4277646b97fae54003b8a7cc3ac3af97",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 209,
@@ -39892,6 +40104,29 @@
           "researchManifest": "scripts/construction/research-2026-10-24.json"
         },
         {
+          "id": 463,
+          "title": "New Manila International Airport Runway Delayed to 2028",
+          "sourceUrl": "https://www.youtube.com/watch?v=nRUShCQt_5E",
+          "date": "2028-06-30",
+          "reason": "New Manila’s runway scope is In Progress: June 2026 reporting describes actual land surcharging, while the September CEO briefing targets the first runway toward end-2028. Native date moves from the older Q2 target to an estimated December 31 year-end anchor. Published PHP735/740 billion descriptions cover the airport/aerotropolis, not the first runway alone; the old US$15 billion native figure is cleared pending a separately quoted runway-phase total.",
+          "evidence": "the runway is currently undergoing surcharging",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://tfa.ph/property_news/smcs-nmia-runway-seen-ready-in-28/",
+            "https://insiderph.com/ramon-ang-eyes-end-2028-opening-for-bulacan-airports-first-runway",
+            "https://pia.gov.ph/news/construction-of-bulakan-airport-terminal-building-set-to-begin-in-2026/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "a7fb3f5eae5dcac736b96b2c142465f47c3f97e6e363994ae3cb7721c291a932",
+          "metadataVerified": true,
+          "savedPinSha256": "9481a87494f2f07389f0e06b4cfa9c5a4d07c6ccacd487cd7eb6da207ee8562c",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 472,
           "title": "Navi Mumbai International Airport Opens on a Reclaimed Swamp",
           "sourceUrl": "https://www.youtube.com/watch?v=zoqKwqM7wkQ",
@@ -39922,6 +40157,29 @@
             "https://vietnamnet.vn/en/vietnam-unveils-timeline-for-67-billion-high-speed-railway-2517429.html"
           ],
           "verified": true
+        },
+        {
+          "id": 475,
+          "title": "Réunion's Nouvelle Route du Littoral Set for Full Completion",
+          "sourceUrl": "https://www.youtube.com/watch?v=00BHXAzYRTA",
+          "date": "2030-06-30",
+          "reason": "The complete Nouvelle Route du Littoral remains In Progress: May 2026 site reporting describes continuing interchange work and the final viaduct still ahead. The June 2030 estimated anchor is retained, not treated as an exact opening day. The latest opened explicit whole-road estimate is approximately EUR2.5 billion in September 2024 reporting. EIB’s July 2026 EUR1.07 billion estimate covers Phase 2 only; it is recorded separately, not added to a whole-road estimate that already includes finishing work. A revised cumulative total remains a cost follow-up.",
+          "evidence": "avant l’achèvement complet du chantier annoncé pour 2030.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.linfo.re/la-reunion/faits-divers/nouvelle-route-du-littoral-visite-et-point-sur-l-avancement-des-travaux",
+            "https://www.lemonde.fr/economie/article/2024/09/18/a-la-reunion-les-litiges-de-la-nouvelle-route-du-littoral-une-lourde-menace-pour-les-finances-du-conseil-regional_6322695_3234.html",
+            "https://www.eib.org/en/projects/all/20260076"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "7e6cfc6c16cc8d497ca3fd5b2fe579359a59458d7f4ab335cbd4f8fa64ba625e",
+          "metadataVerified": true,
+          "savedPinSha256": "a80fff6d97bf8cb2b5aa07d567ed6dcd6affe0bcecd4c48d06c5d5d0a7db55b7",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 476,
@@ -40228,6 +40486,28 @@
           "verified": true
         },
         {
+          "id": 530,
+          "title": "Kvesheti-Kobi Highway Nears Completion in Georgia",
+          "sourceUrl": "https://www.youtube.com/watch?v=yajklD0QvAI",
+          "date": "2027-03-31",
+          "reason": "Kvesheti–Kobi remains In Progress: October 5, 2026 reporting describes ongoing arch-bridge construction and tunnel electromechanical installation, with full road opening expected in 2028. The date moves from spring 2027 to an estimated 2028 year anchor. The project’s own FAQ and current reporting both give approximately GEL1.2 billion construction/project cost; the old FAQ’s 2024 schedule is superseded. Financing amounts, individual lots and the completed tunnel excavation are not full-project completion.",
+          "evidence": "expected to be completed and opened to traffic in 2028.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://bm.ge/en/news/kvesheti-kobi-road-project-tunnel-and-bridge-construction-progress",
+            "https://kveshetikobiroad.ge/en/faq-page/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "f13fbb6c591a749287bae9285bcd06502ad40249431d73efc540ed0d87608e97",
+          "metadataVerified": true,
+          "savedPinSha256": "2b8ccd1513afc153ff22dc1aa083861a463f842073ba380ffbdcbcf3d7f8be07",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 535,
           "title": "The Millau Viaduct Opens to Traffic",
           "sourceUrl": "https://www.youtube.com/watch?v=gQA8303vxjE",
@@ -40371,6 +40651,29 @@
             "https://simpleflying.com/nuuk-international-airport-opening/"
           ],
           "verified": true
+        },
+        {
+          "id": 571,
+          "title": "JFK’s New Terminal One Phase 1 Slips to Early 2027",
+          "sourceUrl": "https://www.youtube.com/watch?v=3roesY4BJR8",
+          "date": "2026-11-30",
+          "reason": "JFK’s first 14-gate New Terminal One phase is In Progress, not operating. The Port Authority now gives 2027, and the terminal told TPG in September it was finalizing construction for early 2027. The old November 2026 headline/date are superseded by an estimated March 31, 2027 quarter anchor. The published US$9.5 billion is the full 23-gate terminal budget, not Phase 1 alone; native price/currency are cleared rather than allocating the whole-terminal figure to the first phase.",
+          "evidence": "is expected to open in 2027.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "https://thepointsguy.com/news/new-york-jfk-new-terminal-one-delayed-2027/"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "219825f454622eb60726a64f7bf011dc5ef55acaa57868daf66fcbb9963d7a8a",
+          "expectedOriginalTitle": "JFK's New Terminal One Phase 1 Slips to Late 2026",
+          "metadataVerified": true,
+          "savedPinSha256": "3a91837125d62d5eb011ea048e1dec02a6d323b7603f4296ceff9ac87ad6f538",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 573,
@@ -40655,6 +40958,29 @@
           "researchManifest": "scripts/construction/research-round4-2026-10-24.json"
         },
         {
+          "id": 619,
+          "title": "Messina Strait Bridge Wins Final Design Approval",
+          "sourceUrl": "https://www.youtube.com/watch?v=Rqx0RH7cUY8",
+          "date": "2025-08-06",
+          "reason": "The August 6, 2025 Messina pin represents final-design approval, so Proposed describes that historical pre-construction milestone. The CIPESS record states EUR13.532 billion for the complete bridge and associated road/rail connections, distinct from the Eurolink contract alone. Initial works were conditional on the approval becoming effective. The company’s 2025 accounts later record refusal of Court of Auditors registration; the approval is not represented as proof that physical bridge work began.",
+          "evidence": "Il costo dell’opera è di 13,532 miliardi di euro",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.programmazioneeconomica.gov.it/media/3eel5sg1/esito-cipess-6-agosto-2025.pdf",
+            "https://strettodimessina.it/web/ponte-stretto-con-efficacia-delibera-cipess-partono-le-prime-opere/",
+            "https://strettodimessina.it/web/wp-content/uploads/2026/05/SITO-Fascicolo-BILANCIO-2025-Approv-Ass-29-04-2026.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "expectedPinSha256": "84fbec181ba39b5321cf63e09bbfe33ac18e1f01042a2214bb9ef196ca7a4718",
+          "metadataVerified": true,
+          "savedPinSha256": "f700332ee0918047e335b8c8fbf55ea556862e251bb9d58878ed05dd6ab6c4b0",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 624,
           "title": "Taipei Performing Arts Center Officially Opens",
           "sourceUrl": "https://www.youtube.com/watch?v=7iZJmzffB7w",
@@ -40738,6 +41064,28 @@
             "https://www.skyscrapercenter.com/building/mori-jp-tower/35022"
           ],
           "verified": true
+        },
+        {
+          "id": 636,
+          "title": "McCook Reservoir's Second Stage Delayed to 2032",
+          "sourceUrl": "https://www.youtube.com/watch?v=2klS1diYMWU",
+          "date": "2032-12-31",
+          "reason": "McCook Stage 2 is In Progress: MWRD’s August 15, 2025 release explicitly describes active quarry excavation and a December 31, 2032 operational estimate. The native date is retained with estimated confidence; Stage 1’s 2017 operation does not complete Stage 2. The current TARP budgets mix shared Stages 1/2 works, mining and individual future preparation contracts. Neither the whole-reservoir budget nor a mining-change-order ceiling establishes a separately quoted all-in Stage 2 total.",
+          "evidence": "McCook Stage 2 is an active stone quarry that is being excavated",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://mwrd.org/news/mwrd-issues-update-tunnel-and-reservoir-plan",
+            "https://mwrd.org/sites/default/files/2024-10/Tarp_Status_Report_2024.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "b5c80e17bc4a8f98ed4efe79796a1ae2d508c4ff2a893ad384e0146de7383674",
+          "metadataVerified": true,
+          "savedPinSha256": "1f8d0a222030a9e0483c6c8d84888935b7ddfe971b999ad3ed752564c40893c3",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 637,
@@ -41019,6 +41367,28 @@
           "savedPinSha256": "8bcfeda3847e5b5fb8ad48962128c51090265d37c140534fcd1c25450b2ac1b3",
           "verified": true,
           "researchManifest": "scripts/construction/research-round4-2026-10-24.json"
+        },
+        {
+          "id": 674,
+          "title": "O'Hare 21 Terminal Program Slips to 2034",
+          "sourceUrl": "https://www.youtube.com/watch?v=_Pnea6PrMmI",
+          "date": "2034-12-31",
+          "reason": "O’Hare’s terminal program remains In Progress: Concourse D construction is active while the Global Terminal and Concourse E remain future scopes. August 25, 2026 reporting gives US$12.5 billion for the redevelopment, superseding the saved rounded US$12 billion; narrower ORDNext approvals and the Concourse D contract have different cost bases/scopes. The estimated 2034 year anchor is retained for the reported Global Terminal/core terminal horizon, not an exact opening day or a guarantee every later optional package finishes together.",
+          "evidence": "$12.5 billion",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://thepointsguy.com/news/chicago-ohare-airport-ordnext-construction-update/",
+            "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public-1/2026%20Budget%20Overview_0.pdf"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "cc7a66d3f7f566b9bae3dfa00f38327a3b3353349387a3950faccc837b7a45b7",
+          "metadataVerified": true,
+          "savedPinSha256": "862ac282f2e1bca20b9808c9b1716180d6dbeff91e9349af2c5ba341d8956073",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 677,
@@ -42110,6 +42480,28 @@
           "verified": true
         },
         {
+          "id": 2166,
+          "title": "UC San Diego Targets Summer 2027 Start for New Hillcrest Hospital",
+          "sourceUrl": "https://health.ucsd.edu/about-us/hillcrest-redevelopment/",
+          "date": "2027-06-21",
+          "reason": "The exact replacement Hillcrest hospital is Proposed: UC San Diego lists Design Development and anticipates major construction in summer 2027. Advance works are only described as expected in late summer 2026, so elapsed dates do not prove commencement. The existing June 21 seasonal anchor is explicitly estimated and the headline is qualified. The campus-wide US$2.5–3 billion covers five phases; no current, source-verified total for the redesigned approximately 300-bed hospital is assigned from that campus range.",
+          "evidence": "major construction activities anticipated to begin summer 2027.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://plandesignbuild.ucsd.edu/projects/current.html"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "Proposed",
+          "expectedPinSha256": "3fd7099f303174defbc06967668cc35a52675c0256a0c56944c29459f7fdb253",
+          "expectedOriginalTitle": "UC San Diego Starts Building Its New Hillcrest Hospital",
+          "metadataVerified": true,
+          "savedPinSha256": "79e3e5432ce62dfc127497703f8c3b4b11c75e1aa8a0f128376cf01191aa4c26",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
+        },
+        {
           "id": 2167,
           "title": "Kindred Affordable Apartments Completes in Cortez Hill",
           "sourceUrl": "https://bridgehousing.com/properties/kindred/",
@@ -42440,6 +42832,28 @@
             "https://en.wikipedia.org/wiki/Port_Authority_Bus_Terminal"
           ],
           "verified": true
+        },
+        {
+          "id": 2220,
+          "title": "CHOP Tops Out the Roberts Children's Health Tower",
+          "sourceUrl": "https://www.chop.edu/giving/roberts-childrens-health",
+          "date": "2026-01-28",
+          "reason": "CHOP’s own page confirms the final structural beam was placed January 28, 2026 and targets Roberts Children’s Health opening in 2028. In Progress describes this historical topping-out milestone, not patient opening. March 2025 reporting states US$2.59 billion for the new patient tower; the US$125 million Roberts gift is only partial funding. The represented new tower is distinguished from the older Roberts research building and the adjacent existing inpatient building.",
+          "evidence": "On January 28, 2026, the final structural beam was placed at the top of Roberts Children’s Health.",
+          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
+          "gapCategory": "individual-source-or-phase",
+          "evidenceUrls": [
+            "https://www.chop.edu/giving/roberts-childrens-health",
+            "https://www.inquirer.com/health/chop-brian-roberts-donation-new-hospital-philadelphia-20250313.html"
+          ],
+          "scopeReviewedAt": "2026-10-24",
+          "expectedAuthorId": 76,
+          "status": "In Progress",
+          "expectedPinSha256": "b00133f4841ae08d80978ef4f521a24e987bb799c741b461f56b76e53da51a20",
+          "metadataVerified": true,
+          "savedPinSha256": "c8eff72fd4c81537b16830f108e8044b67ad62a6f6935e6bd0657e253c342fc6",
+          "verified": true,
+          "researchManifest": "scripts/construction/research-round6-2026-10-24.json"
         },
         {
           "id": 2221,
@@ -59832,23 +60246,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 192,
-          "title": "Sites Reservoir still on tract to break ground in 2024",
-          "sourceUrl": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
-          "date": "2024-12-31",
-          "reason": "Sites Reservoir still on tract to break ground in 2024: Announced groundbreaking is not proof it took place; verify physical start. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Announced groundbreaking is not proof it took place; verify physical start",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
-            "https://krcrtv.com/news/local/sites-reservoir-project-moves-forward-with-new-developments-friends-of-the-river-react",
-            "https://www.capradio.org/articles/2023/11/24/sites-reservoir-project-finally-gets-green-light-construction-expected-to-begin-in-2024/",
-            "https://en.wikipedia.org/wiki/Sites_Reservoir"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 220,
           "title": "Fehmarnbelt Tunnel Opens",
           "sourceUrl": "https://en.wikipedia.org/wiki/Fehmarn_Belt_Fixed_Link",
@@ -59947,37 +60344,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 463,
-          "title": "New Manila International Airport Runway Delayed to 2028",
-          "sourceUrl": "https://www.youtube.com/watch?v=nRUShCQt_5E",
-          "date": "2028-06-30",
-          "reason": "New Manila International Airport Runway Delayed to 2028: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=nRUShCQt_5E",
-            "https://www.khaleejtimes.com/world/asia/philippines-new-manila-international-airports-completion-delayed-to-2028"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 475,
-          "title": "Réunion's Nouvelle Route du Littoral Set for Full Completion",
-          "sourceUrl": "https://www.youtube.com/watch?v=00BHXAzYRTA",
-          "date": "2030-06-30",
-          "reason": "Réunion's Nouvelle Route du Littoral Set for Full Completion: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=00BHXAzYRTA",
-            "https://en.wikipedia.org/wiki/Nouvelle_route_du_Littoral",
-            "https://la1ere.franceinfo.fr/reunion/le-second-viaduc-de-la-nrl-prevu-pour-2030-l-auto-pont-de-la-possession-demonte-en-novembre-prochain-1635305.html"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 494,
           "title": "Goldin Finance 117 Targeted to Finally Complete in Tianjin",
           "sourceUrl": "https://www.youtube.com/watch?v=Ko25P88bWFY",
@@ -60028,22 +60394,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 530,
-          "title": "Kvesheti-Kobi Highway Nears Completion in Georgia",
-          "sourceUrl": "https://www.youtube.com/watch?v=yajklD0QvAI",
-          "date": "2027-03-31",
-          "reason": "Kvesheti-Kobi Highway Nears Completion in Georgia: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=yajklD0QvAI",
-            "https://georgiatoday.ge/first-section-of-kvesheti-kobi-road-to-open-in-2025/",
-            "https://kveshetikobiroad.ge/en/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 567,
           "title": "Eiffel Tower's Rust-Fighting Repaint Unveiled for the Paris Olympics",
           "sourceUrl": "https://www.youtube.com/watch?v=WqEvwuU8pJs",
@@ -60073,39 +60423,6 @@
           "scopeReviewedAt": "2026-10-24"
         },
         {
-          "id": 571,
-          "title": "JFK's New Terminal One Phase 1 Slips to Late 2026",
-          "sourceUrl": "https://www.youtube.com/watch?v=3roesY4BJR8",
-          "date": "2026-11-30",
-          "reason": "JFK's New Terminal One Phase 1 Slips to Late 2026: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=3roesY4BJR8",
-            "https://simpleflying.com/6-billion-debt-clock-ticking-new-york-jfk-delayed-new-terminal-1/",
-            "https://www.bloomberg.com/news/articles/2026-05-15/jfk-terminal-developer-faces-downgrade-risk-after-opening-delay",
-            "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk.html"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 619,
-          "title": "Messina Strait Bridge Wins Final Design Approval",
-          "sourceUrl": "https://www.youtube.com/watch?v=Rqx0RH7cUY8",
-          "date": "2025-08-06",
-          "reason": "Messina Strait Bridge Wins Final Design Approval: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=Rqx0RH7cUY8",
-            "https://www.governo.it/en/articolo/cipess-meeting-6-august-2025/29450",
-            "https://www.webuildgroup.com/en/media/press-releases/eurolink-and-stretto-di-messina-signed-strait-messina-bridge-contract/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
           "id": 633,
           "title": "Contractor Sues Over 161 Maiden Lane's Leaning Foundation",
           "sourceUrl": "https://www.youtube.com/watch?v=7QrvbUxOamo",
@@ -60118,38 +60435,6 @@
             "https://www.youtube.com/watch?v=7QrvbUxOamo",
             "https://therealdeal.com/new-york/2019/04/03/leaning-tower-of-pizzarotti-contractor-sues-fortis-over-alignment-issues-at-seaport-project/",
             "https://www.bisnow.com/new-york/news/construction-development/fortis-fidi-condo-building-is-leaning-contractor-claims-98352"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 636,
-          "title": "McCook Reservoir's Second Stage Delayed to 2032",
-          "sourceUrl": "https://www.youtube.com/watch?v=2klS1diYMWU",
-          "date": "2032-12-31",
-          "reason": "McCook Reservoir's Second Stage Delayed to 2032: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=2klS1diYMWU",
-            "https://mwrd.org/news/mwrd-issues-update-tunnel-and-reservoir-plan",
-            "https://municipalwaterleader.com/mccook-reservoir/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 674,
-          "title": "O'Hare 21 Terminal Program Slips to 2034",
-          "sourceUrl": "https://www.youtube.com/watch?v=_Pnea6PrMmI",
-          "date": "2034-12-31",
-          "reason": "O'Hare 21 Terminal Program Slips to 2034: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.youtube.com/watch?v=_Pnea6PrMmI",
-            "https://simpleflying.com/chicago-ohare-global-terminal-modernization-project/",
-            "https://chicago.urbanize.city/post/ohare-redevelopment-timeline-pushes-back-2034"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -60246,20 +60531,6 @@
           "gapCategory": "individual-source-or-phase",
           "evidenceUrls": [
             "https://www.san.org/terminal-projects/"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 2166,
-          "title": "UC San Diego Starts Building Its New Hillcrest Hospital",
-          "sourceUrl": "https://health.ucsd.edu/about-us/hillcrest-redevelopment/",
-          "date": "2027-06-21",
-          "reason": "UC San Diego Starts Building Its New Hillcrest Hospital: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://health.ucsd.edu/about-us/hillcrest-redevelopment/"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -60400,20 +60671,6 @@
           "gapCategory": "individual-source-or-phase",
           "evidenceUrls": [
             "https://en.wikipedia.org/wiki/Hard_Rock_Las_Vegas"
-          ],
-          "scopeReviewedAt": "2026-10-24"
-        },
-        {
-          "id": 2220,
-          "title": "CHOP Tops Out the Roberts Children's Health Tower",
-          "sourceUrl": "https://www.chop.edu/giving/roberts-childrens-health",
-          "date": "2026-01-28",
-          "reason": "CHOP Tops Out the Roberts Children's Health Tower: Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient. Follow up the project-specific cited source for the exact pinned building/unit/phase, separating physical work and operation from planned dates and predecessor facilities.",
-          "evidence": null,
-          "originalReason": "Construction stage not established: need explicit proposal, physical-work or completed-scope evidence; elapsed pin date and capacity/parcel/permit alone are insufficient",
-          "gapCategory": "individual-source-or-phase",
-          "evidenceUrls": [
-            "https://www.chop.edu/giving/roberts-childrens-health"
           ],
           "scopeReviewedAt": "2026-10-24"
         },
@@ -77460,10 +77717,10 @@
           "title": "Embalse Shuts for Reactor Retubing and Life Extension"
         }
       ],
-      "verifiedCount": 1310,
+      "verifiedCount": 1320,
       "counts": {
-        "Proposed": 636,
-        "In Progress": 407,
+        "Proposed": 639,
+        "In Progress": 414,
         "Completed": 267
       },
       "publicSamples": [
@@ -77495,7 +77752,7 @@
       "inventorySha256": "99244bcc65b0b05522a3be43a15d86ceb23af854e4db993492d48f40270b29a1",
       "queueReviewOriginalCount": 1132,
       "queueGapCounts": {
-        "individual-source-or-phase": 399,
+        "individual-source-or-phase": 389,
         "conflicting-or-halted-scope": 43,
         "housing-milestone-source": 5,
         "grid-request-identity": 35,
@@ -78208,6 +78465,127 @@
             "researchAndStatusPresent": true
           }
         ]
+      },
+      "round6PublicVerification": {
+        "base": "https://www.chronopin.com",
+        "checks": [
+          {
+            "id": 192,
+            "status": "Proposed",
+            "price": 9900000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 463,
+            "status": "In Progress",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 475,
+            "status": "In Progress",
+            "price": 2500000000,
+            "priceCurrency": "EUR",
+            "utcStartDateTime": "2030-06-30T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 530,
+            "status": "In Progress",
+            "price": 1200000000,
+            "priceCurrency": "GEL",
+            "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 571,
+            "status": "In Progress",
+            "utcStartDateTime": "2027-03-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 619,
+            "status": "Proposed",
+            "price": 13532000000,
+            "priceCurrency": "EUR",
+            "utcStartDateTime": "2025-08-06T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 636,
+            "status": "In Progress",
+            "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 674,
+            "status": "In Progress",
+            "price": 12500000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2034-12-31T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 2166,
+            "status": "Proposed",
+            "utcStartDateTime": "2027-06-21T00:00:00.000Z",
+            "publicJsonVerified": true
+          },
+          {
+            "id": 2220,
+            "status": "In Progress",
+            "price": 2590000000,
+            "priceCurrency": "USD",
+            "utcStartDateTime": "2026-01-28T00:00:00.000Z",
+            "publicJsonVerified": true
+          }
+        ],
+        "pages": [
+          {
+            "id": 192,
+            "url": "https://www.chronopin.com/pin/192/sites-reservoir-targets-construction-start-in-2027",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 463,
+            "url": "https://www.chronopin.com/pin/463/new-manila-international-airport-runway-delayed-to-2028",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 530,
+            "url": "https://www.chronopin.com/pin/530/kvesheti-kobi-highway-nears-completion-in-georgia",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 571,
+            "url": "https://www.chronopin.com/pin/571/jfk-s-new-terminal-one-phase-1-slips-to-early-2027",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 619,
+            "url": "https://www.chronopin.com/pin/619/messina-strait-bridge-wins-final-design-approval",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 2166,
+            "url": "https://www.chronopin.com/pin/2166/uc-san-diego-targets-summer-2027-start-for-new-hillcrest-hospital",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          },
+          {
+            "id": 2220,
+            "url": "https://www.chronopin.com/pin/2220/chop-tops-out-the-roberts-children-s-health-tower",
+            "httpStatus": 200,
+            "researchAndStatusPresent": true
+          }
+        ]
       }
     }
   ],
@@ -78247,6 +78625,7 @@
     "scripts/construction/research-round2-2026-10-24.json",
     "scripts/construction/research-round3-2026-10-24.json",
     "scripts/construction/research-round4-2026-10-24.json",
-    "scripts/construction/research-round5-2026-10-24.json"
+    "scripts/construction/research-round5-2026-10-24.json",
+    "scripts/construction/research-round6-2026-10-24.json"
   ]
 }
