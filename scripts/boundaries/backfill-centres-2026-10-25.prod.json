@@ -1,0 +1,22 @@
+[
+  {
+    "pinId": 19807,
+    "name": "Ottawa",
+    "latitude": 45.293227,
+    "longitude": -75.775222,
+    "sourceUrl": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/9",
+    "reason": "Missing map coordinate: geometric centroid inside verified municipal voting-area outline, not a venue address.",
+    "pinTitle": "Sutcliffe Is Favoured in the Forecast as Ottawa Votes on October 26",
+    "address": "Polling stations across Ottawa, Ontario, Canada"
+  },
+  {
+    "pinId": 19615,
+    "name": "Toronto",
+    "latitude": 43.722044,
+    "longitude": -79.39057,
+    "sourceUrl": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/9",
+    "reason": "Missing map coordinate: geometric centroid inside verified municipal voting-area outline, not a venue address.",
+    "pinTitle": "Chow Is Favoured as Toronto Votes for Mayor on October 26",
+    "address": "Toronto, Ontario, Canada"
+  }
+]

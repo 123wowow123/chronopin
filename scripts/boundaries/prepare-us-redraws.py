@@ -34,7 +34,9 @@ new = json.loads((root / 'us120-redraw.geojson').read_text())['features']
 assert len(old) == len(new) == 435
 
 def converted(state):
-    files = [p for p in (root / state['shapefileDirectory']).rglob('*.shp') if '__MACOSX' not in p.parts and not p.name.startswith('._')]
+    directory = root / state['shapefileDirectory']
+    # Downloaded archives extract flat; prefer those over older nested caches.
+    files = list(directory.glob('*.shp')) or [p for p in directory.rglob('*.shp') if '__MACOSX' not in p.parts and not p.name.startswith('._')]
     if len(files) != 1:
         raise ValueError('Expected one shapefile: ' + state['id'])
     path = files[0]

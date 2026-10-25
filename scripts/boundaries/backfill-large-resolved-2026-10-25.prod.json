@@ -1,0 +1,13 @@
+[
+  {
+    "pinId": 5172,
+    "pinTitle": "Bosnia and Herzegovina Elects a Three-Member Presidency, the First Vote Since Dodik's Removal",
+    "kind": "district",
+    "name": "Bosnia and Herzegovina — Presidency voting geography with Brčko exception",
+    "vintage": "2013 geographic overview, 2024 build; two entity areas and Brčko special voting area. Brčko voters use entity citizenship; it is not a third Presidency constituency.",
+    "source": "geoBoundaries / Wikimedia Commons (public domain); legal scope: OHR Final Award and BiH Constitution",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM1/",
+    "file": ".scrape/boundaries/bosnia-presidency-overview.geojson",
+    "preserveFeatureCredits": true
+  }
+]

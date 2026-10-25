@@ -327,5 +327,330 @@
     "source": "Office for National Statistics / Ordnance Survey (Open Government Licence)",
     "sourceUrl": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Westminster_Parliamentary_Constituencies_July_2024_Boundaries_UK_BGC/FeatureServer/0",
     "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Westminster_Parliamentary_Constituencies_July_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=PCON24CD%3D%27E14001290%27&outFields=PCON24CD%2CPCON24NM&outSR=4326&f=geojson"
+  },
+  {
+    "pinId": 1648,
+    "pinTitle": "2026 U.S. Midterm Elections Decide Control of Congress",
+    "kind": "district",
+    "name": "US House — 435 voting districts; 2026 election maps with state redraw comparisons",
+    "vintage": "Reviewed 2026-10-25: 120th-Congress Census geometry with Alabama, California, Florida and Louisiana official state geometry and Missouri general-election restoration. Senate contests are statewide.",
+    "source": "US Census Bureau and state redistricting authorities",
+    "sourceUrl": "https://www.ncsl.org/redistricting-and-census/changing-the-maps-tracking-mid-decade-redistricting?maptype=tile",
+    "file": ".scrape/boundaries/us2026-defaults.geojson",
+    "redrawFile": ".scrape/boundaries/us2026-redraws.json",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 2360,
+    "pinTitle": "Kenya Votes for a President, Senate and Assembly",
+    "kind": "district",
+    "name": "Kenya — 290 National Assembly constituencies; Senate seats are countywide",
+    "vintage": "IEBC 2012 delimitation via OCHA HDX; current plan for 2027 under IEBC January 2026 statement; 75m overview. Five unnamed code-0 source pieces have no district assignment and are not drawn.",
+    "source": "IEBC / OCHA Humanitarian Data Exchange",
+    "sourceUrl": "https://data.humdata.org/dataset/kenya-elections",
+    "file": ".scrape/boundaries/kenya-iebc-290.geojson"
+  },
+  {
+    "pinId": 2352,
+    "pinTitle": "El Salvador Votes Under Its New Re-election Rules",
+    "kind": "district",
+    "name": "El Salvador — 14 departmental legislative constituencies (geographic overview)",
+    "vintage": "geoBoundaries 2021 department geometry, built 2023; matches the 14 departmental legislative constituencies. Overview only, not municipal districts or polling boundaries.",
+    "source": "geoBoundaries / OpenStreetMap contributors (CC BY-SA 2.0)",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/SLV/ADM1/",
+    "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SLV/ADM1/geoBoundaries-SLV-ADM1_simplified.geojson"
+  },
+  {
+    "pinId": 5171,
+    "pinTitle": "Latvia Elects Its 15th Saeima, With Kulbergs' United List Far Ahead",
+    "kind": "district",
+    "name": "Latvia — five Saeima constituencies; overseas votes count in Riga",
+    "vintage": "2026 Ministry administrative boundaries aggregated exactly by Saeima Election Law section 7(2), current August–December 2026 edition; 75m overview",
+    "source": "Latvia VARAM / State Land Service (CC0); Saeima Election Law section 7",
+    "sourceUrl": "https://data.gov.lv/dati/dataset/atr",
+    "file": ".scrape/boundaries/latvia-2026-saeima.geojson"
+  },
+  {
+    "pinId": 2358,
+    "pinTitle": "Guatemala Votes for a President and Congress",
+    "kind": "district",
+    "name": "Guatemala — 23 congressional districts, including the separate capital district",
+    "vintage": "CONRED/OCHA administrative geometry valid 2019-02-07; department GT01 split by exact capital municipality GT0101. Current district structure, 75m overview; national-list seats are nationwide.",
+    "source": "CONRED / OCHA HDX (CC BY 3.0 IGO)",
+    "sourceUrl": "https://data.humdata.org/dataset/cod-ab-gtm",
+    "file": ".scrape/boundaries/guatemala-23-districts.geojson"
+  },
+  {
+    "pinId": 2353,
+    "pinTitle": "Micronesia Elects Its Congress",
+    "kind": "district",
+    "name": "Micronesia — ten two-year congressional districts (island land overview)",
+    "vintage": "2019 government/SPC land geometry, district membership verified from 2025 Congress and state law. Current context for 2027; maritime boundaries and four-year at-large seats are not drawn.",
+    "source": "FSM Statistics / SPC / OCHA via geoBoundaries (CC BY 3.0 IGO); district membership: FSM Congress",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/FSM/ADM2/",
+    "file": ".scrape/boundaries/micronesia-10-districts.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 2356,
+    "pinTitle": "Spain Holds Its Nationwide Local Election Day",
+    "kind": "district",
+    "name": "Spain — 8,130 municipal constituencies and Ceuta/Melilla Assembly areas (current context)",
+    "vintage": "IGN live boundary snapshot checked 2026-10-25, matched to every INE January 2026 municipal code; 150m overview. Current context for 2027, not certified future boundaries; regional/provincial/island council districts are not drawn.",
+    "source": "Obra derivada de IGN Unidades administrativas 2026, CC BY 4.0 ign.es; codes: INE",
+    "sourceUrl": "https://api-features.ign.es/collections/administrativeunit",
+    "file": ".scrape/boundaries/spain-municipal-2026.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 1970,
+    "pinTitle": "California Elects Its Next Governor",
+    "kind": "district",
+    "name": "California — statewide governor voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-california.geojson"
+  },
+  {
+    "pinId": 3545,
+    "pinTitle": "New York Elects Its Governor: Hochul vs. Blakeman",
+    "kind": "district",
+    "name": "New York — statewide governor voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-new-york-state.geojson"
+  },
+  {
+    "pinId": 3970,
+    "pinTitle": "Missouri Voters Pass Amendment 3, Restoring Abortion Rights",
+    "kind": "district",
+    "name": "Missouri — statewide Amendment 3 voting area",
+    "vintage": "2024 cartographic state outline; one statewide ballot jurisdiction, not legislative or precinct boundaries",
+    "source": "US Census Bureau, 2024 cartographic state boundaries (1:500,000)",
+    "sourceUrl": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_500k.zip",
+    "file": ".scrape/boundaries/ballot-missouri2024.geojson"
+  },
+  {
+    "pinId": 3972,
+    "pinTitle": "Missouri Votes on Amendment 3 to Repeal 2024 Abortion Rights",
+    "kind": "district",
+    "name": "Missouri — statewide Amendment 3 voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-missouri2026.geojson"
+  },
+  {
+    "pinId": 3974,
+    "pinTitle": "Nevada Voters Approve Question 6 Abortion-Rights Amendment",
+    "kind": "district",
+    "name": "Nevada — statewide Question 6 voting area",
+    "vintage": "2024 cartographic state outline; one statewide ballot jurisdiction, not legislative or precinct boundaries",
+    "source": "US Census Bureau, 2024 cartographic state boundaries (1:500,000)",
+    "sourceUrl": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_500k.zip",
+    "file": ".scrape/boundaries/ballot-nevada2024.geojson"
+  },
+  {
+    "pinId": 3976,
+    "pinTitle": "Nevada Holds Its Second Vote on the Question 6 Abortion Amendment",
+    "kind": "district",
+    "name": "Nevada — statewide Question 6 voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-nevada2026.geojson"
+  },
+  {
+    "pinId": 3979,
+    "pinTitle": "Virginia Votes on Question 1 Reproductive Freedom Amendment",
+    "kind": "district",
+    "name": "Virginia — statewide Question 1 voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-virginia.geojson"
+  },
+  {
+    "pinId": 3981,
+    "pinTitle": "Idaho Votes on Proposition 1 to Overturn Its Abortion Ban",
+    "kind": "district",
+    "name": "Idaho — statewide Proposition 1 voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0",
+    "file": ".scrape/boundaries/ballot-idaho.geojson"
+  },
+  {
+    "pinId": 3290,
+    "pinTitle": "Wu Routs Kraft in Boston's Preliminary Mayoral Election",
+    "kind": "district",
+    "name": "Boston — citywide mayor voting area",
+    "vintage": "January 1, 2025 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18",
+    "file": ".scrape/boundaries/ballot-boston.geojson"
+  },
+  {
+    "pinId": 3306,
+    "pinTitle": "Michelle Wu Wins a Second Term as Boston Mayor, Unopposed",
+    "kind": "district",
+    "name": "Boston — citywide mayor voting area",
+    "vintage": "January 1, 2025 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18",
+    "file": ".scrape/boundaries/ballot-boston.geojson"
+  },
+  {
+    "pinId": 3535,
+    "pinTitle": "Zohran Mamdani Wins New York City's Democratic Mayoral Primary",
+    "kind": "district",
+    "name": "New York City — citywide mayor voting area",
+    "vintage": "January 1, 2025 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18",
+    "file": ".scrape/boundaries/ballot-nyc2025.geojson"
+  },
+  {
+    "pinId": 3539,
+    "pinTitle": "Zohran Mamdani Is Elected Mayor of New York City",
+    "kind": "district",
+    "name": "New York City — citywide mayor voting area",
+    "vintage": "January 1, 2025 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/18",
+    "file": ".scrape/boundaries/ballot-nyc2025.geojson"
+  },
+  {
+    "pinId": 3541,
+    "pinTitle": "New Yorkers Vote on Five City Charter Amendments to Cut Red Tape",
+    "kind": "district",
+    "name": "New York City — citywide charter-ballot voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-nyc2026.geojson"
+  },
+  {
+    "pinId": 3570,
+    "pinTitle": "Bass and Raman Advance to a Runoff in the LA Mayoral Primary",
+    "kind": "district",
+    "name": "Los Angeles — citywide mayor/municipal-ballot voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; 50m topology-preserving overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-los-angeles.geojson"
+  },
+  {
+    "pinId": 3584,
+    "pinTitle": "Los Angeles Chooses Between Karen Bass and Nithya Raman for Mayor",
+    "kind": "district",
+    "name": "Los Angeles — citywide mayor/municipal-ballot voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; 50m topology-preserving overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-los-angeles.geojson"
+  },
+  {
+    "pinId": 3618,
+    "pinTitle": "LA Votes on Charter Reform and an LAFD Sales Tax",
+    "kind": "district",
+    "name": "Los Angeles — citywide mayor/municipal-ballot voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; 50m topology-preserving overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-los-angeles.geojson"
+  },
+  {
+    "pinId": 3525,
+    "pinTitle": "San Diego Voters Reject Measure A Empty Homes Tax",
+    "kind": "district",
+    "name": "San Diego city — citywide Measure A voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; 50m topology-preserving overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-san-diego-city.geojson"
+  },
+  {
+    "pinId": 3530,
+    "pinTitle": "San Diego County Votes on Measure B Half-Cent Sales Tax",
+    "kind": "district",
+    "name": "San Diego County — countywide ballot-measure voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1",
+    "file": ".scrape/boundaries/ballot-san-diego-county.geojson"
+  },
+  {
+    "pinId": 3532,
+    "pinTitle": "San Diego County Votes on Measure A Charter Reform and Term Limits",
+    "kind": "district",
+    "name": "San Diego County — countywide ballot-measure voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1",
+    "file": ".scrape/boundaries/ballot-san-diego-county.geojson"
+  },
+  {
+    "pinId": 3670,
+    "pinTitle": "San Francisco Voters Reject the Overpaid CEO Tax",
+    "kind": "district",
+    "name": "San Francisco — citywide Proposition D voting area",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; single citywide/countywide/statewide voting jurisdiction, not internal legislative or polling districts; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4",
+    "file": ".scrape/boundaries/ballot-san-francisco.geojson"
+  },
+  {
+    "pinId": 3686,
+    "pinTitle": "Bay Area Votes on the Connect Bay Area Transit Sales Tax",
+    "kind": "district",
+    "name": "Connect Bay Area — five-county voting district",
+    "vintage": "January 1, 2026 Census jurisdiction outline; generalised geographic overview; five-county regional ballot district, not the nine-county MTC region; reviewed 2026-10-25",
+    "source": "US Census Bureau, TIGERweb",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1",
+    "file": ".scrape/boundaries/ballot-connect-bay-area.geojson"
+  },
+  {
+    "pinId": 19615,
+    "pinTitle": "Chow Is Favoured as Toronto Votes for Mayor on October 26",
+    "kind": "district",
+    "name": "Toronto — citywide mayor voting area; council and school districts not drawn",
+    "vintage": "2021 Census subdivision outline, used as geographic context for the 2026 citywide mayor vote; not council, school-board, ward or polling districts; reviewed 2026-10-25",
+    "source": "Statistics Canada, 2021 Census digital boundaries (Open Government Licence – Canada)",
+    "sourceUrl": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/9",
+    "file": ".scrape/boundaries/ballot-toronto.geojson"
+  },
+  {
+    "pinId": 19807,
+    "pinTitle": "Sutcliffe Is Favoured in the Forecast as Ottawa Votes on October 26",
+    "kind": "district",
+    "name": "Ottawa — citywide mayor voting area; council and school districts not drawn",
+    "vintage": "2021 Census subdivision outline, used as geographic context for the 2026 citywide mayor vote; not council, school-board, ward or polling districts; reviewed 2026-10-25",
+    "source": "Statistics Canada, 2021 Census digital boundaries (Open Government Licence – Canada)",
+    "sourceUrl": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/9",
+    "file": ".scrape/boundaries/ballot-ottawa.geojson"
+  },
+  {
+    "pinId": 7453,
+    "pinTitle": "Vancouver Votes for Mayor, Council, Parks and Schools on October 17",
+    "kind": "district",
+    "name": "Vancouver — citywide mayor voting area; other ballot scopes not drawn",
+    "vintage": "2021 Census subdivision outline, used as geographic context for the 2026 citywide mayor vote; not council, school-board, ward or polling districts; reviewed 2026-10-25",
+    "source": "Statistics Canada, 2021 Census digital boundaries (Open Government Licence – Canada)",
+    "sourceUrl": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/9",
+    "file": ".scrape/boundaries/ballot-vancouver.geojson"
+  },
+  {
+    "pinId": 5172,
+    "pinTitle": "Bosnia and Herzegovina Elects a Three-Member Presidency, the First Vote Since Dodik's Removal",
+    "kind": "district",
+    "name": "Bosnia and Herzegovina — Presidency voting geography with Brčko exception",
+    "vintage": "2013 geographic overview, 2024 build; two entity areas and Brčko special voting area. Brčko voters use entity citizenship; it is not a third Presidency constituency.",
+    "source": "geoBoundaries / Wikimedia Commons (public domain); legal scope: OHR Final Award and BiH Constitution",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM1/",
+    "file": ".scrape/boundaries/bosnia-presidency-overview.geojson",
+    "preserveFeatureCredits": true
   }
 ]

@@ -1,0 +1,24 @@
+[
+  {
+    "pinId": 2353,
+    "pinTitle": "Micronesia Elects Its Congress",
+    "kind": "district",
+    "name": "Micronesia — ten two-year congressional districts (island land overview)",
+    "vintage": "2019 government/SPC land geometry, district membership verified from 2025 Congress and state law. Current context for 2027; maritime boundaries and four-year at-large seats are not drawn.",
+    "source": "FSM Statistics / SPC / OCHA via geoBoundaries (CC BY 3.0 IGO); district membership: FSM Congress",
+    "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/FSM/ADM2/",
+    "file": ".scrape/boundaries/micronesia-10-districts.geojson",
+    "preserveFeatureCredits": true
+  },
+  {
+    "pinId": 2356,
+    "pinTitle": "Spain Holds Its Nationwide Local Election Day",
+    "kind": "district",
+    "name": "Spain — 8,130 municipal constituencies and Ceuta/Melilla Assembly areas (current context)",
+    "vintage": "IGN live boundary snapshot checked 2026-10-25, matched to every INE January 2026 municipal code; 150m overview. Current context for 2027, not certified future boundaries; regional/provincial/island council districts are not drawn.",
+    "source": "Obra derivada de IGN Unidades administrativas 2026, CC BY 4.0 ign.es; codes: INE",
+    "sourceUrl": "https://api-features.ign.es/collections/administrativeunit",
+    "file": ".scrape/boundaries/spain-municipal-2026.geojson",
+    "preserveFeatureCredits": true
+  }
+]
