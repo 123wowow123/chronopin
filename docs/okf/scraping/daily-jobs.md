@@ -666,7 +666,7 @@ events and create **predicted pins** out of them:
   - Where the market points to an underlying dated event in the world (an election,
     a central-bank rate decision, an AI model release, an orbital flight test, a
     championship, an award ceremony), pin **the event** under the vertical's desk
-    (@PoliticsDesk for elections, @TechDesk for tech/AI, @EconDesk for macro releases,
+    (@PoliticsDesk for elections, @TechDesk for tech and @AIDesk for AI, @EconDesk for macro releases,
     @BuildDesk for space/infrastructure, @SportDesk for championships), citing
     the prediction market URL in `references` or as `sourceUrl`.
   - For speculative model releases (Gemini, Claude Opus, Grok, DeepSeek) or market questions

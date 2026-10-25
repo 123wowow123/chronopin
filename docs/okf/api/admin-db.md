@@ -148,3 +148,7 @@ writes every table - these included - to `scripts/backup/tables/` as one
 gzipped JSON Lines file each with a manifest; `--restore` loads them into a
 migrated, non-production database. The folder is gitignored: it holds
 password hashes and private messages.
+
+## Changing a pin's author
+
+`POST /api/admin/pins/author` (admin token) with `{ ids: [..1-200], userName: "@AIDesk" }` (or `userId`) sets `Pin.userId` for those pins and expires their pages. The answer lists `updated` (id and previous author), `unchanged` and `missing` ids; each change is written to `AdminAudit`. Route: `src/app/api/admin/pins/author/route.ts`.
