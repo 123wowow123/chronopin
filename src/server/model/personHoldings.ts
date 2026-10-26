@@ -3,10 +3,11 @@ import { preferredHoldings, type HoldingsSnapshot } from '@/lib/holdings';
 import * as db from '../db';
 import catalog from '../data/personHoldings.json';
 import primary from '../data/personHoldingsPrimary.json';
+import insiders from '../data/personHoldingsInsiders.json';
 import { readHoldings } from '../holdingsInput';
 
 const bundled = new Map<string, HoldingsSnapshot[]>();
-for (const p of [...catalog.profiles, ...primary.profiles] as { name: string; portfolios: unknown[] }[]) bundled.set(p.name, [...(bundled.get(p.name) ?? []), ...readHoldings(p)]);
+for (const p of [...catalog.profiles, ...primary.profiles, ...insiders.profiles] as { name: string; portfolios: unknown[] }[]) bundled.set(p.name, [...(bundled.get(p.name) ?? []), ...readHoldings(p)]);
 function combined(name: string, stored: HoldingsSnapshot[] = []): HoldingsSnapshot[] {
   const byKey = new Map((bundled.get(name) ?? []).map(p => [p.key, p]));
   for (const p of stored) byKey.set(p.key, p);

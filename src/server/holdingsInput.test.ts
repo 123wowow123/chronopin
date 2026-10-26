@@ -3,9 +3,24 @@ import catalog from './data/personHoldings.json';
 import { readHoldings } from './holdingsInput';
 import primary from './data/personHoldingsPrimary.json';
 import { holdingPnl } from '@/lib/holdings';
+import insiders from './data/personHoldingsInsiders.json';
 
 const example = () => ({ name: catalog.profiles[0].name, portfolios: readHoldings(catalog.profiles[0]) });
 describe('holdings evidence contract', () => {
+  it('preserves personal insider share balances without inventing market values or matching cost lots', () => {
+    expect(insiders.profiles.map(p => p.name).sort()).toEqual(['Bill Ackman', 'Elon Musk', 'Peter Thiel', 'Warren Buffett']);
+    for (const person of insiders.profiles) for (const p of readHoldings(person)) {
+      expect(p.scope).toBe('personal');
+      expect(p.complete).toBe(false);
+      expect(p.sourceUrl).toMatch(/^https:\/\/www.sec.gov\/Archives\//);
+      for (const h of p.holdings) {
+        expect(h.shares).toBeGreaterThan(0);
+        expect(h.costBasis).toBeNull();
+        expect(h.marketValue).toBeNull();
+        expect(holdingPnl(h)).toBeNull();
+      }
+    }
+  });
   it('accepts every imported strategy and preserves unknown inputs rather than inventing profit', () => {
     expect(catalog.profiles.length).toBe(70);
     for (const person of catalog.profiles) {

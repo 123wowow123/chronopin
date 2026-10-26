@@ -47,7 +47,7 @@ export function TradesSection({ personId, name, trades, summary: totals, t }: { 
                 <th scope="col" className="px-4 py-3 text-start font-medium">{t('person.trades.disclosures')}</th>
                 <th scope="col" className="px-4 py-3 text-end font-medium">{t('person.trades.pnl')}</th>
               </tr></thead>
-              <tbody className="divide-y divide-line">{disclosure.entries.map(entry => <tr key={entry.sourceUrl} className="align-top">
+              <tbody className="divide-y divide-line">{disclosure.entries.map((entry, index) => <tr key={`${entry.sourceUrl}:${index}`} className="align-top">
                 <td className="px-4 py-3 whitespace-nowrap text-xs text-muted">{day(entry.publishedDate)}{entry.tradeDate ? <span className="mt-1 block">{t('person.trades.date')}: {day(entry.tradeDate)}</span> : null}</td>
                 <td className="min-w-64 px-4 py-3"><Anchor href={entry.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-medium">{entry.title}</Anchor><p className="mt-1 max-w-3xl text-xs leading-relaxed text-muted">{entry.summary}</p></td>
                 <td className="px-4 py-3 text-end text-xs whitespace-nowrap text-subtle">{t('person.holdings.unknown')}</td>

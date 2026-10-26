@@ -10,7 +10,7 @@ import type { HoldingsSnapshot } from '@/lib/holdings';
 
 const { values } = parseArgs({ options: { refresh: { type: 'boolean' }, apply: { type: 'boolean' }, base: { type: 'string', default: 'http://localhost:3000' }, file: { type: 'string', default: 'src/server/data/personHoldings.json' } } });
 const file = values.file!;
-if (!['src/server/data/personHoldings.json', 'src/server/data/personHoldingsPrimary.json'].includes(file)) throw new Error('Unsupported reviewed holdings catalog');
+if (!['src/server/data/personHoldings.json', 'src/server/data/personHoldingsPrimary.json', 'src/server/data/personHoldingsInsiders.json'].includes(file)) throw new Error('Unsupported reviewed holdings catalog');
 const base = values.base!.replace(/\/$/, '');
 if (!['http://localhost:3000', 'https://www.chronopin.com'].includes(base)) throw new Error('Unsupported API host');
 type Entry = { name: string; portfolios: HoldingsSnapshot[] };
@@ -23,7 +23,7 @@ type SourcePortfolio = {
 };
 async function main() {
   if (values.refresh) {
-    if (file.endsWith('Primary.json')) throw new Error('Use primaryHoldings.py --refresh to research primary sources');
+    if (file !== 'src/server/data/personHoldings.json') throw new Error('Use the corresponding primaryHoldings.py or personalInsiders.py refresh script for this source catalog');
     const people = JSON.parse(readFileSync('scripts/people/data/autopilot.json', 'utf8')).profiles as { name: string; profile: { contributions: { reference?: string; sourceUrl?: string }[] } }[];
     const urls = new Map<string, string>();
     for (const person of people) for (const c of person.profile.contributions) {
@@ -78,7 +78,7 @@ async function main() {
   const indexResponse = await fetch(base + '/api/people');
   if (!indexResponse.ok) throw new Error('Cannot read People directory');
   const index = await indexResponse.json() as { id: number; name: string }[];
-  const work = `.scrape/people-holdings-${file.endsWith('Primary.json') ? 'primary-' : ''}${catalog.checkedAt}/${base.includes('localhost') ? 'local' : 'prod'}`;
+  const work = `.scrape/people-holdings-${file.endsWith('Primary.json') ? 'primary-' : file.endsWith('Insiders.json') ? 'insiders-' : ''}${catalog.checkedAt}/${base.includes('localhost') ? 'local' : 'prod'}`;
   mkdirSync(work, { recursive: true });
   const report = [];
   for (const person of catalog.profiles) {

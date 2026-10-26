@@ -42,6 +42,6 @@ describe('holdings updates', () => {
     expect(saved.some(p => p.key === 'manual-strategy')).toBe(true);
     expect(saved.some(p => p.key === 'sec-13f-1067983')).toBe(true);
     expect(saved.some(p => p.key === 'berkshire-annual-costs-2025')).toBe(true);
-    expect(saved[0].scope).toBe('fund');
+    expect(saved[0].scope).toBe('personal');
   });
 });

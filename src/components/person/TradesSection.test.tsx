@@ -25,4 +25,16 @@ describe('personal trade coverage', () => {
     expect(html).not.toContain('Traded: Oct 11');
     expect(html).not.toContain('Stock Act');
   });
+  it('extends verified personal disclosures to insiders without presenting grants or gifts as profits', () => {
+    for (const name of ['Elon Musk', 'Peter Thiel', 'Warren Buffett', 'Bill Ackman']) {
+      const html = renderToStaticMarkup(<TradesSection personId={1} name={name} trades={[]} t={t} />);
+      expect(html).toContain('www.sec.gov/Archives/edgar/data/');
+      expect(html).toContain('Not disclosed');
+      expect(html).toContain('Acquisition lot costs and realized P&amp;L are not established');
+    }
+    const gifts = renderToStaticMarkup(<TradesSection personId={1} name="Warren Buffett" trades={[]} t={t} />);
+    expect(gifts).toContain('A gift is not a sale');
+    const musk = renderToStaticMarkup(<TradesSection personId={1} name="Elon Musk" trades={[]} t={t} />);
+    expect(musk).toContain('not an open-market sale');
+  });
 });

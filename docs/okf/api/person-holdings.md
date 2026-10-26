@@ -220,3 +220,51 @@ Burry's source links, dates and P&L unknowns. The five focused holdings/trading
 suites pass 24 tests; TypeScript and targeted ESLint pass. The live page inspected
 before these edits already had holdings but no trades section. This follow-up
 has not been deployed; it requires the next explicitly requested deployment.
+
+## Other applicable personal disclosures — October 25 extension
+
+The personal disclosure pattern now covers Musk, Thiel, Buffett and Ackman in
+addition to Burry: 23 further non-derivative Form 4 transaction rows, plus four
+dated personal security-balance snapshots. These are partial historical
+records, not assertions of a complete current portfolio. They preserve the
+reported shares without inventing a market valuation or cost basis. Musk's
+Tesla balance includes conditional/restricted shares described in the filing;
+Buffett's Class B balance follows conversions and charitable gifts. Ackman's
+accepted records are direct PSUS interests; ambiguous joint-owner PS/HHH records
+are excluded. Thiel's Palantir interests are explicitly identified as held by
+STS Holdings II LLC, of which the filing states he is the sole beneficial owner.
+
+Registry: `scripts/people/data/personal-insider-sources.json`. Research refresh:
+`python3 scripts/people/personalInsiders.py --refresh`. The script reads up to
+12 recent filings per reviewed person since January 2025, checks reporting CIKs,
+and displays up to 24 eligible non-derivative rows. Direct ownership requires a
+sole matching reporting owner; the reviewed STS exception requires the specific
+transaction's ownership footnote. Fund holdings and ambiguous joint-owner rows
+are excluded. Unreconciled amendments cause a stop. Candidate holdings are
+validated before the research catalogs are replaced. Source response hashes,
+coverage counts and exclusions are retained.
+
+The personal holdings baseline is `src/server/data/personHoldingsInsiders.json`;
+it merges per portfolio key with existing runtime overrides and the fund/strategy
+catalogs. Preview using `npx tsx scripts/people/holdings.ts --file
+src/server/data/personHoldingsInsiders.json`, adding `--apply` to save through
+the authenticated API. The first-person/trade research remains in
+`personTradingDisclosures.json`. Gifts, grants, exercises, withholding and
+conversions retain their event labels and never acquire invented realized P&L.
+Quoted transaction prices are reported prices (possibly weighted averages),
+not tax-lot costs. Derivative rows are not converted into ordinary shares.
+
+Felix Baker, Julian Baker and Joseph Edelman were also checked. Their reviewed
+filings do not supply eligible personal direct non-derivative records under
+these rules; fund-held and ambiguous beneficial interests remain excluded.
+Existing House, Senate and executive disclosure tables continue to render
+under personal trades with their original owner and amount-range information.
+No creator's strategy holdings are relabelled as personal investments merely
+because a personal ledger is unavailable.
+
+Validation: 26 TypeScript tests and three additional Python ownership tests
+pass, as do TypeScript and targeted ESLint. The four native profile pages and
+holdings APIs were read back: every added disclosure link and row is present,
+with one personal balance snapshot per person and P&L explicitly undisclosed.
+The new holdings replay is idempotent locally. This extension has not been
+deployed; production deployment still requires the owner's explicit request.

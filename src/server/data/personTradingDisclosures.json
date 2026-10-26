@@ -35,6 +35,287 @@
           "sourceUrl": "https://substack.com/@michaeljburry/note/c-301065569"
         }
       ]
+    },
+    {
+      "name": "Elon Musk",
+      "sourceUrl": "https://data.sec.gov/submissions/CIK0001494730.json",
+      "coverageNote": "Partial SEC Form 4 coverage: up to 12 recent filings since January 2025 reviewed, displaying up to 24 eligible non-derivative transaction rows. Individual reporting identity and ownership were checked. Fund-held, ambiguous joint-owner and derivative rows are excluded; 35 non-derivative rows were excluded by ownership. Direct and specifically verified sole-beneficial entity ownership are distinguished. Awards, gifts, conversions, exercises and withholding events are not treated as open-market investment profits. Share balances are historical and may include restrictions; this is not a complete current portfolio or tax-lot ledger.",
+      "entries": [
+        {
+          "publishedDate": "2026-06-17",
+          "tradeDate": "2026-06-16",
+          "title": "TSLA — Option exercise",
+          "summary": "Tesla, Inc.: Option exercise (SEC code M), 303,960,630 Common Stock shares. Reported price: $23.3400 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. The reported exercise price is not a market sale price or proof of realized profit. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/tm2618092-2_4seq1.xml",
+          "transactionCode": "M",
+          "shares": 303960630.0,
+          "reportedPrice": 23.34,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-06-17",
+          "tradeDate": "2026-06-16",
+          "title": "TSLA — Shares withheld for exercise price or tax obligations",
+          "summary": "Tesla, Inc.: Shares withheld for exercise price or tax obligations (SEC code F), 17,531,857 Common Stock shares. Reported price: $404.6600 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. This is a share-withholding event, not an open-market sale. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/tm2618092-2_4seq1.xml",
+          "transactionCode": "F",
+          "shares": 17531857.0,
+          "reportedPrice": 404.66,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-04-23",
+          "tradeDate": "2026-04-21",
+          "title": "TSLA — Disposition to issuer",
+          "summary": "Tesla, Inc.: Disposition to issuer (SEC code D), 96,000,000 Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926047678/tm2612285-1_4seq1.xml",
+          "transactionCode": "D",
+          "shares": 96000000.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2025-11-10",
+          "tradeDate": "2025-11-06",
+          "title": "TSLA — Award or grant",
+          "summary": "Tesla, Inc.: Award or grant (SEC code A), 423,743,904 Common Stock shares. Reported price: $334.0900 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. The award may be restricted, unvested or conditional; reported shares are not automatically freely tradable. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1494730/000110465925109263/tm2530487-1_4seq1.xml",
+          "transactionCode": "A",
+          "shares": 423743904.0,
+          "reportedPrice": 334.09,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2025-08-04",
+          "tradeDate": "2025-08-03",
+          "title": "TSLA — Award or grant",
+          "summary": "Tesla, Inc.: Award or grant (SEC code A), 96,000,000 Common Stock shares. Reported price: $23.3400 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. The award may be restricted, unvested or conditional; reported shares are not automatically freely tradable. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1494730/000110465925073753/tm2522507-1_4seq1.xml",
+          "transactionCode": "A",
+          "shares": 96000000.0,
+          "reportedPrice": 23.34,
+          "ownership": "direct"
+        }
+      ]
+    },
+    {
+      "name": "Peter Thiel",
+      "sourceUrl": "https://data.sec.gov/submissions/CIK0001211060.json",
+      "coverageNote": "Partial SEC Form 4 coverage: up to 12 recent filings since January 2025 reviewed, displaying up to 24 eligible non-derivative transaction rows. Individual reporting identity and ownership were checked. Fund-held, ambiguous joint-owner and derivative rows are excluded; 0 non-derivative rows were excluded by ownership. Direct and specifically verified sole-beneficial entity ownership are distinguished. Awards, gifts, conversions, exercises and withholding events are not treated as open-market investment profits. Share balances are historical and may include restrictions; this is not a complete current portfolio or tax-lot ledger.",
+      "entries": [
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 50,026 Class A Common Stock shares. Reported price: $140.9739 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 50026.0,
+          "reportedPrice": 140.9739,
+          "ownership": "sole-beneficial-entity"
+        },
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 46,722 Class A Common Stock shares. Reported price: $142.2131 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 46722.0,
+          "reportedPrice": 142.2131,
+          "ownership": "sole-beneficial-entity"
+        },
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 222,837 Class A Common Stock shares. Reported price: $143.2751 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 222837.0,
+          "reportedPrice": 143.2751,
+          "ownership": "sole-beneficial-entity"
+        },
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 419,113 Class A Common Stock shares. Reported price: $144.1774 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 419113.0,
+          "reportedPrice": 144.1774,
+          "ownership": "sole-beneficial-entity"
+        },
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 721,136 Class A Common Stock shares. Reported price: $145.1654 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 721136.0,
+          "reportedPrice": 145.1654,
+          "ownership": "sole-beneficial-entity"
+        },
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 488,783 Class A Common Stock shares. Reported price: $146.1385 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 488783.0,
+          "reportedPrice": 146.1385,
+          "ownership": "sole-beneficial-entity"
+        },
+        {
+          "publishedDate": "2026-03-04",
+          "tradeDate": "2026-03-02",
+          "title": "PLTR — Sale",
+          "summary": "Palantir Technologies Inc.: Sale (SEC code S), 51,383 Class A Common Stock shares. Reported price: $146.8003 per share; read filing footnotes for weighted-average pricing and conditions. Held through STS Holdings II LLC; the filing identifies Thiel as its sole beneficial owner. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+          "transactionCode": "S",
+          "shares": 51383.0,
+          "reportedPrice": 146.8003,
+          "ownership": "sole-beneficial-entity"
+        }
+      ]
+    },
+    {
+      "name": "Warren Buffett",
+      "sourceUrl": "https://data.sec.gov/submissions/CIK0000315090.json",
+      "coverageNote": "Partial SEC Form 4 coverage: up to 12 recent filings since January 2025 reviewed, displaying up to 24 eligible non-derivative transaction rows. Individual reporting identity and ownership were checked. Fund-held, ambiguous joint-owner and derivative rows are excluded; 57 non-derivative rows were excluded by ownership. Direct and specifically verified sole-beneficial entity ownership are distinguished. Awards, gifts, conversions, exercises and withholding events are not treated as open-market investment profits. Share balances are historical and may include restrictions; this is not a complete current portfolio or tax-lot ledger.",
+      "entries": [
+        {
+          "publishedDate": "2026-07-15",
+          "tradeDate": "2026-07-14",
+          "title": "BRK.B — Conversion",
+          "summary": "BERKSHIRE HATHAWAY INC: Conversion (SEC code C), 12,000,000 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526304843/ownership.xml",
+          "transactionCode": "C",
+          "shares": 12000000.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-07-15",
+          "tradeDate": "2026-07-14",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 9,000,000 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526304843/ownership.xml",
+          "transactionCode": "G",
+          "shares": 9000000.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-07-15",
+          "tradeDate": "2026-07-14",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 1,000,000 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526304843/ownership.xml",
+          "transactionCode": "G",
+          "shares": 1000000.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-07-15",
+          "tradeDate": "2026-07-14",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 1,000,000 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526304843/ownership.xml",
+          "transactionCode": "G",
+          "shares": 1000000.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-07-15",
+          "tradeDate": "2026-07-14",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 1,000,000 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526304843/ownership.xml",
+          "transactionCode": "G",
+          "shares": 1000000.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-05-26",
+          "tradeDate": "2026-05-22",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 160 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526239886/ownership.xml",
+          "transactionCode": "G",
+          "shares": 160.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-05-20",
+          "tradeDate": "2026-05-18",
+          "title": "BRK.B — Conversion",
+          "summary": "BERKSHIRE HATHAWAY INC: Conversion (SEC code C), 37,500 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526232543/ownership.xml",
+          "transactionCode": "C",
+          "shares": 37500.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-05-20",
+          "tradeDate": "2026-05-18",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 18,646 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526232543/ownership.xml",
+          "transactionCode": "G",
+          "shares": 18646.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-05-20",
+          "tradeDate": "2026-05-18",
+          "title": "BRK.B — Gift",
+          "summary": "BERKSHIRE HATHAWAY INC: Gift (SEC code G), 18,646 Class B Common Stock shares. Reported price: $0.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. A gift is not a sale or a realized investment gain. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/315090/000119312526232543/ownership.xml",
+          "transactionCode": "G",
+          "shares": 18646.0,
+          "reportedPrice": 0.0,
+          "ownership": "direct"
+        }
+      ]
+    },
+    {
+      "name": "Bill Ackman",
+      "sourceUrl": "https://data.sec.gov/submissions/CIK0001056513.json",
+      "coverageNote": "Partial SEC Form 4 coverage: up to 12 recent filings since January 2025 reviewed, displaying up to 24 eligible non-derivative transaction rows. Individual reporting identity and ownership were checked. Fund-held, ambiguous joint-owner and derivative rows are excluded; 21 non-derivative rows were excluded by ownership. Direct and specifically verified sole-beneficial entity ownership are distinguished. Awards, gifts, conversions, exercises and withholding events are not treated as open-market investment profits. Share balances are historical and may include restrictions; this is not a complete current portfolio or tax-lot ledger.",
+      "entries": [
+        {
+          "publishedDate": "2026-05-01",
+          "tradeDate": "2026-04-30",
+          "title": "PSUS — Purchase",
+          "summary": "Pershing Square USA, Ltd.: Purchase (SEC code P), 3,500,000 Common Shares of Beneficial Interest shares. Reported price: $50.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126018381/form4.xml",
+          "transactionCode": "P",
+          "shares": 3500000.0,
+          "reportedPrice": 50.0,
+          "ownership": "direct"
+        },
+        {
+          "publishedDate": "2026-05-01",
+          "tradeDate": "2026-04-30",
+          "title": "PSUS — Purchase",
+          "summary": "Pershing Square USA, Ltd.: Purchase (SEC code P), 500,000 Common Shares of Beneficial Interest shares. Reported price: $42.0000 per share; read filing footnotes for weighted-average pricing and conditions. Direct ownership as reported. Acquisition lot costs and realized P&L are not established by this filing.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126018381/form4.xml",
+          "transactionCode": "P",
+          "shares": 500000.0,
+          "reportedPrice": 42.0,
+          "ownership": "direct"
+        }
+      ]
     }
   ],
   "sourceAudit": [
@@ -67,6 +348,476 @@
       "checkedAt": "2026-10-25",
       "sha256": "abc9fefb45348583a0f30afd1524dd39cb1c848357876eaaa3defac7e2bc2a15",
       "status": 200
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001494730.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "0803b50e0d9ade1692f530f027dce1c567af9bd4a52d385a72106e8f57cea5af"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000162828026044069/wk-form4_1781740812.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "4feb60ac96c2bd1c1a5a286f60417ec0f5403016796647deafe04dbce345b559"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/tm2618092-2_4seq1.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "0de09e841962987ce3cfea602d65671521ca7467d6a003afd82cc7dce95b5915"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926047678/tm2612285-1_4seq1.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "46e1de8077609fc63549dae05677b0e90950969c46f708ac70f3fb78872c3ac7"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465925125703/tm2534544-1_4seq1.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "059f3ca2eae208e9032f07cc1b4a330ad432c1f7b9a34ece308bde93d9fb999e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465925109263/tm2530487-1_4seq1.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "42f2b33a25d9562cd4821f0235824ad931fb5ce865f94a18430637ed01dc9316"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465925089693/tm2526050-1_4seq1.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "e9bcc3417b31fde405b48e5338de4a1ddef1c422ae9b4661367b764dc27b2b66"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465925073753/tm2522507-1_4seq1.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "153ee6a3ca1f8028c5fee76c8b99d992131731ce92493939c0976dadd2f8615b"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001211060.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b3723dbeb603d72a013497dd19cee3710c722feee691f3c9200654552859d58a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000007/form4-03042026_090310.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "c4f4d0e82192fbac22a2bc81046a902fc6941752374aff05c686b3e4b7c190e7"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000315090.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "3c59a213f090818edb866e2f9ed79bf5f946ebfb37503a0d7aac7dd0f686e52c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526414744/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "41d9d7da61ce8e63d6f23e185f3ea1039e289574f99613db415c227e5c2adc4a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526409451/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "c30da85843bb9a5a05eec3400c48229cab2543fee43e58820f973768706ae543"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526403089/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "826196c05755675e68d0699062ce23a0b204f0e4ef0b7bcad4935f1b6b11527a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526397059/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "9aa31e028ab90b5000d3b11604cd743b9738386d24abc2aee557aa18ad524b4e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526333151/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "c17cd9666b0486b85da922b1fca2e688019e3a71368e44e4f68211b34416362f"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526304843/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b5dd08ed856e9e8ef937cea43a0ea2a935bf278ff17bfcbc7dd4511be2a597eb"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526239886/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "f60449e2e82b8deaaff39280c329b49f8694ca87393c3d1c6a690f4f38c017a8"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526232543/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "6b61a0e21cc3d0b8c3431499816250ef7ff798027b3af53aef070894b2b5f2d9"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526207021/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "52e23d9fb3da2bd4bbc4107343445cafce33ae07dd5bb9ae926c5395d1b98569"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526116315/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "4895b70d091b827bac36c6bf456222e52fb861bf594594783952c454aebdd2d3"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526054947/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "62981228f2dab4d11a357033b3c4520f4cb3c02de9cda5bd9b58e28ac3d678fb"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/315090/000119312526033900/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "05fb32808082828306517ded8703349d6a92cb83b1d6602207604036ac1704a9"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001056513.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "470ac525a43bb4629c4a02836dc5903f5a9f92e8b903e7faac30bc4424d64e64"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126033760/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "a73e2d3625b07f4329d3beefe41cf06fb420cf0a182e298b9b8c40aa22db339d"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126024482/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "76b88669d121704d8ef9af31035df1c4c984936109b9e4afa125bb0befda51fa"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126018949/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "a33a8c472eb782671fa3ef86342a6c2fe84844232266dec93089044499d25540"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126018381/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "7cb02d4ee165f922ab7c7a1adb5eb3531ded63f742f3144efcf69196e8b8ddfc"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126016494/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "df851d67d1a41d127df1d6d5c58ff7f53e68616659a6dd22ad5f28b77c3b2b63"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126016490/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "40027aaaceeb213aea329fc434160816430cbfd9c5258f9d3a2a479ac06c6a2f"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036126016488/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "7850afaa849a096f24118c753bfe664148effa182ea8ee3b5536197d25c9019b"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1056513/000114036125017782/form4.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "63671a0ce28a9e74c065ef4719b94791567682e2e28434d8bc3abc63bda4109d"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001087940.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "af4d7cc22354927931b44d05169316312bb9651a47dfe3a446875aa8fbc84931"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526412653/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "ad14c47aa05f2060f63b091e57a9005bb6dcaa9a8fae4c8d6377a33286f3b703"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526409127/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "69e2c50cb27c994856a7309106bdde9ed9c6f743bdafdc97145e5b2017283ce4"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526409118/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "2989715ff92652dd5b034e6b1a52cf87a4a59fbf8a8172e72fb00e97c5995deb"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526409116/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "e60cba56dd55120466707fc8c62704fa98467a626d243efc2a93fb7504d35b5f"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526393103/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "45a84d9992f6a6731d981eaaa8547c903b3acae0a8dd15bb877f14bdadb04fd1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526345144/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "bab0b28ad7e9a5541f5a189fe540c8804a2b4b2577e52cf5946d51a1adfd12c3"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526306299/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "2063d764e6c87f89c0f84ac56fd9bef5fb10edaa374387570071111678bcf120"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526294724/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "6ffa4e3bbd38bbe2ed31daa4dd2c9a3dbd9767f3abe4427c42ba100b8771736f"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526294712/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "25070b22c24a1b26c08ebe12330c1867d39aeba229f2a960e2d1c3d677daf405"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526288602/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b877b75c76dfb1a395a47208f8e5f748b66f0be2f1ec8e5383513e89e12abe40"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526283039/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b7e38a3048ba822674c702799de36aaf96cad5feb6c6974f85a9cefbd022da0e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087940/000119312526275800/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "6d2a28c6dc33528f8e26b4a0f7418ef212b1ea34728c5671ab81118184f0b378"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001087939.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "72aa9210fce84be3930d608c9826e40b2b58a3962791ab182125934121bbe3a9"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526412653/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "ad14c47aa05f2060f63b091e57a9005bb6dcaa9a8fae4c8d6377a33286f3b703"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526409127/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "69e2c50cb27c994856a7309106bdde9ed9c6f743bdafdc97145e5b2017283ce4"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526409118/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "2989715ff92652dd5b034e6b1a52cf87a4a59fbf8a8172e72fb00e97c5995deb"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526409116/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "e60cba56dd55120466707fc8c62704fa98467a626d243efc2a93fb7504d35b5f"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526393103/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "45a84d9992f6a6731d981eaaa8547c903b3acae0a8dd15bb877f14bdadb04fd1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526345144/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "bab0b28ad7e9a5541f5a189fe540c8804a2b4b2577e52cf5946d51a1adfd12c3"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526306299/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "2063d764e6c87f89c0f84ac56fd9bef5fb10edaa374387570071111678bcf120"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526294724/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "6ffa4e3bbd38bbe2ed31daa4dd2c9a3dbd9767f3abe4427c42ba100b8771736f"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526294712/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "25070b22c24a1b26c08ebe12330c1867d39aeba229f2a960e2d1c3d677daf405"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526288602/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b877b75c76dfb1a395a47208f8e5f748b66f0be2f1ec8e5383513e89e12abe40"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526283039/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b7e38a3048ba822674c702799de36aaf96cad5feb6c6974f85a9cefbd022da0e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1087939/000119312526275800/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "6d2a28c6dc33528f8e26b4a0f7418ef212b1ea34728c5671ab81118184f0b378"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001164426.json",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "b5ef63c7b7eb1dd1c14d5c43fb73b1c2b1653837c6f3c85801c749a0fa14b5ef"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526371237/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "281f74640f55079a67716dbfa8cacf1baaf9d1c37ce449ef350c75a126f83856"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526312798/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "736fab954a5ec24e7ba7143015b9a38fc5884bab5a66d2d90c762f7966d9bd0b"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526302095/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "8e6c1618568aef59da2a48f26afbb50726e7111790f5148a7865b19349436ff1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526300876/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "f7ae6719186141cd8bbccb33debe2764f48e8a082edc4f16281caa52d6bc3058"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526299927/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "ddb1cb76ce5ddb5e9f1aa0d4f985d3bbf9d78465b2a347d22f042b15a830bbfd"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000116442626000003/form4-06242026_100602.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "157f6261d8a573e881910e0de446c09225fe6f92de8a787e8822ce6d7ec9bb9c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526271152/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "a4c00f7b74e06b400934c4c104c2e71c786b842cc4e871dcfea9021b7c3e356e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526267501/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "c0af1e751235d3ccc4d7d318290837e58fb501fb743d7f619da899c62ae9eb39"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526174407/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "49773c469a74d521b9f498cb6f8b6efd46d6490fa3873a6aabfeb5ea7f41364e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000116442626000002/form4-04132026_080406.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "36e515a17af258f994dfe8208be9e1aebc1fe3d966be8325ade21f035d9b0da0"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526102076/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "56cd799db6d51da69af7e1af9a8b53d57a400320ec6dd967e4c57f8f63b36b4a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164426/000119312526000939/ownership.xml",
+      "checkedAt": "2026-10-26",
+      "status": 200,
+      "sha256": "915e14a7ac216dfc452beec1585e934a52844b41d83005a190227b77d809fe1e"
+    }
+  ],
+  "insiderCoverage": [
+    {
+      "name": "Elon Musk",
+      "filingsReviewed": 7,
+      "eligibleDisplayedRows": 5,
+      "excludedOwnershipRows": 35
+    },
+    {
+      "name": "Peter Thiel",
+      "filingsReviewed": 1,
+      "eligibleDisplayedRows": 7,
+      "excludedOwnershipRows": 0
+    },
+    {
+      "name": "Warren Buffett",
+      "filingsReviewed": 12,
+      "eligibleDisplayedRows": 9,
+      "excludedOwnershipRows": 57
+    },
+    {
+      "name": "Bill Ackman",
+      "filingsReviewed": 8,
+      "eligibleDisplayedRows": 2,
+      "excludedOwnershipRows": 21
+    },
+    {
+      "name": "Felix Baker",
+      "filingsReviewed": 12,
+      "eligibleDisplayedRows": 0,
+      "excludedOwnershipRows": 92
+    },
+    {
+      "name": "Julian Baker",
+      "filingsReviewed": 12,
+      "eligibleDisplayedRows": 0,
+      "excludedOwnershipRows": 92
+    },
+    {
+      "name": "Joseph Edelman",
+      "filingsReviewed": 12,
+      "eligibleDisplayedRows": 0,
+      "excludedOwnershipRows": 5
     }
   ]
 }

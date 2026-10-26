@@ -1,0 +1,11 @@
+{
+  "people": [
+    {"name":"Elon Musk","cik":1494730,"secName":"Musk Elon","policy":"direct"},
+    {"name":"Peter Thiel","cik":1211060,"secName":"THIEL PETER","policy":"direct-or-sole-sts"},
+    {"name":"Warren Buffett","cik":315090,"secName":"BUFFETT WARREN E","policy":"direct"},
+    {"name":"Bill Ackman","cik":1056513,"secName":"ACKMAN WILLIAM A","policy":"direct"},
+    {"name":"Felix Baker","cik":1087940,"secName":"BAKER FELIX","policy":"direct"},
+    {"name":"Julian Baker","cik":1087939,"secName":"BAKER JULIAN","policy":"direct"},
+    {"name":"Joseph Edelman","cik":1164426,"secName":"EDELMAN JOSEPH","policy":"direct"}
+  ]
+}
