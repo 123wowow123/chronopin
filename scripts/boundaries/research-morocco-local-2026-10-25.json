@@ -1,0 +1,668 @@
+{
+  "checkedAt": "2026-10-25",
+  "completeCountryCoverage": false,
+  "publishedLocalConstituencies": 65,
+  "publishedRegionalListAreas": 12,
+  "missingLocalConstituencies": 27,
+  "legalCompositionSource": "https://archive.gazettes.africa/archive/ma/2011/ma-bulletin-officiel-dated-2011-11-03-no-5992.pdf",
+  "currentRosterSource": "https://candidats.pjd.ma/js/data.js",
+  "geometrySource": "https://communes.pages.dev/fr/docs/downloads/",
+  "coordinatesModified": false,
+  "wholeUnitCrosswalk": [
+    {
+      "provinceCode": "01.051",
+      "name": "Al Hoceima",
+      "nameArabic": "الحسيمة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "الحسيمة",
+      "currentRosterConstituency": "الحسيمة"
+    },
+    {
+      "provinceCode": "01.151",
+      "name": "Chefchaouen",
+      "nameArabic": "شفشاون",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "شفشاون",
+      "currentRosterConstituency": "شفشاون"
+    },
+    {
+      "provinceCode": "01.227",
+      "name": "Fahs-Anjra",
+      "nameArabic": "الفحص-أنجرة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "الفحص-أنجرة",
+      "currentRosterConstituency": "الفحص - أنجرة"
+    },
+    {
+      "provinceCode": "01.331",
+      "name": "Larache",
+      "nameArabic": "العرائش",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "العرائش",
+      "currentRosterConstituency": "العرائش"
+    },
+    {
+      "provinceCode": "01.405",
+      "name": "Ouezzane",
+      "nameArabic": "وزان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "وزان",
+      "currentRosterConstituency": "وزان"
+    },
+    {
+      "provinceCode": "01.511",
+      "name": "Tanger-Assilah",
+      "nameArabic": "طنجة-أصيلة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "طنجة - أصيلة",
+      "currentRosterConstituency": "طنجة - أصيلة"
+    },
+    {
+      "provinceCode": "01.571",
+      "name": "Tétouan",
+      "nameArabic": "تطوان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "تطوان",
+      "currentRosterConstituency": "تطوان"
+    },
+    {
+      "provinceCode": "01.573",
+      "name": "M'diq-Fnideq",
+      "nameArabic": "المضيق-الفنيدق",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "المضيق الفنيدق",
+      "currentRosterConstituency": "المضيق - الفنيدق"
+    },
+    {
+      "provinceCode": "02.113",
+      "name": "Berkane",
+      "nameArabic": "بركان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "بركان",
+      "currentRosterConstituency": "بركان"
+    },
+    {
+      "provinceCode": "02.167",
+      "name": "Driouch",
+      "nameArabic": "الدريوش",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "الدريوش",
+      "currentRosterConstituency": "الدريوش"
+    },
+    {
+      "provinceCode": "02.251",
+      "name": "Figuig",
+      "nameArabic": "فجيج",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "فجيج - بوعرفة",
+      "currentRosterConstituency": "فجيج - بوعرفة"
+    },
+    {
+      "provinceCode": "02.265",
+      "name": "Guercif",
+      "nameArabic": "جرسيف",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "جرسيف",
+      "currentRosterConstituency": "جرسيف"
+    },
+    {
+      "provinceCode": "02.275",
+      "name": "Jerada",
+      "nameArabic": "جرادة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "جرادة",
+      "currentRosterConstituency": "جرادة"
+    },
+    {
+      "provinceCode": "02.381",
+      "name": "Nador",
+      "nameArabic": "الناضور",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "الناضور",
+      "currentRosterConstituency": "الناضور"
+    },
+    {
+      "provinceCode": "02.411",
+      "name": "Oujda-Angad",
+      "nameArabic": "وجدة-أنجاد",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "وجدة - أنجاد",
+      "currentRosterConstituency": "وجدة - أنجاد"
+    },
+    {
+      "provinceCode": "02.533",
+      "name": "Taourirt",
+      "nameArabic": "تاوريرت",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "تاوريرت",
+      "currentRosterConstituency": "تاوريرت"
+    },
+    {
+      "provinceCode": "03.061",
+      "name": "Meknès",
+      "nameArabic": "مكناس",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "مكناس",
+      "currentRosterConstituency": "مكناس"
+    },
+    {
+      "provinceCode": "03.131",
+      "name": "Boulemane",
+      "nameArabic": "بولمان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "بولمان",
+      "currentRosterConstituency": "بولمان"
+    },
+    {
+      "provinceCode": "03.171",
+      "name": "El Hajeb",
+      "nameArabic": "الحاجب",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "الحاجب",
+      "currentRosterConstituency": "الحاجب"
+    },
+    {
+      "provinceCode": "03.271",
+      "name": "Ifrane",
+      "nameArabic": "إفران",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "إفران",
+      "currentRosterConstituency": "إفران"
+    },
+    {
+      "provinceCode": "03.451",
+      "name": "Sefrou",
+      "nameArabic": "صفرو",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "صفرو",
+      "currentRosterConstituency": "صفرو"
+    },
+    {
+      "provinceCode": "03.561",
+      "name": "Taza",
+      "nameArabic": "تازة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "تازة",
+      "currentRosterConstituency": "تازة"
+    },
+    {
+      "provinceCode": "03.591",
+      "name": "Moulay Yacoub",
+      "nameArabic": "مولاي يعقوب",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "مولاي يعقوب",
+      "currentRosterConstituency": "مولاي يعقوب"
+    },
+    {
+      "provinceCode": "04.481",
+      "name": "Sidi Kacem",
+      "nameArabic": "سيدي قاسم",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "سيدي قاسم",
+      "currentRosterConstituency": "سيدي قاسم"
+    },
+    {
+      "provinceCode": "04.491",
+      "name": "Sidi Slimane",
+      "nameArabic": "سيدي سليمان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "سيدي سليمان",
+      "currentRosterConstituency": "سيدي سليمان"
+    },
+    {
+      "provinceCode": "04.501",
+      "name": "Skhirate-Témara",
+      "nameArabic": "الصخيرات-تمارة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 31,
+      "currentRosterProvince": "الصخيرات - تمارة",
+      "currentRosterConstituency": "الصخيرات - تمارة"
+    },
+    {
+      "provinceCode": "05.091",
+      "name": "Béni Mellal",
+      "nameArabic": "بني ملال",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 36,
+      "currentRosterProvince": "بني ملال",
+      "currentRosterConstituency": "بني ملال"
+    },
+    {
+      "provinceCode": "05.255",
+      "name": "Fquih Ben Salah",
+      "nameArabic": "الفقيه بن صالح",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "الفقيه بن صالح",
+      "currentRosterConstituency": "الفقيه بن صالح"
+    },
+    {
+      "provinceCode": "05.301",
+      "name": "Khénifra",
+      "nameArabic": "خنيفرة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "خنيفرة",
+      "currentRosterConstituency": "خنيفرة"
+    },
+    {
+      "provinceCode": "05.311",
+      "name": "Khouribga",
+      "nameArabic": "خريبكة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "خريبكة",
+      "currentRosterConstituency": "خريبكة"
+    },
+    {
+      "provinceCode": "06.111",
+      "name": "Benslimane",
+      "nameArabic": "بنسليمان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "بنسليمان",
+      "currentRosterConstituency": "بنسليمان"
+    },
+    {
+      "provinceCode": "06.117",
+      "name": "Berrechid",
+      "nameArabic": "برشيد",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "برشيد",
+      "currentRosterConstituency": "برشيد"
+    },
+    {
+      "provinceCode": "06.181",
+      "name": "El Jadida",
+      "nameArabic": "الجديدة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "الجديدة",
+      "currentRosterConstituency": "الجديدة"
+    },
+    {
+      "provinceCode": "06.355",
+      "name": "Médiouna",
+      "nameArabic": "مديونة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 32,
+      "currentRosterProvince": "مديونة",
+      "currentRosterConstituency": "مديونة"
+    },
+    {
+      "provinceCode": "06.371",
+      "name": "Mohammadia",
+      "nameArabic": "المحمدية",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 32,
+      "currentRosterProvince": "المحمدية",
+      "currentRosterConstituency": "المحمدية"
+    },
+    {
+      "provinceCode": "06.385",
+      "name": "Nouaceur",
+      "nameArabic": "النواصر",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 32,
+      "currentRosterProvince": "النواصر",
+      "currentRosterConstituency": "النواصر"
+    },
+    {
+      "provinceCode": "06.461",
+      "name": "Settat",
+      "nameArabic": "سطات",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "سطات",
+      "currentRosterConstituency": "سطات"
+    },
+    {
+      "provinceCode": "06.467",
+      "name": "Sidi Bennour",
+      "nameArabic": "سيدي بنور",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "سيدي بنور",
+      "currentRosterConstituency": "سيدي بنور"
+    },
+    {
+      "provinceCode": "07.041",
+      "name": "Al Haouz",
+      "nameArabic": "الحوز",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "الحوز",
+      "currentRosterConstituency": "الحوز"
+    },
+    {
+      "provinceCode": "07.161",
+      "name": "Chichaoua",
+      "nameArabic": "شيشاوة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "شيشاوة",
+      "currentRosterConstituency": "شيشاوة"
+    },
+    {
+      "provinceCode": "07.191",
+      "name": "El Kelâa Des-Sraghna",
+      "nameArabic": "قلعة السراغنة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "قلعة السراغنة",
+      "currentRosterConstituency": "قلعة السراغنة"
+    },
+    {
+      "provinceCode": "07.211",
+      "name": "Essaouira",
+      "nameArabic": "الصويرة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "الصويرة",
+      "currentRosterConstituency": "الصويرة"
+    },
+    {
+      "provinceCode": "07.427",
+      "name": "Rehamna",
+      "nameArabic": "الرحامنة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "الرحامنة",
+      "currentRosterConstituency": "الرحامنة"
+    },
+    {
+      "provinceCode": "07.431",
+      "name": "Safi",
+      "nameArabic": "آسفي",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "آسفي",
+      "currentRosterConstituency": "آسفي"
+    },
+    {
+      "provinceCode": "07.585",
+      "name": "Youssoufia",
+      "nameArabic": "اليوسفية",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 39,
+      "currentRosterProvince": "اليوسفية",
+      "currentRosterConstituency": "اليوسفية"
+    },
+    {
+      "provinceCode": "08.201",
+      "name": "Errachidia",
+      "nameArabic": "الرشيدية",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "الرشيدية",
+      "currentRosterConstituency": "الرشيدية"
+    },
+    {
+      "provinceCode": "08.363",
+      "name": "Midelt",
+      "nameArabic": "ميدلت",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "ميدلت",
+      "currentRosterConstituency": "ميدلت"
+    },
+    {
+      "provinceCode": "08.401",
+      "name": "Ouarzazate",
+      "nameArabic": "ورزازات",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "ورزازات",
+      "currentRosterConstituency": "ورزازات"
+    },
+    {
+      "provinceCode": "08.577",
+      "name": "Tinghir",
+      "nameArabic": "تنغير",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "تنغير",
+      "currentRosterConstituency": "تنغير"
+    },
+    {
+      "provinceCode": "08.587",
+      "name": "Zagora",
+      "nameArabic": "زاكورة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "زاكورة",
+      "currentRosterConstituency": "زاكورة"
+    },
+    {
+      "provinceCode": "09.001",
+      "name": "Agadir-Ida-Ou-Tanane",
+      "nameArabic": "أكادير-إدا وتنان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 32,
+      "currentRosterProvince": "أكادير -إدا وتنان",
+      "currentRosterConstituency": "أكادير -إدا وتنان"
+    },
+    {
+      "provinceCode": "09.163",
+      "name": "Chtouka-Aït Baha",
+      "nameArabic": "اشتوكة-آيت باها",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 32,
+      "currentRosterProvince": "اشتوكة-آيت باها",
+      "currentRosterConstituency": "اشتوكة-آيت باها"
+    },
+    {
+      "provinceCode": "09.273",
+      "name": "Inezgane-Aït Melloul",
+      "nameArabic": "إنزكان-آيت ملول",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 32,
+      "currentRosterProvince": "إنزكان-آيت ملول",
+      "currentRosterConstituency": "إنزكان-آيت ملول"
+    },
+    {
+      "provinceCode": "09.551",
+      "name": "Tata",
+      "nameArabic": "طاطا",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "طاطا",
+      "currentRosterConstituency": "طاطا"
+    },
+    {
+      "provinceCode": "09.581",
+      "name": "Tiznit",
+      "nameArabic": "تيزنيت",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "تيزنيت",
+      "currentRosterConstituency": "تيزنيت"
+    },
+    {
+      "provinceCode": "10.071",
+      "name": "Assa-Zag",
+      "nameArabic": "آسا-الزاك",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "أسا - الزاك",
+      "currentRosterConstituency": "أسا - الزاك"
+    },
+    {
+      "provinceCode": "10.261",
+      "name": "Guelmim",
+      "nameArabic": "كلميم",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "كلميم",
+      "currentRosterConstituency": "كلميم"
+    },
+    {
+      "provinceCode": "10.473",
+      "name": "Sidi Ifni",
+      "nameArabic": "سيدي إفني",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 35,
+      "currentRosterProvince": "سيدي إفني",
+      "currentRosterConstituency": "سيدي إفني"
+    },
+    {
+      "provinceCode": "10.521",
+      "name": "Tan-Tan",
+      "nameArabic": "طانطان",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "طانطان",
+      "currentRosterConstituency": "طانطان"
+    },
+    {
+      "provinceCode": "11.121",
+      "name": "Boujdour",
+      "nameArabic": "بوجدور",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "بوجدور",
+      "currentRosterConstituency": "بوجدور"
+    },
+    {
+      "provinceCode": "11.221",
+      "name": "Es-Semara",
+      "nameArabic": "السمارة",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 37,
+      "currentRosterProvince": "السمارة",
+      "currentRosterConstituency": "السمارة"
+    },
+    {
+      "provinceCode": "11.321",
+      "name": "Laâyoune",
+      "nameArabic": "العيون",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "العيون",
+      "currentRosterConstituency": "العيون"
+    },
+    {
+      "provinceCode": "11.537",
+      "name": "Tarfaya",
+      "nameArabic": "طرفاية",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "طرفاية",
+      "currentRosterConstituency": "طرفاية"
+    },
+    {
+      "provinceCode": "12.066",
+      "name": "Aousserd",
+      "nameArabic": "أوسرد",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "أوسرد",
+      "currentRosterConstituency": "أوسرد"
+    },
+    {
+      "provinceCode": "12.391",
+      "name": "Oued Ed-Dahab",
+      "nameArabic": "وادي الذهب",
+      "legalComposition": "Whole province/prefecture",
+      "legalAnnexPdfPage": 38,
+      "currentRosterProvince": "وادي الذهب",
+      "currentRosterConstituency": "وادي الذهب"
+    }
+  ],
+  "excludedSplitUnits": [
+    {
+      "code": "03.231",
+      "name": "Fès",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "03.531",
+      "name": "Taounate",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "04.281",
+      "name": "Kénitra",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "04.291",
+      "name": "Khémisset",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "04.421",
+      "name": "Rabat",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "04.441",
+      "name": "Salé",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "05.081",
+      "name": "Azilal",
+      "missingConstituencies": 2
+    },
+    {
+      "code": "06.141",
+      "name": "Casablanca",
+      "missingConstituencies": 8
+    },
+    {
+      "code": "07.351",
+      "name": "Marrakech",
+      "missingConstituencies": 3
+    },
+    {
+      "code": "09.541",
+      "name": "Taroudannt",
+      "missingConstituencies": 2
+    }
+  ],
+  "evidence": [
+    {
+      "file": ".scrape/boundaries/morocco-provinces-round3.geojson",
+      "sha256": "6d6c3ee051f45741ed0a03f03cd9f6d98c03469521588982367b4a46dc418f3b"
+    },
+    {
+      "file": ".scrape/boundaries/morocco-pjd-data-round3.js",
+      "sha256": "40784dd82ba7fd23fe1ac58b226e84a79363aa872fe895b6b1a2ec3d23b534cd"
+    },
+    {
+      "file": ".scrape/boundaries/morocco-decree-2011-bo5992-mirror.pdf",
+      "sha256": "d493e276c2f1bc648a115e3046e1085653c9580302754efa0053888c800f6555"
+    },
+    {
+      "file": ".scrape/boundaries/morocco-partial-77.geojson",
+      "sha256": "09953839d9476442afd43a417b97ab03a9bd1fd14e236058e7b143ba6a7a6f70"
+    }
+  ]
+}

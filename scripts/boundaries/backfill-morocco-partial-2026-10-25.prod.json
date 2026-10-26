@@ -1,0 +1,13 @@
+[
+  {
+    "pinId": 2979,
+    "pinTitle": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
+    "kind": "district",
+    "name": "Morocco — 65 local constituencies + 12 regional-list areas; 27 local seats missing",
+    "vintage": "2026 partial coverage: 65 of 92 local constituencies and all 12 regional-list areas. The 27 local constituencies in ten split provinces/prefectures are NOT mapped. OSM-derived cartographic outlines downloaded 2026-10-25, not legally surveyed electoral lines. Minor source overlaps retained. Includes source administrative geography in disputed Western Sahara; no sovereignty determination.",
+    "source": "OpenStreetMap contributors / Ousama Ajebbar, Communes du Maroc (ODbL 1.0; original database downloadable at source link)",
+    "sourceUrl": "https://communes.pages.dev/fr/docs/downloads/",
+    "file": ".scrape/boundaries/morocco-partial-77.geojson",
+    "preserveFeatureCredits": true
+  }
+]

@@ -1,15 +1,15 @@
 {
   "checkedAt": "2026-10-25",
   "usableForBoundaryImport": false,
-  "productionWrites": 1,
+  "productionWrites": 2,
   "resolvedCountryGaps": 0,
   "remainingCountryGaps": 5,
   "productionReadback": {
     "maps": 75,
-    "defaultFeatures": 10257,
+    "defaultFeatures": 10322,
     "evidence": {
       "path": ".scrape/boundaries/gap-resolution-all-saved-verified.json",
-      "sha256": "88ab01eae1a5a0f3f41dac159e829d81c2dc54e819a7b5e94d520c9e43bfec18"
+      "sha256": "c4414889ec469a2c7cf58c70a0969d3ef167faaf371ab2923b39d89da330ab21"
     }
   },
   "countries": [
@@ -32,7 +32,8 @@
       ],
       "nextRequired": "Current Assam/J&K polygons, independently validated national crosswalk and explicit treatment of the predicted future election plan.",
       "status": "research_gap",
-      "usableForBoundaryImport": false
+      "usableForBoundaryImport": false,
+      "latestResearchCatalog": "scripts/boundaries/research-india-crosswalk-2026-10-25.json"
     },
     {
       "pinId": 2350,
@@ -201,22 +202,30 @@
           "sha256": "90dcba771d633f7bf663ff11faacece56f86b93bf1a66ab1ae26e3cf14b50116"
         }
       ],
-      "nextRequired": "The 12 regional-list areas are published. Still need the complete 92-local-seat layer, including Rabat Hassan annex geometry and validated commune crosswalk.",
+      "nextRequired": "The 65 whole-unit local constituencies and 12 regional-list areas are published. Still need geographic splits for the remaining 27 local constituencies in ten provinces/prefectures, including Rabat Hassan annexes.",
       "status": "verified_partial",
       "usableForBoundaryImport": false,
-      "publishedRegionalManifest": "scripts/boundaries/backfill-morocco-regional-2026-10-25.prod.json"
+      "publishedRegionalManifest": "scripts/boundaries/backfill-morocco-partial-2026-10-25.prod.json",
+      "publishedCoverage": {
+        "regionalList": 12,
+        "local": 65,
+        "localMissing": 27
+      },
+      "latestResearchCatalog": "scripts/boundaries/research-morocco-local-2026-10-25.json"
     }
   ],
   "followUp": {
     "date": "2026-10-25",
-    "productionGeometryWrites": 1,
+    "productionGeometryWrites": 2,
     "partialCountryCoverage": {
       "Morocco": {
         "regionalList": 12,
-        "local": 0
+        "local": 65,
+        "localMissing": 27
       }
     },
     "remainingCompleteCountryGaps": 5,
-    "nigeriaRacCatalog": "scripts/boundaries/research-nigeria-rac-2026-10-25.json"
+    "nigeriaRacCatalog": "scripts/boundaries/research-nigeria-rac-2026-10-25.json",
+    "latestRound": "docs/okf/scraping/boundaries-country-round3-2026-10-25.md"
   }
 }

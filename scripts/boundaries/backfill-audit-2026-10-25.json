@@ -178,7 +178,7 @@
     "districtPins": 57,
     "researchGaps": 5,
     "outsideBoundaryScope": 513,
-    "defaultBoundaryFeatures": 10257,
+    "defaultBoundaryFeatures": 10322,
     "stateRedrawComparisons": 10,
     "alternatePlanFeatures": 401,
     "provincialRedrawComparisons": 1,
@@ -590,7 +590,8 @@
         "https://bharatsurvey.org/constituency-mapping"
       ],
       "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
-      "nextRequired": "Current Assam/J&K polygons, independently validated national crosswalk and explicit treatment of the predicted future election plan."
+      "nextRequired": "Current Assam/J&K polygons, independently validated national crosswalk and explicit treatment of the predicted future election plan.",
+      "latestGeometryResearchCatalog": "scripts/boundaries/research-india-crosswalk-2026-10-25.json"
     },
     {
       "pinId": 1979,
@@ -1238,7 +1239,7 @@
       "pinId": 2979,
       "title": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
       "status": "verified_partial",
-      "reason": "Published and verified the complete 12 regional-list area layer only. The 92 local constituency polygons remain a research gap, including the Hassan administrative-annex split. Map labels and pin wiki explicitly distinguish regional coverage from missing local seats.",
+      "reason": "Verified partial map: 65 whole-province/prefecture local constituency outlines plus all 12 regional-list areas. The 27 local constituencies in ten split provinces remain missing; no whole-province substitute used for split constituencies.",
       "sourcesChecked": [
         "https://www.maroc.ma/fr/actualites/elections-legislatives-2026-trois-moyens-pour-localiser-votre-bureau-de-vote",
         "https://www.listeselectorales.ma/fr/Index.aspx",
@@ -1254,8 +1255,9 @@
         "https://communes.pages.dev/fr/docs/downloads/"
       ],
       "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
-      "nextRequired": "Rabat Hassan administrative-annex geometry, complete commune/province crosswalk and confirmation of the legal composition applicable to the 2026 pin.",
-      "features": 12
+      "nextRequired": "Verified internal boundaries for the remaining 27 local constituencies in ten split provinces/prefectures, including Rabat Hassan annexes.",
+      "features": 77,
+      "latestGeometryResearchCatalog": "scripts/boundaries/research-morocco-local-2026-10-25.json"
     },
     {
       "pinId": 2982,
@@ -5300,7 +5302,9 @@
   "researchCatalogs": [
     "scripts/boundaries/research-gambia-wards-2026-10-25.json",
     "scripts/boundaries/research-country-gaps-2026-10-25.json",
-    "scripts/boundaries/research-nigeria-rac-2026-10-25.json"
+    "scripts/boundaries/research-nigeria-rac-2026-10-25.json",
+    "scripts/boundaries/research-morocco-local-2026-10-25.json",
+    "scripts/boundaries/research-india-crosswalk-2026-10-25.json"
   ],
   "large7RunVerification": {
     "newPins": 0,
@@ -5320,11 +5324,18 @@
     "catalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
     "resolved": 0,
     "remaining": 5,
-    "productionWrites": 1,
+    "productionWrites": 2,
     "verifiedLiveMaps": 75,
-    "defaultBoundaryFeatures": 10257,
+    "defaultBoundaryFeatures": 10322,
     "partiallyMapped": 1,
-    "productionGeometryWrites": 1,
-    "followUpCatalog": "scripts/boundaries/research-nigeria-rac-2026-10-25.json"
+    "productionGeometryWrites": 2,
+    "followUpCatalog": "scripts/boundaries/research-nigeria-rac-2026-10-25.json",
+    "latestRound": {
+      "localConstituenciesAdded": 65,
+      "moroccoLocalMapped": 65,
+      "moroccoLocalMissing": 27,
+      "regionalListAreasPreserved": 12,
+      "completeCountryGapsRemaining": 5
+    }
   }
 }

@@ -1,0 +1,66 @@
+[
+  {
+    "pinId": 170,
+    "url": "https://www.ign.com/articles/elden-ring-review",
+    "title": "Elden Ring Review - IGN",
+    "publishedDate": "2022-02-23",
+    "quote": "FromSoftware takes the ball that The Legend of Zelda: Breath of the Wild got rolling and runs with it, creating a fascinating and dense open world about freedom and exploration above all else, while also somehow managing to seamlessly weave a full-on Dark Souls game into the middle of it.",
+    "sentiment": 0.98
+  },
+  {
+    "pinId": 170,
+    "url": "https://www.pcgamer.com/elden-ring-review/",
+    "title": "Elden Ring review | PC Gamer",
+    "publishedDate": "2022-02-23",
+    "quote": "Elden Ring, FromSoftware's successor to the Souls series, is huge in comparison to the previous games, and what's in its open world is undeniably Dark Souls.",
+    "sentiment": 0.9
+  },
+  {
+    "pinId": 170,
+    "url": "https://www.gamespot.com/reviews/elden-ring-review-death-of-the-wild/1900-6417832/",
+    "title": "Elden Ring Review - Death Of The Wild - GameSpot",
+    "publishedDate": "2022-03-16",
+    "quote": "That delicate orchestration of highs and lows and the build-up and release of tension that From Software has mastered, coupled with the thrill of freeform exploration and discovery, is an intoxicating cocktail of game design",
+    "sentiment": 0.95
+  },
+  {
+    "pinId": 172,
+    "url": "https://www.ign.com/articles/gran-turismo-7-review",
+    "title": "Gran Turismo 7 Review - IGN",
+    "publishedDate": "2022-03-02",
+    "quote": "Gran Turismo 7 has that magic; that compulsive car upgrade loop the series established, plus the hot looks and sterling handling to back it up.",
+    "sentiment": 0.85
+  },
+  {
+    "pinId": 173,
+    "url": "https://www.ign.com/articles/bayonetta-3-review",
+    "title": "Bayonetta 3 Review - IGN",
+    "publishedDate": "2022-10-25",
+    "quote": "Bayonetta 3 is an invigorated sequel with fresh new ideas that embolden its 13-year-old combat system, an impressive amount of variety throughout its 10 to 12-hour campaign, and more of that trademark sexy Bayonetta style that makes the series one of a kind.",
+    "sentiment": 0.9
+  },
+  {
+    "pinId": 174,
+    "url": "https://www.ign.com/articles/kirby-and-the-forgotten-land-review",
+    "title": "Kirby and the Forgotten Land Review - IGN",
+    "publishedDate": "2022-03-23",
+    "quote": "But in reality, this platformer feels like the next big step for a more classic Kirby formula rather than an upheaval of it, and it’s one that skillfully translates the things I love about Kirby into a fresh – but still familiar – new perspective.",
+    "sentiment": 0.85
+  },
+  {
+    "pinId": 168,
+    "url": "https://www.gamespot.com/reviews/god-of-war-ragnarok-review-blood-sweat-and-tyrs/1900-6417993/",
+    "title": "God Of War Ragnarok Review (PC Version Update) - Blood, Sweat, And Tyrs - GameSpot",
+    "publishedDate": "2024-09-25",
+    "quote": "God of War Ragnarok is a lavish production with pristine visuals, jaw-dropping scale, crunchy combat that is as satisfying as it is brutal, and a world that begs to have its every corner and crevice explored. It’s a spectacular blockbuster, but these are the least of its achievements.",
+    "sentiment": 0.95
+  },
+  {
+    "pinId": 188,
+    "url": "https://www.gamespot.com/reviews/the-last-of-us-part-i-ps5-and-pc-review-desolation-row/1900-6417949/",
+    "title": "The Last Of Us Part I PS5 And PC Review - Desolation Row - GameSpot",
+    "publishedDate": "2023-04-05",
+    "quote": "The Last of Us Part I is an unrelenting tour de force that strategically leverages the power of the PlayStation 5 to push its story and themes a little further. Slight though many of them may be, all its enhancements serve the story, and the story is just as good as it was nine years ago",
+    "sentiment": 0.85
+  }
+]

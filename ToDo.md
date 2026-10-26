@@ -1,5 +1,36 @@
 # To Do
 
+## Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25, 2026)
+
+**Implemented, seeded locally, and deployed to production:**
+- [x] **Database schema & API (`scripts/db/schema/0215_pin_critic_review.sql`, `src/lib/pinCriticReviews.ts`, `src/app/api/pins/[id]/critic-reviews/route.ts`):** Created `"PinCriticReview"` table keyed by `"pinId"` storing `reviews` (`[{url, title, publishedDate, quote, sentiment}]`), `source` (`'session' | 'hand'`), `basis`, `sourceUrl`, and `checkedAt`. Added model helper `pinCriticReviews(id)` and GET/POST API endpoints. Migration 0215 verified deployed on production.
+- [x] **Production critic reviews sync script (`scripts/products/criticReviewsProd.ts`):** Added authenticated admin script to sync local `"PinCriticReview"` rows to production by matching `sourceUrl` and upserting via `POST /api/admin/db/PinCriticReview?upsert=1`.
+- [x] **Gaming critic reviews backfilled & synced to production (41 pins, 123+ reviews):**
+  - Scraped and verified 3 independent critic reviews each from opened HTTPS pages (IGN, GameSpot, PC Gamer, Eurogamer, Nintendo Life, VGC) with verbatim quotes (<=300 chars), published dates, and sentiment scores.
+  - Completed all 6 games previously stuck at 2 reviews: *Street Fighter 6*, *Star Wars Jedi: Survivor*, *Final Fantasy 16*, *Counter-Strike 2*, *Overwatch 2*, and *Marvel Rivals*.
+  - Added full 3-review sets for game pins that previously had none: *Valheim 1.0*, *Slay the Spire 2*, *Gears of War: E-Day*, *Crisis Core Reunion Switch 2*, *Marvel's Wolverine*, *Wardogs*, *Stray*, *The Last of Us Part I*, *God of War Ragnarök*, *Horizon Forbidden West*, *Elden Ring*, *Gran Turismo 7*, *Bayonetta 3*, *Kirby and the Forgotten Land*, *Call of Duty: Modern Warfare II*, *Pokémon Scarlet & Violet*, *A Plague Tale: Requiem*, *Sifu*, *Xenoblade Chronicles 3*, *Splatoon 3*, *As Dusk Falls*, *Need for Speed Unbound*, *The Callisto Protocol*, *TMNT: Shredder's Revenge*, *The Quarry*, *Mario + Rabbids: Sparks of Hope*, and *Rollerdrome*.
+- [x] **Sampled Movie/TV, Music, and Computing critic reviews in `PinCriticReview` (39 pins, 105 reviews):**
+  - **Movies & Anime Films:** Added 3 verified reviews each for *The Odyssey (2026)*, *The First Slam Dunk*, *Your Name.*, *Spirited Away*, *Howl's Moving Castle*, *Princess Mononoke*, *A Silent Voice*, *The End of Evangelion*, *Demon Slayer: Mugen Train*, *Grave of the Fireflies*, *HAIKYU!! The Dumpster Battle*, and *Look Back*, plus reviews for *Kaguya-sama*, *Attack on Titan*, *Violet Evergarden*, *I Want to Eat Your Pancreas*, *Wolf Children*, *The Disappearance of Haruhi Suzumiya*, *Redline*, and *Tokyo Godfathers*.
+  - **Music Albums:** Added verified reviews from Pitchfork, Rolling Stone, NME, and The Guardian for Amy Winehouse (*Back to Black*), Daft Punk (*Random Access Memories*), Taylor Swift (*1989*, *folklore*, *Midnights*), Harry Styles (*Harry's House*), and Norah Jones (*Come Away with Me*).
+  - **Computing & Consumer Tech:** Added 3 verified reviews each across 12 product pins: iPhone 5S, Google Nexus 5, NVIDIA Shield Tablet, iPhone 6, Xbox One X, PlayStation VR2, iPhone 18 Pro / Pro Max, Apple Watch Series 12, Apple Watch Ultra 4, AirPods 5, Google Pixel 11, and Google Pixel Watch 5.
+- [x] **Production sync of all 80 `PinCriticReview` pins:** Pushed all 80 rows (228 reviews) to production via `npm run reviews:critic:prod` with 0 errors.
+- [x] **Rubric review backfill & verification across 20 pins:**
+  - Added verified reviews to bring 20 pins up to 3 independent reviews across `PinGasCarPerf` (VW Golf GTI Edition 50, Aston Martin DB12 S, 2027 BMW X5, 2027 BMW M350, 2027 BMW 7 Series, 2027 Honda Civic Type R), `PinAircraftPerf` (Embraer EMB 120 Brasilia, De Havilland Canada Dash 8, Douglas DC-8, Douglas DC-9, McDonnell Douglas DC-10), and `PinLlmPerf` (GPT-5-Codex, DeepSeek-V3.2-Exp, GLM-4.7-Flash, Qwen3-30B-A3B, GPT-5 mini/nano, Mistral Small 3, Mistral Small 3.2, GLM-4.5V, GLM-4.6V). Synced all 20 rows to production.
+- [x] **Dated and scored 58 rubric reviews:** Extracted valid publication dates and sentiment scores for 58 previously undated rubric reviews across taste, dining, car, aircraft, and LLM rubrics; synced all 58 to production.
+- [x] **Production sentiment score audit:** Verified all 788 local scored review rows against production (`npm run reviews:sentiment:prod -- --dry`: 0 review scores missing, 0 problems).
+- [x] **Fixed OKF lint test (`src/lib/okfLint.test.ts`):** Added frontmatter to `docs/okf/scraping/autopilot-people-2026-10-25.md`, `boundaries-country-round3-2026-10-25.md`, and `holdings-primary-2026-10-25.md`; 9 of 9 unit tests passing.
+
+**Remainder work & follow-up items:**
+- [ ] **Expand `PinCriticReview` coverage for remaining Movie/TV, Music, and Fashion pins:**
+  - Continue sampling remaining Movie and TV pins (~750 pins) and Music album pins (~900 pins).
+  - Research Fashion & Footwear product pins (Alo Yoga sneakers, Kith, Nike Tom Sachs).
+- [ ] **Rubric pins below the 3-review minimum (~70 remaining):**
+  - EV performance (`PinCarPerf`) and restaurant dining (`PinDining`), plus remaining aircraft and gas car models.
+- [ ] **Remaining ~109 non-MICHELIN undated rubric reviews:**
+  - Use browser navigation for sites blocking curl (Car and Driver, What Car, Top Gear, Autocar, Motor1) to locate publication dates, then score and sync.
+- [ ] **Scrape flow integration:**
+  - Add sentiment scoring directly into the extraction pipeline so newly scraped reviews arrive already scored.
+
 ## Data Center Trackers, `PinDatacenter` Table, Map HUD & Pin Detail Stats (updated October 21, 2026)
 
 **Implemented, seeded locally, and deployed to production:**

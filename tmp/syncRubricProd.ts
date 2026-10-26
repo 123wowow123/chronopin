@@ -1,0 +1,53 @@
+import '../scripts/env';
+import { readFileSync } from 'node:fs';
+import * as db from '@/server/db';
+
+const BASE = 'https://www.chronopin.com';
+const token = readFileSync('.scrape/admin.token', 'utf8').trim();
+const TABLES = ['PinGasCarPerf', 'PinAircraftPerf', 'PinLlmPerf', 'PinCarPerf', 'PinVideoPerf', 'PinDining'];
+
+async function call(method: string, route: string, body?: unknown) {
+  const res = await fetch(BASE + route, {
+    method,
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const text = await res.text();
+  let data: any = text;
+  try { data = text ? JSON.parse(text) : null; } catch {}
+  return { status: res.status, data };
+}
+
+(async()=>{
+  let patched = 0;
+  for (const t of TABLES) {
+    const rows:any[] = await db.query(`
+      select r."pinId", p.title, p."sourceUrl", r.reviews
+      from "${t}" r join "Pin" p on p.id = r."pinId"
+      where p."utcDeletedDateTime" is null and r."checkedAt" > now() - interval '2 hours'
+    `);
+    for (const row of rows) {
+      if (!row.sourceUrl) continue;
+      const found = await call('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(row.sourceUrl)}&utcDeletedDateTime.null=true&limit=5`);
+      const matches = found.data?.rows ?? [];
+      if (matches.length !== 1) continue;
+      const id = matches[0].id;
+      const there = await call('GET', `/api/admin/db/${t}?pinId=${id}&limit=1`);
+      const remote = there.data?.rows?.[0];
+      if (!remote) continue;
+      const rvs:any[] = typeof remote.reviews === 'string' ? JSON.parse(remote.reviews) : (remote.reviews || []);
+      const m = new Map(rvs.map(x=>[x.url, x]));
+      let added = 0;
+      for (const loc of (typeof row.reviews === 'string' ? JSON.parse(row.reviews) : row.reviews)) {
+        if (!m.has(loc.url)) { m.set(loc.url, loc); added++; }
+      }
+      if (!added) continue;
+      const merged = [...m.values()].slice(0, 6);
+      const patch = await call('PATCH', `/api/admin/db/${t}?pinId=${id}`, { reviews: merged });
+      console.log(t, row.pinId, '->', id, `+${added}`, patch.status);
+      if (patch.status === 200) patched++;
+    }
+  }
+  console.log('patched', patched);
+  process.exit(0);
+})();

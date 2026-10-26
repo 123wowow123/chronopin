@@ -2217,6 +2217,10 @@ const pt: Messages = {
       fecLink: 'No fec.gov',
     },
     holdings: {
+      personalTitle: "Posições pessoais e lucros/prejuízos",
+      relatedTitle: "Posições de fundos e estratégias acompanhadas",
+      personalNone: "Não há carteira pessoal verificada. Posições e ganhos não realizados pessoais são desconhecidos; fundos e estratégias aparecem separados.",
+
       "title": "Ações atuais e lucros/prejuízos",
       "unknown": "Não divulgado",
       "personal": "Posições pessoais",
@@ -2246,6 +2250,14 @@ const pt: Messages = {
       "pnlAbout": "O cálculo exige custo e avaliação datada na mesma moeda. É um resultado não realizado, excluindo dividendos e ganhos realizados. Dados ausentes não são estimados."
     },
     trades: {
+      personalTitle: "Operações pessoais e lucros/prejuízos",
+      disclosures: "Divulgações de operações pessoais",
+      published: "Publicado",
+      pnl: "Lucro/prejuízo realizado",
+      personalAbout: "Atividade pessoal divulgada. Datas de publicação e operação são distintas; comentários não são um registro completo de execução.",
+      personalNone: "Não há registro pessoal verificado. Atividade e lucros realizados são desconhecidos, não zero.",
+      pnlAbout: "O lucro realizado exige custos e receitas de venda correspondentes ao mesmo ativo e quantidade. Faixas, mudanças trimestrais inferidas e comentários não comprovam lucro. Dados ausentes permanecem não divulgados.",
+
       title: 'Operações na bolsa',
       about: 'Operações com valores mobiliários declaradas nos termos do STOCK Act em relatórios periódicos de transações. Cada relatório dá os valores como faixas, nunca um número exato, e os membros podem apresentá-los até 45 dias depois da operação, por isso nunca é em tempo real. Cada linha liga à declaração de onde foi lida.',
       purchases: 'Compras',

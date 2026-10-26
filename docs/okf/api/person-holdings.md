@@ -180,3 +180,43 @@ preserving newly added baselines alongside runtime overrides. Every primary
 profile, native field and rendered position row is checked against its catalog.
 This source upgrade is local and ready for the initially required deployment;
 production still returned 404 for the new endpoint during verification.
+
+## Personal holdings and personal trades — October 25 follow-up
+
+Every profile now renders `#holdings` as **Personal holdings & P&L**, restricted
+strictly to `scope: personal`. `#trades` is always visible as **Personal trades &
+P&L**, including an explicit unknown-data state when no execution ledger exists.
+Fund and tracker portfolios move into their own `#related-holdings` section;
+they cannot fill a missing personal portfolio. The jump links follow the same
+order. All section headings and unknown-state explanations are translated in
+the 16 supported locales.
+
+The personal transaction table has an explicit realized P&L column. Existing
+STOCK Act records disclose transaction-value ranges rather than matched tax
+lots/acquisition costs, so their realized P&L is undisclosed. The page explains
+that an acquisition cost and sale proceeds must cover the same security and
+quantity; it does not label the value of a sale as profit or infer executions
+from quarterly holdings changes. The exact cost-based unrealized holding P&L
+calculation remains in the personal holdings table where source data supports it.
+
+Burry's first-person public newsletter previews and public note are captured in
+`src/server/data/personTradingDisclosures.json`, with source URLs, publication
+and explicitly stated trade dates, source hashes and research limits. Four dated
+entries cover October 11, October 5, August 10 and July 24, 2026. They show what
+he actually disclosed in accessible text: changes involving Fannie/Freddie,
+possible tax-loss candidates, unspecified executions and stock buys/shorts.
+They do not fabricate tickers, quantities, directions or prices withheld behind
+a paid section. A plan to sell or an unfinished order is not counted as a
+completed trade. Publication dates are distinguished from execution dates.
+These entries are research content, separate from the structured STOCK Act
+execution records and their counts/notifications. The existing compiled profile
+wiki is unchanged; each trading disclosure links directly to its primary source.
+
+Local verification covers Burry (no complete personal snapshot; four first-person
+disclosures; fund and tracker separate), Pelosi (22 personal stock/owner rows,
+existing transaction table preserved) and Schiff (empty personal holdings,
+existing trades preserved). Chrome confirms all three section headings and
+Burry's source links, dates and P&L unknowns. The five focused holdings/trading
+suites pass 24 tests; TypeScript and targeted ESLint pass. The live page inspected
+before these edits already had holdings but no trades section. This follow-up
+has not been deployed; it requires the next explicitly requested deployment.

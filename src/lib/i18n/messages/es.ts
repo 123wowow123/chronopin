@@ -2226,6 +2226,10 @@ const es: Messages = {
       fecLink: 'En fec.gov',
     },
     holdings: {
+      personalTitle: "Posiciones personales y ganancias/pérdidas",
+      relatedTitle: "Posiciones de fondos y estrategias seguidas",
+      personalNone: "No hay una cartera personal verificada. Las posiciones personales y sus ganancias latentes son desconocidas; los fondos y estrategias aparecen por separado.",
+
       "title": "Acciones actuales y ganancias/pérdidas",
       "unknown": "No divulgado",
       "personal": "Posiciones personales",
@@ -2255,6 +2259,14 @@ const es: Messages = {
       "pnlAbout": "El cálculo requiere coste y valoración fechada en la misma moneda. Es una ganancia o pérdida no realizada, sin dividendos ni ganancias realizadas. Los datos ausentes no se estiman."
     },
     trades: {
+      personalTitle: "Operaciones personales y ganancias/pérdidas",
+      disclosures: "Divulgaciones de operaciones personales",
+      published: "Publicado",
+      pnl: "Ganancia/pérdida realizada",
+      personalAbout: "Actividad personal divulgada. La fecha de publicación puede diferir de la operación; un comentario no es un registro completo.",
+      personalNone: "No hay un registro personal de operaciones verificado. La actividad y las ganancias realizadas son desconocidas, no cero.",
+      pnlAbout: "La ganancia realizada requiere coste y venta correspondientes al mismo valor y cantidad. Los rangos, cambios trimestrales inferidos y comentarios no determinan beneficios. Los datos ausentes no se estiman.",
+
       title: 'Operaciones bursátiles',
       about: 'Operaciones con valores declaradas conforme a la Ley STOCK en informes periódicos de transacciones. Cada informe da los importes como rangos, nunca una cifra exacta, y los miembros pueden presentarlos hasta 45 días después de la operación, así que nunca es en vivo. Cada fila enlaza con la declaración de la que se leyó.',
       purchases: 'Compras',

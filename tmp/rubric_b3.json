@@ -1,0 +1,65 @@
+[
+  {
+    "table": "PinAircraftPerf",
+    "pinId": 19544,
+    "url": "https://readyfortakeoffbook.com/blogs/aircraft-type/embraer-emb-120-brasilia",
+    "title": "Embraer EMB 120 Brasilia | A trusted regional workhorse",
+    "publishedDate": "2026-01-17",
+    "quote": "For operators, the selling points were practical rather than abstract: a pressurised cabin, competitive cruise, and a service ceiling that enabled more weather avoidance and better ride quality on typical regional routes.",
+    "sentiment": 0.75
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 1816,
+    "url": "https://venturebeat.com/technology/openai-unveils-new-model-gpt-5-codex-optimized-for-agentic-coding",
+    "title": "OpenAI's new agentic coding model GPT-5-Codex can run independently for 7 hours at a time | VentureBeat",
+    "publishedDate": "2025-09-15",
+    "quote": "For more demanding projects, it is able to run independently for extended periods — in testing, it successfully executed refactor jobs lasting more than seven hours, iterating until it delivered a working implementation.",
+    "sentiment": 0.85
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15106,
+    "url": "https://venturebeat.com/technology/deepseeks-new-v3-2-exp-model-cuts-api-pricing-in-half-to-less-than-3-cents",
+    "title": "DeepSeek's new V3.2-Exp model cuts API pricing in half to less than 3 cents per 1M input tokens | VentureBeat",
+    "publishedDate": "2025-09-29",
+    "quote": "By reducing the compute burden per token at large context lengths, V3.2-Exp keeps the cost curve flatter and much lower.",
+    "sentiment": 0.8
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15115,
+    "url": "https://www.marktechpost.com/2026/01/20/zhipu-ai-releases-glm-4-7-flash-a-30b-a3b-moe-model-for-efficient-local-coding-and-agents/",
+    "title": "Zhipu AI Releases GLM-4.7-Flash: A 30B-A3B MoE Model for Efficient Local Coding and Agents - MarkTechPost",
+    "publishedDate": "2026-01-20",
+    "quote": "The important point is that GLM-4.7-Flash is not only a compact deployment of GLM but also a high performing model on established coding and agent benchmarks.",
+    "sentiment": 0.8
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15131,
+    "url": "https://runaihome.com/blog/qwen3-30b-a3b-local-ai-guide-2026/",
+    "title": "Qwen3-30B-A3B Local AI Guide: 196 tok/s on One RTX 4090, and What MoE Means for Your GPU",
+    "publishedDate": "2026-05-24",
+    "quote": "This is the MoE bargain: you pay the VRAM cost of a 30B model, but you get the generation speed of a model three to five times smaller.",
+    "sentiment": 0.8
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15139,
+    "url": "https://simonwillison.net/2025/Aug/7/gpt-5/",
+    "title": "GPT-5: Key characteristics, pricing and model card",
+    "publishedDate": "2025-08-07",
+    "quote": "GPT-5 in the API is simpler: it’s available as three models—regular, mini and nano—which can each be run at one of four reasoning levels: minimal (a new level not previously available for other OpenAI reasoning models), low, medium or high.",
+    "sentiment": 0.7
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15145,
+    "url": "https://simonwillison.net/2025/Jan/30/mistral-small-3/",
+    "title": "Mistral Small 3",
+    "publishedDate": "2025-01-30",
+    "quote": "Llama 3.3 70B and Qwen 32B are two of my favourite models to run on my laptop - that ~20GB size turns out to be a great trade-off between memory usage and model utility. It's exciting to see a new entrant into that weight class.",
+    "sentiment": 0.85
+  }
+]

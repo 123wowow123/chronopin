@@ -2217,6 +2217,10 @@ const it: Messages = {
       fecLink: 'Su fec.gov',
     },
     holdings: {
+      personalTitle: "Posizioni personali e profitti/perdite",
+      relatedTitle: "Posizioni dei fondi e strategie seguite",
+      personalNone: "Nessun portafoglio personale verificato. Posizioni e plusvalenze latenti personali sconosciute; fondi e strategie sono separati.",
+
       "title": "Azioni detenute e profitti/perdite",
       "unknown": "Non dichiarato",
       "personal": "Posizioni personali",
@@ -2246,6 +2250,14 @@ const it: Messages = {
       "pnlAbout": "Il calcolo richiede costo e valutazione datata nella stessa valuta. È una plusvalenza non realizzata, esclusi dividendi e guadagni realizzati. I dati mancanti non sono stimati."
     },
     trades: {
+      personalTitle: "Operazioni personali e profitti/perdite",
+      disclosures: "Operazioni personali dichiarate",
+      published: "Pubblicato",
+      pnl: "Profitto/perdita realizzato",
+      personalAbout: "Attività personale dichiarata. Date di pubblicazione e negoziazione distinte; un commento non è un registro completo di esecuzione.",
+      personalNone: "Nessun registro personale verificato. Attività e profitti realizzati sono sconosciuti, non zero.",
+      pnlAbout: "Il profitto realizzato richiede costo e ricavo abbinati allo stesso titolo e quantità. Intervalli, variazioni trimestrali dedotte e commenti non provano un profitto. I dati mancanti restano non dichiarati.",
+
       title: 'Operazioni in borsa',
       about: 'Operazioni su titoli dichiarate ai sensi dello STOCK Act nei rapporti periodici sulle transazioni. Ogni rapporto indica gli importi come intervalli, mai una cifra esatta, e i membri possono presentarli fino a 45 giorni dopo l\'operazione, quindi non sono mai in tempo reale. Ogni riga rimanda alla dichiarazione da cui è tratta.',
       purchases: 'Acquisti',

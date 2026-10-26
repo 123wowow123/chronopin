@@ -2226,6 +2226,10 @@ const de: Messages = {
       fecLink: 'Auf fec.gov',
     },
     holdings: {
+      personalTitle: "Persönliche Bestände und Gewinn/Verlust",
+      relatedTitle: "Fondsbestände und verfolgte Strategien",
+      personalNone: "Kein verifizierter persönlicher Portfoliostand verfügbar. Persönliche Bestände und unrealisierte Gewinne sind unbekannt; Fonds und Strategien stehen separat.",
+
       "title": "Aktuelle Aktienbestände und Gewinn/Verlust",
       "unknown": "Nicht offengelegt",
       "personal": "Persönliche Bestände",
@@ -2255,6 +2259,14 @@ const de: Messages = {
       "pnlAbout": "Erforderlich sind Anschaffungskosten und eine datierte Bewertung in derselben Währung. Berechnet wird der unrealisierte Kursgewinn ohne Dividenden und realisierte Gewinne. Fehlende Angaben werden nicht geschätzt."
     },
     trades: {
+      personalTitle: "Persönliche Transaktionen und Gewinn/Verlust",
+      disclosures: "Offengelegte persönliche Transaktionen",
+      published: "Veröffentlicht",
+      pnl: "Realisierter Gewinn/Verlust",
+      personalAbout: "Öffentlich offengelegte persönliche Transaktionen. Veröffentlichungs- und Handelsdatum sind verschieden; Kommentare sind kein vollständiges Transaktionsbuch.",
+      personalNone: "Kein verifiziertes persönliches Transaktionsbuch verfügbar. Aktivität und realisierte Gewinne sind unbekannt, nicht null.",
+      pnlAbout: "Realisierter Gewinn erfordert zugeordnete Anschaffungskosten und Verkaufserlöse für dasselbe Wertpapier und dieselbe Menge. Betragsspannen, abgeleitete Quartalsänderungen und Kommentare belegen keinen Gewinn. Fehlende Daten bleiben unbekannt.",
+
       title: 'Aktiengeschäfte',
       about: 'Wertpapiergeschäfte, die nach dem STOCK Act in periodischen Transaktionsberichten offengelegt werden. Beträge werden nur als Spannen angegeben, nie als genaue Zahl, und Mitglieder dürfen bis zu 45 Tage nach dem Geschäft melden – es ist also nie live. Jede Zeile verweist auf die Meldung, aus der sie stammt.',
       purchases: 'Käufe',

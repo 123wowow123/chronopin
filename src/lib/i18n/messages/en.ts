@@ -2230,6 +2230,10 @@ const en = {
       fecLink: 'On fec.gov',
     },
     holdings: {
+      personalTitle: "Personal holdings & P&L",
+      relatedTitle: "Fund holdings & tracked strategies",
+      personalNone: "No verified personal portfolio snapshot is available. Personal holdings and unrealized P&L are unknown; associated fund or strategy holdings appear separately.",
+
       "title": "Current stock holdings & P&L",
       "unknown": "Not disclosed",
       "personal": "Personal holdings",
@@ -2259,6 +2263,14 @@ const en = {
       "pnlAbout": "Stock P&L requires a disclosed position cost basis and a dated valuation in the same currency. It is unrealized price P&L and excludes dividends and realized gains. Missing inputs stay undisclosed."
     },
     trades: {
+      personalTitle: "Personal trades & P&L",
+      disclosures: "Personal trading disclosures",
+      published: "Published",
+      pnl: "Realized P&L",
+      personalAbout: "Publicly disclosed personal trading activity. Publication dates and trade dates are distinct; a commentary post is not a complete execution record.",
+      personalNone: "No verified personal trade ledger is available. Trading activity and realized P&L are unknown, not zero.",
+      pnlAbout: "Realized P&L requires matched acquisition costs and sale proceeds for the same security and quantity. Transaction value ranges, inferred quarterly changes and commentary do not establish profit. Missing cost or execution data remains undisclosed.",
+
       title: 'Stock trades',
       about:
         'Securities trades disclosed under the STOCK Act in periodic transaction reports. A report gives each amount as a range, never an exact figure, and members may file up to 45 days after a trade, so this is never live. Each row links to the filing it was read from.',

@@ -10,6 +10,17 @@ import primary from '@/server/data/personHoldingsPrimary.json';
 const t = createTranslator(en, 'en');
 const render = (portfolios = readHoldings(catalog.profiles[0])) => renderToStaticMarkup(<HoldingsSection portfolios={portfolios} today="2026-10-25" t={t} />);
 describe('holdings section', () => {
+  it('keeps fund and strategy positions out of the personal section, with unique section targets', () => {
+    const portfolios = readHoldings(primary.profiles.find(p => p.name === 'Michael Burry')!);
+    const personal = renderToStaticMarkup(<HoldingsSection portfolios={portfolios} today="2026-10-25" t={t} view="personal" />);
+    expect(personal).toContain('Personal holdings &amp; P&amp;L');
+    expect(personal).toContain('No verified personal portfolio snapshot');
+    expect(personal).not.toContain('Scion Asset Management');
+    const related = renderToStaticMarkup(<HoldingsSection portfolios={portfolios} today="2026-10-25" t={t} view="related" />);
+    expect(related).toContain('id="related-holdings"');
+    expect(related).toContain('Scion Asset Management');
+    expect(related).not.toContain('id="holdings"');
+  });
   it('renders the section for people without published positions, without implying no investments', () => {
     const html = render([]);
     expect(html).toContain('id="holdings"');

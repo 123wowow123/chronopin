@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-10-25",
+  "profiles": [
+    {
+      "name": "Michael Burry",
+      "sourceUrl": "https://michaeljburry.substack.com/t/trading-posts",
+      "coverageNote": "First-person public previews and notes from Cassandra Unchained, reviewed October 25, 2026. These are partial trading disclosures, not an execution ledger or a complete current portfolio. The accessible text does not establish quantities, fill prices, purchase costs or realized P&L. Paid-only details were not inferred from headlines or third-party trackers. Dates below are publication dates; a trade date is shown only if the public text specifies it.",
+      "entries": [
+        {
+          "publishedDate": "2026-10-11",
+          "tradeDate": null,
+          "title": "Trading Post/Short Thoughts Mash-Up October 11, 2026",
+          "summary": "Burry reports changing positions involving Fannie Mae and Freddie Mac during the preceding week. The public preview does not specify the direction, security class, execution dates, quantities or prices of those changes.",
+          "sourceUrl": "https://michaeljburry.substack.com/p/fannie-mae-freddie-mac-hong-kong"
+        },
+        {
+          "publishedDate": "2026-10-05",
+          "tradeDate": null,
+          "title": "Trading Post October 5, 2026",
+          "summary": "The public preview discusses six stocks in his portfolio as possible tax-loss-sale candidates. It does not identify the six stocks or establish that a sale occurred, so no execution or loss is recorded from this preview.",
+          "sourceUrl": "https://michaeljburry.substack.com/p/trading-post-october-5-2026"
+        },
+        {
+          "publishedDate": "2026-08-10",
+          "tradeDate": "2026-08-10",
+          "title": "Trading Post August 10, 2026",
+          "summary": "Burry reports executing several trades that day and also discussing an order he was still trying to complete. The public preview does not identify the securities, quantities, fill prices or profit; the unfinished order is not counted as an execution.",
+          "sourceUrl": "https://michaeljburry.substack.com/p/trading-post-august-10-2026"
+        },
+        {
+          "publishedDate": "2026-07-24",
+          "tradeDate": "2026-07-24",
+          "title": "Personal trading note — July 24, 2026",
+          "summary": "In his public note, Burry reports buying stocks and opening stock shorts that day. The note links to his trading post but does not provide a security-level execution ledger or acquisition costs.",
+          "sourceUrl": "https://substack.com/@michaeljburry/note/c-301065569"
+        }
+      ]
+    }
+  ],
+  "sourceAudit": [
+    {
+      "url": "https://michaeljburry.substack.com/p/trading-post-august-10-2026",
+      "checkedAt": "2026-10-25",
+      "sha256": "8f60744288c46a64c63a9cc3a2e4d32e6878cfbef334ce9bee1d1feec443ed92",
+      "status": 200
+    },
+    {
+      "url": "https://michaeljburry.substack.com/p/trading-post-october-5-2026",
+      "checkedAt": "2026-10-25",
+      "sha256": "4e705f16188e30fafd076c6d90edb8470c5ce1d601e1b9b2456dc1d04f4c80cb",
+      "status": 200
+    },
+    {
+      "url": "https://substack.com/@michaeljburry/note/c-301065569",
+      "checkedAt": "2026-10-25",
+      "sha256": "6c07196527b6722e1208aea3dc838360b9daf551c3fea0508ef832ef209f315a",
+      "status": 200
+    },
+    {
+      "url": "https://michaeljburry.substack.com/p/fannie-mae-freddie-mac-hong-kong",
+      "checkedAt": "2026-10-25",
+      "sha256": "5653df26c05c654064eaab7d6ec3d6cd65c046cc61d5422cd82e3db947fa341b",
+      "status": 200
+    },
+    {
+      "url": "https://michaeljburry.substack.com/t/trading-posts",
+      "checkedAt": "2026-10-25",
+      "sha256": "abc9fefb45348583a0f30afd1524dd39cb1c848357876eaaa3defac7e2bc2a15",
+      "status": 200
+    }
+  ]
+}

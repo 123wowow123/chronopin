@@ -8,7 +8,7 @@ tags: [scraping, maps, wildfire, elections, production]
 
 # Production boundary backfill — 2026-10-25
 
-**Latest partial follow-up:** Morocco's 12 regional-list constituency outlines are now saved and publicly verified. Current coverage is **75 mapped pins and 10,257 default features** (74 complete reviewed layers plus one explicitly partial regional tier; 18 wildfire and 57 district pins). All five countries still lack complete geometry: Morocco's 92 local constituencies remain missing. See [the country follow-up](boundaries-country-gaps-2026-10-25.md). Earlier round counts below are historical.
+**Latest partial follow-up:** Morocco's 65 whole-unit local constituency outlines and 12 regional-list areas are saved and publicly verified. Current coverage is **75 mapped pins and 10,322 default features** (74 complete reviewed layers plus one explicitly partial map; 18 wildfire and 57 district pins). All five countries still lack complete geometry: Morocco's 27 local constituencies in ten split provinces remain missing. See [country round three](boundaries-country-round3-2026-10-25.md). Earlier round counts below are historical.
 
 The owner requested all relevant production pins after the initial three-pin import. The audit covered **592 distinct pins across the discovery passes**, discovered by broad title/description searches and then independently by the Elections, Disaster, Wildfire and Wildfires tags. The category-tag pass found national elections that the title search missed. The structured audit is `scripts/boundaries/backfill-audit-2026-10-25.json`.
 

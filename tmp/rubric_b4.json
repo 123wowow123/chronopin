@@ -1,0 +1,56 @@
+[
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15139,
+    "url": "https://venturebeat.com/business/openai-launches-gpt-5-not-agi-but-capable-of-generating-software-on-demand",
+    "title": "OpenAI launches GPT-5, nano, mini and Pro — not AGI, but capable of generating 'software-on-demand' | VentureBeat",
+    "publishedDate": "2025-08-07",
+    "quote": "Once users reach usage limits on GPT-5, the system automatically shifts to GPT-5 mini — a more lightweight but still highly capable fallback.",
+    "sentiment": 0.75
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15145,
+    "url": "https://fireworks.ai/blog/mistral-small-3",
+    "title": "Mistral Small 3: 24B Open-Weight Model for Low-Latency AI | Fireworks",
+    "publishedDate": "2025-01-30",
+    "quote": "With Apache 2.0 licensing, blazing-fast 150 TPS generation speeds, and a 32K context window, it’s a powerful choice for builders looking for low-latency, high-efficiency AI.",
+    "sentiment": 0.85
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15147,
+    "url": "https://venturebeat.com/ai/mistral-just-updated-its-open-source-small-model-from-3-1-to-3-2-heres-why",
+    "title": "Mistral just updated its open source Small model from 3.1 to 3.2: here's why | VentureBeat",
+    "publishedDate": "2025-06-20",
+    "quote": "Internal metrics also suggest reduced output repetition. The rate of infinite generations dropped from 2.11% in Small 3.1 to 1.29% in Small 3.2 — almost a 2× reduction. This makes the model more reliable for developers building applications that require consistent, bounded responses.",
+    "sentiment": 0.8
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15189,
+    "url": "https://www.marktechpost.com/2025/08/12/zhipu-ai-releases-glm-4-5v-versatile-multimodal-reasoning-with-scalable-reinforcement-learning/",
+    "title": "Zhipu AI Releases GLM-4.5V: Versatile Multimodal Reasoning with Scalable Reinforcement Learning - MarkTechPost",
+    "publishedDate": "2025-08-12",
+    "quote": "Based on Zhipu’s 106-billion parameter GLM-4.5-Air architecture—with 12 billion active parameters via a Mixture-of-Experts (MoE) design—GLM-4.5V delivers strong real-world performance and unmatched versatility across visual and textual content.",
+    "sentiment": 0.85
+  },
+  {
+    "table": "PinLlmPerf",
+    "pinId": 15202,
+    "url": "https://www.marktechpost.com/2025/12/09/zhipu-ai-releases-glm-4-6v-a-128k-context-vision-language-model-with-native-tool-calling/",
+    "title": "Zhipu AI Releases GLM-4.6V: A 128K Context Vision Language Model with Native Tool Calling - MarkTechPost",
+    "publishedDate": "2025-12-09",
+    "quote": "The model consumes those visual outputs and fuses them with text in the same reasoning chain. This closes the loop from perception to understanding to execution and is explicitly positioned as the bridge between visual perception and executable action for multimodal agents.",
+    "sentiment": 0.85
+  },
+  {
+    "table": "PinGasCarPerf",
+    "pinId": 15233,
+    "url": "https://www.motor1.com/news/810530/2027-honda-civic-type-r-details/",
+    "title": "2027 Honda Civic Type R Revealed With Hardware Upgrades",
+    "publishedDate": "2026-10-02",
+    "quote": "Honda has given the Civic Type R a round of updates for 2027, making its already feisty hot hatch sharper, more comfortable, and better equipped.",
+    "sentiment": 0.8
+  }
+]

@@ -51,6 +51,7 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
                   {t(`person.trades.${k}`)}
                 </th>
               ))}
+              <th scope="col" className="px-3 py-2 text-start font-medium">{t('person.trades.pnl')}</th>
             </tr>
           </thead>
           <tbody>
@@ -85,6 +86,7 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
                       </Anchor>
                     ) : null}
                   </td>
+                  <td className="px-3 py-2 text-xs whitespace-nowrap text-subtle" title={t('person.trades.pnlAbout')}>{t('person.holdings.unknown')}</td>
                 </tr>
               );
             })}

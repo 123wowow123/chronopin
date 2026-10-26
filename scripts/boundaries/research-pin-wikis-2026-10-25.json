@@ -31,7 +31,8 @@
     "paragraphs": [
       "The map requires 543 Lok Sabha constituencies, incorporating the subsequent Assam and Jammu & Kashmir delimitations. The geography applicable to this future election must also be checked when its plan is settled.",
       "Inspected national datasets retained legacy Assam geography or inconsistent constituency assignments. Bharat Survey explicitly describes its public map as 2019 boundaries and says Assam and Jammu & Kashmir await new open boundaries.",
-      "Still needed: verified current Assam and Jammu & Kashmir polygons and a checked national constituency crosswalk. A 2019 map has not been substituted for the current plan."
+      "Still needed: verified current Assam and Jammu & Kashmir polygons and a checked national constituency crosswalk. A 2019 map has not been substituted for the current plan.",
+      "A further Kaun Civic Data Commons crosswalk provides memberships for all 14 Assam and five Jammu & Kashmir parliamentary seats. Internal checks found every Assam assembly number 1–126 and Jammu & Kashmir number 1–90 exactly once in these 19 rows. This is useful membership research, not new validated geographic rings: the publisher reuses the previously reviewed PC geometry and its own output marks Guwahati and Nagaon divergent. Representative-point agreement against partly older assembly geometry does not independently validate the current borders."
     ],
     "references": [
       {
@@ -41,6 +42,10 @@
       {
         "url": "https://www.eci.gov.in/Documents/Delimitation/DELIMITATIONASSAM_UPDATED.pdf",
         "title": "ECI: Assam delimitation document"
+      },
+      {
+        "url": "https://data.kaun.city/india/pc-crosswalk/",
+        "title": "Kaun Civic Data Commons: constituency crosswalk, methodology and limitations"
       }
     ]
   },
@@ -104,11 +109,11 @@
     "pinTitle": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
     "checkedAt": "2026-10-25",
     "paragraphs": [
-      "Published partial coverage: the pin map now shows the 12 regional-list constituency outlines only. The Interior Ministry’s 11 September 2026 communiqué confirms that regional constituencies are created at the level of the 12 regions. The 92 local constituencies remain unmapped. These are OSM-derived cartographic outlines, not legally surveyed boundary lines; minor source overlaps are retained. Source administrative geography includes disputed Western Sahara and does not determine sovereignty.",
+      "Published partial coverage: the pin map now contains 65 whole-province/prefecture local constituency outlines plus all 12 regional-list areas. The legal composition annex identifies the whole-unit constituencies, and each has a one-to-one match in PJD’s 2026 candidate roster. The remaining 27 local constituencies in ten split provinces/prefectures are not mapped. Both electoral tiers overlap by design and are named separately. The OSM-derived outlines are cartographic, not legally surveyed lines; minor source overlaps and disputed-territory source geography are retained without a sovereignty determination.",
       "The required geography distinguishes 92 local constituencies from the 12 regional-list areas. A map of 75 provinces alone cannot represent all local seats.",
       "The downloaded annex to decree 2-11-603 of 19 October 2011 supplies local constituency composition. Its continued applicability to the 2026 election still requires confirmation. The inspected open geometry contains 41 arrondissements.",
       "Rabat El Mouhit includes Hassan administrative annexes 3 and 4; Rabat Chellah includes Hassan annexes 1, 2 and 22. Available arrondissement geometry contains a single whole Hassan polygon. Assigning that entire polygon to either seat would not reproduce the legal split.",
-      "Still needed: Hassan administrative-annex boundaries, a complete commune/province crosswalk and confirmation of the legal plan for this election. The source geometry is OSM-derived under ODbL; attribution and derivative-database obligations must be addressed before publication."
+      "Still needed: the 27 local constituencies in Fès, Taounate, Rabat, Salé, Kénitra, Khémisset, Azilal, Casablanca, Marrakech and Taroudant. Whole-province boundaries cannot substitute for their internal divisions. Rabat in particular requires the Hassan administrative-annex cut lines."
     ],
     "references": [
       {
@@ -126,6 +131,14 @@
       {
         "url": "https://www.maroc.ma/fr/actualites/legislatives-2026-1850-listes-de-candidatures-presentees-lechelle-nationale",
         "title": "Interior Ministry communiqué: regional constituencies at the level of the 12 regions, 11 September 2026"
+      },
+      {
+        "url": "https://candidats.pjd.ma/index.html",
+        "title": "PJD 2026: current local and regional candidate roster"
+      },
+      {
+        "url": "https://candidats.pjd.ma/js/data.js",
+        "title": "PJD 2026: published 104-list roster data"
       }
     ]
   }

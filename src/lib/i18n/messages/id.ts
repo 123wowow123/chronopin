@@ -2230,6 +2230,10 @@ const id: Messages = {
       fecLink: 'Di fec.gov',
     },
     holdings: {
+      personalTitle: "Kepemilikan pribadi dan laba/rugi",
+      relatedTitle: "Kepemilikan dana dan strategi yang dilacak",
+      personalNone: "Tidak ada portofolio pribadi terverifikasi. Kepemilikan dan laba belum terealisasi tidak diketahui; dana dan strategi ditampilkan terpisah.",
+
       "title": "Kepemilikan saham saat ini dan laba/rugi",
       "unknown": "Tidak diungkapkan",
       "personal": "Kepemilikan pribadi",
@@ -2259,6 +2263,14 @@ const id: Messages = {
       "pnlAbout": "Penghitungan memerlukan biaya perolehan dan valuasi bertanggal dalam mata uang yang sama. Ini laba/rugi harga belum terealisasi, tanpa dividen atau keuntungan terealisasi. Data yang hilang tidak diperkirakan."
     },
     trades: {
+      personalTitle: "Transaksi pribadi dan laba/rugi",
+      disclosures: "Pengungkapan transaksi pribadi",
+      published: "Diterbitkan",
+      pnl: "Laba/rugi terealisasi",
+      personalAbout: "Aktivitas pribadi yang diungkapkan. Tanggal publikasi dan transaksi berbeda; komentar bukan catatan eksekusi lengkap.",
+      personalNone: "Tidak ada buku transaksi pribadi terverifikasi. Aktivitas dan laba terealisasi tidak diketahui, bukan nol.",
+      pnlAbout: "Laba terealisasi memerlukan biaya beli dan hasil jual yang cocok untuk efek serta jumlah yang sama. Rentang nilai, perubahan kuartal yang disimpulkan dan komentar tidak membuktikan laba. Data yang hilang tetap tidak diungkapkan.",
+
       title: 'Transaksi saham',
       about: 'Transaksi sekuritas yang diungkapkan berdasarkan STOCK Act dalam laporan transaksi berkala. Jumlah hanya diberikan sebagai rentang, bukan angka pasti, dan anggota boleh melapor hingga 45 hari setelah transaksi, jadi tidak pernah real-time. Setiap baris tertaut ke laporan tempat data itu dibaca.',
       purchases: 'Pembelian',

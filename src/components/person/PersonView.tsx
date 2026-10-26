@@ -130,8 +130,9 @@ export function PersonView({
   const nav = [
     { id: 'phases', label: t('person.octagon.title') },
     years.length ? { id: 'earnings', label: t('person.earnings') } : null,
-    { id: 'holdings', label: t('person.holdings.title') },
-    trades.length ? { id: 'trades', label: t('person.trades.title') } : null,
+    { id: 'holdings', label: t('person.holdings.personalTitle') },
+    { id: 'trades', label: t('person.trades.personalTitle') },
+    holdings.some(p => p.scope !== 'personal') ? { id: 'related-holdings', label: t('person.holdings.relatedTitle') } : null,
     committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
     campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
     contributions.length ? { id: 'laws', label: lawsHeading } : null,
@@ -312,8 +313,9 @@ export function PersonView({
           </section>
         ) : null}
 
-        <HoldingsSection portfolios={holdings} today={todayKey} t={t} />
-        {trades.length ? <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} /> : null}
+        <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="personal" />
+        <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} />
+        {holdings.some(p => p.scope !== 'personal') ? <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="related" /> : null}
 
         {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
 

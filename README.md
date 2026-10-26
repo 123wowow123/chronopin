@@ -182,15 +182,13 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Movie pins with no ticket or disc link (about 254 on prod as of 2026-10-05): hand-pick the real Fandango/Amazon page for the recent and upcoming films (about 60 days either side of today), then post with `POST /api/pins/:id/merchants`
 
-- Review sentiment graph (started 2026-10-25; scored rubric reviews plot on the pin page under "Sentiment over time"). Remaining:
-  - Deploy migration `0215_pin_critic_review.sql`, then `npm run reviews:critic:prod -- --dry` and without `--dry` to push the 36 Gaming critic reviews (15 pins) to prod. Needs Ian's admin password at the prompt.
-  - Gaming: more games (Valheim 1.0, Slay the Spire 2, Monster Hunter Wilds Switch 2, Gears of War E-Day, Crisis Core Reunion and others had no critic reviews yet); add a third review to the games stuck at 2.
-  - Movie and TV (about 750 pins), then Music albums (about 900), then Computing and Fashion: collect dated critic reviews into `PinCriticReview` (sample 20-30 first), same rules as the rubric reviews (opened HTTPS page, verbatim quote of at most 300 characters, scored -1..1). No UI strings needed.
-  - Rubric pins still below the 3-review minimum (about 90 on prod as of 2026-10-25: EV `PinCarPerf`, `PinDining`, `PinAircraftPerf`, `PinLlmPerf`, a few gas-car): no independent reviews found by search. Try Chrome reads of Motor1, Edmunds, VentureBeat and Electrek, or loosen the source rule only if Ian agrees.
-  - About 281 rubric reviews have a quote but no `publishedDate`, so they cannot be plotted: find the dates, then score them.
-  - Reviews with no date on the page (Car Magazine, 91wheels, Edmunds model pages, Trusted Reviews, TheXboxHub) count toward the minimum but stay off the graph.
-  - Add reviewing and scoring to the scrape flow so new rubric/critic reviews arrive scored (today the news job's `sentiment` task and `npm run reviews:sentiment` catch up; without API credit a session scores by hand).
-  - Fix the unrelated failing test `src/lib/okfLint.test.ts` (`docs/okf/api/factory-capability.md` and three other concepts have no frontmatter).
+- Review sentiment graph (started 2026-10-25; scored reviews plot on the pin page under "Sentiment over time").
+  - Done 2026-10-25: 80 `PinCriticReview` rows (228 total critic reviews across Gaming, Movie/TV, Music, and Computing) scraped via browser, verified with verbatim quotes <=300 chars, scored, and synced to production (`npm run reviews:critic:prod`). All 41 Gaming pins now have 3+ reviews (all games previously stuck at 2 completed, plus Valheim 1.0, Slay the Spire 2, Gears of War: E-Day, Crisis Core Reunion, Wardogs, and Wolverine). 20 rubric pins brought up to 3 reviews on prod (`PinGasCarPerf`, `PinAircraftPerf`, `PinLlmPerf`). 58 rubric reviews dated and scored on prod.
+  - Remaining:
+    - Expand Movie and TV (remaining of ~750 pins), Music albums (remaining of ~900), Computing, and Fashion critic reviews into `PinCriticReview`.
+    - Remaining rubric pins below the 3-review minimum (~70 remaining: EV `PinCarPerf`, `PinDining`, and remaining gas/aircraft).
+    - Remaining ~109 non-MICHELIN undated rubric reviews (pages that block plain fetches require browser reads; shop/directory pages stay off the graph).
+    - Add reviewing and scoring to the scrape flow so new rubric/critic reviews arrive scored.
 
 
 ### Map
@@ -525,11 +523,17 @@ yes do all these
 
 
 
-todo
-Review sentiment graph
-
-
 
 
 Chronopin organic search growth
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com
+
+
+
+
+
+
+add prod translations for all pins and add in pin wiki that translations was done with this model
+
+
+Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25, 2026)

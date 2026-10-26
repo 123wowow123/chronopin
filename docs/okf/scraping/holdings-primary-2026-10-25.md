@@ -1,3 +1,10 @@
+---
+type: Reference
+title: Primary-source holdings review, 2026-10-25
+description: Primary sources for stock holdings and P&L.
+tags: [scraping]
+---
+
 # Primary-source holdings review — 2026-10-25 Pacific
 
 Owner request: use a better source for stock holdings and P&L wherever one is

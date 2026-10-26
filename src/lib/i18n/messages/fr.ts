@@ -2226,6 +2226,10 @@ const fr: Messages = {
       fecLink: 'Sur fec.gov',
     },
     holdings: {
+      personalTitle: "Positions personnelles et gains/pertes",
+      relatedTitle: "Positions de fonds et stratégies suivies",
+      personalNone: "Aucun portefeuille personnel vérifié disponible. Positions et gains latents personnels inconnus ; fonds et stratégies figurent séparément.",
+
       "title": "Actions détenues et gains/pertes",
       "unknown": "Non communiqué",
       "personal": "Positions personnelles",
@@ -2255,6 +2259,14 @@ const fr: Messages = {
       "pnlAbout": "Le calcul nécessite un coût et une valorisation datée dans la même devise. Il porte sur la plus-value latente, hors dividendes et gains réalisés. Les données absentes ne sont pas estimées."
     },
     trades: {
+      personalTitle: "Transactions personnelles et gains/pertes",
+      disclosures: "Déclarations de transactions personnelles",
+      published: "Publié",
+      pnl: "Gain/perte réalisé",
+      personalAbout: "Activité personnelle déclarée. Dates de publication et de transaction sont distinctes ; un commentaire ne constitue pas un registre complet.",
+      personalNone: "Aucun registre personnel vérifié disponible. Activité et gains réalisés inconnus, et non nuls.",
+      pnlAbout: "Le gain réalisé exige le coût et le produit de vente du même titre et de la même quantité. Fourchettes, variations trimestrielles déduites et commentaires ne prouvent pas un gain. Les données absentes restent inconnues.",
+
       title: 'Opérations boursières',
       about: 'Opérations sur titres déclarées en vertu du STOCK Act dans des rapports périodiques de transactions. Chaque rapport donne les montants sous forme de fourchettes, jamais un chiffre exact, et les élus peuvent déposer jusqu\'à 45 jours après l\'opération : ce n\'est donc jamais en direct. Chaque ligne renvoie à la déclaration dont elle est tirée.',
       purchases: 'Achats',

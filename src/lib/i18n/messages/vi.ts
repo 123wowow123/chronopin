@@ -2229,6 +2229,10 @@ const vi: Messages = {
       fecLink: 'Trên fec.gov',
     },
     holdings: {
+      personalTitle: "Danh mục cá nhân và lãi/lỗ",
+      relatedTitle: "Danh mục quỹ và chiến lược theo dõi",
+      personalNone: "Chưa có danh mục cá nhân được xác minh. Danh mục và lãi chưa thực hiện của cá nhân chưa rõ; quỹ và chiến lược hiển thị riêng.",
+
       "title": "Cổ phiếu đang nắm giữ và lãi/lỗ",
       "unknown": "Chưa công bố",
       "personal": "Danh mục cá nhân",
@@ -2258,6 +2262,14 @@ const vi: Messages = {
       "pnlAbout": "Cần giá vốn công bố và định giá có ngày trong cùng đồng tiền. Đây là lãi/lỗ giá chưa thực hiện, không gồm cổ tức và lãi đã thực hiện. Không ước tính dữ liệu còn thiếu."
     },
     trades: {
+      personalTitle: "Giao dịch cá nhân và lãi/lỗ",
+      disclosures: "Công bố giao dịch cá nhân",
+      published: "Ngày công bố",
+      pnl: "Lãi/lỗ đã thực hiện",
+      personalAbout: "Hoạt động cá nhân được công bố. Ngày công bố khác ngày giao dịch; bình luận không phải sổ khớp lệnh đầy đủ.",
+      personalNone: "Chưa có sổ giao dịch cá nhân xác minh. Hoạt động và lãi đã thực hiện chưa rõ, không phải bằng không.",
+      pnlAbout: "Lãi thực hiện cần giá vốn và tiền bán tương ứng cùng chứng khoán và số lượng. Khoảng giá trị, thay đổi quý suy đoán và bình luận không chứng minh lợi nhuận. Dữ liệu thiếu vẫn là chưa công bố.",
+
       title: 'Giao dịch cổ phiếu',
       about: 'Các giao dịch chứng khoán được công bố theo Đạo luật STOCK trong báo cáo giao dịch định kỳ. Số tiền chỉ được đưa ra dưới dạng khoảng, không bao giờ là con số chính xác, và các thành viên có thể nộp muộn đến 45 ngày sau giao dịch nên dữ liệu không bao giờ là thời gian thực. Mỗi dòng liên kết tới hồ sơ mà nó được đọc từ đó.',
       purchases: 'Mua',

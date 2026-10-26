@@ -4,21 +4,23 @@ import { dateFormat } from '@/lib/format';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import type { Translator } from '@/lib/i18n/translate';
 
-export function HoldingsSection({ portfolios, today, t }: { portfolios: HoldingsSnapshot[]; today: string; t: Translator }) {
+export function HoldingsSection({ portfolios, today, t, view = 'all' }: { portfolios: HoldingsSnapshot[]; today: string; t: Translator; view?: 'all' | 'personal' | 'related' }) {
+  const id = view === 'related' ? 'related-holdings' : 'holdings';
+  const visible = portfolios.filter(p => view === 'all' || (view === 'personal' ? p.scope === 'personal' : p.scope !== 'personal'));
   const intl = INTL_LOCALES[t.locale];
   const day = (iso: string) => dateFormat(intl, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
   const percent = (value: number, signed = false) => new Intl.NumberFormat(intl, { style: 'percent', maximumFractionDigits: 2, ...(signed ? { signDisplay: 'exceptZero' as const } : {}) }).format(value);
   const money = (value: number, currency: string) => new Intl.NumberFormat(intl, { style: 'currency', currency, maximumFractionDigits: 2 }).format(value);
   const unknown = t('person.holdings.unknown');
   return (
-    <section id="holdings" aria-labelledby="holdings-heading" className="scroll-mt-20">
+    <section id={id} aria-labelledby={`${id}-heading`} className="scroll-mt-20">
       <div className="mb-5 border-s-4 border-accent ps-4">
-        <h2 id="holdings-heading" className="text-2xl font-semibold tracking-tight">{t('person.holdings.title')}</h2>
+        <h2 id={`${id}-heading`} className="text-2xl font-semibold tracking-tight">{t(view === 'personal' ? 'person.holdings.personalTitle' : view === 'related' ? 'person.holdings.relatedTitle' : 'person.holdings.title')}</h2>
         <p className="mt-1.5 max-w-3xl text-xs leading-relaxed text-subtle">{t('person.holdings.about')}</p>
       </div>
-      {!portfolios.length ? <p className="rounded-xl border border-line bg-panel p-5 text-sm text-muted">{t('person.holdings.none')}</p> : (
+      {!visible.length ? <p className="rounded-xl border border-line bg-panel p-5 text-sm text-muted">{t(view === 'personal' ? 'person.holdings.personalNone' : 'person.holdings.none')}</p> : (
         <div className="flex flex-col gap-5">
-          {preferredHoldings(portfolios).map(p => {
+          {preferredHoldings(visible).map(p => {
             const quantities = p.holdings.some(h => h.shares != null);
             const owners = p.holdings.some(h => h.owner != null);
             const valuations = p.holdings.some(h => h.marketValue != null || h.marketValueLow != null || h.costBasis != null);

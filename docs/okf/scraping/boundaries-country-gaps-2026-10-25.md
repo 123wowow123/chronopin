@@ -7,7 +7,7 @@ tags: [scraping, maps, boundaries, production]
 
 # Five-country geometry follow-up — 2026-10-25
 
-**Latest follow-up: Morocco now has verified partial production coverage: all 12 regional-list constituencies. Its 92 local constituencies remain missing. Total production coverage is 75 mapped pins and 10,257 default features. Five countries still lack complete coverage.** The original research-only pass below is retained as history.
+**Latest follow-up: Morocco now has verified partial production coverage: 65 local constituencies plus all 12 regional-list areas. The 27 local constituencies in ten split provinces/prefectures remain missing. Total production coverage is 75 mapped pins and 10,322 default features. Five countries still lack complete coverage.** See [round three](boundaries-country-round3-2026-10-25.md). Earlier passes below are retained as history.
 
 **Zero country gaps resolved; zero production writes.** All five remain explicitly open. Fresh authenticated read-back verified the existing 74 production maps and 10,245 default features against the saved reviewed geometry and source credits. No deployment, restart or build occurred.
 

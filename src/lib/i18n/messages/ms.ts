@@ -2230,6 +2230,10 @@ const ms: Messages = {
       fecLink: 'Di fec.gov',
     },
     holdings: {
+      personalTitle: "Pegangan peribadi dan untung/rugi",
+      relatedTitle: "Pegangan dana dan strategi dijejaki",
+      personalNone: "Tiada portfolio peribadi yang disahkan. Pegangan dan untung belum direalisasi tidak diketahui; dana dan strategi dipaparkan berasingan.",
+
       "title": "Pegangan saham semasa dan untung/rugi",
       "unknown": "Tidak didedahkan",
       "personal": "Pegangan peribadi",
@@ -2259,6 +2263,14 @@ const ms: Messages = {
       "pnlAbout": "Pengiraan memerlukan kos belian didedahkan dan penilaian bertarikh dalam mata wang yang sama. Ia untung/rugi harga belum direalisasi, tanpa dividen dan keuntungan direalisasi. Input yang tiada tidak dianggarkan."
     },
     trades: {
+      personalTitle: "Urus niaga peribadi dan untung/rugi",
+      disclosures: "Pendedahan urus niaga peribadi",
+      published: "Diterbitkan",
+      pnl: "Untung/rugi direalisasi",
+      personalAbout: "Aktiviti peribadi yang didedahkan. Tarikh terbit dan urus niaga berbeza; ulasan bukan rekod pelaksanaan lengkap.",
+      personalNone: "Tiada lejar urus niaga peribadi yang disahkan. Aktiviti dan untung direalisasi tidak diketahui, bukan sifar.",
+      pnlAbout: "Untung direalisasi memerlukan padanan kos belian dan hasil jualan bagi sekuriti serta kuantiti yang sama. Julat nilai, perubahan suku tahunan disimpulkan dan ulasan tidak membuktikan untung. Data tiada kekal tidak didedahkan.",
+
       title: 'Dagangan saham',
       about: 'Transaksi sekuriti yang didedahkan di bawah Akta STOCK dalam laporan transaksi berkala. Jumlah diberikan sebagai julat, bukan angka tepat, dan ahli boleh memfailkan sehingga 45 hari selepas transaksi, jadi ia tidak pernah langsung. Setiap baris memaut ke pemfailan tempat ia dibaca.',
       purchases: 'Pembelian',

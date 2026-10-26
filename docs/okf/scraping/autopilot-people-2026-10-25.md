@@ -1,3 +1,10 @@
+---
+type: Reference
+title: Autopilot people coverage, 2026-10-25
+description: People profiles added and enriched through the authenticated People APIs.
+tags: [scraping]
+---
+
 # Autopilot people coverage — 2026-10-25
 
 Applied to localhost and production through the authenticated People APIs:
