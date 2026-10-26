@@ -10,7 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
-import { botRetryAfter, ipRetryAfter, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { botRetryAfter, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -212,6 +212,14 @@ export async function proxy(request: NextRequest) {
     const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
     const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1);
     if (wait != null) return tooManyRequests(request, wait, light);
+  }
+  // A Chinese-language browser on a page in another language shares one small
+  // bucket while the server sheds load (botLimit.mismatchRetryAfter).
+  if (retryAfter == null && !bot && !session && request.method === 'GET' && !isLimitExempt(pathname)) {
+    if (localeMismatch(request.headers.get('accept-language'), splitLocale(pathname).locale)) {
+      const wait = mismatchRetryAfter();
+      if (wait != null) return tooManyRequests(request, wait, true);
+    }
   }
   if (retryAfter != null) {
     // 503 while the server sheds crawlers to protect itself (botLimit.shedding);

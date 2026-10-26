@@ -431,7 +431,6 @@ political figure in other countries
 do 6am/6pm job on prod using this session
 
 
-need manage notification and following page to unfollow easily
 
 
 datacenter
@@ -454,7 +453,6 @@ check to see if anything can be improved and increase organic visits
 https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Achronopin.com
 
 
-ai spend publication latest predicted figures
 
 
 
@@ -543,3 +541,7 @@ behind paywall $20 for premium user
 non substack information available for all users
 and will show go premium to see additonal section on user page
 admin has access
+
+
+
+pull prod db to local and generate jsons

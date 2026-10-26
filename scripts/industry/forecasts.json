@@ -1195,5 +1195,553 @@
       }
     ],
     "note": "Blended price per million tokens (token spend divided by token volume, all token types) for OpenAI and Anthropic, as Ramp charts it; weekly seven-day totals. Measured on businesses on Ramp's card and bill-pay platform, from Ramp AI Token Spend Management; a sample of Ramp customers, not the whole US. Lines are refreshed by the 6am and 6pm job."
+  },
+  {
+    "slug": "gvr-anime-market",
+    "industry": "Anime",
+    "title": "Worldwide anime market revenue",
+    "tags": [
+      "Anime",
+      "Movie",
+      "TV"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Grand View Research, 2026–2033 public report summary",
+      "points": [
+        {
+          "x": "2026",
+          "value": 41.7
+        },
+        {
+          "x": "2033",
+          "value": 77.2
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Grand View Research, 2026–2033 public report summary",
+        "url": "https://www.grandviewresearch.com/industry-analysis/anime-market",
+        "date": null,
+        "quote": "projected to grow from USD 41.7 billion in 2026 to USD 77.2 billion by 2033"
+      }
+    ],
+    "note": "USD billions. Covers anime distribution, merchandising and other licensed activity, not only studio production revenue. Commercial publisher estimate from its public summary; the underlying research is paid. Rounded figures follow the summary text, not the more precise chart."
+  },
+  {
+    "slug": "gvr-manga-market",
+    "industry": "Manga",
+    "title": "Worldwide manga market revenue",
+    "tags": [
+      "Manga",
+      "Literature"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Grand View Research, 2026–2033 public report summary",
+      "points": [
+        {
+          "x": "2026",
+          "value": 11.9
+        },
+        {
+          "x": "2033",
+          "value": 43.9
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Grand View Research, 2026–2033 public report summary",
+        "url": "https://www.grandviewresearch.com/industry-analysis/manga-market-report",
+        "date": null,
+        "quote": "projected to grow from USD 11.9 billion in 2026 to USD 43.9 billion by 2033"
+      }
+    ],
+    "note": "USD billions, covering printed and digital manga. A commercial publisher estimate rather than audited sales; underlying research is paid. Not additive to overlapping comic-book market estimates."
+  },
+  {
+    "slug": "gvr-comic-books-market",
+    "industry": "Comics",
+    "title": "Worldwide comic book market revenue",
+    "tags": [
+      "Comics",
+      "Literature"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Grand View Research, 2026–2033 public report summary",
+      "points": [
+        {
+          "x": "2026",
+          "value": 20.5
+        },
+        {
+          "x": "2033",
+          "value": 37.2
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Grand View Research, 2026–2033 public report summary",
+        "url": "https://www.grandviewresearch.com/industry-analysis/comic-books-market-report",
+        "date": null,
+        "quote": "projected to grow from USD 20.5 billion in 2026 to USD 37.2 billion by 2033"
+      }
+    ],
+    "note": "USD billions. The publisher includes manga among comic-book genres, so this must not be added to the separate manga forecast. Rounded summary values are used consistently. Fortune Business Insights publishes a different 2034 estimate under a separate methodology; estimates are not blended."
+  },
+  {
+    "slug": "gvr-games-and-puzzles",
+    "industry": "Tabletop",
+    "title": "Worldwide games and puzzles market revenue",
+    "tags": [
+      "Tabletop"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Grand View Research, 2026–2033 public report summary",
+      "points": [
+        {
+          "x": "2026",
+          "value": 26.3
+        },
+        {
+          "x": "2033",
+          "value": 104.0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Grand View Research, 2026–2033 public report summary",
+        "url": "https://www.grandviewresearch.com/industry-analysis/games-puzzles-market",
+        "date": null,
+        "quote": "projected to grow from USD 26.3 billion in 2026 to USD 104.0 billion by 2033"
+      }
+    ],
+    "note": "USD billions. Broad physical games and puzzles scope, including board/tabletop games and puzzles; not a board-games-only, trading-card-only or video-game forecast. Commercial estimate from the public summary; underlying methodology is paid and scope differs across publishers."
+  },
+  {
+    "slug": "wef-sports-economy",
+    "industry": "Sports",
+    "title": "Global sports economy revenue",
+    "tags": [
+      "Sports",
+      "Travel"
+    ],
+    "prefix": "$",
+    "suffix": "T",
+    "projection": {
+      "label": "World Economic Forum / Oliver Wyman, Sports for People and Planet",
+      "points": [
+        {
+          "x": "2030",
+          "value": 3.7
+        },
+        {
+          "x": "2050",
+          "value": 8.8
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "World Economic Forum / Oliver Wyman, Sports for People and Planet",
+        "url": "https://www.weforum.org/stories/economic-growth/what-is-the-sports-economy-improve-health-livelihoods//",
+        "date": "2026-01-15",
+        "quote": "growing to $3.7 trillion by 2030 (a 10% compound annual growth rate) and reaching $8.8 trillion by 2050"
+      }
+    ],
+    "note": "USD trillions, including sports-related broadcasting, streaming, nutrition, wearables and tourism. Not just league revenue. A growth trajectory exposed to physical inactivity and environmental risks; the report also discusses downside losses."
+  },
+  {
+    "slug": "mckinsey-jewellery-unit-growth",
+    "industry": "Fashion",
+    "title": "Jewellery annual unit-sales growth, 2025–2028",
+    "tags": [
+      "Fashion"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "BoF–McKinsey The State of Fashion 2026, page 51",
+      "points": [
+        {
+          "x": "2028",
+          "value": 4.1
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "BoF–McKinsey The State of Fashion 2026, page 51",
+        "url": "https://www.mckinsey.com/~/media/mckinsey/industries/retail/our%20insights/state%20of%20fashion/2026/the-state-of-fashion-2026-vf.pdf",
+        "date": "2025-11-17",
+        "quote": "Between 2025 and 2028, jewellery is projected to record annual unit growth of 4.1 percent"
+      }
+    ],
+    "note": "Annual growth in the number of jewellery items sold over 2025–2028, shown at the end of the interval. Not annual revenue growth, total cumulative growth or a forecast for all clothing. The report’s headline fashion outlook is only qualitative (low single digits)."
+  },
+  {
+    "slug": "citi-stablecoin-issuance",
+    "industry": "Crypto",
+    "title": "Stablecoin issuance, 2030 base case",
+    "tags": [
+      "Crypto",
+      "Finance"
+    ],
+    "prefix": "$",
+    "suffix": "T",
+    "projection": {
+      "label": "Citi GPS: Stablecoins 2030: Web3 to Wall Street",
+      "points": [
+        {
+          "x": "2030",
+          "value": 1.9
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Citi GPS: Stablecoins 2030: Web3 to Wall Street",
+        "url": "https://www.citigroup.com/global/insights/stablecoins-2030",
+        "date": "2025-09-25",
+        "quote": "$1.9 trillion base case (previously $1.6 trillion) and $4.0 trillion bull case ($3.7 trillion)"
+      },
+      {
+        "label": "Citi Exec-X: Ten Global Insights for Leaders Q1-2026",
+        "url": "https://www.citigroup.com/global/insights/exec-x-ten-global-insights-for-leaders-q1-2026",
+        "date": "2026-02-25",
+        "quote": null
+      }
+    ],
+    "note": "USD trillions of stablecoin issuance in Citi’s September 2025 base case. Not annual payment volume, all crypto assets or a token price target. The bull case is $4 trillion; Citi’s Q1 2026 summary still cites the $1.9 trillion projection. Other banks’ estimates are separate forecasts."
+  },
+  {
+    "slug": "nato-core-defence-threshold",
+    "industry": "Defense",
+    "title": "NATO allies expected to meet 3.5% core defence spending in 2026",
+    "tags": [
+      "Defense",
+      "Geopolitics",
+      "Policy"
+    ],
+    "prefix": "",
+    "suffix": " allies",
+    "projection": {
+      "label": "NATO Defence Investment Update, July 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 5
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "NATO Defence Investment Update, July 2026",
+        "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/defence-investment-update-record-spending-in-europe-and-canada",
+        "date": "2026-07-07",
+        "quote": "In 2026, five Allies are already expected to meet the 3.5% guideline for core defence requirements"
+      }
+    ],
+    "note": "Count of NATO allies expected in the July update to spend at least 3.5% of GDP on core defence during 2026. Not 5% of GDP or five countries already verified by final accounts. The broader 2035 commitment is a policy target, not treated as a forecast here."
+  },
+  {
+    "slug": "nasa-sunspot-median",
+    "industry": "Astronomy",
+    "title": "Monthly smoothed sunspot number: NASA median outlook",
+    "tags": [
+      "Astronomy",
+      "Science",
+      "Space"
+    ],
+    "prefix": "",
+    "suffix": "",
+    "projection": {
+      "label": "NASA Marshall, October 2026, 50th percentile",
+      "points": [
+        {
+          "x": "2026-11-01",
+          "value": 77.9
+        },
+        {
+          "x": "2026-12-01",
+          "value": 75.3
+        },
+        {
+          "x": "2027-01-01",
+          "value": 72.9
+        },
+        {
+          "x": "2027-02-01",
+          "value": 71.1
+        },
+        {
+          "x": "2027-03-01",
+          "value": 68.9
+        },
+        {
+          "x": "2027-04-01",
+          "value": 66.5
+        },
+        {
+          "x": "2027-05-01",
+          "value": 64.4
+        },
+        {
+          "x": "2027-06-01",
+          "value": 62.5
+        },
+        {
+          "x": "2027-07-01",
+          "value": 60.4
+        },
+        {
+          "x": "2027-08-01",
+          "value": 58.1
+        },
+        {
+          "x": "2027-09-01",
+          "value": 55.9
+        },
+        {
+          "x": "2027-10-01",
+          "value": 53.8
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "NASA Marshall, October 2026, 50th percentile",
+        "url": "https://www.nasa.gov/wp-content/uploads/2026/10/oct2026ssn-prd.txt?emrc=03010d",
+        "date": "2026-10-01",
+        "quote": "2027.0003   JAN    98.2      72.9      54.5      21.4      15.5      11.6"
+      }
+    ],
+    "note": "NASA’s October 2026 forecast of the dimensionless 13-month-smoothed sunspot number, November 2026–October 2027. Dates mark monthly buckets, not exact-day predictions. Values use the sunspot 50th-percentile column, not the geomagnetic Ap columns; published 5th/95th percentile uncertainty is omitted from the line. Not a local aurora forecast."
+  },
+  {
+    "slug": "undrr-disaster-frequency",
+    "industry": "Disaster",
+    "title": "Annual disasters by 2030: continuation-of-trend scenario",
+    "tags": [
+      "Disaster",
+      "Climate"
+    ],
+    "prefix": "",
+    "suffix": " /year",
+    "projection": {
+      "label": "UNDRR Global Assessment Report 2022 / COP27 call to action",
+      "points": [
+        {
+          "x": "2030",
+          "value": 560
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "UNDRR Global Assessment Report 2022 / COP27 call to action",
+        "url": "https://www.undrr.org/undrr-cop27",
+        "date": null,
+        "quote": "If we continue this trajectory, by 2030, the world will face some 560 disasters per year"
+      },
+      {
+        "label": "UNDP: Why recovery should begin before disasters strike",
+        "url": "https://www.undp.org/european-union/blog/why-recovery-should-begin-disasters-strike-rethinking-resilience-stronger-future",
+        "date": "2025-11-19",
+        "quote": null
+      }
+    ],
+    "note": "Approximate global annual disaster count if the trajectory used in the 2022 assessment continues, not a prediction of where or when an individual disaster will occur. This is an older conditional projection, restated in a November 2025 UNDP article; it is not a new 2026 model run."
+  },
+  {
+    "slug": "art-basel-dealer-outlook",
+    "industry": "Art",
+    "title": "Art dealers’ expectations for 2026 sales",
+    "tags": [
+      "Art"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": null,
+    "sources": [
+      {
+        "label": "Art Basel and UBS Global Art Market Report 2026",
+        "url": "https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en",
+        "date": null,
+        "quote": "43% of dealers expected sales to improve"
+      }
+    ],
+    "note": "Survey outlook for 2026: 43% of dealers expected sales to improve, 38% expected stable sales and 19% expected a decline. These are respondent shares, not predicted sales growth or a 43% probability that the market grows. Kept as a cited note rather than a numerical market forecast. The report’s $59.6 billion figure is realized 2025 sales, not a forecast."
+  },
+  {
+    "slug": "gvr-legal-services",
+    "industry": "Law",
+    "title": "Worldwide legal services revenue",
+    "tags": [
+      "Law",
+      "Business"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Grand View Research, Legal Services Market 2025–2030",
+      "points": [
+        {
+          "x": "2026",
+          "value": 1158.2
+        },
+        {
+          "x": "2030",
+          "value": 1375.6
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Grand View Research, Legal Services Market 2025–2030",
+        "url": "https://www.grandviewresearch.com/industry-analysis/global-legal-services-market",
+        "date": null,
+        "quote": "projected to grow from USD 1,158.2 billion in 2026 to USD 1,375.6 billion by 2030"
+      }
+    ],
+    "note": "USD billions. Commercial revenue forecast covering corporate, litigation, taxation and other legal services. Not the size of public justice budgets, a prediction of court outcomes or prison population. Public summary only; underlying research is paid."
+  },
+  {
+    "slug": "un-homicide-trend",
+    "industry": "Crime",
+    "title": "Projected decline in global homicide rate, 2015–2030",
+    "tags": [
+      "Crime",
+      "Justice"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "United Nations Sustainable Development Goals Report 2026, Goal 16",
+      "points": [
+        {
+          "x": "2030",
+          "value": 25
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "United Nations Sustainable Development Goals Report 2026, Goal 16",
+        "url": "https://unstats.un.org/sdgs/report/2026/Goal-16/",
+        "date": null,
+        "quote": "the global homicide rate in 2030 will be around one quarter lower than in 2015"
+      }
+    ],
+    "note": "Approximately 25% lower global intentional-homicide rate in 2030 relative to 2015 if current trends continue; a cumulative rate reduction, not a 25% annual decline, all-crime forecast or number of deaths. The source’s “one quarter” is represented as 25%. Regional trajectories vary; the target is not treated as achieved."
+  },
+  {
+    "slug": "pew-us-christian-share-scenario",
+    "industry": "Religion",
+    "title": "US Christian population share in 2070: Pew 2022 scenario",
+    "tags": [
+      "Religion",
+      "Demographics"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "Pew Research Center, 2022 steady-switching scenario",
+      "points": [
+        {
+          "x": "2070",
+          "value": 46
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Pew Research Center, 2022 steady-switching scenario",
+        "url": "https://www.pewresearch.org/religion/2022/09/13/projecting-u-s-religious-groups-population-shares-by-2070/",
+        "date": "2022-09-13",
+        "quote": "In 2070, 46% of Americans would identify as Christian"
+      },
+      {
+        "label": "Pew: Decline of Christianity in the U.S. Has Slowed, May Have Leveled Off",
+        "url": "https://www.pewresearch.org/religion/2025/02/26/decline-of-christianity-in-the-us-has-slowed-may-have-leveled-off/",
+        "date": "2025-02-26",
+        "quote": null
+      }
+    ],
+    "note": "A conditional demographic scenario, explicitly not a prediction: religious switching and other assumptions remain at the rates used in Pew’s 2020 baseline. Includes children; not worldwide religious composition. This is a 2022 scenario, not a refreshed 2026 forecast. Pew’s February 2025 observations found that the US Christian decline had slowed or may have leveled off, so the old scenario should not be read as inevitable."
+  },
+  {
+    "slug": "mckinsey-quantum-company-revenue",
+    "industry": "Futurism",
+    "title": "Quantum computing company revenue by 2028: upper estimate",
+    "tags": [
+      "Futurism",
+      "Computing",
+      "Science"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "McKinsey Quantum Technology Monitor 2026",
+      "points": [
+        {
+          "x": "2028",
+          "value": 4.4
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "McKinsey Quantum Technology Monitor 2026",
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/mckinsey-quantum-technology-monitor-2026-a-commercial-tipping-point",
+        "date": "2026-04-28",
+        "quote": "that could grow to as much as $4.4 billion by 2028"
+      }
+    ],
+    "note": "USD billions of worldwide quantum-computing company revenue. $4.4 billion is the published upper estimate (“as much as”), not a midpoint, guaranteed outcome or economic value enabled by quantum computing. The separate $60–100 billion 2035 internal quantum market has a broader scope and is not substituted here."
+  },
+  {
+    "slug": "ddhq-house-control-2026",
+    "industry": "Elections",
+    "title": "Democratic House-control probability, November 2026",
+    "tags": [
+      "Elections"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "Decision Desk HQ 2026 forecast, observed October 25, 2026",
+      "points": [
+        {
+          "x": "2026-11-03",
+          "value": 79
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Decision Desk HQ 2026 forecast, observed October 25, 2026",
+        "url": "https://votes.decisiondeskhq.com/forecast/2026",
+        "date": "2026-10-25",
+        "quote": "Decision Desk HQ's model gives Democrats a 79% chance of winning the House"
+      },
+      {
+        "label": "DDHQ forecast methodology",
+        "url": "https://votes-docs.decisiondeskhq.com/forecast-methodology",
+        "date": null,
+        "quote": null
+      }
+    ],
+    "note": "Dated model snapshot observed October 25, 2026; publisher displays “Last updated Oct 25, 4:57 PM” without a timezone in the page text. Outcome date is the November 3 election, not market settlement. This is a probability, not a vote share, realized result or live feed; refresh before using it after the observation day and resolve after the election."
   }
 ]

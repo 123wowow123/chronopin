@@ -1,5 +1,13 @@
 # To Do
 
+## Prod slowness (read-only check, October 26, 2026)
+
+- [ ] **Prod is CPU-bound on a non-burstable VM; the October 17 resize is already done.** Instance metadata reports `Standard_D2s_v5` (2 vCPUs, booted 2026-10-18 02:01), so the older B2ms/CPU-credit explanation in the Oct 17 note above no longer applies. Snapshot at 14:40 UTC: load 6.48 / 5.43 / 3.71 on 2 cores, CPU 71% user, `docker-app-1` ~86% (the single `next-server` Node thread ~91%), Postgres ~81% (many short queries; none running when sampled), Caddy 17-36% CPU and ~900 MB RSS, memory fine. Caddy log, 5 minutes: 13,395 requests (~45/s) from 1,122 distinct IPs, top IP only 278, 94% claiming Windows Chrome, mostly Chinese carrier addresses (a spread-out crawl; not confirmed as the Oct 17 scraper). `/_next/static` is ~80% of handler seconds (2,559 requests in 3 minutes, all 200, avg 3.1 s, ~25 KB), yet Caddy already serves it from the `next-static` volume (`/srv/assets`, 76 build dirs), so those seconds are Caddy starved of CPU, not Node queueing. A per-IP limit does not touch this traffic.
+  - [x] Per-IP burst lowered 100 -> 90 (`IP_BURST` in `src/server/botLimit.ts`; refill still 6/s; tests pass). Local, uncommitted, undeployed.
+  - [x] `log_skip @static` added to `Docker/Caddyfile` (static files out of the JSON access log; `caddy validate` OK). Local, uncommitted, undeployed. Compression left as is (not checked whether woff2 is already skipped).
+  - [x] Crawler cohort throttled (local, uncommitted, undeployed): the 5-minute log shows ~1,900 page requests from browsers sending `Accept-Language: zh-CN` on `/it`, `/hi`, `/fr`, `/ms` pages (about 1,400 with no Referer; only 62 on `/zh`), mostly searches. `localeMismatch` + `mismatchRetryAfter` in `src/server/botLimit.ts` (wired in `src/proxy.ts`): signed-out GETs by a Chinese browser on a non-Chinese language path share one bucket (burst 20, 1/s) **only while `shedding()` is on**, else a plain 429. Not geo-blocking; a real Chinese reader on a French page is only affected while the server is overloaded. Tests added; typecheck clean. After deploy, re-run the Caddy cohort count and watch for 429s on `/it`, `/hi`, `/fr`, `/ms`.
+  - [ ] Options not yet chosen: (1) second app instance behind Caddy `lb_policy round_robin` (per-process rate-limit buckets, caches and background jobs run twice); (2) (done above) ; (3) D4s_v5 (4 vCPUs, about double the cost). Re-run the Postgres active-query check with a quoting-safe script (scratchpad `q.sql` piped over SSH) when load is high.
+
 ## Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25, 2026)
 
 **Implemented, seeded locally, and deployed to production:**

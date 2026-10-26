@@ -129,9 +129,9 @@ export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null 
 // traffic looked like bots). A visitor who runs out is shown the heavy user
 // plan (src/app/[lang]/heavy-use): with it the budget is LIGHT_*, still a limit
 // but ten times looser. Admins and named crawlers have their own rules.
-// Burst 100 (150 until 2026-10-22), refill 6/s: the figures macOS Safari readers were first given (2026-10-20, after
+// Burst 90 (100 until 2026-10-26, 150 until 2026-10-22), refill 6/s: the figures macOS Safari readers were first given (2026-10-20, after
 // their page requests were being refused), now the same for every browser.
-export const IP_BURST = 100;
+export const IP_BURST = 90;
 export const IP_PER_SECOND = 6;
 export const LIGHT_BURST = 1_200;
 export const LIGHT_PER_SECOND = 20;
@@ -159,6 +159,37 @@ export function ipRetryAfter(key: string, light = false, now = Date.now(), cost 
     return null;
   }
   return Math.ceil((cost - bucket.tokens) / perSecond);
+}
+
+// A swarm of Chinese-language browsers (2026-10-26: ~1,100 addresses in five
+// minutes, none above ~280 requests, so no per-address budget sees them) walks
+// /it, /hi, /fr and /ms pages, searches first, with no Referer. People whose
+// browser asks for Chinese read /zh. While the server sheds load the whole
+// cohort (Chinese browser, signed out, a page in another non-Chinese language)
+// shares one bucket; an ordinary visitor never meets it. Burst 20, refill 1/s.
+export const MISMATCH_BURST = 20;
+export const MISMATCH_PER_SECOND = 1;
+
+// Whether a browser that asks for Chinese is on a page in another language.
+// `prefix` is the page's language prefix, null for the plain English paths.
+export function localeMismatch(acceptLanguage: string | null, prefix: string | null): boolean {
+  if (!prefix || prefix === 'zh' || prefix.startsWith('zh-')) return false;
+  const first = (acceptLanguage ?? '').split(',')[0]?.trim().toLowerCase() ?? '';
+  return first === 'zh' || first.startsWith('zh-');
+}
+
+// Null when the request may go on (always, while the server is healthy), else
+// the seconds to wait.
+export function mismatchRetryAfter(now = Date.now(), shed = shedding(now)): number | null {
+  if (!shed) return null;
+  const g = globalThis as unknown as { __chronopinMismatch?: Bucket };
+  const bucket = (g.__chronopinMismatch ??= { tokens: MISMATCH_BURST, at: now });
+  refill(bucket, now, MISMATCH_BURST, MISMATCH_PER_SECOND);
+  if (bucket.tokens >= 1) {
+    bucket.tokens -= 1;
+    return null;
+  }
+  return Math.ceil((1 - bucket.tokens) / MISMATCH_PER_SECOND);
 }
 
 // A pin-page budget per client id (the signed cookie the cookie gate issues),

@@ -31,7 +31,7 @@ on pin pages and category searches, including categories gaining their first pan
 
 ## Category expansion, October 25, 2026
 
-The catalog contains 31 panels matching 39 fixed categories (plus sector tags).
+The initial expansion brought the catalog to 31 panels matching 39 fixed categories (plus sector tags).
 Fifteen new panels cover the IMF global growth outlook, WSTS semiconductors,
 IEA electricity mix and electric car sales, Newzoo video games, WTO goods trade,
 Gartner security and IT spending, PwC entertainment and media, WEF space,
@@ -51,12 +51,18 @@ The public API now accepts up to 100 slugs so a multi-category search can load
 all matching panels beyond the former 12-panel cutoff. Pin pages retain their
 three-panel preview with Show more.
 
-No relevant numerical outlook was verified in this pass for Tabletop, Anime,
+No relevant numerical outlook was verified in the initial pass for Tabletop, Anime,
 Manga, Comics, Art, Award, Sports, Science, Astronomy, Disaster, Geopolitics,
 Defense, Elections, Religion, Fashion, Futurism, Crypto, Law, Crime or Justice.
-These remain research gaps rather than receiving an unrelated fallback panel.
+These were retained as research gaps rather than receiving an unrelated fallback panel.
 Sources checked were the publisher pages retained in the catalog, with current
 edition searches for IMF, WSTS, IEA, WTO, Gartner, Newzoo, PwC, WEF, WMO, FAO,
 UNESCO and IATA. The UN population pages returned an error/403 and were not used.
-Future work should seek specific forecasts for the unmatched sectors rather
-than treating a broad media or GDP total as their own forecast.
+The [follow-up gap research](okf/scraping/forecast-category-gaps-2026-10-25.md)
+adds 16 panels and closes 19 of those category gaps. Including the three Ramp
+token panels added separately, the catalog now contains 50 panels matching 58
+of 59 fixed categories. Award remains unsupported by a verified numerical
+forecast. Art uses a cited dealer-survey outlook rather than a numerical market
+projection. Conditional scenarios, upper estimates and dated election-model
+snapshots are labeled explicitly; this is contextual coverage, not a forecast
+of the entire market for every matching category.

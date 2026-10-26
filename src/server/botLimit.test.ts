@@ -158,3 +158,23 @@ describe('pinRetryAfter', () => {
     expect(pinRetryAfter('p', 1_000, 0.25)).not.toBeNull();
   });
 });
+
+import { localeMismatch, mismatchRetryAfter, MISMATCH_BURST } from './botLimit';
+describe('locale mismatch cohort', () => {
+  it('flags a Chinese browser on another language, not on Chinese or English paths', () => {
+    expect(localeMismatch('zh-CN,zh;q=0.9', 'it')).toBe(true);
+    expect(localeMismatch('zh', 'hi')).toBe(true);
+    expect(localeMismatch('zh-CN,zh;q=0.9', 'zh')).toBe(false);
+    expect(localeMismatch('zh-CN', 'zh-TW')).toBe(false);
+    expect(localeMismatch('zh-CN', null)).toBe(false);
+    expect(localeMismatch('en-US,en;q=0.9', 'it')).toBe(false);
+    expect(localeMismatch(null, 'it')).toBe(false);
+  });
+  it('limits the cohort only while shedding', () => {
+    const now = 9_000_000;
+    for (let i = 0; i < MISMATCH_BURST * 3; i++) expect(mismatchRetryAfter(now, false)).toBeNull();
+    for (let i = 0; i < MISMATCH_BURST; i++) expect(mismatchRetryAfter(now, true)).toBeNull();
+    expect(mismatchRetryAfter(now, true)).toBeGreaterThan(0);
+    expect(mismatchRetryAfter(now, false)).toBeNull();
+  });
+});

@@ -47,6 +47,10 @@ www.chronopin.com {
 			try_files {path}
 		}
 	}
+	# Hashed static files are about 40% of requests and say nothing about bots
+	# (the page request already does); leaving them out of the JSON access log
+	# saves Caddy a write per file on the CPU-starved VM.
+	log_skip @static
 	# Every page load asks who is signed in (src/lib/client/session.ts) and the
 	# app answers null when the request carries no token cookie, no bearer header
 	# and no access_token: the same answer, without waking Node (1,044 of 18,256
