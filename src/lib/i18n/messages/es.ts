@@ -620,6 +620,7 @@ const es: Messages = {
     undo: 'Deshacer',
     notInterestedFailed: 'No se pudo guardar. Inténtalo de nuevo.',
     toMap: 'Al mapa',
+    loadingOutline: 'Cargando el contorno del mapa…',
     toTimeline: 'A la línea de tiempo',
     posted: 'Publicado <time></time>',
     openSource: 'Abrir la fuente',

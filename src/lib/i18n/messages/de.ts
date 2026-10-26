@@ -620,6 +620,7 @@ const de: Messages = {
     undo: 'Rückgängig',
     notInterestedFailed: 'Konnte nicht gespeichert werden. Versuch es noch einmal.',
     toMap: 'Zur Karte',
+    loadingOutline: 'Kartenumriss wird geladen …',
     toTimeline: 'Zur Zeitleiste',
     posted: 'Gepostet <time></time>',
     openSource: 'Quelle öffnen',

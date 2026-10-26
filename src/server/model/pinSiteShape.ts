@@ -11,6 +11,11 @@ export async function siteShapeForPin(pinId: number): Promise<PinSiteShapeJson |
   return row ? { geojson: row.geojson, source: row.source, sourceUrl: row.sourceUrl ?? null } : null;
 }
 
+export async function hasSiteShape(pinId: number): Promise<boolean> {
+  const rows = await db.query(`SELECT 1 FROM "PinSiteShape" WHERE "pinId" = $1`, [pinId]);
+  return rows.length > 0;
+}
+
 export async function saveSiteShape(pinId: number, input: PinSiteShapeJson) {
   await db.query(
     `INSERT INTO "PinSiteShape" ("pinId", "geojson", "source", "sourceUrl", "checkedAt")

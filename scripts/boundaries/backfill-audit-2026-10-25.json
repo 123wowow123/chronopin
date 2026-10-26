@@ -175,14 +175,16 @@
     "audited": 592,
     "verifiedLive": 74,
     "wildfirePins": 18,
-    "districtPins": 56,
+    "districtPins": 57,
     "researchGaps": 5,
     "outsideBoundaryScope": 513,
-    "defaultBoundaryFeatures": 10245,
+    "defaultBoundaryFeatures": 10257,
     "stateRedrawComparisons": 10,
     "alternatePlanFeatures": 401,
     "provincialRedrawComparisons": 1,
-    "totalRedrawComparisons": 11
+    "totalRedrawComparisons": 11,
+    "verifiedPartial": 1,
+    "mappedPins": 75
   },
   "replayManifest": "scripts/boundaries/backfill-2026-10-25.prod.json",
   "records": [
@@ -1235,8 +1237,8 @@
     {
       "pinId": 2979,
       "title": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
-      "status": "research_gap",
-      "reason": "Need verified 2026 local constituency polygons and separate regional-list scope. Current election pages describe local and regional constituencies; the older 2011 list or a generic province/region layer does not establish the complete 2026 plan. Round two: the additional public result dataset aggregates eight Casablanca electoral areas into one province, so it cannot supply all local constituencies. Sixth large run: Le Millénaire’s 2026 geometry manifest contains 12 regional and 75 administrative units, not the 92 local constituencies. Its election page explicitly says the local map is pending. Result tables on other sites do not establish a complete georeferenced local-boundary set.",
+      "status": "verified_partial",
+      "reason": "Published and verified the complete 12 regional-list area layer only. The 92 local constituency polygons remain a research gap, including the Hassan administrative-annex split. Map labels and pin wiki explicitly distinguish regional coverage from missing local seats.",
       "sourcesChecked": [
         "https://www.maroc.ma/fr/actualites/elections-legislatives-2026-trois-moyens-pour-localiser-votre-bureau-de-vote",
         "https://www.listeselectorales.ma/fr/Index.aspx",
@@ -1252,7 +1254,8 @@
         "https://communes.pages.dev/fr/docs/downloads/"
       ],
       "geometryResearchCatalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
-      "nextRequired": "Rabat Hassan administrative-annex geometry, complete commune/province crosswalk and confirmation of the legal composition applicable to the 2026 pin."
+      "nextRequired": "Rabat Hassan administrative-annex geometry, complete commune/province crosswalk and confirmation of the legal composition applicable to the 2026 pin.",
+      "features": 12
     },
     {
       "pinId": 2982,
@@ -5296,7 +5299,8 @@
   },
   "researchCatalogs": [
     "scripts/boundaries/research-gambia-wards-2026-10-25.json",
-    "scripts/boundaries/research-country-gaps-2026-10-25.json"
+    "scripts/boundaries/research-country-gaps-2026-10-25.json",
+    "scripts/boundaries/research-nigeria-rac-2026-10-25.json"
   ],
   "large7RunVerification": {
     "newPins": 0,
@@ -5316,8 +5320,11 @@
     "catalog": "scripts/boundaries/research-country-gaps-2026-10-25.json",
     "resolved": 0,
     "remaining": 5,
-    "productionWrites": 0,
-    "verifiedLiveMaps": 74,
-    "defaultBoundaryFeatures": 10245
+    "productionWrites": 1,
+    "verifiedLiveMaps": 75,
+    "defaultBoundaryFeatures": 10257,
+    "partiallyMapped": 1,
+    "productionGeometryWrites": 1,
+    "followUpCatalog": "scripts/boundaries/research-nigeria-rac-2026-10-25.json"
   }
 }

@@ -185,7 +185,7 @@ function bboxRing(rings: Ring[]): Ring {
 function simplifyFeatures(features: SiteFeature[], budget: number): SiteFeature[] {
   const total = (list: SiteFeature[]) => list.reduce((n, f) => n + countPoints(f.geometry.coordinates), 0);
   if (total(features) <= budget) return features;
-  const round = (c: unknown) => (typeof c === 'number' ? Math.round(c * 1e5) / 1e5 : Array.isArray(c) ? c.map(round) : c);
+  const round = (c: unknown): unknown => (typeof c === 'number' ? Math.round(c * 1e5) / 1e5 : Array.isArray(c) ? c.map(round) : c);
   const draw = (tolerance: number): SiteFeature[] =>
     features.map((feature) => {
       const { type, coordinates } = feature.geometry;
@@ -208,14 +208,30 @@ function simplifyFeatures(features: SiteFeature[], budget: number): SiteFeature[
   return out;
 }
 
+// Thousands of districts share one credit (Spain: 8,130 copies, 3.7 MB). The key
+// lists each distinct credit once, so a repeat keeps only its kind.
+const CREDIT_REPEAT_FROM = 50;
+function dedupeCredits(features: SiteFeature[]): SiteFeature[] {
+  if (features.length < CREDIT_REPEAT_FROM) return features;
+  const seen = new Set<string>();
+  return features.map((feature) => {
+    const { kind } = feature.properties;
+    if (kind !== 'wildfire' && kind !== 'district') return feature;
+    const credit = JSON.stringify(feature.properties);
+    if (!seen.has(credit)) { seen.add(credit); return feature; }
+    return { ...feature, properties: { kind } };
+  });
+}
+
 export function simplifyForDisplay(shape: PinSiteShapeJson, budget = SITE_SHAPE_POINT_BUDGET): PinSiteShapeJson {
-  const { features, districtRedraws } = shape.geojson;
+  const { districtRedraws } = shape.geojson;
+  const features = dedupeCredits(shape.geojson.features);
   const simple = simplifyFeatures(features, budget);
   const redraws = districtRedraws?.map((redraw) => ({
     ...redraw,
-    before: { ...redraw.before, features: simplifyFeatures(redraw.before.features, budget) },
-    after: { ...redraw.after, features: simplifyFeatures(redraw.after.features, budget) },
+    before: { ...redraw.before, features: simplifyFeatures(redraw.before.features, budget / 4) },
+    after: { ...redraw.after, features: simplifyFeatures(redraw.after.features, budget / 4) },
   }));
-  if (simple === features && (!redraws || redraws.every((r, i) => r.before.features === districtRedraws![i].before.features && r.after.features === districtRedraws![i].after.features))) return shape;
+  if (simple === shape.geojson.features && (!redraws || redraws.every((r, i) => r.before.features === districtRedraws![i].before.features && r.after.features === districtRedraws![i].after.features))) return shape;
   return { ...shape, geojson: { ...shape.geojson, features: simple, ...(redraws ? { districtRedraws: redraws } : {}) } };
 }

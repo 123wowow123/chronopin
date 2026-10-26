@@ -623,6 +623,7 @@ const vi: Messages = {
     undo: 'Hoàn tác',
     notInterestedFailed: 'Không lưu được. Hãy thử lại.',
     toMap: 'Đến bản đồ',
+    loadingOutline: 'Đang tải đường viền bản đồ…',
     toTimeline: 'Đến dòng thời gian',
     posted: 'Đã đăng <time></time>',
     openSource: 'Mở nguồn',

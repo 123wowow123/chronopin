@@ -1,0 +1,553 @@
+{
+  "checkedAt": "2026-10-25",
+  "usableForBoundaryImport": false,
+  "lgas": [
+    {
+      "state": "Lagos",
+      "lga": "Lagos Island",
+      "inecLgaCode": "14",
+      "source": "https://www.inecnigeria.org/documents/resources/rac/LAGOS.pdf",
+      "pdfSha256": "01c3c19ca984e78307bb1a86993a626e85c5ae0f9208592449e23160e0499a96",
+      "inecRegistrationAreas": [
+        {
+          "code": "01",
+          "name": "OLOWOGBOWO/ELEGBATA",
+          "sourceRowNumber": 1
+        },
+        {
+          "code": "02",
+          "name": "OLUWOLE",
+          "sourceRowNumber": 2
+        },
+        {
+          "code": "03",
+          "name": "IDUMOTA/OKE-ARIN",
+          "sourceRowNumber": 3
+        },
+        {
+          "code": "04",
+          "name": "OJU-OTO",
+          "sourceRowNumber": 4
+        },
+        {
+          "code": "05",
+          "name": "OKO-AWO",
+          "sourceRowNumber": 5
+        },
+        {
+          "code": "06",
+          "name": "AGARAWU/OBADINA",
+          "sourceRowNumber": 6
+        },
+        {
+          "code": "07",
+          "name": "IDUNTAFA",
+          "sourceRowNumber": 7
+        },
+        {
+          "code": "08",
+          "name": "ILUPESI",
+          "sourceRowNumber": 8
+        },
+        {
+          "code": "09",
+          "name": "ISALE-AGBEDE",
+          "sourceRowNumber": 9
+        },
+        {
+          "code": "10",
+          "name": "OLUOSUN",
+          "sourceRowNumber": 10
+        },
+        {
+          "code": "11",
+          "name": "OLUSHI/KAKAWA",
+          "sourceRowNumber": 11
+        },
+        {
+          "code": "12",
+          "name": "POPO-AGUDA",
+          "sourceRowNumber": 12
+        },
+        {
+          "code": "13",
+          "name": "ANIKANTAMO",
+          "sourceRowNumber": 13
+        },
+        {
+          "code": "14",
+          "name": "OKO-FAJI",
+          "sourceRowNumber": 14
+        },
+        {
+          "code": "15",
+          "name": "EIYEKOLE",
+          "sourceRowNumber": 15
+        },
+        {
+          "code": "16",
+          "name": "ONIKAN",
+          "sourceRowNumber": 16
+        },
+        {
+          "code": "17",
+          "name": "SANDGROUSE",
+          "sourceRowNumber": 17
+        },
+        {
+          "code": "18",
+          "name": "EPETEDO",
+          "sourceRowNumber": 18
+        },
+        {
+          "code": "19",
+          "name": "ILUBINRIN/ LAFIAJI",
+          "sourceRowNumber": 19
+        }
+      ],
+      "operationalWardCount": 20,
+      "operationalWardNames": [
+        "Ajele",
+        "Alagba/Obadina",
+        "Anikantamo",
+        "Araromi Odo",
+        "Balogun",
+        "Epetedo East",
+        "Epetedo West",
+        "Idumoyingbo",
+        "Idunganran/Idumagbo",
+        "Ilupesi/Ebute Awo",
+        "Isale Gangan",
+        "Lafiaji",
+        "Odam",
+        "Oke-Arin/Idumota",
+        "Oke-Olowogbowo",
+        "Okepopo East",
+        "Okepopo West",
+        "Oko-Awo/Agarawu",
+        "Olosun/Ojo Oto",
+        "Oluwole"
+      ],
+      "crosswalkVerified": false
+    },
+    {
+      "state": "Lagos",
+      "lga": "Mushin",
+      "inecLgaCode": "16",
+      "source": "https://www.inecnigeria.org/documents/resources/rac/LAGOS.pdf",
+      "pdfSha256": "01c3c19ca984e78307bb1a86993a626e85c5ae0f9208592449e23160e0499a96",
+      "inecRegistrationAreas": [
+        {
+          "code": "01",
+          "name": "ALAKARA",
+          "sourceRowNumber": 1
+        },
+        {
+          "code": "02",
+          "name": "IDI-ORO/ODI-OLOWO",
+          "sourceRowNumber": 2
+        },
+        {
+          "code": "03",
+          "name": "BABALOSA",
+          "sourceRowNumber": 3
+        },
+        {
+          "code": "04",
+          "name": "OJUWOYE",
+          "sourceRowNumber": 4
+        },
+        {
+          "code": "05",
+          "name": "ILUPEJU",
+          "sourceRowNumber": 5
+        },
+        {
+          "code": "06",
+          "name": "OLATEJU",
+          "sourceRowNumber": 6
+        },
+        {
+          "code": "07",
+          "name": "KAYODE/FADEYI",
+          "sourceRowNumber": 7
+        },
+        {
+          "code": "08",
+          "name": "MUSHIN/ATEWOLARA",
+          "sourceRowNumber": 8
+        },
+        {
+          "code": "09",
+          "name": "PAP-AJAO",
+          "sourceRowNumber": 9
+        },
+        {
+          "code": "10",
+          "name": "ILASAMAJA",
+          "sourceRowNumber": 10
+        },
+        {
+          "code": "11",
+          "name": "BABALOSA/IDI-ARABA",
+          "sourceRowNumber": 11
+        },
+        {
+          "code": "12",
+          "name": "IDI-ARABA",
+          "sourceRowNumber": 12
+        },
+        {
+          "code": "13",
+          "name": "ITIRE",
+          "sourceRowNumber": 13
+        },
+        {
+          "code": "14",
+          "name": "ILUPEJU IND. ESTATE",
+          "sourceRowNumber": 14
+        }
+      ],
+      "operationalWardCount": 19,
+      "operationalWardNames": [
+        "Alafia/Adeoyo",
+        "Alakara",
+        "Babalosa I",
+        "Babalosa II",
+        "Idi-Araba",
+        "Idi-Oro/Odi Olowo",
+        "Igbehin",
+        "Ilupeju",
+        "Ilupeju Industrial",
+        "Kayode/Fadeyi",
+        "Moshalashi/Agoro",
+        "Mushin/Atewolara",
+        "Odo Eran/Ogunlana",
+        "Oduselu/Ola",
+        "Ojuwoye",
+        "Olateju",
+        "Onitire",
+        "Owodunni",
+        "Papa Ajao"
+      ],
+      "crosswalkVerified": false
+    },
+    {
+      "state": "Lagos",
+      "lga": "Oshodi/Isolo",
+      "inecLgaCode": "18",
+      "source": "https://www.inecnigeria.org/documents/resources/rac/LAGOS.pdf",
+      "pdfSha256": "01c3c19ca984e78307bb1a86993a626e85c5ae0f9208592449e23160e0499a96",
+      "inecRegistrationAreas": [
+        {
+          "code": "01",
+          "name": "OSHODI-BOLADE",
+          "sourceRowNumber": 1
+        },
+        {
+          "code": "02",
+          "name": "ORILE OSHODI",
+          "sourceRowNumber": 2
+        },
+        {
+          "code": "03",
+          "name": "ISOLO",
+          "sourceRowNumber": 3
+        },
+        {
+          "code": "04",
+          "name": "AJAO ESTATE",
+          "sourceRowNumber": 4
+        },
+        {
+          "code": "05",
+          "name": "ILASAMAJA",
+          "sourceRowNumber": 5
+        },
+        {
+          "code": "06",
+          "name": "MAFOLUKU",
+          "sourceRowNumber": 6
+        },
+        {
+          "code": "07",
+          "name": "SHOGUNLE",
+          "sourceRowNumber": 7
+        },
+        {
+          "code": "08",
+          "name": "SHOGUNLE ALASIA",
+          "sourceRowNumber": 8
+        },
+        {
+          "code": "09",
+          "name": "OKOTA",
+          "sourceRowNumber": 9
+        },
+        {
+          "code": "10",
+          "name": "ISHAGATEDO",
+          "sourceRowNumber": 10
+        },
+        {
+          "code": "11",
+          "name": "OKE-AFA/OJIGBO",
+          "sourceRowNumber": 11
+        }
+      ],
+      "operationalWardCount": 20,
+      "operationalWardNames": [
+        "Afariogun",
+        "Aigbaka",
+        "Ailegun",
+        "Ajao Estate",
+        "Akingbaye",
+        "Alagbeji",
+        "Apena",
+        "Ewutuntun",
+        "Fadu",
+        "Ifoshin",
+        "Igbehinadun",
+        "Ilamoshe",
+        "Ilasamaja",
+        "Ishaga/Ire-Akari",
+        "Mafoluku",
+        "Ogunnoloko",
+        "Oke-Afa",
+        "Okota",
+        "Oluyeye",
+        "Shogunle"
+      ],
+      "crosswalkVerified": false
+    },
+    {
+      "state": "Lagos",
+      "lga": "Surulere",
+      "inecLgaCode": "20",
+      "source": "https://www.inecnigeria.org/documents/resources/rac/LAGOS.pdf",
+      "pdfSha256": "01c3c19ca984e78307bb1a86993a626e85c5ae0f9208592449e23160e0499a96",
+      "inecRegistrationAreas": [
+        {
+          "code": "01",
+          "name": "ORILE",
+          "sourceRowNumber": 1
+        },
+        {
+          "code": "02",
+          "name": "AGUDA",
+          "sourceRowNumber": 2
+        },
+        {
+          "code": "03",
+          "name": "IJESHATEDO",
+          "sourceRowNumber": 3
+        },
+        {
+          "code": "04",
+          "name": "AKINHANMI/COLE",
+          "sourceRowNumber": 4
+        },
+        {
+          "code": "05",
+          "name": "YABA/OJUELEGBA",
+          "sourceRowNumber": 5
+        },
+        {
+          "code": "06",
+          "name": "IGBAJA/ STADIUM",
+          "sourceRowNumber": 6
+        },
+        {
+          "code": "07",
+          "name": "SHTTA/OGUNLANA DRIVE",
+          "sourceRowNumber": 7
+        },
+        {
+          "code": "08",
+          "name": "ADENIRAN/ OGUNSANYA",
+          "sourceRowNumber": 8
+        },
+        {
+          "code": "09",
+          "name": "IPONRI HOUSING ESTATE/ERIC MOORE",
+          "sourceRowNumber": 9
+        },
+        {
+          "code": "10",
+          "name": "COKER",
+          "sourceRowNumber": 10
+        },
+        {
+          "code": "11",
+          "name": "ITIRE",
+          "sourceRowNumber": 11
+        },
+        {
+          "code": "12",
+          "name": "IKATE",
+          "sourceRowNumber": 12
+        }
+      ],
+      "operationalWardCount": 23,
+      "operationalWardNames": [
+        "Adeniran Ogunsanya",
+        "Agunbiade",
+        "Airways",
+        "Akinhanmi Cole",
+        "Aralile",
+        "Babatunde Ayilara",
+        "Bale",
+        "Baruwa",
+        "Coker",
+        "Gbaja Obele-Odan",
+        "Iponri/Eric Moore",
+        "Irone",
+        "Jinadu Aiyetoro",
+        "Mosafejo Ojuelegba",
+        "Nuru Oniwo",
+        "Obele Oniwala",
+        "Odo-Olowu",
+        "Ogunsami/Karounwi",
+        "Osho",
+        "Ramoni",
+        "Sanusi I",
+        "Savage",
+        "Shitta Bank Olemoh"
+      ],
+      "crosswalkVerified": false
+    },
+    {
+      "state": "Rivers",
+      "lga": "Port-Harcourt",
+      "inecLgaCode": "22",
+      "source": "https://www.inecnigeria.org/documents/resources/rac/RIVERS.pdf",
+      "pdfSha256": "041b167d5dbee6b6e54f0e790d1af949eef1a83be05264cf25acb76b10ce692b",
+      "inecRegistrationAreas": [
+        {
+          "code": "01",
+          "name": "OROMINEKE/EZIMGBU",
+          "sourceRowNumber": 1
+        },
+        {
+          "code": "02",
+          "name": "OROGBUM",
+          "sourceRowNumber": 2
+        },
+        {
+          "code": "03",
+          "name": "OROABALI",
+          "sourceRowNumber": 3
+        },
+        {
+          "code": "04",
+          "name": "OGBUM-NU-ABALI",
+          "sourceRowNumber": 4
+        },
+        {
+          "code": "05",
+          "name": "PORT HARCOURT TOWNSHIP V",
+          "sourceRowNumber": 5
+        },
+        {
+          "code": "06",
+          "name": "PORT HARCOURT TOWNSHIP VI",
+          "sourceRowNumber": 6
+        },
+        {
+          "code": "07",
+          "name": "PORT HARCOURT TOWNSHIP VII",
+          "sourceRowNumber": 7
+        },
+        {
+          "code": "08",
+          "name": "OCHIRI/RUMUOKALAGBOR",
+          "sourceRowNumber": 8
+        },
+        {
+          "code": "09",
+          "name": "OROWORUKWO",
+          "sourceRowNumber": 9
+        },
+        {
+          "code": "10",
+          "name": "NKPOLU OROWORUKWO",
+          "sourceRowNumber": 10
+        },
+        {
+          "code": "11",
+          "name": "RUMUWOJI (ONE)",
+          "sourceRowNumber": 11
+        },
+        {
+          "code": "12",
+          "name": "RUMUWOJI (TWO)",
+          "sourceRowNumber": 12
+        },
+        {
+          "code": "13",
+          "name": "RUMUWOJI (THREE)",
+          "sourceRowNumber": 13
+        },
+        {
+          "code": "14",
+          "name": "MGBUNDUKWU (ONE)",
+          "sourceRowNumber": 14
+        },
+        {
+          "code": "15",
+          "name": "MGBUNDUKWU (TWO)",
+          "sourceRowNumber": 15
+        },
+        {
+          "code": "16",
+          "name": "RUMUOIBEKWE",
+          "sourceRowNumber": 16
+        },
+        {
+          "code": "17",
+          "name": "DIOBU",
+          "sourceRowNumber": 17
+        },
+        {
+          "code": "18",
+          "name": "NKPOLU OROWORUKWO",
+          "sourceRowNumber": 18
+        },
+        {
+          "code": "19",
+          "name": "ELEKAHIA",
+          "sourceRowNumber": 19
+        },
+        {
+          "code": "20",
+          "name": "ABULOMA/AMADI-AMA",
+          "sourceRowNumber": 20
+        }
+      ],
+      "operationalWardCount": 20,
+      "operationalWardNames": [
+        "PHWard 1",
+        "PHWard 10",
+        "PHWard 11",
+        "PHWard 12",
+        "PHWard 13",
+        "PHWard 14",
+        "PHWard 15",
+        "PHWard 16",
+        "PHWard 17",
+        "PHWard 18",
+        "PHWard 19",
+        "PHWard 2",
+        "PHWard 20",
+        "PHWard 3",
+        "PHWard 4",
+        "PHWard 5",
+        "PHWard 6",
+        "PHWard 7",
+        "PHWard 8",
+        "PHWard 9"
+      ],
+      "crosswalkVerified": false
+    }
+  ]
+}

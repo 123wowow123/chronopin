@@ -624,6 +624,7 @@ const en = {
     undo: 'Undo',
     notInterestedFailed: "Couldn't save that. Try again.",
     toMap: 'To map',
+    loadingOutline: 'Loading map outline…',
     toTimeline: 'To timeline',
     posted: 'Posted <time></time>',
     openSource: 'Open the source',

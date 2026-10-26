@@ -620,6 +620,7 @@ const fr: Messages = {
     undo: 'Annuler',
     notInterestedFailed: "Impossible d'enregistrer. Réessayez.",
     toMap: 'Vers la carte',
+    loadingOutline: 'Chargement du tracé…',
     toTimeline: 'Vers la chronologie',
     posted: 'Publié <time></time>',
     openSource: 'Ouvrir la source',

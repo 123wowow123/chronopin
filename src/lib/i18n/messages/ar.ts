@@ -694,6 +694,7 @@ const ar: Messages = {
     undo: 'تراجع',
     notInterestedFailed: 'تعذّر الحفظ. حاول مجددًا.',
     toMap: 'إلى الخريطة',
+    loadingOutline: 'جارٍ تحميل حدود الخريطة…',
     toTimeline: 'إلى الخط الزمني',
     posted: 'نُشر <time></time>',
     openSource: 'فتح المصدر',

@@ -624,6 +624,7 @@ const ms: Messages = {
     undo: 'Buat asal',
     notInterestedFailed: 'Tidak dapat menyimpannya. Cuba lagi.',
     toMap: 'Ke peta',
+    loadingOutline: 'Memuatkan garis peta…',
     toTimeline: 'Ke garis masa',
     posted: 'Disiarkan <time></time>',
     openSource: 'Buka sumber',

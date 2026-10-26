@@ -7,6 +7,8 @@ import PersonCampaign from '../model/personCampaign';
 import type { CampaignCycle } from '@/lib/campaigns';
 import PersonCommittee from '../model/personCommittee';
 import PersonTrade from '../model/personTrade';
+import PersonHoldings from '../model/personHoldings';
+import type { HoldingsSnapshot } from '@/lib/holdings';
 import type { Seat } from '@/lib/conflicts';
 import type { TradeRow, TradeSummary } from '@/lib/trades';
 import Person from '../model/person';
@@ -38,7 +40,7 @@ export async function personIndex(): Promise<PersonEntry[]> {
 // The newest trades in the page itself; the rest load on demand (the "More" button).
 export const TRADES_SHOWN = 25;
 
-export type PersonPage = { profile: CompiledPerson; pins: PinJson[]; trades: TradeRow[]; tradeSummary: TradeSummary; committees: Seat[]; campaigns: CampaignCycle[] };
+export type PersonPage = { profile: CompiledPerson; pins: PinJson[]; trades: TradeRow[]; tradeSummary: TradeSummary; committees: Seat[]; campaigns: CampaignCycle[]; holdings: HoldingsSnapshot[] };
 
 export async function personPage(slug: string, locale: Locale = DEFAULT_LOCALE): Promise<PersonPage | null> {
   'use cache';
@@ -48,11 +50,12 @@ export async function personPage(slug: string, locale: Locale = DEFAULT_LOCALE):
   if (id == null) return null;
   const [profile, pinIds, trades, tradeSummary, committees, campaigns] = await Promise.all([PersonWiki.compiled(id), Person.pinIds(id, PINS), PersonTrade.list(id, TRADES_SHOWN), PersonTrade.summary(id), PersonCommittee.forPerson(id), PersonCampaign.forPerson(id)]);
   if (!profile) return null;
+  const holdings = await PersonHoldings.forPerson(id, profile.name);
   const loaded = pinIds.length ? toJson<PinJson[]>((await Pins.queryByIds(pinIds)).pins) : [];
   const byId = new Map(loaded.map((p) => [p.id, p]));
   const pins = pinIds.map((pinId) => byId.get(pinId)).filter((p): p is PinJson => !!p);
   await localizePins(pins, locale);
-  return { profile, pins, trades, tradeSummary, committees, campaigns };
+  return { profile, pins, trades, tradeSummary, committees, campaigns, holdings };
 }
 
 export { topicSlug };

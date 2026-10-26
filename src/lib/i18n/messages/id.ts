@@ -624,6 +624,7 @@ const id: Messages = {
     undo: 'Urungkan',
     notInterestedFailed: 'Gagal menyimpan. Coba lagi.',
     toMap: 'Ke peta',
+    loadingOutline: 'Memuat garis peta…',
     toTimeline: 'Ke linimasa',
     posted: 'Diposting <time></time>',
     openSource: 'Buka sumber',

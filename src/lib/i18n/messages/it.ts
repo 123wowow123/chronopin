@@ -618,6 +618,7 @@ const it: Messages = {
     undo: 'Annulla',
     notInterestedFailed: 'Impossibile salvare. Riprova.',
     toMap: 'Alla mappa',
+    loadingOutline: 'Caricamento del contorno…',
     toTimeline: 'Alla timeline',
     posted: 'Pubblicato <time></time>',
     openSource: 'Apri la fonte',

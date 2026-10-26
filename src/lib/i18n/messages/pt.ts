@@ -618,6 +618,7 @@ const pt: Messages = {
     undo: 'Desfazer',
     notInterestedFailed: 'Não foi possível salvar. Tente novamente.',
     toMap: 'Para o mapa',
+    loadingOutline: 'Carregando o contorno do mapa…',
     toTimeline: 'Para a linha do tempo',
     posted: 'Publicado <time></time>',
     openSource: 'Abrir a fonte',

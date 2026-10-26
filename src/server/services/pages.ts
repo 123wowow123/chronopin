@@ -14,7 +14,7 @@ import { eventInfoForPin } from '../model/pinEventInfo';
 import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
-import { siteShapeForPin } from '../model/pinSiteShape';
+import { hasSiteShape, siteShapeForPin } from '../model/pinSiteShape';
 import { simplifyForDisplay, type PinSiteShapeJson } from '@/lib/siteShape';
 import { perfForPin } from '../model/pinPerf';
 import type { PinPerfJson } from '@/lib/pinPerf';
@@ -277,6 +277,14 @@ export async function pinSiteShape(id: number): Promise<PinSiteShapeJson | null>
   cacheTag(TAGS.pin(id));
   const shape = await siteShapeForPin(id);
   return shape ? simplifyForDisplay(shape) : null;
+}
+
+// Whether the pin has a traced outline, without loading it (the page's map fetches it).
+export async function pinHasSiteShape(id: number): Promise<boolean> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return hasSiteShape(id);
 }
 
 // The pin's hardware performance charts and tables, or null when none is recorded.

@@ -44,7 +44,9 @@ export default function PinMap({
   const [districtView, setDistrictView] = useState<DistrictView>('compare');
   const redraws = siteShape?.geojson.districtRedraws;
   const redraw = redraws?.find((r) => r.id === redrawId) ?? null;
-  const viewport = useRef<{ scope: string; shape: PinSiteShapeJson | undefined; center: L.LatLng; zoom: number } | null>(null);
+  // The map is made once; the outline (which may arrive after it) is drawn onto it.
+  const [map, setMap] = useState<L.Map | null>(null);
+  const framed = useRef<string | null>(null);
   const [armed, setArmed] = useState(false);
   const t = useT();
   const [startLabel, finishLabel, loopLabel] = [t('pin.routeStart'), t('pin.routeFinish'), t('pin.routeStartFinish')];
@@ -82,58 +84,67 @@ export default function PinMap({
       }).addTo(map);
       map.fitBounds(line.getBounds().extend([latitude, longitude]), { padding: [24, 24], maxZoom: 6 });
     }
-    // Traced outlines: boundaries under, their parts over
-    // (SITE_KINDS is in drawing order), the map framed on the whole site.
-    if (siteShape?.geojson.features.length) {
-      const site = L.featureGroup().addTo(map);
-      for (const layer of districtLayers(siteShape, redraw, districtView)) {
-        for (const kind of SITE_KINDS) {
-          const style = SITE_STYLE[kind];
-          const features = layer.features.filter((f) => f.properties.kind === kind);
-          if (!features.length) continue;
-          L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear(features, longitude) } as never, {
-            style: () => ({ color: layer.version === 'before' ? '#b45309' : style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: layer.version === 'before' ? 0 : style.fill, dashArray: layer.version === 'before' ? '7 4' : layer.version === 'after' ? undefined : style.dash }),
-            interactive: false,
-          }).addTo(site);
-        }
-      }
-      // A course (a single line) gets its start and finish, and a number every
-      // 5 km when it is a long one, a marathon but not a circuit.
-      const course = siteShape.geojson.features.find((f) => f.properties.kind === 'route' && f.geometry.type === 'LineString');
-      if (course) {
-        const line = course.geometry.coordinates as [number, number][];
-        const dot = (color: string, text: string, size: number) =>
-          L.divIcon({
-            className: '',
-            iconSize: [size, size],
-            html: `<span style="display:flex;align-items:center;justify-content:center;width:${size}px;height:${size}px;border-radius:9999px;background:${color};color:#fff;border:2px solid #fff;font:700 ${size > 16 ? 10 : 9}px system-ui">${text}</span>`,
-          });
-        const { marks, totalKm } = alongLine(line, 5);
-        const first = line[0];
-        const last = line[line.length - 1];
-        const loop = Math.hypot(first[0] - last[0], first[1] - last[1]) < 0.003;
-        L.marker([first[1], first[0]], { icon: dot('#16a34a', '', 16), interactive: false, keyboard: false }).addTo(site).bindTooltip(loop ? loopLabel : startLabel, { direction: 'top' });
-        if (!loop) L.marker([last[1], last[0]], { icon: dot('#111827', '', 16), interactive: false, keyboard: false }).addTo(site).bindTooltip(finishLabel, { direction: 'top' });
-        if (totalKm >= 15) {
-          for (const m of marks) {
-            if (m.km >= totalKm - 1) continue;
-            L.marker([m.lat, m.lon], { icon: dot('#e11d48', String(m.km), 20), interactive: false, keyboard: false }).addTo(site);
-          }
-        }
-      }
-      // Use the union of both plans so switching sides does not change the framing.
-      const bounds = redraw ? L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear([...redraw.before.features, ...redraw.after.features], longitude) } as never).getBounds() : site.getBounds();
-      if (bounds.isValid()) map.fitBounds(redraw ? bounds : bounds.extend([latitude, longitude]), { padding: [24, 24], maxZoom: 17 });
-      const previous = viewport.current;
-      if (redraw && previous?.scope === redraw.id && previous.shape === siteShape) map.setView(previous.center, previous.zoom);
-
-    }
+    setMap(map);
     return () => {
-      viewport.current = { scope: redraw?.id ?? '', shape: siteShape, center: map.getCenter(), zoom: map.getZoom() };
       map.getContainer().removeEventListener('mouseleave', disarm);
+      framed.current = null;
+      setMap(null);
       map.remove();
     };
-  }, [latitude, longitude, title, flightPath, siteShape, startLabel, finishLabel, loopLabel, redraw, districtView]);
+  }, [latitude, longitude, title, flightPath]);
+
+  useEffect(() => {
+    if (!map || !siteShape?.geojson.features.length) return;
+    // Traced outlines: boundaries under, their parts over
+    // (SITE_KINDS is in drawing order), the map framed on the whole site.
+    const site = L.featureGroup().addTo(map);
+    for (const layer of districtLayers(siteShape, redraw, districtView)) {
+      for (const kind of SITE_KINDS) {
+        const style = SITE_STYLE[kind];
+        const features = layer.features.filter((f) => f.properties.kind === kind);
+        if (!features.length) continue;
+        L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear(features, longitude) } as never, {
+          style: () => ({ color: layer.version === 'before' ? '#b45309' : style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: layer.version === 'before' ? 0 : style.fill, dashArray: layer.version === 'before' ? '7 4' : layer.version === 'after' ? undefined : style.dash }),
+          interactive: false,
+        }).addTo(site);
+      }
+    }
+    // A course (a single line) gets its start and finish, and a number every
+    // 5 km when it is a long one, a marathon but not a circuit.
+    const course = siteShape.geojson.features.find((f) => f.properties.kind === 'route' && f.geometry.type === 'LineString');
+    if (course) {
+      const line = course.geometry.coordinates as [number, number][];
+      const dot = (color: string, text: string, size: number) =>
+        L.divIcon({
+          className: '',
+          iconSize: [size, size],
+          html: `<span style="display:flex;align-items:center;justify-content:center;width:${size}px;height:${size}px;border-radius:9999px;background:${color};color:#fff;border:2px solid #fff;font:700 ${size > 16 ? 10 : 9}px system-ui">${text}</span>`,
+        });
+      const { marks, totalKm } = alongLine(line, 5);
+      const first = line[0];
+      const last = line[line.length - 1];
+      const loop = Math.hypot(first[0] - last[0], first[1] - last[1]) < 0.003;
+      L.marker([first[1], first[0]], { icon: dot('#16a34a', '', 16), interactive: false, keyboard: false }).addTo(site).bindTooltip(loop ? loopLabel : startLabel, { direction: 'top' });
+      if (!loop) L.marker([last[1], last[0]], { icon: dot('#111827', '', 16), interactive: false, keyboard: false }).addTo(site).bindTooltip(finishLabel, { direction: 'top' });
+      if (totalKm >= 15) {
+        for (const m of marks) {
+          if (m.km >= totalKm - 1) continue;
+          L.marker([m.lat, m.lon], { icon: dot('#e11d48', String(m.km), 20), interactive: false, keyboard: false }).addTo(site);
+        }
+      }
+    }
+    // Use the union of both plans so switching sides does not change the framing.
+    const bounds = redraw ? L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear([...redraw.before.features, ...redraw.after.features], longitude) } as never).getBounds() : site.getBounds();
+    // Frame once per outline and chosen plan: flipping before/after keeps the viewer's view.
+    const frame = `${redraw?.id ?? ''}`;
+    if (bounds.isValid() && framed.current !== frame) {
+      framed.current = frame;
+      map.fitBounds(redraw ? bounds : bounds.extend([latitude, longitude]), { padding: [24, 24], maxZoom: 17 });
+    }
+    return () => {
+      site.remove();
+    };
+  }, [map, siteShape, redraw, districtView, longitude, latitude, startLabel, finishLabel, loopLabel]);
 
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.

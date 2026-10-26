@@ -620,6 +620,7 @@ const ja: Messages = {
     undo: '元に戻す',
     notInterestedFailed: '保存できませんでした。もう一度お試しください。',
     toMap: 'マップへ',
+    loadingOutline: 'マップの輪郭を読み込み中…',
     toTimeline: 'タイムラインへ',
     posted: '投稿 <time></time>',
     openSource: '出典を開く',

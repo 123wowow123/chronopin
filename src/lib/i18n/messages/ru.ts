@@ -629,6 +629,7 @@ const ru: Messages = {
     undo: 'Отменить',
     notInterestedFailed: 'Не удалось сохранить. Попробуйте ещё раз.',
     toMap: 'На карту',
+    loadingOutline: 'Загрузка контура на карте…',
     toTimeline: 'В ленту',
     posted: 'Опубликовано <time></time>',
     openSource: 'Открыть источник',

@@ -620,6 +620,7 @@ const ko: Messages = {
     undo: '실행 취소',
     notInterestedFailed: '저장하지 못했습니다. 다시 시도해 주세요.',
     toMap: '지도로',
+    loadingOutline: '지도 윤곽 불러오는 중…',
     toTimeline: '타임라인으로',
     posted: '게시 <time></time>',
     openSource: '출처 열기',

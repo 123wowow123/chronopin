@@ -623,6 +623,7 @@ const hi: Messages = {
     undo: 'पूर्ववत करें',
     notInterestedFailed: 'सेव नहीं हो सका। फिर से कोशिश करें।',
     toMap: 'मैप पर जाएं',
+    loadingOutline: 'मैप की रूपरेखा लोड हो रही है…',
     toTimeline: 'टाइमलाइन पर जाएं',
     posted: 'पोस्ट किया गया <time></time>',
     openSource: 'सोर्स खोलें',

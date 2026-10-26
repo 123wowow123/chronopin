@@ -1,15 +1,15 @@
 {
   "checkedAt": "2026-10-25",
   "usableForBoundaryImport": false,
-  "productionWrites": 0,
+  "productionWrites": 1,
   "resolvedCountryGaps": 0,
   "remainingCountryGaps": 5,
   "productionReadback": {
-    "maps": 74,
-    "defaultFeatures": 10245,
+    "maps": 75,
+    "defaultFeatures": 10257,
     "evidence": {
       "path": ".scrape/boundaries/gap-resolution-all-saved-verified.json",
-      "sha256": "63e43ed9872a4fe3f11eb75a74872ad35e36293d254e78718a4579714bc537a2"
+      "sha256": "88ab01eae1a5a0f3f41dac159e829d81c2dc54e819a7b5e94d520c9e43bfec18"
     }
   },
   "countries": [
@@ -84,7 +84,7 @@
         },
         "validInputFeatures": 20,
         "validUnions": 2,
-        "overlapArea": 0.0,
+        "overlapArea": 0,
         "compositionEvidence": "Indexed primary INEC 2015 Info Kit; full PDF download not obtained this pass. Current-plan and geographic validation still required.",
         "evidence": {
           "path": ".scrape/boundaries/nigeria-portharcourt-candidate-unions.geojson",
@@ -201,9 +201,22 @@
           "sha256": "90dcba771d633f7bf663ff11faacece56f86b93bf1a66ab1ae26e3cf14b50116"
         }
       ],
-      "nextRequired": "Rabat Hassan administrative-annex geometry, complete commune/province crosswalk and confirmation of the legal composition applicable to the 2026 pin.",
-      "status": "research_gap",
-      "usableForBoundaryImport": false
+      "nextRequired": "The 12 regional-list areas are published. Still need the complete 92-local-seat layer, including Rabat Hassan annex geometry and validated commune crosswalk.",
+      "status": "verified_partial",
+      "usableForBoundaryImport": false,
+      "publishedRegionalManifest": "scripts/boundaries/backfill-morocco-regional-2026-10-25.prod.json"
     }
-  ]
+  ],
+  "followUp": {
+    "date": "2026-10-25",
+    "productionGeometryWrites": 1,
+    "partialCountryCoverage": {
+      "Morocco": {
+        "regionalList": 12,
+        "local": 0
+      }
+    },
+    "remainingCompleteCountryGaps": 5,
+    "nigeriaRacCatalog": "scripts/boundaries/research-nigeria-rac-2026-10-25.json"
+  }
 }

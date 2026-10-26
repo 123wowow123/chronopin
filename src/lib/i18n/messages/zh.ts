@@ -621,6 +621,7 @@ const zh: Messages = {
     undo: '撤销',
     notInterestedFailed: '无法保存，请重试。',
     toMap: '去地图',
+    loadingOutline: '正在加载地图轮廓…',
     toTimeline: '去时间线',
     posted: '发布于 <time></time>',
     openSource: '打开来源',

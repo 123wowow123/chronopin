@@ -617,6 +617,7 @@ const th: Messages = {
     undo: 'เลิกทำ',
     notInterestedFailed: 'บันทึกไม่สำเร็จ โปรดลองอีกครั้ง',
     toMap: 'ไปที่แผนที่',
+    loadingOutline: 'กำลังโหลดเส้นขอบแผนที่…',
     toTimeline: 'ไปที่ไทม์ไลน์',
     posted: 'โพสต์เมื่อ <time></time>',
     openSource: 'เปิดแหล่งที่มา',

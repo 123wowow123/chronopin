@@ -44,6 +44,8 @@ import { TradesSection } from '@/components/person/TradesSection';
 import type { TradeRow, TradeSummary } from '@/lib/trades';
 import { CampaignSection } from '@/components/person/CampaignSection';
 import type { CampaignCycle } from '@/lib/campaigns';
+import { HoldingsSection } from '@/components/person/HoldingsSection';
+import type { HoldingsSnapshot } from '@/lib/holdings';
 
 const PILL = 'inline-flex items-center rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-ink ring-1 ring-inset ring-line';
 const TAG = 'inline-flex items-center rounded-md bg-raised px-1.5 py-0.5 text-[11px] font-medium text-muted';
@@ -57,6 +59,7 @@ export function PersonView({
   pins,
   trades,
   tradeSummary,
+  holdings = [],
   committees = [],
   campaigns,
   timeZone,
@@ -67,6 +70,7 @@ export function PersonView({
   pins: PinJson[];
   trades: TradeRow[];
   tradeSummary?: TradeSummary;
+  holdings?: HoldingsSnapshot[];
   committees?: Seat[];
   campaigns: CampaignCycle[];
   timeZone: string;
@@ -126,6 +130,7 @@ export function PersonView({
   const nav = [
     { id: 'phases', label: t('person.octagon.title') },
     years.length ? { id: 'earnings', label: t('person.earnings') } : null,
+    { id: 'holdings', label: t('person.holdings.title') },
     trades.length ? { id: 'trades', label: t('person.trades.title') } : null,
     committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
     campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
@@ -307,6 +312,7 @@ export function PersonView({
           </section>
         ) : null}
 
+        <HoldingsSection portfolios={holdings} today={todayKey} t={t} />
         {trades.length ? <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} /> : null}
 
         {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}

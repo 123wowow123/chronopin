@@ -8,6 +8,8 @@ tags: [scraping, maps, geojson, wildfire, elections]
 
 # Boundary shapes on pin maps
 
+Current production coverage is **75 mapped pins and 10,257 default features**, including Morocco's explicitly partial 12-regional-list layer. Five countries still lack complete coverage; Morocco's 92 local seats remain unmapped. See [the country-gap follow-up](boundaries-country-gaps-2026-10-25.md). The 11 redraw comparisons and 401 alternate-plan features are unchanged.
+
 `PinSiteShape` supports `wildfire` (red translucent fill) and `district` (teal translucent fill, dashed border), underneath buildings and other parts. Both have key labels in all 16 languages. No schema migration is needed: the existing table stores a GeoJSON FeatureCollection. Polygon holes and MultiPolygon islands are preserved. Route dots and distance markers still apply only to `route` lines.
 
 Each imported boundary has its own `name`, `source` and HTTPS `sourceUrl` properties. Wildfires also carry the source's `observedAt` (ISO year, month, day or UTC timestamp, preserving published precision); districts carry a `vintage` describing the plan and applicable election. The key displays these beside the corresponding source link. A snapshot is not a live fire feed, evacuation order or election result choropleth.

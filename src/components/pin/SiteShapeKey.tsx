@@ -7,9 +7,11 @@ import Anchor from '@/components/ui/Anchor';
 export function SiteShapeKey({ shape, t }: { shape: PinSiteShapeJson; t: Translator }) {
   const counts = new Map<string, number>();
   for (const f of shape.geojson.features) counts.set(f.properties.kind, (counts.get(f.properties.kind) ?? 0) + 1);
-  const boundaries = [...new Map(shape.geojson.features
+  const credited = shape.geojson.features
     .filter((f) => f.properties.kind === 'wildfire' || f.properties.kind === 'district')
-    .map((f) => [JSON.stringify(f.properties), f.properties])).values()];
+    .map((f) => [JSON.stringify(f.properties), f.properties] as const);
+  // A bare kind is a repeat whose credit the page left out (simplifyForDisplay).
+  const boundaries = [...new Map(credited).values()].filter((b, _, all) => Object.keys(b).length > 1 || !all.some((o) => o !== b && o.kind === b.kind && Object.keys(o).length > 1));
   const facts = routeFacts(shape);
   const number = new Intl.NumberFormat(t.locale, { maximumFractionDigits: 2 });
   const profile = facts?.profile;
