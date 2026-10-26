@@ -168,30 +168,54 @@ function simplifyPolygon(rings: Ring[], tolerance: number): Ring[] {
   return out;
 }
 
-// The shape as the page map draws it. A wildfire perimeter can carry millions of
-// vertices (Black Summer: 11 MB inside the page's HTML), far finer than a map a few
-// hundred pixels wide can show. Over the point budget, polygons are simplified with
-// a growing tolerance until they fit; the stored geometry is never changed.
-export const SITE_SHAPE_POINT_BUDGET = 30000;
-export function simplifyForDisplay(shape: PinSiteShapeJson, budget = SITE_SHAPE_POINT_BUDGET): PinSiteShapeJson {
-  if (shape.geojson.features.reduce((n, f) => n + countPoints(f.geometry.coordinates), 0) <= budget) return shape;
+// The shape as the page map draws it. A wildfire perimeter or a national district
+// map can carry millions of vertices (Black Summer: 26 MB inside the page's HTML),
+// far finer than a map a few hundred pixels wide can show. Over the point budget,
+// polygons are simplified with a growing tolerance until they fit; the stored
+// geometry is never changed.
+export const SITE_SHAPE_POINT_BUDGET = 60000;
+
+function bboxRing(rings: Ring[]): Ring {
+  const xs = rings.flatMap((r) => r.map((p) => p[0]));
+  const ys = rings.flatMap((r) => r.map((p) => p[1]));
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  return [[x0, y0], [x1, y0], [x1, y1], [x0, y1], [x0, y0]];
+}
+
+function simplifyFeatures(features: SiteFeature[], budget: number): SiteFeature[] {
+  const total = (list: SiteFeature[]) => list.reduce((n, f) => n + countPoints(f.geometry.coordinates), 0);
+  if (total(features) <= budget) return features;
+  const round = (c: unknown) => (typeof c === 'number' ? Math.round(c * 1e5) / 1e5 : Array.isArray(c) ? c.map(round) : c);
   const draw = (tolerance: number): SiteFeature[] =>
-    shape.geojson.features.map((feature) => {
+    features.map((feature) => {
       const { type, coordinates } = feature.geometry;
       if (type === 'Polygon') {
         const rings = simplifyPolygon(coordinates as Ring[], tolerance);
-        return rings.length ? { ...feature, geometry: { type, coordinates: rings } } : feature;
+        return { ...feature, geometry: { type, coordinates: round(rings.length ? rings : [bboxRing(coordinates as Ring[])]) } };
       }
       if (type === 'MultiPolygon') {
         const polygons = (coordinates as Ring[][]).map((p) => simplifyPolygon(p, tolerance)).filter((p) => p.length);
-        return polygons.length ? { ...feature, geometry: { type, coordinates: polygons } } : feature;
+        const kept = polygons.length ? polygons : [[bboxRing((coordinates as Ring[][]).flat())]];
+        return { ...feature, geometry: { type, coordinates: round(kept) } };
       }
       return feature;
     });
-  let features = shape.geojson.features;
-  for (let tolerance = 0.0002; tolerance <= 0.02; tolerance *= 2) {
-    features = draw(tolerance);
-    if (features.reduce((n, f) => n + countPoints(f.geometry.coordinates), 0) <= budget) break;
+  let out = features;
+  for (let tolerance = 0.0002; tolerance <= 0.05; tolerance *= 2) {
+    out = draw(tolerance);
+    if (total(out) <= budget) break;
   }
-  return { ...shape, geojson: { ...shape.geojson, features } };
+  return out;
+}
+
+export function simplifyForDisplay(shape: PinSiteShapeJson, budget = SITE_SHAPE_POINT_BUDGET): PinSiteShapeJson {
+  const { features, districtRedraws } = shape.geojson;
+  const simple = simplifyFeatures(features, budget);
+  const redraws = districtRedraws?.map((redraw) => ({
+    ...redraw,
+    before: { ...redraw.before, features: simplifyFeatures(redraw.before.features, budget) },
+    after: { ...redraw.after, features: simplifyFeatures(redraw.after.features, budget) },
+  }));
+  if (simple === features && (!redraws || redraws.every((r, i) => r.before.features === districtRedraws![i].before.features && r.after.features === districtRedraws![i].after.features))) return shape;
+  return { ...shape, geojson: { ...shape.geojson, features: simple, ...(redraws ? { districtRedraws: redraws } : {}) } };
 }
