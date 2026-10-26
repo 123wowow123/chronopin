@@ -203,6 +203,21 @@ async function adminToken(why: string): Promise<string> {
     : await signToken(admin.id);
 }
 
+// Review maintenance uses the native pin endpoints, as admin, without changing
+// the original author. Local research ids must be resolved by sourceUrl before
+// calling this against production.
+export async function reviewResearchRequest<T>(method: 'GET' | 'PUT', path: string, body?: unknown, production = false): Promise<T> {
+  if (!/^\/api\/pins\/\d+\/(?:taste|car-performance|gas-car-performance|aircraft-performance|llm-performance|video-performance|hotel|dining|critic-reviews)$/.test(path)) throw new Error('Not a pin review endpoint');
+  const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
+  if (!admin) throw new Error('No admin account available for review research');
+  const base = production ? prodBase() : apiBase();
+  if (!base) throw new Error('Production is not configured');
+  const token = production
+    ? await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET))
+    : await signToken(admin.id);
+  return call<T>(method, path, { token, body, base });
+}
+
 // An industry forecast row, or a replacement of its survey lines, on
 // production's admin endpoint (the industryForecasts task). Nothing happens
 // unless the run writes to production.

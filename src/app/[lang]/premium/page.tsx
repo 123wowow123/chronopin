@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { connection } from 'next/server';
 import Link from '@/components/ui/Link';
 import { getUser } from '@/server/auth';
 import PremiumSubscription from '@/server/model/premiumSubscription';
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 
 // The landing page the "Go premium" prompts on /person pages point to.
 export default async function PremiumPage({ searchParams }: { searchParams: Promise<{ paid?: string }> }) {
+  await connection();
   const [query, user, traders] = await Promise.all([searchParams, getUser(), TraderPosition.counts()]);
   const people = new Set((await db.query<{ name: string }>(`SELECT "name"::text FROM "Person" WHERE "name"::text = ANY($1)`, [traders.map((t) => t.traderName)])).map((p) => p.name));
   const plan = user ? await PremiumSubscription.status(user.id) : null;

@@ -528,7 +528,6 @@ https://search.google.com/search-console?utm_source=about-page&resource_id=sc-do
 Add prod translations for all pins without translation or outdated translation.  Add in the pin wiki that translations was done with this model for tracking
 
 
-Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25, 2026)
 
 
 
