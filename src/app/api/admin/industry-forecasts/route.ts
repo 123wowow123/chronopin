@@ -1,8 +1,10 @@
 import type { NextRequest } from 'next/server';
+import { revalidateTag } from 'next/cache';
 import { forecastProblem, type ForecastLine } from '@/lib/industryForecast';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
 import { saveForecastSnapshot, saveIndustryForecast } from '@/server/model/industryForecast';
+import { TAGS } from '@/server/services/cache';
 
 // Saves one industry forecast row (IndustryForecast, 0216) so the jobs' local
 // edit can reach production. Admin only. Body: a row (see forecastProblem),
@@ -18,5 +20,6 @@ export const PUT = route(async (request: NextRequest) => {
   const checked = forecastProblem(body);
   if (typeof checked === 'string') throw new HttpError(400, '', { message: checked });
   await saveIndustryForecast(checked);
+  revalidateTag(TAGS.industryForecasts, { expire: 0 });
   return json({ saved: true });
 });

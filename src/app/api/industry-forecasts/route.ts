@@ -10,6 +10,6 @@ export const GET = route(async (request: NextRequest) => {
     .split(',')
     .map((s) => s.trim())
     .filter((s) => /^[a-z0-9-]{1,80}$/.test(s))
-    .slice(0, 12);
+    .slice(0, 100);
   return json(await forecastsBySlugs(slugs), 200, { 'Cache-Control': 'public, max-age=300' });
 });

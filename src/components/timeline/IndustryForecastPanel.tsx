@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { RefineLink } from '@/components/pin/RefineLink';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
@@ -180,7 +181,11 @@ function Forecast({ forecast }: { forecast: IndustryForecastJson }) {
   const modal = useRef<HTMLDialogElement>(null);
   const caption = (
     <>
-      <span className="text-xs font-bold tracking-wider text-subtle uppercase">{t('pin.industry.heading')} · {forecast.industry}</span>
+      <span className="text-xs font-bold tracking-wider text-subtle uppercase">{t('pin.industry.heading')} ·{' '}
+        <RefineLink field="tag" value={forecast.industry} className="hover:text-ink hover:underline">
+          {forecast.industry}
+        </RefineLink>
+      </span>
       <span className="mt-0.5 block font-semibold text-ink">{forecast.title}</span>
     </>
   );

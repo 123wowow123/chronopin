@@ -6,6 +6,7 @@ import { DEFAULT_MULTILINGUAL, type OtherLocale } from '@/lib/multilingual';
 import { getMultilingual } from '../model/appSetting';
 
 export const TAGS = {
+  industryForecasts: 'industry-forecasts',
   restaurantContent: 'restaurant-content',
   // The /person pages and their index (src/server/services/people.ts).
   people: 'people',

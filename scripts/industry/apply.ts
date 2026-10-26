@@ -31,7 +31,7 @@ const btos = existsSync('scripts/industry/btos.json') ? JSON.parse(readFileSync(
 for (const r of rows) {
   const checked = forecastProblem({ ...r, prefix: r.prefix ?? '', suffix: r.suffix ?? '', projection: r.projection ?? null, earlier: r.earlier ?? [], note: r.note ?? null });
   if (typeof checked === 'string') throw new Error(`${r.slug}: ${checked}`);
-  await saveIndustryForecast({ ...checked, live: (r.live ?? []) as never }, r.slug === 'us-ai-adoption' ? btos : []);
+  await saveIndustryForecast({ ...checked, live: (r.live ?? []) as never }, r.slug === 'us-ai-adoption' ? btos : undefined);
   console.log('saved', r.slug);
 }
 process.exit(0);

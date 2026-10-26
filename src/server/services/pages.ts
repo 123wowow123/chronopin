@@ -486,7 +486,7 @@ export async function searchPage(
 async function cachedSearch(query: string, view: SearchView, locale: Locale) {
   'use cache';
   cacheLife('minutes');
-  cacheTag(TAGS.timeline);
+  cacheTag(TAGS.timeline, TAGS.industryForecasts);
   const page = withoutViewerState(await runSearch(query, NO_VIEWER, false, view));
   await localizePins(page.pins, locale);
   return page;
@@ -582,7 +582,7 @@ export async function pinComments(id: number) {
 export async function pinIndustries(id: number, names: string[]) {
   'use cache';
   cacheLife('hours');
-  cacheTag(TAGS.pin(id));
+  cacheTag(TAGS.pin(id), TAGS.industryForecasts);
   return forecastSlugsForNames(names);
 }
 
