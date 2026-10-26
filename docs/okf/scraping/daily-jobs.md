@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -999,6 +999,44 @@ by hand.
 is neither awaiting nor tagged; the tool does not guess. When the arena
 returns nothing the tool errors rather than reporting every pin as awaiting.
 
+
+### horoscopes
+
+**Reads** `horoscopes_needed`: for every user with a birthday, today's and
+tomorrow's (UTC days) **transits** - the planets' positions
+([transits.ts](../../../src/lib/transits.ts), `astronomy-engine`, tropical
+zodiac) against the natal chart - and what has no reading yet: `transits`, each
+distinct set of aspects (`key`, `aspects`, `day`, `users`), and `signs`, the
+users with no aspect in orb that day, who get their sun sign's reading.
+**Does** writes each missing reading itself and saves it with `save_horoscope`
+(`transits` = the key exactly as given, or `sign`). Owner, 2026-10-26: "daily
+horoscope on the 6am/pm job for all users with birthdays entered to save on
+site LLM credits" and "make it personal like astro.com". The menu row under the
+weather ([NotificationBell.tsx](../../../src/components/nav/NotificationBell.tsx),
+`GET /api/horoscope/me`) only reads `TransitHoroscope` / `DailyHoroscope`
+(0221, 0222); the site never calls an LLM, so a user with no stored reading
+sees their sign without text. Two days are written because the site reads the
+**UTC** day and the 18:00 Pacific run already falls on the next one.
+**The chart.** A birthday alone gives the planets at noon UTC on that day
+(Sun-Pluto; the Moon moves 13 degrees a day and is left out). A birth time and
+place (`UserBirth`, 0222, profile > Preferences) cast the exact moment, adding
+the natal Moon and the Ascendant. Aspects: conjunction, square, trine,
+opposition within 1 degree, sextile within 0.5; the strongest three (slow
+planets weigh most) form the key, so everyone with the same sky shares one
+reading. Verified against astro.com: a 15 Dec 1984 chart on 27 Oct 2026 has the
+Sun conjunct natal Pluto, exact that afternoon.
+**Writing.** 2-4 sentences, under 90 words, original wording (never copy a
+horoscope site - astro.com's interpretations are licensed), grounded in the
+aspects (what the transiting planet stirs in that part of the chart), warm
+second person, no medical, financial, legal or fear-based claims, no event
+predictions, no dates, never naming the user. A sign reading is a mood, one area
+to lean into and one small thing to try. Never interchangeable with another
+entry's text.
+**Prod.** A run that writes locally pushes the rows to production through
+`/api/admin/db/TransitHoroscope?upsert=1` and `/api/admin/db/DailyHoroscope?upsert=1`
+(keys `transits,day` / `sign,day`) so www.chronopin.com has them; verify with
+a signed-in `GET /api/horoscope/me` there. Note prod's users' charts differ from
+local's, so keys must be computed against prod's `horoscopes_needed`.
 
 ### modelRubrics
 

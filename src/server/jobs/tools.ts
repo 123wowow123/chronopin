@@ -21,7 +21,9 @@ import { inspectImage } from '../image';
 import { hashDistance, NEAR_DUPLICATE_DISTANCE } from '../imageHash';
 import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
+import DailyHoroscope from '../model/dailyHoroscope';
 import HolidayAd from '../model/holidayAd';
+import { dayKeyIn } from '@/lib/format';
 import PinAd from '../model/pinAd';
 import ProductAd from '../model/productAd';
 import { stockMovieMerchandise } from '../movieMerchandise';
@@ -815,6 +817,33 @@ export const TOOLS: JobTool[] = [
       const result = await HolidayAd.add(String(input.holiday), String(input.url));
       if ('added' in result) await act(ctx, { tool: 'add_holiday_ad', title: result.added.title, detail: `${input.holiday} ${result.added.tier}: ${input.reason} ($${result.added.price}, ${result.added.rating} stars / ${result.added.reviewCount} reviews)` });
       return result;
+    },
+  },
+  {
+    name: 'horoscopes_needed',
+    description:
+      "The horoscopes task's first call. Works out each user's transits (the planets' positions today and tomorrow, UTC days, against the natal chart from their birthday - and their birth time and place when they gave them) and returns what still has no reading: `transits` - each distinct set of aspects (`key`, exactly as to be saved; `aspects`, readable) with its `day` and how many `users` have it - and `signs`, the users with nothing in aspect that day, who get their sun sign's reading instead. Write each one yourself and save it with save_horoscope; the site never calls an LLM for these. Biggest groups first. Returns days, transits, signs and totalMissing.",
+    input_schema: obj(),
+    run: async () => {
+      const now = Date.now();
+      const days = [dayKeyIn(now, 'UTC'), dayKeyIn(now + 86_400_000, 'UTC')];
+      const needed = await DailyHoroscope.needed(days);
+      return { days, ...needed, totalMissing: needed.transits.length + needed.signs.length };
+    },
+  },
+  {
+    name: 'save_horoscope',
+    description:
+      "Saves one reading for one UTC day, replacing any: pass `transits` (a key exactly as horoscopes_needed gave it) for a set of aspects, or `sign` (lowercase, e.g. sagittarius) for a sun sign. 2-4 sentences, under 90 words, plain warm second person. For a set of transits, ground it in those aspects - what the planet in aspect to that part of the chart stirs up (Sun conjunct Pluto: intensity, repair, taking back control) - without jargon beyond naming the main aspect once; for a sign, a mood, one area of life to lean into and one small thing to try. Specific, never interchangeable with another entry's text; no medical, financial, legal or fear-based claims, no predictions of events, no dates, never naming the user. Original wording only: do not copy any horoscope site.",
+    input_schema: obj({ transits: str('A transits key from horoscopes_needed'), sign: str('Lowercase sun sign, instead of transits'), day: str('UTC day, YYYY-MM-DD'), text: str('The reading') }, ['day', 'text']),
+    run: async (input, ctx) => {
+      const day = String(input.day);
+      const text = String(input.text);
+      const key = typeof input.transits === 'string' && input.transits.trim() ? input.transits : null;
+      const sign = typeof input.sign === 'string' ? input.sign.toLowerCase() : '';
+      const saved = key ? await DailyHoroscope.saveTransit(key, day, text) : await DailyHoroscope.save(sign, day, text);
+      if (saved) await act(ctx, { tool: 'save_horoscope', detail: `${key ?? sign} ${day}`.slice(0, 120) });
+      return { saved };
     },
   },
   {

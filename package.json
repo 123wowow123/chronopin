@@ -53,7 +53,7 @@
     "gov:wiki": "tsx scripts/people/govWiki.ts",
     "companies:wiki": "tsx scripts/people/companyWiki.ts",
     "people:committees": "tsx scripts/people/committees.ts",
-    "people:terms":"tsx scripts/people/termsFix.ts",
+    "people:terms": "tsx scripts/people/termsFix.ts",
     "people:oge-transcribed": "tsx scripts/people/ogeTranscribed.ts",
     "people:campaigns": "tsx scripts/people/campaigns.ts",
     "people:wiki": "tsx scripts/people/wiki.ts",
@@ -159,6 +159,7 @@
     "@editorjs/image": "^2.10.3",
     "@editorjs/list": "^1.10.0",
     "@sotaproject/strikethrough": "^1.0.1",
+    "astronomy-engine": "^2.1.19",
     "date-fns": "^4.4.0",
     "date-holidays": "^3.36.1",
     "editorjs-parser": "^1.5.3",
@@ -178,6 +179,7 @@
     "server-only": "^0.0.1",
     "sharp": "^0.35.5",
     "simple-icons": "^16.34.0",
+    "tz-lookup": "^6.1.25",
     "web-push": "^3.6.7"
   },
   "devDependencies": {
@@ -191,6 +193,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.1",
+    "@types/tz-lookup": "^6.1.2",
     "@types/web-push": "^3.6.4",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9.39.5",

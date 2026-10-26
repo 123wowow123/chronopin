@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ACTIVITY_CITIES, activitiesForTrip, activitiesNearCity, activityCity, isActiveOn, localDay, monthInWindow, seasonOfMonth, windowEnd, windowStart, type ActivityCatalogItem } from './activities';
 import catalog from '../server/data/activities.json';
 import { activityProblems } from './activityCatalog';
+import tripResearch from '../../scripts/activities/tripResearch.json';
 
 describe('activity seasons', () => {
   it('only recommends explicit trip lengths, independently of event duration', () => {
@@ -12,13 +13,36 @@ describe('activity seasons', () => {
     expect(activitiesForTrip([day, both, unclassified], 2)).toEqual([both]);
   });
 
-  it('has valid day-trip and two-day suggestions within every guide’s default radius', () => {
+  it('has at least 30 distinct day-trip and two-day suggestions within every guide’s default radius', () => {
     const pins = (catalog as ActivityCatalogItem[]).map((activity) => ({ activity }));
     expect(pins.flatMap((pin) => activityProblems(pin.activity))).toEqual([]);
     for (const city of ACTIVITY_CITIES) {
       const nearby = activitiesNearCity(pins, city);
-      expect(activitiesForTrip(nearby, 1).length, `${city.slug} day trips`).toBeGreaterThan(0);
-      expect(activitiesForTrip(nearby, 2).length, `${city.slug} 2-day trips`).toBeGreaterThan(0);
+      expect(activitiesForTrip(nearby, 1).length, `${city.slug} day trips`).toBeGreaterThanOrEqual(30);
+      expect(activitiesForTrip(nearby, 2).length, `${city.slug} 2-day trips`).toBeGreaterThanOrEqual(30);
+    }
+  });
+
+  it('counts seasonal variations of a destination once per trip tab', () => {
+    const winter = { activity: { tripDays: [1, 2] as (1 | 2)[], tripDestinationKey: 'same-park' } };
+    const summer = { activity: { tripDays: [1, 2] as (1 | 2)[], tripDestinationKey: 'same-park' } };
+    const other = { activity: { tripDays: [2] as (1 | 2)[], tripDestinationKey: 'other-park' } };
+    expect(activitiesForTrip([winter, summer, other], 1)).toEqual([winter]);
+    expect(activitiesForTrip([winter, summer, other], 2)).toEqual([winter, other]);
+  });
+
+  it('backs every trip recommendation with recorded source evidence and planning notes', () => {
+    const sources = new Map(tripResearch.map((entry) => [entry.key, entry]));
+    for (const item of catalog as ActivityCatalogItem[]) {
+      if (!item.tripDays?.length) continue;
+      const source = sources.get(`${item.citySlug}/${item.slug}`);
+      expect(source, `${item.citySlug}/${item.slug}`).toBeDefined();
+      expect(source?.url).toMatch(/^https:\/\//);
+      expect(source?.title.trim().length).toBeGreaterThan(0);
+      expect(source?.quote.trim().length).toBeGreaterThan(0);
+      expect(source?.tripDays).toEqual(item.tripDays);
+      if (item.tripDays.includes(1)) expect(item.tripPlan?.day?.trim().length).toBeGreaterThan(0);
+      if (item.tripDays.includes(2)) expect(item.tripPlan?.overnight?.trim().length).toBeGreaterThan(0);
     }
   });
   it('includes nearby outings assigned to another city and excludes distant ones', () => {

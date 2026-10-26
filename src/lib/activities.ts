@@ -48,10 +48,19 @@ export type ActivityCatalogItem = {
   checkedAt: string;
   // Editorial planning suggestions, not operator tour durations or travel times.
   tripDays?: (1 | 2)[];
+  tripDestinationKey?: string;
+  tripPlan?: { day?: string; overnight?: string };
 };
 
-export function activitiesForTrip<T extends { activity: Pick<ActivityCatalogItem, 'tripDays'> }>(pins: readonly T[], days: 1 | 2): T[] {
-  return pins.filter((pin) => pin.activity.tripDays?.includes(days));
+export function activitiesForTrip<T extends { activity: Pick<ActivityCatalogItem, 'tripDays' | 'tripDestinationKey'> }>(pins: readonly T[], days: 1 | 2): T[] {
+  const seen = new Set<string>();
+  return pins.filter(({ activity }) => {
+    if (!activity.tripDays?.includes(days)) return false;
+    if (!activity.tripDestinationKey) return true;
+    if (seen.has(activity.tripDestinationKey)) return false;
+    seen.add(activity.tripDestinationKey);
+    return true;
+  });
 }
 
 // Cities ordered by city-center longitude, west to east.

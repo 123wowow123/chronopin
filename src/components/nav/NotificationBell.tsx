@@ -15,6 +15,8 @@ import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import { term } from '@/lib/searchTerms';
+import { useSession } from '@/lib/client/session';
+import { sunSign } from '@/lib/horoscope';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
 
@@ -773,6 +775,52 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
   );
 }
 
+// The signed-in viewer's sun sign, read from the birthday on the account, under
+// the weather. Signed out it is nothing; with no birthday it asks for one.
+function HoroscopeRow({ className = '', onNavigate }: { className?: string; onNavigate?: () => void }) {
+  const { user } = useSession();
+  const sign = user ? sunSign(user.birthday) : null;
+  const slug = sign?.slug;
+  const [reading, setReading] = useState<{ slug: string; text: string; aspect: string | null } | null>(null);
+  useEffect(() => {
+    if (!slug) return;
+    let live = true;
+    fetch('/api/horoscope/me', { credentials: 'same-origin' })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((body: { text?: string | null; personal?: boolean; transits?: { planet: string; aspect: string; natal: string }[] } | null) => {
+        if (!live || !body?.text) return;
+        const top = body.personal ? body.transits?.[0] : null;
+        setReading({ slug, text: body.text, aspect: top ? `${top.planet} ${top.aspect} ${top.natal}` : null });
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [slug]);
+  if (!user) return null;
+  const base = `flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-raised hover:no-underline ${className}`;
+  if (!sign) {
+    return (
+      <Link href="/profile" onClick={onNavigate} className={`${base} text-muted hover:text-ink`}>
+        <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+          <Icon name="sparkle" className="size-4" />
+        </span>
+        Add your birthday for your daily horoscope
+      </Link>
+    );
+  }
+  return (
+    <div className={`flex items-start gap-3 px-4 py-2.5 text-sm text-ink ${className}`}>
+      <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-lg text-accent">{sign.symbol}</span>
+      <div className="min-w-0 flex-1">
+        <div className="font-semibold">{sign.name} <span className="font-normal text-muted">· Horoscope</span></div>
+        <div className="truncate text-xs text-subtle">{reading?.aspect ? `${reading.aspect} · ` : ''}{sign.element} · {sign.range}</div>
+        {reading?.slug === sign.slug ? <p className="mt-1.5 text-sm leading-snug text-muted">{reading.text}</p> : null}
+      </div>
+    </div>
+  );
+}
+
 // The weather beside the bell rather than over it: the conditions with the
 // degrees right under them, flush on one left edge. It stands next to the
 // bell, not on it, so the bell itself stays plain to read.
@@ -873,6 +921,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
       {open ? (
         <div className="floating absolute end-0 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-80 flex-col overflow-hidden">
           <LocalWeatherRow className="shrink-0" />
+          <HoroscopeRow className="shrink-0 border-t border-line" onNavigate={() => setOpen(false)} />
           {/* Only what is under the weather row scrolls, as under the bell's heading. */}
           <div className="min-h-0 overflow-y-auto">
           <div className="peer border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
@@ -974,6 +1023,7 @@ export function NotificationBell({ className = '' }: { className?: string }) {
       {open ? (
         <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
           <LocalWeatherRow className="border-b border-line" />
+          <HoroscopeRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <Link href="/notifications" onClick={() => setOpen(false)} className="block border-b border-line px-4 py-2.5 text-sm font-semibold text-ink hover:bg-raised hover:no-underline">
             {t('notifications.title')}
           </Link>

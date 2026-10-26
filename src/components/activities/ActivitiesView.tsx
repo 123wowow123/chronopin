@@ -355,10 +355,17 @@ export function ActivitiesView({
                       <h3 dir={pinTextDir(pin)}>
                         <Link href={pinPath(pin)} className="text-[var(--text)] hover:text-[var(--green)]">{a.name}</Link>
                       </h3>
-                      <p className={styles.cardDescription} dir={pinTextDir(pin)}>{a.description}</p>
+                      {(!tripTab || (tripTab === 'day-trips' ? a.tripPlan?.day : a.tripPlan?.overnight) !== a.description) && (
+                        <p className={styles.cardDescription} dir={pinTextDir(pin)}>{a.description}</p>
+                      )}
                       {a.tripDays?.length ? (
                         <p className="mb-2 text-xs font-semibold text-[var(--green)]">
                           Suggested trip: {tripTab === 'two-day-trips' ? '2 days · 1 night' : tripTab === 'day-trips' ? '1 day' : a.tripDays.map((days) => days === 1 ? '1 day' : '2 days · 1 night').join(' or ')}
+                        </p>
+                      ) : null}
+                      {tripTab && (tripTab === 'day-trips' ? a.tripPlan?.day : a.tripPlan?.overnight) ? (
+                        <p className="mb-3 text-xs leading-relaxed text-[var(--soft)]">
+                          {tripTab === 'day-trips' ? a.tripPlan?.day : a.tripPlan?.overnight}
                         </p>
                       ) : null}
                       <p className="mb-3 text-[11px] text-[var(--soft)]">
