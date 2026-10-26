@@ -1,0 +1,907 @@
+{
+  "checkedAt": "2026-10-26T21:13:31.440Z",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 19984,
+      "pinSourceUrl": "https://ko.wikipedia.org/wiki/%EC%B4%88%EC%BD%94%ED%8C%8C%EC%9D%B4",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://seoulscope.com/choco-pie/",
+          "quote": "Lotte's runs a touch sweeter.",
+          "title": "Orion vs. Lotte Choco Pie: What's Different & Which to Buy",
+          "publishedDate": "2026-08-08",
+          "sentiment": 0.1
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://seoulscope.com/choco-pie/",
+          "finalUrl": "https://seoulscope.com/choco-pie/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-08-08T06:59:29+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2026-08-08T06:59:29+00:00\"}"
+            },
+            {
+              "value": "2026-08-08T06:59:29+00:00",
+              "evidence": "{\"@type\":\"BlogPosting\",\"headline\":\"Orion vs. Lotte Choco Pie: What&#039;s Different &amp; Which to Buy\",\"datePublished\":\"2026-08-08T06:59:29+00:00\",\"url\":{\"@id\":\"https://seoulscope.com/choco-pie/#webpage\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20014,
+      "pinSourceUrl": "https://www.hobokengirl.com/oreo-day-hoboken-history/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://spoonuniversity.com/lifestyle/we-tried-15-oreo-flavors-and-ranked-them-from-worst-to-best",
+          "quote": "Despite all of the unique and surprising flavors, our #1 choice proves that nothing can ever top the Original Oreo.",
+          "title": "We Tried 15 Oreo Flavors and Ranked Them from Worst to Best",
+          "publishedDate": "2018-02-15",
+          "sentiment": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://spoonuniversity.com/lifestyle/we-tried-15-oreo-flavors-and-ranked-them-from-worst-to-best",
+          "finalUrl": "https://spoonuniversity.com/school/uc-irvine/we-tried-15-oreo-flavors-and-ranked-them-from-worst-to-best/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2018-02-15T12:00:51-05:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2018-02-15T12:00:51-05:00\"}"
+            },
+            {
+              "value": "2018-02-15T12:00:51-05:00",
+              "evidence": "{\"@type\":\"NewsArticle\",\"headline\":\"We Tried 15 Oreo Flavors and Ranked Them From Worst to Best\",\"datePublished\":\"2018-02-15T12:00:51-05:00\",\"url\":{\"@id\":\"https://spoonuniversity.com/school/uc-irvine/we-tried-15-oreo-flavors-and-ranked-them-from-worst-to-best/#webpage\"}}"
+            },
+            {
+              "value": "2018-02-15T17:00:51Z",
+              "evidence": "{\"@type\":\"NewsArticle\",\"headline\":\"We Tried 15 Oreo Flavors and Ranked Them from Worst to Best\",\"datePublished\":\"2018-02-15T17:00:51Z\",\"url\":\"http://spoonuniversity.com/school/uc-irvine/we-tried-15-oreo-flavors-and-ranked-them-from-worst-to-best/\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19872,
+      "pinSourceUrl": "https://cnevpost.com/2024/02/27/great-wall-tank-launches-tank-700-hi4-t/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/large-suvs/gwm-tank-700-hi4-t-2024-review/",
+          "quote": "Body roll's marked and control's hard work when steering between cones.",
+          "title": "GWM Tank 700 Hi4-T 2024 review - Chasing Cars",
+          "publishedDate": "2024-05-13",
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/large-suvs/gwm-tank-700-hi4-t-2024-review/",
+          "finalUrl": "https://www.chasingcars.com.au/reviews/large-suvs/gwm-tank-700-hi4-t-2024-review/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-05-13T00:00:00.000Z",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-05-13T00:00:00.000Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19878,
+      "pinSourceUrl": "https://cnevpost.com/2024/09/20/zeekr-launches-7x-suv/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/zeekr-7x-rwd-2026-review/",
+          "quote": "The Zeekr is smooth and languid; it does have reasonable handling capability, but its ride quality is tuned for comfort.",
+          "title": "Zeekr 7X RWD 2026 review - Chasing Cars",
+          "publishedDate": "2026-01-15",
+          "sentiment": 0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/zeekr-7x-rwd-2026-review/",
+          "finalUrl": "https://www.chasingcars.com.au/reviews/midsize-suvs/zeekr-7x-rwd-2026-review/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-01-15T00:00:00.000Z",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2026-01-15T00:00:00.000Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19877,
+      "pinSourceUrl": "https://carnewschina.com/2022/11/01/need-bling-in-your-family-life-get-a-zeekr-009-mpv-with-544-hp/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/vans/zeekr-009-2025-review/",
+          "quote": "Leave the car in Normal mode and with highest ride height it's buttery smooth.",
+          "title": "Zeekr 009 2025 review - Chasing Cars",
+          "publishedDate": "2025-03-18",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/vans/zeekr-009-2025-review/",
+          "finalUrl": "https://www.chasingcars.com.au/reviews/vans/zeekr-009-2025-review/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2025-03-18T00:00:00.000Z",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2025-03-18T00:00:00.000Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19981,
+      "pinSourceUrl": "https://goauto.com.au/future-models/lamborghini/revuelto/lamborghini-debuts-revuelto-hybrid-supercar/2023-04-03/90679.html",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.carthrottle.com/reviews/lamborghini/lamborghini-revuelto-review-looks-proper-lambo-it",
+          "quote": "The Revuelto is incredibly nimble for something weighing around 1,800kg with fluids",
+          "title": "Lamborghini Revuelto Review: Looks Like A Proper Lambo, But Is It?",
+          "publishedDate": "2024-08-18",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carthrottle.com/reviews/lamborghini/lamborghini-revuelto-review-looks-proper-lambo-it",
+          "finalUrl": "https://www.carthrottle.com/reviews/lamborghini/lamborghini-revuelto-review-looks-proper-lambo-it",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-08-18T10:00:00+01:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-08-18T10:00:00+01:00\"}"
+            },
+            {
+              "value": "2024-08-18T10:00:00+01:00",
+              "evidence": "{\"@type\":\"NewsArticle\",\"headline\":\"Lamborghini Revuelto Review: Looks Like A Proper Lambo, But Is It?\",\"datePublished\":\"2024-08-18T10:00:00+01:00\",\"url\":\"https://www.carthrottle.com/reviews/lamborghini/lamborghini-revuelto-review-looks-proper-lambo-it\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://electricvehicleweb.com/voyah-dream/",
+          "quote": "I could stretch out properly, and the cabin felt bright and open.",
+          "title": "First Look Review: Voyah's Dream MPV is a wake-up call for Mercedes & Lexus",
+          "publishedDate": "2026-07-02",
+          "sentiment": 0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://electricvehicleweb.com/voyah-dream/",
+          "finalUrl": "https://electricvehicleweb.com/voyah-dream/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-07-02T01:15:39+05:30",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2026-07-02T01:15:39+05:30\"}"
+            },
+            {
+              "value": "2026-07-02T01:15:39+05:30",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"First Look Review: Voyah&#039;s Dream MPV is a wake-up call for Mercedes &amp; Lexus\",\"datePublished\":\"2026-07-02T01:15:39+05:30\",\"url\":{\"@id\":\"https://electricvehicleweb.com/voyah-dream/#webpage\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "pinSourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.topgear.com/car-reviews/polestar/4/driving",
+          "quote": "The dual-motor version is better. Not just because power is actually doubled, but also because the adaptive damping system keeps the body under better control.",
+          "title": "Polestar 4 Driving, Engines & Performance | Top Gear",
+          "publishedDate": "2025-11-05",
+          "sentiment": 0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.topgear.com/car-reviews/polestar/4/driving",
+          "finalUrl": "https://www.topgear.com/car-reviews/polestar/4/driving",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2025-11-05T05:00:00+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2025-11-05T05:00:00+00:00\",\"data-next-head\":\"\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20067,
+      "pinSourceUrl": "https://www.theverge.com/2022/11/9/23447288/volvo-ex90-suv-ev-price-specs-lidar-mile-range",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.topgear.com/car-reviews/volvo/ex90",
+          "quote": "Smooth and silent on the road, it’s a pleasure to drive, more wieldy than you might expect for its size and weight",
+          "title": "Volvo EX90 Review 2026 | Top Gear",
+          "publishedDate": "2024-12-17",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.topgear.com/car-reviews/volvo/ex90",
+          "finalUrl": "https://www.topgear.com/car-reviews/volvo/ex90",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-12-17T05:00:00+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-12-17T05:00:00+00:00\",\"data-next-head\":\"\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15216,
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/available-to-order-now-the-new-golf-gti-edition-50-the-most-powerful-production-model-in-the-history-of-the-gti-19912",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.whatcar.com/news/2026-vw-golf-gti-edition-50-review-hot-hatchback-celebrates-its-birthday-by-looking-into-the-past/n28610",
+          "quote": "a GTI that grips tenaciously, with a greater sense of feedback from the nose of the car as you carve your way from one corner to another on a country road or on track.",
+          "title": "2026 VW Golf GTI Edition 50 review: when 50 is the new 40",
+          "publishedDate": "2026-01-29",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.whatcar.com/news/2026-vw-golf-gti-edition-50-review-hot-hatchback-celebrates-its-birthday-by-looking-into-the-past/n28610",
+          "finalUrl": "https://www.whatcar.com/news/2026-vw-golf-gti-edition-50-review-hot-hatchback-celebrates-its-birthday-by-looking-into-the-past/n28610",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-01-29T18:34:34+0000",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"2026 VW Golf GTI Edition 50 review: when 50 is the new 40\",\"datePublished\":\"2026-01-29T18:34:34+0000\",\"url\":{\"@type\":\"ImageObject\",\"@id\":\"https://www.whatcar.com/news/2026-vw-golf-gti-edition-50-review-hot-hatchback-celebrates-its-birthday-by-looking-into-the-past/n28610\",\"name\":\"2026 VW Golf GTI Edition 50 review: when 50 is the new 40\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15261,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/2026-maruti-brezza-launched-at-rs-740-lakh-440286",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.91wheels.com/expert-review/2026-maruti-suzuki-brezza-driven-pros-cons-explained",
+          "quote": "Shifts are super smooth, and the low-end torque keeps you stress-free in bumper-to-bumper traffic.",
+          "title": "2026 Maruti Suzuki Brezza Turbo Review: Pros & Cons Explained",
+          "sentiment": 0.5,
+          "publishedDate": "2026-07-27"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.91wheels.com/expert-review/2026-maruti-suzuki-brezza-driven-pros-cons-explained",
+          "finalUrl": "https://www.91wheels.com/expert-review/2026-maruti-suzuki-brezza-driven-pros-cons-explained",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-07-27T07:54:14.362Z",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2026-07-27T07:54:14.362Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15262,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/2026-maruti-baleno-facelift-launched-at-rs-610-lakh-440667",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.91wheels.com/expert-review/2026-maruti-suzuki-baleno-facelift-review",
+          "quote": "The new engine is refined, smooth and extremely easy to drive, but it isn’t particularly exciting.",
+          "title": "2026 Maruti Suzuki Baleno Facelift Review: More Complete Than Ever, But Is It New Enough?",
+          "sentiment": 0.2,
+          "publishedDate": "2026-09-08"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.91wheels.com/expert-review/2026-maruti-suzuki-baleno-facelift-review",
+          "finalUrl": "https://www.91wheels.com/expert-review/2026-maruti-suzuki-baleno-facelift-review",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-09-08T06:36:55.268Z",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2026-09-08T06:36:55.268Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15254,
+      "pinSourceUrl": "https://www.stellantisandyou.co.uk/news-hub/award-winning-grande-panda-opens-for-uk-orders-following-record-interest-and-with-fiat-e-grant-boost",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.autocar.co.uk/car-review/fiat/grande-panda",
+          "quote": "It may have 108bhp, but a Panda 100HP this hybrid is not. Even so, the steering decently weighted and progressively paced, allowing you to make the most of the surprisingly grippy chassis.",
+          "title": "The Fiat Panda is BACK in the UK! And we've finally had a go... | Autocar",
+          "publishedDate": "2026-04-22",
+          "sentiment": 0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.autocar.co.uk/car-review/fiat/grande-panda",
+          "finalUrl": "https://www.autocar.co.uk/car-review/fiat/grande-panda",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-04-22T08:06:19",
+              "evidence": "{\"@type\":\"Review\",\"headline\":\"The Fiat Panda is BACK in the UK! And we've finally had a go...\",\"datePublished\":\"2026-04-22T08:06:19\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19972,
+      "pinSourceUrl": "https://www.jk-forum.com/articles/jl-jeep-wrangler-world-reveal-2017-los-angeles-auto-show",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.consumerreports.org/suvs/2018-jeep-wrangler-first-drive-all-new-suv-improves-upon-a-classic",
+          "quote": "While its handling is improved with quicker steering, it's still no match for a modern SUV in terms of agility.",
+          "title": "All-New 2018 Jeep Wrangler Improves Upon a Classic",
+          "publishedDate": "2018-02-14",
+          "sentiment": -0.2
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.consumerreports.org/suvs/2018-jeep-wrangler-first-drive-all-new-suv-improves-upon-a-classic",
+          "finalUrl": "https://www.consumerreports.org/suvs/2018-jeep-wrangler-first-drive-all-new-suv-improves-upon-a-classic",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2018-02-14T19:06:48.776Z",
+              "evidence": "{\"@type\":\"NewsArticle\",\"headline\":\"All-New 2018 Jeep Wrangler Improves Upon a Classic\",\"datePublished\":\"2018-02-14T19:06:48.776Z\",\"url\":\"https://www.consumerreports.org/suvs/2018-jeep-wrangler-first-drive-all-new-suv-improves-upon-a-classic/\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20016,
+      "pinSourceUrl": "https://www.motor1.com/news/306662/2019-peugeot-208-revealed/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.motoringresearch.com/car-reviews/2020-peugeot-208-review/",
+          "quote": "while that Playstation-sized wheel delivers darty changes of direction, it’s over-assisted and short on feedback.",
+          "title": "Peugeot 208 2020 review",
+          "publishedDate": "2019-10-10",
+          "sentiment": -0.2
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.motoringresearch.com/car-reviews/2020-peugeot-208-review/",
+          "finalUrl": "https://www.motoringresearch.com/car-reviews/2020-peugeot-208-review/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2019-10-10T12:53:26+01:00",
+              "evidence": "{\"itemprop\":\"datePublished\",\"content\":\"2019-10-10T12:53:26+01:00\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20015,
+      "pinSourceUrl": "https://www.goodwood.com/grr/road/news/meet-the-all-new-peugeot-2008-and-e-2008-suv/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.thecarexpert.co.uk/peugeot-2008-2020/",
+          "quote": "a great car to drive, buoyed up by a terrific engine, enjoyable handling",
+          "title": "Peugeot 2008 (2020 – present) | Expert Rating | The Car Expert",
+          "publishedDate": "2020-06-15",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.thecarexpert.co.uk/peugeot-2008-2020/",
+          "finalUrl": "https://www.thecarexpert.co.uk/peugeot-2008-2020/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2020-06-15T15:26:17+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2020-06-15T15:26:17+00:00\"}"
+            },
+            {
+              "value": "2020-06-15T15:26:17+00:00",
+              "evidence": "{\"@type\":\"Review\",\"headline\":\"Peugeot 2008 (2020 &ndash; present) | Expert Rating | The Car Expert\",\"datePublished\":\"2020-06-15T15:26:17+00:00\",\"url\":\"https://www.thecarexpert.co.uk/peugeot-2008-2020/\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19993,
+      "pinSourceUrl": "https://www.insidemazda.co.uk/?p=10735",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.motorweek.org/reviews/road_tests/2019-mazda3-hatchback",
+          "quote": "It feels flat and nimble as always.",
+          "title": "2019 Mazda3 Hatchback - MotorWeek",
+          "publishedDate": "2019-09-19",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.motorweek.org/reviews/road_tests/2019-mazda3-hatchback",
+          "finalUrl": "https://motorweek.org/road_tests/2019-mazda3-hatchback/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2019-09-19T00:00:00+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2019-09-19T00:00:00+00:00\"}"
+            },
+            {
+              "value": "2019-09-19T00:00:00+00:00",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"2019 Mazda3 Hatchback\",\"datePublished\":\"2019-09-19T00:00:00+00:00\",\"url\":{\"@id\":\"https://motorweek.org/road_tests/2019-mazda3-hatchback/\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20019,
+      "pinSourceUrl": "https://www.auto-motor-und-sport.de/neuheiten/porsche-cayman-boxster-gts-40-daten-preis-kauf-ausstattung/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/718-cayman/40-gts-2dr/first-drive",
+          "quote": "it’s about how the more natural, turbo-free power delivery complements one of the best handling cars on sale.",
+          "title": "Porsche 718 GTS 4.0 review: the 6cyl Cayman is back! Reviews 2026 | Top Gear",
+          "publishedDate": "2020-02-16",
+          "sentiment": 0.85
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/718-cayman/40-gts-2dr/first-drive",
+          "finalUrl": "https://www.topgear.com/car-reviews/porsche/cayman-coupe-2016/40-gts-2dr/first-drive",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2020-02-16T22:06:17+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2020-02-16T22:06:17+00:00\",\"data-next-head\":\"\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20022,
+      "pinSourceUrl": "https://www.pistonheads.com/news/ph-germancars/porsche-cayenne-updated--but-turbo-gt-culled/47090",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.which.co.uk/news/article/porsche-cayenne-2023-facelift-first-drive-review-aCSz63K01pjT",
+          "quote": "The S model’s big 4.0-litre turbocharged V8 has near instantaneous throttle response, and makes light work of getting the car up to speed; its huge power reserves and the slick automatic transmission mean acceleration is effortless whatever the situation.",
+          "title": "Porsche Cayenne 2023 facelift: first-drive review - Which?",
+          "publishedDate": "2024-07-22",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.topgear.com/long-term-car-reviews/porsche/cayenne/report-9",
+          "quote": "The chassis practically begs to be pushed – and once you lob it into a corner, it wants you to dig deeper, uncovering a treasure chest of engineering.",
+          "title": "Porsche Cayenne S - long-term review - Report No:9 2026 | Top Gear",
+          "publishedDate": "2024-09-10",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.whatcar.com/porsche/cayenne/estate/review/n17375",
+          "quote": "The V8-powered Cayenne S is the best choice for private buyers, while company car drivers will be better off with one of the E-Hybrid versions.",
+          "title": "Porsche Cayenne review: The Porsche Cayenne is rapid, luxurious and spacious, but some rivals are more comfortable",
+          "publishedDate": "2023-10-23",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.which.co.uk/news/article/porsche-cayenne-2023-facelift-first-drive-review-aCSz63K01pjT",
+          "finalUrl": "https://www.which.co.uk/news/article/porsche-cayenne-2023-facelift-first-drive-review-aCSz63K01pjT",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-07-22T11:03:51.881Z",
+              "evidence": "{\"@type\":\"NewsArticle\",\"headline\":\"Porsche Cayenne 2023 facelift: first-drive review\",\"datePublished\":\"2024-07-22T11:03:51.881Z\",\"url\":{\"@type\":\"WebPage\",\"@id\":\"https://www.which.co.uk/news/article/porsche-cayenne-2023-facelift-first-drive-review-aCSz63K01pjT\",\"primaryImageOfPage\":{\"@type\":\"ImageObject\",\"url\":\"https://media.product.which.co.uk/prod/images/ar_2to1_1500x750/1ee79c6ba2c8-cayenne-lead.jpg\",\"width\":\"1500\",\"height\":\"750\"}}}"
+            }
+          ]
+        },
+        {
+          "url": "https://www.topgear.com/long-term-car-reviews/porsche/cayenne/report-9",
+          "finalUrl": "https://www.topgear.com/long-term-car-reviews/porsche/cayenne/report-9",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-09-10T05:00:00+01:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-09-10T05:00:00+01:00\",\"data-next-head\":\"\"}"
+            }
+          ]
+        },
+        {
+          "url": "https://www.whatcar.com/porsche/cayenne/estate/review/n17375",
+          "finalUrl": "https://www.whatcar.com/porsche/cayenne/estate/review/n17375",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2023-10-23T23:01:00+01:00",
+              "evidence": "{\"@type\":\"Review\",\"headline\":\"Porsche Cayenne review\",\"datePublished\":\"2023-10-23T23:01:00+01:00\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20021,
+      "pinSourceUrl": "https://newsroom.porsche.com/dam/jcr:0f2efbc7-f66f-480f-bf1e-ffd21589fa72/PCH20_0093_ch_de.pdf",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/911-992-turbo-cabriolet-2020/s-2dr-pdk/first-drive",
+          "quote": "The front and rear end are in constant and crystal clear contact with each other, and the chassis firepower – all-wheel drive with a front axle that can handle 368 torques alone, active rear axle, all the high-end PASM, PDCC and PSM software – combines to deliver a car of unfathomable depths.",
+          "title": "Porsche 911 Turbo S Cabriolet review: first UK test Reviews 2026 | Top Gear",
+          "publishedDate": "2020-06-08",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/911-992-turbo-cabriolet-2020/s-2dr-pdk/first-drive",
+          "finalUrl": "https://www.topgear.com/car-reviews/porsche/911-992-turbo-cabriolet-2020/s-2dr-pdk/first-drive",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2020-06-08T06:00:00+01:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2020-06-08T06:00:00+01:00\",\"data-next-head\":\"\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20025,
+      "pinSourceUrl": "https://www.motorauthority.com/news/1126435_2020-porsche-macan-gts-price-specs-photos-review-details",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/gts-5dr-pdk/first-drive",
+          "quote": "it’s a significantly nimbler car to drive than any of its rivals lacking an AMG badge.",
+          "title": "Porsche Macan GTS review: the last of its breed Reviews 2026 | Top Gear",
+          "publishedDate": "2020-02-10",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/gts-5dr-pdk/first-drive",
+          "finalUrl": "https://www.topgear.com/car-reviews/porsche/macan-estate-2018/gts-5dr-pdk/first-drive",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2020-02-10T23:01:00+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2020-02-10T23:01:00+00:00\",\"data-next-head\":\"\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19551,
+      "pinSourceUrl": "https://airlinegeeks.com/2016/05/25/e190-e2-aircraft-completes-first-flight/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "quote": "the seat pitch was extremely tight and my knees were touching the seat in front of me.",
+          "title": "Review: Wideroe Embraer E190-E2 Economy (BGO-TOS) - ATX Jetsetter",
+          "publishedDate": "2024-03-27",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "finalUrl": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-03-27T04:00:28+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-03-27T04:00:28+00:00\"}"
+            },
+            {
+              "value": "2024-03-27T04:00:28+00:00",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"Review: Wideroe Embraer E190-E2 Economy (BGO-TOS)\",\"datePublished\":\"2024-03-27T04:00:28+00:00\",\"url\":{\"@id\":\"https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19552,
+      "pinSourceUrl": "https://airlinegeeks.com/2018/02/28/embraer-e190-e2-gets-green-light-from-easa-anac-and-faa/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "quote": "the seat pitch was extremely tight and my knees were touching the seat in front of me.",
+          "title": "Review: Wideroe Embraer E190-E2 Economy (BGO-TOS) - ATX Jetsetter",
+          "publishedDate": "2024-03-27",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "finalUrl": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-03-27T04:00:28+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-03-27T04:00:28+00:00\"}"
+            },
+            {
+              "value": "2024-03-27T04:00:28+00:00",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"Review: Wideroe Embraer E190-E2 Economy (BGO-TOS)\",\"datePublished\":\"2024-03-27T04:00:28+00:00\",\"url\":{\"@id\":\"https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19553,
+      "pinSourceUrl": "https://worldairlinenews.com/2018/04/04/embraer-delivers-the-first-e190-e2-to-wideroe/",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "quote": "the seat pitch was extremely tight and my knees were touching the seat in front of me.",
+          "title": "Review: Wideroe Embraer E190-E2 Economy (BGO-TOS) - ATX Jetsetter",
+          "publishedDate": "2024-03-27",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "finalUrl": "https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-03-27T04:00:28+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-03-27T04:00:28+00:00\"}"
+            },
+            {
+              "value": "2024-03-27T04:00:28+00:00",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"Review: Wideroe Embraer E190-E2 Economy (BGO-TOS)\",\"datePublished\":\"2024-03-27T04:00:28+00:00\",\"url\":{\"@id\":\"https://atxjetsetter.com/post/review-wideroe-embraer-e190-e2-economy-bgo-tos/\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2462,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Alinea_(restaurant)",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.worldtraversal.com/post/alinea-review-michelin",
+          "quote": "The barely cooked king crab is a standout, rich but controlled, playful yet precise.",
+          "title": "Alinea Review - 2 Stars Now With a Completely New Menu",
+          "publishedDate": "2026-06-12",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.worldtraversal.com/post/alinea-review-michelin",
+          "finalUrl": "https://www.worldtraversal.com/post/alinea-review-michelin",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2026-06-12T05:00:16.873Z",
+              "evidence": "{\"@type\":\"BlogPosting\",\"headline\":\"Alinea Review - 2 Stars Now With a Completely New Menu\",\"datePublished\":\"2026-06-12T05:00:16.873Z\",\"url\":\"https://www.worldtraversal.com/post/alinea-review-michelin\"}"
+            },
+            {
+              "value": "2026-06-12T05:00:16.873Z",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2026-06-12T05:00:16.873Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2592,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/The_Varsity_(restaurant)",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://gardenandgun.com/varsity-atlanta-history",
+          "quote": "Loosen your belt one more notch and finish off your meal with a fried pie—peach, naturally.",
+          "title": "The Varsity Celebrates 90 Years in Atlanta",
+          "publishedDate": "2018-08-08",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://gardenandgun.com/varsity-atlanta-history",
+          "finalUrl": "https://gardenandgun.com/varsity-atlanta-history",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2018-08-08T19:13:05+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2018-08-08T19:13:05+00:00\"}"
+            },
+            {
+              "value": "2018-08-08T19:13:05+00:00",
+              "evidence": "{\"@type\":\"Article\",\"headline\":\"The Varsity Celebrates 90 Years in Atlanta\",\"datePublished\":\"2018-08-08T19:13:05+00:00\",\"url\":{\"@id\":\"https://gardenandgun.com/varsity-atlanta-history\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 163,
+      "pinSourceUrl": "https://www.ign.com/articles/resident-evil-4-remake-review",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.trustedreviews.com/reviews/resident-evil-4-remake",
+          "quote": "Beyond the immense graphical upheaval, the game never struggles under the weight of its newer coat of paint.",
+          "title": "Resident Evil 4 Remake",
+          "sentiment": 0.7,
+          "publishedDate": "2023-06-30"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.trustedreviews.com/reviews/resident-evil-4-remake",
+          "finalUrl": "https://www.trustedreviews.com/reviews/resident-evil-4-remake",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2023-06-30T13:43:40+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2023-06-30T13:43:40+00:00\"}"
+            },
+            {
+              "value": "2023-06-30T13:43:40+00:00",
+              "evidence": "{\"@type\":\"NewsArticle\",\"headline\":\"Resident Evil 4 Remake Review\",\"datePublished\":\"2023-06-30T13:43:40+00:00\",\"url\":{\"@id\":\"https://www.trustedreviews.com/reviews/resident-evil-4-remake\"}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5461,
+      "pinSourceUrl": "https://shacknews.com/article/142419/marvel-rivals-release-time",
+      "basis": "Publication dates verified 2026-10-26 from explicit publisher metadata; existing verbatim extracts rechecked in the opened HTTPS body. Sentiment estimates follow the review rubric. Original publication day, not modification or research date.",
+      "reviews": [
+        {
+          "url": "https://www.thexboxhub.com/marvel-rivals-review/",
+          "quote": "Taking the basic 6v6 hero shooter structure we are all pretty familiar with, Marvel Rivals’ modes and core gameplay loop falls within pretty familiar territory.",
+          "title": "Marvel Rivals Review | TheXboxHub",
+          "sentiment": 0.1,
+          "publishedDate": "2024-12-30"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.thexboxhub.com/marvel-rivals-review/",
+          "finalUrl": "https://www.thexboxhub.com/marvel-rivals-review/",
+          "openedAt": "2026-10-26T21:13:31.440Z",
+          "quoteVerified": true,
+          "dates": [
+            {
+              "value": "2024-12-30T13:19:16+00:00",
+              "evidence": "{\"property\":\"article:published_time\",\"content\":\"2024-12-30T13:19:16+00:00\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

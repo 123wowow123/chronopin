@@ -24,6 +24,10 @@ Owner instruction, 2026-10-24: construction and energy-project pins should carry
 
 Owner reminder, 2026-10-24: power plant pins must include sourced generation information in the native `PinPower` fields (`kind: 'generation'`), saved and verified through `PUT /api/pins/:id/power` locally and in production. Match capacity to the unit, phase and historical period; distinguish net/gross electrical MW from thermal MW and annual energy in MWh/GWh. Include published annual output when available. Explain whether capacity is historical, operating or proposed, especially on accident, shutdown, storage and restart pins; a retired unit's rating must not imply current generation. Preserve sources in references/wiki and keep replay scripts synchronized.
 
+## Product competitors
+
+Owner instruction, 2026-10-26: every product pin (a purchasable good or named product: vehicles, aircraft, snacks and drinks, sneakers, watches, electronics, games, software, AI models) lists its main competing products in `PinCompetitor` (2-5 rows, rank 1 = closest rival). Pick rivals that compete in the same segment and market at the pin's own time; name the product and its maker; link `competitorPinId` when we have a pin for it; add a one-line `summary` of how it competes and an opened HTTPS `sourceUrl` (a comparison, review or spec page). Save via `PUT /api/pins/:id/competitors` locally and on production (match prod pins by sourceUrl; ids differ). Never invent a rival; queue the pin with a reason when no sourced rival exists. Not for restaurants, films, events or projects.
+
 ## Deploying to production
 
 Never deploy, restart, resize or build on the production VM (20.109.175.187) unless the user has asked for that deploy in this conversation, in words. Editing code, committing and pushing are not a request to deploy, and approval for one deploy does not cover the next.

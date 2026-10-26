@@ -1,0 +1,2375 @@
+{
+  "checkedAt": "2026-10-26T21:27:20.486Z",
+  "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
+  "summary": [
+    {
+      "table": "PinTaste",
+      "pins": 228,
+      "reviews": 496,
+      "minimum": 1,
+      "belowMinimum": 0,
+      "undatedNonMichelin": 47,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinCarPerf",
+      "pins": 128,
+      "reviews": 337,
+      "minimum": 3,
+      "belowMinimum": 39,
+      "undatedNonMichelin": 20,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pins": 160,
+      "reviews": 497,
+      "minimum": 3,
+      "belowMinimum": 16,
+      "undatedNonMichelin": 40,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pins": 165,
+      "reviews": 542,
+      "minimum": 3,
+      "belowMinimum": 23,
+      "undatedNonMichelin": 29,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinLlmPerf",
+      "pins": 125,
+      "reviews": 440,
+      "minimum": 3,
+      "belowMinimum": 4,
+      "undatedNonMichelin": 20,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinVideoPerf",
+      "pins": 32,
+      "reviews": 111,
+      "minimum": 3,
+      "belowMinimum": 2,
+      "undatedNonMichelin": 5,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinHotel",
+      "pins": 41,
+      "reviews": 123,
+      "minimum": 3,
+      "belowMinimum": 0,
+      "undatedNonMichelin": 0,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinDining",
+      "pins": 89,
+      "reviews": 266,
+      "minimum": 3,
+      "belowMinimum": 14,
+      "undatedNonMichelin": 41,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinCriticReview",
+      "pins": 84,
+      "reviews": 240,
+      "minimum": 3,
+      "belowMinimum": 9,
+      "undatedNonMichelin": 2,
+      "unscoredDated": 0
+    }
+  ],
+  "rubricGaps": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14001,
+      "title": "BYD Launches the Da Han Flagship Electric Sedan in China",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14030,
+      "title": "Smart #2 Makes Its World Premiere at the Paris Motor Show",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14035,
+      "title": "Lynk & Co 07 GT, Its First Station Wagon, Launches in China From RMB 157,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14037,
+      "title": "Lynk & Co 07 GT Makes European Debut at Paris Motor Show on 12 October",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14040,
+      "title": "Geely Monjaro EM-i Makes European Debut at the Paris Motor Show",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14045,
+      "title": "Geely Galaxy Starship 7 EV Launches From RMB 99,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14055,
+      "title": "Geely Galaxy TT Electric Sedan Launches From RMB 129,900",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14071,
+      "title": "Geely Galaxy Launches Cruiser 700 Off-Road PHEV From RMB 189,800",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14100,
+      "title": "Leapmotor Launches the A05 Compact EV Hatchback From RMB 63,900",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "title": "IM Motors Launches the LS9 Large Extended-Range SUV From RMB 322,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14140,
+      "title": "Luxeed Launches the RX Coupe SUV From 259,800 Yuan to Take On the Xiaomi YU7",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "title": "Avatr Launches the 07L Electric SUV With Huawei ADS 5 From RMB 229,900",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14200,
+      "title": "Fang Cheng Bao Launches the Formula S Sedan From 189,900 Yuan",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "title": "MG 07 Electric and Hybrid Sedan Goes on Sale From RMB 108,900",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14221,
+      "title": "Wuling Launches the Huajing S, Its First Huawei-Developed SUV, From RMB 159,800",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14223,
+      "title": "GAC Aion Launches the RT Super Sedan With CATL Battery Swapping From RMB 88,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14224,
+      "title": "GAC-Huawei Aistaland Launches the GX7 Extended-Range SUV From RMB 239,900",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14228,
+      "title": "Changan Nevo Launches the Q06 Mid-Size SUV From RMB 139,900",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14230,
+      "title": "Arcfox Launches the Alpha T7 SUV, Extended-Range or Electric, From RMB 136,800",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14253,
+      "title": "Li Auto Launches the Revamped L6 Extended-Range SUV at RMB 249,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19648,
+      "title": "Zeekr Launches the 007 Electric Sedan From RMB 209,900",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19650,
+      "title": "Li Auto Launches the i8, Its First Electric SUV, From RMB 321,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19652,
+      "title": "Huawei and Seres Launch the Aito M7 Six-Seat EREV SUV From RMB 319,800",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19850,
+      "title": "Denza Launches the N9 Six-Seat Hybrid SUV From RMB 389,800",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19851,
+      "title": "Li Auto Launches the Revamped Five-Seat L8 From RMB 359,800",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19852,
+      "title": "Huawei-Backed Aito Launches the M8 Family SUV From 359,800 Yuan With 20,000 First-Hour Orders",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19853,
+      "title": "Huawei-Backed Aito Launches the New-Generation M9 From 479,800 Yuan",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19854,
+      "title": "Avatr Starts China Sales of the 07 Electric and Range-Extender SUV From RMB 219,900",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19857,
+      "title": "BYD Launches the Seal 06 EV Sedan at the Chongqing Show From RMB 109,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19858,
+      "title": "BYD Launches the Seal 07 DM-i Hybrid Sedan From RMB 139,800 With 2,000 km Range",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19859,
+      "title": "BYD Launches the New Yuan Plus Electric SUV With Flash Charging From RMB 119,900",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "title": "Chery Launches the QQ Ice Cream Mini EV From RMB 29,900 in Wuhu",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19864,
+      "title": "Geely Launches the Panda Mini EV From RMB 39,900 to Take On the Wuling Hongguang Mini",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19866,
+      "title": "Li Auto Launches the L6, Its Cheapest Extended-Range SUV, From RMB 249,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19867,
+      "title": "Li Auto Launches the Six-Seat L8 SUV From RMB 359,800 and Previews the L7",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19869,
+      "title": "Li Auto Launches the Redesigned L9 With Active Suspension From RMB 459,800",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19870,
+      "title": "Dongfeng Nissan Launches the N7 Electric Sedan From RMB 119,900 at Auto Shanghai",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19871,
+      "title": "Great Wall's Tank Launches the Tank 300 Hi4-T Hybrid Off-Roader From RMB 269,800",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19879,
+      "title": "Zeekr Launches the X Compact Electric SUV From RMB 189,800 With 560 km Range",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15217,
+      "title": "Audi Unveils the Q9, Its First Full-Size SUV, in New York",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15223,
+      "title": "Mercedes-AMG Updates the GLE 63 S and GLS 63 With a Flat-Plane V8",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15224,
+      "title": "Mercedes-AMG Opens Orders for the Updated GLE 53 Six-Cylinder SUV",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15228,
+      "title": "Aston Martin Introduces the DBX GT, a 717 hp Luxury V8 SUV",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15231,
+      "title": "Hennessey Reveals the Blackbird, a Manual 6.2-Litre V8 Hypercar",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15242,
+      "title": "Subaru Cuts the 2027 Impreza to $24,595, Cheapest AWD Compact",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15259,
+      "title": "Mahindra Launches the XUV 7XO, the XUV700 Facelift, From Rs 13.66 Lakh",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15262,
+      "title": "Maruti Suzuki Launches the 2026 Baleno Facelift With Level 2 ADAS From Rs 5.99 Lakh",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15263,
+      "title": "Mahindra Launches the Thar OG With a 162 hp Turbo-Petrol From Rs 10.32 Lakh",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15264,
+      "title": "Tata Launches the Aeris Compact Sedan, the Tigor Successor, From Rs 5.29 Lakh",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15267,
+      "title": "Ram Launches the 2027 1500 Rumble Bee V8 Muscle Trucks",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15270,
+      "title": "Chevrolet Revives the Corvette Grand Sport With a 535-hp LS6 V8",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "title": "Chevrolet Says the 2027 Corvette Stingray Tops 200 mph From US$73,495",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19979,
+      "title": "KTM Unveils the Road-Legal X-Bow GT-XR With a 500 PS Audi Five-Cylinder, From 284,900 Euros",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20054,
+      "title": "Toyota Unveils the Aygo X, a Czech-Built A-Segment Crossover With a Retractable Canvas Roof",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19565,
+      "title": "NorOntair Takes Delivery of the First Dash 8",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19572,
+      "title": "Delta Flies the First Scheduled DC-9 Passenger Service",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19577,
+      "title": "American Airlines Flies the First DC-10 Passenger Service",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19586,
+      "title": "FAA Certifies the Stretched Boeing 767-300",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19587,
+      "title": "Boeing 767-400ER Makes Its First Flight at Everett",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19592,
+      "title": "Boeing 757-300 Flies for the First Time, Live on the Web",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19609,
+      "title": "Irkut MC-21-300 Makes Its First Flight From Irkutsk",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19610,
+      "title": "Irkut MC-21-300 Receives Its Russian Type Certificate",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19642,
+      "title": "Bombardier Delivers the First CRJ1000s to Brit Air and Air Nostrum at Mirabel",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19644,
+      "title": "BAC One-Eleven Flies Its First Scheduled Service for British United",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19645,
+      "title": "Saab 340 Enters Airline Service With Crossair",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19646,
+      "title": "Short 360 Prototype Makes Its First Flight",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19882,
+      "title": "The Airbus A319neo Makes Its First Flight From Hamburg to Toulouse",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19883,
+      "title": "The Airbus A330-200F Freighter Makes Its First Flight From Toulouse",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19884,
+      "title": "The Airbus A340-500 Makes Its First Flight From Toulouse",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19886,
+      "title": "Boeing 707-120 Makes Its First Flight From Renton",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19887,
+      "title": "Boeing 727-100 Makes Its First Flight From Renton",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19888,
+      "title": "Boeing 737-800 Makes Its First Flight From Renton",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19891,
+      "title": "Boeing 777 Freighter Makes Its First Flight From Everett",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19892,
+      "title": "Convair 880 Makes Its First Flight From San Diego",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19894,
+      "title": "Bombardier's CRJ700 Stretch Makes Its First Flight",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19896,
+      "title": "Xi'an Aircraft's MA60 Turboprop Airliner Makes Its First Flight",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19897,
+      "title": "The Saab 2000, the Fastest Turboprop Airliner, Makes Its First Flight",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15102,
+      "title": "Granite 4.2 8B, 3B and 30B Released",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15136,
+      "title": "Qwen3.7-Plus Released",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "title": "GPT-5.4 mini and GPT-5.4 nano Released",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15170,
+      "title": "Qwen-Plus (Qwen2.5-Plus, qwen-plus-2025-01-25) Released",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19670,
+      "title": "Sora API Adds 20-Second Clips, 1080p and Characters",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19675,
+      "title": "Grok Imagine Video 1.5 Adds Text-to-Video, References and 1080p",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17202,
+      "title": "3rd Samgyetang — Seoul restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "title": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas) — Seoul restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17263,
+      "title": "La Scala, Paradise Hotel Busan (라스칼라) — Busan restaurant",
+      "reviews": 0,
+      "needed": 3,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "title": "Jeongjitgan (정짓간 신평본점) — Busan restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17272,
+      "title": "Cor Pasta Bar (코르 파스타 바) — Busan restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "title": "Shunsai Kubo Hwamyeong (슌사이쿠보 화명) — Busan restaurant guide",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17279,
+      "title": "Tokyo Babsang (동경밥상 본점) — Busan restaurant guide",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17280,
+      "title": "Anmok (안목) — Busan restaurant guide",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17281,
+      "title": "Buda Myeonok (부다면옥) — Busan restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17282,
+      "title": "Pili Pili (피리피리) — Busan restaurant guide",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17283,
+      "title": "Hapcheon Gukbapjip (합천국밥집) — Busan restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17284,
+      "title": "Bao Haus (바오하우스) — Busan restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17285,
+      "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17286,
+      "title": "Yakitori Onjeong (야키토리 온정) — Busan restaurant guide",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1024,
+      "title": "Kaguya-sama: Love is War -The First Kiss That Never Ends- Releases in Japanese Theaters",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1055,
+      "title": "Attack on Titan: The Last Attack Releases in Japanese Theaters",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1057,
+      "title": "Violet Evergarden: the Movie Releases in Japanese Theaters",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1126,
+      "title": "The Disappearance of Haruhi Suzumiya Releases in Japanese Theaters",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1176,
+      "title": "I Want to Eat Your Pancreas Releases in Japanese Theaters",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1178,
+      "title": "Wolf Children Releases in Japanese Theaters",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1212,
+      "title": "Redline Releases in Japanese Theaters",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1233,
+      "title": "Tokyo Godfathers Releases in Japanese Theaters",
+      "reviews": 1,
+      "needed": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "title": "Norah Jones Wins Five Grammys, Led by Record and Album of the Year",
+      "reviews": 2,
+      "needed": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+    }
+  ],
+  "publicationResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 3410,
+      "title": "Ferrero Rocher and Raffaello Chocolate Bars Hit UK Shelves",
+      "url": "https://www.trolley.co.uk/product/ferrero-rocher-milk-chocolate-hazelnut-bar/FLP669",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 4503,
+      "title": "Buffalo Trace's First Bottle Draw Winners Collect Uncut Elmer T. Lee 40th Anniversary",
+      "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 4506,
+      "title": "Great Lakes Christmas Ale First Pour 2026 Taps in Cleveland",
+      "url": "https://bevx.com/bow-detail/?id=443",
+      "reason": "No explicit publication date"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5610,
+      "title": "Nestlé's KitKat F1 Collectable Tin Goes on Sale in UK for Christmas",
+      "url": "https://www.snacksonline.co.uk/products/kit-kat-f1-official-car-chocolate-bar-29g",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5611,
+      "title": "Cadbury Dairy Milk Smash Bauble Arrives in UK for Christmas",
+      "url": "https://www.taquitos.net/candy/Cadbury-Dairy-Milk-Freddo-Faces",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5612,
+      "title": "Cadbury Biscoff Filled Centres Launch in UK for Christmas",
+      "url": "https://www.taquitos.net/candy/Cadbury-Biscoff",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5613,
+      "title": "Haribo Sour Bats Join UK Halloween Range",
+      "url": "https://www.taquitos.net/candy/Haribo-Sour-Vampire-Bats",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
+      "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
+      "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
+      "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
+      "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
+      "url": "https://www.lemon8-app.com/@barleysgotitall/7478272148637778474?region=us",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7013,
+      "title": "GREY GOOSE Berry Rouge Launches in United States",
+      "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7014,
+      "title": "High Noon Transfusion Vodka Seltzer Launches in United States",
+      "url": "https://www.totalwine.com/beer/seltzers-flavored-beverages/hard-seltzer/high-noon-vodka-seltzer-transfusion/p/2126277428",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7016,
+      "title": "Absolut TABASCO Vodka Launches in United States",
+      "url": "https://www.tastings.com/Spirits-Review/Absolut-Tabasco-Flavored-Vodka-Sweden-03-01-2026.aspx",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7626,
+      "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
+      "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7659,
+      "title": "CHI FOREST Lychee Fizzy Sparkling Water",
+      "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7660,
+      "title": "Wanglaoji / Walovi Canned Herbal Tea",
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7661,
+      "title": "Jia Duo Bao Canned Herbal Tea",
+      "url": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+      "reason": "No explicit publication date"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7663,
+      "title": "Coconut Palm Coconut Milk Drink",
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7665,
+      "title": "White Rabbit Matcha Milk Candy",
+      "url": "https://helloasia.co.za/products/white-rabbit-creamy-candy-matcha-150g",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13912,
+      "title": "Peters Drumstick Launches an Anzac Biscuit Ice Cream Cone in Australia",
+      "url": "https://www.productreview.com.au/listings/peters-drumstick",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13915,
+      "title": "Canopy Salted Walnut Ice Cream and Hokey Pokey Gelato Win at Melbourne Royal",
+      "url": "https://www.melbourneroyal.com.au/australian-food-awards/results/2026-champions/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "title": "Triumf Glass Adds Matcha & Caramel and Strawberry & Chocolate Tubs for Autumn",
+      "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "title": "Triumf Glass Adds Matcha & Caramel and Strawberry & Chocolate Tubs for Autumn",
+      "url": "https://www.facebook.com/triumfglass/videos/1568022244557404/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13921,
+      "title": "Hennig-Olsen Launches Daim Strawberry Tub and Brings Back Anita Ice Cake",
+      "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13926,
+      "title": "Alberto Marchetti and Caffè Vergnano Open Affogato Kiosk in Turin",
+      "url": "https://restaurantguru.com/Alberto-Marchetti-Turin",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13934,
+      "title": "Lick Gelato Named Northern Ireland Champion at the Great British Food Awards",
+      "url": "https://www.facebook.com/LickGelatoNI/videos/guess-where-you-can-find-our-cans-now-get-yours-today-lickgelato-viral-icecream-/1986148565668332/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13962,
+      "title": "Baskin-Robbins Japan Launches Love Potion Grand Shake on 9 October",
+      "url": "https://ranking.net/items/f9afbb",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13964,
+      "title": "Glico's Giant Cone Teams Up With The Apothecary Diaries From 7 September",
+      "url": "https://ranking.net/items/1005a7",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13971,
+      "title": "CU Launches Pokemon Ditto, Pikachu and Magikarp Shaped Sorbet Bars",
+      "url": "https://www.instagram.com/reel/DeRM1E_zg99/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13973,
+      "title": "Helados Holanda Adds a Paleta OREO to Its Mexican Ice Cream Range",
+      "url": "https://www.walmart.com.mx/ip/helado-holanda-oreo-sabor-vainilla-con-trozos-de-galleta-1-89-l/00750630641517",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "title": "Kibon's Mini Paçoquita Peanut-Candy Ice Cream Bites Go National",
+      "url": "https://www.paguemenos.com.br/minisorvete-pacoquita-kibon-caixa-92g-edicao-limitada/p",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "title": "Kibon's Mini Paçoquita Peanut-Candy Ice Cream Bites Go National",
+      "url": "https://www.facebook.com/blogcheiasdecharmeplussize/posts/provamos-o-mini-pa%C3%A7oquita-kibon-que-%C3%A9-um-bombom-de-sorvete-cremoso-sabor-amendoi/1653389256359622/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13978,
+      "title": "Helados Holanda Launches Pumpkin Spice Tub With a Pan de Muerto Weekend",
+      "url": "https://www.instagram.com/reel/DdFsf7gReMq/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "title": "Cortina Adds Four Shamiso Ice Cream Flavours in Zimbabwe",
+      "url": "https://silverstreamdistribution.com/collections/all-products/products/cortina-shamiso-bubblegum-ice-cream-5lt",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "title": "Cortina Adds Four Shamiso Ice Cream Flavours in Zimbabwe",
+      "url": "https://silverstreamdistribution.com/products/cortina-shamiso-banana-ice-cream-5lt",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13987,
+      "title": "Dairy Queen's Spellbound Series Brings an Ube Enchanted OREO Blizzard",
+      "url": "https://www.tiktok.com/@classywithnoregards/video/7690772384281922829",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13991,
+      "title": "Ben & Jerry's Waffle Lotta Good Donates $1 per Waffle Cone Through 12 October",
+      "url": "https://www.yelp.com/biz/ben-and-jerrys-san-diego-10",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13996,
+      "title": "KitKat Dark Ice Cream Gets Three Visit Malaysia 2026 Limited-Edition Packs",
+      "url": "https://www.threads.com/@penangfoodie/post/DM1qxCUzihk",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19948,
+      "title": "Streets Releases the Golden Gaytime, Toffee and Vanilla Ice Cream in Biscuit Crumbs",
+      "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19951,
+      "title": "Meiji Sells Hello Panda Biscuits in Singapore in 1991, Starting Its Overseas Hit",
+      "url": "https://candycritic.org/hello%20panda%20milk%20chocolate.htm",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20009,
+      "title": "Meiji Launches M's Bar Rum au Lait Rum-Raisin Chocolate in Japan on 5 March 2019",
+      "url": "https://konbinichoco.com/meijiseika/meijiseika-genre/17235/",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20038,
+      "title": "Whitbread Secures the Licence to Brew Stella Artois in the UK",
+      "url": "https://www.fearlesscritic.com/beer/69/stella-artois",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20048,
+      "title": "Terry's Launches the Chocolate Orange at Its York Works in 1932",
+      "url": "https://www.candycritic.org/terrys%20orange%20milk.htm",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14000,
+      "title": "BYD Launches the Da Tang EV Flagship SUV With 950 km Range",
+      "url": "https://www.xchuxing.com/article/162814",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14076,
+      "title": "Zeekr Launches Super Hybrid 9X Luxury SUV in Europe",
+      "url": "https://www.xchuxing.com/article/158922",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14100,
+      "title": "Leapmotor Launches the A05 Compact EV Hatchback From RMB 63,900",
+      "url": "https://www.xchuxing.com/article/175515",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "title": "IM Motors Launches the LS9 Large Extended-Range SUV From RMB 322,800",
+      "url": "https://www.xchuxing.com/article/162486",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14111,
+      "title": "IM Motors Launches the Next-Generation LS6 With Steer-by-Wire From RMB 202,900",
+      "url": "https://www.xchuxing.com/article/138470",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "title": "Avatr Launches the 07L Electric SUV With Huawei ADS 5 From RMB 229,900",
+      "url": "https://www.xchuxing.com/article/174048",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14200,
+      "title": "Fang Cheng Bao Launches the Formula S Sedan From 189,900 Yuan",
+      "url": "https://www.xchuxing.com/article/175037",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14218,
+      "title": "MG Launches the Redesigned MG4 in China From RMB 68,800",
+      "url": "https://www.xchuxing.com/article/160445",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "title": "MG 07 Electric and Hybrid Sedan Goes on Sale From RMB 108,900",
+      "url": "https://www.pcauto.com.cn/reviews/31211.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14228,
+      "title": "Changan Nevo Launches the Q06 Mid-Size SUV From RMB 139,900",
+      "url": "https://www.xchuxing.com/article/174108",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "title": "Zeekr Starts 001 Deliveries in China From RMB 281,000, With 800 V and 700 km Range",
+      "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19936,
+      "title": "Ferrari Unveils the 296 GTS, an 830 cv Plug-In Hybrid V6 Spider With a 14-Second Folding Hardtop",
+      "url": "https://carmagazine.co.uk/car-reviews/ferrari/296-gts",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19969,
+      "title": "Hyundai Prices the Fifth-Generation Santa Fe Plug-in Hybrid in the UK From GBP 51,885",
+      "url": "https://www.exchangeandmart.co.uk/reviews/hyundai/santa-fe-plug-in-hybrid/14433",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19991,
+      "title": "Maserati Unveils the GranCabrio Folgore, a 751 hp Electric Convertible, From EUR 206,713",
+      "url": "https://www.discoverev.co.uk/ev-reviews/maserati-grancabrio-folgore-review",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "title": "Polestar 4 Goes on Sale in Europe and Australia From EUR 61,900 With 200 kW Charging",
+      "url": "https://www.carwow.co.uk/polestar/4",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20024,
+      "title": "Porsche Unveils the Electric Macan Turbo With 630 hp and 270 kW Charging, From USD 105,300",
+      "url": "https://www.carmagazine.co.uk/car-reviews/porsche/macan-electric/",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20024,
+      "title": "Porsche Unveils the Electric Macan Turbo With 630 hp and 270 kW Charging, From USD 105,300",
+      "url": "https://www.evo.co.uk/porsche/macan",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20027,
+      "title": "Porsche Premieres the Taycan Turbo S on Three Continents With 761 PS, From EUR 185,456",
+      "url": "https://www.topgear.com/car-reviews/porsche/taycan/460kw-turbo-93kwh-4dr-auto/first-drive",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "title": "Škoda Opens UK Orders for the Superb iV Estate With 84 Miles of EV Range, From GBP 41,465",
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "title": "Volvo Lifts the V60 Recharge Plug-In to an 18.8 kWh Battery and 350-455 PS, From EUR 56,350",
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15216,
+      "title": "VW Opens Orders for the 325 PS Golf GTI Edition 50, Strongest GTI Yet",
+      "url": "https://www.carmagazine.co.uk/car-reviews/volkswagen/golf-gti-edition-50/",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15220,
+      "title": "BMW Updates the 7 Series With Neue Klasse Tech and a 400 hp 740 xDrive",
+      "url": "https://www.caranddriver.com/bmw/7-series",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "title": "Volkswagen Premieres the Second-Generation T-Roc as a Mild Hybrid",
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15222,
+      "title": "Mercedes-AMG Unveils the GLC 53 With a Returning Inline-Six",
+      "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15227,
+      "title": "Aston Martin Announces the DB12 S with 700 PS and Sharper Handling",
+      "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15228,
+      "title": "Aston Martin Introduces the DBX GT, a 717 hp Luxury V8 SUV",
+      "url": "https://www.topgear.com/car-reviews/aston-martin/dbx707",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15238,
+      "title": "Toyota's Refreshed 2026 Corolla Cross Reaches Dealers From $24,635",
+      "url": "https://www.edmunds.com/toyota/corolla-cross/",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15243,
+      "title": "Kia Prices the Redesigned 2027 Seltos From $24,990 in the US",
+      "url": "https://www.caranddriver.com/kia/seltos",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15244,
+      "title": "Kia Prices the All-New 2027 Telluride From $39,190, Now With a Turbo Four",
+      "url": "https://www.caranddriver.com/kia/telluride",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15245,
+      "title": "Hyundai Prices the All-New 2026 Palisade From $38,935 With V6 and Hybrid",
+      "url": "https://www.caranddriver.com/hyundai/palisade",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15246,
+      "title": "Kia Prices the 2026 K4 Hatchback From $24,890, Turbo GT-Line at $28,790",
+      "url": "https://www.caranddriver.com/kia/k4",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
+      "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15253,
+      "title": "Fiat Opens UK Orders for the 500 Hybrid From GBP 18,995",
+      "url": "https://www.carenthusiast.com/reviews/article/13951/-/2026-Fiat-500/First+drive%3A+Hybrid+Torino.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15254,
+      "title": "Fiat Opens UK Orders for the Grande Panda Hybrid From GBP 18,035",
+      "url": "https://www.carmagazine.co.uk/car-reviews/fiat/grande-panda-hybrid",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15255,
+      "title": "DS Unveils the N°7 SUV, Replacing the DS 7, With a 145 hp Hybrid",
+      "url": "https://www.carmagazine.co.uk/car-reviews/ds/2026-no-7-hybrid/",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "title": "Chevrolet Says the 2027 Corvette Stingray Tops 200 mph From US$73,495",
+      "url": "https://www.edmunds.com/chevrolet/corvette/",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19911,
+      "title": "Audi Prices the 2020 SQ8 With a 500 hp V8 at USD 89,995 for the US",
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19921,
+      "title": "BMW Unveils the X7, Its First Three-Row SUV, With US Pricing From $74,895",
+      "url": "https://www.carpro.com/vehicle-reviews/2019-bmw-x7-xdrive40i-review",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19926,
+      "title": "Caterham Unveils the Seven 620R at Goodwood: 310 bhp Supercharged, From 49,995 Pounds",
+      "url": "https://carmagazine.co.uk/car-reviews/caterham/caterham-seven-620r-2013-review",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19930,
+      "title": "Chevrolet Unveils the All-New Silverado 1500 in Detroit, Dropping 450 lb and Adding a 6.2L V8",
+      "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19947,
+      "title": "Genesis Unveils the Facelifted G70, Keeping the 365 hp 3.3T Twin-Turbo V6 and Adding Drift Mode",
+      "url": "https://autobytel.com/2022-genesis-g70-road-test-and-review",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19953,
+      "title": "Honda's Eleventh-Generation 2022 Civic Sedan Reaches US Dealers From $22,695",
+      "url": "https://www.caranddriver.com/honda/civic-2022",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19954,
+      "title": "Honda Prices the Eleventh-Generation 2022 Civic Hatchback From $23,915 With a Stick-Shift Turbo",
+      "url": "https://www.caranddriver.com/honda/civic-2022",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19955,
+      "title": "Honda's FL5 Civic Type R Reaches US Dealers From $43,990 With 315 hp and a Manual",
+      "url": "https://www.goodwood.com/grr/car-reviews/honda/civic-type-r-2023/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19955,
+      "title": "Honda's FL5 Civic Type R Reaches US Dealers From $43,990 With 315 hp and a Manual",
+      "url": "https://www.caranddriver.com/honda/civic-type-r-2023",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19956,
+      "title": "Honda Starts US Deliveries of the Sixth-Generation 2023 CR-V From $31,110, Hybrid Following",
+      "url": "https://www.caranddriver.com/honda/cr-v-2023",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19958,
+      "title": "Honda Prices the Redesigned 2023 HR-V From $24,895 With a 158 hp 2.0-Litre and Multi-Link Rear",
+      "url": "https://www.caranddriver.com/honda/hr-v-2023",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19960,
+      "title": "Honda Opens Orders for the Fifth-Generation 2018 Odyssey From $29,990 With a 280 hp V6",
+      "url": "https://www.caranddriver.com/honda/odyssey-2018",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19961,
+      "title": "Honda Prices the Fourth-Generation 2023 Pilot From $40,445 With a 285 hp V6 and a TrailSport",
+      "url": "https://www.caranddriver.com/honda/pilot-2023",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "title": "Hyundai Premieres the European-Built Third-Generation i10 at Frankfurt From GBP 12,495",
+      "url": "https://www.vanarama.com/guides/cars/hyundai-i10-review",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "title": "Hyundai Premieres the European-Built Third-Generation i10 at Frankfurt From GBP 12,495",
+      "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19979,
+      "title": "KTM Unveils the Road-Legal X-Bow GT-XR With a 500 PS Audi Five-Cylinder, From 284,900 Euros",
+      "url": "https://www.carmagazine.co.uk/car-reviews/ktm/x-bow-gt-xr/",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19997,
+      "title": "Mercedes-AMG Unveils the GLC 43 With a 416 hp Four-Cylinder, From EUR 86,870 in Germany",
+      "url": "https://www.chasingcars.com.au/reviews/sports-suvs/mercedes-amg-glc43-2024-review/",
+      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20003,
+      "title": "Mercedes-Benz Unveils the W223 S-Class Digitally, S 500 4MATIC With a 435 PS Mild-Hybrid Six, US From US$109,800",
+      "url": "https://www.carjournalism.com/reviews/tested-2021-mercedes-benz-s-class-s500l",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20019,
+      "title": "Porsche Adds the 718 Cayman GTS 4.0 With a 400 PS Flat-Six, From EUR 81,926",
+      "url": "https://www.carmagazine.co.uk/car-reviews/porsche/718-gts-40/",
+      "reason": "Publisher emits placeholder year 0001; original publication date still needs verification."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20020,
+      "title": "Porsche Premieres the Eighth-Generation 911 (992) in Los Angeles With a 450 PS Carrera S",
+      "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/2dr-pdk/first-drive",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20040,
+      "title": "Subaru Debuts the All-New 2024 Crosstrek at the Chicago Auto Show, From USD 24,995",
+      "url": "https://www.autoexpress.co.uk/subaru/crosstrek",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20045,
+      "title": "Tata Launches the Altroz Premium Hatchback in India From Rs 5.29 Lakh",
+      "url": "https://carindia.in/new-tata-altroz-first-drive-review/2/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20046,
+      "title": "Tata Launches the Facelifted Nexon in India From Rs 8.1 Lakh With a Seven-Speed DCT Option",
+      "url": "https://carindia.in/tata-nexon-2023-first-drive-review-fresh-face-fresh-colours/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20060,
+      "title": "Toyota Reveals the Fourth-Generation Sienna Minivan, Hybrid-Only With 243 hp",
+      "url": "https://www.carpro.com/vehicle-reviews/2021-toyota-sienna-platinum-awd-review",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 947,
+      "title": "Lufthansa Takes Delivery of Its First Airbus A350-900",
+      "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 947,
+      "title": "Lufthansa Takes Delivery of Its First Airbus A350-900",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 2339,
+      "title": "The Boeing 747 Makes Its First Flight",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 6632,
+      "title": "Pan Am Flies the Boeing 747 on Its First Commercial Flight, New York to London",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19440,
+      "title": "Boeing Rolls Out the First 747 Jumbo Jet in Everett",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19441,
+      "title": "FAA Certifies the Boeing 747 for Passenger Service",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19508,
+      "title": "Airbus A350 XWB Makes Its First Flight",
+      "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19508,
+      "title": "Airbus A350 XWB Makes Its First Flight",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19509,
+      "title": "EASA Certifies the Airbus A350-900",
+      "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19509,
+      "title": "EASA Certifies the Airbus A350-900",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19510,
+      "title": "Airbus Delivers the First A350 XWB to Qatar Airways",
+      "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19510,
+      "title": "Airbus Delivers the First A350 XWB to Qatar Airways",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19511,
+      "title": "Qatar Airways Flies the First A350 Passenger Service to Frankfurt",
+      "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19511,
+      "title": "Qatar Airways Flies the First A350 Passenger Service to Frankfurt",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19512,
+      "title": "Airbus A350-1000 Makes Its First Flight",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19513,
+      "title": "EASA and FAA Certify the Airbus A350-1000",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19514,
+      "title": "Airbus Delivers the First A350-1000 to Qatar Airways",
+      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19564,
+      "title": "De Havilland Canada Dash 8 Prototype Makes Its First Flight",
+      "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19565,
+      "title": "NorOntair Takes Delivery of the First Dash 8",
+      "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19570,
+      "title": "Douglas DC-8 Makes Its First Flight From Long Beach",
+      "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19573,
+      "title": "McDonnell Douglas DC-9 Super 80 (MD-80) Makes Its First Flight",
+      "url": "https://www.airlinepilotcentral.com/articles/news/airline-pilots-say-goodbye-to-the-md-80.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19574,
+      "title": "Swissair Puts the First MD-81 Into Passenger Service",
+      "url": "https://www.airlinepilotcentral.com/articles/news/airline-pilots-say-goodbye-to-the-md-80.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "title": "McDonnell Douglas MD-90 Makes Its First Flight From Long Beach",
+      "url": "https://aeroxplorer.com/articles/flying-on-the-delta-md-90.php",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "title": "McDonnell Douglas MD-90 Makes Its First Flight From Long Beach",
+      "url": "https://deltamuseum.org/research/history/aircraft/jets/jets/mcdonnell-douglas-md-90-1995-2020",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19576,
+      "title": "McDonnell Douglas DC-10 Makes Its First Flight From Long Beach",
+      "url": "https://www.airwaysmag.com/legacy-posts/remembering-dc-10",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19577,
+      "title": "American Airlines Flies the First DC-10 Passenger Service",
+      "url": "https://www.airwaysmag.com/legacy-posts/remembering-dc-10",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19640,
+      "title": "Bombardier CRJ900 Stretch Makes Its Maiden Flight From Mirabel",
+      "url": "https://runwaygirlnetwork.com/2025/05/the-indignities-of-flying-fluffy-aboard-a-crj/",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "title": "Canadair's CRJ100 Regional Jet Makes Its First Flight",
+      "url": "https://www.airlinereporter.com/?p=38780",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19894,
+      "title": "Bombardier's CRJ700 Stretch Makes Its First Flight",
+      "url": "https://airlinereporter.com/2010/08/my-review-sea-to-lax-on-united-express-crj-700",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 2693,
+      "title": "Claude Fable 5.1 and Mythos 5.1 Released",
+      "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 4812,
+      "title": "DeepSeek-V4.1-Flash Released",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "title": "Gemini 1.0 Released",
+      "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15110,
+      "title": "DeepSeek-V4-Pro and DeepSeek-V4-Flash Released",
+      "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15114,
+      "title": "GLM-4.7 Released",
+      "url": "https://epoch.ai/models/glm-4-7",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15115,
+      "title": "GLM-4.7-Flash Released",
+      "url": "https://www.verdent.ai/guides/model/glm-4-7-flash",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15128,
+      "title": "Step 5 Preview Released",
+      "url": "https://artificialanalysis.ai/models/step-5",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15129,
+      "title": "Qwen3-235B-A22B-Instruct-2507 Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-2507",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "title": "Qwen3-235B-A22B-Thinking-2507 Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-2507-reasoning",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "title": "Qwen3-235B-A22B-Thinking-2507 Released",
+      "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15131,
+      "title": "Qwen3-30B-A3B-Instruct-2507 Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-30b-a3b-2507",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15132,
+      "title": "Qwen3-Next-80B-A3B-Instruct and Qwen3-Next-80B-A3B-Thinking Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15132,
+      "title": "Qwen3-Next-80B-A3B-Instruct and Qwen3-Next-80B-A3B-Thinking Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-reasoning",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "title": "GPT-5.4 mini and GPT-5.4 nano Released",
+      "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15166,
+      "title": "Muse Spark 1.2 Released",
+      "url": "https://megalens.ai/research/llm-latency-timeouts-code-review",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15166,
+      "title": "Muse Spark 1.2 Released",
+      "url": "https://epoch.ai/models/muse-spark-1-2",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15176,
+      "title": "Qwen3-32B and the Qwen3 Family Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-32b-instruct-reasoning",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15193,
+      "title": "Qwen3-VL-235B-A22B-Instruct and Qwen3-VL-235B-A22B-Thinking Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-vl-235b-a22b-instruct",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15308,
+      "title": "Gemini 4 Argon Released to Paying Users",
+      "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 19805,
+      "title": "Kimi K3.1 Pro Released on the API, With Weights Promised by November 4",
+      "url": "https://www.vals.ai/models/kimi_kimi-k3.1-pro",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "title": "Seedance 1.0 Pro Fast Released",
+      "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19636,
+      "title": "Seedance 2.5 Released",
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19665,
+      "title": "Veo 3.1 and Veo 3.1 Fast Released",
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19666,
+      "title": "Veo 3.1 Lite Released",
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "title": "Sora 2 and Sora 2 Pro Released in the API",
+      "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2464,
+      "title": "Eleven Madison Park Reopens With a Plant-Based Menu",
+      "url": "https://forbestravelguide.com/restaurants/new-york-city-new-york/eleven-madison-park",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2557,
+      "title": "Swan Oyster Depot Opens on Polk Street",
+      "url": "https://projects.sfchronicle.com/2017/top-100-restaurants/swan-oyster-depot",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2559,
+      "title": "Wolfgang Puck Opens the First Spago on the Sunset Strip",
+      "url": "https://www.gayot.com/restaurants/spago-beverly-hills-beverly-hills-ca-90210_2la00494-01.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2581,
+      "title": "Union Oyster House Opens as the Atwood & Bacon Oyster House",
+      "url": "https://www.hungryfordesignreview.com/reviews/union-oyster-house",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2777,
+      "title": "Dakar NOLA Opens in New Orleans",
+      "url": "https://www.outalldaynola.com/dakar-nola-new-orleans-review.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17198,
+      "title": "Tosokchon Samgyetang — Seoul restaurant guide",
+      "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "title": "Myeongdong Yeongyang Center — Seoul restaurant guide",
+      "url": "https://www.theseoulguide.com/yeongyang-center-myeongdong-branch/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "title": "Myeongdong Yeongyang Center — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/4228626",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17204,
+      "title": "Samwon Garden — Seoul restaurant guide",
+      "url": "https://visitgangnam.net/en/places/samwon-garden",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "title": "Hanilkwan (Apgujeong) — Seoul restaurant guide",
+      "url": "https://visitgangnam.net/en/places/hanilkwan",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "title": "Hanilkwan (Apgujeong) — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/4236393",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17206,
+      "title": "Mingles — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Mingles.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17207,
+      "title": "Jungsik — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Jungsik.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "title": "La Yeon — Seoul restaurant guide",
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "title": "La Yeon — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/396544/la-yeon",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "title": "La Yeon — Seoul restaurant guide",
+      "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/La-Yeon.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "title": "Onjium — Seoul restaurant guide",
+      "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Onjium.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "title": "Onjium — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17210,
+      "title": "Kwonsooksoo — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Kwonsooksoo.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17211,
+      "title": "Soigné — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Soigné.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17212,
+      "title": "alla prima — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17214,
+      "title": "Evett — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "title": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas) — Seoul restaurant guide",
+      "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17222,
+      "title": "The Park View (The Shilla Seoul) — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17223,
+      "title": "The Library (The Shilla Seoul) — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1699464/the-library",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17224,
+      "title": "Mosu Seoul — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Mosu.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17225,
+      "title": "Bicena — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Bicena.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17225,
+      "title": "Bicena — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/428273/bicena",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17257,
+      "title": "Mugunghwa, Lotte Hotel Busan (무궁화) — Busan restaurant",
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "title": "Chaoran, Signiel Busan (차오란 超然) — Busan restaurant guide",
+      "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "title": "Chaoran, Signiel Busan (차오란 超然) — Busan restaurant guide",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17264,
+      "title": "Mori (모리) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/mori-busan-restaurant",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "title": "Palate (팔레트) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/palate",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17266,
+      "title": "Fiotto (피오또) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "title": "Le DORER (르도헤) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/le-dorer-busan-restaurant",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17269,
+      "title": "Moemiljip (뫼밀집) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17270,
+      "title": "Baek-il Pyeongnaeng 100.1 (백일평냉) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17274,
+      "title": "Nagahama Mangetsu Haeundae (나가하마 만게츠 해운대 본점) — Busan restaurant guide",
+      "url": "https://eatbusan.com/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17277,
+      "title": "Songheonjip (송헌집) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17284,
+      "title": "Bao Haus (바오하우스) — Busan restaurant guide",
+      "url": "https://eatbusan.com/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17285,
+      "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
+      "url": "https://eatbusan.com/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 297,
+      "title": "Crisis Core: Final Fantasy VII Reunion Shadow Drops on Switch 2",
+      "url": "https://digitalchumps.com/crisis-core-final-fantasy-vii-reunion-nintendo-switch-2-review/",
+      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "title": "Norah Jones Wins Five Grammys, Led by Record and Album of the Year",
+      "url": "https://www.allmusic.com/album/mw0000507740",
+      "reason": "Page could not be opened"
+    }
+  ]
+}

@@ -591,6 +591,8 @@ Added 2026-10-24 (owner: product pins carry Announced and Released; a future lau
 **When.** In the news job, morning and evening. `npx tsx scripts/tags/productLifecycle.ts` (local) and `node scripts/tags/productLifecycleProd.mjs` (production) do the same by hand; `--dry-run` only counts.
 **Traps.** New goods pins get both tags from the extraction prompt; this task catches the rest and the dates that have since passed. A start date that moves later takes `Released` off.
 
+**Competitors (owner, 2026-10-26).** Every goods pin also needs 2-5 `PinCompetitor` rows (see AGENTS.md "Product competitors"). The extraction prompt has no competitor field, so new goods pins are gaps until a run fills them: query pins tagged `Announced`/`Released` with no `PinCompetitor` row and fill them through `PUT /api/pins/:id/competitors`. 2026-10-26 backlog: about 720 local goods pins.
+
 ## Find new events
 
 Look for what the timeline is missing, from what people search, read and say.
@@ -927,6 +929,23 @@ any unavailable graphs, inaccessible source assets or incompatible data.
 Keep the numbers the pages graph up to date. Last, so they cover the pins the run just added.
 
 ### sentiment
+
+**Review collection (2026-10-26).** Before the final scoring pass, call
+`review_research_gaps`. Research a bounded batch of the returned exact products,
+works and restaurant branches: aim for three independent reviews, up to six
+(up to eight for `PinCriticReview`; taste needs at least one). The category
+queue is a list of leads: awards, tours, finances and construction are not
+reviewable products. Skip them and pass checked ids in `skip` so they do not
+starve the queue. Open HTTPS sources, retain exact titles and verbatim extracts
+of at most 300 characters, and score each with `reviewRubric`. Save with
+`save_researched_reviews`, which preserves the author and axes, merges existing
+reviews and verifies both environments through native pin APIs. Research an
+undated extract's original publication day; never use `dateModified`, a URL
+date, a check date or a publisher's `0001-01-01` placeholder. Leave genuinely
+undated reviews null, and keep directory/shop pages off the graph. Record
+specific source failures or conflicting evidence, not an author allowlist
+mismatch. Back scoring sources with references/source wikis and synchronize
+the research/replay catalogs; do not report a partial production save as done.
 
 **Reads** `pending_sentiment`: the company pins whose title or summary
 changed since their tone was scored (or that never were), the comments

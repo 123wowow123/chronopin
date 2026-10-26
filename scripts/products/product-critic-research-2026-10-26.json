@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 6516,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/HoloLens_2",
+      "basis": "Three independent HoloLens 2 hands-on tests/reviews, not HoloLens 1 or a software-only update. Engadget and Toms Guide describe demo sessions; UploadVR is a later 2021 extended-use review. Their publication dates remain distinct from the 2019 announcement.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2019-02-25-microsoft-hololens-2-hands-on-mixed-reality.html",
+          "title": "Microsoft HoloLens 2 hands-on: A giant leap closer to mixed reality",
+          "publishedDate": "2019-02-25",
+          "quote": "Microsoft has made mixed reality less awkward.",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.tomsguide.com/reviews/hololens-2",
+          "title": "Hololens 2 hands-on review: $3,500 worth of cool",
+          "publishedDate": "2019-11-11",
+          "quote": "Out of the many AR and VR headsets I’ve tried, Hololens 2 is definitely in my top three as far as comfort goes.",
+          "sentiment": 0.75
+        },
+        {
+          "url": "https://www.uploadvr.com/hololens-2-review/",
+          "title": "HoloLens 2 Review: Ahead Of Its Time, For Better And Worse",
+          "publishedDate": "2021-04-09",
+          "quote": "For both better and worse, Microsoft’s HoloLens 2 is ahead of its time.",
+          "sentiment": 0.25
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.engadget.com/2019-02-25-microsoft-hololens-2-hands-on-mixed-reality.html",
+          "openedAt": "2026-10-26",
+          "title": "Microsoft HoloLens 2 hands-on: A giant leap closer to mixed reality",
+          "publishedDate": "2019-02-25",
+          "quoteVerified": true,
+          "method": "Opened publisher body and publication byline; Who What Wear date also confirmed in datePublished and time datetime"
+        },
+        {
+          "url": "https://www.tomsguide.com/reviews/hololens-2",
+          "openedAt": "2026-10-26",
+          "title": "Hololens 2 hands-on review: $3,500 worth of cool",
+          "publishedDate": "2019-11-11",
+          "quoteVerified": true,
+          "method": "Opened publisher body and publication byline; Who What Wear date also confirmed in datePublished and time datetime"
+        },
+        {
+          "url": "https://www.uploadvr.com/hololens-2-review/",
+          "openedAt": "2026-10-26",
+          "title": "HoloLens 2 Review: Ahead Of Its Time, For Better And Worse",
+          "publishedDate": "2021-04-09",
+          "quoteVerified": true,
+          "method": "Opened publisher body and publication byline; Who What Wear date also confirmed in datePublished and time datetime"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 3710,
+      "pinSourceUrl": "https://www.yahoo.com/lifestyle/exclusive-alo-yoga-launches-runner-130000467.html",
+      "basis": "Three firsthand Alo Runner wear tests from distinct publications. These excerpts support walking comfort and fit; they do not establish suitability for marathon training. Eat This and Travel + Leisure share a publishing family, but have separate named testers; the latter discloses a brand-supplied pair. No Alo Trail/Recovery Mode reviews or retailer ratings substituted.",
+      "reviews": [
+        {
+          "url": "https://www.eatthis.com/alo-runner-sneaker-review-10k-steps/",
+          "title": "I Took ALO’s Running Sneakers for a 10K Step Spin and Here’s What Surprised Me",
+          "publishedDate": "2025-09-13",
+          "quote": "Overall, the shoe is lightweight, breathable, comfortable, supportive, and provides the ideal amount of cushioning.",
+          "sentiment": 0.75
+        },
+        {
+          "url": "https://www.whowhatwear.com/wellness/alo-yoga-try-on-2026",
+          "title": "I Tried Out Hailey Bieber and Bella Hadid’s Favourite Activewear Brand—These Are My Honest Thoughts",
+          "publishedDate": "2026-01-15",
+          "quote": "there was no pinching, squeezing or claustrophobic toes.",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.travelandleisure.com/alo-runner-walking-shoes-review-11998731",
+          "title": "I Comfortably Walked 50,000+ Steps on Vacation in These Breathable, Bouncy Sneakers That Elevated My Outfits",
+          "publishedDate": "2026-06-16",
+          "quote": "my feet never felt tired.",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.eatthis.com/alo-runner-sneaker-review-10k-steps/",
+          "openedAt": "2026-10-26",
+          "title": "I Took ALO’s Running Sneakers for a 10K Step Spin and Here’s What Surprised Me",
+          "publishedDate": "2025-09-13",
+          "quoteVerified": true,
+          "method": "Opened publisher body and publication byline; Who What Wear date also confirmed in datePublished and time datetime"
+        },
+        {
+          "url": "https://www.whowhatwear.com/wellness/alo-yoga-try-on-2026",
+          "openedAt": "2026-10-26",
+          "title": "I Tried Out Hailey Bieber and Bella Hadid’s Favourite Activewear Brand—These Are My Honest Thoughts",
+          "publishedDate": "2026-01-15",
+          "quoteVerified": true,
+          "method": "Opened publisher body and publication byline; Who What Wear date also confirmed in datePublished and time datetime"
+        },
+        {
+          "url": "https://www.travelandleisure.com/alo-runner-walking-shoes-review-11998731",
+          "openedAt": "2026-10-26",
+          "title": "I Comfortably Walked 50,000+ Steps on Vacation in These Breathable, Bouncy Sneakers That Elevated My Outfits",
+          "publishedDate": "2026-06-16",
+          "quoteVerified": true,
+          "method": "Opened publisher body and publication byline; Who What Wear date also confirmed in datePublished and time datetime"
+        }
+      ]
+    }
+  ]
+}

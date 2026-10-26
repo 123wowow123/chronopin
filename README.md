@@ -457,13 +457,6 @@ https://search.google.com/search-console/performance/search-analytics?resource_i
 
 
 
-https://www.chronopin.com/pin/19608/china-eastern-flies-the-c919-s-first-commercial-flight-shanghai-to-beijing
-
-should mention main competitor products. 
-this should apply for all products
-
-
-
 
 create product production knowlege graph what supliers good coming in and output of company going out and consumed
 

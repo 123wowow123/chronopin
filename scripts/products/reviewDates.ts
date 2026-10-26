@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import { Parser } from 'htmlparser2';
 import type { PinReview } from '@/lib/pinReviews';
+import { reviewPublicationDay } from '@/lib/reviewPublicationDay';
 
 const { values } = parseArgs({ options: { audit: { type: 'string' }, output: { type: 'string' } } });
 if (!values.audit || !values.output) throw new Error('--audit and --output are required');
@@ -53,7 +54,9 @@ await Promise.all(Array.from({ length: 6 }, async () => {
       const body = normalize(bodyText);
       const days = [...new Set(dates.map((d) => /^\d{4}-\d{2}-\d{2}/.exec(d.value)?.[0]).filter(Boolean))];
       const matches = targets.filter((t) => t.review.url === url).map((t) => ({ table: t.table, pinId: t.pinId, quoteMatches: !!t.review.quote && !/^paraphrase:/i.test(t.review.quote) && body.includes(normalize(t.review.quote)) }));
-      readings.set(url, { status: response.status, finalUrl: response.url, title, dates, publishedDate: days.length === 1 ? days[0] : null, reason: days.length > 1 ? 'Conflicting publication dates' : days.length === 0 ? 'No explicit publication date' : null, matches });
+      const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+      const publishedDate = reviewPublicationDay(dates.map((d) => d.value), today);
+      readings.set(url, { status: response.status, finalUrl: response.url, title, dates, publishedDate, reason: publishedDate ? null : days.length > 1 ? 'Conflicting publication dates' : 'No valid explicit publication date', matches });
     } catch (error) { readings.set(url, { reason: (error as Error).message }); }
   }
 }));

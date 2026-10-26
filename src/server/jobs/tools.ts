@@ -60,6 +60,8 @@ import TraderPosition from '../model/traderPosition';
 import { addPosition } from '../services/traders';
 import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
+import { reviewResearchGaps, saveResearchedReviews } from './reviewResearch';
+import type { ReviewTable } from '@/lib/pinReviews';
 import { llmPerfProblem, saveLlmPerf } from '../model/pinLlmPerf';
 import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
 import { savePerf } from '../model/pinPerf';
@@ -342,6 +344,24 @@ export const TOOLS: JobTool[] = [
     run: (input) => signals.taggedPins(String(input.tag), int(input.limit, 40, 1, 100)),
   },
   // --- Sentiment (the sentiment task) -------------------------------------
+  {
+    name: 'review_research_gaps',
+    description: 'Review research queue: existing rubrics below three reviews (one for taste), undated non-MICHELIN extracts, and released pins in Gaming, Movie, TV, Music, Computing or Fashion without critic reviews. Categories also contain awards, concerts, business and construction: skip those, never manufacture product reviews. Research the exact work, model, variant or restaurant branch. Return skip pinIds already checked this run to move through the queue. Dates must be explicit publication days, never modified dates, review/check dates, URL guesses or placeholder year 0001. Pages genuinely undated remain null; directories and shops stay off the graph.',
+    input_schema: obj({ limit: num('Per queue, default 5, at most 20'), skip: { type: 'array', items: num('Pin id already researched this run') } }),
+    run: (input) => reviewResearchGaps(int(input.limit, 5, 1, 20), (input.skip ?? []).filter((id: unknown) => Number.isInteger(id))),
+  },
+  {
+    name: 'save_researched_reviews',
+    description: 'Merge verified reviews into an existing rubric, or create/extend PinCriticReview. Uses native pin APIs locally and in production, resolves production ids by unique sourceUrl, preserves author, rubric axes and existing reviews, refuses hand rows, and reads back to verify. Each source must be an opened HTTPS page with exact title, verbatim quote <=300 characters, explicit publishedDate (YYYY-MM-DD or empty when genuinely unpublished), and sentiment from reviewRubric (-1..1). Supply a basis explaining exact product matching, sources checked and any gaps. Up to 6 reviews for rubrics or 8 for critics. Retain source evidence in references/source wikis and synchronize replay catalogs before reporting completion.',
+    input_schema: obj({ table: str('One of the nine review table names, e.g. PinCriticReview or PinCarPerf'), pinId: num('Local pin id'), basis: str('Research basis, at most 1000 characters'), reviews: { type: 'array', items: obj({ url: str('Opened HTTPS review'), title: str('Exact article title'), publishedDate: str('Explicit publication day or empty'), quote: str('Verbatim extract, at most 300 characters'), sentiment: { type: 'number', description: '-1 to 1 from reviewRubric' } }, ['url','title','publishedDate','quote','sentiment']) } }, ['table','pinId','basis','reviews']),
+    run: async (input, ctx) => {
+      if (ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached.`);
+      const result = await saveResearchedReviews(input.table as ReviewTable, int(input.pinId, 0, 1, 2 ** 31 - 1), (input.reviews ?? []).map((r: Record<string, unknown>) => ({ ...r, publishedDate: r.publishedDate || null })), String(input.basis ?? ''));
+      ctx.updated++;
+      await act(ctx, { tool: 'save_researched_reviews', pinId: input.pinId, title: result.title, detail: JSON.stringify(result.saved) });
+      return result;
+    },
+  },
   {
     name: 'pending_sentiment',
     description:

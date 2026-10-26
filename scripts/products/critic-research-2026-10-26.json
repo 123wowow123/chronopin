@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 6148,
+      "pinSourceUrl": "https://www.imdb.com/title/tt10676052/",
+      "basis": "Three independent opened HTTPS reviews of the exact 2025 film/album; no live-show reviews or other franchise entries. Publication dates and short verbatim verdict extracts checked 2026-10-26. Sentiment estimates use the review rubric.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/film/2025/jul/22/the-fantastic-four-first-steps-review",
+          "title": "The Fantastic Four: First Steps review – Marvel regains buoyancy with wacky superhero family sitcom",
+          "publishedDate": "2025-07-22",
+          "quote": "an entertaining spectacle",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.digitaltrends.com/movies/fantastic-four-first-steps-review-marvel-cinematic-universe/",
+          "title": "The Fantastic Four: First Steps review: One giant leap for Marvel",
+          "publishedDate": "2025-07-25",
+          "quote": "First Steps is a strong start for the Fantastic Four’s run in the Marvel Cinematic Universe.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://arstechnica.com/culture/2025/07/review-fantastic-four-first-steps-is-the-best-film-version-so-far/",
+          "title": "Review: Fantastic Four: First Steps is the best film version so far",
+          "publishedDate": "2025-07-28",
+          "quote": "The plot makes no sense, but that retro-futuristic Tomorrowland vibe and superb cast make it (mostly) work.",
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/film/2025/jul/22/the-fantastic-four-first-steps-review",
+          "openedAt": "2026-10-26",
+          "title": "The Fantastic Four: First Steps review – Marvel regains buoyancy with wacky superhero family sitcom",
+          "publishedDate": "2025-07-22",
+          "quoteVerified": true,
+          "method": "Opened publisher page, publication byline and verbatim review text"
+        },
+        {
+          "url": "https://www.digitaltrends.com/movies/fantastic-four-first-steps-review-marvel-cinematic-universe/",
+          "openedAt": "2026-10-26",
+          "title": "The Fantastic Four: First Steps review: One giant leap for Marvel",
+          "publishedDate": "2025-07-25",
+          "quoteVerified": true,
+          "method": "Opened publisher page, publication byline and verbatim review text"
+        },
+        {
+          "url": "https://arstechnica.com/culture/2025/07/review-fantastic-four-first-steps-is-the-best-film-version-so-far/",
+          "openedAt": "2026-10-26",
+          "title": "Review: Fantastic Four: First Steps is the best film version so far",
+          "publishedDate": "2025-07-28",
+          "quoteVerified": true,
+          "method": "Opened publisher page, publication byline and verbatim review text"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7389,
+      "pinSourceUrl": "https://www.officialcharts.com/chart-news/lily-allen-reveals-new-album-west-end-girl-is-coming-imminently",
+      "basis": "Three independent opened HTTPS reviews of the exact 2025 film/album; no live-show reviews or other franchise entries. Publication dates and short verbatim verdict extracts checked 2026-10-26. Sentiment estimates use the review rubric.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/music/2025/oct/24/lily-allen-west-end-girl-a-gobsmacking-autopsy-of-marital-betrayal",
+          "title": "Lily Allen: West End Girl – a gobsmacking autopsy of marital betrayal",
+          "publishedDate": "2025-10-24",
+          "quote": "a great pop album",
+          "sentiment": 0.85
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/lily-allen-west-end-girl/",
+          "title": "West End Girl",
+          "publishedDate": "2025-10-30",
+          "quote": "Lightness isn’t a foil for irony, but a vehicle for hurt.",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.thefader.com/2025/10/24/lily-allen-west-end-girl-review",
+          "title": "Lily Allen’s West End Girl review: tea, divorce, and even stranger things",
+          "publishedDate": "2025-10-24",
+          "quote": "That would be a shame because there are some great songs on the album.",
+          "sentiment": 0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/music/2025/oct/24/lily-allen-west-end-girl-a-gobsmacking-autopsy-of-marital-betrayal",
+          "openedAt": "2026-10-26",
+          "title": "Lily Allen: West End Girl – a gobsmacking autopsy of marital betrayal",
+          "publishedDate": "2025-10-24",
+          "quoteVerified": true,
+          "method": "Opened publisher page, publication byline and verbatim review text"
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/lily-allen-west-end-girl/",
+          "openedAt": "2026-10-26",
+          "title": "West End Girl",
+          "publishedDate": "2025-10-30",
+          "quoteVerified": true,
+          "method": "Opened publisher page, publication byline and verbatim review text"
+        },
+        {
+          "url": "https://www.thefader.com/2025/10/24/lily-allen-west-end-girl-review",
+          "openedAt": "2026-10-26",
+          "title": "Lily Allen’s West End Girl review: tea, divorce, and even stranger things",
+          "publishedDate": "2025-10-24",
+          "quoteVerified": true,
+          "method": "Opened publisher page, publication byline and verbatim review text"
+        }
+      ]
+    }
+  ]
+}

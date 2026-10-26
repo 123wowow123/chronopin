@@ -206,8 +206,11 @@ async function adminToken(why: string): Promise<string> {
 // Review maintenance uses the native pin endpoints, as admin, without changing
 // the original author. Local research ids must be resolved by sourceUrl before
 // calling this against production.
-export async function reviewResearchRequest<T>(method: 'GET' | 'PUT', path: string, body?: unknown, production = false): Promise<T> {
-  if (!/^\/api\/pins\/\d+\/(?:taste|car-performance|gas-car-performance|aircraft-performance|llm-performance|video-performance|hotel|dining|critic-reviews)$/.test(path)) throw new Error('Not a pin review endpoint');
+export async function reviewResearchRequest<T>(method: 'GET' | 'PUT' | 'POST', path: string, body?: unknown, production = false): Promise<T> {
+  const review = /^\/api\/pins\/\d+\/(?:taste|car-performance|gas-car-performance|aircraft-performance|llm-performance|video-performance|hotel|dining|critic-reviews)$/.test(path);
+  const evidence = /^\/api\/pins\/\d+\/references$/.test(path) || path === '/api/admin/source-wikis';
+  const links = /^\/api\/admin\/db\/(?:Source|PinSource)(?:\?[^#]*)?$/.test(path);
+  if (!((review && method !== 'POST') || (evidence && method === 'POST') || (links && method !== 'PUT'))) throw new Error('Not a pin review or review evidence endpoint');
   const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
   if (!admin) throw new Error('No admin account available for review research');
   const base = production ? prodBase() : apiBase();

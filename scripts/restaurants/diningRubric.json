@@ -1575,9 +1575,10 @@
       },
       {
         "url": "https://gardenandgun.com/varsity-atlanta-history",
-        "title": "The Varsity Celebrates 90 Years in Atlanta (Garden & Gun, Aug/Sept 2018 issue)",
-        "publishedDate": null,
-        "quote": "Loosen your belt one more notch and finish off your meal with a fried pie—peach, naturally."
+        "quote": "Loosen your belt one more notch and finish off your meal with a fried pie—peach, naturally.",
+        "title": "The Varsity Celebrates 90 Years in Atlanta",
+        "publishedDate": "2018-08-08",
+        "sentiment": 0.6
       },
       {
         "url": "https://jaybusbee.substack.com/p/the-best-burger-ever",
@@ -1829,9 +1830,10 @@
       },
       {
         "url": "https://www.worldtraversal.com/post/alinea-review-michelin",
-        "title": "Alinea Review - 2 Stars Now With a Completely New Menu (travel blog, diner account)",
-        "publishedDate": null,
-        "quote": "The barely cooked king crab is a standout, rich but controlled, playful yet precise."
+        "quote": "The barely cooked king crab is a standout, rich but controlled, playful yet precise.",
+        "title": "Alinea Review - 2 Stars Now With a Completely New Menu",
+        "publishedDate": "2026-06-12",
+        "sentiment": 0.8
       }
     ],
     "sources": [
@@ -2370,7 +2372,7 @@
     "pinId": 17143,
     "scores": {
       "food": 3,
-      "service": 2.0,
+      "service": 2,
       "ambience": 2.5,
       "value": 1.5,
       "acclaim": 3
@@ -2534,8 +2536,8 @@
     "scores": {
       "food": 3,
       "service": 1.5,
-      "ambience": 2.0,
-      "value": 2.0,
+      "ambience": 2,
+      "value": 2,
       "acclaim": null
     },
     "basis": "Tripadvisor, read 2026-10-18 (2,723 listing reviews; category sample counts unpublished): Service 3.5/5 -> 1.5; Ambience 3.7/5 -> 2; Value 3.7/5 -> 2. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3 and Critic acclaim null retained from prior cited research.",
@@ -2895,7 +2897,7 @@
       "food": 4,
       "service": 4.5,
       "ambience": 4.5,
-      "value": 3.0,
+      "value": 3,
       "acclaim": 4.5
     },
     "basis": "Tripadvisor, read 2026-10-18 (82 listing reviews; category sample counts unpublished): Service 4.7/5 -> 4.5; Ambience 4.8/5 -> 4.5; Value 4.2/5 -> 3. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
@@ -3175,7 +3177,7 @@
     "pinId": 17161,
     "scores": {
       "food": 4.5,
-      "service": 3.0,
+      "service": 3,
       "ambience": 3.5,
       "value": 1.5,
       "acclaim": 4.5
@@ -3658,7 +3660,7 @@
     "pinId": 17153,
     "scores": {
       "food": null,
-      "service": 4.0,
+      "service": 4,
       "ambience": 4.5,
       "value": 3.5,
       "acclaim": 5
@@ -4272,7 +4274,7 @@
     "scores": {
       "food": 3,
       "service": 2.5,
-      "ambience": 3.0,
+      "ambience": 3,
       "value": 2.5,
       "acclaim": null
     },
@@ -4377,7 +4379,7 @@
       "food": null,
       "service": 1.5,
       "ambience": null,
-      "value": 2.0,
+      "value": 2,
       "acclaim": 2
     },
     "basis": "Tripadvisor, read 2026-10-18 (52 listing reviews; category sample counts unpublished): Service 3.6/5 -> 1.5; Ambience unpublished (null); Value 3.7/5 -> 2. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food null and Critic acclaim 2 retained from prior cited research.",

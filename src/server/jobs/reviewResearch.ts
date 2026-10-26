@@ -1,6 +1,8 @@
 import * as db from '../db';
 import { REVIEW_TABLES, reviewsProblem, type PinReview, type ReviewTable } from '@/lib/pinReviews';
 import { adminDbRequest, prodBase, reviewResearchRequest } from './pinApi';
+import { reviewPublicationDay } from '@/lib/reviewPublicationDay';
+import { REVIEW_SENTIMENT_PROMPT } from '../extract/reviewSentiment';
 
 export const REVIEW_ENDPOINTS: Record<ReviewTable, string> = {
   PinTaste: 'taste', PinCarPerf: 'car-performance', PinGasCarPerf: 'gas-car-performance',
@@ -40,7 +42,7 @@ export async function reviewResearchGaps(limit = 5, skip: number[] = []) {
        AND NOT EXISTS (SELECT 1 FROM "PinCriticReview" c WHERE c."pinId" = p."id")
      ORDER BY p."utcStartDateTime" DESC, p."id" LIMIT $2`, [skip, limit + 1],
   );
-  return { rubric: rubric.slice(0, limit), critics: critics.slice(0, limit), moreRubrics: rubric.length > limit, moreCritics: critics.length > limit };
+  return { reviewRubric: REVIEW_SENTIMENT_PROMPT, rubric: rubric.slice(0, limit), critics: critics.slice(0, limit), moreRubrics: rubric.length > limit, moreCritics: critics.length > limit };
 }
 
 // Both sides are read, merged and verified through native APIs; no rubric
@@ -51,6 +53,8 @@ export async function saveResearchedReviews(table: ReviewTable, pinId: number, i
   const incoming = reviewsProblem(input, { max, maxQuote: 300 });
   if (typeof incoming === 'string') throw new Error(incoming);
   if (!incoming.length || incoming.some((r) => !r.url.startsWith('https://') || !r.title || !r.quote || r.sentiment == null)) throw new Error('Research needs opened HTTPS sources, exact titles, verbatim quotes and sentiment scores.');
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+  if (incoming.some((r) => r.publishedDate && reviewPublicationDay([r.publishedDate], today) !== r.publishedDate)) throw new Error('Publication dates must be real, nonfuture days; leave placeholders null.');
   if (!basis.trim() || basis.length > 1000) throw new Error('A research basis of 1–1000 characters is required');
   const [pin] = await db.query<{ title: string; sourceUrl: string | null }>(`SELECT "title", "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
   if (!pin) throw new Error('Pin not found');
@@ -70,7 +74,7 @@ export async function saveResearchedReviews(table: ReviewTable, pinId: number, i
     if (row?.source === 'hand') throw new Error('Reviews set by hand are preserved');
     if (!row && table !== 'PinCriticReview') throw new Error(`Missing ${table} rubric`);
     const reviews = mergeResearchedReviews(row?.reviews ?? [], incoming, max);
-    prepared.push({ ...target, route, body: { ...row, reviews, source: row?.source ?? 'session', basis: [row?.basis, basis].filter(Boolean).join('\n').slice(-1000) } });
+    prepared.push({ ...target, route, body: { ...row, reviews, source: row?.source ?? 'session', basis: row?.basis ?? basis } });
   }
   const saved = [];
   for (const target of prepared) {
