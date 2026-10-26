@@ -65,6 +65,7 @@ import { DEFAULT_HIDE_THIN_PINS, type HideThinPinsSetting } from '@/lib/searchQu
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
 import { restaurantPreviewPin } from './restaurantPreview';
+import { TagCountBusy, withTagCountSlot } from '../tagCountGate';
 import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } from './search';
 import type { TagCount } from '@/lib/tags';
 import { getTimeline, timelineMinConfidence } from './timeline';
@@ -558,7 +559,11 @@ export async function searchPageTagCounts(
   const zone = zoneFor(counted, timeZone);
   return onlyWatched && userId
     ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
-    : cachedTagCounts(counted, created, zone, limit);
+    : cachedTagCounts(counted, created, zone, limit).catch((error) => {
+        // An uncached count turned away (tagCountGate): no cloud for now.
+        if (error instanceof TagCountBusy) return [];
+        throw error;
+      });
 }
 const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
 
@@ -567,7 +572,8 @@ async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: s
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.timeline);
-  return searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) });
+  // Thrown, not returned empty, when busy, so the answer is not cached.
+  return withTagCountSlot(() => searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) }));
 }
 
 export async function pinComments(id: number) {
