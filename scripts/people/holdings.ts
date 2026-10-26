@@ -10,7 +10,7 @@ import type { HoldingsSnapshot } from '@/lib/holdings';
 
 const { values } = parseArgs({ options: { refresh: { type: 'boolean' }, apply: { type: 'boolean' }, base: { type: 'string', default: 'http://localhost:3000' }, file: { type: 'string', default: 'src/server/data/personHoldings.json' } } });
 const file = values.file!;
-if (!['src/server/data/personHoldings.json', 'src/server/data/personHoldingsPrimary.json', 'src/server/data/personHoldingsInsiders.json'].includes(file)) throw new Error('Unsupported reviewed holdings catalog');
+if (!['src/server/data/personHoldings.json', 'src/server/data/personHoldingsPrimary.json', 'src/server/data/personHoldingsInsiders.json', 'src/server/data/personHoldingsReported.json'].includes(file)) throw new Error('Unsupported reviewed holdings catalog');
 const base = values.base!.replace(/\/$/, '');
 if (!['http://localhost:3000', 'https://www.chronopin.com'].includes(base)) throw new Error('Unsupported API host');
 type Entry = { name: string; portfolios: HoldingsSnapshot[] };
@@ -78,14 +78,16 @@ async function main() {
   const indexResponse = await fetch(base + '/api/people');
   if (!indexResponse.ok) throw new Error('Cannot read People directory');
   const index = await indexResponse.json() as { id: number; name: string }[];
-  const work = `.scrape/people-holdings-${file.endsWith('Primary.json') ? 'primary-' : file.endsWith('Insiders.json') ? 'insiders-' : ''}${catalog.checkedAt}/${base.includes('localhost') ? 'local' : 'prod'}`;
+  const work = `.scrape/people-holdings-${file.endsWith('Primary.json') ? 'primary-' : file.endsWith('Insiders.json') ? 'insiders-' : file.endsWith('Reported.json') ? 'reported-' : ''}${catalog.checkedAt}/${base.includes('localhost') ? 'local' : 'prod'}`;
   mkdirSync(work, { recursive: true });
   const report = [];
   for (const person of catalog.profiles) {
     const matches = index.filter(p => p.name === person.name);
     if (matches.length !== 1) throw new Error(`Ambiguous or missing identity: ${person.name}`);
     const url = `${base}/api/people/${matches[0].id}/holdings`;
-    const response = await fetch(url);
+    // A proxy can suffix compressed response ETags (e.g. "...-gzip").
+    // Request the identity representation so If-Match retains the API's hash.
+    const response = await fetch(url, { headers: { 'Accept-Encoding': 'identity', 'Cache-Control': 'no-cache' } });
     if (!response.ok) throw new Error(`Holdings ${person.name}: HTTP ${response.status}`);
     const before = await response.json() as { portfolios: HoldingsSnapshot[] };
     const current = readHoldings(before);
@@ -95,7 +97,7 @@ async function main() {
       writeFileSync(`${work}/before-${matches[0].id}-${Date.now()}.json`, JSON.stringify(before, null, 2) + '\n');
       const saved = await fetch(url, { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}`, 'If-Match': response.headers.get('etag') ?? '' }, body: JSON.stringify({ portfolios: additions }) });
       if (!saved.ok) throw new Error(`Save ${person.name}: HTTP ${saved.status}: ${await saved.text()}`);
-      const afterResponse = await fetch(url);
+      const afterResponse = await fetch(url, { headers: { 'Accept-Encoding': 'identity', 'Cache-Control': 'no-cache' } });
       if (!afterResponse.ok) throw new Error('Readback failed');
       const after = readHoldings(await afterResponse.json());
       if (additions.some(p => JSON.stringify(after.find(c => c.key === p.key)) !== JSON.stringify(p))) throw new Error(`Readback mismatch: ${person.name}`);

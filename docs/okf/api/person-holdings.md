@@ -268,3 +268,31 @@ holdings APIs were read back: every added disclosure link and row is present,
 with one personal balance snapshot per person and P&L explicitly undisclosed.
 The new holdings replay is idempotent locally. This extension has not been
 deployed; production deployment still requires the owner's explicit request.
+
+## Burry production content correction — October 25
+
+The original personal section shipped with no holding rows: the first-person
+public previews were insufficient, but the research had not incorporated
+credible dated reporting of named personal positions. The correction adds
+`src/server/data/personHoldingsReported.json` as an independent reviewed source
+catalog, separate from SEC insider refreshes and fund/strategy data. It records
+six companies reported by Oninvest on October 12 from Burry's October portfolio:
+BYD, JD.com, Haidilao, Haier, Tencent and Meituan. The portfolio observation is
+October 11. Five names are corroborated by an October 15 financial article.
+These are explicitly press-reported, partial personal holdings. Share counts,
+allocation, exact listing/share class, cost, valuation and P&L are not inferred.
+Reference symbols identify issuers; the USD display convention is not an
+assertion about the held account currency. Conflicting derivative and preferred
+share details are excluded. Source URLs, response hashes, accessibility limits
+and differing reported BYD trade dates are retained in the research catalog.
+
+Saved through the authenticated holdings API locally and in production using
+`npx tsx scripts/people/holdings.ts --file src/server/data/personHoldingsReported.json
+--apply --base https://www.chronopin.com`. No deployment was performed or needed
+for the production content save. Existing fund and tracker keys were retained.
+The proxy appends `-gzip` to compressed response ETags; sending that transformed
+ETag as If-Match correctly failed with 412. Replay GET/readback now request
+`Accept-Encoding: identity` to preserve the API's original version hash without
+weakening concurrent-edit protection. Production application then succeeded;
+a fresh native page request rendered six personal rows and a subsequent replay
+reported zero updates. TypeScript, 21 affected tests and targeted ESLint passed.

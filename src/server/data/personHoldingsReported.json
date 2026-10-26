@@ -1,0 +1,128 @@
+{
+  "checkedAt": "2026-10-25",
+  "profiles": [
+    {
+      "name": "Michael Burry",
+      "portfolios": [
+        {
+          "key": "personal-burry-reported-october-2026",
+          "name": "Michael Burry — reported personal holdings (October 2026)",
+          "scope": "personal",
+          "asOf": "2026-10-11",
+          "checkedAt": "2026-10-25",
+          "sourceUrl": "https://en.oninvest.com/article/the-hong-kong-market-is-under-pressure-which-stocks-did-the-investor-from-shorting-the-market-buy",
+          "sourceDataUrl": null,
+          "complete": false,
+          "undisclosedCount": null,
+          "undisclosedWeightPercent": null,
+          "coverageNote": "Reported personal positions, not Scion filings or an Autopilot strategy. Oninvest’s October 12 article names these six companies in Burry’s October portfolio; a separate October 15 report corroborates five. This is a partial dated press-reported snapshot, not an audited brokerage statement. The full newsletter holdings were not accessible in its public preview. Issuer symbols are references only: the exact listing/share class held is not established. USD is a display convention for these reference symbols, not an asserted account currency; no monetary values or FX conversions are entered. Shares, allocations, costs, valuations and P&L remain unknown. Subsequent changes are possible. Options and reported exits are excluded.",
+          "holdings": [
+            {
+              "symbol": "BYDDF",
+              "name": "BYD Company Limited",
+              "owner": "self",
+              "side": "long",
+              "currency": "USD",
+              "weightPercent": null,
+              "shares": null,
+              "costBasis": null,
+              "marketValue": null,
+              "valuationDate": null,
+              "costSourceUrl": null,
+              "valueSourceUrl": null
+            },
+            {
+              "symbol": "JD",
+              "name": "JD.com",
+              "owner": "self",
+              "side": "long",
+              "currency": "USD",
+              "weightPercent": null,
+              "shares": null,
+              "costBasis": null,
+              "marketValue": null,
+              "valuationDate": null,
+              "costSourceUrl": null,
+              "valueSourceUrl": null
+            },
+            {
+              "symbol": "HDALF",
+              "name": "Haidilao International Holding",
+              "owner": "self",
+              "side": "long",
+              "currency": "USD",
+              "weightPercent": null,
+              "shares": null,
+              "costBasis": null,
+              "marketValue": null,
+              "valuationDate": null,
+              "costSourceUrl": null,
+              "valueSourceUrl": null
+            },
+            {
+              "symbol": "HRSHF",
+              "name": "Haier Smart Home",
+              "owner": "self",
+              "side": "long",
+              "currency": "USD",
+              "weightPercent": null,
+              "shares": null,
+              "costBasis": null,
+              "marketValue": null,
+              "valuationDate": null,
+              "costSourceUrl": null,
+              "valueSourceUrl": null
+            },
+            {
+              "symbol": "TCTZF",
+              "name": "Tencent Holdings",
+              "owner": "self",
+              "side": "long",
+              "currency": "USD",
+              "weightPercent": null,
+              "shares": null,
+              "costBasis": null,
+              "marketValue": null,
+              "valuationDate": null,
+              "costSourceUrl": null,
+              "valueSourceUrl": null
+            },
+            {
+              "symbol": "MPNGF",
+              "name": "Meituan",
+              "owner": "self",
+              "side": "long",
+              "currency": "USD",
+              "weightPercent": null,
+              "shares": null,
+              "costBasis": null,
+              "marketValue": null,
+              "valuationDate": null,
+              "costSourceUrl": null,
+              "valueSourceUrl": null
+            }
+          ],
+          "performance": null
+        }
+      ]
+    }
+  ],
+  "sourceAudit": [
+    {
+      "url": "https://en.oninvest.com/article/the-hong-kong-market-is-under-pressure-which-stocks-did-the-investor-from-shorting-the-market-buy",
+      "status": 200,
+      "sha256": "a973295366febff7e4fd93a96cb622aa166eb37bb3a9cbde48dccfa78f5665cd",
+      "checkedAt": "2026-10-25"
+    },
+    {
+      "url": "https://insiderbuying.com/insights/editorial-michael-burry-china-stocks-shorts-nasdaq-2026-10-15",
+      "verification": "Opened and read with web tool; plain HTTP fetch returns 403",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "researchNotes": [
+    "Primary newsletter public preview opened: https://michaeljburry.substack.com/p/fannie-mae-freddie-mac-hong-kong. Full holdings are behind subscriber access.",
+    "Oninvest dates its reported BYD addition October 11; the October 15 corroborating article dates it October 6. No exact execution date is claimed.",
+    "Derivative positions and Fannie/Freddie share classes conflict across trackers and are excluded. No tracker is treated as a complete personal portfolio."
+  ]
+}

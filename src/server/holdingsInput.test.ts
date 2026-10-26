@@ -4,9 +4,24 @@ import { readHoldings } from './holdingsInput';
 import primary from './data/personHoldingsPrimary.json';
 import { holdingPnl } from '@/lib/holdings';
 import insiders from './data/personHoldingsInsiders.json';
+import reported from './data/personHoldingsReported.json';
 
 const example = () => ({ name: catalog.profiles[0].name, portfolios: readHoldings(catalog.profiles[0]) });
 describe('holdings evidence contract', () => {
+  it('accepts a dated partial reported personal portfolio without inferring quantities or profit', () => {
+    const p = readHoldings(reported.profiles[0])[0];
+    expect(p.scope).toBe('personal');
+    expect(p.complete).toBe(false);
+    expect(p.asOf).toBe('2026-10-11');
+    expect(p.holdings).toHaveLength(6);
+    expect(p.coverageNote).toContain('press-reported');
+    for (const h of p.holdings) {
+      expect(h.shares).toBeNull();
+      expect(h.costBasis).toBeNull();
+      expect(h.marketValue).toBeNull();
+      expect(holdingPnl(h)).toBeNull();
+    }
+  });
   it('preserves personal insider share balances without inventing market values or matching cost lots', () => {
     expect(insiders.profiles.map(p => p.name).sort()).toEqual(['Bill Ackman', 'Elon Musk', 'Peter Thiel', 'Warren Buffett']);
     for (const person of insiders.profiles) for (const p of readHoldings(person)) {

@@ -1,0 +1,28 @@
+{
+  "name": "Michael Burry",
+  "educationLevel": 4,
+  "educationNote": "MD, Vanderbilt University School of Medicine, 1997 (professional medical degree)",
+  "educationSourceUrl": "https://news.vumc.org/medicine/these-doctors-mean-business/",
+  "phases": [
+    {
+      "label": "Overview",
+      "startYear": null,
+      "endYear": null,
+      "summary": "Career evidence reviewed October 25, 2026. Position describes documented historical fund leadership, rather than a claim of a current operating fund. Unscored axes remain evidence gaps.",
+      "axes": {
+        "education": {
+          "score": 4,
+          "confidence": "high",
+          "basis": "Vanderbilt identifies Burry as an MD graduate of its 1997 class. A professional medical degree scores 4 under the education rubric.",
+          "evidenceUrl": "https://news.vumc.org/medicine/these-doctors-mean-business/"
+        },
+        "position": {
+          "score": 3,
+          "confidence": "high",
+          "basis": "Founded and led Scion Capital in 2000–2008 and started Scion Asset Management in September 2013. This investment-management leadership meets the senior-manager anchor (3); the source does not establish leadership of a major institution at the 5 anchor. Historical career scope, not a statement that either fund operates today.",
+          "evidenceUrl": "https://news.vumc.org/medicine/these-doctors-mean-business/"
+        }
+      }
+    }
+  ]
+}

@@ -6,10 +6,18 @@ import en from '@/lib/i18n/messages/en';
 import catalog from '@/server/data/personHoldings.json';
 import { readHoldings } from '@/server/holdingsInput';
 import primary from '@/server/data/personHoldingsPrimary.json';
+import reported from '@/server/data/personHoldingsReported.json';
 
 const t = createTranslator(en, 'en');
 const render = (portfolios = readHoldings(catalog.profiles[0])) => renderToStaticMarkup(<HoldingsSection portfolios={portfolios} today="2026-10-25" t={t} />);
 describe('holdings section', () => {
+  it('shows Burry’s six reported personal holdings in the personal section with source limits', () => {
+    const html = renderToStaticMarkup(<HoldingsSection portfolios={readHoldings(reported.profiles[0])} today="2026-10-25" t={t} view="personal" />);
+    for (const name of ['BYD', 'JD.com', 'Tencent', 'Meituan', 'Haidilao', 'Haier']) expect(html).toContain(name);
+    expect(html).toContain('press-reported');
+    expect(html).toContain('Not disclosed');
+    expect(html).not.toContain('No verified personal portfolio snapshot');
+  });
   it('keeps fund and strategy positions out of the personal section, with unique section targets', () => {
     const portfolios = readHoldings(primary.profiles.find(p => p.name === 'Michael Burry')!);
     const personal = renderToStaticMarkup(<HoldingsSection portfolios={portfolios} today="2026-10-25" t={t} view="personal" />);

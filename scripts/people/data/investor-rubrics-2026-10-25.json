@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-10-25",
+  "scope": "Four investor profiles: research additions merged with all existing rubric axes and research notes; no legal clean-record inference.",
+  "entries": [
+    {
+      "id": 1309,
+      "name": "Jim Simons",
+      "slug": "jim-simons",
+      "educationLevel": 5,
+      "educationNote": "PhD in mathematics, University of California, Berkeley, 1961; undergraduate mathematics degree, MIT, 1958",
+      "educationSourceUrl": "https://www.simonsfoundation.org/news/remembering-the-life-and-careers-of-jim-simons/",
+      "axes": {
+        "education": {
+          "score": 5,
+          "basis": "Highest completed qualification: PhD in mathematics, University of California, Berkeley, 1961; undergraduate mathematics degree, MIT, 1958. Professional/master’s degrees score 4; research doctorates 5; bachelor’s degrees 3.",
+          "evidenceUrl": "https://www.simonsfoundation.org/news/remembering-the-life-and-careers-of-jim-simons/",
+          "confidence": "high"
+        },
+        "position": {
+          "score": 5,
+          "basis": "Historical career scope: founded Renaissance Technologies (originally Monometrics), led its institutional investment business and retired as CEO in 2010. Leadership of this major investment institution meets the top-institutional-role anchor (5). This is not a current employment claim; Simons died in 2024.",
+          "evidenceUrl": "https://www.simonsfoundation.org/news/remembering-the-life-and-careers-of-jim-simons/",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "id": 1311,
+      "name": "Ken Griffin",
+      "slug": "ken-griffin",
+      "educationLevel": 3,
+      "educationNote": "AB with honors in economics, Harvard College, 1989",
+      "educationSourceUrl": "https://www.citadel.com/who-we-are/leadership/kenneth-c-griffin/",
+      "axes": {
+        "education": {
+          "score": 3,
+          "basis": "Highest completed qualification: AB with honors in economics, Harvard College, 1989. Professional/master’s degrees score 4; research doctorates 5; bachelor’s degrees 3.",
+          "evidenceUrl": "https://www.citadel.com/who-we-are/leadership/kenneth-c-griffin/",
+          "confidence": "high"
+        },
+        "position": {
+          "score": 5,
+          "basis": "Founder and CEO of Citadel and founder/non-executive chairman of Citadel Securities. Citadel reports 3,300 professionals and over $70 billion of client investment capital. Its CEO is the top role of a major financial institution, the position rubric’s 5 anchor. Client assets establish institutional scope, not personal wealth.",
+          "evidenceUrl": "https://www.citadel.com/who-we-are/leadership/kenneth-c-griffin/",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "id": 1315,
+      "name": "Ray Dalio",
+      "slug": "ray-dalio",
+      "educationLevel": 4,
+      "educationNote": "MBA, Harvard Business School, 1973",
+      "educationSourceUrl": "https://www.bridgewater.com/our-founder",
+      "axes": {
+        "education": {
+          "score": 4,
+          "basis": "Highest completed qualification: MBA, Harvard Business School, 1973. Professional/master’s degrees score 4; research doctorates 5; bachelor’s degrees 3.",
+          "evidenceUrl": "https://www.bridgewater.com/our-founder",
+          "confidence": "high"
+        },
+        "position": {
+          "score": 5,
+          "basis": "Historical career scope: founded Bridgewater in 1975 and led its development into a global institution as CEO, CIO and chairman. This meets the top-institutional-role anchor (5). He stepped down as CEO in 2017, CIO in summer 2020 and chairman at the end of 2021; this score does not assert current executive authority.",
+          "evidenceUrl": "https://www.bridgewater.com/our-founder",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "id": 1317,
+      "name": "Peter Thiel",
+      "slug": "peter-thiel",
+      "educationLevel": 4,
+      "educationNote": "JD, Stanford Law School, 1992",
+      "educationSourceUrl": "https://law.stanford.edu/press/peter-thiels-quest-for-one-of-a-kind-ideas/",
+      "axes": {
+        "education": {
+          "score": 4,
+          "basis": "Highest completed qualification: JD, Stanford Law School, 1992. Professional/master’s degrees score 4; research doctorates 5; bachelor’s degrees 3.",
+          "evidenceUrl": "https://law.stanford.edu/press/peter-thiels-quest-for-one-of-a-kind-ideas/",
+          "confidence": "high"
+        },
+        "position": {
+          "score": 5,
+          "basis": "Cofounded PayPal, led it as CEO and took it public; cofounded Palantir Technologies and serves as chairman, according to Founders Fund. These are top corporate leadership roles at major technology institutions, meeting the rubric’s 5 anchor. This assesses scope of authority, not investment success or social benefit.",
+          "evidenceUrl": "https://foundersfund.com/team/peter-thiel/",
+          "confidence": "high"
+        },
+        "standing": {
+          "score": 1,
+          "basis": "Navigator/Global Strategy Group national survey, June 4–8, 2026: 8% favorable, 23% unfavorable, 22% don’t know and 46% never heard of Thiel (rounded percentages). Overall favorability below 20% maps to 1 under the displayed rubric. This is favorability, not job approval, and includes respondents unfamiliar with him. Single dated survey; 1,000 base interviews plus oversamples (1,383 total); base margin ±3.1 points.",
+          "evidenceUrl": "https://navigatorresearch.org/wp-content/uploads/2026/06/Navigator-Toplines-06.08.2026.pdf",
+          "confidence": "medium"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.simonsfoundation.org/news/remembering-the-life-and-careers-of-jim-simons/",
+      "title": "Remembering the Life and Careers of Jim Simons",
+      "quote": "After retiring as Renaissance Technologies’ chief executive officer in 2010",
+      "supports": "Historical leadership; completed education"
+    },
+    {
+      "url": "https://www.citadel.com/who-we-are/leadership/kenneth-c-griffin/",
+      "title": "Kenneth C. Griffin",
+      "quote": "Ken holds an A.B. ’89 with Honors in Economics from Harvard College.",
+      "supports": "Degree, executive roles and institutional scope"
+    },
+    {
+      "url": "https://www.bridgewater.com/our-founder",
+      "title": "Our Founder",
+      "quote": "Harvard Business School where he received an MBA in 1973.",
+      "supports": "Degree, former leadership and explicit transition dates"
+    },
+    {
+      "url": "https://foundersfund.com/team/peter-thiel/",
+      "title": "Peter Thiel",
+      "quote": "he cofounded Palantir Technologies, where he serves as chairman.",
+      "supports": "Historical PayPal and Palantir leadership"
+    },
+    {
+      "url": "https://law.stanford.edu/press/peter-thiels-quest-for-one-of-a-kind-ideas/",
+      "title": "Peter Thiel’s Quest for One-of-a-Kind Ideas",
+      "quote": "a JD (’92) from Stanford Law School.",
+      "supports": "Professional degree"
+    },
+    {
+      "url": "https://navigatorresearch.org/wp-content/uploads/2026/06/Navigator-Toplines-06.08.2026.pdf",
+      "title": "June 1 Navigator 2026 — Toplines, June 4–8, 2026",
+      "supports": "Page 6/45: Thiel favorability; page 1/45: sample and field dates"
+    },
+    {
+      "url": "https://navigatorresearch.org/americans-are-concerned-by-ai-but-still-use-it/",
+      "title": "Americans are Concerned by AI, But Still Use It",
+      "supports": "Pollster-hosted report linking to the original June national survey; August battleground methodology is not the June survey methodology"
+    }
+  ],
+  "gaps": [
+    "Health: no current person/physician functional assessment established in this pass.",
+    "Misconduct: no comprehensive personal legal review undertaken; company actions cannot be assigned to individuals.",
+    "Social/economic: biographies and donation/program totals do not establish causal net impact under the official-statistics/peer-reviewed rubric.",
+    "Standing: no eligible dated approval/favorability population survey verified for Simons, Griffin or Dalio; reputation indices and self-selected website polls were excluded.",
+    "Wealth: existing sourced income scores preserved; Thiel has no new dated wealth assessment."
+  ]
+}
