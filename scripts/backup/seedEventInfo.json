@@ -12,7 +12,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://la28.org/en/newsroom/la28-launches-global-olympic-ticket-sales.html",
-    "checkedAt": "2026-10-10T21:46:01.617Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 252,
@@ -27,7 +27,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.uefa.com/euro2028/news/02a0-1f55506ebc73-bd595aa88468-1000--uefa-euro-2028-puts-fans-first-with-fair-and-transparent-/",
-    "checkedAt": "2026-10-14T16:12:55.672Z"
+    "checkedAt": "2026-10-24T14:03:40.475Z"
   },
   {
     "pinId": 253,
@@ -42,7 +42,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2030_Winter_Olympics",
-    "checkedAt": "2026-10-16T18:00:03.018Z"
+    "checkedAt": "2026-10-24T14:05:22.446Z"
   },
   {
     "pinId": 254,
@@ -57,7 +57,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-2030-hosts-qualified-bidding-spain-argentina-morocco-uruguay-portugal-paraguay",
-    "checkedAt": "2026-10-13T14:59:53.531Z"
+    "checkedAt": "2026-10-24T03:49:11.148Z"
   },
   {
     "pinId": 256,
@@ -72,7 +72,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2032_Summer_Olympics",
-    "checkedAt": "2026-10-16T18:00:03.209Z"
+    "checkedAt": "2026-10-24T14:05:23.904Z"
   },
   {
     "pinId": 575,
@@ -347,7 +347,16 @@
   },
   {
     "pinId": 1953,
-    "performers": [],
+    "performers": [
+      {
+        "name": "Milwaukee Brewers",
+        "type": "PerformingGroup"
+      },
+      {
+        "name": "Tampa Bay Rays",
+        "type": "PerformingGroup"
+      }
+    ],
     "ticketUrl": "https://www.mlb.com/postseason/tickets",
     "lowPrice": null,
     "highPrice": null,
@@ -356,9 +365,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
-    "checkedAt": "2026-10-13T14:21:37.458Z"
+    "checkedAt": "2026-10-23T13:22:18.596Z"
   },
   {
     "pinId": 1954,
@@ -371,9 +380,9 @@
     "itinerary": [],
     "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.sofistadium.com/events/detail/super-bowl-lxi",
-    "checkedAt": "2026-10-13T02:22:33.773Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 1955,
@@ -387,8 +396,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:03:54.989Z"
+    "sourceUrl": "https://kalshi.com/markets/kxnba/2027-pro-basketball-champion/kxnba-27",
+    "checkedAt": "2026-10-24T03:49:35.948Z"
   },
   {
     "pinId": 1956,
@@ -402,8 +411,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:02:00.127Z"
+    "sourceUrl": "https://kalshi.com/markets/kxnhl/2026-27-stanley-cup-finals-winner/kxnhl-27",
+    "checkedAt": "2026-10-24T03:49:31.902Z"
   },
   {
     "pinId": 1957,
@@ -417,12 +426,21 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:03:59.300Z"
+    "sourceUrl": "https://kalshi.com/markets/kxucl/champions-league-winner/kxucl-27",
+    "checkedAt": "2026-10-24T03:49:40.131Z"
   },
   {
     "pinId": 1958,
-    "performers": [],
+    "performers": [
+      {
+        "name": "Thierry Henry",
+        "type": "Person"
+      },
+      {
+        "name": "Kate Scott",
+        "type": "Person"
+      }
+    ],
     "ticketUrl": null,
     "lowPrice": null,
     "highPrice": null,
@@ -431,9 +449,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://kalshi.com/markets/kxballondor/who-will-win-the-ballon-dor-in-2026/kxballondor-26",
-    "checkedAt": "2026-10-13T14:21:41.665Z"
+    "source": "hand",
+    "sourceUrl": "https://www.uefa.com/ballondor/news/02aa-21dcfc743210-2786daba77d8-1000--2026-ballon-d-or-ceremony-when-and-where-all-the-nominees-/",
+    "checkedAt": "2026-10-24T03:54:02.836Z"
   },
   {
     "pinId": 1959,
@@ -446,9 +464,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://kalshi.com/markets/kxheisman/heisman-trophy-winner/kxheisman-27",
-    "checkedAt": "2026-10-13T14:22:34.910Z"
+    "checkedAt": "2026-10-23T13:22:24.893Z"
   },
   {
     "pinId": 1960,
@@ -461,9 +479,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.abudhabigp.com/en/",
-    "checkedAt": "2026-10-11T05:54:49.905Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2073,
@@ -478,7 +496,7 @@
     "onSaleDate": "2026-10-01T02:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.world.rugby/news/1002155/mens-rugby-world-cup-2027-ticketing-programme-unveiled-a-new-era-of-openness-and-inclusivity",
-    "checkedAt": "2026-10-10T21:46:00.959Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2074,
@@ -493,7 +511,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.icc-cricket.com/tournaments/icc-cricket-world-cup-2027/news/icc-men-s-cricket-world-cup-2027-ticket-applications-surpass-one-million",
-    "checkedAt": "2026-10-10T21:46:01.317Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2075,
@@ -507,8 +525,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:05:23.355Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup",
+    "checkedAt": "2026-10-24T03:49:48.941Z"
   },
   {
     "pinId": 2076,
@@ -532,7 +550,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.rydercup.com/attend/ticket-information",
-    "checkedAt": "2026-10-10T21:45:59.898Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2077,
@@ -546,8 +564,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:08:38.202Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_World_Athletics_Championships",
+    "checkedAt": "2026-10-24T03:50:25.738Z"
   },
   {
     "pinId": 2078,
@@ -561,8 +579,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:05:19.037Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_Africa_Cup_of_Nations",
+    "checkedAt": "2026-10-24T03:49:44.971Z"
   },
   {
     "pinId": 2079,
@@ -576,8 +594,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:12:53.503Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_LXII",
+    "checkedAt": "2026-10-24T14:03:38.423Z"
   },
   {
     "pinId": 2080,
@@ -591,8 +609,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T15:59:45.558Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_NCAA_Division_I_men%27s_basketball_tournament",
+    "checkedAt": "2026-10-24T03:49:19.302Z"
   },
   {
     "pinId": 2108,
@@ -623,7 +641,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ces.tech/attendee-guides/registration-information/",
-    "checkedAt": "2026-10-10T21:45:39.579Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2109,
@@ -636,9 +654,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.mwcbarcelona.com/",
-    "checkedAt": "2026-10-13T02:22:50.992Z"
+    "checkedAt": "2026-10-23T13:21:55.804Z"
   },
   {
     "pinId": 2110,
@@ -652,8 +670,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:08:33.861Z"
+    "sourceUrl": "https://www.ifa-berlin.com/",
+    "checkedAt": "2026-10-24T03:50:21.554Z"
   },
   {
     "pinId": 2157,
@@ -667,8 +685,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:06:58.639Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_Pan_American_Games",
+    "checkedAt": "2026-10-24T03:49:56.813Z"
   },
   {
     "pinId": 2158,
@@ -683,7 +701,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://la28.org/en/newsroom/la28-announces-tickets-and-hospitality-packages-go-on-sale-for-olympic-games-in-2026-and-paralympic-games-in-2027.html",
-    "checkedAt": "2026-10-14T16:13:34.592Z"
+    "checkedAt": "2026-10-24T14:03:42.545Z"
   },
   {
     "pinId": 2159,
@@ -696,9 +714,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2028_Men's_T20_World_Cup",
-    "checkedAt": "2026-10-15T14:19:29.546Z"
+    "checkedAt": "2026-10-24T14:03:46.669Z"
   },
   {
     "pinId": 2160,
@@ -711,9 +729,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2030_Commonwealth_Games",
-    "checkedAt": "2026-10-15T14:19:56.026Z"
+    "checkedAt": "2026-10-24T14:03:48.829Z"
   },
   {
     "pinId": 2161,
@@ -726,9 +744,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2032_Summer_Paralympics",
-    "checkedAt": "2026-10-15T14:19:58.195Z"
+    "checkedAt": "2026-10-24T14:03:50.961Z"
   },
   {
     "pinId": 2162,
@@ -741,9 +759,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2034_Winter_Olympics",
-    "checkedAt": "2026-10-15T14:20:48.432Z"
+    "checkedAt": "2026-10-24T14:03:52.988Z"
   },
   {
     "pinId": 2274,
@@ -764,7 +782,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://powerhouse.com.au/visit/parramatta",
-    "checkedAt": "2026-10-10T21:46:02.361Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2282,
@@ -777,9 +795,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://globalnews.ca/news/10925478/ontario-place-science-centre-opening/",
-    "checkedAt": "2026-10-11T05:46:06.477Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2318,
@@ -797,9 +815,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
-    "checkedAt": "2026-10-13T02:22:35.833Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2319,
@@ -817,9 +835,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
-    "checkedAt": "2026-10-13T02:22:37.896Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2320,
@@ -837,9 +855,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
-    "checkedAt": "2026-10-13T02:22:39.996Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2321,
@@ -857,9 +875,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
-    "checkedAt": "2026-10-13T02:22:44.713Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2331,
@@ -888,8 +906,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:01:55.644Z"
+    "sourceUrl": "https://www.screendaily.com/news/cannes-film-festival-confirms-2027-dates-for-80th-edition/5217448.article",
+    "checkedAt": "2026-10-24T03:49:27.633Z"
   },
   {
     "pinId": 2379,
@@ -951,7 +969,7 @@
     "onSaleDate": "2026-10-17T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.comic-con.org/cc/badges/",
-    "checkedAt": "2026-10-10T21:45:57.280Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2381,
@@ -964,9 +982,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.edfringe.com/",
-    "checkedAt": "2026-10-11T05:40:25.258Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2382,
@@ -980,8 +998,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:00:40.963Z"
+    "sourceUrl": "https://www.labiennale.org/en/news/do-architecture-%E2%80%94-possibility-coexistence-facing-real-reality",
+    "checkedAt": "2026-10-24T03:49:25.505Z"
   },
   {
     "pinId": 2383,
@@ -996,7 +1014,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.gamescom.global/en/tickets/buy-tickets",
-    "checkedAt": "2026-10-14T16:07:05.305Z"
+    "checkedAt": "2026-10-24T03:50:19.903Z"
   },
   {
     "pinId": 2480,
@@ -1011,7 +1029,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com.au/ausopen",
-    "checkedAt": "2026-10-10T21:45:43.161Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2481,
@@ -1026,7 +1044,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com.au/ausopen",
-    "checkedAt": "2026-10-10T21:45:42.759Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2482,
@@ -1039,9 +1057,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.rolandgarros.com/en-us/",
-    "checkedAt": "2026-10-13T02:23:08.466Z"
+    "checkedAt": "2026-10-23T13:22:12.315Z"
   },
   {
     "pinId": 2483,
@@ -1054,9 +1072,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.rolandgarros.com/en-us/",
-    "checkedAt": "2026-10-13T02:23:06.354Z"
+    "checkedAt": "2026-10-23T13:22:10.227Z"
   },
   {
     "pinId": 2484,
@@ -1071,7 +1089,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.wimbledon.com/en_GB/atoz/dates.html",
-    "checkedAt": "2026-10-10T21:45:56.500Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2485,
@@ -1086,7 +1104,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.wimbledon.com/en_GB/atoz/dates.html",
-    "checkedAt": "2026-10-10T21:45:56.169Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2486,
@@ -1100,8 +1118,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:09:37.895Z"
+    "sourceUrl": "https://www.atptour.com/en/tournaments/us-open/560/overview",
+    "checkedAt": "2026-10-24T03:50:29.970Z"
   },
   {
     "pinId": 2487,
@@ -1115,8 +1133,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:08:40.370Z"
+    "sourceUrl": "https://www.wtatennis.com/tournament/560/us-open",
+    "checkedAt": "2026-10-24T03:50:27.837Z"
   },
   {
     "pinId": 2494,
@@ -1131,7 +1149,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://ticketing.formula1.com/tickets/en/bahrain/general-admission-f1-sakhir",
-    "checkedAt": "2026-10-10T21:45:47.058Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2495,
@@ -1146,7 +1164,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://ticketing.formula1.com/tickets/en/saudi-arabia/general-admission-f1-jeddah-corniche-circuit",
-    "checkedAt": "2026-10-10T21:45:47.773Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2496,
@@ -1161,7 +1179,7 @@
     "onSaleDate": "2026-10-06T01:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.grandprix.com.au/",
-    "checkedAt": "2026-10-10T21:45:49.121Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2497,
@@ -1176,7 +1194,7 @@
     "onSaleDate": "2026-11-15T02:00:00.000Z",
     "source": "session",
     "sourceUrl": "https://www.suzukacircuit.jp/f1/ticket/index.html",
-    "checkedAt": "2026-10-14T15:59:47.809Z"
+    "checkedAt": "2026-10-24T03:49:21.370Z"
   },
   {
     "pinId": 2498,
@@ -1191,7 +1209,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://ticketing.formula1.com/china/",
-    "checkedAt": "2026-10-10T21:45:51.241Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2499,
@@ -1206,7 +1224,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://f1miamigp.com/tickets/",
-    "checkedAt": "2026-10-10T21:45:52.659Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2500,
@@ -1221,7 +1239,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://gpcanada.ca/en/2027-tickets/",
-    "checkedAt": "2026-10-10T21:45:54.079Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2501,
@@ -1236,7 +1254,7 @@
     "onSaleDate": "2026-10-01T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://ticketing.formula1.com/monaco/",
-    "checkedAt": "2026-10-10T21:45:54.385Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2502,
@@ -1251,7 +1269,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.noticiasaominuto.com/auto/3056090/esgotados-os-primeiros-bilhetes-para-o-gp-de-portugal-mas-ha-boa-noticia",
-    "checkedAt": "2026-10-14T16:05:21.181Z"
+    "checkedAt": "2026-10-24T03:49:46.588Z"
   },
   {
     "pinId": 2503,
@@ -1266,7 +1284,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.silverstone.co.uk/events/formula-1-british-grand-prix/tickets",
-    "checkedAt": "2026-10-10T21:45:55.802Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2504,
@@ -1281,7 +1299,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://tickets.redbullring.com/en/f1/f1-grand-prix-oesterreich-2027/tickets.html",
-    "checkedAt": "2026-10-14T16:05:25.645Z"
+    "checkedAt": "2026-10-24T03:49:51.675Z"
   },
   {
     "pinId": 2505,
@@ -1296,7 +1314,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.spagrandprix.com/en/billetterie",
-    "checkedAt": "2026-10-10T21:45:57.657Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2506,
@@ -1311,7 +1329,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.gpticketshop.hu/Formula_1_HungarianGP/Formula_1.html",
-    "checkedAt": "2026-10-14T16:07:00.805Z"
+    "checkedAt": "2026-10-24T03:50:07.240Z"
   },
   {
     "pinId": 2507,
@@ -1326,7 +1344,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.monzanet.it/en/tickets/",
-    "checkedAt": "2026-10-14T16:08:36.029Z"
+    "checkedAt": "2026-10-24T03:50:23.648Z"
   },
   {
     "pinId": 2508,
@@ -1341,7 +1359,7 @@
     "onSaleDate": "2026-09-29T15:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://ticketing.formula1.com/madrid-spain/",
-    "checkedAt": "2026-10-10T21:45:59.521Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2509,
@@ -1355,8 +1373,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:09:40.057Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Baku_City_Circuit",
+    "checkedAt": "2026-10-24T03:50:32.041Z"
   },
   {
     "pinId": 2510,
@@ -1370,8 +1388,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:09:42.225Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Istanbul_Park",
+    "checkedAt": "2026-10-24T03:50:34.309Z"
   },
   {
     "pinId": 2511,
@@ -1385,8 +1403,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:09:44.411Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit",
+    "checkedAt": "2026-10-24T03:50:37.452Z"
   },
   {
     "pinId": 2512,
@@ -1401,7 +1419,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://circuitoftheamericas.com/event/f1/tickets/",
-    "checkedAt": "2026-10-14T16:11:08.656Z"
+    "checkedAt": "2026-10-24T03:50:46.036Z"
   },
   {
     "pinId": 2513,
@@ -1415,8 +1433,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:11:10.830Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez",
+    "checkedAt": "2026-10-24T03:50:59.604Z"
   },
   {
     "pinId": 2514,
@@ -1430,8 +1448,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:11:12.991Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace",
+    "checkedAt": "2026-10-24T03:51:05.768Z"
   },
   {
     "pinId": 2515,
@@ -1445,8 +1463,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:11:15.151Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Las_Vegas_Strip_Circuit",
+    "checkedAt": "2026-10-24T03:51:07.819Z"
   },
   {
     "pinId": 2516,
@@ -1460,8 +1478,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:12:49.092Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Lusail_International_Circuit",
+    "checkedAt": "2026-10-24T03:51:09.880Z"
   },
   {
     "pinId": 2517,
@@ -1475,8 +1493,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:12:51.305Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit",
+    "checkedAt": "2026-10-24T14:03:38.266Z"
   },
   {
     "pinId": 2518,
@@ -1490,8 +1508,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:04:01.519Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_UEFA_Champions_League_final",
+    "checkedAt": "2026-10-24T03:49:42.219Z"
   },
   {
     "pinId": 2519,
@@ -1505,8 +1523,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:01:57.800Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_UEFA_Europa_League_final",
+    "checkedAt": "2026-10-24T03:49:29.683Z"
   },
   {
     "pinId": 2520,
@@ -1520,8 +1538,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:02:02.284Z"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2027_UEFA_Conference_League_final",
+    "checkedAt": "2026-10-24T03:49:33.833Z"
   },
   {
     "pinId": 2521,
@@ -1543,14 +1561,6 @@
         "type": "Person"
       },
       {
-        "name": "Joe Pyfer",
-        "type": "Person"
-      },
-      {
-        "name": "Bo Nickal",
-        "type": "Person"
-      },
-      {
         "name": "Brandon Moreno",
         "type": "Person"
       },
@@ -1565,11 +1575,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
-    "onSaleDate": "2026-10-16T17:00:00.000Z",
+    "availability": "InStock",
+    "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.t-mobilearena.com/events/detail/ufc-335",
-    "checkedAt": "2026-10-13T14:28:01.786Z"
+    "checkedAt": "2026-10-23T13:22:26.986Z"
   },
   {
     "pinId": 2522,
@@ -1591,9 +1601,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.skysports.com/boxing/news/13584326/tyson-fury-vs-anthony-joshua-british-heavyweight-showdown-set-for-cardiff-s-principality-stadium-on-december-11",
-    "checkedAt": "2026-10-11T05:54:51.990Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2544,
@@ -1651,7 +1661,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.lacma.org/tickets",
-    "checkedAt": "2026-10-10T21:30:59.006Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 2545,
@@ -1683,7 +1693,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.lucasmuseum.org/plan-your-visit",
-    "checkedAt": "2026-10-10T21:16:13.547Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 2546,
@@ -1696,9 +1706,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.londonmuseum.org.uk/",
-    "checkedAt": "2026-10-11T05:35:30.239Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2547,
@@ -1711,9 +1721,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.guggenheim.org/press-release/abu-dhabi-announces-opening-of-guggenheim-abu-dhabi",
-    "checkedAt": "2026-10-11T05:35:32.412Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2548,
@@ -1726,9 +1736,9 @@
     "itinerary": [],
     "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.smb.museum/en/museums-institutions/pergamonmuseum/plan-your-visit/",
-    "checkedAt": "2026-10-11T05:35:36.572Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2580,
@@ -1743,7 +1753,7 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://en.wikipedia.org/wiki/Theatercaf%C3%A9en",
-    "checkedAt": "2026-10-11T05:33:29.313Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 2859,
@@ -1791,7 +1801,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.hpe.com/us/en/discover/barcelona/registration.html",
-    "checkedAt": "2026-10-10T21:45:35.106Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2863,
@@ -1897,7 +1907,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://register.ignite.microsoft.com/",
-    "checkedAt": "2026-10-10T21:45:27.125Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 2886,
@@ -1908,16 +1918,22 @@
       }
     ],
     "ticketUrl": "https://registration.awsevents.com/flow/awsevents/reinvent2026/reg",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 2499,
+    "highPrice": 2499,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Regular price. 10% discount for 10+ tickets purchased in a single transaction; terms apply. Early-bird pricing ended August 25.",
+        "label": "Full conference pass",
+        "price": 2499
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://aws.amazon.com/events/reinvent/agenda/",
-    "checkedAt": "2026-10-11T05:49:18.383Z"
+    "source": "hand",
+    "sourceUrl": "https://aws.amazon.com/events/reinvent/",
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 2952,
@@ -1953,11 +1969,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": "SoldOut",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.nvidia.com/en-eu/gtc/",
-    "checkedAt": "2026-10-10T21:45:21.261Z"
+    "checkedAt": "2026-10-23T00:05:02.586Z"
   },
   {
     "pinId": 2953,
@@ -1993,7 +2009,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.nvidia.com/en-us/gtc/dc/pricing/",
-    "checkedAt": "2026-10-10T21:45:34.713Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 2954,
@@ -2006,9 +2022,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.nvidia.com/gtc/",
-    "checkedAt": "2026-10-13T02:22:48.933Z"
+    "checkedAt": "2026-10-23T13:21:53.816Z"
   },
   {
     "pinId": 2964,
@@ -2064,9 +2080,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.aramcostadium.com/en",
-    "checkedAt": "2026-10-11T05:35:34.491Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3027,
@@ -2226,9 +2242,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://event.vmware.com/flow/vmware/eotlondon26/site/page/home",
-    "checkedAt": "2026-10-11T05:49:16.327Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3033,
@@ -2254,9 +2270,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://event.vmware.com/flow/vmware/eotdc26/site/page/home",
-    "checkedAt": "2026-10-13T14:22:32.814Z"
+    "checkedAt": "2026-10-23T13:22:22.825Z"
   },
   {
     "pinId": 3034,
@@ -2269,9 +2285,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.vmware.com/explore",
-    "checkedAt": "2026-10-13T02:22:42.394Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3101,
@@ -2523,7 +2539,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.baa.org/news/qualifier-registration-for-131st-boston-marathon-presented-by-bank-of-america-begins-today/",
-    "checkedAt": "2026-10-14T16:00:38.644Z"
+    "checkedAt": "2026-10-24T03:49:23.457Z"
   },
   {
     "pinId": 3169,
@@ -2538,7 +2554,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.8newsnow.com/sports/vegas-full-throttle/f1-las-vegas-grand-prix-ticket-prices-for-2026-begin-at-50-3-day-general-admission-from-492/amp/",
-    "checkedAt": "2026-10-10T21:45:29.404Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3173,
@@ -2721,8 +2737,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:03:57.141Z"
+    "sourceUrl": "https://bostoncalling.com/",
+    "checkedAt": "2026-10-24T03:49:38.035Z"
   },
   {
     "pinId": 3218,
@@ -2776,7 +2792,7 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.portofsandiego.org/projects/chula-vista-bayfront",
-    "checkedAt": "2026-10-11T05:33:31.387Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 3258,
@@ -3535,7 +3551,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://aws.nfrexperience.com/ticket_faqs",
-    "checkedAt": "2026-10-10T21:45:35.842Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3308,
@@ -3557,9 +3573,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.nbcsportsbayarea.com/nba/golden-state-warriors/2026-27-schedule-release-dates-times/1956290/",
-    "checkedAt": "2026-10-11T05:47:59.833Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3309,
@@ -3625,9 +3641,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.baytobreakers.com/12k",
-    "checkedAt": "2026-10-13T02:22:59.660Z"
+    "checkedAt": "2026-10-23T13:22:04.170Z"
   },
   {
     "pinId": 3320,
@@ -3640,9 +3656,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.fox5vegas.com/2026/06/04/las-vegas-bowl-returns-with-new-years-eve-sec-matchup-allegiant-stadium/",
-    "checkedAt": "2026-10-11T05:54:54.080Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3321,
@@ -3657,7 +3673,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://thesentry.com/tickets/",
-    "checkedAt": "2026-10-14T15:58:59.306Z"
+    "checkedAt": "2026-10-24T03:49:15.187Z"
   },
   {
     "pinId": 3325,
@@ -3672,7 +3688,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://sfoutsidelands.com/tickets",
-    "checkedAt": "2026-10-10T21:45:58.373Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 3327,
@@ -3687,7 +3703,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://poinsettiabowl.com/",
-    "checkedAt": "2026-10-10T21:45:37.080Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3331,
@@ -3702,7 +3718,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://holidaybowl.com/tickets/game-tickets/",
-    "checkedAt": "2026-10-10T21:45:38.420Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3334,
@@ -3713,11 +3729,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.salesforce.com/dreamforce/faq/",
-    "checkedAt": "2026-10-13T14:21:30.679Z"
+    "checkedAt": "2026-10-23T13:22:16.504Z"
   },
   {
     "pinId": 3336,
@@ -3732,7 +3748,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://collegefootballplayoff.com/sports/2018/9/25/cfp-tickets.aspx",
-    "checkedAt": "2026-10-10T21:45:42.065Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3337,
@@ -3754,9 +3770,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.mlb.com/press-release/padres-2027-schedule",
-    "checkedAt": "2026-10-13T02:22:53.412Z"
+    "checkedAt": "2026-10-23T13:21:57.856Z"
   },
   {
     "pinId": 3374,
@@ -3902,7 +3918,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://us.money2020.com/",
-    "checkedAt": "2026-10-10T21:45:20.832Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3409,
@@ -3915,9 +3931,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.semashow.com/",
-    "checkedAt": "2026-10-11T05:49:12.161Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3418,
@@ -3930,9 +3946,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.nabshow.com/las-vegas/",
-    "checkedAt": "2026-10-13T02:22:55.543Z"
+    "checkedAt": "2026-10-23T13:21:59.961Z"
   },
   {
     "pinId": 3420,
@@ -3960,9 +3976,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.googlecloudevents.com/next-vegas",
-    "checkedAt": "2026-10-13T02:23:01.722Z"
+    "checkedAt": "2026-10-23T13:22:06.128Z"
   },
   {
     "pinId": 3434,
@@ -4015,7 +4031,7 @@
     "onSaleDate": "2026-10-06T09:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
-    "checkedAt": "2026-10-10T21:45:54.749Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 3435,
@@ -4044,8 +4060,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:07:03.036Z"
+    "sourceUrl": "https://defcon.org/",
+    "checkedAt": "2026-10-24T03:50:18.258Z"
   },
   {
     "pinId": 3445,
@@ -4105,9 +4121,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.lvms.com/media/news/edc-las-vegas-introduces-new-dusk-till-dawn-2027-day-festival-concept-spanning-two-consecutive-weekends.html",
-    "checkedAt": "2026-10-13T02:22:57.604Z"
+    "checkedAt": "2026-10-23T13:22:02.009Z"
   },
   {
     "pinId": 3471,
@@ -4261,7 +4277,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.oracle.com/ai-world/register/",
-    "checkedAt": "2026-10-10T21:45:23.194Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3497,
@@ -4333,7 +4349,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://fest.afi.com/passes/",
-    "checkedAt": "2026-10-10T21:45:22.141Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3513,
@@ -4423,7 +4439,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.theautochannel.com/news/2026/08/04/1699803-los-angeles-auto-show-tickets-now-sale-ten-days-hundreds.html",
-    "checkedAt": "2026-10-10T21:45:28.685Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3522,
@@ -4470,7 +4486,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://tickets.sharpseating.com/tickets",
-    "checkedAt": "2026-10-10T21:45:38.808Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3528,
@@ -4500,7 +4516,7 @@
     "onSaleDate": "2026-09-02T16:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://rosebowlgame.com/news/2026/9/1/general-the-pasadena-tournament-of-roses-announces-public-ticket-sale-for-the-2027-cfp-quarterfinal-at-the-rose-bowl-game-presented-by-prudential.aspx",
-    "checkedAt": "2026-10-10T21:45:39.155Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3533,
@@ -4515,7 +4531,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.mccourtfoundation.org/event/los-angeles-marathon/register/",
-    "checkedAt": "2026-10-10T21:45:46.110Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3534,
@@ -4560,7 +4576,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.gplb.com/tickets",
-    "checkedAt": "2026-10-10T21:45:50.933Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 3540,
@@ -4571,11 +4587,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.anime-expo.org/2026/07/10/anime-expo-2026-wraps-its-35th-edition-with-attendees-from-over-65-countries-and-over-1400-hours-of-programming/",
-    "checkedAt": "2026-10-13T14:16:05.093Z"
+    "checkedAt": "2026-10-23T13:22:14.480Z"
   },
   {
     "pinId": 3542,
@@ -4588,9 +4604,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.salesforce.com/fr/events/paris/",
-    "checkedAt": "2026-10-11T05:49:14.270Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3546,
@@ -4622,7 +4638,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.salesforce.com/jp/events/world-tour/tokyo/",
-    "checkedAt": "2026-10-10T21:45:28.386Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3550,
@@ -4637,7 +4653,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.salesforce.com/de/events/munich/",
-    "checkedAt": "2026-10-10T21:45:30.868Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 3553,
@@ -4650,9 +4666,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.salesforce.com/tdx/form-save-date-tdx27/",
-    "checkedAt": "2026-10-13T02:22:46.840Z"
+    "checkedAt": "2026-10-23T13:21:53.619Z"
   },
   {
     "pinId": 3557,
@@ -4665,9 +4681,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.salesforce.com/connections/join-the-list/",
-    "checkedAt": "2026-10-13T02:23:03.824Z"
+    "checkedAt": "2026-10-23T13:22:08.191Z"
   },
   {
     "pinId": 3601,
@@ -4808,9 +4824,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.nyrr.org/media-center/press-release/2026_0819_tcsnycmprofield",
-    "checkedAt": "2026-10-11T05:48:01.893Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3612,
@@ -4948,7 +4964,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.oracle.com/javaone/",
-    "checkedAt": "2026-10-10T21:45:48.066Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3655,
@@ -4990,8 +5006,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-13T14:59:55.591Z"
+    "sourceUrl": "https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx",
+    "checkedAt": "2026-10-24T03:49:13.107Z"
   },
   {
     "pinId": 3662,
@@ -5012,7 +5028,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.rockefellercenter.com/es-us/holidays/rockefeller-center-christmas-tree/",
-    "checkedAt": "2026-10-10T21:45:35.418Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 3666,
@@ -5025,9 +5041,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.timessquarenyc.org/nye/nye-faq",
-    "checkedAt": "2026-10-11T05:54:54.128Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 3673,
@@ -5148,7 +5164,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://chineseparade.com/faq/",
-    "checkedAt": "2026-10-13T14:59:47.134Z"
+    "checkedAt": "2026-10-24T03:49:07.000Z"
   },
   {
     "pinId": 3692,
@@ -5163,7 +5179,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://sfpride.org/",
-    "checkedAt": "2026-10-13T14:59:50.649Z"
+    "checkedAt": "2026-10-24T03:49:09.102Z"
   },
   {
     "pinId": 3794,
@@ -5206,7 +5222,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.seawheeze.com/",
-    "checkedAt": "2026-10-13T14:29:41.434Z"
+    "checkedAt": "2026-10-23T13:22:29.468Z"
   },
   {
     "pinId": 3824,
@@ -5241,7 +5257,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.afterdarktour.nike.com/en/mumbai",
-    "checkedAt": "2026-10-13T14:29:49.587Z"
+    "checkedAt": "2026-10-23T13:22:35.402Z"
   },
   {
     "pinId": 3871,
@@ -5256,7 +5272,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.afterdarktour.nike.com/en/manila",
-    "checkedAt": "2026-10-13T14:29:47.028Z"
+    "checkedAt": "2026-10-23T13:22:33.267Z"
   },
   {
     "pinId": 3875,
@@ -5271,7 +5287,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.afterdarktour.nike.com/en/la",
-    "checkedAt": "2026-10-13T14:29:43.882Z"
+    "checkedAt": "2026-10-23T13:22:31.204Z"
   },
   {
     "pinId": 3878,
@@ -5515,7 +5531,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://audifield.com/event/2026-nwsl-championship-presented-by-google-pixel/",
-    "checkedAt": "2026-10-13T14:29:55.802Z"
+    "checkedAt": "2026-10-23T13:22:37.466Z"
   },
   {
     "pinId": 4016,
@@ -5634,7 +5650,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.wtatennis.com/news/4526239/how-to-get-tickets-for-the-2026-wta-finals-in-indian-wells",
-    "checkedAt": "2026-10-10T21:45:26.147Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4052,
@@ -5648,8 +5664,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T15:59:01.458Z"
+    "sourceUrl": "https://www.unwomen.org/en/how-we-work/commission-on-the-status-of-women/csw71-2027",
+    "checkedAt": "2026-10-24T03:49:17.249Z"
   },
   {
     "pinId": 4275,
@@ -5712,7 +5728,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://securityconference.org/en/",
-    "checkedAt": "2026-10-17T17:17:55.478Z"
+    "checkedAt": "2026-10-25T14:51:59.154Z"
   },
   {
     "pinId": 4297,
@@ -5725,9 +5741,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://euronews.al/en/defense-minister-nufi-reveals-who-will-set-the-date-for-the-nato-summit-in-tirana/",
-    "checkedAt": "2026-10-11T05:46:06.088Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4335,
@@ -5763,7 +5779,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.reaganfoundation.org/reagan-institute/centers/peace-through-strength/program/reagan-national-defense-forum-original",
-    "checkedAt": "2026-10-16T17:42:31.029Z"
+    "checkedAt": "2026-10-24T14:04:30.637Z"
   },
   {
     "pinId": 4337,
@@ -5778,7 +5794,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.airshow.com.cn/Category_1216/Index.aspx",
-    "checkedAt": "2026-10-16T17:42:31.466Z"
+    "checkedAt": "2026-10-24T14:04:32.732Z"
   },
   {
     "pinId": 4338,
@@ -5793,7 +5809,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.idexuae.ae/",
-    "checkedAt": "2026-10-10T21:45:41.709Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4339,
@@ -5808,7 +5824,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://aeroindia.gov.in/",
-    "checkedAt": "2026-10-17T17:17:45.716Z"
+    "checkedAt": "2026-10-25T14:51:56.846Z"
   },
   {
     "pinId": 4340,
@@ -5819,11 +5835,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.dsei.co.uk/",
-    "checkedAt": "2026-10-11T05:42:52.437Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4341,
@@ -5834,11 +5850,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.dubaiairshow.aero/",
-    "checkedAt": "2026-10-11T05:44:26.503Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4352,
@@ -5853,7 +5869,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.coachella.com/passes",
-    "checkedAt": "2026-10-10T21:45:50.198Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4354,
@@ -5864,8 +5880,8 @@
     "priceCurrency": "GBP",
     "tiers": [
       {
-        "note": "Includes GBP5 booking fee; postage/packing extra. June23–27,2027. Resale planned spring2027.",
-        "label": "General Admission",
+        "note": "SOLD OUT; GBP5fee included, postage extra GBP11.25/order orGBP3coach. GBP100deposit;GBP308balance April1–7. Photo registration13+; spring2027resale unannounced.",
+        "label": "General admission",
         "price": 408
       }
     ],
@@ -5874,42 +5890,98 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.glastonburyfestivals.co.uk/news/glastonbury-2027-ticket-information-confirmed/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:45:22.005Z"
   },
   {
     "pinId": 4356,
     "performers": [],
     "ticketUrl": "https://www.primaverasound.com/en/tickets",
-    "lowPrice": 275,
+    "lowPrice": 330,
     "highPrice": 545,
     "priceCurrency": "EUR",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "Revolut-qualified offer; check operator payment/eligibility terms.",
+        "label": "Full Festival Ticket Revolut",
+        "price": 330
+      },
+      {
+        "note": "2027 Barcelona full-festival admission as displayed.",
+        "label": "Full Festival Ticket",
+        "price": 350
+      },
+      {
+        "note": "Revolut-qualified VIP offer; check payment/eligibility terms.",
+        "label": "VIP Full Festival Ticket Revolut",
+        "price": 525
+      },
+      {
+        "note": "2027 Barcelona VIP full-festival admission.",
+        "label": "VIP Full Festival Ticket",
+        "price": 545
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.primaverasound.com/en/barcelona",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:41:13.530Z"
   },
   {
     "pinId": 4361,
     "performers": [
       {
         "name": "Bruno Mars",
-        "type": "PerformingGroup"
+        "type": "Person"
+      },
+      {
+        "name": "Anderson .Paak (DJ Pee .Wee)",
+        "type": "Person"
       }
     ],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 11800,
+    "highPrice": 149800,
+    "priceCurrency": "JPY",
+    "tiers": [
+      {
+        "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+        "label": "VIP GOLD",
+        "price": 149800
+      },
+      {
+        "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+        "label": "VIP SILVER",
+        "price": 52800
+      },
+      {
+        "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+        "label": "SS reserved",
+        "price": 29800
+      },
+      {
+        "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+        "label": "S reserved",
+        "price": 18800
+      },
+      {
+        "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+        "label": "A reserved",
+        "price": 14800
+      },
+      {
+        "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+        "label": "B reserved",
+        "price": 11800
+      }
+    ],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": "SoldOut",
     "onSaleDate": null,
-    "source": "markup",
+    "source": "hand",
     "sourceUrl": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
-    "checkedAt": "2026-10-15T14:20:50.484Z"
+    "checkedAt": "2026-10-24T14:03:55.058Z"
   },
   {
     "pinId": 4362,
@@ -5922,9 +5994,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.livenation.kr/en/event/bruno-mars-the-romantic-tour-seoul-tickets-edp1693110",
-    "checkedAt": "2026-10-15T14:20:52.536Z"
+    "checkedAt": "2026-10-24T14:03:57.146Z"
   },
   {
     "pinId": 4365,
@@ -5944,7 +6016,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.ticketmaster.com/harry-styles-tickets/artist/2366444",
-    "checkedAt": "2026-10-16T17:37:18.077Z"
+    "checkedAt": "2026-10-24T14:04:17.804Z"
   },
   {
     "pinId": 4366,
@@ -5964,20 +6036,14 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.ticketmaster.com.au/harry-styles-tickets/artist/2366444",
-    "checkedAt": "2026-10-16T17:40:46.572Z"
+    "checkedAt": "2026-10-24T14:04:26.528Z"
   },
   {
     "pinId": 4367,
     "performers": [
       {
-        "url": "https://www.ticketmaster.com/harry-styles-tickets/artist/2366444",
         "name": "Harry Styles",
-        "type": "PerformingGroup"
-      },
-      {
-        "url": "https://www.ticketmaster.com/tinashe-tickets/artist/1990454",
-        "name": "Tinashe",
-        "type": "PerformingGroup"
+        "type": "Person"
       }
     ],
     "ticketUrl": "https://seatgeek.com/harry-styles-tickets/glendale-arizona-state-farm-stadium-2027-04-02-7-45-pm/concert/18570444",
@@ -5990,7 +6056,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.ticketmaster.com/harry-styles-tickets/artist/2366444",
-    "checkedAt": "2026-10-17T17:18:47.791Z"
+    "checkedAt": "2026-10-25T15:02:39.769Z"
   },
   {
     "pinId": 4368,
@@ -6008,15 +6074,14 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://variety.com/2026/music/news/harry-styles-tour-stadium-global-2027-openers-kylie-1236856931/",
-    "checkedAt": "2026-10-11T05:41:40.199Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4369,
     "performers": [
       {
-        "url": "https://www.ticketmaster.com/metallica-tickets/artist/735647",
         "name": "Metallica",
         "type": "PerformingGroup"
       }
@@ -6031,7 +6096,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.ticketmaster.com/metallica-life-burns-faster-las-vegas-nevada-03-13-2027/event/17006461A5E3E208",
-    "checkedAt": "2026-10-17T17:17:28.310Z"
+    "checkedAt": "2026-10-25T14:49:35.703Z"
   },
   {
     "pinId": 4370,
@@ -6052,7 +6117,7 @@
         "type": "PerformingGroup"
       }
     ],
-    "ticketUrl": "https://www.ticketmaster.ca/metallica-m72-world-tour-vancouver-british-columbia-05-08-2027/event/1100652ED2CADD90",
+    "ticketUrl": "https://www.ticketmaster.ca/event/1100652ED2CADD90",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
@@ -6060,9 +6125,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.bcplace.com/?event=metallica2027",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T00:25:26.614Z"
   },
   {
     "pinId": 4371,
@@ -6090,28 +6155,33 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://blabbermouth.net/news/metallica-announces-spring-2027-north-american-tour-with-limp-bizkit-and-avatar",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:45:19.984Z"
   },
   {
     "pinId": 4372,
     "performers": [
       {
-        "url": "https://oasisinet.com/live/8903-2/",
+        "url": "https://www.ticketmaster.co.uk/oasis-tickets/artist/766720",
         "name": "Oasis",
+        "type": "PerformingGroup"
+      },
+      {
+        "url": "https://www.ticketmaster.co.uk/richard-ashcroft-tickets/artist/955580",
+        "name": "Richard Ashcroft",
         "type": "PerformingGroup"
       }
     ],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.ticketmaster.co.uk/oasis-live-27-glasgow-21-05-2027/event/3500652A88FE1835",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "SoldOut",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://oasisinet.com/live/8903-2/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "source": "claude",
+    "sourceUrl": "https://www.ticketmaster.co.uk/oasis-live-27-glasgow-21-05-2027/event/3500652A88FE1835",
+    "checkedAt": "2026-10-26T00:25:28.665Z"
   },
   {
     "pinId": 4373,
@@ -6130,9 +6200,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com/oasis-tickets/artist/766720",
-    "checkedAt": "2026-10-11T05:41:38.143Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4374,
@@ -6162,9 +6232,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.bbc.com/news/articles/c607lyyx3yvvo",
-    "checkedAt": "2026-10-11T05:44:26.197Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4391,
@@ -6223,7 +6293,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://brasil.tomorrowland.com/en/tickets/festival-tickets/",
-    "checkedAt": "2026-10-10T21:45:51.975Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4428,
@@ -6310,9 +6380,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://sneakerness.com/events/milan-2026/",
-    "checkedAt": "2026-10-15T14:22:16.595Z"
+    "checkedAt": "2026-10-24T14:04:04.071Z"
   },
   {
     "pinId": 4556,
@@ -6342,7 +6412,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://irish-presidency.consilium.europa.eu/media/qkfmfrbw/2026_06_15-_indicative-calendar-ie-presidency.pdf",
-    "checkedAt": "2026-10-16T17:42:33.261Z"
+    "checkedAt": "2026-10-24T14:04:35.495Z"
   },
   {
     "pinId": 4576,
@@ -6357,7 +6427,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://meetings.ccamlr.org/en/ccamlr-45",
-    "checkedAt": "2026-10-16T17:37:13.534Z"
+    "checkedAt": "2026-10-24T14:04:06.118Z"
   },
   {
     "pinId": 4586,
@@ -6372,7 +6442,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.iccat.int/en/Meetings.html",
-    "checkedAt": "2026-10-16T17:40:44.220Z"
+    "checkedAt": "2026-10-24T14:04:21.964Z"
   },
   {
     "pinId": 4591,
@@ -6387,7 +6457,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://meetings.wcpfc.int/meetings/wcpfc23",
-    "checkedAt": "2026-10-16T17:40:48.754Z"
+    "checkedAt": "2026-10-24T14:04:28.631Z"
   },
   {
     "pinId": 4612,
@@ -6402,7 +6472,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.beaujolais.com/en/a-world-for-every-beaujolais/nouveau-by-beaujolais/",
-    "checkedAt": "2026-10-16T17:40:44.499Z"
+    "checkedAt": "2026-10-24T14:04:24.298Z"
   },
   {
     "pinId": 4613,
@@ -6428,18 +6498,18 @@
     "priceCurrency": "EUR",
     "tiers": [
       {
-        "note": "October14–January31; wine/spirits professionals or journalists, age18+",
-        "label": "Standard professional visitor badge",
+        "note": "14 October2026–31 January2027 inclusive; trade professionals18+",
+        "label": "Regular registration",
         "price": 80
       },
       {
-        "note": "February1–14,2027; professionals age18+",
-        "label": "Late bird",
+        "note": "1–14 February2027 inclusive",
+        "label": "Late registration",
         "price": 95
       },
       {
-        "note": "February15–17,2027 online; professionals age18+",
-        "label": "During the event",
+        "note": "15–17 February2027",
+        "label": "During-show online registration",
         "price": 120
       }
     ],
@@ -6448,7 +6518,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.wineparis.com/en/opening-hours-access-and-map",
-    "checkedAt": "2026-10-17T17:18:51.993Z"
+    "checkedAt": "2026-10-25T15:05:00.827Z"
   },
   {
     "pinId": 4615,
@@ -6468,7 +6538,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.prowein.com/en/Visit/Preparations/Tickets_and_Vouchers/Tickets",
-    "checkedAt": "2026-10-10T21:45:46.409Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4616,
@@ -6488,7 +6558,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.muenchen.de/en/events/oktoberfest",
-    "checkedAt": "2026-10-10T21:46:00.568Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4617,
@@ -6499,11 +6569,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": "https://www.vinitaly.com/en/",
-    "checkedAt": "2026-10-17T17:18:37.468Z"
+    "sourceUrl": "https://www.vinitaly.com/en/verona/buyer/ticketing/",
+    "checkedAt": "2026-10-25T15:18:23.652Z"
   },
   {
     "pinId": 4619,
@@ -6518,7 +6588,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://ugcb.net/en/evenement/en-primeurs-week/",
-    "checkedAt": "2026-10-17T17:18:43.761Z"
+    "checkedAt": "2026-10-25T15:02:35.409Z"
   },
   {
     "pinId": 4620,
@@ -6533,7 +6603,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.un.org/bbnjagreement/en",
-    "checkedAt": "2026-10-16T17:49:17.667Z"
+    "checkedAt": "2026-10-24T14:04:39.312Z"
   },
   {
     "pinId": 4630,
@@ -6563,7 +6633,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.wto.org/english/news_e/news26_e/fish_01may26_382_e.htm",
-    "checkedAt": "2026-10-16T17:37:15.985Z"
+    "checkedAt": "2026-10-24T14:04:13.837Z"
   },
   {
     "pinId": 4659,
@@ -6578,7 +6648,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.bassmaster.com/classic/news/lake-hartwell-to-host-2027-bass-pro-shops-bassmaster-classic-presented-by-under-armour/",
-    "checkedAt": "2026-10-17T17:18:05.851Z"
+    "checkedAt": "2026-10-25T14:56:36.268Z"
   },
   {
     "pinId": 4661,
@@ -6593,7 +6663,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://thebigrock.com/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:44:33.162Z"
   },
   {
     "pinId": 4663,
@@ -6608,7 +6678,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.bisbees.com/tournaments/bisbees-black-blue/schedule",
-    "checkedAt": "2026-10-16T17:37:13.731Z"
+    "checkedAt": "2026-10-24T14:04:08.173Z"
   },
   {
     "pinId": 4668,
@@ -6621,9 +6691,9 @@
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://whitemarlinopen.com/tournament-info",
-    "checkedAt": "2026-10-11T05:40:24.581Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4670,
@@ -6638,7 +6708,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.worldbassenterprises.com/vip-passes",
-    "checkedAt": "2026-10-10T21:45:23.882Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4671,
@@ -6653,7 +6723,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.narafestival.com/ice_en/",
-    "checkedAt": "2026-10-16T17:42:35.318Z"
+    "checkedAt": "2026-10-24T14:04:37.342Z"
   },
   {
     "pinId": 4672,
@@ -6668,7 +6738,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://tayrivers.org/conservation-code/",
-    "checkedAt": "2026-10-16T17:49:21.839Z"
+    "checkedAt": "2026-10-24T14:04:41.543Z"
   },
   {
     "pinId": 4676,
@@ -6683,7 +6753,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://nor-seafood.com/",
-    "checkedAt": "2026-10-17T17:18:07.902Z"
+    "checkedAt": "2026-10-25T14:58:00.039Z"
   },
   {
     "pinId": 4680,
@@ -6698,12 +6768,12 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.seafoodexpo.com/global/",
-    "checkedAt": "2026-10-17T17:18:39.518Z"
+    "checkedAt": "2026-10-25T14:59:48.887Z"
   },
   {
     "pinId": 4682,
     "performers": [],
-    "ticketUrl": "https://registration.experientevent.com/showsna271",
+    "ticketUrl": "https://registration.experientevent.com/ShowSNA271/flow/ATT#!/registrant//Member/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
@@ -6713,7 +6783,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.seafoodexpo.com/north-america/",
-    "checkedAt": "2026-10-17T17:18:01.679Z"
+    "checkedAt": "2026-10-25T14:56:29.259Z"
   },
   {
     "pinId": 4695,
@@ -6793,22 +6863,62 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.estadiognpseguros.com/todos-los-eventos/bruno-mars-boletos-ae147754",
-    "checkedAt": "2026-10-10T21:45:36.263Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4699,
-    "performers": [],
+    "performers": [
+      {
+        "name": "Bruno Mars",
+        "type": "Person"
+      },
+      {
+        "name": "Anderson .Paak (DJ Pee .Wee)",
+        "type": "Person"
+      }
+    ],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 11800,
+    "highPrice": 149800,
+    "priceCurrency": "JPY",
+    "tiers": [
+      {
+        "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+        "label": "VIP GOLD",
+        "price": 149800
+      },
+      {
+        "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+        "label": "VIP SILVER",
+        "price": 52800
+      },
+      {
+        "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+        "label": "SS reserved",
+        "price": 29800
+      },
+      {
+        "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+        "label": "S reserved",
+        "price": 18800
+      },
+      {
+        "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+        "label": "A reserved",
+        "price": 14800
+      },
+      {
+        "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+        "label": "B reserved",
+        "price": 11800
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "SoldOut",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
-    "checkedAt": "2026-10-15T14:21:23.988Z"
+    "checkedAt": "2026-10-24T14:09:18.957Z"
   },
   {
     "pinId": 4704,
@@ -6821,9 +6931,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "session",
     "sourceUrl": "https://www.livenation.asia/bruno-mars-tickets-adp147754",
-    "checkedAt": "2026-10-15T14:21:26.071Z"
+    "checkedAt": "2026-10-24T14:04:01.436Z"
   },
   {
     "pinId": 4706,
@@ -6838,16 +6948,16 @@
       }
     ],
     "ticketUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
-    "lowPrice": null,
+    "lowPrice": 799,
     "highPrice": null,
-    "priceCurrency": null,
+    "priceCurrency": "HKD",
     "tiers": [],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": "2026-09-24T04:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
-    "checkedAt": "2026-10-10T21:45:53.029Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4862,
@@ -6980,7 +7090,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://nbaabace.org/register",
-    "checkedAt": "2026-10-10T21:45:21.779Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4866,
@@ -7026,7 +7136,7 @@
     "onSaleDate": "2026-08-04T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.flibs.com/press/flibs-launches-ticket-sales/",
-    "checkedAt": "2026-10-10T21:45:23.565Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4867,
@@ -7067,7 +7177,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://ticketseicma.it/en/",
-    "checkedAt": "2026-10-16T17:51:25.966Z"
+    "checkedAt": "2026-10-24T14:04:43.712Z"
   },
   {
     "pinId": 4868,
@@ -7093,7 +7203,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.metstrade.com/registration",
-    "checkedAt": "2026-10-10T21:45:27.588Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4869,
@@ -7108,7 +7218,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://cnevpost.com/2025/11/30/2025-guangzhou-auto-show-wraps-up/",
-    "checkedAt": "2026-10-17T17:17:34.786Z"
+    "checkedAt": "2026-10-25T14:50:54.848Z"
   },
   {
     "pinId": 4870,
@@ -7123,7 +7233,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://detroitautoshow.com/public-show-tickets/",
-    "checkedAt": "2026-10-10T21:45:40.342Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4871,
@@ -7132,13 +7242,34 @@
     "lowPrice": 3000,
     "highPrice": 4000,
     "priceCurrency": "JPY",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "14:00–19:00; tax included; single day",
+        "label": "1月15日（金）一般特別公開",
+        "price": 4000
+      },
+      {
+        "note": "09:00–19:00; tax included; single day",
+        "label": "1月16日（土）",
+        "price": 3000
+      },
+      {
+        "note": "09:00–18:00; tax included; single day",
+        "label": "1月17日（日）",
+        "price": 3000
+      },
+      {
+        "note": "Guardian accompaniment required",
+        "label": "小学生以下",
+        "price": 0
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.tokyoautosalon.jp/2027/ticket/",
-    "checkedAt": "2026-10-17T17:17:39.530Z"
+    "checkedAt": "2026-10-25T14:53:05.627Z"
   },
   {
     "pinId": 4872,
@@ -7153,7 +7284,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://shop.messe-duesseldorf.de/boot_e?ticket=g_u_e_s_t&lang=2&oid=30775",
-    "checkedAt": "2026-10-10T21:45:41.407Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4873,
@@ -7168,7 +7299,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.miamiboatshow.com/press/tickets-on-sale-for-the-2027-discover-boating-miami-international-boat-show/",
-    "checkedAt": "2026-10-10T21:45:44.614Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4874,
@@ -7201,7 +7332,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.chicagoautoshow.com/?p=14",
-    "checkedAt": "2026-10-10T21:45:45.050Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4875,
@@ -7216,22 +7347,68 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.defenceconnect.com.au/air/17897-dates-confirmed-for-avalon-australian-international-airshow-in-2027",
-    "checkedAt": "2026-10-17T17:18:13.064Z"
+    "checkedAt": "2026-10-25T14:58:04.471Z"
   },
   {
     "pinId": 4876,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "ticketUrl": "https://ameliaconcours.com/tickets-experiences/",
+    "lowPrice": 45,
+    "highPrice": 1745,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Saturday March 6, 2027.",
+        "label": "Concours General Admission",
+        "price": 145
+      },
+      {
+        "note": "Sunday March 7, 2027.",
+        "label": "Cars & Caffeine",
+        "price": 45
+      },
+      {
+        "note": "Saturday March 6 and Sunday March 7, 2027.",
+        "label": "Two Day Pass",
+        "price": 185
+      },
+      {
+        "note": "Saturday March 6, 2027; see operator package conditions.",
+        "label": "Vintners Lounge",
+        "price": 329
+      },
+      {
+        "note": "Saturday March 6, 2027.",
+        "label": "Club Amelia",
+        "price": 910
+      },
+      {
+        "note": "Saturday–Sunday package, March 6–7, 2027.",
+        "label": "Concours & More",
+        "price": 399
+      },
+      {
+        "note": "Thursday–Sunday package, March 4–7, 2027.",
+        "label": "Signature Experience",
+        "price": 1745
+      },
+      {
+        "note": "Thursday March 4, 2027 evening.",
+        "label": "Reverie",
+        "price": 425
+      },
+      {
+        "note": "Friday March 5, 2027 evening.",
+        "label": "Legends of Speed",
+        "price": 425
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": "https://ameliaconcours.com/",
-    "checkedAt": "2026-10-17T17:17:59.671Z"
+    "sourceUrl": "https://ameliaconcours.com/tickets-experiences/",
+    "checkedAt": "2026-10-25T15:18:19.315Z"
   },
   {
     "pinId": 4877,
@@ -7246,7 +7423,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.daytonabeach.com/bike-week/",
-    "checkedAt": "2026-10-17T17:18:03.732Z"
+    "checkedAt": "2026-10-25T14:56:31.511Z"
   },
   {
     "pinId": 4878,
@@ -7261,7 +7438,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://autoshowny.com/plan-your-visit/",
-    "checkedAt": "2026-10-17T17:18:14.504Z"
+    "checkedAt": "2026-10-25T14:58:06.744Z"
   },
   {
     "pinId": 4879,
@@ -7281,7 +7458,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://flysnf.org/",
-    "checkedAt": "2026-10-10T21:45:49.882Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4880,
@@ -7296,7 +7473,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://cnevpost.com/2026/09/08/2027-shanghai-auto-show-apr-23-may-2/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:39:11.853Z"
   },
   {
     "pinId": 4881,
@@ -7307,11 +7484,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.goodwood.com/motorsport/festival-of-speed/tickets-and-packages/",
-    "checkedAt": "2026-10-10T21:45:56.884Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4882,
@@ -7326,7 +7503,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.eaa.org/airventure/EAA-AirVenture-Tickets",
-    "checkedAt": "2026-10-10T21:45:57.996Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4883,
@@ -7354,9 +7531,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://sturgismotorcyclerally.com/dates/",
-    "checkedAt": "2026-10-11T05:40:25.021Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4885,
@@ -7369,9 +7546,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://pebblebeachconcours.net",
-    "checkedAt": "2026-10-11T05:41:38.191Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4886,
@@ -7386,7 +7563,7 @@
     "onSaleDate": "2027-06-01T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.caravan-salon.com/en/For_Visitors/Tickets_and_Registration/Ticket_shop",
-    "checkedAt": "2026-10-10T21:45:58.803Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4887,
@@ -7399,9 +7576,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.iaa-mobility.com/en",
-    "checkedAt": "2026-10-11T05:42:52.169Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4888,
@@ -7414,9 +7591,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.cannesyachtingfestival.com/en-gb/",
-    "checkedAt": "2026-10-11T05:42:52.345Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4890,
@@ -7431,7 +7608,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.twitchcon.com/san-diego-2026/passes/",
-    "checkedAt": "2026-10-10T21:45:26.458Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4891,
@@ -7446,7 +7623,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://sc26.supercomputing.org/attendees/registration/",
-    "checkedAt": "2026-10-10T21:45:26.814Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4892,
@@ -7461,22 +7638,63 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.rsna.org/annual-meeting/attendee-resources/pricing-and-registration",
-    "checkedAt": "2026-10-10T21:45:33.413Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4893,
     "performers": [],
-    "ticketUrl": "https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
-    "lowPrice": 45,
-    "highPrice": 101.99,
+    "ticketUrl": "https://events.leapevents.com/tickets/PAXUnplugged2026-2379rtfbwe",
+    "lowPrice": 26.25,
+    "highPrice": 60.9,
     "priceCurrency": "USD",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "Current checkout:50USD+5service+5%tax; shipping extra. Adult3-day122.84USD is sold out.",
+        "label": "Friday Badge",
+        "price": 57.75
+      },
+      {
+        "note": "Current checkout:53USD+5service+5%tax; shipping extra.",
+        "label": "Saturday Badge",
+        "price": 60.9
+      },
+      {
+        "note": "Current checkout:50USD+5service+5%tax; shipping extra.",
+        "label": "Sunday Badge",
+        "price": 57.75
+      },
+      {
+        "note": "Ages7–12;45USD+5service+5%tax; shipping extra.",
+        "label": "3 Day Kids Badge",
+        "price": 52.5
+      },
+      {
+        "note": "Ages7–12;20USD+5service+5%tax.",
+        "label": "Friday Kids Badge",
+        "price": 26.25
+      },
+      {
+        "note": "Ages7–12;20USD+5service+5%tax.",
+        "label": "Saturday Kids Badge",
+        "price": 26.25
+      },
+      {
+        "note": "Ages7–12;20USD+5service+5%tax.",
+        "label": "Sunday Kids Badge",
+        "price": 26.25
+      },
+      {
+        "note": "Free with a paid adult; proof of age required.",
+        "label": "Children6and younger",
+        "price": 0
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
-    "checkedAt": "2026-09-30T00:41:06.351Z"
+    "sourceUrl": "https://events.leapevents.com/tickets/PAXUnplugged2026-2379rtfbwe",
+    "checkedAt": "2026-10-23T13:27:26.045Z"
   },
   {
     "pinId": 4894,
@@ -7533,7 +7751,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://nrfbigshow.nrf.com/register",
-    "checkedAt": "2026-10-10T21:45:39.972Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4895,
@@ -7548,7 +7766,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.namm.org/thenammshow/registration-process",
-    "checkedAt": "2026-10-10T21:45:42.437Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4896,
@@ -7563,22 +7781,53 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.buildersshow.com/",
-    "checkedAt": "2026-10-10T21:45:43.534Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4897,
     "performers": [],
     "ticketUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
-    "lowPrice": 99,
-    "highPrice": 1149,
+    "lowPrice": 125,
+    "highPrice": 1249,
     "priceCurrency": "USD",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "Early rate through December11,23:59PT; limited meeting access.",
+        "label": "Business Hall ONLY",
+        "price": 125
+      },
+      {
+        "note": "Early rate; Tue–Thu; excludes Business Hall and main program.",
+        "label": "Festival Hall ONLY",
+        "price": 175
+      },
+      {
+        "note": "Early rate through December11,23:59PT.",
+        "label": "Festival",
+        "price": 549
+      },
+      {
+        "note": "Early rate; premium onsite pass.",
+        "label": "Game Changer",
+        "price": 1249
+      },
+      {
+        "note": "Application-based eligibility; fewer than50 full-time employees and other conditions apply.",
+        "label": "Indie OR Start-Up",
+        "price": 299
+      },
+      {
+        "note": "Accredited educational email and full-time status required.",
+        "label": "Academic",
+        "price": 299
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
-    "checkedAt": "2026-09-30T00:43:12.714Z"
+    "sourceUrl": "https://gdconf.com/passes-pricing/",
+    "checkedAt": "2026-10-23T13:27:04.030Z"
   },
   {
     "pinId": 4898,
@@ -7593,7 +7842,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.expowest.com/",
-    "checkedAt": "2026-10-17T17:17:57.648Z"
+    "checkedAt": "2026-10-25T14:52:01.394Z"
   },
   {
     "pinId": 4899,
@@ -7674,7 +7923,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.emeraldcitycomiccon.com/en-us/buy/tickets.html",
-    "checkedAt": "2026-10-10T21:45:45.737Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4900,
@@ -7689,7 +7938,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://cart.sxsw.com/",
-    "checkedAt": "2026-09-30T00:44:51.378Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4901,
@@ -7744,7 +7993,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.comic-con.org/wc/badges/",
-    "checkedAt": "2026-10-10T21:45:48.441Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4902,
@@ -7759,7 +8008,7 @@
     "onSaleDate": "2026-10-19T00:00:00.000Z",
     "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/RSAC_Conference",
-    "checkedAt": "2026-10-17T17:18:37.237Z"
+    "checkedAt": "2026-10-25T14:59:44.477Z"
   },
   {
     "pinId": 4903,
@@ -7774,7 +8023,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.himssconference.com/register/",
-    "checkedAt": "2026-10-10T21:45:49.513Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4904,
@@ -7789,7 +8038,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://east.paxsite.com/",
-    "checkedAt": "2026-10-17T17:18:41.708Z"
+    "checkedAt": "2026-10-25T14:59:51.491Z"
   },
   {
     "pinId": 4905,
@@ -7804,7 +8053,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.c2e2.com/en-us/buy/tickets.html",
-    "checkedAt": "2026-09-30T00:47:36.648Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4906,
@@ -7815,11 +8064,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://megaconorlando.fanexpohq.com/",
-    "checkedAt": "2026-10-10T21:45:53.330Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4907,
@@ -7854,7 +8103,7 @@
     "onSaleDate": "2026-10-01T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.nationalrestaurantshow.com/home/badge-pricing/",
-    "checkedAt": "2026-10-10T21:45:53.697Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 4908,
@@ -7869,7 +8118,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.snowflake.com/en/summit/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:41:15.878Z"
   },
   {
     "pinId": 4909,
@@ -7884,7 +8133,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://unplugged.paxsite.com/houston/en-us.html",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:50:42.106Z"
   },
   {
     "pinId": 4910,
@@ -7899,7 +8148,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.specialtyfood.com/fancy-food-shows/summer/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:46:23.701Z"
   },
   {
     "pinId": 4911,
@@ -7912,9 +8161,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.gencon.com/",
-    "checkedAt": "2026-10-11T05:40:24.837Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4912,
@@ -7925,11 +8174,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.otakon.com/",
-    "checkedAt": "2026-10-11T05:41:37.633Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4913,
@@ -7940,11 +8189,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://animenyc.com/",
-    "checkedAt": "2026-09-30T00:51:38.030Z"
+    "checkedAt": "2026-10-23T00:05:02.586Z"
   },
   {
     "pinId": 4914,
@@ -7957,9 +8206,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://west.paxsite.com/",
-    "checkedAt": "2026-10-11T05:42:51.961Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4928,
@@ -7974,7 +8223,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://cphia.africacdc.org/register",
-    "checkedAt": "2026-10-10T21:45:30.101Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4957,
@@ -7985,11 +8234,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.itu.int/wrc-27/",
-    "checkedAt": "2026-10-11T05:44:26.335Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 4982,
@@ -8126,7 +8375,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.fintechfestival.sg/registration",
-    "checkedAt": "2026-10-16T17:58:48.382Z"
+    "checkedAt": "2026-10-24T14:05:05.848Z"
   },
   {
     "pinId": 4984,
@@ -8147,7 +8396,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://berlinscienceweek.com/",
-    "checkedAt": "2026-10-10T21:45:24.286Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4985,
@@ -8193,7 +8442,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://pretix.eu/fallingwalls/sciencesummit26/",
-    "checkedAt": "2026-10-10T21:45:25.706Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 4986,
@@ -8221,7 +8470,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://ca.billboard.com/music/music-news/riley-green-grey-cup-halftime",
-    "checkedAt": "2026-10-16T17:58:48.195Z"
+    "checkedAt": "2026-10-24T14:05:03.720Z"
   },
   {
     "pinId": 4989,
@@ -8253,7 +8502,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.hkmarathon.com/race-information",
-    "checkedAt": "2026-10-10T21:45:40.640Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4990,
@@ -8294,7 +8543,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.runrocknroll.com/events/manila/register",
-    "checkedAt": "2026-10-10T21:45:34.278Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 4991,
@@ -8309,7 +8558,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.techshowmadrid.es/",
-    "checkedAt": "2026-10-10T21:45:25.330Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5027,
@@ -8356,7 +8605,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.londonmarathonevents.co.uk/london-marathon",
-    "checkedAt": "2026-10-10T21:45:51.600Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 5029,
@@ -8377,7 +8626,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.marathon.tokyo/en/participants/guideline/",
-    "checkedAt": "2026-10-10T21:45:46.769Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 5030,
@@ -8403,7 +8652,7 @@
     "onSaleDate": "2026-09-29T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.tcssydneymarathon.com/sign-up",
-    "checkedAt": "2026-10-10T21:45:59.221Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 5031,
@@ -8418,7 +8667,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.visitvalencia.com/en/events-valencia/enjoy-trinidad-alfonso-zurich-marathon",
-    "checkedAt": "2026-10-16T17:58:52.405Z"
+    "checkedAt": "2026-10-24T14:05:19.050Z"
   },
   {
     "pinId": 5032,
@@ -8448,7 +8697,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/articles/50290-paris-marathon-2027-the-date-of-the-city-s-biggest-race-and-the-registration-details",
-    "checkedAt": "2026-10-17T17:18:09.954Z"
+    "checkedAt": "2026-10-25T14:58:02.139Z"
   },
   {
     "pinId": 5034,
@@ -8473,7 +8722,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.twooceansmarathon.org.za/ultra-marathon/",
-    "checkedAt": "2026-10-10T21:45:48.817Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 5035,
@@ -8504,7 +8753,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://comrades.com/2027-entry-schedule",
-    "checkedAt": "2026-10-10T21:45:55.417Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 5092,
@@ -8519,7 +8768,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://olachina.org/the-140th-canton-fair/",
-    "checkedAt": "2026-10-16T17:53:29.824Z"
+    "checkedAt": "2026-10-24T14:04:55.430Z"
   },
   {
     "pinId": 5093,
@@ -8570,7 +8819,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://f1saopaulo.com.br/en/noticias/f1-sao-paulo-gp-last-chance-to-attend-this-years-race-at-interlagos/",
-    "checkedAt": "2026-10-16T17:57:32.943Z"
+    "checkedAt": "2026-10-24T14:05:01.651Z"
   },
   {
     "pinId": 5094,
@@ -8585,7 +8834,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.romacinemafest.it/en/rome-film-fest/",
-    "checkedAt": "2026-10-10T21:45:19.629Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5095,
@@ -8615,7 +8864,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://9to5google.com/2026/09/25/android-dev-summit-android-18/",
-    "checkedAt": "2026-10-16T17:53:30.147Z"
+    "checkedAt": "2026-10-24T14:04:57.574Z"
   },
   {
     "pinId": 5106,
@@ -8630,7 +8879,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.thailandhighlights.com/thailand/loy-krathong-festival",
-    "checkedAt": "2026-10-16T17:58:50.441Z"
+    "checkedAt": "2026-10-24T14:05:14.204Z"
   },
   {
     "pinId": 5107,
@@ -8645,7 +8894,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://shop.midaticket.it/makerfaire/Event/1149/Dates",
-    "checkedAt": "2026-10-10T21:45:22.833Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5108,
@@ -8660,7 +8909,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.smartnationexpo.org/visit-us/",
-    "checkedAt": "2026-10-10T21:45:28.013Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5109,
@@ -8675,7 +8924,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "http://www.eguangzhou.gov.cn/gzwhatson/content/post_44820.html",
-    "checkedAt": "2026-10-17T17:17:28.114Z"
+    "checkedAt": "2026-10-25T14:49:33.674Z"
   },
   {
     "pinId": 5110,
@@ -8685,44 +8934,79 @@
         "type": "Person"
       }
     ],
-    "ticketUrl": "https://mundo-ticket.com/en-US/events/ccxp26",
+    "ticketUrl": "https://new.ccxp.com.br/en/tickets-en",
     "lowPrice": 240,
     "highPrice": 2550,
     "priceCurrency": "BRL",
     "tiers": [
       {
-        "note": "Starting price; includes service fee",
-        "label": "Thursday",
+        "note": "Third batch including fees; only with documented half-price eligibility.",
+        "label": "Thursday half-price",
         "price": 240
       },
       {
-        "note": "Starting price; includes service fee",
-        "label": "Friday",
-        "price": 260
-      },
-      {
-        "note": "Starting price; includes service fee",
-        "label": "Saturday",
-        "price": 350
-      },
-      {
-        "note": "Starting price; includes service fee",
-        "label": "Sunday",
+        "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+        "label": "Thursday social",
         "price": 290
       },
       {
-        "note": "Starting price; includes service fee",
-        "label": "4-day badge",
+        "note": "Third batch including fees.",
+        "label": "Thursday full-price",
+        "price": 480
+      },
+      {
+        "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+        "label": "Friday social",
+        "price": 310
+      },
+      {
+        "note": "Third batch including fees.",
+        "label": "Friday full-price",
+        "price": 520
+      },
+      {
+        "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+        "label": "Saturday social",
+        "price": 350
+      },
+      {
+        "note": "Third batch including fees.",
+        "label": "Saturday full-price",
+        "price": 600
+      },
+      {
+        "note": "Third batch including fees; only with documented half-price eligibility.",
+        "label": "Sunday half-price",
+        "price": 290
+      },
+      {
+        "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+        "label": "Sunday social",
+        "price": 340
+      },
+      {
+        "note": "Third batch including fees.",
+        "label": "Sunday full-price",
+        "price": 580
+      },
+      {
+        "note": "Third batch including fees and automatic R$10 donation; see operator conditions.",
+        "label": "Four-day pass social",
         "price": 1120
       },
       {
-        "note": "Choose visit day by December1; includes Spoiler Night and service fee",
-        "label": "Joker Ticket",
+        "note": "Third batch including fees.",
+        "label": "Four-day pass full-price",
+        "price": 1900
+      },
+      {
+        "note": "Operator Joker option; check included access and choice conditions.",
+        "label": "Coringa",
         "price": 699
       },
       {
-        "note": "Includes service fee; early access and Spoiler Night",
-        "label": "Epic Pass",
+        "note": "Operator premium admission package; check inclusions.",
+        "label": "Epic",
         "price": 2550
       }
     ],
@@ -8730,8 +9014,8 @@
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": "https://new.ccxp.com.br/en/",
-    "checkedAt": "2026-10-17T17:18:49.846Z"
+    "sourceUrl": "https://new.ccxp.com.br/en/tickets-en",
+    "checkedAt": "2026-10-25T15:18:21.365Z"
   },
   {
     "pinId": 5118,
@@ -8746,7 +9030,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.euronaval.com/i-want-to-visit/",
-    "checkedAt": "2026-10-10T21:45:24.657Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5124,
@@ -8761,7 +9045,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://carnetsvanille.com/en/route-du-rhum-in-saint-malo/",
-    "checkedAt": "2026-10-16T17:53:32.072Z"
+    "checkedAt": "2026-10-24T14:04:59.593Z"
   },
   {
     "pinId": 5125,
@@ -8776,7 +9060,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.yacht.de/en/regatta/races/golden-globe-race-2026-sail-like-it-s-1968-experience-it-like-it-s-2026/",
-    "checkedAt": "2026-10-16T17:51:28.399Z"
+    "checkedAt": "2026-10-24T14:04:53.430Z"
   },
   {
     "pinId": 5126,
@@ -8789,9 +9073,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.boatingnz.co.nz/2026/09/grazie-napoli/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T00:25:52.553Z"
   },
   {
     "pinId": 5128,
@@ -8806,7 +9090,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://events.humanitix.com/rolex-sydney-hobart-yacht-race-or-2026-or-official-spectator-vessel-the-jackson",
-    "checkedAt": "2026-10-10T21:45:37.524Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 5129,
@@ -8836,7 +9120,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.tamiya.com/japan/mini4wd/japancup.html",
-    "checkedAt": "2026-10-17T17:17:32.777Z"
+    "checkedAt": "2026-10-25T14:49:40.338Z"
   },
   {
     "pinId": 5179,
@@ -8937,7 +9221,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.tamiya.com/english/tamiyafair2026.html",
-    "checkedAt": "2026-10-17T17:17:30.406Z"
+    "checkedAt": "2026-10-25T14:49:38.049Z"
   },
   {
     "pinId": 5191,
@@ -8973,16 +9257,42 @@
     "pinId": 5200,
     "performers": [],
     "ticketUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
-    "lowPrice": 13,
-    "highPrice": 35,
+    "lowPrice": 16,
+    "highPrice": 67,
     "priceCurrency": "EUR",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "From August5; earlybird expired. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+        "label": "Normal day ticket",
+        "price": 25
+      },
+      {
+        "note": "Children under4 enter free. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+        "label": "Child day ticket (4–12)",
+        "price": 16
+      },
+      {
+        "note": "Eligibility proof required. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+        "label": "Reduced day ticket",
+        "price": 22
+      },
+      {
+        "note": "2adults and up to3children aged4–12; group total, not per person. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+        "label": "Family day ticket",
+        "price": 67
+      },
+      {
+        "note": "Board-game industry proof required; earlyentry and business access. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+        "label": "Business visitor",
+        "price": 46
+      }
+    ],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
-    "checkedAt": "2026-10-02T14:54:09.132Z"
+    "sourceUrl": "https://www.spiel-essen.de/en/visit/tickets-opening-hours",
+    "checkedAt": "2026-10-24T14:12:18.053Z"
   },
   {
     "pinId": 5202,
@@ -8997,7 +9307,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://tabletop.events/conventions/bgg.con-2026",
-    "checkedAt": "2026-10-02T14:54:48.282Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5204,
@@ -9012,7 +9322,7 @@
     "onSaleDate": "2026-10-06T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.festivaldesjeux-cannes.com/en/take-part/tickets/",
-    "checkedAt": "2026-10-10T21:45:45.378Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 5439,
@@ -9027,7 +9337,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.jumpfesta.com/",
-    "checkedAt": "2026-10-03T01:17:13.972Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5445,
@@ -9047,7 +9357,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.thepopverse.com/comics-dc-absolute-batman-fcbd-2027-matt-fraction",
-    "checkedAt": "2026-10-10T21:45:52.289Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 5471,
@@ -9099,22 +9409,33 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.foxsports.com/articles/motor/scott-dixon-and-felix-rosenqvist-sign-multiyear-deals-to-begin-racing-for-arrow-mclaren-in-2027",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:39:14.241Z"
   },
   {
     "pinId": 5481,
     "performers": [],
     "ticketUrl": "https://www.24h-lemans.com/en/tickets",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 75,
+    "highPrice": 126,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "2027 week pass, June9–13; general sale November6. Not a race-only pass.",
+        "label": "Week pass — full rate",
+        "price": 126
+      },
+      {
+        "note": "Eligible ACO members; member presale November3–5. Week pass June9–13.",
+        "label": "Week pass — ACO member",
+        "price": 75
+      }
+    ],
     "itinerary": [],
     "availability": "PreOrder",
-    "onSaleDate": null,
+    "onSaleDate": "2026-11-06T00:00:00.000Z",
     "source": "session",
-    "sourceUrl": "https://www.24h-lemans.com/en/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "sourceUrl": "https://www.24h-lemans.com/en/news/tickets-go-on-sale-on-friday-6-november-for-next-year-s-24-hours-of-le-mans-61106",
+    "checkedAt": "2026-10-26T03:44:35.109Z"
   },
   {
     "pinId": 5491,
@@ -9144,7 +9465,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.qatar-tribune.com/article/249936/latest-news/formula-1-qatar-airways-qatar-grand-prix-2026-100-days-to-go-as-key-visual-unveiled",
-    "checkedAt": "2026-10-03T22:15:28.939Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5496,
@@ -9159,7 +9480,7 @@
     "onSaleDate": "2026-05-26T02:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.justbikes.com.au/news-and-reviews/ticket-guide-motogp-grand-prix-of-australia-2026/1097695",
-    "checkedAt": "2026-10-03T22:15:54.750Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5499,
@@ -9174,7 +9495,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://tickets.motogp.com/en/21151-valencia/",
-    "checkedAt": "2026-10-10T21:45:31.636Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 5505,
@@ -9189,7 +9510,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/2026_Straight_Talk_Wireless_400",
-    "checkedAt": "2026-10-17T17:18:45.864Z"
+    "checkedAt": "2026-10-25T15:02:37.462Z"
   },
   {
     "pinId": 5509,
@@ -9204,7 +9525,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.fiaformulae.com/en/news/1074657",
-    "checkedAt": "2026-10-17T17:17:41.564Z"
+    "checkedAt": "2026-10-25T14:51:02.090Z"
   },
   {
     "pinId": 5512,
@@ -9219,7 +9540,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": null,
-    "checkedAt": "2026-10-17T17:17:36.847Z"
+    "checkedAt": "2026-10-25T14:50:56.862Z"
   },
   {
     "pinId": 5515,
@@ -9234,7 +9555,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.iomttraces.com/latest/news/tt-2027-dates-isle-of-man-tt-races/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:41:08.562Z"
   },
   {
     "pinId": 5518,
@@ -9249,7 +9570,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.vrc.com.au/race-days-and-events/2026-2027/lexus-melbourne-cup-day/",
-    "checkedAt": "2026-10-03T22:18:37.655Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 5763,
@@ -9288,9 +9609,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.prnewswire.com/news-releases/mcdonalds-and-chicago-fire-football-club-announce-landmark-stadium-naming-rights-partnership-mcdonalds-park-to-open-in-2028-as-a-new-destination-for-soccer-culture-and-community-in-chicago-302770303.html",
-    "checkedAt": "2026-10-11T05:33:34.394Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 6077,
@@ -9327,7 +9648,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ghibli-museum.jp/en/tickets/",
-    "checkedAt": "2026-10-10T21:30:59.177Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 6324,
@@ -9361,9 +9682,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.bluewin.ch/en/news/collectible-watches-stolen-from-a-private-museum-in-le-locle-ne-li.3599447",
-    "checkedAt": "2026-10-11T05:33:34.503Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 6356,
@@ -9378,7 +9699,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://en.endurance-info.com/auto/article/119029-daytona-international-speedway-announces-2027-rolex-24-date",
-    "checkedAt": "2026-10-17T17:17:43.619Z"
+    "checkedAt": "2026-10-25T14:51:54.896Z"
   },
   {
     "pinId": 6510,
@@ -9417,7 +9738,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.goodwood.com/motorsport/members-meeting/tickets-and-packages/",
-    "checkedAt": "2026-10-10T21:45:50.560Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 6513,
@@ -9432,7 +9753,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.goodwood.com/grr/event-coverage/goodwood-revival/2027-revival-dates-revealed/",
-    "checkedAt": "2026-10-10T21:46:00.264Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 6544,
@@ -9502,7 +9823,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://autoemotodepoca.com/en/ticket-office/",
-    "checkedAt": "2026-10-10T21:45:22.517Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 6556,
@@ -9562,7 +9883,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.essen-motorshow.de/tickets/index-9.html",
-    "checkedAt": "2026-10-10T21:45:32.449Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 6559,
@@ -9612,7 +9933,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.retromobile.com/en/box-office/buy-my-ticket",
-    "checkedAt": "2026-10-10T21:45:43.841Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 6564,
@@ -9627,7 +9948,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.bharat-mobility.com/visitor-registration",
-    "checkedAt": "2026-10-10T21:45:44.244Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 6570,
@@ -9642,7 +9963,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://view.asiae.co.kr/en/article/2026090915254540957",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:14:17.819Z"
   },
   {
     "pinId": 6600,
@@ -9657,7 +9978,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.taiwannews.com.tw/news/6448957",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:05:02.611Z"
   },
   {
     "pinId": 6604,
@@ -9672,7 +9993,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://fatmarathoner.com/taipei-marathon-guide/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:14:10.664Z"
   },
   {
     "pinId": 6606,
@@ -9687,7 +10008,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://udn.com/news/story/7241/9464732",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:14:15.309Z"
   },
   {
     "pinId": 6610,
@@ -9702,7 +10023,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.computextaipei.com.tw/en/index.html",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:41:11.264Z"
   },
   {
     "pinId": 6612,
@@ -9717,7 +10038,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.apec.org/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:12:19.640Z"
   },
   {
     "pinId": 6613,
@@ -9732,7 +10053,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://news.cgtn.com/news/2026-09-30/China-s-World-Internet-Conference-summit-to-focus-on-open-source-AI-1QQPSohYhjO/share_amp.html",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:05:04.986Z"
   },
   {
     "pinId": 6616,
@@ -9747,7 +10068,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://en.wikipedia.org/wiki/Chinese_New_Year",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:14:12.653Z"
   },
   {
     "pinId": 6630,
@@ -9777,7 +10098,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.wtm.com/london/en-gb/tickets.html",
-    "checkedAt": "2026-10-10T21:45:24.957Z"
+    "checkedAt": "2026-10-21T15:36:48.785Z"
   },
   {
     "pinId": 6638,
@@ -9792,7 +10113,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.itb.com/en/besuchen/tickets/",
-    "checkedAt": "2026-10-10T21:45:47.399Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 6639,
@@ -9807,7 +10128,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ifema.es/en/fitur/tickets",
-    "checkedAt": "2026-10-10T21:45:41.013Z"
+    "checkedAt": "2026-10-21T22:08:56.502Z"
   },
   {
     "pinId": 6641,
@@ -9822,7 +10143,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.seatradecruiseevents.com/global/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:39:08.728Z"
   },
   {
     "pinId": 6643,
@@ -9837,7 +10158,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.iata.org/en/pressroom/2026-releases/06-07-xiamen-airlines-host-83rd-iata-agm/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-26T03:39:16.522Z"
   },
   {
     "pinId": 6659,
@@ -9850,9 +10171,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.sibos.com/about/future-sibos",
-    "checkedAt": "2026-10-11T05:44:26.243Z"
+    "checkedAt": "2026-10-22T23:34:29.946Z"
   },
   {
     "pinId": 6660,
@@ -9867,7 +10188,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://europe.money2020.com/",
-    "checkedAt": "2026-10-10T21:45:55.126Z"
+    "checkedAt": "2026-10-22T14:16:49.830Z"
   },
   {
     "pinId": 7592,
@@ -9882,7 +10203,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.worldchocolatemasters.com/final-2026",
-    "checkedAt": "2026-10-13T14:59:07.133Z"
+    "checkedAt": "2026-10-23T13:22:43.758Z"
   },
   {
     "pinId": 7608,
@@ -9913,22 +10234,43 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000328.000119996.html",
-    "checkedAt": "2026-10-13T14:59:20.464Z"
+    "checkedAt": "2026-10-23T13:22:56.357Z"
   },
   {
     "pinId": 7609,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "ticketUrl": "https://www.foodandrum.com/events/",
+    "lowPrice": 100,
+    "highPrice": 250,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "November6 18:00; BDS200 / USD100.",
+        "label": "Rum Route",
+        "price": 100
+      },
+      {
+        "note": "November7 04:00; Copacabana; BDS250 / USD125.",
+        "label": "Rise & Rum",
+        "price": 125
+      },
+      {
+        "note": "November8 19:00; CARIFESTA House; BDS350 / USD175.",
+        "label": "Liquid Gold",
+        "price": 175
+      },
+      {
+        "note": "Combined package; BDS500 / USD250.",
+        "label": "Rise & Rum + Liquid Gold combo",
+        "price": 250
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": "https://www.riotimesonline.com/barbados-food-and-rum-festival-2026-november-5-8-caribbean-culinary/",
-    "checkedAt": "2026-10-13T14:59:18.406Z"
+    "sourceUrl": "https://www.foodandrum.com/events/",
+    "checkedAt": "2026-10-23T13:22:54.244Z"
   },
   {
     "pinId": 7615,
@@ -10010,7 +10352,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://newshub.medianet.com.au/2026/08/hong-kong-wine-dine-festival-returns-this-autumn/166941/",
-    "checkedAt": "2026-10-13T14:59:11.376Z"
+    "checkedAt": "2026-10-23T13:22:47.954Z"
   },
   {
     "pinId": 7625,
@@ -10041,7 +10383,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://sakematsuri.sg/",
-    "checkedAt": "2026-10-13T14:59:35.647Z"
+    "checkedAt": "2026-10-23T13:23:06.828Z"
   },
   {
     "pinId": 7627,
@@ -10056,7 +10398,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://gff.co.uk/for-producers/world-cheese-awards/",
-    "checkedAt": "2026-10-13T14:59:22.604Z"
+    "checkedAt": "2026-10-23T13:22:58.461Z"
   },
   {
     "pinId": 7630,
@@ -10071,7 +10413,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.salon-du-chocolat.com/en/paris",
-    "checkedAt": "2026-10-13T14:59:09.229Z"
+    "checkedAt": "2026-10-23T13:22:45.858Z"
   },
   {
     "pinId": 7631,
@@ -10091,7 +10433,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.eurochocolate.com/perugia2026/",
-    "checkedAt": "2026-10-13T14:59:31.302Z"
+    "checkedAt": "2026-10-23T13:23:02.651Z"
   },
   {
     "pinId": 7635,
@@ -10134,11 +10476,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://swg3.tv/events/2027/january/scottish-national-whisky-festival-2027/",
-    "checkedAt": "2026-10-13T14:59:39.898Z"
+    "checkedAt": "2026-10-23T13:23:11.027Z"
   },
   {
     "pinId": 7648,
@@ -10153,7 +10495,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://number.bunshun.jp/ud/pressrelease/6a5889271262179c88000001",
-    "checkedAt": "2026-10-13T14:59:14.168Z"
+    "checkedAt": "2026-10-23T13:22:50.050Z"
   },
   {
     "pinId": 7649,
@@ -10168,7 +10510,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://pannofes.jp/event/makuhari2026/",
-    "checkedAt": "2026-10-13T14:59:02.820Z"
+    "checkedAt": "2026-10-23T13:22:41.666Z"
   },
   {
     "pinId": 7650,
@@ -10204,7 +10546,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://pannofes.jp/event/umekitakouen2026/",
-    "checkedAt": "2026-10-13T14:59:37.838Z"
+    "checkedAt": "2026-10-23T13:23:08.926Z"
   },
   {
     "pinId": 7652,
@@ -10219,7 +10561,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://pannofes.jp/event/minamioosawa2026/",
-    "checkedAt": "2026-10-13T14:59:16.226Z"
+    "checkedAt": "2026-10-23T13:22:52.149Z"
   },
   {
     "pinId": 13924,
@@ -10249,7 +10591,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://sherbeth.it/",
-    "checkedAt": "2026-10-13T14:59:28.428Z"
+    "checkedAt": "2026-10-23T13:23:00.546Z"
   },
   {
     "pinId": 13975,
@@ -10264,7 +10606,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.infobae.com/inhouse/2026/08/31/dia-nacional-del-helado-artesanal-las-claves-de-un-sector-que-busca-crecer-y-aumentar-el-consumo-de-cara-al-proximo-verano/",
-    "checkedAt": "2026-10-13T14:59:33.589Z"
+    "checkedAt": "2026-10-23T13:23:04.728Z"
   },
   {
     "pinId": 14168,
@@ -10279,7 +10621,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://cnevpost.com/2026/09/24/next-beijing-auto-show-mar-27-apr-5-2027/",
-    "checkedAt": "2026-10-13T14:59:42.056Z"
+    "checkedAt": "2026-10-23T13:23:13.135Z"
   },
   {
     "pinId": 14233,
@@ -10294,7 +10636,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://cnevpost.com/2026/06/08/2026-shenzhen-auto-show-closes-next-edition-jun-5-2027/",
-    "checkedAt": "2026-10-13T14:59:44.117Z"
+    "checkedAt": "2026-10-24T03:49:06.796Z"
   },
   {
     "pinId": 14240,
@@ -10309,7 +10651,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://english.beijing.gov.cn/whatson/events/forum/202609/t20260930_4886674.html",
-    "checkedAt": "2026-10-13T14:59:00.541Z"
+    "checkedAt": "2026-10-23T13:22:39.618Z"
   },
   {
     "pinId": 15257,
@@ -10323,8 +10665,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-14T16:20:07.369Z"
+    "sourceUrl": "https://www.carlelo.com/news/maruti-victoris-launched-price-starts-at-rs-105-lakh",
+    "checkedAt": "2026-10-24T14:03:44.630Z"
   },
   {
     "pinId": 15306,
@@ -10371,7 +10713,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://informaconnect.com/bioeurope/article/bio-europe-2026-to-convene-global-biopharma-decision-makers-in-cologne/",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:12:16.752Z"
   },
   {
     "pinId": 17013,
@@ -10386,7 +10728,7 @@
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.hematology.org/meetings/annual-meeting",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:12:21.899Z"
   },
   {
     "pinId": 17026,
@@ -10397,26 +10739,72 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.sitcancer.org/2026/home",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "checkedAt": "2026-10-25T15:05:07.992Z"
   },
   {
     "pinId": 17028,
     "performers": [],
     "ticketUrl": "https://www.compusystems.com/servlet/sar?evt_uid=417",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 50,
+    "highPrice": 1810,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Patient/caregiver/advocate non-member",
+        "price": 50
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Student member",
+        "price": 105
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Student non-member",
+        "price": 185
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Associate/allied-health member",
+        "price": 470
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Associate/allied-health non-member",
+        "price": 900
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Trainee member",
+        "price": 470
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Trainee non-member",
+        "price": 900
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Regular/international member",
+        "price": 710
+      },
+      {
+        "note": "General in-person rate displayed October 25; category/member eligibility required. General program and TLMdX OnDemand included; extra courses separate. No 2026 live streaming.",
+        "label": "Regular/international non-member",
+        "price": 1810
+      }
+    ],
     "itinerary": [],
-    "availability": null,
-    "onSaleDate": null,
+    "availability": "InStock",
+    "onSaleDate": "2026-07-22T00:00:00.000Z",
     "source": "session",
-    "sourceUrl": "https://www.aasld.org/tlm-26/home",
-    "checkedAt": "2026-10-18T14:19:36.799Z"
+    "sourceUrl": "https://www.aasld.org/tlm-26/event-registration",
+    "checkedAt": "2026-10-25T15:24:37.814Z"
   },
   {
     "pinId": 17359,
@@ -10497,16 +10885,32 @@
     "pinId": 17366,
     "performers": [],
     "ticketUrl": "https://tribecafilm.com/festival/tickets",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 95,
+    "highPrice": 1550,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "USD1500+50mandatoryfee. Ten-day priority entry; present30minutes before, seating policies apply.",
+        "label": "Hudson All-Access Pass",
+        "price": 1550
+      },
+      {
+        "note": "USD950+50fee. June3–7five-day access; priority-entry policies apply.",
+        "label": "Hudson Opening Weekend Pass",
+        "price": 1000
+      },
+      {
+        "note": "USD85+10fee; under25only; rush-line access subjecttoavailable seating.",
+        "label": "Under25Pass",
+        "price": 95
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://tribecafilm.com/festival/tickets",
-    "checkedAt": "2026-10-18T22:56:10.563Z"
+    "checkedAt": "2026-10-26T03:50:54.687Z"
   },
   {
     "pinId": 17369,
@@ -11081,17 +11485,17 @@
   {
     "pinId": 17429,
     "performers": [],
-    "ticketUrl": "https://www.miamiopen.com/tickets",
+    "ticketUrl": "https://www.miamiopen.com/tickets/stadium",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.miamiopen.com/tickets",
-    "checkedAt": "2026-10-18T22:56:11.987Z"
+    "sourceUrl": "https://www.miamiopen.com/",
+    "checkedAt": "2026-10-26T03:48:21.563Z"
   },
   {
     "pinId": 17430,
@@ -11102,11 +11506,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://ultramusicfestival.frontgatetickets.com/event/54xl4njpboe307h9",
-    "checkedAt": "2026-10-18T22:56:11.987Z"
+    "sourceUrl": "https://ultramusicfestival.com/",
+    "checkedAt": "2026-10-26T03:50:56.826Z"
   },
   {
     "pinId": 17431,
@@ -11157,7 +11561,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com/event/0D00646CE57C1350?brand=dolphins&artistid=805964&wt.mc_id=NFL_TEAM_MIA_SGT_PG_HOME_7&utm_source=NFL.com&utm_medium=client&utm_campaign=NFL_TEAM_MIA&utm_content=SGT_PG_HOME_7&_gl=1*1rm9zwk*_gcl_au*MTMxODQ1Njk0OS4xNzc2NDQwNzA4*_ga*MTU3MTM2OTQ3MC4xNzc2NDQwNzA4*_ga_ZW0BR8DY2Y*czE3Nzg3NzA3ODkkbzM0JGcxJHQxNzc4Nzg0MDYxJGo1OSRsMCRoMA..",
-    "checkedAt": "2026-10-18T22:56:12.163Z"
+    "checkedAt": "2026-10-26T03:48:23.554Z"
   },
   {
     "pinId": 17437,
@@ -11177,17 +11581,17 @@
   {
     "pinId": 17438,
     "performers": [],
-    "ticketUrl": "https://fanaccount.axs.com/login?_ga=2.179163296.545431688.1724205090-89295394.1724205090&_gl=1*h68n1x*_gcl_au*MTY3OTgwNzQ3NS4xNzI0MjA1MDkw*_ga*ODkyOTUzOTQuMTcyNDIwNTA5MA..*_ga_CB8DTECQ8B*MTcyNDIwNTA5MC4xLjEuMTcyNDIwNTE0Mi44LjAuMA..",
+    "ticketUrl": "https://www.rodeohouston.com/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://fanaccount.axs.com/login?_ga=2.179163296.545431688.1724205090-89295394.1724205090&_gl=1*h68n1x*_gcl_au*MTY3OTgwNzQ3NS4xNzI0MjA1MDkw*_ga*ODkyOTUzOTQuMTcyNDIwNTA5MA..*_ga_CB8DTECQ8B*MTcyNDIwNTA5MC4xLjEuMTcyNDIwNTE0Mi44LjAuMA..",
-    "checkedAt": "2026-10-18T22:56:12.274Z"
+    "sourceUrl": "https://www.rodeohouston.com/",
+    "checkedAt": "2026-10-26T03:48:26.856Z"
   },
   {
     "pinId": 17442,
@@ -11217,7 +11621,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.sitickets.com/category/sports?utm_source=si&utm_medium=referral&utm_content=main-nav",
-    "checkedAt": "2026-10-18T22:56:12.282Z"
+    "checkedAt": "2026-10-26T03:48:32.573Z"
   },
   {
     "pinId": 17444,
@@ -11232,7 +11636,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com/reliant-arena-formerly-nrg-arena-tickets-houston/venue/475175?ac_link=blog",
-    "checkedAt": "2026-10-18T22:56:12.514Z"
+    "checkedAt": "2026-10-26T03:49:41.677Z"
   },
   {
     "pinId": 17447,
@@ -11367,7 +11771,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.mlb.com/rangers/tickets",
-    "checkedAt": "2026-10-18T22:56:12.646Z"
+    "checkedAt": "2026-10-26T03:49:43.377Z"
   },
   {
     "pinId": 17458,
@@ -11378,11 +11782,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://seatgeek.com/dallas-cowboys-tickets/primary-only?aid=13144&pid=26sgt_web&rid=5&utm_medium=partnership&utm_source=cowboys&utm_campaign=26sgt_web&campaign=dal-tg-iw-edi-2074140",
-    "checkedAt": "2026-10-18T22:56:12.653Z"
+    "sourceUrl": "https://www.dallascowboys.com/news/nfl-announces-cowboys-2026-complete-17-game-schedule",
+    "checkedAt": "2026-10-26T03:49:45.660Z"
   },
   {
     "pinId": 17459,
@@ -11517,7 +11921,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://texaslonghorns.com/sports/2020/6/16/mobile-ticketing-headquarters",
-    "checkedAt": "2026-10-18T22:56:12.991Z"
+    "checkedAt": "2026-10-26T03:49:47.925Z"
   },
   {
     "pinId": 17473,
@@ -11552,17 +11956,33 @@
   {
     "pinId": 17478,
     "performers": [],
-    "ticketUrl": "https://www.visitsanantonio.com/plan-your-trip/tickets-and-deals/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "ticketUrl": "https://www.sarodeo.com/p/buy-tickets",
+    "lowPrice": 225,
+    "highPrice": 814,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "2027packageincludesmeal,twodrinktickets,FanZonerodeoseatandstage-sideconcertseat;parkingexcluded.",
+        "label": "Rodeo Star Experience — Regular",
+        "price": 225
+      },
+      {
+        "note": "2027package;seeoperatorseatinginclusions.Parkingexcluded.",
+        "label": "Rodeo Star Experience — First Class",
+        "price": 250
+      },
+      {
+        "note": "Same seatfor22rodeo performances, includesfairgrounds;notasingledayticket.",
+        "label": "Rodeo Season Tickets — starting per-seat price",
+        "price": 814
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.visitsanantonio.com/plan-your-trip/tickets-and-deals/",
-    "checkedAt": "2026-10-18T22:56:13.170Z"
+    "sourceUrl": "https://www.sarodeo.com/p/buy-tickets",
+    "checkedAt": "2026-10-26T03:57:37.353Z"
   },
   {
     "pinId": 17479,
@@ -11682,7 +12102,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://seatgeek.com/cma-fest-tickets/nashville-tennessee-nissan-stadium-2027-06-10-5-pm/music-festival/18386353?aid=16313&pid=web&rid=1238&utm_campaign=web&utm_medium=web&utm_source=&dd_referrer=",
-    "checkedAt": "2026-10-18T22:56:13.608Z"
+    "checkedAt": "2026-10-26T03:51:26.523Z"
   },
   {
     "pinId": 17490,
@@ -11738,11 +12158,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.tennesseetitans.com/tickets/",
-    "checkedAt": "2026-10-18T22:56:13.812Z"
+    "sourceUrl": "https://www.tennesseetitans.com/news/titans-2026-schedule-announced",
+    "checkedAt": "2026-10-26T03:51:28.813Z"
   },
   {
     "pinId": 17494,
@@ -11757,7 +12177,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.nhl.com/predators/tickets/index",
-    "checkedAt": "2026-10-18T22:56:13.882Z"
+    "checkedAt": "2026-10-26T03:51:31.241Z"
   },
   {
     "pinId": 17495,
@@ -11772,7 +12192,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://am.ticketmaster.com/nashvillescmls/buy/virtual-venue/MjZOU0MxOA==?_gl=1*8x0r8j*_ga*MTMyMzcyNTAzNS4xNzYwNjMyMTAz*_ga_Y5LKS9CB0V*czE3NjM2NTYwOTEkbzM5JGcxJHQxNzYzNjU2MDk4JGo1MyRsMCRoMA..",
-    "checkedAt": "2026-10-18T22:56:14.042Z"
+    "checkedAt": "2026-10-26T03:53:49.811Z"
   },
   {
     "pinId": 17496,
@@ -11787,7 +12207,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.milb.com/nashville/tickets/promotions",
-    "checkedAt": "2026-10-18T22:56:14.257Z"
+    "checkedAt": "2026-10-26T03:53:50.671Z"
   },
   {
     "pinId": 17497,
@@ -11892,7 +12312,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.mlb.com/tickets",
-    "checkedAt": "2026-10-18T22:56:14.934Z"
+    "checkedAt": "2026-10-26T03:53:53.000Z"
   },
   {
     "pinId": 17511,
@@ -12152,17 +12572,33 @@
   {
     "pinId": 17538,
     "performers": [],
-    "ticketUrl": "https://nationalwestern.com/buy-tickets",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "ticketUrl": "https://nationalwestern.com/buy-tickets/",
+    "lowPrice": 2,
+    "highPrice": 88,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Actual daily range USD5–37includingfees, dependingonweekday. Grounds only, notrodeoperformance.",
+        "label": "Adults12+ — starting daily price",
+        "price": 5
+      },
+      {
+        "note": "Actual daily range USD2–9includingfees, dependingonweekday. Age2andunderfree.",
+        "label": "Children3–11 — starting daily price",
+        "price": 2
+      },
+      {
+        "note": "January9–24,2027groundsadmissionbadge; separatelyticketedperformancesnotincluded.",
+        "label": "Guest Badge — all16days grounds admission",
+        "price": 88
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://nationalwestern.com/buy-tickets",
-    "checkedAt": "2026-10-18T22:56:15.982Z"
+    "sourceUrl": "https://nationalwestern.com/grounds-admission/",
+    "checkedAt": "2026-10-26T03:57:35.347Z"
   },
   {
     "pinId": 17540,
@@ -12192,7 +12628,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.sitickets.com/category/sports?utm_source=si&utm_medium=referral&utm_content=main-nav",
-    "checkedAt": "2026-10-18T22:56:16.031Z"
+    "checkedAt": "2026-10-26T03:56:23.194Z"
   },
   {
     "pinId": 17542,
@@ -12222,7 +12658,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com/salt-river-fields-at-talking-stick-tickets-scottsdale/venue/205115?utm_source=cactusleague.com&utm_medium=referral&utm_campaign=tickets&utm_content=home",
-    "checkedAt": "2026-10-18T22:56:16.492Z"
+    "checkedAt": "2026-10-26T03:56:26.047Z"
   },
   {
     "pinId": 17544,
@@ -12233,11 +12669,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://shop.axs.com/?c=axs&e=609603917188",
-    "checkedAt": "2026-10-18T22:56:16.492Z"
+    "sourceUrl": "https://wmphoenixopen.com/",
+    "checkedAt": "2026-10-26T03:56:28.262Z"
   },
   {
     "pinId": 17545,
@@ -12297,7 +12733,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.bigtickets.com/events/arizonarenfest/2026/",
-    "checkedAt": "2026-10-18T22:56:16.861Z"
+    "checkedAt": "2026-10-26T03:56:30.627Z"
   },
   {
     "pinId": 17551,
@@ -12612,7 +13048,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.sitickets.com/category/sports?utm_source=si&utm_medium=referral&utm_content=main-nav",
-    "checkedAt": "2026-10-18T22:56:18.350Z"
+    "checkedAt": "2026-10-26T03:58:02.586Z"
   },
   {
     "pinId": 17582,
@@ -12657,7 +13093,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.dmtc.com/tickets",
-    "checkedAt": "2026-10-18T22:56:18.376Z"
+    "checkedAt": "2026-10-26T03:58:04.519Z"
   },
   {
     "pinId": 17586,
@@ -12738,7 +13174,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.petcoparkinsider.com/tickets-to-padres-games-when-where-how-much",
-    "checkedAt": "2026-10-18T22:56:18.806Z"
+    "checkedAt": "2026-10-26T03:58:09.148Z"
   },
   {
     "pinId": 17594,
@@ -12813,7 +13249,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://sfoutsidelands.com/tickets",
-    "checkedAt": "2026-10-18T22:56:18.805Z"
+    "checkedAt": "2026-10-26T03:58:06.889Z"
   },
   {
     "pinId": 17600,
@@ -13073,17 +13509,55 @@
   {
     "pinId": 17629,
     "performers": [],
-    "ticketUrl": "https://helenoktoberfest.com/tickets/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "ticketUrl": "https://helenchamber.com/oktoberfest/faq/",
+    "lowPrice": 5,
+    "highPrice": 25,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Adult Mon–Thu",
+        "price": 10
+      },
+      {
+        "label": "Adult Fri–Sat",
+        "price": 15
+      },
+      {
+        "label": "Adult Friday + Saturday pass",
+        "price": 25
+      },
+      {
+        "label": "Child 6–12 Mon–Thu",
+        "price": 5
+      },
+      {
+        "label": "Child 6–12 Fri–Sat",
+        "price": 7
+      },
+      {
+        "label": "Child 6–12 Friday + Saturday pass",
+        "price": 12
+      },
+      {
+        "label": "Under 6",
+        "price": 0
+      },
+      {
+        "label": "Sunday admission",
+        "price": 0
+      },
+      {
+        "note": "Military ID required; veterans receive $3 off their own admission.",
+        "label": "Active/retired military",
+        "price": 0
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://helenoktoberfest.com/tickets/",
-    "checkedAt": "2026-10-18T22:56:19.474Z"
+    "sourceUrl": "https://helenchamber.com/oktoberfest/faq/",
+    "checkedAt": "2026-10-26T14:37:23.429Z"
   },
   {
     "pinId": 17630,
@@ -13094,11 +13568,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://tickets.garenfest.com/fallfling",
-    "checkedAt": "2026-10-18T22:56:19.475Z"
+    "checkedAt": "2026-10-26T14:37:25.268Z"
   },
   {
     "pinId": 17632,
@@ -13208,8 +13682,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://nba.com/hawks/tickets/games",
-    "checkedAt": "2026-10-18T22:56:19.854Z"
+    "sourceUrl": "https://www.nba.com/hawks",
+    "checkedAt": "2026-10-26T14:41:39.353Z"
   },
   {
     "pinId": 17640,
@@ -13223,8 +13697,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.atlutd.com/tickets/index",
-    "checkedAt": "2026-10-18T22:56:19.851Z"
+    "sourceUrl": "https://www.atlutd.com/",
+    "checkedAt": "2026-10-26T15:26:54.578Z"
   },
   {
     "pinId": 17641,
@@ -13238,8 +13712,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://am.ticketmaster.com/wnbaatlanta/",
-    "checkedAt": "2026-10-18T22:56:20.052Z"
+    "sourceUrl": "https://www.wnba.com/dream",
+    "checkedAt": "2026-10-26T14:41:39.664Z"
   },
   {
     "pinId": 17642,
@@ -13283,8 +13757,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://georgiadogs.com/gm/login.aspx?xd_co_f=NzI5YTQxM2EtYTNhNi00MmNhLWIxMzgtMzVlZWYyYjRhMDgy&ReturnUrl=%2fgm%2fticket_request.aspx&_gl=1*fli54o*_gcl_au*OTg5NzM2MDg4LjE3NDk3NTk5MzMuMTYxODM3MTk3Ni4xNzU1MTEwNjcyLjE3NTUxMTA2Nzk.*_ga*MTYwNTU4MDE1MS4xNzQ4ODc0OTEx*_ga_1FRVD4F35W*czE3NTUxODYyNzgkbzQ1NCRnMSR0MTc1NTE4NjI4OSRqNDkkbDAkaDA.&_ga=2.28472319.2133064722.1755110684-1605580151.1748874911",
-    "checkedAt": "2026-10-18T22:56:20.134Z"
+    "sourceUrl": "https://georgiadogs.com/",
+    "checkedAt": "2026-10-26T14:41:42.057Z"
   },
   {
     "pinId": 17645,
@@ -13523,8 +13997,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.milb.com/round-rock/tickets/ticketing-guide",
-    "checkedAt": "2026-10-18T22:56:20.710Z"
+    "sourceUrl": "https://www.mlb.com/milb/round-rock",
+    "checkedAt": "2026-10-26T14:41:44.050Z"
   },
   {
     "pinId": 17665,
@@ -13560,16 +14034,32 @@
     "pinId": 17667,
     "performers": [],
     "ticketUrl": "https://www.eventbrite.com/e/round-top-2026-fall-show-at-the-big-red-barn-continental-tickets-1998504617108?aff=erelpanelorg",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 10,
+    "highPrice": 25,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "All six official show days Oct26–31; opening-day entry from1pm; face value, fees not established.",
+        "label": "General admission",
+        "price": 10
+      },
+      {
+        "note": "October26 9am–1pm early access; also valid all six official show days.",
+        "label": "VIP early shopping",
+        "price": 25
+      },
+      {
+        "note": "Free admission only when attending in costume.",
+        "label": "October31 costume special",
+        "price": 0
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.eventbrite.com/e/round-top-2026-fall-show-at-the-big-red-barn-continental-tickets-1998504617108?aff=erelpanelorg",
-    "checkedAt": "2026-10-18T22:56:20.897Z"
+    "checkedAt": "2026-10-26T14:47:49.707Z"
   },
   {
     "pinId": 17668,
@@ -13644,7 +14134,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.topsfieldfair.org/plan/tickets/",
-    "checkedAt": "2026-10-18T22:56:21.937Z"
+    "checkedAt": "2026-10-26T14:47:50.031Z"
   },
   {
     "pinId": 17673,
@@ -13733,8 +14223,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.milb.com/worcester/tickets",
-    "checkedAt": "2026-10-18T22:56:22.285Z"
+    "sourceUrl": "https://www.milb.com/worcester",
+    "checkedAt": "2026-10-26T14:47:52.204Z"
   },
   {
     "pinId": 17679,
@@ -13838,8 +14328,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.lollapalooza.com/tickets",
-    "checkedAt": "2026-10-18T22:56:22.428Z"
+    "sourceUrl": "https://www.lollapalooza.com",
+    "checkedAt": "2026-10-26T14:47:54.187Z"
   },
   {
     "pinId": 17693,
@@ -13898,23 +14388,23 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.ticketmaster.com/Chicago-Bears-tickets/artist/805912?wt.mc_id=NFL_TEAM_CHI_TICKETS_DROP_DOWN_MENU_LINK&utm_source=NFL.com&utm_medium=client&utm_campaign=NFL_TEAM_CHI&utm_content=TICKETS_DROP_DOWN_MENU_LINK",
-    "checkedAt": "2026-10-18T22:56:22.656Z"
+    "sourceUrl": "https://www.chicagobears.com",
+    "checkedAt": "2026-10-26T14:50:50.610Z"
   },
   {
     "pinId": 17698,
     "performers": [],
-    "ticketUrl": "https://www.mlb.com/whitesox/tickets",
+    "ticketUrl": "https://www.mlb.com/whitesox/tickets/season-tickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.mlb.com/whitesox/tickets",
-    "checkedAt": "2026-10-18T22:56:22.702Z"
+    "sourceUrl": "https://www.mlb.com/whitesox",
+    "checkedAt": "2026-10-26T14:50:50.946Z"
   },
   {
     "pinId": 17699,
@@ -13928,8 +14418,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.nhl.com/blackhawks/tickets/",
-    "checkedAt": "2026-10-18T22:56:22.998Z"
+    "sourceUrl": "https://www.nhl.com/blackhawks",
+    "checkedAt": "2026-10-26T14:50:52.925Z"
   },
   {
     "pinId": 17701,
@@ -14024,17 +14514,17 @@
   {
     "pinId": 17709,
     "performers": [],
-    "ticketUrl": "https://www.texasmotorspeedway.com/events/",
+    "ticketUrl": "https://www.texasmotorspeedway.com/events/wurth-400/tickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.texasmotorspeedway.com/events/",
-    "checkedAt": "2026-10-18T22:56:23.297Z"
+    "sourceUrl": "https://www.texasmotorspeedway.com/events/wurth-400/tickets",
+    "checkedAt": "2026-10-26T14:50:55.257Z"
   },
   {
     "pinId": 17710,
@@ -14060,11 +14550,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.fwssr.com/p/tickets",
-    "checkedAt": "2026-10-18T22:56:23.322Z"
+    "checkedAt": "2026-10-26T15:06:50.284Z"
   },
   {
     "pinId": 17712,
@@ -14093,23 +14583,23 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.nhl.com/stars/tickets/single-game",
-    "checkedAt": "2026-10-18T22:56:23.651Z"
+    "sourceUrl": "https://www.nhl.com/stars",
+    "checkedAt": "2026-10-26T15:06:52.934Z"
   },
   {
     "pinId": 17715,
     "performers": [],
-    "ticketUrl": "https://www.fcdallastickets.com/",
+    "ticketUrl": "https://www.fcdallas.com/tickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.fcdallastickets.com/",
-    "checkedAt": "2026-10-18T22:56:23.666Z"
+    "sourceUrl": "https://www.fcdallas.com/",
+    "checkedAt": "2026-10-26T15:07:10.838Z"
   },
   {
     "pinId": 17716,
@@ -14123,8 +14613,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.axs.com/artists/1109710/dallas-wings-tickets/staticDetails",
-    "checkedAt": "2026-10-18T22:56:23.661Z"
+    "sourceUrl": "https://wings.wnba.com",
+    "checkedAt": "2026-10-26T15:07:06.559Z"
   },
   {
     "pinId": 17717,
@@ -14219,7 +14709,7 @@
   {
     "pinId": 17724,
     "performers": [],
-    "ticketUrl": "https://baylorbears.com/feature/digital-ticketing",
+    "ticketUrl": "https://baylorbears.evenue.net/list/GS",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
@@ -14228,8 +14718,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://baylorbears.com/feature/digital-ticketing",
-    "checkedAt": "2026-10-18T22:56:24.437Z"
+    "sourceUrl": "https://baylorbears.com/",
+    "checkedAt": "2026-10-26T15:10:38.438Z"
   },
   {
     "pinId": 17726,
@@ -14270,11 +14760,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://coloradorenaissance.com/tickets/",
-    "checkedAt": "2026-10-18T22:56:24.761Z"
+    "checkedAt": "2026-10-26T15:11:08.110Z"
   },
   {
     "pinId": 17730,
@@ -14369,17 +14859,17 @@
   {
     "pinId": 17738,
     "performers": [],
-    "ticketUrl": "https://www.winterparkresort.com/plan-your-trip/lift-tickets-ski-pass",
+    "ticketUrl": "https://shop.winterparkresort.com/l/winter-lift-tickets/day-lift-tickets/c/daylifttickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.winterparkresort.com/plan-your-trip/lift-tickets-ski-pass",
-    "checkedAt": "2026-10-18T22:56:25.151Z"
+    "checkedAt": "2026-10-26T15:11:10.030Z"
   },
   {
     "pinId": 17739,
@@ -14400,16 +14890,47 @@
     "pinId": 17740,
     "performers": [],
     "ticketUrl": "https://www.arapahoebasin.com/tickets-and-passes/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 229,
+    "highPrice": 699,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "2026/27 season; age discounts available.",
+        "label": "Unrestricted season pass, adult",
+        "price": 699
+      },
+      {
+        "note": "Monday–Friday plus opening–Dec13,2026 and May8–closing2027 weekends; opening and closing TBD.",
+        "label": "Midweek pass, adult",
+        "price": 539
+      },
+      {
+        "note": "Active/retired military and dependents only.",
+        "label": "Military season pass, adult",
+        "price": 419
+      },
+      {
+        "note": "Passholders with disabilities; age discounts available.",
+        "label": "Adaptive season pass, adult",
+        "price": 419
+      },
+      {
+        "note": "2026/27 nontransferable three-day pack, no blackouts; total pack price.",
+        "label": "Any Day Pack, 3-day adult",
+        "price": 269
+      },
+      {
+        "note": "Monday–Friday 2026/27 pack; price varies by product and age; total pack price.",
+        "label": "Midweek Pack, adult",
+        "price": 229
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.arapahoebasin.com/tickets-and-passes/",
-    "checkedAt": "2026-10-18T22:56:25.393Z"
+    "checkedAt": "2026-10-26T15:27:24.819Z"
   },
   {
     "pinId": 17741,
@@ -14420,31 +14941,31 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.eldora.com/tickets-passes/tickets/",
-    "checkedAt": "2026-10-18T22:56:25.459Z"
+    "checkedAt": "2026-10-26T15:13:07.429Z"
   },
   {
     "pinId": 17742,
     "performers": [],
-    "ticketUrl": "https://www.coloradorapids.com/tickets/index",
+    "ticketUrl": "https://www.coloradorapids.com/tickets/single-game",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.coloradorapids.com/tickets/index",
-    "checkedAt": "2026-10-18T22:56:25.462Z"
+    "sourceUrl": "https://www.coloradorapids.com/tickets/single-game",
+    "checkedAt": "2026-10-26T15:13:09.724Z"
   },
   {
     "pinId": 17743,
     "performers": [],
-    "ticketUrl": "https://avs.social/NHL_TEAM_COL_SINGLE_GAME_TIX_LINK",
+    "ticketUrl": "https://www.nhl.com/avalanche/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
@@ -14453,8 +14974,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://avs.social/NHL_TEAM_COL_SINGLE_GAME_TIX_LINK",
-    "checkedAt": "2026-10-18T22:56:25.755Z"
+    "sourceUrl": "https://www.nhl.com/avalanche/tickets/",
+    "checkedAt": "2026-10-26T15:13:11.612Z"
   },
   {
     "pinId": 17744,
@@ -14519,17 +15040,17 @@
   {
     "pinId": 17748,
     "performers": [],
-    "ticketUrl": "https://www.mardigrasgalveston.com/tickets-2023/",
+    "ticketUrl": "https://www.mardigrasgalveston.com/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.mardigrasgalveston.com/tickets-2023/",
-    "checkedAt": "2026-10-18T22:56:26.094Z"
+    "sourceUrl": "https://www.mardigrasgalveston.com/tickets/",
+    "checkedAt": "2026-10-26T15:13:13.717Z"
   },
   {
     "pinId": 17749,
@@ -14579,17 +15100,17 @@
   {
     "pinId": 17752,
     "performers": [],
-    "ticketUrl": "https://www.texrenfest.com/p/ticket-info",
+    "ticketUrl": "https://www.texrenfest.com/p/tickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.texrenfest.com/p/ticket-info",
-    "checkedAt": "2026-10-18T22:56:26.465Z"
+    "sourceUrl": "https://www.texrenfest.com/p/tickets",
+    "checkedAt": "2026-10-26T15:26:54.858Z"
   },
   {
     "pinId": 17753,
@@ -14624,17 +15145,33 @@
   {
     "pinId": 17755,
     "performers": [],
-    "ticketUrl": "https://www.katyriceharvestfestival.com/tickets",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "ticketUrl": "https://www.eventeny.com/events/katy-rice-harvest-festival-2026-26278/",
+    "lowPrice": 15,
+    "highPrice": 15,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "October10,2026 10am–10pm; historic admission, event has ended.",
+        "label": "Saturday adult",
+        "price": 15
+      },
+      {
+        "note": "October11,2026 noon–6pm; historic admission, event has ended.",
+        "label": "Sunday adult",
+        "price": 15
+      },
+      {
+        "note": "Per operator ticket table; carnival rides require separate tickets.",
+        "label": "Children 12 and under",
+        "price": 0
+      }
+    ],
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.katyriceharvestfestival.com/tickets",
-    "checkedAt": "2026-10-18T22:56:26.808Z"
+    "checkedAt": "2026-10-26T15:26:56.937Z"
   },
   {
     "pinId": 17756,
@@ -14714,17 +15251,17 @@
   {
     "pinId": 17762,
     "performers": [],
-    "ticketUrl": "https://www.houstondynamofc.com/tickets",
+    "ticketUrl": "https://www.houstondynamofc.com/tickets/single-game",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.houstondynamofc.com/tickets",
-    "checkedAt": "2026-10-18T22:56:27.047Z"
+    "sourceUrl": "https://www.houstondynamofc.com/tickets/single-game",
+    "checkedAt": "2026-10-26T15:26:58.956Z"
   },
   {
     "pinId": 17763,
@@ -14789,17 +15326,17 @@
   {
     "pinId": 17767,
     "performers": [],
-    "ticketUrl": "https://go.12thman.com/E1-UN9mJ5",
+    "ticketUrl": "https://12thman.com/feature/football-tickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://go.12thman.com/E1-UN9mJ5",
-    "checkedAt": "2026-10-18T22:56:27.458Z"
+    "sourceUrl": "https://12thman.com/feature/football-tickets",
+    "checkedAt": "2026-10-26T15:27:01.261Z"
   },
   {
     "pinId": 17770,
@@ -14933,32 +15470,32 @@
   {
     "pinId": 17780,
     "performers": [],
-    "ticketUrl": "https://www.lvms.com/events/",
+    "ticketUrl": "https://www.lvms.com/events/mopar-nhra-las-vegas-nationals/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.lvms.com/events/",
-    "checkedAt": "2026-10-18T22:56:28.086Z"
+    "sourceUrl": "https://www.lvms.com/events/mopar-nhra-las-vegas-nationals/tickets/",
+    "checkedAt": "2026-10-26T15:27:03.536Z"
   },
   {
     "pinId": 17781,
     "performers": [],
-    "ticketUrl": "https://www.lvms.com/events/",
+    "ticketUrl": "https://www.lvms.com/events/pennzoil-400/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.lvms.com/events/",
-    "checkedAt": "2026-10-18T22:56:28.098Z"
+    "sourceUrl": "https://www.lvms.com/events/pennzoil-400/tickets/",
+    "checkedAt": "2026-10-26T15:27:05.746Z"
   },
   {
     "pinId": 17782,
@@ -14972,23 +15509,23 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.milb.com/las-vegas/tickets",
-    "checkedAt": "2026-10-18T22:56:28.196Z"
+    "sourceUrl": "https://www.milb.com/las-vegas/tickets/season",
+    "checkedAt": "2026-10-26T15:27:07.686Z"
   },
   {
     "pinId": 17783,
     "performers": [],
-    "ticketUrl": "https://www.nhl.com/goldenknights/tickets/",
+    "ticketUrl": "https://www.nhl.com/goldenknights/tickets/single-game",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.nhl.com/goldenknights/tickets/",
-    "checkedAt": "2026-10-18T22:56:28.445Z"
+    "sourceUrl": "https://www.nhl.com/goldenknights",
+    "checkedAt": "2026-10-26T15:27:09.781Z"
   },
   {
     "pinId": 17784,
@@ -15002,38 +15539,38 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.raiders.com/tickets",
-    "checkedAt": "2026-10-18T22:56:28.451Z"
+    "sourceUrl": "https://www.raiders.com/",
+    "checkedAt": "2026-10-26T15:27:11.758Z"
   },
   {
     "pinId": 17785,
     "performers": [],
-    "ticketUrl": "https://www.axs.com/series/31932/2026-las-vegas-aces-season-tickets?skin=aces",
+    "ticketUrl": "https://aces.wnba.com/membership",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.axs.com/series/31932/2026-las-vegas-aces-season-tickets?skin=aces",
-    "checkedAt": "2026-10-18T22:56:28.509Z"
+    "sourceUrl": "https://aces.wnba.com/",
+    "checkedAt": "2026-10-26T15:27:13.975Z"
   },
   {
     "pinId": 17786,
     "performers": [],
-    "ticketUrl": "https://unlvtickets.evenue.net/list/FB",
+    "ticketUrl": "https://www.unlvtickets.com/eventInfo/ath/8/rebel-football/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://unlvtickets.evenue.net/list/FB",
-    "checkedAt": "2026-10-18T22:56:28.815Z"
+    "sourceUrl": "https://unlvrebels.com/",
+    "checkedAt": "2026-10-26T15:27:15.950Z"
   },
   {
     "pinId": 17787,
@@ -15078,7 +15615,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.sbfiesta.org/fiesta-events-calendar/",
-    "checkedAt": "2026-10-18T22:56:28.815Z"
+    "checkedAt": "2026-10-26T15:27:18.857Z"
   },
   {
     "pinId": 17792,
@@ -15104,11 +15641,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.datefest.org/p/riverside-county-fair/plan-your-visit/tickets",
-    "checkedAt": "2026-10-18T22:56:28.850Z"
+    "checkedAt": "2026-10-26T15:27:20.793Z"
   },
   {
     "pinId": 17794,
@@ -15188,7 +15725,7 @@
   {
     "pinId": 17802,
     "performers": [],
-    "ticketUrl": "https://www.lafc.com/tickets/index",
+    "ticketUrl": "https://www.lafc.com/tickets/single",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
@@ -15197,8 +15734,8 @@
     "availability": null,
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.lafc.com/tickets/index",
-    "checkedAt": "2026-10-18T22:56:29.123Z"
+    "sourceUrl": "https://www.lafc.com/",
+    "checkedAt": "2026-10-26T15:27:22.763Z"
   },
   {
     "pinId": 17803,

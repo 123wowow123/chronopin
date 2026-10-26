@@ -484,5 +484,95 @@
     "pictureUrl": null,
     "role": "user",
     "utcCreatedDateTime": "2026-10-13T18:24:46.753Z"
+  },
+  {
+    "id": 437,
+    "userName": "@QuakeDesk",
+    "firstName": "Quake",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-24T15:41:59.098Z"
+  },
+  {
+    "id": 438,
+    "userName": "@AIDesk",
+    "firstName": "AI",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T02:24:24.073Z"
+  },
+  {
+    "id": 439,
+    "userName": "@DataCenterDesk",
+    "firstName": "Data Center",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:01:39.867Z"
+  },
+  {
+    "id": 440,
+    "userName": "@PolicyDesk",
+    "firstName": "Policy",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:01:39.882Z"
+  },
+  {
+    "id": 441,
+    "userName": "@ChipDesk",
+    "firstName": "Chip",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:01:39.894Z"
+  },
+  {
+    "id": 442,
+    "userName": "@EnterpriseDesk",
+    "firstName": "Enterprise",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:01:39.906Z"
+  },
+  {
+    "id": 443,
+    "userName": "@TelecomDesk",
+    "firstName": "Telecom",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:14:25.215Z"
+  },
+  {
+    "id": 444,
+    "userName": "@RoboticsDesk",
+    "firstName": "Robotics",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:27:41.349Z"
+  },
+  {
+    "id": 445,
+    "userName": "@DeviceDesk",
+    "firstName": "Device",
+    "lastName": "Desk",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T03:27:43.127Z"
+  },
+  {
+    "id": 446,
+    "userName": "@ChinaTrends",
+    "firstName": "China",
+    "lastName": "Trends",
+    "pictureUrl": null,
+    "role": "user",
+    "utcCreatedDateTime": "2026-10-25T05:30:12.147Z"
   }
 ]
