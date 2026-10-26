@@ -1,5 +1,5 @@
 import Anchor from '@/components/ui/Anchor';
-import { holdingPnl, holdingsAreStale, type HoldingsSnapshot } from '@/lib/holdings';
+import { holdingPnl, holdingsAreStale, preferredHoldings, type HoldingsSnapshot } from '@/lib/holdings';
 import { dateFormat } from '@/lib/format';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import type { Translator } from '@/lib/i18n/translate';
@@ -18,9 +18,10 @@ export function HoldingsSection({ portfolios, today, t }: { portfolios: Holdings
       </div>
       {!portfolios.length ? <p className="rounded-xl border border-line bg-panel p-5 text-sm text-muted">{t('person.holdings.none')}</p> : (
         <div className="flex flex-col gap-5">
-          {portfolios.map(p => {
+          {preferredHoldings(portfolios).map(p => {
             const quantities = p.holdings.some(h => h.shares != null);
-            const valuations = p.holdings.some(h => h.marketValue != null || h.costBasis != null);
+            const owners = p.holdings.some(h => h.owner != null);
+            const valuations = p.holdings.some(h => h.marketValue != null || h.marketValueLow != null || h.costBasis != null);
             const performance = p.performance;
             const periods = performance ? [
               { label: t('person.holdings.monthly'), value: performance.monthly },
@@ -35,17 +36,20 @@ export function HoldingsSection({ portfolios, today, t }: { portfolios: Holdings
                     <p className="mb-1 text-[11px] font-medium tracking-wide text-subtle uppercase">{t(`person.holdings.${p.scope}`)}</p>
                     <h3 className="text-lg font-semibold">{p.name}</h3>
                     <p className="mt-1 text-xs text-muted">{t('person.asOf', { date: day(p.asOf) })}{holdingsAreStale(p.asOf, today) ? ` · ${t('person.holdings.stale')}` : ''}</p>
+                    {p.filedDate ? <p className="mt-1 text-xs text-subtle">{t('person.trades.filed')} · {day(p.filedDate)}</p> : null}
                   </div>
                   <Anchor href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs">{t('person.source')} ↗</Anchor>
                 </header>
                 {p.scope === 'strategy' ? <p className="border-t border-line px-4 py-3 text-xs leading-relaxed text-muted sm:px-5">{t('person.holdings.strategyAbout')}</p> : null}
+                {p.coverageNote ? <p className="border-t border-line px-4 py-3 text-xs leading-relaxed text-muted sm:px-5">{p.coverageNote}</p> : null}
                 {p.holdings.length ? (
-                  <div className="overflow-x-auto">
+                  <div className={p.holdings.length > 12 ? 'max-h-[32rem] overflow-auto' : 'overflow-x-auto'}>
                     <table className="w-full text-start text-sm">
                       <caption className="sr-only">{p.name} · {t('person.asOf', { date: day(p.asOf) })}</caption>
-                      <thead className="border-y border-line bg-raised/50 text-xs text-subtle">
+                      <thead className="sticky top-0 z-10 border-y border-line bg-raised text-xs text-subtle">
                         <tr>
                           <th scope="col" className="px-4 py-3 text-start font-medium sm:px-5">{t('person.holdings.security')}</th>
+                          {owners ? <th scope="col" className="px-4 py-3 text-start font-medium">{t('person.trades.owner')}</th> : null}
                           <th scope="col" className="px-4 py-3 text-end font-medium">{t('person.holdings.weight')}</th>
                           {quantities ? <th scope="col" className="px-4 py-3 text-end font-medium">{t('person.holdings.shares')}</th> : null}
                           {valuations ? <><th scope="col" className="px-4 py-3 text-end font-medium">{t('person.holdings.cost')}</th><th scope="col" className="px-4 py-3 text-end font-medium">{t('person.holdings.value')}</th></> : null}
@@ -56,16 +60,17 @@ export function HoldingsSection({ portfolios, today, t }: { portfolios: Holdings
                         {p.holdings.map(h => {
                           const pnl = holdingPnl(h);
                           return (
-                            <tr key={`${h.symbol}:${h.side}`}>
+                            <tr key={`${h.symbol}:${h.side}:${h.owner ?? ''}`}>
                               <th scope="row" className="min-w-44 px-4 py-3 text-start font-normal sm:px-5">
-                                <span className="font-semibold">{h.symbol}</span>{h.side === 'short' ? <span className="ms-2 text-xs text-muted">{t('person.holdings.short')}</span> : null}
+                                <span className="font-semibold">{h.identifierType === 'cusip' ? `CUSIP ${h.symbol}` : h.symbol}</span>{h.side === 'short' ? <span className="ms-2 text-xs text-muted">{t('person.holdings.short')}</span> : null}
                                 <span className="mt-0.5 block text-xs text-muted">{h.name}</span>
                               </th>
+                              {owners ? <td className="px-4 py-3 text-start">{h.owner ? t(`person.trades.owners.${h.owner}`) : unknown}</td> : null}
                               <td className="px-4 py-3 text-end tabular-nums">{h.weightPercent != null ? percent(h.weightPercent / 100) : unknown}</td>
                               {quantities ? <td className="px-4 py-3 text-end tabular-nums">{h.shares != null ? h.shares.toLocaleString(intl, { maximumFractionDigits: 6 }) : unknown}</td> : null}
                               {valuations ? <>
                                 <td className="px-4 py-3 text-end whitespace-nowrap tabular-nums">{h.costBasis != null && h.costSourceUrl ? <Anchor href={h.costSourceUrl} target="_blank" rel="noopener noreferrer">{money(h.costBasis, h.currency)}</Anchor> : unknown}</td>
-                                <td className="px-4 py-3 text-end whitespace-nowrap tabular-nums">{h.marketValue != null && h.valueSourceUrl ? <><Anchor href={h.valueSourceUrl} target="_blank" rel="noopener noreferrer">{money(h.marketValue, h.currency)}</Anchor><span className="mt-0.5 block text-[10px] text-subtle">{h.valuationDate ? day(h.valuationDate) : ''}</span></> : unknown}</td>
+                                <td className="px-4 py-3 text-end whitespace-nowrap tabular-nums">{(h.marketValue != null || h.marketValueLow != null) && h.valueSourceUrl ? <><Anchor href={h.valueSourceUrl} target="_blank" rel="noopener noreferrer">{h.marketValue != null ? money(h.marketValue, h.currency) : h.marketValueHigh != null ? `${money(h.marketValueLow!, h.currency)} – ${money(h.marketValueHigh, h.currency)}` : `> ${money(h.marketValueLow!, h.currency)}`}</Anchor><span className="mt-0.5 block text-[10px] text-subtle">{h.valuationDate ? day(h.valuationDate) : ''}</span></> : unknown}</td>
                               </> : null}
                               <td className="px-4 py-3 text-end whitespace-nowrap tabular-nums sm:px-5">
                                 {pnl ? <><span className={pnl.amount > 0 ? 'text-success' : pnl.amount < 0 ? 'text-danger' : 'text-ink'}>{money(pnl.amount, h.currency)}<span className="mt-0.5 block text-xs">{percent(pnl.percent / 100, true)}</span></span><span className="sr-only">{t('person.holdings.unrealized')}</span></> : <span className="text-xs text-subtle">{unknown}</span>}

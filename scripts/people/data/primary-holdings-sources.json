@@ -1,0 +1,251 @@
+{
+  "checkedAt": "2026-10-25",
+  "managers": [
+    {
+      "cik": 1067983,
+      "people": [
+        "Warren Buffett"
+      ],
+      "secName": "BERKSHIRE HATHAWAY INC",
+      "label": "Berkshire Hathaway",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1037389,
+      "people": [
+        "Jim Simons"
+      ],
+      "secName": "RENAISSANCE TECHNOLOGIES LLC",
+      "label": "Renaissance Technologies",
+      "associationNote": "Renaissance is the firm founded by Jim Simons. These are the firm’s later reported positions; Simons died in 2024, so they are not current holdings or trading decisions by him."
+    },
+    {
+      "cik": 1649339,
+      "people": [
+        "Michael Burry"
+      ],
+      "secName": "Scion Asset Management, LLC",
+      "label": "Scion Asset Management",
+      "associationNote": "This is Scion’s last published 13F found in SEC submission history, for September 2025. It is historical and does not establish Michael Burry’s current personal holdings."
+    },
+    {
+      "cik": 1423053,
+      "people": [
+        "Ken Griffin"
+      ],
+      "secName": "CITADEL ADVISORS LLC",
+      "label": "Citadel Advisors",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1603466,
+      "people": [
+        "Steven A. Cohen"
+      ],
+      "secName": "Point72 Asset Management, L.P.",
+      "label": "Point72 Asset Management",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1350694,
+      "people": [
+        "Ray Dalio"
+      ],
+      "secName": "Bridgewater Associates, LP",
+      "label": "Bridgewater Associates",
+      "associationNote": "Bridgewater is the firm founded by Ray Dalio. He stepped away from management and later sold his remaining stake; these are the firm’s reported holdings, not his personal portfolio or present investment decisions."
+    },
+    {
+      "cik": 2026053,
+      "people": [
+        "Bill Ackman"
+      ],
+      "secName": "PERSHING SQUARE INC.",
+      "label": "Pershing Square Inc.",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1656456,
+      "people": [
+        "David Tepper"
+      ],
+      "secName": "Appaloosa LP",
+      "label": "Appaloosa LP",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1224962,
+      "people": [
+        "Joseph Edelman"
+      ],
+      "secName": "PERCEPTIVE ADVISORS LLC",
+      "label": "Perceptive Advisors",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1562087,
+      "people": [
+        "Peter Thiel"
+      ],
+      "secName": "Thiel Macro LLC",
+      "label": "Thiel Macro",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1263508,
+      "people": [
+        "Julian Baker",
+        "Felix Baker"
+      ],
+      "secName": "BAKER BROS. ADVISORS LP",
+      "label": "Baker Bros. Advisors",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 2045724,
+      "people": [
+        "Leopold Aschenbrenner"
+      ],
+      "secName": "Situational Awareness LP",
+      "label": "Situational Awareness",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    },
+    {
+      "cik": 1783139,
+      "people": [
+        "Garth Friesen"
+      ],
+      "secName": "III Capital Management",
+      "label": "III Capital Management",
+      "associationNote": "These are the investment manager’s reported positions, not the named person’s personal brokerage holdings."
+    }
+  ],
+  "houseMembers": [
+    {
+      "name": "Nancy Pelosi",
+      "first": "Nancy",
+      "last": "Pelosi",
+      "district": "CA11"
+    },
+    {
+      "name": "Dan Crenshaw",
+      "first": "Daniel",
+      "last": "Crenshaw",
+      "district": "TX02"
+    },
+    {
+      "name": "Debbie Wasserman Schultz",
+      "first": "Debbie",
+      "last": "Wasserman Schultz",
+      "district": "FL25"
+    },
+    {
+      "name": "Dan Goldman",
+      "first": "Daniel",
+      "last": "Goldman",
+      "district": "NY10"
+    },
+    {
+      "name": "Gilbert Cisneros",
+      "first": "Gilbert",
+      "last": "Cisneros",
+      "district": "CA31"
+    },
+    {
+      "name": "Ro Khanna",
+      "first": "Rohit",
+      "last": "Khanna",
+      "district": "CA17"
+    },
+    {
+      "name": "David Rouzer",
+      "first": "David",
+      "last": "Rouzer",
+      "district": "NC07"
+    },
+    {
+      "name": "Tim Moore",
+      "first": "Tim",
+      "last": "Moore",
+      "district": "NC14"
+    }
+  ],
+  "berkshireAnnual": {
+    "url": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf",
+    "asOf": "2025-12-31",
+    "units": "USD millions as published; no additional currency conversion",
+    "positions": [
+      {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "costMillions": 6255,
+        "valueMillions": 61962,
+        "pdfPage": 19
+      },
+      {
+        "symbol": "AXP",
+        "name": "American Express Company",
+        "costMillions": 1287,
+        "valueMillions": 56088,
+        "pdfPage": 19
+      },
+      {
+        "symbol": "KO",
+        "name": "The Coca-Cola Company",
+        "costMillions": 1299,
+        "valueMillions": 27964,
+        "pdfPage": 19
+      },
+      {
+        "symbol": "MCO",
+        "name": "Moody’s Corporation",
+        "costMillions": 248,
+        "valueMillions": 12603,
+        "pdfPage": 19
+      },
+      {
+        "symbol": "TYO:8058",
+        "name": "Mitsubishi Corporation",
+        "costMillions": 4248,
+        "valueMillions": 9207,
+        "pdfPage": 20
+      },
+      {
+        "symbol": "TYO:8001",
+        "name": "ITOCHU Corporation",
+        "costMillions": 4165,
+        "valueMillions": 8886,
+        "pdfPage": 20
+      },
+      {
+        "symbol": "TYO:8031",
+        "name": "Mitsui & Co., Ltd.",
+        "costMillions": 3490,
+        "valueMillions": 8785,
+        "pdfPage": 20
+      },
+      {
+        "symbol": "TYO:8002",
+        "name": "Marubeni Corporation",
+        "costMillions": 1572,
+        "valueMillions": 4468,
+        "pdfPage": 20
+      },
+      {
+        "symbol": "TYO:8053",
+        "name": "Sumitomo Corporation",
+        "costMillions": 1907,
+        "valueMillions": 4022,
+        "pdfPage": 20
+      }
+    ],
+    "identifierSources": [
+      "https://www.sec.gov/files/company_tickers.json",
+      "https://www.mitsubishicorp.com/jp/ja/ir/shareholder/faq/",
+      "https://www.itochu.co.jp/en/ir/shareholder/info/",
+      "https://www.mitsui.com/jp/en/ir/information/basic/index.html",
+      "https://www.marubeni.com/en/ir/faq/",
+      "https://www.sumitomocorp.com/jp/-/media/Files/hq/ir/report/investors-guide/2023/ar2023en_all.pdf?la=en"
+    ]
+  }
+}

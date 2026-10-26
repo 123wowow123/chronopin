@@ -2,6 +2,8 @@
 // A transaction range or a strategy return is never a position's cost basis.
 export type Holding = {
   symbol: string;
+  identifierType?: 'ticker' | 'cusip';
+  owner?: 'self' | 'spouse' | 'joint' | 'dependent';
   name: string;
   weightPercent: number | null;
   shares: number | null;
@@ -9,6 +11,8 @@ export type Holding = {
   currency: string;
   costBasis: number | null;
   marketValue: number | null;
+  marketValueLow?: number;
+  marketValueHigh?: number | null;
   valuationDate: string | null;
   costSourceUrl: string | null;
   valueSourceUrl: string | null;
@@ -21,6 +25,8 @@ export type HoldingsSnapshot = {
   checkedAt: string;
   sourceUrl: string;
   sourceDataUrl: string | null;
+  filedDate?: string;
+  coverageNote?: string;
   complete: boolean;
   undisclosedCount: number | null;
   undisclosedWeightPercent: number | null;
@@ -35,6 +41,13 @@ export type HoldingsSnapshot = {
     disclosure: string;
   } | null;
 };
+
+// Direct personal/fund disclosures lead; tracked strategies remain separately
+// available because they describe a different portfolio, often on another date.
+export function preferredHoldings(portfolios: HoldingsSnapshot[]): HoldingsSnapshot[] {
+  const priority = { personal: 0, fund: 1, strategy: 2 };
+  return [...portfolios].sort((a, b) => priority[a.scope] - priority[b.scope] || b.asOf.localeCompare(a.asOf) || a.key.localeCompare(b.key));
+}
 
 export function holdingPnl(holding: Holding): { amount: number; percent: number } | null {
   const { costBasis, marketValue } = holding;

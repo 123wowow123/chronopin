@@ -91,7 +91,7 @@ export function PersonView({
   const description = t('person.description', { name: profile.name, site: siteName });
   const jobTitle = profile.office || t.dynamic(`person.roles.${profile.role}`, profile.role);
   const photo = safeUrl(profile.photoUrl);
-  const hasRecord = years.length > 0 || contributions.length > 0 || profile.properties.length > 0 || profile.trips.length > 0;
+  const hasRecord = years.length > 0 || holdings.length > 0 || trades.length > 0 || contributions.length > 0 || profile.properties.length > 0 || profile.trips.length > 0;
   const lawsHeading = t(isPolitical(profile.role) ? 'person.laws' : 'person.work');
   // Everyone's radar is backed by the wiki. One with nothing documented that
   // maps to an axis shows the empty overview, and says so, rather than no chart.

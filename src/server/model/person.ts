@@ -451,15 +451,15 @@ export default class Person {
   // Seeding (npm run backup:data / create:data): every table row for row, ids
   // included, so a rebuilt database has the same pages and the same pin links.
   static async backupAll(): Promise<Record<string, db.Row[]>> {
-    const [people, earnings, contributions, properties, trips, matters, phases, notes, pins] = await Promise.all(
-      TABLES.map((table) => db.query(`SELECT * FROM "${table}" ORDER BY ${table === 'PinPerson' ? '"personId", "pinId"' : '"id"'}`)),
+    const [people, earnings, contributions, properties, trips, matters, phases, notes, pins, holdings] = await Promise.all(
+      TABLES.map((table) => db.query(`SELECT * FROM "${table}" ORDER BY ${table === 'PinPerson' ? '"personId", "pinId"' : table === 'PersonHoldings' ? '"personId"' : '"id"'}`)),
     );
-    return { people, earnings, contributions, properties, trips, matters, phases, notes, pins };
+    return { people, earnings, contributions, properties, trips, matters, phases, notes, pins, holdings };
   }
 
   static async restoreAll(data: Record<string, db.Row[]> | null | undefined): Promise<void> {
     if (!data) return;
-    const keys = ['people', 'earnings', 'contributions', 'properties', 'trips', 'matters', 'phases', 'notes', 'pins'] as const;
+    const keys = ['people', 'earnings', 'contributions', 'properties', 'trips', 'matters', 'phases', 'notes', 'pins', 'holdings'] as const;
     for (const [i, key] of keys.entries()) {
       const rows = data[key] ?? [];
       const table = TABLES[i];
@@ -474,7 +474,7 @@ export default class Person {
         );
       }
     }
-    for (const table of TABLES.filter((t) => t !== 'PinPerson')) {
+    for (const table of TABLES.filter((t) => t !== 'PinPerson' && t !== 'PersonHoldings')) {
       await db.query(`SELECT setval(pg_get_serial_sequence('"${table}"', 'id'), COALESCE((SELECT max("id") FROM "${table}"), 1))`);
     }
     // The wikis are compiled, not seeded.
@@ -484,4 +484,4 @@ export default class Person {
 }
 
 // In dependency order: a person first, then what hangs off them.
-const TABLES = ['Person', 'PersonEarning', 'PersonContribution', 'PersonProperty', 'PersonTrip', 'PersonMatter', 'PersonPhase', 'PersonResearchNote', 'PinPerson'] as const;
+const TABLES = ['Person', 'PersonEarning', 'PersonContribution', 'PersonProperty', 'PersonTrip', 'PersonMatter', 'PersonPhase', 'PersonResearchNote', 'PinPerson', 'PersonHoldings'] as const;
