@@ -1129,5 +1129,71 @@
       }
     ],
     "note": "Annual global passenger traffic growth measured in revenue passenger kilometres (RPK), not passenger headcount. June 2026 outlook reflects fuel costs and airspace disruption; it is not a tourism-arrivals forecast."
+  },
+  {
+    "slug": "ramp-token-volume",
+    "industry": "AI",
+    "title": "AI token volume, businesses on Ramp",
+    "tags": [
+      "AI",
+      "Computing",
+      "Software",
+      "Business"
+    ],
+    "prefix": "",
+    "suffix": "T",
+    "sources": [
+      {
+        "label": "Ramp AI Index: Tokenomics",
+        "url": "https://ramp.com/data/ai-index?metric=token-volume&detail=maker&mode=volume",
+        "date": "2026-10-25",
+        "quote": null
+      }
+    ],
+    "note": "Tokens consumed per week, in trillions, by model maker. Weekly (Monday to Sunday) totals for businesses on Ramp's card and bill-pay platform, from Ramp AI Token Spend Management; a sample of Ramp customers, not the whole US. Lines are refreshed by the 6am and 6pm job."
+  },
+  {
+    "slug": "ramp-token-spend",
+    "industry": "AI",
+    "title": "AI token spend, businesses on Ramp",
+    "tags": [
+      "AI",
+      "Computing",
+      "Software",
+      "Business"
+    ],
+    "prefix": "$",
+    "suffix": "M",
+    "sources": [
+      {
+        "label": "Ramp AI Index: Tokenomics",
+        "url": "https://ramp.com/data/ai-index?metric=token-volume&detail=maker&mode=volume",
+        "date": "2026-10-25",
+        "quote": null
+      }
+    ],
+    "note": "Dollars spent on tokens per week, in millions, by model maker. Weekly (Monday to Sunday) totals for businesses on Ramp's card and bill-pay platform, from Ramp AI Token Spend Management; a sample of Ramp customers, not the whole US. Lines are refreshed by the 6am and 6pm job."
+  },
+  {
+    "slug": "ramp-token-price",
+    "industry": "AI",
+    "title": "AI token price, businesses on Ramp",
+    "tags": [
+      "AI",
+      "Computing",
+      "Software",
+      "Business"
+    ],
+    "prefix": "$",
+    "suffix": "",
+    "sources": [
+      {
+        "label": "Ramp AI Index: Tokenomics",
+        "url": "https://ramp.com/data/ai-index?metric=token-volume&detail=maker&mode=volume",
+        "date": "2026-10-25",
+        "quote": null
+      }
+    ],
+    "note": "Blended price per million tokens (token spend divided by token volume, all token types) for OpenAI and Anthropic, as Ramp charts it; weekly seven-day totals. Measured on businesses on Ramp's card and bill-pay platform, from Ramp AI Token Spend Management; a sample of Ramp customers, not the whole US. Lines are refreshed by the 6am and 6pm job."
   }
 ]

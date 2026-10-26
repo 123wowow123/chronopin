@@ -243,11 +243,11 @@ export function IndustryForecastPanel({ slugs, compact = false, limit }: { slugs
   }, [key]);
   if (!forecasts.length) return null;
   return (
-    <div className={compact ? 'flex flex-col gap-3' : 'mt-4 flex flex-col gap-3'} data-industry-forecast>
+    <div className={compact ? 'flex flex-col gap-3' : 'my-4 flex flex-col gap-3'} data-industry-forecast>
       {(limit && !all ? forecasts.slice(0, limit) : forecasts).map((f) => <Forecast key={f.slug} forecast={f} />)}
-      {limit && !all && forecasts.length > limit ? (
-        <button type="button" onClick={() => setAll(true)} className="self-start rounded-full px-3 py-1 text-xs text-muted ring-1 ring-line ring-inset hover:text-ink">
-          {t('common.showMore')} ({forecasts.length - limit})
+      {limit && forecasts.length > limit ? (
+        <button type="button" onClick={() => setAll(!all)} className="self-start rounded-full px-3 py-1 text-xs text-muted ring-1 ring-line ring-inset hover:text-ink">
+          {all ? t('common.showLess') : `${t('common.showMore')} (${forecasts.length - limit})`}
         </button>
       ) : null}
     </div>

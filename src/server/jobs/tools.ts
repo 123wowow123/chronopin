@@ -53,7 +53,7 @@ import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { modelRubricGaps } from './modelRubrics';
-import { forecastStatus, refreshBtos, saveResearched } from './industryForecasts';
+import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { llmPerfProblem, saveLlmPerf } from '../model/pinLlmPerf';
 import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
@@ -463,6 +463,17 @@ export const TOOLS: JobTool[] = [
     run: async (_input, ctx) => {
       const result = await refreshBtos();
       await act(ctx, { tool: 'refresh_btos', detail: `BTOS through ${result.through}, ${result.points} points${result.production ? '; prod saved' : ''}` });
+      return result;
+    },
+  },
+  {
+    name: 'refresh_ramp_tokens',
+    description:
+      "Reads the Ramp AI Index tokenomics feeds (ramp.com/data/ai-index?metric=token-volume) and replaces the weekly lines of the three token panels (token volume in trillions, token spend in $M, blended price per million tokens) by model maker, here and on production when the run writes there. Mechanical: nothing to review. Returns the newest week.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const result = await refreshRampTokens();
+      await act(ctx, { tool: 'refresh_ramp_tokens', detail: `Ramp tokens through ${result.through}, ${result.weeks} weeks${result.production ? '; prod saved' : ''}` });
       return result;
     },
   },

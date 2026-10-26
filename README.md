@@ -470,11 +470,6 @@ this should apply for all products
 create product production knowlege graph what supliers good coming in and output of company going out and consumed
 
 
-add substack trader position gain and lost and live notifictions
-behind paywall $20 for premium user
-non substack information available for all users
-and will show go premium to see additonal section on user page
-admin has access
 
 
 
@@ -523,15 +518,28 @@ yes do all these
 
 
 
+create a thread story for each year and add supporting or disproving reference as time goes on
+https://hub.tslombard.com/the-perkini-report
+
 
 
 Chronopin organic search growth
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com
 
 
-
-
 Add prod translations for all pins without translation or outdated translation.  Add in the pin wiki that translations was done with this model for tracking
 
 
 Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25, 2026)
+
+
+
+add
+Horoscope
+
+
+add substack trader position gain and lost and live notifictions
+behind paywall $20 for premium user
+non substack information available for all users
+and will show go premium to see additonal section on user page
+admin has access

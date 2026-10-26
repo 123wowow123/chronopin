@@ -1,0 +1,31 @@
+{
+  "pinId": 20043,
+  "media": [
+    {
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-25/trinity-jobs-pm.png",
+      "thumbnailUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-25/trinity-jobs-pm-thumb.jpg",
+      "originalWidth": 1920,
+      "originalHeight": 1072,
+      "authorName": "Chronopin; data: Michigan Advance / Michigan WARN reporting",
+      "authorUrl": "https://michiganadvance.com/2026/09/08/trinity-health-in-livonia-to-lay-off-557-employees-starting-in-october-primarily-in-it-support/",
+      "sourceUrl": "https://michiganadvance.com/2026/09/08/trinity-health-in-livonia-to-lay-off-557-employees-starting-in-october-primarily-in-it-support/",
+      "caption": "Editorial graphic of 557 announced national IT layoffs, including 49 Service Desk Support I roles. The 49 is a subset, not an additional count. Scheduled October 25–November 29, 2026; not verified completed departures."
+    },
+    {
+      "type": 3,
+      "originalUrl": "https://www.youtube.com/watch?v=leGXJ8h1Zt0",
+      "authorName": "CBS Detroit",
+      "authorUrl": "https://www.youtube.com/watch?v=leGXJ8h1Zt0",
+      "caption": "September 8 announcement report; the October 25 start remains scheduled, not independently verified completed departures."
+    },
+    {
+      "type": 3,
+      "originalUrl": "https://www.youtube.com/watch?v=epO7L1VFQnY",
+      "authorName": "WDIV Local 4",
+      "authorUrl": "https://www.youtube.com/watch?v=epO7L1VFQnY",
+      "caption": "September 8 announcement coverage. Its Livonia-only wording predates the corrected national scope; this pin follows Michigan Advance’s September 9 clarification."
+    }
+  ],
+  "researchNotes": "Chart generated from corrected Michigan Advance report and visually checked; original and thumbnail uploaded to Azure and public bytes verified. Opened company release has only a brand logo; article images are generic unemployment/stock illustrations, not this workforce, so omitted. Both September8 videos opened through read_page with metadata and transcript. WDIV geographic wording predates correction and caption explicitly flags it. Michigan official WARN PDF link returned404, current public list did not expose matching entry. No unverified role distribution, workforce time series, completed departures or 557-person Livonia-only claim."
+}
