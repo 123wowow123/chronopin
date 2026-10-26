@@ -125,3 +125,73 @@ export function mapFeaturesNear(features: SiteFeature[], longitude: number): Sit
   };
   return features.map((f) => ({ ...f, geometry: { ...f.geometry, coordinates: wrap(f.geometry.coordinates) } }));
 }
+
+type Ring = [number, number][];
+
+// Douglas-Peucker on one ring (iterative: a fire perimeter has 100k+ vertices).
+function simplifyRing(ring: Ring, tolerance: number): Ring {
+  const keep = new Uint8Array(ring.length);
+  keep[0] = 1;
+  keep[ring.length - 1] = 1;
+  const stack: [number, number][] = [[0, ring.length - 1]];
+  const tol2 = tolerance * tolerance;
+  while (stack.length) {
+    const [a, b] = stack.pop()!;
+    const [ax, ay] = ring[a];
+    const dx = ring[b][0] - ax;
+    const dy = ring[b][1] - ay;
+    const len2 = dx * dx + dy * dy;
+    let far = -1;
+    let farD = tol2;
+    for (let i = a + 1; i < b; i++) {
+      const px = ring[i][0] - ax;
+      const py = ring[i][1] - ay;
+      const t = len2 ? Math.max(0, Math.min(1, (px * dx + py * dy) / len2)) : 0;
+      const d = (px - t * dx) ** 2 + (py - t * dy) ** 2;
+      if (d > farD) { farD = d; far = i; }
+    }
+    if (far >= 0) {
+      keep[far] = 1;
+      stack.push([a, far], [far, b]);
+    }
+  }
+  return ring.filter((_, i) => keep[i]);
+}
+
+function countPoints(c: unknown): number {
+  return Array.isArray(c) && typeof c[0] === 'number' ? 1 : Array.isArray(c) ? c.reduce((n: number, x) => n + countPoints(x), 0) : 0;
+}
+
+// A ring that collapses below a triangle is a speck smaller than the tolerance: dropped.
+function simplifyPolygon(rings: Ring[], tolerance: number): Ring[] {
+  const out = rings.map((ring) => simplifyRing(ring, tolerance)).filter((ring) => ring.length >= 4);
+  return out;
+}
+
+// The shape as the page map draws it. A wildfire perimeter can carry millions of
+// vertices (Black Summer: 11 MB inside the page's HTML), far finer than a map a few
+// hundred pixels wide can show. Over the point budget, polygons are simplified with
+// a growing tolerance until they fit; the stored geometry is never changed.
+export const SITE_SHAPE_POINT_BUDGET = 30000;
+export function simplifyForDisplay(shape: PinSiteShapeJson, budget = SITE_SHAPE_POINT_BUDGET): PinSiteShapeJson {
+  if (shape.geojson.features.reduce((n, f) => n + countPoints(f.geometry.coordinates), 0) <= budget) return shape;
+  const draw = (tolerance: number): SiteFeature[] =>
+    shape.geojson.features.map((feature) => {
+      const { type, coordinates } = feature.geometry;
+      if (type === 'Polygon') {
+        const rings = simplifyPolygon(coordinates as Ring[], tolerance);
+        return rings.length ? { ...feature, geometry: { type, coordinates: rings } } : feature;
+      }
+      if (type === 'MultiPolygon') {
+        const polygons = (coordinates as Ring[][]).map((p) => simplifyPolygon(p, tolerance)).filter((p) => p.length);
+        return polygons.length ? { ...feature, geometry: { type, coordinates: polygons } } : feature;
+      }
+      return feature;
+    });
+  let features = shape.geojson.features;
+  for (let tolerance = 0.0002; tolerance <= 0.02; tolerance *= 2) {
+    features = draw(tolerance);
+    if (features.reduce((n, f) => n + countPoints(f.geometry.coordinates), 0) <= budget) break;
+  }
+  return { ...shape, geojson: { ...shape.geojson, features } };
+}

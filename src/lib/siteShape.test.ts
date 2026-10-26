@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { SITE_KINDS, SITE_STYLE, epochKind, roundCoords, districtLayers, mapFeaturesNear } from './siteShape';
+import { SITE_KINDS, SITE_STYLE, epochKind, roundCoords, districtLayers, mapFeaturesNear, simplifyForDisplay, type PinSiteShapeJson } from './siteShape';
 
 describe('epochKind', () => {
   it("reads Epoch AI's annotation types as site kinds, in any case", () => {
@@ -46,5 +46,34 @@ describe('district redraw display', () => {
     const wrapped = mapFeaturesNear(features, -77);
     expect((wrapped[0].geometry.coordinates as number[][][])[0][0][0]).toBe(-181);
     expect((features[0].geometry.coordinates as number[][][])[0][0][0]).toBe(179);
+  });
+});
+
+describe('simplifyForDisplay', () => {
+  const circle = (n: number, r: number, cx = 0, cy = 0): [number, number][] => {
+    const pts = Array.from({ length: n }, (_, i): [number, number] => [cx + r * Math.cos((2 * Math.PI * i) / n), cy + r * Math.sin((2 * Math.PI * i) / n)]);
+    return [...pts, pts[0]];
+  };
+  const shape = (coordinates: unknown): PinSiteShapeJson => ({
+    geojson: { type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'MultiPolygon', coordinates }, properties: { kind: 'wildfire' } }] },
+    source: 's',
+    sourceUrl: null,
+  });
+
+  it('leaves a shape under the budget untouched', () => {
+    const small = shape([[circle(100, 1)]]);
+    expect(simplifyForDisplay(small)).toBe(small);
+  });
+
+  it('shrinks an oversized perimeter under the budget, keeping closed rings and dropping specks', () => {
+    const big = shape([[circle(200000, 1)], [circle(8, 0.00001, 5, 5)]]);
+    const out = simplifyForDisplay(big, 5000);
+    const polygons = out.geojson.features[0].geometry.coordinates as [number, number][][][];
+    const ring = polygons[0][0];
+    expect(ring.length).toBeLessThanOrEqual(5000);
+    expect(ring.length).toBeGreaterThan(50);
+    expect(ring[0]).toEqual(ring[ring.length - 1]);
+    expect(polygons).toHaveLength(1);
+    expect((big.geojson.features[0].geometry.coordinates as unknown[][][]).length).toBe(2);
   });
 });

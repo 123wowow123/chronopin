@@ -15,7 +15,7 @@ import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
 import { siteShapeForPin } from '../model/pinSiteShape';
-import type { PinSiteShapeJson } from '@/lib/siteShape';
+import { simplifyForDisplay, type PinSiteShapeJson } from '@/lib/siteShape';
 import { perfForPin } from '../model/pinPerf';
 import type { PinPerfJson } from '@/lib/pinPerf';
 import type { PinEnergyJson } from '@/lib/energy';
@@ -275,7 +275,8 @@ export async function pinSiteShape(id: number): Promise<PinSiteShapeJson | null>
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
-  return siteShapeForPin(id);
+  const shape = await siteShapeForPin(id);
+  return shape ? simplifyForDisplay(shape) : null;
 }
 
 // The pin's hardware performance charts and tables, or null when none is recorded.
