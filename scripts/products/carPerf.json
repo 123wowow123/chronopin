@@ -2303,5 +2303,277 @@
         "quote": "The suspension is also tuned towards comfort, soaking up bumps nicely."
       }
     ]
+  },
+  {
+    "pinId": 19872,
+    "scores": {
+      "range": null,
+      "charging": null,
+      "acceleration": 3,
+      "assistance": null,
+      "space": 4,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: Tank 700 Hi4-T, RMB 428,000 base. Acceleration 'five-second class' (published claim) -> 3; wheelbase 3,000 mm with air springs/EM dampers -> 4. Range null (only 90 km WLTC electric published, no combined figure), charging, assist, value, kids null: not published on opened pages.",
+    "sourceUrl": "https://cnevpost.com/2024/02/27/great-wall-tank-launches-tank-700-hi4-t/",
+    "reviews": [
+      {
+        "url": "https://carnewschina.com/2024/12/07/sunday-china-drive-tank-700-hi4-t-hybrid-power-meets-off-road-capability-in-a-robust-suv/",
+        "quote": "The SUV performs well on the road, with smooth acceleration and minimal road noise.",
+        "title": "Sunday China Drive | Tank 700 Hi4-T hybrid power meets off-road capability in a robust SUV",
+        "sentiment": 0.6,
+        "publishedDate": "2024-12-07"
+      },
+      {
+        "url": "https://evcentral.com.au/2024-gwm-tank-700-phev-review-385kw-800nm-4x4-is-a-rapid-plug-in-toyota-landcruiser-and-nissan-patrol-rival/",
+        "quote": "Planting the throttle it gets a proper move on for something weighing over three-tonnes.",
+        "title": "2024 GWM Tank 700 PHEV review: 385kW/800Nm 4x4 is a rapid plug-in Toyota LandCruiser and Nissan Patrol rival (AU-market car)",
+        "sentiment": 0.4,
+        "publishedDate": "2024-06-02"
+      },
+      {
+        "url": "https://www.chasingcars.com.au/reviews/large-suvs/gwm-tank-700-hi4-t-2024-review/",
+        "quote": "Body roll's marked and control's hard work when steering between cones.",
+        "title": "GWM Tank 700 Hi4-T 2024 review - Chasing Cars",
+        "sentiment": -0.5,
+        "publishedDate": "2024-05-13"
+      }
+    ]
+  },
+  {
+    "pinId": 19878,
+    "scores": {
+      "range": 3,
+      "charging": 4,
+      "acceleration": null,
+      "assistance": null,
+      "space": 3.5,
+      "value": 4,
+      "kidsFriendly": 4
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: RWD 75 kWh LFP, RMB 229,900. 605 km CLTC -> 3; 10-80% in 10.5 min -> 4; wheelbase 2,925 mm -> 3.5; value 4: RMB 20,000 below Tesla Model Y's RMB 249,900 (CnEVPost); kids 4 from Zeekr's child smart seat with active airbags. Acceleration null (only dual-motor 3.8 s published), assist null (hardware not on opened pages). Reviews are export-market 7X.",
+    "sourceUrl": "https://cnevpost.com/2024/09/20/zeekr-launches-7x-suv/",
+    "reviews": [
+      {
+        "url": "https://www.aol.com/zeekr-7x-review-best-premium-141340458.html",
+        "quote": "On our test drive in China we found the Zeekr had a slightly odd ride.",
+        "title": "Zeekr 7X review: The best premium electric SUV you can't buy (yet) (China test drive)",
+        "sentiment": -0.3,
+        "publishedDate": "2025-05-12"
+      },
+      {
+        "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/zeekr-7x-rwd-2026-review/",
+        "quote": "The Zeekr is smooth and languid; it does have reasonable handling capability, but its ride quality is tuned for comfort.",
+        "title": "Zeekr 7X RWD 2026 review - Chasing Cars",
+        "sentiment": 0.55,
+        "publishedDate": "2026-01-15"
+      },
+      {
+        "url": "https://gulfnews.com/auto/7x-an-experience-like-no-other-1.500132289",
+        "quote": "The result is sharper handling and reduced understeer, particularly through corners.",
+        "title": "7X: An experience like no other (Gulf News, export)",
+        "sentiment": 0.6,
+        "publishedDate": "2025-05-19"
+      }
+    ]
+  },
+  {
+    "pinId": 19877,
+    "scores": {
+      "range": 3.5,
+      "charging": 2,
+      "acceleration": 3,
+      "assistance": 2,
+      "space": 5,
+      "value": null,
+      "kidsFriendly": 4.5
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: WE, RMB 499,000, 116 kWh, 702 km CLTC -> 3.5; 10-80% in 28 min -> 2; 0-100 4.5 s (Zeekr claim) -> 3; Mobileye EyeQ5H L2 with seven 8MP cameras, no LiDAR -> 2; 3,205 mm wheelbase, air suspension, captain seats -> 5; kids 4.5 from 15.6-inch second-row screen and sliding doors (ISOFIX not published). Value null: no priced rival.",
+    "sourceUrl": "https://carnewschina.com/2022/11/01/need-bling-in-your-family-life-get-a-zeekr-009-mpv-with-544-hp/",
+    "reviews": [
+      {
+        "url": "https://eftm.com/2025/05/zeekr-009-review-an-expensive-but-ultra-premium-all-electric-people-mover-263165",
+        "quote": "On city roads it's a smooth ride, though speed bumps do feel a touch more brutal than I would have hoped.",
+        "title": "Zeekr 009 Review - An expensive but ultra-premium all-electric people mover (AU car)",
+        "sentiment": 0.2,
+        "publishedDate": "2025-05-28"
+      },
+      {
+        "url": "https://www.drivencarguide.co.nz/reviews/zeekr-009-first-drive-seats-of-power/",
+        "quote": "The extreme acceleration feels like a novelty more than anything, given the 009 takes up so much road.",
+        "title": "Zeekr 009 first drive: seats of power (NZ car)",
+        "sentiment": 0,
+        "publishedDate": "2025-12-01"
+      },
+      {
+        "url": "https://www.zeekrlife.com/en-sg/posts/the-straits-times-glitzy-zeekr-009-wows-mostly",
+        "quote": "The accelerator response feels softer than is the norm for an EV.",
+        "title": "[The Straits Times] Glitzy Zeekr 009 wows, mostly (reposted by Zeekr Singapore, pre-production car)",
+        "sentiment": -0.1,
+        "publishedDate": "2024-11-16"
+      },
+      {
+        "url": "https://www.chasingcars.com.au/reviews/vans/zeekr-009-2025-review/",
+        "quote": "Leave the car in Normal mode and with highest ride height it's buttery smooth.",
+        "title": "Zeekr 009 2025 review - Chasing Cars",
+        "sentiment": 0.7,
+        "publishedDate": "2025-03-18"
+      }
+    ]
+  },
+  {
+    "pinId": 19981,
+    "scores": {
+      "range": null,
+      "charging": null,
+      "acceleration": 5,
+      "assistance": null,
+      "space": 2,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Scored the launch Revuelto (V12 PHEV, 1,015 PS). Range null: only about 6 miles (WLTP) electric range, no total range published. Charging null (no AC/DC rate opened). Acceleration 5: 0-100 km/h 2.5 s (maker). Assistance null. Space 2: 2,779 mm wheelbase mid-engine supercar (seat count not sourced). Value null (no launch price). Kids friendly null (no source). Three independent drives opened; one is a Canadian-spec car.",
+    "sourceUrl": "https://goauto.com.au/future-models/lamborghini/revuelto/lamborghini-debuts-revuelto-hybrid-supercar/2023-04-03/90679.html",
+    "reviews": [
+      {
+        "url": "https://www.thedrive.com/car-reviews/2025-lamborghini-revuelto-supercar-review",
+        "quote": "somehow remains just dramatic enough never to be that scary to throw around a corner.",
+        "title": "2025 Lamborghini Revuelto Review: Great Bulls of Fire (The Drive, Canadian-spec car)",
+        "sentiment": 0.4,
+        "publishedDate": "2025-08-12"
+      },
+      {
+        "url": "https://www.autoguide.com/auto/manufacturers/lamborghini/2025-lamborghini-revuelto-review-bull-on-parade-44626711",
+        "quote": "The steering is light—like everything these days—but unerringly accurate.",
+        "title": "2025 Lamborghini Revuelto Review: Bull on Parade (AutoGuide)",
+        "sentiment": 0.5,
+        "publishedDate": "2025-11-03"
+      },
+      {
+        "url": "https://www.carthrottle.com/reviews/lamborghini/lamborghini-revuelto-review-looks-proper-lambo-it",
+        "quote": "The Revuelto is incredibly nimble for something weighing around 1,800kg with fluids",
+        "title": "Lamborghini Revuelto Review: Looks Like A Proper Lambo, But Is It?",
+        "sentiment": 0.7,
+        "publishedDate": "2024-08-18"
+      }
+    ]
+  },
+  {
+    "pinId": 19873,
+    "scores": {
+      "range": 3,
+      "charging": 2.5,
+      "acceleration": 2.5,
+      "assistance": 2,
+      "space": 4.5,
+      "value": null,
+      "kidsFriendly": 4
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: all-electric 7-seat, 605 km CLTC, dual 160 kW, 0-100 5.8 s (launch priced from RMB 369,900; which trim is cheapest not stated). Range -> 3; 20-80% in as little as 20 min -> 2.5; 5.8 s -> 2.5; L2 assist and remote parking -> 2; 3,200 mm wheelbase 7-seat MPV, air suspension unconfirmed -> 4.5; kids 4 from sliding doors/3-zone climate (EVW). Value null. Only reviews of the 2024-26 updated Dream exist (labelled); no 2022 road test found.",
+    "sourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/",
+    "reviews": [
+      {
+        "url": "https://www.autohled.cz/en/magazin/voyah-dream-recenze-2026-luxusni-cinsky-van-s-komfortem-business-class-ale-s-kompromisy-za-25-milionu/11090",
+        "quote": "The steering is light and precise, but devoid of any feedback.",
+        "title": "Voyah Dream review 2026: luxurious Chinese van with business-class comfort, but compromises for 2.5 million (updated Dream)",
+        "sentiment": 0,
+        "publishedDate": "2026-04-07"
+      },
+      {
+        "url": "https://www.bitauto.com/global/news/100193103585.html",
+        "quote": "The power is readily available as you press the pedal, and the acceleration is very linear.",
+        "title": "Testing the Voyah Dream: Has New Energy Changed the MPV Game? (Bitauto, updated Dream)",
+        "sentiment": 0.4,
+        "publishedDate": "2024-07-30"
+      },
+      {
+        "url": "https://electricvehicleweb.com/voyah-dream/",
+        "quote": "I could stretch out properly, and the cabin felt bright and open.",
+        "title": "First Look Review: Voyah's Dream MPV is a wake-up call for Mercedes & Lexus",
+        "sentiment": 0.55,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 20018,
+    "scores": {
+      "range": 3,
+      "charging": 3,
+      "acceleration": 2,
+      "assistance": 2,
+      "space": 4,
+      "value": null,
+      "kidsFriendly": 4
+    },
+    "rubricYear": 2026,
+    "basis": "Scored: Long Range Single Motor. Range 609 km WLTP (electrive, UK preliminary) = 3. Charging peak 200 kW (electrive) = 3. Acceleration 0-100 km/h 7.4 s (Wikipedia) = 2. Assistance: Pilot Pack, 12 cameras + radar, no LiDAR (Carwow) = 2. Space: 2,999 mm wheelbase (Wikipedia) = 4. Value null: no same-segment rival price opened. Kids: easy ISOFIX, rear controls, 526 L boot, 85% Euro NCAP child score (Carwow) = 4.",
+    "sourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+    "reviews": [
+      {
+        "url": "https://www.topgear.com/car-reviews/polestar/4/driving",
+        "quote": "The dual-motor version is better. Not just because power is actually doubled, but also because the adaptive damping system keeps the body under better control.",
+        "title": "Polestar 4 Driving, Engines & Performance | Top Gear",
+        "sentiment": 0.55,
+        "publishedDate": "2025-11-05"
+      },
+      {
+        "url": "https://www.carenthusiast.com/reviews/article/13750/-/2024-Polestar-4/First+drive:+Long+Range+Dual+Motor+with+Performance+Pack.html",
+        "quote": "the 4 is best described in handling terms as immensely talented, yet not massively engaging.",
+        "title": "First drive: Polestar 4 (Car Enthusiast, Long Range Dual Motor with Performance Pack)",
+        "sentiment": 0.2,
+        "publishedDate": "2024-09-30"
+      },
+      {
+        "url": "https://www.carwow.co.uk/polestar/4",
+        "quote": "However, it never quite hides its weight, which can knock your confidence slightly",
+        "title": "Polestar 4 Review & Prices (Carwow, updated 2026)",
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 20067,
+    "scores": {
+      "range": 3,
+      "charging": 3,
+      "acceleration": 3,
+      "assistance": 3,
+      "space": 4,
+      "value": 3,
+      "kidsFriendly": 4
+    },
+    "rubricYear": 2026,
+    "basis": "Scored: EX90 Twin Motor Performance (380 kW, 510 hp). Range: claimed 590 km WLTP (Wikipedia) = 3. Charging: 250 kW DC, 10-80% about 30 min (Car and Driver) = 3. Acceleration: 4.9 s 0-100 km/h (AutoGuide) = 3. Assist: lidar and Pilot Assist, hands-off Ride Pilot not live; reviewers note features still to arrive = 3. Space: 2,984 mm wheelbase, seven seats, air suspension = 4. Value: US$81,290 Twin Motor, at market = 3. Kids: radar child-presence detection, four-zone climate, Euro NCAP child 94% = 4.",
+    "sourceUrl": "https://www.caranddriver.com/news/a41897699/volvo-ex90-ev-revealed/",
+    "reviews": [
+      {
+        "url": "https://www.topgear.com/car-reviews/volvo/ex90",
+        "quote": "Smooth and silent on the road, it’s a pleasure to drive, more wieldy than you might expect for its size and weight",
+        "title": "Volvo EX90 Review 2026 | Top Gear",
+        "sentiment": 0.7,
+        "publishedDate": "2024-12-17"
+      },
+      {
+        "url": "https://canadianautoreview.ca/review-2025-volvo-ex90",
+        "quote": "the EX90 rides exceptionally well even on its 22-inch wheels, flowing over poor surfaces with confidence and swallowing compressions without ever hitting the bump stops.",
+        "title": "Review: 2025 Volvo EX90 (Canadian Auto Review, manufacturer-hosted first drive)",
+        "sentiment": 0.8,
+        "publishedDate": "2024-09-03"
+      },
+      {
+        "url": "https://www.autoguide.com/auto/manufacturers/volvo/2025-volvo-ex90-review-unfinished-potential-44622829",
+        "quote": "The suspension is less about tackling corners than luxury refinement, never getting upset or producing harsh vibrations over bumps, although it’s not the absolute smoothest.",
+        "title": "2025 Volvo EX90 Review: Unfinished Potential (AutoGuide)",
+        "sentiment": 0.4,
+        "publishedDate": "2025-07-18"
+      }
+    ]
   }
 ]

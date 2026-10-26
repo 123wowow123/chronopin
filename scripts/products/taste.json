@@ -3783,5 +3783,68 @@
         "quote": "No synthetic syrup can mimic this real grape juice bite. Salty cheese, tart-sweet fruit, and crisp cold jasmine tea all in one sip."
       }
     ]
+  },
+  {
+    "pinId": 19984,
+    "aroma": 1.5,
+    "bitterness": 0.5,
+    "sweetness": 4.5,
+    "astringency": 0,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "Chocolate-coated sponge cake with marshmallow: very sweet (Seoulscope 'a touch sweeter', 'softer, sweeter' marshmallow). Mild cocoa aroma; chocolate flavour notes in the 2010 and 2013 blogs; no bitterness, spice or cooling reported. Reviews are blog comparisons with Orion.",
+    "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%B4%88%EC%BD%94%ED%8C%8C%EC%9D%B4",
+    "reviews": [
+      {
+        "url": "https://seoulscope.com/choco-pie/",
+        "quote": "Lotte's runs a touch sweeter.",
+        "title": "Orion vs. Lotte Choco Pie: What's Different & Which to Buy",
+        "sentiment": 0.1,
+        "publishedDate": "2026-08-08"
+      },
+      {
+        "url": "http://pictorialeverything.blogspot.com/2010/01/orion-chocopie-vs-lotte-chocopie.html",
+        "quote": "the Lotte Choco pie had more flavor than the Orion Choco pie.",
+        "title": "ORION Chocopie VS. LOTTE Chocopie",
+        "sentiment": 0.3,
+        "publishedDate": "2010-01-31"
+      },
+      {
+        "url": "https://cabcooks.wordpress.com/2013/07/03/choco-pie-fever/",
+        "quote": "I tried just the marshmallow from both to see if one was softer than the other but no, they were both the same.",
+        "title": "Choco Pie Fever | CAB Cooks",
+        "sentiment": 0,
+        "publishedDate": "2013-07-03"
+      }
+    ]
+  },
+  {
+    "pinId": 20014,
+    "aroma": 1.5,
+    "bitterness": 2,
+    "sweetness": 4,
+    "astringency": 1,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "Reviewed's testers cite chocolate cookie with sweet creme filling and nostalgia; Spoon University tasters rank the Original first. Ingredients (sugar first, alkali-treated cocoa) imply high sweetness and mild cocoa bitterness.",
+    "sourceUrl": "https://www.hobokengirl.com/oreo-day-hoboken-history/",
+    "reviews": [
+      {
+        "url": "https://reviewed.com/cooking/features/we-ate-16-flavors-of-oreos-and-this-one-was-the-best",
+        "quote": "The combination of chocolate cookies and sweet creme filling left our testers with feelings of nostalgia",
+        "title": "We tried 16 different Oreo flavors—and this is the best one",
+        "sentiment": 0.4,
+        "publishedDate": "2019-05-10"
+      },
+      {
+        "url": "https://spoonuniversity.com/lifestyle/we-tried-15-oreo-flavors-and-ranked-them-from-worst-to-best",
+        "quote": "Despite all of the unique and surprising flavors, our #1 choice proves that nothing can ever top the Original Oreo.",
+        "title": "We Tried 15 Oreo Flavors and Ranked Them from Worst to Best",
+        "sentiment": 0.9,
+        "publishedDate": "2018-02-15"
+      }
+    ]
   }
 ]

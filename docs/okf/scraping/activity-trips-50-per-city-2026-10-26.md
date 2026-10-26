@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Activity trips: 50 per city, 2026-10-26"
+description: "Activity catalog expansion, research evidence and validation for the 50-per-city trip coverage target."
+tags: [scraping, activities]
+---
+
 # Activity trips: 50 per city, 2026-10-26
 
 Expanded the local activity catalog from 954 to 1,265 items with 311 new destinations. Every supported US city guide now has at least 50 distinct Day trips and at least 50 distinct 2-day trips within the unchanged default 250 km straight-line radius. Counts cover the all-season trip tabs, not activities open today or every type/search filter. This is a coverage floor, not a display cap.

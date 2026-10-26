@@ -17,7 +17,7 @@
       "reviews": 337,
       "minimum": 3,
       "belowMinimum": 39,
-      "undatedNonMichelin": 20,
+      "undatedNonMichelin": 21,
       "unscoredDated": 0
     },
     {
@@ -531,7 +531,7 @@
       "title": "NorOntair Takes Delivery of the First Dash 8",
       "reviews": 1,
       "needed": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources."
+      "reason": "Existing Modeling Madness citation reviews a scale-model kit, not the actual Dash 8. Replace with verified actual-aircraft reviews; do not count the model-kit page as coverage."
     },
     {
       "table": "PinAircraftPerf",
@@ -2370,6 +2370,13 @@
       "title": "Norah Jones Wins Five Grammys, Led by Record and Album of the Year",
       "url": "https://www.allmusic.com/album/mw0000507740",
       "reason": "Page could not be opened"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "title": "Voyah Launches the Dream Electric and Range-Extender MPV From RMB 369,900",
+      "url": "https://electricvehicleweb.com/voyah-dream/",
+      "reason": "Opened source is a static cabin/practicality first-look, not a driving test; displayed date is labelled Last Updated. Restored null publication date locally and in production. Find an exact-variant road test before counting it as driving-performance evidence."
     }
   ]
 }

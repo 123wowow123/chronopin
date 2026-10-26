@@ -1,0 +1,277 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 1024,
+      "pinSourceUrl": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://beneaththetangles.com/2023/02/15/review-kaguya-sama-love-is-war-the-first-kiss-that-never-ends/",
+          "title": "Review: Kaguya-sama: Love Is War -The First Kiss That Never Ends-",
+          "publishedDate": "2023-02-15",
+          "quote": "The First Kiss That Never Ends delivers the laughs and engaging animation of the TV series",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://beneaththetangles.com/2023/02/15/review-kaguya-sama-love-is-war-the-first-kiss-that-never-ends/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2023-02-15",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1055,
+      "pinSourceUrl": "https://myanimelist.net/anime/59571/Shingeki_no_Kyojin_Movie__Kanketsu-hen_-_The_Last_Attack",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://blacknerdproblems.com/attack-on-titan-the-last-attack-review/",
+          "title": "The End of An Era Done Right: ‘Attack on Titan: The Last Attack’ Review",
+          "publishedDate": "2025-02-19",
+          "quote": "With no punches pulled and a chilling conclusion, The Last Attack is more relevant than ever.",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://megustaelcine.com/critica-attack-on-titan-el-ataque-final-un-desenlace-que-vale-la-pena-ver-en-el-cine/",
+          "title": "CRÍTICA: Attack on Titan: el ataque final – un desenlace que vale la pena ver en el cine",
+          "publishedDate": "2025-02-25",
+          "quote": "es innegablemente entretenido y narrativamente satisfactorio, pero no se puede negar que uno también termina algo cansado luego de verlo.",
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://blacknerdproblems.com/attack-on-titan-the-last-attack-review/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2025-02-19",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        },
+        {
+          "url": "https://megustaelcine.com/critica-attack-on-titan-el-ataque-final-un-desenlace-que-vale-la-pena-ver-en-el-cine/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2025-02-25",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1057,
+      "pinSourceUrl": "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://animeuknews.net/2021/06/violet-evergarden-the-movie-cinema-screening-review/",
+          "title": "Violet Evergarden: The Movie Cinema Screening Review",
+          "publishedDate": "2021-06-30",
+          "quote": "It’s beautifully composed, written and animated, one to definitely not miss on the big screen.",
+          "sentiment": 0.85
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://animeuknews.net/2021/06/violet-evergarden-the-movie-cinema-screening-review/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2021-06-30",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1126,
+      "pinSourceUrl": "https://myanimelist.net/anime/7311/Suzumiya_Haruhi_no_Shoushitsu",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://www.otakunews.com/Dvd/189/the-disappearance-of-haruhi-suzumiya",
+          "title": "The Disappearance of Haruhi Suzumiya",
+          "publishedDate": "2011-11-15",
+          "quote": "The film however is enjoyable, not in a laugh out loud kind of way but in a quiet thoughtful one.",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.geekscape.net/anime-expo-2011-the-disappearance-of-haruhi-suzumiya-review",
+          "title": "Anime Expo 2011: The Disappearance of Haruhi Suzumiya Review",
+          "publishedDate": "2011-07-10",
+          "quote": "The centerpiece of the film drags on so much",
+          "sentiment": -0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.otakunews.com/Dvd/189/the-disappearance-of-haruhi-suzumiya",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2011-11-15",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        },
+        {
+          "url": "https://www.geekscape.net/anime-expo-2011-the-disappearance-of-haruhi-suzumiya-review",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2011-07-10",
+          "quoteVerified": true,
+          "method": "Visible July 10 2011 byline and publisher-local JSON-LD; meta time is same instant on July 11 UTC"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1176,
+      "pinSourceUrl": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://www.filmink.com.au/reviews/want-eat-pancreas/",
+          "title": "I Want To Eat Your Pancreas",
+          "publishedDate": "2018-10-13",
+          "quote": "director Ushijima has crafted a captivating and emotional work with his debut feature.",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.filmink.com.au/reviews/want-eat-pancreas/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2018-10-13",
+          "quoteVerified": true,
+          "method": "Exact film body; explicit datePublished 2018-10-13 in publisher JSON-LD"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1178,
+      "pinSourceUrl": "https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://www.latimes.com/entertainment/movies/moviesnow/la-et-mn-wolf-children-20130927-story.html",
+          "title": "Mamoru Hosoda’s ‘Wolf Children’ anime is wild",
+          "publishedDate": "2013-09-26",
+          "quote": "the dubbed English-language soundtrack can sound overly sweet and simplistic",
+          "sentiment": -0.2
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.latimes.com/entertainment/movies/moviesnow/la-et-mn-wolf-children-20130927-story.html",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2013-09-26",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1212,
+      "pinSourceUrl": "https://myanimelist.net/anime/6675/Redline",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://screenanarchy.com/2011/09/etrange-2011-redline-review.html",
+          "title": "ETRANGE 2011: REDLINE review",
+          "publishedDate": "2011-09-07",
+          "quote": "What makes Takeshi Koike's Redline a work of sheer, unalloyed genius",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.capsulecomputers.com.au/2012/01/redline-review/",
+          "title": "Redline Review",
+          "publishedDate": "2012-01-05",
+          "quote": "After the engines simmer down to a final stop, Redline remains the best anime film of 2011.",
+          "sentiment": 0.95
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://screenanarchy.com/2011/09/etrange-2011-redline-review.html",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2011-09-07",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        },
+        {
+          "url": "https://www.capsulecomputers.com.au/2012/01/redline-review/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2012-01-05",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1233,
+      "pinSourceUrl": "https://myanimelist.net/anime/759/Tokyo_Godfathers",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://www.slantmagazine.com/film/tokyo-godfathers/",
+          "title": "Review: Tokyo Godfathers",
+          "publishedDate": "2004-01-14",
+          "quote": "The comic relief is screechy and grotesque",
+          "sentiment": -0.55
+        },
+        {
+          "url": "https://www.ocweekly.com/a-tale-of-two-tokyos-6381205/",
+          "title": "A Tale of Two Tokyos",
+          "publishedDate": "2004-01-15",
+          "quote": "the film is as lively as a cricket and often very funny",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.slantmagazine.com/film/tokyo-godfathers/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2004-01-14",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        },
+        {
+          "url": "https://www.ocweekly.com/a-tale-of-two-tokyos-6381205/",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2004-01-15",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "pinSourceUrl": "https://www.grammy.com/awards/45th-annual-grammy-awards",
+      "basis": "Independent critical reviews of the exact film or album, opened and checked 2026-10-26. Film criticism in home-video reviews is distinguished from disc extras. Original byline publication dates, not event/reissue dates. Includes critical as well as favourable verdicts; sentiment is an editorial estimate from the extract.",
+      "reviews": [
+        {
+          "url": "https://www.musicomh.com/reviews/albums/norah-jones-come-away-with-me",
+          "title": "Norah Jones – Come Away With Me",
+          "publishedDate": "2002-03-04",
+          "quote": "the musical arrangements are muted, to the point where the listener struggles to stay awake for all 14 tracks.",
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.musicomh.com/reviews/albums/norah-jones-come-away-with-me",
+          "openedAt": "2026-10-26",
+          "publishedDate": "2002-03-04",
+          "quoteVerified": true,
+          "method": "Opened publisher byline date and verbatim critical extract"
+        }
+      ]
+    }
+  ]
+}

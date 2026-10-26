@@ -182,13 +182,11 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Movie pins with no ticket or disc link (about 254 on prod as of 2026-10-05): hand-pick the real Fandango/Amazon page for the recent and upcoming films (about 60 days either side of today), then post with `POST /api/pins/:id/merchants`
 
-- Review sentiment graph (started 2026-10-25; scored reviews plot on the pin page under "Sentiment over time").
-  - Done 2026-10-25: 80 `PinCriticReview` rows (228 total critic reviews across Gaming, Movie/TV, Music, and Computing) scraped via browser, verified with verbatim quotes <=300 chars, scored, and synced to production (`npm run reviews:critic:prod`). All 41 Gaming pins now have 3+ reviews (all games previously stuck at 2 completed, plus Valheim 1.0, Slay the Spire 2, Gears of War: E-Day, Crisis Core Reunion, Wardogs, and Wolverine). 20 rubric pins brought up to 3 reviews on prod (`PinGasCarPerf`, `PinAircraftPerf`, `PinLlmPerf`). 58 rubric reviews dated and scored on prod.
-  - Remaining:
-    - Expand Movie and TV (remaining of ~750 pins), Music albums (remaining of ~900), Computing, and Fashion critic reviews into `PinCriticReview`.
-    - Remaining rubric pins below the 3-review minimum (~70 remaining: EV `PinCarPerf`, `PinDining`, and remaining gas/aircraft).
-    - Remaining ~109 non-MICHELIN undated rubric reviews (pages that block plain fetches require browser reads; shop/directory pages stay off the graph).
-    - Add reviewing and scoring to the scrape flow so new rubric/critic reviews arrive scored.
+- Review sentiment graph — remaining work ([verified batch and inventory, 2026-10-26](docs/okf/scraping/review-verification-2026-10-26.md)):
+  - Expand Movie/TV, Music albums, Computing and Fashion critic coverage; screen category leads for actual reviewable products/works. Nine existing critic rows still have fewer than three reviews.
+  - Research the 98 rubric rows below three reviews: EV 39, gas cars 16, aircraft 23, dining 14, LLMs 4 and video models 2. Verify independent sources and the exact variant/branch.
+  - Resolve publication evidence or source eligibility for 205 non-MICHELIN undated reviews. Leave genuinely undated reviews null; keep shops/directories off the graph.
+  - Exercise the deployed review research/scoring tools in a scheduled production job. Deployment verified 2026-10-26 (`771c23ac`); scheduled jobs are currently disabled.
 
 
 ### Map

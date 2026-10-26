@@ -9,6 +9,9 @@ import { saveResearchedReviews } from '@/server/jobs/reviewResearch';
 import { reviewResearchRequest } from '@/server/jobs/pinApi';
 import type { PinReview, ReviewTable } from '@/lib/pinReviews';
 import { sourceKey } from '@/server/model/source';
+import { CAR_PERF_KEYS } from '@/lib/pinCarPerf';
+import { TASTE_KEYS } from '@/lib/pinTaste';
+import { DINING_KEYS } from '@/lib/pinDining';
 
 const { values } = parseArgs({ options: { file: { type: 'string' }, references: { type: 'boolean' }, pin: { type: 'string' } } });
 if (!values.file) throw new Error('--file is required');
@@ -73,6 +76,14 @@ async function run() {
             return fresh ?? r;
           });
           item.reviews.push(...incoming.values());
+          changed = true;
+        }
+        if (!changed) {
+          const [row] = await db.query(`SELECT * FROM "${entry.table}" WHERE "pinId" = $1`, [pinId]);
+          if (!row) throw new Error('Saved rubric missing while synchronizing catalog');
+          const keys = entry.table === 'PinCarPerf' ? CAR_PERF_KEYS : entry.table === 'PinTaste' ? TASTE_KEYS : DINING_KEYS;
+          const scores = Object.fromEntries(keys.map((key) => [key, row[key] == null ? null : Number(row[key])]));
+          catalog.push({ pinId, ...(entry.table === 'PinTaste' ? scores : { scores }), ...(row.rubricYear == null ? {} : { rubricYear: row.rubricYear }), basis: row.basis, sourceUrl: row.sourceUrl, reviews: row.reviews });
           changed = true;
         }
         if (changed) writeFileSync(file, JSON.stringify(catalog, null, 2) + '\n');
