@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Michael Burry rubric update — 2026-10-25"
+description: "Saved and verified through authenticated PUT /api/people/1310/wiki on localhost and production."
+tags: [scraping]
+---
+
 # Michael Burry rubric update — 2026-10-25
 
 Saved and verified through authenticated `PUT /api/people/1310/wiki` on localhost and production. Both compiled wikis contain the two sourced axes. Existing earnings, contributions, matters, properties and trips were preserved.

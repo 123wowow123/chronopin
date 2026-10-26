@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Investor rubric coverage — October 25, 2026"
+description: "Researched and saved Jim Simons (#1309), Ken Griffin (#1311), Ray Dalio (#1315) and Peter Thiel (#1317), locally and in production, through authenticated PUT /api/people/:id/wiki."
+tags: [scraping]
+---
+
 # Investor rubric coverage — October 25, 2026
 
 Researched and saved Jim Simons (#1309), Ken Griffin (#1311), Ray Dalio (#1315) and Peter Thiel (#1317), locally and in production, through authenticated `PUT /api/people/:id/wiki`. Each compiled wiki was checked after saving. Existing earnings, contributions, matters, property, trips and scored wealth axes were preserved. Each profile now has three documented axes.

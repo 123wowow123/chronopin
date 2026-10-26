@@ -455,6 +455,8 @@ export type SessionUser = {
   emailVerifiedDateTime?: string | null;
   // On while the $1 a month ad-free plan is active (0177); no ads are served.
   adFree?: boolean;
+  // On while the $20 a month premium plan is active, or for an admin (0223).
+  premium?: boolean;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

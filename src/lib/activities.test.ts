@@ -13,13 +13,13 @@ describe('activity seasons', () => {
     expect(activitiesForTrip([day, both, unclassified], 2)).toEqual([both]);
   });
 
-  it('has at least 30 distinct day-trip and two-day suggestions within every guide’s default radius', () => {
+  it('has at least 50 distinct day-trip and two-day suggestions within every guide’s default radius', () => {
     const pins = (catalog as ActivityCatalogItem[]).map((activity) => ({ activity }));
     expect(pins.flatMap((pin) => activityProblems(pin.activity))).toEqual([]);
     for (const city of ACTIVITY_CITIES) {
       const nearby = activitiesNearCity(pins, city);
-      expect(activitiesForTrip(nearby, 1).length, `${city.slug} day trips`).toBeGreaterThanOrEqual(30);
-      expect(activitiesForTrip(nearby, 2).length, `${city.slug} 2-day trips`).toBeGreaterThanOrEqual(30);
+      expect(activitiesForTrip(nearby, 1).length, `${city.slug} day trips`).toBeGreaterThanOrEqual(50);
+      expect(activitiesForTrip(nearby, 2).length, `${city.slug} 2-day trips`).toBeGreaterThanOrEqual(50);
     }
   });
 

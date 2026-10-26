@@ -12,6 +12,7 @@ const TIMEOUT_MS = 15000;
 const TOLERANCE_SECONDS = 300;
 
 export const AD_FREE_PRICE_CENTS = 100;
+export const PREMIUM_PRICE_CENTS = 2000;
 
 export function stripeConfigured(): boolean {
   return !!config.stripe.secretKey;

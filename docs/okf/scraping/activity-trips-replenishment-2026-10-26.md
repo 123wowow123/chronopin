@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Activity trip replenishment — October 26, 2026"
+description: "Completed the owner’s target of at least 15 Day trips and 15 2-day trips per city, counted on the local rendered landing pages at the unchanged default 250 km radius."
+tags: [scraping]
+---
+
 # Activity trip replenishment — October 26, 2026
 
 Completed the owner’s target of **at least 15 Day trips and 15 2-day trips per city**, counted on the local rendered landing pages at the unchanged default **250 km radius**. These are planning tabs across all seasons; the target is not 15 activities open today or 15 in each type filter. Smaller user-selected radii and searches can legitimately show fewer.

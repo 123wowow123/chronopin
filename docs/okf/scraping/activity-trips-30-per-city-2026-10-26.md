@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Activity trips: 30 per city, 2026-10-26"
+description: "Target: at least 30 distinct destination suggestions in each of Day trips and 2-day trips for all 20 supported US activity guides, within the existing 250 km default straight-line radius."
+tags: [scraping]
+---
+
 # Activity trips: 30 per city, 2026-10-26
 
 Target: at least 30 distinct destination suggestions in each of Day trips and 2-day trips for all 20 supported US activity guides, within the existing 250 km default straight-line radius. This is a coverage floor, not a display cap.

@@ -7,6 +7,7 @@ import { localizePath } from '@/lib/i18n/config';
 import { alternates, getT } from '@/lib/i18n/server';
 import { personPath } from '@/lib/people';
 import { topicSlug } from '@/lib/topics';
+import TraderPosition from '@/server/model/traderPosition';
 import { timelineVideo } from '@/server/services/pages';
 import { personPage } from '@/server/services/people';
 import { viewerTimeZone } from '@/server/viewer';
@@ -56,6 +57,6 @@ async function PersonContent({ params }: Pick<Props, 'params'>) {
   if (!page) notFound();
   // One URL per person: /person/Susan-Collins goes to /person/susan-collins.
   if (raw !== slug) permanentRedirect(localizePath(personPath(page.profile.name), t.locale));
-  const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
-  return <PersonView profile={page.profile} pins={page.pins} trades={page.trades} tradeSummary={page.tradeSummary} holdings={page.holdings} committees={page.committees} campaigns={page.campaigns} timeZone={timeZone} video={video} t={t} />;
+  const [timeZone, video, premiumMoves] = await Promise.all([viewerTimeZone(), timelineVideo(), TraderPosition.count(slug)]);
+  return <PersonView profile={page.profile} pins={page.pins} trades={page.trades} tradeSummary={page.tradeSummary} holdings={page.holdings} committees={page.committees} campaigns={page.campaigns} premiumMoves={premiumMoves} timeZone={timeZone} video={video} t={t} />;
 }

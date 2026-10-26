@@ -3,6 +3,7 @@
 
 import AdFreeSubscription from '../model/adFreeSubscription';
 import HeavyUserPlan from '../model/heavyUserPlan';
+import PremiumSubscription from '../model/premiumSubscription';
 import { stripeRequest } from '../stripe';
 
 type StripeSubscription = {
@@ -55,6 +56,23 @@ export async function recordHeavySubscription(subscription: StripeSubscription):
   const userId = Number.isInteger(fromMetadata) && fromMetadata > 0 ? fromMetadata : await HeavyUserPlan.userIdForSubscription(subscription.id);
   if (!userId) return false;
   await HeavyUserPlan.saveSubscription(userId, {
+    customerId,
+    subscriptionId: subscription.id,
+    status: subscription.status,
+    currentPeriodEnd: periodEnd(subscription),
+    cancelAtPeriodEnd: subscription.cancel_at_period_end === true || typeof subscription.cancel_at === 'number',
+  });
+  return true;
+}
+
+// The $20 premium plan, found from premiumUserId in its metadata or the
+// customer saved earlier. False when it is nobody's.
+export async function recordPremiumSubscription(subscription: StripeSubscription): Promise<boolean> {
+  const customerId = typeof subscription.customer === 'string' ? subscription.customer : subscription.customer.id;
+  const fromMetadata = Number(subscription.metadata?.premiumUserId);
+  const userId = Number.isInteger(fromMetadata) && fromMetadata > 0 ? fromMetadata : await PremiumSubscription.userIdForCustomer(customerId);
+  if (!userId) return false;
+  await PremiumSubscription.save(userId, {
     customerId,
     subscriptionId: subscription.id,
     status: subscription.status,

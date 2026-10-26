@@ -98,6 +98,11 @@ export const TASKS = {
     label: 'Stock trades of people',
     summary: "Read the House and Senate periodic transaction reports for new stock trades by members of Congress, save them to the people's pages and tell the people watching each person.",
   },
+  traderPositions: {
+    group: 'upkeep',
+    label: 'Trader positions (premium)',
+    summary: "Read the followed Substack traders' (Michael Burry, HFIR, Shrubstack) newest posts in the owner's Chrome, save each new disclosed buy, sell or hold as a short summary in our own words with a source link, estimate its PnL, and push it to premium subscribers.",
+  },
   threadPredicted: {
     group: 'upkeep',
     label: 'Thread predicted pins',
@@ -270,7 +275,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'productLifecycle', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -315,11 +320,11 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   // runs, including saved settings from before this task was introduced.
   // Add the owner-requested twice-daily layoff and hiring beats, and the
   // person stock-trades update (2026-10-16) the model rubrics, reviews and
-  // spec tables (2026-10-24) and the daily horoscopes (2026-10-26), to saved news jobs too.
+  // spec tables (2026-10-24) and the daily horoscopes (2026-10-26) and the premium trader positions (2026-10-26), to saved news jobs too.
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'earthquakes', 'modelRubrics', 'horoscopes', 'industryForecasts'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'modelRubrics', 'horoscopes', 'industryForecasts'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

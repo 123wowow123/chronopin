@@ -567,6 +567,13 @@ Nothing else needs review: trades are the filing's own figures, never estimated.
 Filings made on paper are scanned images and are skipped. Campaign finance is
 the midnight job's [personCampaigns](#personcampaigns), not this task.
 
+### traderPositions
+
+**Reads** `trader_positions_status` (the followed traders: Michael Burry's Cassandra Unchained, HFIR, Shrubstack; positions stored, newest trade date, last 25 positions).
+**Does** (owner, 2026-10-26: "there should be a 6am/pm job for getting update for this"): for each trader open the archive in the owner's logged-in Chrome (`@browser`, the owner is a paying subscriber; plain fetches see only the free preview), open every post newer than the newest stored trade date that names trades (Burry's "Trading Post", "Short Thoughts" and the like), and call `save_trader_positions` with one entry per trade the post says the trader made: ticker (the underlying for options), instrument (`stock`, `call`, `put`, `short`), action (`buy`, `sell`, `hold`, `swap`), the trade date, a `summary` in **our own words** (at most 280 characters, what and why), and the post URL and exact title. The save estimates the entry price from the close on the trade date, pushes the move once to premium subscribers (Web Push) and, when the run writes to production, saves it there too (`POST /api/admin/traders`, which pushes prod's subscribers).
+**Traps.** These are paid third-party posts: never store or quote the author's text, and never paste more than the link and our summary; the premium page shows our summaries and a source link only. Save only moves the post states the trader made, never inferred ones, and not a stock merely discussed. Options are priced by the underlying in the estimated PnL (labelled so). A swap is two entries (a sell and a buy). The PnL is our estimate from market closes, not the trader's result. Nothing is stored for a post behind a login wall the run cannot get through: say so in the run notes.
+**When.** In the news job (06:00 and 18:00 Los Angeles) after personTrades. Premium is the $20 a month plan (`/premium`, `PremiumSubscription` 0223); admins see the section without paying.
+
 ### threadPredicted
 
 **Reads** `predicted_pins`: predicted pins (market-predicted events and pins tagged `Predicted`), unthreaded pins first, curators' pins first, each with its author and candidate parent threads to join.

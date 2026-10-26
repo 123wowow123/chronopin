@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Forecast category gap research — October 25, 2026"
+description: "This pass adds 16 panels and supplies matches for 19 previously uncovered fixed categories."
+tags: [scraping]
+---
+
 # Forecast category gap research — October 25, 2026
 
 This pass adds 16 panels and supplies matches for 19 previously uncovered fixed

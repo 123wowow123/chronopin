@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Activities expansion — October 26, 2026"
+description: "Added one researched outing to each of the 20 US guides: 663 → 683 catalog entries."
+tags: [scraping]
+---
+
 # Activities expansion — October 26, 2026
 
 Added one researched outing to each of the 20 US guides: 663 → 683 catalog entries. Seeded locally through the existing activities seeder, preserving existing authors and media. All 683 catalog source identities have live backing pins; the 20 additions have reviewed, publicly verified Azure photos. One previously missing catalog pin (Stockyards Championship Rodeo) was also seeded. No production deployment or production content update was performed.

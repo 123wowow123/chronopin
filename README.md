@@ -532,13 +532,11 @@ Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25
 
 
 
-add
-Horoscope for logged in users
+Add substack trader position PnL and push live notifictions if user has paied for the $20 / mo for premium users for activating this feature. Admin will have this showing
 
+people section will show go premium message to to go landing page to purchase and unlock additonal section for poeple page and futre paid content
 
-add substack trader position gain and lost and live notifictions
-behind paywall $20 for premium user
-non substack information available for all users
-and will show go premium to see additonal section on user page
-admin has access
-
+use below substack sites to get premium user content that I'll put behind paywall for their personal trades and PnL and reasoning
+https://michaeljburry.substack.com/
+https://www.hfir.com/
+https://www.shrubstack.com/

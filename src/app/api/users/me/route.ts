@@ -7,6 +7,7 @@ import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
 import { sendVerificationEmailInBackground } from '@/server/emailVerification';
 import { json, readJson, route } from '@/server/http';
 import AdFreeSubscription from '@/server/model/adFreeSubscription';
+import PremiumSubscription from '@/server/model/premiumSubscription';
 import User, { patchableUserProps, pickUserProps, takenBody, takenField } from '@/server/model/user';
 import { loadUser } from '@/server/services/users';
 
@@ -16,7 +17,7 @@ import { loadUser } from '@/server/services/users';
 export const GET = route(async (request: NextRequest) => {
   const user = await getUser(request);
   if (!user) return json(null);
-  return json({ ...user.pick(pickUserProps), ...((await AdFreeSubscription.isActive(user.id)) ? { adFree: true } : {}) });
+  return json({ ...user.pick(pickUserProps), ...((await AdFreeSubscription.isActive(user.id)) ? { adFree: true } : {}), ...((await PremiumSubscription.hasAccess(user)) ? { premium: true } : {}) });
 });
 
 // The longest profile description, in characters.

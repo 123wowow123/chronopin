@@ -36,11 +36,13 @@ import {
 import type { CompiledPerson } from '@/lib/personWiki';
 import { personJsonLd } from '@/lib/seo';
 import { term } from '@/lib/searchTerms';
+import { topicSlug } from '@/lib/topics';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { PinJson } from '@/lib/types';
 import { CommitteesSection } from '@/components/person/CommitteesSection';
 import type { Seat } from '@/lib/conflicts';
 import { TradesSection } from '@/components/person/TradesSection';
+import { PremiumTrades } from '@/components/person/PremiumTrades';
 import type { TradeRow, TradeSummary } from '@/lib/trades';
 import { CampaignSection } from '@/components/person/CampaignSection';
 import type { CampaignCycle } from '@/lib/campaigns';
@@ -62,6 +64,7 @@ export function PersonView({
   holdings = [],
   committees = [],
   campaigns,
+  premiumMoves = 0,
   timeZone,
   video,
   t,
@@ -73,6 +76,8 @@ export function PersonView({
   holdings?: HoldingsSnapshot[];
   committees?: Seat[];
   campaigns: CampaignCycle[];
+  // Tracked premium portfolio moves (0223); the section shows only when there are some.
+  premiumMoves?: number;
   timeZone: string;
   video: TimelineVideoSetting;
   t: Translator;
@@ -132,6 +137,7 @@ export function PersonView({
     years.length ? { id: 'earnings', label: t('person.earnings') } : null,
     { id: 'holdings', label: t('person.holdings.personalTitle') },
     { id: 'trades', label: t('person.trades.personalTitle') },
+    premiumMoves ? { id: 'premium-trades', label: 'Portfolio moves' } : null,
     holdings.some(p => p.scope !== 'personal') ? { id: 'related-holdings', label: t('person.holdings.relatedTitle') } : null,
     committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
     campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
@@ -315,6 +321,7 @@ export function PersonView({
 
         <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="personal" />
         <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} />
+        {premiumMoves ? <PremiumTrades slug={topicSlug(profile.name)} name={profile.name} count={premiumMoves} /> : null}
         {holdings.some(p => p.scope !== 'personal') ? <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="related" /> : null}
 
         {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}

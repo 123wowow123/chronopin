@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Priority personal holdings — 2026-10-25"
+description: "Applied directly through the authenticated holdings API to production."
+tags: [scraping]
+---
+
 # Priority personal holdings — 2026-10-25
 
 Applied directly through the authenticated holdings API to production. All seven

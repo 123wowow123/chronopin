@@ -229,6 +229,13 @@ export async function personTradesRequest(filings: unknown[]) {
   return call<{ added: number; missing: string[] }>('POST', '/api/admin/person-trades', { token, body: { filings } });
 }
 
+// Premium trader positions to production's admin endpoint (the traderPositions
+// task). Production pushes them to its own premium subscribers.
+export async function traderPositionsRequest(positions: unknown[]) {
+  if (!prodBase()) return null;
+  return call<{ added: number[]; skipped: number }>('POST', '/api/admin/traders', { token: await adminToken('trader positions'), body: { positions } });
+}
+
 // The tag backfill for goods pins (productLifecycle.ts): reads of Pin and
 // PinTag and writes of PinTag rows through the admin DB API, signed as the
 // existing admin. Nothing else.
