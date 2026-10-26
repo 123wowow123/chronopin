@@ -1313,9 +1313,10 @@
     "reviews": [
       {
         "url": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
-        "title": "Ifang Hsieh — Jia Duo Bao herbal tea (T Ching)",
+        "title": "Heard of this Chinese tisane beverage?",
+        "publishedDate": "2013-09-16",
         "quote": "with mesona and Chinese licorice producing the dominant flavors.",
-        "publishedDate": null
+        "sentiment": 0.3
       }
     ],
     "sourceUrl": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/"

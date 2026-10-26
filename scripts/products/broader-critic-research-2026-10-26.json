@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "pinId": 6152,
+      "basis": "Three separately authored reviews of the original 1995 film; the 2009 retrospective is dated as published, not backdated to release. Roger Ebert page was inaccessible and was not used.",
+      "reviews": [
+        {
+          "url": "https://www.slantmagazine.com/film/toy-story/",
+          "title": "Review: Toy Story",
+          "publishedDate": "2009-09-30",
+          "quote": "Across Toy Story’s runtime, nary a frame goes to waste in the establishment and development of plot and character",
+          "sentiment": 0.85
+        },
+        {
+          "url": "https://time.com/3833800/toy-story-movie-review/",
+          "title": "Toy Story: They're Alive!",
+          "publishedDate": "1995-11-27",
+          "quote": "the year’s most inventive comedy.",
+          "sentiment": 0.95
+        },
+        {
+          "url": "https://www.straight.com/article-122774/toy-story",
+          "title": "Toy Story",
+          "publishedDate": "1995-11-23",
+          "quote": "Happily, the screenplay, from a team of TV veterans, is as exciting as the visuals.",
+          "sentiment": 0.9
+        }
+      ],
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Toy_Story",
+      "evidence": [
+        {
+          "url": "https://www.slantmagazine.com/film/toy-story/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        },
+        {
+          "url": "https://time.com/3833800/toy-story-movie-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        },
+        {
+          "url": "https://www.straight.com/article-122774/toy-story",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        }
+      ]
+    },
+    {
+      "pinId": 4713,
+      "basis": "Three independent album critics reviewing the original October 2025 album, not its 2026 Encore expansion or release-party film. NME and musicOMH verified in rendered Chromium; Pitchfork opened directly. Mixed/negative verdicts retained.",
+      "reviews": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/taylor-swift-the-life-of-a-showgirl/",
+          "title": "The Life of a Showgirl",
+          "publishedDate": "2025-10-06",
+          "quote": "her music’s never been less compelling.",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/taylor-swift-the-life-of-a-showgirl-review-3897387",
+          "title": "Taylor Swift – ‘The Life Of A Showgirl’ review: magical when the songwriter just lets herself be",
+          "publishedDate": "2025-10-06",
+          "quote": "When Swift simply lets herself be, the magic is still there.",
+          "sentiment": 0.55
+        },
+        {
+          "url": "https://www.musicomh.com/reviews/albums/taylor-swift-the-life-of-a-showgirl",
+          "title": "Taylor Swift – The Life Of A Showgirl",
+          "publishedDate": "2025-10-06",
+          "quote": "too much of it sounds like an artist on autopilot and in need of a rest.",
+          "sentiment": -0.5
+        }
+      ],
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.rollingstone.com/music/music-news/taylor-swift-the-life-of-a-showgirl-listen-release-1235439937/",
+      "evidence": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/taylor-swift-the-life-of-a-showgirl/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/taylor-swift-the-life-of-a-showgirl-review-3897387",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        },
+        {
+          "url": "https://www.musicomh.com/reviews/albums/taylor-swift-the-life-of-a-showgirl",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        }
+      ]
+    },
+    {
+      "pinId": 6511,
+      "basis": "Three independently authored hands-on accounts of the original 2016 HoloLens Developer Edition, not HoloLens 2, announcement renders or a commercial consumer release. Dates are original article bylines.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2016-03-31-our-first-deep-look-at-hololens.html",
+          "title": "Untethered and unguided: Our first deep look at HoloLens",
+          "publishedDate": "2016-03-31",
+          "quote": "I continuously found myself struggling with the limited field of view",
+          "sentiment": -0.55
+        },
+        {
+          "url": "https://www.techadvisor.com/article/717367/hololens-review-hands-on.html",
+          "title": "HoloLens review: Hands-on",
+          "publishedDate": "2016-10-25",
+          "quote": "The HoloLens offers a tantalising version of future AR experiences.",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.wired.com/story/hololens-hands-on-review/",
+          "title": "Hands-on with Microsoft's HoloLens as it lands in Europe",
+          "publishedDate": "2016-10-12",
+          "quote": "Watching a cross section of a heart beating was breathtaking",
+          "sentiment": 0.85
+        }
+      ],
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.foxnews.com/tech/microsofts-3000-hololens-ships-to-developers-starting-march-30.print",
+      "evidence": [
+        {
+          "url": "https://www.engadget.com/2016-03-31-our-first-deep-look-at-hololens.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        },
+        {
+          "url": "https://www.techadvisor.com/article/717367/hololens-review-hands-on.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        },
+        {
+          "url": "https://www.wired.com/story/hololens-hands-on-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body and byline, with rendered browser fallback where required"
+        }
+      ]
+    }
+  ]
+}

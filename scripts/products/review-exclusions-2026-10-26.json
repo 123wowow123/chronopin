@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "pinId": 14111,
+      "url": "https://www.xchuxing.com/article/138470",
+      "reason": "Opened rendered publisher page is dated 2024-11-07 and explicitly tests a previous-generation LS6 AWD with 100 kWh battery. The pin is the September 2026 next-generation Max RWD 76 kWh. Existing English extract is a paraphrase, not a verbatim quote. Cannot count as review of this exact generation/variant.",
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/09/24/im-motors-launches-next-gen-ls6-suv/",
+      "expectedReview": {
+        "url": "https://www.xchuxing.com/article/138470",
+        "quote": "Paraphrase: XCX measured 69% attainment on a crosswind motorway run (702 km CLTC) and 30-80% charging in 14 min at a 600 kW charger with a 299 kW peak.",
+        "title": "[earlier version: 2024 LS6 100 kWh AWD; instrumented test] XCX 续航体验 24期：智己 LS6 超强性能灵蜥智享版纯电续航及充电测试_体验_新出行",
+        "publishedDate": null
+      }
+    },
+    {
+      "pinId": 14200,
+      "url": "https://www.xchuxing.com/article/175037",
+      "reason": "Opened rendered publisher headline and contents explicitly identify a static Formula S showroom inspection, not a driving test. Describes 92.1 kWh and 300 kW RWD preview; pin is the 76.7 kWh 245 kW entry production trim. Cannot support driving-performance criticism.",
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://carnewschina.com/2026/09/16/byd-targets-xiaomi-su7-and-tesla-model-3-with-new-fang-cheng-bao-formula-s-and-s-gt-launch/",
+      "expectedReview": {
+        "url": "https://www.xchuxing.com/article/175037",
+        "quote": "Paraphrase: Sat in the show car: front headroom about one fist and one finger, second row two fingers of headroom and a fist and two fingers of legroom; editor says space and equipment meet daily needs and suggests trying it at a dealer.",
+        "title": "[static walkaround at the Chengdu show, not a drive; pre-launch 300 kW RWD car] 新出行图文详解 242期：静态体验方程豹方程 S_体验_新出行",
+        "publishedDate": null
+      }
+    }
+  ]
+}

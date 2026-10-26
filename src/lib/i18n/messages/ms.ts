@@ -1690,6 +1690,9 @@ const ms: Messages = {
     body: 'Pin atau halaman itu tidak wujud, atau telah dialih keluar.',
     pinHeading: 'Pin tidak ditemui',
     pinBody: 'Pin itu tidak wujud, atau telah dialih keluar.',
+    errorHeading: 'Sesuatu telah berlaku',
+    errorBody: 'Halaman ini gagal dimuatkan. Cuba lagi, atau kembali ke garis masa.',
+    retry: 'Cuba lagi',
   },
   heavy: {
     metaTitle: 'Pelan pengguna tegar',
@@ -2019,6 +2022,7 @@ const ms: Messages = {
       arts: 'Seni dan sastera',
       science: 'Sains dan teknologi',
       media: 'Media dan kehidupan awam',
+      netizen: 'Netizen',
       other: 'Tokoh terkemuka lain',
     },
     all: 'Semua',

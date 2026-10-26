@@ -77,14 +77,7 @@
     },
     "basis": "Variant: Formula S entry RWD, 189,900 yuan, 76.7 kWh, 730 km CLTC (a later CNC article says 720). Flash charging 10-70% in 5 min, 10-97% in 9 min. 0-100 km/h 5.8 s for single-motor cars per kolesa.ru (not variant-specific). LiDAR God's Eye B with urban/highway NOA, compute not named. Wheelbase 2,960 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, 3,000 mm, LiDAR+Thor), so the Formula S undercuts by 30,000. 5.8 s is variant-specific for the 245 kW RWD entry (730 km, 76.7 kWh) per Sohu/Autohome trim lists; 300 kW RWD is also about 5.8 s and AWD 3.6 s.",
     "sourceUrl": "https://cnevpost.com/2026/09/16/byd-fang-cheng-bao-launches-formula-s/",
-    "reviews": [
-      {
-        "url": "https://www.xchuxing.com/article/175037",
-        "title": "[static walkaround at the Chengdu show, not a drive; pre-launch 300 kW RWD car] 新出行图文详解 242期：静态体验方程豹方程 S_体验_新出行",
-        "publishedDate": null,
-        "quote": "Paraphrase: Sat in the show car: front headroom about one fist and one finger, second row two fingers of headroom and a fist and two fingers of legroom; editor says space and equipment meet daily needs and suggests trying it at a dealer."
-      }
-    ]
+    "reviews": []
   },
   {
     "pinId": 14000,
@@ -810,12 +803,6 @@
         "title": "[earlier version: 2026-model LS6 EREV, 66 kWh] 深耕精致市场 试驾新一代智己LS6-新浪汽车",
         "publishedDate": "2025-09-11",
         "quote": "Paraphrase: Sina Auto drove the extended-range LS6 and found it does not feel like a large vehicle thanks to 18-degree four-wheel steering (4.79 m turning radius); 800V charging and the big battery/tank pairing are the selling points."
-      },
-      {
-        "url": "https://www.xchuxing.com/article/138470",
-        "title": "[earlier version: 2024 LS6 100 kWh AWD; instrumented test] XCX 续航体验 24期：智己 LS6 超强性能灵蜥智享版纯电续航及充电测试_体验_新出行",
-        "publishedDate": null,
-        "quote": "Paraphrase: XCX measured 69% attainment on a crosswind motorway run (702 km CLTC) and 30-80% charging in 14 min at a 600 kW charger with a 299 kW peak."
       }
     ]
   },
@@ -1552,9 +1539,10 @@
       },
       {
         "url": "https://www.xchuxing.com/article/175515",
-        "title": "零跑A05试驾分享，售6.39万起，续航510km，高配提供激光雷达 (新出行, individual creator post after a dealership test drive; 510 km LiDAR trim)",
-        "publishedDate": null,
-        "quote": "Paraphrase: Creator test drive of the 510 LiDAR trim: light steering, comfort-tuned chassis with some bounce from the torsion-beam rear on bad roads; 405 km trims peak at 70 kW (30-80% in about 30 min) and 510 km trims take 30-80% in 16 min; non-LiDAR trims have only basic ACC and lane centering."
+        "title": "零跑A05试驾分享，售6.39万起，续航510km，高配提供激光雷达",
+        "publishedDate": "2026-08-24",
+        "quote": "高速跑起来不飘，方向盘轻巧好开。",
+        "sentiment": 0.65
       }
     ]
   },

@@ -1690,6 +1690,9 @@ const id: Messages = {
     body: 'Pin atau halaman itu tidak ada, atau sudah dihapus.',
     pinHeading: 'Pin tidak ditemukan',
     pinBody: 'Pin itu tidak ada, atau sudah dihapus.',
+    errorHeading: 'Terjadi kesalahan',
+    errorBody: 'Halaman ini gagal dimuat. Coba lagi, atau kembali ke linimasa.',
+    retry: 'Coba lagi',
   },
   heavy: {
     metaTitle: 'Paket pengguna berat',
@@ -2019,6 +2022,7 @@ const id: Messages = {
       arts: 'Seni dan sastra',
       science: 'Sains dan teknologi',
       media: 'Media dan kehidupan publik',
+      netizen: 'Netizen',
       other: 'Tokoh terkemuka lain',
     },
     all: 'Semua',

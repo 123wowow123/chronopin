@@ -1677,6 +1677,9 @@ const it: Messages = {
     body: 'Quel pin o quella pagina non esiste, oppure è stato rimosso.',
     pinHeading: 'Pin non trovato',
     pinBody: 'Quel pin non esiste, oppure è stato rimosso.',
+    errorHeading: 'Qualcosa è andato storto',
+    errorBody: 'Impossibile caricare questa pagina. Riprova o torna alla cronologia.',
+    retry: 'Riprova',
   },
   heavy: {
     metaTitle: 'Piano per lettori assidui',
@@ -2006,6 +2009,7 @@ const it: Messages = {
       arts: 'Arti e lettere',
       science: 'Scienza e tecnologia',
       media: 'Media e vita pubblica',
+      netizen: 'Netizen',
       other: 'Altre persone di rilievo',
     },
     all: 'Tutti',

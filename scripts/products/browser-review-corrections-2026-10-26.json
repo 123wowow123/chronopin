@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-26T22:03:28.392Z",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14100,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/11/leapmotor-launches-a05/",
+      "basis": "Exact 2026 A05 510 LiDAR test; replaces an English paraphrase with the original Chinese driving verdict. Date is visible next to the author.",
+      "reviews": [
+        {
+          "url": "https://www.xchuxing.com/article/175515",
+          "title": "零跑A05试驾分享，售6.39万起，续航510km，高配提供激光雷达",
+          "publishedDate": "2026-08-24",
+          "quote": "高速跑起来不飘，方向盘轻巧好开。",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xchuxing.com/article/175515",
+          "openedAt": "2026-10-26T22:03:28.392Z",
+          "method": "Rendered Chromium publisher page",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact 2026 A05 510 LiDAR test; replaces an English paraphrase with the original Chinese driving verdict. Date is visible next to the author."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15216,
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/available-to-order-now-the-new-golf-gti-edition-50-the-most-powerful-production-model-in-the-history-of-the-gti-19912",
+      "basis": "Visible Published: 30 January 2026. JSON-LD emits a year-0001 placeholder, so the rendered original publication byline is the evidence.",
+      "reviews": [
+        {
+          "url": "https://www.carmagazine.co.uk/car-reviews/volkswagen/golf-gti-edition-50/",
+          "title": "Volkswagen Golf GTI Edition 50 (2026) review: the ultimate GTI",
+          "publishedDate": "2026-01-30",
+          "quote": "The steering is pleasingly weighted, splitting the right balance between being relaxed enough for daily driving but alert enough when you fancy chucking it around.",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carmagazine.co.uk/car-reviews/volkswagen/golf-gti-edition-50/",
+          "openedAt": "2026-10-26T22:03:28.392Z",
+          "method": "Rendered Chromium publisher page",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible Published: 30 January 2026. JSON-LD emits a year-0001 placeholder, so the rendered original publication byline is the evidence."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15253,
+      "pinSourceUrl": "https://www.stellantisandyou.co.uk/news-hub/fiat-opens-uk-orders-for-new-500-hybrid",
+      "basis": "Visible Dave Humphreys - 16 Dec 2025 byline, exact new Fiat 500 Hybrid Torino road test, not 500e.",
+      "reviews": [
+        {
+          "url": "https://www.carenthusiast.com/reviews/article/13951/-/2026-Fiat-500/First+drive%3A+Hybrid+Torino.html",
+          "title": "First drive: Fiat 500 Hybrid",
+          "publishedDate": "2025-12-16",
+          "quote": "It feels nimble, partly due to its compact dimensions and quick steering rack, and it's happiest when bimbling around city streets below 40mph.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carenthusiast.com/reviews/article/13951/-/2026-Fiat-500/First+drive%3A+Hybrid+Torino.html",
+          "openedAt": "2026-10-26T22:03:28.392Z",
+          "method": "Rendered Chromium publisher page",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible Dave Humphreys - 16 Dec 2025 byline, exact new Fiat 500 Hybrid Torino road test, not 500e."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 297,
+      "pinSourceUrl": "https://gameranx.com/updates/id/564037/article/crisis-core-final-fantasy-vii-reunion-shadow-drops-on-switch-2-today/",
+      "basis": "Visible BY WILL SILBERMAN ON SEPTEMBER 22, 2026; exact Nintendo Switch 2 release, not the 2022 original port or its release day.",
+      "reviews": [
+        {
+          "url": "https://digitalchumps.com/crisis-core-final-fantasy-vii-reunion-nintendo-switch-2-review/",
+          "title": "CRISIS CORE –FINAL FANTASY VII– REUNION (Nintendo Switch 2) Review",
+          "publishedDate": "2026-09-22",
+          "quote": "Crisis Core: Final Fantasy VII Reunion is an incredible action RPG, don’t get me wrong.",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://digitalchumps.com/crisis-core-final-fantasy-vii-reunion-nintendo-switch-2-review/",
+          "openedAt": "2026-10-26T22:03:28.392Z",
+          "method": "Rendered Chromium publisher page",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible BY WILL SILBERMAN ON SEPTEMBER 22, 2026; exact Nintendo Switch 2 release, not the 2022 original port or its release day."
+        }
+      ]
+    }
+  ]
+}

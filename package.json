@@ -51,6 +51,7 @@
     "people:assess": "tsx scripts/people/assess.ts",
     "people:trades": "tsx scripts/people/trades.ts",
     "traders:seed": "tsx scripts/traders/seed.ts",
+    "people:netizens": "tsx scripts/people/netizens.ts",
     "gov:wiki": "tsx scripts/people/govWiki.ts",
     "companies:wiki": "tsx scripts/people/companyWiki.ts",
     "people:committees": "tsx scripts/people/committees.ts",

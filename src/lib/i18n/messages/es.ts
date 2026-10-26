@@ -1686,6 +1686,9 @@ const es: Messages = {
     body: 'Ese pin o página no existe, o se eliminó.',
     pinHeading: 'Pin no encontrado',
     pinBody: 'Ese pin no existe, o se eliminó.',
+    errorHeading: 'Algo salió mal',
+    errorBody: 'No se pudo cargar esta página. Inténtalo de nuevo o vuelve a la cronología.',
+    retry: 'Reintentar',
   },
   heavy: {
     metaTitle: 'Plan de uso intensivo',
@@ -2015,6 +2018,7 @@ const es: Messages = {
       arts: 'Artes y letras',
       science: 'Ciencia y tecnología',
       media: 'Medios y vida pública',
+      netizen: 'Internautas',
       other: 'Otras personas destacadas',
     },
     all: 'Todos',

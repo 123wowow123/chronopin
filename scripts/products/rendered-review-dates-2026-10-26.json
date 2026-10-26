@@ -1,0 +1,293 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 7661,
+      "pinSourceUrl": "https://www.amazon.com/dp/B00DUQ2HLG",
+      "basis": "Visible Ifang Hsieh Sep 16, 2013 byline. Firsthand Jia Duo Bao taste description, not a health claim.",
+      "reviews": [
+        {
+          "url": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+          "title": "Heard of this Chinese tisane beverage?",
+          "publishedDate": "2013-09-16",
+          "quote": "with mesona and Chinese licorice producing the dominant flavors.",
+          "sentiment": 0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible Ifang Hsieh Sep 16, 2013 byline. Firsthand Jia Duo Bao taste description, not a health claim.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19921,
+      "pinSourceUrl": "https://www.bmwblog.com/2018/10/17/2019-bmw-x7-pricing-to-start-at-74895-in-the-us/",
+      "basis": "Written By Jerry Reynolds | Aug 20, 2019; original xDrive40i road test.",
+      "reviews": [
+        {
+          "url": "https://www.carpro.com/vehicle-reviews/2019-bmw-x7-xdrive40i-review",
+          "title": "2019 BMW X7 xDrive40i Review and Test Drive",
+          "publishedDate": "2019-08-20",
+          "quote": "the X7 handles like a BMW sedan.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carpro.com/vehicle-reviews/2019-bmw-x7-xdrive40i-review",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Written By Jerry Reynolds | Aug 20, 2019; original xDrive40i road test.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19947,
+      "pinSourceUrl": "https://www.motor1.com/news/449901/2022-genesis-g70-refresh-debut/",
+      "basis": "Visible Ron Sessions September 21, 2021 byline; exact facelift G70 road test.",
+      "reviews": [
+        {
+          "url": "https://autobytel.com/2022-genesis-g70-road-test-and-review",
+          "title": "2022 Genesis G70 Road Test and Review",
+          "publishedDate": "2021-09-21",
+          "quote": "Offering a surprisingly communicative and balanced chassis",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://autobytel.com/2022-genesis-g70-road-test-and-review",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible Ron Sessions September 21, 2021 byline; exact facelift G70 road test.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19955,
+      "pinSourceUrl": "https://www.motor1.com/news/619058/civic-type-r-price-starts-at/",
+      "basis": "Visible Ben Miles 11TH APRIL 2023 byline, UK-spec FL5; not a US acceleration specification.",
+      "reviews": [
+        {
+          "url": "https://www.goodwood.com/grr/car-reviews/honda/civic-type-r-2023/",
+          "title": "Goodwood Test: Honda Civic Type R 2023 Review",
+          "publishedDate": "2023-04-11",
+          "quote": "The steering is lightning fast, but manages to never feel like it darts.",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.goodwood.com/grr/car-reviews/honda/civic-type-r-2023/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible Ben Miles 11TH APRIL 2023 byline, UK-spec FL5; not a US acceleration specification.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20060,
+      "pinSourceUrl": "https://www.autoguide.com/auto-news/2020/05/2021-toyota-sienna-revealed-all-hybrid-people-mover.html",
+      "basis": "Written By Amy Plemons | Apr 15, 2021, original hybrid Platinum AWD test.",
+      "reviews": [
+        {
+          "url": "https://www.carpro.com/vehicle-reviews/2021-toyota-sienna-platinum-awd-review",
+          "title": "2021 Toyota Sienna Platinum AWD Review",
+          "publishedDate": "2021-04-15",
+          "quote": "The Sienna's braking and handling felt confident and on point.",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carpro.com/vehicle-reviews/2021-toyota-sienna-platinum-awd-review",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Written By Amy Plemons | Apr 15, 2021, original hybrid Platinum AWD test.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 947,
+      "pinSourceUrl": "https://www.youtube.com/watch?v=j6G9H-EfCE8",
+      "basis": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+      "reviews": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "title": "Flight report: An A350 Xperience",
+          "publishedDate": "2014-06-17",
+          "quote": "I was struck by the low noise level in the cabin",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19508,
+      "pinSourceUrl": "https://skiesmag.com/?p=11128",
+      "basis": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+      "reviews": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "title": "Flight report: An A350 Xperience",
+          "publishedDate": "2014-06-17",
+          "quote": "I was struck by the low noise level in the cabin",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19509,
+      "pinSourceUrl": "https://www.easa.europa.eu/en/newsroom-and-events/press-releases/airbus-a350-900-easa-certified",
+      "basis": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+      "reviews": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "title": "Flight report: An A350 Xperience",
+          "publishedDate": "2014-06-17",
+          "quote": "I was struck by the low noise level in the cabin",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19510,
+      "pinSourceUrl": "https://web.archive.org/web/2015/http://www.airbus.com/newsevents/news-events-single/detail/airbus-delivers-first-ever-a350-xwb-to-qatar-airways/",
+      "basis": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+      "reviews": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "title": "Flight report: An A350 Xperience",
+          "publishedDate": "2014-06-17",
+          "quote": "I was struck by the low noise level in the cabin",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19511,
+      "pinSourceUrl": "https://www.gulf-times.com/story/423472/qatar-airways-starts-a350-flight-frankfurt-first-destination",
+      "basis": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+      "reviews": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "title": "Flight report: An A350 Xperience",
+          "publishedDate": "2014-06-17",
+          "quote": "I was struck by the low noise level in the cabin",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofaviation.com/2014/06/flight-report-an-a350-xperience/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible written by Owen Zupp | June 17, 2014. Firsthand A350-900 prototype media flight; family cabin evidence, not an airline-specific service review.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19576,
+      "pinSourceUrl": "https://www.thisdayinaviation.com/5609/",
+      "basis": "Visible Capt. Rand Peck April 26, 2022 byline. Historical DC-10-40 pilot account; family cockpit evidence, not DC-10-10 numeric performance.",
+      "reviews": [
+        {
+          "url": "https://www.airwaysmag.com/legacy-posts/remembering-dc-10",
+          "title": "Remembering the DC-10: A Pilot's Perspective",
+          "publishedDate": "2022-04-26",
+          "quote": "Sitting up high, with electric seats, huge windows, and a spacious cockpit",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.airwaysmag.com/legacy-posts/remembering-dc-10",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible Capt. Rand Peck April 26, 2022 byline. Historical DC-10-40 pilot account; family cockpit evidence, not DC-10-10 numeric performance.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19577,
+      "pinSourceUrl": "https://www.airlinereporter.com/2014/02/historical-look-dc-10-final-passenger-flight/",
+      "basis": "Visible Capt. Rand Peck April 26, 2022 byline. Historical DC-10-40 pilot account; family cockpit evidence, not DC-10-10 numeric performance.",
+      "reviews": [
+        {
+          "url": "https://www.airwaysmag.com/legacy-posts/remembering-dc-10",
+          "title": "Remembering the DC-10: A Pilot's Perspective",
+          "publishedDate": "2022-04-26",
+          "quote": "Sitting up high, with electric seats, huge windows, and a spacious cockpit",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.airwaysmag.com/legacy-posts/remembering-dc-10",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page; visible original byline",
+          "publicationEvidence": "Visible Capt. Rand Peck April 26, 2022 byline. Historical DC-10-40 pilot account; family cockpit evidence, not DC-10-10 numeric performance.",
+          "quoteVerified": true
+        }
+      ]
+    }
+  ]
+}

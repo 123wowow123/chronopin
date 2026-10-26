@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "pinId": 20054,
+      "table": "PinGasCarPerf",
+      "basis": "Alex Ingram firsthand 2022 1.0 petrol manual road test, matching original Aygo X, not the later hybrid. Original publisher byline 27 Jun 2022.",
+      "reviews": [
+        {
+          "url": "https://www.autoexpress.co.uk/toyota/aygo/357294/new-toyota-aygo-x-2022-review",
+          "title": "New Toyota Aygo X 2022 review",
+          "publishedDate": "2022-06-27",
+          "quote": "It’s an agile car, too, which makes it fairly fun to drive in built-up areas.",
+          "sentiment": 0.6
+        }
+      ],
+      "pinSourceUrl": "https://media.toyota.co.uk/?p=44176",
+      "evidence": [
+        {
+          "url": "https://www.autoexpress.co.uk/toyota/aygo/357294/new-toyota-aygo-x-2022-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original visible byline; genuinely absent date stays null"
+        }
+      ]
+    },
+    {
+      "pinId": 19979,
+      "table": "PinGasCarPerf",
+      "basis": "Two independently authored road/track tests of the 500 PS road-legal GT-XR, not GT2/GTX race cars. Original visible bylines 9 Jun 2023 and 29 Mar 2024. AUTO ZEITUNG and CAR share Bauer ownership; AUTO BILD supplies a distinct publisher alongside existing evo.",
+      "reviews": [
+        {
+          "url": "https://www.autozeitung.de/ktm-x-bow-gt-xr-2022-fahrbericht-204144.html",
+          "title": "KTM X-Bow GT-XR (2022): Erste Testfahrt",
+          "publishedDate": "2023-06-09",
+          "quote": "Ihr eigentliches Wesen ist aber schonungslose Rückmeldung und glasklare Transparenz.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.autobild.de/artikel/ktm-x-bow-gt-xr-test-25365325.html",
+          "title": "KTM X-Bow GT-XR: Test",
+          "publishedDate": "2024-03-29",
+          "quote": "Nichts da, hinten ruhig, vorn lebendig.",
+          "sentiment": 0.5
+        }
+      ],
+      "pinSourceUrl": "https://www.ktm.com/en-us/X-BOW/x-bow-news/ktm-x-bow-gt-xr0.html",
+      "evidence": [
+        {
+          "url": "https://www.autozeitung.de/ktm-x-bow-gt-xr-2022-fahrbericht-204144.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original visible byline; genuinely absent date stays null"
+        },
+        {
+          "url": "https://www.autobild.de/artikel/ktm-x-bow-gt-xr-test-25365325.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original visible byline; genuinely absent date stays null"
+        }
+      ]
+    },
+    {
+      "pinId": 17272,
+      "table": "PinDining",
+      "basis": "Daily Busan municipal English newspaper food feature, a local gourmet guide recommendation of the exact Jeonpo address, distinct from MICHELIN and The Auditing Foodie. No publication date shown; left null. This is guide criticism, not a claimed anonymous restaurant visit.",
+      "reviews": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71983&srchCl=Food",
+          "title": "European fine dining in the City by the Sea",
+          "publishedDate": null,
+          "quote": "The wine menu is great with pairing done by the chef.",
+          "sentiment": 0.65
+        }
+      ],
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/cor-pasta-bar",
+      "evidence": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71983&srchCl=Food",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original visible byline; genuinely absent date stays null"
+        }
+      ]
+    }
+  ]
+}

@@ -26,7 +26,7 @@ const rows: [string, Instrument, TraderAction, string][] = [
 ];
 
 // HFIR's trade alerts (paid, hfir.com) state entry prices; USD-listed ones are used as the entry.
-const HFIR = { traderSlug: 'hfir', traderName: 'HFI Research' };
+const HFIR = { traderSlug: 'hfi-research', traderName: 'HFI Research' };
 const hfir = (slug: string, title: string, tradeDate: string) => ({ ...HFIR, sourceUrl: `https://www.hfir.com/p/${slug}`, sourceTitle: title, tradeDate });
 type Row = [string, Instrument, TraderAction, string, number?];
 const hfirRows: [ReturnType<typeof hfir>, Row[]][] = [
@@ -50,7 +50,7 @@ const hfirRows: [ReturnType<typeof hfir>, Row[]][] = [
 ];
 
 // Shrubstack ("Le Shrub", a parody trading blog): positions the posts say he took.
-const SHRUB = { traderSlug: 'shrubstack', traderName: 'Le Shrub (Shrubstack)' };
+const SHRUB = { traderSlug: 'le-shrub', traderName: 'Le Shrub' };
 const shrub = (slug: string, title: string, tradeDate: string) => ({ ...SHRUB, sourceUrl: `https://www.shrubstack.com/p/${slug}`, sourceTitle: title, tradeDate });
 const shrubRows: [ReturnType<typeof shrub>, Row[]][] = [
   [shrub('the-ai-slop-of-hope-ii-trades', 'The AI Slop of Hope II - Trades', '2026-10-15'), [

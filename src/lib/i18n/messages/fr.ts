@@ -1686,6 +1686,9 @@ const fr: Messages = {
     body: 'Cette épingle ou cette page n’existe pas, ou a été supprimée.',
     pinHeading: 'Épingle introuvable',
     pinBody: 'Cette épingle n’existe pas, ou a été supprimée.',
+    errorHeading: 'Une erreur s’est produite',
+    errorBody: 'Cette page n’a pas pu se charger. Réessayez ou revenez à la chronologie.',
+    retry: 'Réessayer',
   },
   heavy: {
     metaTitle: 'Forfait gros lecteur',
@@ -2015,6 +2018,7 @@ const fr: Messages = {
       arts: 'Arts et lettres',
       science: 'Sciences et technologie',
       media: 'Médias et vie publique',
+      netizen: 'Internautes',
       other: 'Autres personnalités notables',
     },
     all: 'Tous',

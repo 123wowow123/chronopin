@@ -113,6 +113,7 @@ import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
 import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -180,35 +181,35 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
   const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
-    pinUpdates(pin.id),
+    soft(pinUpdates(pin.id), [], 'pinUpdates'),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
     // Any pin may carry a hand-entered reading (a Food pin for a wine expo), so
     // the panel does not wait on the category; the Event markup still does.
-    pinEventInfo(pin.id),
-    pinPower(pin.id),
-    pinEnergy(pin.id),
-    pinDatacenter(pin.id),
-    pinHasSiteShape(pin.id),
-    pinPerf(pin.id),
-    pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
-    pinTaste(pin.id),
-    pinCarPerf(pin.id),
-    pinGasCarPerf(pin.id),
-    pinAircraftPerf(pin.id),
-    pinVideoPerf(pin.id),
-    pinLlmPerf(pin.id),
-    pinDining(pin.id),
-    pinFactory(pin.id),
-    pinIndustries(pin.id, [...(pin.categories ?? []), ...(pin.tags?.map((tag) => tag.name) ?? [])]),
-    pinHotel(pin.id),
-    pinCriticReviews(pin.id),
-    pinCandidates(pin.id),
-    pinCompetitors(pin.id),
+    soft(pinEventInfo(pin.id), null, 'pinEventInfo'),
+    soft(pinPower(pin.id), null, 'pinPower'),
+    soft(pinEnergy(pin.id), null, 'pinEnergy'),
+    soft(pinDatacenter(pin.id), null, 'pinDatacenter'),
+    soft(pinHasSiteShape(pin.id), false, 'pinHasSiteShape'),
+    soft(pinPerf(pin.id), null, 'pinPerf'),
+    pin.categories?.includes('Gaming') ? soft(pinGameInfo(pin.id), null, 'pinGameInfo') : null,
+    soft(pinTaste(pin.id), null, 'pinTaste'),
+    soft(pinCarPerf(pin.id), null, 'pinCarPerf'),
+    soft(pinGasCarPerf(pin.id), null, 'pinGasCarPerf'),
+    soft(pinAircraftPerf(pin.id), null, 'pinAircraftPerf'),
+    soft(pinVideoPerf(pin.id), null, 'pinVideoPerf'),
+    soft(pinLlmPerf(pin.id), null, 'pinLlmPerf'),
+    soft(pinDining(pin.id), null, 'pinDining'),
+    soft(pinFactory(pin.id), null, 'pinFactory'),
+    soft(pinIndustries(pin.id, [...(pin.categories ?? []), ...(pin.tags?.map((tag) => tag.name) ?? [])]), [], 'pinIndustries'),
+    soft(pinHotel(pin.id), null, 'pinHotel'),
+    soft(pinCriticReviews(pin.id), null, 'pinCriticReviews'),
+    soft(pinCandidates(pin.id), [], 'pinCandidates'),
+    soft(pinCompetitors(pin.id), [], 'pinCompetitors'),
     adPlacements(),
     adsenseSlots(),
     viewerUser(),
-    pinAlternateNames(pin.id),
+    soft(pinAlternateNames(pin.id), [], 'pinAlternateNames'),
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};

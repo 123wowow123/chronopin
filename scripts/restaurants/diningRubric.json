@@ -5080,5 +5080,39 @@
         }
       }
     ]
+  },
+  {
+    "pinId": 17272,
+    "scores": {
+      "food": 3,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 3.0 from 4.2 over 60 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/cor-pasta-bar",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/cor-pasta-bar",
+        "quote": "Cor Pasta Bar offers a variety of house-made pasta dishes.",
+        "title": "Cor Pasta bar - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://theauditingfoodie.com/cor-pasta-bar-affordable-pastas-in-busan/",
+        "quote": "few versions have matched the carbonara I had in Italy but Cor Pasta Bar nailed it.",
+        "title": "Cor Pasta Bar: Affordable pasta in Busan",
+        "sentiment": 0.7,
+        "publishedDate": "2025-08-19"
+      },
+      {
+        "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71983&srchCl=Food",
+        "quote": "The wine menu is great with pairing done by the chef.",
+        "title": "European fine dining in the City by the Sea",
+        "sentiment": 0.65,
+        "publishedDate": null
+      }
+    ]
   }
 ]

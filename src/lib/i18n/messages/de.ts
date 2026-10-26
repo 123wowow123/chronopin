@@ -1686,6 +1686,9 @@ const de: Messages = {
     body: 'Dieser Pin oder diese Seite existiert nicht oder wurde entfernt.',
     pinHeading: 'Pin nicht gefunden',
     pinBody: 'Dieser Pin existiert nicht oder wurde entfernt.',
+    errorHeading: 'Etwas ist schiefgelaufen',
+    errorBody: 'Diese Seite konnte nicht geladen werden. Versuche es erneut oder kehre zur Zeitleiste zurück.',
+    retry: 'Erneut versuchen',
   },
   heavy: {
     metaTitle: 'Vielnutzer-Tarif',
@@ -2015,6 +2018,7 @@ const de: Messages = {
       arts: 'Kunst und Literatur',
       science: 'Wissenschaft und Technik',
       media: 'Medien und öffentliches Leben',
+      netizen: 'Netizens',
       other: 'Weitere bekannte Persönlichkeiten',
     },
     all: 'Alle',

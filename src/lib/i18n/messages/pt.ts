@@ -1677,6 +1677,9 @@ const pt: Messages = {
     body: 'Esse pin ou página não existe, ou foi removido.',
     pinHeading: 'Pin não encontrado',
     pinBody: 'Esse pin não existe, ou foi removido.',
+    errorHeading: 'Algo deu errado',
+    errorBody: 'Não foi possível carregar esta página. Tente novamente ou volte à linha do tempo.',
+    retry: 'Tentar novamente',
   },
   heavy: {
     metaTitle: 'Plano para leitores intensivos',
@@ -2006,6 +2009,7 @@ const pt: Messages = {
       arts: 'Artes e letras',
       science: 'Ciência e tecnologia',
       media: 'Mídia e vida pública',
+      netizen: 'Internautas',
       other: 'Outras pessoas notáveis',
     },
     all: 'Todos',

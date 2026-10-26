@@ -1681,6 +1681,9 @@ const ko: Messages = {
     body: '해당 핀 또는 페이지가 존재하지 않거나 삭제되었습니다.',
     pinHeading: '핀을 찾을 수 없습니다',
     pinBody: '해당 핀이 존재하지 않거나 삭제되었습니다.',
+    errorHeading: '문제가 발생했습니다',
+    errorBody: '이 페이지를 불러오지 못했습니다. 다시 시도하거나 타임라인으로 돌아가세요.',
+    retry: '다시 시도',
   },
   heavy: {
     metaTitle: '헤비 유저 플랜',
@@ -2010,6 +2013,7 @@ const ko: Messages = {
       arts: '예술과 문학',
       science: '과학기술',
       media: '미디어와 공적 활동',
+      netizen: '네티즌',
       other: '기타 주요 인물',
     },
     all: '전체',

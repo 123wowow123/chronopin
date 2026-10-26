@@ -46,6 +46,6 @@ export function averagePnl(rows: TraderPositionRow[]): number | null {
 // our own words with a link back; never copied (docs/okf/scraping/daily-jobs.md#traderpositions).
 export const TRADER_SOURCES = [
   { slug: 'michael-burry', name: 'Michael Burry', archive: 'https://michaeljburry.substack.com/archive', postKind: 'Trading Post / Short Thoughts posts' },
-  { slug: 'hfir', name: 'HFI Research', archive: 'https://www.hfir.com/s/trades', postKind: 'trade and position posts' },
-  { slug: 'shrubstack', name: 'Le Shrub (Shrubstack)', archive: 'https://www.shrubstack.com/archive', postKind: 'trade and position posts' },
+  { slug: 'hfi-research', name: 'HFI Research', archive: 'https://www.hfir.com/s/trades', postKind: 'trade and position posts' },
+  { slug: 'le-shrub', name: 'Le Shrub', archive: 'https://www.shrubstack.com/archive', postKind: 'trade and position posts' },
 ] as const;

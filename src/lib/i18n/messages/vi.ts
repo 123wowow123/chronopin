@@ -1689,6 +1689,9 @@ const vi: Messages = {
     body: 'Ghim hoặc trang đó không tồn tại, hoặc đã bị gỡ.',
     pinHeading: 'Không tìm thấy ghim',
     pinBody: 'Ghim đó không tồn tại, hoặc đã bị gỡ.',
+    errorHeading: 'Đã xảy ra lỗi',
+    errorBody: 'Không tải được trang này. Hãy thử lại hoặc quay về dòng thời gian.',
+    retry: 'Thử lại',
   },
   heavy: {
     metaTitle: 'Gói người dùng nhiều',
@@ -2018,6 +2021,7 @@ const vi: Messages = {
       arts: 'Nghệ thuật và văn chương',
       science: 'Khoa học và công nghệ',
       media: 'Truyền thông và đời sống công chúng',
+      netizen: 'Cộng đồng mạng',
       other: 'Nhân vật nổi bật khác',
     },
     all: 'Tất cả',

@@ -1680,6 +1680,9 @@ const ja: Messages = {
     body: 'そのピンまたはページは存在しないか、削除されました。',
     pinHeading: 'ピンが見つかりません',
     pinBody: 'そのピンは存在しないか、削除されました。',
+    errorHeading: '問題が発生しました',
+    errorBody: 'このページを読み込めませんでした。もう一度試すか、タイムラインに戻ってください。',
+    retry: '再試行',
   },
   heavy: {
     metaTitle: 'ヘビーユーザープラン',
@@ -2009,6 +2012,7 @@ const ja: Messages = {
       arts: '芸術・文学',
       science: '科学・技術',
       media: 'メディア・公共活動',
+      netizen: 'ネットユーザー',
       other: 'その他の著名人',
     },
     all: 'すべて',

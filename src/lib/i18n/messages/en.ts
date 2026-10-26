@@ -1690,6 +1690,9 @@ const en = {
     body: "That pin or page doesn't exist, or it was removed.",
     pinHeading: 'Pin not found',
     pinBody: "That pin doesn't exist, or it was removed.",
+    errorHeading: 'Something went wrong',
+    errorBody: 'This page failed to load. Try again, or go back to the timeline.',
+    retry: 'Try again',
   },
   heavy: {
     metaTitle: 'Heavy user plan',
@@ -2019,6 +2022,7 @@ const en = {
       arts: 'Arts and letters',
       science: 'Science and technology',
       media: 'Media and public life',
+      netizen: 'Netizens',
       other: 'Other notable people',
     },
     all: 'All',

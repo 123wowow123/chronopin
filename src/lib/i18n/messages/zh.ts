@@ -1680,6 +1680,9 @@ const zh: Messages = {
     body: '该图钉或页面不存在，或已被删除。',
     pinHeading: '找不到图钉',
     pinBody: '该图钉不存在，或已被删除。',
+    errorHeading: '出错了',
+    errorBody: '此页面加载失败。请重试，或返回时间线。',
+    retry: '重试',
   },
   heavy: {
     metaTitle: '重度用户方案',
@@ -2009,6 +2012,7 @@ const zh: Messages = {
       arts: '文学艺术',
       science: '科学与技术',
       media: '媒体与公共生活',
+      netizen: '网民',
       other: '其他知名人士',
     },
     all: '全部',

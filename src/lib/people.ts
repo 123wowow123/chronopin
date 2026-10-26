@@ -9,7 +9,7 @@ import { topicSlug } from './topics';
 
 export const PERSON_ROLES = [
   'president', 'vice-president', 'cabinet', 'senator', 'representative', 'governor', 'politician',
-  'business', 'entertainment', 'sports', 'arts', 'science', 'media', 'other',
+  'business', 'entertainment', 'sports', 'arts', 'science', 'media', 'netizen', 'other',
 ] as const;
 export type PersonRole = (typeof PERSON_ROLES)[number];
 
@@ -32,7 +32,7 @@ export function foldRoles(counts: Partial<Record<PersonRole, number>>, min = MIN
   for (const role of PERSON_ROLES) {
     const n = size[role] ?? 0;
     const target: PersonRole = isPolitical(role) ? 'cabinet' : 'other';
-    if (n === 0 || n >= min || role === target || role === 'president') continue;
+    if (n === 0 || n >= min || role === target || role === 'president' || role === 'netizen') continue;
     tab.set(role, target);
     size[target] = (size[target] ?? 0) + n;
     size[role] = 0;
@@ -278,7 +278,8 @@ export const ROLE_ORDER: Record<PersonRole, number> = {
   arts: 10,
   science: 11,
   media: 12,
-  other: 13,
+  netizen: 13,
+  other: 14,
 };
 
 const DAY = /^(\d{4})-(\d{2})-(\d{2})$/;
