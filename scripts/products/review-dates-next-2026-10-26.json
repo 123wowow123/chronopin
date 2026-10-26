@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20003,
+      "pinSourceUrl": "https://www.motor1.com/news/441999/2021-mercedes-benz-s-class/",
+      "basis": "Ward Seugling byline 19 Apr with publisher time datetime 2021-04-19; exact W223 S 500 L.",
+      "reviews": [
+        {
+          "url": "https://www.carjournalism.com/reviews/tested-2021-mercedes-benz-s-class-s500l",
+          "quote": "more engaging to drive than the majority of fast crossovers.",
+          "title": "Tested In Length: 2021 Mercedes-Benz S-Class (S 500 L)",
+          "publishedDate": "2021-04-19",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carjournalism.com/reviews/tested-2021-mercedes-benz-s-class-s500l",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page, visible original byline",
+          "publicationEvidence": "Ward Seugling byline 19 Apr with publisher time datetime 2021-04-19; exact W223 S 500 L.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20045,
+      "pinSourceUrl": "https://www.rushlane.com/amp/tata-altroz-launch-price-12349891.html",
+      "basis": "Jim Gorde Dec 9, 2019 byline; launch Altroz petrol five-speed road test.",
+      "reviews": [
+        {
+          "url": "https://carindia.in/new-tata-altroz-first-drive-review/2/",
+          "quote": "The steering feel is commendable and the responsiveness is excellent.",
+          "title": "New Tata Altroz First Drive Review (Car India, pre-launch first drive)",
+          "publishedDate": "2019-12-09",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://carindia.in/new-tata-altroz-first-drive-review/2/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page, visible original byline",
+          "publicationEvidence": "Jim Gorde Dec 9, 2019 byline; launch Altroz petrol five-speed road test.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20046,
+      "pinSourceUrl": "https://www.rushlane.com/amp/2023-tata-nexon-launch-price-rs-8-1-lakh-to-rs-13-lakh-12478075.html",
+      "basis": "Joshua Varghese Sep 6, 2023 byline; exact facelift Nexon, article explicitly drove petrol and diesel.",
+      "reviews": [
+        {
+          "url": "https://carindia.in/tata-nexon-2023-first-drive-review-fresh-face-fresh-colours/",
+          "quote": "The steering feel is neutral and allows one to control the car confidently",
+          "title": "Tata Nexon 2023 First Drive Review - Fresh Face, Fresh Colours (Car India)",
+          "publishedDate": "2023-09-06",
+          "sentiment": 0.55
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://carindia.in/tata-nexon-2023-first-drive-review-fresh-face-fresh-colours/",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page, visible original byline",
+          "publicationEvidence": "Joshua Varghese Sep 6, 2023 byline; exact facelift Nexon, article explicitly drove petrol and diesel.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19894,
+      "pinSourceUrl": "https://www.airwaysmag.com/new-post/maiden-flight-crj700",
+      "basis": "Visible author David Parker Brown and 26 AUG 2010 article header. HTML datetime 2014-04-24 conflicts and appears migration metadata; original visible byline takes precedence, consistent with August 2010 flight report/comments.",
+      "reviews": [
+        {
+          "url": "https://airlinereporter.com/2010/08/my-review-sea-to-lax-on-united-express-crj-700",
+          "quote": "Improved wings and engines over the CRJ-200 make the CRJ-700 a nimble and quick aircraft.",
+          "title": "Flight Review: SEA to LAX on United Express CRJ-700",
+          "publishedDate": "2010-08-26",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://airlinereporter.com/2010/08/my-review-sea-to-lax-on-united-express-crj-700",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page, visible original byline",
+          "publicationEvidence": "Visible author David Parker Brown and 26 AUG 2010 article header. HTML datetime 2014-04-24 conflicts and appears migration metadata; original visible byline takes precedence, consistent with August 2010 flight report/comments.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
+      "basis": "Rendered explicit Published on January 3, 2024. Analysis of Gemini 1.0 Pro versus GPT-3.5, not Ultra.",
+      "reviews": [
+        {
+          "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+          "quote": "competent reasoning ability, and superior instruction following",
+          "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
+          "publishedDate": "2024-01-03",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page, visible original byline",
+          "publicationEvidence": "Rendered explicit Published on January 3, 2024. Analysis of Gemini 1.0 Pro versus GPT-3.5, not Ultra.",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15110,
+      "pinSourceUrl": "https://www.deepseek.com/en/news/v4-preview/",
+      "basis": "Rendered article date April 24, 2026, first matching article time element; other date belongs to a related distillation story. Independent university analysis of V4-Pro, not a new firsthand benchmark run.",
+      "reviews": [
+        {
+          "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
+          "quote": "V4 still trails Anthropic's Opus 4.6 on MRCR 1M long-context recall (92.9%)",
+          "title": "DeepSeek Releases V4: Open-Source 1.6T MoE with 1M Context",
+          "publishedDate": "2026-04-24",
+          "sentiment": -0.35
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
+          "openedAt": "2026-10-26",
+          "method": "Rendered Chromium publisher page, visible original byline",
+          "publicationEvidence": "Rendered article date April 24, 2026, first matching article time element; other date belongs to a related distillation story. Independent university analysis of V4-Pro, not a new firsthand benchmark run.",
+          "quoteVerified": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19587,
+      "pinSourceUrl": "https://boeing.mediaroom.com/1999-10-09-Wheels-Up-Boeing-767-400ER-Makes-Debut-Flight",
+      "basis": "Nick Serati firsthand Delta 767-400ER JFK-CDG business-class flight, original 15 Apr 2024 byline. Exact stretched 767-400ER, not 767-300ER; criticism is specific to the later Delta One cabin and period, not launch prototype interiors. Numeric axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://thriftytraveler.com/reviews/flights/delta-one-767-400er-jfk-cdg/",
+          "title": "Better, But Not Best: Delta One Business Class on the 767-400ER",
+          "publishedDate": "2024-04-15",
+          "quote": "it felt cramped and wasn’t the most comfortable.",
+          "sentiment": -0.45
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://thriftytraveler.com/reviews/flights/delta-one-767-400er-jfk-cdg/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened exact aircraft flight report and visible byline"
+        }
+      ]
+    }
+  ]
+}

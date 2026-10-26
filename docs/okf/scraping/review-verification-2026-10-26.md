@@ -36,6 +36,39 @@ verified running image/commit `771c23ace8a618530bb9bcffe66913447bf49046` on
   environments. Existing ready wikis were preserved. Source/PinSource links
   were registered where reference saves had not yet registered them.
 
+## Continuation verified on October 26
+
+- Added 32 scored reviews: 13 reviews closing all nine prior critic-row gaps;
+  three each for Toy Story (#6152), The Life of a Showgirl (#4713), the original
+  HoloLens Developer Edition (#6511), and Black Doves season one (#15311);
+  one Aygo X road test (#20054), two X-Bow GT-XR tests (#19979), a municipal
+  food-guide recommendation for Cor Pasta Bar (#17272), and three Boeing
+  737-800 flight reports (#19888). Saved references and source wikis on both
+  environments. CAR/AUTO ZEITUNG shared ownership is identified; AUTO BILD
+  adds a distinct publisher. Airline cabin verdicts identify operator,
+  configuration and review period, rather than describing the 1997 prototype.
+- Verified 16 more publication days through rendered publisher bylines,
+  replacing the A05 English paraphrase with its original Chinese driving
+  extract. Tasting days, related-article dates and Updated labels were not
+  treated as original publication dates.
+- Removed two ineligible EV citations through native APIs in both environments:
+  the 2024 AWD LS6 test on the September 2026 Max RWD pin (#14111), and a static
+  Formula S preview on the production entry-trim pin (#14200). Preserved axes,
+  authors and other reviews. The LS6 now re-enters the below-three queue;
+  the Formula S has zero qualifying reviews. Two Dash-8 pilot extracts were
+  corrected without inventing publication dates.
+- Refreshed the research queue with source-specific findings and the saved
+  research basis for each remaining rubric gap. The eleven deliberately
+  undated cases cover the Pan Am retrospective (four pins), Dakar NOLA,
+  Absolut Tabasco’s tasting-day label, the Japanese chocolate tasting,
+  GranCabrio Folgore, Cor Pasta Bar and the two Dash-8 pilot accounts.
+- Validation for this continuation: TypeScript, scoped ESLint, 15 focused
+  review-tool/publication tests, 22 documentation checks, and all 78 car-catalog
+  dry validations passed. Toy Story’s native page rendered the saved quote and
+  sentiment graph in Chromium locally and in production.
+  Every content save was read back on both environments. No production deploy,
+  restart or scheduled-job setting change was performed.
+
 ## Research evidence and replay
 
 The catalogs retain opened URLs, publication evidence and short verbatim
@@ -48,7 +81,21 @@ URL, merge into current data, refuse hand rows, and verify the saved result.
 - [Film and album reviews](../../../scripts/products/critic-research-2026-10-26.json)
 - [Hardware and footwear reviews](../../../scripts/products/product-critic-research-2026-10-26.json)
 - [Gas-car road tests](../../../scripts/products/gas-review-research-2026-10-26.json)
+- [Nine completed critic gaps](../../../scripts/products/critic-completion-2026-10-26.json)
+- [Additional movie, album and hardware critics](../../../scripts/products/broader-critic-research-2026-10-26.json)
+- [Television critics](../../../scripts/products/tv-critic-research-2026-10-26.json)
+- [Road tests and dining guide](../../../scripts/products/rubric-completion-2026-10-26.json)
+- [Boeing 737-800 flight reports](../../../scripts/products/aircraft-review-research-2026-10-26.json)
+- [Browser publication corrections](../../../scripts/products/browser-review-corrections-2026-10-26.json)
+- [Rendered byline corrections](../../../scripts/products/rendered-review-dates-2026-10-26.json)
+- [Dash-8 pilot-source correction](../../../scripts/products/dash8-review-correction-2026-10-26.json)
+- [Researched exclusions](../../../scripts/products/review-exclusions-2026-10-26.json)
 - [Remaining inventory and specific source URLs](../../../scripts/products/review-queue-2026-10-26.json)
+
+The exclusion catalog is replayed with
+`npx tsx scripts/products/replayReviewExclusions.ts --file <catalog>`. It
+preflights both environments, refuses changed extracts and hand rows, removes
+only the named URL, and verifies all unrelated rubric fields remain unchanged.
 
 The original taste, car and dining catalogs were synchronized. Two historical
 taste profiles and seven historical car profiles absent from their original
@@ -63,23 +110,24 @@ or shop is not a firsthand review of the pinned product.
 
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
-| PinTaste | 228 | 496 | 0 (minimum one) | 47 |
-| PinCarPerf | 128 | 337 | 39 | 21 |
-| PinGasCarPerf | 160 | 497 | 16 | 40 |
-| PinAircraftPerf | 165 | 542 | 23 | 29 |
+| PinTaste | 228 | 496 | 0 (minimum one) | 46 |
+| PinCarPerf | 128 | 335 | 40 | 18 |
+| PinGasCarPerf | 160 | 500 | 14 | 34 |
+| PinAircraftPerf | 165 | 545 | 22 | 22 |
 | PinLlmPerf | 125 | 440 | 4 | 20 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 266 | 14 | 41 |
-| PinCriticReview | 84 | 240 | 9 | 2 |
+| PinDining | 89 | 267 | 13 | 42 |
+| PinCriticReview | 88 | 265 | 0 | 1 |
 
-There are **98 rubric rows below three reviews**, plus nine existing critic
-rows below three. All 205 non-MICHELIN undated entries retain null dates
-pending further evidence; not every entry is eligible for a graph date.
-Every dated review with a quote is scored. Category-level leads still require
-screening: the audit also returns awards, concerts, financial results,
-layoffs, data centers and other events that must not receive invented product
-reviews.
+There are **95 rubric rows below three reviews**. Every one of the 88 existing
+critic rows now has at least three reviews. These are raw coverage counts,
+not a blanket certification of independence or exact-variant eligibility.
+Of 188 non-MICHELIN undated entries, 11 have been checked and deliberately
+retain null dates; **177 date/source checks remain**. Every dated review with
+a quote is scored. Category-level leads still require screening: awards,
+concerts, financial results, layoffs and construction must not receive
+invented product reviews.
 
 The publication pass opened 209 unique URLs for 234 undated entries. Nine
 pages refused the plain fetch; many others supplied no original publication
@@ -88,9 +136,11 @@ emits `0001-01-01` in multiple review records; that is a placeholder and was
 not saved. Several mutable Car and Driver model pages have publication
 metadata predating the reviewed model year; those candidates were not saved.
 Wikipedia, live leaderboards, retailer listings and MICHELIN directory pages
-must not receive invented dates to put them on the graph. For #19565, the
-existing Modeling Madness URL is a model-kit review and needs replacement
-with a review of the actual Dash 8, rather than being counted as coverage.
+must not receive invented dates to put them on the graph. For #19564/#19565, a full reading corrected the initial eligibility assessment:
+the Modeling Madness page contains Ben Brown’s firsthand Dash-8 pilot
+recollections in its History section. Only that real-aircraft passage is
+retained, with a verbatim quote and null publication date; kit assessment
+is not aircraft-performance evidence.
 For Voyah Dream #19873, the opened ElectricVehicleWeb piece is a static
 cabin/practicality first-look and labels its date Last Updated. Its null
 publication date was restored on both environments after the final eligibility

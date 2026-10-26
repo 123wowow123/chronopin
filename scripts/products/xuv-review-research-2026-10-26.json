@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15259,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/new-mahindra-xuv-7xo-suv-revealed-438720",
+      "basis": "Jay Shah explicitly tested the 2.0 turbo-petrol six-speed automatic, matching the rubric powertrain. Visible 8 Jan 2026 23:29 IST byline. Adds CarTrade as a second independent publisher beside two existing Autocar India tests. A third independent petrol-automatic publication is still needed; Moneycontrol, TopGear India and Team-BHP drove diesels and were not borrowed.",
+      "reviews": [
+        {
+          "url": "https://www.cartrade.com/mahindra-cars/xuv-7xo/expert-reviews/mahindra-xuv-7xo-petrol-automatic-first-drive-review/",
+          "title": "Mahindra XUV 7XO Petrol Automatic First Drive Review",
+          "publishedDate": "2026-01-08",
+          "quote": "At low speeds, the steering feels light and makes the XUV 7XO easy to manoeuvre.",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cartrade.com/mahindra-cars/xuv-7xo/expert-reviews/mahindra-xuv-7xo-petrol-automatic-first-drive-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original byline and exact tested powertrain in Engine and Powertrain section"
+        }
+      ]
+    }
+  ]
+}

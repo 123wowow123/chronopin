@@ -2563,5 +2563,43 @@
         "publishedDate": "2025-07-18"
       }
     ]
+  },
+  {
+    "pinId": 20027,
+    "scores": {
+      "range": 1.5,
+      "charging": 3.5,
+      "acceleration": 4.5,
+      "assistance": null,
+      "space": 3,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Scored: Taycan Turbo S launch car (93.4 kWh). Range 412 km WLTP (Porsche) = 1.5. Charging 270 kW peak, 5-80% in 22.5 min (Porsche) = 3.5. Acceleration 2.8 s 0-100 km/h claimed, 2.46 s measured by CarExpert (use claim) = 4.5. Space: 2,900 mm wheelbase (Wikipedia) = 3. Assistance, value and kids null: no driver-assist, rival-price or child-seat figures opened.",
+    "sourceUrl": "https://newsroom.porsche.com/en/2019/products/porsche-taycan-world-premiere-live-all-electric-sports-car-18445.html",
+    "reviews": [
+      {
+        "url": "https://mag.autocar.co.uk/car-review/porsche/taycan/first-drives/porsche-taycan-turbo-s-2020-review",
+        "quote": "They’ll simply be too busy trying to fathom how a car this heavy can be made to handle with the incredible level of composure and precision, the natural chassis balance and the fluent poise you would normally associate with a car weighing nearly a tonne less.",
+        "title": "Tested: 2026 Porsche Taycan Turbo S 2019-2024 - Full review, price & features (Autocar)",
+        "sentiment": 0.9,
+        "publishedDate": "2020-08-07"
+      },
+      {
+        "url": "https://www.carexpert.com.au/car-reviews/2021-porsche-taycan-turbo-s-review-track-test",
+        "quote": "The Turbo S smashed the 2.8 second 0-100km/h claim by a staggering 0.338 seconds.",
+        "title": "2021 Porsche Taycan Turbo S review: Track test (CarExpert, Australian-market track test)",
+        "sentiment": 0.6,
+        "publishedDate": "2021-04-13"
+      },
+      {
+        "url": "https://www.motortrend.com/reviews/2020-porsche-taycan-turbo-s-first-test-review",
+        "quote": "Exiting, it walks the tail around at a very sassy angle",
+        "title": "2020 Porsche Taycan Turbo S First Test: Lächerlich Mode",
+        "sentiment": 0.65,
+        "publishedDate": "2020-02-19"
+      }
+    ]
   }
 ]

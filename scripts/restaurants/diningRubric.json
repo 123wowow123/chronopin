@@ -5114,5 +5114,106 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 17281,
+    "scores": {
+      "food": 3,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 3.0 from 4.2 over 419 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/buda-myeonoak",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/buda-myeonoak",
+        "quote": "Buda Myeonoak, relocated near Haeundae Beach in 2021, offers Pyeongyang cold noodles made out of 100% buckwheat flour.",
+        "title": "Buda Myeonoak - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://danielfooddiary.com/2024/04/22/budamyeonoak/",
+        "quote": "This is as authentic as you can get to traditional Pyongyang naengmyeon taste.",
+        "title": "Buda Myeonoak 부다면옥, BUSAN – One OF The Best Bibim Naengmyeon With Michelin Bib Gourmand, Near Haeundae Beach",
+        "sentiment": 0.7,
+        "publishedDate": "2024-04-22"
+      },
+      {
+        "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+        "quote": "This Pyongyang naengmyeon specialty spot is known for its clean, refreshing flavors.",
+        "title": "Long strands of tradition",
+        "sentiment": 0.65,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 17284,
+    "scores": {
+      "food": 3.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 3.5 from 4.3 over 332 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/bao-haus",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/bao-haus",
+        "quote": "Familiar yet gently exotic, the food is easy to enjoy and thoughtfully prepared.",
+        "title": "Bao Haus - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://eatbusan.com/",
+        "quote": "Taiwanese bao and noodles young locals queue for.",
+        "title": "Eat Busan — Where Locals Actually Eat in Busan",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+        "quote": "both served with quick and friendly service.",
+        "title": "Long strands of tradition",
+        "sentiment": 0.65,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 17283,
+    "scores": {
+      "food": 3,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 3.0 from 4.2 over 1,283 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/hapcheon-gukbapjip",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/hapcheon-gukbapjip",
+        "quote": "The clear, umami‑packed broth leaves a lasting impression.",
+        "title": "Hapcheon Gukbapjip - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.wassupkorea.com/food/michelin-starred-pork-rice-soup-in-busan-a-taste/",
+        "quote": "① Clean and savory broth ② Tender and non-greasy pork",
+        "title": "Michelin-Starred Pork Rice Soup in Busan: A Taste of",
+        "sentiment": 0.6,
+        "publishedDate": "2025-08-26"
+      },
+      {
+        "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&dataNo=69751&srchCl=Food",
+        "quote": "Diners dive right in, delighting in the clean and light soup.",
+        "title": "A bowl of soup that mirrors its hometown history",
+        "sentiment": 0.65,
+        "publishedDate": null
+      }
+    ]
   }
 ]

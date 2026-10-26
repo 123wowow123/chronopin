@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "pinId": 5610,
+      "table": "PinTaste",
+      "url": "https://www.foodstufffinds.co.uk/2026/03/kit-kat-f1-car-bar-tesco-by-cinabar.html?m=0",
+      "reason": "Duplicate mobile query-string alias of the same Cinabar article already saved at its canonical URL without ?m=0; one article must count once.",
+      "pinSourceUrl": "https://groceries.morrisons.com/products/kit-kat-f1-tin-132g/116009154",
+      "expectedReview": {
+        "url": "https://www.foodstufffinds.co.uk/2026/03/kit-kat-f1-car-bar-tesco-by-cinabar.html?m=0",
+        "quote": "The chocolate itself is pleasant, with that familiar sweet Kit Kat flavour.",
+        "title": "Kit Kat F1 Car Bar (Tesco) By @Cinabar",
+        "sentiment": 0.6,
+        "publishedDate": "2026-03-23"
+      }
+    },
+    {
+      "pinId": 15228,
+      "table": "PinGasCarPerf",
+      "url": "https://www.topgear.com/car-reviews/aston-martin/dbx707",
+      "reason": "Opened URL is 404 and the saved extract explicitly describes DBX707, not the pin’s DBX GT variant. Existing basis says no GT road test; do not count another trim or an unverifiable paraphrase as GT driving criticism.",
+      "pinSourceUrl": "https://www.astonmartin.com/en-us/models/dbx-gt",
+      "expectedReview": {
+        "url": "https://www.topgear.com/car-reviews/aston-martin/dbx707",
+        "quote": "Utilizing advanced air suspension and active anti-roll control, it disguises its mass remarkably well with flat cornering, incredible grip, and direct, communicative steering.",
+        "title": "Top Gear: Aston Martin DBX707 Review: Aston's 700bhp Super SUV",
+        "publishedDate": null
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20027,
+      "pinSourceUrl": "https://newsroom.porsche.com/en/2019/products/porsche-taycan-world-premiere-live-all-electric-sports-car-18445.html",
+      "url": "https://www.topgear.com/car-reviews/porsche/taycan/460kw-turbo-93kwh-4dr-auto/first-drive",
+      "reason": "Opened publisher title and body explicitly test Taycan Turbo, not the pin’s Turbo S. Replaced with an opened MotorTrend test of the exact launch-generation Turbo S; three exact-trim reviews remain.",
+      "expectedReview": {
+        "url": "https://www.topgear.com/car-reviews/porsche/taycan/460kw-turbo-93kwh-4dr-auto/first-drive",
+        "quote": "The Taycan Turbo is no 911, because it’s almost a tonne heavier and no amount of suspension management or rear-axle steering is able to disguise that fact in a fast corner.",
+        "title": "Porsche Taycan Turbo review: first UK test (Top Gear, Taycan Turbo not Turbo S)",
+        "publishedDate": null
+      }
+    }
+  ]
+}

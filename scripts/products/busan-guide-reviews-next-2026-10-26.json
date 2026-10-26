@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17281,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/buda-myeonoak",
+      "basis": "Buda Myeonoak at 2F, 36 Jungdong1-ro, Haeundae-gu, exact pin branch. Daily Busan municipal English newspaper food-guide recommendation, distinct from MICHELIN and the other saved publication. Describes the guide’s assessment; no claim of anonymous critic visit. Opened article has no original publication day, so null.",
+      "reviews": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+          "title": "Long strands of tradition",
+          "publishedDate": null,
+          "quote": "This Pyongyang naengmyeon specialty spot is known for its clean, refreshing flavors.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened municipal newspaper food feature, exact branch address and original evaluative text; no publication byline"
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17284,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/bao-haus",
+      "basis": "Bao Haus at 62-9 Seojeon-ro 38beon-gil, Busanjin-gu, exact pin branch; extract refers to bao and beef noodle soup. Daily Busan municipal English newspaper food-guide recommendation, distinct from MICHELIN and the other saved publication. Describes the guide’s assessment; no claim of anonymous critic visit. Opened article has no original publication day, so null.",
+      "reviews": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+          "title": "Long strands of tradition",
+          "publishedDate": null,
+          "quote": "both served with quick and friendly service.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened municipal newspaper food feature, exact branch address and original evaluative text; no publication byline"
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17283,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/hapcheon-gukbapjip",
+      "basis": "Hapcheon Gukbapjip at 235 Yongho-ro, Nam-gu, exact pin branch. Daily Busan municipal English newspaper food-guide recommendation, distinct from MICHELIN and the other saved publication. Describes the guide’s assessment; no claim of anonymous critic visit. Opened article has no original publication day, so null.",
+      "reviews": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&dataNo=69751&srchCl=Food",
+          "title": "A bowl of soup that mirrors its hometown history",
+          "publishedDate": null,
+          "quote": "Diners dive right in, delighting in the clean and light soup.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&dataNo=69751&srchCl=Food",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened municipal newspaper food feature, exact branch address and original evaluative text; no publication byline"
+        }
+      ]
+    }
+  ]
+}

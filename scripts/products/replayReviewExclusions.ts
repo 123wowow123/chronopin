@@ -39,7 +39,8 @@ async function run() {
     for (const target of prepared) {
       if (target.found) await reviewResearchRequest('PUT', target.route, { ...target.row, reviews: target.row.reviews.filter((r: PinReview) => r.url !== entry.url) }, target.production);
       const saved = await reviewResearchRequest<Record<string, any>>('GET', target.route, undefined, target.production);
-      if (saved.reviews.some((r: PinReview) => r.url === entry.url)) throw new Error('Exclusion read-back failed');
+      const expectedReviews = target.row.reviews.filter((r: PinReview) => r.url !== entry.url);
+      if (JSON.stringify(saved.reviews) !== JSON.stringify(expectedReviews)) throw new Error('Exclusion or remaining-review read-back failed');
       for (const [key, value] of Object.entries(target.row)) {
         if (['reviews', 'checkedAt'].includes(key)) continue;
         if (JSON.stringify(saved[key]) !== JSON.stringify(value)) throw new Error(`Unrelated field changed: ${key}`);

@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 15311,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3028714/black-doves-1x01-to-love-then",
+      "basis": "Three independent season-one television critiques of the original 2024 Netflix series. Opened publisher bodies and bylines. Guardian original 6 Dec 2024 distinguished from its 13 Oct 2025 modification. Not reviews of the upcoming second season. RogerEbert source blocked and excluded.",
+      "reviews": [
+        {
+          "url": "https://www.vanityfair.com/hollywood/story/black-doves-netflix-keira-knightley-ben-whishaw-review",
+          "title": "Black Doves Is a Refreshing New Take on the Spy Story",
+          "publishedDate": "2024-12-04",
+          "quote": "Their rapport is textured and credible, the result of thoughtful, specific writing and performances.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.latimes.com/entertainment-arts/tv/story/2024-12-04/black-doves-netflix-review",
+          "title": "‘Black Doves’ is a holiday thriller of the heart",
+          "publishedDate": "2024-12-04",
+          "quote": "it manages to balance relatable relationships with hot- and cold-blooded murder.",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2024/dec/06/black-doves-review-keira-knightley-and-ben-whishaws-gleefully-pulpy-christmas-gift",
+          "title": "Black Doves review – Keira Knightley and Ben Whishaw’s gleefully pulpy Christmas gift",
+          "publishedDate": "2024-12-06",
+          "quote": "pulpy popcorn TV.",
+          "sentiment": 0.35
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.vanityfair.com/hollywood/story/black-doves-netflix-keira-knightley-ben-whishaw-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original byline"
+        },
+        {
+          "url": "https://www.latimes.com/entertainment-arts/tv/story/2024-12-04/black-doves-netflix-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original byline"
+        },
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2024/dec/06/black-doves-review-keira-knightley-and-ben-whishaws-gleefully-pulpy-christmas-gift",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article and original byline"
+        }
+      ]
+    }
+  ]
+}

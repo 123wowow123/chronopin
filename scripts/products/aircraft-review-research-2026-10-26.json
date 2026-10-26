@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19888,
+      "pinSourceUrl": "https://boeing.mediaroom.com/1997-07-31-Longest-Boeing-737-Makes-First-Flight",
+      "basis": "Three independent firsthand flight reports of actual Boeing 737-800 NG airframes, not MAX 8s or simulators. These describe Delta economy (2016), Delta first (2024) and retrofitted United Next first (2024). Cabin verdicts are operator/configuration/period specific, not evidence of the 1997 prototype cabin or universal airframe comfort; numeric rubric axes remain unchanged.",
+      "reviews": [
+        {
+          "url": "https://thepointsguy.com/airline/reviews/delta-737-800-economy-review/",
+          "title": "Review: Delta 737-800 Economy — Las Vegas to New York (JFK)",
+          "publishedDate": "2016-04-25",
+          "quote": "The seat itself was surprisingly spacious",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://onemileatatime.com/reviews/delta-first-class-737-800/",
+          "title": "Review: Delta First Class Boeing 737-800 (ATL-MEX)",
+          "publishedDate": "2024-11-22",
+          "quote": "Despite the seats being thick, they’re not actually terribly comfortable.",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://liveandletsfly.com/united-airlines-737-800-first-class-review/",
+          "title": "Review: United Airlines 737-800 First Class",
+          "publishedDate": "2024-01-08",
+          "quote": "a sleek and modern cabin.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://thepointsguy.com/airline/reviews/delta-737-800-economy-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article, aircraft identification and visible original publication byline; OMAAT Published 22 Nov distinguished from Updated 23 Nov"
+        },
+        {
+          "url": "https://onemileatatime.com/reviews/delta-first-class-737-800/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article, aircraft identification and visible original publication byline; OMAAT Published 22 Nov distinguished from Updated 23 Nov"
+        },
+        {
+          "url": "https://liveandletsfly.com/united-airlines-737-800-first-class-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher article, aircraft identification and visible original publication byline; OMAAT Published 22 Nov distinguished from Updated 23 Nov"
+        }
+      ]
+    }
+  ]
+}

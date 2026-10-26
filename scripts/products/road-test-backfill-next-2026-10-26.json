@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15262,
+      "basis": "Akshay Kulkarni firsthand Bengaluru media drive of the exact September 2026 Baleno facelift, Z12E petrol manual. Not the prior K12N four-cylinder. Steering verdict is explicitly in the Drive, Dynamics section; negative criticism retained.",
+      "reviews": [
+        {
+          "url": "https://www.rushlane.com/2026-maruti-baleno-facelift-review-adas-for-the-win-12555364.html",
+          "title": "2026 Maruti Baleno Facelift Review – ADAS For The Win?",
+          "publishedDate": "2026-09-08",
+          "quote": "The steering lacks feel and it is decently precise and is par for this segment.",
+          "sentiment": -0.2
+        }
+      ],
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/2026-maruti-baleno-facelift-launched-at-rs-610-lakh-440667",
+      "evidence": [
+        {
+          "url": "https://www.rushlane.com/2026-maruti-baleno-facelift-review-adas-for-the-win-12555364.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher firsthand road test and original byline; exact engine/trim matched"
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20027,
+      "basis": "Kim Reynolds MotorTrend instrumented February 2020 first test of launch-generation Taycan Turbo S with 93.4 kWh battery, not Taycan Turbo or later facelift. Adds an independent exact-trim test before excluding the prior Turbo-only citation.",
+      "reviews": [
+        {
+          "url": "https://www.motortrend.com/reviews/2020-porsche-taycan-turbo-s-first-test-review",
+          "title": "2020 Porsche Taycan Turbo S First Test: Lächerlich Mode",
+          "publishedDate": "2020-02-19",
+          "quote": "Exiting, it walks the tail around at a very sassy angle",
+          "sentiment": 0.65
+        }
+      ],
+      "pinSourceUrl": "https://newsroom.porsche.com/en/2019/products/porsche-taycan-world-premiere-live-all-electric-sports-car-18445.html",
+      "evidence": [
+        {
+          "url": "https://www.motortrend.com/reviews/2020-porsche-taycan-turbo-s-first-test-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher firsthand road test and original byline; exact engine/trim matched"
+        }
+      ]
+    }
+  ]
+}

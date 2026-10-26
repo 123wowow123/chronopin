@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 5785,
+      "pinSourceUrl": "https://ir.amd.com/news-events/press-releases/detail/750/innovation-and-competition-return-to-high-performance-pcs-march-2nd-with-worldwide-amd-ryzen-7-availability",
+      "basis": "Three independent launch-day instrumented reviews of flagship Ryzen 7 1800X, with TechSpot additionally testing 1700X. Pin concerns the Ryzen 7 family launch; these excerpts concern the tested flagship and do not establish performance of every sibling or later generation. Preserve differing gaming and workstation verdicts; sentiment scores describe the short extracts, not a consensus product rating.",
+      "reviews": [
+        {
+          "url": "https://arstechnica.com/gadgets/2017/03/amd-ryzen-review/",
+          "title": "AMD Ryzen 7 1800X still behind Intel, but it’s great for the price",
+          "publishedDate": "2017-03-02",
+          "quote": "Ryzen’s gaming performance simply isn’t up to snuff.",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://gamersnexus.net/hwreviews/2822-amd-ryzen-r7-1800x-review-premiere-blender-fps-benchmarks",
+          "title": "AMD Ryzen R7 1800X Review: An i5 in Gaming, i7 in Production",
+          "publishedDate": "2017-03-02",
+          "quote": "AMD still holds a lead in price-to-performance in our Blender benchmark",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.techspot.com/review/1345-amd-ryzen-7-1800x-1700x/page7.html",
+          "title": "AMD Ryzen Review: Ryzen 7 1800X & 1700X Put to the Test",
+          "publishedDate": "2017-03-02",
+          "quote": "the 1800X runs as smooth as silk, sans stuttering from what I observed.",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://arstechnica.com/gadgets/2017/03/amd-ryzen-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original publisher test, matched launch-generation CPU and original publication byline"
+        },
+        {
+          "url": "https://gamersnexus.net/hwreviews/2822-amd-ryzen-r7-1800x-review-premiere-blender-fps-benchmarks",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original publisher test, matched launch-generation CPU and original publication byline"
+        },
+        {
+          "url": "https://www.techspot.com/review/1345-amd-ryzen-7-1800x-1700x/page7.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original publisher test, matched launch-generation CPU and original publication byline"
+        }
+      ]
+    }
+  ]
+}

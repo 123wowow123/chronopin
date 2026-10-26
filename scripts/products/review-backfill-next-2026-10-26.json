@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "pinId": 19897,
+      "table": "PinAircraftPerf",
+      "basis": "Matthew Klint firsthand flight on a SWISS-operated Adria Saab 2000 in June 2019. Exact Saab 2000 type, not Saab 340; original publication 8 Aug 2019 distinguished from later update. Operator cabin observation, not 1992 prototype equipment.",
+      "reviews": [
+        {
+          "url": "https://liveandletsfly.com/swiss-adria-saab-2000-review/",
+          "title": "Review: SWISS Saab 2000 Zurich To Lugano",
+          "publishedDate": "2019-08-08",
+          "quote": "Legroom is not great, but was sufficient.",
+          "sentiment": 0.1
+        }
+      ],
+      "pinSourceUrl": "https://saab.com/newsroom/stories/2022/march/saab-2000-30-year-anniversary-happy-first-flight-day",
+      "evidence": [
+        {
+          "url": "https://liveandletsfly.com/swiss-adria-saab-2000-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body, exact product/aircraft identification and original publication byline"
+        }
+      ]
+    },
+    {
+      "pinId": 19592,
+      "table": "PinAircraftPerf",
+      "basis": "Matthew Klint explicitly identifies a real United 757-300 economy flight from Los Angeles to Chicago in his firsthand cabin incident account. Seat-pitch criticism is operator/configuration specific; not numeric performance or a review of another 757 variant.",
+      "reviews": [
+        {
+          "url": "https://liveandletsfly.com/seat-recline-broken-laptop/",
+          "title": "Airplane Etiquette: Look Before You Recline",
+          "publishedDate": "2018-10-03",
+          "quote": "That’s tight seating.",
+          "sentiment": -0.4
+        }
+      ],
+      "pinSourceUrl": "https://boeing.mediaroom.com/1998-08-02-Boeing-757-300-Flies-Live-For-The-1st-Time",
+      "evidence": [
+        {
+          "url": "https://liveandletsfly.com/seat-recline-broken-laptop/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body, exact product/aircraft identification and original publication byline"
+        }
+      ]
+    },
+    {
+      "pinId": 5610,
+      "table": "PinTaste",
+      "basis": "Verified Cinabar firsthand tasting of the 29g single F1 car bar from the same KitKat F1 line, not the tin packaging. Canonicalizes the mobile query-string alias to avoid counting one article twice. Original visible 23 March 2026 byline.",
+      "reviews": [
+        {
+          "url": "https://www.foodstufffinds.co.uk/2026/03/kit-kat-f1-car-bar-tesco-by-cinabar.html",
+          "title": "Kit Kat F1 Car Bar (Tesco) By @Cinabar",
+          "publishedDate": "2026-03-23",
+          "quote": "The chocolate itself is pleasant, with that familiar sweet Kit Kat flavour.",
+          "sentiment": 0.6
+        }
+      ],
+      "pinSourceUrl": "https://groceries.morrisons.com/products/kit-kat-f1-tin-132g/116009154",
+      "evidence": [
+        {
+          "url": "https://www.foodstufffinds.co.uk/2026/03/kit-kat-f1-car-bar-tesco-by-cinabar.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened publisher body, exact product/aircraft identification and original publication byline"
+        }
+      ]
+    }
+  ]
+}

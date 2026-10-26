@@ -473,9 +473,10 @@
     "reviews": [
       {
         "url": "https://www.foodstufffinds.co.uk/2026/03/kit-kat-f1-car-bar-tesco-by-cinabar.html",
-        "quote": "The chocolate itself is pleasant, with that familiar sweet Kit Kat flavour. ... The filling has plenty of crispy bits, which do add texture",
-        "title": "Foodstuff Finds: Kit Kat F1 Car Bar (Tesco), by Cinabar. Review of the single 29g F1 car bar from the same KitKat F1 line, not the 12-car tin",
-        "publishedDate": "2026-03-23"
+        "title": "Kit Kat F1 Car Bar (Tesco) By @Cinabar",
+        "publishedDate": "2026-03-23",
+        "quote": "The chocolate itself is pleasant, with that familiar sweet Kit Kat flavour.",
+        "sentiment": 0.6
       },
       {
         "url": "https://www.snacksonline.co.uk/products/kit-kat-f1-official-car-chocolate-bar-29g",

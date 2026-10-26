@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19564,
+      "pinSourceUrl": "https://www.airwaysmag.com/new-post/maiden-flight-dash-8",
+      "basis": "Eligibility correction: although the page reviews a scale model, its History section explicitly contains Ben Brown’s firsthand Henson Airlines Dash-8 flying experience beginning in 1991, including N941HA and original -100 aircraft. Retain only that pilot observation, never kit quality as airframe criticism. No article publication day shown; stays null. Does not establish 1984 delivery configuration.",
+      "reviews": [
+        {
+          "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+          "title": "Welsh Models 1/144 DeHavilland Dash-8-100",
+          "publishedDate": null,
+          "quote": "They were all rock-stable, so I hand-flew the plane as often as I could.",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+          "openedAt": "2026-10-26",
+          "method": "Opened full History section: author explicitly describes flying Henson Dash-8 aircraft; no original publication date",
+          "quoteVerified": true
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19565,
+      "pinSourceUrl": "https://web.archive.org/web/2021/https://www.baesystems.com/en/heritage/de-havilland-canada-dhc-8-dash-8",
+      "basis": "Eligibility correction: although the page reviews a scale model, its History section explicitly contains Ben Brown’s firsthand Henson Airlines Dash-8 flying experience beginning in 1991, including N941HA and original -100 aircraft. Retain only that pilot observation, never kit quality as airframe criticism. No article publication day shown; stays null. Does not establish 1984 delivery configuration.",
+      "reviews": [
+        {
+          "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+          "title": "Welsh Models 1/144 DeHavilland Dash-8-100",
+          "publishedDate": null,
+          "quote": "They were all rock-stable, so I hand-flew the plane as often as I could.",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+          "openedAt": "2026-10-26",
+          "method": "Opened full History section: author explicitly describes flying Henson Dash-8 aircraft; no original publication date",
+          "quoteVerified": true
+        }
+      ]
+    }
+  ]
+}
