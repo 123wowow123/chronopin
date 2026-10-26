@@ -1,0 +1,66 @@
+{
+  "jobRunId": 24,
+  "date": "2026-10-26",
+  "media": [
+    {
+      "pinId": 20082,
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-26/mitsubishi-savannah-existing-factory.jpg",
+      "originalWidth": 3840,
+      "originalHeight": 2160,
+      "authorName": "Mitsubishi Power Systems, courtesy via The Atlanta Journal-Constitution",
+      "authorUrl": "https://www.ajc.com/news/2026/10/georgia-power-turbine-plant-mitsubishi/",
+      "caption": "Existing Savannah Machinery Works; not proof that the proposed expansion is built.",
+      "sourcePage": "https://www.ajc.com/news/2026/10/georgia-power-turbine-plant-mitsubishi/",
+      "publicVerified": true,
+      "visuallyInspected": true
+    },
+    {
+      "pinId": 20082,
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-26/mitsubishi-savannah-announcement.jpg",
+      "originalWidth": 1024,
+      "originalHeight": 683,
+      "authorName": "Mitsubishi Power Americas",
+      "authorUrl": "https://power.mhi.com/regions/amer/news/261022",
+      "caption": "Mitsubishi Power and regional partners at the October 23, 2026 Savannah Machinery Works expansion announcement; construction groundbreaking remains ahead.",
+      "sourcePage": "https://power.mhi.com/regions/amer/news/261022",
+      "publicVerified": true,
+      "visuallyInspected": true
+    },
+    {
+      "pinId": 20082,
+      "type": 2,
+      "originalUrl": "https://x.com/BrimmerAda50981/status/2113680561042821504",
+      "authorName": "Adam Van Brimmer",
+      "authorUrl": "https://x.com/BrimmerAda50981",
+      "caption": "October23 reporting from Savannah Machinery Works.",
+      "sourcePage": "https://x.com/BrimmerAda50981",
+      "publicVerified": true,
+      "visuallyInspected": false
+    },
+    {
+      "pinId": 17641,
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-26/atlanta-dream-state-farm-arena.png",
+      "originalWidth": 2128,
+      "originalHeight": 739,
+      "authorName": "Atlanta Dream / State Farm Arena",
+      "sourcePage": "https://www.statefarmarena.com/news/detail/atlanta-dream-announces-multi-year-agreement-to-playall-home-games-at-state-farm-arena",
+      "sourceAsset": "https://www.statefarmarena.com/assets/img/1440x500-6c064d0dfe.png",
+      "caption": "Official graphic announcing the Dream’s move to State Farm Arena beginning with all 25 home games in 2027.",
+      "publicVerified": true,
+      "visuallyInspected": true
+    }
+  ],
+  "gaps": [
+    {
+      "pinId": 20082,
+      "reason": "No published comparable workforce or project-spending chart found; a single planned jobs count is not a trend."
+    },
+    {
+      "pinId": 20083,
+      "reason": "SEC filing has no transaction imagery. Reuters/AOL scrape yielded a rocket-launch photo and unrelated recommendations. Inspected and excluded the launch photo; no suitable exact-event video or GPU transaction image established."
+    }
+  ]
+}
