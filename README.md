@@ -533,7 +533,7 @@ Review Sentiment Graph, Critic Reviews & Rubric Verification (updated October 25
 
 
 add
-Horoscope
+Horoscope for logged in users
 
 
 add substack trader position gain and lost and live notifictions
@@ -542,6 +542,3 @@ non substack information available for all users
 and will show go premium to see additonal section on user page
 admin has access
 
-
-
-pull prod db to local and generate jsons

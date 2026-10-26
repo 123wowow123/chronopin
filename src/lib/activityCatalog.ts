@@ -14,6 +14,7 @@ export function activityProblems(item: ActivityCatalogItem): string[] {
   if (!item.seasons?.length || item.seasons.some((s) => !SEASONS.includes(s))) problems.push('seasons must be winter/spring/summer/fall');
   for (const m of [item.startMonth, item.endMonth]) if (!Number.isInteger(m) || m < 1 || m > 12) problems.push('months must be 1-12');
   if (!ACTIVITY_CATEGORIES.includes(item.category)) problems.push(`unknown category ${item.category}`);
+  if (item.tripDays && (!item.tripDays.length || item.tripDays.some((days) => days !== 1 && days !== 2) || new Set(item.tripDays).size !== item.tripDays.length)) problems.push('tripDays must contain unique 1/2 day suggestions');
   if (item.startDate && !ISO.test(item.startDate)) problems.push('startDate must be YYYY-MM-DD');
   if (item.endDate && !ISO.test(item.endDate)) problems.push('endDate must be YYYY-MM-DD');
   if (!!item.startDate !== !!item.endDate) problems.push('startDate and endDate go together');

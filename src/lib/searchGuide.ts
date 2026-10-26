@@ -23,7 +23,8 @@ export const SEARCH_GUIDE: SearchGuideGroup[] = [
       { term: 'tag:', what: 'Pins carrying a tag. Categories are tags too (the old category: still works). Award names and the year of an awards body also work.', examples: ['tag:Anime', 'tag:"Tokyo Anime Award Festival 2024"', 'category:Gaming'] },
       { term: '-tag:', what: 'Leaves out pins carrying a tag. Only tags can be negated.', examples: ['tag:Anime -tag:Predicted'] },
       { term: 'person:', what: 'Pins linked to a person, as the People pages write the name.', examples: ['person:"Joe Biden"'] },
-      { term: 'pin:', what: 'Exactly these pin ids, comma-separated. Used by notifications and thread maps; an id may carry a short =label for the map marker.', examples: ['pin:1992,1991,1987'] },
+      { term: 'name:', what: 'Names the search it is in, for anyone signed in: add it to any search and press Enter. The name is saved for everyone and the search runs without it, shown as the named pill. It never narrows the results. Quicker: start the search with the name in brackets, or wrap a long filter as [Name](...) (see Naming a group).', examples: ['[Veo]pin:19661,19662,19663,19664,19665,19666', 'pin:19661,19662,19663,19664,19665,19666 name:Veo', 'tag:Predicted company:Nintendo name:"Nintendo bets"'] },
+      { term: 'pin:', what: 'Exactly these pin ids, comma-separated. Used by notifications and thread maps; an id may carry a short =label for the map marker. The search box shows the list as one pill ("24 pins"), or by its name once someone has named it.', examples: ['pin:1992,1991,1987'] },
     ],
   },
   {
@@ -94,5 +95,25 @@ export const SEARCH_GUIDE_RULES: { title: string; body: string; examples: string
   { title: 'Tags all apply', body: 'Tags side by side must all be carried, and an explicit AND between them says the same. Use OR to match either.', examples: ['tag:"AI Models" tag:Predicted', 'tag:"AI Models" AND tag:Predicted', 'tag:Anime OR tag:Gaming'] },
   { title: 'OR joins groups', body: 'A standalone OR between two groups of terms returns what either group matches.', examples: ['tag:Predicted posted:today OR tag:Predicted updated:>=2026-10-17'] },
   { title: 'Free text', body: 'Anything that is not a term searches the pin text.', examples: ['iphone', 'company:Apple iphone'] },
+  {
+    title: 'Groups',
+    body: 'Brackets group terms, so an OR can sit inside a search: the group is combined with everything around it. A group that holds an OR or a field term counts; ordinary text in brackets, like (2020), is left as written.',
+    examples: ['(tag:Predicted OR tag:Food) company:Apple', '(tag:Anime OR tag:Gaming) posted:today'],
+  },
+  {
+    title: 'Naming a group',
+    body: 'Put a name in square brackets before a group to give a long filter a name: [Predicted food](tag:Predicted updated:>=2026-10-17 OR tag:Predicted posted:2026-10-18 tag:Food). Signed in, press Enter and the search is saved under that name for everyone and shows as one named pill; click the pill to open it back into its terms.',
+    examples: ['[Predicted food](tag:Predicted updated:>=2026-10-17 OR tag:Predicted posted:2026-10-18 tag:Food)'],
+  },
+  {
+    title: 'Pills',
+    body: 'Each term in the search box becomes a pill: click it to edit, or its cross to remove it. In the tag cloud, the Popular searches row holds searches to run again with one click: amber pills are pinned by you, blue ones are your recent searches, plain ones are what others run most. A list of pins (pin:) is never added to that row on its own.',
+    examples: ['tag:Predicted posted:today', 'company:Nintendo company:Sony', 'pin:19661,19662,19663,19664,19665,19666'],
+  },
+  {
+    title: 'Named searches',
+    body: 'Signed in, add name:"Your name" to any search, start it with [Your name] (as in [Veo]pin:19661,19662), or wrap a long filter as [Your name](...), and press Enter, or use Name this search under the Popular searches row. A pin list opens with a suggested name, the tag most of its pins share, and one tap saves it. A named search is shared: every visitor sees it in Popular searches as a green pill with a label icon, a pin list followed by its count (Google · 24), and hovering shows who named it. The search box shows the same pill in place of the terms. Only whoever named a search, or an admin, can rename it; save an empty name to remove it. For example, name the Veo releases below "Veo" and it shows as Veo · 6.',
+    examples: ['pin:19661,19662,19663,19664,19665,19666', 'pin:17316,17328,17340,17354,18037,18038,18039,18078'],
+  },
   { title: 'Quoting', body: 'Quote values with spaces. Single quotes, whole-term quotes and smart quotes work too, and an unclosed quote runs to the end of the query.', examples: ['company:"Electronic Arts"', "company:'Electronic Arts'", '"company:Electronic Arts"'] },
 ];

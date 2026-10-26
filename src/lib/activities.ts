@@ -12,6 +12,8 @@ const SEASON_MONTHS: Record<Season, readonly number[]> = { winter: [12, 1, 2], s
 
 export const ACTIVITY_CATEGORIES = ['outdoor', 'family', 'festival', 'sports', 'arts', 'food', 'wellness', 'holiday'] as const;
 export type ActivityCategoryId = (typeof ACTIVITY_CATEGORIES)[number];
+export const TRIP_LABELS = { 'day-trips': 'Day trips', 'two-day-trips': '2-day trips' } as const;
+export type ActivityTripTab = keyof typeof TRIP_LABELS;
 export const ACTIVITY_CATEGORY_LABELS: Record<ActivityCategoryId, string> = {
   outdoor: 'Outdoors',
   family: 'Family',
@@ -44,7 +46,13 @@ export type ActivityCatalogItem = {
   dateConfidence: 'confirmed' | 'estimated';
   dateReasoning: string;
   checkedAt: string;
+  // Editorial planning suggestions, not operator tour durations or travel times.
+  tripDays?: (1 | 2)[];
 };
+
+export function activitiesForTrip<T extends { activity: Pick<ActivityCatalogItem, 'tripDays'> }>(pins: readonly T[], days: 1 | 2): T[] {
+  return pins.filter((pin) => pin.activity.tripDays?.includes(days));
+}
 
 // Cities ordered by city-center longitude, west to east.
 export const ACTIVITY_CITIES = [
@@ -71,6 +79,16 @@ export const ACTIVITY_CITIES = [
 ] as const;
 
 export type ActivityCity = (typeof ACTIVITY_CITIES)[number];
+
+export const DEFAULT_ACTIVITY_RADIUS_KM = 250;
+export const ACTIVITY_RADII_KM = [50, 100, 150, 250, 400] as const;
+
+// Search the whole catalog by location, including outings assigned to another guide.
+export function activitiesNearCity<T extends { activity: Pick<ActivityCatalogItem, 'latitude' | 'longitude'> }>(
+  pins: readonly T[], city: Place, radiusKm = DEFAULT_ACTIVITY_RADIUS_KM,
+): T[] {
+  return pins.filter((pin) => distanceKm(city, pin.activity) <= radiusKm);
+}
 
 export function activityCity(slug: string): ActivityCity | undefined {
   return ACTIVITY_CITIES.find((city) => city.slug === slug);
@@ -100,10 +118,15 @@ export function monthInWindow(month: number, startMonth: number, endMonth: numbe
 
 type Window = Pick<ActivityCatalogItem, 'startMonth' | 'endMonth' | 'startDate' | 'endDate'>;
 
-// An explicit dated cycle wins while it is current; otherwise the annual month window decides.
-// A dated cycle that has already ended falls back to its month window, because the activity recurs yearly.
+// Exact dates govern their own cycle. Only a later annual cycle may use the
+// typical month window, so an event doesn't appear before opening or after closing.
 export function isActiveOn(item: Window, day: { month: number; iso: string }): boolean {
-  if (item.startDate && item.endDate && day.iso >= item.startDate && day.iso <= item.endDate) return true;
+  if (item.startDate && item.endDate) {
+    if (day.iso <= item.endDate) return day.iso >= item.startDate;
+    const annual = { ...item, startDate: null, endDate: null };
+    const cycle = windowStart(annual, { ...day, year: Number(day.iso.slice(0, 4)) });
+    return monthInWindow(day.month, item.startMonth, item.endMonth) && cycle > item.endDate;
+  }
   return monthInWindow(day.month, item.startMonth, item.endMonth);
 }
 

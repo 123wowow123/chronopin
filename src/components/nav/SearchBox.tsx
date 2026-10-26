@@ -13,7 +13,8 @@ import { useTimeZone } from '@/lib/client/timeZone';
 import { formatDayKey, formatStart } from '@/lib/format';
 import { OCTAGON_AXES } from '@/lib/people';
 import { hasTerm, term } from '@/lib/searchTerms';
-import { DRAG_QUERY_EVENT } from '@/lib/savedQueries';
+import { useSession } from '@/lib/client/session';
+import { DRAG_QUERY_EVENT, queryLabel, queryNamedBy, saveQueryName, takeName, useQueryNames } from '@/lib/savedQueries';
 import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { CLOUD_QUERY_EVENT, HELD_QUERY_EVENT, isTagCloudOpen, TAG_CLOUD_EVENT } from '@/lib/client/tagCloudOpen';
 import { ADD_TERM_EVENT, DRAG_TERM_EVENT } from '@/components/timeline/WordCloud';
@@ -194,12 +195,16 @@ export function SearchBox() {
   const params = useSearchParams();
   const timeZone = useTimeZone('UTC');
   const t = useT();
+  const queryNames = useQueryNames();
+  const { user } = useSession();
 
   // The map searches its own pins; everywhere else a search opens /search.
   const onMap = pathname === '/map';
   const urlQuery = pathname === '/search' || onMap ? params.get('q') || '' : '';
   const urlChoice = pathname === '/search' || onMap ? params.get('f') || '' : '';
   const [items, setItems] = useState(() => toItems(urlQuery));
+  // A search with a saved name shows as one named pill until it is opened to edit.
+  const [openedFor, setOpenedFor] = useState('');
   // The text field's position among the items, and what it holds.
   const [editAt, setEditAt] = useState(() => toItems(urlQuery).length);
   const [draft, setDraft] = useState('');
@@ -241,6 +246,8 @@ export function SearchBox() {
   // The items with the field's text put back where it sits.
   const committed = (text = draft, from = items, at = editAt) => [...from.slice(0, at), ...toItems(text), ...from.slice(at)];
   const query = (text = draft) => joinSearchQuery(committed(text));
+  const wholeKey = joinSearchQuery(items);
+  const namedWhole = items.length > 1 && !draft && openedFor !== wholeKey ? queryNames[wholeKey] : undefined;
 
   // Follow the URL (back/forward, label clicks).
   const [lastUrl, setLastUrl] = useState(`${urlQuery}|${urlChoice}`);
@@ -487,7 +494,11 @@ export function SearchBox() {
     window.dispatchEvent(new CustomEvent(HELD_QUERY_EVENT, { detail: { q } }));
   }
 
-  function submit(q: string, filter = choice, widen = false) {
+  function submit(typed: string, filter = choice, widen = false) {
+    // A name: term names the search: signed in, it is saved for everyone and
+    // the search runs without it, so the box then shows the named pill.
+    const { query: q, name } = takeName(typed);
+    if (name && q && user) saveQueryName(q, name, user.userName ?? null);
     closeSuggestions();
     // With the tag cloud open the box only takes the change; the search runs
     // when the cloud closes (held).
@@ -1046,7 +1057,21 @@ export function SearchBox() {
           // pushing them apart, as the field pulls itself into that gap.
           className="flex h-9 min-w-0 flex-1 items-center gap-1.5 overflow-x-auto overscroll-x-contain ps-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {items.map((item, index) => {
+          {namedWhole ? (
+            <button
+              type="button"
+              data-pill=""
+              title={queryNamedBy(wholeKey) ? t('tagCloud.namedBy', { name: queryNamedBy(wholeKey) as string }) : t('common.edit')}
+              aria-label={t('search.editItem', { name: namedWhole })}
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={() => setOpenedFor(wholeKey)}
+              className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-xs font-medium whitespace-nowrap text-ink ring-1 ring-emerald-500/60 ring-inset"
+            >
+              <Icon name="tag" aria-hidden className="size-3 text-emerald-600 dark:text-emerald-400" />
+              {queryLabel(wholeKey, namedWhole)}
+            </button>
+          ) : null}
+          {(namedWhole ? [] : items).map((item, index) => {
             // Pressing an item must not blur the field first: that would move
             // the field before this item opens.
             const keepFocus = (event: React.MouseEvent) => event.preventDefault();
@@ -1088,7 +1113,11 @@ export function SearchBox() {
                 </button>
               );
             } else {
-              const { field, value } = termLabel(item, t);
+              const termText = termLabel(item, t);
+              // A saved name stands in for the term, in the cloud's green with its label icon.
+              const saved = queryNames[item.raw];
+              const field = saved ? '' : termText.field;
+              const value = saved ? queryLabel(item.raw, saved) : termText.value;
               const name = `${field ? `${field} ` : ''}${value}`;
               node = (
                 <span
@@ -1096,12 +1125,12 @@ export function SearchBox() {
                   data-raw={item.raw}
                   data-pill=""
                   className={`inline-flex shrink-0 items-center rounded-full text-xs font-medium whitespace-nowrap ring-1 ring-inset ${
-                    picked ? 'bg-accent/55 text-white ring-accent' : item.negated ? 'bg-red-500/10 text-danger ring-red-500/40' : 'bg-accent/15 text-link ring-accent/60'
+                    picked ? 'bg-accent/55 text-white ring-accent' : item.negated ? 'bg-red-500/10 text-danger ring-red-500/40' : saved ? 'bg-emerald-500/15 text-ink ring-emerald-500/60' : 'bg-accent/15 text-link ring-accent/60'
                   }`}
                 >
                   <button
                     type="button"
-                    title={t('common.edit')}
+                    title={saved && queryNamedBy(item.raw) ? t('tagCloud.namedBy', { name: queryNamedBy(item.raw) as string }) : t('common.edit')}
                     aria-label={t('search.editItem', { name })}
                     // A pill goes whole, so a drag from one selects it and
                     // whatever else it reaches; a press that stays put opens
@@ -1119,6 +1148,7 @@ export function SearchBox() {
                     }}
                     className="flex items-center gap-1 py-0.5 ps-2"
                   >
+                    {saved ? <Icon name="tag" aria-hidden className={`size-3 ${picked ? 'text-white/75' : 'text-emerald-600 dark:text-emerald-400'}`} /> : null}
                     {field ? <span className={picked ? 'text-white/75' : 'text-subtle'}>{field}</span> : null}
                     <span className={item.negated ? 'line-through' : undefined}>{value}</span>
                   </button>

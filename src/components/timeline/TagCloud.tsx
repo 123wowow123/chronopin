@@ -8,10 +8,11 @@ import { Fragment, useCallback, useEffect, useId, useMemo, useOptimistic, useRef
 import { createPortal } from 'react-dom';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
+import { useSession } from '@/lib/client/session';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeFields, removeTerm, term } from '@/lib/searchTerms';
-import { DRAG_QUERY_EVENT, pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
+import { DRAG_QUERY_EVENT, isPinList, pinnedQueries, queryLabel, queryNamedBy, recentQueries, recordQuery, recordRecentQuery, saveQueryName, sharedQueries, suggestQueryName, syncQueryNames, togglePinnedQuery, useQueryNames } from '@/lib/savedQueries';
 import { isCategory } from '@/lib/categories';
 import { cloudTags, groupSelection, groupTags, isReserved, isStoredSiteTag, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
@@ -422,6 +423,11 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
   const [popular, setPopular] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [pinned, setPinned] = useState<string[]>([]);
+  // Names given to searches (shared); an unnamed pin: list stays out of the row.
+  const names = useQueryNames();
+  const [naming, setNaming] = useState<string | null>(null);
+  const [suggested, setSuggested] = useState('');
+  const { isLoggedIn, user } = useSession();
   // A pill dragged by pointer (not the browser's drag-and-drop, whose snapshot
   // can't change): a floating copy follows the cursor and turns amber over the zone.
   const [drag, setDrag] = useState<{ q: string; x: number; y: number } | null>(null);
@@ -492,15 +498,22 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
   useEffect(() => {
     setRecent(recentQueries());
     setPinned(pinnedQueries());
+    // Everyone's names are shared, so every viewer's row shows them.
+    syncQueryNames();
     sharedQueries().then(setPopular);
   }, [current]);
   // Pinned searches lead (amber), then this viewer's recent ones (blue), then the popular ones.
   // The place cloud keeps to searches by place (a country or a city).
-  const list = [...new Set([...pinned, ...recent, ...popular])].filter((q) => !placesOnly || parseSearchQuery(q).places.length > 0);
-  if (!list.length) return null;
+  const list = [...new Set([...pinned, ...Object.keys(names), ...recent, ...popular])].filter((q) => (!placesOnly || parseSearchQuery(q).places.length > 0) && (!isPinList(q) || names[q]));
   const now = current.trim().replace(/\s+/g, ' ');
+  const label_ = (q: string) => (names[q] ? queryLabel(q, names[q]) : q);
+  // The search on screen can be named when it is a list of exact pins or already in the row.
+  const nameable = isLoggedIn && !placesOnly && !!now && (isPinList(now) || list.includes(now));
+  if (!list.length && !nameable) return null;
   const toneFor = (q: string) =>
-    pinned.includes(q)
+    names[q]
+      ? `bg-emerald-500/15 font-medium text-ink hover:border-emerald-500 ${q === now ? 'border-emerald-500' : 'border-emerald-500/60'}`
+      : pinned.includes(q)
       ? `bg-amber-500/20 font-medium text-ink hover:border-amber-500 ${q === now ? 'border-amber-500' : 'border-amber-500/70'}`
       : q === now
         ? 'border-accent/60 bg-accent/15 text-link'
@@ -524,7 +537,9 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
       </span>
       <div ref={row} className="-mx-1 flex items-center gap-2 overflow-x-auto px-1 py-1 [scrollbar-width:thin]">
         {list.map((q) => {
-          const isPinned = pinned.includes(q);
+          const isNamed = !!names[q];
+          // A named pill wears a label icon instead of the pin's; its pin button sits at the end.
+          const isPinned = pinned.includes(q) && !isNamed;
           const tone = toneFor(q);
           return (
             <span
@@ -532,9 +547,10 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
               onPointerDown={(e) => startDrag(e, q)}
               className={`group relative shrink-0 select-none transition-transform has-[[data-pill]:active]:scale-[0.97] ${drag?.q === q ? 'opacity-40' : ''}`}
             >
-              <button type="button" data-pill aria-pressed={q === now} onClick={() => !moved.current && onOpen(q)} title={q} className={`rounded-full border py-1 text-sm whitespace-nowrap transition-colors active:scale-100 ${isPinned ? 'ps-8 pe-3' : 'px-3'} ${tone}`}>
-                {q}
+              <button type="button" data-pill aria-pressed={q === now} onClick={() => !moved.current && onOpen(q)} title={names[q] && queryNamedBy(q) ? `${label_(q)}\n${t('tagCloud.namedBy', { name: queryNamedBy(q) as string })}` : q} className={`rounded-full border py-1 text-sm whitespace-nowrap transition-colors active:scale-100 ${isPinned || isNamed ? 'ps-8 pe-3' : 'px-3'} ${tone}`}>
+                {label_(q)}
               </button>
+              {isNamed ? <Icon name="tag" aria-hidden className="pointer-events-none absolute start-3 top-1/2 size-3.5 -translate-y-1/2 text-emerald-600 dark:text-emerald-400" /> : null}
               {isPinned ? (
                 // Over the pinned pill's own pin icon: click it to unpin.
                 <button
@@ -553,12 +569,12 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
                 <span data-pin-button className={`absolute end-[3px] top-1/2 size-6 -translate-y-1/2 rounded-full bg-panel opacity-0 transition-opacity ${dragging ? 'pointer-events-none' : 'group-hover:opacity-100 has-[:focus-visible]:opacity-100'}`}>
                   <button
                     type="button"
-                    aria-label={t('tagCloud.pinQuery')}
-                    title={t('tagCloud.pinQuery')}
+                    aria-label={t(pinned.includes(q) ? 'tagCloud.unpinQuery' : 'tagCloud.pinQuery')}
+                    title={t(pinned.includes(q) ? 'tagCloud.unpinQuery' : 'tagCloud.pinQuery')}
                     onClick={() => togglePin(q)}
                     className="grid size-full place-items-center rounded-full border border-line bg-panel text-muted transition-colors hover:border-amber-500 hover:bg-amber-500 hover:text-white active:border-amber-600 active:bg-amber-600 active:text-white"
                   >
-                    <Icon name="thumbtack" className="size-3.5" />
+                    <Icon name={pinned.includes(q) ? 'thumbtackOff' : 'thumbtack'} className="size-3.5" />
                   </button>
                 </span>
               )}
@@ -566,10 +582,47 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
           );
         })}
       </div>
+      {nameable ? (
+        naming === now ? (
+          <form
+            className="flex items-center gap-2"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const value = new FormData(e.currentTarget).get('name');
+              saveQueryName(now, typeof value === 'string' ? value : '', user?.userName ?? null);
+              setNaming(null);
+            }}
+          >
+            <input
+              name="name"
+              autoFocus
+              key={suggested}
+              defaultValue={names[now] ?? suggested}
+              maxLength={60}
+              placeholder={t('tagCloud.nameQueryPlaceholder')}
+              aria-label={t('tagCloud.nameQueryPlaceholder')}
+              onKeyDown={(e) => e.key === 'Escape' && setNaming(null)}
+              className="min-w-0 flex-1 rounded-full bg-field px-3 py-1 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none"
+            />
+            <button type="submit" className="rounded-full border border-amber-500/70 bg-amber-500/20 px-3 py-1 text-sm font-medium text-ink hover:border-amber-500">
+              {t('tagCloud.nameQuerySave')}
+            </button>
+          </form>
+        ) : (
+          <button type="button" onClick={() => {
+              setSuggested('');
+              setNaming(now);
+              if (!names[now]) suggestQueryName(now).then((name) => name && setSuggested(name));
+            }} className="inline-flex w-fit items-center gap-1 rounded-full border border-dashed border-line px-3 py-1 text-sm text-muted transition-colors hover:border-amber-500 hover:text-ink">
+            <Icon name="thumbtack" className="size-3.5" />
+            {t('tagCloud.nameQuery')}
+          </button>
+        )
+      ) : null}
       {drag &&
         createPortal(
           <span aria-hidden style={{ left: drag.x, top: drag.y }} className="pointer-events-none fixed z-[200] -translate-x-1/2 -translate-y-1/2 rounded-full bg-panel shadow-lg">
-            <span className={`block rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${over ? 'border-amber-500 bg-amber-500/60 text-ink' : toneFor(drag.q)}`}>{drag.q}</span>
+            <span className={`block rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${over ? 'border-amber-500 bg-amber-500/60 text-ink' : toneFor(drag.q)}`}>{label_(drag.q)}</span>
           </span>,
           document.body,
         )}

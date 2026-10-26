@@ -136,11 +136,19 @@
 // pin: takes pin ids, comma-separated (pin:1992,1991,1987): exactly those
 // pins and no others. Nothing in the site writes one by hand - it is how a
 // batch of notifications links to the pins it stands for, which no day or
-// author term can name exactly. The search box shows it as "3 pins".
+// author term can name exactly. The search box shows it as "3 pins", or as
+// its name once someone has named it (SavedSearch, docs/okf/api/saved-searches.md).
 // An id can be followed by = and a label of up to 4 letters or digits
 // (pin:5711=1,5712=2): the map draws that label on the pin's marker, as a
 // thread's map numbers its pins as the thread list does. The search itself
 // ignores the label.
+//
+// name: gives the search it is in a name (name:"Veo releases"), for anyone
+// signed in: the search box saves it for everyone and runs the search without
+// it (src/lib/savedQueries.ts, takeName). It never narrows the results.
+//
+// A named group, [Hot](tag:Predicted OR tag:Food), names the search it makes up.
+// A leading [Name] does the same, as a quicker way to type it ([Veo]pin:1,2,3).
 //
 // A value with spaces is quoted, as the labels write it. Several values for
 // one field widen the search (either company), while different fields narrow
@@ -287,7 +295,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -307,7 +315,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -370,11 +378,106 @@ const OR_WORD = /(?<=^|\s)OR(?=\s|$)/;
 // (tags side by side already all apply); OR starts a new group.
 const OPERATOR_WORD = /(?<=^|\s)(OR|AND)(?=\s|$)/;
 
+// A leading [Name] is the quick way to name a search ([Veo]pin:1,2,3); it is
+// not part of what the search matches.
+export const LEADING_NAME = /^\s*\[([^\]]+)\]\s*/;
+
+// Brackets group: (tag:Predicted OR tag:Food) company:Apple reads as
+// tag:Predicted company:Apple OR tag:Food company:Apple, since the parser has
+// only flat groups joined by OR. A (...) counts as a group only when it holds
+// an OR or a field term, so "iphone (2020)" is still the words it was. A group
+// may be named, [Hot](...), which the search box saves (takeName).
+const MAX_ALTERNATIVES = 32;
+
+// Each character of the text: is it inside a quoted value? ' only opens a
+// quote at the start of a word or after a colon, so McDonald's is no quote.
+function quoted(text: string): boolean[] {
+  const inside: boolean[] = [];
+  let quote = '';
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    const opens = c === '"' || (c === "'" && (i === 0 || /[\s:]/.test(text[i - 1])));
+    if (!quote && opens) {
+      quote = c;
+      inside.push(true);
+    } else if (quote && c === quote && (c === '"' || i === text.length - 1 || /\s/.test(text[i + 1]))) {
+      quote = '';
+      inside.push(true);
+    } else inside.push(!!quote);
+  }
+  return inside;
+}
+
+// The text split at every standalone OR outside brackets and quotes.
+function splitTopLevelOr(text: string): string[] {
+  const inside = quoted(text);
+  const pieces: string[] = [];
+  let depth = 0;
+  let from = 0;
+  for (let i = 0; i < text.length; i++) {
+    if (inside[i]) continue;
+    if (text[i] === '(') depth++;
+    else if (text[i] === ')') depth = Math.max(0, depth - 1);
+    else if (depth === 0 && text.startsWith('OR', i) && (i === 0 || /\s/.test(text[i - 1])) && (i + 2 === text.length || /\s/.test(text[i + 2]))) {
+      pieces.push(text.slice(from, i));
+      from = i + 2;
+      i++;
+    }
+  }
+  pieces.push(text.slice(from));
+  return pieces;
+}
+
+// The first bracketed group of the text: where it opens and closes.
+function findGroup(text: string): { start: number; end: number } | null {
+  const inside = quoted(text);
+  for (let i = 0; i < text.length; i++) {
+    if (inside[i] || text[i] !== '(' || (i > 0 && !/\s/.test(text[i - 1]))) continue;
+    let depth = 0;
+    for (let j = i; j < text.length; j++) {
+      if (inside[j]) continue;
+      if (text[j] === '(') depth++;
+      else if (text[j] === ')' && --depth === 0) {
+        const held = text.slice(i + 1, j);
+        if (/(^|\s)OR(\s|$)/.test(held) || /(^|[\s(])-?[a-z-]+:/i.test(held)) return { start: i, end: j };
+        break;
+      }
+    }
+  }
+  return null;
+}
+
+// The query with its groups multiplied out, alternatives joined by OR.
+export function expandGroups(text: string): string {
+  const expand = (alt: string, depth: number): string[] => {
+    const group = depth < 8 ? findGroup(alt) : null;
+    if (!group) return [alt.replace(/\s+/g, ' ').trim()];
+    const before = alt.slice(0, group.start);
+    const after = alt.slice(group.end + 1);
+    return splitTopLevelOr(alt.slice(group.start + 1, group.end))
+      .flatMap((inner) => expand(`${before} ${inner} ${after}`, depth + 1))
+      .slice(0, MAX_ALTERNATIVES);
+  };
+  if (!text.includes('(')) return text;
+  return splitTopLevelOr(text)
+    .flatMap((alt) => expand(alt, 0))
+    .filter(Boolean)
+    .slice(0, MAX_ALTERNATIVES)
+    .join(' OR ');
+}
+
+// The text of a query that is one group and nothing else, without its brackets.
+export function wholeGroup(text: string): string | null {
+  const t = text.trim();
+  const group = t.startsWith('(') ? findGroup(t) : null;
+  return group && group.end === t.length - 1 ? t.slice(1, -1).trim() : null;
+}
+
 export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
   // The parts split at every OR into groups; the merged query reads them all.
   const groups: QueryPart[][] = [[]];
   const all: QueryPart[] = [];
-  for (const part of splitSearchQuery(searchText)) {
+  for (const part of splitSearchQuery(expandGroups(String(searchText || '').replace(LEADING_NAME, '')))) {
     if (part.kind === 'term') {
       groups[groups.length - 1].push(part);
       all.push(part);
@@ -482,6 +585,8 @@ function readParts(parts: QueryPart[]): SearchQuery {
       if (part.value.trim()) addUnique(query.coolings, part.value.trim());
     } else if (part.field === 'powersource') {
       if (part.value.trim()) addUnique(query.powerSources, part.value.trim());
+    } else if (part.field === 'name') {
+      // Names the search, matches nothing: the search box saves it (takeName).
     } else if (part.field === 'holiday') {
       if (part.value) addUnique(query.holidays, part.value);
     } else if (part.field === 'taste') {

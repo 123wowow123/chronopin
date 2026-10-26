@@ -4831,7 +4831,10 @@
   "costNote": "Free",
   "dateConfidence": "estimated",
   "dateReasoning": "City page lists sunrise-to-sunset hours; the cooler-months window is an assumption.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1
+  ]
  },
  {
   "citySlug": "phoenix",
@@ -4956,7 +4959,10 @@
   "costNote": "Paid - fees on site",
   "dateConfidence": "confirmed",
   "dateReasoning": "Site lists hours by season: Nov-Feb to 5pm, Apr-Sep to 8pm.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1
+  ]
  },
  {
   "citySlug": "las-vegas",
@@ -7995,7 +8001,11 @@
   "costNote": "Paid - summer beach parking fee",
   "dateConfidence": "estimated",
   "dateReasoning": "NPS page opened 2026-10-18; lifeguard season not read, so May-October is estimated.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "boston",
@@ -8151,7 +8161,11 @@
   "costNote": "Paid - park entrance fees apply at some beaches; see NPS page",
   "dateConfidence": "estimated",
   "dateReasoning": "NPS page opened 2026-10-18 (updated Sept 26, 2026); park is open year-round, lifeguarded beach season assumed late May-early Sept so a May-Oct window is estimated.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "chicago",
@@ -10941,7 +10955,10 @@
   "costNote": "Free admission; planetarium shows paid",
   "dateConfidence": "estimated",
   "dateReasoning": "Opened the observatory site on 2026-10-18 (redirect from griffithobservatory.org); hours vary, typically closed Mondays.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1
+  ]
  },
  {
   "citySlug": "los-angeles",
@@ -12291,7 +12308,11 @@
   "costNote": "Paid - cave tour tickets; see NPS fees page",
   "dateConfidence": "estimated",
   "dateReasoning": "Official page opened and the attraction confirmed; no dated cycle stated, so the typical open-season month window is used.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "nashville",
@@ -13149,7 +13170,11 @@
   "costNote": "Paid - vehicle use fee",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened on 2026-10-18 and confirms the activity; State parks page opened; seasonal facilities window estimated.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "new-york",
@@ -13542,7 +13567,11 @@
   "costNote": "Paid - lift, tubing and park tickets vary",
   "dateConfidence": "estimated",
   "dateReasoning": "Opened the page 2026-10-18 (HTTP 200) and confirmed the venue/program operates; no dated cycle published on the page read, so a typical-season window is used.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "philadelphia",
@@ -14435,7 +14464,11 @@
   "costNote": "Paid - state park entrance fee; amount not read",
   "dateConfidence": "estimated",
   "dateReasoning": "TPWD page read 2026-10-18: Frio River floating, swimming, jukebox dancing on summer evenings, 16 miles of trails. Month window is typical; address and coordinates from general knowledge.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "san-antonio",
@@ -14725,7 +14758,11 @@
   "costNote": "Paid - ticket prices not read",
   "dateConfidence": "estimated",
   "dateReasoning": "Official page opened; it lists current park hours and seasonal events (Brick or Treat, Christmas Bricktacular). Operating most of the year; exact days vary.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "san-diego",
@@ -16220,7 +16257,11 @@
   "costNote": "Free",
   "dateConfidence": "estimated",
   "dateReasoning": "Opened the page (HTTP 200) on 2026-10-18 and confirmed the activity; NPS page mentions operating hours and seasons for the visitor center; exact dates not read.",
-  "checkedAt": "2026-10-18"
+  "checkedAt": "2026-10-18",
+  "tripDays": [
+   1,
+   2
+  ]
  },
  {
   "citySlug": "washington-dc",
@@ -16755,5 +16796,607 @@
   "dateConfidence": "estimated",
   "dateReasoning": "Operator page opened 2026-10-18 and the activity is current; no dated cycle published there, so the typical-season window is used.",
   "checkedAt": "2026-10-18"
+ },
+ {
+  "citySlug": "san-francisco",
+  "slug": "point-reyes-coastal-walks",
+  "name": "Point Reyes coastal walks",
+  "venue": "Point Reyes National Seashore",
+  "neighborhood": "Point Reyes Station",
+  "address": "1, Bear Valley Road, Point Reyes Station, California, 94956",
+  "latitude": 38.0411185,
+  "longitude": -122.8003358,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Walk coastal landscapes and visit the Bear Valley Visitor Center to plan trails and wildlife viewing. Check current access before setting out.",
+  "sourceUrl": "https://www.nps.gov/pore/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "seattle",
+  "slug": "klondike-gold-rush-museum",
+  "name": "Klondike Gold Rush museum visit",
+  "venue": "Klondike Gold Rush National Historical Park",
+  "neighborhood": "Pioneer Square",
+  "address": "319, 2nd Avenue South, Seattle, WA, 98104",
+  "latitude": 47.599381,
+  "longitude": -122.331864,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "arts",
+  "description": "Explore interactive exhibits and park films about Seattle’s role in the Yukon gold rush, with historic Pioneer Square nearby. Visitor-center hours vary.",
+  "sourceUrl": "https://www.nps.gov/klse/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "los-angeles",
+  "slug": "joshua-tree-desert-outing",
+  "name": "Joshua Tree desert walks and stargazing",
+  "venue": "Joshua Tree National Park",
+  "neighborhood": "Twentynine Palms",
+  "address": "6533, Freedom Way, Twentynine Palms, CA, 92277",
+  "latitude": 34.134827,
+  "longitude": -116.0568095,
+  "seasons": [
+   "fall",
+   "winter",
+   "spring"
+  ],
+  "startMonth": 10,
+  "endMonth": 5,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Plan nature walks, photography and stargazing among desert rock formations. The park identifies October–May as its busy season; check conditions, entrance fees and trail access.",
+  "sourceUrl": "https://www.nps.gov/jotr/planyourvisit/index.htm",
+  "costNote": "Park entrance fee; check current passes",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   2
+  ]
+ },
+ {
+  "citySlug": "san-diego",
+  "slug": "torrey-pines-reserve-trails",
+  "name": "Torrey Pines reserve trails",
+  "venue": "Torrey Pines State Natural Reserve",
+  "neighborhood": "La Jolla",
+  "address": "12600, N Coast Highway, San Diego, CA, 92037",
+  "latitude": 32.9160702,
+  "longitude": -117.2481883,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore coastal hiking trails and the visitor center among rare Torrey pines and salt-marsh habitat. Check trail closures and reserve rules before visiting.",
+  "sourceUrl": "https://www.parks.ca.gov/?page_id=657",
+  "costNote": "Vehicle day use USD 10–25 north beach / USD 12–25 south beach; demand-based",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "las-vegas",
+  "slug": "zion-canyon-outing",
+  "name": "Zion Canyon trails and shuttle outing",
+  "venue": "Zion National Park",
+  "neighborhood": "Springdale, Utah",
+  "address": "1, Zion Park Boulevard, Springdale, Utah, 84767",
+  "latitude": 37.2001074,
+  "longitude": -112.9869151,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore canyon scenery and walking trails on an extended day trip or overnight visit. Park entry requires a pass; shuttle schedules change seasonally and Angels Landing requires a separate permit.",
+  "sourceUrl": "https://www.nps.gov/zion/planyourvisit/index.htm",
+  "costNote": "Park entrance fee; shuttle included",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   2
+  ]
+ },
+ {
+  "citySlug": "phoenix",
+  "slug": "organ-pipe-desert-drive",
+  "name": "Organ Pipe desert drive and nature walks",
+  "venue": "Organ Pipe Cactus National Monument",
+  "neighborhood": "Ajo",
+  "address": "10, Organ Pipe Drive, Ajo, AZ, 85321",
+  "latitude": 31.9548142,
+  "longitude": -112.8011351,
+  "seasons": [
+   "fall",
+   "winter",
+   "spring"
+  ],
+  "startMonth": 10,
+  "endMonth": 4,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Start at the Kris Eggle Visitor Center, then explore desert nature trails or the Ajo Mountain scenic loop. Winter ranger programs are seasonal; check heat, road conditions and fees.",
+  "sourceUrl": "https://www.nps.gov/orpi/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   2
+  ]
+ },
+ {
+  "citySlug": "denver",
+  "slug": "rocky-mountain-park-outing",
+  "name": "Rocky Mountain wildlife and trail outing",
+  "venue": "Rocky Mountain National Park",
+  "neighborhood": "Estes Park",
+  "address": "Park Entrance Road, Beaver Meadows Visitor Center, Colorado, 80511",
+  "latitude": 40.3666403,
+  "longitude": -105.5619226,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Plan hiking, wildlife watching and ranger programs from the Estes Park side of the park. Roads and trails vary by season; timed entry can be required during published periods.",
+  "sourceUrl": "https://www.nps.gov/romo/planyourvisit/index.htm",
+  "costNote": "Entrance fee or valid park pass; timed-entry reservations may also apply",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "san-antonio",
+  "slug": "government-canyon-trails",
+  "name": "Government Canyon hiking and dinosaur tracks",
+  "venue": "Government Canyon State Natural Area",
+  "neighborhood": "San Antonio",
+  "address": "12861 Galm Rd, San Antonio, TX 78254",
+  "latitude": 29.549316,
+  "longitude": -98.764715,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Walk rocky Hill Country trails, including the five-mile route to dinosaur tracks. Check operating days and weather closures; pets are not allowed on the dinosaur-track trail.",
+  "sourceUrl": "https://tpwd.texas.gov/state-parks/government-canyon",
+  "costNote": "USD 6 adult daily; children 12 and under free",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "austin",
+  "slug": "bastrop-lost-pines-walks",
+  "name": "Bastrop Lost Pines walks",
+  "venue": "Bastrop State Park",
+  "neighborhood": "Bastrop",
+  "address": "100 Park Road 1A, Bastrop, TX 78602",
+  "latitude": 30.110149,
+  "longitude": -97.286864,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore the Lost Pines landscape and nature programs on a day trip east of Austin. Reserve day entry when busy; pool access and interpretive-center hours have separate schedules.",
+  "sourceUrl": "https://tpwd.texas.gov/state-parks/bastrop",
+  "costNote": "USD 5 adult daily; children 12 and under free",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "dallas",
+  "slug": "lake-mineral-wells-trails",
+  "name": "Lake Mineral Wells trails and lakeside outing",
+  "venue": "Lake Mineral Wells State Park & Trailway",
+  "neighborhood": "Mineral Wells",
+  "address": "100 Park Road 71, Mineral Wells, TX 76067",
+  "latitude": 32.812655,
+  "longitude": -98.043368,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore lakeside trails and the park’s trailway. Penitentiary Hollow climbing requires check-in at headquarters; bouldering and free-climbing are prohibited.",
+  "sourceUrl": "https://tpwd.texas.gov/state-parks/lake-mineral-wells",
+  "costNote": "USD 7 adult daily; children 12 and under free",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "houston",
+  "slug": "big-thicket-nature-outing",
+  "name": "Big Thicket hiking and nature programs",
+  "venue": "Big Thicket National Preserve",
+  "neighborhood": "Kountze",
+  "address": "6044, FM 420, Kountze, TX, 77625",
+  "latitude": 30.4583319,
+  "longitude": -94.3873783,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore preserve trails and paddling opportunities, with ranger walks and canoe programs offered through the year. Some free ranger programs require reservations; check routes and conditions.",
+  "sourceUrl": "https://www.nps.gov/bith/planyourvisit/index.htm",
+  "costNote": "Ranger programs free; some require reservations",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "minneapolis",
+  "slug": "saint-croix-riverway-outing",
+  "name": "Saint Croix Riverway paddling and trails",
+  "venue": "Saint Croix National Scenic Riverway",
+  "neighborhood": "St. Croix Falls, Wisconsin",
+  "address": "401, North Hamilton Street, St. Croix Falls, WI, 54024",
+  "latitude": 45.4162778,
+  "longitude": -92.6467705,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 4,
+  "endMonth": 10,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Plan river paddling, hiking and wildlife watching along the St. Croix. Check river conditions and access points; outfitters charge separately for equipment, shuttles and guided trips.",
+  "sourceUrl": "https://www.nps.gov/sacn/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "chicago",
+  "slug": "matthiessen-canyon-trails",
+  "name": "Matthiessen canyon trails",
+  "venue": "Matthiessen State Park",
+  "neighborhood": "Oglesby",
+  "address": "Matthiessen State Park, Illinois, 61348",
+  "latitude": 41.296128,
+  "longitude": -89.0252248,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore woodland and canyon hiking trails. The Lake Falls bridge/trail is closed with a posted detour; 2026 hunting closures include November 20–22, December 3–6 and December 11–13. Check current notices.",
+  "sourceUrl": "https://dnr.illinois.gov/parks/park.matthiessen.html",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "nashville",
+  "slug": "lincoln-birthplace-visit",
+  "name": "Lincoln Birthplace exhibits and trails",
+  "venue": "Abraham Lincoln Birthplace National Historical Park",
+  "neighborhood": "Hodgenville, Kentucky",
+  "address": "2995 Lincoln Farm Road, Hodgenville, KY 42748",
+  "latitude": 37.5315099,
+  "longitude": -85.7352448,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "arts",
+  "description": "Visit the birthplace unit’s visitor center, exhibits and walking trails on an extended day trip to Kentucky. The park operates on Eastern Time; Knob Creek unit hours differ seasonally.",
+  "sourceUrl": "https://www.nps.gov/abli/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding. Birthplace unit coordinates checked against the NPS page location widget; OSM multi-unit centroid rejected.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "atlanta",
+  "slug": "cloudland-canyon-trails",
+  "name": "Cloudland Canyon views and trails",
+  "venue": "Cloudland Canyon State Park",
+  "neighborhood": "Rising Fawn",
+  "address": "Cloudland Canyon State Park, Georgia",
+  "latitude": 34.838505,
+  "longitude": -85.4766392,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Walk canyon viewpoints and woodland trails on Lookout Mountain. Entrance roadworks can cause delays; the temporary visitor center is at the Group Lodge. Check trail conditions and park fees.",
+  "sourceUrl": "https://gastateparks.org/CloudlandCanyon",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "miami",
+  "slug": "big-cypress-boardwalks",
+  "name": "Big Cypress boardwalks and scenic drives",
+  "venue": "Big Cypress National Preserve",
+  "neighborhood": "Ochopee",
+  "address": "52105, Tamiami Trail East, Ochopee, FL, 34141",
+  "latitude": 25.8573617,
+  "longitude": -81.0335111,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Explore swamp viewpoints, boardwalks and scenic drives, with ranger activities offered on their own schedules. Plan access and conditions before traveling into the preserve.",
+  "sourceUrl": "https://www.nps.gov/bicy/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "washington-dc",
+  "slug": "shenandoah-trail-outing",
+  "name": "Shenandoah mountain trails and viewpoints",
+  "venue": "Shenandoah National Park",
+  "neighborhood": "Front Royal, Virginia",
+  "address": "Fox Hollow Trail, Dickey Ridge Visitor Center, Virginia",
+  "latitude": 38.8717346,
+  "longitude": -78.2046544,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "outdoor",
+  "description": "Plan mountain viewpoints, trails and ranger activities in Shenandoah. Check Skyline Drive access and weather-related closures, plus current entry fees, before leaving the city.",
+  "sourceUrl": "https://www.nps.gov/shen/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1,
+   2
+  ]
+ },
+ {
+  "citySlug": "philadelphia",
+  "slug": "longwood-autumn-gardens",
+  "name": "Longwood autumn gardens and conservatories",
+  "venue": "Longwood Gardens",
+  "neighborhood": "Kennett Square",
+  "address": "1001 Longwood Rd, Kennett Square, PA 19348",
+  "latitude": 39.8720422,
+  "longitude": -75.6749597,
+  "seasons": [
+   "fall"
+  ],
+  "startMonth": 10,
+  "endMonth": 11,
+  "startDate": "2026-10-02",
+  "endDate": "2026-11-15",
+  "category": "family",
+  "description": "Explore harvest displays, chrysanthemums and conservatories during Autumn’s Colors. The current display runs through November 15, 2026; timed tickets and some member reservations are required. Check opening days.",
+  "sourceUrl": "https://longwoodgardens.org/",
+  "costNote": "Timed admission tickets; see organizer for prices",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Longwood Gardens official September 30, 2026 blog states Autumn’s Colors opens October 2; official homepage lists it through November 15, 2026. Both opened 2026-10-26. Individual opening days and member reservations vary. https://longwoodgardens.org/blog/2026-09-30/spooky-season-lovers-guide-gardens",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "new-york",
+  "slug": "storm-king-sculpture-walk",
+  "name": "Storm King outdoor sculpture walk",
+  "venue": "Storm King Art Center",
+  "neighborhood": "New Windsor",
+  "address": "20 Old Pleasant Hill Rd, New Windsor, NY 12553",
+  "latitude": 41.4234644,
+  "longitude": -74.0625583,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 4,
+  "endMonth": 11,
+  "startDate": null,
+  "endDate": null,
+  "category": "arts",
+  "description": "Walk rolling meadows and woodland paths around large outdoor sculptures in the Hudson Valley. The published October schedule closes Tuesdays; check seasonal opening dates and book admission before traveling.",
+  "sourceUrl": "https://stormking.org/plan-your-visit/",
+  "costNote": "Adult USD 25 weekday / USD 28 weekend; peak fall weekend pricing may apply",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
+ },
+ {
+  "citySlug": "boston",
+  "slug": "salem-maritime-waterfront",
+  "name": "Salem Maritime waterfront and exhibits",
+  "venue": "Salem Maritime National Historical Park",
+  "neighborhood": "Salem",
+  "address": "160, Derby Street, Salem, Massachusetts, 01970",
+  "latitude": 42.5190589,
+  "longitude": -70.8855837,
+  "seasons": [
+   "winter",
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "startMonth": 1,
+  "endMonth": 12,
+  "startDate": null,
+  "endDate": null,
+  "category": "arts",
+  "description": "Explore historic waterfront places and maritime-history exhibits in Salem. Ranger tours, building access and visitor-center programs have separate schedules; check the park’s current visit information.",
+  "sourceUrl": "https://www.nps.gov/sama/planyourvisit/index.htm",
+  "costNote": null,
+  "dateConfidence": "estimated",
+  "dateReasoning": "Official visitor information opened 2026-10-26. Annual planning window, not a confirmed event cycle; individual hours, programs and closures vary. Location anchored to the named visitor center or venue using OpenStreetMap geocoding.",
+  "checkedAt": "2026-10-26",
+  "tripDays": [
+   1
+  ]
  }
 ]

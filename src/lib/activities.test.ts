@@ -1,7 +1,40 @@
 import { describe, expect, it } from 'vitest';
-import { ACTIVITY_CITIES, isActiveOn, localDay, monthInWindow, seasonOfMonth, windowEnd, windowStart } from './activities';
+import { ACTIVITY_CITIES, activitiesForTrip, activitiesNearCity, activityCity, isActiveOn, localDay, monthInWindow, seasonOfMonth, windowEnd, windowStart, type ActivityCatalogItem } from './activities';
+import catalog from '../server/data/activities.json';
+import { activityProblems } from './activityCatalog';
 
 describe('activity seasons', () => {
+  it('only recommends explicit trip lengths, independently of event duration', () => {
+    const day = { activity: { tripDays: [1] as (1 | 2)[] } };
+    const both = { activity: { tripDays: [1, 2] as (1 | 2)[] } };
+    const unclassified = { activity: {} };
+    expect(activitiesForTrip([day, both, unclassified], 1)).toEqual([day, both]);
+    expect(activitiesForTrip([day, both, unclassified], 2)).toEqual([both]);
+  });
+
+  it('has valid day-trip and two-day suggestions within every guide’s default radius', () => {
+    const pins = (catalog as ActivityCatalogItem[]).map((activity) => ({ activity }));
+    expect(pins.flatMap((pin) => activityProblems(pin.activity))).toEqual([]);
+    for (const city of ACTIVITY_CITIES) {
+      const nearby = activitiesNearCity(pins, city);
+      expect(activitiesForTrip(nearby, 1).length, `${city.slug} day trips`).toBeGreaterThan(0);
+      expect(activitiesForTrip(nearby, 2).length, `${city.slug} 2-day trips`).toBeGreaterThan(0);
+    }
+  });
+  it('includes nearby outings assigned to another city and excludes distant ones', () => {
+    const sanDiego = activityCity('san-diego')!;
+    const local = { activity: { citySlug: 'san-diego', latitude: 32.72, longitude: -117.16 } };
+    const anaheim = { activity: { citySlug: 'los-angeles', latitude: 33.81, longitude: -117.92 } };
+    const newYork = { activity: { citySlug: 'new-york', latitude: 40.71, longitude: -74.01 } };
+    expect(activitiesNearCity([local, anaheim, newYork], sanDiego)).toEqual([local, anaheim]);
+    expect(activitiesNearCity([local, anaheim, newYork], sanDiego, 50)).toEqual([local]);
+  });
+
+  it('includes a venue at the city center even at a zero radius', () => {
+    const city = activityCity('boston')!;
+    const pin = { activity: city };
+    expect(activitiesNearCity([pin], city, 0)).toEqual([pin]);
+  });
   it('lists cities west to east', () => {
     const longitudes = ACTIVITY_CITIES.map((city) => city.longitude);
     expect(longitudes).toEqual([...longitudes].sort((a, b) => a - b));
@@ -38,5 +71,19 @@ describe('activity seasons', () => {
     expect(isActiveOn(dated, day)).toBe(true);
     expect(windowStart(dated, day)).toBe('2026-10-10');
     expect(windowEnd(dated, '2026-10-10')).toBe('2026-10-31');
+  });
+
+  it('does not extend exact event dates to the whole month', () => {
+    const dated = { startMonth: 10, endMonth: 11, startDate: '2026-10-02', endDate: '2026-11-15' };
+    expect(isActiveOn(dated, { month: 10, iso: '2026-10-01' })).toBe(false);
+    expect(isActiveOn(dated, { month: 11, iso: '2026-11-15' })).toBe(true);
+    expect(isActiveOn(dated, { month: 11, iso: '2026-11-16' })).toBe(false);
+    expect(isActiveOn(dated, { month: 10, iso: '2027-10-10' })).toBe(true);
+  });
+
+  it('keeps the end of a dated winter cycle closed until its next annual opening', () => {
+    const dated = { startMonth: 11, endMonth: 2, startDate: '2026-11-10', endDate: '2027-02-15' };
+    expect(isActiveOn(dated, { month: 2, iso: '2027-02-20' })).toBe(false);
+    expect(isActiveOn(dated, { month: 11, iso: '2027-11-20' })).toBe(true);
   });
 });

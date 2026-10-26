@@ -7,3 +7,4 @@
 * [Source wikis](source-wikis.md) - Send wikis written on the dev machine to the server: GET the pending links, POST finished wikis, or carry them on an admin pin post (admin)
 * [Pin OKF bundle](pin-okf.md) - GET a pin and its links as an OKF bundle (admin)
 * [Scraping API](scraping-api.md) - Design of a job-based scraping API with a pluggable LLM driver (not built yet)
+* [Named searches](saved-searches.md) - Shared names for searches (pin lists especially), shown in everyone's popular searches with who named them; signed-in users name, anyone reads

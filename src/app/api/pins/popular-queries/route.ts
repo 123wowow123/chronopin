@@ -5,7 +5,7 @@ import { hasFilters, parseSearchQuery } from '@/server/util/searchQuery';
 import { viewerKey } from '@/server/visitor';
 
 // GET  /api/pins/popular-queries   the combined searches run most lately, [string]
-// POST { q }                       counts one (ignored unless it combines filters or uses OR; crawlers ignored)
+// POST { q }                       counts one (ignored unless it combines filters or uses OR, or if it is a pin: list; crawlers ignored)
 // Every visitor's page asks for this and the answer is a 30-day tally, so one
 // read a minute serves them all (it cost a GROUP BY per call, 2026-10-18).
 let popular: { at: number; rows: Promise<string[]> } | null = null;
@@ -26,7 +26,7 @@ export const POST = route(async (request: NextRequest) => {
   const query = q.trim().replace(/\s+/g, ' ');
   const parsed = parseSearchQuery(query);
   const combo = !!parsed.alternatives || (hasFilters(parsed) && query.split(' ').length >= 2);
-  if (!combo || userAgent(request).isBot) return noContent();
+  if (!combo || parsed.ids.length || userAgent(request).isBot) return noContent();
   await SearchQueryLog.record(query, await viewerKey(request));
   return noContent();
 });

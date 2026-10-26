@@ -11,6 +11,7 @@ export default class SearchQueryLog {
     const rows = await db.query<{ query: string }>(
       `SELECT "query" FROM "SearchQueryLog"
        WHERE "day" >= (now() AT TIME ZONE 'UTC')::date - 30
+         AND "query" !~ '(^|\\s)pin:'
        GROUP BY "query" ORDER BY count(*) DESC, max("day") DESC LIMIT $1`,
       [limit],
     );
