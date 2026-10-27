@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14040,
+      "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "basis": "Variant: Ultra AWD EM-i, the Paris show car (no European spec sheet or price). 1,100 km combined and 130 km electric (29.8 kWh) per CarNewsChina's Paris preview, cycle not stated (elektroquatsch calls the 130 km NEDC); 30-80% in 15 min per elektroquatsch; 0-100 in 5.83 s (CnEVPost, Egypt launch); wheelbase 2,845 mm. Driver-assist hardware is not published in any page opened, so assistance is null; no European price (Egypt is EGP only), so value is null. Doubt: elektroquatsch lists 250 kW system output vs 305 kW in the CarNewsChina preview. Charging revised: e-AWD 29.8 kWh pack rated up to 78 kW DC, 30-80% in about 15 min (CAR Magazine/Geely reference spec, NEDC-era figures, EU homologation pending); scored on peak power.",
+      "reviews": [
+        {
+          "url": "https://motormania.com.mx/pruebas-de-manejo/geely-monjaro-em-i-prueba-manejo-precio-mexico/",
+          "title": "Probamos la Geely Monjaro EM-i: mucha potencia, lujo y detalles que la hacen ver diferente a lo que realmente es",
+          "quote": "en curvas cerradas puede sentirse poco comunicativa",
+          "publishedDate": "2026-10-16",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://drivemeonline.com/geely-monjaro-launches-super-hybrid-twin/",
+          "title": "Geely Monjaro launches super-hybrid twin",
+          "quote": "335 hp climbs, brakes and quickly switches lanes.",
+          "publishedDate": "2026-10-01",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://motormania.com.mx/pruebas-de-manejo/geely-monjaro-em-i-prueba-manejo-precio-mexico/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Carlos Millares original October 16. Mexican GF e-AWD 335 hp with adaptive CCD, not GL FWD or a European homologated car; steering criticism retained as regional context."
+        },
+        {
+          "url": "https://drivemeonline.com/geely-monjaro-launches-super-hybrid-twin/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original October 1 visible date and matching publisher metadata. Reporter describes personally driven Cairo media route in 335 hp electric-AWD hybrid, not gasoline Monjaro; European prices/specification not established."
+        }
+      ],
+      "disposition": "context-only",
+      "reason": "Mexico GF and Egypt export drives cannot satisfy the exact European-market variant requirement. Keep references/source wikis; do not replay into native independent reviews."
+    }
+  ]
+}

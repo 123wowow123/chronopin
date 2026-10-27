@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15264,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/tata-aeris-launched-at-rs-529-lakh-440848",
+      "basis": "Scored variant: 1.2 petrol manual (Smart) at Rs 5.29 lakh. Power 86 hp = 0; economy 20.5 kmpl ARAI (48 mpg) = 5; space 4 (419 L boot, larger than Amaze/Dzire/Aura; airy cabin); value 86 hp / US$5,510 = 15.6 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 5. Acceleration null (no figure published), handling null (one road test).",
+      "reviews": [
+        {
+          "url": "https://www.autocarindia.com/car-reviews/tata-aeris-petrol-review-more-desirable-now-440599",
+          "title": "Tata Aeris petrol review: More desirable now?",
+          "quote": "The clutch is light and has a predictable bite point",
+          "publishedDate": "2026-10-08",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.autocarindia.com/car-reviews/tata-aeris-petrol-review-more-desirable-now-440599",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Dipan Sur original October 8 explicit byline and petrol five-speed manual road-test paragraph. Replaces a boot-space extract with an actual driving/control observation. Existing October 8 publication confirmed; unrelated CNG-AMT recollection excluded."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "basis": "Berry-cherry gummy with a foam top: sweet and fruity, with no bitterness. Tasting-review scope: Berry & Cherry Fruity Pigs. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
+      "reviews": [
+        {
+          "url": "https://www.fundaysweets.com/collections/new-arrivals/products/fruity-flavoured-gummy-pigs",
+          "quote": "the cherry flavour is nicely coming through",
+          "title": "Fruity Flavoured Pigs Gummies (12x50g)",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fundaysweets.com/collections/new-arrivals/products/fruity-flavoured-gummy-pigs",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Australian collection-product URL opened in primary publisher reader, with named Ms S. customer review verbatim beneath Reviews. This is a customer’s firsthand tasting hosted by the maker, not the separate AI Generated Review Summary or operator description. Original review day is not published; keep null. Old bare product route redirected to unrelated US homepage in rendered browser."
+        }
+      ]
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "basis": "Strawberry and vanilla ice-cream-cone gummies with a foamy texture: sweet and creamy. Tasting-review scope: Strawberry & Vanilla Mr Whippy gummies. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
+      "reviews": [
+        {
+          "url": "https://www.fundaysweets.com/collections/new-arrivals/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+          "quote": "They are soft, but so subtle in flavour that they’re almost imperceptible.",
+          "title": "Mr Whippy Strawberry & Vanilla Ice Cream Gummies (12x50g)",
+          "publishedDate": null,
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fundaysweets.com/collections/new-arrivals/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Australian collection-product URL opened in primary publisher reader, with named Nicole customer review verbatim beneath Reviews. This is a customer’s firsthand tasting hosted by the maker, not the separate AI Generated Review Summary or operator description. Original review day is not published; keep null. Old bare product route redirected to unrelated US homepage in rendered browser."
+        }
+      ]
+    }
+  ]
+}

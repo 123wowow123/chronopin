@@ -1,0 +1,168 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "url": "https://wanderlog.com/place/details/396544/la-yeon",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/396544/la-yeon",
+        "quote": "Reviewers praise the thoughtfully curated course menu using seasonal Korean ingredients, the exquisite presentation of dishes, and the impeccable service.",
+        "title": "La Yeon, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Opened original Wanderlog page. Saved sentence is unattributed platform summary of other reviews, not an independent critic or original firsthand reviewer. Removed from native reviews; contextual source retained."
+    },
+    {
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.segye.com/newsView/20261016506491#shilla-library",
+      "url": "https://wanderlog.com/place/details/1699464/the-library",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/1699464/the-library",
+        "quote": "Additionally, The Library offers delicious food options including their famous Mango shaved ice and Pad Thai.",
+        "title": "The Library, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Opened original Wanderlog page. Saved sentence is unattributed platform summary of other reviews, not an independent critic or original firsthand reviewer. Removed from native reviews; contextual source retained."
+    },
+    {
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+      "url": "https://wanderlog.com/place/details/428273/bicena",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/428273/bicena",
+        "quote": "Reviewers praise the personalized service, hospitality, and knowledgeable staff who guide diners through each course.",
+        "title": "Bicena, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Opened original Wanderlog page. Saved sentence is unattributed platform summary of other reviews, not an independent critic or original firsthand reviewer. Removed from native reviews; contextual source retained."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/09/24/changan-nevo-launches-q06-suv/",
+      "url": "https://www.xchuxing.com/article/174108",
+      "expectedReview": {
+        "url": "https://www.xchuxing.com/article/174108",
+        "quote": "Paraphrase: Xchuxing's showroom walk-around highlights the 449 hp dual-motor spec, 6C charging and standard aluminium chassis; no driving impressions.",
+        "title": "[static look; pre-launch] 长安启源Q06到店实拍，配449马力+6C闪充，还标配了全铝底盘！_文章_新出行",
+        "publishedDate": null
+      },
+      "reason": "Opened original Xchuxing article by 汽车大师哥: title explicitly 到店实拍, pre-launch dealer/showroom overview. No attributable firsthand driving test; native English Paraphrase summary is not a verbatim quote. Removed from performance reviews, kept contextual reference."
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "expectedReview": {
+        "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+        "quote": "the cherry flavour is nicely coming through",
+        "title": "Ms S. — Fruity Pigs customer review (FUNDAY)",
+        "publishedDate": null
+      },
+      "reason": "Replaced by the opened Australian collection-product page with the exact same named customer review. Old bare route redirects to US homepage. Remove duplicate legacy citation after replacement readback; original review date remains null."
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "expectedReview": {
+        "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+        "quote": "They are soft, but so subtle in flavour that they’re almost imperceptible.",
+        "title": "Nicole — Mr Whippy customer review (FUNDAY)",
+        "publishedDate": null
+      },
+      "reason": "Replaced by the opened Australian collection-product page with the exact same named customer review. Old bare route redirects to US homepage. Remove duplicate legacy citation after replacement readback; original review date remains null."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "url": "https://www.autoexpress.co.uk/geely/370270/new-geely-monjaro-em-i-has-jab-skoda-kodiaq-and-hyundai-santa-fe",
+      "expectedReview": {
+        "url": "https://www.autoexpress.co.uk/geely/370270/new-geely-monjaro-em-i-has-jab-skoda-kodiaq-and-hyundai-santa-fe",
+        "quote": "Utilizes Geely's EM-i Super Hybrid system with dedicated 1.5-litre engine and intelligent electric AWD on the GEA-Evo architecture targeting 70+ miles electric range.",
+        "title": "Auto Express: New Geely Monjaro EM-i has a jab at Skoda Kodiaq and Hyundai Santa Fe",
+        "sentiment": 0.3,
+        "publishedDate": "2026-10-14"
+      },
+      "reason": "Opened original October 12 Auto Express article: Paris-show news, no driving test, European power/battery specifications not yet released. Saved English sentence is a paraphrase, not a firsthand steering/handling verdict; kept as contextual launch reference."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/fd874439-9493-43c9-98f4-33c2f76c446d",
+      "url": "https://www.motorauthority.com/news/1127083_first-drive-review-2021-mercedes-amg-gle-63-s-defies-physics",
+      "expectedReview": {
+        "url": "https://www.motorauthority.com/news/1127083_first-drive-review-2021-mercedes-amg-gle-63-s-defies-physics",
+        "quote": "AMG Active Ride Control and adaptive air suspension allow the vehicle to corner supernaturally flat, behaving more like a heavy-duty sport sedan than a utility vehicle.",
+        "title": "Motor Authority: First drive review: Mercedes-AMG GLE 63 S defies physics",
+        "sentiment": 0.8,
+        "publishedDate": "2021-03-02"
+      },
+      "reason": "Saved citation explicitly identifies 2021 GLE63 S, while pin is the updated flat-plane-V8 2027 family. Original source retry was inaccessible; no evidence this old review tests the new engine/chassis/software. Remove old-generation citation from native independent reviews, retaining context. New MotorTrend 2027 test saved separately."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "url": "https://motormania.com.mx/pruebas-de-manejo/geely-monjaro-em-i-prueba-manejo-precio-mexico/",
+      "expectedReview": {
+        "url": "https://motormania.com.mx/pruebas-de-manejo/geely-monjaro-em-i-prueba-manejo-precio-mexico/",
+        "title": "Probamos la Geely Monjaro EM-i: mucha potencia, lujo y detalles que la hacen ver diferente a lo que realmente es",
+        "quote": "en curvas cerradas puede sentirse poco comunicativa",
+        "publishedDate": "2026-10-16",
+        "sentiment": -0.4
+      },
+      "reason": "Verified firsthand road test, but Mexico GF / Egyptian export market rather than the pin’s European Ultra. Excluded under exact-market review rule; preserved as contextual reference, not a native independent review."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "url": "https://drivemeonline.com/geely-monjaro-launches-super-hybrid-twin/",
+      "expectedReview": {
+        "url": "https://drivemeonline.com/geely-monjaro-launches-super-hybrid-twin/",
+        "title": "Geely Monjaro launches super-hybrid twin",
+        "quote": "335 hp climbs, brakes and quickly switches lanes.",
+        "publishedDate": "2026-10-01",
+        "sentiment": 0.5
+      },
+      "reason": "Verified firsthand road test, but Mexico GF / Egyptian export market rather than the pin’s European Ultra. Excluded under exact-market review rule; preserved as contextual reference, not a native independent review."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.audi.com/en/press-releases/new-portfolio-flagship-the-audi-q9-redefines-space-and-comfort-as-the-first-of-its-kind-18145",
+      "url": "https://www.motor1.com/news/803010/2027-audi-q9-sq9-details-specs-revealed/",
+      "expectedReview": {
+        "url": "https://www.motor1.com/news/803010/2027-audi-q9-sq9-details-specs-revealed/",
+        "quote": "Twin-turbocharged V6 putting out 429 horsepower with 0-60 mph in 4.9 seconds, standard adaptive air suspension and lounge-like three-row serenity.",
+        "title": "Motor1: 2027 Audi Q9 and SQ9 Details, Specs Revealed",
+        "sentiment": 0.5,
+        "publishedDate": "2026-09-18"
+      },
+      "reason": "Replaced unverified announcement-style summary by three opened original 2027 US Q9 2.9 V6 first drives. Original Motor1 news source retry returned 403, so its saved quotation cannot be certified as verbatim or firsthand. Retain contextual reference without counting it as a road test."
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+      "url": "https://www.instagram.com/p/DNa5YigMUOk/",
+      "expectedReview": {
+        "url": "https://www.instagram.com/p/DNa5YigMUOk/",
+        "quote": "The strawberry ice cream is decent, with a faint strawberry flavour and enormous creaminess. It works well with the chocolate and the toffee in Daim. (translated)",
+        "title": "Sockerbiten (Instagram) review of GB Glace Daim Strawberry mini cone, Sweden - a different producer's product with the same strawberry-ice-cream-plus-Daim concept, not the Hennig-Olsen tub (3.5/5)",
+        "sentiment": 0.4,
+        "publishedDate": "2025-08-16"
+      },
+      "reason": "Stored citation explicitly describes GB Glace Swedish mini-cone / 2013 Strawberry Dream, a different producer and formulation from the Hennig-Olsen 450-ml tub. The opened current maker page identifies its separate tub/GTIN. Remove different-product dated points from this taste graph; retain historical comparison only as context. Exact Hennig-Olsen firsthand tasting remains unresolved."
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+      "url": "https://lakonism.blogspot.com/2013/08/daim-strawberry-dream-nu-helt-utan.html",
+      "expectedReview": {
+        "url": "https://lakonism.blogspot.com/2013/08/daim-strawberry-dream-nu-helt-utan.html",
+        "quote": "The strawberry flavour did not feel genuine, it tasted too artificial. (translated)",
+        "title": "Blog comments on GB Glace Daim Strawberry Dream (2013 recipe, Sweden; different producer and an earlier, strawberry-free formulation - not the Hennig-Olsen tub)",
+        "sentiment": -0.5,
+        "publishedDate": "2013-08-18"
+      },
+      "reason": "Stored citation explicitly describes GB Glace Swedish mini-cone / 2013 Strawberry Dream, a different producer and formulation from the Hennig-Olsen 450-ml tub. The opened current maker page identifies its separate tub/GTIN. Remove different-product dated points from this taste graph; retain historical comparison only as context. Exact Hennig-Olsen firsthand tasting remains unresolved."
+    }
+  ]
+}

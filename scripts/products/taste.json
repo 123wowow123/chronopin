@@ -762,44 +762,6 @@
     ]
   },
   {
-    "pinId": 5631,
-    "aroma": 3,
-    "bitterness": 0,
-    "sweetness": 4.5,
-    "astringency": 0.5,
-    "umami": 0,
-    "basis": "Berry-cherry gummy with a foam top: sweet and fruity, with no bitterness. Tasting-review scope: Berry & Cherry Fruity Pigs. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
-    "pungent": 0,
-    "coolness": 0,
-    "reviews": [
-      {
-        "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
-        "title": "Ms S. — Fruity Pigs customer review (FUNDAY)",
-        "quote": "the cherry flavour is nicely coming through",
-        "publishedDate": null
-      }
-    ]
-  },
-  {
-    "pinId": 5633,
-    "aroma": 3,
-    "bitterness": 0,
-    "sweetness": 4.5,
-    "astringency": 0,
-    "umami": 0,
-    "basis": "Strawberry and vanilla ice-cream-cone gummies with a foamy texture: sweet and creamy. Tasting-review scope: Strawberry & Vanilla Mr Whippy gummies. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
-    "pungent": 0,
-    "coolness": 0,
-    "reviews": [
-      {
-        "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
-        "title": "Nicole — Mr Whippy customer review (FUNDAY)",
-        "quote": "They are soft, but so subtle in flavour that they’re almost imperceptible.",
-        "publishedDate": null
-      }
-    ]
-  },
-  {
     "pinId": 5635,
     "aroma": 3,
     "bitterness": 0,
@@ -3874,6 +3836,78 @@
         "title": "We Tried 15 Oreo Flavors and Ranked Them from Worst to Best",
         "sentiment": 0.9,
         "publishedDate": "2018-02-15"
+      }
+    ]
+  },
+  {
+    "pinId": 5631,
+    "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+    "aroma": 3,
+    "bitterness": 0,
+    "sweetness": 4.5,
+    "astringency": 0.5,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "Berry-cherry gummy with a foam top: sweet and fruity, with no bitterness. Tasting-review scope: Berry & Cherry Fruity Pigs. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
+    "sourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+    "reviews": [
+      {
+        "url": "https://www.fundaysweets.com/collections/new-arrivals/products/fruity-flavoured-gummy-pigs",
+        "quote": "the cherry flavour is nicely coming through",
+        "title": "Fruity Flavoured Pigs Gummies (12x50g)",
+        "sentiment": 0.6,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 5633,
+    "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+    "aroma": 3,
+    "bitterness": 0,
+    "sweetness": 4.5,
+    "astringency": 0,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "Strawberry and vanilla ice-cream-cone gummies with a foamy texture: sweet and creamy. Tasting-review scope: Strawberry & Vanilla Mr Whippy gummies. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
+    "sourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+    "reviews": [
+      {
+        "url": "https://www.instagram.com/p/Dd3pWI7TamC/",
+        "quote": "I'm very impressed! Strawberry and vanilla in a little gummy treat…such a yummy, fun find.",
+        "title": "Instagram post by thehappyroxy: tried the new Funday Foamy Ice Cream Gummies (Strawberry & Vanilla)",
+        "sentiment": 0.8,
+        "publishedDate": "2026-09-29"
+      },
+      {
+        "url": "https://www.fundaysweets.com/collections/new-arrivals/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+        "quote": "They are soft, but so subtle in flavour that they’re almost imperceptible.",
+        "title": "Mr Whippy Strawberry & Vanilla Ice Cream Gummies (12x50g)",
+        "sentiment": -0.5,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 13921,
+    "pinSourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+    "aroma": 3,
+    "bitterness": 0.5,
+    "sweetness": 4.5,
+    "astringency": 0.5,
+    "umami": 0.5,
+    "pungent": 0,
+    "coolness": 0.5,
+    "basis": "Hennig-Olsen product page (fetched): strawberry cream ice with strawberry juice from concentrate 7.4%, topped with a lid of crunchy Daim balls (toffee-almond chocolate), 250 g net; 268 kcal, 30 g sugars, 0.28 g salt per 100 g. Sweet and fruity-creamy with caramel-chocolate crunch; mild tang from strawberry (sourness not scored). No tasting review of this exact product was found as of 2026-10-11; the reviews listed below cover an earlier edition, the same line or the maker's own description.",
+    "sourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+    "reviews": [
+      {
+        "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
+        "quote": "An exciting combination of velvety strawberry ice cream and crunchy Daim; the lid of Daim balls gives a crisp contrast to the rich ice cream (translated)",
+        "title": "Hennig-Olsen product page: Daim Strawberry fløte-is 450 ml (maker's own description)",
+        "publishedDate": null
       }
     ]
   }

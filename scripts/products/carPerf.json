@@ -568,28 +568,32 @@
       "value": 4,
       "kidsFriendly": 4.5
     },
-    "basis": "Variant: Europe Ultra 6-seater AWD, EUR 119,500 in Germany (elektroquatsch.de, 6 Oct; the Zeekr release has no price). 737 km total range (55.1 kWh, 179 km WLTP EV; cycle of the total not stated); 10-80% in 9.5 min, up to 330 kW; 0-100 in 4.1 s (660 kW); 1 roof LiDAR + 11 cameras + 5 radars + 12 ultrasonics with highway nav assist, urban and parking functions (city NOA on delivery not confirmed); wheelbase 3.17 m, 6 seats, air suspension, rear lounge. Value: Porsche Cayenne S Electric EUR 126,400 (544 PS; AutoBild), base Cayenne Electric EUR 105,200.",
+    "basis": "Variant: European Zeekr 9X Ultra, 55.1 kWh. Existing specification scores are preserved. Review verification, 2026-10-27: XCX original 伟健 drive explicitly uses China Ultra with optional 70 kWh battery. Its literal Chinese single-speed-DHT observation replaces a paraphrase, but its range/charging measurements do not establish the European 55.1 kWh variant. Original article publication byline was not found; comments are not publication dates. Exact-European review applicability remains unresolved.",
     "sourceUrl": "https://press.zeekr.eu/the-rules-of-luxury-have-changed-introducing-the-zeekr-9x",
     "reviews": [
       {
         "url": "https://carnewschina.com/2026/02/08/sunday-china-drive-zeekr-9x-range-rover-and-bentley-buyers-reportedly-switching/",
+        "quote": "The system filters road irregularities effectively while keeping body composure, underscoring its premium SUV positioning.",
         "title": "[China-market 70 kWh PHEV, not the Europe Ultra 6-seater] Sunday China Drive | Zeekr 9X: Range Rover and Bentley buyers reportedly switching",
-        "publishedDate": "2026-02-08",
-        "quote": "The system filters road irregularities effectively while keeping body composure, underscoring its premium SUV positioning."
+        "sentiment": 0.5,
+        "publishedDate": "2026-02-08"
       },
       {
         "url": "https://www.canberratimes.com.au/story/9244195/chinas-answer-to-range-rover-tested/",
+        "quote": "It will quickly silence doubters with its terrifying, thunderous electrified performance.",
         "title": "[Australian preview drive of China-built car; CarsGuide] China's answer to Range Rover tested! | The Canberra Times",
-        "publishedDate": "2026-05-11",
-        "quote": "It will quickly silence doubters with its terrifying, thunderous electrified performance."
+        "sentiment": 0.8,
+        "publishedDate": "2026-05-11"
       },
       {
         "url": "https://www.xchuxing.com/article/158922",
-        "title": "[China-market Ultra dual-motor 70 kWh PHEV; instrumented test] 新出行图文详解 116期：伟健动态试驾极氪9X_文章_新出行",
+        "title": "新出行图文详解 116期：伟健动态试驾极氪9X",
+        "quote": "由于新车搭载的是单档 DHT，在任何时候都感受不到换挡的感觉",
         "publishedDate": null,
-        "quote": "Paraphrase: XCX drove the Ultra dual-motor with the 70 kWh pack (380 km CLTC): 134 km at 120 km/h used 45% of the battery (about 78% highway attainment), battery-depleted consumption about 8 L/100 km, linear power and a firm-but-not-floaty ride."
+        "sentiment": 0.6
       }
-    ]
+    ],
+    "pinSourceUrl": "https://press.zeekr.eu/the-rules-of-luxury-have-changed-introducing-the-zeekr-9x"
   },
   {
     "pinId": 14031,
@@ -638,16 +642,10 @@
       "value": null,
       "kidsFriendly": 3
     },
-    "basis": "Variant: Ultra AWD EM-i, the Paris show car (no European spec sheet or price). 1,100 km combined and 130 km electric (29.8 kWh) per CarNewsChina's Paris preview, cycle not stated (elektroquatsch calls the 130 km NEDC); 30-80% in 15 min per elektroquatsch; 0-100 in 5.83 s (CnEVPost, Egypt launch); wheelbase 2,845 mm. Driver-assist hardware is not published in any page opened, so assistance is null; no European price (Egypt is EGP only), so value is null. Doubt: elektroquatsch lists 250 kW system output vs 305 kW in the CarNewsChina preview. Charging revised: e-AWD 29.8 kWh pack rated up to 78 kW DC, 30-80% in about 15 min (CAR Magazine/Geely reference spec, NEDC-era figures, EU homologation pending); scored on peak power.",
+    "basis": "Variant: Paris-show Ultra AWD EM-i. Prior scoring uses 1,100 km combined / 130 km electric (29.8 kWh, cycle unspecified), 30-80% in 15 min, 0-100 in 5.83 s and 2,845 mm wheelbase. These are export/show figures, not confirmed European homologation. No European price or assist specification opened, so those axes remain null. Review verification, 2026-10-27: no qualifying exact-European road test found. Auto Express is launch news; Mexico GF and Egypt e-AWD drives are contextual references only, excluded from native reviews. Prior scores preserved pending exact-market evidence.",
     "sourceUrl": "https://carnewschina.com/2026/10/02/what-to-expect-from-chinese-car-brands-at-the-paris-auto-show-2026/",
-    "reviews": [
-      {
-        "url": "https://www.autoexpress.co.uk/geely/370270/new-geely-monjaro-em-i-has-jab-skoda-kodiaq-and-hyundai-santa-fe",
-        "title": "Auto Express: New Geely Monjaro EM-i has a jab at Skoda Kodiaq and Hyundai Santa Fe",
-        "publishedDate": "2026-10-14",
-        "quote": "Utilizes Geely's EM-i Super Hybrid system with dedicated 1.5-litre engine and intelligent electric AWD on the GEA-Evo architecture targeting 70+ miles electric range."
-      }
-    ]
+    "reviews": [],
+    "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html"
   },
   {
     "pinId": 14217,
@@ -701,23 +699,27 @@
     "reviews": [
       {
         "url": "https://carnewschina.com/2025/10/04/sunday-china-drive-mg4-from-rear-wheel-dreams-to-front-wheel-reality/",
+        "quote": "The new MG4’s driving experience emphasises predictable control and everyday usability over engagement.",
         "title": "[China entry 437 km trim, same car as the pin] Sunday China Drive | MG4: from rear-wheel dreams to front-wheel reality",
-        "publishedDate": "2025-10-04",
-        "quote": "The new MG4’s driving experience emphasises predictable control and everyday usability over engagement."
+        "sentiment": 0.1,
+        "publishedDate": "2025-10-04"
       },
       {
         "url": "https://www.autohome.com.cn/drive/202509/1308881.html",
+        "quote": "Paraphrase: Autohome ran the car to zero: 394.6 km (90.3% of 437 km CLTC, 12.05 kWh/100 km); 30-80% charging took 37 min against the 20 min official figure and a full charge 78 min.",
         "title": "[2026 MG4 437 Freedom trim] 【图】八万块带通风加热！MG4凭什么搅动纯电市场？_汽车之家",
-        "publishedDate": "2025-09-09",
-        "quote": "Paraphrase: Autohome ran the car to zero: 394.6 km (90.3% of 437 km CLTC, 12.05 kWh/100 km); 30-80% charging took 37 min against the 20 min official figure and a full charge 78 min."
+        "sentiment": -0.2,
+        "publishedDate": "2025-09-09"
       },
       {
         "url": "https://www.xchuxing.com/article/160445",
-        "title": "[MG4 437 Freedom trim; instrumented test] XCX 续航体验 62期：名爵 MG4 纯电续航及充电测试_体验_新出行",
+        "title": "XCX 续航体验 62期：名爵 MG4 纯电续航及充电测试",
+        "quote": "整体掉电非常线性。",
         "publishedDate": null,
-        "quote": "Paraphrase: XCX-Test measured 73% highway attainment (294.9 km using 92% of the 42.8 kWh pack) and 108% in the city; 30-80% took 20 min and 90% 35 min on a fast charger."
+        "sentiment": 0.4
       }
-    ]
+    ],
+    "pinSourceUrl": "https://cnevpost.com/2025/08/29/saic-mg-launches-redesigned-mg4/"
   },
   {
     "pinId": 14219,
@@ -760,22 +762,25 @@
       "value": 4.5,
       "kidsFriendly": 4
     },
-    "basis": "Variant: 52 Ultra EREV, RMB 322,800 (66 Ultra RMB 352,800, 1,508 km). 1,454 km CLTC combined (320 km EV, 52 kWh); 10-80% in 16.5 min on 800 V; 0-100 in 4.9 s (390 kW); 520-channel LiDAR + Nvidia Thor + IM AD Max by Momenta; wheelbase 3,160 mm, six seats. Value: Li L9 at RMB 409,800 in Sept 2025 (3,015 mm, six seats; CnEVPost) and RMB 459,800 after the May 2026 refresh (CarNewsChina), so 21-30% under with a longer wheelbase. Correction: 52 Ultra is 380 kW (not 390) and charges 10-80% in 19 min; 16.5 min and 390 kW belong to the 66 Ultra (IT之家, CarNewsChina database). 0-100 is 4.9 s on both trims.",
+    "basis": "Variant: IM LS9 52 Ultra EREV, RMB 322,800, 52 kWh, 320 km EV / 1,454 km combined CLTC, 380 kW, 0-100 4.9 s, 10-80% in 19 min; 3,160 mm wheelbase, six seats, LiDAR/Thor/Momenta. The 390 kW and 16.5-min figures belong to 66 Ultra and are excluded. Prior axis scores preserved. Review verification, 2026-10-27: XCX original November 28, 2025 test is 66 Ultra (402 km EV), not base 52 Ultra. Original Chinese quotation repaired; retain as scoped context only, not validation of the base battery or charging figures. Exact-52-Ultra review coverage remains open.",
     "sourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
     "reviews": [
       {
         "url": "https://www.xchuxing.com/article/162486",
-        "title": "[66 Ultra variant, 402 km EV; instrumented test] XCX 深度体验 30期：深度体验智己 LS9_体验_新出行",
-        "publishedDate": null,
-        "quote": "Paraphrase: XCX called the LS9 the best-driving 5.2 m six-seater; measured 243.2 km of motorway EV range (76% of 402 km), 0-100 in 5.2 s with charge and 5.6 s depleted against 4.9 s claimed, 30-80% in 18 min at a 600 kW charger (peak 246 kW), stable and quiet but comfort mode still firm."
+        "title": "XCX 深度体验 30期：深度体验智己 LS9",
+        "quote": "先说结论，智己 LS9 就是五米二的大六座里最好开的，没有之一。",
+        "publishedDate": "2025-11-28",
+        "sentiment": 0.8
       },
       {
         "url": "https://chejiahao.m.autohome.com.cn/info/25220827",
+        "quote": "Paraphrase: The practicality report finds the turning diameter among the best in class and a generally strong package; the only weak point was the nearest parking-radar detection distance.",
         "title": "[Autohome creator practicality test] 2026款智己LS9日常实用性测试报告_车家号_汽车之家",
-        "publishedDate": "2026-04-15",
-        "quote": "Paraphrase: The practicality report finds the turning diameter among the best in class and a generally strong package; the only weak point was the nearest parking-radar detection distance."
+        "sentiment": 0.3,
+        "publishedDate": "2026-04-15"
       }
-    ]
+    ],
+    "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/"
   },
   {
     "pinId": 14111,
@@ -963,22 +968,25 @@
       "value": 3.5,
       "kidsFriendly": 3.5
     },
-    "basis": "Variant: Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited (Max+ RMB 249,900 adds the roof 896-channel LiDAR, ADS Max and air suspension; Ultra tri-motor 3.7 s, 650 km). 725 km CLTC (89.33 kWh); 800 V, 30-80% in <10 min and 0-80% in 20 min; 0-100 in 5.9 s; Qiankun ADS Pro with in-cabin LiDAR (Max+/Ultra would be 4.5); wheelbase 2,990 mm. Value: Xiaomi YU7 Standard RMB 253,500 (835 km, 5.88 s, 3,000 mm; CnEVPost June 2025), so about 9% under but 110 km less range.",
+    "basis": "Variant: Avatr 07L Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited, 89.33 kWh, 725 km CLTC, 800 V, 30-80% under 10 min, 0-100 5.9 s, 2,990 mm wheelbase; ADS Pro/in-cabin LiDAR. Max+/Ultra add different equipment, so their results cannot establish the Elite. Prior scores preserved. Review verification, 2026-10-27: XCX pre-launch Max+/Ultra quote repaired to literal Chinese, retained only as context. The other saved Avatr 07 report is an earlier model. Neither proves a final-Elite independent road test; exact-07L-Elite coverage remains open.",
     "sourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
     "reviews": [
       {
         "url": "https://www.xchuxing.com/article/174048",
-        "title": "[Avatr 07L pre-launch hands-on, Max+/Ultra trims; predates Elite] 入门即高配，好开又安全，实测阿维塔07L，智美大五座豪华SUV_文章_新出行",
+        "title": "入门即高配，好开又安全，实测阿维塔07L，智美大五座豪华SUV",
+        "quote": "动力调校很顺滑，提速不猛不突兀",
         "publishedDate": null,
-        "quote": "Paraphrase: The writer says rear legroom is a fist-plus at 181 cm with a flat floor and 130-degree backrests, all trims share air suspension and CDC, and the 305 kW RWD Max+ is smooth; much of the piece restates official range/charging claims."
+        "sentiment": 0.6
       },
       {
         "url": "https://carnewschina.com/2024/09/28/sunday-china-drive-avatr-07-secures-11673-orders-in-20-hours-innovation-meets-comfort/",
+        "quote": "The Avatr 07 delivers a strong balance between innovation and everyday usability for those seeking a versatile, tech-forward vehicle.",
         "title": "[earlier version: 2024 Avatr 07 EREV Ultra AWD, shorter wheelbase] Sunday China Drive | Avatr 07 secures 11,673 orders in 20 hours: innovation meets comfort",
-        "publishedDate": "2024-09-28",
-        "quote": "The Avatr 07 delivers a strong balance between innovation and everyday usability for those seeking a versatile, tech-forward vehicle."
+        "sentiment": 0.6,
+        "publishedDate": "2024-09-28"
       }
-    ]
+    ],
+    "pinSourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/"
   },
   {
     "pinId": 14228,
@@ -997,17 +1005,13 @@
     "reviews": [
       {
         "url": "https://auto.sina.com.cn/review/2026-08-31/detail-iniqepex7545844.shtml",
+        "quote": "Paraphrase: Sina Auto drove the car in Chongqing and on a closed course: strong, linear acceleration, no understeer on slalom, library-quiet cabin at 120 km/h, and city/tunnel navigation assist handled complex junctions smoothly; no 0-100 time quoted.",
         "title": "[80 kWh 700 km version with the Ultra assist; closed-course and Chongqing drive] 天枢领航实力拉满 深度试驾长安启源Q06-新浪汽车",
-        "publishedDate": "2026-08-31",
-        "quote": "Paraphrase: Sina Auto drove the car in Chongqing and on a closed course: strong, linear acceleration, no understeer on slalom, library-quiet cabin at 120 km/h, and city/tunnel navigation assist handled complex junctions smoothly; no 0-100 time quoted."
-      },
-      {
-        "url": "https://www.xchuxing.com/article/174108",
-        "title": "[static look; pre-launch] 长安启源Q06到店实拍，配449马力+6C闪充，还标配了全铝底盘！_文章_新出行",
-        "publishedDate": null,
-        "quote": "Paraphrase: Xchuxing's showroom walk-around highlights the 449 hp dual-motor spec, 6C charging and standard aluminium chassis; no driving impressions."
+        "sentiment": 0.7,
+        "publishedDate": "2026-08-31"
       }
-    ]
+    ],
+    "pinSourceUrl": "https://cnevpost.com/2026/09/24/changan-nevo-launches-q06-suv/"
   },
   {
     "pinId": 14230,

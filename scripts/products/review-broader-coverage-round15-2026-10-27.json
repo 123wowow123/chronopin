@@ -1,0 +1,250 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 4392,
+      "pinSourceUrl": "https://www.nme.com/news/music/fontaines-d-c-share-dopamine-chamber-tracklist-featuring-collab-with-rosalia-3969431",
+      "basis": "Original independently published critical assessments of the exact named work/product. Sentiment estimates describe quoted passages, not converted star scores. Album five, not Romance or a live performance.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/fontaines-d-c-dopamine-chamber-album-review-3972863",
+          "title": "Fontaines D.C. – ‘Dopamine Chamber’ review: a doom-ridden escape from the band of the decade",
+          "quote": "an opulent and textured musical tapestry befitting some of Chatten’s most absorbing poetry.",
+          "publishedDate": "2026-10-12",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/fontaines-dc-dopamine-chamber/",
+          "title": "Dopamine Chamber",
+          "quote": "This is cruel, beautiful feel-bad music.",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.rollingstone.co.uk/music/album-reviews/fontaines-d-c-dopamine-chamber-review-album-65050/",
+          "title": "FONTAINES D.C. ‘DOPAMINE CHAMBER’ REVIEW: DYSTOPIA HAS NEVER SOUNDED SO GLORIOUS",
+          "quote": "Through 12 bold and consistently brilliant tracks",
+          "publishedDate": "2026-10-12",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nme.com/reviews/album/fontaines-d-c-dopamine-chamber-album-review-3972863",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Andrew Trendell original byline. 23:01:59 UTC October 11 equals October 12 in publisher BST; October 14 modification excluded."
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/fontaines-dc-dopamine-chamber/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Shaad D’Souza, explicit Reviewed October 15. Description praises intentionally unsettling music; no lyric quotation or numerical score conversion."
+        },
+        {
+          "url": "https://www.rollingstone.co.uk/music/album-reviews/fontaines-d-c-dopamine-chamber-review-album-65050/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Nick Reilly, original 10:24 BST matches 09:24 UTC metadata, later 10:30 UTC modification excluded."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4394,
+      "pinSourceUrl": "https://www.billboard.com/music/pop/lisa-talks-press-play-tonight-show-1236342361/",
+      "basis": "Original independently published critical assessments of the exact named work/product. Sentiment estimates describe quoted passages, not converted star scores. Six-track Press Play EP, not Alter Ego or another artist’s Press Play.",
+      "reviews": [
+        {
+          "url": "https://ratingsgamemusic.com/2026/10/23/lisa-press-play-ep-review/",
+          "title": "LISA – PRESS PLAY (EP Review)",
+          "quote": "They don’t come together as a distinct body of work",
+          "publishedDate": "2026-10-23",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://cadernopop.com.br/critica-lisa-press-play/",
+          "title": "Crítica: Lisa, “Press Play”",
+          "quote": "a masterização compromete parte do resultado",
+          "publishedDate": "2026-10-22",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://los40.com/2026/10/23/critica-de-press-play-de-lisa-el-trono-del-k-pop-esta-en-juego-y-ella-tiene-un-ferrari/",
+          "title": "Crítica de 'Press Play' de LISA: el trono del K-pop está en juego y ella tiene un Ferrari",
+          "quote": "Es uno de los cortes más completos del EP",
+          "publishedDate": "2026-10-23",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://ratingsgamemusic.com/2026/10/23/lisa-press-play-ep-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Emma Platt, original article heading/byline opened through publisher reader. Browser 403; selected current reader text differs from cached search wording."
+        },
+        {
+          "url": "https://cadernopop.com.br/critica-lisa-press-play/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Ygor Monroe, visible October 22 in Brazilian publisher timezone equals October 23 02:33 UTC. Exact mastering criticism; no release-date inference."
+        },
+        {
+          "url": "https://los40.com/2026/10/23/critica-de-press-play-de-lisa-el-trono-del-k-pop-esta-en-juego-y-ella-tiene-un-ferrari/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Lola Rabal, original Creada 13:14 CEST. Selected assessment concerns V12, not every track; navigation header October 27 ignored."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2062,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3755151/nobody-wants-this-3x01-episode-1",
+      "basis": "Original independently published critical assessments of the exact named work/product. Sentiment estimates describe quoted passages, not converted star scores. Season 3; episode-specific performance criticism is labelled, not applied to earlier seasons.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/entertainment/netflix/nobody-wants-this-season-3-review-did-someone-accidentally-hit-the-romance-fast-forward-button",
+          "title": "'Nobody Wants This' season 3 review: Did someone accidentally hit the romance fast-forward button?",
+          "quote": "its breakneck pacing and overcrowded subplots",
+          "publishedDate": "2026-10-22",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://www.tvline.com/2294480/nobody-wants-this-season-3-morgan-sasha-romance-review/",
+          "title": "Nobody Wants This Season 3 Delivers The Year's Best Rom-Com In Episode 7 — Then Gets Cold Feet",
+          "quote": "Lupe gives a transcendent performance in Episode 8.",
+          "publishedDate": "2026-10-22",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://unpacked.media/nobody-wants-this-season-3-review-the-shows-best-season-yet-but-jewish-depth-is-missing/",
+          "title": "‘Nobody Wants This’ season 3 review: The show’s best season yet, but Jewish depth is missing",
+          "quote": "remains less convincing when it explores the faith at the center of its premise.",
+          "publishedDate": "2026-10-22",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.tomsguide.com/entertainment/netflix/nobody-wants-this-season-3-review-did-someone-accidentally-hit-the-romance-fast-forward-button",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Kelly Woo, original publication metadata October 22 07:01 UTC; selected season-3 pacing criticism, unrelated sidebar headings excluded."
+        },
+        {
+          "url": "https://www.tvline.com/2294480/nobody-wants-this-season-3-morgan-sasha-romance-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Ryan Schwartz. Original metadata October 22, not October 25 update. Quote about Justine Lupe’s episode-8 performance; not an entire-season consensus."
+        },
+        {
+          "url": "https://unpacked.media/nobody-wants-this-season-3-review-the-shows-best-season-yet-but-jewish-depth-is-missing/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Alan Zeitlin, original 16:38 UTC vs modified 19:38 UTC; concerns religious characterization within a generally favorable season review."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15790,
+      "pinSourceUrl": "https://www.msi.com/Graphics-Card/GeForce-RTX-5080-16G-EXPERT",
+      "basis": "Original independently published critical assessments of the exact named work/product. Sentiment estimates describe quoted passages, not converted star scores. Exact MSI RTX 5080 Expert/Expert OC cooler design; these 2025 hardware tests support reception of the named card, not its later CES award. No inference that base-reference Nvidia or other MSI boards were tested.",
+      "reviews": [
+        {
+          "url": "https://www.club386.com/msi-geforce-rtx-5080-16g-expert-review/",
+          "title": "MSI GeForce RTX 5080 16G Expert review: the grown-up graphics card",
+          "quote": "Just the two fans operating at comfortable speeds ensures noise is kept in check.",
+          "publishedDate": "2025-08-21",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://thepcenthusiast.com/msi-geforce-rtx-5080-expert-oc-review-quiet-cool-and-creatively-designed/",
+          "title": "MSI RTX 5080 EXPERT OC Review: Quiet Dual-Fan Design, But Is It Worth It?",
+          "quote": "Hard to justify over the RTX 5070 Ti given the relatively small performance gap",
+          "publishedDate": "2025-08-29",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://www.computerbase.de/artikel/grafikkarten/msi-geforce-rtx-5080-expert-test.94139/",
+          "title": "MSI GeForce RTX 5080 Expert im Test: Sieht nicht nur gut aus, sondern kann auch was",
+          "quote": "Sieht nicht nur gut aus, sondern kann auch was",
+          "publishedDate": "2025-09-22",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.club386.com/msi-geforce-rtx-5080-16g-expert-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Parm Mann hardware test; original August 21 BST, October 17 modification excluded. Exact Expert cooler rather than Suprim/Founders Edition."
+        },
+        {
+          "url": "https://thepcenthusiast.com/msi-geforce-rtx-5080-expert-oc-review-quiet-cool-and-creatively-designed/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Peter Paul original August 29 article/datePublished; April 15 2026 modification excluded. Expert OC sample, value criticism retained without applying factory-OC benchmark differences to another board."
+        },
+        {
+          "url": "https://www.computerbase.de/artikel/grafikkarten/msi-geforce-rtx-5080-expert-test.94139/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Jan-Frederik Timm, original 22.9.2025 article heading supplies concise evaluative verdict; page-2 measurements independently opened. No numerical score conversion."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6323,
+      "pinSourceUrl": "https://www.fratellowatches.com/choosing-between-good-and-evil-the-omega-seamaster-diver-300m-james-bond-and-spectre-collection/",
+      "basis": "Original independently published critical assessments of the exact named work/product. Sentiment estimates describe quoted passages, not converted star scores. October 2026 James Bond/Spectre collection, not 2015 Spectre or the 2022 Bond anniversary editions. Distinguish worn-in-hand impressions from editorial design/value analysis.",
+      "reviews": [
+        {
+          "url": "https://www.hodinkee.com/articles/the-new-omega-seamaster-diver-300m-james-bond-and-spectre-editions-live-pics",
+          "title": "The New Omega Seamaster Diver 300M James Bond & Spectre Editions (Live Pics)",
+          "quote": "these two new versions are rather attractive in person",
+          "publishedDate": "2026-10-05",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://watchesbysjx.com/2026/10/omega-seamaster-diver-300m-james-bond-spectre.html",
+          "title": "Duelling Dials: Omega’s James Bond and Spectre Seamasters",
+          "quote": "the trimmings do little to strengthen the horological value proposition.",
+          "publishedDate": "2026-10-06",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://twobrokewatchsnobs.com/omega-seamaster-james-bond-spectre-editions/",
+          "title": "Omega Made a New James Bond Watch for the Bad Guys",
+          "quote": "the Spectre version feels much cleaner.",
+          "publishedDate": "2026-10-05",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.hodinkee.com/articles/the-new-omega-seamaster-diver-300m-james-bond-and-spectre-editions-live-pics",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "TanTan Wang original October 05 byline and own live photos; in-the-metal impression. Title has a visual Introducing section label separated from heading."
+        },
+        {
+          "url": "https://watchesbysjx.com/2026/10/omega-seamaster-diver-300m-james-bond-spectre.html",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Brandon Moore original 06.10.2026 date. Value criticism specifically concerns limited box sets, not an instrumented movement test."
+        },
+        {
+          "url": "https://twobrokewatchsnobs.com/omega-seamaster-james-bond-spectre-editions/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Michael Penate, original October 5; editorial comparison of the Spectre styling with the blue Bond model, not a timing-accuracy or durability test."
+        }
+      ]
+    }
+  ]
+}

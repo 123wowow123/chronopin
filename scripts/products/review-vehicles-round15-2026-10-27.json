@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15270,
+      "pinSourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2026/mar/0326-Chevrolet-Grand-Sport-returns-6-7-liter-535-horsepower-V8.html",
+      "basis": "2027 Corvette Grand Sport coupe: 535 hp (Chevrolet), 0-60 in 2.75 s (Chevrolet), EPA 17 mpg combined, 12.6 cu ft cargo scored against two-seaters, US$88,495 incl. destination = 6.0 hp per US$1,000. Handling null: no independent road test opened.",
+      "reviews": [
+        {
+          "url": "https://www.motortrend.com/reviews/first-test-2027-chevrolet-corvette-grand-sport",
+          "title": "2027 Chevrolet Corvette Grand Sport First Test: A Perfectly Magical Mix of Everything",
+          "quote": "Turn-in was extra quick, with a crispness and perfect weight that reminded us of the ZR1.",
+          "publishedDate": "2026-09-15",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.caranddriver.com/reviews/a73219937/2027-chevrolet-corvette-grand-sport-drive/",
+          "title": "2027 Chevrolet Corvette Grand Sport Test: Middleweight Brawler",
+          "quote": "Standard magnetorheological adaptive dampers provide excellent wheel control and impressive bump compliance.",
+          "publishedDate": "2026-07-23",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.autoblog.com/reviews/2027-chevrolet-corvette-grand-sport-review",
+          "title": "2027 Chevrolet Corvette Grand Sport First Drive: The Best ‘Vette Gets Better",
+          "quote": "some of the sharpest steering I’ve felt in a modern sports car",
+          "publishedDate": "2026-09-03",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.thedrive.com/car-reviews/2027-chevy-corvette-lineup-ls6-review",
+          "title": "We Drove the New LS6-Powered 2027 Chevy Corvette Lineup. Here’s the One to Get",
+          "quote": "The GS is a precision instrument",
+          "publishedDate": "2026-09-03",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.motortrend.com/reviews/first-test-2027-chevrolet-corvette-grand-sport",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Kristen Lee, original September 15. RWD Grand Sport LS6, not hybrid X; tested with track alignment and optional track rubber, so limits are not base-tire measurements."
+        },
+        {
+          "url": "https://www.caranddriver.com/reviews/a73219937/2027-chevrolet-corvette-grand-sport-drive/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Mike Sutton, original article:published_time July 23, later September 22 instrumented update excluded as publication. Statement about standard dampers; optional-track-package figures not transferred."
+        },
+        {
+          "url": "https://www.autoblog.com/reviews/2027-chevrolet-corvette-grand-sport-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Chase Bierenkoven, exact original September 3 byline. Combined Grand Sport and X drive: chosen shared chassis observation, not hybrid acceleration. Primary reader body verified, browser 403."
+        },
+        {
+          "url": "https://www.thedrive.com/car-reviews/2027-chevy-corvette-lineup-ls6-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Jerry Perez original September 3 byline, not saved August 25. Replaces a nonverbatim summary with actual GS track paragraph; hybrid-X section excluded."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "pinSourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/topic/us/en/2026/jun/0630-2027-chevrolet-corvette-stingray-200-mph.html",
+      "basis": "2027 Corvette Stingray coupe: 535 hp, 0-60 in 2.8 s (both Chevrolet), EPA 18 mpg combined, 12.6 cu ft cargo (Grand Sport table, same body) scored against two-seaters, US$73,495 = 7.3 hp per US$1,000. Handling null: no road test opened.",
+      "reviews": [
+        {
+          "url": "https://www.thedrive.com/car-reviews/2027-chevy-corvette-lineup-ls6-review",
+          "title": "We Drove the New LS6-Powered 2027 Chevy Corvette Lineup. Here’s the One to Get",
+          "quote": "The ride quality in my tester was more than satisfactory",
+          "publishedDate": "2026-09-03",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.caranddriver.com/reviews/a73583684/2027-chevrolet-corvette-stingray-drive/",
+          "title": "Tested: The 2027 Chevrolet Corvette Stingray Is Ready to Go 200 MPH",
+          "quote": "The stiffer springs and damping values make the body motions a bit more lively and agile",
+          "publishedDate": "2026-09-03",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/first-drive-2027-chevrolet-corvette-stingray-convertible",
+          "title": "2027 Chevrolet Corvette Stingray First Drive: More of a Bargain Than Ever",
+          "quote": "the Z51 Corvette Stingray felt as fast, precise, and playful as its pricier Grand Sport sibling.",
+          "publishedDate": "2026-09-03",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.thedrive.com/car-reviews/2027-chevy-corvette-lineup-ls6-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Jerry Perez original September 3, replacing nonverbatim summary and unsupported August 25 date. This sentence belongs to road-driven Stingray 3LT Z51, not the GS/X track sections."
+        },
+        {
+          "url": "https://www.caranddriver.com/reviews/a73583684/2027-chevrolet-corvette-stingray-drive/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Dan Edmunds, original September 3; October 12 updated test results are not publication. Exact sentence about optional Z51 suspension, not base passive suspension or Grand Sport X."
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/first-drive-2027-chevrolet-corvette-stingray-convertible",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Lawrence Ulrich original September 3. Z51 road-driven convertible, not base-coupe speed measurement; chassis impression only."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15223,
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/fd874439-9493-43c9-98f4-33c2f76c446d",
+      "basis": "Scored variant: GLE 63 S 4MATIC+ SUV. Power 612 PS (604 hp, 600+ = 5); 0-100 km/h 3.9 s (Mercedes); economy WLTP 13.6-13.2 l/100 km, about 17.5 US mpg; value 612 PS / EUR 170,045 = 3.6 PS per 1,000 EUR (local-currency basis); space and handling null (no cargo figure or road test). Value re-based to US$ for cross-market ranking: 612 hp / US$197,252 (at 1.16 US$ per EUR) = 3.1 hp per US$1,000 = 0 (was 1.0).",
+      "reviews": [
+        {
+          "url": "https://www.motortrend.com/reviews/first-drive-2027-mercedes-amg-gle63s-gls63",
+          "title": "2027 Mercedes-AMG GLE63 S and GLS63 First Drive: That Ol’ Six-Three Magic",
+          "quote": "the GLE63 S offers plenty of comfort in Comfort mode.",
+          "publishedDate": "2026-10-22",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.motortrend.com/reviews/first-drive-2027-mercedes-amg-gle63s-gls63",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Aaron Gold first drive of updated flat-plane 2027 SUVs. Selected GLE coupe observation, not GLS paragraph or old-generation 2021 test; only second native source, gap remains."
+        }
+      ]
+    }
+  ]
+}

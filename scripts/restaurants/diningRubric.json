@@ -69,27 +69,29 @@
     "reviews": [
       {
         "url": "https://www.theinfatuation.com/new-york/reviews/eleven-madison-park",
+        "quote": "Across the board, the meat dishes are more enjoyable than the plant-based ones.",
         "title": "Meat can't save Eleven Madison Park (The Infatuation)",
-        "publishedDate": "2026-02-25",
-        "quote": "Across the board, the meat dishes are more enjoyable than the plant-based ones."
+        "sentiment": -0.3,
+        "publishedDate": "2026-02-25"
       },
       {
         "url": "https://nbcnewyork.com/news/local/one-of-nycs-and-the-worlds-top-restaurants-went-vegan-and-the-nyt-review-is-rough/3296254",
+        "quote": "The one at Eleven Madison Park tastes like Lemon Pledge and smells like a burning joint.",
         "title": "One of NYC's Top Restaurants Went Vegan, and the NYT Review Is ... Rough (NBC New York, quoting the New York Times' Pete Wells)",
-        "publishedDate": "2021-09-28",
-        "quote": "The one at Eleven Madison Park tastes like Lemon Pledge and smells like a burning joint."
+        "sentiment": -0.8,
+        "publishedDate": "2021-09-28"
       },
       {
         "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/eleven-madison-park",
+        "quote": "The freshly baked, delicately crisped vegan roll presented with faux butter is a magical creation.",
         "title": "Eleven Madison Park - a MICHELIN Guide Restaurant (guide inspector text)",
-        "publishedDate": null,
-        "quote": "The freshly baked, delicately crisped vegan roll presented with faux butter is a magical creation."
+        "publishedDate": null
       },
       {
         "url": "https://forbestravelguide.com/restaurants/new-york-city-new-york/eleven-madison-park",
+        "quote": "Each tasting menu will always include one or two tableside preparations, an impressive touch that calls to mind classic service.",
         "title": "Eleven Madison Park - Forbes Travel Guide",
-        "publishedDate": null,
-        "quote": "Each tasting menu will always include one or two tableside preparations, an impressive touch that calls to mind classic service."
+        "publishedDate": null
       }
     ]
   },
@@ -524,23 +526,27 @@
     "reviews": [
       {
         "url": "https://www.bostonglobe.com/lifestyle/food-dining/2016/02/29/tourist-trap-living-history-review-union-oyster-house/Xru3c9Q7LmKAZKsCD9NLXJ/story.html",
+        "quote": "And if the food were just a notch or two better, the experience might be worth the price.",
         "title": "Tourist trap or living history? A review of Union Oyster House at 190 (The Boston Globe)",
-        "publishedDate": null,
-        "quote": "And if the food were just a notch or two better, the experience might be worth the price."
+        "sentiment": -0.3,
+        "publishedDate": "2016-02-29"
       },
       {
         "url": "https://www.uponarriving.com/union-oyster-house",
+        "quote": "The crab cakes were decent, the clam chowder did the job, but, alas, the lobster roll left a bit to be desired.",
         "title": "The Union Oyster House Review: The Oldest Restaurant in America (UponArriving, travel site)",
-        "publishedDate": "2023-11-23",
-        "quote": "The crab cakes were decent, the clam chowder did the job, but, alas, the lobster roll left a bit to be desired."
+        "sentiment": -0.3,
+        "publishedDate": "2023-11-23"
       },
       {
         "url": "https://www.hungryfordesignreview.com/reviews/union-oyster-house",
-        "title": "Union Oyster House (Hungry For Design)",
+        "title": "UNION OYSTER HOUSE",
+        "quote": "Though perfectly fine, it’s not going to win any awards for culinary innovation.",
         "publishedDate": null,
-        "quote": "Though perfectly fine, it's not going to win any awards for culinary innovation."
+        "sentiment": -0.3
       }
-    ]
+    ],
+    "pinSourceUrl": "https://en.wikipedia.org/wiki/Union_Oyster_House"
   },
   {
     "pinId": 2590,
@@ -2748,7 +2754,7 @@
     ]
   },
   {
-    "pinId": 17155,
+    "pinId": 17208,
     "scores": {
       "food": 4,
       "service": 4.5,
@@ -2767,14 +2773,9 @@
       },
       {
         "url": "https://www.andyhayler.com/restaurant/la-yeon",
-        "quote": "Service was excellent, with a helpful female sommelier who had trained in Beaune.",
+        "quote": "Service was excellent",
         "title": "review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017",
-        "publishedDate": null
-      },
-      {
-        "url": "https://wanderlog.com/place/details/396544/la-yeon",
-        "quote": "Reviewers praise the thoughtfully curated course menu using seasonal Korean ingredients, the exquisite presentation of dishes, and the impeccable service.",
-        "title": "La Yeon, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "sentiment": 0.8,
         "publishedDate": null
       },
       {
@@ -2810,7 +2811,7 @@
         "wiki": {
           "title": "review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017",
           "summary": "Independent write-up of La Yeon: quoted for the cooking, service or room; read 2026-10-18.",
-          "body": "# review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017\n\nPage read on 2026-10-18 for the dining rubric of La Yeon (Seoul).\n\n## What it says\n\n> Service was excellent, with a helpful female sommelier who had trained in Beaune.\n\n\n\n## Use on the pin\n\nCited as one of the pin's independent reviews. Publication date: not stated on the page.\n",
+          "body": "# review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017\n\nPage read on 2026-10-18 for the dining rubric of La Yeon (Seoul).\n\n## What it says\n\n> Service was excellent, with a helpful female sommelier who had trained in Beaune.\n\n\n\n## Use on the pin\n\nCited as one of the pin's independent reviews. Publication date: not stated on the page.\n\n\nPublication/scope verification, 2026-10-27: Opened original Andy Hayler firsthand La Yeon meal at 23F The Shilla Seoul. Service quote verified. Selector says 11th Apr 2017 review, without a separate original publication byline or datePublished. Keep null rather than equating meal/review label with publication.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -2827,7 +2828,7 @@
         "wiki": {
           "title": "La Yeon, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
           "summary": "Independent write-up of La Yeon: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.5/5 from 808 reviews on Google; 4.0/5 from 87 reviews on Tripadvisor.",
-          "body": "# La Yeon, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of La Yeon (Seoul).\n\n## What it says\n\n> Reviewers praise the thoughtfully curated course menu using seasonal Korean ingredients, the exquisite presentation of dishes, and the impeccable service.\n\nRatings as printed: 4.5/5 from 808 reviews on Google; 4.0/5 from 87 reviews on Tripadvisor.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n",
+          "body": "# La Yeon, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of La Yeon (Seoul).\n\n## What it says\n\n> Reviewers praise the thoughtfully curated course menu using seasonal Korean ingredients, the exquisite presentation of dishes, and the impeccable service.\n\nRatings as printed: 4.5/5 from 808 reviews on Google; 4.0/5 from 87 reviews on Tripadvisor.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n\n\nSource eligibility correction, 2026-10-27: Opened original Wanderlog page. Saved sentence is unattributed platform summary of other reviews, not an independent critic or original firsthand reviewer. Removed from native reviews; contextual source retained. Removed from native reviews; contextual source/ref retained. Do not restore the old citation from an earlier Review evidence block.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -2889,7 +2890,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon"
   },
   {
     "pinId": 17158,
@@ -3418,7 +3420,7 @@
     ]
   },
   {
-    "pinId": 17170,
+    "pinId": 17223,
     "scores": {
       "food": 3.5,
       "service": 4.5,
@@ -3433,25 +3435,22 @@
         "url": "https://www.ohhowcivilized.com/afternoon-tea-review-shilla-seoul/",
         "quote": "SETTING: ★★★★☆ Afternoon tea is served in The Library, which I found to be a little too business loungey, and less froufrou that I like, but it’s a lovely space with seating spaced nicely apart so it seems very intimate.",
         "title": "Afternoon Tea Review // The Shilla Seoul - Oh, How Civilized",
+        "sentiment": 0.1,
         "publishedDate": "2014-12-08"
       },
       {
-        "url": "https://wanderlog.com/place/details/1699464/the-library",
-        "quote": "Additionally, The Library offers delicious food options including their famous Mango shaved ice and Pad Thai.",
-        "title": "The Library, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
-      },
-      {
         "url": "https://365days2play.com/2013/12/03/afternoon-tea-at-the-shilla/",
+        "quote": "In fact, the highlight for me was the tea. Really, I have never drunk such delicious milk tea before.",
         "title": "Afternoon tea at The Shilla",
-        "publishedDate": "2013-12-03",
-        "quote": "In fact, the highlight for me was the tea. Really, I have never drunk such delicious milk tea before."
+        "sentiment": 0.8,
+        "publishedDate": "2013-12-03"
       },
       {
         "url": "https://doremifa-seoul.blogspot.com/2011/05/munchies-library-at-shilla-hotel-for.html",
+        "quote": "Shilla's Library is dark wood and lots of light, which is nothing less than handsome.",
         "title": "Munchies: The Library at Shilla Hotel for Afternoon Tea",
-        "publishedDate": "2011-05-10",
-        "quote": "Shilla's Library is dark wood and lots of light, which is nothing less than handsome."
+        "sentiment": 0.3,
+        "publishedDate": "2011-05-10"
       }
     ],
     "sources": [
@@ -3480,7 +3479,7 @@
         "wiki": {
           "title": "The Library, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
           "summary": "Independent write-up of The Library: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.3/5 from 66 reviews on Google.",
-          "body": "# The Library, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of The Library (Seoul).\n\n## What it says\n\n> Additionally, The Library offers delicious food options including their famous Mango shaved ice and Pad Thai.\n\nRatings as printed: 4.3/5 from 66 reviews on Google.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n",
+          "body": "# The Library, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of The Library (Seoul).\n\n## What it says\n\n> Additionally, The Library offers delicious food options including their famous Mango shaved ice and Pad Thai.\n\nRatings as printed: 4.3/5 from 66 reviews on Google.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n\n\nSource eligibility correction, 2026-10-27: Opened original Wanderlog page. Saved sentence is unattributed platform summary of other reviews, not an independent critic or original firsthand reviewer. Removed from native reviews; contextual source retained. Removed from native reviews; contextual source/ref retained. Do not restore the old citation from an earlier Review evidence block.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -3544,7 +3543,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://www.segye.com/newsView/20261016506491#shilla-library"
   },
   {
     "pinId": 17213,
@@ -5295,45 +5295,6 @@
     ]
   },
   {
-    "pinId": 17208,
-    "scores": {
-      "food": 4,
-      "service": 4.5,
-      "ambience": 4.5,
-      "value": 1.5,
-      "acclaim": 4.5
-    },
-    "basis": "Tripadvisor, read 2026-10-18 (89 listing reviews; category sample counts unpublished): Service 4.6/5 -> 4.5; Ambience 5/5 -> 4.5; Value 3.5/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
-    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8380813-Reviews-La_Yeon-Seoul.html",
-    "reviews": [
-      {
-        "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
-        "quote": "Stunning views are guaranteed from La Yeon’s position on the 23rd floor of The Shilla Hotel, but the quality of the food ensures your attention never strays far from the plate.",
-        "title": "La Yeon – Seoul - a MICHELIN Guide Restaurant",
-        "publishedDate": null
-      },
-      {
-        "url": "https://www.andyhayler.com/restaurant/la-yeon",
-        "quote": "Service was excellent",
-        "title": "review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017",
-        "publishedDate": null,
-        "sentiment": 0.8
-      },
-      {
-        "url": "https://wanderlog.com/place/details/396544/la-yeon",
-        "quote": "Reviewers praise the thoughtfully curated course menu using seasonal Korean ingredients, the exquisite presentation of dishes, and the impeccable service.",
-        "title": "La Yeon, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
-      },
-      {
-        "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/La-Yeon.html",
-        "quote": "There are two tasting menus, one for lunch (eight courses) and one for dinner (ten courses), as well as fully vegetarian alternatives for both.",
-        "title": "La Yeon - Seoul - Restaurant - The 50 Discovery",
-        "publishedDate": null
-      }
-    ]
-  },
-  {
     "pinId": 17257,
     "scores": {
       "food": 4.5,
@@ -5782,6 +5743,40 @@
         "title": "부산 해운대 파라다이스 호텔 라스칼라 단골이 쓰는 후기 (런치코스/디너코스/세트/가격/추천메뉴/예약/기념일 레스토랑 추천)",
         "sentiment": 0.8,
         "publishedDate": "2023-12-06"
+      }
+    ]
+  },
+  {
+    "pinId": 17225,
+    "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+    "scores": {
+      "food": 4,
+      "service": 4,
+      "ambience": 5,
+      "value": 3,
+      "acclaim": 4
+    },
+    "basis": "Food 4 from Google 4.4/5 (519 reviews) via Wanderlog (read 2026-10-18). Service 4, Ambience 5 and Value 3 are the sub-scores one independent blog (The Ordinary Patrons, Jun 2025: Food 5, Service 4, Value 3, Atmosphere 5) printed; single visit. Acclaim 4: one MICHELIN star in the MICHELIN Guide Seoul & Busan 2026.",
+    "sourceUrl": "https://wanderlog.com/place/details/428273/bicena",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+        "quote": "The chef, originally from Gyeongsang-do, proudly showcases ingredients and culinary traditions from his hometown.",
+        "title": "Bicena – Seoul - a MICHELIN Guide Restaurant",
+        "publishedDate": null
+      },
+      {
+        "url": "https://ordinarypatrons.com/2025/06/11/bicena-seoul-michelin-star-restaurant-in-lotte-world-tower/",
+        "quote": "Not fans of raw beef in general, but we were impressed by the lightness of flavour in this beef.",
+        "title": "Bicena Seoul : Michelin Star Restaurant in Lotte World Tower",
+        "sentiment": 0.5,
+        "publishedDate": "2025-06-11"
+      },
+      {
+        "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Bicena.html",
+        "quote": "Their nuanced, creative tasting menus start with a glass of pine-needle gamju (rice wine), followed by a series of precision-crafted plates, rooted in the seasons.",
+        "title": "Bicena - Seoul - Restaurant - The 50 Discovery",
+        "publishedDate": null
       }
     ]
   }

@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-27",
+  "repairs": [
+    {
+      "pinId": 17208,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "mergedLegacyIds": [
+        17155,
+        17208
+      ],
+      "scoringFieldsEqual": true,
+      "richSourceWikisPreserved": true,
+      "nativeReviewsAuthoritative": true
+    },
+    {
+      "pinId": 17225,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+      "missingCatalogRowAddedFromNative": true
+    },
+    {
+      "pinId": 13921,
+      "pinSourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+      "missingStableIdentityAddedFromVerifiedNative": true,
+      "sevenTasteAxesPreserved": true,
+      "reason": "No unambiguous stable pin or rubric-source URL match in the legacy catalog; added a stable-URL record instead of treating a numeric id as portable."
+    },
+    {
+      "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "legacyEntryConsolidated": true,
+      "identityEvidence": "Legacy reviewed product URL equals stable pin source URL; all seven taste axes and basis match. Not matched solely by numeric id.",
+      "scoringFieldsEqual": true,
+      "nativeReviewsAuthoritative": true
+    },
+    {
+      "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "legacyEntryConsolidated": true,
+      "identityEvidence": "Legacy reviewed product URL equals stable pin source URL; all seven taste axes and basis match. Not matched solely by numeric id.",
+      "scoringFieldsEqual": true,
+      "nativeReviewsAuthoritative": true
+    }
+  ],
+  "previouslyStaleCatalogReviewsSynchronizedFromVerifiedNative": [
+    14109,
+    14164,
+    14218,
+    2581,
+    14076,
+    2464
+  ]
+}

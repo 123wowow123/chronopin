@@ -20,25 +20,25 @@ are recorded below.
 ## Current inventory
 
 This live snapshot includes concurrent daily-job additions; those are not
-attributed to this dining pass. There are **65 rubric gaps** (EV33, gas12,
-aircraft13, dining1, LLM4, video2), **71 unresolved publication/source checks**
-and **80 verified-undated entries**. Round 14 closes three prior aggregator-source
-checks by removing unattributed summaries. No publication date was invented.
+attributed to this dining pass. There are **61 rubric gaps** (EV33, gas8,
+aircraft13, dining1, LLM4, video2), **57 unresolved publication/source checks**
+and **89 verified-undated entries**. Round 15 examines all 65 baseline rubric gaps
+and 71 baseline source checks; it closes four raw coverage gaps and 14 source checks. No publication date was invented.
 All dated quoted reviews are scored.
 Raw review counts do not certify three professional critic meals or complete
 source independence.
 
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
-| PinTaste | 228 | 496 | 0 | 44 |
-| PinCarPerf | 128 | 350 | 33 | 16 |
-| PinGasCarPerf | 160 | 502 | 12 | 14 |
+| PinTaste | 228 | 494 | 0 | 44 |
+| PinCarPerf | 128 | 348 | 33 | 14 |
+| PinGasCarPerf | 160 | 510 | 8 | 14 |
 | PinAircraftPerf | 165 | 563 | 13 | 8 |
 | PinLlmPerf | 127 | 446 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 283 | 1 | 45 |
-| PinCriticReview | 108 | 325 | 0 | 1 |
+| PinDining | 89 | 280 | 1 | 42 |
+| PinCriticReview | 113 | 340 | 0 | 1 |
 
 ## Saved evidence and limits
 
@@ -154,3 +154,83 @@ current queue and README contain only unfinished work: 65 raw rubric gaps,
 71 publication/source checks, broader critic coverage and successful scheduled
 production verification. Round 14 did not retry the already skipped scheduled
 run, deploy, restart or alter production configuration.
+
+
+## Round 15 — full queue research and broader coverage
+
+The [full research ledger](../../../scripts/products/review-full-queue-research-round15-2026-10-27.json)
+records all 65 baseline rubric gaps and all 71 unresolved source/date checks.
+Each rubric received English and native-name/exact-variant searches; all 71
+original source URLs were retried. Search discoveries are leads, not verified
+citations. This pass does **not** complete the overall job: 61 raw rubric gaps,
+57 source/date checks and further eligible critic coverage remain.
+
+Saved **25 new verified review extracts** locally and in production:
+
+- Fifteen extracts across five new critic pins: Fontaines D.C.’s *Dopamine Chamber*, Lisa’s *Press Play* EP, *Nobody Wants This* season 3, MSI RTX 5080 Expert and Omega’s Bond/Spectre collection. These expand Music, TV, Computing and Fashion coverage. Hardware testing concerns the exact cooler/card, not proof of its later award. Watch verdicts are editorial assessments, not instrumented accuracy tests.
+- Ten new vehicle extracts: three Grand Sport, two Stingray, one current-generation AMG GLE, three Q9 and one petrol-manual Tata Aeris. Q9, Aeris, Grand Sport and Stingray cross the raw three-review threshold. Suspension, tire, engine and market qualifications remain explicit; Stingray’s optional Z51 tests do not establish base-coupe handling.
+
+The [broader catalog](../../../scripts/products/review-broader-coverage-round15-2026-10-27.json),
+[vehicle catalog](../../../scripts/products/review-vehicles-round15-2026-10-27.json)
+and [additional vehicle catalog](../../../scripts/products/review-additional-vehicles-round15-2026-10-27.json)
+contain exact titles, quotes, original publication days and evidence limitations.
+Original bylines take precedence over later updates; UTC midnight crossings use
+the publisher’s displayed publication day. No missing day was guessed.
+
+Nine ineligible legacy citations were removed: three Wanderlog summaries, a
+Nevo showroom overview, Monjaro launch news, an older-generation AMG test, an
+unverified Q9 announcement summary and two different-producer Daim comparisons.
+Two briefly added Monjaro export-market reviews were also removed from native
+reviews after exact-market screening; they remain explicitly
+[context only](../../../scripts/products/review-context-only-round15-2026-10-27.json).
+Two FUNDAY customer-review URLs were replaced with the original Australian
+collection-product pages containing the named comments, distinct from the
+site’s AI-generated summary. Nine existing citations received literal-quote,
+headline, date or driving-extract corrections. See the
+[guarded exclusions](../../../scripts/products/review-exclusions-round15-2026-10-27.json),
+[source corrections](../../../scripts/products/review-source-corrections-round15-2026-10-27.json),
+[metadata correction](../../../scripts/products/review-metadata-round15-2026-10-27.json),
+[taste replacements](../../../scripts/products/review-taste-replacements-round15-2026-10-27.json)
+and [final driving extract](../../../scripts/products/review-final-vehicle-corrections-round15-2026-10-27.json).
+Hennig-Olsen’s remaining maker description is still not a firsthand tasting;
+that research gap remains open despite its existing seven-axis radar.
+
+Three previously null handling axes were filled under the published anchors:
+Grand Sport 4, Q9 4 and Aeris 3. The
+[guarded rubric corrections](../../../scripts/products/review-rubric-updates-round15-2026-10-27.json)
+also correct stale basis text for six other rows while preserving their axes.
+LS9 66 Ultra, Avatr pre-production Max+/Ultra and Chinese 70-kWh Zeekr tests do
+not validate the scored base, final Elite or European 55.1-kWh configurations.
+Those exact-variant research gaps remain open.
+
+Four source checks closed by excluding summaries/showroom material, two through
+verified URL replacements, one through an original LS9 publication date and
+seven through original-source verification with legitimately null publication
+days. The new FUNDAY URLs also remain verified-undated. There are now 89
+verified-undated entries; these do not create dated graph points.
+[Source dispositions](../../../scripts/products/review-source-checks-round15-2026-10-27.json)
+and [coverage findings](../../../scripts/products/review-coverage-leads-round15-2026-10-27.json)
+retain specific missing evidence for every remaining baseline item. The active
+[queue](../../../scripts/products/review-queue-2026-10-27.json) and README TODO
+remove closed work and retain actual shortages.
+
+The La Yeon duplicate catalog identity was consolidated without discarding its
+source wikis; Library and Bicena now use stable venue URLs. See
+[catalog repairs](../../../scripts/products/review-catalog-repairs-round15-2026-10-27.json).
+Source references and 106 source-wiki annotations were saved and read back
+across both environments, retaining earlier source content. The
+[wiki receipt](../../../scripts/products/review-wiki-verification-round15-2026-10-27.json)
+records those checks. Two duplicate FUNDAY catalog rows were consolidated by
+matching their reviewed product URLs and all seven axes; Hennig-Olsen received
+a stable-URL catalog record. Numeric ids alone were not used to infer identity.
+
+All 54 native rows and 54 rendered detail pages (27 pins in both environments)
+passed final checks. Remaining quotes render verbatim after whitespace
+normalization; graph visibility matches the presence of dated, scored reviews.
+Unrelated native fields were compared against the pre-pass snapshot.
+
+Validation is recorded in the
+[round 15 receipt](../../../scripts/products/review-validation-round15-2026-10-27.json).
+The 31 focused review/catalog/markup/publication-day tests pass; the new guarded
+rubric replay utility passes ESLint. No deployment or schedule change was made.
+Scheduled production model/tool verification remains separately unfinished.

@@ -1,0 +1,1841 @@
+{
+  "checkedAt": "2026-10-27T17:50:42.518Z",
+  "scope": "Round 15: all baseline 65 raw rubric gaps and 71 unresolved source/date checks researched; eligible additions and corrections saved through authenticated native APIs locally and in production.",
+  "fullTaskComplete": false,
+  "newRetainedReviews": 25,
+  "newBroaderCriticPins": 5,
+  "closedRubricGaps": 4,
+  "closedBaselineSourceChecks": 14,
+  "handlingAxesFilled": [
+    {
+      "pinId": 15270,
+      "score": 4
+    },
+    {
+      "pinId": 15217,
+      "score": 4
+    },
+    {
+      "pinId": 15264,
+      "score": 3
+    }
+  ],
+  "remaining": {
+    "rubricGaps": 61,
+    "sourceChecks": 57,
+    "verifiedUndated": 89,
+    "broaderCoverage": "Ongoing eligibility screening and exact-product research; raw category candidates include non-reviewable events."
+  },
+  "nativeReadbacks": [
+    {
+      "id": 4392,
+      "pinId": 4392,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.nme.com/news/music/fontaines-d-c-share-dopamine-chamber-tracklist-featuring-collab-with-rosalia-3969431",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 4392,
+      "pinId": 4392,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.nme.com/news/music/fontaines-d-c-share-dopamine-chamber-tracklist-featuring-collab-with-rosalia-3969431",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 4394,
+      "pinId": 4394,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.billboard.com/music/pop/lisa-talks-press-play-tonight-show-1236342361/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 4394,
+      "pinId": 4394,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.billboard.com/music/pop/lisa-talks-press-play-tonight-show-1236342361/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 2062,
+      "pinId": 2062,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3755151/nobody-wants-this-3x01-episode-1",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 2062,
+      "pinId": 2062,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3755151/nobody-wants-this-3x01-episode-1",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 15790,
+      "pinId": 15790,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.msi.com/Graphics-Card/GeForce-RTX-5080-16G-EXPERT",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 15790,
+      "pinId": 15790,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.msi.com/Graphics-Card/GeForce-RTX-5080-16G-EXPERT",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 6323,
+      "pinId": 6323,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.fratellowatches.com/choosing-between-good-and-evil-the-omega-seamaster-diver-300m-james-bond-and-spectre-collection/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 6323,
+      "pinId": 6323,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.fratellowatches.com/choosing-between-good-and-evil-the-omega-seamaster-diver-300m-james-bond-and-spectre-collection/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 15270,
+      "pinId": 15270,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2026/mar/0326-Chevrolet-Grand-Sport-returns-6-7-liter-535-horsepower-V8.html",
+      "reviewsVerified": 5,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15270,
+      "pinId": 15270,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2026/mar/0326-Chevrolet-Grand-Sport-returns-6-7-liter-535-horsepower-V8.html",
+      "reviewsVerified": 5,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15271,
+      "pinId": 15271,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/topic/us/en/2026/jun/0630-2027-chevrolet-corvette-stingray-200-mph.html",
+      "reviewsVerified": 4,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15271,
+      "pinId": 15271,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/topic/us/en/2026/jun/0630-2027-chevrolet-corvette-stingray-200-mph.html",
+      "reviewsVerified": 4,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15223,
+      "pinId": 15223,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/fd874439-9493-43c9-98f4-33c2f76c446d",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15223,
+      "pinId": 15223,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/fd874439-9493-43c9-98f4-33c2f76c446d",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14164,
+      "pinId": 14164,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14164,
+      "pinId": 14164,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14218,
+      "pinId": 14218,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2025/08/29/saic-mg-launches-redesigned-mg4/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14218,
+      "pinId": 14218,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2025/08/29/saic-mg-launches-redesigned-mg4/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 2581,
+      "pinId": 2581,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Union_Oyster_House",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 2581,
+      "pinId": 2581,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Union_Oyster_House",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 14076,
+      "pinId": 14076,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://press.zeekr.eu/the-rules-of-luxury-have-changed-introducing-the-zeekr-9x",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14076,
+      "pinId": 14076,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://press.zeekr.eu/the-rules-of-luxury-have-changed-introducing-the-zeekr-9x",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15166,
+      "pinId": 15166,
+      "production": false,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15166,
+      "pinId": 15166,
+      "production": true,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 5631,
+      "pinId": 5631,
+      "production": false,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 5631,
+      "pinId": 5631,
+      "production": true,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 5633,
+      "pinId": 5633,
+      "production": false,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 5633,
+      "pinId": 5633,
+      "production": true,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 15217,
+      "pinId": 15217,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.audi.com/en/press-releases/new-portfolio-flagship-the-audi-q9-redefines-space-and-comfort-as-the-first-of-its-kind-18145",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15217,
+      "pinId": 15217,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.audi.com/en/press-releases/new-portfolio-flagship-the-audi-q9-redefines-space-and-comfort-as-the-first-of-its-kind-18145",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15264,
+      "pinId": 15264,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/tata-aeris-launched-at-rs-529-lakh-440848",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15264,
+      "pinId": 15264,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/tata-aeris-launched-at-rs-529-lakh-440848",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14040,
+      "pinId": 14040,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "reviewsVerified": 0,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14040,
+      "pinId": 14040,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "reviewsVerified": 0,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 2464,
+      "pinId": 2464,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Eleven_Madison_Park",
+      "reviewsVerified": 4,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 2464,
+      "pinId": 2464,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Eleven_Madison_Park",
+      "reviewsVerified": 4,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 19969,
+      "pinId": 19969,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://www.motor1.com/news/716883/2024-hyundai-santa-fe-uk-pricing/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 19969,
+      "pinId": 19969,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://www.motor1.com/news/716883/2024-hyundai-santa-fe-uk-pricing/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 17208,
+      "pinId": 17208,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17208,
+      "pinId": 17208,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 15115,
+      "pinId": 15115,
+      "production": false,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15115,
+      "pinId": 15115,
+      "production": true,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 17223,
+      "pinId": 17223,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.segye.com/newsView/20261016506491#shilla-library",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17223,
+      "pinId": 17223,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.segye.com/newsView/20261016506491#shilla-library",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17225,
+      "pinId": 17225,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17225,
+      "pinId": 17225,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 14228,
+      "pinId": 14228,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/09/24/changan-nevo-launches-q06-suv/",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14228,
+      "pinId": 14228,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/09/24/changan-nevo-launches-q06-suv/",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 13921,
+      "pinId": 13921,
+      "production": false,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 13921,
+      "pinId": 13921,
+      "production": true,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.hennig-olsen.no/artikler/hostens-iskremnyheter2026",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    }
+  ],
+  "renderedPages": [
+    {
+      "id": 4394,
+      "pinId": 4394,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/4394/lisa-releases-press-play-her-first-ep",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 4392,
+      "pinId": 4392,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/4392/fontaines-d-c-release-dopamine-chamber-their-fifth-album",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 4394,
+      "pinId": 4394,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/4394/lisa-releases-press-play-her-first-ep",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15790,
+      "pinId": 15790,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15790/msi-geforce-rtx-5080-16g-expert-wins-ces-2026-best-of-innovation-in-gaming",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15790,
+      "pinId": 15790,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15790/msi-geforce-rtx-5080-16g-expert-wins-ces-2026-best-of-innovation-in-gaming",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15270,
+      "pinId": 15270,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15270/chevrolet-revives-the-corvette-grand-sport-with-a-535-hp-ls6-v8",
+      "httpStatus": 200,
+      "quotesVerified": 5,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15271,
+      "pinId": 15271,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15271/chevrolet-says-the-2027-corvette-stingray-tops-200-mph-from-us-73-495",
+      "httpStatus": 200,
+      "quotesVerified": 4,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15271,
+      "pinId": 15271,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15271/chevrolet-says-the-2027-corvette-stingray-tops-200-mph-from-us-73-495",
+      "httpStatus": 200,
+      "quotesVerified": 4,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15223,
+      "pinId": 15223,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15223/mercedes-amg-updates-the-gle-63-s-and-gls-63-with-a-flat-plane-v8",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15223,
+      "pinId": 15223,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15223/mercedes-amg-updates-the-gle-63-s-and-gls-63-with-a-flat-plane-v8",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14109/im-motors-launches-the-ls9-large-extended-range-suv-from-rmb-322-800",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14109/im-motors-launches-the-ls9-large-extended-range-suv-from-rmb-322-800",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14164,
+      "pinId": 14164,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14164/avatr-launches-the-07l-electric-suv-with-huawei-ads-5-from-rmb-229-900",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14164,
+      "pinId": 14164,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14164/avatr-launches-the-07l-electric-suv-with-huawei-ads-5-from-rmb-229-900",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14218,
+      "pinId": 14218,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14218/mg-launches-the-redesigned-mg4-in-china-from-rmb-68-800",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14218,
+      "pinId": 14218,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14218/mg-launches-the-redesigned-mg4-in-china-from-rmb-68-800",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2581,
+      "pinId": 2581,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/2581/union-oyster-house-opens-as-the-atwood-bacon-oyster-house",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14076,
+      "pinId": 14076,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14076/zeekr-launches-super-hybrid-9x-luxury-suv-in-europe",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14076,
+      "pinId": 14076,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14076/zeekr-launches-super-hybrid-9x-luxury-suv-in-europe",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15166,
+      "pinId": 15166,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15166/muse-spark-1-2-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15166,
+      "pinId": 15166,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15166/muse-spark-1-2-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 5631,
+      "pinId": 5631,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/5631/funday-fruity-pigs-gummies-land-at-woolworths-in-australia",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 5631,
+      "pinId": 5631,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/5631/funday-fruity-pigs-gummies-land-at-woolworths-in-australia",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 5633,
+      "pinId": 5633,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/5633/funday-x-mr-whippy-foamy-ice-cream-gummies-hit-shelves-in-australia",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 5633,
+      "pinId": 5633,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/5633/funday-x-mr-whippy-foamy-ice-cream-gummies-hit-shelves-in-australia",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15217,
+      "pinId": 15217,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15217/audi-unveils-the-q9-its-first-full-size-suv-in-new-york",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15217,
+      "pinId": 15217,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15217/audi-unveils-the-q9-its-first-full-size-suv-in-new-york",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14040,
+      "pinId": 14040,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14040/geely-monjaro-em-i-makes-european-debut-at-the-paris-motor-show",
+      "httpStatus": 200,
+      "quotesVerified": 0,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 14040,
+      "pinId": 14040,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14040/geely-monjaro-em-i-makes-european-debut-at-the-paris-motor-show",
+      "httpStatus": 200,
+      "quotesVerified": 0,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 15264,
+      "pinId": 15264,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15264/tata-launches-the-aeris-compact-sedan-the-tigor-successor-from-rs-5-29-lakh",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2464,
+      "pinId": 2464,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/2464/eleven-madison-park-reopens-with-a-plant-based-menu",
+      "httpStatus": 200,
+      "quotesVerified": 4,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17208,
+      "pinId": 17208,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17208/la-yeon-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 17208,
+      "pinId": 17208,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17208/la-yeon-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 15115,
+      "pinId": 15115,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15115/glm-4-7-flash-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15115,
+      "pinId": 15115,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15115/glm-4-7-flash-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17223,
+      "pinId": 17223,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17223/the-library-the-shilla-seoul-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17223,
+      "pinId": 17223,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17223/the-library-the-shilla-seoul-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17225,
+      "pinId": 17225,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17225/bicena-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17225,
+      "pinId": 17225,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17225/bicena-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14228,
+      "pinId": 14228,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14228/changan-nevo-launches-the-q06-mid-size-suv-from-rmb-139-900",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14228,
+      "pinId": 14228,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14228/changan-nevo-launches-the-q06-mid-size-suv-from-rmb-139-900",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 13921,
+      "pinId": 13921,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/13921/hennig-olsen-launches-daim-strawberry-tub-and-brings-back-anita-ice-cake",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 13921,
+      "pinId": 13921,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/13921/hennig-olsen-launches-daim-strawberry-tub-and-brings-back-anita-ice-cake",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 2464,
+      "pinId": 2464,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/2464/eleven-madison-park-reopens-with-a-plant-based-menu",
+      "httpStatus": 200,
+      "quotesVerified": 4,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 19969,
+      "pinId": 19969,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/19969/hyundai-prices-the-fifth-generation-santa-fe-plug-in-hybrid-in-the-uk-from-gbp-5",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2062,
+      "pinId": 2062,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/2062/nobody-wants-this-season-3-premieres",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 6323,
+      "pinId": 6323,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/6323/omega-launches-seamaster-diver-300m-james-bond-and-spectre-editions-on-james-bon",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 6323,
+      "pinId": 6323,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/6323/omega-launches-seamaster-diver-300m-james-bond-and-spectre-editions-on-james-bon",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15270,
+      "pinId": 15270,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15270/chevrolet-revives-the-corvette-grand-sport-with-a-535-hp-ls6-v8",
+      "httpStatus": 200,
+      "quotesVerified": 5,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2581,
+      "pinId": 2581,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/2581/union-oyster-house-opens-as-the-atwood-bacon-oyster-house",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15264,
+      "pinId": 15264,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15264/tata-launches-the-aeris-compact-sedan-the-tigor-successor-from-rs-5-29-lakh",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 19969,
+      "pinId": 19969,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/19969/hyundai-prices-the-fifth-generation-santa-fe-plug-in-hybrid-in-the-uk-from-gbp-5",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2062,
+      "pinId": 2062,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/2062/nobody-wants-this-season-3-premieres",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 4392,
+      "pinId": 4392,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/4392/fontaines-d-c-release-dopamine-chamber-their-fifth-album",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    }
+  ],
+  "wikiReadbacks": 106,
+  "rubricCorrectionReadbacks": [
+    {
+      "pinId": 15270,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "2027 Corvette Grand Sport coupe: 535 hp (Chevrolet), 0-60 in 2.75 s (Chevrolet), EPA 17 mpg combined, 12.6 cu ft cargo scored against two-seaters, US$88,495 incl. destination = 6.0 hp per US$1,000.\n\nResearch verification, 2026-10-27: Handling 4 (praised): independent C/D, MotorTrend, Autoblog and The Drive 2027 LS6 RWD road tests. Track alignment and optional tires affect measured limits; do not transfer those numbers to base tires. Existing Edmunds steering criticism is retained; no class-leading claim.",
+        "handling": 4
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15270,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "2027 Corvette Grand Sport coupe: 535 hp (Chevrolet), 0-60 in 2.75 s (Chevrolet), EPA 17 mpg combined, 12.6 cu ft cargo scored against two-seaters, US$88,495 incl. destination = 6.0 hp per US$1,000.\n\nResearch verification, 2026-10-27: Handling 4 (praised): independent C/D, MotorTrend, Autoblog and The Drive 2027 LS6 RWD road tests. Track alignment and optional tires affect measured limits; do not transfer those numbers to base tires. Existing Edmunds steering criticism is retained; no class-leading claim.",
+        "handling": 4
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15217,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "Scored variant: 2027 US Q9 2.9 V6 (429 hp, 0-60 mph 4.9 s per Audi via SlashGear). Economy null (no gasoline fuel-economy figure published yet);  space 19.3/50/87.8 cu ft behind rows 3/2/1 in a full-size three-row class, above average; value 429 hp / US$89,095 = 4.8 hp per US$1,000.\n\nResearch verification, 2026-10-27: Handling 4 (praised): October 27 C/D, MotorTrend and Jalopnik first drives explicitly include US Q9 2.9 V6. SQ9 V8/sport-suspension observations excluded. Removed unverified launch-summary citation.",
+        "handling": 4
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15217,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "Scored variant: 2027 US Q9 2.9 V6 (429 hp, 0-60 mph 4.9 s per Audi via SlashGear). Economy null (no gasoline fuel-economy figure published yet);  space 19.3/50/87.8 cu ft behind rows 3/2/1 in a full-size three-row class, above average; value 429 hp / US$89,095 = 4.8 hp per US$1,000.\n\nResearch verification, 2026-10-27: Handling 4 (praised): October 27 C/D, MotorTrend and Jalopnik first drives explicitly include US Q9 2.9 V6. SQ9 V8/sport-suspension observations excluded. Removed unverified launch-summary citation.",
+        "handling": 4
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15264,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "Scored variant: 1.2 petrol manual (Smart) at Rs 5.29 lakh. Power 86 hp = 0; economy 20.5 kmpl ARAI (48 mpg) = 5; space 4 (419 L boot, larger than Amaze/Dzire/Aura; airy cabin); value 86 hp / US$5,510 = 15.6 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 5. Acceleration null (no figure published),\n\nResearch verification, 2026-10-27: Handling 3 (competent): Autocar India, evo India and CarWale petrol-manual road tests; slow steering and settled chassis. CNG/AMT performance excluded.",
+        "handling": 3
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15264,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "Scored variant: 1.2 petrol manual (Smart) at Rs 5.29 lakh. Power 86 hp = 0; economy 20.5 kmpl ARAI (48 mpg) = 5; space 4 (419 L boot, larger than Amaze/Dzire/Aura; airy cabin); value 86 hp / US$5,510 = 15.6 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 5. Acceleration null (no figure published),\n\nResearch verification, 2026-10-27: Handling 3 (competent): Autocar India, evo India and CarWale petrol-manual road tests; slow steering and settled chassis. CNG/AMT performance excluded.",
+        "handling": 3
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15271,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "2027 Corvette Stingray coupe: 535 hp, 0-60 in 2.8 s (both Chevrolet), EPA 18 mpg combined, 12.6 cu ft cargo (Grand Sport table, same body) scored against two-seaters, US$73,495 = 7.3 hp per US$1,000.\n\nResearch verification, 2026-10-27: Three opened current-year LS6 road tests now present (C/D, MotorTrend, The Drive). Most driven examples have optional Z51 suspension, with a convertible in MotorTrend; keep base-coupe handling null rather than transfer those limits. The Drive original September 3 and literal wording corrected."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15271,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "2027 Corvette Stingray coupe: 535 hp, 0-60 in 2.8 s (both Chevrolet), EPA 18 mpg combined, 12.6 cu ft cargo (Grand Sport table, same body) scored against two-seaters, US$73,495 = 7.3 hp per US$1,000.\n\nResearch verification, 2026-10-27: Three opened current-year LS6 road tests now present (C/D, MotorTrend, The Drive). Most driven examples have optional Z51 suspension, with a convertible in MotorTrend; keep base-coupe handling null rather than transfer those limits. The Drive original September 3 and literal wording corrected."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15223,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "Scored variant: GLE 63 S 4MATIC+ SUV. Power 612 PS (604 hp, 600+ = 5); 0-100 km/h 3.9 s (Mercedes); economy WLTP 13.6-13.2 l/100 km, about 17.5 US mpg; value 612 PS / EUR 170,045 = 3.6 PS per 1,000 EUR (local-currency basis); space and handling null (no cargo figure or road test). Value re-based to US$ for cross-market ranking: 612 hp / US$197,252 (at 1.16 US$ per EUR) = 3.1 hp per US$1,000 = 0 (was 1.0).\n\nResearch verification, 2026-10-27: Only one qualifying updated 2027 flat-plane-family road test verified: MotorTrend. The old 2021 GLE review was removed. Selected GLE coupe comfort-mode observation is not a separate GLS test; handling remains null."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15223,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "changes": {
+        "basis": "Scored variant: GLE 63 S 4MATIC+ SUV. Power 612 PS (604 hp, 600+ = 5); 0-100 km/h 3.9 s (Mercedes); economy WLTP 13.6-13.2 l/100 km, about 17.5 US mpg; value 612 PS / EUR 170,045 = 3.6 PS per 1,000 EUR (local-currency basis); space and handling null (no cargo figure or road test). Value re-based to US$ for cross-market ranking: 612 hp / US$197,252 (at 1.16 US$ per EUR) = 3.1 hp per US$1,000 = 0 (was 1.0).\n\nResearch verification, 2026-10-27: Only one qualifying updated 2027 flat-plane-family road test verified: MotorTrend. The old 2021 GLE review was removed. Selected GLE coupe comfort-mode observation is not a separate GLS test; handling remains null."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14040,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: Paris-show Ultra AWD EM-i. Prior scoring uses 1,100 km combined / 130 km electric (29.8 kWh, cycle unspecified), 30-80% in 15 min, 0-100 in 5.83 s and 2,845 mm wheelbase. These are export/show figures, not confirmed European homologation. No European price or assist specification opened, so those axes remain null. Review verification, 2026-10-27: no qualifying exact-European road test found. Auto Express is launch news; Mexico GF and Egypt e-AWD drives are contextual references only, excluded from native reviews. Prior scores preserved pending exact-market evidence."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14040,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: Paris-show Ultra AWD EM-i. Prior scoring uses 1,100 km combined / 130 km electric (29.8 kWh, cycle unspecified), 30-80% in 15 min, 0-100 in 5.83 s and 2,845 mm wheelbase. These are export/show figures, not confirmed European homologation. No European price or assist specification opened, so those axes remain null. Review verification, 2026-10-27: no qualifying exact-European road test found. Auto Express is launch news; Mexico GF and Egypt e-AWD drives are contextual references only, excluded from native reviews. Prior scores preserved pending exact-market evidence."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14076,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: European Zeekr 9X Ultra, 55.1 kWh. Existing specification scores are preserved. Review verification, 2026-10-27: XCX original 伟健 drive explicitly uses China Ultra with optional 70 kWh battery. Its literal Chinese single-speed-DHT observation replaces a paraphrase, but its range/charging measurements do not establish the European 55.1 kWh variant. Original article publication byline was not found; comments are not publication dates. Exact-European review applicability remains unresolved."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14076,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: European Zeekr 9X Ultra, 55.1 kWh. Existing specification scores are preserved. Review verification, 2026-10-27: XCX original 伟健 drive explicitly uses China Ultra with optional 70 kWh battery. Its literal Chinese single-speed-DHT observation replaces a paraphrase, but its range/charging measurements do not establish the European 55.1 kWh variant. Original article publication byline was not found; comments are not publication dates. Exact-European review applicability remains unresolved."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: IM LS9 52 Ultra EREV, RMB 322,800, 52 kWh, 320 km EV / 1,454 km combined CLTC, 380 kW, 0-100 4.9 s, 10-80% in 19 min; 3,160 mm wheelbase, six seats, LiDAR/Thor/Momenta. The 390 kW and 16.5-min figures belong to 66 Ultra and are excluded. Prior axis scores preserved. Review verification, 2026-10-27: XCX original November 28, 2025 test is 66 Ultra (402 km EV), not base 52 Ultra. Original Chinese quotation repaired; retain as scoped context only, not validation of the base battery or charging figures. Exact-52-Ultra review coverage remains open."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: IM LS9 52 Ultra EREV, RMB 322,800, 52 kWh, 320 km EV / 1,454 km combined CLTC, 380 kW, 0-100 4.9 s, 10-80% in 19 min; 3,160 mm wheelbase, six seats, LiDAR/Thor/Momenta. The 390 kW and 16.5-min figures belong to 66 Ultra and are excluded. Prior axis scores preserved. Review verification, 2026-10-27: XCX original November 28, 2025 test is 66 Ultra (402 km EV), not base 52 Ultra. Original Chinese quotation repaired; retain as scoped context only, not validation of the base battery or charging figures. Exact-52-Ultra review coverage remains open."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14164,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: Avatr 07L Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited, 89.33 kWh, 725 km CLTC, 800 V, 30-80% under 10 min, 0-100 5.9 s, 2,990 mm wheelbase; ADS Pro/in-cabin LiDAR. Max+/Ultra add different equipment, so their results cannot establish the Elite. Prior scores preserved. Review verification, 2026-10-27: XCX pre-launch Max+/Ultra quote repaired to literal Chinese, retained only as context. The other saved Avatr 07 report is an earlier model. Neither proves a final-Elite independent road test; exact-07L-Elite coverage remains open."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14164,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: Avatr 07L Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited, 89.33 kWh, 725 km CLTC, 800 V, 30-80% under 10 min, 0-100 5.9 s, 2,990 mm wheelbase; ADS Pro/in-cabin LiDAR. Max+/Ultra add different equipment, so their results cannot establish the Elite. Prior scores preserved. Review verification, 2026-10-27: XCX pre-launch Max+/Ultra quote repaired to literal Chinese, retained only as context. The other saved Avatr 07 report is an earlier model. Neither proves a final-Elite independent road test; exact-07L-Elite coverage remains open."
+      },
+      "otherFieldsPreserved": true
+    }
+  ],
+  "synchronizedCatalogs": [
+    "scripts/products/carPerf.json",
+    "scripts/products/taste.json",
+    "scripts/restaurants/diningRubric.json"
+  ],
+  "catalogLimitation": "Exchange & Mart source-only verification (pin 19969) has no stable matching legacy catalog entry; its native rubric was verified unchanged. No numeric-id catalog fallback used.",
+  "checks": {
+    "focusedTests": {
+      "files": 5,
+      "passed": 31
+    },
+    "eslint": {
+      "file": "scripts/products/replayReviewRubricUpdates.ts",
+      "warnings": 0,
+      "passed": true
+    },
+    "reviewEvidenceConstraints": "Opened HTTPS URLs, titles, <=300-character quotes and ISO original publication days or null checked for all incoming review catalogs.",
+    "gitDiffCheck": true
+  },
+  "limitations": [
+    "Raw three-review counts do not certify three professional critics or perfect independence.",
+    "Exact market, variant, generation, branch and model-update gaps remain explicitly open.",
+    "89 verified-undated entries keep null publication dates and cannot create dated graph points.",
+    "Scheduled production model/tool verification remains unfinished and was not retried in this pass."
+  ],
+  "deploymentPerformed": false,
+  "schedulesChanged": false
+}

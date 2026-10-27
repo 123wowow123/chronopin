@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15217,
+      "pinSourceUrl": "https://www.audi.com/en/press-releases/new-portfolio-flagship-the-audi-q9-redefines-space-and-comfort-as-the-first-of-its-kind-18145",
+      "basis": "Scored variant: 2027 US Q9 2.9 V6 (429 hp, 0-60 mph 4.9 s per Audi via SlashGear). Economy null (no gasoline fuel-economy figure published yet); handling null (no road test); space 19.3/50/87.8 cu ft behind rows 3/2/1 in a full-size three-row class, above average; value 429 hp / US$89,095 = 4.8 hp per US$1,000.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a74233484/2027-audi-q9-sq9-drive/",
+          "title": "2027 Audi Q9 and SQ9: We Drive Audi’s Big-League SUVs",
+          "quote": "you’d never be wont for more grunt",
+          "publishedDate": "2026-10-27",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/first-drive-2027-audi-q9",
+          "title": "2027 Audi Q9 Driven: The Big Boy SUV Has Big Promise",
+          "quote": "we were happy with how it handled the twisty roads and hills",
+          "publishedDate": "2026-10-27",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.jalopnik.com/2297915/2027-audi-q9-sq9-three-row-suv-first-drive-review/",
+          "title": "2027 Audi Q9 And SQ9 Go Straight To The Top Of Their Class",
+          "quote": "taut and athletic without being harsh or jiggly",
+          "publishedDate": "2026-10-27",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a74233484/2027-audi-q9-sq9-drive/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Andrew Wendler original October 27; US 429-hp 2.9 V6 Q9 acceleration paragraph, not SQ9. Maker acceleration claim is not an instrumented test."
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/first-drive-2027-audi-q9",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Miguel Cortina original October 27; afternoon Q9 V6 drive explicitly distinct from preceding SQ9 V8 section."
+        },
+        {
+          "url": "https://www.jalopnik.com/2297915/2027-audi-q9-sq9-three-row-suv-first-drive-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Logan K. Carter original October 27; regular Q9 on 22-inch wheels, not adjacent sport-suspension SQ9 paragraph."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15264,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/tata-aeris-launched-at-rs-529-lakh-440848",
+      "basis": "Scored variant: 1.2 petrol manual (Smart) at Rs 5.29 lakh. Power 86 hp = 0; economy 20.5 kmpl ARAI (48 mpg) = 5; space 4 (419 L boot, larger than Amaze/Dzire/Aura; airy cabin); value 86 hp / US$5,510 = 15.6 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 5. Acceleration null (no figure published), handling null (one road test).",
+      "reviews": [
+        {
+          "url": "https://www.carwale.com/tata-cars/aeris/expert-reviews/tata-aeris-petrol-and-cng-first-drive-review/",
+          "title": "Tata Aeris Petrol and CNG First Drive Review",
+          "quote": "The clutch pedal has an uneven feel and the gearshifts aren't as slick as you would expect.",
+          "publishedDate": "2026-10-08",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.carwale.com/tata-cars/aeris/expert-reviews/tata-aeris-petrol-and-cng-first-drive-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Sagar Bhanushali original October 8 11:13 IST. Selected petrol-manual paragraph, not CNG-AMT drive or CNG-mode acceleration."
+        }
+      ]
+    }
+  ]
+}

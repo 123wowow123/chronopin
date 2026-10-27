@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15166,
+      "pinSourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "basis": "Muse Spark1.2 xhigh August5 launch AA article Index54 (contemporary index; article does not name version),1M context. Standard launchUSD1.25input/4.25output=USD2 blended3:1. Maker launch video-input demo and multimodal context support text/image/video. Coding null: launch80% is TB2.1, not TB4.0. Speed null: later MegaLens222tok/s and current AA are not launch throughput. AA independent tests, MegaLens vendor-owned363-run code-review experiment, and Epoch evaluation summary are three independent evaluation sources; only two provide direct test narratives, so fewer than3 firsthand narrative reviews.",
+      "reviews": [
+        {
+          "url": "https://megalens.ai/research/llm-latency-timeouts-code-review",
+          "quote": "Muse Spark 1.2 18 s 4,205 222 0.79 barely (0.08)",
+          "title": "LLM speed in real code review: what public benchmarks did not tell us.",
+          "publishedDate": null,
+          "sentiment": 0
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://megalens.ai/research/llm-latency-timeouts-code-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Exact own 363-run code-review experiment, Muse Spark 1.2 table row verified. Original headline repaired. Research September month and October 9 note do not establish original publication day. Vendor-owned study reports automated matching without human adjudication, not a general intelligence benchmark. Neutral sentiment for the factual measurement row; no publication day or narrative verdict invented."
+        }
+      ]
+    }
+  ]
+}

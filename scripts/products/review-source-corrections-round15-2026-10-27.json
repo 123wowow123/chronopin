@@ -1,0 +1,120 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "basis": "Variant: 52 Ultra EREV, RMB 322,800 (66 Ultra RMB 352,800, 1,508 km). 1,454 km CLTC combined (320 km EV, 52 kWh); 10-80% in 16.5 min on 800 V; 0-100 in 4.9 s (390 kW); 520-channel LiDAR + Nvidia Thor + IM AD Max by Momenta; wheelbase 3,160 mm, six seats. Value: Li L9 at RMB 409,800 in Sept 2025 (3,015 mm, six seats; CnEVPost) and RMB 459,800 after the May 2026 refresh (CarNewsChina), so 21-30% under with a longer wheelbase. Correction: 52 Ultra is 380 kW (not 390) and charges 10-80% in 19 min; 16.5 min and 390 kW belong to the 66 Ultra (IT之家, CarNewsChina database). 0-100 is 4.9 s on both trims.",
+      "reviews": [
+        {
+          "url": "https://www.xchuxing.com/article/162486",
+          "title": "XCX 深度体验 30期：深度体验智己 LS9",
+          "quote": "先说结论，智己 LS9 就是五米二的大六座里最好开的，没有之一。",
+          "publishedDate": "2025-11-28",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xchuxing.com/article/162486",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "陈大个同学 original November 28 article byline, not comment dates. Replaces English Paraphrase text with original Chinese. Actual test car 66 Ultra 402 km; base 52 Ultra pin is not independently tested by this citation."
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
+      "basis": "Variant: Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited (Max+ RMB 249,900 adds the roof 896-channel LiDAR, ADS Max and air suspension; Ultra tri-motor 3.7 s, 650 km). 725 km CLTC (89.33 kWh); 800 V, 30-80% in <10 min and 0-80% in 20 min; 0-100 in 5.9 s; Qiankun ADS Pro with in-cabin LiDAR (Max+/Ultra would be 4.5); wheelbase 2,990 mm. Value: Xiaomi YU7 Standard RMB 253,500 (835 km, 5.88 s, 3,000 mm; CnEVPost June 2025), so about 9% under but 110 km less range.",
+      "reviews": [
+        {
+          "url": "https://www.xchuxing.com/article/174048",
+          "title": "入门即高配，好开又安全，实测阿维塔07L，智美大五座豪华SUV",
+          "quote": "动力调校很顺滑，提速不猛不突兀",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xchuxing.com/article/174048",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "盘车匠 original claimed hands-on article, publication byline absent. Replaces English Paraphrase text. Pre-launch RWD Max+ and Ultra, not final Elite entry; source remains context and exact-Elite research stays open."
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14218,
+      "pinSourceUrl": "https://cnevpost.com/2025/08/29/saic-mg-launches-redesigned-mg4/",
+      "basis": "Variant: entry 42.8 kWh LFP at RMB 68,800 (65,800 discounted). 437 km CLTC (53.9 kWh 530 km; semi-solid-state 537 km at RMB 102,800); 30-80% in about 20 min (hibridosyelectricos.com, secondary; no peak kW); 0-100 not published in any page opened; upper trims have Horizon J6e highway NOA without LiDAR (same Spanish report) but entry-trim hardware is not stated, so assistance is null; wheelbase 2,750 mm. Value: BYD Dolphin RMB 99,800-129,800 in China (CarNewsChina, Dec 2025), roughly 31% above the MG4 entry price. Acceleration filled: Autohome measured 0-100 in 8.02 s on the 120 kW 437 Freedom trim (MG publishes only 0-50 km/h 3 s); same motor on the 42.8 kWh entry.",
+      "reviews": [
+        {
+          "url": "https://www.xchuxing.com/article/160445",
+          "title": "XCX 续航体验 62期：名爵 MG4 纯电续航及充电测试",
+          "quote": "整体掉电非常线性。",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xchuxing.com/article/160445",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "陈大个同学 original Chinese MG4 highway/city energy and charging test, not an English paraphrase. No original publication byline found; comment and linked launch dates not substituted."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2581,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Union_Oyster_House",
+      "basis": "OpenTable (9,216 verified diner ratings, 4.4 overall, read 2026-10-12): Food 4.3, Service 4.5, Ambience 4.6, Value 4.0. Acclaim 2.5: named North America's Best Landmark Restaurant at the World Culinary Awards in 2020, 2024 and 2025 per Wikipedia; no James Beard or Michelin recognition found.",
+      "reviews": [
+        {
+          "url": "https://www.hungryfordesignreview.com/reviews/union-oyster-house",
+          "title": "UNION OYSTER HOUSE",
+          "quote": "Though perfectly fine, it’s not going to win any awards for culinary innovation.",
+          "publishedDate": null,
+          "sentiment": -0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.hungryfordesignreview.com/reviews/union-oyster-house",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original firsthand restaurant/design visit, exact 41 Union Street branch. Typographic apostrophe repaired. No publication byline or datePublished; February meal period and 1826 history do not establish publication."
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14076,
+      "pinSourceUrl": "https://press.zeekr.eu/the-rules-of-luxury-have-changed-introducing-the-zeekr-9x",
+      "basis": "Variant: Europe Ultra 6-seater AWD, EUR 119,500 in Germany (elektroquatsch.de, 6 Oct; the Zeekr release has no price). 737 km total range (55.1 kWh, 179 km WLTP EV; cycle of the total not stated); 10-80% in 9.5 min, up to 330 kW; 0-100 in 4.1 s (660 kW); 1 roof LiDAR + 11 cameras + 5 radars + 12 ultrasonics with highway nav assist, urban and parking functions (city NOA on delivery not confirmed); wheelbase 3.17 m, 6 seats, air suspension, rear lounge. Value: Porsche Cayenne S Electric EUR 126,400 (544 PS; AutoBild), base Cayenne Electric EUR 105,200.",
+      "reviews": [
+        {
+          "url": "https://www.xchuxing.com/article/158922",
+          "title": "新出行图文详解 116期：伟健动态试驾极氪9X",
+          "quote": "由于新车搭载的是单档 DHT，在任何时候都感受不到换挡的感觉",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xchuxing.com/article/158922",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original 伟健 dynamic drive, literal Chinese quotation replaces English Paraphrase summary. No original article byline day displayed; comment days excluded. China Ultra optional 70 kWh test car, not European Ultra 55.1 kWh; exact-European review research remains open."
+        }
+      ]
+    }
+  ]
+}
