@@ -110,24 +110,24 @@ or shop is not a firsthand review of the pinned product.
 
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
-| PinTaste | 228 | 496 | 0 (minimum one) | 46 |
-| PinCarPerf | 128 | 335 | 40 | 18 |
-| PinGasCarPerf | 160 | 500 | 14 | 34 |
-| PinAircraftPerf | 165 | 545 | 22 | 22 |
+| PinTaste | 228 | 494 | 0 (minimum one) | 44 |
+| PinCarPerf | 128 | 335 | 40 | 17 |
+| PinGasCarPerf | 160 | 501 | 12 | 30 |
+| PinAircraftPerf | 165 | 548 | 19 | 21 |
 | PinLlmPerf | 125 | 440 | 4 | 20 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 267 | 13 | 42 |
-| PinCriticReview | 88 | 265 | 0 | 1 |
+| PinDining | 89 | 270 | 10 | 45 |
+| PinCriticReview | 90 | 271 | 0 | 1 |
 
-There are **95 rubric rows below three reviews**. Every one of the 88 existing
-critic rows now has at least three reviews. These are raw coverage counts,
-not a blanket certification of independence or exact-variant eligibility.
-Of 188 non-MICHELIN undated entries, 11 have been checked and deliberately
-retain null dates; **177 date/source checks remain**. Every dated review with
-a quote is scored. Category-level leads still require screening: awards,
-concerts, financial results, layoffs and construction must not receive
-invented product reviews.
+There are **87 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 90 existing critic rows have at least three extracts.
+These are raw counts, not certification of source independence or eligibility.
+The XUV 7XO has three extracts but only two independent publishers and remains
+in the separate independence queue. Of 183 non-MICHELIN undated entries, 43
+have verified reasons to retain null dates; **140 date/source checks remain**.
+Every dated review with a quote is scored. Category leads still need screening;
+awards, concerts and business events must not receive invented product reviews.
 
 The publication pass opened 209 unique URLs for 234 undated entries. Nine
 pages refused the plain fetch; many others supplied no original publication
@@ -154,9 +154,14 @@ merges researched, scored reviews through native APIs on both environments,
 preserves hand rows and verifies saves. The sentiment task's instructions now
 research before its final pending-score pass. This implementation is tested
 locally and deployed in commit `771c23ac`. The authenticated production
-daily-jobs API confirms the news job includes `sentiment`, but all scheduled
-jobs are currently disabled. A scheduled production execution remains
-outstanding; job settings were left unchanged.
+daily-jobs API confirms the news job includes `sentiment`. A temporary bounded
+sentiment-only verification job was scheduled and claimed as run **25** on
+2026-10-26 at 22:34 UTC. The API driver immediately skipped it because Anthropic
+returned HTTP 400: insufficient account credit. No actions or model usage were
+recorded, so the research/scoring tools remain unverified within a scheduled
+model execution. The temporary job was removed and the four original schedules
+remain disabled. Restore API credit before retrying; no deployment, restart or
+VM build was performed. See the [sanitized run evidence](../../../scripts/products/review-production-verification-2026-10-26.json).
 
 Validation: TypeScript and scoped ESLint passed. The focused regression suite
 passed 15 tests, covering preservation, cross-environment id matching,
@@ -165,3 +170,51 @@ suite passed all 2,187 tests (247 files), after adding the required frontmatter
 to `scraping/activity-trips-50-per-city-2026-10-26.md` without altering its body.
 The Fantastic Four native detail page was also checked in a browser locally
 and in production: the saved critic quote and sentiment graph both render.
+
+## Continued research and native API verification
+
+This continuation added **15 reviews** across both environments and saved four
+original publication dates. New coverage includes the Ryzen 7 launch (three
+independent launch-day tests), three aircraft third reports (Saab 2000, 757-300,
+767-400ER), Baleno facelift and XUV 7XO road tests, an exact Turbo S replacement,
+three Busan municipal dining-guide extracts, and three reviews of Olivia Dean’s
+The Art of Loving. The guide extracts have no original publication day and retain null dates. Aircraft cabin reports are
+period-specific; they do not establish prototype cabin specifications.
+
+Replayable opened-source catalogs:
+
+- [Album criticism](../../../scripts/products/music-critic-next-2026-10-26.json)
+- [Computing launch criticism](../../../scripts/products/computing-critic-next-2026-10-26.json)
+- [Saab and 757 reports; KitKat canonical citation correction](../../../scripts/products/review-backfill-next-2026-10-26.json)
+- [767-400ER cabin report](../../../scripts/products/767-review-research-2026-10-26.json)
+- [Baleno and Taycan road tests](../../../scripts/products/road-test-backfill-next-2026-10-26.json)
+- [XUV petrol automatic test and independence caveat](../../../scripts/products/xuv-review-research-2026-10-26.json)
+- [Busan dining guide extracts](../../../scripts/products/busan-guide-reviews-next-2026-10-26.json)
+- [Four saved dates and two protected hand-row proposals](../../../scripts/products/review-dates-next-2026-10-26.json)
+- [29 additional verified-undated source checks and specific follow-ups](../../../scripts/products/review-source-checks-next-2026-10-26.json)
+- [Exact-source exclusions](../../../scripts/products/review-exclusions-next-2026-10-26.json)
+
+Removed a DBX707 citation from the DBX GT rubric, a Turbo-only Taycan test from
+Turbo S, and Strawberry and Cream gummy customer extracts from Fruity Pigs and
+Mr Whippy Strawberry and Vanilla. An accidentally duplicated mobile KitKat URL
+was removed after the canonical citation was verified. The KitKat single-bar
+review concerns the same F1 chocolate line, not the collectable tin packaging.
+No ratings or dates were fabricated to replace excluded evidence.
+
+The 29 completed source checks distinguish actual customer tasting comments
+from merchant copy, guide editorial from anonymous dining-visit claims, and
+month-only tasting records from exact publication days. Missing dates remain
+null. Akkio Gemini and NYU DeepSeek dates were researched but the save helper
+refused their hand-edited rows during preflight; both remain unchanged and in
+the queue. Endor Labs has conflicting publication/release chronology, also
+retained for research. The remaining FUNDAY sources require exact-product
+firsthand verification; regional redirects and unavailable comment widgets
+were not treated as tasting evidence.
+
+All successful saves and exclusions were read back from the local and
+production native APIs; reference/source-wiki links and original replay catalogs
+were synchronized where applicable. The Ryzen and Olivia Dean native pages were opened locally
+and in production: saved quotes and sentiment graphs render in both. The
+focused review/date and documentation regression run passed **28 tests** in
+four files. This continuation made content/catalog/documentation changes; the
+full-suite result above describes the earlier implementation validation.

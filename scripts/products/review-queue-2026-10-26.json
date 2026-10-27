@@ -1,14 +1,14 @@
 {
-  "checkedAt": "2026-10-26T22:18:47.540Z",
+  "checkedAt": "2026-10-27T00:15:36.847Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
       "table": "PinTaste",
       "pins": 228,
-      "reviews": 496,
+      "reviews": 494,
       "minimum": 1,
       "belowMinimum": 0,
-      "undatedNonMichelin": 46,
+      "undatedNonMichelin": 44,
       "unscoredDated": 0
     },
     {
@@ -17,25 +17,25 @@
       "reviews": 335,
       "minimum": 3,
       "belowMinimum": 40,
-      "undatedNonMichelin": 18,
+      "undatedNonMichelin": 17,
       "unscoredDated": 0
     },
     {
       "table": "PinGasCarPerf",
       "pins": 160,
-      "reviews": 500,
+      "reviews": 501,
       "minimum": 3,
-      "belowMinimum": 14,
-      "undatedNonMichelin": 34,
+      "belowMinimum": 12,
+      "undatedNonMichelin": 30,
       "unscoredDated": 0
     },
     {
       "table": "PinAircraftPerf",
       "pins": 165,
-      "reviews": 545,
+      "reviews": 548,
       "minimum": 3,
-      "belowMinimum": 22,
-      "undatedNonMichelin": 22,
+      "belowMinimum": 19,
+      "undatedNonMichelin": 21,
       "unscoredDated": 0
     },
     {
@@ -68,16 +68,16 @@
     {
       "table": "PinDining",
       "pins": 89,
-      "reviews": 267,
+      "reviews": 270,
       "minimum": 3,
-      "belowMinimum": 13,
-      "undatedNonMichelin": 42,
+      "belowMinimum": 10,
+      "undatedNonMichelin": 45,
       "unscoredDated": 0
     },
     {
       "table": "PinCriticReview",
-      "pins": 88,
-      "reviews": 265,
+      "pins": 90,
+      "reviews": 271,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -477,7 +477,7 @@
       "pinId": 15228,
       "title": "Aston Martin Introduces the DBX GT, a 717 hp Luxury V8 SUV",
       "sourceUrl": "https://www.astonmartin.com/en-us/models/dbx-gt",
-      "reviewCount": 1,
+      "reviewCount": 0,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "DBX GT: 727 PS (717 hp) = 5; 0-60 mph 3.1 s (Aston) = 5; WLTP combined 14.3 l/100 km = 16.4 US mpg = 0.5; load space 638 l seats up, large luxury SUV, above average = 4. Value null: no price announced (only speculation); handling null: no road tests yet."
     },
@@ -507,24 +507,6 @@
       "reviewCount": 1,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "XC40 B3 (base-priced): 163 PS = 161 hp -> 1.0; 0-100 km/h 8.6 s (maker figure via Autonotizen/Cars24) -> 1.5; WLTP 6.5-7.2 l/100 km = about 36-33 US mpg -> 3.5; value 161 hp / 43,990 euros = 3.7 hp per 1,000 euros (local currency) -> 1.0; handling and space null (no road test of the facelift opened, no cargo figure). Value re-based to US$ for cross-market ranking: 161 hp / US$51,028 (at 1.16 US$ per EUR) = 3.2 hp per US$1,000 = 0.5 (was 1.0)."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 15259,
-      "title": "Mahindra Launches the XUV 7XO, the XUV700 Facelift, From Rs 13.66 Lakh",
-      "sourceUrl": "https://www.autocarindia.com/car-news/new-mahindra-xuv-7xo-suv-revealed-438720",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Scored variant: 2.0 turbo-petrol automatic (AX3, Rs 17.47 lakh introductory). Power 203 hp (Autocar test sheet) = 2; acceleration 0-100 kph 9.79 s (Autocar India test) = 1; economy 8.7 kpl tested average (ARAI not yet published) = 20.5 mpg = 1.5; space 3 (third row tight for adults, limited boot with all rows up); value 203 hp / US$18,198 = 11.2 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 4.5. Handling null (tests from one outlet only)."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 15262,
-      "title": "Maruti Suzuki Launches the 2026 Baleno Facelift With Level 2 ADAS From Rs 5.99 Lakh",
-      "sourceUrl": "https://www.autocarindia.com/car-news/2026-maruti-baleno-facelift-launched-at-rs-610-lakh-440667",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Scored variant: 1.2 Z12E petrol manual (Sigma) at Rs 5.99 lakh. Power 83 hp = 0; economy 23.80 kpl claimed (56 mpg) = 5; space 4 (excellent rear room, 318 L boot); value 83 hp / US$6,240 = 13.3 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 5. Acceleration null (no Baleno 0-100 figure published), handling null."
     },
     {
       "table": "PinGasCarPerf",
@@ -606,24 +588,6 @@
       "reviewCount": 2,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "767-300 (JT9D-7R4D/CF6-80A, 350,000 lb MTOW, Boeing planning layout 261 seats: 24 first + 237 economy). Range 3,900 nmi with 269 pax (Wikipedia) = 2.5. Capacity 261 = 3.5. Efficiency null: Aircraft Commerce burn tables cover only the -300ER/-400ER. Speed Mach 0.80 = 2.5. Runway ~10,400 ft at MTOW, sea level, standard day, read from ACAPS graph 3.3.9 (JT9D) = 1.5. Comfort 3.5 from two pilot reviews (sweet handling, light controls); only 2 reviews, no 3rd independent -300 review found."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19587,
-      "title": "Boeing 767-400ER Makes Its First Flight at Everett",
-      "sourceUrl": "https://boeing.mediaroom.com/1999-10-09-Wheels-Up-Boeing-767-400ER-Makes-Debut-Flight",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "767-400ER (CF6-80C2B8F, 450,000 lb MTOW, Boeing two-class 304 seats / 245 three-class). Range 5,625 nmi (Wikipedia) = 3.5. Capacity 304 two-class = 4. Efficiency: Aircraft Commerce 2006 LAX-ARN, 243 seats, 17,858 USG over ~4,860 nm (9,000 km) = 278 L per seat = 3.1 L/seat/100km = 3. Speed: Mach 0.80 = 2.5. Runway ~10,300 ft at MTOW, sea level, standard day, read from ACAPS graph 3.3.25 = 2. Comfort 3: stable and benign to fly, 40 narrow staggered business seats. Only 2 independent reviews found (flagged)."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19592,
-      "title": "Boeing 757-300 Flies for the First Time, Live on the Web",
-      "sourceUrl": "https://boeing.mediaroom.com/1998-08-02-Boeing-757-300-Flies-Live-For-The-1st-Time",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "757-300 (RB211-535E4B, 273,000 lb MTOW, Boeing planning layout 243 seats: 12 first + 231 economy). Range 3,400 nmi with 243 pax (Wikipedia) = 2. Capacity 243 = 3.5. Efficiency: Aircraft Commerce 2008 IAH-DEN, 216 seats, 2,775 USG over 756 nm tracked = 48.6 L; 3.47 L/seat/100km = 2. Speed: Flight 'book' cruise Mach 0.80 = 2.5. Runway ~7,850 ft at MTOW, sea level, standard day, read from ACAPS graph 3.3.15 = 3.5. Comfort 2.5: handling praised but dated cockpit and fishtailing; 17-in 3-3 seats. Only 2 independent reviews found (flagged)."
     },
     {
       "table": "PinAircraftPerf",
@@ -761,15 +725,6 @@
       "existingResearchBasis": "Variant: MA60 (PW127J, MTOW 21,800 kg), Wikipedia and flugzeuginfo.net. Range: 1,600 km (Wikipedia; flugzeuginfo says 1,430 km = 772 nmi) = about 864 nmi -> under 1,500 nmi -> 0.0. Capacity: 62 (Wikipedia) or about 60 (Airport Technology) -> under 60 anchor line -> 0.0. Efficiency: no fuel burn figure -> null. Speed: maximum 514 km/h (Airport Technology), cruise 430 km/h (Wikipedia), roughly Mach 0.35-0.45, under the 0.60 anchor -> 0.0 (no maker Mach published, but any plausible turboprop value is below 0.60). Runway: no field-length figure -> null. Comfort: null, only one trip report. Reviews: 1 of the required 3 found (airportspotting trip report 'very mediocre and simple'); the Nepali Times piece found in search is about a purchase, not a flying review; none padded."
     },
     {
-      "table": "PinAircraftPerf",
-      "pinId": 19897,
-      "title": "The Saab 2000, the Fastest Turboprop Airliner, Makes Its First Flight",
-      "sourceUrl": "https://saab.com/newsroom/stories/2022/march/saab-2000-30-year-anniversary-happy-first-flight-day",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: Saab 2000 (GMA 2100, MTOW 22,800 kg), Wikipedia specification. Range: 2,869 km = 1,549 nmi -> 0 + (1,549-1,500)/1,000 = 0.05 -> 0.0. Capacity: 50 (32 in pitch) to 58 seats -> under 60 -> 0.0. Efficiency: no fuel burn figure -> null. Speed: only km/h figures (665 cruise, 682 maximum), no maker Mach -> null (a turboprop would score low on the Mach anchor regardless; not guessed). Runway: no field-length figure in an opened source -> null. Comfort: no passenger review found, only speed commentary -> null. Reviews: 2 of the required 3, and both are performance write-ups (a history site and Airways), not flying or cabin reviews; no pilot account or trip report of the Saab 2000 surfaced, none padded."
-    },
-    {
       "table": "PinLlmPerf",
       "pinId": 15102,
       "title": "Granite 4.2 8B, 3B and 30B Released",
@@ -888,39 +843,12 @@
     },
     {
       "table": "PinDining",
-      "pinId": 17281,
-      "title": "Buda Myeonok (부다면옥) — Busan restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/buda-myeonoak",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Food 3.0 from 4.2 over 419 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
-    },
-    {
-      "table": "PinDining",
       "pinId": 17282,
       "title": "Pili Pili (피리피리) — Busan restaurant guide",
       "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/pili-pili",
       "reviewCount": 1,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Food 2.5 from 4.0 over only 26 ratings (under ~30, so it is capped and treated as indicative). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17283,
-      "title": "Hapcheon Gukbapjip (합천국밥집) — Busan restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/hapcheon-gukbapjip",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Food 3.0 from 4.2 over 1,283 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17284,
-      "title": "Bao Haus (바오하우스) — Busan restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/bao-haus",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Food 3.5 from 4.3 over 332 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
     },
     {
       "table": "PinDining",
@@ -941,14 +869,24 @@
       "existingResearchBasis": "Food capped at 3.5: 4.7 over only 30 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
     }
   ],
+  "independenceGaps": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15259,
+      "title": "Mahindra XUV 7XO",
+      "reviewCount": 3,
+      "independentPublishers": 2,
+      "reason": "Two reviews are from Autocar India and one from CarTrade. Find a third independent exact petrol-automatic road test. Moneycontrol and DriveSpark drove diesel automatic; Top Gear India drove diesel manual, so those tests were not added."
+    }
+  ],
   "publicationResearch": [
     {
       "table": "PinTaste",
       "pinId": 3410,
       "title": "Ferrero Rocher and Raffaello Chocolate Bars Hit UK Shelves",
       "url": "https://www.trolley.co.uk/product/ferrero-rocher-milk-chocolate-hazelnut-bar/FLP669",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened displayed firsthand customer tasting extract, not seller description. No exact publication day displayed for this specific customer comment; keep null. This is consumer testimony, not professional criticism."
     },
     {
       "table": "PinTaste",
@@ -963,8 +901,8 @@
       "pinId": 4506,
       "title": "Great Lakes Christmas Ale First Pour 2026 Taps in Cleveland",
       "url": "https://bevx.com/bow-detail/?id=443",
-      "status": "needs-research",
-      "reason": "No explicit publication date"
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinTaste",
@@ -979,32 +917,32 @@
       "pinId": 5610,
       "title": "Nestlé's KitKat F1 Collectable Tin Goes on Sale in UK for Christmas",
       "url": "https://www.snacksonline.co.uk/products/kit-kat-f1-official-car-chocolate-bar-29g",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened actual customer tasting section and matched the saved extract. It is a customer review, not the retailer product description or shop reply. No publication date for the specific comment; keep null and off the graph."
     },
     {
       "table": "PinTaste",
       "pinId": 5611,
       "title": "Cadbury Dairy Milk Smash Bauble Arrives in UK for Christmas",
       "url": "https://www.taquitos.net/candy/Cadbury-Dairy-Milk-Freddo-Faces",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened exact firsthand tasting. Publisher supplies publication month/year only (December 2019), not a day; keep null instead of inventing a day."
     },
     {
       "table": "PinTaste",
       "pinId": 5612,
       "title": "Cadbury Biscoff Filled Centres Launch in UK for Christmas",
       "url": "https://www.taquitos.net/candy/Cadbury-Biscoff",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened exact firsthand tasting. Publisher supplies publication month/year only (August 2026), not a day; keep null instead of inventing a day."
     },
     {
       "table": "PinTaste",
       "pinId": 5613,
       "title": "Haribo Sour Bats Join UK Halloween Range",
       "url": "https://www.taquitos.net/candy/Haribo-Sour-Vampire-Bats",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened exact firsthand tasting. Publisher supplies publication month/year only (August 2022), not a day; keep null instead of inventing a day."
     },
     {
       "table": "PinTaste",
@@ -1020,15 +958,7 @@
       "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
       "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinTaste",
-      "pinId": 5631,
-      "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
-      "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
     },
     {
       "table": "PinTaste",
@@ -1036,15 +966,7 @@
       "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
       "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinTaste",
-      "pinId": 5633,
-      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
-      "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
     },
     {
       "table": "PinTaste",
@@ -1052,7 +974,7 @@
       "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
       "url": "https://www.lemon8-app.com/@barleysgotitall/7478272148637778474?region=us",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
     },
     {
       "table": "PinTaste",
@@ -1091,8 +1013,8 @@
       "pinId": 7659,
       "title": "CHI FOREST Lychee Fizzy Sparkling Water",
       "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened actual customer tasting section and matched the saved extract. It is a customer review, not the retailer product description or shop reply. No publication date for the specific comment; keep null and off the graph."
     },
     {
       "table": "PinTaste",
@@ -1115,8 +1037,8 @@
       "pinId": 7665,
       "title": "White Rabbit Matcha Milk Candy",
       "url": "https://helloasia.co.za/products/white-rabbit-creamy-candy-matcha-150g",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened actual customer tasting section and matched the saved extract. It is a customer review, not the retailer product description or shop reply. No publication date for the specific comment; keep null and off the graph."
     },
     {
       "table": "PinTaste",
@@ -1179,16 +1101,16 @@
       "pinId": 13962,
       "title": "Baskin-Robbins Japan Launches Love Potion Grand Shake on 9 October",
       "url": "https://ranking.net/items/f9afbb",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened displayed firsthand customer tasting extract, not seller description. No exact publication day displayed for this specific customer comment; keep null. This is consumer testimony, not professional criticism."
     },
     {
       "table": "PinTaste",
       "pinId": 13964,
       "title": "Glico's Giant Cone Teams Up With The Apothecary Diaries From 7 September",
       "url": "https://ranking.net/items/1005a7",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened displayed firsthand customer tasting extract, not seller description. No exact publication day displayed for this specific customer comment; keep null. This is consumer testimony, not professional criticism."
     },
     {
       "table": "PinTaste",
@@ -1283,8 +1205,8 @@
       "pinId": 19951,
       "title": "Meiji Sells Hello Panda Biscuits in Singapore in 1991, Starting Its Overseas Hit",
       "url": "https://candycritic.org/hello%20panda%20milk%20chocolate.htm",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinTaste",
@@ -1299,16 +1221,16 @@
       "pinId": 20038,
       "title": "Whitbread Secures the Licence to Brew Stella Artois in the UK",
       "url": "https://www.fearlesscritic.com/beer/69/stella-artois",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinTaste",
       "pinId": 20048,
       "title": "Terry's Launches the Chocolate Orange at Its York Works in 1932",
       "url": "https://www.candycritic.org/terrys%20orange%20milk.htm",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinCarPerf",
@@ -1432,14 +1354,6 @@
     },
     {
       "table": "PinCarPerf",
-      "pinId": 20027,
-      "title": "Porsche Premieres the Taycan Turbo S on Three Continents With 761 PS, From EUR 185,456",
-      "url": "https://www.topgear.com/car-reviews/porsche/taycan/460kw-turbo-93kwh-4dr-auto/first-drive",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinCarPerf",
       "pinId": 20034,
       "title": "Škoda Opens UK Orders for the Superb iV Estate With 84 Miles of EV Range, From GBP 41,465",
       "url": "https://www.autoexpress.co.uk/skoda/superb",
@@ -1485,14 +1399,6 @@
       "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
       "status": "needs-research",
       "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 15228,
-      "title": "Aston Martin Introduces the DBX GT, a 717 hp Luxury V8 SUV",
-      "url": "https://www.topgear.com/car-reviews/aston-martin/dbx707",
-      "status": "needs-research",
-      "reason": "Page could not be opened"
     },
     {
       "table": "PinGasCarPerf",
@@ -1680,14 +1586,6 @@
     },
     {
       "table": "PinGasCarPerf",
-      "pinId": 20003,
-      "title": "Mercedes-Benz Unveils the W223 S-Class Digitally, S 500 4MATIC With a 435 PS Mild-Hybrid Six, US From US$109,800",
-      "url": "https://www.carjournalism.com/reviews/tested-2021-mercedes-benz-s-class-s500l",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
       "pinId": 20019,
       "title": "Porsche Adds the 718 Cayman GTS 4.0 With a 400 PS Flat-Six, From EUR 81,926",
       "url": "https://www.carmagazine.co.uk/car-reviews/porsche/718-gts-40/",
@@ -1707,22 +1605,6 @@
       "pinId": 20040,
       "title": "Subaru Debuts the All-New 2024 Crosstrek at the Chicago Auto Show, From USD 24,995",
       "url": "https://www.autoexpress.co.uk/subaru/crosstrek",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 20045,
-      "title": "Tata Launches the Altroz Premium Hatchback in India From Rs 5.29 Lakh",
-      "url": "https://carindia.in/new-tata-altroz-first-drive-review/2/",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 20046,
-      "title": "Tata Launches the Facelifted Nexon in India From Rs 8.1 Lakh With a Seven-Speed DCT Option",
-      "url": "https://carindia.in/tata-nexon-2023-first-drive-review-fresh-face-fresh-colours/",
       "status": "needs-research",
       "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
     },
@@ -1895,20 +1777,12 @@
       "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
     },
     {
-      "table": "PinAircraftPerf",
-      "pinId": 19894,
-      "title": "Bombardier's CRJ700 Stretch Makes Its First Flight",
-      "url": "https://airlinereporter.com/2010/08/my-review-sea-to-lax-on-united-express-crj-700",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
       "table": "PinLlmPerf",
       "pinId": 2693,
       "title": "Claude Fable 5.1 and Mythos 5.1 Released",
       "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Rendered Published on April 9, 2026 predates the article’s stated Fable 5.1 release September 1, 2026; Updated September 4 cannot replace original publication. Need publisher correction or original archive; keep null."
     },
     {
       "table": "PinLlmPerf",
@@ -1924,7 +1798,7 @@
       "title": "Gemini 1.0 Released",
       "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Original Published on January 3, 2024 verified in rendered article. Native save refused hand-edited rubric; unchanged in both environments. Proposed date retained in review-dates-next catalog; requires a deliberate hand-row-preserving decision."
     },
     {
       "table": "PinLlmPerf",
@@ -1932,7 +1806,7 @@
       "title": "DeepSeek-V4-Pro and DeepSeek-V4-Flash Released",
       "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Original April 24, 2026 byline verified, distinguishing related-article dates. Native save refused hand-edited rubric; unchanged in both environments. Proposed date retained in review-dates-next catalog; requires a deliberate hand-row-preserving decision."
     },
     {
       "table": "PinLlmPerf",
@@ -2123,8 +1997,8 @@
       "pinId": 2559,
       "title": "Wolfgang Puck Opens the First Spago on the Sunset Strip",
       "url": "https://www.gayot.com/restaurants/spago-beverly-hills-beverly-hills-ca-90210_2la00494-01.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2155,8 +2029,8 @@
       "pinId": 17203,
       "title": "Myeongdong Yeongyang Center — Seoul restaurant guide",
       "url": "https://www.theseoulguide.com/yeongyang-center-myeongdong-branch/",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2171,16 +2045,16 @@
       "pinId": 17204,
       "title": "Samwon Garden — Seoul restaurant guide",
       "url": "https://visitgangnam.net/en/places/samwon-garden",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened municipal dining guide and exact extract. The only visible date is Last updated, not original publication; keep null."
     },
     {
       "table": "PinDining",
       "pinId": 17205,
       "title": "Hanilkwan (Apgujeong) — Seoul restaurant guide",
       "url": "https://visitgangnam.net/en/places/hanilkwan",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened municipal dining guide and exact extract. The only visible date is Last updated, not original publication; keep null."
     },
     {
       "table": "PinDining",
@@ -2195,16 +2069,16 @@
       "pinId": 17206,
       "title": "Mingles — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Mingles.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
       "pinId": 17207,
       "title": "Jungsik — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Jungsik.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2227,16 +2101,16 @@
       "pinId": 17208,
       "title": "La Yeon — Seoul restaurant guide",
       "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/La-Yeon.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
       "pinId": 17209,
       "title": "Onjium — Seoul restaurant guide",
       "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Onjium.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2251,16 +2125,16 @@
       "pinId": 17210,
       "title": "Kwonsooksoo — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Kwonsooksoo.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
       "pinId": 17211,
       "title": "Soigné — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Soigné.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2307,16 +2181,16 @@
       "pinId": 17224,
       "title": "Mosu Seoul — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Mosu.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
       "pinId": 17225,
       "title": "Bicena — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Bicena.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2339,8 +2213,8 @@
       "pinId": 17261,
       "title": "Chaoran, Signiel Busan (차오란 超然) — Busan restaurant guide",
       "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2411,8 +2285,8 @@
       "pinId": 17274,
       "title": "Nagahama Mangetsu Haeundae (나가하마 만게츠 해운대 본점) — Busan restaurant guide",
       "url": "https://eatbusan.com/",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinDining",
@@ -2424,19 +2298,43 @@
     },
     {
       "table": "PinDining",
+      "pinId": 17281,
+      "title": "Buda Myeonok (부다면옥) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17283,
+      "title": "Hapcheon Gukbapjip (합천국밥집) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&dataNo=69751&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
+    },
+    {
+      "table": "PinDining",
       "pinId": 17284,
       "title": "Bao Haus (바오하우스) — Busan restaurant guide",
       "url": "https://eatbusan.com/",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17284,
+      "title": "Bao Haus (바오하우스) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
     },
     {
       "table": "PinDining",
       "pinId": 17285,
       "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
       "url": "https://eatbusan.com/",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
     },
     {
       "table": "PinCriticReview",

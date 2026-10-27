@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 7383,
+      "pinSourceUrl": "https://www.rollingstone.com/music/music-album-reviews/olivia-dean-the-art-of-loving-review-1235436058/",
+      "basis": "Three independent listening reviews of the original September 2025 album, not a live concert or anniversary pressing. NME rendered publisher article and byline opened in browser after plain fetch 403; Pitchfork and Melodic opened directly. Dates are original review bylines, separate from album release. Preserve Pitchfork criticism alongside positive excerpts; sentiment estimates concern the extracts and do not replace publisher ratings.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/olivia-dean-the-art-of-loving-review-3895288",
+          "title": "Olivia Dean – ‘The Art of Loving’ review: musings on love from a star risen",
+          "publishedDate": "2025-09-26",
+          "quote": "showcase Olivia Dean the popstar at her best.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/olivia-dean-the-art-of-loving/",
+          "title": "The Art of Loving",
+          "publishedDate": "2025-10-02",
+          "quote": "Too often, though, it’s weighed down with clichés and mixed metaphors",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://www.melodicmag.com/reviews/album-ep-reviews/for-hopeful-romantics-the-art-of-loving-is-olivia-deans-best-work-yet-album-review/",
+          "title": "For hopeful romantics, ‘The Art of Loving’ is Olivia Dean’s best work yet — Album Review",
+          "publishedDate": "2025-09-26",
+          "quote": "Musically, it is rich and varied",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nme.com/reviews/album/olivia-dean-the-art-of-loving-review-3895288",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original listening review, exact album and original publication day verified"
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/olivia-dean-the-art-of-loving/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original listening review, exact album and original publication day verified"
+        },
+        {
+          "url": "https://www.melodicmag.com/reviews/album-ep-reviews/for-hopeful-romantics-the-art-of-loving-is-olivia-deans-best-work-yet-album-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original listening review, exact album and original publication day verified"
+        }
+      ]
+    }
+  ]
+}

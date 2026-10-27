@@ -33,6 +33,19 @@ export function matchesTags(forecastTags: readonly string[], names: readonly (st
   return names.some((n) => !!n && wanted.has(norm(n)));
 }
 
+// Pin sidebars require the forecast's own industry, rather than any related
+// tag. AI sector charts additionally require AI on the pin.
+export function matchesPinForecast(
+  forecast: Pick<IndustryForecastJson, 'industry' | 'title' | 'tags'>,
+  names: readonly (string | null | undefined)[],
+): boolean {
+  const aiNames = ['AI', 'AI Models'];
+  const aiPin = matchesTags(aiNames, names);
+  const aiForecast = matchesTags(aiNames, [forecast.industry, ...forecast.tags]) || /\bAI\b/i.test(forecast.title);
+  if (aiForecast && !aiPin) return false;
+  return matchesTags([forecast.industry], aiPin ? [...names, 'AI'] : names);
+}
+
 export function formatForecastValue(f: Pick<IndustryForecastJson, 'prefix' | 'suffix'>, v: number): string {
   const n = Math.abs(v) >= 100 ? Math.round(v).toLocaleString('en-US') : String(Math.round(v * 100) / 100);
   return `${f.prefix}${n}${f.suffix}`;

@@ -2,7 +2,7 @@ import Anchor from '@/components/ui/Anchor';
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
 import { cacheLife, cacheTag } from 'next/cache';
-import { Cinzel, IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_Thai } from 'next/font/google';
+import { Cinzel, IBM_Plex_Sans_Arabic, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_Thai } from 'next/font/google';
 import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
 import { HideDevIssues } from '@/components/HideDevIssues';
@@ -29,23 +29,25 @@ import { siteCardImages } from '@/server/services/shareCard';
 import '../globals.css';
 
 const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-noto-sans', display: 'swap' });
-const plexSans = IBM_Plex_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+// Bundle Plex Sans locally: Turbopack 16.3.6 can fail to resolve its generated
+// Google font URLs in CI. This file includes Latin, Cyrillic and Vietnamese.
+const plexSans = localFont({
+  src: '../fonts/IBMPlexSans.woff2',
+  weight: '400 600',
   variable: '--font-plex-sans',
   display: 'swap',
 });
-// Cyrillic, Thai and Arabic, for Russian, Thai and Arabic pages: not preloaded, and the
-// browser fetches them only when a page holds such characters (unicode-range).
+// Language fallbacks are not separately preloaded. Google's fonts use
+// unicode-range; the local Plex faces share the file already loaded above.
 // The stacks in globals.css list them after the Latin fonts.
 const notoCyrillic = Noto_Sans({ subsets: ['cyrillic'], variable: '--font-noto-cyrillic', display: 'swap', preload: false });
-const plexCyrillic = IBM_Plex_Sans({ subsets: ['cyrillic'], weight: ['400', '500', '600'], variable: '--font-plex-cyrillic', display: 'swap', preload: false });
+const plexCyrillic = localFont({ src: '../fonts/IBMPlexSans.woff2', weight: '400 600', variable: '--font-plex-cyrillic', display: 'swap', preload: false });
 const notoThai = Noto_Sans_Thai({ subsets: ['thai'], variable: '--font-noto-thai', display: 'swap', preload: false });
 const notoArabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-noto-arabic', display: 'swap', preload: false });
 const plexArabic = IBM_Plex_Sans_Arabic({ subsets: ['arabic'], weight: ['400', '500', '600'], variable: '--font-plex-arabic', display: 'swap', preload: false });
 // Vietnamese's stacked diacritics, which the Latin subsets lack.
 const notoVietnamese = Noto_Sans({ subsets: ['vietnamese'], variable: '--font-noto-vietnamese', display: 'swap', preload: false });
-const plexVietnamese = IBM_Plex_Sans({ subsets: ['vietnamese'], weight: ['400', '500', '600'], variable: '--font-plex-vietnamese', display: 'swap', preload: false });
+const plexVietnamese = localFont({ src: '../fonts/IBMPlexSans.woff2', weight: '400 600', variable: '--font-plex-vietnamese', display: 'swap', preload: false });
 const cinzel = Cinzel({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-cinzel', display: 'swap', preload: false });
 const astroSigns = localFont({
   src: '../fonts/AstronomicSigns.ttf',

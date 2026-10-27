@@ -1,0 +1,182 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19894,
+      "pinSourceUrl": "https://www.airwaysmag.com/new-post/maiden-flight-crj700",
+      "basis": "Two independent CRJ700 cabin reports: Jenny Southan on United Express in 2011 and RGV Jetsetter on PSA American Eagle in October 2025, published October 2026. They describe operator-specific cabins and do not change baseline aircraft range, engines or other axes. Publication day is not flight day.",
+      "reviews": [
+        {
+          "url": "https://www.businesstraveller.com/news/airlines/united-express-crj700-economy-class/",
+          "title": "United Express CRJ700 economy class",
+          "publishedDate": "2011-09-30",
+          "quote": "A comfortable, punctual short-haul flight with friendly cabin crew.",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://rgvjetsetter.com/2026/10/13/review-american-eagle-crj-700-economy-des-moines-washington/",
+          "title": "Review: American Eagle CRJ-700 Economy | Des Moines-Washington",
+          "publishedDate": "2026-10-13",
+          "quote": "The American Eagle CRJ-700 is absolutely nothing special.",
+          "sentiment": -0.25
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.businesstraveller.com/news/airlines/united-express-crj700-economy-class/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        },
+        {
+          "url": "https://rgvjetsetter.com/2026/10/13/review-american-eagle-crj-700-economy-des-moines-washington/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19586,
+      "pinSourceUrl": "https://web.archive.org/web/20180929014303if_/http://www.airweb.faa.gov/Regulatory_and_Guidance_Library/rgMakeModel.nsf/0/b9e61e631046f10186257fd900588ed4/%24FILE/A1NM_Rev35.pdf#b76-08",
+      "basis": "World Traveller 73 firsthand May 2012 Asiana non-ER Boeing 767-300 business-class cabin experience, published November 9, 2020. Specifically not a LAN/United 767-300ER test. Comfort observation concerns the old Asiana angle-flat seat, not the 1986 prototype or all operator cabins. No aircraft technical axes changed.",
+      "reviews": [
+        {
+          "url": "https://worldtraveller73.com/2020/11/09/review-asiana-business-class-b767-incheon-shanghai/",
+          "title": "Review: Asiana Business Class B767-3, Incheon – Shanghai",
+          "publishedDate": "2020-11-09",
+          "quote": "It was very comfortable for simple reclining",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://worldtraveller73.com/2020/11/09/review-asiana-business-class-b767-incheon-shanghai/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19884,
+      "pinSourceUrl": "https://www.aero-news.net/index.cfm?do=main.textpost&id=1cdf4d50-e91d-44d5-be95-dec3abeb1510",
+      "basis": "Sam Chui firsthand January 2016 AZAL A340-500 registration 4K-AZ85 cabin review, published February 20, 2016. Quote taken from the A340-500 section, not the later B767 leg in the same article. Describes the former Kingfisher-design business cabin; not a universal or prototype cabin claim. Technical axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://samchui.com/2016/02/20/azerbaijan-airlines-a340-500-and-b767-300-business-class/",
+          "title": "Review: Azerbaijan Airlines Business Class A340-500 and B767-300",
+          "publishedDate": "2016-02-20",
+          "quote": "Very generous leg room and ottoman.",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://samchui.com/2016/02/20/azerbaijan-airlines-a340-500-and-b767-300-business-class/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19645,
+      "pinSourceUrl": "https://airwaysmag.com/new-post/saab-340-enters-service-crossair",
+      "basis": "Exact early A-type Saab 340, registration YL-RAL, RAF Avia wet lease for Trade Air. Independent firsthand Zagreb-Osijek report published May 11, 2025. Adds direct 340A cabin evidence without borrowing 340B engine/airframe performance or changing axes; another independent exact-A report is still needed for full coverage.",
+      "reviews": [
+        {
+          "url": "https://www.exyuaviation.com/2025/05/trip-report-trade-air-zagreb-osijek.html",
+          "title": "TRIP REPORT: Trade Air, Zagreb - Osijek",
+          "publishedDate": "2025-05-11",
+          "quote": "The seating on board was noticeably cramped",
+          "sentiment": -0.45
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.exyuaviation.com/2025/05/trip-report-trade-air-zagreb-osijek.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19642,
+      "pinSourceUrl": "https://www.firmenpresse.de/pressrelease49704/bombardier-showcases-first-air-nostrum-and-brit-air-crj1000-nextgen-regional-jets.html",
+      "basis": "Two independent firsthand CRJ1000 operator-cabin reports, Air Nostrum and Garuda. German quote retained verbatim, not translated as if original. Garuda author nafandra posted October 20, 2017 about January 5 flight; original publication day is used. Reports concern cabin comfort, not launch-carrier layouts or baseline fuel-burn specifications; technical axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://aufnachirgendwo.boardingarea.com/blog/review-iberia-regional-air-nostrum-crj1000-economy-class-madrid-nach-marseille/",
+          "title": "Review: Iberia Regional/Air Nostrum CRJ1000 Economy Class Madrid nach Marseille",
+          "publishedDate": "2018-06-24",
+          "quote": "Die CRJ ist ein angenehmes, leises Flugzeug.",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://flight-report.com/en/report/27934/Garuda-Indonesia-GA285-Tanjung-Pandan-Belitung-Island-TJQ-Ja/",
+          "title": "Review of Garuda Indonesia flight from Tanjung Pandan-Belitung Island to Jakarta in Economy",
+          "publishedDate": "2017-10-20",
+          "quote": "The seat pitch is comfortable",
+          "sentiment": 0.35
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://aufnachirgendwo.boardingarea.com/blog/review-iberia-regional-air-nostrum-crj1000-economy-class-madrid-nach-marseille/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        },
+        {
+          "url": "https://flight-report.com/en/report/27934/Garuda-Indonesia-GA285-Tanjung-Pandan-Belitung-Island-TJQ-Ja/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19896,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Xi%27an_MA60",
+      "basis": "Two independent firsthand MA60 passenger reports: biaman94 on Merpati in August 2012, posted April 12, 2013; Peter White on Real Tonga in January 2014, posted March 22, 2014. French criticism retained verbatim and balanced with Tonga legroom account. Passenger takeoff-distance estimates are excluded from technical scoring; axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://flight-report.com/en/report/3639/Merpati_Airlines_MZ6550_Denpasar_DPS_Labuan_Bajo_Flores_Isla/",
+          "title": "Review of Merpati Airlines flight from Denpasar to Labuan Bajo-Flores Island in Economy",
+          "publishedDate": "2013-04-12",
+          "quote": "Le XI'an MA60 est très bruyant",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://3rdlevelnz.blogspot.com/2014/03/real-tongas-ma-60-passengers-review.html",
+          "title": "Real Tonga's MA-60 - A passenger's review",
+          "publishedDate": "2014-03-22",
+          "quote": "My knees never touched the seat in front of me.",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://flight-report.com/en/report/3639/Merpati_Airlines_MZ6550_Denpasar_DPS_Labuan_Bajo_Flores_Isla/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        },
+        {
+          "url": "https://3rdlevelnz.blogspot.com/2014/03/real-tongas-ma-60-passengers-review.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        }
+      ]
+    }
+  ]
+}

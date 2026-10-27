@@ -3,6 +3,7 @@
 import * as db from '../db';
 import { getFredSeries } from '../fredSeries';
 import type { ForecastLine, ForecastSource, IndustryForecastInput, IndustryForecastJson } from '@/lib/industryForecast';
+import { matchesPinForecast, matchesTags } from '@/lib/industryForecast';
 
 type Row = {
   slug: string;
@@ -54,15 +55,18 @@ async function all(): Promise<Row[]> {
   return db.query<Row>(`SELECT ${COLUMNS} FROM "IndustryForecast" ORDER BY "id"`);
 }
 
-// The forecasts whose tags include any of these names.
-export async function forecastSlugsForNames(names: readonly (string | null | undefined)[]): Promise<string[]> {
+// Searches match related tags; pin sidebars require the forecast's industry.
+export async function forecastSlugsForNames(names: readonly (string | null | undefined)[], scope: 'search' | 'pin' = 'search'): Promise<string[]> {
   const wanted = names.filter((n): n is string => !!n).map((n) => n.trim().toLowerCase());
+  if (scope === 'pin' && matchesTags(['AI Models'], wanted)) wanted.push('ai');
   if (!wanted.length) return [];
-  const rows = await db.query<{ slug: string }>(
-    `SELECT "slug" FROM "IndustryForecast" WHERE EXISTS (SELECT 1 FROM unnest("tags") t WHERE lower(t) = ANY($1)) ORDER BY "id"`,
+  const rows = await db.query<Pick<Row, 'slug' | 'industry' | 'title' | 'tags'>>(
+    `SELECT "slug", "industry", "title", "tags" FROM "IndustryForecast"
+     WHERE ${scope === 'pin' ? 'lower("industry") = ANY($1)' : 'EXISTS (SELECT 1 FROM unnest("tags") t WHERE lower(t) = ANY($1))'}
+     ORDER BY "id"`,
     [wanted],
   );
-  return rows.map((r) => r.slug);
+  return rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted)).map((r) => r.slug);
 }
 
 export async function forecastsBySlugs(slugs: string[]): Promise<IndustryForecastJson[]> {

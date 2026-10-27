@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-26",
+  "deploymentCommit": "771c23ace8a618530bb9bcffe66913447bf49046",
+  "run": {
+    "id": 25,
+    "jobId": "review-verify-20261026",
+    "trigger": "schedule",
+    "status": "skipped",
+    "driver": "api",
+    "tasks": [
+      "sentiment"
+    ],
+    "started": "2026-10-26T22:34:27.046Z",
+    "finished": "2026-10-26T22:34:27.491Z",
+    "actions": 0,
+    "usage": null
+  },
+  "blocker": "Anthropic API returned HTTP 400 invalid_request_error: account credit balance too low. No model was available; review research/scoring tools were not exercised by this scheduled run.",
+  "temporaryJobRemoved": true,
+  "restoredSchedules": [
+    {
+      "id": "midnight",
+      "enabled": false
+    },
+    {
+      "id": "news",
+      "enabled": false
+    },
+    {
+      "id": "monthly",
+      "enabled": false
+    },
+    {
+      "id": "weekly",
+      "enabled": false
+    }
+  ],
+  "nextStep": "After API credit is restored, repeat a narrowly bounded scheduled sentiment verification. Preserve original job settings and remove the temporary schedule afterward.",
+  "deploymentPerformed": false
+}

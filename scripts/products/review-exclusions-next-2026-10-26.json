@@ -40,6 +40,32 @@
         "title": "Porsche Taycan Turbo review: first UK test (Top Gear, Taycan Turbo not Turbo S)",
         "publishedDate": null
       }
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "pinSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
+      "reason": "Opened source is FUNDAY Strawberry and Cream, a different product from Fruity Pigs or the Mr Whippy Strawberry and Vanilla collaboration. Its customer tasting must not be attributed to this product. Remaining exact-product sources require independent re-verification; no replacement tasting was invented.",
+      "expectedReview": {
+        "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
+        "quote": "They are super soft, delicious, and just like the original.",
+        "title": "Part & Parcel verified-buyer review of Funday Strawberry & Cream gummies (same brand/formulation line, not the Pigs)",
+        "publishedDate": null
+      }
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "pinSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
+      "reason": "Opened source is FUNDAY Strawberry and Cream, a different product from Fruity Pigs or the Mr Whippy Strawberry and Vanilla collaboration. Its customer tasting must not be attributed to this product. Remaining exact-product sources require independent re-verification; no replacement tasting was invented.",
+      "expectedReview": {
+        "url": "https://partandparcel.com.au/products/funday-gummy-strawberry-cream-50g",
+        "quote": "They are super soft, delicious, and just like the original.",
+        "title": "Part&Parcel shopper reviews of Funday Strawberry & Cream gummies (different product, same Funday line; reviews undated)",
+        "publishedDate": null
+      }
     }
   ]
 }

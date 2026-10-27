@@ -184,9 +184,9 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Review sentiment graph — remaining work ([verified batch and inventory, 2026-10-26](docs/okf/scraping/review-verification-2026-10-26.md)):
   - Expand Movie/TV, Music albums, Computing and Fashion critic coverage; screen category leads for actual reviewable products/works.
-  - Research the 95 rubric rows below three reviews: EV 40, gas cars 14, aircraft 22, dining 13, LLMs 4 and video models 2. Verify independent sources and the exact variant/branch.
-  - Resolve the 177 remaining publication/source checks in the research queue. Eleven further entries are verified as undated and retain null dates; keep shops/directories off the graph.
-  - Exercise the deployed review research/scoring tools in a scheduled production job. Deployment verified 2026-10-26 (`771c23ac`); scheduled jobs are currently disabled.
+  - Research the 87 rubric rows below three reviews: EV 40, gas cars 12, aircraft 19, dining 10, LLMs 4 and video models 2. Verify independent sources and the exact variant/branch; XUV 7XO also needs a third independent publisher despite having three extracts.
+  - Resolve the 140 remaining publication/source checks in the research queue. Another 43 entries are verified as undated and retain null dates. Verify actual firsthand comments separately from merchant copy; undated guide extracts stay off the graph.
+  - Exercise the deployed review research/scoring tools in a scheduled production job after Anthropic API credit is restored. Scheduled run #25 was claimed on 2026-10-26 but skipped for insufficient credit; the temporary verification job was removed and all four original schedules remain disabled.
 
 
 ### Map

@@ -1,9 +1,12 @@
 # Industry forecast panels (IndustryForecast, 0216)
 
-One row per metric. A pin shows the panels whose `tags` include any of its
-categories or tag names; a search for `tag:AI` (etc.) shows them in the side
-panel (`SearchPage.industries`, slugs only). `GET /api/industry-forecasts?slugs=`
-returns the lines.
+One row per metric. A pin shows a panel only when its categories or tag names
+match the panel's primary `industry` (case-insensitive). Related forecast `tags`
+alone do not qualify: Finance does not select a Crypto panel, for example.
+AI forecasts, including sector-specific adoption charts, also require `AI` or
+`AI Models` on the pin; `AI Models` counts as the AI industry. Searches retain
+broader matching against forecast `tags` (`SearchPage.industries`, slugs only).
+`GET /api/industry-forecasts?slugs=` returns the lines.
 
 - **live**: FRED handles, read on view (Ramp AI Index: `RAMPAIALL`, `RAMPAITECH`,
   `RAMPAIFINANCE`, `RAMPAIHEALTHCARE`, `RAMPAIRETAIL`, `RAMPAIMANUFACTURING`,

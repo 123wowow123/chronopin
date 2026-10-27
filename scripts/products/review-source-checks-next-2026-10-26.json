@@ -175,7 +175,7 @@
     {
       "table": "PinDining",
       "pinId": 17211,
-      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Soigné.html",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Soign\u00e9.html",
       "status": "verified-undated",
       "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph.",
       "openedAt": "2026-10-26",
@@ -268,7 +268,7 @@
       "table": "PinLlmPerf",
       "pinId": 2693,
       "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
-      "reason": "Rendered Published on April 9, 2026 predates the article’s stated Fable 5.1 release September 1, 2026; Updated September 4 cannot replace original publication. Need publisher correction or original archive; keep null."
+      "reason": "Rendered Published on April 9, 2026 predates the article\u2019s stated Fable 5.1 release September 1, 2026; Updated September 4 cannot replace original publication. Need publisher correction or original archive; keep null."
     },
     {
       "table": "PinLlmPerf",
@@ -281,6 +281,24 @@
       "pinId": 15110,
       "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
       "reason": "Original April 24, 2026 byline verified, distinguishing related-article dates. Native save refused hand-edited rubric; unchanged in both environments. Proposed date retained in review-dates-next catalog; requires a deliberate hand-row-preserving decision."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "url": "https://www.lemon8-app.com/@barleysgotitall/7478272148637778474?region=us",
+      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
     }
   ]
 }

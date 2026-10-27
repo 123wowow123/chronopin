@@ -589,7 +589,7 @@ export async function pinIndustries(id: number, names: string[]) {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id), TAGS.industryForecasts);
-  return forecastSlugsForNames(names);
+  return forecastSlugsForNames(names, 'pin');
 }
 
 // A factory capability profile; missing axes remain explicit research gaps.
