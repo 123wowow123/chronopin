@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
@@ -13,6 +13,36 @@ type Answer =
 const VERB: Record<string, string> = { buy: 'Bought', sell: 'Sold', hold: 'Holding', swap: 'Swapped into' };
 const KIND: Record<string, string> = { stock: 'Stock', call: 'Calls', put: 'Puts', short: 'Short' };
 
+type Sort = 'newest' | 'oldest' | 'best' | 'worst' | 'peak' | 'drawdown';
+const SORTS: { value: Sort; label: string }[] = [
+  { value: 'newest', label: 'Newest first' },
+  { value: 'oldest', label: 'Oldest first' },
+  { value: 'best', label: 'Best PnL' },
+  { value: 'worst', label: 'Worst PnL' },
+  { value: 'peak', label: 'Highest peak' },
+  { value: 'drawdown', label: 'Deepest drawdown' },
+];
+
+// Positions without the sorted figure (holds, unpriced tickers) always sort last on the numeric orders.
+function sortPositions(rows: TraderPositionRow[], sort: Sort): TraderPositionRow[] {
+  const out = [...rows];
+  const byValue = (get: (r: TraderPositionRow) => number | null | undefined, dir: 1 | -1) => (a: TraderPositionRow, b: TraderPositionRow) => {
+    const x = get(a);
+    const y = get(b);
+    if (x == null && y == null) return 0;
+    if (x == null) return 1;
+    if (y == null) return -1;
+    return dir * (y - x);
+  };
+  if (sort === 'oldest') out.sort((a, b) => a.tradeDate.localeCompare(b.tradeDate));
+  else if (sort === 'newest') out.sort((a, b) => b.tradeDate.localeCompare(a.tradeDate));
+  else if (sort === 'best') out.sort(byValue((r) => r.estimatedPnlPercent, 1));
+  else if (sort === 'worst') out.sort(byValue((r) => r.estimatedPnlPercent, -1));
+  else if (sort === 'peak') out.sort(byValue((r) => r.maxGainPercent, 1));
+  else out.sort(byValue((r) => r.maxDrawdownPercent, -1));
+  return out;
+}
+
 const pct = (v: number | null | undefined) => (v == null ? '—' : `${v > 0 ? '+' : ''}${v}%`);
 const tone = (v: number | null | undefined) => (v == null ? 'text-muted' : v >= 0 ? 'text-success' : 'text-danger');
 
@@ -22,11 +52,12 @@ const tone = (v: number | null | undefined) => (v == null ? 'text-muted' : v >= 
 export function PremiumTrades({ slug, name, count }: { slug: string; name: string; count: number }) {
   const { status } = useSession();
   const [answer, setAnswer] = useState<Answer | null>(null);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     if (status !== 'ready') return;
     let cancelled = false;
-    api.get<Answer>(`/api/traders/${slug}`).then((a) => !cancelled && setAnswer(a)).catch(() => {});
+    api.get<Answer>(`/api/traders/${slug}`).then((a) => !cancelled && setAnswer(a)).catch(() => !cancelled && setFailed(true));
     return () => {
       cancelled = true;
     };
@@ -41,8 +72,24 @@ export function PremiumTrades({ slug, name, count }: { slug: string; name: strin
         </h2>
         <p className="text-sm text-muted">Disclosed trades with an estimated PnL and our summary of the reasoning, linked to the source post.</p>
       </div>
-      {answer && !answer.locked ? <Unlocked answer={answer} /> : <Locked count={answer?.count ?? count} name={name} />}
+      {answer && !answer.locked ? <Unlocked answer={answer} /> : !answer && !failed ? <Loading /> : <Locked count={answer?.count ?? count} name={name} />}
     </section>
+  );
+}
+
+// Held until the session and the per-viewer answer arrive, so a premium reader never
+// sees the paywall flash before their moves load.
+function Loading() {
+  return (
+    <div className="space-y-4" role="status" aria-busy="true" aria-label="Loading moves">
+      <div className="grid gap-3 sm:grid-cols-3">
+        <div className="h-[72px] animate-pulse rounded-xl border border-line bg-panel motion-reduce:animate-none" />
+        <div className="h-[72px] animate-pulse rounded-xl border border-line bg-panel motion-reduce:animate-none" />
+      </div>
+      {[0, 1, 2].map((i) => (
+        <div key={i} className="h-24 animate-pulse rounded-xl border border-line bg-panel motion-reduce:animate-none" />
+      ))}
+    </div>
   );
 }
 
@@ -59,6 +106,8 @@ function Locked({ count, name }: { count: number; name: string }) {
 }
 
 function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
+  const [sort, setSort] = useState<Sort>('newest');
+  const positions = useMemo(() => sortPositions(answer.positions, sort), [answer.positions, sort]);
   return (
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-3">
@@ -70,9 +119,24 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
           <span className="text-xs text-muted">Avg. estimated PnL on opening trades</span>
           <span className={`text-xl font-semibold tabular-nums ${tone(answer.averagePnlPercent)}`}>{pct(answer.averagePnlPercent)}</span>
         </div>
+        <label className="flex items-center justify-start gap-2 text-sm text-muted sm:justify-end">
+          Sort
+          <span className="relative inline-flex">
+            <select value={sort} onChange={(e) => setSort(e.target.value as Sort)} className="appearance-none rounded-md border border-line bg-popover py-1.5 ps-2.5 pe-8 text-sm text-ink">
+              {SORTS.map((o) => (
+                <option key={o.value} value={o.value}>
+                  {o.label}
+                </option>
+              ))}
+            </select>
+            <svg aria-hidden="true" viewBox="0 0 12 12" className="pointer-events-none absolute end-2.5 top-1/2 h-3 w-3 -translate-y-1/2 text-muted" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2.5 4.5 6 8l3.5-3.5" />
+            </svg>
+          </span>
+        </label>
       </div>
       <ul className="space-y-3">
-        {answer.positions.map((p) => (
+        {positions.map((p) => (
           <li key={p.id} className="surface space-y-1.5 p-4">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <span className="font-semibold">
