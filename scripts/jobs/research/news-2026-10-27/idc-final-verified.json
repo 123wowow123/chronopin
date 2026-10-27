@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "idc-enterprise-ai-infrastructure",
+    "industry": "AI",
+    "title": "Enterprise and government AI infrastructure spending",
+    "tags": [
+      "AI",
+      "Computing",
+      "Infrastructure"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "live": [],
+    "lines": [],
+    "projection": {
+      "label": "IDC HPC/AI Index, October 2026",
+      "points": [
+        {
+          "x": "2025",
+          "value": 28.6
+        },
+        {
+          "x": "2030",
+          "value": 96.4
+        }
+      ]
+    },
+    "earlier": [],
+    "sources": [
+      {
+        "url": "https://www.idc.com/resource-center/blog/ai-is-short-of-capacity-not-demand/",
+        "date": "2026-10-22",
+        "label": "IDC: AI Is Short of Capacity, Not Demand",
+        "quote": "non-service-provider spending on AI infrastructure steadily rising from $28.6 billion in 2025 to $96.4 billion in 2030"
+      }
+    ],
+    "note": "IDC October 22, 2026 HPC/AI Index: non-service-provider buyers (enterprises and governments). Publisher\u2019s 2025 baseline and 2030 forecast, USD billions, not an observed actual series. Excludes service-provider procurement and non-AI IT infrastructure; not comparable to Gartner worldwide total AI spending or IDC US AI spending.",
+    "checkedAt": "2026-10-27T14:16:33.577Z"
+  }
+]

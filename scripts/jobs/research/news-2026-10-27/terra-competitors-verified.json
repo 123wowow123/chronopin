@@ -1,0 +1,28 @@
+[
+  {
+    "rank": 1,
+    "name": "Claude Sonnet 5.5",
+    "maker": "Anthropic",
+    "pin": {
+      "id": 4814,
+      "title": "Claude Sonnet 5.5 Released",
+      "thumbName": "4ab0aeb3-102d-45d3-a5a0-03f1afdd1d98.jpeg",
+      "originalUrl": "https://www-cdn.anthropic.com/images/4zrzovbb/website/eaa6046f4ae8c88e368c3c530c4c1312f7ff6f2e-1200x630.jpg"
+    },
+    "summary": "Competes for general-purpose coding and computer-use workloads; OpenAI explicitly includes Sonnet 5.5 in its launch comparison charts.",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
+  },
+  {
+    "rank": 2,
+    "name": "Claude Opus 5.5",
+    "maker": "Anthropic",
+    "pin": {
+      "id": 2694,
+      "title": "Claude Opus 5.5 Released",
+      "thumbName": "9785e5e5-f9ec-41ca-9fbd-940b4cb4eeab.jpeg",
+      "originalUrl": "https://cdn.sanity.io/images/4zrzovbb/website/f4d37a1d1f582f53f4e89440062b649b6273a093-1200x630.jpg"
+    },
+    "summary": "Higher-cost alternative for demanding agent tasks, directly compared in the launch\u2019s task-cost and scientific-terminal evaluations.",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
+  }
+]

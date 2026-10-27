@@ -1,0 +1,71 @@
+{
+  "pin": {
+    "title": "GPT-6.1 Terra Released",
+    "description": "OpenAI releases its lower-cost Terra model for visual reasoning, computer use and writing. Independent launch tests show useful efficiency gains alongside task-specific accuracy limits.",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+    "utcStartDateTime": "2026-10-26T00:00:00.000Z",
+    "allDay": true,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated: OpenAI says \u201cStarting today\u201d; independent launch-day articles from Artificial Analysis and Plotly are explicitly dated October 26, 2026.",
+    "company": "OpenAI",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/OpenAI",
+    "categories": [
+      "AI",
+      "Software"
+    ],
+    "tags": [
+      "AI Models",
+      "Released"
+    ],
+    "productName": "GPT-6.1 Terra",
+    "price": null,
+    "priceCurrency": null,
+    "parentId": 15142,
+    "longFormSummary": "<ul><li>OpenAI released GPT-6.1 Terra on October 26, 2026 for the API and paying ChatGPT Work and Codex plans. It follows July\u2019s GPT-5.6 Terra and targets everyday computer-based work at lower cost than the larger Sol and Astra models.<cite data-ref=\"https://openai.com/index/introducing-gpt-6-1-terra/\"></cite></li><li>Independent launch-day assessments show the trade-off depends on the task: Artificial Analysis places its maximum-effort intelligence score between the current Sol and Luna models, while its lower effort settings lead on cost efficiency. Its benchmark version is v4.3.2, rather than an older scale.<cite data-ref=\"https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier\"></cite></li><li>Plotly\u2019s own synthetic data-analysis exam found 40 of 43 correct at default reasoning, costing $1.31 for the run. Its three misses included hidden patterns and a causal explanation; this is a particular workload, not a universal accuracy guarantee.<cite data-ref=\"https://plotly.com/blog/gpt-6-1-terra-plotly-data-analytics-bench/\"></cite></li><li>DualEntry\u2019s separate 101-task accounting test found 78.2% accuracy and only 65.3% consistent success across three runs. The accounting-software vendor highlights weaknesses in payables, receivables and month-end close, tempering the broad launch claims.<cite data-ref=\"https://www.dualentry.com/blog/gpt-6-1-terra-accounting-benchmark\"></cite></li></ul><h3>Notable features</h3><ul><li>The API accepts text and images and produces text, with a 1,050,000-token context window and up to 128,000 output tokens. Audio and native video input are unsupported; operating a video editor is distinct from accepting video as a model input.<cite data-ref=\"https://developers.openai.com/api/docs/models/gpt-6.1-terra\"></cite></li><li>Standard short-context rates are $1 input, $0.05 cached input and $5 output per million tokens. That is $2 per million at a 3:1 input/output mix, before cache, tools or long-context adjustments. API usage is metered, so no single consumer purchase price is assigned.<cite data-ref=\"https://developers.openai.com/api/docs/models/gpt-6.1-terra\"></cite></li><li>OpenAI reports 50.3% on Terminal-Bench 4.0 at maximum effort, versus 21.5% for its predecessor. The maker\u2019s internal factuality test reports 16.7% errors at low effort and 4.3% at maximum; these internal rates are distinct from independent accounting or analytics accuracy.<cite data-ref=\"https://openai.com/index/introducing-gpt-6-1-terra/\"></cite></li></ul>",
+    "sentiment": 0.5,
+    "productLine": "GPT",
+    "media": [
+      {
+        "type": 1,
+        "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-27/gpt-6-1-terra.webp"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier",
+        "title": "GPT-6.1 Terra pushes the cost efficiency frontier",
+        "publishedDate": "2026-10-26",
+        "confidence": 95,
+        "reasoning": "Independent launch-day benchmark and cost-efficiency assessment."
+      },
+      {
+        "url": "https://plotly.com/blog/gpt-6-1-terra-plotly-data-analytics-bench/",
+        "title": "GPT-6.1 Terra Benchmark Results for Data Analysis",
+        "publishedDate": "2026-10-26",
+        "confidence": 95,
+        "reasoning": "Analytics software maker\u2019s own synthetic-task test, with disclosed methodology."
+      },
+      {
+        "url": "https://www.dualentry.com/blog/gpt-6-1-terra-accounting-benchmark",
+        "title": "GPT-6.1 Terra Is Fast and Cheap. On Accounting, It's Not Accurate Enough to Lead",
+        "publishedDate": "2026-10-26",
+        "confidence": 95,
+        "reasoning": "Accounting software maker\u2019s own 101-task evaluation; independent of OpenAI, not a general benchmark."
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+        "title": "GPT-6.1 Terra Model | OpenAI API",
+        "publishedDate": null,
+        "confidence": 95,
+        "reasoning": "Native modalities, context and token pricing; current documentation checked October 27."
+      }
+    ]
+  },
+  "result": {
+    "created": 20089,
+    "title": "GPT-6.1 Terra Released",
+    "needs": [
+      "check for a model performance rubric with 3 verified independent reviews, if this pin is a product, restaurant, hotel or model (no review markup without it)"
+    ]
+  }
+}

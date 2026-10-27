@@ -2401,6 +2401,8 @@ const ko: Messages = {
       kindleunlimited: { title: '킨들 언리미티드', body: '수백만 권의 책과 오디오북을 무료로 체험해 보세요.', cta: '읽기 시작' },
       subscribesave: { title: '정기 배송 할인', body: '일상용품을 원하는 주기로 받고 절약하세요.', cta: '절약 시작' },
       abracadabra: { title: 'Abracadabra NYC', body: '뉴욕의 유명 의상 가게에서 만나는 코스튬, 코스프레, 소품, 수집품.', cta: '매장 보기' },
+      marshall: { title: 'Marshall', body: '마샬 앰프의 상징적인 디자인을 담은 프리미엄 헤드폰, 스피커, 이어버드.', cta: '마샬 보기' },
+      gearup: { title: 'GearUP', body: 'PC와 모바일 게임의 렉과 핑을 줄여 주는 게임 부스터.', cta: 'GearUP 체험하기' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

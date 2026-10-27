@@ -1,0 +1,74 @@
+[
+  {
+    "pinId": 5609,
+    "production": false,
+    "review": {
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "title": "These Toblerone Biscoff truffles are dangerously good",
+      "publishedDate": null,
+      "quote": "They\u2019re rich, but not overly sweet, and have a good texture with some crunch.",
+      "sentiment": 0.7
+    },
+    "basis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness. October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review."
+  },
+  {
+    "pinId": 5609,
+    "production": true,
+    "review": {
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "title": "These Toblerone Biscoff truffles are dangerously good",
+      "publishedDate": null,
+      "quote": "They\u2019re rich, but not overly sweet, and have a good texture with some crunch.",
+      "sentiment": 0.7
+    },
+    "basis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness. October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review."
+  },
+  {
+    "pinId": 7016,
+    "production": false,
+    "review": {
+      "url": "https://www.delish.com/food-news/a70162139/absolut-tabasco-vodka-taste-test/",
+      "title": "I Tried Absolut's New Tabasco-Flavored Vodka & I Can Still Feel The Heat",
+      "publishedDate": "2026-01-28",
+      "quote": "It has a peppery, vinegary Tabasco-style kick that builds and lingers, especially in a shot.",
+      "sentiment": 0.5
+    },
+    "basis": "Four reviewers (Difford's, The Takeout, The Daily Pour, Tastings): heat dominant with a long peppery finish and a vinegar tang, only a faint sweetness. October 27 research adds Sean Abrams\u2019s explicitly dated January 28 firsthand tasting in Sweden and at home. Existing Tastings extract remains undated: Date Tasted is not an established publication date."
+  },
+  {
+    "pinId": 7016,
+    "production": true,
+    "review": {
+      "url": "https://www.delish.com/food-news/a70162139/absolut-tabasco-vodka-taste-test/",
+      "title": "I Tried Absolut's New Tabasco-Flavored Vodka & I Can Still Feel The Heat",
+      "publishedDate": "2026-01-28",
+      "quote": "It has a peppery, vinegary Tabasco-style kick that builds and lingers, especially in a shot.",
+      "sentiment": 0.5
+    },
+    "basis": "Four reviewers (Difford's, The Takeout, The Daily Pour, Tastings): heat dominant with a long peppery finish and a vinegar tang, only a faint sweetness. October 27 research adds Sean Abrams\u2019s explicitly dated January 28 firsthand tasting in Sweden and at home. Existing Tastings extract remains undated: Date Tasted is not an established publication date."
+  },
+  {
+    "pinId": 4506,
+    "production": false,
+    "review": {
+      "url": "https://www.axios.com/local/detroit/2022/12/20/detroit-favorite-christmas-beer-2022",
+      "title": "Our favorite Christmas beer",
+      "publishedDate": "2022-12-20",
+      "quote": "I'd drink it all,",
+      "sentiment": 0.8
+    },
+    "basis": "No 2026 review yet; reviews of earlier vintages cite ginger, cinnamon, cardamom, allspice, honey, clove and nutmeg with a moderate hop edge and a thin, smooth body. October 27 research adds Axios Detroit\u2019s December 20, 2022 blind tasting of Great Lakes Christmas Ale, a historical vintage rather than evidence of the 2026 first-pour batch. Existing historical reviews and native taste scores are preserved; BevX publication day remains unverified."
+  },
+  {
+    "pinId": 4506,
+    "production": true,
+    "review": {
+      "url": "https://www.axios.com/local/detroit/2022/12/20/detroit-favorite-christmas-beer-2022",
+      "title": "Our favorite Christmas beer",
+      "publishedDate": "2022-12-20",
+      "quote": "I'd drink it all,",
+      "sentiment": 0.8
+    },
+    "basis": "No 2026 review yet; reviews of earlier vintages cite ginger, cinnamon, cardamom, allspice, honey, clove and nutmeg with a moderate hop edge and a thin, smooth body. October 27 research adds Axios Detroit\u2019s December 20, 2022 blind tasting of Great Lakes Christmas Ale, a historical vintage rather than evidence of the 2026 first-pour batch. Existing historical reviews and native taste scores are preserved; BevX publication day remains unverified."
+  }
+]

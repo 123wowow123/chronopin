@@ -1,0 +1,595 @@
+[
+  {
+    "pinId": 17811,
+    "patch": {
+      "utcEndDateTime": "2026-11-02T00:00:00.000Z",
+      "longFormSummary": "<p>A sprawling waterfront show spread across several marinas and the convention center, with yachts, superyachts and marine gear to tour.<cite data-ref=\"https://www.flibs.com/\"></cite></p><p>Bahia Mar Yachting Center and other marinas, Fort Lauderdale, 30 mi north, Miami. Paid - ticket price not published on the home page.</p><p>Official FLIBS page states October 28–November 1; use November 2 exclusive to include the last show day.<cite data-ref=\"https://www.flibs.com/\"></cite></p>"
+    },
+    "reason": "Official FLIBS page states October 28–November 1; use November 2 exclusive to include the last show day.",
+    "production": true,
+    "savedTitle": "Fort Lauderdale International Boat Show — Miami seasonal activity"
+  },
+  {
+    "pinId": 17823,
+    "patch": {
+      "utcStartDateTime": "2026-11-12T00:00:00.000Z",
+      "utcEndDateTime": "2026-11-16T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: the official Miami Beach Polo World Cup page advertises “November 12th - 15th, 2026”. November 16 is the exclusive end.",
+      "longFormSummary": "<p>Polo matches staged on the grass of Collins Park in Miami Beach, with a festival setting.<cite data-ref=\"https://www.miamibeachpolo.com/\"></cite></p><p>Collins Park, Miami Beach, Miami. Paid - ticket price not listed.</p><p>Replace month-long placeholder with the exact November 12–15, 2026 operator dates.<cite data-ref=\"https://www.miamibeachpolo.com/\"></cite></p>"
+    },
+    "reason": "Replace month-long placeholder with the exact November 12–15, 2026 operator dates.",
+    "production": true,
+    "savedTitle": "Miami Beach Polo World Cup — Miami seasonal activity"
+  },
+  {
+    "pinId": 17838,
+    "patch": {
+      "utcEndDateTime": "2027-09-07T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: the official fair page gives August 26 through Labor Day, September 6, 2027. Exclusive end September 7 includes Labor Day.",
+      "longFormSummary": "<p>The Great Minnesota Get-Together: twelve days of food on a stick, livestock, concerts and midway rides.<cite data-ref=\"https://www.mnstatefair.org/\"></cite></p><p>Minnesota State Fairgrounds, Falcon Heights, St. Paul, 7 mi east, Minneapolis. Paid - admission price not shown on the home page.</p><p>Include the final advertised September 6 Minnesota State Fair day.<cite data-ref=\"https://www.mnstatefair.org/\"></cite></p>"
+    },
+    "reason": "Include the final advertised September 6 Minnesota State Fair day.",
+    "production": true,
+    "savedTitle": "Minnesota State Fair — Minneapolis seasonal activity"
+  },
+  {
+    "pinId": 17840,
+    "patch": {
+      "utcEndDateTime": "2027-02-08T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: the official Saint Paul Winter Carnival page gives January 28 to February 7, 2027. Exclusive end February 8 includes the final advertised day.",
+      "longFormSummary": "<p>Long-running winter festival with ice and snow sculpture, parades, royalty and downtown events.<cite data-ref=\"https://www.wintercarnival.com/\"></cite></p><p>Rice Park and downtown St. Paul, Downtown St. Paul, 10 mi east, Minneapolis. Paid - some events ticketed, pricing not read.</p><p>Include February 7 in the January 28–February 7 Winter Carnival period.<cite data-ref=\"https://www.wintercarnival.com/\"></cite></p>"
+    },
+    "reason": "Include February 7 in the January 28–February 7 Winter Carnival period.",
+    "production": true,
+    "savedTitle": "Saint Paul Winter Carnival — Minneapolis seasonal activity"
+  },
+  {
+    "pinId": 17885,
+    "patch": {
+      "utcEndDateTime": "2026-12-07T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: NYRA’s official Belmont page gives the 2026 fall meet as September 18–December 6. Exclusive end December 7 includes the final listed day.",
+      "longFormSummary": "<p>Historic racetrack and home of the Belmont Stakes, with a grandstand and family-friendly infield days. The venue reopened after renovation.<cite data-ref=\"https://www.nyra.com/belmont/\"></cite></p><p>Belmont Park, Elmont, Long Island, 18 mi east, New York. Paid - general admission and reserved seating.</p><p>Include December 6 in NYRA’s advertised fall-meet period.<cite data-ref=\"https://www.nyra.com/belmont/\"></cite></p>"
+    },
+    "reason": "Include December 6 in NYRA’s advertised fall-meet period.",
+    "production": true,
+    "savedTitle": "Thoroughbred racing at Belmont Park — New York seasonal activity"
+  },
+  {
+    "pinId": 19615,
+    "patch": {
+      "title": "Olivia Chow Wins Toronto’s October 26 Mayoral Election",
+      "description": "Toronto’s complete unofficial count gives Olivia Chow 532,201 votes (54.16%), ahead of Brad Bradford’s 404,013 (41.11%). Certification is separate from this election-night result.",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Confirmed: voting took place October 26, 2026; the complete city count identifies the winner. Counts remain unofficial pending the clerk’s certification. The existing polling-onset time is retained.",
+      "longFormSummary": "<ul><li>The City of Toronto’s complete unofficial mayoral feed, read October 27, records all 1,431 polls and 982,660 votes: Olivia Chow 532,201 (54.16%), Brad Bradford 404,013 (41.11%). The earlier forecast favoured the winner; its probabilities were not vote-share predictions.<cite data-ref=\"https://mediaresults.toronto.ca/results/unofficialresult.json\"></cite><cite data-ref=\"https://www.toronto.ca/city-government/elections/election-results-reports/election-results/live-results-information-for-media/\"></cite></li></ul><ul><li>Morning October 26, 2026 public market snapshot: Olivia Chow 81%, Brad Bradford 19%, US$821,328 event volume. These displayed probabilities differ from executable buy prices and are not vote shares. The existing October 24 image is a historical snapshot.<cite data-ref=\"https://polymarket.com/event/toronto-mayoral-election-winner-545\"></cite></li><li>Observed October 24, 2026, Polymarket’s Toronto mayoral market displayed Olivia Chow at 66% and Brad Bradford at 34%, with US$676,496 total event volume. The attached market card preserves that snapshot. These are winner probabilities, not projected percentages of ballots.<cite data-ref=\"https://polymarket.com/event/toronto-mayoral-election-winner-545\"></cite></li><li>Toronto Elections gives Monday, October 26 as election day, with voting from 10 a.m. to 8 p.m. Eastern. This pin starts at 14:00 UTC, the polls’ opening, and ends at 00:00 UTC the next day. It does not use an exchange-resolution fallback as the election date.<cite data-ref=\"https://www.toronto.ca/news/fact-sheet-2026-toronto-municipal-election/\"></cite></li><li>The city reports 53 certified mayoral candidates, alongside council and school-board contests. A two-candidate market lead does not mean only two people appear on the ballot. Toronto’s municipal election also elects representatives for 25 wards.<cite data-ref=\"https://www.toronto.ca/news/fact-sheet-2026-toronto-municipal-election/\"></cite></li><li>CityNews explains that voters use their assigned local voting place and may consult MyVote for their ward and identification requirements. This is a citywide election across distributed locations; no single campaign office or unrelated government building is presented as the polling venue.<cite data-ref=\"https://toronto.citynews.ca/2026/09/30/toronto-municipal-elections-how-to-vote/\"></cite></li><li>Historical forecast prices remain distinct from the result and actual vote shares, and can move before election day. Subject, mayor and Chow searches found no earlier native Toronto election pin suitable as a parent; the forecast remains a standalone election event.<cite data-ref=\"https://polymarket.com/event/toronto-mayoral-election-winner-545\"></cite></li></ul><p>Translations completed using Gemini 3.8 Flash.</p>",
+      "tags": [
+        "Polymarket",
+        "Toronto",
+        "Toronto mayoral election"
+      ],
+      "addReferences": [
+        {
+          "url": "https://mediaresults.toronto.ca/results/unofficialresult.json",
+          "title": "Toronto Elections: 2026 Municipal Election unofficial results",
+          "confidence": 100,
+          "reasoning": "Official 2026 municipal election results and context, opened October 27; complete count is unofficial until certified."
+        },
+        {
+          "url": "https://www.toronto.ca/city-government/elections/election-results-reports/election-results/live-results-information-for-media/",
+          "title": "Live Results Information for Media",
+          "confidence": 100,
+          "reasoning": "Official 2026 municipal election results and context, opened October 27; complete count is unofficial until certified."
+        }
+      ]
+    },
+    "reason": "Replace the pre-vote headline with the verified complete unofficial city result; preserve prior forecast snapshots and polling onset.",
+    "production": true,
+    "savedTitle": "Olivia Chow Wins Toronto’s October 26 Mayoral Election"
+  },
+  {
+    "pinId": 19807,
+    "patch": {
+      "title": "Mark Sutcliffe Wins Ottawa’s October 26 Mayoral Election",
+      "description": "Ottawa’s complete unofficial count returns Mark Sutcliffe with 139,354 votes (44.65%), ahead of Jeff Leiper’s 105,819 (33.90%). The clerk’s certification remains separate.",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Confirmed: voting took place October 26, 2026; the complete city count identifies the winner. Counts remain unofficial pending the clerk’s certification. The existing polling-onset time is retained.",
+      "longFormSummary": "<ul><li>Ottawa’s official results XML, timestamped October 26 at 22:43:48 with all 824 tabulators reporting, gives Mark Sutcliffe 139,354 votes (44.65%) and Jeff Leiper 105,819 (33.90%). The election-event XML identifies candidate IDs 12 and 6. These are complete unofficial counts; the forecast correctly favoured Sutcliffe but never predicted a vote share.<cite data-ref=\"https://app06.ottawa.ca/election/2026/results.xml\"></cite><cite data-ref=\"https://app06.ottawa.ca/election/2026/electionevent.xml\"></cite></li></ul><ul><li>This is an estimated election-winner forecast. In the opened October 25 public market snapshot, Sutcliffe is priced at 89% and Leiper at 10.8%, with US$104,757 reported traded across the event. Volume is turnover, not a poll sample or campaign spending; prices are not certified probabilities.<cite data-ref=\"https://polymarket.com/event/ottawa-mayoral-election-winner\"></cite></li><li>Ottawa’s municipal election takes place October 26. Polls open at 10 a.m. and close at 8 p.m. Eastern daylight time. The pin begins at polling onset, rather than the market’s creation timestamp or a later settlement deadline.<cite data-ref=\"https://ottawa.ca/vote/\"></cite><cite data-ref=\"https://vanierbia.com/event/municipal-election-day/\"></cite></li><li>The highlighted market contenders are not a complete ballot list. Verify eligibility, identification and the correct polling station through the city. This paragraph preserves the pre-vote forecast, before any winner was declared.<cite data-ref=\"https://ottawa.ca/vote/\"></cite></li><li>City flag and candidate portraits were checked against the exact Ottawa market outcomes and stored in Azure. Toronto and other cities’ recommended-market portraits were excluded. No eligible earlier Ottawa election-cycle pin was found for a parent thread.</li></ul><p>Translations completed using Gemini 3.8 Flash.</p>",
+      "tags": [
+        "Municipal Election",
+        "Ottawa"
+      ],
+      "addReferences": [
+        {
+          "url": "https://app06.ottawa.ca/election/2026/results.xml",
+          "title": "Ottawa 2026 Municipal Elections: complete unofficial results",
+          "confidence": 100,
+          "reasoning": "Official 2026 municipal election results and context, opened October 27; complete count is unofficial until certified."
+        },
+        {
+          "url": "https://app06.ottawa.ca/election/2026/electionevent.xml",
+          "title": "Ottawa 2026 Municipal Elections: candidate and contest identifiers",
+          "confidence": 100,
+          "reasoning": "Official 2026 municipal election results and context, opened October 27; complete count is unofficial until certified."
+        }
+      ]
+    },
+    "reason": "Replace the pre-vote headline with the verified complete unofficial city result; preserve prior forecast snapshots and polling onset.",
+    "production": true,
+    "savedTitle": "Mark Sutcliffe Wins Ottawa’s October 26 Mayoral Election"
+  },
+  {
+    "pinId": 5609,
+    "patch": {
+      "references": [
+        {
+          "id": 13769,
+          "url": "https://www.thegrocer.co.uk/news/mondelez-christmas-2026-toblerone-meets-biscoff-in-festive-npd/722048.article",
+          "title": "Mondelez Christmas 2026: Toblerone meets Biscoff in festive NPD - The Grocer",
+          "confidence": 85,
+          "reasoning": "UK trade press giving the 180g box's £6.77 recommended price.",
+          "utcCreatedDateTime": "2026-10-04T03:53:15.614443+00:00",
+          "pinId": 5609
+        },
+        {
+          "id": 13770,
+          "url": "https://www.foodbev.com/news/toblerone-and-biscoff-team-up-for-new-diamond-truffles",
+          "title": "Toblerone and Biscoff team up for new Diamond Truffles - FoodBev Media",
+          "confidence": 75,
+          "reasoning": "Trade report on the Mondelez and Lotus Bakeries launch.",
+          "utcCreatedDateTime": "2026-10-04T03:53:15.614443+00:00",
+          "pinId": 5609
+        },
+        {
+          "id": 13771,
+          "url": "https://scottishgrocer.co.uk/2026/08/07/mondelez-unwraps-cadbury-biscoff-christmas-range/",
+          "title": "Mondelez unwraps Cadbury & Biscoff Christmas range - Scottish Grocer",
+          "confidence": 75,
+          "publishedDate": "2026-08-07",
+          "reasoning": "Trade report on Mondelez's Christmas 2026 range, including the Toblerone Biscoff truffles.",
+          "utcCreatedDateTime": "2026-10-04T03:53:15.614443+00:00",
+          "pinId": 5609
+        },
+        {
+          "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+          "title": "These Toblerone Biscoff truffles are dangerously good",
+          "confidence": 90,
+          "publishedDate": null,
+          "reasoning": "October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review."
+        }
+      ]
+    },
+    "reason": "Add verified firsthand taste-review evidence while preserving author and taste axes.",
+    "production": false,
+    "savedTitle": "Toblerone Launches Diamond Truffles with Biscoff Worldwide"
+  },
+  {
+    "pinId": 5609,
+    "patch": {
+      "references": [
+        {
+          "id": 13769,
+          "url": "https://www.thegrocer.co.uk/news/mondelez-christmas-2026-toblerone-meets-biscoff-in-festive-npd/722048.article",
+          "title": "Mondelez Christmas 2026: Toblerone meets Biscoff in festive NPD - The Grocer",
+          "confidence": 85,
+          "reasoning": "UK trade press giving the 180g box's £6.77 recommended price.",
+          "utcCreatedDateTime": "2026-10-04T03:53:15.614443+00:00",
+          "pinId": 5609
+        },
+        {
+          "id": 13770,
+          "url": "https://www.foodbev.com/news/toblerone-and-biscoff-team-up-for-new-diamond-truffles",
+          "title": "Toblerone and Biscoff team up for new Diamond Truffles - FoodBev Media",
+          "confidence": 75,
+          "reasoning": "Trade report on the Mondelez and Lotus Bakeries launch.",
+          "utcCreatedDateTime": "2026-10-04T03:53:15.614443+00:00",
+          "pinId": 5609
+        },
+        {
+          "id": 13771,
+          "url": "https://scottishgrocer.co.uk/2026/08/07/mondelez-unwraps-cadbury-biscoff-christmas-range/",
+          "title": "Mondelez unwraps Cadbury & Biscoff Christmas range - Scottish Grocer",
+          "confidence": 75,
+          "publishedDate": "2026-08-07",
+          "reasoning": "Trade report on Mondelez's Christmas 2026 range, including the Toblerone Biscoff truffles.",
+          "utcCreatedDateTime": "2026-10-04T03:53:15.614443+00:00",
+          "pinId": 5609
+        },
+        {
+          "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+          "title": "These Toblerone Biscoff truffles are dangerously good",
+          "confidence": 90,
+          "publishedDate": null,
+          "reasoning": "October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review."
+        }
+      ]
+    },
+    "reason": "Add verified firsthand taste-review evidence while preserving author and taste axes.",
+    "production": true,
+    "savedTitle": "Toblerone Launches Diamond Truffles with Biscoff Worldwide"
+  },
+  {
+    "pinId": 7016,
+    "patch": {
+      "references": [
+        {
+          "id": 19822,
+          "url": "https://www.prnewswire.com/news-releases/coming-in-hot-absolut-and-tabasco-brand-launch-unique-spicy-vodka-302671906.html",
+          "title": "Absolut TABASCO Vodka — producer announcement",
+          "confidence": 95,
+          "reasoning": "The January 28, 2026 U.S. producer announcement says now available; the separate global announcement gives a February rollout, so this pin specifically tracks the U.S. launch.",
+          "utcCreatedDateTime": "2026-10-09T21:00:48.926995+00:00",
+          "pinId": 7016
+        },
+        {
+          "url": "https://www.delish.com/food-news/a70162139/absolut-tabasco-vodka-taste-test/",
+          "title": "I Tried Absolut's New Tabasco-Flavored Vodka & I Can Still Feel The Heat",
+          "confidence": 90,
+          "publishedDate": "2026-01-28",
+          "reasoning": "October 27 research adds Sean Abrams’s explicitly dated January 28 firsthand tasting in Sweden and at home. Existing Tastings extract remains undated: Date Tasted is not an established publication date."
+        }
+      ]
+    },
+    "reason": "Add verified firsthand taste-review evidence while preserving author and taste axes.",
+    "production": false,
+    "savedTitle": "Absolut TABASCO Vodka Launches in United States"
+  },
+  {
+    "pinId": 7016,
+    "patch": {
+      "references": [
+        {
+          "id": 19822,
+          "url": "https://www.prnewswire.com/news-releases/coming-in-hot-absolut-and-tabasco-brand-launch-unique-spicy-vodka-302671906.html",
+          "title": "Absolut TABASCO Vodka — producer announcement",
+          "confidence": 95,
+          "reasoning": "The January 28, 2026 U.S. producer announcement says now available; the separate global announcement gives a February rollout, so this pin specifically tracks the U.S. launch.",
+          "utcCreatedDateTime": "2026-10-09T21:00:48.926995+00:00",
+          "pinId": 7016
+        },
+        {
+          "url": "https://www.delish.com/food-news/a70162139/absolut-tabasco-vodka-taste-test/",
+          "title": "I Tried Absolut's New Tabasco-Flavored Vodka & I Can Still Feel The Heat",
+          "confidence": 90,
+          "publishedDate": "2026-01-28",
+          "reasoning": "October 27 research adds Sean Abrams’s explicitly dated January 28 firsthand tasting in Sweden and at home. Existing Tastings extract remains undated: Date Tasted is not an established publication date."
+        }
+      ]
+    },
+    "reason": "Add verified firsthand taste-review evidence while preserving author and taste axes.",
+    "production": true,
+    "savedTitle": "Absolut TABASCO Vodka Launches in United States"
+  },
+  {
+    "pinId": 4506,
+    "patch": {
+      "references": [
+        {
+          "id": 9361,
+          "url": "https://www.greatlakesbrewing.com/christmas-ale",
+          "title": "Christmas Ale - Great Lakes Brewing Co.",
+          "confidence": 85,
+          "reasoning": "GLBC's beer page: Christmas Ale is a seasonal released in October, 7.5% ABV and 30 IBU, brewed with honey, ginger and cinnamon on Mt. Hood and Cascade hops.",
+          "utcCreatedDateTime": "2026-09-27T16:05:34.348856+00:00",
+          "pinId": 4506
+        },
+        {
+          "id": 9362,
+          "url": "https://www.youtube.com/watch?v=sOkyZ1pEZjg",
+          "title": "Great Lakes Brewing Company announces Christmas Ale First Pour date",
+          "confidence": 75,
+          "reasoning": "WKYC Channel 3's report on the announcement of the 2026 First Pour date.",
+          "utcCreatedDateTime": "2026-09-27T16:05:34.348856+00:00",
+          "pinId": 4506
+        },
+        {
+          "id": 9363,
+          "url": "https://www.youtube.com/watch?v=O3nW5b3oQu0",
+          "title": "Great Lakes Brewing Sets Date For 2026 Christmas Ale First Pour",
+          "confidence": 72,
+          "reasoning": "cleveland.com's video on the 2026 First Pour date.",
+          "utcCreatedDateTime": "2026-09-27T16:05:34.348856+00:00",
+          "pinId": 4506
+        },
+        {
+          "url": "https://www.axios.com/local/detroit/2022/12/20/detroit-favorite-christmas-beer-2022",
+          "title": "Our favorite Christmas beer",
+          "confidence": 90,
+          "publishedDate": "2022-12-20",
+          "reasoning": "October 27 research adds Axios Detroit’s December 20, 2022 blind tasting of Great Lakes Christmas Ale, a historical vintage rather than evidence of the 2026 first-pour batch. Existing historical reviews and native taste scores are preserved; BevX publication day remains unverified."
+        }
+      ]
+    },
+    "reason": "Add verified firsthand taste-review evidence while preserving author and taste axes.",
+    "production": false,
+    "savedTitle": "Great Lakes Christmas Ale First Pour 2026 Taps in Cleveland"
+  },
+  {
+    "pinId": 4506,
+    "patch": {
+      "references": [
+        {
+          "id": 9361,
+          "url": "https://www.greatlakesbrewing.com/christmas-ale",
+          "title": "Christmas Ale - Great Lakes Brewing Co.",
+          "confidence": 85,
+          "reasoning": "GLBC's beer page: Christmas Ale is a seasonal released in October, 7.5% ABV and 30 IBU, brewed with honey, ginger and cinnamon on Mt. Hood and Cascade hops.",
+          "utcCreatedDateTime": "2026-09-27T16:05:34.348856+00:00",
+          "pinId": 4506
+        },
+        {
+          "id": 9362,
+          "url": "https://www.youtube.com/watch?v=sOkyZ1pEZjg",
+          "title": "Great Lakes Brewing Company announces Christmas Ale First Pour date",
+          "confidence": 75,
+          "reasoning": "WKYC Channel 3's report on the announcement of the 2026 First Pour date.",
+          "utcCreatedDateTime": "2026-09-27T16:05:34.348856+00:00",
+          "pinId": 4506
+        },
+        {
+          "id": 9363,
+          "url": "https://www.youtube.com/watch?v=O3nW5b3oQu0",
+          "title": "Great Lakes Brewing Sets Date For 2026 Christmas Ale First Pour",
+          "confidence": 72,
+          "reasoning": "cleveland.com's video on the 2026 First Pour date.",
+          "utcCreatedDateTime": "2026-09-27T16:05:34.348856+00:00",
+          "pinId": 4506
+        },
+        {
+          "url": "https://www.axios.com/local/detroit/2022/12/20/detroit-favorite-christmas-beer-2022",
+          "title": "Our favorite Christmas beer",
+          "confidence": 90,
+          "publishedDate": "2022-12-20",
+          "reasoning": "October 27 research adds Axios Detroit’s December 20, 2022 blind tasting of Great Lakes Christmas Ale, a historical vintage rather than evidence of the 2026 first-pour batch. Existing historical reviews and native taste scores are preserved; BevX publication day remains unverified."
+        }
+      ]
+    },
+    "reason": "Add verified firsthand taste-review evidence while preserving author and taste axes.",
+    "production": true,
+    "savedTitle": "Great Lakes Christmas Ale First Pour 2026 Taps in Cleveland"
+  },
+  {
+    "pinId": 17923,
+    "patch": {
+      "sourceUrl": "https://www.barrett-jackson.com/tickets-and-experiences",
+      "utcEndDateTime": "2027-02-01T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Official ticket page gives Scottsdale January 23–31, 2027; February 1 is the exclusive end.",
+      "longFormSummary": "<p>A week-long collector-car auction and festival drawing hundreds of vehicles, vendors and live entertainment each January.<cite data-ref=\"https://www.barrett-jackson.com/Events/Event/Details/Scottsdale-2027\"></cite></p><p>WestWorld of Scottsdale, North Scottsdale, Phoenix. Paid - admission varies.</p><p>Official ticket page gives Scottsdale January 23–31, 2027; February 1 is the exclusive end.<cite data-ref=\"https://www.barrett-jackson.com/tickets-and-experiences\"></cite></p>"
+    },
+    "reason": "Official ticket page gives Scottsdale January 23–31, 2027; February 1 is the exclusive end.",
+    "production": true,
+    "savedTitle": "Barrett-Jackson Scottsdale Auction — Phoenix seasonal activity"
+  },
+  {
+    "pinId": 17924,
+    "patch": {
+      "utcStartDateTime": "2026-12-31T00:30:00.000Z",
+      "allDay": false,
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Official Fiesta Bowl page gives December 30, 2026 at 5:30 PM Arizona time (MST), equivalent to December 31 at 00:30 UTC.",
+      "longFormSummary": "<p>A College Football Playoff-era New Year&#39;s bowl game at State Farm Stadium, with a parade and fan events beforehand.<cite data-ref=\"https://www.fiestasportsfoundation.org/\"></cite></p><p>State Farm Stadium, Glendale, 15 mi west, Phoenix. Paid - ticket prices vary.</p><p>Official Fiesta Bowl page gives December 30, 2026 at 5:30 PM Arizona time (MST), equivalent to December 31 at 00:30 UTC.<cite data-ref=\"https://www.fiestabowl.org/\"></cite></p>"
+    },
+    "reason": "Official Fiesta Bowl page gives December 30, 2026 at 5:30 PM Arizona time (MST), equivalent to December 31 at 00:30 UTC.",
+    "production": true,
+    "savedTitle": "Vrbo Fiesta Bowl — Phoenix seasonal activity"
+  },
+  {
+    "pinId": 17926,
+    "patch": {
+      "utcEndDateTime": "2026-11-16T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Wurstfest gives November 6–15, 2026. November 16 exclusive includes the final festival day.",
+      "longFormSummary": "<p>Ten days of German food, polka bands, beer and carnival rides on the Comal River in Landa Park.<cite data-ref=\"https://www.wurstfest.com/\"></cite></p><p>Landa Park, New Braunfels, 30 mi northeast, San Antonio. Paid - Mon-Thu free; Fri/Sun $15 online ($20 gate); Sat $25 online ($30 gate); kids 12 and under free.</p><p>Wurstfest gives November 6–15, 2026. November 16 exclusive includes the final festival day.<cite data-ref=\"https://wurstfest.com/\"></cite></p>"
+    },
+    "reason": "Wurstfest gives November 6–15, 2026. November 16 exclusive includes the final festival day.",
+    "production": true,
+    "savedTitle": "Wurstfest — San Antonio seasonal activity"
+  },
+  {
+    "pinId": 17956,
+    "patch": {
+      "utcStartDateTime": "2026-02-03T00:00:00.000Z",
+      "utcEndDateTime": "2026-11-08T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: San Diego FC’s published 2026 home schedule starts with February 3 CONCACAF play and ends regular-season home play November 7. This span excludes any unconfirmed later playoff dates.",
+      "longFormSummary": "<p>The city&#39;s MLS club plays its home matches in Mission Valley.<cite data-ref=\"https://www.sandiegofc.com/\"></cite></p><p>Snapdragon Stadium, Mission Valley, San Diego. Paid - varies by match.</p><p>San Diego FC’s published 2026 home schedule starts with February 3 CONCACAF play and ends regular-season home play November 7. This span excludes any unconfirmed later playoff dates.<cite data-ref=\"https://www.sandiegofc.com/\"></cite></p>"
+    },
+    "reason": "San Diego FC’s published 2026 home schedule starts with February 3 CONCACAF play and ends regular-season home play November 7. This span excludes any unconfirmed later playoff dates.",
+    "production": true,
+    "savedTitle": "San Diego FC at Snapdragon Stadium — San Diego seasonal activity"
+  },
+  {
+    "pinId": 17978,
+    "patch": {
+      "utcEndDateTime": "2026-11-29T00:00:00.000Z",
+      "dateConfidenceReasoning": "Stated: Cal’s official football schedule lists the final home game against Pitt on November 28, 2026. November 29 is its exclusive end; the existing season-start estimate remains unverified.",
+      "longFormSummary": "<p>College football in a stadium above the Hayward Fault with views of the Bay.<cite data-ref=\"https://calbears.com/sports/football\"></cite></p><p>California Memorial Stadium, Berkeley, 12 mi east, San Francisco. Paid - tickets.</p><p>Cal’s official football schedule lists the final home game against Pitt on November 28, 2026. November 29 is its exclusive end; the existing season-start estimate remains unverified.<cite data-ref=\"https://calbears.com/\"></cite></p>"
+    },
+    "reason": "Cal’s official football schedule lists the final home game against Pitt on November 28, 2026. November 29 is its exclusive end; the existing season-start estimate remains unverified.",
+    "production": true,
+    "savedTitle": "Cal Bears Football — San Francisco seasonal activity"
+  },
+  {
+    "pinId": 17992,
+    "patch": {
+      "utcStartDateTime": "2026-02-22T00:00:00.000Z",
+      "utcEndDateTime": "2026-11-08T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Sounders’ full official schedule lists its first 2026 home league match February 22 and final home regular-season match November 7. Unconfirmed later playoff dates are excluded.",
+      "longFormSummary": "<p>MLS matches with a standing-section supporters culture and some of the league&#39;s biggest crowds.<cite data-ref=\"https://www.soundersfc.com/\"></cite></p><p>Lumen Field, SoDo, Seattle. Paid - match tickets.</p><p>Sounders’ full official schedule lists its first 2026 home league match February 22 and final home regular-season match November 7. Unconfirmed later playoff dates are excluded.<cite data-ref=\"https://www.soundersfc.com/\"></cite></p>"
+    },
+    "reason": "Sounders’ full official schedule lists its first 2026 home league match February 22 and final home regular-season match November 7. Unconfirmed later playoff dates are excluded.",
+    "production": true,
+    "savedTitle": "Seattle Sounders FC at Lumen Field — Seattle seasonal activity"
+  },
+  {
+    "pinId": 18024,
+    "patch": {
+      "utcEndDateTime": "2026-11-08T00:00:00.000Z",
+      "dateConfidenceReasoning": "Stated: D.C. United’s official schedule lists its final regular-season home game November 7 against NYCFC; November 8 exclusive includes it. The first home date still needs verification.",
+      "longFormSummary": "<p>MLS soccer at a riverside stadium near the Wharf and Navy Yard.<cite data-ref=\"https://www.dcunited.com\"></cite></p><p>Audi Field, Buzzard Point, Washington, DC. Paid - ticket prices vary.</p><p>D.C. United’s official schedule lists its final regular-season home game November 7 against NYCFC; November 8 exclusive includes it. The first home date still needs verification.<cite data-ref=\"https://www.dcunited.com\"></cite></p>"
+    },
+    "reason": "D.C. United’s official schedule lists its final regular-season home game November 7 against NYCFC; November 8 exclusive includes it. The first home date still needs verification.",
+    "production": true,
+    "savedTitle": "D.C. United at Audi Field — Washington, DC seasonal activity"
+  },
+  {
+    "pinId": 17396,
+    "patch": {
+      "utcEndDateTime": "2027-09-27T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Opened NBC Sports Philadelphia schedule coverage gives April 1 home opener and September 24–26 final home series. September 27 exclusive includes September 26.",
+      "longFormSummary": "<p>Major League Baseball home games from the April home opener through late September.<cite data-ref=\"https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/\"></cite></p><p>Citizens Bank Park, South Philadelphia, Philadelphia. Paid - tickets.</p><p>Opened NBC Sports Philadelphia schedule coverage gives April 1 home opener and September 24–26 final home series. September 27 exclusive includes September 26.<cite data-ref=\"https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/\"></cite></p>"
+    },
+    "reason": "Opened NBC Sports Philadelphia schedule coverage gives April 1 home opener and September 24–26 final home series. September 27 exclusive includes September 26.",
+    "production": true,
+    "savedTitle": "Phillies at Citizens Bank Park — Philadelphia seasonal activity"
+  },
+  {
+    "pinId": 17417,
+    "patch": {
+      "utcEndDateTime": "2027-09-27T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Opened Atlanta News First schedule coverage gives April 2 home opener and September 24–26 final home series, subject to the reported labor uncertainty. September 27 exclusive includes September 26.",
+      "longFormSummary": "<p>Major League Baseball at Truist Park.<cite data-ref=\"https://www.atlantanewsfirst.com/2026/07/16/braves-2027-schedule-released-will-open-season-road-vs-dodgers-brewers/\"></cite></p><p>Truist Park, The Battery / Cumberland, Atlanta. Paid - tickets.</p><p>Opened Atlanta News First schedule coverage gives April 2 home opener and September 24–26 final home series, subject to the reported labor uncertainty. September 27 exclusive includes September 26.<cite data-ref=\"https://www.atlantanewsfirst.com/2026/07/16/braves-2027-schedule-released-will-open-season-road-vs-dodgers-brewers/\"></cite></p>"
+    },
+    "reason": "Opened Atlanta News First schedule coverage gives April 2 home opener and September 24–26 final home series, subject to the reported labor uncertainty. September 27 exclusive includes September 26.",
+    "production": true,
+    "savedTitle": "Braves at Truist Park — Atlanta seasonal activity"
+  },
+  {
+    "pinId": 17424,
+    "patch": {
+      "utcEndDateTime": "2027-02-16T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Stated: Official Coconut Grove Arts Festival page advertises February 13–15, 2027, including Monday 10 AM–5 PM. February 16 is the exclusive end.",
+      "longFormSummary": "<p>A juried outdoor art festival over Presidents Day weekend with artists, food and live entertainment in the Grove.<cite data-ref=\"https://cgaf.com/\"></cite></p><p>Coconut Grove waterfront streets, Coconut Grove, Miami. Paid - see festival site.</p><p>Official Coconut Grove Arts Festival page advertises February 13–15, 2027, including Monday 10 AM–5 PM. February 16 is the exclusive end.<cite data-ref=\"https://cgaf.com/\"></cite></p>"
+    },
+    "reason": "Official Coconut Grove Arts Festival page advertises February 13–15, 2027, including Monday 10 AM–5 PM. February 16 is the exclusive end.",
+    "production": true,
+    "savedTitle": "Coconut Grove Arts Festival — Miami seasonal activity"
+  },
+  {
+    "pinId": 16017,
+    "patch": {
+      "description": "October’s active Brent ladder has its largest adjacent midpoint-implied band at USD 108.99–110.99/barrel. October 27 contracts-times-last-prices imply USD 100,434.62 turnover proxy; observation remains October 30.",
+      "dateConfidenceReasoning": "Estimated: October 27 morning market snapshot has modal adjacent midpoint band USD 108.99–110.99/barrel and 43% above USD 110.99, with USD 100,434.62 derived turnover proxy. Contract observation is October 30, 2026 at 17:00 EDT / 21:00 UTC; future and unsettled.",
+      "longFormSummary": "<ul><li>October 27, 2026 morning snapshot: 30 active October Brent strikes. Largest adjacent midpoint-implied band USD 108.99–110.99 per barrel (16.5 percentage-point drop). Nearest 50% threshold is USD 110.99: midpoint 43%, bid 41%, ask 45%; USD 108.99 has midpoint 59.5%. Summed volume 195,687.25 contract units; contracts times last prices imply USD 100,434.62 turnover proxy, not exchange-reported dollar volume. Non-monotonic sparse quotes make adjacent bands noisy. No realized October settlement: observation remains October 30 at 17:00 EDT / 21:00 UTC.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li></ul><ul><li>October 26, 2026 morning snapshot: 30 active October strikes. The largest adjacent midpoint-probability drop is USD 110.99–112.99/barrel (15.0 percentage points); the threshold nearest 50% is USD 108.99, midpoint 54.0% (bid/ask 52–56%). Volume totals 188,942.21 contract units. Summing each contract’s volume times its last price implies USD 97,996.10, a derived turnover proxy, not exchange-reported cash volume. Sparse and non-monotonic quotes make the band noisy. All remain active with no realized settlement; observation remains October 30 at 17:00 EDT / 21:00 UTC.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Evening observation, October25,2026 Pacific (October26 UTC): the30active October strikes have their largest adjacent midpoint-probability drop between US$106.99 and US$108.99 per barrel, about19 percentage points. The US$108.99 threshold is closest to50%: midpoint50.5%, Yes bid49¢/ask52¢. This is a noisy market-implied band, not a point estimate or a calibrated probability interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Volume basis:186,157.36 traded contract units across the October ladder. Summing units times each contract’s latest price yields approximatelyUS$97,064.46 estimated turnover. This is a derived snapshot proxy, not reported cash volume; changing last prices can make it fall even as contracts traded increase. It must not be compared as a cash-volume time series with earlier estimates.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>The current operator rules say October’s settlement uses the Pyth Brent Crude Oil24/7 index, replacing the front-month futures methodology for settlements from September30. It uses the close of the one-minute candle ending October30 at5p.m. EDT (21:00UTC), rounded to two decimals. This is not a monthly average, WTI price or realized settlement. All October contracts remain active with no settlement value.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-crude-oil-price-on-october-30-2026-at-5-00-pm-edt/kxbrentmon-26oct3017\"></cite></li><li>October 25, 2026 morning snapshot (2026-10-25T15:00:38.120078+00:00): 30 active October Brent strikes. The largest adjacent midpoint-implied band is US$114.99–116.99/bbl (13.0 percentage points), while the threshold nearest50% is US$110.99 at 49.5% (bid/ask 48–51%). Summed contracts times last prices imply estimated dollar turnover US$101,823.38; this is not reported cash volume. Non-monotonic tails make adjacent differences noisy, not a precise density. Observation remains October30 at17:00EDT/21:00UTC and is not yet settled.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>October24,2026 morning (snapshot checked 2026-10-24T14:08:19.135977+00:00): 30 October Brent strikes. Leading adjacent midpoint-implied band US$108.99–110.99/bbl (16.0 percentage points); closest50%threshold US$110.99 at 49.5%. Contracts times last prices imply estimated dollar turnover US$99,499.22, not reported cash volume. Non-monotonic thresholds make these differences noisy rather than a precise probability density. Observation remains October30 at17:00EDT/21:00UTC; October is not settled.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>October23,2026 evening (snapshot checked 2026-10-24T03:54:04.988370+00:00): 30 October Brent strikes. Leading adjacent midpoint-implied band US$108.99–110.99/bbl (10.5 percentage points); closest50%threshold US$110.99 at 50%. Contracts times last prices imply estimated dollar turnover US$97,930.48, not reported cash volume. Non-monotonic thresholds make these differences noisy rather than a precise probability density. Observation remains October30 at17:00EDT/21:00UTC; October is not settled.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Observed October 23, 2026: the 30-strike October Brent book’s largest adjacent midpoint-implied band is US$108.99–110.99/bbl (12 percentage points). The closest midpoint to 50% is the US$108.99 threshold at 53%; its quoted bid/ask is 51–55%. Summed contracts times last-trade prices imply estimated dollar turnover of US$88,276.95, not exchange-reported cash volume. Non-monotonic thresholds make these differences a noisy distribution rather than a precise density. October remains unsettled; the observation is October 30 at 17:00 EDT / 21:00 UTC.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>On October 22, 2026 at approximately 23:32 UTC, the raw Kalshi book contained 30 October Brent strikes. The largest adjacent midpoint-implied band was US$106.99–108.99/bbl (17 percentage points); nearest 50% threshold US$108.99. Contracts times last prices total an estimated US$83,954.71, not reported cash turnover. Non-monotonic outliers mean these adjacent differences are not a precise probability density. Observation remains October 30, 17:00 EDT / 21:00 UTC. The month has not settled.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>October 21,2026 PM book: 30 October Brent strikes; the largest adjacent midpoint-implied band was US$106.99–108.99/bbl (16.5 percentage points), with nearest 50%threshold US$106.99. Contract count times last price totals an estimated US$71,805.77, not reported cash turnover. Outlying thresholds remain non-monotonic, so these differences are not a precise probability density. Observation remains October 30 at 17:00 EDT/21:00 UTC; the October contract is unsettled.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>On October 20, 2026 the 30-strike October Brent book’s largest adjacent midpoint-implied band was US$106.99–108.99/bbl (21.5 percentage points). The nearest 50% threshold was US$104.99. Summed contracts times last price was an estimated US$72,901.59, not exchange-reported dollar turnover. Some outlying thresholds are non-monotonic and the distribution is not a precise probability density. The observation remains October 30 at 17:00 EDT / 21:00 UTC; October has not settled.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>This monthly Brent forecast resolves to the contract-defined one-minute closing price on <strong>October 30, 2026 at 17:00 EDT (21:00 UTC)</strong>. It is neither the monthly average spot price nor a physical cargo purchase. Kalshi’s rules, rather than a later administrative settlement buffer, determine the timestamp.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Observed October 16, the 30-strike book quoted 71–75% bid/ask above US$100.99/bbl, 54–55% above US$102.99, and 44–45% above US$104.99. Midpoint differences between adjacent cumulative thresholds put the largest quoted band around US$101–103; the 50% crossing is nearer US$104. These derived readings are not a guaranteed final value.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Dollar turnover is estimated at <strong>US$59,668</strong> by summing each strike’s traded-contract count multiplied by its last-trade dollar price. Kalshi contract counts are not dollar volume. This estimate can differ from exchange-displayed turnover, and last prices can lag the bid/ask quotes used above. No turnover amount is entered as the event’s cost.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>EIA’s October outlook forecasts a US$105/bbl average Brent spot price for Q 4, against constrained Middle East flows, inventory withdrawals and tight diesel markets. It assumes flows improve over time and expects US$84 for the 2027 annual average. These provide independent market context; quarterly spot averages and this single contract observation are different benchmarks.<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>The forecast will be checked against the finalized contract value. A later outcome review must compare that value with this preserved October 16 distribution and contemporaneous inventory, shipping, supply and demand evidence. The October 16 forecast is preserved here; separate historical monthly records were subsequently linked in this thread.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite><cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>On October 17, 2026, the October 30 book quoted 56–60% bid/ask aboveUS$104.99,48–51% aboveUS$106.99 and 40–43% aboveUS$108.99 per barrel. The median threshold moved towardUS$107. The largest adjacent midpoint-probability difference was aroundUS$111–113, approximately 10.5 percentage points; this derived modal band is sensitive to sparse quotes and is not a point forecast.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Across 30 strikes, approximately 129,355.46 traded contracts imply an estimatedUS$66,049 when each count is multiplied by its last-trade price. This is an estimate of dollar turnover, not exchange-reported exact dollars or oil-purchase cost. Earlier October 16 odds remain above for comparison. The event remains the October 30, 17:00 EDT observation; this October observation has not yet realized.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Across 30 current strikes the largest adjacent midpoint-implied band is US$98.99–100.99 (about 11.0 percentage points); the closest 50% threshold is US$106.99 at 47.0%. Estimated turnover is US$68,495, computed as contracts times last prices, not exact exchange-reported dollar volume. Earlier dated snapshots remain above. No realized October price is available; observation remains October 30,17:00 EDT.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>On October 19, 2026, the 30-strike October 30 Brent book’s largest adjacent midpoint-implied band was US$106.99–108.99/bbl, about 14.5 percentage points. The closest 50% threshold was US$104.99. Summed contracts times each last price gives an estimated US$67,667, not exact exchange-reported dollar turnover. Last-price changes can lower this estimate even when cumulative contract volume rises. The event remains the October 30,17:00 EDT observation; no October realized settlement is available.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><p>Translations completed using Gemini 3.8 Flash.</p>"
+    },
+    "reason": "Refresh dated Brent market distribution and synchronize headline/reasoning while preserving settlement timestamp and commodity parent.",
+    "production": true,
+    "savedTitle": "Brent Crude Oil Price — October 2026"
+  },
+  {
+    "pinId": 15162,
+    "patch": {
+      "references": [
+        {
+          "id": 34580,
+          "url": "https://artificialanalysis.ai/articles/muse-spark-everything-you-need-to-know",
+          "title": "Muse Spark: Meta is back in the AI race - Artificial Analysis",
+          "confidence": 85,
+          "publishedDate": "2026-04-08",
+          "reasoning": "Independent launch analysis: 52 on the Intelligence Index behind Gemini 3.1 Pro, GPT-5.4 and Claude Opus 4.6 and ahead of Claude Sonnet 4.6, GLM-5.1, MiniMax-M2.7 and Grok 4.20; Meta's first frontier model not released as open weights; 58M output tokens to run the index; Humanity's Last Exam 39.9%, MMMU-Pro 80.5%; weaker on GDPval-AA (1,427) and Terminal-Bench Hard.",
+          "utcCreatedDateTime": "2026-10-12T21:39:39.94101+00:00",
+          "pinId": 15162
+        },
+        {
+          "id": 34581,
+          "url": "https://www.deeplearning.ai/the-batch/with-muse-spark-meta-pivots-away-from-its-open-weights-llama-strategy",
+          "title": "With Muse Spark, Meta Pivots Away From its Open-Weights Llama Strategy - The Batch",
+          "confidence": 80,
+          "publishedDate": "2026-04-17",
+          "reasoning": "Context piece: Meta's first model in a year and the first product of a nine-month-old Superintelligence Labs, a natively multimodal reasoning model with instant, thinking and contemplating modes, inputs up to 262,000 tokens, undisclosed size, free in meta.ai and the app, API preview for select partners, and developer concern after Meta left open weights.",
+          "utcCreatedDateTime": "2026-10-12T21:39:39.94101+00:00",
+          "pinId": 15162
+        },
+        {
+          "id": 34582,
+          "url": "https://officechai.com/ai/meta-muse-spark-benchmarks/",
+          "title": "Meta Releases Muse Spark, Beats Top Frontier Labs On Some Benchmarks - OfficeChai",
+          "confidence": 75,
+          "publishedDate": "2026-04-08",
+          "reasoning": "Tabulates Meta's own numbers: CharXiv Reasoning 86.4, HealthBench Hard 42.8 against 40.1 for GPT 5.4, DeepSearchQA 74.8, Humanity's Last Exam 50.2 in Contemplating mode, ARC AGI 2 42.5 and Terminal-Bench 2.0 59.0 against 75.1 for GPT 5.4.",
+          "utcCreatedDateTime": "2026-10-12T21:39:39.94101+00:00",
+          "pinId": 15162
+        },
+        {
+          "url": "https://www.datacamp.com/blog/muse-spark",
+          "title": "Muse Spark: Features, Benchmarks, and How to Use It",
+          "publishedDate": "2026-04-08",
+          "confidence": 95,
+          "reasoning": "Opened firsthand assessment of original April 8 Muse Spark, quote string-matched during October 27 research."
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/i-tried-muse-spark-heres-what-you-need-to-know-about-metas-new-ai-model",
+          "title": "I tried Muse Spark — here’s what you need to know about Meta’s new AI model",
+          "publishedDate": "2026-04-14",
+          "confidence": 95,
+          "reasoning": "Opened firsthand assessment of original April 8 Muse Spark, quote string-matched during October 27 research."
+        }
+      ]
+    },
+    "reason": "Back original Muse Spark rubric with independently opened hands-on review evidence.",
+    "production": false,
+    "savedTitle": "Muse Spark Released"
+  },
+  {
+    "pinId": 15162,
+    "patch": {
+      "references": [
+        {
+          "id": 34580,
+          "url": "https://artificialanalysis.ai/articles/muse-spark-everything-you-need-to-know",
+          "title": "Muse Spark: Meta is back in the AI race - Artificial Analysis",
+          "confidence": 85,
+          "publishedDate": "2026-04-08",
+          "reasoning": "Independent launch analysis: 52 on the Intelligence Index behind Gemini 3.1 Pro, GPT-5.4 and Claude Opus 4.6 and ahead of Claude Sonnet 4.6, GLM-5.1, MiniMax-M2.7 and Grok 4.20; Meta's first frontier model not released as open weights; 58M output tokens to run the index; Humanity's Last Exam 39.9%, MMMU-Pro 80.5%; weaker on GDPval-AA (1,427) and Terminal-Bench Hard.",
+          "utcCreatedDateTime": "2026-10-12T21:39:39.94101+00:00",
+          "pinId": 15162
+        },
+        {
+          "id": 34581,
+          "url": "https://www.deeplearning.ai/the-batch/with-muse-spark-meta-pivots-away-from-its-open-weights-llama-strategy",
+          "title": "With Muse Spark, Meta Pivots Away From its Open-Weights Llama Strategy - The Batch",
+          "confidence": 80,
+          "publishedDate": "2026-04-17",
+          "reasoning": "Context piece: Meta's first model in a year and the first product of a nine-month-old Superintelligence Labs, a natively multimodal reasoning model with instant, thinking and contemplating modes, inputs up to 262,000 tokens, undisclosed size, free in meta.ai and the app, API preview for select partners, and developer concern after Meta left open weights.",
+          "utcCreatedDateTime": "2026-10-12T21:39:39.94101+00:00",
+          "pinId": 15162
+        },
+        {
+          "id": 34582,
+          "url": "https://officechai.com/ai/meta-muse-spark-benchmarks/",
+          "title": "Meta Releases Muse Spark, Beats Top Frontier Labs On Some Benchmarks - OfficeChai",
+          "confidence": 75,
+          "publishedDate": "2026-04-08",
+          "reasoning": "Tabulates Meta's own numbers: CharXiv Reasoning 86.4, HealthBench Hard 42.8 against 40.1 for GPT 5.4, DeepSearchQA 74.8, Humanity's Last Exam 50.2 in Contemplating mode, ARC AGI 2 42.5 and Terminal-Bench 2.0 59.0 against 75.1 for GPT 5.4.",
+          "utcCreatedDateTime": "2026-10-12T21:39:39.94101+00:00",
+          "pinId": 15162
+        },
+        {
+          "url": "https://www.datacamp.com/blog/muse-spark",
+          "title": "Muse Spark: Features, Benchmarks, and How to Use It",
+          "publishedDate": "2026-04-08",
+          "confidence": 95,
+          "reasoning": "Opened firsthand assessment of original April 8 Muse Spark, quote string-matched during October 27 research."
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/i-tried-muse-spark-heres-what-you-need-to-know-about-metas-new-ai-model",
+          "title": "I tried Muse Spark — here’s what you need to know about Meta’s new AI model",
+          "publishedDate": "2026-04-14",
+          "confidence": 95,
+          "reasoning": "Opened firsthand assessment of original April 8 Muse Spark, quote string-matched during October 27 research."
+        }
+      ]
+    },
+    "reason": "Back original Muse Spark rubric with independently opened hands-on review evidence.",
+    "production": true,
+    "savedTitle": "Muse Spark Released"
+  }
+]

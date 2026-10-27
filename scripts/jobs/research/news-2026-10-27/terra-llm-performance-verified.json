@@ -1,0 +1,36 @@
+{
+  "reasoning": 3.5,
+  "coding": 4,
+  "context": 4,
+  "price": 4.5,
+  "speed": 3,
+  "modalities": 3,
+  "reviews": [
+    {
+      "url": "https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier",
+      "quote": "The low and medium effort levels are Pareto-optimal for cost efficiency, while the other effort levels sit behind the frontier.",
+      "title": "GPT-6.1 Terra pushes the cost efficiency frontier",
+      "sentiment": 0.5,
+      "publishedDate": "2026-10-26"
+    },
+    {
+      "url": "https://plotly.com/blog/gpt-6-1-terra-plotly-data-analytics-bench/",
+      "quote": "no model we've tested is both cheaper and more accurate.",
+      "title": "GPT-6.1 Terra Benchmark Results for Data Analysis",
+      "sentiment": 0.7,
+      "publishedDate": "2026-10-26"
+    },
+    {
+      "url": "https://www.dualentry.com/blog/gpt-6-1-terra-accounting-benchmark",
+      "quote": "It isn't the best value, though.",
+      "title": "GPT-6.1 Terra Is Fast and Cheap. On Accounting, It's Not Accurate Enough to Lead",
+      "sentiment": -0.3,
+      "publishedDate": "2026-10-26"
+    }
+  ],
+  "source": "session",
+  "basis": "October 26 launch: AA Intelligence Index v4.3.2 max-effort 48 => 3.5; maker Terminal-Bench 4.0 50.3% max => 4. API 1,050,000 context => 4; text/image input => 3; $1/$5 standard short-context 3:1 blend $2/M => 4.5. AA release page 90.9 output tokens/s => 3 (not Plotly end-to-end task speed). Three independent-of-OpenAI tests: AA benchmark, Plotly analytics and DualEntry accounting. The latter two sell software and test their own workloads; not neutral general-purpose reviews. None of the task-specific accuracy figures is substituted for a rubric anchor.",
+  "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+  "rubricYear": 2026,
+  "checkedAt": "2026-10-27T14:14:40.863Z"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Microsoft Opens Voluntary Exit Offers to About 60,000 Eligible Staff",
+  "description": "Microsoft introduces a voluntary exit program across four countries. About 60,000 employees are eligible; that figure is not a confirmed departure or layoff count.",
+  "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
+  "utcStartDateTime": "2026-10-26T00:00:00.000Z",
+  "allDay": true,
+  "dateConfidence": "confirmed",
+  "dateConfidenceReasoning": "Stated: Amy Coleman’s October 26 official post says “Today, we’re introducing” the Voluntary Exit Offer. This is the announcement date, not the reported December 31 departure date.",
+  "price": null,
+  "priceCurrency": null,
+  "company": "Microsoft",
+  "companyWikiUrl": "https://en.wikipedia.org/wiki/Microsoft",
+  "address": "Microsoft Redmond East Campus, Overlake, Redmond, King County, Washington, United States",
+  "latitude": 47.6406936,
+  "longitude": -122.1273018,
+  "categories": [
+    "Labour",
+    "Business",
+    "Software"
+  ],
+  "tags": [
+    "Microsoft",
+    "Layoffs",
+    "Voluntary buyouts"
+  ],
+  "longFormSummary": "<ul><li>Microsoft introduced its Voluntary Exit Offer on October 26, 2026. Chief People Officer Amy Coleman describes a time-limited option for eligible employees in participating teams in Canada, India, the United Kingdom and the United States, at level 70 and below. Organizations participate according to their own workforce needs.<cite data-ref=\"https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/\"></cite></li><li>CNBC reports approximately 60,000 eligible employees, about 27% of the company’s 223,000 staff. This is the population offered a choice, not a count of accepted offers, completed departures or involuntary layoffs; the reporting says Microsoft has no departure target for this program.<cite data-ref=\"https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html\"></cite></li><li>Reuters reports that participating divisions include AI experiences, Copilot, finance, human resources, Xbox and Windows + Devices, while marketing, commercial business and security are excluded. Those organizational details are attributed to a source familiar with the offer rather than a complete published eligibility register.<cite data-ref=\"https://www.schwab.wallst.com/schwab/Prospect/research/stocks/news.asp?doc=3200-nL3N46C1C2-7&symbol=MSFT\"></cite></li><li>CNBC reports decisions are due in early December and participants would depart December 31. This pin marks the launch of the offer, not that later exit date. Individual payment terms, total severance cost and an exact December decision deadline are not disclosed in the official post.<cite data-ref=\"https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html\"></cite></li><li>The offer extends Microsoft’s workforce-adjustment approach after its earlier Voluntary Retirement Program. The company promises financial support and career-planning resources; the official memo does not itself attribute this initiative to AI spending. CNBC separately places it against rising AI infrastructure expenditure.<cite data-ref=\"https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/\"></cite></li><li>The announcement is distinct from Microsoft’s July job-cut round and from the smaller retirement offer earlier in the year. With participation still voluntary, actual workforce effects depend on take-up. The corporate logo is credited to Microsoft and is illustrative, not an image of affected employees.<cite data-ref=\"https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html\"></cite></li></ul>",
+  "sentiment": -0.2,
+  "productLine": "",
+  "media": [
+    {
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-27/microsoft-veo-logo.webp"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
+      "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",
+      "publishedDate": "2026-10-26",
+      "confidence": 95,
+      "reasoning": "CNBC reports approximately 60,000 eligible workers, an early-December choice and December 31 departures; eligibility is not actual departures."
+    },
+    {
+      "url": "https://www.schwab.wallst.com/schwab/Prospect/research/stocks/news.asp?doc=3200-nL3N46C1C2-7&symbol=MSFT",
+      "title": "UPDATE 2-Microsoft offers buyouts to around 60,000 employees to contain costs",
+      "publishedDate": "2026-10-26",
+      "confidence": 95,
+      "reasoning": "Reuters reports the offer, the memo and participating/excluded divisions; published October 26 at 1:12 pm ET."
+    }
+  ],
+  "parentId": null
+}

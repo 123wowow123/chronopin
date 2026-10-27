@@ -2409,6 +2409,8 @@ const vi: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Đọc hàng triệu cuốn sách và nghe sách nói, dùng thử miễn phí.', cta: 'Bắt đầu đọc' },
       subscribesave: { title: 'Đăng ký và Tiết kiệm', body: 'Tiết kiệm cho đồ dùng hằng ngày, giao theo lịch của bạn.', cta: 'Bắt đầu tiết kiệm' },
       abracadabra: { title: 'Abracadabra NYC', body: 'Trang phục, cosplay, đạo cụ và đồ sưu tầm từ cửa hàng hóa trang nổi tiếng của New York.', cta: 'Xem cửa hàng' },
+      marshall: { title: 'Marshall', body: 'Tai nghe, loa và tai nghe nhét tai cao cấp mang diện mạo ampli Marshall đặc trưng.', cta: 'Xem Marshall' },
+      gearup: { title: 'GearUP', body: 'Giảm lag và ping khi chơi game PC và di động với trình tăng tốc game.', cta: 'Dùng thử GearUP' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

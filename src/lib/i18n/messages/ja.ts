@@ -2400,6 +2400,8 @@ const ja: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: '数百万冊の本とオーディオブックが読み放題・聴き放題。無料体験あり。', cta: '読み始める' },
       subscribesave: { title: '定期おトク便', body: '日用品を好きなペースで届けてお得に。', cta: '節約を始める' },
       abracadabra: { title: 'Abracadabra NYC', body: 'ニューヨークの有名コスチューム店の衣装、コスプレ、小道具、コレクターズアイテム。', cta: 'ショップを見る' },
+      marshall: { title: 'Marshall', body: 'アンプのアイコニックなデザインが光る、マーシャルのヘッドホン、スピーカー、イヤホン。', cta: 'マーシャルを見る' },
+      gearup: { title: 'GearUP', body: 'PCもスマホも、ゲームブースターでラグとpingを軽減。', cta: 'GearUPを試す' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

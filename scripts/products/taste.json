@@ -392,28 +392,37 @@
     "sweetness": 3,
     "astringency": 1,
     "umami": 0.5,
-    "basis": "No 2026 review yet; reviews of earlier vintages cite ginger, cinnamon, cardamom, allspice, honey, clove and nutmeg with a moderate hop edge and a thin, smooth body.",
+    "basis": "No 2026 review yet; reviews of earlier vintages cite ginger, cinnamon, cardamom, allspice, honey, clove and nutmeg with a moderate hop edge and a thin, smooth body. October 27 research adds Axios Detroit’s December 20, 2022 blind tasting of Great Lakes Christmas Ale, a historical vintage rather than evidence of the 2026 first-pour batch. Existing historical reviews and native taste scores are preserved; BevX publication day remains unverified.",
     "abv": 7.5,
     "pungent": 2,
     "coolness": 0,
     "reviews": [
       {
         "url": "https://www.guysdrinkingbeer.com/review-great-lakes-christmas-ale/",
+        "quote": "aromas of ginger, cinnamon, cardamom seed, allspice and honey",
         "title": "\"12 Beers of Christmas\" Review: Great Lakes Christmas Ale (2010 vintage)",
-        "publishedDate": "2010-12-18",
-        "quote": "aromas of ginger, cinnamon, cardamom seed, allspice and honey"
+        "sentiment": 0.5,
+        "publishedDate": "2010-12-18"
       },
       {
         "url": "https://thefullpint.com/2008/12/18/review-great-lakes-christmas-ale",
+        "quote": "Lots of cloves, cinnamon, nutmeg, all spice, ginger.",
         "title": "Review - Great Lakes Christmas Ale (2008 vintage)",
-        "publishedDate": "2008-12-18",
-        "quote": "Lots of cloves, cinnamon, nutmeg, all spice, ginger."
+        "sentiment": 0.5,
+        "publishedDate": "2008-12-18"
       },
       {
         "url": "https://bevx.com/bow-detail/?id=443",
+        "quote": "Rich and mildly spicy with warming malt notes and just enough hops to add a crisp edge.",
         "title": "Great Lakes Christmas Ale (USA) - Beverage of the Week, BevX (vintage not stated)",
-        "publishedDate": null,
-        "quote": "Rich and mildly spicy with warming malt notes and just enough hops to add a crisp edge."
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.axios.com/local/detroit/2022/12/20/detroit-favorite-christmas-beer-2022",
+        "quote": "I'd drink it all,",
+        "title": "Our favorite Christmas beer",
+        "sentiment": 0.8,
+        "publishedDate": "2022-12-20"
       }
     ]
   },
@@ -449,15 +458,22 @@
     "sweetness": 5,
     "astringency": 0.5,
     "umami": 1,
-    "basis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness.",
+    "basis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness. October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review.",
     "pungent": 0,
     "coolness": 0,
     "reviews": [
       {
         "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+        "quote": "The addition of honey gives a subtle sweetness that perfectly balances the earthy caramel notes from the Biscoff biscuit.",
         "title": "Biscoff Toblerone Truffles at Costco: A Delicious Milk Chocolate Treat (Lemon8 @costcobuys)",
-        "publishedDate": null,
-        "quote": "The addition of honey gives a subtle sweetness that perfectly balances the earthy caramel notes from the Biscoff biscuit."
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+        "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+        "title": "These Toblerone Biscoff truffles are dangerously good",
+        "sentiment": 0.7,
+        "publishedDate": null
       }
     ]
   },
@@ -1091,34 +1107,44 @@
     "sweetness": 1,
     "astringency": 1.5,
     "umami": 1.5,
-    "basis": "Four reviewers (Difford's, The Takeout, The Daily Pour, Tastings): heat dominant with a long peppery finish and a vinegar tang, only a faint sweetness.",
+    "basis": "Four reviewers (Difford's, The Takeout, The Daily Pour, Tastings): heat dominant with a long peppery finish and a vinegar tang, only a faint sweetness. October 27 research adds Sean Abrams’s explicitly dated January 28 firsthand tasting in Sweden and at home. Existing Tastings extract remains undated: Date Tasted is not an established publication date.",
     "abv": 38,
     "pungent": 4,
     "coolness": 0,
     "reviews": [
       {
         "url": "https://www.diffordsguide.com/beer-wine-spirits/12027/absolut-tabasco",
+        "quote": "A clean, tame palate quickly explodes with chili pepper flavour and heat.",
         "title": "Absolut Tabasco (Difford's Guide)",
-        "publishedDate": "2026-02-16",
-        "quote": "A clean, tame palate quickly explodes with chili pepper flavour and heat."
+        "sentiment": 0.5,
+        "publishedDate": "2026-02-16"
       },
       {
         "url": "https://www.thetakeout.com/2089477/absolut-new-tabasco-vodka-review-bloody-mary/",
+        "quote": "Both the vinegar tang and the pepper flavor of Tabasco are there in droves.",
         "title": "Review: Absolut Tabasco Vodka Might Just Be Your New Bloody Mary Go-To",
-        "publishedDate": "2026-01-30",
-        "quote": "Both the vinegar tang and the pepper flavor of Tabasco are there in droves."
+        "sentiment": 0.4,
+        "publishedDate": "2026-01-30"
       },
       {
         "url": "https://thedailypour.com/?p=141242",
+        "quote": "Cayenne pepper dominates alongside a bit of that fermentation zing that Tabasco is known for.",
         "title": "Review: Absolut Tabasco Vodka Is a Spicy, Meme-Worthy Delight",
-        "publishedDate": "2026-02-18",
-        "quote": "Cayenne pepper dominates alongside a bit of that fermentation zing that Tabasco is known for."
+        "sentiment": 0.3,
+        "publishedDate": "2026-02-18"
       },
       {
         "url": "https://www.tastings.com/Spirits-Review/Absolut-Tabasco-Flavored-Vodka-Sweden-03-01-2026.aspx",
+        "quote": "a peppery, interesting, very long finish conveying notes of sport pepper and habanero",
         "title": "Absolut Tabasco Flavored Vodka Sweden Spirits Review | Tastings",
-        "publishedDate": null,
-        "quote": "a peppery, interesting, very long finish conveying notes of sport pepper and habanero"
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.delish.com/food-news/a70162139/absolut-tabasco-vodka-taste-test/",
+        "quote": "It has a peppery, vinegary Tabasco-style kick that builds and lingers, especially in a shot.",
+        "title": "I Tried Absolut's New Tabasco-Flavored Vodka & I Can Still Feel The Heat",
+        "sentiment": 0.5,
+        "publishedDate": "2026-01-28"
       }
     ]
   },

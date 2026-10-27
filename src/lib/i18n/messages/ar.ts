@@ -2778,6 +2778,8 @@ const ar: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: 'اقرأ من ملايين الكتب واستمع إلى الكتب الصوتية، مجانًا للتجربة.', cta: 'ابدأ القراءة' },
       subscribesave: { title: 'اشترك ووفّر', body: 'وفّر على احتياجاتك اليومية بتوصيل يناسب جدولك.', cta: 'ابدأ التوفير' },
       abracadabra: { title: 'Abracadabra NYC', body: 'أزياء وكوسبلاي وإكسسوارات ومقتنيات من متجر الأزياء الشهير في نيويورك.', cta: 'تسوّق الآن' },
+      marshall: { title: 'Marshall', body: 'سماعات رأس ومكبرات صوت وسماعات أذن فاخرة بتصميم مارشال الأيقوني المستوحى من الأمبليفاير.', cta: 'تسوق مارشال' },
+      gearup: { title: 'GearUP', body: 'قلّل التأخير والبينغ في ألعاب الكمبيوتر والجوال بمسرّع الألعاب.', cta: 'جرّب GearUP' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

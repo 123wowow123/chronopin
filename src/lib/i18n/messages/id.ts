@@ -2410,6 +2410,8 @@ const id: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Baca jutaan buku dan dengarkan buku audio, gratis dicoba.', cta: 'Mulai membaca' },
       subscribesave: { title: 'Berlangganan & Hemat', body: 'Hemat untuk kebutuhan sehari-hari yang dikirim sesuai jadwalmu.', cta: 'Mulai hemat' },
       abracadabra: { title: 'Abracadabra NYC', body: 'Kostum, cosplay, properti, dan barang koleksi dari toko kostum terkenal di New York.', cta: 'Belanja sekarang' },
+      marshall: { title: 'Marshall', body: 'Headphone, speaker, dan earbud premium dengan tampilan ampli Marshall yang ikonik.', cta: 'Lihat Marshall' },
+      gearup: { title: 'GearUP', body: 'Kurangi lag dan ping game PC dan seluler dengan game booster.', cta: 'Coba GearUP' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

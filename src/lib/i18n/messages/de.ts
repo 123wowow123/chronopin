@@ -2406,6 +2406,8 @@ const de: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Millionen Bücher lesen und Hörbücher hören, gratis zum Testen.', cta: 'Jetzt lesen' },
       subscribesave: { title: 'Spar-Abo', body: 'Spare bei Alltagsartikeln, geliefert nach deinem Zeitplan.', cta: 'Jetzt sparen' },
       abracadabra: { title: 'Abracadabra NYC', body: 'Kostüme, Cosplay, Requisiten und Sammlerstücke aus New Yorks berühmtem Kostümladen.', cta: 'Zum Shop' },
+      marshall: { title: 'Marshall', body: 'Hochwertige Kopfhörer, Lautsprecher und Ohrhörer im ikonischen Marshall-Verstärker-Look.', cta: 'Marshall ansehen' },
+      gearup: { title: 'GearUP', body: 'Weniger Lag und Ping mit einem Game-Booster für PC und Handy.', cta: 'GearUP testen' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

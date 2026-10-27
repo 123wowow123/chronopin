@@ -2400,6 +2400,8 @@ const zh: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: '畅读数百万本图书并收听有声书，可免费试用。', cta: '开始阅读' },
       subscribesave: { title: '订阅省钱', body: '按你的节奏配送日常用品，还能省钱。', cta: '开始省钱' },
       abracadabra: { title: 'Abracadabra NYC', body: '来自纽约知名服装店的戏服、Cosplay、道具和收藏品。', cta: '逛逛商店' },
+      marshall: { title: 'Marshall', body: '拥有标志性音箱外观的 Marshall 高端耳机、音箱和耳塞。', cta: '选购 Marshall' },
+      gearup: { title: 'GearUP', body: '用游戏加速器降低 PC 和手机游戏的卡顿与延迟。', cta: '试用 GearUP' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

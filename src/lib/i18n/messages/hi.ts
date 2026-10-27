@@ -2417,6 +2417,8 @@ const hi: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: 'लाखों किताबें पढ़ें और ऑडियोबुक सुनें, मुफ़्त आज़माएँ।', cta: 'पढ़ना शुरू करें' },
       subscribesave: { title: 'Subscribe & Save', body: 'रोज़मर्रा की चीज़ें अपने समय पर मँगवाएँ और बचत करें।', cta: 'बचत शुरू करें' },
       abracadabra: { title: 'Abracadabra NYC', body: 'न्यूयॉर्क की मशहूर कॉस्ट्यूम शॉप से कॉस्ट्यूम, कॉस्प्ले, प्रॉप्स और कलेक्टिबल्स।', cta: 'स्टोर देखें' },
+      marshall: { title: 'Marshall', body: 'मार्शल एम्प के प्रतिष्ठित लुक वाले प्रीमियम हेडफ़ोन, स्पीकर और ईयरबड्स।', cta: 'मार्शल देखें' },
+      gearup: { title: 'GearUP', body: 'PC और मोबाइल गेम में लैग और पिंग घटाएँ, गेम बूस्टर के साथ।', cta: 'GearUP आज़माएँ' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).

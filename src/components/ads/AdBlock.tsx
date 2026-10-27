@@ -56,6 +56,10 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   subscribesave: { icon: 'clock', background: '#e47911', color: '#fff' },
   // Abracadabra NYC (0134, CJ Affiliate): a violet-to-midnight wash with a gold sparkle.
   abracadabra: { icon: 'sparkle', background: 'linear-gradient(135deg, #4c1d95 0%, #1e1033 100%)', color: '#f5d77a' },
+  // Marshall Headphones (0225, CJ Affiliate): the black script logo on cream.
+  marshall: { icon: 'play', background: '#f4efe6', color: '#111' },
+  // GearUP game booster (0226, CJ Affiliate): deep blue with a bolt.
+  gearup: { icon: 'bolt', background: 'linear-gradient(135deg, #0b3fd1 0%, #0a1a4d 100%)', color: '#fff' },
   // Watch brands (0130): the house's own colour behind a clock.
   watch_rolex: { icon: 'clock', background: '#0b5d3b', color: '#e9d8a6' },
   watch_omega: { icon: 'clock', background: '#c8102e', color: '#fff' },
@@ -100,7 +104,7 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   business_us: { icon: 'eye', background: '#7f1d1d', color: '#fff' },
 };
 // Programs whose own picture sits on their tile (a file in public/ads).
-const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
+const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png', marshall: '/ads/marshall.png' };
 const DEFAULT_TILE = { icon: 'cart' as IconName, background: '#232f3e', color: '#fff' };
 
 export function useAds(slot: AdSlot, pinId: number | undefined, count = SLOT_COUNT[slot]) {

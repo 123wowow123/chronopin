@@ -64,8 +64,8 @@ import { contentForSource } from '@/server/model/restaurantContent';
 import { StoreLogo } from '@/components/pin/StoreLogo';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
-import { AdRow } from '@/components/ads/AdBlock';
-import { AdsenseBanner } from '@/components/ads/AdsensePanel';
+import { AdColumn, AdRow } from '@/components/ads/AdBlock';
+import { AdsenseBanner, AdsenseColumn } from '@/components/ads/AdsensePanel';
 import { adsenseAllowed } from '@/lib/adsense';
 import { ageOn } from '@/lib/ads';
 import { ShopButtons } from '@/components/pin/ShopButtons';
@@ -334,6 +334,8 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
             <PinCommentsSection pinId={pin.id} />
           </Suspense>
 
+          {/* The tall space the side column leaves under the comments. */}
+          {ads['pin-side'] ? google['pin-side'] ? <AdsenseColumn unit={google['pin-side']} className="mt-6" /> : <AdColumn pinId={pin.id} className="mt-6" /> : null}
         </aside>
 
         {/* Across the foot of the page: a Google banner, when the admin has given it a unit. */}

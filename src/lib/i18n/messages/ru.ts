@@ -2498,6 +2498,8 @@ const ru: Messages = {
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Миллионы книг и аудиокниг, можно попробовать бесплатно.', cta: 'Начать читать' },
       subscribesave: { title: 'Подписка со скидкой', body: 'Экономьте на товарах повседневного спроса с доставкой по вашему графику.', cta: 'Начать экономить' },
       abracadabra: { title: 'Abracadabra NYC', body: 'Костюмы, косплей, реквизит и коллекционные предметы из знаменитого нью-йоркского магазина.', cta: 'В магазин' },
+      marshall: { title: 'Marshall', body: 'Премиальные наушники, колонки и вкладыши в культовом стиле усилителей Marshall.', cta: 'Смотреть Marshall' },
+      gearup: { title: 'GearUP', body: 'Уменьшите лаги и пинг с помощью игрового бустера для ПК и мобильных.', cta: 'Попробовать GearUP' },
     },
   },
   // The product, car and activities landing pages (their pins' own words are translated per pin).
