@@ -8,9 +8,7 @@ import { MIN_INDEXED_CARS } from '@/lib/products';
 import { carShelves } from '@/server/services/cars';
 import { siteCardImages } from '@/server/services/shareCard';
 
-// English in every language, as /products is; the car names are the pins' own.
-const TITLE = 'The best cars';
-const DESCRIPTION = `The best new cars on ${siteName}, ranked on one published rubric of range, charging, acceleration, driver assistance, space and value, each with the figures behind its score.`;
+// The page's words are in the messages (guides.cars); the car names are the pins' own.
 
 export async function generateMetadata(): Promise<Metadata> {
   await connection();
@@ -18,6 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const shelves = await carShelves(t.locale);
   const images = await siteCardImages();
   const links = await alternates('/cars');
+  const TITLE = t('guides.cars.title');
+  const DESCRIPTION = t('guides.cars.description', { site: siteName });
   return {
     title: TITLE,
     description: DESCRIPTION,
@@ -43,12 +43,12 @@ async function Cars() {
   return (
     <ProductsView
       shelves={shelves}
-      title={TITLE}
-      description={DESCRIPTION}
+      title={t('guides.cars.title')}
+      description={t('guides.cars.description', { site: siteName })}
       path="/cars"
-      wordmark="The car guide"
-      eyebrow="RANKED ON THE SPECS."
-      heading={<>The cars worth <em>the drive.</em></>}
+      wordmark={t('guides.cars.wordmark')}
+      eyebrow={t('guides.cars.eyebrow')}
+      heading={t.rich('guides.cars.heading', { em: (c) => <em>{c}</em> })}
     />
   );
 }

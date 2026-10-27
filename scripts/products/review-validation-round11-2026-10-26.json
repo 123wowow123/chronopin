@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-10-26",
+  "newCriticPins": 2,
+  "newCriticReviews": 6,
+  "newPerformanceReviews": 1,
+  "newGuideReviews": 2,
+  "existingGuideExtractRepairs": 2,
+  "excludedUnverifiedDirectoryReviews": 2,
+  "priorPublicationSourceChecksResolved": 4,
+  "newlyDatedReviews": 2,
+  "resolvedCoverageFollowUps": [
+    19893
+  ],
+  "savedIn": [
+    "local",
+    "production"
+  ],
+  "rubricReadbacks": [
+    {
+      "pinId": 19893,
+      "production": false,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19893,
+      "production": true,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 17257,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17257,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17270,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17270,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17264,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17264,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17267,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17267,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    }
+  ],
+  "sourceWikiReadbacks": [
+    {
+      "pinId": 15341,
+      "production": false,
+      "url": "https://www.empireonline.com/tv/reviews/silo/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15341,
+      "production": true,
+      "url": "https://www.empireonline.com/tv/reviews/silo/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15342,
+      "production": false,
+      "url": "https://www.digitaltrends.com/movies/silo-season-2-2024-tv-show-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15342,
+      "production": true,
+      "url": "https://www.digitaltrends.com/movies/silo-season-2-2024-tv-show-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19893,
+      "production": false,
+      "url": "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19893,
+      "production": true,
+      "url": "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17257,
+      "production": false,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17257,
+      "production": true,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17270,
+      "production": false,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17270,
+      "production": true,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17264,
+      "production": false,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17264,
+      "production": true,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17267,
+      "production": false,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17267,
+      "production": true,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    }
+  ],
+  "fleetReferenceReadbacks": [
+    {
+      "pinId": 19893,
+      "production": false,
+      "url": "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf",
+      "referenceReadback": true,
+      "sourceLinked": true,
+      "wikiStatus": "saved"
+    },
+    {
+      "pinId": 19893,
+      "production": true,
+      "url": "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf",
+      "referenceReadback": true,
+      "sourceLinked": true,
+      "wikiStatus": "saved"
+    }
+  ],
+  "nativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 15341,
+      "url": "http://127.0.0.1:3000/pin/15341/silo-premieres",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 15342,
+      "url": "http://127.0.0.1:3000/pin/15342/silo-season-2-premieres",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19893,
+      "url": "http://127.0.0.1:3000/pin/19893/canadair-s-crj100-regional-jet-makes-its-first-flight",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17264,
+      "url": "http://127.0.0.1:3000/pin/17264/mori-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17267,
+      "url": "http://127.0.0.1:3000/pin/17267/le-dorer-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17257,
+      "url": "http://127.0.0.1:3000/pin/17257/mugunghwa-lotte-hotel-busan-busan-restaurant",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17270,
+      "url": "http://127.0.0.1:3000/pin/17270/baek-il-pyeongnaeng-100-1-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 15341,
+      "url": "https://www.chronopin.com/pin/15341/silo-premieres",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 15342,
+      "url": "https://www.chronopin.com/pin/15342/silo-season-2-premieres",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19893,
+      "url": "https://www.chronopin.com/pin/19893/canadair-s-crj100-regional-jet-makes-its-first-flight",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17264,
+      "url": "https://www.chronopin.com/pin/17264/mori-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17267,
+      "url": "https://www.chronopin.com/pin/17267/le-dorer-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17257,
+      "url": "https://www.chronopin.com/pin/17257/mugunghwa-lotte-hotel-busan-busan-restaurant",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17270,
+      "url": "https://www.chronopin.com/pin/17270/baek-il-pyeongnaeng-100-1-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    }
+  ],
+  "tests": {
+    "focusedCommand": "npx vitest run src/lib/okf.test.ts src/lib/okfLint.test.ts src/lib/reviewPublicationDay.test.ts src/server/jobs/reviewResearch.test.ts",
+    "passed": 28,
+    "documentationChecksAfterEdits": 22,
+    "catalogConstraints": true,
+    "diningCatalogSynchronized": true,
+    "queueTotalsVerified": true,
+    "whitespaceChecks": true
+  },
+  "remaining": {
+    "rubricGaps": 72,
+    "sourceChecks": 75,
+    "verifiedUndated": 74,
+    "broaderCoverage": true,
+    "scheduledProductionVerification": "Still blocked by missing production ANTHROPIC_API_KEY established in run #26; not retried in this pass."
+  },
+  "schedulesChanged": false,
+  "productionEnvironmentChanged": false,
+  "deploymentPerformed": false
+}

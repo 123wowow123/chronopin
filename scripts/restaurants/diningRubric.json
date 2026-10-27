@@ -5321,5 +5321,163 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 17257,
+    "scores": {
+      "food": 4.5,
+      "service": 3.5,
+      "ambience": null,
+      "value": 1.5,
+      "acclaim": null
+    },
+    "basis": "Tripadvisor, read 2026-10-18 (15 listing reviews; category sample counts unpublished): Service 4.3/5 -> 3.5; Ambience unpublished (null); Value 3.5/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim null retained from prior cited research.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297884-d4033806-Reviews-Mugunghwa-Busan.html",
+    "reviews": [
+      {
+        "url": "https://korea.stripes.com/food-drink/lotte-hotel-busan-mugunghwa-summer.html",
+        "quote": "Both set menus include chilled seafood mulhoe, black sesame and mung bean porridge, grilled eel, along with rice, side dishes, and dessert.",
+        "title": "Mugunghwa at Lotte Hotel Busan introduces summer wellness menu",
+        "sentiment": 0.4,
+        "publishedDate": "2026-07-31"
+      },
+      {
+        "url": "https://alovelettertoasia.com/lotte-hotel-busan-review/",
+        "quote": "Korean restaurant (Mugunghwa): which was very good!",
+        "title": "Lotte Hotel Busan Review 2026 (Unsponsored)",
+        "sentiment": 0.7,
+        "publishedDate": "2024-03-29"
+      },
+      {
+        "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d4033806-r612886233-Mugunghwa-Busan.html",
+        "quote": "Very attentive staff who know more English than we know Korean.",
+        "title": "Spectacular views, traditional Korean cuisine",
+        "sentiment": 0.7,
+        "publishedDate": "2018-09-01"
+      },
+      {
+        "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+        "quote": "this elegant Korean restaurant offers a panoramic view of Baekyang Mountain.",
+        "title": "100 Great Places to Eat in Busan",
+        "sentiment": 0.6,
+        "publishedDate": "2023-10-30"
+      }
+    ]
+  },
+  {
+    "pinId": 17270,
+    "scores": {
+      "food": 3,
+      "service": 3.5,
+      "ambience": 3.5,
+      "value": 3.5,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor, read 2026-10-18 (1 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 3 and Critic acclaim 3 retained from prior cited research.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297884-d32749550-Reviews-Baek_Ill_Pyeong_Naeng-Busan.html",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/100-1-pyeongnaeng",
+        "quote": "The clear, delicate broth impresses from the very first sip, revealing subtle yet lingering umami.",
+        "title": "100.1.Pyeongnaeng - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "quote": "completed the art of making authentic Pyeongyang naengmyeon",
+        "title": "2025 Taste of Busan",
+        "sentiment": 0.8,
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d32749550-r985417174-Baek_Ill_Pyeong_Naeng-Busan.html",
+        "quote": "광안리에 유일하게 있는 평양냉면집. 육수에서 나는 육항이 일품입니다.",
+        "title": "평양냉면에 제육 추가해서 드시는걸 추천",
+        "sentiment": 0.7,
+        "publishedDate": "2024-12-19"
+      }
+    ]
+  },
+  {
+    "pinId": 17264,
+    "scores": {
+      "food": 4.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Food 4.5 from 4.8 over 32 ratings (enough to score, few enough that 5 is not given). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 4: One MICHELIN Star (2026 edition, Michelin page metadata read 2026-10-18; Korea Stripes: retained for the third year).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/mori",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/mori",
+        "quote": "Chef Kim Wan-gyu crafts delicate dishes using the fresh seafood and seasonal produce of Busan.",
+        "title": "Mori - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://seoulkoreaasia.com/busan-michelin-restaurants-guide/",
+        "quote": "It’s run by a Korean chef who trained in Japan, then came back to Busan to create seasonal menus built around seafood and local produce.",
+        "title": "7 Busan Michelin Guide Restaurants to Try in 2026 (From Market-Style to Fine Dining)",
+        "sentiment": 0.5,
+        "publishedDate": "2026-10-09"
+      },
+      {
+        "url": "https://www.koreaherald.com/article/3334528",
+        "quote": "chef Kim Wan-gyu focuses on original Japanese kaiseki.",
+        "title": "Michelin Guide’s Busan selections unveiled, Mosu stays tops in Seoul",
+        "sentiment": 0.5,
+        "publishedDate": "2024-02-23"
+      },
+      {
+        "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+        "quote": "immersive Japanese atmosphere",
+        "title": "100 Great Places to Eat in Busan",
+        "sentiment": 0.6,
+        "publishedDate": "2023-10-30"
+      }
+    ]
+  },
+  {
+    "pinId": 17267,
+    "scores": {
+      "food": 4.5,
+      "service": 3.5,
+      "ambience": 3.5,
+      "value": 3.5,
+      "acclaim": 4
+    },
+    "basis": "Tripadvisor, read 2026-10-18 (2 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 4 retained from prior cited research.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297884-d28155873-Reviews-Le_Dorer-Busan.html",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/le-dorer",
+        "quote": "A well-stocked wine cellar and thoughtfully curated wine pairings further enrich the experience.",
+        "title": "Le DORER - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://korea.stripes.com/food-drink/busan-michelin-starred-restaurant.html",
+        "quote": "Le DORER presents a tasting menu that reinterprets traditional Korean cuisine through a contemporary lens, incorporating seasonal local ingredients",
+        "title": "Busan, Korea gets its fourth MICHELIN-starred restaurant in the 2026 Guide",
+        "sentiment": 0.5,
+        "publishedDate": "2026-03-05"
+      },
+      {
+        "url": "https://seoulkoreaasia.com/busan-michelin-restaurants-guide/",
+        "quote": "The dining room feels a bit “speakeasy by the sea,” with big ocean views, a serious wine cellar, and a calm, polished atmosphere.",
+        "title": "7 Busan Michelin Guide Restaurants to Try in 2026 (From Market-Style to Fine Dining)",
+        "sentiment": 0.6,
+        "publishedDate": "2026-10-09"
+      },
+      {
+        "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "quote": "offering a unique dining experience",
+        "title": "2025 Taste of Busan",
+        "sentiment": 0.6,
+        "publishedDate": null
+      }
+    ]
   }
 ]

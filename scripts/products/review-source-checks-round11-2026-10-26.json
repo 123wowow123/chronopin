@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17257,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "status": "resolved",
+      "reason": "Downloaded original HTTPS PDF with curl; text extracted and complete relevant spreads visually inspected, not the browser PDF viewer shell. PDF page 17, printed page 31, exact Mugunghwa in Lotte Hotel Busan, restaurant #55. Blue Ribbon Survey editorial restaurant guide, not operator description. PDF page 28 explicitly prints first publication October 30, 2023. Conference hosting year and current check date excluded. The room-view extract does not establish a new food or service score."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17270,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Downloaded original HTTPS PDF with curl; text extracted and complete relevant spreads visually inspected, not the browser PDF viewer shell. PDF page 89, printed page 176, exact 100.1.pyeongnaeng with Namcheonbada-ro address. Shortened verbatim verdict, joining a typographical line-end word break only. Page 4 identifies official municipal guide and rigorous restaurant selection; page 144 identifies publisher and content-as-of December 2024, not a publication day. Edition year, PDF metadata creation/modification and compilation cutoff are not publication. Keep null; no new dated graph point. No implication of a named individual critic or a current menu."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17264,
+      "url": "https://www.enprimeurclub.com/restaurants/mori-busan-restaurant",
+      "status": "resolved",
+      "reason": "Replace an editorial-listing extract whose exact original text/publication could not be verified after browser 403 with an opened, exact-restaurant independent guide assessment. Do not claim the inaccessible listing is fabricated or infer a date. Preserve listing as context in references; axes and other reviews unchanged.",
+      "replacementUrl": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "url": "https://www.enprimeurclub.com/restaurants/le-dorer-busan-restaurant",
+      "status": "resolved",
+      "reason": "Replace an editorial-listing extract whose exact original text/publication could not be verified after browser 403 with an opened, exact-restaurant independent guide assessment. Do not claim the inaccessible listing is fabricated or infer a date. Preserve listing as context in references; axes and other reviews unchanged.",
+      "replacementUrl": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Downloaded opened HTTPS original PDF and visually inspected full relevant pages. Official municipal selected restaurant guide, PDF page 122 / printed page 242, Le DORER #9 at 37 Marine City 3-ro, #213-214. Short exact guide verdict; page 4 explains selection and review, page 144 identifies publisher and content-as-of December 2024, not a publication date. Keep null. Historical prices/hours not applied as current offers."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "url": "https://www.allmusic.com/album/mw0000507740",
+      "status": "needs-research",
+      "reason": "Retried original album review: primary reader 403 and rendered Cloudflare security page. Exact existing quotation and original publication day remain unverified; no date inferred from album release or Grammy award. Retain null and research an accessible original/archive. Not counted as verified-undated."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "url": "https://www.enprimeurclub.com/restaurants/palate",
+      "status": "needs-research",
+      "reason": "Original directory extract remains unverified. Located independent 2023 Blue Ribbon guide at Nam-gu and 2025 municipal guide at 154 Dalmaji-gil 65beon-gil, Haeundae; apparent relocation means branch/period must be matched to pin before replacing. No cross-location dining/room attribution saved."
+    }
+  ]
+}

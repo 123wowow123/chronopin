@@ -360,6 +360,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             {link('/activities', 'compass', t('nav.activities'))}
             {link('/products', 'cart', t('nav.products'))}
             {link('/cars', 'car', t('nav.cars'))}
+            {link('/forecasts', 'trending-up', t('nav.forecasts'))}
             {link('/music', 'music', t('nav.music'))}
           </DrawerSection>
           {user && isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}

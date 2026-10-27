@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-26",
+  "results": [
+    {
+      "pinId": 19893,
+      "production": false,
+      "url": "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf",
+      "referenceReadback": true,
+      "sourceLinked": true,
+      "wikiStatus": "saved"
+    },
+    {
+      "pinId": 19893,
+      "production": true,
+      "url": "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf",
+      "referenceReadback": true,
+      "sourceLinked": true,
+      "wikiStatus": "saved"
+    }
+  ]
+}

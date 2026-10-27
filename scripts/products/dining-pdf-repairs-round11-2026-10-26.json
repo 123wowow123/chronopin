@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17257,
+      "pinSourceUrl": "https://www.lottehotel.com/busan-hotel/ko/dining/restaurant-mugunghwa",
+      "basis": "Tripadvisor, read 2026-10-18 (15 listing reviews; category sample counts unpublished): Service 4.3/5 -> 3.5; Ambience unpublished (null); Value 3.5/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim null retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "quote": "this elegant Korean restaurant offers a panoramic view of Baekyang Mountain.",
+          "title": "100 Great Places to Eat in Busan",
+          "publishedDate": "2023-10-30",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Downloaded original HTTPS PDF with curl; text extracted and complete relevant spreads visually inspected, not the browser PDF viewer shell. PDF page 17, printed page 31, exact Mugunghwa in Lotte Hotel Busan, restaurant #55. Blue Ribbon Survey editorial restaurant guide, not operator description. PDF page 28 explicitly prints first publication October 30, 2023. Conference hosting year and current check date excluded. The room-view extract does not establish a new food or service score."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17270,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/100-1-pyeongnaeng",
+      "basis": "Tripadvisor, read 2026-10-18 (1 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 3 and Critic acclaim 3 retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "quote": "completed the art of making authentic Pyeongyang naengmyeon",
+          "title": "2025 Taste of Busan",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Downloaded original HTTPS PDF with curl; text extracted and complete relevant spreads visually inspected, not the browser PDF viewer shell. PDF page 89, printed page 176, exact 100.1.pyeongnaeng with Namcheonbada-ro address. Shortened verbatim verdict, joining a typographical line-end word break only. Page 4 identifies official municipal guide and rigorous restaurant selection; page 144 identifies publisher and content-as-of December 2024, not a publication day. Edition year, PDF metadata creation/modification and compilation cutoff are not publication. Keep null; no new dated graph point. No implication of a named individual critic or a current menu."
+        }
+      ]
+    }
+  ]
+}

@@ -5,19 +5,17 @@ import { JsonLd } from '@/components/JsonLd';
 import Link from '@/components/ui/Link';
 import { LandingMark } from '@/components/ui/LandingMark';
 import { CardImage } from '@/components/pin/CardImage';
+import { useIntlLocale, useLocale, useT } from '@/lib/client/i18n';
 import { useRouter } from '@/lib/client/navigation';
 import { viewerPlace } from '@/lib/client/viewerPlace';
 import { distanceKm, formatDistance } from '@/lib/distance';
 import { pinTextDir } from '@/lib/i18n/config';
 import {
   ACTIVITY_CATEGORIES,
-  ACTIVITY_CATEGORY_LABELS,
   ACTIVITY_CITIES,
   ACTIVITY_RADII_KM,
   DEFAULT_ACTIVITY_RADIUS_KM,
   SEASONS,
-  SEASON_LABELS,
-  TRIP_LABELS,
   activityCity,
   activitiesNearCity,
   activitiesForTrip,
@@ -32,6 +30,7 @@ import {
   type ActivityTripTab,
   type Season,
 } from '@/lib/activities';
+import type { MessageKey } from '@/lib/i18n/translate';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import type { ActivityPin } from '@/server/services/activities';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
@@ -47,8 +46,8 @@ function picture(media: ActivityPin['media']) {
   return { thumbName: medium?.thumbName, originalUrl: medium?.originalUrl ?? undefined };
 }
 
-function longDate(iso: string) {
-  return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+function longDate(iso: string, intl: string) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString(intl, { month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
 function stayOnAllCities() {
@@ -86,6 +85,15 @@ export function ActivitiesView({
   description: string;
   path: string;
 }) {
+  const t = useT();
+  const locale = useLocale();
+  const intl = useIntlLocale();
+  const ga = (key: string, values?: Record<string, string | number>) => t(`guides.activities.${key}` as MessageKey, values);
+  const categoryLabel = (id: ActivityCategoryId) => ga(id);
+  const seasonLabel = (season: Season) => ga(season);
+  const tripLabel = (id: ActivityTripTab) => ga(id === 'day-trips' ? 'dayTrips' : 'twoDayTrips');
+  const miles = (km: number) => formatDistance(km, true, locale);
+  const kms = (km: number) => formatDistance(km, false, locale);
   // Start from the server's clock so hydration matches, then follow the viewer's.
   const [now, setNow] = useState(() => new Date(serverNow));
   useEffect(() => {
@@ -135,7 +143,7 @@ export function ActivitiesView({
   const searched = useMemo(() => {
     const words = search.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return scoped.filter(({ activity: a }) => {
-      const text = [a.name, a.venue, a.neighborhood, a.description, activityCity(a.citySlug)?.name, ACTIVITY_CATEGORY_LABELS[a.category]].join(' ').toLowerCase();
+      const text = [a.name, a.venue, a.neighborhood, a.description, activityCity(a.citySlug)?.name, categoryLabel(a.category)].join(' ').toLowerCase();
       return words.every((word) => text.includes(word));
     });
   }, [scoped, search]);
@@ -169,10 +177,10 @@ export function ActivitiesView({
   }), [searched]);
 
   const allTabs: { id: Tab; label: string; count: number }[] = [
-    { id: 'today', label: 'Today', count: active.length },
-    { id: 'day-trips', label: TRIP_LABELS['day-trips'], count: trips['day-trips'].length },
-    { id: 'two-day-trips', label: TRIP_LABELS['two-day-trips'], count: trips['two-day-trips'].length },
-    ...SEASONS.map((season): { id: Tab; label: string; count: number } => ({ id: season, label: SEASON_LABELS[season], count: bySeason.get(season)!.length })),
+    { id: 'today', label: ga('today'), count: active.length },
+    { id: 'day-trips', label: tripLabel('day-trips'), count: trips['day-trips'].length },
+    { id: 'two-day-trips', label: tripLabel('two-day-trips'), count: trips['two-day-trips'].length },
+    ...SEASONS.map((season): { id: Tab; label: string; count: number } => ({ id: season, label: seasonLabel(season), count: bySeason.get(season)!.length })),
   ];
   const tabs = allTabs.filter((tab) => tab.count > 0);
 
@@ -192,7 +200,7 @@ export function ActivitiesView({
   });
 
   const cityTabs = ACTIVITY_CITIES.filter((c) => pins.some((p) => p.activity.citySlug === c.slug));
-  const placeName = city ? `and around ${city.name}` : 'major US cities';
+  const placeName = city ? ga('placeCity', { city: city.name }) : ga('placeAll');
 
   const collection = {
     '@context': 'https://schema.org',
@@ -214,15 +222,15 @@ export function ActivitiesView({
       <div className={styles.container}>
         <div className={styles.guideNav}>
           <Link href="/activities" className={styles.wordmark}>
-            <span aria-hidden="true">✳</span> The activities guide
+            <span aria-hidden="true">✳</span> {ga('wordmark')}
           </Link>
-          <nav className={styles.countryNav} aria-label="Activities guide">
-            <Link href="/activities" aria-current="location">United States</Link>
+          <nav className={styles.countryNav} aria-label={ga('guideNav')}>
+            <Link href="/activities" aria-current="location">{ga('country')}</Link>
           </nav>
         </div>
 
-        <nav className={styles.cityNav} aria-label="Activities guide cities">
-          <Link href="/activities" aria-current={city ? undefined : 'page'} onClick={city ? stayOnAllCities : undefined}>All cities</Link>
+        <nav className={styles.cityNav} aria-label={ga('citiesNav')}>
+          <Link href="/activities" aria-current={city ? undefined : 'page'} onClick={city ? stayOnAllCities : undefined}>{ga('allCities')}</Link>
           {cityTabs.map((c) => (
             <Link key={c.slug} href={`/activities/${c.slug}`} aria-current={city?.slug === c.slug ? 'page' : undefined}>
               {c.name}
@@ -232,39 +240,39 @@ export function ActivitiesView({
 
         <header className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>WHAT TO DO. WHEN TO DO IT.</p>
+            <p className={styles.eyebrow}>{ga('eyebrow')}</p>
             <h1>
-              {city ? <>Seasonal things to do in and around <em>{city.name}.</em></> : <>The season&rsquo;s best things to do, <em>city by city.</em></>}
+              {t.rich(city ? 'guides.activities.headingCity' : 'guides.activities.headingAll', { city: city?.name ?? '', em: (c) => <em>{c}</em> })}
             </h1>
             <p className={styles.lead}>{description}</p>
           </div>
         </header>
 
-        <section id="activities" aria-label="Browse activities">
+        <section id="activities" aria-label={ga('browse')}>
           <div className="mb-6 flex flex-wrap items-end gap-4 rounded-lg border border-[var(--rule)] p-4">
             <label className="flex min-w-48 flex-1 flex-col gap-1 text-xs font-semibold">
-              Search activities
-              <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Try hiking, museums, or a nearby town" className="rounded-md border border-[var(--rule)] bg-[var(--paper)] px-3 py-2 text-sm text-[var(--text)]" />
+              {ga('searchLabel')}
+              <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder={ga('searchPlaceholder')} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] px-3 py-2 text-sm text-[var(--text)]" />
             </label>
             {city && (
               <label className="flex flex-col gap-1 text-xs font-semibold">
-                Distance from {city.name}
+                {ga('distanceFrom', { city: city.name })}
                 <select value={radiusKm} onChange={(event) => setRadiusKm(Number(event.target.value))} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] px-3 py-2 text-sm text-[var(--text)]">
-                  {ACTIVITY_RADII_KM.map((km) => <option key={km} value={km}>Within {formatDistance(km, true)} / {km} km</option>)}
+                  {ACTIVITY_RADII_KM.map((km) => <option key={km} value={km}>{ga('within', { miles: miles(km), km })}</option>)}
                 </select>
               </label>
             )}
             <label className="flex flex-col gap-1 text-xs font-semibold">
-              Sort by
+              {ga('sortBy')}
               <select value={sort === 'nearest' && !city ? 'season' : sort} onChange={(event) => setSort(event.target.value as typeof sort)} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] px-3 py-2 text-sm text-[var(--text)]">
-                <option value="season">Seasonal order</option>
-                {city && <option value="nearest">Nearest first</option>}
-                <option value="name">Name A–Z</option>
+                <option value="season">{ga('sortSeason')}</option>
+                {city && <option value="nearest">{ga('sortNearest')}</option>}
+                <option value="name">{ga('sortName')}</option>
               </select>
             </label>
           </div>
           <div className={styles.filters}>
-            <nav className={styles.statusFilters} aria-label="Activity sections">
+            <nav className={styles.statusFilters} aria-label={ga('sections')}>
               {tabs.map((t) => (
                 <button
                   key={t.id}
@@ -282,26 +290,26 @@ export function ActivitiesView({
             <div>
               <h2 className="font-serif text-2xl font-normal text-[var(--text)]">
                 {tab === 'today'
-                  ? `In season today in ${placeName}`
-                  : `${tripTab ? TRIP_LABELS[tripTab] : SEASON_LABELS[tab as Season]} in ${placeName}`}
+                  ? ga('todayHeading', { place: placeName })
+                  : ga('tabHeading', { tab: tripTab ? tripLabel(tripTab) : seasonLabel(tab as Season), place: placeName })}
               </h2>
               <p className="mt-1 text-sm text-[var(--soft)]">
                 {tab === 'today'
-                  ? `${longDate(today.iso)} · ${SEASON_LABELS[currentSeason]}. Seasonal windows; check the organizer for opening hours and exact dates.`
+                  ? ga('todaySub', { date: longDate(today.iso, intl), season: seasonLabel(currentSeason) })
                   : tripTab === 'day-trips'
-                    ? 'Ideas for a full day out, across all seasons. Trip lengths are suggestions; check seasonal dates, opening hours and transport before setting off.'
+                    ? ga('dayTripsSub')
                     : tripTab === 'two-day-trips'
-                      ? 'Destinations for a two-day getaway with one overnight stay, across all seasons. Suggested trip lengths; arrange accommodation and transport separately and check seasonal availability.'
-                      : `Everything that runs in ${SEASON_LABELS[tab as Season].toLowerCase()}, with the season window from each organizer.`}
+                      ? ga('twoDayTripsSub')
+                      : ga('seasonSub', { season: seasonLabel(tab as Season).toLocaleLowerCase(intl) })}
               </p>
               <p className="mt-2 text-xs text-[var(--soft)]" role="status">
-                {shown.length} {shown.length === 1 ? 'activity' : 'activities'}{city ? ` within ${formatDistance(radiusKm, true)} (${radiusKm} km) of the city center · straight-line distances` : ' across all cities'}
+                {city ? ga('countCity', { count: shown.length, miles: miles(radiusKm), km: radiusKm }) : ga('countAll', { count: shown.length })}
               </p>
             </div>
           </div>
 
           {categories.length > 1 && (
-            <div className="mb-5 flex flex-wrap gap-2" role="group" aria-label="Activity type">
+            <div className="mb-5 flex flex-wrap gap-2" role="group" aria-label={ga('type')}>
               {(['all', ...categories] as const).map((id) => (
                 <button
                   key={id}
@@ -312,7 +320,7 @@ export function ActivitiesView({
                     effectiveCategory === id ? 'bg-[var(--green)] text-[var(--paper)]' : 'border border-[var(--rule)] bg-[var(--paper)] text-[var(--text)] hover:border-[var(--green)]'
                   }`}
                 >
-                  {id === 'all' ? 'All types' : ACTIVITY_CATEGORY_LABELS[id]}
+                  {id === 'all' ? ga('allTypes') : categoryLabel(id)}
                 </button>
               ))}
             </div>
@@ -320,8 +328,8 @@ export function ActivitiesView({
 
           {shown.length === 0 ? (
             <div className="py-10 text-sm text-[var(--soft)]">
-              <p>No activities match these filters. Try another search{city ? ' or a wider radius' : ''}.</p>
-              <button type="button" className="mt-3 underline" onClick={() => { setSearch(''); setCategory('all'); setRadiusKm(DEFAULT_ACTIVITY_RADIUS_KM); setRequested('today'); }}>Reset filters</button>
+              <p>{ga(city ? 'emptyWider' : 'empty')}</p>
+              <button type="button" className="mt-3 underline" onClick={() => { setSearch(''); setCategory('all'); setRadiusKm(DEFAULT_ACTIVITY_RADIUS_KM); setRequested('today'); }}>{ga('reset')}</button>
             </div>
           ) : (
             <div className={styles.cardGrid}>
@@ -335,22 +343,22 @@ export function ActivitiesView({
                 const end = windowEnd(a, start);
                 return (
                   <article key={pin.id} className={styles.card} id={`activity-${pin.id}`}>
-                    <Link href={pinPath(pin)} className={styles.photoLink} aria-label={`View ${a.name}`}>
+                    <Link href={pinPath(pin)} className={styles.photoLink} aria-label={ga('view', { name: a.name })}>
                       {pic.thumbName || pic.originalUrl ? (
                         <CardImage thumbName={pic.thumbName} originalUrl={pic.originalUrl} alt={a.name} className={styles.cardImage} />
                       ) : (
                         <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
                       )}
                       <span className={`${styles.cardBadge} ${running ? styles.openBadge : ''}`}>
-                        {running ? 'IN SEASON NOW' : `STARTS ${longDate(start).toUpperCase()}`}
+                        {running ? ga('inSeasonNow') : ga('startsOn', { date: longDate(start, intl).toLocaleUpperCase(intl) })}
                       </span>
                     </Link>
                     <div className={styles.cardBody}>
                       <p className={styles.cardMeta}>
                         <span>{aCity?.name ?? a.citySlug}</span>
                         <span>· {a.neighborhood}</span>
-                        <span>· {ACTIVITY_CATEGORY_LABELS[a.category]}</span>
-                        {city && <span>· {formatDistance(distanceKm(city, a), true)} / {formatDistance(distanceKm(city, a), false)} from {city.name}</span>}
+                        <span>· {categoryLabel(a.category)}</span>
+                        {city && <span>· {ga('fromCity', { miles: miles(distanceKm(city, a)), km: kms(distanceKm(city, a)), city: city.name })}</span>}
                       </p>
                       <h3 dir={pinTextDir(pin)}>
                         <Link href={pinPath(pin)} className="text-[var(--text)] hover:text-[var(--green)]">{a.name}</Link>
@@ -360,7 +368,7 @@ export function ActivitiesView({
                       )}
                       {a.tripDays?.length ? (
                         <p className="mb-2 text-xs font-semibold text-[var(--green)]">
-                          Suggested trip: {tripTab === 'two-day-trips' ? '2 days · 1 night' : tripTab === 'day-trips' ? '1 day' : a.tripDays.map((days) => days === 1 ? '1 day' : '2 days · 1 night').join(' or ')}
+                          {ga('suggestedTrip', { trip: tripTab === 'two-day-trips' ? ga('twoDays') : tripTab === 'day-trips' ? ga('oneDay') : a.tripDays.map((days) => days === 1 ? ga('oneDay') : ga('twoDays')).reduce((first, second) => ga('tripOr', { first, second })) })}
                         </p>
                       ) : null}
                       {tripTab && (tripTab === 'day-trips' ? a.tripPlan?.day : a.tripPlan?.overnight) ? (
@@ -369,13 +377,13 @@ export function ActivitiesView({
                         </p>
                       ) : null}
                       <p className="mb-3 text-[11px] text-[var(--soft)]">
-                        {a.venue} · {a.startDate && a.endDate ? `${longDate(a.startDate)} – ${longDate(a.endDate)}` : formatWindow(a)}
-                        {running ? ` · until ${longDate(end)}` : ''}
-                        {a.dateConfidence === 'estimated' ? ' · typical season' : ''}
+                        {a.venue} · {a.startDate && a.endDate ? `${longDate(a.startDate, intl)} – ${longDate(a.endDate, intl)}` : formatWindow(a, intl)}
+                        {running ? ` · ${ga('until', { date: longDate(end, intl) })}` : ''}
+                        {a.dateConfidence === 'estimated' ? ` · ${ga('typicalSeason')}` : ''}
                       </p>
                       <div className={styles.cardFoot}>
-                        <span className="text-[11px] font-semibold text-[var(--green)]">{a.costNote ?? 'See details'}</span>
-                        <Link href={pinPath(pin)} className={styles.cardArrow} aria-label={`Details for ${a.name}`}>→</Link>
+                        <span className="text-[11px] font-semibold text-[var(--green)]">{a.costNote ?? ga('seeDetails')}</span>
+                        <Link href={pinPath(pin)} className={styles.cardArrow} aria-label={ga('detailsFor', { name: a.name })}>→</Link>
                       </div>
                     </div>
                   </article>

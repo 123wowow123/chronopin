@@ -176,7 +176,7 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
   );
 }
 
-function Forecast({ forecast }: { forecast: IndustryForecastJson }) {
+export function ForecastCard({ forecast }: { forecast: IndustryForecastJson }) {
   const t = useT();
   const modal = useRef<HTMLDialogElement>(null);
   const caption = (
@@ -244,7 +244,7 @@ export function IndustryForecastPanel({ slugs, compact = false, limit }: { slugs
   if (!forecasts.length) return null;
   return (
     <div className={compact ? 'flex flex-col gap-3' : 'my-4 flex flex-col gap-3'} data-industry-forecast>
-      {(limit && !all ? forecasts.slice(0, limit) : forecasts).map((f) => <Forecast key={f.slug} forecast={f} />)}
+      {(limit && !all ? forecasts.slice(0, limit) : forecasts).map((f) => <ForecastCard key={f.slug} forecast={f} />)}
       {limit && forecasts.length > limit ? (
         <button type="button" onClick={() => setAll(!all)} className="self-start rounded-full px-3 py-1 text-xs text-muted ring-1 ring-line ring-inset hover:text-ink">
           {all ? t('common.showLess') : `${t('common.showMore')} (${forecasts.length - limit})`}

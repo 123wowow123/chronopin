@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 15341,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2500484/silo-1x01-freedom-day",
+      "basis": "Exact first 2023 season of Apple TV+ Silo, not the Wool novels, later seasons or individual episode recaps. Lucy Mangan / The Guardian (May 5), John Nugent / Empire (April 25), and Steven Scaife / Slant (May 4) offer three original season assessments, including criticism of pacing/politicking. Empire explicitly reviewed all ten episodes. Advance-screening articles remain dated to publication rather than the May premiere. Empire opened fully in the browser despite plain-reader HTTP 402; Slant was verified through the primary reader. Sentiment estimates describe the cited short passages, not converted ratings.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2023/may/05/silo-review-this-rich-dystopian-drama-is-absolutely-thrilling",
+          "title": "Silo review – this rich dystopian drama is absolutely thrilling",
+          "quote": "The world-building is meticulous",
+          "publishedDate": "2023-05-05",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.empireonline.com/tv/reviews/silo/",
+          "title": "Silo Review",
+          "quote": "only grows more absorbing",
+          "publishedDate": "2023-04-25",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.slantmagazine.com/tv/silo-review-rebecca-ferguson/",
+          "title": "‘Silo’ Review: A Paint-by-Numbers Sci-Fi Dystopia with Glimmers of Promise",
+          "quote": "tiresome, protracted politicking",
+          "publishedDate": "2023-05-04",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2023/may/05/silo-review-this-rich-dystopian-drama-is-absolutely-thrilling",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, author and original publication day checked against datePublished. Later modification, streaming release and related-story dates excluded."
+        },
+        {
+          "url": "https://www.empireonline.com/tv/reviews/silo/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, author and original publication day checked against datePublished. Later modification, streaming release and related-story dates excluded."
+        },
+        {
+          "url": "https://www.slantmagazine.com/tv/silo-review-rebecca-ferguson/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original primary publisher article opened fully in web reader; visible Steven Scaife byline and May 4, 2023 publication. Browser received security page; no browser metadata is claimed."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15342,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2957753/silo-2x01-the-engineer",
+      "basis": "Exact second 2024 season of Apple TV+ Silo. Leila Latif / The Guardian (November 15), James Mottram / NME (November 12) and Alex Welch / Digital Trends (November 15) are distinct original reviewers/publications. Digital Trends explicitly saw the first nine episodes, so it does not establish a verdict on the finale. A selected structural criticism does not mean its broadly positive whole-season review is negative. Original publication dates retained, not premiere or later edits. No first-season, third-season or book-review excerpts substituted. Sentiment estimates concern cited passages, not numerical ratings.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2024/nov/15/silo-season-two-review-this-dystopian-thriller-is-bigger-and-better-than-before",
+          "title": "Silo season two review – this dystopian thriller is bigger and better than before",
+          "quote": "the second is even better",
+          "publishedDate": "2024-11-15",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.nme.com/reviews/tv-reviews/silo-season-2-review-rebecca-ferguson-3811884",
+          "title": "‘Silo’ season two review: conspiracy theories abound in this worthy successor to ‘Lost’",
+          "quote": "It’s more than worth it.",
+          "publishedDate": "2024-11-12",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.digitaltrends.com/movies/silo-season-2-2024-tv-show-review/",
+          "title": "Silo season 2 review: one of the best sci-fi shows on right now gets even better",
+          "quote": "occasionally frustrating to grapple with",
+          "publishedDate": "2024-11-15",
+          "sentiment": -0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2024/nov/15/silo-season-two-review-this-dystopian-thriller-is-bigger-and-better-than-before",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, author and original publication day checked against datePublished. Later modification, streaming release and related-story dates excluded."
+        },
+        {
+          "url": "https://www.nme.com/reviews/tv-reviews/silo-season-2-review-rebecca-ferguson-3811884",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, author and original publication day checked against datePublished. Later modification, streaming release and related-story dates excluded."
+        },
+        {
+          "url": "https://www.digitaltrends.com/movies/silo-season-2-2024-tv-show-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, author and original publication day checked against datePublished. Later modification, streaming release and related-story dates excluded."
+        }
+      ]
+    }
+  ]
+}

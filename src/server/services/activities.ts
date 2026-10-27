@@ -36,7 +36,9 @@ export async function activityPins(locale: Locale = DEFAULT_LOCALE): Promise<Act
   for (const activity of activityCatalog) {
     const id = idByUrl.get(urls.get(`${activity.citySlug}/${activity.slug}`)!);
     const pin = id ? pinById.get(id) : undefined;
-    if (pin) result.push({ ...pin, activity });
+    // A translated pin gives the card its name and summary in the page's language;
+    // the catalog's own words (venue, cost note, trip plan) stay as written.
+    if (pin) result.push({ ...pin, activity: pin.translatedTo ? { ...activity, name: pin.title.split(' — ')[0] || activity.name, description: pin.description || activity.description } : activity });
   }
   return result;
 }

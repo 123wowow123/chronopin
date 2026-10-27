@@ -69,6 +69,10 @@ export async function forecastSlugsForNames(names: readonly (string | null | und
   return rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted)).map((r) => r.slug);
 }
 
+export async function allForecasts(): Promise<IndustryForecastJson[]> {
+  return Promise.all((await all()).map(toJson));
+}
+
 export async function forecastsBySlugs(slugs: string[]): Promise<IndustryForecastJson[]> {
   if (!slugs.length) return [];
   const rows = (await all()).filter((r) => slugs.includes(r.slug));

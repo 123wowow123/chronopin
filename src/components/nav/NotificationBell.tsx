@@ -888,6 +888,7 @@ const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
   { href: '/activities', label: 'Activities', icon: 'compass' },
   { href: '/products', label: 'Products', icon: 'cart' },
   { href: '/cars', label: 'Cars', icon: 'car' },
+  { href: '/forecasts', label: 'Forecasts', icon: 'trending-up' },
   { href: '/music', label: 'Music', icon: 'music' },
 ];
 

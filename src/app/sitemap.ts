@@ -63,6 +63,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     { url: absoluteUrl('/tags'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/tags') },
     { url: absoluteUrl('/products'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/products') },
     { url: absoluteUrl('/cars'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/cars') },
+    { url: absoluteUrl('/forecasts'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/forecasts') },
     { url: absoluteUrl('/travel'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/travel') },
     { url: absoluteUrl('/activities'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/activities') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T04:13:40.762Z",
+  "checkedAt": "2026-10-27T04:41:29.407Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -32,9 +32,9 @@
     {
       "table": "PinAircraftPerf",
       "pins": 165,
-      "reviews": 562,
+      "reviews": 563,
       "minimum": 3,
-      "belowMinimum": 14,
+      "belowMinimum": 13,
       "undatedNonMichelin": 8,
       "unscoredDated": 0
     },
@@ -71,13 +71,13 @@
       "reviews": 272,
       "minimum": 3,
       "belowMinimum": 8,
-      "undatedNonMichelin": 46,
+      "undatedNonMichelin": 44,
       "unscoredDated": 0
     },
     {
       "table": "PinCriticReview",
-      "pins": 102,
-      "reviews": 307,
+      "pins": 104,
+      "reviews": 313,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -608,15 +608,6 @@
       "existingResearchBasis": "Variant: Convair 880-22 (four CJ-805-3, MTOW 184,500 lb), Jane's All The World's Aircraft 1965-66 as tabulated on Wikipedia. Range: 2,472 nmi with 22,500 lb payload and 14,000 lb reserve; 2,500 -> 1, under 1,500 -> 0, so 2,472 -> 0.97 -> 1.0 (This Day in Aviation quotes a 5,056-mile maximum range, which conflicts and is not a typical-load figure; not used). Capacity: 110 passengers (Jane's); 100 -> 1, 150 -> 2, so 110 -> 1.2 -> 1.0. Efficiency: no fuel burn published -> null. Speed: Jane's economy cruise Mach 0.82 at 35,000 ft -> 3.0 (0.82 anchor); the maximum cruise of 534.5 kt is not the typical cruise. Runway: Jane's lists a 8,750 ft takeoff for the 880-22 without stating weight or ISA conditions, so it is treated as the MTOW figure: 7,000 -> 4, 8,500 -> 3, 10,000 -> 2, so 8,750 -> 2.8 -> 3.0 (flagged: not from an airport-planning document). Comfort: no reviews of this variant found (Air Facts Journal pilot article was blocked) -> null. Reviews: 0 found, below the required 3."
     },
     {
-      "table": "PinAircraftPerf",
-      "pinId": 19893,
-      "title": "Canadair's CRJ100 Regional Jet Makes Its First Flight",
-      "sourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
-      "reviewCount": 2,
-      "reason": "Removed three CRJ200 sibling cabin citations. Two exact CRJ100 reports now saved: BritAir and Belavia, distinct authors on Flight-Report. Need another independently published exact CRJ100 flight/cabin account; comfort null. No CRJ200 or simulator inference.",
-      "existingResearchBasis": "Variant: CRJ100 / CRJ100ER (CF34-3A1), Wikipedia CRJ100/200 table (one combined table: values assigned to the CRJ100 by column order, which the page does not state explicitly). Range: ER 1,305 nmi, below the 1,500 nmi anchor -> 0.0 (LR 1,650 nmi would be 0.0 too). Capacity: 50 seats -> under 60 -> 0.0. Efficiency: no fuel burn figure -> null. Speed: normal cruise Mach 0.74 -> 1 + (0.74-0.70)/(0.78-0.70) = 1.5. Runway: 5,800 ft (ER) at MTOW, SL, ISA -> 5 - 300/1,500 = 4.8 -> 5.0 (LR 6,290 ft would be 4.5). Comfort remains null: two actual CRJ100 cabin reports now verified (BritAir F-GRJR, published Oct3 2022 from Jun2010 flight; Belavia, published Sep24 2016). Operator/period-specific scratched-window and ageing-but-comfortable comments do not establish a universal launch-era cabin score. Three CRJ200 sibling reviews removed; one more independent exact CRJ100 report needed."
-    },
-    {
       "table": "PinLlmPerf",
       "pinId": 15102,
       "title": "Granite 4.2 8B, 3B and 30B Released",
@@ -776,6 +767,30 @@
         "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
         "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
         "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/"
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "status": "resolved",
+      "reason": "Third exact CRJ100 firsthand report saved: sumitsan, Comair N959CA seat 9A, SQTalk post #8, published March 2, 2012 about April 2011 flight. Operator fleet PDF visually confirms MSN 7116 and CF34-3A1. Three authors across two platforms meets raw review count, not a claim of three publishers. Technical axes unchanged; comfort null.",
+      "sourcesChecked": [
+        "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+        "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf"
+      ],
+      "excludedCandidates": [
+        {
+          "url": "https://travelupdate.com/review-air-canada-express-crj-100-experience/",
+          "reason": "Opened original labels CRJ100 but names C-GKEJ. TSB A19O0117 and airframe records identify CRJ200, MSN 7269. Headline alone insufficient; not used."
+        },
+        {
+          "url": "https://flieger67.blogspot.com/2013/12/ukraine-cimberas-sas-crj100.html",
+          "reason": "Opened original December 21, 2013 report names OY-RJH. Contradictory CRJ100/200 historical fleet labels; engine/dated identity unresolved. Do not assume conversion from other Cimber registrations; not used."
+        },
+        {
+          "url": "https://www.aviation24.be/forums/viewtopic.php?t=18433",
+          "reason": "Browser security page prevents full original quotation/aircraft verification. Search snippets insufficient; not used."
+        }
       ]
     }
   ],
@@ -1848,14 +1863,6 @@
     },
     {
       "table": "PinDining",
-      "pinId": 17257,
-      "title": "Mugunghwa, Lotte Hotel Busan (무궁화) — Busan restaurant",
-      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
-    },
-    {
-      "table": "PinDining",
       "pinId": 17261,
       "title": "Chaoran, Signiel Busan (차오란 超然) — Busan restaurant guide",
       "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
@@ -1872,19 +1879,11 @@
     },
     {
       "table": "PinDining",
-      "pinId": 17264,
-      "title": "Mori (모리) — Busan restaurant guide",
-      "url": "https://www.enprimeurclub.com/restaurants/mori-busan-restaurant",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
-    },
-    {
-      "table": "PinDining",
       "pinId": 17265,
       "title": "Palate (팔레트) — Busan restaurant guide",
       "url": "https://www.enprimeurclub.com/restaurants/palate",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+      "reason": "Original directory extract remains unverified. Located independent 2023 Blue Ribbon guide at Nam-gu and 2025 municipal guide at 154 Dalmaji-gil 65beon-gil, Haeundae; apparent relocation means branch/period must be matched to pin before replacing. No cross-location dining/room attribution saved."
     },
     {
       "table": "PinDining",
@@ -1898,9 +1897,9 @@
       "table": "PinDining",
       "pinId": 17267,
       "title": "Le DORER (르도헤) — Busan restaurant guide",
-      "url": "https://www.enprimeurclub.com/restaurants/le-dorer-busan-restaurant",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Downloaded opened HTTPS original PDF and visually inspected full relevant pages. Official municipal selected restaurant guide, PDF page 122 / printed page 242, Le DORER #9 at 37 Marine City 3-ro, #213-214. Short exact guide verdict; page 4 explains selection and review, page 144 identifies publisher and content-as-of December 2024, not a publication date. Keep null. Historical prices/hours not applied as current offers."
     },
     {
       "table": "PinDining",
@@ -1915,8 +1914,8 @@
       "pinId": 17270,
       "title": "Baek-il Pyeongnaeng 100.1 (백일평냉) — Busan restaurant guide",
       "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "status": "verified-undated",
+      "reason": "Downloaded original HTTPS PDF with curl; text extracted and complete relevant spreads visually inspected, not the browser PDF viewer shell. PDF page 89, printed page 176, exact 100.1.pyeongnaeng with Namcheonbada-ro address. Shortened verbatim verdict, joining a typographical line-end word break only. Page 4 identifies official municipal guide and rigorous restaurant selection; page 144 identifies publisher and content-as-of December 2024, not a publication day. Edition year, PDF metadata creation/modification and compilation cutoff are not publication. Keep null; no new dated graph point. No implication of a named individual critic or a current menu."
     },
     {
       "table": "PinDining",
@@ -1996,7 +1995,7 @@
       "title": "Norah Jones Wins Five Grammys, Led by Record and Album of the Year",
       "url": "https://www.allmusic.com/album/mw0000507740",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+      "reason": "Retried original album review: primary reader 403 and rendered Cloudflare security page. Exact existing quotation and original publication day remain unverified; no date inferred from album release or Grammy award. Retain null and research an accessible original/archive. Not counted as verified-undated."
     }
   ]
 }

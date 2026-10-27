@@ -4,23 +4,24 @@ import { Suspense } from 'react';
 import { ProductsView } from '@/components/products/ProductsView';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
+import type { Translator } from '@/lib/i18n/translate';
 import { MIN_INDEXED_PRODUCTS } from '@/lib/products';
 import { productShelves } from '@/server/services/products';
 import { siteCardImages } from '@/server/services/shareCard';
 
-// The page's words are English in every language, as the restaurant guide's
-// are; the product names and the store buttons are the pins' own.
+// The page's words are in the messages (guides.products); the product names
+// and the store buttons are the pins' own.
 // This year's products, so the words are made per request, not once at load.
-const words = () => {
+const words = (t: Translator) => {
   const year = new Date().getUTCFullYear();
-  return { title: `Products of ${year}`, description: `Products released or coming in ${year} on ${siteName}, by shelf, each with a short note on why it is worth a look.` };
+  return { title: t('guides.products.title', { year }), description: t('guides.products.description', { year, site: siteName }) };
 };
 
 export async function generateMetadata(): Promise<Metadata> {
   await connection();
   const t = await getT();
   const shelves = await productShelves(t.locale);
-  const { title: TITLE, description: DESCRIPTION } = words();
+  const { title: TITLE, description: DESCRIPTION } = words(t);
   const images = await siteCardImages();
   const links = await alternates('/products');
   return {
@@ -45,6 +46,6 @@ async function Products() {
   await connection();
   const t = await getT();
   const shelves = await productShelves(t.locale);
-  const { title, description } = words();
+  const { title, description } = words(t);
   return <ProductsView shelves={shelves} title={title} description={description} />;
 }

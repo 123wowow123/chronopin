@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "basis": "Variant: CRJ100 / CRJ100ER (CF34-3A1), Wikipedia CRJ100/200 table (one combined table: values assigned to the CRJ100 by column order, which the page does not state explicitly). Range: ER 1,305 nmi, below the 1,500 nmi anchor -> 0.0 (LR 1,650 nmi would be 0.0 too). Capacity: 50 seats -> under 60 -> 0.0. Efficiency: no fuel burn figure -> null. Speed: normal cruise Mach 0.74 -> 1 + (0.74-0.70)/(0.78-0.70) = 1.5. Runway: 5,800 ft (ER) at MTOW, SL, ISA -> 5 - 300/1,500 = 4.8 -> 5.0 (LR 6,290 ft would be 4.5). Comfort remains null: three exact CRJ100 cabin reports from distinct authors on two platforms (BritAir and Belavia on Flight-Report; sumitsan on SQTalk). Comair N959CA, April 2011: operator fleet list confirms MSN 7116/CF34-3A1. Cramped seats are operator/period-specific, not a universal score. SQTalk visible publication day March 2, 2012 retained; offsetless metadata is not converted to UTC. Three CRJ200 sibling reviews remain excluded. All technical scores unchanged.",
+      "reviews": [
+        {
+          "url": "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+          "title": "A Tale of Two Jumbo Jets: SQ & TG",
+          "quote": "Seats were crammed",
+          "publishedDate": "2012-03-02",
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Post #8 by sumitsan, visible publisher-local date 2 March 2012, 06:33 AM. Offsetless datetime 2012-03-01T23:33:22 does not justify replacing visible calendar day or a UTC conversion. Flight was April 2011, not publication. Exact quoted paragraph follows Delta Connection/Comair DL6462, N959CA, CRJ100, seat 9A; preceding 767 passage excluded.",
+          "scope": "Three firsthand authors across two publishing platforms, not three independent publications. Comfort remains null."
+        },
+        {
+          "url": "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf",
+          "openedAt": "2026-10-26",
+          "page": 15,
+          "printedPage": 29,
+          "quote": "N959CA",
+          "verification": "Downloaded HTTPS original historical operator fleet PDF, rendered and visually inspected complete spread. Comair Fleet CRJ row: ship/MSN 7116, N959CA, CL-600-2B19, CF34-3A1, 50 seats, manufacture 15-MAY-96. Corroborates registration/engine; PDF filename not used as publication evidence."
+        }
+      ]
+    }
+  ]
+}

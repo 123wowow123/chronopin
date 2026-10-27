@@ -28,7 +28,7 @@ type MenuGroup = { title?: MessageKey; items: MenuItem[] };
 function accountGroups(isAdmin: boolean): MenuGroup[] {
   const groups: MenuGroup[] = [
     { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'nav.people', icon: 'users' }, { href: '/trades', label: 'notifications.tradesToday', icon: 'trending-up' }] },
-    { title: 'nav.curated', items: [{ href: '/restaurants', label: 'nav.restaurants', icon: 'map' }, { href: '/travel', label: 'nav.travel', icon: 'globe' }, { href: '/activities', label: 'nav.activities', icon: 'compass' }, { href: '/products', label: 'nav.products', icon: 'cart' }, { href: '/cars', label: 'nav.cars', icon: 'car' }, { href: '/music', label: 'nav.music', icon: 'music' }] },
+    { title: 'nav.curated', items: [{ href: '/restaurants', label: 'nav.restaurants', icon: 'map' }, { href: '/travel', label: 'nav.travel', icon: 'globe' }, { href: '/activities', label: 'nav.activities', icon: 'compass' }, { href: '/products', label: 'nav.products', icon: 'cart' }, { href: '/cars', label: 'nav.cars', icon: 'car' }, { href: '/forecasts', label: 'nav.forecasts', icon: 'trending-up' }, { href: '/music', label: 'nav.music', icon: 'music' }] },
   ];
   if (isAdmin) groups.push({ items: [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }] });
   return groups;

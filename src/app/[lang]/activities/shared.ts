@@ -3,24 +3,25 @@ import { connection } from 'next/server';
 import { siteName } from '@/lib/appConfig';
 import { activitiesNearCity, activityCity } from '@/lib/activities';
 import { alternates, getT } from '@/lib/i18n/server';
+import type { Translator } from '@/lib/i18n/translate';
 import { siteCardImages } from '@/server/services/shareCard';
 import { activityPins } from '@/server/services/activities';
 
 export const MIN_INDEXED_ACTIVITIES = 8;
 
-export function activityDescription(citySlug: string | null): string {
+export function activityDescription(t: Translator, citySlug: string | null): string {
   const city = citySlug ? activityCity(citySlug) : undefined;
   return city
-    ? `Seasonal things to do in and around ${city.name}, including day trips within 250 km (155 miles): explore activities, festivals and outings by season, distance and type, with sources and dates on ${siteName}.`
-    : `What to do in New York, Los Angeles, Chicago, Houston and the other major US cities: what is in season today, plus the best winter, spring, summer and fall activities, festivals and outings, each linked to its source on ${siteName}.`;
+    ? t('guides.activities.descriptionCity', { city: city.name, site: siteName })
+    : t('guides.activities.description', { site: siteName });
 }
 
 export async function activityMetadata(citySlug: string | null): Promise<Metadata> {
   await connection();
   const t = await getT();
   const city = citySlug ? activityCity(citySlug) : undefined;
-  const title = city ? `Seasonal things to do in ${city.name}` : 'Seasonal activities in major US cities';
-  const description = activityDescription(citySlug);
+  const title = city ? t('guides.activities.titleCity', { city: city.name }) : t('guides.activities.title');
+  const description = activityDescription(t, citySlug);
   const allPins = await activityPins(t.locale);
   const pins = city ? activitiesNearCity(allPins, city) : allPins;
   const links = await alternates(city ? `/activities/${city.slug}` : '/activities');

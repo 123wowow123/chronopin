@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "status": "resolved",
+      "reason": "Third exact CRJ100 firsthand report saved: sumitsan, Comair N959CA seat 9A, SQTalk post #8, published March 2, 2012 about April 2011 flight. Operator fleet PDF visually confirms MSN 7116 and CF34-3A1. Three authors across two platforms meets raw review count, not a claim of three publishers. Technical axes unchanged; comfort null.",
+      "sourcesChecked": [
+        "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+        "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf"
+      ],
+      "excludedCandidates": [
+        {
+          "url": "https://travelupdate.com/review-air-canada-express-crj-100-experience/",
+          "reason": "Opened original labels CRJ100 but names C-GKEJ. TSB A19O0117 and airframe records identify CRJ200, MSN 7269. Headline alone insufficient; not used."
+        },
+        {
+          "url": "https://flieger67.blogspot.com/2013/12/ukraine-cimberas-sas-crj100.html",
+          "reason": "Opened original December 21, 2013 report names OY-RJH. Contradictory CRJ100/200 historical fleet labels; engine/dated identity unresolved. Do not assume conversion from other Cimber registrations; not used."
+        },
+        {
+          "url": "https://www.aviation24.be/forums/viewtopic.php?t=18433",
+          "reason": "Browser security page prevents full original quotation/aircraft verification. Search snippets insufficient; not used."
+        }
+      ]
+    }
+  ]
+}

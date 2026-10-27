@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17264,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/mori",
+      "url": "https://www.enprimeurclub.com/restaurants/mori-busan-restaurant",
+      "expectedReview": {
+        "url": "https://www.enprimeurclub.com/restaurants/mori-busan-restaurant",
+        "quote": "the front-of-house delivers the kind of attentive, unhurried service that the format demands.",
+        "title": "Mori Restaurant, Busan - En Primeur Club (editorial listing)",
+        "publishedDate": null
+      },
+      "reason": "Replace an editorial-listing extract whose exact original text/publication could not be verified after browser 403 with an opened, exact-restaurant independent guide assessment. Do not claim the inaccessible listing is fabricated or infer a date. Preserve listing as context in references; axes and other reviews unchanged."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/le-dorer",
+      "url": "https://www.enprimeurclub.com/restaurants/le-dorer-busan-restaurant",
+      "expectedReview": {
+        "url": "https://www.enprimeurclub.com/restaurants/le-dorer-busan-restaurant",
+        "quote": "Korean foundations shaped by French and Japanese technique and an ocean-view dining room reached through a small alley.",
+        "title": "Le dorer Restaurant, Busan - En Primeur Club (editorial listing)",
+        "publishedDate": null
+      },
+      "reason": "Replace an editorial-listing extract whose exact original text/publication could not be verified after browser 403 with an opened, exact-restaurant independent guide assessment. Do not claim the inaccessible listing is fabricated or infer a date. Preserve listing as context in references; axes and other reviews unchanged."
+    }
+  ]
+}

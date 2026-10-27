@@ -3,6 +3,7 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import Anchor from '@/components/ui/Anchor';
 import { usePathname } from '@/lib/client/navigation';
+import { useT } from '@/lib/client/i18n';
 import { queryTabHref, selectQueryTab, useQueryParam } from '@/lib/client/queryTabs';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 
@@ -10,6 +11,7 @@ import styles from '@/components/restaurants/RestaurantGuide.module.css';
 // shelf (?shelf=audio), the first one without it. Every panel is in the server HTML,
 // the others only hidden, so a crawler reads them all.
 export function ShelfTabs({ tabs, panels }: { tabs: { id: string; label: string; count: number }[]; panels: ReactNode[] }) {
+  const t = useT();
   const pathname = usePathname();
   const shelf = useQueryParam('shelf');
   const selected = tabs.some((tab) => tab.id === shelf) ? shelf : tabs[0]?.id;
@@ -48,15 +50,15 @@ export function ShelfTabs({ tabs, panels }: { tabs: { id: string; label: string;
   }, [selected]);
 
   return (
-    <section id="products" className={styles.openings} aria-label="Browse products">
+    <section id="products" className={styles.openings} aria-label={t('guides.products.browse')}>
       <div className={styles.browseHeading}>
         <div>
-          <p className={styles.eyebrow}>THE SHELVES</p>
-          <h2>Something good on every shelf.</h2>
+          <p className={styles.eyebrow}>{t('guides.products.shelvesEyebrow')}</p>
+          <h2>{t('guides.products.shelvesHeading')}</h2>
         </div>
       </div>
       <div className={`${styles.filters} min-w-0 max-w-full overflow-hidden`}>
-        <nav ref={navRef} className={`${styles.statusFilters} flex min-w-0 max-w-full flex-nowrap items-center gap-1.5 overflow-x-auto py-1 border-b-0 [overscroll-behavior-x:contain] [scrollbar-width:thin]`} aria-label="Product shelf">
+        <nav ref={navRef} className={`${styles.statusFilters} flex min-w-0 max-w-full flex-nowrap items-center gap-1.5 overflow-x-auto py-1 border-b-0 [overscroll-behavior-x:contain] [scrollbar-width:thin]`} aria-label={t('guides.products.shelfNav')}>
           {tabs.map((tab) => (
             <Anchor key={tab.id} href={queryTabHref(pathname, 'shelf', tab.id)} aria-current={tab.id === selected ? 'location' : undefined} onClick={selectQueryTab('shelf', tab.id)} className="shrink-0 whitespace-nowrap">
               {tab.label} <span aria-hidden="true">·</span> <span>{tab.count.toString().padStart(2, '0')}</span>

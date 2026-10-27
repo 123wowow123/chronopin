@@ -113,21 +113,21 @@ or shop is not a firsthand review of the pinned product.
 | PinTaste | 228 | 493 | 0 (minimum one) | 43 |
 | PinCarPerf | 128 | 350 | 33 | 16 |
 | PinGasCarPerf | 160 | 502 | 12 | 14 |
-| PinAircraftPerf | 165 | 562 | 14 | 8 |
+| PinAircraftPerf | 165 | 563 | 13 | 8 |
 | PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 272 | 8 | 46 |
-| PinCriticReview | 102 | 307 | 0 | 1 |
+| PinDining | 89 | 272 | 8 | 44 |
+| PinCriticReview | 104 | 313 | 0 | 1 |
 
-There are **73 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 102 existing critic rows have at least three extracts.
+There are **72 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 104 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
 The XUV 7XO now has three independent publishers: Autocar India, CarTrade
 and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
-petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 151 non-MICHELIN undated entries, 72
-have verified reasons to retain null dates; **79 date/source checks remain**.
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 149 non-MICHELIN undated entries, 74
+have verified reasons to retain null dates; **75 date/source checks remain**.
 Current scheduled verification: retry #26 is blocked by the missing production
 `ANTHROPIC_API_KEY`; the older credit failure is historical. See the tenth
 continuation below.
@@ -495,3 +495,32 @@ All 28 focused documentation/review-date/research tests, the guarded replay’s
 idempotent run and stale-citation rejection, catalog constraints, queue totals
 and whitespace checks passed. No application/runtime code was changed; the new
 script is an operator replay utility for explicit researched date corrections.
+
+
+## Eleventh continuation: Silo seasons, exact CRJ100 and original guide PDFs
+
+Saved nine new reviews and repaired two existing guide extracts through native
+APIs locally and in production. Removed two inaccessible directory excerpts
+after saving verified replacements. Critic coverage now totals 104 pins and
+313 extracts. The current queue retains **72 rubric gaps** (EV33, gas12,
+aircraft13, dining8, LLM4, video2), **75 publication/source checks**, and 74
+verified-undated entries. This remains an unfinished broader backfill.
+
+- [Silo seasons one and two](../../../scripts/products/silo-critic-round11-2026-10-26.json): three original reviews per exact season. The Guardian, Empire and Slant cover the first season; The Guardian, NME and Digital Trends cover the second. Exact titles, short verbatim passages and original publication days were checked. Empire explicitly saw all ten first-season episodes; Digital Trends saw only nine second-season episodes and does not establish a finale verdict. Criticism is retained alongside praise, with passage sentiment distinguished from the whole review. Advance-review dates were not changed to premiere dates. Empire was readable in the browser despite a plain-reader 402; Slant was verified through the primary reader, not its browser security page.
+- [CRJ100](../../../scripts/products/crj100-reviews-round11-2026-10-26.json): sumitsan’s original SQTalk post #8 describes Comair DL6462, N959CA, seat 9A, on an April 2011 flight. The operator’s original historical fleet PDF was downloaded and visually checked on PDF page 15 / printed page 29, corroborating MSN 7116 and CF34-3A1. The cramped-seat quote belongs to that CRJ leg, not the preceding Boeing 767. Publication follows the visible publisher-local March 2, 2012 label; offsetless metadata is not converted to UTC or substituted for the visible calendar day. Three authors now span two platforms, not three publishers. Comfort remains null; all technical axes are unchanged. The [guarded basis update](../../../scripts/products/review-basis-round11-2026-10-26.json) and [fleet citation readbacks](../../../scripts/products/review-fleet-verification-round11-2026-10-26.json) retain the exact evidence.
+- [Original dining PDFs](../../../scripts/products/dining-pdf-repairs-round11-2026-10-26.json): Mugunghwa’s exact guide passage appears in the Blue Ribbon Survey volume on PDF page 17 / printed page 31. Its colophon explicitly gives first publication October 30, 2023, now saved with sentiment. The exact 100.1.pyeongnaeng entry appears in the municipal 2025 guide on PDF page 89 / printed page 176. Its verdict was shortened verbatim; the edition year and December 2024 content cutoff do not establish a publication day, so null is retained. Both guides were downloaded and their complete relevant pages visually inspected; browser PDF-viewer text was insufficient. Historical menus, prices and operating hours were not applied as current content.
+- [Mori and Le DORER replacements](../../../scripts/products/busan-guide-reviews-round11-2026-10-26.json): verified independent guide verdicts replace two directory excerpts whose original text could not be checked after publisher refusal. Mori’s exact Pale de Cz restaurant appears in the dated 2023 Blue Ribbon guide; Le DORER’s Marine City entry is in the undated 2025 municipal guide. The latter’s date stays null. [Guarded exclusions](../../../scripts/products/review-exclusions-round11-2026-10-26.json) preserve other reviews, axes and the old links as context; an inaccessible listing is not declared fabricated. Palate remains open because the 2023 and 2025 guides show different locations, requiring branch/period matching before attribution.
+- [Source checks](../../../scripts/products/review-source-checks-round11-2026-10-26.json) close four prior checks and record the new verified-undated guide source. AllMusic remains blocked and unverified; no album-release or Grammy date was substituted. [Coverage research](../../../scripts/products/review-coverage-leads-round11-2026-10-26.json) records excluded CRJ candidates: TravelUpdate names CRJ200 C-GKEJ despite its CRJ100 headline; OY-RJH has conflicting historical fleet labels; the Aviation24 original was inaccessible. No unsupported conversion history, sibling variant or search-snippet quotation was saved.
+
+[Validation](../../../scripts/products/review-validation-round11-2026-10-26.json)
+records native readbacks, unchanged rubric fields, rendered pin-page quotes and
+graphs in both environments, focused tests and queue/catalog checks. Research
+and replay catalogs are synchronized, including the dining catalog. Source
+references, Source/PinSource links and scope annotations were saved through the
+existing APIs. Completed CRJ100 coverage is removed from the open gap queue;
+broader coverage and unresolved research remain in the README TODO.
+
+Scheduled production verification remains blocked by the missing runtime
+`ANTHROPIC_API_KEY` established by run #26. This pass made no deployment,
+restart, environment or schedule changes, and does not claim the scheduled
+review tools have been exercised successfully.

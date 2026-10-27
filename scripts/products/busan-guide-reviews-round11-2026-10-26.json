@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17264,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/mori",
+      "basis": "Food 4.5 from 4.8 over 32 ratings (enough to score, few enough that 5 is not given). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 4: One MICHELIN Star (2026 edition, Michelin page metadata read 2026-10-18; Korea Stripes: retained for the third year).",
+      "reviews": [
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "title": "100 Great Places to Eat in Busan",
+          "quote": "immersive Japanese atmosphere",
+          "publishedDate": "2023-10-30",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Downloaded opened HTTPS original PDF and visually inspected full relevant pages. Blue Ribbon Survey original guide, PDF page 17 / printed page 31, Mori #54 at Pale de Cz, 24 Haeundaehaebyeon-ro 298beon-gil, second floor; same restaurant, not similarly named Aomori. Original first publication October 30, 2023 explicitly verified in colophon PDF page 28. Short exact atmosphere verdict, not a new service score."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/le-dorer",
+      "basis": "Tripadvisor, read 2026-10-18 (2 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 4 retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "title": "2025 Taste of Busan",
+          "quote": "offering a unique dining experience",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Downloaded opened HTTPS original PDF and visually inspected full relevant pages. Official municipal selected restaurant guide, PDF page 122 / printed page 242, Le DORER #9 at 37 Marine City 3-ro, #213-214. Short exact guide verdict; page 4 explains selection and review, page 144 identifies publisher and content-as-of December 2024, not a publication date. Keep null. Historical prices/hours not applied as current offers."
+        }
+      ]
+    }
+  ]
+}

@@ -32,5 +32,5 @@ async function ActivityCity({ params }: { params: Params }) {
   await connection();
   const t = await getT();
   const pins = await activityPins(t.locale);
-  return <ActivitiesView pins={pins} cityFilter={known.slug} serverNow={new Date().toISOString()} title={`Seasonal things to do in ${known.name}`} description={activityDescription(known.slug)} path={`/activities/${known.slug}`} />;
+  return <ActivitiesView pins={pins} cityFilter={known.slug} serverNow={new Date().toISOString()} title={t('guides.activities.titleCity', { city: known.name })} description={activityDescription(t, known.slug)} path={`/activities/${known.slug}`} />;
 }

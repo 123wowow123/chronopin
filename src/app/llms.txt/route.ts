@@ -44,6 +44,7 @@ async function llmsText(): Promise<string> {
     `- [Tags](${absoluteUrl('/tags')}): a page per subject (/tag/anime), with its upcoming dates and the next one first`,
     `- [Products](${absoluteUrl('/products')}): product pins by shelf, each with a short note on why it is good`,
     `- [Cars](${absoluteUrl('/cars')}): the best new cars ranked on one published rubric, each with the figures behind its score`,
+    `- [Forecasts](${absoluteUrl('/forecasts')}): industry forecast panels, live series and cited projections side by side, each with its sources`,
     `- [Travel](${absoluteUrl('/travel')}): the best luxury resorts and destinations ranked on the hotel rubric, with the optimal season and weather behind every journey`,
     `- [Activities](${absoluteUrl('/activities')}): seasonal things to do in major US cities, with what is in season today`,
     `- [Companies](${absoluteUrl('/companies')}): a page per company (/company/nintendo), with its upcoming dates and the next one first`,

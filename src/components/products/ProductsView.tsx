@@ -10,8 +10,10 @@ import { AdFilledGrid } from '@/components/restaurants/AdFilledGrid';
 import { RestaurantCardAdsProvider } from '@/components/restaurants/RestaurantAdCard';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 import { adPlacements } from '@/server/services/pages';
+import { getT } from '@/lib/i18n/server';
+import { siteName } from '@/lib/appConfig';
 import { blobUrl } from '@/lib/appConfig';
-import { pinTextDir } from '@/lib/i18n/config';
+import { INTL_LOCALES, pinTextDir } from '@/lib/i18n/config';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import { LandingMark } from '@/components/ui/LandingMark';
 import { isKidsFriendlyProduct } from '@/lib/products';
@@ -40,7 +42,7 @@ function blurb(pin: ProductPin): string {
 // The curated products page: the products pins are about, by shelf, each with
 // a short line on why it is good. Every product links to its pin for the dates, the
 // sources and the rest.
-export async function ProductsView({ shelves, title, description, path = '/products', wordmark = 'The product guide', eyebrow = 'GOOD GEAR. GREAT TIMING.', heading = <>The products worth <em>the wait.</em></> }: {
+export async function ProductsView({ shelves, title, description, path = '/products', wordmark, eyebrow, heading }: {
   shelves: ProductShelf[];
   title: string;
   description: string;
@@ -49,6 +51,10 @@ export async function ProductsView({ shelves, title, description, path = '/produ
   eyebrow?: string;
   heading?: ReactNode;
 }) {
+  const t = await getT();
+  wordmark ??= t('guides.products.wordmark');
+  eyebrow ??= t('guides.products.eyebrow');
+  heading ??= t.rich('guides.products.heading', { em: (c) => <em>{c}</em> });
   const placements = await adPlacements();
   const products = shelves.flatMap((s) => s.pins);
   const collection = {
@@ -90,35 +96,35 @@ export async function ProductsView({ shelves, title, description, path = '/produ
             <p className={styles.lead}>{description}</p>
           </div>
           {featured ? (
-            <Link href={pinPath(featured)} className={styles.featured} aria-label={`Explore ${featured.productName ?? featured.title}`}>
+            <Link href={pinPath(featured)} className={styles.featured} aria-label={t('guides.products.explore', { name: featured.productName ?? featured.title })}>
               {/* eslint-disable-next-line @next/next/no-img-element -- pin thumbs come from the blob store */}
               <img src={imageOf(featured)} alt={featured.productName ?? featured.title} className={styles.featuredImage} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
               <div className={styles.featuredShade} />
-              <span className={styles.featuredBadge}>CHRONOPIN SELECTION</span>
+              <span className={styles.featuredBadge}>{t('guides.products.selection', { site: siteName.toUpperCase() })}</span>
               <div className={styles.featuredCopy}>
                 <p>
                   {featured.company ?? featured.categories?.[0]}
-                  {isKidsFriendlyProduct(featured) ? ' · Kids friendly' : ''}
+                  {isKidsFriendlyProduct(featured) ? ` · ${t('guides.products.kidsFriendly')}` : ''}
                 </p>
                 <h2>{featured.productName ?? featured.title}</h2>
-                <span>See the product <span aria-hidden="true">↗</span></span>
+                <span>{t('guides.products.seeProduct')} <span aria-hidden="true">↗</span></span>
               </div>
             </Link>
           ) : (
-            <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>Good things<br />to look forward to.</p></div>
+            <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>{t('guides.products.emptyFeature')}</p></div>
           )}
         </header>
 
         <ShelfTabs
-          tabs={shelves.map((shelf) => ({ id: id(shelf.name), label: shelf.label, count: shelf.pins.length }))}
+          tabs={shelves.map((shelf) => ({ id: id(shelf.name), label: t.dynamic(`guides.shelf.${shelf.name}`, shelf.label), count: shelf.pins.length }))}
           panels={shelves.map((shelf) => {
-          const label = shelf.label;
+          const label = t.dynamic(`guides.shelf.${shelf.name}`, shelf.label);
           return (
             <section key={shelf.name} id={id(shelf.name)} className={styles.section} aria-labelledby={`${id(shelf.name)}-title`}>
               <div className={styles.sectionHeading}>
                 <div>
                   <h2 id={`${id(shelf.name)}-title`}>{label} <span>{shelf.pins.length.toString().padStart(2, '0')}</span></h2>
-                  <p>Why each one is worth a look.</p>
+                  <p>{t('guides.products.whyWorthLook')}</p>
                 </div>
               </div>
               <AdFilledGrid cards={
@@ -128,13 +134,13 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                   const isKidsFriendly = isKidsFriendlyProduct(pin, shelf.name);
                   return (
                     <article key={pin.id} className={styles.card}>
-                      <Link href={pinPath(pin)} className={styles.photoLink} aria-label={`See ${name}`}>
+                      <Link href={pinPath(pin)} className={styles.photoLink} aria-label={t('guides.products.see', { name })}>
                         {image ? (
                           <CardImage thumbName={picture(pin.media).thumbName!} alt={name} portrait={picture(pin.media).portrait} className={styles.cardImage} />
                         ) : (
                           <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
                         )}
-                        <span className={styles.cardBadge}>{label.toUpperCase()}</span>
+                        <span className={styles.cardBadge}>{label.toLocaleUpperCase(t.locale)}</span>
                       </Link>
                       <div className={styles.cardBody}>
                         <div className="mb-2 flex items-center justify-between gap-3">
@@ -143,7 +149,7 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                             {isKidsFriendly && (
                               <>
                                 {pin.company ? <span aria-hidden="true">·</span> : null}
-                                <span className={styles.kidsBadge}>Kids friendly</span>
+                                <span className={styles.kidsBadge}>{t('guides.products.kidsFriendly')}</span>
                               </>
                             )}
                           </p>
@@ -152,9 +158,9 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                         <h3><Link href={pinPath(pin)} dir={pinTextDir(pin)}>{name}</Link></h3>
                         {shelf.name === 'Alcoholic Drinks' && pin.utcStartDateTime && (
                           <p className={styles.cardMeta}>
-                            {new Date(pin.utcStartDateTime).getTime() > Date.now() ? 'Coming' : 'Released'}{' '}
+                            {new Date(pin.utcStartDateTime).getTime() > Date.now() ? t('guides.products.coming') : t('guides.products.released')}{' '}
                             <time dateTime={String(pin.utcStartDateTime).slice(0, 10)}>
-                              {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(pin.utcStartDateTime))}
+                              {new Intl.DateTimeFormat(INTL_LOCALES[t.locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(pin.utcStartDateTime))}
                             </time>
                           </p>
                         )}

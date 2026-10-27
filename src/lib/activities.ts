@@ -162,7 +162,7 @@ export function windowEnd(item: Window, startIso: string): string {
   return `${endYear}-${String(item.endMonth).padStart(2, '0')}-${String(last).padStart(2, '0')}`;
 }
 
-export function formatWindow(item: Window): string {
-  const names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return item.startMonth === item.endMonth ? names[item.startMonth - 1]! : `${names[item.startMonth - 1]} – ${names[item.endMonth - 1]}`;
+export function formatWindow(item: Window, intl = 'en-US'): string {
+  const name = (month: number) => new Date(Date.UTC(2000, month - 1, 1)).toLocaleDateString(intl, { month: 'short', timeZone: 'UTC' });
+  return item.startMonth === item.endMonth ? name(item.startMonth) : `${name(item.startMonth)} – ${name(item.endMonth)}`;
 }
