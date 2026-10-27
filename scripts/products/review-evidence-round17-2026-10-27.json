@@ -1,0 +1,163 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "pinId": 5588,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.grammy.com/awards/45th-annual-grammy-awards",
+      "basis": "Browser-read critic reviews, 2026-10-25",
+      "reviews": [
+        {
+          "url": "https://www.keranews.org/archive/2002-03-05/norah-jones-come-away-with-me-a-review",
+          "title": "Norah Jones 'Come Away With Me' - A Review",
+          "publishedDate": "2002-03-05",
+          "quote": "Her presence is comforting yet commanding, her phrasing whispered yet assured.",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.keranews.org/archive/2002-03-05/norah-jones-come-away-with-me-a-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "David Okamoto original KERA 90.1 album criticism, March5 2002 11:49AM CST. Exact debut album; not a concert review. Primary web reader opened full original despite browser403. Replaces unresolved AllMusic quotation, preserves existing Pitchfork/musicOMH. This maintains an existing album-review panel on the Grammy pin; not new event eligibility."
+        }
+      ]
+    },
+    {
+      "pinId": 14164,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
+      "basis": "Variant: Avatr 07L Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited, 89.33 kWh, 725 km CLTC, 800 V, 30-80% under 10 min, 0-100 5.9 s, 2,990 mm wheelbase; ADS Pro/in-cabin LiDAR. Max+/Ultra add different equipment, so their results cannot establish the Elite. Prior scores preserved. Review verification, 2026-10-27: XCX pre-launch Max+/Ultra quote repaired to literal Chinese, retained only as context. The other saved Avatr 07 report is an earlier model. Neither proves a final-Elite independent road test; exact-07L-Elite coverage remains open.",
+      "reviews": [
+        {
+          "url": "https://dianping.yiche.com/sid_12372/koubei/9981065017465728/",
+          "title": "我的阿维塔是试驾体验",
+          "publishedDate": "2026-08-27",
+          "quote": "不过转弯掉头的时候确实比较轻松，基本上一把也能过。",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://dianping.yiche.com/sid_12372/koubei/9981065017465728/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "DTDTDT original test-drive participant, explicitly 2027 725km RWD Elite, Wenzhou; not a purchaser or professional instrumented test. Original August27 publication; August test month is not publication. Quote uses literal readable Chinese, not private-use font substitutions. Seller turning-radius/capacity claims are not independently measured. Existing pre-launch Max+/Ultra and 2024 EREV reports excluded."
+        }
+      ]
+    },
+    {
+      "pinId": 14035,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/07/23/lynk-co-07-gt-launch/",
+      "basis": "Variant: 2WD EM-P, 157,800 yuan guide price. 28.3 kWh, 200 km electric, combined up to 1,422 km CLTC; 30-80% in 14 min (reported, newmobility/CNC on the 07 system); 0-100 km/h 5.5 s for the 300 kW 2WD (newmobility; AWD 4 s); standard LiDAR with G-ASD H5, Thor-U H7 optional; 2,843 mm wheelbase. Value: updated Zeekr 007 GT wagon is 203,900 yuan list (BEV, 905 km, LiDAR+Thor-U).",
+      "reviews": [
+        {
+          "url": "https://club.autohome.com.cn/bbs/thread/7b51ec6ad8ddeb72/116305852-1.html",
+          "title": "领克07GT银色两驱Ultra提车快一个月，说一下个人感受",
+          "publishedDate": "2026-09-30",
+          "quote": "底盘是让我比较惊喜的地方，过减速带、过弯、跑高速都是一个字，稳。",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://club.autohome.com.cn/bbs/thread/7b51ec6ad8ddeb72/116305852-1.html",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Original forum firsthand China 200-km 2WD Ultra owner, nearly2000km, original September30 16:06:42, not16:11:47 edit. Optional audio does not change powertrain. Primary web reader original body/photos opened; browser404 means reader-only access. Author name unavailable in reader; do not invent attribution. One owner report, not a professional road test. Separate 15-day owner and 老蔡 leads actually drive4WD despite static2WD mentions; another generic2WD post incorrectly calls PHEV pure EV and is excluded."
+        }
+      ]
+    },
+    {
+      "pinId": 19645,
+      "table": "PinAircraftPerf",
+      "pinSourceUrl": "https://airwaysmag.com/new-post/saab-340-enters-service-crossair",
+      "basis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort null: EX-YU Aviation (2025-05-11) reports cramped seating and noise on exact 340A YL-RAL. Existing Rex review is later 340B, not launch-A cabin evidence. Two extracts, only one exact-A firsthand report; seek two more independent A reports. No simulator or vendor-news reviews added.",
+      "reviews": [
+        {
+          "url": "https://flight-report.com/fr/report/57660/raf-avia-mt103-geneva-gva-deauville-dol/",
+          "title": "Avis du vol entre Geneva et Deauville en classe Economique avec RAF-Avia",
+          "publishedDate": "2022-07-07",
+          "quote": "Les sièges sont bien rembourrés et confortables.",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://flight-report.com/fr/report/66524/aeroitalia-xz2214-ancona-aoi-rome-fco/",
+          "title": "Avis du vol entre Ancona et Rome en classe Economique avec AeroItalia",
+          "publishedDate": "2024-03-04",
+          "quote": "l'éclairage de la cabine d'un Saab 340 âgé de 36 ans \"c'est pas Versailles\"",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://flight-report.com/fr/report/57660/raf-avia-mt103-geneva-gva-deauville-dol/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Two distinct original passengers Cal and LUCKY LUKE, same340A-QC YL-RAL confirmed by registration and explicitA intro/conclusion plus EX-YU same-aircraft report. Cal July7 publication differs July3 flight; LUCKY LUKE March4 publication differs February29 flight. Cal construction-year error and isolated B typo in later report do not override tail identity; no specs borrowed. Both later27/33-seat layouts differ from original Crossair cabin; axes/comfort remain unchanged. Three accounts across two publishers after scoped Rex citation removal."
+        },
+        {
+          "url": "https://flight-report.com/fr/report/66524/aeroitalia-xz2214-ancona-aoi-rome-fco/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Two distinct original passengers Cal and LUCKY LUKE, same340A-QC YL-RAL confirmed by registration and explicitA intro/conclusion plus EX-YU same-aircraft report. Cal July7 publication differs July3 flight; LUCKY LUKE March4 publication differs February29 flight. Cal construction-year error and isolated B typo in later report do not override tail identity; no specs borrowed. Both later27/33-seat layouts differ from original Crossair cabin; axes/comfort remain unchanged. Three accounts across two publishers after scoped Rex citation removal."
+        }
+      ]
+    },
+    {
+      "pinId": 13987,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://news.dairyqueen.com/announcements/details/2026/Something-Spellbinding-Is-Coming-to-DQ-This-Halloween/default.aspx",
+      "basis": "Oreo cookie pieces in a sweet ube-flavoured soft serve with a purple shimmer swirl. Early tasters are split: several say the ube is faint ('tastes like milk and sugar', 4.5/10 in a Reddit rating, found only as search excerpts), so the flavour reads as very sweet marshmallow- or malt-like sweetness with mild cocoa from the Oreo rather than a distinct ube or nutty-vanilla note. Crunchy cookie pieces in a soft, fast-melting texture.",
+      "reviews": [
+        {
+          "url": "https://www.onsecondscoop.com/2026/10/dq-mystery-blizzard-buddies.html?showComment=1792430086992",
+          "title": "DQ Mystery Blizzard Buddies",
+          "publishedDate": "2026-10-19",
+          "quote": "Ube has a bit of a sweet profile which worked so well with Oreo in my opinion.",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.onsecondscoop.com/2026/10/dq-mystery-blizzard-buddies.html?showComment=1792430086992",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Named visitor Anne Sutton original moderated comment October19 2026 1:14PM. Explicitly tasted exactUbeOreo; parent author explicitly did NOT and chose pumpkin. Attribute quote to comment, not parent writer or October18 parent publication. Replaces unverified TikTok description, not counted as a professional review."
+        }
+      ]
+    },
+    {
+      "pinId": 15220,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.press.bmwgroup.com/global/article/detail/T0457130EN/the-new-bmw-7-series",
+      "basis": "Scored variant: 740 xDrive (3.0 I6 + 48V). Power 400 hp; 0-100 km/h 5.1 s (BMW); economy WLTP 9.3-8.3 l/100 km, about 27 US mpg; space 540 l boot, slightly above average for a full-size luxury sedan; value 400 hp / EUR 117,900 = 3.4 hp per 1,000 EUR (local-currency basis); handling null (no road tests yet). Value re-based to US$ for cross-market ranking: 400 hp / US$136,764 (at 1.16 US$ per EUR) = 2.9 hp per US$1,000 = 0 (was 1.0).",
+      "reviews": [
+        {
+          "url": "https://www.auto-test-und-technik.de/fahrbericht-bmw-740-xdrive-mhev/",
+          "title": "Fahrbericht: BMW 740 xDrive MHEV",
+          "publishedDate": "2026-10-19",
+          "quote": "Die Lenkung arbeitet präzise und ist weder zu leicht noch zu schwergängig",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.auto-test-und-technik.de/fahrbericht-bmw-740-xdrive-mhev/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Stefan Grundhoff original German-market400PS740xDriveMHEV road report, EUR117900,294kW,5.1s; original October19 publication, not2027 model year. Literal German steering assessment. Replace unverified rolling C/D paraphrase. Existing US C/D and Edmunds launch drives are scoped context, not proof of every German-market specification; no axis changes."
+        }
+      ]
+    }
+  ]
+}

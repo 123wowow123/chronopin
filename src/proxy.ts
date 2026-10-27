@@ -10,7 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
-import { botRetryAfter, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { botRetryAfter, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, searchRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -203,6 +203,12 @@ export async function proxy(request: NextRequest) {
     if (gateClient && !bot && !session && /^\/pin\/\d+(?:\/|$)/.test(splitLocale(pathname).path)) {
       const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
       const wait = pinRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1);
+      if (wait != null) return signInForMore(request, wait);
+    }
+    // Searches with a query have their own budget per cookie.
+    if (gateClient && !bot && !session && request.method === 'GET' && splitLocale(pathname).path === '/search' && request.nextUrl.searchParams.has('q')) {
+      const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
+      const wait = searchRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1);
       if (wait != null) return signInForMore(request, wait);
     }
   }

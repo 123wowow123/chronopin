@@ -3932,12 +3932,6 @@
         "publishedDate": "2026-01-26"
       },
       {
-        "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
-        "quote": "Tastes really good. This might be my new favorite. It tastes equally as good if not better, has 40% abv rather than 35%.",
-        "title": "Total Wine customer review by 'Snacks 55' (5/5)",
-        "publishedDate": null
-      },
-      {
         "url": "https://www.drinkhacker.com/2026/10/15/review-grey-goose-berry-rouge-vodka/",
         "quote": "It finishes with a surprising cleanliness",
         "title": "Review: Grey Goose Berry Rouge Vodka",
@@ -3960,23 +3954,97 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
     "reviews": [
       {
-        "url": "https://www.pedestrian.tv/bites/streets-icecream-tub-bubble-o-bill-gaytime/",
-        "quote": "But there's definitely less biscuit bits. Like, significantly less, it's more that they're swirled through a little.",
-        "title": "We Tried Those Streets Bubble O Bill / Golden Gaytime Ice-cream Tubs",
-        "sentiment": -0.3,
-        "publishedDate": "2020-07-14"
-      },
-      {
-        "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
-        "quote": "The ice cream has a strange airy and fatty texture that leaves a strange taste in my mouth",
-        "title": "Streets Golden Gaytime reviews | ProductReview.com.au",
-        "publishedDate": null
-      },
-      {
         "url": "https://www.candycritic.org/golden%20gaytime.htm",
         "quote": "In general, I liked this ice cream.",
         "title": "Golden Gaytime",
         "sentiment": 0.4,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 7014,
+    "pinSourceUrl": "https://www.prnewswire.com/news-releases/high-noon-tees-up-its-first-limited-flavor-drop-meet-high-noon-transfusion-vodka-seltzer-302756411.html",
+    "aroma": 3.5,
+    "bitterness": 0.5,
+    "sweetness": 2,
+    "astringency": 1.5,
+    "umami": 0,
+    "pungent": 1.5,
+    "coolness": 1,
+    "basis": "A vodka seltzer with grape, lime and ginger: light and fruity, with a ginger bite. Tasting-review scope: Exact vodka Transfusion flavor; customer review, not Target’s product description. Existing seven-axis editorial estimates are retained.",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/high-noon-tees-up-its-first-limited-flavor-drop-meet-high-noon-transfusion-vodka-seltzer-302756411.html",
+    "reviews": [
+      {
+        "url": "https://www.target.com/p/-/A-95047225",
+        "quote": "If you like grape, lime, and a touch of ginger flavor, this is for you.",
+        "title": "AF — High Noon Transfusion customer tasting (Target)",
+        "sentiment": 0.4,
+        "publishedDate": "2026-05-21"
+      },
+      {
+        "url": "https://untappd.com/b/high-noon-transfusion-vodka-seltzer/6688552",
+        "quote": "I thought high joons are clear? This is all purpy What’s even this flavor? Whatever it is isn’t very good.",
+        "title": "Transfusion Vodka Seltzer",
+        "sentiment": -0.7,
+        "publishedDate": "2026-09-09"
+      }
+    ]
+  },
+  {
+    "pinId": 13987,
+    "pinSourceUrl": "https://news.dairyqueen.com/announcements/details/2026/Something-Spellbinding-Is-Coming-to-DQ-This-Halloween/default.aspx",
+    "aroma": 2,
+    "bitterness": 1,
+    "sweetness": 4.5,
+    "astringency": 0,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "Oreo cookie pieces in a sweet ube-flavoured soft serve with a purple shimmer swirl. Early tasters are split: several say the ube is faint ('tastes like milk and sugar', 4.5/10 in a Reddit rating, found only as search excerpts), so the flavour reads as very sweet marshmallow- or malt-like sweetness with mild cocoa from the Oreo rather than a distinct ube or nutty-vanilla note. Crunchy cookie pieces in a soft, fast-melting texture.",
+    "sourceUrl": "https://news.dairyqueen.com/announcements/details/2026/Something-Spellbinding-Is-Coming-to-DQ-This-Halloween/default.aspx",
+    "reviews": [
+      {
+        "url": "https://www.instagram.com/p/Dd2zadVDdsX/",
+        "quote": "It's beautiful! The new Enchanted OREO Blizzard at Dairy Queen looks like art and tastes amazing with a subtle ube taste throughout!",
+        "title": "Instagram post by snackolator: Enchanted OREO Blizzard at Dairy Queen (first-hand; top comments are mixed)",
+        "sentiment": 0.5,
+        "publishedDate": "2026-09-28"
+      },
+      {
+        "url": "https://www.instagram.com/reel/DePfF4VRjjo/",
+        "quote": "It sure is pretty. But I don't know if I'd get it again. It's definitely a fun Halloween treat.",
+        "title": "Instagram reel by milehighfoodfrenzy: @dairyqueen Sparkly Ube Blizzard (first-hand, lukewarm)",
+        "sentiment": 0.7,
+        "publishedDate": "2026-10-08"
+      },
+      {
+        "url": "https://www.onsecondscoop.com/2026/10/dq-mystery-blizzard-buddies.html?showComment=1792430086992",
+        "quote": "Ube has a bit of a sweet profile which worked so well with Oreo in my opinion.",
+        "title": "DQ Mystery Blizzard Buddies",
+        "sentiment": 0.7,
+        "publishedDate": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "pinId": 13918,
+    "pinSourceUrl": "https://www.mynewsdesk.com/se/triumfglass/pressreleases/triumf-glass-presenterar-hoestens-smaknyheter-trendigt-moeter-klassiskt-3464939",
+    "aroma": 3,
+    "bitterness": 1.5,
+    "sweetness": 4,
+    "astringency": 1,
+    "umami": 1,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "ESTIMATE from Triumf Glass's press release (fetched via the pin's source and the Fooddayme launch post, 2026-10-11): matcha cream ice cream with a caramel ripple, positioned to make matcha accessible, with the maker saying the matcha taste meets caramel sweetness. A search summary of the ICA listing gave about 24 g sugars per 100 g (not independently fetched). Matcha adds grassy/vegetal notes and mild bitterness; caramel adds toasty sweetness. No sourness; creamy. Tasting reviews of this product are listed below.",
+    "sourceUrl": "https://www.mynewsdesk.com/se/triumfglass/pressreleases/triumf-glass-presenterar-hoestens-smaknyheter-trendigt-moeter-klassiskt-3464939",
+    "reviews": [
+      {
+        "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+        "quote": "Den var inte god smakade ingenting , endast en lätt bismak av gräs",
+        "title": "GLASSNYHET! Matcha & Karamell.",
+        "sentiment": -0.8,
         "publishedDate": null
       }
     ]

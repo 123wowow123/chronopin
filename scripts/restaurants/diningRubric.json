@@ -2553,19 +2553,22 @@
         "url": "https://myannoyingopinions.com/2026/07/18/tosokchon-samgyetang-seoul-may-2026/",
         "quote": "It’s not a place to linger. It’s big and full and the focus is on getting people into their seats, getting their food to them and then getting them out.",
         "title": "Tosokchon Samgyetang (Seoul, May 2026)",
+        "sentiment": 0,
         "publishedDate": "2026-07-18"
       },
       {
         "url": "https://foodle.pro/restaurants/seoul/tosokchon-samgyetang",
         "quote": "The broth was comforting and mild in flavor, with the ginseng flavor not overpowering it all.",
         "title": "Tosokchon Samgyetang, Seoul | Reviews, Photos, Address, Phone Number | Foodle",
+        "sentiment": 0.4,
         "publishedDate": "2025-05-27"
       },
       {
-        "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
-        "quote": "There’s always a line of people waiting for the bubbling samgyetang (ginseng chicken soup) at this venerable restaurant spread over a series of hanok.",
-        "title": "Tosokchon Samgyetang Reviews | Tripexpert",
-        "publishedDate": null
+        "url": "https://www.timeout.com/seoul/restaurants/tosokchon",
+        "quote": "Cooked to perfection, the chicken's so tender that it doesn't require a lot of chewing at all.",
+        "title": "Tosokchon",
+        "sentiment": 0.8,
+        "publishedDate": "2016-07-11"
       }
     ],
     "sources": [
@@ -2605,7 +2608,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "http://www.tosokchon.co.kr/"
   },
   {
     "pinId": 17146,
@@ -3326,29 +3330,25 @@
     "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g294197-d10088229-Reviews-The_Parkview-Seoul.html",
     "reviews": [
       {
-        "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
-        "quote": "It is known for its amazing buffet with top-notch quality seafood, sushi, dim sum, meats, fruit, and desserts.",
-        "title": "Seoul Shilla Hotel The Parkview, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
-      },
-      {
         "url": "https://kissmykimchi.com/2015/08/kmk-shilla-parkview-buffet.html/",
+        "quote": "The staff was also very attentive and professional.",
         "title": "KMK: Shilla Parkview Buffet",
-        "publishedDate": "2015-08-24",
-        "quote": "The staff was also very attentive and professional."
+        "sentiment": 0.6,
+        "publishedDate": "2015-08-24"
       },
       {
         "url": "https://whatsstewin.blogspot.com/2013/11/review-seouls-best-buffet-parkview-at.html",
+        "quote": "The pasta dishes were definitely misses. The ravioli was very dry as was the spinach lasagna roll-up.",
         "title": "Review: Seoul's Best Buffet, The Parkview at Shilla Hotel",
-        "publishedDate": "2013-11-08",
-        "quote": "The pasta dishes were definitely misses. The ravioli was very dry as was the spinach lasagna roll-up."
+        "sentiment": -0.5,
+        "publishedDate": "2013-11-08"
       },
       {
         "url": "https://pinayajumma.wordpress.com/2018/01/24/the-shilla-seoul-the-parkview-buffet/",
-        "title": "The Shilla Seoul | The Parkview",
         "quote": "I love The Parkview’s authentic Peking duck, tenderloin steak and sushi.",
-        "publishedDate": "2018-01-24",
-        "sentiment": 0.8
+        "title": "The Shilla Seoul | The Parkview",
+        "sentiment": 0.8,
+        "publishedDate": "2018-01-24"
       }
     ],
     "sources": [
@@ -4206,20 +4206,15 @@
         "url": "https://www.timeout.com/seoul/restaurants/hanilkwan",
         "quote": "Although the restaurant left its vintage Jongno home for a shinier exterior at Apgujeong, the taste has yet to change.",
         "title": "Hanilkwan | Restaurants in Apgujeong-dong, Seoul",
+        "sentiment": 0.5,
         "publishedDate": "2015-11-26"
       },
       {
-        "url": "https://wanderlog.com/place/details/4236393",
-        "quote": "However, there are positive mentions of well-prepared local Korean food in a clean setting with good flavors and prompt service.",
-        "title": "Hanilkwan, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
-      },
-      {
         "url": "https://revitguide.com/en/stores/a16hjfuqgzsv3c",
-        "title": "Hanilkwan(Apgujeong)",
         "quote": "The seasoning had a well-balanced sweet and salty flavor, the meat was tender, and the serving bowl kept it warm until the very end.",
-        "publishedDate": null,
-        "sentiment": 0.7
+        "title": "Hanilkwan(Apgujeong)",
+        "sentiment": 0.7,
+        "publishedDate": null
       }
     ],
     "sources": [
@@ -4312,7 +4307,8 @@
         "url": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960",
         "quote": "What arrives at the table is a whole bird with mahogany-glossed skin and meat that pulls cleanly off the bone.",
         "title": "Myeongdong Yeongyang Center: Korea’s Original Tongdak Since 1960",
-        "publishedDate": null
+        "sentiment": 0.7,
+        "publishedDate": "2026-05-13"
       },
       {
         "url": "https://www.theseoulguide.com/yeongyang-center-myeongdong-branch/",
@@ -4321,17 +4317,11 @@
         "publishedDate": null
       },
       {
-        "url": "https://wanderlog.com/place/details/4228626",
-        "quote": "Reviewers praised the old-school charm of the place, with efficient and friendly service despite being busy.",
-        "title": "Yeongyang Center Main, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
-      },
-      {
         "url": "https://en.trippose.com/restaurant/yeongyang-center-main-branch",
-        "title": "Yeongyang Center - Main Branch - Korea Restaurant | Trippose",
         "quote": "栄養センタの鶏肉がとてもやわらかくてジューシーなのでとても好きです。",
-        "publishedDate": "2016-12-26",
-        "sentiment": 0.8
+        "title": "Yeongyang Center - Main Branch - Korea Restaurant | Trippose",
+        "sentiment": 0.8,
+        "publishedDate": "2016-12-26"
       }
     ],
     "sources": [
@@ -4498,15 +4488,16 @@
       },
       {
         "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
+        "quote": "A polished homage to 1920s Hong Kong, where dim sum steams by day and cocktails glint by night",
         "title": "Korea's 10 Famous Chinese Restaurants in Busan",
-        "publishedDate": null,
-        "quote": "A polished homage to 1920s Hong Kong, where dim sum steams by day and cocktails glint by night"
+        "publishedDate": null
       },
       {
-        "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
-        "title": "Good Chinese Food",
-        "publishedDate": null,
-        "quote": "The dim sum were ok, the fried shrimps with chilly sauce were excellent."
+        "url": "https://sos471.tistory.com/6",
+        "quote": "고기가 정말 부드러웠고 기름기도 다 빠져서 아주 담백한 맛이었습니다.",
+        "title": "[부산 시그니엘 차오란] 모둠 딤섬, 차오란 덕 후기",
+        "sentiment": 0.7,
+        "publishedDate": "2022-10-24"
       }
     ],
     "sources": [
@@ -4581,7 +4572,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://www.lottehotel.com/busan-signiel/ko/dining/restaurant-chaoran"
   },
   {
     "pinId": 17206,
@@ -5801,6 +5793,111 @@
         "quote": "Their nuanced, creative tasting menus start with a glass of pine-needle gamju (rice wine), followed by a series of precision-crafted plates, rooted in the seasons.",
         "title": "Bicena - Seoul - Restaurant - The 50 Discovery",
         "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 17269,
+    "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+    "scores": {
+      "food": 4.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 4.5 from 4.8 over 61 ratings (5 not given: no independent diner reviews were found). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition, new this year).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+        "quote": "The bouncy, tender slices of boiled pork also pair well with the noodles.",
+        "title": "Moemiljip - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.koreajoongangdaily.com/lifestyle/michelin-releases-2026-bib-gourmand-adds-8-new-korean-restaurants/12491521",
+        "quote": "Moemiljip, which mills buckwheat noodles in-house and serves them in spicy, perilla-oil and cold versions with boiled pork",
+        "title": "Michelin releases 2026 Bib Gourmand, adds 8 new Korean restaurants",
+        "sentiment": 0.5,
+        "publishedDate": "2026-02-26"
+      },
+      {
+        "url": "https://saline1.tistory.com/625",
+        "quote": "면 자체도 고소한 데다가 들깨와 들기름이 고소함을 증폭시켜서 너무 맛있었다.",
+        "title": "부산 해운대 마린시티 뫼밀집",
+        "sentiment": 0.8,
+        "publishedDate": "2026-09-19"
+      }
+    ]
+  },
+  {
+    "pinId": 17277,
+    "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+    "scores": {
+      "food": 4.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 4.5 from 4.6 over 53 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition, new this year).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+        "quote": "Thick, charcoal-grilled patties are smoky and juicy, served with rice, delicate banchan, and a rich doenjang jjigae.",
+        "title": "Songheonjip - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://korea.stripes.com/food-drink/michelin-guide-seoul-busan.html",
+        "quote": "Songheonjip serves charcoal-grilled tteokgalbi in a renovated two-story house with a nostalgic atmosphere.",
+        "title": "Michelin Guide Seoul & Busan 2026 highlights new Bib Gourmand additions",
+        "sentiment": 0.4,
+        "publishedDate": "2026-02-27"
+      },
+      {
+        "url": "https://familytripkorea.com/%EB%B6%80%EC%82%B0-%EA%B4%91%EC%95%88%EB%A6%AC-%EB%A7%9B%EC%A7%91-%EB%AF%B8%EC%89%90%EB%A6%B0-%EB%96%A1%EA%B0%88%EB%B9%84%EB%9D%BC%EB%8B%88-%EC%86%A1%ED%97%8C%EC%A7%91-%EA%B0%80%EC%84%9C/",
+        "quote": "살치살은 더 부드러웠고, 갈비살은 고기 풍미가 진했습니다.",
+        "title": "부산 광안리 송헌집 후기｜아이와 떡갈비 정식·웨이팅·주차 팁",
+        "sentiment": 0.7,
+        "publishedDate": "2026-09-29"
+      }
+    ]
+  },
+  {
+    "pinId": 17266,
+    "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+    "scores": {
+      "food": null,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Food null: the current Dalmaji-gil 117beonga-gil listing shows 4.0 from only 5 ratings and the older Jwadongsunhwan-ro listing (4.4 from 32) is marked permanently closed, so no usable diner figure for the current address. Service, Ambience and Value are not scored (no published figure). Acclaim 4: One MICHELIN Star plus the MICHELIN Green Star (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+        "quote": "Perched on Dalmaji Hill, fiotto is a small, husband-and-wife–run restaurant offering a pasta-focused tasting menu.",
+        "title": "Fiotto - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://seoulkoreaasia.com/busan-michelin-restaurants-guide/",
+        "quote": "The chefs are big on vegetables and seasonal produce, much of it coming directly from their own family farm",
+        "title": "7 Busan Michelin Guide Restaurants to Try in 2026 (From Market-Style to Fine Dining)",
+        "sentiment": 0.5,
+        "publishedDate": "2026-10-09"
+      },
+      {
+        "url": "https://m.blog.naver.com/liin_studio/224356394823",
+        "quote": "다만 간이 제 입에는 너무 셌고 모든 코스에 들어가는 재료들이 중복되어서 그런지는 몰라도 맛이 하나하나 개성이 없었다는 느낌을 받았습니다..",
+        "title": "[내돈내산 | 한식 파인다이닝] 부산 미슐랭 1스타 피오또 방문 후기",
+        "sentiment": -0.6,
+        "publishedDate": "2026-07-24"
       }
     ]
   }

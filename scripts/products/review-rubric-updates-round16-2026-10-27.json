@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "expectedBasis": "Variant: IM LS9 52 Ultra EREV, RMB 322,800, 52 kWh, 320 km EV / 1,454 km combined CLTC, 380 kW, 0-100 4.9 s, 10-80% in 19 min; 3,160 mm wheelbase, six seats, LiDAR/Thor/Momenta. The 390 kW and 16.5-min figures belong to 66 Ultra and are excluded. Prior axis scores preserved. Review verification, 2026-10-27: XCX original November 28, 2025 test is 66 Ultra (402 km EV), not base 52 Ultra. Original Chinese quotation repaired; retain as scoped context only, not validation of the base battery or charging figures. Exact-52-Ultra review coverage remains open.",
+      "changes": {
+        "basis": "Variant: launch IM LS9 52 Ultra EREV, RMB322800,52kWh,320km EV/1454km combined CLTC,380kW,0-1004.9s,10-80%19min,3160mm wheelbase/six seats. Prior axes preserved;390kW/16.5min belong to66Ultra. October27: three original exact52Ultra owner/driver accounts (ashleychoi,书院大师兄,Carmen), bought/driven2025-26, not three professional instrumented road tests. Praise for rear-wheel steering and chassis sits beside Carmen’s half-yoke learning/turning criticism. English paraphrase practicality report and exact66Ultra XCX test removed from native reviews; context references retained. Owner observations do not independently validate charging or battery figures. Seek professional exact-trim tests; raw3-review threshold is not professional coverage completion."
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "expectedBasis": "Variant: 650 BEV Comfort, 67 kWh Qingtao, RMB 108,900 official / 105,900 limited (the 845 km 91 kWh 5C version would score range 4.0, charging 3.5, 0-100 5.9 s). 650 km CLTC; 400 V, 3C, 30-80% in 20 min; 0-100 in 6.9 s (176 kW); entry uses Horizon J6B with no highway or urban NOA and no LiDAR (higher trims LiDAR + Momenta R7); wheelbase 2,825 mm. Value: BYD Seal 07 DM-i from RMB 149,800 (PHEV, 2,900 mm; CnEVPost) and Lynk & Co 07 EM-P RMB 139,800-159,800 limited (CarNewsChina), about 25-30% under, though BEV vs PHEV. Price correction: 650 BEV Comfort is RMB 116,900 official / 113,900 limited; 108,900/105,900 is the Hybrid 245 Comfort (CarNewsChina 21 Aug 2026, News18). Value rescored 4.0 on the corrected price.",
+      "changes": {
+        "basis": "Variant:650BEV Comfort/舒享,67kWh Qingtao,RMB116900 official/113900 limited (108900/105900 is245Hybrid);650kmCLTC,400V/3C,30-80%20min,176kW/0-1006.9s,2825mm wheelbase. Entry HorizonJ6B,no LiDAR/highway/urbanNOA; do not borrow610/845trim ADAS. Previous axes preserved. October27: original allentree named-owner207km review of exact650舒享 praises CDC damping and notes high-speed wind noise; publishedSeptember8. Removed PCauto aggregate English paraphrase and610km higher-trim forum paraphrase. One original exact-entry owner account is not three independent professional road tests. Additional exact650Comfort evidence remains required."
+      }
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15102,
+      "pinSourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "expectedBasis": "Granite4.2 family pin, scoring30B flagship at August25 launch. Maker supports native128K with extension to512K; context axis uses published512K maximum. Text-only. Launch independently measured AA Index and Terminal-Bench4.0 were not established; maker29.24% is Terminal-Bench2.1 and cannot fill coding. No verified launch API list price or output throughput, so those axes are null. Two firsthand independent tests verified after broader search; fewer than3 reviews. KGP tested quantized30B onRTX5090; Carwash is a narrow two-run30B constraint test, not a general ranking.",
+      "changes": {
+        "basis": "Granite4.2 family pin, scoring30B flagship as launched August25. Maker native128K,extension512K;context uses published maximum. Text-only. No independently verified launch AAIndex/TB4.0/APIprice/outputthroughput, so those launch axes remain null. October27: KGP quantized30B/RTX5090 and narrow Carwash two-run constraint test retained. Added Artificial Analysis original30B reasoning evaluation: currentIndexv4.3.2 score13,currentnotlaunch; publication day absent,keepnull. No speed figure or context change inferred from current live evaluator. Three original evaluator publications now present, with scope/measurement limits; not three broad professional audits. No axis rescored."
+      }
+    }
+  ]
+}

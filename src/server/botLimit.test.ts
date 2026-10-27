@@ -159,6 +159,24 @@ describe('pinRetryAfter', () => {
   });
 });
 
+import { searchRetryAfter, SEARCH_BURST } from './botLimit';
+describe('searchRetryAfter', () => {
+  beforeEach(() => {
+    delete (globalThis as unknown as { __chronopinSearchLimits?: unknown }).__chronopinSearchLimits;
+  });
+  it('lets a client run a burst of searches, then one every 2 seconds', () => {
+    for (let i = 0; i < SEARCH_BURST; i++) expect(searchRetryAfter('a', 1_000)).toBeNull();
+    expect(searchRetryAfter('a', 1_000)).toBe(2);
+    expect(searchRetryAfter('a', 3_000)).toBeNull();
+    expect(searchRetryAfter('a', 3_000)).not.toBeNull();
+  });
+  it('is separate from the pin budget and from other clients', () => {
+    for (let i = 0; i < SEARCH_BURST; i++) searchRetryAfter('a', 1_000);
+    expect(pinRetryAfter('a', 1_000)).toBeNull();
+    expect(searchRetryAfter('b', 1_000)).toBeNull();
+  });
+});
+
 import { localeMismatch, mismatchRetryAfter, MISMATCH_BURST } from './botLimit';
 describe('locale mismatch cohort', () => {
   it('flags a Chinese browser on another language, not on Chinese or English paths', () => {

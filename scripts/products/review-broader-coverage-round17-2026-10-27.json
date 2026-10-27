@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "pinId": 7385,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://ca.billboard.com/music/rock/phoebe-bridgers-lost-weekend-album",
+      "basis": "Three independently authored original album critics: Sam Sodomsky, Erica Campbell and Michael Savio. Original review publication days precede the August14 release; album release is not publication. Slant full primary reader accessible despite rendered403. Quotations are prose criticism, not lyrics.",
+      "reviews": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/phoebe-bridgers-lost-weekend/",
+          "title": "Lost Weekend",
+          "publishedDate": "2026-08-13",
+          "quote": "The sound design is a marvel: subtle and dynamic",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/phoebe-bridgers-lost-weekend-review-3962027",
+          "title": "Phoebe Bridgers – ‘Lost Weekend’ review: indie’s poet laureate returns with a staggering, strange and stirring opus",
+          "publishedDate": "2026-08-12",
+          "quote": "a captivating record where she crafts expansive stories over strange sonics.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.slantmagazine.com/music/phoebe-bridgers-lost-weekend-album-review/",
+          "title": "Phoebe Bridgers ‘Lost Weekend’ Review: Loved Ones Lost and Found",
+          "publishedDate": "2026-08-05",
+          "quote": "Lost Weekend is a challenging, inspired album",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/phoebe-bridgers-lost-weekend/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Three independently authored original album critics: Sam Sodomsky, Erica Campbell and Michael Savio. Original review publication days precede the August14 release; album release is not publication. Slant full primary reader accessible despite rendered403. Quotations are prose criticism, not lyrics."
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/phoebe-bridgers-lost-weekend-review-3962027",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Three independently authored original album critics: Sam Sodomsky, Erica Campbell and Michael Savio. Original review publication days precede the August14 release; album release is not publication. Slant full primary reader accessible despite rendered403. Quotations are prose criticism, not lyrics."
+        },
+        {
+          "url": "https://www.slantmagazine.com/music/phoebe-bridgers-lost-weekend-album-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Three independently authored original album critics: Sam Sodomsky, Erica Campbell and Michael Savio. Original review publication days precede the August14 release; album release is not publication. Slant full primary reader accessible despite rendered403. Quotations are prose criticism, not lyrics."
+        }
+      ]
+    },
+    {
+      "pinId": 7387,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.billboard.com/music/chart-beat/ariana-grande-charts-petal-songs-hot-100-1236312898/",
+      "basis": "Original Ariana Grande Petal studio album reviews by Aimee Cliff, Kristen S. Hé and Michael Savio. Mixed/negative criticism retained. Original bylines, not album date or last modification. Slant full primary web reader opened. No quoted song lyrics.",
+      "reviews": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/ariana-grande-petal/",
+          "title": "petal",
+          "publishedDate": "2026-07-31",
+          "quote": "petal feels fairly constrained and, occasionally, like a tame reimagining of her older work.",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/ariana-grande-petal-review-3960390",
+          "title": "Ariana Grande – ‘Petal’ review: conflicted pop songs under the spotlight",
+          "publishedDate": "2026-08-03",
+          "quote": "Its joys are painted in shades of grey, while she carries its heaviest moments with poise.",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://www.slantmagazine.com/music/ariana-grande-petal-album-review/",
+          "title": "Ariana Grande ‘Petal’ Review: A Wilting Expression of the Pressures of Celebrity",
+          "publishedDate": "2026-07-31",
+          "quote": "it ultimately can’t overcome its self-imposed limitations.",
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/ariana-grande-petal/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Original Ariana Grande Petal studio album reviews by Aimee Cliff, Kristen S. Hé and Michael Savio. Mixed/negative criticism retained. Original bylines, not album date or last modification. Slant full primary web reader opened. No quoted song lyrics."
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/ariana-grande-petal-review-3960390",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Original Ariana Grande Petal studio album reviews by Aimee Cliff, Kristen S. Hé and Michael Savio. Mixed/negative criticism retained. Original bylines, not album date or last modification. Slant full primary web reader opened. No quoted song lyrics."
+        },
+        {
+          "url": "https://www.slantmagazine.com/music/ariana-grande-petal-album-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Original Ariana Grande Petal studio album reviews by Aimee Cliff, Kristen S. Hé and Michael Savio. Mixed/negative criticism retained. Original bylines, not album date or last modification. Slant full primary web reader opened. No quoted song lyrics."
+        }
+      ]
+    },
+    {
+      "pinId": 4381,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.billboard.com/music/music-news/olivia-rodrigo-you-seem-pretty-sad-for-girl-in-love-tracklist-1236256875/",
+      "basis": "Three original exact third-album reviews: Molly Mary O’Brien, Alex Rigotti and Michael Savio. NME original June15, not album June12 or modification time. Prose critical excerpts, no lyrics.",
+      "reviews": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love/",
+          "title": "you seem pretty sad for a girl so in love",
+          "publishedDate": "2026-06-12",
+          "quote": "you seem pretty sad for a girl so in love is their third collaboration, and by far their most sophisticated.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love-review-3951006",
+          "title": "Olivia Rodrigo – ‘You Seem Pretty Sad For A Girl So In Love’ review: a bittersweet, cinematic odyssey from a generational talent",
+          "publishedDate": "2026-06-15",
+          "quote": "Ambitious, nuanced and layered, it’s absolute proof of Rodrigo’s generational talent.",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.slantmagazine.com/music/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love-album-review/",
+          "title": "Olivia Rodrigo ‘You Seem Pretty Sad for a Girl So In Love’ Review: A Triumphant Turning Point",
+          "publishedDate": "2026-06-12",
+          "quote": "the results can be nothing short of spectacular.",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Three original exact third-album reviews: Molly Mary O’Brien, Alex Rigotti and Michael Savio. NME original June15, not album June12 or modification time. Prose critical excerpts, no lyrics."
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love-review-3951006",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Three original exact third-album reviews: Molly Mary O’Brien, Alex Rigotti and Michael Savio. NME original June15, not album June12 or modification time. Prose critical excerpts, no lyrics."
+        },
+        {
+          "url": "https://www.slantmagazine.com/music/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love-album-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Three original exact third-album reviews: Molly Mary O’Brien, Alex Rigotti and Michael Savio. NME original June15, not album June12 or modification time. Prose critical excerpts, no lyrics."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1961 @@
+{
+  "checkedAt": "2026-10-27T19:56:21.747088+00:00",
+  "scope": "Round 16: original review additions, exact-variant/source replacements, manual-model append-only updates and discovery screening of all 61 baseline rubric gaps and 57 source/date checks. Discovery-only entries remain unresolved.",
+  "fullTaskComplete": false,
+  "newRetainedReviews": 29,
+  "newBroaderCriticPins": 3,
+  "existingCitationCorrections": 2,
+  "ineligibleReviewsRemoved": 15,
+  "closedRubricGaps": 4,
+  "closedBaselineSourceChecks": 13,
+  "remaining": {
+    "rubricGaps": 57,
+    "sourceChecks": 44,
+    "verifiedUndated": 96,
+    "broaderCoverage": "Continued exact-product evidence research, including Music, Computing and Fashion.",
+    "scheduledProductionVerification": "Still unfinished; no scheduler changes made."
+  },
+  "nativeReadbacks": [
+    {
+      "id": 395,
+      "pinId": 395,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.imdb.com/title/tt27419420/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 395,
+      "pinId": 395,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.imdb.com/title/tt27419420/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 2022,
+      "pinId": 2022,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3701737/the-diplomat-4x01-tba",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 2022,
+      "pinId": 2022,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3701737/the-diplomat-4x01-tba",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 2056,
+      "pinId": 2056,
+      "production": false,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3616304/visionquest-1x01-tba",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 2056,
+      "pinId": 2056,
+      "production": true,
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3616304/visionquest-1x01-tba",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "source",
+        "basis"
+      ]
+    },
+    {
+      "id": 7013,
+      "pinId": 7013,
+      "production": false,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 7013,
+      "pinId": 7013,
+      "production": true,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+      "reviewsVerified": 2,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 19948,
+      "pinId": 19948,
+      "production": false,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 19948,
+      "pinId": 19948,
+      "production": true,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "source",
+        "basis",
+        "sourceUrl",
+        "abv",
+        "abvSourceUrl",
+        "pungent",
+        "coolness"
+      ]
+    },
+    {
+      "id": 17203,
+      "pinId": 17203,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17203,
+      "pinId": 17203,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17205,
+      "pinId": 17205,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.hanilkwan.co.kr/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17205,
+      "pinId": 17205,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.hanilkwan.co.kr/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17222,
+      "pinId": 17222,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17222,
+      "pinId": 17222,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 14219,
+      "pinId": 14219,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14219,
+      "pinId": 14219,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "reviewsVerified": 1,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": false,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": true,
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15102,
+      "pinId": 15102,
+      "production": false,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15102,
+      "pinId": 15102,
+      "production": true,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15136,
+      "pinId": 15136,
+      "production": false,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15136,
+      "pinId": 15136,
+      "production": true,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15170,
+      "pinId": 15170,
+      "production": false,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://help.aliyun.com/en/model-studio/newly-released-models",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 15170,
+      "pinId": 15170,
+      "production": true,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://help.aliyun.com/en/model-studio/newly-released-models",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "reasoning",
+        "coding",
+        "context",
+        "speed",
+        "price",
+        "modalities",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "id": 17198,
+      "pinId": 17198,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "http://www.tosokchon.co.kr/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17198,
+      "pinId": 17198,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "http://www.tosokchon.co.kr/",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17261,
+      "pinId": 17261,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.lottehotel.com/busan-signiel/ko/dining/restaurant-chaoran",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17261,
+      "pinId": 17261,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://www.lottehotel.com/busan-signiel/ko/dining/restaurant-chaoran",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17269,
+      "pinId": 17269,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17269,
+      "pinId": 17269,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17277,
+      "pinId": 17277,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17277,
+      "pinId": 17277,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17266,
+      "pinId": 17266,
+      "production": false,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 17266,
+      "pinId": 17266,
+      "production": true,
+      "table": "PinDining",
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "basis",
+        "sourceUrl"
+      ]
+    },
+    {
+      "id": 15227,
+      "pinId": 15227,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.astonmartin.com/en-us/models/db12-s",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15227,
+      "pinId": 15227,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.astonmartin.com/en-us/models/db12-s",
+      "reviewsVerified": 3,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15222,
+      "pinId": 15222,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/7baf1cd8-2b99-4d6d-9d51-5ae0133298ad",
+      "reviewsVerified": 4,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    },
+    {
+      "id": 15222,
+      "pinId": 15222,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/7baf1cd8-2b99-4d6d-9d51-5ae0133298ad",
+      "reviewsVerified": 4,
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "source",
+        "basis",
+        "sourceUrl",
+        "rubricYear",
+        "kidsFriendly"
+      ]
+    }
+  ],
+  "renderedPages": [
+    {
+      "id": 2022,
+      "pinId": 2022,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/2022/the-diplomat-season-4-premieres",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 395,
+      "pinId": 395,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/395/street-fighter-reboot-set-for-october-release",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2022,
+      "pinId": 2022,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/2022/the-diplomat-season-4-premieres",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2056,
+      "pinId": 2056,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/2056/visionquest-premieres",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 7013,
+      "pinId": 7013,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/7013/grey-goose-berry-rouge-launches-in-united-states",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 7013,
+      "pinId": 7013,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/7013/grey-goose-berry-rouge-launches-in-united-states",
+      "httpStatus": 200,
+      "quotesVerified": 2,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 19948,
+      "pinId": 19948,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/19948/streets-releases-the-golden-gaytime-toffee-and-vanilla-ice-cream-in-biscuit-crum",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 19948,
+      "pinId": 19948,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/19948/streets-releases-the-golden-gaytime-toffee-and-vanilla-ice-cream-in-biscuit-crum",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": false,
+      "graph": false
+    },
+    {
+      "id": 17203,
+      "pinId": 17203,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17203/myeongdong-yeongyang-center-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17203,
+      "pinId": 17203,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17203/myeongdong-yeongyang-center-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17205,
+      "pinId": 17205,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17205/hanilkwan-apgujeong-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17205,
+      "pinId": 17205,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17205/hanilkwan-apgujeong-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17222,
+      "pinId": 17222,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17222/the-park-view-the-shilla-seoul-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17222,
+      "pinId": 17222,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17222/the-park-view-the-shilla-seoul-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14219,
+      "pinId": 14219,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14219/mg-07-electric-and-hybrid-sedan-goes-on-sale-from-rmb-108-900",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14219,
+      "pinId": 14219,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14219/mg-07-electric-and-hybrid-sedan-goes-on-sale-from-rmb-108-900",
+      "httpStatus": 200,
+      "quotesVerified": 1,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/14109/im-motors-launches-the-ls9-large-extended-range-suv-from-rmb-322-800",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 14109,
+      "pinId": 14109,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/14109/im-motors-launches-the-ls9-large-extended-range-suv-from-rmb-322-800",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15102,
+      "pinId": 15102,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15102/granite-4-2-8b-3b-and-30b-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15102,
+      "pinId": 15102,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15102/granite-4-2-8b-3b-and-30b-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15136,
+      "pinId": 15136,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15136/qwen3-7-plus-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15170,
+      "pinId": 15170,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15170/qwen-plus-qwen2-5-plus-qwen-plus-2025-01-25-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17198,
+      "pinId": 17198,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17198/tosokchon-samgyetang-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17198,
+      "pinId": 17198,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17198/tosokchon-samgyetang-seoul-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17261,
+      "pinId": 17261,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17261/chaoran-signiel-busan-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17261,
+      "pinId": 17261,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17261/chaoran-signiel-busan-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17269,
+      "pinId": 17269,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17269/moemiljip-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17269,
+      "pinId": 17269,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17269/moemiljip-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17277,
+      "pinId": 17277,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17277/songheonjip-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17277,
+      "pinId": 17277,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17277/songheonjip-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17266,
+      "pinId": 17266,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/17266/fiotto-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 17266,
+      "pinId": 17266,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/17266/fiotto-busan-restaurant-guide",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15227,
+      "pinId": 15227,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15227/aston-martin-announces-the-db12-s-with-700-ps-and-sharper-handling",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15227,
+      "pinId": 15227,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15227/aston-martin-announces-the-db12-s-with-700-ps-and-sharper-handling",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15222,
+      "pinId": 15222,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/15222/mercedes-amg-unveils-the-glc-53-with-a-returning-inline-six",
+      "httpStatus": 200,
+      "quotesVerified": 4,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15222,
+      "pinId": 15222,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15222/mercedes-amg-unveils-the-glc-53-with-a-returning-inline-six",
+      "httpStatus": 200,
+      "quotesVerified": 4,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15170,
+      "pinId": 15170,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15170/qwen-plus-qwen2-5-plus-qwen-plus-2025-01-25-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 15136,
+      "pinId": 15136,
+      "production": true,
+      "url": "https://www.chronopin.com/pin/15136/qwen3-7-plus-released",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 395,
+      "pinId": 395,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/395/street-fighter-reboot-set-for-october-release",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    },
+    {
+      "id": 2056,
+      "pinId": 2056,
+      "production": false,
+      "url": "http://127.0.0.1:3000/pin/2056/visionquest-premieres",
+      "httpStatus": 200,
+      "quotesVerified": 3,
+      "missingQuotes": [],
+      "expectedGraph": true,
+      "graph": true
+    }
+  ],
+  "wikiReadbacks": [
+    {
+      "pinId": 395,
+      "production": false,
+      "url": "https://awardswatch.com/street-fighter-2026-review-hollywood-poorly-adapting-video-games-will-commence-until-morale-improves-d/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 395,
+      "production": true,
+      "url": "https://awardswatch.com/street-fighter-2026-review-hollywood-poorly-adapting-video-games-will-commence-until-morale-improves-d/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 395,
+      "production": false,
+      "url": "https://consequence.net/2026/10/street-fighter-movie-review-2026-cast/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 395,
+      "production": true,
+      "url": "https://consequence.net/2026/10/street-fighter-movie-review-2026-cast/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 395,
+      "production": false,
+      "url": "https://www.gamesradar.com/entertainment/live-action-movies/street-fighter-movie-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 395,
+      "production": true,
+      "url": "https://www.gamesradar.com/entertainment/live-action-movies/street-fighter-movie-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2022,
+      "production": false,
+      "url": "https://www.radiotimes.com/tv/drama/the-diplomat-season-4-review-netflix/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2022,
+      "production": true,
+      "url": "https://www.radiotimes.com/tv/drama/the-diplomat-season-4-review-netflix/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2022,
+      "production": false,
+      "url": "https://www.tomsguide.com/entertainment/netflix/the-diplomat-season-4-review-netflixs-best-drama-delivers-its-best-season-yet",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2022,
+      "production": true,
+      "url": "https://www.tomsguide.com/entertainment/netflix/the-diplomat-season-4-review-netflixs-best-drama-delivers-its-best-season-yet",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2022,
+      "production": false,
+      "url": "https://www.avclub.com/the-diplomat-season-4-episode-7-west-wing-scandal",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2022,
+      "production": true,
+      "url": "https://www.avclub.com/the-diplomat-season-4-episode-7-west-wing-scandal",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2056,
+      "production": false,
+      "url": "https://www.techradar.com/streaming/disney-plus/visionquest-review",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2056,
+      "production": true,
+      "url": "https://www.techradar.com/streaming/disney-plus/visionquest-review",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2056,
+      "production": false,
+      "url": "https://au.variety.com/2026/tv/global/visionquest-review-marvel-ai-41248/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2056,
+      "production": true,
+      "url": "https://au.variety.com/2026/tv/global/visionquest-review-marvel-ai-41248/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2056,
+      "production": false,
+      "url": "https://www.latimes.com/entertainment-arts/tv/story/2026-10-14/visionquest-review-marvel-paul-bettany",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 2056,
+      "production": true,
+      "url": "https://www.latimes.com/entertainment-arts/tv/story/2026-10-14/visionquest-review-marvel-paul-bettany",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 7013,
+      "production": false,
+      "url": "https://www.drinkhacker.com/2026/10/15/review-grey-goose-berry-rouge-vodka/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 7013,
+      "production": true,
+      "url": "https://www.drinkhacker.com/2026/10/15/review-grey-goose-berry-rouge-vodka/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19948,
+      "production": false,
+      "url": "https://www.candycritic.org/golden%20gaytime.htm",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19948,
+      "production": true,
+      "url": "https://www.candycritic.org/golden%20gaytime.htm",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17203,
+      "production": false,
+      "url": "https://en.trippose.com/restaurant/yeongyang-center-main-branch",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17203,
+      "production": true,
+      "url": "https://en.trippose.com/restaurant/yeongyang-center-main-branch",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17205,
+      "production": false,
+      "url": "https://revitguide.com/en/stores/a16hjfuqgzsv3c",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17205,
+      "production": true,
+      "url": "https://revitguide.com/en/stores/a16hjfuqgzsv3c",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17222,
+      "production": false,
+      "url": "https://pinayajumma.wordpress.com/2018/01/24/the-shilla-seoul-the-parkview-buffet/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17222,
+      "production": true,
+      "url": "https://pinayajumma.wordpress.com/2018/01/24/the-shilla-seoul-the-parkview-buffet/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": false,
+      "url": "https://k.autohome.com.cn/detail/view_01m1zj0twm6mwk2dhg6rw00000.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": true,
+      "url": "https://k.autohome.com.cn/detail/view_01m1zj0twm6mwk2dhg6rw00000.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": false,
+      "url": "https://k.autohome.com.cn/detail/view_01kztf90dm6mw3je9n6wr00000.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "url": "https://k.autohome.com.cn/detail/view_01kztf90dm6mw3je9n6wr00000.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": false,
+      "url": "https://dianping.yiche.com/zhijils9/koubei/10041515740419968/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "url": "https://dianping.yiche.com/zhijils9/koubei/10041515740419968/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": false,
+      "url": "https://dianping.yiche.com/sid_11866/koubei/9375809057593984/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "url": "https://dianping.yiche.com/sid_11866/koubei/9375809057593984/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15102,
+      "production": false,
+      "url": "https://artificialanalysis.ai/models/granite-4-2-30b",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15102,
+      "production": true,
+      "url": "https://artificialanalysis.ai/models/granite-4-2-30b",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15136,
+      "production": false,
+      "url": "https://tessl.io/blog/open-source-coding-agents-one-ties-sonnet-one-wont-listen/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15136,
+      "production": true,
+      "url": "https://tessl.io/blog/open-source-coding-agents-one-ties-sonnet-one-wont-listen/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15136,
+      "production": false,
+      "url": "https://www.sparkthai.com/en/model-arena/Qwen3.7-Plus",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15136,
+      "production": true,
+      "url": "https://www.sparkthai.com/en/model-arena/Qwen3.7-Plus",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": false,
+      "url": "https://aclanthology.org/2025.findings-emnlp.45.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": true,
+      "url": "https://aclanthology.org/2025.findings-emnlp.45.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": false,
+      "url": "https://epoch.ai/data-insights/output-length",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": true,
+      "url": "https://epoch.ai/data-insights/output-length",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": false,
+      "url": "https://www.llm-reasoning-benchmark.com/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": true,
+      "url": "https://www.llm-reasoning-benchmark.com/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17198,
+      "production": false,
+      "url": "https://www.timeout.com/seoul/restaurants/tosokchon",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17198,
+      "production": true,
+      "url": "https://www.timeout.com/seoul/restaurants/tosokchon",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17261,
+      "production": false,
+      "url": "https://sos471.tistory.com/6",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17261,
+      "production": true,
+      "url": "https://sos471.tistory.com/6",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17269,
+      "production": false,
+      "url": "https://saline1.tistory.com/625",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17269,
+      "production": true,
+      "url": "https://saline1.tistory.com/625",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17277,
+      "production": false,
+      "url": "https://familytripkorea.com/%EB%B6%80%EC%82%B0-%EA%B4%91%EC%95%88%EB%A6%AC-%EB%A7%9B%EC%A7%91-%EB%AF%B8%EC%89%90%EB%A6%B0-%EB%96%A1%EA%B0%88%EB%B9%84%EB%9D%BC%EB%8B%88-%EC%86%A1%ED%97%8C%EC%A7%91-%EA%B0%80%EC%84%9C/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17277,
+      "production": true,
+      "url": "https://familytripkorea.com/%EB%B6%80%EC%82%B0-%EA%B4%91%EC%95%88%EB%A6%AC-%EB%A7%9B%EC%A7%91-%EB%AF%B8%EC%89%90%EB%A6%B0-%EB%96%A1%EA%B0%88%EB%B9%84%EB%9D%BC%EB%8B%88-%EC%86%A1%ED%97%8C%EC%A7%91-%EA%B0%80%EC%84%9C/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17266,
+      "production": false,
+      "url": "https://m.blog.naver.com/liin_studio/224356394823",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17266,
+      "production": true,
+      "url": "https://m.blog.naver.com/liin_studio/224356394823",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15227,
+      "production": false,
+      "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15227,
+      "production": true,
+      "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15222,
+      "production": false,
+      "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 15222,
+      "production": true,
+      "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17203,
+      "production": false,
+      "url": "https://wanderlog.com/place/details/4228626",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17203,
+      "production": true,
+      "url": "https://wanderlog.com/place/details/4228626",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17205,
+      "production": false,
+      "url": "https://wanderlog.com/place/details/4236393",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17205,
+      "production": true,
+      "url": "https://wanderlog.com/place/details/4236393",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17222,
+      "production": false,
+      "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17222,
+      "production": true,
+      "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 7013,
+      "production": false,
+      "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 7013,
+      "production": true,
+      "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19948,
+      "production": false,
+      "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19948,
+      "production": true,
+      "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19948,
+      "production": false,
+      "url": "https://www.pedestrian.tv/bites/streets-icecream-tub-bubble-o-bill-gaytime/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 19948,
+      "production": true,
+      "url": "https://www.pedestrian.tv/bites/streets-icecream-tub-bubble-o-bill-gaytime/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": false,
+      "url": "https://www.pcauto.com.cn/reviews/31211.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": true,
+      "url": "https://www.pcauto.com.cn/reviews/31211.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": false,
+      "url": "https://club.autohome.com.cn/bbs/thread/1f5e15aa4e210a56/115874403-1.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": true,
+      "url": "https://club.autohome.com.cn/bbs/thread/1f5e15aa4e210a56/115874403-1.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": false,
+      "url": "https://www.xchuxing.com/article/162486",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "url": "https://www.xchuxing.com/article/162486",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": false,
+      "url": "https://chejiahao.m.autohome.com.cn/info/25220827",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "url": "https://chejiahao.m.autohome.com.cn/info/25220827",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17198,
+      "production": false,
+      "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17198,
+      "production": true,
+      "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17261,
+      "production": false,
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17261,
+      "production": true,
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17266,
+      "production": false,
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17266,
+      "production": true,
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17269,
+      "production": false,
+      "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17269,
+      "production": true,
+      "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17277,
+      "production": false,
+      "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17277,
+      "production": true,
+      "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    }
+  ],
+  "rubricCorrectionReadbacks": [
+    {
+      "pinId": 14109,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: launch IM LS9 52 Ultra EREV, RMB322800,52kWh,320km EV/1454km combined CLTC,380kW,0-1004.9s,10-80%19min,3160mm wheelbase/six seats. Prior axes preserved;390kW/16.5min belong to66Ultra. October27: three original exact52Ultra owner/driver accounts (ashleychoi,书院大师兄,Carmen), bought/driven2025-26, not three professional instrumented road tests. Praise for rear-wheel steering and chassis sits beside Carmen’s half-yoke learning/turning criticism. English paraphrase practicality report and exact66Ultra XCX test removed from native reviews; context references retained. Owner observations do not independently validate charging or battery figures. Seek professional exact-trim tests; raw3-review threshold is not professional coverage completion."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14109,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: launch IM LS9 52 Ultra EREV, RMB322800,52kWh,320km EV/1454km combined CLTC,380kW,0-1004.9s,10-80%19min,3160mm wheelbase/six seats. Prior axes preserved;390kW/16.5min belong to66Ultra. October27: three original exact52Ultra owner/driver accounts (ashleychoi,书院大师兄,Carmen), bought/driven2025-26, not three professional instrumented road tests. Praise for rear-wheel steering and chassis sits beside Carmen’s half-yoke learning/turning criticism. English paraphrase practicality report and exact66Ultra XCX test removed from native reviews; context references retained. Owner observations do not independently validate charging or battery figures. Seek professional exact-trim tests; raw3-review threshold is not professional coverage completion."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant:650BEV Comfort/舒享,67kWh Qingtao,RMB116900 official/113900 limited (108900/105900 is245Hybrid);650kmCLTC,400V/3C,30-80%20min,176kW/0-1006.9s,2825mm wheelbase. Entry HorizonJ6B,no LiDAR/highway/urbanNOA; do not borrow610/845trim ADAS. Previous axes preserved. October27: original allentree named-owner207km review of exact650舒享 praises CDC damping and notes high-speed wind noise; publishedSeptember8. Removed PCauto aggregate English paraphrase and610km higher-trim forum paraphrase. One original exact-entry owner account is not three independent professional road tests. Additional exact650Comfort evidence remains required."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 14219,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant:650BEV Comfort/舒享,67kWh Qingtao,RMB116900 official/113900 limited (108900/105900 is245Hybrid);650kmCLTC,400V/3C,30-80%20min,176kW/0-1006.9s,2825mm wheelbase. Entry HorizonJ6B,no LiDAR/highway/urbanNOA; do not borrow610/845trim ADAS. Previous axes preserved. October27: original allentree named-owner207km review of exact650舒享 praises CDC damping and notes high-speed wind noise; publishedSeptember8. Removed PCauto aggregate English paraphrase and610km higher-trim forum paraphrase. One original exact-entry owner account is not three independent professional road tests. Additional exact650Comfort evidence remains required."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15102,
+      "production": false,
+      "table": "PinLlmPerf",
+      "changes": {
+        "basis": "Granite4.2 family pin, scoring30B flagship as launched August25. Maker native128K,extension512K;context uses published maximum. Text-only. No independently verified launch AAIndex/TB4.0/APIprice/outputthroughput, so those launch axes remain null. October27: KGP quantized30B/RTX5090 and narrow Carwash two-run constraint test retained. Added Artificial Analysis original30B reasoning evaluation: currentIndexv4.3.2 score13,currentnotlaunch; publication day absent,keepnull. No speed figure or context change inferred from current live evaluator. Three original evaluator publications now present, with scope/measurement limits; not three broad professional audits. No axis rescored."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15102,
+      "production": true,
+      "table": "PinLlmPerf",
+      "changes": {
+        "basis": "Granite4.2 family pin, scoring30B flagship as launched August25. Maker native128K,extension512K;context uses published maximum. Text-only. No independently verified launch AAIndex/TB4.0/APIprice/outputthroughput, so those launch axes remain null. October27: KGP quantized30B/RTX5090 and narrow Carwash two-run constraint test retained. Added Artificial Analysis original30B reasoning evaluation: currentIndexv4.3.2 score13,currentnotlaunch; publication day absent,keepnull. No speed figure or context change inferred from current live evaluator. Three original evaluator publications now present, with scope/measurement limits; not three broad professional audits. No axis rescored."
+      },
+      "otherFieldsPreserved": true
+    }
+  ],
+  "manualModelAppendReadbacks": [
+    {
+      "pinId": 15136,
+      "production": false,
+      "reviews": 3,
+      "originalCitationsPreserved": true,
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15136,
+      "production": true,
+      "reviews": 3,
+      "originalCitationsPreserved": true,
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": false,
+      "reviews": 3,
+      "originalCitationsPreserved": true,
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 15170,
+      "production": true,
+      "reviews": 3,
+      "originalCitationsPreserved": true,
+      "otherFieldsPreserved": true
+    }
+  ],
+  "synchronizedCatalogs": [
+    "scripts/products/carPerf.json",
+    "scripts/products/taste.json",
+    "scripts/restaurants/diningRubric.json"
+  ],
+  "checks": {
+    "focusedTests": {
+      "files": 5,
+      "passed": 30
+    },
+    "eslint": {
+      "files": [
+        "scripts/products/replayAdditionalModelReviews.ts",
+        "scripts/products/replayReviewRubricUpdates.ts"
+      ],
+      "passed": true,
+      "warnings": 0
+    },
+    "evidenceConstraints": "All 31 incoming additions/corrections: HTTPS URLs, nonempty exact titles/quotes, quotes <=300 characters, valid sentiment and original ISO publication day or null.",
+    "gitDiffCheck": true
+  },
+  "limitations": [
+    "LS9 raw count is three named firsthand owner/driver accounts across two publishers, not three professional independent road tests.",
+    "Qwen manual axes, basis and provenance were intentionally preserved; existing basis may predate current review additions.",
+    "Small/commercial model evaluations, assisted scores, current measurements and tokens/question do not independently validate launch rubric axes.",
+    "GLC53 review tests coupe; scope documented; yearless byline remains null.",
+    "Six new undated sources and one existing verified-undated repair create no dated graph point.",
+    "All remaining baseline source checks received discovery searches; original verification and appropriate replacements remain unresolved."
+  ],
+  "deploymentPerformed": false,
+  "schedulesChanged": false
+}

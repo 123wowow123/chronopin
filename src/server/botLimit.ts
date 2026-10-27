@@ -200,12 +200,22 @@ export function mismatchRetryAfter(now = Date.now(), shed = shedding(now)): numb
 // Burst 90, then one pin every 1.3 s (45 a minute); the same for every browser.
 export const PIN_BURST = 90;
 export const PIN_PER_SECOND = 0.75;
+// Searches with a query (?q=) have a budget of their own per client id
+// (2026-10-27): a crawler spread ~2,300 searches in 5 minutes over ~800
+// addresses, about 3 each, so the per-address budget never saw it. Burst 30,
+// then one every 2 s; a person clicking tags stays well inside it.
+export const SEARCH_BURST = 30;
+export const SEARCH_PER_SECOND = 0.5;
 export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1): number | null {
+  return clientBudget('__chronopinPinLimits', PIN_BURST, PIN_PER_SECOND, clientId, now, cost);
+}
+export function searchRetryAfter(clientId: string, now = Date.now(), cost = 1): number | null {
+  return clientBudget('__chronopinSearchLimits', SEARCH_BURST, SEARCH_PER_SECOND, clientId, now, cost);
+}
+function clientBudget(store: string, burst: number, perSecond: number, clientId: string, now: number, cost: number): number | null {
   if (!clientId) return null;
-  const burst = PIN_BURST;
-  const perSecond = PIN_PER_SECOND;
-  const g = globalThis as unknown as { __chronopinPinLimits?: Map<string, Bucket> };
-  const buckets = (g.__chronopinPinLimits ??= new Map());
+  const g = globalThis as unknown as Record<string, Map<string, Bucket> | undefined>;
+  const buckets = (g[store] ??= new Map());
   const bucket = buckets.get(clientId) ?? { tokens: burst, at: now };
   refill(bucket, now, burst, perSecond);
   buckets.delete(clientId);

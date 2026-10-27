@@ -20,25 +20,26 @@ are recorded below.
 ## Current inventory
 
 This live snapshot includes concurrent daily-job additions; those are not
-attributed to this dining pass. There are **61 rubric gaps** (EV33, gas8,
-aircraft13, dining1, LLM4, video2), **57 unresolved publication/source checks**
-and **89 verified-undated entries**. Round 15 examines all 65 baseline rubric gaps
-and 71 baseline source checks; it closes four raw coverage gaps and 14 source checks. No publication date was invented.
-All dated quoted reviews are scored.
-Raw review counts do not certify three professional critic meals or complete
-source independence.
+attributed to this review pass. There are **54 rubric gaps** (EV31, gas8,
+aircraft12, dining1, video2), **37 unresolved publication/source checks**
+and **97 verified-undated entries**. Round 17 adds 21 reviews, closes three raw
+coverage gaps and resolves seven baseline source checks. No publication day was invented.
+All dated quoted reviews are scored. Raw counts do not certify three professional
+critics, independent publishers or validation of every rubric axis. In particular,
+GPT-5.4 mini now has three saved accounts but its existing Artificial Analysis
+post still needs source/day verification; that follow-up remains open.
 
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
-| PinTaste | 228 | 494 | 0 | 44 |
-| PinCarPerf | 128 | 348 | 33 | 14 |
-| PinGasCarPerf | 160 | 510 | 8 | 14 |
-| PinAircraftPerf | 165 | 563 | 13 | 8 |
-| PinLlmPerf | 127 | 446 | 4 | 18 |
+| PinTaste | 228 | 491 | 0 | 40 |
+| PinCarPerf | 128 | 348 | 31 | 12 |
+| PinGasCarPerf | 160 | 510 | 8 | 12 |
+| PinAircraftPerf | 165 | 564 | 12 | 8 |
+| PinLlmPerf | 127 | 453 | 0 | 22 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 280 | 1 | 42 |
-| PinCriticReview | 113 | 340 | 0 | 1 |
+| PinDining | 89 | 280 | 1 | 35 |
+| PinCriticReview | 119 | 358 | 0 | 0 |
 
 ## Saved evidence and limits
 
@@ -234,3 +235,127 @@ Validation is recorded in the
 The 31 focused review/catalog/markup/publication-day tests pass; the new guarded
 rubric replay utility passes ESLint. No deployment or schedule change was made.
 Scheduled production model/tool verification remains separately unfinished.
+
+
+## Round 16: original reviews and exact-variant replacements
+
+Added **29 retained reviews across 18 pins**, and corrected two existing gas-car
+citations. Changes were saved through authenticated native APIs locally and in
+production; stable source URLs established each production identity.
+
+- [Broader critic coverage](../../../scripts/products/review-broader-coverage-round16-2026-10-27.json): nine original reviews of Street Fighter (2026), The Diplomat season four and VisionQuest. Positive, mixed and negative evaluations are retained; licensed Variety republication counts once.
+- [Original evidence](../../../scripts/products/review-evidence-round16-2026-10-27.json): exact Berry Rouge and Golden Gaytime stick tastings, three Seoul dining accounts, an entry MG07 owner report, three LS9 52 Ultra accounts and current Granite 4.2 30B measurements. The 66 Ultra test and flagship MG report do not validate the scored entry variants. LS9 now has three distinct firsthand authors across two publishers; professional road-test coverage remains a follow-up.
+- [Additional model evaluations](../../../scripts/products/review-additional-model-evidence-round16-2026-10-27.json): Tessl paired coding-agent and SparkThai small API tests for Qwen3.7 Plus; GeoHALUBench, Epoch and Salonen original evaluations for the exact qwen-plus-2025-01-25 snapshot. The complete GeoHALUBench table page was visually checked. Macro accuracy, tokens per question and assisted-task results are not interchangeable with launch reasoning anchors or output speed. Commercial interests and small benchmark limitations are recorded. All manual axes, basis, provenance and existing citations were preserved by the append-only replay helper. Preserved basis text can predate these additions; the source wikis explain current coverage.
+- [Dining replacements](../../../scripts/products/review-dining-replacements-round16-2026-10-27.json): original Time Out Tosokchon review and firsthand Chaoran, Fiotto, Moemiljip and Songheonjip meals, matching exact addresses. Fiotto's July 24 publication is separate from its May meal; modification days and travel dates were not used as publication dates.
+
+The [15 guarded exclusions](../../../scripts/products/review-exclusions-round16-2026-10-27.json)
+remove aggregator summaries, unverified comments, translated paraphrases and
+wrong-product/trim extracts only after replacements were saved. Historical links
+remain annotated context. MG07 has one verified exact-entry review and remains
+below target. No radar axis was changed. Three
+[basis corrections](../../../scripts/products/review-rubric-updates-round16-2026-10-27.json)
+clarify vehicle scope and current-versus-launch model measurements.
+
+[Two existing citation repairs](../../../scripts/products/review-source-corrections-round16-2026-10-27.json)
+restore DB12 S's original August 17 publication day and correct its headline;
+GLC53's original Motor1 title and quote are verified, but its displayed May 26
+byline lacks a year. GLC53 retains a null publication date, with the tested coupe
+scope documented. No model year was substituted for a publication year.
+
+The [full research ledger](../../../scripts/products/review-full-research-round16-2026-10-27.json)
+records discovery searches for every baseline gap and source check. Discovery-only
+items remain unresolved; snippets are not evidence of an original review or day.
+[Source dispositions](../../../scripts/products/review-source-checks-round16-2026-10-27.json)
+and [coverage findings](../../../scripts/products/review-coverage-leads-round16-2026-10-27.json)
+retain specific shortages, inaccessible sources and variant limitations. Six new
+undated sources and the verified-undated GLC53 bring verified-undated entries to
+96; these create no dated graph points. Broader Music, Computing and Fashion
+coverage remains research, alongside the 57 raw rubric gaps and 44 source checks.
+
+The [validation receipt](../../../scripts/products/review-validation-round16-2026-10-27.json)
+records 40 native readbacks and rendered detail pages across 20 pins in both
+environments, unchanged unrelated fields, synchronized replay catalogs, source
+references and [92 source-wiki checks](../../../scripts/products/review-wiki-verification-round16-2026-10-27.json).
+Two local pages needed a fresh rendered retry; saved reviews and sentiment graphs
+were checked before accepting them. The focused tests and replay-helper ESLint
+checks pass. README TODO removes resolved counts and retains genuine gaps.
+No deployment, restart or schedule change was performed. Scheduled production
+model/tool verification remains separately unfinished.
+
+
+## Round 17: album coverage and original variant evidence
+
+Added **21 retained reviews across 12 pins**, corrected two existing tasting
+citations, and removed 12 unverified or inapplicable extracts. Authenticated native
+APIs saved the content locally and in production, matching pins by stable source
+URLs and preserving authors, scores and unrelated fields.
+
+[Broader album coverage](../../../scripts/products/review-broader-coverage-round17-2026-10-27.json)
+adds three independently authored critics each for Phoebe Bridgers’ Lost Weekend,
+Ariana Grande’s Petal and Olivia Rodrigo’s You Seem Pretty Sad for a Girl So in Love.
+Original Pitchfork, NME and Slant articles were opened; their review bylines are
+separate from release days. Mixed and negative Petal criticism is retained.
+KERA’s original David Okamoto review replaces an inaccessible AllMusic extract
+in the existing Norah Jones panel. Award events were not newly treated as albums.
+
+[Vehicle, aircraft and tasting evidence](../../../scripts/products/review-evidence-round17-2026-10-27.json)
+and [additional owner reports](../../../scripts/products/review-more-evidence-round17-2026-10-27.json)
+record the exact scopes:
+
+- Avatr 07L: DTDTDT’s final 725-km RWD Elite test drive replaces pre-launch Max+/Ultra and older EREV context. This is one participant account, so coverage remains below target.
+- Lynk 07 GT: one original 200-km 2WD Ultra owner replaces the 4WD paraphrase and MRC media-drive repost. Other articles showed static 2WD cars but actually drove 4WD. Another post called the PHEV a pure EV and was excluded.
+- MG07: a second exact 650 Comfort owner describes its sport-oriented chassis. The original custom-font rendering was visually checked before transcription. Another entry-tagged post claimed incompatible Momenta highway NOA and was excluded. Two reviews remain below target.
+- Li L6: three original 2026 Ultra, 51-kWh, M100/dual-valve-CDC accounts replace 2024 Max and a placeholder video citation. The soft-suspension/roll complaint remains beside praise. Three authors across two publishers are not three professional instrumented tests. Custom-font Chinese was visually verified.
+- Saab 340A: Cal and LUCKY LUKE’s original YL-RAL flights add seat-comfort praise and dim-cabin criticism beside EX-YU’s exact-aircraft report. Publication days differ from flight days. Tail identity and explicit A/QC descriptions disambiguate incidental year/B-label errors. Later 27/33-seat layouts do not validate the original Crossair cabin; comfort and all numeric axes remain unchanged. The generic Rex cabin citation was removed.
+- BMW 740 xDrive: Stefan Grundhoff’s original German-market 400-PS MHEV drive replaces an unverified generic steering sentence. Existing US launch drives remain scoped context; handling stays null.
+- Dairy Queen: Anne Sutton’s named original Ube Oreo comment replaces a TikTok description label. The parent blogger explicitly chose pumpkin and did not taste Ube; October 19 is the comment publication, not the parent post’s October 18.
+
+[GPT-5.4 mini evidence](../../../scripts/products/review-additional-model-evidence-round17-2026-10-27.json)
+adds Simon Willison’s original matched SVG experiment, backed by linked raw mini
+API transcripts. Its neutral protocol excerpt is not a model-quality score;
+nano’s photo-cost example, the full model’s preferred result and AI-written image
+alt text are not mini verdicts. All hand-set fields and prior citations remain
+unchanged. The existing AA post’s source/day check remains open despite the raw
+review count reaching three.
+
+[Literal tasting corrections](../../../scripts/products/review-source-corrections-round17-2026-10-27.json)
+restore Parker Schubert’s actual Untappd wording and displayed September 9 UTC
+publication day, and replace Marie Lindqvist’s translated Triumf extract with
+original Swedish. Marie’s relative “3w” does not supply an absolute day; that
+check remains open. The other unverified Triumf comment was removed.
+[Guarded exclusions](../../../scripts/products/review-exclusions-round17-2026-10-27.json)
+retain contextual source links with eligibility notes rather than counting them
+as native firsthand reviews. The original Total Wine product/aggregate page does
+not establish the named PCal quotation; two verified High Noon tastings remain.
+
+The existing Edmunds 2027 LS6 Stingray extract is now verified against its full
+original test; only an Updated day is supplied, so publication remains null.
+Its 3LT/Z51 test does not rescore the base coupe. This verification brings
+verified-undated sources to 97.
+[Source dispositions](../../../scripts/products/review-source-checks-round17-2026-10-27.json)
+close seven baseline checks and retain 37. The
+[research ledger](../../../scripts/products/review-full-research-round17-2026-10-27.json)
+records 38 rendered original retries plus targeted source/replacement checks,
+specific rejected leads and unchanged coverage evidence. Search discovery is not
+claimed as an opened original review. La Scala’s mixed-branch collages and hotel
+promotions were excluded; two additional original Busan meal accounts are needed.
+Fashion leads include real Warning Code and Blue wear tests, but tests of other
+colorways/EP constructions were not presented as three exact-colorway critics.
+Computing candidate events and infrastructure were not assigned product reviews.
+
+[Six basis clarifications](../../../scripts/products/review-rubric-updates-round17-2026-10-27.json)
+preserve every axis. The Chinese and European Lynk replay rows shared a legacy
+rubric source URL; matching their full scores, basis and criteria year to the
+pre-pass native snapshot established separate stable identities. The
+[catalog repair record](../../../scripts/products/review-catalog-repairs-round17-2026-10-27.json)
+records this disambiguation; ids alone did not decide the match.
+
+The [validation receipt](../../../scripts/products/review-validation-round17-2026-10-27.json)
+records 30 native readbacks and 30 rendered detail pages across 15 pins in both
+environments, unchanged unrelated fields, synchronized catalogs and
+[72 source-wiki checks](../../../scripts/products/review-wiki-verification-round17-2026-10-27.json).
+The 30 focused tests and replay-helper ESLint checks pass. Source wikis retain
+prior content and identify consumer/owner evidence and publication limits.
+README TODO removes resolved counts and retains the 54 raw rubric gaps, 37
+source/date checks, broader coverage and scheduled production verification.
+No deployment, restart or schedule change was performed.

@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15227,
+      "pinSourceUrl": "https://www.astonmartin.com/en-us/models/db12-s",
+      "basis": "DB12 S coupe: 700 PS (690 bhp) = 5; 0-60 mph 3.4 s (Aston/Wards; model page says 3.5 s 0-100 km/h) = 4.5; WLTP combined 11.9 l/100 km = 19.8 US mpg = 1; 262 l boot, 2+2 coupe, 'modest' (Motoring Research) = 3; handling praised by Motoring Research and Autotrader = 4; £205,000 (Autotrader) = about 2.5 hp per US$1,000 at £1 = $1.35 = 0.",
+      "reviews": [
+        {
+          "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+          "quote": "There is a definite maturity to this S version over the standard DB12 in that it feels like it has grown into the car it was always meant to be, with calm steering, bold movement and exemplary control.",
+          "title": "Aston Martin DB12 S (2026 - ) review",
+          "publishedDate": "2026-08-17",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Erin Baker original Autotrader article fully opened in primary reader. Exact S, UK-market RHD road test in France; visible Published17August2026 and original literal final power paragraph match stored quote. Browser403 not proof original unavailable."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15222,
+      "pinSourceUrl": "https://media.mercedes-benz.com/en/article/7baf1cd8-2b99-4d6d-9d51-5ae0133298ad",
+      "basis": "Scored variant: GLC 53 4MATIC+ SUV (Germany). Power 449 hp (PS); 0-100 km/h 4.2 s (Mercedes, AMG Launch Control); economy provisional WLTP 9.9-9.4 l/100 km, about 24 US mpg; handling praised by The Drive and Motor1; space 620 l boot (Italian catalogue), above average; value 449 hp / EUR 85,287 = 5.3 hp per 1,000 EUR (local-currency basis). Value re-based to US$ for cross-market ranking: 449 hp / US$98,933 (at 1.16 US$ per EUR) = 4.5 hp per US$1,000 = 1.5 (was 2.0).",
+      "reviews": [
+        {
+          "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+          "quote": "For a big car, the GLC 53 also handles itself quite well. There is minimal body roll, and the car feels more composed than some of its sedan counterparts.",
+          "title": "The Mercedes-AMG GLC 53 Coupe Is Still Odd, But The Inline-Six Helps: Review",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Zander Sutton article opened; exact stored composed/body-roll sentence verified in GLC53Coupe driving paragraph. Visible May26 lacksyear; modelyear2027 notarticleyear. Keepnull. Coupe differs in cargo/roofline from SUV; dynamic scope explicit; no axis changed."
+        }
+      ]
+    }
+  ]
+}

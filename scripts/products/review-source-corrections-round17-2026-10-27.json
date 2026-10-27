@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "pinId": 7014,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.prnewswire.com/news-releases/high-noon-tees-up-its-first-limited-flavor-drop-meet-high-noon-transfusion-vodka-seltzer-302756411.html",
+      "basis": "A vodka seltzer with grape, lime and ginger: light and fruity, with a ginger bite. Tasting-review scope: Exact vodka Transfusion flavor; customer review, not Target’s product description. Existing seven-axis editorial estimates are retained.",
+      "reviews": [
+        {
+          "url": "https://untappd.com/b/high-noon-transfusion-vodka-seltzer/6688552",
+          "title": "Transfusion Vodka Seltzer",
+          "publishedDate": "2026-09-09",
+          "quote": "I thought high joons are clear? This is all purpy What’s even this flavor? Whatever it is isn’t very good.",
+          "sentiment": -0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://untappd.com/b/high-noon-transfusion-vodka-seltzer/6688552",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Parker Schubert original check-in explicitly Wednesday September9 2026 01:17:42 +0000. Use the original displayed UTC publication day, not US-local September8. Literal curly apostrophes restored; remove aggregate3.7rating from personal-review title. Named Target AF customer May21 exact quote separately reopened; retailer product marketing is not the tasting author."
+        }
+      ]
+    },
+    {
+      "pinId": 13918,
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.mynewsdesk.com/se/triumfglass/pressreleases/triumf-glass-presenterar-hoestens-smaknyheter-trendigt-moeter-klassiskt-3464939",
+      "basis": "ESTIMATE from Triumf Glass's press release (fetched via the pin's source and the Fooddayme launch post, 2026-10-11): matcha cream ice cream with a caramel ripple, positioned to make matcha accessible, with the maker saying the matcha taste meets caramel sweetness. A search summary of the ICA listing gave about 24 g sugars per 100 g (not independently fetched). Matcha adds grassy/vegetal notes and mild bitterness; caramel adds toasty sweetness. No sourness; creamy. Tasting reviews of this product are listed below.",
+      "reviews": [
+        {
+          "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+          "title": "GLASSNYHET! Matcha & Karamell.",
+          "publishedDate": null,
+          "quote": "Den var inte god smakade ingenting , endast en lätt bismak av gräs",
+          "sentiment": -0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Marie Lindqvist original public consumer comment, exactMatcha&Karamell product, notTriumf marketingcaption. Rendered comment andauthor verified andEnglish translation replaced with literalSwedish. Comment exposes3w only; noabsolute publicationday obtained, keepnull anddatecheckOPEN. ParentSeptember20 andrelatedSeptember27 are notcommentpublication. OtherMariannequote notfoundonsecondvideo and removed. Do not claimStrawberry&Chocolate firsthandcoverage oradjustaxes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
+      "expectedBasis": "Variant: Avatr 07L Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited, 89.33 kWh, 725 km CLTC, 800 V, 30-80% under 10 min, 0-100 5.9 s, 2,990 mm wheelbase; ADS Pro/in-cabin LiDAR. Max+/Ultra add different equipment, so their results cannot establish the Elite. Prior scores preserved. Review verification, 2026-10-27: XCX pre-launch Max+/Ultra quote repaired to literal Chinese, retained only as context. The other saved Avatr 07 report is an earlier model. Neither proves a final-Elite independent road test; exact-07L-Elite coverage remains open.",
+      "changes": {
+        "basis": "Avatr07L final725km RWD Elite,305kW,89.33kWh,RMB229900 guide/219900 limited; prior axes preserved. October27: DTDTDT exactElite original August27 Wenzhou test-drive account saved, literal turning/steering observation. One driver, not three independent professional road tests. Removed pre-launchMax+/Ultra and older2024EREV native extracts; retain scoped historical references. Seller capacity/radius claims were not independently measured."
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14035,
+      "pinSourceUrl": "https://cnevpost.com/2026/07/23/lynk-co-07-gt-launch/",
+      "expectedBasis": "Variant: 2WD EM-P, 157,800 yuan guide price. 28.3 kWh, 200 km electric, combined up to 1,422 km CLTC; 30-80% in 14 min (reported, newmobility/CNC on the 07 system); 0-100 km/h 5.5 s for the 300 kW 2WD (newmobility; AWD 4 s); standard LiDAR with G-ASD H5, Thor-U H7 optional; 2,843 mm wheelbase. Value: updated Zeekr 007 GT wagon is 203,900 yuan list (BEV, 905 km, LiDAR+Thor-U).",
+      "changes": {
+        "basis": "China Lynk07GT 2WD200 Ultra,157800yuan guide,28.3kWh,300kW,200km electric/1422km combinedCLTC,5.5s0-100; prior axes preserved. October27: original Sept30 owner report explicitly2WD200Ultra,nearly2000km, praises stable chassis; one owner source, not professional consensus. Removed4WDPerformanceUltra paraphrase and MRCprelaunch media-drive repost. 4WDdynamic reports with2WDstatic photos do not validate this variant; exact2WD coverage remains open."
+      }
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19645,
+      "pinSourceUrl": "https://airwaysmag.com/new-post/saab-340-enters-service-crossair",
+      "expectedBasis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort null: EX-YU Aviation (2025-05-11) reports cramped seating and noise on exact 340A YL-RAL. Existing Rex review is later 340B, not launch-A cabin evidence. Two extracts, only one exact-A firsthand report; seek two more independent A reports. No simulator or vendor-news reviews added.",
+      "changes": {
+        "basis": "SaabSF340/340A as delivered toCrossair(34pax,CT7-5A2); prior numeric axes and nullcomfort preserved. October27: EX-YU and original passengersCal/LUCKYLUKE cover exact340A-QC YL-RAL,three accounts/two publishers. Later27/33-seat cabins differ from launchlayout; Cal praises seat padding, LUCKYLUKE criticizes dim cabin/toilet smell, EX-YU cramped/noisy. These do not retroactively score Crossair comfort. Generic laterRex cabin excluded; seek additional editorial/pilot independence."
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14253,
+      "pinSourceUrl": "https://cnevpost.com/2026/07/16/li-auto-launches-revamped-l6/",
+      "expectedBasis": "EREV Ultra: 300 km CLTC battery-only, 1,250 km combined (scored 5 as combined CLTC). 0-100 km/h 5.4 s. 20-80% in 12 min; 260 kW max is from Wikipedia's infobox only. Mach M100 1,280 TOPS + one LiDAR (dual-chip, four-LiDAR package is a RMB 20,000 option). Wheelbase 2,920 mm. Value: RMB 249,800 vs Leapmotor D19 EREV from RMB 219,800 (3,110 mm, 6/7 seats) and Aito M7 RMB 279,800 (3,030 mm): priced above the larger D19.",
+      "changes": {
+        "basis": "2026L6UltraEREV,51kWh,300kmEV/1250kmcombinedCLTC,5.4s0-100,2920mmwheelbase,RMB249800. Prioraxes preserved. October27: originalcurrent51kWh/M100/dual-valveCDC driving accounts by车坛真香官,淏爸 and axiifj1gcxn; latter reports softsuspension/roll while earlieraccounts praise control. Threeauthors/twopublishers, owner/creator evidence rather than3professional instrumentedtests. Removed2024Max andplaceholdervideo quotes; noADASorchargingpercentages transferredacrossgeneration."
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "expectedBasis": "Variant:650BEV Comfort/舒享,67kWh Qingtao,RMB116900 official/113900 limited (108900/105900 is245Hybrid);650kmCLTC,400V/3C,30-80%20min,176kW/0-1006.9s,2825mm wheelbase. Entry HorizonJ6B,no LiDAR/highway/urbanNOA; do not borrow610/845trim ADAS. Previous axes preserved. October27: original allentree named-owner207km review of exact650舒享 praises CDC damping and notes high-speed wind noise; publishedSeptember8. Removed PCauto aggregate English paraphrase and610km higher-trim forum paraphrase. One original exact-entry owner account is not three independent professional road tests. Additional exact650Comfort evidence remains required.",
+      "changes": {
+        "basis": "Variant:650BEV Comfort/舒享,67kWh Qingtao,RMB116900 official/113900 limited (108900/105900 is245Hybrid);650kmCLTC,400V/3C,30-80%20min,176kW/0-1006.9s,2825mm wheelbase. Entry HorizonJ6B,no LiDAR/highway/urbanNOA; do not borrow610/845trim ADAS. Previous axes preserved. October27: original allentree named-owner207km review of exact650舒享 praises CDC damping and notes high-speed wind noise; publishedSeptember8. Removed PCauto aggregate English paraphrase and610km higher-trim forum paraphrase. Second exact650舒享 owner愉快的沉香木1549 publishedSeptember15 describes chassis as sport-oriented; two owneraccounts now, stillbelow3 and notprofessionalconsensus. Excludedanotherentry-taggedpostclaimingunavailableMomentaNOA. Prioraxesunchanged."
+      }
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15220,
+      "pinSourceUrl": "https://www.press.bmwgroup.com/global/article/detail/T0457130EN/the-new-bmw-7-series",
+      "expectedBasis": "Scored variant: 740 xDrive (3.0 I6 + 48V). Power 400 hp; 0-100 km/h 5.1 s (BMW); economy WLTP 9.3-8.3 l/100 km, about 27 US mpg; space 540 l boot, slightly above average for a full-size luxury sedan; value 400 hp / EUR 117,900 = 3.4 hp per 1,000 EUR (local-currency basis); handling null (no road tests yet). Value re-based to US$ for cross-market ranking: 400 hp / US$136,764 (at 1.16 US$ per EUR) = 2.9 hp per US$1,000 = 0 (was 1.0).",
+      "changes": {
+        "basis": "Scored variant: 740 xDrive (3.0 I6 + 48V). Power 400 hp; 0-100 km/h 5.1 s (BMW); economy WLTP 9.3-8.3 l/100 km, about 27 US mpg; space 540 l boot, slightly above average for a full-size luxury sedan; value 400 hp / EUR 117,900 = 3.4 hp per 1,000 EUR (local-currency basis); handling null (no road tests yet). Value re-based to US$ for cross-market ranking: 400 hp / US$136,764 (at 1.16 US$ per EUR) = 2.9 hp per US$1,000 = 0 (was 1.0). October27: originalStefanGrundhoff German400PS740xDriveMHEV drive added; generic C/D steering paraphrase removed. Existing US launch drives remain scoped context; handlingnull retained pending two applicable exact-market road tests. Noaxischange."
+      }
+    }
+  ]
+}

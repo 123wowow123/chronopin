@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "pinId": 15140,
+      "table": "PinLlmPerf",
+      "pinSourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "basis": "Scored as launched (GPT-5.4 mini, 17 Mar 2026, shipped with nano; this rubric is for mini): Artificial Analysis Intelligence Index 48 at xhigh (nano 44), AA post of the launch (v4.0); 400k context; $0.75 in / $4.50 out per 1M = about $1.69 blended (nano $0.20/$1.25); text+image input. Coding null: OpenAI's Terminal-Bench 2.0 60.0% (mini) and AA's TerminalBench 52% are not Terminal-Bench 4.0. Speed null: OpenAI says 'more than 2x faster than GPT-5 mini' but no launch tok/s was opened (AA's current page reads 254.5 tok/s). (A review whose quote could not be re-verified was dropped.)",
+      "reviews": [
+        {
+          "url": "https://simonwillison.net/2026/mar/17/mini-and-nano/",
+          "title": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+          "publishedDate": "2026-03-17",
+          "quote": "loop through all five reasoning effort levels and all three models and produce this combined SVG grid of pelicans riding bicycles",
+          "sentiment": 0
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://simonwillison.net/2026/mar/17/mini-and-nano/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "method": "Opened original publisher body/byline with rendered browser or primary web reader; no search-snippet substitution.",
+          "note": "Simon Willison original matched SVG task across mini/nano/full and all5 reasoning levels. Opened linked raw transcripts (gist f16292d9a5b90b28054cff3ba497a3ca) showing exactgpt-5.4-mini outputs, not an unverified ChatGPT router. Photo-description cost applies to nano, author preference fullxhigh and AI-written image alt are not mini verdicts. Neutral protocol extract; small qualitative experiment does not establish launch reasoning/coding/speed anchors. Preserve all hand-set fields and prior citations; AA existing source/day check remains open."
+        }
+      ]
+    }
+  ]
+}

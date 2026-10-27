@@ -1,0 +1,360 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "All44baseline source/date checks retained with dispositions; six opened separately and38original render retries. Verified source identity does not invent a publication day or establish firsthand authorship.",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 7014,
+      "title": "High Noon Transfusion Vodka Seltzer Launches in United States",
+      "url": "https://www.totalwine.com/beer/seltzers-flavored-beverages/hard-seltzer/high-noon-vodka-seltzer-transfusion/p/2126277428",
+      "status": "resolved",
+      "reason": "Uncorroborated PCal retailer quote/publication could not be verified on blocked original; do not publish as established tasting. Two exact original attributed tastings remain, TargetAF and UntappdParker, reopened thisrun. Saved and native-readback verified locally and in production."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "title": "Triumf Glass Adds Matcha & Caramel and Strawberry & Chocolate Tubs for Autumn",
+      "url": "https://www.facebook.com/triumfglass/videos/1568022244557404/",
+      "status": "resolved",
+      "reason": "MarianneHesselmark translateddiscardingclaim not found in originalvideo/comments. Remove unverifiedcitation after first exactMatchaMariecommentverifiedandcorrected. Do not useparentcaption asfirsthandreview. Saved and native-readback verified locally and in production."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13987,
+      "title": "Dairy Queen's Spellbound Series Brings an Ube Enchanted OREO Blizzard",
+      "url": "https://www.tiktok.com/@classywithnoregards/video/7690772384281922829",
+      "status": "resolved",
+      "reason": "Saved extract is a video-description label rather than a verified firsthand flavor judgment. Replace with named original exactUbeOreo tasting comment; retain other verified citations. Saved and native-readback verified locally and in production."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "title": "Avatr Launches the 07L Electric SUV With Huawei ADS 5 From RMB 229,900",
+      "url": "https://www.xchuxing.com/article/174048",
+      "status": "resolved",
+      "reason": "Outside exact scored final725km RWD Elite: pre-launchMax+/Ultra source or 2024 earlier07 EREV. ExactElite original now saved; preserve context only in reference wiki, not native review evidence. Saved and native-readback verified locally and in production."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15220,
+      "title": "BMW Updates the 7 Series With Neue Klasse Tech and a 400 hp 740 xDrive",
+      "url": "https://www.caranddriver.com/bmw/7-series",
+      "status": "resolved",
+      "reason": "Saved generic steering/chassis sentence not found in opened rolling C/D7-series page, which also mixes earlier powertrains. Replace with original exact400PS German740xDriveMHEV road report; keep other existing launch-drive citations. Saved and native-readback verified locally and in production."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "title": "Chevrolet Says the 2027 Corvette Stingray Tops 200 mph From US$73,495",
+      "url": "https://www.edmunds.com/chevrolet/corvette/",
+      "status": "verified-undated",
+      "reason": "Research verification, 2026-10-27 (round17): OriginalEdmunds2027StingrayLS6road/trackevaluation and literalquote verified in fullprimarywebreader; browser403. OnlyUpdatedOctober23 supplied, not anoriginalpublicationbyline; keepnull. Driven3LT/Z51 context, notvalidationofbase1LT suspension/handling; axisnullandotherfields preserved. Sourceverificationclosed; no newreview counted."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "title": "Norah Jones Wins Five Grammys, Led by Record and Album of the Year",
+      "url": "https://www.allmusic.com/album/mw0000507740",
+      "status": "resolved",
+      "reason": "Existing extract/publication remain unverified after publisher challenge. Replace with opened original KERA critic; no date inferred from2002 album release. Saved and native-readback verified locally and in production."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+      "status": "needs-research",
+      "reason": "Full original reopened: exact sentence is present in the expanded recommendation section, outside CostcoBuys’ short original caption. Firsthand authorship/attribution of the expanded text is unclear. Visible 9/15 Edited label has no year and is not original publication. Need attributed original-post evidence/day; do not certify this as a named firsthand tasting. Round17: Rendered original retry: HTTP200, 2711 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "status": "needs-research",
+      "reason": "Opened original Reddit post by u/minutemaiding; saved exact rich/not-overly-sweet/crunch tasting sentence verified in post body, not comments or merchant copy. Canadian Costco product photograph identifies Lotus Biscoff Toblerone Diamond Truffles. Reader exposes only relative 2d age, and original public RSS returned HTTP 403 to curl (reader does not support Atom). Exact original publication day remains unresolved; keep null and do not infer day from the relative age or pin launch. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTP200, 0 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 11 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7626,
+      "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
+      "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+      "status": "needs-research",
+      "reason": "Original IrelandGuide bakery verdict verified again; no firsthand tasting of the exact award-winning80%-speltloaf. Bakery-wide praise cannot close consumable-specific review gap; no publication day supplied."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7660,
+      "title": "Wanglaoji / Walovi Canned Herbal Tea",
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "status": "needs-research",
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTPunknown, 0 body characters; Error: Execution context was destroyed, most likely because of a navigation.. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7663,
+      "title": "Coconut Palm Coconut Milk Drink",
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "status": "needs-research",
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTPunknown, 0 body characters; Error: Execution context was destroyed, most likely because of a navigation.. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13912,
+      "title": "Peters Drumstick Launches an Anzac Biscuit Ice Cream Cone in Australia",
+      "url": "https://www.productreview.com.au/listings/peters-drumstick",
+      "status": "needs-research",
+      "reason": "Rendered ProductReview listing is blocked, so exact author/text/day remain unverified. Saved title explicitly describes the classic Drumstick range rather than the pinned Anzac flavour; the other saved classic-range article also does not establish that flavour. Research an exact Anzac tasting account instead of treating a generic range review date as completion. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 697 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13915,
+      "title": "Canopy Salted Walnut Ice Cream and Hokey Pokey Gelato Win at Melbourne Royal",
+      "url": "https://www.melbourneroyal.com.au/australian-food-awards/results/2026-champions/",
+      "status": "needs-research",
+      "reason": "Saved extract matches official food-award results, not a firsthand product tasting. Awards support achievement but cannot substitute for a verified tasting review; research exact winning product and judge/taster account. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 16088 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "title": "Triumf Glass Adds Matcha & Caramel and Strawberry & Chocolate Tubs for Autumn",
+      "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+      "status": "needs-research",
+      "reason": "Original public named Marie Lindqvist Matcha&Karamell consumer comment found and literal Swedish saved. Full publication day still unavailable: displayed3w only, no absolute timestamp/title on rendered element. ParentSeptember20 and relatedSeptember27 are not comment dates. Date check remains open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13921,
+      "title": "Hennig-Olsen Launches Daim Strawberry Tub and Brings Back Anita Ice Cake",
+      "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
+      "status": "needs-research",
+      "reason": "Opened exact Hennig-Olsen 450-ml tub/GTIN page: remaining description is maker copy, not a firsthand tasting. Removed dated GB Glace Swedish cone/2013-recipe comparisons from this graph as different products. Native taste radar retained; exact Hennig-Olsen independent tasting still needed. Candy-bar tests and GB cone tests were excluded. Round17: Rendered original retry: HTTP200, 736 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13926,
+      "title": "Alberto Marchetti and Caffè Vergnano Open Affogato Kiosk in Turin",
+      "url": "https://restaurantguru.com/Alberto-Marchetti-Turin",
+      "status": "needs-research",
+      "reason": "Rendered RestaurantGuru page identifies ViaPo35/B branch, not GranMadre kiosk, and republishes Google comments. Saved smooth/creamy sentence absent. Need original exact-kiosk tasting, not other-branch/copy; retain research."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13934,
+      "title": "Lick Gelato Named Northern Ireland Champion at the Great British Food Awards",
+      "url": "https://www.facebook.com/LickGelatoNI/videos/guess-where-you-can-find-our-cans-now-get-yours-today-lickgelato-viral-icecream-/1986148565668332/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 104 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13971,
+      "title": "CU Launches Pokemon Ditto, Pikachu and Magikarp Shaped Sorbet Bars",
+      "url": "https://www.instagram.com/reel/DeRM1E_zg99/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 0 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13973,
+      "title": "Helados Holanda Adds a Paleta OREO to Its Mexican Ice Cream Range",
+      "url": "https://www.walmart.com.mx/ip/helado-holanda-oreo-sabor-vainilla-con-trozos-de-galleta-1-89-l/00750630641517",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 89 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "title": "Kibon's Mini Paçoquita Peanut-Candy Ice Cream Bites Go National",
+      "url": "https://www.paguemenos.com.br/minisorvete-pacoquita-kibon-caixa-92g-edicao-limitada/p",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 2898 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "title": "Kibon's Mini Paçoquita Peanut-Candy Ice Cream Bites Go National",
+      "url": "https://www.facebook.com/blogcheiasdecharmeplussize/posts/provamos-o-mini-pa%C3%A7oquita-kibon-que-%C3%A9-um-bombom-de-sorvete-cremoso-sabor-amendoi/1653389256359622/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 852 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13978,
+      "title": "Helados Holanda Launches Pumpkin Spice Tub With a Pan de Muerto Weekend",
+      "url": "https://www.instagram.com/reel/DdFsf7gReMq/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 2322 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "title": "Cortina Adds Four Shamiso Ice Cream Flavours in Zimbabwe",
+      "url": "https://silverstreamdistribution.com/collections/all-products/products/cortina-shamiso-bubblegum-ice-cream-5lt",
+      "status": "needs-research",
+      "reason": "Saved flavour description matches distributor product copy, not an attributed firsthand tasting. Need independent exact-flavour tasting source; do not turn merchant text or product timestamps into a review. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 1491 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "title": "Cortina Adds Four Shamiso Ice Cream Flavours in Zimbabwe",
+      "url": "https://silverstreamdistribution.com/products/cortina-shamiso-banana-ice-cream-5lt",
+      "status": "needs-research",
+      "reason": "Saved flavour description matches distributor product copy, not an attributed firsthand tasting. Need independent exact-flavour tasting source; do not turn merchant text or product timestamps into a review. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 1040 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13991,
+      "title": "Ben & Jerry's Waffle Lotta Good Donates $1 per Waffle Cone Through 12 October",
+      "url": "https://www.yelp.com/biz/ben-and-jerrys-san-diego-10",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 0 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13996,
+      "title": "KitKat Dark Ice Cream Gets Three Visit Malaysia 2026 Limited-Edition Packs",
+      "url": "https://www.threads.com/@penangfoodie/post/DM1qxCUzihk",
+      "status": "needs-research",
+      "reason": "Rendered original PenangFoodie caption and exactbalanced sentence verified; time element2025-08-02T04:04:52Z versus displayed08/01/25 from browser zone. Promotion has no explicitfirsthand tasting and predates2026packedition. Do not use marketingcopy as independenttasting; exactproduct firsthand/day research remains."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14000,
+      "title": "BYD Launches the Da Tang EV Flagship SUV With 950 km Range",
+      "url": "https://www.xchuxing.com/article/162814",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 152 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14076,
+      "title": "Zeekr Launches Super Hybrid 9X Luxury SUV in Europe",
+      "url": "https://www.xchuxing.com/article/158922",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Original Chinese wording repaired; test explicitly optional China Ultra 70 kWh, not Europe 55.1 kWh. Round17: Rendered original retry: HTTP200, 6867 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "title": "Voyah Launches the Dream Electric and Range-Extender MPV From RMB 369,900",
+      "url": "https://electricvehicleweb.com/voyah-dream/",
+      "status": "needs-research",
+      "reason": "Voyah source is explicitly First Look of updated 2024-26 cabin, not the scored 2022 launch BEV. Visible July2 2026 is Last Updated On despite datePublished sharing that value. Resolve updated-version eligibility and original day; do not date as independent launch road test. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 8347 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "title": "Zeekr Starts 001 Deliveries in China From RMB 281,000, With 800 V and 700 km Range",
+      "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "title": "Škoda Opens UK Orders for the Superb iV Estate With 84 Miles of EV Range, From GBP 41,465",
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "status": "needs-research",
+      "reason": "AutoExpress generic Superb page now covers multiple petrol/diesel/PHEV versions. Scored pin is UK iV Estate; June6 2024 metadata alone does not establish when this PHEV-specific assessment appeared. Exact iV road-test replacement still needed. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 34664 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "title": "Volvo Lifts the V60 Recharge Plug-In to an 18.8 kWh Battery and 350-455 PS, From EUR 56,350",
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "needs-research",
+      "reason": "Full browser body verifies TopGear V60 overview quote, but visible Published Apr8 2025 conflicts with structured Apr9 2025 datePublished. Generic overview covers later trims while pin scores350PS RechargeT6 launch. Seek dated exact T6 18.8kWh drive before applying a publication day. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 11164 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "title": "Volkswagen Premieres the Second-Generation T-Roc as a Mild Hybrid",
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15238,
+      "title": "Toyota's Refreshed 2026 Corolla Cross Reaches Dealers From $24,635",
+      "url": "https://www.edmunds.com/toyota/corolla-cross/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 357 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
+      "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19911,
+      "title": "Audi Prices the 2020 SQ8 With a 500 hp V8 at USD 89,995 for the US",
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "status": "needs-research",
+      "reason": "Opened evo SQ8 page is titled 2024 and visibly dated February2 2024 while original datePublished is May28 2021. Both petrol V8 model scope and whether saved quote appeared in original versus facelift revision need historical verification; do not assign update as original. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 6580 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19570,
+      "title": "Douglas DC-8 Makes Its First Flight From Long Beach",
+      "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
+      "status": "needs-research",
+      "reason": "Full browser body verifies HenryTenby ATI extract, but its October2013 magazine issue has no publication day and covers DC8-62/-72 combis, not scored Series10. Existing basis also mentions later55/-72 freighters; exact-variant replacements needed. Flight/visit dates are not article publication. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 19290 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 2693,
+      "title": "Claude Fable 5.1 and Mythos 5.1 Released",
+      "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
+      "status": "needs-research",
+      "reason": "Full browser body verifies Endor vendor benchmark and quote. Visible and structured original Apr9 2026 precede pin model launch Sep1 2026; visible modification Sep4 may be model revision rather than original. Resolve historical article/model chronology before dating; not dated from current benchmark text. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 19462 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "title": "Gemini 1.0 Released",
+      "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+      "status": "needs-research",
+      "reason": "Exact corrected Akkio extract verified. Visible publication January3 2024 conflicts with JSON-LD December22 2023 original and December26 2023 modification. Date remains null in both environments; seek original archive/publisher evidence. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 17122 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "title": "GPT-5.4 mini and GPT-5.4 nano Released",
+      "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 98 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "title": "Seedance 1.0 Pro Fast Released",
+      "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+      "status": "needs-research",
+      "reason": "Opened GeeLark comparison has original metadata November18 2025 and visible updated October6 2026; generic Analysis and tests assertion lacks attributed protocol or samples, and publisher promotes its Seedance service. Independent-test eligibility remains unresolved, so no date assigned. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 12285 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "title": "Sora 2 and Sora 2 Pro Released in the API",
+      "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+      "status": "needs-research",
+      "reason": "Saved Wikipedia text matches, but Wikipedia page creation February15 2024 and last revision October24 2026 are not an independent Sora2Pro model test or its publication date. Find actual primary independent evaluator/reviewer; do not graph encyclopedia timestamps. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 31311 body characters. No new original publication/eligibility evidence accepted; remain open."
+    }
+  ]
+}
