@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17279,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Complete PDF page 9 / printed page 15 visually inspected; Donggyeong bapsang #20, exact 34-6 Namcheonbada-ro matches main-branch Pin. BR Media / Blue Ribbon Survey, distinct publisher from municipal guide and MICHELIN. Colophon PDF page 28 explicitly first published October 30, 2023. Neutral description of finishing eel rice as ochazuke receives neutral sentiment, not invented praise.",
+      "sourcesChecked": [
+        "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17280,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Full original Kookje staff tasting report rendered. Explicit original input March 6, 2024 19:09:07; March 7 URL/print issue is not publication day. Selected quote is reporter 정인덕’s own head-meat texture verdict in Anmok/Namcheon section, not the preceding MICHELIN quotation or subsequent Budamyeonok section. Three reporters remain one publishing source.",
+      "sourcesChecked": [
+        "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+        "https://archive19.tistory.com/723"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17282,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Cindy Choi original HAPS local dining report, visible June 28, 2022 and time datetime June 28 00:00:59 +09. UTC article metadata June 27 15:00:59 is same instant; retain publisher-local day. Historical warm-room observation only, no current hours/menu claims. HAPS cadastral Gwangan-dong 94-3 matches current 54 Muhak-ro 33beon-gil through opened original Diningcode dual-address listing.",
+      "sourcesChecked": [
+        "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+        "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17286,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Full original Foodtracer blog by 안냠쩝, actual article title distinct from site H1. Original August 5, 2023 10:04 visible byline; exact personally ordered chicken-wing assessment and original course photographs. 9-7 Dongcheon-ro 108beon-gil matches native Pin, not a similarly named Danggam venue. Historical menu/hours not saved as current.",
+      "sourcesChecked": [
+        "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+        "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Opened exact original Seoul inspector entry with id 1244365 and hotel street address 521 Teheran-ro, explicitly sushi counter within Hinotsuki. No publication day supplied; keep null, no ceremony date or current year inferred. This replaces an unverified non-id URL whose saved iki quotation does not describe the Seoul entry. The old iki quotation was separately located verbatim in the opened original Tokyo MICHELIN entry at B1F 8-10-3 Ginza: https://guide.michelin.com/th/en/tokyo-region/tokyo/restaurant/sushi-kanesaka .",
+      "sourcesChecked": [
+        "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+        "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+        "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17263,
+      "status": "needs-research",
+      "reason": "One original CH_ blog review now saved, published December 6, 2023 (April 2024 modification excluded). Two more independently attributable exact Paradise Hotel Busan firsthand sources needed. Tabling reproduces gray’s Polle account but live original refused access; Google Maps exposes only limited venue view, so Restaurant Guru reprints not treated as opened original reviews. Excluded Incheon La Scala/Trip.com misclassified pages, operator promotions and Stripes/HAPS promotion reprints. Do not transfer pre-rebrand NYX Grill or Incheon food verdicts.",
+      "sourcesChecked": [
+        "https://a-room-of-my-own.tistory.com/7",
+        "https://www.tabling.co.kr/place/677cd22f66de5f0698893dde",
+        "https://www.google.com/maps/search/?api=1&query=La+Scala+Paradise+Hotel+Busan"
+      ],
+      "excludedCandidates": [
+        {
+          "url": "https://us.trip.com/restaurant/south-korea/incheon/detail/la-scala-147940379/",
+          "finding": "Search result is labelled Incheon while including Busan-sounding copied comments; not used as exact-branch original evidence."
+        },
+        {
+          "url": "https://korea.stripes.com/food-drink/paradise-hotel-busan-t-bone.html",
+          "finding": "Promotion/menu announcement credited to HAPS with operator photograph; not counted as an independent firsthand meal review."
+        },
+        {
+          "url": "https://restaurantguru.com/%ED%8C%8C%EB%9D%BC%EB%8B%A4%EC%9D%B4%EC%8A%A4%ED%98%B8%ED%85%94%EB%B6%80%EC%82%B0-%EB%8B%89%EC%8A%A4%EA%B7%B8%EB%A6%B4-Busan",
+          "finding": "Google comments republished by directory; original comment access was unavailable in limited Maps view. Not counted as verified original citations."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-27",
+  "apiDriverConfigured": true,
+  "sessionDriverAvailable": false,
+  "runningJobs": [],
+  "schedules": [
+    {
+      "id": "midnight",
+      "enabled": false
+    },
+    {
+      "id": "news",
+      "enabled": false
+    },
+    {
+      "id": "monthly",
+      "enabled": false
+    },
+    {
+      "id": "weekly",
+      "enabled": false
+    }
+  ],
+  "lastReviewVerification": {
+    "id": 26,
+    "jobId": "review-verify-r10-20261026",
+    "trigger": "schedule",
+    "status": "skipped",
+    "driver": "api",
+    "tasks": [
+      "sentiment"
+    ],
+    "started": "2026-10-27T04:08:53.399Z",
+    "finished": "2026-10-27T04:08:53.438Z",
+    "usage": null
+  },
+  "settingsChanged": false,
+  "deploymentPerformed": false
+}

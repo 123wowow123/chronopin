@@ -24,6 +24,9 @@ export type IndustryForecastJson = {
   checkedAt: string;
 };
 
+// The URL segment of an industry: /forecasts/<slug>.
+export const industrySlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 const norm = (s: string) => s.trim().toLowerCase();
 
 // Whether any of a pin's (or a search's) tag and category names is one of the

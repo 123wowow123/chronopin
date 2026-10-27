@@ -2368,6 +2368,10 @@ const ms: Messages = {
     industryLabel: 'Industri {group}',
     glance: 'Gambaran ringkas',
     noMatch: 'Tiada ramalan sepadan dengan “{query}”.',
+    industryTitle: 'Ramalan {industry}',
+    industryDescription: '{count} ramalan {industry} di {site}: unjuran dan data bersumber, setiap satu dengan penerbit, tarikh dan petikannya.',
+    allForecasts: 'Semua ramalan',
+    byIndustry: 'Layari mengikut industri',
     groups: {
       tech: 'Teknologi & AI',
       economy: 'Ekonomi & Perniagaan',

@@ -2359,6 +2359,10 @@ const ko: Messages = {
     industryLabel: '{group} 산업',
     glance: '한눈에 보는 전망',
     noMatch: '“{query}”와(과) 일치하는 전망이 없습니다.',
+    industryTitle: '{industry} 전망',
+    industryDescription: '{site}의 {industry} 전망 {count}건: 출처가 있는 전망과 데이터, 각각 발행처·날짜·인용문 포함.',
+    allForecasts: '모든 전망',
+    byIndustry: '산업별 보기',
     groups: {
       tech: '기술 및 AI',
       economy: '경제 및 비즈니스',

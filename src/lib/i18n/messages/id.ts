@@ -2368,6 +2368,10 @@ const id: Messages = {
     industryLabel: 'Industri {group}',
     glance: 'Gambaran singkat',
     noMatch: 'Tidak ada prakiraan yang cocok dengan “{query}”.',
+    industryTitle: 'Prakiraan {industry}',
+    industryDescription: '{count} prakiraan {industry} di {site}: proyeksi dan data bersumber, masing-masing dengan penerbit, tanggal, dan kutipannya.',
+    allForecasts: 'Semua prakiraan',
+    byIndustry: 'Telusuri menurut industri',
     groups: {
       tech: 'Teknologi & AI',
       economy: 'Ekonomi & Bisnis',

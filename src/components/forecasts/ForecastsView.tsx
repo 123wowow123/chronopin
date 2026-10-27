@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ForecastCard } from '@/components/timeline/IndustryForecastPanel';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 import { useT } from '@/lib/client/i18n';
-import { formatForecastValue, type IndustryForecastJson } from '@/lib/industryForecast';
+import { formatForecastValue, industrySlug, type IndustryForecastJson } from '@/lib/industryForecast';
 
 // The top tier: each group holds the industries (second tier) it is named for.
 // An industry not listed lands in the last group.
@@ -17,7 +17,7 @@ const GROUPS: { name: string; key: 'tech' | 'economy' | 'energy' | 'culture' | '
   { name: 'Society & Security', key: 'society', industries: ['Health', 'Education', 'Law', 'Crime', 'Defense', 'Elections', 'Religion'] },
   { name: 'Space & Science', key: 'space', industries: ['Space', 'Astronomy'] },
 ];
-const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const slug = industrySlug;
 const groupOf = (industry: string) => GROUPS.find((g) => g.industries.includes(industry))?.name ?? GROUPS[GROUPS.length - 1].name;
 
 // A panel with fewer than three points has no trend to draw: it is listed

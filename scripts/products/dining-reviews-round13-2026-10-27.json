@@ -195,6 +195,29 @@
           "verification": "Original Diningcode member 소풍, 15 photographs, personally attended birthday lunch at Parnas counter after separate Tokyo visit. Selected complaint concerns prolonged noise not addressed by staff at Seoul counter, not Tokyo meal or a rating-average summary. Visible evaluation timestamp July 5 omits year; no ISO day inferred from current year or Michelin mention. Keep null."
         }
       ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17263,
+      "pinSourceUrl": "https://www.busanparadisehotel.co.kr/front/facility/dinerestaurants?language=EN#la-scala",
+      "basis": "Food 4.5 from 4.9 over 444 ratings (5 not given: no independent reviews found). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 0: Not shown on pages 1-2 of the MICHELIN Guide Busan restaurant list (57 restaurants) read 2026-10-18, so 0.",
+      "reviews": [
+        {
+          "url": "https://a-room-of-my-own.tistory.com/7",
+          "title": "부산 해운대 파라다이스 호텔 라스칼라 단골이 쓰는 후기 (런치코스/디너코스/세트/가격/추천메뉴/예약/기념일 레스토랑 추천)",
+          "quote": "모든 게 만족스러운 곳이거든요.",
+          "publishedDate": "2023-12-06",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://a-room-of-my-own.tistory.com/7",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Full original blog by CH_, actual article heading distinct from site-wide H1 자기만의 방. December 6, 2023 08:38:09 +09 visible byline/datePublished, not April 3, 2024 modification. Author describes repeated personal meals after September 2022 La Scala rebrand at Paradise Hotel Busan annex second floor, not Incheon Paradise City. Historical menus/prices not adopted as current. One original firsthand source; two more verified independent sources still needed."
+        }
+      ]
     }
   ]
 }

@@ -2367,6 +2367,10 @@ const vi: Messages = {
     industryLabel: 'Các ngành {group}',
     glance: 'Tóm tắt triển vọng',
     noMatch: 'Không có dự báo nào khớp với “{query}”.',
+    industryTitle: 'Dự báo {industry}',
+    industryDescription: '{count} dự báo {industry} trên {site}: dự phóng và dữ liệu có trích dẫn, mỗi mục kèm nhà xuất bản, ngày và trích đoạn.',
+    allForecasts: 'Tất cả dự báo',
+    byIndustry: 'Duyệt theo ngành',
     groups: {
       tech: 'Công nghệ & AI',
       economy: 'Kinh tế & Kinh doanh',

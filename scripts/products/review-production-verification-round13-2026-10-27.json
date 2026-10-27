@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-27",
+  "run": {
+    "id": 28,
+    "jobId": "review-verify-r13-20261027",
+    "trigger": "schedule",
+    "status": "skipped",
+    "driver": "api",
+    "tasks": [
+      "sentiment"
+    ],
+    "started": "2026-10-27T16:14:20.960Z",
+    "finished": "2026-10-27T16:14:22.752Z",
+    "usage": null,
+    "error": "No LLM was available. api: No ANTHROPIC_API_KEY is configured"
+  },
+  "actions": [],
+  "apiDriverConfigured": true,
+  "temporaryJobRemoved": true,
+  "originalSettingsVerifiedUnchanged": true,
+  "productionDeploymentPerformed": false
+}

@@ -5752,5 +5752,26 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 17263,
+    "scores": {
+      "food": 4.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 0
+    },
+    "basis": "Food 4.5 from 4.9 over 444 ratings (5 not given: no independent reviews found). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 0: Not shown on pages 1-2 of the MICHELIN Guide Busan restaurant list (57 restaurants) read 2026-10-18, so 0.",
+    "sourceUrl": "https://www.google.com/maps/search/Paradise%20Hotel%20Busan%20La%20Scala",
+    "reviews": [
+      {
+        "url": "https://a-room-of-my-own.tistory.com/7",
+        "quote": "모든 게 만족스러운 곳이거든요.",
+        "title": "부산 해운대 파라다이스 호텔 라스칼라 단골이 쓰는 후기 (런치코스/디너코스/세트/가격/추천메뉴/예약/기념일 레스토랑 추천)",
+        "sentiment": 0.8,
+        "publishedDate": "2023-12-06"
+      }
+    ]
   }
 ]

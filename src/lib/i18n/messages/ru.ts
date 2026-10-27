@@ -2456,6 +2456,10 @@ const ru: Messages = {
     industryLabel: 'Отрасли: {group}',
     glance: 'Прогнозы вкратце',
     noMatch: 'Нет прогнозов по запросу «{query}».',
+    industryTitle: 'Прогнозы: {industry}',
+    industryDescription: '{count} прогнозов ({industry}) на {site}: проекции и данные с источниками, у каждого — издатель, дата и цитата.',
+    allForecasts: 'Все прогнозы',
+    byIndustry: 'Обзор по отраслям',
     groups: {
       tech: 'Технологии и ИИ',
       economy: 'Экономика и бизнес',

@@ -182,7 +182,7 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Movie pins with no ticket or disc link (about 254 on prod as of 2026-10-05): hand-pick the real Fandango/Amazon page for the recent and upcoming films (about 60 days either side of today), then post with `POST /api/pins/:id/merchants`
 
-- Review sentiment graph — remaining work ([verified batch and inventory, 2026-10-26](docs/okf/scraping/review-verification-2026-10-26.md)):
+- Review sentiment graph — remaining work ([verified batches and current inventory, 2026-10-27](docs/okf/scraping/review-verification-2026-10-27.md)):
   - Expand Movie/TV, Music albums, Computing and Fashion critic coverage; screen category leads for actual reviewable products/works.
   - Research the 72 rubric rows below three reviews: EV 33, gas cars 12, aircraft 13, dining 8, LLMs 4 and video models 2. Verify independent sources and the exact variant/branch.
   - Resolve the 75 remaining publication/source checks in the research queue. Another 74 entries are verified as undated and retain null dates. Verify actual firsthand comments separately from merchant copy; undated guide extracts stay off the graph.

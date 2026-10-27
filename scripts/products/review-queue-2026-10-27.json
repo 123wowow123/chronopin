@@ -1,0 +1,2061 @@
+{
+  "checkedAt": "2026-10-27T16:02:58.364Z",
+  "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
+  "summary": [
+    {
+      "table": "PinTaste",
+      "pins": 228,
+      "reviews": 496,
+      "minimum": 1,
+      "belowMinimum": 0,
+      "undatedNonMichelin": 44,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinCarPerf",
+      "pins": 128,
+      "reviews": 350,
+      "minimum": 3,
+      "belowMinimum": 33,
+      "undatedNonMichelin": 16,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pins": 160,
+      "reviews": 502,
+      "minimum": 3,
+      "belowMinimum": 12,
+      "undatedNonMichelin": 14,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pins": 165,
+      "reviews": 563,
+      "minimum": 3,
+      "belowMinimum": 13,
+      "undatedNonMichelin": 8,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinLlmPerf",
+      "pins": 127,
+      "reviews": 446,
+      "minimum": 3,
+      "belowMinimum": 4,
+      "undatedNonMichelin": 18,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinVideoPerf",
+      "pins": 32,
+      "reviews": 111,
+      "minimum": 3,
+      "belowMinimum": 2,
+      "undatedNonMichelin": 5,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinHotel",
+      "pins": 41,
+      "reviews": 123,
+      "minimum": 3,
+      "belowMinimum": 0,
+      "undatedNonMichelin": 0,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinDining",
+      "pins": 89,
+      "reviews": 285,
+      "minimum": 3,
+      "belowMinimum": 1,
+      "undatedNonMichelin": 48,
+      "unscoredDated": 0
+    },
+    {
+      "table": "PinCriticReview",
+      "pins": 107,
+      "reviews": 322,
+      "minimum": 3,
+      "belowMinimum": 0,
+      "undatedNonMichelin": 1,
+      "unscoredDated": 0
+    }
+  ],
+  "rubricGaps": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 14001,
+      "title": "BYD Launches the Da Han Flagship Electric Sedan in China",
+      "sourceUrl": "https://www.byd.com/cn/dynasty-home/models/han/da-han-ev",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: RWD Premium, pre-sale 249,900 yuan (final price due 13 Oct). Range 1,008 km CLTC (102.3 kWh); 10-97% in 9 min flash charging; 0-100 km/h 4.9 s (370 kW; AWD 3.3 s); roof-LiDAR God's Eye B with urban NOA, L2+, compute not named so 3.5; wheelbase 3,130 mm with DiSus-A air suspension. Value: same 249,900 buys a Xiaomi SU7 Pro (902 km, 5.7 s, 3,000 mm wheelbase)."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14030,
+      "title": "Smart #2 Makes Its World Premiere at the Paris Motor Show",
+      "sourceUrl": "https://mondial.paris/actualites/auto-mondial/mondial-de-lauto-2026-smart-creera-levenement-avec-la-2-63606.html",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: series-production Smart #2 (premiere 12 Oct, no price). Range 'close to 300 km' (target); 10-80% DC in under 20 min; MIIT filing gives 1,875 mm wheelbase, 2 seats, 60 kW motor, 140 km/h top speed. No 0-100 km/h, no driver-assist spec and no price published, so those three axes are null. Range 1.5: 410 km CLTC (35.8 kWh CATL LFP; Smart specs 28 Sep, CNC 12 Oct); Europe target is 290 km WLTP. Charging 65 kW DC, 10-80% in 20 min (Smart release); 0-100 km/h not published (0-50 in 3.8 s). Assistance 2: ACC with Stop&Go, Highway Assist and Pilot Assist (Smart release 12 Oct), LKA/LDW/BSD in the China config list; no LiDAR."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14035,
+      "title": "Lynk & Co 07 GT, Its First Station Wagon, Launches in China From RMB 157,800",
+      "sourceUrl": "https://cnevpost.com/2026/07/23/lynk-co-07-gt-launch/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 2WD EM-P, 157,800 yuan guide price. 28.3 kWh, 200 km electric, combined up to 1,422 km CLTC; 30-80% in 14 min (reported, newmobility/CNC on the 07 system); 0-100 km/h 5.5 s for the 300 kW 2WD (newmobility; AWD 4 s); standard LiDAR with G-ASD H5, Thor-U H7 optional; 2,843 mm wheelbase. Value: updated Zeekr 007 GT wagon is 203,900 yuan list (BEV, 905 km, LiDAR+Thor-U)."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14037,
+      "title": "Lynk & Co 07 GT Makes European Debut at Paris Motor Show on 12 October",
+      "sourceUrl": "https://press.lynkco.com/en-WW/271002-lynk-co-showcases-the-07-gt-alongside-its-european-model-line-up-at-paris-motor-show-2026/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Chinese-spec AWD EM-P, the car shown in Paris (no European price or spec yet). 1,315 km CLTC combined (28.3 kWh, 170 km EV); 30-80% in 14 min is only 'reportedly' per newmobility.news; 0-100 in about 4 s (390 kW; 2WD 5.5 s); LiDAR standard with G-ASD H5, optional H7 on Nvidia Thor-U with urban NOA (CnEVPost); wheelbase 2,843 mm. Value rests on China prices RMB 157,800-177,800 (145,800-165,800 limited) vs Zeekr 007 GT RMB 203,900 (193,900 limited; 905 km BEV, Thor-U); not a European price, so low confidence. Charging revised: Lynk states 75 kW DC peak, 30-80% in 14 min on the 28.3 kWh pack (Gasgoo, lynkco.com.cn); 14 min is maker-confirmed, not just 'reported'; scored on peak power."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14040,
+      "title": "Geely Monjaro EM-i Makes European Debut at the Paris Motor Show",
+      "sourceUrl": "https://mondial.paris/actualites/auto-mondial/geely-au-mondial-de-lauto-2026-le-monjaro-em-i-a-l-honneur-93494.html",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Ultra AWD EM-i, the Paris show car (no European spec sheet or price). 1,100 km combined and 130 km electric (29.8 kWh) per CarNewsChina's Paris preview, cycle not stated (elektroquatsch calls the 130 km NEDC); 30-80% in 15 min per elektroquatsch; 0-100 in 5.83 s (CnEVPost, Egypt launch); wheelbase 2,845 mm. Driver-assist hardware is not published in any page opened, so assistance is null; no European price (Egypt is EGP only), so value is null. Doubt: elektroquatsch lists 250 kW system output vs 305 kW in the CarNewsChina preview. Charging revised: e-AWD 29.8 kWh pack rated up to 78 kW DC, 30-80% in about 15 min (CAR Magazine/Geely reference spec, NEDC-era figures, EU homologation pending); scored on peak power."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14045,
+      "title": "Geely Galaxy Starship 7 EV Launches From RMB 99,800",
+      "sourceUrl": "https://cnevpost.com/2026/06/11/geely-starship-7-ev-hits-market/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 525 km entry at RMB 99,800 limited (109,800 official); the 605 km pack costs RMB 10,000 more. 525 km CLTC (60.22 kWh); 30-80% in 20 min on 800 V (peak kW not published); 0-100 in 7.3 s (160 kW FWD); entry has cruise control only, L2 (ACC S&G, ICC; 1 camera + 4 surround + 2 radars + 5 ultrasonics, no LiDAR/NOA) starts one trim up (Autohome handbook, galaxy-geely.com); wheelbase 2,755 mm. Value: Deepal S05 refresh from RMB 115,900 limited (520 km, 6.28 s, 30-80% in <=15 min, 2,880 mm) and Nevo Q05 RMB 79,900-109,900 (506 km, 2,656 mm); ~14% under S05 but slower and no L2 at entry."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14055,
+      "title": "Geely Galaxy TT Electric Sedan Launches From RMB 129,900",
+      "sourceUrl": "https://cnevpost.com/2026/09/10/geely-launches-galaxy-tt-sedan/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: entry 640 RWD, 129,900 yuan. 63.8 kWh, 640 km CLTC; 6C, 10-80% in 11.8 min; 245 kW, 0-100 km/h 6.5 s (CnEVPost; CNC says 7.2 s for 640 km, doubt). Entry has no LiDAR and its NOA is not itemised, so assist is 3. Wheelbase 2,920 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, LiDAR, 3,000 mm); the TT is 90,000 less. Assistance 1.5, not 3: the 129,900-yuan entry (640 RWD Zunxiang) lacks LiDAR and the G-ASD H5 NOA package, which starts one trim up at 139,900 (Autohome buying guide); only basic cruise/ADAS listed."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14071,
+      "title": "Geely Galaxy Launches Cruiser 700 Off-Road PHEV From RMB 189,800",
+      "sourceUrl": "https://cnevpost.com/2026/10/10/geely-galaxy-launches-cruiser-700-suv/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 1.5T 2WD, 189,800 yuan, 350 kW, 0-100 km/h 6.4 s. Combined CLTC range 1,770 km (305 km electric, 47.14 kWh LFP); 6C, 10-80% in 10 min (CNC). Roof 192-line LiDAR with G-ASD H5/H7 on Thor-U 700 TOPS. 2,900 mm wheelbase, five seats. Value: FCB Ti 7 DM 2WD Max is 195,800 yuan with a 200 kW motor, 158 kW charging and God's Eye B a 12,000-yuan option."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14100,
+      "title": "Leapmotor Launches the A05 Compact EV Hatchback From RMB 63,900",
+      "sourceUrl": "https://cnevpost.com/2026/08/11/leapmotor-launches-a05/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored on the RMB 63,900 entry (405 Comfort): 39.8 kWh, 405 km CLTC, 30-80% DC in ~30 min, 11.02 s, cruise control only. The 510 LiDAR trim (RMB 85,900) would score 2.5/2.5/0.5/4.0 on range/charging/accel/assist (510 km, 16 min, 10.58 s, city+highway NOA). Wheelbase 2,605 mm. Value: vs Geely Xingyuan guide RMB 64,800 (410 km, 19 min, 2,650 mm, highway NOA) with a RMB 61,800 launch price: priced slightly above."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "title": "IM Motors Launches the LS9 Large Extended-Range SUV From RMB 322,800",
+      "sourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "reviewCount": 2,
+      "reason": "Opened Chinese test covers LS9 66 kWh Ultra while the rubric scores the 52 kWh base Ultra. Verify variant applicability; do not use battery/acceleration findings across trims.",
+      "existingResearchBasis": "Variant: 52 Ultra EREV, RMB 322,800 (66 Ultra RMB 352,800, 1,508 km). 1,454 km CLTC combined (320 km EV, 52 kWh); 10-80% in 16.5 min on 800 V; 0-100 in 4.9 s (390 kW); 520-channel LiDAR + Nvidia Thor + IM AD Max by Momenta; wheelbase 3,160 mm, six seats. Value: Li L9 at RMB 409,800 in Sept 2025 (3,015 mm, six seats; CnEVPost) and RMB 459,800 after the May 2026 refresh (CarNewsChina), so 21-30% under with a longer wheelbase. Correction: 52 Ultra is 380 kW (not 390) and charges 10-80% in 19 min; 16.5 min and 390 kW belong to the 66 Ultra (IT之家, CarNewsChina database). 0-100 is 4.9 s on both trims."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14111,
+      "title": "IM Motors Launches the Next-Generation LS6 With Steer-by-Wire From RMB 202,900",
+      "sourceUrl": "https://cnevpost.com/2026/09/24/im-motors-launches-next-gen-ls6-suv/",
+      "reviewCount": 2,
+      "reason": "Removed 2024 AWD 100 kWh LS6 article from next-generation September 2026 Max RWD 76 kWh pin. Two reviews remain; exact-generation third road test needed.",
+      "existingResearchBasis": "Variant: Max RWD 76 kWh, RMB 202,900 official / 197,900 after incentives (Pro Max 93 kWh 782 km, 5.4 s; Ultra 103 kWh 750 km, 3.48 s, 10-80% in 16.8 min). 650 km CLTC; 800 V, 10-80% in 18 min; 0-100 in 6.4 s (245 kW); IM AD Zeta with 520-channel LiDAR and NOA without HD maps (compute not stated; the sister L6 uses Momenta); wheelbase 2,960 mm, standard steer-by-wire. Value: Zeekr 7X Max RWD RMB 229,800 (620 km, 5.4 s, LiDAR + Thor-U; CarNewsChina), Tesla Model Y RWD RMB 263,500 and Xiaomi YU7 RMB 253,500 (June 2025), so 12-23% under."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14140,
+      "title": "Luxeed Launches the RX Coupe SUV From 259,800 Yuan to Take On the Xiaomi YU7",
+      "sourceUrl": "https://cnevpost.com/2026/09/28/luxeed-launches-rx-suv/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Entry at 259,800 (81 kWh RWD per Wikipedia). CLTC 672-702 km (3.5); 800 V, 30-80% in about 15 min, 10-80% not published (3.0); 3.6 s is 'as little as' for AWD, RWD 0-100 null; 4-LiDAR/38-sensor suite stated for the model but L3 architecture only on the pricier trim, entry split unclear (4.0, doubt); wheelbase 3,000 mm (4.0). Value: YU7 Standard is 233,500 (643 km), YU7 GT 389,900; RX entry sits above its closest rival (3.0)."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "title": "Avatr Launches the 07L Electric SUV With Huawei ADS 5 From RMB 229,900",
+      "sourceUrl": "https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Elite RWD, 305 kW, RMB 229,900 official / 219,900 limited (Max+ RMB 249,900 adds the roof 896-channel LiDAR, ADS Max and air suspension; Ultra tri-motor 3.7 s, 650 km). 725 km CLTC (89.33 kWh); 800 V, 30-80% in <10 min and 0-80% in 20 min; 0-100 in 5.9 s; Qiankun ADS Pro with in-cabin LiDAR (Max+/Ultra would be 4.5); wheelbase 2,990 mm. Value: Xiaomi YU7 Standard RMB 253,500 (835 km, 5.88 s, 3,000 mm; CnEVPost June 2025), so about 9% under but 110 km less range."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14200,
+      "title": "Fang Cheng Bao Launches the Formula S Sedan From 189,900 Yuan",
+      "sourceUrl": "https://carnewschina.com/2026/09/16/byd-targets-xiaomi-su7-and-tesla-model-3-with-new-fang-cheng-bao-formula-s-and-s-gt-launch/",
+      "reviewCount": 0,
+      "reason": "Removed static Formula S 92.1 kWh showroom preview from 76.7 kWh production entry pin. No driven-car reviews remain; research exact production variant.",
+      "existingResearchBasis": "Variant: Formula S entry RWD, 189,900 yuan, 76.7 kWh, 730 km CLTC (a later CNC article says 720). Flash charging 10-70% in 5 min, 10-97% in 9 min. 0-100 km/h 5.8 s for single-motor cars per kolesa.ru (not variant-specific). LiDAR God's Eye B with urban/highway NOA, compute not named. Wheelbase 2,960 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, 3,000 mm, LiDAR+Thor), so the Formula S undercuts by 30,000. 5.8 s is variant-specific for the 245 kW RWD entry (730 km, 76.7 kWh) per Sohu/Autohome trim lists; 300 kW RWD is also about 5.8 s and AWD 3.6 s."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "title": "MG 07 Electric and Hybrid Sedan Goes on Sale From RMB 108,900",
+      "sourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 650 BEV Comfort, 67 kWh Qingtao, RMB 108,900 official / 105,900 limited (the 845 km 91 kWh 5C version would score range 4.0, charging 3.5, 0-100 5.9 s). 650 km CLTC; 400 V, 3C, 30-80% in 20 min; 0-100 in 6.9 s (176 kW); entry uses Horizon J6B with no highway or urban NOA and no LiDAR (higher trims LiDAR + Momenta R7); wheelbase 2,825 mm. Value: BYD Seal 07 DM-i from RMB 149,800 (PHEV, 2,900 mm; CnEVPost) and Lynk & Co 07 EM-P RMB 139,800-159,800 limited (CarNewsChina), about 25-30% under, though BEV vs PHEV. Price correction: 650 BEV Comfort is RMB 116,900 official / 113,900 limited; 108,900/105,900 is the Hybrid 245 Comfort (CarNewsChina 21 Aug 2026, News18). Value rescored 4.0 on the corrected price."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14221,
+      "title": "Wuling Launches the Huajing S, Its First Huawei-Developed SUV, From RMB 159,800",
+      "sourceUrl": "https://cnevpost.com/2026/05/08/huajing-s-launched-with-aggressive-pricing/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: RMB 159,800 entry (149,800 after subsidy); trim-level specs are not mapped. Combined CLTC range above 1,100 km, 255 km EV at most; 3.5C fast charging with no 10-80% time or peak kW published, so 2.5 is an estimate from 3.5C on the 31-42 kWh packs in the MIIT filing; 0-100 in 5.2 s is the top 4WD trim (386 kW), the entry time is not published; Huawei Qiankun ADS Pro on all trims with in-cabin Limera LiDAR (city NOA not stated); wheelbase 3,105 mm, six seats. Value: Geely Galaxy M9 six-seater RMB 183,800-248,800 official, 173,800 limited (3,030 mm, G-Pilot H5 only on upper trims; CnEVPost). Acceleration: entry 200 km FWD 200 kW does 0-100 in 8.3 s per IT之家 launch roundup; the 5.2 s is the 386 kW 4WD top trim only. Assistance: Qiankun ADS Pro enhanced with in-cabin Limera LiDAR standard, city NCA supported at launch (IT之家 8 May 2026); scored 4."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14223,
+      "title": "GAC Aion Launches the RT Super Sedan With CATL Battery Swapping From RMB 88,800",
+      "sourceUrl": "https://cnevpost.com/2026/04/08/gac-aion-launches-rt-super-catl-battery-swap-tech/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: RT Super, 54 kWh CATL Choco-SEB, RMB 88,800 with battery rental (no battery-included version). 505 km; 30-80% in 26 min by plug, plus a 99-second swap at CATL Choco stations (3,000+ planned by end-2026), so 2.5; 0-100 in 7.5 s (150 kW); ADAS is not stated for the RT Super in any page opened (Wikipedia gives LiDAR + Orin-X only for the regular RT), so null; wheelbase 2,775 mm. Value: regular Aion RT RMB 99,800-123,800 with battery (CnEVPost) and BYD Seal 06 EV RMB 109,800 (2,820 mm; CarNewsChina); the rental fee was not found, so 3.5 not higher."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14224,
+      "title": "GAC-Huawei Aistaland Launches the GX7 Extended-Range SUV From RMB 239,900",
+      "sourceUrl": "https://cnevpost.com/2026/09/24/aistaland-launches-gx7/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: RWD Ultra, 200 kW, RMB 239,900 official / 229,900 limited (tri-motor 550 kW: 3.9 s, 30-80% in 10 min). CLTC combined 1,500-1,580 km (325-385 km EV, 52/67 kWh); RWD and dual-motor versions take 30-80% in 15 min; 0-100 in 7.6 s; Huawei Qiankun ADS 5 with 4 LiDARs, 38 sensors and an L3-ready 8-way redundant architecture; wheelbase 3,070 mm, five seats. Value: Li L6 2026 RMB 249,800 (2,920 mm, 300 km EV, 5.4 s, Mach M100; CnEVPost) and Xiaomi YU7 RMB 253,500 (3,000 mm), so 4-9% under the entry price."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14228,
+      "title": "Changan Nevo Launches the Q06 Mid-Size SUV From RMB 139,900",
+      "sourceUrl": "https://cnevpost.com/2026/09/24/changan-nevo-launches-q06-suv/",
+      "reviewCount": 2,
+      "reason": "Xchuxing returned 503 in rendered browser, not a verified dead link. Retry or locate alternate exact Q06 road test.",
+      "existingResearchBasis": "Variant: 66.02 kWh RWD 225 kW, RMB 139,900 official / 135,900 limited (entry mapping from Wikipedia; 80 kWh versions 670-700 km). 602 km CLTC; 800 V SiC, 6C, 30-80% in 9 min; 0-100 in 7.1 s (dual-motor 4.8 s); standard SDA Pilot Pro with LiDAR and Horizon J6M 128 TOPS, urban navigation assist only with the RMB 9,900 Ultra option (560 TOPS); wheelbase 2,940 mm. Value: BYD Song Ultra EV from RMB 151,900 (605 km, 2,840 mm; CnEVPost) and Leapmotor C10 RMB 125,800-142,800 (BEV 660 km, 2,825 mm; Gasgoo), so at market. Assistance: the 602 entry trim reportedly lacks Tianshu Pilot Pro, LiDAR, city and memory parking (Autohome/ifeng, official configurator); Pro with LiDAR starts a trim up. Basic L2, scored 1.5."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14230,
+      "title": "Arcfox Launches the Alpha T7 SUV, Extended-Range or Electric, From RMB 136,800",
+      "sourceUrl": "https://cnevpost.com/2026/09/16/arcfox-launches-alpha-t7-suv/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored on the BEV 715 km CLTC (84.8 kWh, 227 kW) Qiankun Edition. 800V: 270 km in 10 min, 30-80% in 15 min; ~190 kW average by my arithmetic. 0-100 km/h not published by CnEVPost or Wikipedia, so null. ADS 5 Pro with LiDAR (27 sensors, urban+highway NOA) is on 4 Qiankun variants only. Wheelbase 3,040 mm, 5 seats. Value: RMB 132,800-136,800 vs Leapmotor C16 RMB 151,800 EREV/161,800 BEV (wheelbase 2,825) and BYD Sealion 06 EV RMB 143,800 (2,820, 605 km). 0-100 km/h now 7.0 s for the 84.8 kWh 715 km BEV (Wikipedia spec table citing Autohome; Auto-Data.net); maker figure not located, so 2.0 at medium confidence."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14253,
+      "title": "Li Auto Launches the Revamped L6 Extended-Range SUV at RMB 249,800",
+      "sourceUrl": "https://cnevpost.com/2026/07/16/li-auto-launches-revamped-l6/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "EREV Ultra: 300 km CLTC battery-only, 1,250 km combined (scored 5 as combined CLTC). 0-100 km/h 5.4 s. 20-80% in 12 min; 260 kW max is from Wikipedia's infobox only. Mach M100 1,280 TOPS + one LiDAR (dual-chip, four-LiDAR package is a RMB 20,000 option). Wheelbase 2,920 mm. Value: RMB 249,800 vs Leapmotor D19 EREV from RMB 219,800 (3,110 mm, 6/7 seats) and Aito M7 RMB 279,800 (3,030 mm): priced above the larger D19."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19648,
+      "title": "Zeekr Launches the 007 Electric Sedan From RMB 209,900",
+      "sourceUrl": "https://cnevpost.com/2023/12/28/zeekr-officially-launches-007-sedan/",
+      "reviewCount": 2,
+      "reason": "Opened Kevin Williams’s original June 5, 2024 InsideEVs drive. The table and body explicitly identify Intelligent Driving Version 4WD, 75 kWh, 259,900 CNY, electromagnetic dampers. The native rubric scores base RWD 75 kWh. Do not add this as an exact RWD road test or infer the same suspension behaviour. Existing two AWD reviews are explicitly sibling context. Exact RWD owner/road-test evidence remains required.",
+      "existingResearchBasis": "Variant: 007 RWD, 75 kWh LFP, from RMB 209,900. Range 688 km CLTC (3.5); 800 V, +500 km in 15 min (3.5); 0-100 5.6 s (3); highway navigation assist at launch, LiDAR/dual Orin on higher trims (3); wheelbase 2,928 mm (3); undercuts Model 3/Xiaomi SU7 class with 800 V and Nvidia hardware (4); kids null: ISOFIX/rear child features not found. Reviews cover the AWD/dual-motor car."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19650,
+      "title": "Li Auto Launches the i8, Its First Electric SUV, From RMB 321,800",
+      "sourceUrl": "https://cnevpost.com/2025/07/29/li-auto-launches-li-i8-suv/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: i8 Pro, 90.1 kWh, 670 km CLTC (3.5). 5C charging: 5C x 90.1 kWh = about 450 kW (4.5, computed, peak not stated in sources). 0-100 4.5 s (3.5). VLA/MindVLA with LiDAR, VLA driver from Aug on AD Max (4). Wheelbase 3,050 mm six-seat, air suspension (4.5). Priced near Onvo L90 at RMB 279,900 (3). Kids null: Pro lacks the fridge and rear screens; ISOFIX not verified. Only 2 reviews found."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19652,
+      "title": "Huawei and Seres Launch the Aito M7 Six-Seat EREV SUV From RMB 319,800",
+      "sourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: M7 RWD EREV, 40 kWh, 1,100 km combined (5), from RMB 319,800. 0-100 7.8 s (1.5). Six seats, wheelbase 2,820 mm (4, six-seat rule). Priced under the Li L9 it was compared with (4). Charging, assist and kids null: not published in sources read. Reviews are of export Seres 7 (AWD and RE-EV)."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19850,
+      "title": "Denza Launches the N9 Six-Seat Hybrid SUV From RMB 389,800",
+      "sourceUrl": "https://cnevpost.com/2025/03/21/denza-launches-n9/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: N9 at launch, 389,800 yuan, 2.0T + three motors, 680 kW. 1,300+ km CLTC combined (200 km electric) so 5; 0-100 in 3.9 s; God's Eye B with one LiDAR, city NOA, compute not named so 3.5; 3,125 mm wheelbase, six seats, DiSus-A air suspension. Value: undercuts Li L9 (409,800) and Aito M9 (469,800). Charging null: no DC figure in opened sources. Kids 4: rear-screen/ISOFIX details not verified."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19851,
+      "title": "Li Auto Launches the Revamped Five-Seat L8 From RMB 359,800",
+      "sourceUrl": "https://cnevpost.com/2026/06/23/li-auto-launches-revamped-l8-suv/",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Ultra, 359,800 yuan limited-time (369,800 guide). 1,670 km combined CLTC (430 km electric) so 5; 0-100 in 4.8 s (420 kW); one Mach M100 (1,280 TOPS) plus Hesai LiDAR so 4; five seats on 3,045 mm wheelbase, four zero-gravity seats; value at market: same price as Aito M8 EREV (359,800). Charging null: 5C stated but no kW or 10-80 time found. Kids 3.5: ISOFIX/boot not verified. No independent review of the revamped car found yet."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19852,
+      "title": "Huawei-Backed Aito Launches the M8 Family SUV From 359,800 Yuan With 20,000 First-Hour Orders",
+      "sourceUrl": "https://cnevpost.com/2025/04/16/aito-launches-m8/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Max five-seat EREV, 359,800 yuan, 37 kWh, 1,405 km combined. 0-100 5.2 s is Wikipedia's general M8 figure, not per variant. 192-line LiDAR, ADS 3.0 so 4; 3,105 mm wheelbase (air suspension not confirmed) so 4.5; value at market vs Li L8's then 321,800. Charging null: none published in opened sources. Kids 4: 976 L five-seat boot, 7.3 L fridge, optional rear projector. Only a showroom first-impression piece found, no driving review."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19853,
+      "title": "Huawei-Backed Aito Launches the New-Generation M9 From 479,800 Yuan",
+      "sourceUrl": "https://cnevpost.com/2026/05/27/huawei-backed-aito-launches-updated-m9-suv/",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Max+ dual-motor EREV, 479,800 yuan, 60 kWh, 1,405 km combined. 0-100 4.5 s and 30-80% in 15 min (Wikipedia only, so charging 2.5 with peak kW unpublished); ADS 5 with six LiDARs, 12 cameras so 5; 3,125 mm wheelbase, air suspension; optional 32-inch projection screen. Value 2: dearer than Li L9 (409,800) and Denza N9 (389,800). No review of the 2026-generation car found (ArenaEV's Jan 2026 piece predates launch)."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19854,
+      "title": "Avatr Starts China Sales of the 07 Electric and Range-Extender SUV From RMB 219,900",
+      "sourceUrl": "https://www.electrive.com/2024/10/07/sales-start-for-the-avatr-07-in-china",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: EREV from 219,900 yuan (the pin's headline); 39 kWh, 1,050-1,100 km combined; ADS 3.0, 192-line LiDAR optional so 3; 2,940 mm wheelbase. Value 4: undercuts Li L6 EREV (249,800). Acceleration null: only BEV figures (6.3 s/3.9 s) published; charging null (4C figure is for the BEV). One independent drive found (EREV Ultra AWD); Thairath link 404s."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19857,
+      "title": "BYD Launches the Seal 06 EV Sedan at the Chongqing Show From RMB 109,800",
+      "sourceUrl": "https://cnevpost.com/2025/06/07/byd-launches-seal-06-ev/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: entry, 109,800 yuan, 46.08 kWh, 470 km CLTC. Peak 103 kW, 30-80% in 24 min so 2; God's Eye C camera-only DiPilot 100 so 2; 2,820 mm wheelbase. Acceleration null: only 0-50 4.1 s published for the EV. Value 4: below own 120,000-150,000 pre-sale, no rival price page opened. Kids 3: 423 L boot, ISOFIX not verified. Reviews are export Seal 6 EV (Malaysia, Singapore), labelled."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19858,
+      "title": "BYD Launches the Seal 07 DM-i Hybrid Sedan From RMB 139,800 With 2,000 km Range",
+      "sourceUrl": "https://carnewschina.com/2024/08/08/byd-launches-seal-07-dm-i-2000-km-range-and-3-4l-100-km-fuel-efficiency/",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: entry 1.5 L DM-i from 139,800 yuan, 70 km electric, about 2,000 km combined. Wikipedia table: 38 kW peak (17.6 kWh) and 8.0 s for the 1.5 L, row matching uncertain, so charging 1 and acceleration 1.5. DiPilot L2, no LiDAR at launch so 2; 2,900 mm wheelbase. Value 4: no rival price page opened. No independent review of the Seal 07 DM-i found (results are Seal 6/Seal U)."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19859,
+      "title": "BYD Launches the New Yuan Plus Electric SUV With Flash Charging From RMB 119,900",
+      "sourceUrl": "https://cnevpost.com/2026/05/21/byd-launches-third-gen-yuan-plus-suv/",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: entry, 119,900 yuan, 57.5 kWh, 540 km CLTC, 200 kW RWD. Flash charging 10-70% in about 5 min (peak kW unpublished) so 4.5; God's Eye B LiDAR is a 12,000 yuan option and not available on the entry trim so 1.5; 2,770 mm wheelbase. Acceleration null: not published. Value 3.5: 4,100 yuan rise, rival (Galaxy E5) prices not opened. No hands-on drive found yet."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19869,
+      "title": "Li Auto Launches the Redesigned L9 With Active Suspension From RMB 459,800",
+      "sourceUrl": "https://carnewschina.com/2026/05/15/li-auto-launches-new-l9-flagship-suv-with-active-suspension-starting-from-67600-usd-in-china/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Ultra, RMB 459,800 (Livis RMB 509,800 has the active chassis). 1,650 km CLTC combined, 420 km electric; 10-80% in 10 min at up to 420 kW; 0-100 km/h 4.9 s; one Mach M100 with VLA driving model, stable on highway and urban roads in the test drive (36Kr); 3,125 mm six-seat; value 3.5: RMB 30,000 above the previous Ultra, RMB 20,000 launch incentive; kids 4.5: 21-inch rear screen, sunshades, zero-gravity seats, ISOFIX not read. Only one independent hands-on found (36Kr pre-launch test drive of the Livis)."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15217,
+      "title": "Audi Unveils the Q9, Its First Full-Size SUV, in New York",
+      "sourceUrl": "https://www.audi.com/en/press-releases/new-portfolio-flagship-the-audi-q9-redefines-space-and-comfort-as-the-first-of-its-kind-18145",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored variant: 2027 US Q9 2.9 V6 (429 hp, 0-60 mph 4.9 s per Audi via SlashGear). Economy null (no gasoline fuel-economy figure published yet); handling null (no road test); space 19.3/50/87.8 cu ft behind rows 3/2/1 in a full-size three-row class, above average; value 429 hp / US$89,095 = 4.8 hp per US$1,000."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15223,
+      "title": "Mercedes-AMG Updates the GLE 63 S and GLS 63 With a Flat-Plane V8",
+      "sourceUrl": "https://media.mercedes-benz.com/en/article/fd874439-9493-43c9-98f4-33c2f76c446d",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored variant: GLE 63 S 4MATIC+ SUV. Power 612 PS (604 hp, 600+ = 5); 0-100 km/h 3.9 s (Mercedes); economy WLTP 13.6-13.2 l/100 km, about 17.5 US mpg; value 612 PS / EUR 170,045 = 3.6 PS per 1,000 EUR (local-currency basis); space and handling null (no cargo figure or road test). Value re-based to US$ for cross-market ranking: 612 hp / US$197,252 (at 1.16 US$ per EUR) = 3.1 hp per US$1,000 = 0 (was 1.0)."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15224,
+      "title": "Mercedes-AMG Opens Orders for the Updated GLE 53 Six-Cylinder SUV",
+      "sourceUrl": "https://media.mercedes-benz.com/en/article/e19f9bca-93fe-4a63-9c97-872c35846785",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored variant: GLE 53 4MATIC+ SUV (48V). Power 449 PS (443 hp); 0-100 km/h 4.9 s (Mercedes-AMG); economy WLTP 11.1-10.4 l/100 km, about 22 US mpg; value 449 PS / EUR 120,047 = 3.7 PS per 1,000 EUR (local-currency basis); space and handling null (no cargo figure or road test opened). Value re-based to US$ for cross-market ranking: 449 hp / US$139,255 (at 1.16 US$ per EUR) = 3.2 hp per US$1,000 = 0.5 (was 1.0)."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15228,
+      "title": "Aston Martin Introduces the DBX GT, a 717 hp Luxury V8 SUV",
+      "sourceUrl": "https://www.astonmartin.com/en-us/models/dbx-gt",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "DBX GT: 727 PS (717 hp) = 5; 0-60 mph 3.1 s (Aston) = 5; WLTP combined 14.3 l/100 km = 16.4 US mpg = 0.5; load space 638 l seats up, large luxury SUV, above average = 4. Value null: no price announced (only speculation); handling null: no road tests yet."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15231,
+      "title": "Hennessey Reveals the Blackbird, a Manual 6.2-Litre V8 Hypercar",
+      "sourceUrl": "https://www.hennesseyspecialvehicles.com/news/all-new-hennessey-blackbird-hypercar-revealed/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Blackbird, the only variant: target 850 hp = 5; target 0-60 mph 2.5 s = 5; space: front trunk for 2 full-size carry-ons plus rear-quarter storage in a two-seater (cargo only), average = 3; $2.5M = 0.34 hp per US$1,000 = 0. Economy and handling null: not published, no road tests."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15242,
+      "title": "Subaru Cuts the 2027 Impreza to $24,595, Cheapest AWD Compact",
+      "sourceUrl": "https://media.subaru.com/pressrelease/2496/1/subaru-announces-pricing-2027-subaru-impreza-most-affordable",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored: 2027 Impreza base, $24,595 MSRP, 180 hp. Acceleration is Car and Driver's tested 7.8 s 0-60 mph of the 2024 RS (182 hp, same 2.5 boxer/CVT); economy EPA 29 mpg combined from that test; space 23.7/52.9 cu ft; value 180 hp / $24,595 = 7.3 hp per US$1,000. Handling null (one road test)."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
+      "sourceUrl": "https://www.carscoops.com/2026/09/volvos-decade-old-xc40-refuses-to-die-gains-design-and-tech-updates/",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "XC40 B3 (base-priced): 163 PS = 161 hp -> 1.0; 0-100 km/h 8.6 s (maker figure via Autonotizen/Cars24) -> 1.5; WLTP 6.5-7.2 l/100 km = about 36-33 US mpg -> 3.5; value 161 hp / 43,990 euros = 3.7 hp per 1,000 euros (local currency) -> 1.0; handling and space null (no road test of the facelift opened, no cargo figure). Value re-based to US$ for cross-market ranking: 161 hp / US$51,028 (at 1.16 US$ per EUR) = 3.2 hp per US$1,000 = 0.5 (was 1.0)."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15263,
+      "title": "Mahindra Launches the Thar OG With a 162 hp Turbo-Petrol From Rs 10.32 Lakh",
+      "sourceUrl": "https://www.autocarindia.com/car-news/mahindra-thar-og-launched-at-rs-1032-lakh-440834",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored variant: 2.0 turbo-petrol manual 4WD (LXT) at Rs 15.60 lakh. Power 162 hp = 1; economy 9 kmpl ARAI claimed for petrol manual (ZigWheels, 21 mpg) = 1.5; space 2 (rear seat just adequate, boot barely any room, two-seater in practice); value 162 hp / US$16,250 = 10.0 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 4.5. Acceleration null (no figure published), handling null."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15264,
+      "title": "Tata Launches the Aeris Compact Sedan, the Tigor Successor, From Rs 5.29 Lakh",
+      "sourceUrl": "https://www.autocarindia.com/car-news/tata-aeris-launched-at-rs-529-lakh-440848",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored variant: 1.2 petrol manual (Smart) at Rs 5.29 lakh. Power 86 hp = 0; economy 20.5 kmpl ARAI (48 mpg) = 5; space 4 (419 L boot, larger than Amaze/Dzire/Aura; airy cabin); value 86 hp / US$5,510 = 15.6 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 5. Acceleration null (no figure published), handling null (one road test)."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15267,
+      "title": "Ram Launches the 2027 1500 Rumble Bee V8 Muscle Trucks",
+      "sourceUrl": "https://media.stellantisnorthamerica.com/newsrelease.do?id=27725&mid=1",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Base 5.7 L Rumble Bee: 395 hp (Ram), 0-60 in 6.1 s (Ram claim), US$59,995 before destination = 6.6 hp per US$1,000; Quad Cab short bed, 1,160 lb payload scored average for a pickup. Economy null: no EPA rating for this variant yet; handling null: no road tests yet."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15270,
+      "title": "Chevrolet Revives the Corvette Grand Sport With a 535-hp LS6 V8",
+      "sourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2026/mar/0326-Chevrolet-Grand-Sport-returns-6-7-liter-535-horsepower-V8.html",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "2027 Corvette Grand Sport coupe: 535 hp (Chevrolet), 0-60 in 2.75 s (Chevrolet), EPA 17 mpg combined, 12.6 cu ft cargo scored against two-seaters, US$88,495 incl. destination = 6.0 hp per US$1,000. Handling null: no independent road test opened."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "title": "Chevrolet Says the 2027 Corvette Stingray Tops 200 mph From US$73,495",
+      "sourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/topic/us/en/2026/jun/0630-2027-chevrolet-corvette-stingray-200-mph.html",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "2027 Corvette Stingray coupe: 535 hp, 0-60 in 2.8 s (both Chevrolet), EPA 18 mpg combined, 12.6 cu ft cargo (Grand Sport table, same body) scored against two-seaters, US$73,495 = 7.3 hp per US$1,000. Handling null: no road test opened."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19572,
+      "title": "Delta Flies the First Scheduled DC-9 Passenger Service",
+      "sourceUrl": "http://content.deltamuseum.org/reader-rails/DouglasDC9/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "DC-9-10/-14 (JT8D-5/-9, MTOW 90,700 lb). Range 1,590 nmi (This Day in Aviation) vs 1,300 nmi for the -15 (Wikipedia table) = 0 at either. Capacity typical 90 single-class (72 in 12F+60Y mixed) = 1. Speed 490 kn at 25,000 ft (TDIA) = about Mach 0.81 by my arithmetic (speed of sound 602 kn at 25,000 ft ISA); MMo 0.84 = 3. Runway null: DC-9 airport-planning manual is a scanned image with no usable text. Comfort null: the two reviews are Delta -50 pilots. Efficiency null: no published fuel-burn figure for this variant was found (airport-planning manual has none; operator pages checked give only fleet-level savings). Only 2 reviews found."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19577,
+      "title": "American Airlines Flies the First DC-10 Passenger Service",
+      "sourceUrl": "https://www.airlinereporter.com/2014/02/historical-look-dc-10-final-passenger-flight/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "DC-10-10 (CF6-6D, MTOW 430,000 lb). Range 3,500 nmi with 270 passengers (Wikipedia table) = 2. Capacity 270 typical (222Y+48J) = 3.5. Speed Mach 0.82 typical = 3. Runway 9,000 ft at MTOW, sea level, ISA (Wikipedia table citing the DC-10 airport-planning manual) = 2.5. Comfort null: both Airways pieces are about the -30/-40 (Biman, Northwest), not the -10. Efficiency null: no published fuel-burn figure for this variant was found (airport-planning manual has none; operator pages checked give only fleet-level savings). Only 2 reviews found (key.aero BA captain interview blocked)."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19609,
+      "title": "Irkut MC-21-300 Makes Its First Flight From Irkutsk",
+      "sourceUrl": "https://ainonline.com/aviation-news/air-transport/2017-05-30/irkut-mc-21-300-performs-first-flight",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "MC-21-300 (PW1431G), 163 seats two-class. Range 6,000 km (3,200 nmi) two-class = 2 (Wikipedia table; a Russian Aug 2026 item says 3,830 km, unresolved). Capacity 163 = 2.5. Runway 2,410 m (7,910 ft) per Wikipedia 'runway length' = 3.5. Speed and efficiency null: no maker cruise Mach or fuel burn found (UAC page blocked). Comfort null: only two reviews, neither an independent flight report of the type (a minister's comment and a cabin-width analysis). SHORTFALL: 2 of 3 required reviews."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19610,
+      "title": "Irkut MC-21-300 Receives Its Russian Type Certificate",
+      "sourceUrl": "https://www.aviationpros.com/aircraft-maintenance-technology/aircraft-technology/commercial-airline/press-release/21251828/rostec-mc-21-300-aircraft-receives-type-certificate-from-russias-federal-air-transport-agency",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "MC-21-300 (PW1431G), 163 seats two-class. Range 6,000 km (3,200 nmi) two-class = 2 (Wikipedia table; a Russian Aug 2026 item says 3,830 km, unresolved). Capacity 163 = 2.5. Runway 2,410 m (7,910 ft) per Wikipedia 'runway length' = 3.5. Speed and efficiency null: no maker cruise Mach or fuel burn found (UAC page blocked). Comfort null: only two reviews, neither an independent flight report of the type (a minister's comment and a cabin-width analysis). SHORTFALL: 2 of 3 required reviews."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19644,
+      "title": "BAC One-Eleven Flies Its First Scheduled Service for British United",
+      "sourceUrl": "https://british-caledonian.com/1-11_200.html",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: BAC One-Eleven Series 200 (Spey Mk 506, 10,410 lbf, MTOW 78,500 lb, up to 89 seats), Wikipedia spec table first column. Older jet: speed and runway use the same 2026 anchors as modern airliners. Range: 830 mi = 720 nmi (typical payload, 2 h reserve) -> 0. Capacity: 89 seats -> 0.5 (60=0, 100=1). Efficiency: no fuel burn -> null. Speed: max cruise 548 mph = 476 kt, about Mach 0.83 at FL350; this is a maximum, not a typical cruise, so scored 2.5 not 3. Runway: takeoff (MTOW) 6,250 ft -> 4.5 (7,000=4, 5,500=5). Comfort: null; only 2 reviews found and both concern later Spey 511-type aircraft/noise (one quiet charter ride, one German retrospective calling it loud), not Series 200; fewer than 3 reviews reached."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19645,
+      "title": "Saab 340 Enters Airline Service With Crossair",
+      "sourceUrl": "https://airwaysmag.com/new-post/saab-340-enters-service-crossair",
+      "reviewCount": 2,
+      "reason": "Two saved extracts, but only EX-YU Aviation covers exact Saab 340A (YL-RAL); existing Rex 340B is sibling context. Need two more independent A cabin/flight reports. Checked Link Airways and Loganair reports: B-family or unverified A; excluded simulator reviews and pure vendor news.",
+      "existingResearchBasis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort null: EX-YU Aviation (2025-05-11) reports cramped seating and noise on exact 340A YL-RAL. Existing Rex review is later 340B, not launch-A cabin evidence. Two extracts, only one exact-A firsthand report; seek two more independent A reports. No simulator or vendor-news reviews added."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19646,
+      "title": "Short 360 Prototype Makes Its First Flight",
+      "sourceUrl": "https://www.airwaysmag.com/new-post/short-360-first-flight",
+      "reviewCount": 2,
+      "reason": "Opened SQTalk Carfield report is genuine Pacific Coastal Shorts360 C-GPCF cabin experience (Aug8 2012), but exact -100/-300 applicability is not verified. Existing two entries are secondary history, not firsthand. Simulator reports and accident investigation forms are not routine independent passenger/pilot reviews. Preserve below-target research rather than imply three firsthand publishers.",
+      "existingResearchBasis": "Variant: Short 360 (SD3-60), 36 pax, 2x PT6A-65AR, MTOW 12,292 kg. Turboprop: speed and runway use the same 2026 anchors. Range: 861 nmi full tanks, 2,569 kg payload -> 0. Capacity: 36 -> 0. Efficiency: Wikipedia fuel consumption 1.01 kg/km (820 lb/h at 200 kn) / 0.8 kg/L = 1.26 L/km = 126 L/100 km / 36 seats = 3.5 L/seat/100 km -> 2 (secondary source, not a maker figure). Speed: 404 km/h at FL100 = 218 kt, about Mach 0.34 -> 0. Runway: takeoff distance 4,250 ft / 1,300 m (AeroCorner spec page, not the maker's chart) -> 5. Comfort: null; only 2 reviews reached (Simple Flying, Aeroclass blog), neither a firsthand ride; fewer than 3 solid reviews."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19882,
+      "title": "The Airbus A319neo Makes Its First Flight From Hamburg to Toulouse",
+      "sourceUrl": "https://www.airframer.com/news/release/37009",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: A319neo (CFM LEAP-1A, 75.5 t MTOW), Wikipedia A319neo and A320neo-family tables. Range: 3,750 nmi (6,950 km) -> 2 + 250/1,500 = 2.17 -> 2.0. Capacity: 140 two-class -> 1 + (140-100)/50 = 1.8 -> 2.0. Efficiency: only Airbus's '15% lower fuel burn' claim, no fuel burn or seat figures -> null. Speed: cruise Mach 0.78 -> 2.0. Runway: take-off 1,829 m = 6,000 ft (Wikipedia family table, not the Airbus chart) -> 5 - 500/1,500 = 4.67 -> 4.5. Comfort: null, no independent review of the A319neo itself was found (searches returned only A320neo and A321 reviews, and the 'never guess from a sibling variant' rule applies). Reviews: 0 of the required 3 found; none is padded."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19883,
+      "title": "The Airbus A330-200F Freighter Makes Its First Flight From Toulouse",
+      "sourceUrl": "https://www.airframer.com/news/release/new-a330-200-freighter-takes-to-the-skies",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: A330-200F (freighter). Range: Airbus's launch-day release gives more than 64 t over 4,000 nmi (7,400 km) -> 2 + 500/1,500 = 2.33 -> 2.5 (maker's maximum range with its heavier payload; the 69 t / 3,200 nmi option would score lower). Capacity: a freighter -> null. Efficiency: only unquantified Airbus cost claims -> null. Speed: no maker cruise Mach in an opened source for this variant -> null. Runway: no airport-planning figure in an opened source -> null. Comfort: not applicable to a freighter -> null. Reviews: no independent reviews found (searches returned only Airbus, operator and trade-press launch coverage); fewer than 3, none padded."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19886,
+      "title": "Boeing 707-120 Makes Its First Flight From Renton",
+      "sourceUrl": "https://boeing.mediaroom.com/2007-12-20-Boeing-Marks-50th-Anniversary-of-707-First-Flight",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 707-120 (JT3C-6). Capacity: the Wikipedia variant table lists 174 passengers for the 707-120/-120B; that is the listed (single-class) capacity, no typical two-class figure was found; 150 -> 2, 200 -> 3, so 174 -> 2.48 -> 2.5. Range: no 707-120 range found on an opened page (the 3,600 nmi figure is the -120B, a different variant) -> null. Efficiency: no fuel burn -> null. Speed: no typical cruise Mach for the -120 found (0.887 on the page is the -320C maximum) -> null. Runway: no takeoff field length for the -120 -> null. Comfort: fewer than two reviews of this variant; the only two sources are a 1956 test-pilot excerpt about handling and a simulator-only remark -> null. Reviews: only 2 found (below the 3 required); the Gadling remark is from a pilot who flew the 707 only in a simulator, and the Aviation Week quote is Tex Johnston's from a 1956 Aviation Week pilot report as quoted in a 2015 blog."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19887,
+      "title": "Boeing 727-100 Makes Its First Flight From Renton",
+      "sourceUrl": "https://www.historylink.org/File/3568",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 727-100 with JT8D-7 (106 passengers two-class, MTOW 169,000 lb), Wikipedia specification. Range: 2,250 nmi; under 1,500 -> 0, 2,500 -> 1, so 2,250 -> 0.75 -> 1.0 (halves up). Capacity: 106 two-class passengers; 100 -> 1, 150 -> 2, so 1.12 -> 1.0. Efficiency: no fuel burn -> null. Speed: the Wikipedia table gives 518 kt cruise and Mach 0.90 maximum with no typical cruise Mach; AvWeb says operators fly the 727 at about Mach 0.78 to 0.80, which is an operator figure for the family, not the maker's typical -> null. Runway: no takeoff field length for the -100 -> null. Comfort: cabin width 11 ft 8 in published but no cabin or noise reviews of the -100 (AvWeb comments on the cockpit noise) -> null. Reviews: 2 found (below 3); both are pilot accounts of the 727 family rather than the -100 specifically (the Gadling quote is about the 727-200)."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19891,
+      "title": "Boeing 777 Freighter Makes Its First Flight From Everett",
+      "sourceUrl": "https://boeing.mediaroom.com/2008-07-14-Boeing-777-Freighter-Makes-First-Flight",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: 777 Freighter (launch customer Air France), Boeing's 14 July 2008 first-flight release. Range: 4,885 nmi with a full payload (Boeing release); 3,500 -> 2, 5,000 -> 3, so 2.92 -> 3.0 (Wikipedia now lists 4,970 nmi at maximum structural payload, Aviation Week's history 5,000 nmi and Boeing's 2004 plan 5,200 nmi; any of them also rounds to 3.0). Capacity: a freighter -> null. Speed: the release says the 777's typical cruise is Mach 0.84 at 35,000 ft; 0.82 -> 3, 0.85 -> 4, so 3.67 -> 3.5. Efficiency, runway, comfort: nothing published for the 777F on an opened page -> null. Reviews: 0 found; a DHL acceptance-flight page timed out and Lufthansa Cargo's page returned 403, so no independent pilot review was opened."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19892,
+      "title": "Convair 880 Makes Its First Flight From San Diego",
+      "sourceUrl": "https://www.thisdayinaviation.com/27-january-1959/",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Variant: Convair 880-22 (four CJ-805-3, MTOW 184,500 lb), Jane's All The World's Aircraft 1965-66 as tabulated on Wikipedia. Range: 2,472 nmi with 22,500 lb payload and 14,000 lb reserve; 2,500 -> 1, under 1,500 -> 0, so 2,472 -> 0.97 -> 1.0 (This Day in Aviation quotes a 5,056-mile maximum range, which conflicts and is not a typical-load figure; not used). Capacity: 110 passengers (Jane's); 100 -> 1, 150 -> 2, so 110 -> 1.2 -> 1.0. Efficiency: no fuel burn published -> null. Speed: Jane's economy cruise Mach 0.82 at 35,000 ft -> 3.0 (0.82 anchor); the maximum cruise of 534.5 kt is not the typical cruise. Runway: Jane's lists a 8,750 ft takeoff for the 880-22 without stating weight or ISA conditions, so it is treated as the MTOW figure: 7,000 -> 4, 8,500 -> 3, 10,000 -> 2, so 8,750 -> 2.8 -> 3.0 (flagged: not from an airport-planning document). Comfort: no reviews of this variant found (Air Facts Journal pilot article was blocked) -> null. Reviews: 0 found, below the required 3."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15102,
+      "title": "Granite 4.2 8B, 3B and 30B Released",
+      "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Granite4.2 family pin, scoring30B flagship at August25 launch. Maker supports native128K with extension to512K; context axis uses published512K maximum. Text-only. Launch independently measured AA Index and Terminal-Bench4.0 were not established; maker29.24% is Terminal-Bench2.1 and cannot fill coding. No verified launch API list price or output throughput, so those axes are null. Two firsthand independent tests verified after broader search; fewer than3 reviews. KGP tested quantized30B onRTX5090; Carwash is a narrow two-run30B constraint test, not a general ranking."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15136,
+      "title": "Qwen3.7-Plus Released",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored as launched (2 Jun 2026). Reasoning null: I found no Artificial Analysis score published at launch in any page I could open; AA's page now shows 25 on v4.3.2 (39 on an older comparison page) and the maker's headline (ScreenSpot Pro 79.0, Terminal-Bench 2.0 70.3) is not comparable to the anchors. Coding null: no TB 4.0. Context 1M (Alibaba help page: 991,808 input tokens). Price $0.40 in / $1.60 out per 1M (Alibaba, VentureBeat, Gigazine, AA) = $0.80 blended; The Decoder printed $2.40 output, which conflicts with the other sources. Speed 59 tok/s from AA's current page (not launch-day). Modalities text, image, video in. Only 3 reviews: no genuine independent hands-on test found (WaveSpeed's page runs no tests). (A review whose quote could not be re-verified was dropped.)"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "title": "GPT-5.4 mini and GPT-5.4 nano Released",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored as launched (GPT-5.4 mini, 17 Mar 2026, shipped with nano; this rubric is for mini): Artificial Analysis Intelligence Index 48 at xhigh (nano 44), AA post of the launch (v4.0); 400k context; $0.75 in / $4.50 out per 1M = about $1.69 blended (nano $0.20/$1.25); text+image input. Coding null: OpenAI's Terminal-Bench 2.0 60.0% (mini) and AA's TerminalBench 52% are not Terminal-Bench 4.0. Speed null: OpenAI says 'more than 2x faster than GPT-5 mini' but no launch tok/s was opened (AA's current page reads 254.5 tok/s). (A review whose quote could not be re-verified was dropped.)"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15170,
+      "title": "Qwen-Plus (Qwen2.5-Plus, qwen-plus-2025-01-25) Released",
+      "sourceUrl": "https://help.aliyun.com/en/model-studio/newly-released-models",
+      "reviewCount": 0,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored as launched (qwen-plus-2025-01-25, 30 Jan 2025; proprietary Qwen2.5-generation API model, not open weights). Reasoning null: no Artificial Analysis Intelligence Index entry or comparable maker headline benchmark for this snapshot (the Qwen2.5 report gives MMLU-Pro 72.5 / Arena-Hard 81.4, not comparable to the anchors). Coding null: no Terminal-Bench 4.0. Context 131,072 tokens (Alibaba Model Studio page) -> 1. Price: Alibaba Model Studio Singapore list $0.40 in / $1.20 out per 1M = $0.60 blended at 3:1 -> 5 (page read 24 Oct 2026, so it is the current list, which the pin also quotes as the launch price; OpenRouter listed $0.26/$0.78). Speed null: none published at launch. Modalities 1: text only. No independent review of this snapshot was found (only maker material, aggregator tables and an arXiv domain benchmark), so reviews are empty."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19670,
+      "title": "Sora API Adds 20-Second Clips, 1080p and Characters",
+      "sourceUrl": "https://x.com/OpenAIDevs/status/2032142448970121468",
+      "reviewCount": 1,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored as of 12 Mar 2026 (Sora 2 API update): sora-2-pro 1080p, up to 20 s per OpenAI's changelog, native audio, text and image input with reusable characters, video extensions and an edits endpoint, hence 3.5. Speed null: no published figure. Realism null: the only independent evaluation of this state is one DIY AI review (July 2026), which scored video quality 9.5/10 but also reported slow rendering; the quotes are therefore recorded without a consensus score."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19675,
+      "title": "Grok Imagine Video 1.5 Adds Text-to-Video, References and 1080p",
+      "sourceUrl": "https://x.ai/news/grok-imagine-video-1-5-references",
+      "reviewCount": 2,
+      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "existingResearchBasis": "Scored as of the 31 Jul 2026 update to grok-imagine-video-1.5. Resolution 4: native 1080p for text- and image-to-video (reference-to-video stayed at 720p per the docs). Duration 4: up to 15 s per xAI's docs (the post itself states no maximum). Audio 5: native speech, effects and ambience plus voice reference for a consistent character voice. Control 4: text, up to seven reference images and a voice reference, plus pinned frames in the docs; there is no video reference or video editing in this entry (editing exists on the separate API endpoint), so it lands at the 4 anchor ('multiple image ... and audio references'). Speed is null: no maker figure for the 1080p or reference modes (Curious Refuge saw about 60 s, resolution unstated). Realism is null: only one hands-on test (Curious Refuge, which found it behind Seedance 2.0) and one news explainer (Tech Times, no quality verdict) were found, fewer than the two independent reviews required."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17263,
+      "title": "La Scala, Paradise Hotel Busan (라스칼라) — Busan restaurant",
+      "sourceUrl": "https://www.busanparadisehotel.co.kr/front/facility/dinerestaurants?language=EN#la-scala",
+      "reviewCount": 1,
+      "reason": "One original CH_ blog review now saved, published December 6, 2023 (April 2024 modification excluded). Two more independently attributable exact Paradise Hotel Busan firsthand sources needed. Tabling reproduces gray’s Polle account but live original refused access; Google Maps exposes only limited venue view, so Restaurant Guru reprints not treated as opened original reviews. Excluded Incheon La Scala/Trip.com misclassified pages, operator promotions and Stripes/HAPS promotion reprints. Do not transfer pre-rebrand NYX Grill or Incheon food verdicts.",
+      "existingResearchBasis": "Food 4.5 from 4.9 over 444 ratings (5 not given: no independent reviews found). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 0: Not shown on pages 1-2 of the MICHELIN Guide Busan restaurant list (57 restaurants) read 2026-10-18, so 0."
+    }
+  ],
+  "coverageFollowUps": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 4410,
+      "reason": "Continued Opal identity research: WearTesters linked original video description lists style 313450_01 and article photo URLs were inventoried; direct photo inspection remains pending. Basketpack explicitly identifies Opal. Basket USA uses blue operator images whose filenames include 313455-01, but that alone does not identify the reviewer’s tested pair. HoopsGeek is a secondary aggregator and its paraphrases were not copied as original reviewer quotations. A third independently verified Opal-specific primary test remains required.",
+      "sourcesChecked": [
+        "https://weartesters.com/puma-hali-1-performance-review/",
+        "https://www.youtube.com/watch?v=O39zWmkc4dI",
+        "https://www.basketusa.com/news/847043/test-de-chaussures-la-puma-hali-1-face-a-son-destin/",
+        "https://www.thehoopsgeek.com/shoe-reviews/puma-hali-1/"
+      ]
+    }
+  ],
+  "resolvedCoverageFollowUps": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "status": "resolved",
+      "reason": "Recovered 周尤’s original Autohome December 16, 2021 test, via the exact source linked by the model section. Publisher Read full article explicitly identifies Sundae 13.9 kWh / 170 km and the quoted sport-mode pedal response. Original byline used rather than later reprints. Native explanation corrected in both environments because replay intentionally preserved its old basis. Four reports span three publishing platforms; owner and editor on Autohome are not two publishers.",
+      "sourcesChecked": [
+        "https://www.autohome.com.cn/drive/202112/1231041.html",
+        "https://www.autohome.com.cn/drive/202112/1231041-all.html"
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "status": "resolved",
+      "reason": "Three replacement Single Motor reports now saved: German ADAC test, NZ Driven Car Guide standard passive-damper car and Autoweek explicitly shared single/dual launch acceleration impression. AWD-only active-damper handling extracts and evolving unspecified-variant quote removed from native review array, with sources retained as context. NZ/US market and later-software limitations explicit; all original scores preserved.",
+      "sourcesChecked": [
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+        "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
+        "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/"
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "status": "resolved",
+      "reason": "Third exact CRJ100 firsthand report saved: sumitsan, Comair N959CA seat 9A, SQTalk post #8, published March 2, 2012 about April 2011 flight. Operator fleet PDF visually confirms MSN 7116 and CF34-3A1. Three authors across two platforms meets raw review count, not a claim of three publishers. Technical axes unchanged; comfort null.",
+      "sourcesChecked": [
+        "https://www.sqtalk.com/forum/forum/general/trip-reports/11393-?p=234271#post234271",
+        "https://northwestairlineshistory.org/wp-content/uploads/2020/05/DL_fleetlist_2009-05-01.pdf"
+      ],
+      "excludedCandidates": [
+        {
+          "url": "https://travelupdate.com/review-air-canada-express-crj-100-experience/",
+          "reason": "Opened original labels CRJ100 but names C-GKEJ. TSB A19O0117 and airframe records identify CRJ200, MSN 7269. Headline alone insufficient; not used."
+        },
+        {
+          "url": "https://flieger67.blogspot.com/2013/12/ukraine-cimberas-sas-crj100.html",
+          "reason": "Opened original December 21, 2013 report names OY-RJH. Contradictory CRJ100/200 historical fleet labels; engine/dated identity unresolved. Do not assume conversion from other Cimber registrations; not used."
+        },
+        {
+          "url": "https://www.aviation24.be/forums/viewtopic.php?t=18433",
+          "reason": "Browser security page prevents full original quotation/aircraft verification. Search snippets insufficient; not used."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "status": "resolved",
+      "reason": "Verified exact current Haeundae location using saved Pin address, official operator About page, 2025 municipal guide and Jenny Na’s September 30, 2026 original site-visit/profile. Late-November-2024 move from Yongho-dong is explicit in the latter; no precise day invented. Native guide/profile sources now replace old-location award news and unverified listing; atmosphere observation is not a scored meal verdict.",
+      "sourcesChecked": [
+        "https://www.palatebusan.com/about-1",
+        "https://www.mingchu.io/people/article-korean/1932",
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "status": "resolved",
+      "reason": "Added exact Hwamyeong municipal guide entry and original named Diningcode member evaluation, alongside existing MICHELIN description. Three independent platforms, with visitor authorship explicitly distinguished from a professional critic meal. Municipal newspaper shares city publisher and was not counted as another independent platform. Changwon branch, anonymous syndicated blog summaries and sponsored Superchart candidates excluded.",
+      "sourcesChecked": [
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+        "https://shunsaikubo.com/",
+        "https://www.busan.go.kr/bige/daily-busan/view?bbsNo=10&curPage=1&dataNo=71501"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "status": "resolved",
+      "reason": "Third independent guide source added from original 2024 municipal volume on an HTTPS education-site mirror. Exact Sinpyeong main branch verified at 6 Bibong-ro, not Busan Station franchise or neighboring Yeongjin entry. Compilation cutoff is not publication; native date null.",
+      "sourcesChecked": [
+        "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17279,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Complete PDF page 9 / printed page 15 visually inspected; Donggyeong bapsang #20, exact 34-6 Namcheonbada-ro matches main-branch Pin. BR Media / Blue Ribbon Survey, distinct publisher from municipal guide and MICHELIN. Colophon PDF page 28 explicitly first published October 30, 2023. Neutral description of finishing eel rice as ochazuke receives neutral sentiment, not invented praise.",
+      "sourcesChecked": [
+        "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17280,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Full original Kookje staff tasting report rendered. Explicit original input March 6, 2024 19:09:07; March 7 URL/print issue is not publication day. Selected quote is reporter 정인덕’s own head-meat texture verdict in Anmok/Namcheon section, not the preceding MICHELIN quotation or subsequent Budamyeonok section. Three reporters remain one publishing source.",
+      "sourcesChecked": [
+        "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+        "https://archive19.tistory.com/723"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17282,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Cindy Choi original HAPS local dining report, visible June 28, 2022 and time datetime June 28 00:00:59 +09. UTC article metadata June 27 15:00:59 is same instant; retain publisher-local day. Historical warm-room observation only, no current hours/menu claims. HAPS cadastral Gwangan-dong 94-3 matches current 54 Muhak-ro 33beon-gil through opened original Diningcode dual-address listing.",
+      "sourcesChecked": [
+        "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+        "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17286,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Full original Foodtracer blog by 안냠쩝, actual article title distinct from site H1. Original August 5, 2023 10:04 visible byline; exact personally ordered chicken-wing assessment and original course photographs. 9-7 Dongcheon-ro 108beon-gil matches native Pin, not a similarly named Danggam venue. Historical menu/hours not saved as current.",
+      "sourcesChecked": [
+        "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+        "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "status": "resolved",
+      "reason": "Native review count now at least three with exact venue/branch evidence. Opened exact original Seoul inspector entry with id 1244365 and hotel street address 521 Teheran-ro, explicitly sushi counter within Hinotsuki. No publication day supplied; keep null, no ceremony date or current year inferred. This replaces an unverified non-id URL whose saved iki quotation does not describe the Seoul entry. The old iki quotation was separately located verbatim in the opened original Tokyo MICHELIN entry at B1F 8-10-3 Ginza: https://guide.michelin.com/th/en/tokyo-region/tokyo/restaurant/sushi-kanesaka .",
+      "sourcesChecked": [
+        "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+        "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+        "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme"
+      ]
+    }
+  ],
+  "independenceGaps": [],
+  "resolvedIndependenceGaps": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15259,
+      "independentPublishers": 3,
+      "resolution": "Added edited Team-BHP exact petrol-automatic owner highway impression, 2026-05-26. This is owner evidence, not an instrumented professional test; two Autocar extracts still count as one publisher.",
+      "evidenceCatalog": "scripts/products/xuv-owner-review-2026-10-26.json"
+    }
+  ],
+  "publicationResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 3410,
+      "title": "Ferrero Rocher and Raffaello Chocolate Bars Hit UK Shelves",
+      "url": "https://www.trolley.co.uk/product/ferrero-rocher-milk-chocolate-hazelnut-bar/FLP669",
+      "status": "verified-undated",
+      "reason": "Opened displayed firsthand customer tasting extract, not seller description. No exact publication day displayed for this specific customer comment; keep null. This is consumer testimony, not professional criticism."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 4503,
+      "title": "Buffalo Trace's First Bottle Draw Winners Collect Uncut Elmer T. Lee 40th Anniversary",
+      "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
+      "status": "verified-undated",
+      "reason": "Opened Richard Thomas exact cask-strength 40th Anniversary tasting. Native APIs now hold one contiguous verbatim extract rather than the former stitched sentences. Full rendered article and metadata expose no original publication day; masthead date and September URL month are not article publication evidence. Keep null and off graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 4506,
+      "title": "Great Lakes Christmas Ale First Pour 2026 Taps in Cleveland",
+      "url": "https://bevx.com/bow-detail/?id=443",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "status": "needs-research",
+      "reason": "Opened original Reddit post by u/minutemaiding; saved exact rich/not-overly-sweet/crunch tasting sentence verified in post body, not comments or merchant copy. Canadian Costco product photograph identifies Lotus Biscoff Toblerone Diamond Truffles. Reader exposes only relative 2d age, and original public RSS returned HTTP 403 to curl (reader does not support Atom). Exact original publication day remains unresolved; keep null and do not infer day from the relative age or pin launch."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5610,
+      "title": "Nestlé's KitKat F1 Collectable Tin Goes on Sale in UK for Christmas",
+      "url": "https://www.snacksonline.co.uk/products/kit-kat-f1-official-car-chocolate-bar-29g",
+      "status": "verified-undated",
+      "reason": "Opened actual customer tasting section and matched the saved extract. It is a customer review, not the retailer product description or shop reply. No publication date for the specific comment; keep null and off the graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5611,
+      "title": "Cadbury Dairy Milk Smash Bauble Arrives in UK for Christmas",
+      "url": "https://www.taquitos.net/candy/Cadbury-Dairy-Milk-Freddo-Faces",
+      "status": "verified-undated",
+      "reason": "Opened exact firsthand tasting. Publisher supplies publication month/year only (December 2019), not a day; keep null instead of inventing a day."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5612,
+      "title": "Cadbury Biscoff Filled Centres Launch in UK for Christmas",
+      "url": "https://www.taquitos.net/candy/Cadbury-Biscoff",
+      "status": "verified-undated",
+      "reason": "Opened exact firsthand tasting. Publisher supplies publication month/year only (August 2026), not a day; keep null instead of inventing a day."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5613,
+      "title": "Haribo Sour Bats Join UK Halloween Range",
+      "url": "https://www.taquitos.net/candy/Haribo-Sour-Vampire-Bats",
+      "status": "verified-undated",
+      "reason": "Opened exact firsthand tasting. Publisher supplies publication month/year only (August 2022), not a day; keep null instead of inventing a day."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
+      "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "status": "needs-research",
+      "reason": "Rendered product page exposes no Ms S. customer quotation or original review day. Exact-phrase searches did not locate the quotation on an opened primary source. Original customer review and timestamp still need verification; do not infer from the product launch or unrelated Strawberry & Cream reviews."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
+      "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "status": "needs-research",
+      "reason": "The saved product path returns a rendered 404. Exact Nicole customer quotation was not recovered. Alternate shops have product descriptions, not this firsthand review; original customer review and day remain unverified. A linked existing Instagram account is a separate source, not proof of this quoted customer text."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7013,
+      "title": "GREY GOOSE Berry Rouge Launches in United States",
+      "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7014,
+      "title": "High Noon Transfusion Vodka Seltzer Launches in United States",
+      "url": "https://www.totalwine.com/beer/seltzers-flavored-beverages/hard-seltzer/high-noon-vodka-seltzer-transfusion/p/2126277428",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7016,
+      "title": "Absolut TABASCO Vodka Launches in United States",
+      "url": "https://www.tastings.com/Spirits-Review/Absolut-Tabasco-Flavored-Vodka-Sweden-03-01-2026.aspx",
+      "status": "verified-undated",
+      "reason": "Rendered Date Tasted 1/27/2026 is the tasting day, not a publication date. URL date is not byline evidence. Keep null."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7626,
+      "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
+      "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+      "status": "needs-research",
+      "reason": "Opened original independent guide and verified its bakery-wide verdict. Repaired the non-verbatim shortened ingredient sentence. This is general bakery context, not a firsthand tasting of the specific award-winning loaf. Last Updated 10-08-2026 is not original publication; retain null. Find an eligible product-specific tasting source rather than marking this date/source check complete."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7659,
+      "title": "CHI FOREST Lychee Fizzy Sparkling Water",
+      "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
+      "status": "verified-undated",
+      "reason": "Opened actual customer tasting section and matched the saved extract. It is a customer review, not the retailer product description or shop reply. No publication date for the specific comment; keep null and off the graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7660,
+      "title": "Wanglaoji / Walovi Canned Herbal Tea",
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "status": "needs-research",
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7663,
+      "title": "Coconut Palm Coconut Milk Drink",
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "status": "needs-research",
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7665,
+      "title": "White Rabbit Matcha Milk Candy",
+      "url": "https://helloasia.co.za/products/white-rabbit-creamy-candy-matcha-150g",
+      "status": "verified-undated",
+      "reason": "Opened actual customer tasting section and matched the saved extract. It is a customer review, not the retailer product description or shop reply. No publication date for the specific comment; keep null and off the graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13912,
+      "title": "Peters Drumstick Launches an Anzac Biscuit Ice Cream Cone in Australia",
+      "url": "https://www.productreview.com.au/listings/peters-drumstick",
+      "status": "needs-research",
+      "reason": "Rendered ProductReview listing is blocked, so exact author/text/day remain unverified. Saved title explicitly describes the classic Drumstick range rather than the pinned Anzac flavour; the other saved classic-range article also does not establish that flavour. Research an exact Anzac tasting account instead of treating a generic range review date as completion."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13915,
+      "title": "Canopy Salted Walnut Ice Cream and Hokey Pokey Gelato Win at Melbourne Royal",
+      "url": "https://www.melbourneroyal.com.au/australian-food-awards/results/2026-champions/",
+      "status": "needs-research",
+      "reason": "Saved extract matches official food-award results, not a firsthand product tasting. Awards support achievement but cannot substitute for a verified tasting review; research exact winning product and judge/taster account."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "title": "Triumf Glass Adds Matcha & Caramel and Strawberry & Chocolate Tubs for Autumn",
+      "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "title": "Triumf Glass Adds Matcha & Caramel and Strawberry & Chocolate Tubs for Autumn",
+      "url": "https://www.facebook.com/triumfglass/videos/1568022244557404/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13921,
+      "title": "Hennig-Olsen Launches Daim Strawberry Tub and Brings Back Anita Ice Cake",
+      "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
+      "status": "needs-research",
+      "reason": "Opened exact Hennig-Olsen 450-ml Strawberry tub product page, GTIN 7041018011209, and searched Norwegian taste tests. Operator description is not firsthand tasting. Existing GB Glace Swedish cone and 2013 Strawberry Dream accounts concern different makers/products; searches found Balltop, Kroneis and older non-strawberry tubs, which do not establish this product taste. Exact tub tasting evidence remains required; dates alone cannot resolve eligibility."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13926,
+      "title": "Alberto Marchetti and Caffè Vergnano Open Affogato Kiosk in Turin",
+      "url": "https://restaurantguru.com/Alberto-Marchetti-Turin",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13934,
+      "title": "Lick Gelato Named Northern Ireland Champion at the Great British Food Awards",
+      "url": "https://www.facebook.com/LickGelatoNI/videos/guess-where-you-can-find-our-cans-now-get-yours-today-lickgelato-viral-icecream-/1986148565668332/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13962,
+      "title": "Baskin-Robbins Japan Launches Love Potion Grand Shake on 9 October",
+      "url": "https://ranking.net/items/f9afbb",
+      "status": "verified-undated",
+      "reason": "Opened displayed firsthand customer tasting extract, not seller description. No exact publication day displayed for this specific customer comment; keep null. This is consumer testimony, not professional criticism."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13964,
+      "title": "Glico's Giant Cone Teams Up With The Apothecary Diaries From 7 September",
+      "url": "https://ranking.net/items/1005a7",
+      "status": "verified-undated",
+      "reason": "Opened displayed firsthand customer tasting extract, not seller description. No exact publication day displayed for this specific customer comment; keep null. This is consumer testimony, not professional criticism."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13971,
+      "title": "CU Launches Pokemon Ditto, Pikachu and Magikarp Shaped Sorbet Bars",
+      "url": "https://www.instagram.com/reel/DeRM1E_zg99/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13973,
+      "title": "Helados Holanda Adds a Paleta OREO to Its Mexican Ice Cream Range",
+      "url": "https://www.walmart.com.mx/ip/helado-holanda-oreo-sabor-vainilla-con-trozos-de-galleta-1-89-l/00750630641517",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "title": "Kibon's Mini Paçoquita Peanut-Candy Ice Cream Bites Go National",
+      "url": "https://www.paguemenos.com.br/minisorvete-pacoquita-kibon-caixa-92g-edicao-limitada/p",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "title": "Kibon's Mini Paçoquita Peanut-Candy Ice Cream Bites Go National",
+      "url": "https://www.facebook.com/blogcheiasdecharmeplussize/posts/provamos-o-mini-pa%C3%A7oquita-kibon-que-%C3%A9-um-bombom-de-sorvete-cremoso-sabor-amendoi/1653389256359622/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13978,
+      "title": "Helados Holanda Launches Pumpkin Spice Tub With a Pan de Muerto Weekend",
+      "url": "https://www.instagram.com/reel/DdFsf7gReMq/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "title": "Cortina Adds Four Shamiso Ice Cream Flavours in Zimbabwe",
+      "url": "https://silverstreamdistribution.com/collections/all-products/products/cortina-shamiso-bubblegum-ice-cream-5lt",
+      "status": "needs-research",
+      "reason": "Saved flavour description matches distributor product copy, not an attributed firsthand tasting. Need independent exact-flavour tasting source; do not turn merchant text or product timestamps into a review."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "title": "Cortina Adds Four Shamiso Ice Cream Flavours in Zimbabwe",
+      "url": "https://silverstreamdistribution.com/products/cortina-shamiso-banana-ice-cream-5lt",
+      "status": "needs-research",
+      "reason": "Saved flavour description matches distributor product copy, not an attributed firsthand tasting. Need independent exact-flavour tasting source; do not turn merchant text or product timestamps into a review."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13987,
+      "title": "Dairy Queen's Spellbound Series Brings an Ube Enchanted OREO Blizzard",
+      "url": "https://www.tiktok.com/@classywithnoregards/video/7690772384281922829",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13991,
+      "title": "Ben & Jerry's Waffle Lotta Good Donates $1 per Waffle Cone Through 12 October",
+      "url": "https://www.yelp.com/biz/ben-and-jerrys-san-diego-10",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13996,
+      "title": "KitKat Dark Ice Cream Gets Three Visit Malaysia 2026 Limited-Edition Packs",
+      "url": "https://www.threads.com/@penangfoodie/post/DM1qxCUzihk",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19948,
+      "title": "Streets Releases the Golden Gaytime, Toffee and Vanilla Ice Cream in Biscuit Crumbs",
+      "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19951,
+      "title": "Meiji Sells Hello Panda Biscuits in Singapore in 1991, Starting Its Overseas Hit",
+      "url": "https://candycritic.org/hello%20panda%20milk%20chocolate.htm",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20009,
+      "title": "Meiji Launches M's Bar Rum au Lait Rum-Raisin Chocolate in Japan on 5 March 2019",
+      "url": "https://konbinichoco.com/meijiseika/meijiseika-genre/17235/",
+      "status": "verified-undated",
+      "reason": "Rendered tasting article has no original publication byline. March 5 is the chocolate release date, not an article date. Keep null."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20038,
+      "title": "Whitbread Secures the Licence to Brew Stella Artois in the UK",
+      "url": "https://www.fearlesscritic.com/beer/69/stella-artois",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 20048,
+      "title": "Terry's Launches the Chocolate Orange at Its York Works in 1932",
+      "url": "https://www.candycritic.org/terrys%20orange%20milk.htm",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14000,
+      "title": "BYD Launches the Da Tang EV Flagship SUV With 950 km Range",
+      "url": "https://www.xchuxing.com/article/162814",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14076,
+      "title": "Zeekr Launches Super Hybrid 9X Luxury SUV in Europe",
+      "url": "https://www.xchuxing.com/article/158922",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "title": "IM Motors Launches the LS9 Large Extended-Range SUV From RMB 322,800",
+      "url": "https://www.xchuxing.com/article/162486",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "title": "Avatr Launches the 07L Electric SUV With Huawei ADS 5 From RMB 229,900",
+      "url": "https://www.xchuxing.com/article/174048",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14218,
+      "title": "MG Launches the Redesigned MG4 in China From RMB 68,800",
+      "url": "https://www.xchuxing.com/article/160445",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "title": "MG 07 Electric and Hybrid Sedan Goes on Sale From RMB 108,900",
+      "url": "https://www.pcauto.com.cn/reviews/31211.html",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14228,
+      "title": "Changan Nevo Launches the Q06 Mid-Size SUV From RMB 139,900",
+      "url": "https://www.xchuxing.com/article/174108",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 503. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "title": "Voyah Launches the Dream Electric and Range-Extender MPV From RMB 369,900",
+      "url": "https://electricvehicleweb.com/voyah-dream/",
+      "status": "needs-research",
+      "reason": "Voyah source is explicitly First Look of updated 2024-26 cabin, not the scored 2022 launch BEV. Visible July2 2026 is Last Updated On despite datePublished sharing that value. Resolve updated-version eligibility and original day; do not date as independent launch road test."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "title": "Zeekr Starts 001 Deliveries in China From RMB 281,000, With 800 V and 700 km Range",
+      "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19936,
+      "title": "Ferrari Unveils the 296 GTS, an 830 cv Plug-In Hybrid V6 Spider With a 14-Second Folding Hardtop",
+      "url": "https://carmagazine.co.uk/car-reviews/ferrari/296-gts",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Ferrari 296 GTS review and video: drop-top perfection?. Visible Updated: 01 November 2022 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19969,
+      "title": "Hyundai Prices the Fifth-Generation Santa Fe Plug-in Hybrid in the UK From GBP 51,885",
+      "url": "https://www.exchangeandmart.co.uk/reviews/hyundai/santa-fe-plug-in-hybrid/14433",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19991,
+      "title": "Maserati Unveils the GranCabrio Folgore, a 751 hp Electric Convertible, From EUR 206,713",
+      "url": "https://www.discoverev.co.uk/ev-reviews/maserati-grancabrio-folgore-review",
+      "status": "verified-undated",
+      "reason": "Rendered GranCabrio Folgore road test has no publication byline; dates in related links do not date this article. Keep null."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "title": "Polestar 4 Goes on Sale in Europe and Australia From EUR 61,900 With 200 kW Charging",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+      "status": "verified-undated",
+      "reason": "Opened original full Single Motor road test. Original article datePublished February 20, 2024 belongs to earlier coverage; visible July 4, 2025 is a later revision. Neither separately establishes first publication of the quoted current road-test passage. Keep native date null and the excerpt off the graph; scope note verified in source wiki."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20024,
+      "title": "Porsche Unveils the Electric Macan Turbo With 630 hp and 270 kW Charging, From USD 105,300",
+      "url": "https://www.carmagazine.co.uk/car-reviews/porsche/macan-electric/",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Porsche Macan Electric (2026) review: still one of the best. Visible Updated: 24 May 2026 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "title": "Škoda Opens UK Orders for the Superb iV Estate With 84 Miles of EV Range, From GBP 41,465",
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "status": "needs-research",
+      "reason": "AutoExpress generic Superb page now covers multiple petrol/diesel/PHEV versions. Scored pin is UK iV Estate; June6 2024 metadata alone does not establish when this PHEV-specific assessment appeared. Exact iV road-test replacement still needed."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "title": "Volvo Lifts the V60 Recharge Plug-In to an 18.8 kWh Battery and 350-455 PS, From EUR 56,350",
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "needs-research",
+      "reason": "Full browser body verifies TopGear V60 overview quote, but visible Published Apr8 2025 conflicts with structured Apr9 2025 datePublished. Generic overview covers later trims while pin scores350PS RechargeT6 launch. Seek dated exact T6 18.8kWh drive before applying a publication day."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15220,
+      "title": "BMW Updates the 7 Series With Neue Klasse Tech and a 400 hp 740 xDrive",
+      "url": "https://www.caranddriver.com/bmw/7-series",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "title": "Volkswagen Premieres the Second-Generation T-Roc as a Mild Hybrid",
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15222,
+      "title": "Mercedes-AMG Unveils the GLC 53 With a Returning Inline-Six",
+      "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15227,
+      "title": "Aston Martin Announces the DB12 S with 700 PS and Sharper Handling",
+      "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15238,
+      "title": "Toyota's Refreshed 2026 Corolla Cross Reaches Dealers From $24,635",
+      "url": "https://www.edmunds.com/toyota/corolla-cross/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
+      "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15254,
+      "title": "Fiat Opens UK Orders for the Grande Panda Hybrid From GBP 18,035",
+      "url": "https://www.carmagazine.co.uk/car-reviews/fiat/grande-panda-hybrid",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Fiat Grande Panda Hybrid (2026) review: cheap and cheerful. Visible Updated: 31 May 2026 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15255,
+      "title": "DS Unveils the N°7 SUV, Replacing the DS 7, With a 145 hp Hybrid",
+      "url": "https://www.carmagazine.co.uk/car-reviews/ds/2026-no-7-hybrid/",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: DS No.7 Hybrid (2026) review: a premium SUV deserves better than a 1.2-litre engine shared with a Corsa. Visible Updated: 09 July 2026 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "title": "Chevrolet Says the 2027 Corvette Stingray Tops 200 mph From US$73,495",
+      "url": "https://www.edmunds.com/chevrolet/corvette/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19911,
+      "title": "Audi Prices the 2020 SQ8 With a 500 hp V8 at USD 89,995 for the US",
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "status": "needs-research",
+      "reason": "Opened evo SQ8 page is titled 2024 and visibly dated February2 2024 while original datePublished is May28 2021. Both petrol V8 model scope and whether saved quote appeared in original versus facelift revision need historical verification; do not assign update as original."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19926,
+      "title": "Caterham Unveils the Seven 620R at Goodwood: 310 bhp Supercharged, From 49,995 Pounds",
+      "url": "https://carmagazine.co.uk/car-reviews/caterham/caterham-seven-620r-2013-review",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Caterham Seven 620R (2013) review. Visible Updated: 26 January 2015 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "title": "Hyundai Premieres the European-Built Third-Generation i10 at Frankfurt From GBP 12,495",
+      "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
+      "status": "verified-undated",
+      "reason": "Full rendered body verifies exact base1.0-litre driving comment. Dimensions3670x1680x1480,252L boot identify third generation, consistent with pin. No original article publication day in visible body/time/metadata;2008 is model-line origin, not publication. Native APIs now include scored exact extract and rendered H1; retain null off graph."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19979,
+      "title": "KTM Unveils the Road-Legal X-Bow GT-XR With a 500 PS Audi Five-Cylinder, From 284,900 Euros",
+      "url": "https://www.carmagazine.co.uk/car-reviews/ktm/x-bow-gt-xr/",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: KTM X-Bow GT-XR review: the responsible track weapon?. Visible Updated: 18 July 2025 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20019,
+      "title": "Porsche Adds the 718 Cayman GTS 4.0 With a 400 PS Flat-Six, From EUR 81,926",
+      "url": "https://www.carmagazine.co.uk/car-reviews/porsche/718-gts-40/",
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Porsche 718 Cayman GTS 4.0 (2020) review: holy grail hunting. Visible Updated: 09 March 2020 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 2339,
+      "title": "The Boeing 747 Makes Its First Flight",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "status": "verified-undated",
+      "reason": "Undated retrospective firsthand account. January 1970 identifies the flight event, not publication. Browser body contains no publication byline. Keep null."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 6632,
+      "title": "Pan Am Flies the Boeing 747 on Its First Commercial Flight, New York to London",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "status": "verified-undated",
+      "reason": "Undated retrospective firsthand account. January 1970 identifies the flight event, not publication. Browser body contains no publication byline. Keep null."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19440,
+      "title": "Boeing Rolls Out the First 747 Jumbo Jet in Everett",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "status": "verified-undated",
+      "reason": "Undated retrospective firsthand account. January 1970 identifies the flight event, not publication. Browser body contains no publication byline. Keep null."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19441,
+      "title": "FAA Certifies the Boeing 747 for Passenger Service",
+      "url": "https://panam.org/global-era/747-flight-to-london-1970",
+      "status": "verified-undated",
+      "reason": "Undated retrospective firsthand account. January 1970 identifies the flight event, not publication. Browser body contains no publication byline. Keep null."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19564,
+      "title": "De Havilland Canada Dash 8 Prototype Makes Its First Flight",
+      "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+      "status": "verified-undated",
+      "reason": "Opened History section contains Ben Brown’s genuine firsthand Henson Dash-8 pilot recollections. Kit discussion is excluded. No article publication date, keep null."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19565,
+      "title": "NorOntair Takes Delivery of the First Dash 8",
+      "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
+      "status": "verified-undated",
+      "reason": "Opened History section contains Ben Brown’s genuine firsthand Henson Dash-8 pilot recollections. Kit discussion is excluded. No article publication date, keep null."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19570,
+      "title": "Douglas DC-8 Makes Its First Flight From Long Beach",
+      "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
+      "status": "needs-research",
+      "reason": "Full browser body verifies HenryTenby ATI extract, but its October2013 magazine issue has no publication day and covers DC8-62/-72 combis, not scored Series10. Existing basis also mentions later55/-72 freighters; exact-variant replacements needed. Flight/visit dates are not article publication."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "title": "McDonnell Douglas MD-90 Makes Its First Flight From Long Beach",
+      "url": "https://aeroxplorer.com/articles/flying-on-the-delta-md-90.php",
+      "status": "verified-undated",
+      "reason": "Opened full Julian Waller firsthand Delta MD-90-30 report. Byline renders AGO without an age; original datePublished is empty. June28 2022 is dateModified only, and Back in May describes the flight. Keep original publication null; do not date the report from the trip or update."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 2693,
+      "title": "Claude Fable 5.1 and Mythos 5.1 Released",
+      "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
+      "status": "needs-research",
+      "reason": "Full browser body verifies Endor vendor benchmark and quote. Visible and structured original Apr9 2026 precede pin model launch Sep1 2026; visible modification Sep4 may be model revision rather than original. Resolve historical article/model chronology before dating; not dated from current benchmark text."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 4812,
+      "title": "DeepSeek-V4.1-Flash Released",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "title": "Gemini 1.0 Released",
+      "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+      "status": "needs-research",
+      "reason": "Exact corrected Akkio extract verified. Visible publication January3 2024 conflicts with JSON-LD December22 2023 original and December26 2023 modification. Date remains null in both environments; seek original archive/publisher evidence."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15114,
+      "title": "GLM-4.7 Released",
+      "url": "https://epoch.ai/models/glm-4-7",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15115,
+      "title": "GLM-4.7-Flash Released",
+      "url": "https://www.verdent.ai/guides/model/glm-4-7-flash",
+      "status": "needs-research",
+      "reason": "Exact Verdent quotation verified, but source explicitly repeats Z.AI-reported results and recommends future tests rather than reporting its own hands-on results. It is an undated coding-agent vendor guide; independent-review eligibility needs replacement or documented guide-only scope."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15128,
+      "title": "Step 5 Preview Released",
+      "url": "https://artificialanalysis.ai/models/step-5",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15129,
+      "title": "Qwen3-235B-A22B-Instruct-2507 Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-2507",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "title": "Qwen3-235B-A22B-Thinking-2507 Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-2507-reasoning",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "title": "Qwen3-235B-A22B-Thinking-2507 Released",
+      "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15131,
+      "title": "Qwen3-30B-A3B-Instruct-2507 Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-30b-a3b-2507",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15132,
+      "title": "Qwen3-Next-80B-A3B-Instruct and Qwen3-Next-80B-A3B-Thinking Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15132,
+      "title": "Qwen3-Next-80B-A3B-Instruct and Qwen3-Next-80B-A3B-Thinking Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-reasoning",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "title": "GPT-5.4 mini and GPT-5.4 nano Released",
+      "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15166,
+      "title": "Muse Spark 1.2 Released",
+      "url": "https://megalens.ai/research/llm-latency-timeouts-code-review",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15166,
+      "title": "Muse Spark 1.2 Released",
+      "url": "https://epoch.ai/models/muse-spark-1-2",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15176,
+      "title": "Qwen3-32B and the Qwen3 Family Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-32b-instruct-reasoning",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15193,
+      "title": "Qwen3-VL-235B-A22B-Instruct and Qwen3-VL-235B-A22B-Thinking Released",
+      "url": "https://artificialanalysis.ai/models/qwen3-vl-235b-a22b-instruct",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15308,
+      "title": "Gemini 4 Argon Released to Paying Users",
+      "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "title": "Seedance 1.0 Pro Fast Released",
+      "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+      "status": "needs-research",
+      "reason": "Opened GeeLark comparison has original metadata November18 2025 and visible updated October6 2026; generic Analysis and tests assertion lacks attributed protocol or samples, and publisher promotes its Seedance service. Independent-test eligibility remains unresolved, so no date assigned."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19636,
+      "title": "Seedance 2.5 Released",
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19665,
+      "title": "Veo 3.1 and Veo 3.1 Fast Released",
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19666,
+      "title": "Veo 3.1 Lite Released",
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "title": "Sora 2 and Sora 2 Pro Released in the API",
+      "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+      "status": "needs-research",
+      "reason": "Saved Wikipedia text matches, but Wikipedia page creation February15 2024 and last revision October24 2026 are not an independent Sora2Pro model test or its publication date. Find actual primary independent evaluator/reviewer; do not graph encyclopedia timestamps."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2464,
+      "title": "Eleven Madison Park Reopens With a Plant-Based Menu",
+      "url": "https://forbestravelguide.com/restaurants/new-york-city-new-york/eleven-madison-park",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2557,
+      "title": "Swan Oyster Depot Opens on Polk Street",
+      "url": "https://projects.sfchronicle.com/2017/top-100-restaurants/swan-oyster-depot",
+      "status": "verified-undated",
+      "reason": "Opened full exact Swan Oyster Depot editorial capsule in San Francisco Chronicle Top100 Restaurants2017. Saved food assessment matches verbatim. The package edition establishes 2017 only; the leaf page supplies no original publication day in body, time or metadata. Retain null rather than infer a day from guide year."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2559,
+      "title": "Wolfgang Puck Opens the First Spago on the Sunset Strip",
+      "url": "https://www.gayot.com/restaurants/spago-beverly-hills-beverly-hills-ca-90210_2la00494-01.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2581,
+      "title": "Union Oyster House Opens as the Atwood & Bacon Oyster House",
+      "url": "https://www.hungryfordesignreview.com/reviews/union-oyster-house",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2777,
+      "title": "Dakar NOLA Opens in New Orleans",
+      "url": "https://www.outalldaynola.com/dakar-nola-new-orleans-review.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered firsthand Dakar dining review has no publication byline; 2025 Bib Gourmand mention is not a publication date. Keep null."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17198,
+      "title": "Tosokchon Samgyetang — Seoul restaurant guide",
+      "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+      "status": "needs-research",
+      "reason": "Saved text matches aggregator listing. Establish underlying named critic/guide and independent attribution before treating it as a separate dining review; no original publication day returned."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "title": "Myeongdong Yeongyang Center — Seoul restaurant guide",
+      "url": "https://www.theseoulguide.com/yeongyang-center-myeongdong-branch/",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "title": "Myeongdong Yeongyang Center — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/4228626",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17204,
+      "title": "Samwon Garden — Seoul restaurant guide",
+      "url": "https://visitgangnam.net/en/places/samwon-garden",
+      "status": "verified-undated",
+      "reason": "Opened municipal dining guide and exact extract. The only visible date is Last updated, not original publication; keep null."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "title": "Hanilkwan (Apgujeong) — Seoul restaurant guide",
+      "url": "https://visitgangnam.net/en/places/hanilkwan",
+      "status": "verified-undated",
+      "reason": "Opened municipal dining guide and exact extract. The only visible date is Last updated, not original publication; keep null."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "title": "Hanilkwan (Apgujeong) — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/4236393",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17206,
+      "title": "Mingles — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Mingles.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17207,
+      "title": "Jungsik — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Jungsik.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "title": "La Yeon — Seoul restaurant guide",
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "status": "needs-research",
+      "reason": "Corrected round9 overconfidence: selector labels 11th Apr 2017 review but does not establish a separate original publication day. Review/meal labels are not sufficient publication evidence. Native date restored to null, quotation retained, and source wiki corrected in both environments. Seek explicit publication/archive evidence before dating; do not replay the superseded assignment."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "title": "La Yeon — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/396544/la-yeon",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "title": "La Yeon — Seoul restaurant guide",
+      "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/La-Yeon.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "title": "Onjium — Seoul restaurant guide",
+      "url": "https://theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Onjium.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "title": "Onjium — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17210,
+      "title": "Kwonsooksoo — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Kwonsooksoo.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17211,
+      "title": "Soigné — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Soigné.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17212,
+      "title": "alla prima — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17214,
+      "title": "Evett — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "title": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas) — Seoul restaurant guide",
+      "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+      "status": "verified-undated",
+      "reason": "Original Revit member 낙천적인 행복의 미식가 #2, Dinner / Visited 2026/03. Selected course-composition criticism comes from that regular dinner, NOT preceding 우케이 guest-chef November 2024 pop-up. Explicit meal month is not a publication day; keep null. Cadastral Samseong-dong 159-8 matches hotel. Positive food comments in same account retained in scope; passage sentiment not whole review conversion."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "title": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas) — Seoul restaurant guide",
+      "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+      "status": "verified-undated",
+      "reason": "Original Diningcode member 소풍, 15 photographs, personally attended birthday lunch at Parnas counter after separate Tokyo visit. Selected complaint concerns prolonged noise not addressed by staff at Seoul counter, not Tokyo meal or a rating-average summary. Visible evaluation timestamp July 5 omits year; no ISO day inferred from current year or Michelin mention. Keep null."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17222,
+      "title": "The Park View (The Shilla Seoul) — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17223,
+      "title": "The Library (The Shilla Seoul) — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/1699464/the-library",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17224,
+      "title": "Mosu Seoul — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Mosu.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17225,
+      "title": "Bicena — Seoul restaurant guide",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Bicena.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17225,
+      "title": "Bicena — Seoul restaurant guide",
+      "url": "https://wanderlog.com/place/details/428273/bicena",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "title": "Chaoran, Signiel Busan (차오란 超然) — Busan restaurant guide",
+      "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "title": "Chaoran, Signiel Busan (차오란 超然) — Busan restaurant guide",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "title": "Palate (팔레트) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide PDF page 131 / printed page 260, full spread visually inspected. Exact current 3F 154 Dalmaji-gil 65beon-gil location matches Pin address and opened operator About page. Dehyphenated line-break only in sophisticated. Publisher identifies compilation cutoff December 2024 but no publication day, keep null."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17266,
+      "title": "Fiotto (피오또) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "title": "Le DORER (르도헤) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Downloaded opened HTTPS original PDF and visually inspected full relevant pages. Official municipal selected restaurant guide, PDF page 122 / printed page 242, Le DORER #9 at 37 Marine City 3-ro, #213-214. Short exact guide verdict; page 4 explains selection and review, page 144 identifies publisher and content-as-of December 2024, not a publication date. Keep null. Historical prices/hours not applied as current offers."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "title": "Jeongjitgan (정짓간 신평본점) — Busan restaurant guide",
+      "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide reproduced as a complete PDF on an education-site HTTPS mirror. Downloaded and visually inspected PDF page 81 / printed page 161, exact Sinpyeong main branch, 1F 6 Bibong-ro; adjacent Yeongjin restaurant excluded. Korean original praises customizable soup meat/temperature/spice; no borrowed neighboring English refreshing-taste claim. Publisher colophon page 145 identifies Busan Department of Health Hygiene and December 2023 compilation cutoff, not publication day; keep null. Historical menu/prices/hours not applied as current."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17269,
+      "title": "Moemiljip (뫼밀집) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17270,
+      "title": "Baek-il Pyeongnaeng 100.1 (백일평냉) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Downloaded original HTTPS PDF with curl; text extracted and complete relevant spreads visually inspected, not the browser PDF viewer shell. PDF page 89, printed page 176, exact 100.1.pyeongnaeng with Namcheonbada-ro address. Shortened verbatim verdict, joining a typographical line-end word break only. Page 4 identifies official municipal guide and rigorous restaurant selection; page 144 identifies publisher and content-as-of December 2024, not a publication day. Edition year, PDF metadata creation/modification and compilation cutoff are not publication. Keep null; no new dated graph point. No implication of a named individual critic or a current menu."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17272,
+      "title": "Cor Pasta Bar (코르 파스타 바) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71983&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17274,
+      "title": "Nagahama Mangetsu Haeundae (나가하마 만게츠 해운대 본점) — Busan restaurant guide",
+      "url": "https://eatbusan.com/",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "title": "Shunsai Kubo Hwamyeong (슌사이쿠보 화명) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide PDF page 67 / printed page 133, full spread visually inspected, exact 17 Yangdal-ro 4beon-gil Hwamyeong address. Grilled-eel description, not Changwon branch. No guide publication day stated; keep null and do not infer from edition, content cutoff or metadata."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17277,
+      "title": "Songheonjip (송헌집) — Busan restaurant guide",
+      "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17279,
+      "title": "Tokyo Babsang (동경밥상 본점) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Complete PDF page 88 / printed page 174 visually inspected, Donggyeongbapsang #9 at exact 34-6 Namcheonbada-ro. Independent municipal selected guide, not neighboring Ramsey entry. Publication day unknown; edition year and compilation cutoff are not dates. Atmosphere verdict only, no transfer of historical menu/prices to current data."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17281,
+      "title": "Buda Myeonok (부다면옥) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17283,
+      "title": "Hapcheon Gukbapjip (합천국밥집) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&dataNo=69751&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17284,
+      "title": "Bao Haus (바오하우스) — Busan restaurant guide",
+      "url": "https://eatbusan.com/",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17284,
+      "title": "Bao Haus (바오하우스) — Busan restaurant guide",
+      "url": "https://www.busan.go.kr/bige/food/view?bbsNo=10&curPage=1&dataNo=71586&srchCl=Food",
+      "status": "verified-undated",
+      "reason": "Opened municipal English newspaper food guide has no publication byline. Keep guide extract and null date."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17285,
+      "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
+      "url": "https://eatbusan.com/",
+      "status": "verified-undated",
+      "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17285,
+      "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
+      "url": "https://korea.stripes.com/food-drink/three-places-to-get-a-taste-of-taiwan-in-busan,-south-korea.html",
+      "status": "verified-undated",
+      "reason": "Stars and Stripes Korea reproduces Dynamic Busan local newspaper guide, explicitly credited July edition; no original day/year exposed. Exact Namcheon branch: 25-4 Suyeong-ro388beon-gil, matches native pin/MICHELIN. Quote concerns interior atmosphere, not a fabricated firsthand diner or numeric subscore. One Dynamic Busan editorial source, not two sources for newspaper and syndication. With MICHELIN and Eat Busan there are three distinct guide publishers. All five dining axes preserved."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "title": "Norah Jones Wins Five Grammys, Led by Record and Album of the Year",
+      "url": "https://www.allmusic.com/album/mw0000507740",
+      "status": "needs-research",
+      "reason": "Retried original album review: primary reader 403 and rendered Cloudflare security page. Exact existing quotation and original publication day remain unverified; no date inferred from album release or Grammy award. Retain null and research an accessible original/archive. Not counted as verified-undated."
+    }
+  ]
+}

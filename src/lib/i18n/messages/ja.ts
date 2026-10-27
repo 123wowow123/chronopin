@@ -2358,6 +2358,10 @@ const ja: Messages = {
     industryLabel: '{group}の業界',
     glance: '予測を一目で',
     noMatch: '「{query}」に一致する予測はありません。',
+    industryTitle: '{industry}の予測',
+    industryDescription: '{site}の{industry}予測{count}件：出典付きの予測とデータ。発行元、日付、引用を掲載。',
+    allForecasts: 'すべての予測',
+    byIndustry: '業界別に見る',
     groups: {
       tech: 'テクノロジーとAI',
       economy: '経済とビジネス',

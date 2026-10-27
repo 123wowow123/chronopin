@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+      "status": "resolved",
+      "reason": "Operator marketing removed from native reviews after saving exact Seoul inspector entry and original regular-dinner visitor accounts. Operator page remains identity/practical context; no marketing extract counted as independent review."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka",
+      "status": "resolved",
+      "reason": "Removed misattributed iki quotation after opening original Tokyo Ginza guide containing it verbatim. Exact Seoul inspector entry id 1244365 replaces it. Do not re-add Tokyo quotation to Seoul."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17279,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Complete PDF page 88 / printed page 174 visually inspected, Donggyeongbapsang #9 at exact 34-6 Namcheonbada-ro. Independent municipal selected guide, not neighboring Ramsey entry. Publication day unknown; edition year and compilation cutoff are not dates. Atmosphere verdict only, no transfer of historical menu/prices to current data."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+      "status": "verified-undated",
+      "reason": "Original Revit member 낙천적인 행복의 미식가 #2, Dinner / Visited 2026/03. Selected course-composition criticism comes from that regular dinner, NOT preceding 우케이 guest-chef November 2024 pop-up. Explicit meal month is not a publication day; keep null. Cadastral Samseong-dong 159-8 matches hotel. Positive food comments in same account retained in scope; passage sentiment not whole review conversion."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+      "status": "verified-undated",
+      "reason": "Original Diningcode member 소풍, 15 photographs, personally attended birthday lunch at Parnas counter after separate Tokyo visit. Selected complaint concerns prolonged noise not addressed by staff at Seoul counter, not Tokyo meal or a rating-average summary. Visible evaluation timestamp July 5 omits year; no ISO day inferred from current year or Michelin mention. Keep null."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "status": "needs-research",
+      "reason": "Opened original Reddit post by u/minutemaiding; saved exact rich/not-overly-sweet/crunch tasting sentence verified in post body, not comments or merchant copy. Canadian Costco product photograph identifies Lotus Biscoff Toblerone Diamond Truffles. Reader exposes only relative 2d age, and original public RSS returned HTTP 403 to curl (reader does not support Atom). Exact original publication day remains unresolved; keep null and do not infer day from the relative age or pin launch."
+    }
+  ]
+}

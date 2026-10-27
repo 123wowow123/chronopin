@@ -2355,6 +2355,10 @@ const pt: Messages = {
     industryLabel: 'Setores de {group}',
     glance: 'Perspectivas num relance',
     noMatch: 'Nenhuma previsão corresponde a “{query}”.',
+    industryTitle: 'Previsões de {industry}',
+    industryDescription: '{count} previsões de {industry} no {site}: projeções e dados citados, cada um com editor, data e citação.',
+    allForecasts: 'Todas as previsões',
+    byIndustry: 'Explorar por setor',
     groups: {
       tech: 'Tecnologia e IA',
       economy: 'Economia e negócios',

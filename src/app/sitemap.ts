@@ -5,6 +5,8 @@ import { absoluteUrl, pinPath } from '@/lib/seo';
 import Pins from '@/server/model/pins';
 import { offeredLocales, TAGS } from '@/server/services/cache';
 import { hideThinPins } from '@/server/services/pages';
+import { industrySlug } from '@/lib/industryForecast';
+import { forecastPanels } from '@/server/services/forecasts';
 import { personIndex } from '@/server/services/people';
 import { topicIndex } from '@/server/services/topics';
 import { personPath } from '@/lib/people';
@@ -44,6 +46,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   }))).flat();
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
   const pins = await Pins.listForSitemap(0, MAX_URLS - 9 - topics.length - RESTAURANT_REGIONS.length - guidePaths.length, (await hideThinPins()).enabled);
+  const industries = [...new Set((await forecastPanels()).map((f) => industrySlug(f.industry)))];
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
     const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, offered);
@@ -64,6 +67,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     { url: absoluteUrl('/products'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/products') },
     { url: absoluteUrl('/cars'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/cars') },
     { url: absoluteUrl('/forecasts'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/forecasts') },
+    ...industries.map((slug) => ({ url: absoluteUrl(`/forecasts/${slug}`), changeFrequency: 'daily' as const, priority: 0.6, alternates: inEveryLanguage(`/forecasts/${slug}`) })),
     { url: absoluteUrl('/travel'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/travel') },
     { url: absoluteUrl('/activities'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/activities') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },

@@ -2369,6 +2369,10 @@ const en = {
     industryLabel: '{group} industries',
     glance: 'Outlooks at a glance',
     noMatch: 'No forecasts match “{query}”.',
+    industryTitle: '{industry} forecasts',
+    industryDescription: '{count} {industry} forecasts on {site}: cited projections and data, each with its publisher, date and quote.',
+    allForecasts: 'All forecasts',
+    byIndustry: 'Browse by industry',
     groups: {
       tech: 'Technology & AI',
       economy: 'Economy & Business',

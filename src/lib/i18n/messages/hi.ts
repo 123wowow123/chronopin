@@ -2375,6 +2375,10 @@ const hi: Messages = {
     industryLabel: '{group} के उद्योग',
     glance: 'एक नज़र में अनुमान',
     noMatch: '“{query}” से मेल खाता कोई पूर्वानुमान नहीं।',
+    industryTitle: '{industry} पूर्वानुमान',
+    industryDescription: '{site} पर {count} {industry} पूर्वानुमान: उद्धृत अनुमान और डेटा, प्रत्येक के प्रकाशक, तिथि और उद्धरण के साथ।',
+    allForecasts: 'सभी पूर्वानुमान',
+    byIndustry: 'उद्योग के अनुसार देखें',
     groups: {
       tech: 'तकनीक और एआई',
       economy: 'अर्थव्यवस्था और व्यापार',

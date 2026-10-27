@@ -2358,6 +2358,10 @@ const zh: Messages = {
     industryLabel: '{group}行业',
     glance: '展望速览',
     noMatch: '没有与“{query}”匹配的预测。',
+    industryTitle: '{industry}预测',
+    industryDescription: '{site}上的{count}项{industry}预测：附出处的预测与数据，每项均注明发布方、日期和引文。',
+    allForecasts: '全部预测',
+    byIndustry: '按行业浏览',
     groups: {
       tech: '科技与人工智能',
       economy: '经济与商业',

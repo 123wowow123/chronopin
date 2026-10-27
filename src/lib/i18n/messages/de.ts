@@ -2364,6 +2364,10 @@ const de: Messages = {
     industryLabel: 'Branchen: {group}',
     glance: 'Ausblicke auf einen Blick',
     noMatch: 'Keine Prognosen für „{query}“.',
+    industryTitle: '{industry}-Prognosen',
+    industryDescription: '{count} {industry}-Prognosen auf {site}: belegte Projektionen und Daten, jeweils mit Herausgeber, Datum und Zitat.',
+    allForecasts: 'Alle Prognosen',
+    byIndustry: 'Nach Branche durchsuchen',
     groups: {
       tech: 'Technologie & KI',
       economy: 'Wirtschaft & Business',

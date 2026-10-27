@@ -2736,6 +2736,10 @@ const ar: Messages = {
     industryLabel: 'قطاعات {group}',
     glance: 'نظرة سريعة على التوقعات',
     noMatch: 'لا توجد توقعات تطابق «{query}».',
+    industryTitle: 'توقعات {industry}',
+    industryDescription: '{count} من توقعات {industry} على {site}: إسقاطات موثقة وبيانات، لكل منها ناشرها وتاريخها واقتباسها.',
+    allForecasts: 'كل التوقعات',
+    byIndustry: 'تصفح حسب القطاع',
     groups: {
       tech: 'التقنية والذكاء الاصطناعي',
       economy: 'الاقتصاد والأعمال',

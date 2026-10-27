@@ -2354,6 +2354,10 @@ const th: Messages = {
     industryLabel: 'อุตสาหกรรมใน{group}',
     glance: 'ภาพรวมแนวโน้มโดยสรุป',
     noMatch: 'ไม่พบการคาดการณ์ที่ตรงกับ “{query}”',
+    industryTitle: 'คาดการณ์ {industry}',
+    industryDescription: 'คาดการณ์ {industry} {count} รายการบน {site}: การคาดการณ์และข้อมูลที่อ้างอิง พร้อมผู้เผยแพร่ วันที่ และคำอ้างอิง',
+    allForecasts: 'คาดการณ์ทั้งหมด',
+    byIndustry: 'เรียกดูตามอุตสาหกรรม',
     groups: {
       tech: 'เทคโนโลยีและ AI',
       economy: 'เศรษฐกิจและธุรกิจ',

@@ -5,6 +5,7 @@ import { ForecastsView } from '@/components/forecasts/ForecastsView';
 import { LandingMark } from '@/components/ui/LandingMark';
 import Link from '@/components/ui/Link';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
+import { industrySlug } from '@/lib/industryForecast';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
 import { forecastPanels } from '@/server/services/forecasts';
@@ -42,6 +43,9 @@ async function Forecasts() {
   const industries = new Set(forecasts.map((f) => f.industry)).size;
   const sources = new Set(forecasts.flatMap((f) => f.sources.map((s) => new URL(s.url).hostname.replace(/^www\./, '')))).size;
   const projected = forecasts.filter((f) => f.projection).length;
+  const counts = new Map<string, number>();
+  for (const f of forecasts) counts.set(f.industry, (counts.get(f.industry) ?? 0) + 1);
+  const industryLinks = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   const stats = [[forecasts.length, t('forecasts.statPanels')], [industries, t('forecasts.statIndustries')], [projected, t('forecasts.statProjections')], [sources, t('forecasts.statPublishers')]] as const;
   return (
     <main className={`${styles.guide} max-sm:px-3!`} data-landing>
@@ -65,6 +69,12 @@ async function Forecasts() {
             ))}
           </dl>
         </header>
+        <nav aria-label={t('forecasts.byIndustry')} className="mt-6 flex flex-wrap items-center gap-2 text-sm">
+          <span className="text-[11px] font-bold tracking-[1.5px] text-(--soft) uppercase">{t('forecasts.byIndustry')}</span>
+          {industryLinks.map(([name, count]) => (
+            <Link key={name} href={`/forecasts/${industrySlug(name)}`} className="rounded-full border border-(--rule) px-3 py-1 text-(--soft) hover:text-(--text)">{name} <span className="opacity-60">{count}</span></Link>
+          ))}
+        </nav>
         <ForecastsView forecasts={forecasts} />
       </div>
     </main>
