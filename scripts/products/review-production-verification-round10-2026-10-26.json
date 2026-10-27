@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-26",
+  "run": {
+    "id": 26,
+    "jobId": "review-verify-r10-20261026",
+    "trigger": "schedule",
+    "status": "skipped",
+    "driver": "api",
+    "tasks": [
+      "sentiment"
+    ],
+    "started": "2026-10-27T04:08:53.399Z",
+    "finished": "2026-10-27T04:08:53.438Z",
+    "usage": null
+  },
+  "actions": 0,
+  "blocker": "Production API driver reports: No ANTHROPIC_API_KEY is configured. No model ran and the research/scoring tools were not exercised. The earlier run #25 reported insufficient credit; current billing state cannot be checked until the key is configured.",
+  "temporaryJobRemoved": true,
+  "originalSettingsVerifiedUnchanged": true,
+  "restoredSchedules": [
+    {
+      "id": "midnight",
+      "enabled": false
+    },
+    {
+      "id": "news",
+      "enabled": false
+    },
+    {
+      "id": "monthly",
+      "enabled": false
+    },
+    {
+      "id": "weekly",
+      "enabled": false
+    }
+  ],
+  "deploymentPerformed": false
+}

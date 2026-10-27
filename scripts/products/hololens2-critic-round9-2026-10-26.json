@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 6518,
+      "pinSourceUrl": "https://www.roadtovr.com/microsoft-hololens-2-sales-shipments-units-expanding-availability/",
+      "basis": "Three distinct original publications covering the production HoloLens 2 hardware: Jamie Feltham / UploadVR (April 9, 2021), Sherri L. Smith / Tom’s Guide (November 11, 2019), and Jim Salter / Ars Technica (November 8, 2019). The 2019 articles report short guided demonstrations, while the 2021 review reports longer use; they do not prove field reliability or current support. Excerpts contrast comfort praise with tracking caveats. The later review date is retained rather than backdated to shipping. No original HoloLens, 2015 prototype, Industrial Edition or IVAS findings substituted. Sentiment estimates describe the cited passages, not numeric ratings.",
+      "reviews": [
+        {
+          "url": "https://www.uploadvr.com/hololens-2-review/",
+          "title": "HoloLens 2 Review: Ahead Of Its Time, For Better And Worse",
+          "quote": "far more comfortable than almost any VR headset I’ve used.",
+          "publishedDate": "2021-04-09",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.tomsguide.com/reviews/hololens-2",
+          "title": "Hololens 2 hands-on review: $3,500 worth of cool",
+          "quote": "the tracking was a little more exacting than I was expecting",
+          "publishedDate": "2019-11-11",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://arstechnica.com/gadgets/2019/11/microsofts-hololens-2-tracks-your-eyeballs-to-see-what-youre-looking-at/",
+          "title": "Microsoft HoloLens 2 offers trippy, eyeball-tracking augmented reality",
+          "quote": "slightly frustrating telepathy",
+          "publishedDate": "2019-11-08",
+          "sentiment": -0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.uploadvr.com/hololens-2-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, visible author publication day and matching original datePublished verified. Related-story dates and later modification times excluded."
+        },
+        {
+          "url": "https://www.tomsguide.com/reviews/hololens-2",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, visible author publication day and matching original datePublished verified. Related-story dates and later modification times excluded."
+        },
+        {
+          "url": "https://arstechnica.com/gadgets/2019/11/microsofts-hololens-2-tracks-your-eyeballs-to-see-what-youre-looking-at/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, exact H1, visible author publication day and matching original datePublished verified. Related-story dates and later modification times excluded."
+        }
+      ]
+    }
+  ]
+}

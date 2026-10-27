@@ -102,7 +102,7 @@ import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { isPredictedPin, PREDICTED_TAG } from '@/lib/tags';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml } from '@/lib/sanitize';
-import { isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
+import { entityJsonLd, isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { thinReasons, translationReady } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
@@ -231,6 +231,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   return (
     <>
       <JsonLd data={pinJsonLd(pin, t.locale, { organizerUrl, eventInfo })} />
+      {entityJsonLd(pin, t.locale, { taste, carPerf, gasCarPerf, dining, hotel, aircraftPerf, llmPerf, videoPerf }) ? <JsonLd data={entityJsonLd(pin, t.locale, { taste, carPerf, gasCarPerf, dining, hotel, aircraftPerf, llmPerf, videoPerf })} /> : null}
       {/* grid-cols-[minmax(0,1fr)]: the single column below lg is otherwise
           floored by its content's min-width, which scrolls the page sideways. */}
       {/* On a phone the references and the correction box come last, under the

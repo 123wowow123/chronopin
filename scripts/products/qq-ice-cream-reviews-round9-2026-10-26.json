@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "pinSourceUrl": "https://carnewschina.com/?p=109999",
+      "basis": "Variant: QQ Ice Cream at pre-sale, RMB 29,900-43,900. 120/170 km NEDC (scored on 170 km; NEDC not CLTC); 20 kW, 85 Nm, top speed 100 km/h; 1,960 mm wheelbase, three doors, four seats. Null: charging (no DC rate in launch sources; the 10 kW figure seen only in a Yiche aggregate, not used), 0-100 km/h and driver assist unpublished. Value 3: priced where the Wuling Mini EV Macaron (RMB 37,600-43,600) sits, but larger (CnEVPost). Reviews: original China launch family only. Autohome owner 落花伊人盎 (Sep 20, 2022; 6,850 km) and Yiche owner ych_AHgNyx180757 (Oct 12, 2022; four months) identify 2022 170-km Sundae. 车评社Auto’s Jan 6, 2022 Sohu article reports a Wuhu launch drive; tested battery trim unspecified, so its high-speed caveat is family context, not measured 170-km range. Distinct accounts/publications; owners are not instrumented tests. No later Queen/Peach or Jetour export findings substituted. Scores unchanged; sentiment estimates describe excerpts.",
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01gdd39d8v6gtkjchj60w00000.html",
+          "title": "QQ冰淇淋新能源，女儿的孝心我的满足",
+          "quote": "转向时，车辆稳定性一般吧。",
+          "publishedDate": "2022-09-20",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://dianping.yiche.com/sid_7634/koubei/5975056073204608/",
+          "title": "[QQ冰淇淋 2022款 170km 圣代版]怎么样口碑好不好-车友ych_AHgNyx180757点评-易车",
+          "quote": "起步快，很平顺",
+          "publishedDate": "2022-10-12",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.sohu.com/a/514742348_99981428",
+          "title": "试驾QQ冰淇淋：灵动可爱电动小车，2.99万即可入手",
+          "quote": "80km/h后加速明显放缓",
+          "publishedDate": "2022-01-06",
+          "sentiment": -0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01gdd39d8v6gtkjchj60w00000.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full original article opened in source reader and rendered browser. Original author publication day distinguished from purchase and related-story dates."
+        },
+        {
+          "url": "https://dianping.yiche.com/sid_7634/koubei/5975056073204608/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full original article opened in source reader and rendered browser. Original author publication day distinguished from purchase and related-story dates. Yiche uses a custom font with private-use character encoding; the exact seven-character driving excerpt was transcribed from the rendered screenshot, not silently guessed from scrambled text."
+        },
+        {
+          "url": "https://www.sohu.com/a/514742348_99981428",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full original article opened in source reader and rendered browser. Original author publication day distinguished from purchase and related-story dates."
+        }
+      ]
+    }
+  ]
+}

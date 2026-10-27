@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "pinSourceUrl": "https://carnewschina.com/?p=109999",
+      "basis": "Variant: QQ Ice Cream at pre-sale, RMB 29,900-43,900. 120/170 km NEDC (scored on 170 km; NEDC not CLTC); 20 kW, 85 Nm, top speed 100 km/h; 1,960 mm wheelbase, three doors, four seats. Null: charging (no DC rate in launch sources; the 10 kW figure seen only in a Yiche aggregate, not used), 0-100 km/h and driver assist unpublished. Value 3: priced where the Wuling Mini EV Macaron (RMB 37,600-43,600) sits, but larger (CnEVPost). No independent road test found.",
+      "reviews": [
+        {
+          "url": "https://www.autohome.com.cn/drive/202112/1231041-all.html",
+          "title": "叫板爆款神车 试驾奇瑞新能源QQ冰淇淋",
+          "quote": "电动机对加速踏板的响应更加积极",
+          "publishedDate": "2021-12-16",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.autohome.com.cn/drive/202112/1231041-all.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened original Autohome article and publisher’s Read full article expansion. Visible 周尤 original author, 原创 and December 16, 2021 21:31 retained. Test explicitly identifies top Sundae, 13.9 kWh / 170-km NEDC; quotation concerns sport-mode accelerator response. Reprints and the mutable 2024 model-section selector were not used to date this original. Autohome owner and editor remain one publishing platform, not two independent publishers."
+        }
+      ]
+    }
+  ]
+}

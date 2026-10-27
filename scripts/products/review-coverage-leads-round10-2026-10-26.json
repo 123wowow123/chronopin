@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "status": "resolved",
+      "reason": "Recovered 周尤’s original Autohome December 16, 2021 test, via the exact source linked by the model section. Publisher Read full article explicitly identifies Sundae 13.9 kWh / 170 km and the quoted sport-mode pedal response. Original byline used rather than later reprints. Native explanation corrected in both environments because replay intentionally preserved its old basis. Four reports span three publishing platforms; owner and editor on Autohome are not two publishers.",
+      "sourcesChecked": [
+        "https://www.autohome.com.cn/drive/202112/1231041.html",
+        "https://www.autohome.com.cn/drive/202112/1231041-all.html"
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "status": "resolved",
+      "reason": "Three replacement Single Motor reports now saved: German ADAC test, NZ Driven Car Guide standard passive-damper car and Autoweek explicitly shared single/dual launch acceleration impression. AWD-only active-damper handling extracts and evolving unspecified-variant quote removed from native review array, with sources retained as context. NZ/US market and later-software limitations explicit; all original scores preserved.",
+      "sourcesChecked": [
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+        "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
+        "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "basis": "Tripadvisor, read 2026-10-18 (89 listing reviews; category sample counts unpublished): Service 4.6/5 -> 4.5; Ambience 5/5 -> 4.5; Value 3.5/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://www.andyhayler.com/restaurant/la-yeon",
+          "quote": "Service was excellent",
+          "title": "review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.andyhayler.com/restaurant/la-yeon",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Superseded by round10 verification: publisher selector labels 11th Apr 2017 review, but does not separately identify first publication. The dated review label alone is not proof of a publication day. Native date restored to null in both environments; exact short service quotation remains verified."
+        }
+      ]
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7626,
+      "pinSourceUrl": "https://www.irishfoodawards.com/awards-presentation-timings/",
+      "basis": "The Irish Times and RTÉ name the winner as Arán's spelt sourdough, made with 80 per cent local spelt flour and finished with sesame seeds; neither gives tasting notes, so the scores rest on the style: a nutty toasted-grain aroma, a gentle sour tang and little sweetness. Review check (October 11, 2026): No descriptive firsthand tasting review verified for the award-winning 80% spelt sourdough. General bakery reviews and praise of its spelt bread lack flavor detail; other Arán bakeries and other loaves were excluded.",
+      "reviews": [
+        {
+          "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+          "quote": "Arán is simply special.",
+          "title": "Arán Artisan Bakery, Deli & Bistro",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Primary guide page opened fully through source reader. Exact short guide verdict replaces the non-verbatim shortened ingredient sentence. Last Updated 10-08-2026 is not original publication and stays out of publishedDate. This is bakery-wide guide context, not a firsthand tasting of the particular award-winning loaf; that product-specific source research remains open."
+        }
+      ]
+    }
+  ]
+}

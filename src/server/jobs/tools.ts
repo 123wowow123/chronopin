@@ -15,6 +15,7 @@
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { mediumID } from '@/lib/appConfig';
+import { newPinFlags } from '@/lib/newPinFlags';
 import { CATEGORIES } from '@/lib/categories';
 import * as db from '../db';
 import { inspectImage } from '../image';
@@ -1068,7 +1069,9 @@ export const TOOLS: JobTool[] = [
         if (existing.length) throw new Error(`Already pinned: ${existing.map((p) => `#${p.id} ${p.title}`).join('; ')}. Add it as a reference there instead.`);
         const saved = await createPin(String(input.curator), pin);
         await act(ctx, { tool: 'create_pin', pinId: saved.id, title: saved.title, detail: `${input.curator}: ${input.why}` });
-        return { created: saved.id, title: saved.title };
+        // Flagged, not refused: the pin is posted, the run is told what to add.
+        const flags = newPinFlags({ ...pin, ...saved } as Parameters<typeof newPinFlags>[0]);
+        return flags.length ? { created: saved.id, title: saved.title, needs: flags } : { created: saved.id, title: saved.title };
       } catch (err) {
         ctx.created--;
         throw err;

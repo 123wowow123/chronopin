@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19648,
+      "reason": "Opened Kevin Williams’s original June 5, 2024 InsideEVs drive. The table and body explicitly identify Intelligent Driving Version 4WD, 75 kWh, 259,900 CNY, electromagnetic dampers. The native rubric scores base RWD 75 kWh. Do not add this as an exact RWD road test or infer the same suspension behaviour. Existing two AWD reviews are explicitly sibling context. Exact RWD owner/road-test evidence remains required.",
+      "sourcesChecked": [
+        "https://insideevs.com/reviews/722124/zeekr-007-cooked-review-drive/"
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "reason": "Now three original-China launch-family reports: two exact 2022 170-km Sundae owners and one independent 车评社Auto Wuhu launch drive. The latter does not disclose tested battery trim and supports only family-level high-speed behaviour, not measured 170-km range. Keep seeking a further professional exact 170-km test. The English 42HOW page returned 404; Dongchedi detail listing was unreadable. The 2026 Autoblog Jetour Philippine export test was opened but not substituted for original China variant evidence. The second Sohu article names 汽车商评 in body but a different posting account, so original provenance remains unresolved and it was not used.",
+      "sourcesChecked": [
+        "https://en.42how.com/2022/01/04/test-drive-of-chery-qq-ice-cream-only-costs-43900-rmb-but-it-is-only-worth-43900-rmb/",
+        "https://www.dongchedi.com/auto/series/score/5257-x-S5-x-x-x-x",
+        "https://www.autoblog.com/news/jetour-ice-cream-ev-china-cheapest-ev-review",
+        "https://www.sohu.com/a/514594354_221743"
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4410,
+      "reason": "Continued Opal identity research: WearTesters linked original video description lists style 313450_01 and article photo URLs were inventoried; direct photo inspection remains pending. Basketpack explicitly identifies Opal. Basket USA uses blue operator images whose filenames include 313455-01, but that alone does not identify the reviewer’s tested pair. HoopsGeek is a secondary aggregator and its paraphrases were not copied as original reviewer quotations. A third independently verified Opal-specific primary test remains required.",
+      "sourcesChecked": [
+        "https://weartesters.com/puma-hali-1-performance-review/",
+        "https://www.youtube.com/watch?v=O39zWmkc4dI",
+        "https://www.basketusa.com/news/847043/test-de-chaussures-la-puma-hali-1-face-a-son-destin/",
+        "https://www.thehoopsgeek.com/shoe-reviews/puma-hali-1/"
+      ]
+    }
+  ]
+}

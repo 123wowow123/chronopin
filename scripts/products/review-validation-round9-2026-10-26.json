@@ -1,0 +1,240 @@
+{
+  "checkedAt": "2026-10-26",
+  "newCriticPins": 3,
+  "newCriticReviews": 9,
+  "newPerformanceReviews": 3,
+  "publicationChecksResolved": 1,
+  "citationScopeRepairs": 1,
+  "savedIn": [
+    "local",
+    "production"
+  ],
+  "rubricReadbacks": [
+    {
+      "pinId": 19861,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19861,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 17208,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17208,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 7626,
+      "production": false,
+      "table": "PinTaste",
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "pungent",
+        "coolness",
+        "abv",
+        "abvSourceUrl",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 7626,
+      "production": true,
+      "table": "PinTaste",
+      "unrelatedFieldsVerified": [
+        "aroma",
+        "bitterness",
+        "sweetness",
+        "astringency",
+        "umami",
+        "pungent",
+        "coolness",
+        "abv",
+        "abvSourceUrl",
+        "source",
+        "sourceUrl"
+      ]
+    }
+  ],
+  "nativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6518,
+      "url": "http://127.0.0.1:3000/pin/6518/hololens-2-begins-shipping-to-enterprise-customers",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19861,
+      "url": "http://127.0.0.1:3000/pin/19861/chery-launches-the-qq-ice-cream-mini-ev-from-rmb-29-900-in-wuhu",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17208,
+      "url": "http://127.0.0.1:3000/pin/17208/la-yeon-seoul-restaurant-guide",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 7626,
+      "url": "http://127.0.0.1:3000/pin/7626/aran-bakery-wins-blas-na-heireann-2026-supreme-champion-again",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6518,
+      "url": "https://www.chronopin.com/pin/6518/hololens-2-begins-shipping-to-enterprise-customers",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19861,
+      "url": "https://www.chronopin.com/pin/19861/chery-launches-the-qq-ice-cream-mini-ev-from-rmb-29-900-in-wuhu",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17208,
+      "url": "https://www.chronopin.com/pin/17208/la-yeon-seoul-restaurant-guide",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 7626,
+      "url": "https://www.chronopin.com/pin/7626/aran-bakery-wins-blas-na-heireann-2026-supreme-champion-again",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6277,
+      "url": "http://127.0.0.1:3000/pin/6277/zootopia-2-2025-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 1089,
+      "url": "http://127.0.0.1:3000/pin/1089/demon-slayer-kimetsu-no-yaiba-infinity-castle-releases-in-japanese-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6277,
+      "url": "https://www.chronopin.com/pin/6277/zootopia-2-2025-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 1089,
+      "url": "https://www.chronopin.com/pin/1089/demon-slayer-kimetsu-no-yaiba-infinity-castle-releases-in-japanese-theaters",
+      "quote": true,
+      "graph": true
+    }
+  ],
+  "sourceVerification": {
+    "primaryQuoteTextMatches": 13,
+    "visualQuoteTranscriptions": 1,
+    "visualTranscriptionSource": "Yiche original article, custom-font text visually inspected in rendered screenshot; exact short Chinese acceleration comment.",
+    "referencesSourceLinksAndWikiResults": "Verified by replayResearchedReviews --references. Existing source-wiki content preserved; two dated-review/product-scope annotations verified separately in both environments."
+  },
+  "tests": {
+    "command": "npx vitest run src/lib/okf.test.ts src/lib/okfLint.test.ts",
+    "passed": 22
+  },
+  "remaining": {
+    "rubricGaps": 73,
+    "sourceChecks": 81,
+    "verifiedUndated": 71,
+    "coverageFollowUps": [
+      {
+        "table": "PinCarPerf",
+        "pinId": 19861,
+        "reason": "Now three original-China launch-family reports: two exact 2022 170-km Sundae owners and one independent 车评社Auto Wuhu launch drive. The latter does not disclose tested battery trim and supports only family-level high-speed behaviour, not measured 170-km range. Keep seeking a further professional exact 170-km test. The English 42HOW page returned 404; Dongchedi detail listing was unreadable. The 2026 Autoblog Jetour Philippine export test was opened but not substituted for original China variant evidence. The second Sohu article names 汽车商评 in body but a different posting account, so original provenance remains unresolved and it was not used.",
+        "sourcesChecked": [
+          "https://en.42how.com/2022/01/04/test-drive-of-chery-qq-ice-cream-only-costs-43900-rmb-but-it-is-only-worth-43900-rmb/",
+          "https://www.dongchedi.com/auto/series/score/5257-x-S5-x-x-x-x",
+          "https://www.autoblog.com/news/jetour-ice-cream-ev-china-cheapest-ev-review",
+          "https://www.sohu.com/a/514594354_221743"
+        ]
+      },
+      {
+        "table": "PinCriticReview",
+        "pinId": 4410,
+        "reason": "Continued Opal identity research: WearTesters linked original video description lists style 313450_01 and article photo URLs were inventoried; direct photo inspection remains pending. Basketpack explicitly identifies Opal. Basket USA uses blue operator images whose filenames include 313455-01, but that alone does not identify the reviewer’s tested pair. HoopsGeek is a secondary aggregator and its paraphrases were not copied as original reviewer quotations. A third independently verified Opal-specific primary test remains required.",
+        "sourcesChecked": [
+          "https://weartesters.com/puma-hali-1-performance-review/",
+          "https://www.youtube.com/watch?v=O39zWmkc4dI",
+          "https://www.basketusa.com/news/847043/test-de-chaussures-la-puma-hali-1-face-a-son-destin/",
+          "https://www.thehoopsgeek.com/shoe-reviews/puma-hali-1/"
+        ]
+      }
+    ],
+    "broaderCoverage": true,
+    "scheduledProductionVerification": "Outstanding; prior Anthropic insufficient-credit failure unchanged"
+  },
+  "deploymentPerformed": false
+}

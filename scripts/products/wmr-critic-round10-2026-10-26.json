@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 6534,
+      "pinSourceUrl": "https://www.pcworld.com/article/407324/windows-10-fall-creators-update-october-17-windows-mixed-reality-headsets.html",
+      "basis": "Three original first-generation Windows Mixed Reality assessments: Ben Lang / Road to VR (October 19, 2017), Ian Hamilton / UploadVR (November 7, 2017), and Hayden Dingman / PCWorld (May 11, 2018). All tested Acer AH101 reference-design hardware, so hardware-specific findings are not asserted for every launch brand or Samsung Odyssey. Excerpts concern Microsoft inside-out tracking and its limitations. PCWorld tested again after April 2018 Windows/SteamVR support, not the exact October 2017 launch software; its later date is retained. These are immersive VR headsets, not HoloLens-style see-through AR. Distinct publications offer differing assessments; sentiment estimates describe short passages, not converted ratings.",
+      "reviews": [
+        {
+          "url": "https://www.roadtovr.com/acer-windows-mixed-reality-vr-headset-review-ah101/",
+          "title": "Acer Windows VR Headset Review",
+          "quote": "Microsoft’s inside-out head tracking is top-notch",
+          "publishedDate": "2017-10-19",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.uploadvr.com/review-acer-vr-headset-controllers/",
+          "title": "Review: Acer’s $400 Windows VR Headset And Controllers",
+          "quote": "I started to notice small gaps in the tracking",
+          "publishedDate": "2017-11-07",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.pcworld.com/article/401917/windows-mixed-reality-review-steamvr.html",
+          "title": "Microsoft Windows Mixed Reality review: Easy to set up, hard to use",
+          "quote": "More software has not fixed fundamental problems",
+          "publishedDate": "2018-05-11",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.roadtovr.com/acer-windows-mixed-reality-vr-headset-review-ah101/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full original primary article opened through reader and browser; exact H1, author day and matching original datePublished checked. Later site modifications and related-story timestamps excluded."
+        },
+        {
+          "url": "https://www.uploadvr.com/review-acer-vr-headset-controllers/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full original primary article opened through reader and browser; exact H1, author day and matching original datePublished checked. Later site modifications and related-story timestamps excluded."
+        },
+        {
+          "url": "https://www.pcworld.com/article/401917/windows-mixed-reality-review-steamvr.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full original primary article opened through reader and browser; exact H1, author day and matching original datePublished checked. Later site modifications and related-story timestamps excluded."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 6277,
+      "pinSourceUrl": "https://www.imdb.com/title/tt26443597/",
+      "basis": "Exact 2025 Zootopia 2 sequel, titled Zootropolis 2 in the UK, not the 2016 original. Peter Bradshaw / The Guardian, Phil de Semlyen / Time Out, and Amelia Emberwing / TheWrap all published November 25, 2025. Three distinct original publications give differing assessments; no aggregator paraphrases counted. Sentiment estimates describe the cited short passages; source star ratings were not converted. Existing pin event data and authors preserved.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/film/2025/nov/25/zootropolis-2-review-just-about-passable-family-comedy-sequel-might-as-well-be-ai-generated",
+          "title": "Zootropolis 2 review – just-about-passable family comedy sequel might as well be AI generated",
+          "quote": "corporately approved jokes",
+          "publishedDate": "2025-11-25",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.timeout.com/movies/zootopia-2-review-2025",
+          "title": "Zootropolis 2",
+          "quote": "bouncy, buoyant caper",
+          "publishedDate": "2025-11-25",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.thewrap.com/zootopia-2-review-disney/",
+          "title": "‘Zootopia 2’ Review: Just as Sweet as the Original but Doesn’t Break New Ground",
+          "quote": "a perfectly enjoyable continuation of the story",
+          "publishedDate": "2025-11-25",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/film/2025/nov/25/zootropolis-2-review-just-about-passable-family-comedy-sequel-might-as-well-be-ai-generated",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full rendered primary article, exact H1, author byline and original publication day verified. Later modification and related-story dates not used."
+        },
+        {
+          "url": "https://www.timeout.com/movies/zootopia-2-review-2025",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full rendered primary article, exact H1, author byline and original publication day verified. Later modification and related-story dates not used."
+        },
+        {
+          "url": "https://www.thewrap.com/zootopia-2-review-disney/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full rendered primary article, exact H1, author byline and original publication day verified. Later modification and related-story dates not used."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 1089,
+      "pinSourceUrl": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
+      "basis": "Exact first 2025 Infinity Castle film / Akaza Returns, not Mugen Train, To the Swordsmith Village, Hashira Training compilation or the complete future trilogy. Phuong Le / The Guardian (September 8), Elizabeth Kerr / Screen International (August 19), and Damian Levy / The Gleaner (September 18) are distinct original critics. English-language reviews postdate the Japanese premiere; no article date was backdated to the event. Gleaner’s visible byline and datePublished agree despite a different URL date. Sentiment estimates describe the cited short passages; source star ratings were not converted. Existing pin event data and authors preserved.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/film/2025/sep/08/demon-slayer-kimetsu-no-yaiba-infinity-castle-review-anime-series",
+          "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle review – battle anime brings the visual flair",
+          "quote": "a spectacular treat",
+          "publishedDate": "2025-09-08",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.screendaily.com/reviews/demon-slayer-infinity-castle-review-bombastic-new-instalment-of-hit-japanese-manga-series/5207944.article",
+          "title": "‘Demon Slayer: Kimetsu no Yaiba Infinity Castle’ review: Bombastic new instalment of hit Japanese manga series",
+          "quote": "the narrative’s emotional beats land",
+          "publishedDate": "2025-08-19",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://jamaica-gleaner.com/article/entertainment/20250920/demon-slayer-infinity-castle-review-non-fan",
+          "title": "‘Demon Slayer: Infinity Castle’ – A review by a non-fan",
+          "quote": "egregious flashbacks that ruin the momentum",
+          "publishedDate": "2025-09-18",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/film/2025/sep/08/demon-slayer-kimetsu-no-yaiba-infinity-castle-review-anime-series",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full rendered primary article, exact H1, author byline and original publication day verified. Later modification and related-story dates not used."
+        },
+        {
+          "url": "https://www.screendaily.com/reviews/demon-slayer-infinity-castle-review-bombastic-new-instalment-of-hit-japanese-manga-series/5207944.article",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full rendered primary article, exact H1, author byline and original publication day verified. Later modification and related-story dates not used. Visible Elizabeth Kerr / 19 August 2025 agrees with pubdate Tue, 19 Aug 2025 15:08 GMT. Plain web reader returned 405, but rendered original article was fully readable."
+        },
+        {
+          "url": "https://jamaica-gleaner.com/article/entertainment/20250920/demon-slayer-infinity-castle-review-non-fan",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full rendered primary article, exact H1, author byline and original publication day verified. Later modification and related-story dates not used. Visible September 18, 2025 byline agrees with datePublished 2025-09-18; URL 20250920 is not used as a publication date. Updated December 9 is excluded."
+        }
+      ]
+    }
+  ]
+}

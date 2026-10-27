@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isAttendableEvent, isTicketedVenue, pinJsonLd, temporalCoverage } from './seo';
+import { entityJsonLd, isAttendableEvent, isTicketedVenue, pinJsonLd, temporalCoverage } from './seo';
 import type { PinJson } from './types';
 
 const place = { address: 'Moscone Center, San Francisco, CA', latitude: 37.784, longitude: -122.401 };
@@ -133,5 +133,39 @@ describe('temporalCoverage', () => {
       '2026-11-18T23:40:00.000Z/2026-11-19T08:40:00.000Z',
     );
     expect(temporalCoverage(pin({ allDay: false, utcStartDateTime: '2026-11-18T23:40:00.000Z' }))).toBe('2026-11-18T23:40:00.000Z');
+  });
+});
+
+describe('entityJsonLd', () => {
+  const reviews = [
+    { url: 'https://www.caranddriver.com/reviews/x', title: 'X review', publishedDate: '2026-01-02', quote: 'Sharp steering.' },
+    { url: 'https://example.com/none', title: null, publishedDate: null, quote: null },
+  ];
+
+  it('marks a product with its quoted reviews by outlet, and no aggregate rating', () => {
+    const node = entityJsonLd(pin({ company: 'Kia', price: 40000, priceCurrency: 'USD' }), 'en', { carPerf: { reviews } }) as Record<string, any>;
+    expect(node['@type']).toBe('Product');
+    expect(node.brand.name).toBe('Kia');
+    expect(node.offers).toMatchObject({ price: 40000, priceCurrency: 'USD' });
+    expect(node.review).toHaveLength(1);
+    expect(node.review[0].author.name).toBe('caranddriver.com');
+    expect(node).not.toHaveProperty('aggregateRating');
+  });
+
+  it('marks a restaurant guide pin with a place as a Restaurant, and nothing without a rubric', () => {
+    const tags = [{ name: 'Restaurant', kind: 'topic', source: 'user' }] as PinJson['tags'];
+    const node = entityJsonLd(pin({ ...place, tags }), 'en', { dining: { reviews } }) as Record<string, any>;
+    expect(node['@type']).toBe('Restaurant');
+    expect(node.address).toBe(place.address);
+    expect(entityJsonLd(pin({ ...place }), 'en', {})).toBeUndefined();
+  });
+
+  it('marks a hotel with a place, an AI model as software, an aircraft as a product', () => {
+    expect((entityJsonLd(pin({ ...place }), 'en', { hotel: { reviews } }) as Record<string, any>)['@type']).toBe('Hotel');
+    const model = entityJsonLd(pin({ company: 'Anthropic' }), 'en', { llmPerf: { reviews } }) as Record<string, any>;
+    expect(model['@type']).toBe('SoftwareApplication');
+    expect(model.review).toHaveLength(1);
+    expect((entityJsonLd(pin({}), 'en', { aircraftPerf: { reviews } }) as Record<string, any>)['@type']).toBe('Product');
+    expect(entityJsonLd(pin({}), 'en', { hotel: { reviews } })).toBeUndefined();
   });
 });

@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "pinSourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+      "basis": "Scored: Long Range Single Motor. Range 609 km WLTP (electrive, UK preliminary) = 3. Charging peak 200 kW (electrive) = 3. Acceleration 0-100 km/h 7.4 s (Wikipedia) = 2. Assistance: Pilot Pack, 12 cameras + radar, no LiDAR (Carwow) = 2. Space: 2,999 mm wheelbase (Wikipedia) = 4. Value null: no same-segment rival price opened. Kids: easy ISOFIX, rear controls, 526 L boot, 85% Euro NCAP child score (Carwow) = 4.",
+      "reviews": [
+        {
+          "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+          "title": "Test Polestar 4: Leistung satt – aber keine Heckscheibe",
+          "quote": "Die Lenkung fühlt sich in allen Fahrmodi etwas synthetisch an.",
+          "publishedDate": null,
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
+          "title": "Polestar 4 single-motor & dual-motor review: less is more",
+          "quote": "the single-motor is simply a nicer, more engaging drive.",
+          "publishedDate": "2024-10-25",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/",
+          "title": "Polestar 4 Hits US Roads With No Rear Window But Plenty Of Power",
+          "quote": "both took off with plenty of alacrity",
+          "publishedDate": "2025-11-04",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original full ADAC test explicitly identifies Long Range Single Motor, 200 kW RWD. Visible July 4, 2025 is a revision; original datePublished February 20, 2024 belongs to the earlier article and does not establish when this road-test passage was published. Keep native publication null."
+        },
+        {
+          "url": "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "David Linklater visible October 25, 2024 agrees with datePublished. Specific RWD passage distinguishes standard 20-inch passive-damper test car from AWD 22-inch Performance Pack. NZ market; not a launch-Europe acceleration/range validation."
+        },
+        {
+          "url": "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Jim Motavalli original November 4, 2025 byline agrees with datePublished. The shared acceleration impression explicitly concerns both the single and dual motor cars he drove. The separate AWD-only handling/active-damper passage was excluded. US market, later software/homologation; does not validate Europe launch acceleration or charging connector."
+        }
+      ]
+    }
+  ]
+}

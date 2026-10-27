@@ -2501,28 +2501,29 @@
       "kidsFriendly": 4
     },
     "rubricYear": 2026,
-    "basis": "Scored: Long Range Single Motor. Range 609 km WLTP (electrive, UK preliminary) = 3. Charging peak 200 kW (electrive) = 3. Acceleration 0-100 km/h 7.4 s (Wikipedia) = 2. Assistance: Pilot Pack, 12 cameras + radar, no LiDAR (Carwow) = 2. Space: 2,999 mm wheelbase (Wikipedia) = 4. Value null: no same-segment rival price opened. Kids: easy ISOFIX, rear controls, 526 L boot, 85% Euro NCAP child score (Carwow) = 4.",
+    "basis": "Scored: Long Range Single Motor. Range 609 km WLTP (electrive, UK preliminary) = 3. Charging peak 200 kW (electrive) = 3. Acceleration 0-100 km/h 7.4 s (Wikipedia) = 2. Assistance: Pilot Pack, 12 cameras + radar, no LiDAR (Carwow) = 2. Space: 2,999 mm wheelbase (Wikipedia) = 4. Value null: no same-segment rival price opened. Kids: easy ISOFIX, rear controls, 526 L boot, 85% Euro NCAP child score (Carwow) = 4. Reviews replaced by Single Motor evidence: ADAC 200-kW RWD test, Driven NZ standard 20-inch passive-damper car, and Autoweek’s explicitly shared single/dual-motor launch acceleration impression. German, NZ and later US reports are labelled; no transfer of US connector, later acceleration/range figures or AWD active-damper handling to Europe launch. ADAC current test-publication day unverified, so null; older first-look metadata not used. All original scores retained.",
     "sourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
     "reviews": [
       {
-        "url": "https://www.topgear.com/car-reviews/polestar/4/driving",
-        "quote": "The dual-motor version is better. Not just because power is actually doubled, but also because the adaptive damping system keeps the body under better control.",
-        "title": "Polestar 4 Driving, Engines & Performance | Top Gear",
-        "sentiment": 0.55,
-        "publishedDate": "2025-11-05"
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+        "title": "Test Polestar 4: Leistung satt – aber keine Heckscheibe",
+        "quote": "Die Lenkung fühlt sich in allen Fahrmodi etwas synthetisch an.",
+        "publishedDate": null,
+        "sentiment": -0.3
       },
       {
-        "url": "https://www.carenthusiast.com/reviews/article/13750/-/2024-Polestar-4/First+drive:+Long+Range+Dual+Motor+with+Performance+Pack.html",
-        "quote": "the 4 is best described in handling terms as immensely talented, yet not massively engaging.",
-        "title": "First drive: Polestar 4 (Car Enthusiast, Long Range Dual Motor with Performance Pack)",
-        "sentiment": 0.2,
-        "publishedDate": "2024-09-30"
+        "url": "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
+        "title": "Polestar 4 single-motor & dual-motor review: less is more",
+        "quote": "the single-motor is simply a nicer, more engaging drive.",
+        "publishedDate": "2024-10-25",
+        "sentiment": 0.7
       },
       {
-        "url": "https://www.carwow.co.uk/polestar/4",
-        "quote": "However, it never quite hides its weight, which can knock your confidence slightly",
-        "title": "Polestar 4 Review & Prices (Carwow, updated 2026)",
-        "publishedDate": null
+        "url": "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/",
+        "title": "Polestar 4 Hits US Roads With No Rear Window But Plenty Of Power",
+        "quote": "both took off with plenty of alacrity",
+        "publishedDate": "2025-11-04",
+        "sentiment": 0.6
       }
     ]
   },
@@ -2885,6 +2886,51 @@
         "title": "买了熊猫mini，使用一年多，有些优缺点不吐不快",
         "sentiment": 0.6,
         "publishedDate": "2025-08-11"
+      }
+    ]
+  },
+  {
+    "pinId": 19861,
+    "scores": {
+      "range": 0.5,
+      "charging": null,
+      "acceleration": null,
+      "assistance": null,
+      "space": 1,
+      "value": 3,
+      "kidsFriendly": 1.5
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: QQ Ice Cream at pre-sale, RMB 29,900-43,900. 120/170 km NEDC (scored on 170 km; NEDC not CLTC); 20 kW, 85 Nm, top speed 100 km/h; 1,960 mm wheelbase, three doors, four seats. Null: charging (no DC rate in launch sources; the 10 kW figure seen only in a Yiche aggregate, not used), 0-100 km/h and driver assist unpublished. Value 3: priced where the Wuling Mini EV Macaron (RMB 37,600-43,600) sits, but larger (CnEVPost). Reviews: 周尤’s original Autohome Dec 16, 2021 full drive explicitly tests 13.9-kWh/170-km Sundae. Two exact 2022 Sundae owner accounts add everyday impressions. Autohome editor and owner share one platform; four accounts span three publishers including Yiche and 车评社Auto. The latter launch drive has unspecified battery trim and remains family context. Dates are original publications, not purchase/reprint days. Scores unchanged; no later Queen/Peach or Jetour export findings substituted.",
+    "sourceUrl": "https://cnevpost.com/2021/10/26/cherys-mini-ev-rival-opens-for-pre-sale-in-china-prices-start-at-about-4700/",
+    "reviews": [
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01gdd39d8v6gtkjchj60w00000.html",
+        "quote": "转向时，车辆稳定性一般吧。",
+        "title": "QQ冰淇淋新能源，女儿的孝心我的满足",
+        "sentiment": -0.3,
+        "publishedDate": "2022-09-20"
+      },
+      {
+        "url": "https://dianping.yiche.com/sid_7634/koubei/5975056073204608/",
+        "quote": "起步快，很平顺",
+        "title": "[QQ冰淇淋 2022款 170km 圣代版]怎么样口碑好不好-车友ych_AHgNyx180757点评-易车",
+        "sentiment": 0.6,
+        "publishedDate": "2022-10-12"
+      },
+      {
+        "url": "https://www.sohu.com/a/514742348_99981428",
+        "quote": "80km/h后加速明显放缓",
+        "title": "试驾QQ冰淇淋：灵动可爱电动小车，2.99万即可入手",
+        "sentiment": -0.3,
+        "publishedDate": "2022-01-06"
+      },
+      {
+        "url": "https://www.autohome.com.cn/drive/202112/1231041-all.html",
+        "title": "叫板爆款神车 试驾奇瑞新能源QQ冰淇淋",
+        "quote": "电动机对加速踏板的响应更加积极",
+        "publishedDate": "2021-12-16",
+        "sentiment": 0.5
       }
     ]
   }

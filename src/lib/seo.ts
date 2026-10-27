@@ -7,6 +7,8 @@ import { pinDelay } from './delay';
 import type { PinEventInfoJson } from './eventInfo';
 import { plainText } from './format';
 import { DEFAULT_LOCALE, languageAlternates, languageTag, localizePath, type Locale } from './i18n/config';
+import { isRestaurantPin } from './restaurantTimeline';
+import type { PinReview } from './pinReviews';
 import type { PinJson } from './types';
 
 export function absoluteUrl(path: string): string {
@@ -152,7 +154,8 @@ export function eventOffers(pin: PinJson, eventInfo: PinEventInfoJson | null | u
 //
 // Critic scores (IMDb, Rotten Tomatoes, MyAnimeList, ...) are shown on the
 // page but not marked up: Google's review snippet guidelines forbid ratings
-// gathered from other websites, and an Article cannot carry reviews anyway.
+// gathered from other websites. Sourced written reviews of a product or a
+// restaurant are marked up apart, by entityJsonLd.
 export function pinJsonLd(
   pin: PinJson,
   locale: Locale = DEFAULT_LOCALE,
@@ -249,6 +252,116 @@ export function pinJsonLd(
   };
 
   return [article, breadcrumbs];
+}
+
+// The outlet of a stored review, read off its url ("www.caranddriver.com"
+// -> "caranddriver.com"): the reviews keep no author or outlet name.
+function reviewOutlet(url: string): { name: string; url: string } | null {
+  try {
+    const u = new URL(url);
+    return { name: u.hostname.replace(/^www\./, ''), url: u.origin };
+  } catch {
+    return null;
+  }
+}
+
+// A Review node per stored independent review (a tasting, road test or
+// critic's write-up), written by the outlet that published it. Only reviews
+// with a quote are marked up, because the quote is what the page shows; the
+// star count is left off: they carry no rating of their own.
+export function reviewNodes(reviews: readonly PinReview[] | null | undefined, itemName: string) {
+  return (reviews ?? []).flatMap((review) => {
+    const outlet = reviewOutlet(review.url);
+    const quote = review.quote?.trim();
+    if (!outlet || !quote) {
+      return [];
+    }
+    return [
+      {
+        '@type': 'Review',
+        url: review.url,
+        ...(review.title ? { name: review.title } : {}),
+        reviewBody: quote,
+        ...(review.publishedDate ? { datePublished: review.publishedDate } : {}),
+        author: { '@type': 'Organization', ...outlet },
+        publisher: { '@type': 'Organization', ...outlet },
+        itemReviewed: { '@type': 'Thing', name: itemName },
+      },
+    ];
+  });
+}
+
+// Product, Restaurant, Hotel or SoftwareApplication markup for a pin with
+// sourced independent reviews: a product when a taste, car or aircraft rubric
+// exists, a restaurant when it is on a restaurant guide and has a place, a
+// hotel with a place, software for an AI or video model. Google bars aggregating ratings from
+// other websites, so no AggregateRating is written; each review stands on
+// its own with its outlet as the author. Returns undefined when the pin has
+// neither. The Product's offer is the pin's own priced listing.
+type Rubric = { reviews: PinReview[] } | null | undefined;
+type Rubrics = { taste?: Rubric; carPerf?: Rubric; gasCarPerf?: Rubric; dining?: Rubric; hotel?: Rubric; aircraftPerf?: Rubric; llmPerf?: Rubric; videoPerf?: Rubric };
+
+export function entityJsonLd(
+  pin: PinJson,
+  locale: Locale,
+  { taste, carPerf, gasCarPerf, dining, hotel, aircraftPerf, llmPerf, videoPerf }: Rubrics,
+) {
+  const url = absoluteUrl(localizePath(pinPath(pin), locale));
+  const image = pinImage(pin)?.url ?? absoluteUrl(`/og/pin/${pin.id}`);
+  const base = { '@context': 'https://schema.org', '@id': `${url}#entity`, name: pin.title, description: pinDescription(pin), image: [image], url };
+
+  if (dining && isRestaurantPin(pin) && pin.address) {
+    const review = reviewNodes(dining.reviews, pin.title);
+    return {
+      ...base,
+      '@type': 'Restaurant',
+      address: pin.address,
+      ...(pin.latitude != null && pin.longitude != null ? { geo: { '@type': 'GeoCoordinates', latitude: pin.latitude, longitude: pin.longitude } } : {}),
+      ...(pin.sourceUrl ? { sameAs: pin.sourceUrl } : {}),
+      ...(review.length ? { review } : {}),
+    };
+  }
+
+  if (hotel && pin.address) {
+    const review = reviewNodes(hotel.reviews, pin.title);
+    return {
+      ...base,
+      '@type': 'Hotel',
+      address: pin.address,
+      ...(pin.latitude != null && pin.longitude != null ? { geo: { '@type': 'GeoCoordinates', latitude: pin.latitude, longitude: pin.longitude } } : {}),
+      ...(pin.sourceUrl ? { sameAs: pin.sourceUrl } : {}),
+      ...(review.length ? { review } : {}),
+    };
+  }
+
+  // An AI model is software; a video model likewise. Their reviews are
+  // written about the model, and they have no offer unless the pin is priced.
+  const software = llmPerf ?? videoPerf;
+  if (software) {
+    const review = reviewNodes(software.reviews, pin.title);
+    return {
+      ...base,
+      '@type': 'SoftwareApplication',
+      applicationCategory: 'AI model',
+      operatingSystem: 'Web',
+      ...(pin.company ? { author: { '@type': 'Organization', name: pin.company } } : {}),
+      ...(review.length ? { review } : {}),
+    };
+  }
+
+  const rubric = taste ?? carPerf ?? gasCarPerf ?? aircraftPerf;
+  if (!rubric) {
+    return undefined;
+  }
+  const review = reviewNodes([taste, carPerf, gasCarPerf, aircraftPerf].flatMap((r) => r?.reviews ?? []), pin.title);
+  const priced = pin.price != null && !!pin.priceCurrency;
+  return {
+    ...base,
+    '@type': 'Product',
+    ...(pin.company ? { brand: { '@type': 'Brand', name: pin.company } } : {}),
+    ...(priced ? { offers: { '@type': 'Offer', url: pin.sourceUrl || url, price: pin.price, priceCurrency: pin.priceCurrency } } : {}),
+    ...(review.length ? { review } : {}),
+  };
 }
 
 // The pin's dates as an ISO 8601 interval: "2027-10-12" for one all-day

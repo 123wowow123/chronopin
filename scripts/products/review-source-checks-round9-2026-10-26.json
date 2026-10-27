@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [],
+  "needsResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 7626,
+      "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+      "status": "needs-research",
+      "reason": "Opened original independent guide and verified its bakery-wide verdict. Repaired the non-verbatim shortened ingredient sentence. This is general bakery context, not a firsthand tasting of the specific award-winning loaf. Last Updated 10-08-2026 is not original publication; retain null. Find an eligible product-specific tasting source rather than marking this date/source check complete."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "status": "needs-research",
+      "reason": "Rendered product page exposes no Ms S. customer quotation or original review day. Exact-phrase searches did not locate the quotation on an opened primary source. Original customer review and timestamp still need verification; do not infer from the product launch or unrelated Strawberry & Cream reviews."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "status": "needs-research",
+      "reason": "The saved product path returns a rendered 404. Exact Nicole customer quotation was not recovered. Alternate shops have product descriptions, not this firsthand review; original customer review and day remain unverified. A linked existing Instagram account is a separate source, not proof of this quoted customer text."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13921,
+      "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
+      "status": "needs-research",
+      "reason": "Opened exact Hennig-Olsen 450-ml Strawberry tub product page, GTIN 7041018011209, and searched Norwegian taste tests. Operator description is not firsthand tasting. Existing GB Glace Swedish cone and 2013 Strawberry Dream accounts concern different makers/products; searches found Balltop, Kroneis and older non-strawberry tubs, which do not establish this product taste. Exact tub tasting evidence remains required; dates alone cannot resolve eligibility."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13912,
+      "url": "https://www.productreview.com.au/listings/peters-drumstick",
+      "status": "needs-research",
+      "reason": "Rendered ProductReview listing is blocked, so exact author/text/day remain unverified. Saved title explicitly describes the classic Drumstick range rather than the pinned Anzac flavour; the other saved classic-range article also does not establish that flavour. Research an exact Anzac tasting account instead of treating a generic range review date as completion."
+    }
+  ],
+  "supersededEntries": [
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "status": "superseded",
+      "reason": "Superseded in round10: dated review selector alone is insufficient publication evidence. Native date restored to null and research reopened; see review-source-checks-round10-2026-10-26.json."
+    }
+  ]
+}

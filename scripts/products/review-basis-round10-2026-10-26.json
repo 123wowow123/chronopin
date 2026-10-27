@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "pinSourceUrl": "https://carnewschina.com/?p=109999",
+      "expectedBasis": "Variant: QQ Ice Cream at pre-sale, RMB 29,900-43,900. 120/170 km NEDC (scored on 170 km; NEDC not CLTC); 20 kW, 85 Nm, top speed 100 km/h; 1,960 mm wheelbase, three doors, four seats. Null: charging (no DC rate in launch sources; the 10 kW figure seen only in a Yiche aggregate, not used), 0-100 km/h and driver assist unpublished. Value 3: priced where the Wuling Mini EV Macaron (RMB 37,600-43,600) sits, but larger (CnEVPost). No independent road test found.",
+      "basis": "Variant: QQ Ice Cream at pre-sale, RMB 29,900-43,900. 120/170 km NEDC (scored on 170 km; NEDC not CLTC); 20 kW, 85 Nm, top speed 100 km/h; 1,960 mm wheelbase, three doors, four seats. Null: charging (no DC rate in launch sources; the 10 kW figure seen only in a Yiche aggregate, not used), 0-100 km/h and driver assist unpublished. Value 3: priced where the Wuling Mini EV Macaron (RMB 37,600-43,600) sits, but larger (CnEVPost). Reviews: 周尤’s original Autohome Dec 16, 2021 full drive explicitly tests 13.9-kWh/170-km Sundae. Two exact 2022 Sundae owner accounts add everyday impressions. Autohome editor and owner share one platform; four accounts span three publishers including Yiche and 车评社Auto. The latter launch drive has unspecified battery trim and remains family context. Dates are original publications, not purchase/reprint days. Scores unchanged; no later Queen/Peach or Jetour export findings substituted."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "pinSourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+      "expectedBasis": "Scored: Long Range Single Motor. Range 609 km WLTP (electrive, UK preliminary) = 3. Charging peak 200 kW (electrive) = 3. Acceleration 0-100 km/h 7.4 s (Wikipedia) = 2. Assistance: Pilot Pack, 12 cameras + radar, no LiDAR (Carwow) = 2. Space: 2,999 mm wheelbase (Wikipedia) = 4. Value null: no same-segment rival price opened. Kids: easy ISOFIX, rear controls, 526 L boot, 85% Euro NCAP child score (Carwow) = 4.",
+      "basis": "Scored: Long Range Single Motor. Range 609 km WLTP (electrive, UK preliminary) = 3. Charging peak 200 kW (electrive) = 3. Acceleration 0-100 km/h 7.4 s (Wikipedia) = 2. Assistance: Pilot Pack, 12 cameras + radar, no LiDAR (Carwow) = 2. Space: 2,999 mm wheelbase (Wikipedia) = 4. Value null: no same-segment rival price opened. Kids: easy ISOFIX, rear controls, 526 L boot, 85% Euro NCAP child score (Carwow) = 4. Reviews replaced by Single Motor evidence: ADAC 200-kW RWD test, Driven NZ standard 20-inch passive-damper car, and Autoweek’s explicitly shared single/dual-motor launch acceleration impression. German, NZ and later US reports are labelled; no transfer of US connector, later acceleration/range figures or AWD active-damper handling to Europe launch. ADAC current test-publication day unverified, so null; older first-look metadata not used. All original scores retained."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15245,
+      "pinSourceUrl": "https://www.carscoops.com/?p=3248277",
+      "expectedBasis": "Scored variant: XRT Pro AWD, $49,370 before destination. 287 hp; 0-60 mph 8.1 s (Car and Driver test, not the maker); EPA combined 19 mpg; 19/46/87 cu ft cargo with a 'snug third row' (average); 5.8 hp per US$1,000. Handling null: only one road test opened and its text calls handling 'bland'.",
+      "basis": "Scored variant: XRT Pro AWD, $49,370 before destination. 287 hp; 0-60 mph 8.1 s (Car and Driver test, not the maker); EPA combined 19 mpg; 19/46/87 cu ft cargo with a 'snug third row' (average); 5.8 hp per US$1,000. Handling null retained. The original C/D XRT Pro off-road test now replaces a generic model overview; remaining Consumer Reports and AutoGuide reports are V6 launch-family context, not proof of XRT-specific tyres/suspension. Original article August 5, 2025; October 8 update adds measured results. No Calligraphy or hybrid performance substituted."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15246,
+      "pinSourceUrl": "https://www.carscoops.com/2025/12/kias-new-hatchback-skips-the-cheap-trims-but-still-feels-like-a-bargain/",
+      "expectedBasis": "Scored variant: K4 Hatchback GT-Line Turbo at $28,790 before destination. 190 hp; 0-60 mph 7.0 s (Car and Driver test, not the maker); EPA combined 28 mpg; 22/59 cu ft cargo with an adult-friendly back seat (above average for a compact); 6.6 hp per US$1,000. Handling 3.5: C/D 'competent but not exciting' (0.86 g) and Carscoops 'never had us bracing ourselves in corners'.",
+      "basis": "Scored variant: K4 Hatchback GT-Line Turbo at $28,790 before destination. 190 hp; 0-60 mph 7.0 s (Car and Driver test, not the maker); EPA combined 28 mpg; 22/59 cu ft cargo with an adult-friendly back seat (above average for a compact); 6.6 hp per US$1,000. Handling 3.5 retained: exact C/D GT-Line Turbo hatch test replaces generic sedan/range overview. It reports easy agility/secure handling and 0.86 g; Carscoops and AutoGuide remain the other independent launch-drive sources. Base CVT and torsion-beam findings not substituted. All original scores retained."
+    }
+  ]
+}

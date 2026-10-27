@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15245,
+      "url": "https://www.caranddriver.com/hyundai/palisade",
+      "status": "resolved",
+      "reason": "Superseded and removed from native review arrays in both environments after saving opened, exact-variant original reviews. No inferred date assigned to evolving overview. References retained as contextual sources."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15246,
+      "url": "https://www.caranddriver.com/kia/k4",
+      "status": "resolved",
+      "reason": "Superseded and removed from native review arrays in both environments after saving opened, exact-variant original reviews. No inferred date assigned to evolving overview. References retained as contextual sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "url": "https://www.carwow.co.uk/polestar/4",
+      "status": "resolved",
+      "reason": "Superseded and removed from native review arrays in both environments after saving opened, exact-variant original reviews. No inferred date assigned to evolving overview. References retained as contextual sources."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+      "status": "verified-undated",
+      "reason": "Opened original full Single Motor road test. Original article datePublished February 20, 2024 belongs to earlier coverage; visible July 4, 2025 is a later revision. Neither separately establishes first publication of the quoted current road-test passage. Keep native date null and the excerpt off the graph; scope note verified in source wiki."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "status": "needs-research",
+      "reason": "Corrected round9 overconfidence: selector labels 11th Apr 2017 review but does not establish a separate original publication day. Review/meal labels are not sufficient publication evidence. Native date restored to null, quotation retained, and source wiki corrected in both environments. Seek explicit publication/archive evidence before dating; do not replay the superseded assignment."
+    }
+  ]
+}

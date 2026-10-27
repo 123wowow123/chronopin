@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15245,
+      "pinSourceUrl": "https://www.carscoops.com/?p=3248277",
+      "url": "https://www.caranddriver.com/hyundai/palisade",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/hyundai/palisade",
+        "quote": "Appealing exterior design, premium cabin, plenty of convenient features come standard.",
+        "title": "2026 Hyundai Palisade Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Generic mutable overview replaced by the opened exact model/trim original test, with verified original publication."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15246,
+      "pinSourceUrl": "https://www.carscoops.com/2025/12/kias-new-hatchback-skips-the-cheap-trims-but-still-feels-like-a-bargain/",
+      "url": "https://www.caranddriver.com/kia/k4",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/kia/k4",
+        "quote": "Attractively modern styling, adult-friendly back seat, high-value standard features list.",
+        "title": "2026 Kia K4 Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Generic mutable overview replaced by the opened exact model/trim original test, with verified original publication."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "pinSourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+      "url": "https://www.topgear.com/car-reviews/polestar/4/driving",
+      "expectedReview": {
+        "url": "https://www.topgear.com/car-reviews/polestar/4/driving",
+        "quote": "The dual-motor version is better. Not just because power is actually doubled, but also because the adaptive damping system keeps the body under better control.",
+        "title": "Polestar 4 Driving, Engines & Performance | Top Gear",
+        "sentiment": 0.55,
+        "publishedDate": "2025-11-05"
+      },
+      "reason": "Replace sibling AWD/Performance Pack or evolving unspecified-variant impression with three newly opened Single Motor reports. References retained as family context; do not show active-damper AWD behaviour as a base RWD assessment."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "pinSourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+      "url": "https://www.carenthusiast.com/reviews/article/13750/-/2024-Polestar-4/First+drive:+Long+Range+Dual+Motor+with+Performance+Pack.html",
+      "expectedReview": {
+        "url": "https://www.carenthusiast.com/reviews/article/13750/-/2024-Polestar-4/First+drive:+Long+Range+Dual+Motor+with+Performance+Pack.html",
+        "quote": "the 4 is best described in handling terms as immensely talented, yet not massively engaging.",
+        "title": "First drive: Polestar 4 (Car Enthusiast, Long Range Dual Motor with Performance Pack)",
+        "sentiment": 0.2,
+        "publishedDate": "2024-09-30"
+      },
+      "reason": "Replace sibling AWD/Performance Pack or evolving unspecified-variant impression with three newly opened Single Motor reports. References retained as family context; do not show active-damper AWD behaviour as a base RWD assessment."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "pinSourceUrl": "https://electrive.com/2024/01/31/polestar-4-suv-goes-on-sale-in-europe-and-australia",
+      "url": "https://www.carwow.co.uk/polestar/4",
+      "expectedReview": {
+        "url": "https://www.carwow.co.uk/polestar/4",
+        "quote": "However, it never quite hides its weight, which can knock your confidence slightly",
+        "title": "Polestar 4 Review & Prices (Carwow, updated 2026)",
+        "publishedDate": null
+      },
+      "reason": "Replace sibling AWD/Performance Pack or evolving unspecified-variant impression with three newly opened Single Motor reports. References retained as family context; do not show active-damper AWD behaviour as a base RWD assessment."
+    }
+  ]
+}

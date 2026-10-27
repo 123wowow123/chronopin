@@ -191,6 +191,19 @@ prod's pin is the one the run worked on ([admin table API](../api/admin-db.md#jo
   reason to leave proposals pending or request another confirmation. Queue
   genuine research gaps or conflicting evidence with a specific reason.
   Production deployment still requires a separate explicit user request.
+* **New pins are search-ready (owner, 2026-10-26).** Structured data is
+  written at render time for every pin ([seo.ts](../../../src/lib/seo.ts):
+  Article and Event, plus Product, Restaurant, Hotel or SoftwareApplication
+  with a `Review` per stored review), so a new pin gets it with no step of
+  its own, provided the data it reads exists. So every `create_pin` must:
+  clear the thin floor at creation (900 characters of text, 3 sources, so it
+  is indexed and not hidden); put the words people search for in the title
+  and the first sentence (the episode, nominee, product or CVE name, the
+  year); and, for a product, drink, snack, car, aircraft, AI model, hotel or
+  restaurant, save its rubric with the verified independent reviews through
+  the rubric endpoints, since the review markup is built from them. Never
+  add a rating the sources do not give: no aggregate rating is marked up.
+  `create_pin` posts the pin regardless, then returns `needs` ([newPinFlags.ts](../../../src/lib/newPinFlags.ts)) when it is thin or may need a rubric: act on every item before the run ends, or list it in the closing report.
 * **Already pinned is checked first.** `find_pins` on the subject's words and
   its source URL before every `create_pin`; the route rejects a repeated
   source URL anyway. A second source for a pinned subject is a reference on

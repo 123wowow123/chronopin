@@ -1,0 +1,341 @@
+{
+  "checkedAt": "2026-10-26",
+  "newCriticPins": 1,
+  "newCriticReviews": 3,
+  "newPerformanceReviews": 6,
+  "excludedGenericOrSiblingReviews": 5,
+  "publicationSourceChecksResolved": 3,
+  "unsupportedDateAssignmentsRetracted": 1,
+  "publicationSourceChecksNetReduction": 2,
+  "resolvedCoverageFollowUps": [
+    19861,
+    20018
+  ],
+  "savedIn": [
+    "local",
+    "production"
+  ],
+  "rubricReadbacks": [
+    {
+      "pinId": 15245,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15245,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15246,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15246,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19861,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19861,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20018,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20018,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 17208,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17208,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    }
+  ],
+  "nativeDateClearReadbacks": [
+    {
+      "pinId": 17208,
+      "production": false,
+      "publishedDate": null,
+      "unchangedFieldsVerified": true
+    },
+    {
+      "pinId": 17208,
+      "production": true,
+      "publishedDate": null,
+      "unchangedFieldsVerified": true
+    }
+  ],
+  "sourceWikiReadbacks": [
+    {
+      "pinId": 17208,
+      "production": false,
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17208,
+      "production": true,
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 20018,
+      "production": false,
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 20018,
+      "production": true,
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    }
+  ],
+  "nativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6534,
+      "url": "http://127.0.0.1:3000/pin/6534/windows-mixed-reality-headsets-launch-with-windows-10-fall-creators-update",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19861,
+      "url": "http://127.0.0.1:3000/pin/19861/chery-launches-the-qq-ice-cream-mini-ev-from-rmb-29-900-in-wuhu",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 20018,
+      "url": "http://127.0.0.1:3000/pin/20018/polestar-4-goes-on-sale-in-europe-and-australia-from-eur-61-900-with-200-kw-char",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 15245,
+      "url": "http://127.0.0.1:3000/pin/15245/hyundai-prices-the-all-new-2026-palisade-from-38-935-with-v6-and-hybrid",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 15246,
+      "url": "http://127.0.0.1:3000/pin/15246/kia-prices-the-2026-k4-hatchback-from-24-890-turbo-gt-line-at-28-790",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17208,
+      "url": "http://127.0.0.1:3000/pin/17208/la-yeon-seoul-restaurant-guide",
+      "quote": true,
+      "graph": false,
+      "expectedGraph": false
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6534,
+      "url": "https://www.chronopin.com/pin/6534/windows-mixed-reality-headsets-launch-with-windows-10-fall-creators-update",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19861,
+      "url": "https://www.chronopin.com/pin/19861/chery-launches-the-qq-ice-cream-mini-ev-from-rmb-29-900-in-wuhu",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 20018,
+      "url": "https://www.chronopin.com/pin/20018/polestar-4-goes-on-sale-in-europe-and-australia-from-eur-61-900-with-200-kw-char",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 15245,
+      "url": "https://www.chronopin.com/pin/15245/hyundai-prices-the-all-new-2026-palisade-from-38-935-with-v6-and-hybrid",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 15246,
+      "url": "https://www.chronopin.com/pin/15246/kia-prices-the-2026-k4-hatchback-from-24-890-turbo-gt-line-at-28-790",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17208,
+      "url": "https://www.chronopin.com/pin/17208/la-yeon-seoul-restaurant-guide",
+      "quote": true,
+      "graph": false,
+      "expectedGraph": false
+    }
+  ],
+  "tests": {
+    "command": "npx vitest run src/lib/okf.test.ts src/lib/okfLint.test.ts src/lib/reviewPublicationDay.test.ts src/server/jobs/reviewResearch.test.ts",
+    "passed": 28,
+    "dateClearIdempotentReplay": true,
+    "staleCitationRejectedBeforeWrite": true
+  },
+  "remaining": {
+    "rubricGaps": 73,
+    "sourceChecks": 79,
+    "verifiedUndated": 72,
+    "broaderCoverage": true,
+    "scheduledProductionVerification": "Run #26 skipped: no production ANTHROPIC_API_KEY configured; zero actions or model usage."
+  },
+  "originalSchedulesUnchanged": true,
+  "deploymentPerformed": false
+}

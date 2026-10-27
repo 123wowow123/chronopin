@@ -111,23 +111,27 @@ or shop is not a firsthand review of the pinned product.
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
 | PinTaste | 228 | 493 | 0 (minimum one) | 43 |
-| PinCarPerf | 128 | 346 | 34 | 16 |
-| PinGasCarPerf | 160 | 502 | 12 | 16 |
+| PinCarPerf | 128 | 350 | 33 | 16 |
+| PinGasCarPerf | 160 | 502 | 12 | 14 |
 | PinAircraftPerf | 165 | 562 | 14 | 8 |
 | PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
 | PinDining | 89 | 272 | 8 | 46 |
-| PinCriticReview | 98 | 295 | 0 | 1 |
+| PinCriticReview | 102 | 307 | 0 | 1 |
 
-There are **74 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 98 existing critic rows have at least three extracts.
+There are **73 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 102 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
 The XUV 7XO now has three independent publishers: Autocar India, CarTrade
 and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
-petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 153 non-MICHELIN undated entries, 71
-have verified reasons to retain null dates; **82 date/source checks remain**.
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 151 non-MICHELIN undated entries, 72
+have verified reasons to retain null dates; **79 date/source checks remain**.
+Current scheduled verification: retry #26 is blocked by the missing production
+`ANTHROPIC_API_KEY`; the older credit failure is historical. See the tenth
+continuation below.
+
 Every dated review with a quote is scored. Category leads still need screening;
 awards, concerts and business events must not receive invented product reviews.
 
@@ -418,3 +422,76 @@ Slant primary-source reader checks support the twelve additions; the Silverado
 original date was separately verified. All 22 documentation tests, catalog
 constraints and queue-count checks passed. Changes for this pass are limited to
 content/research catalogs and documentation.
+
+
+## Ninth continuation: Computing, films and original QQ Ice Cream reports
+
+Added twelve reviews: nine critic extracts across three previously uncovered
+works/products, plus three reports for the original QQ Ice Cream. All were saved
+and verified through authenticated native APIs locally and in production.
+Critic coverage now totals 101 pins and 304 extracts. The raw below-three count
+is 73 (EV33, gas12, aircraft14, dining8, LLM4, video2), with 81 unresolved
+publication/source checks and 71 verified-undated entries. Exact-variant and
+independence limitations remain separate from those raw counts.
+
+- [Production HoloLens 2](../../../scripts/products/hololens2-critic-round9-2026-10-26.json): Jamie Feltham / UploadVR, Sherri L. Smith / Tom’s Guide and Jim Salter / Ars Technica are three distinct original publications. Comfort praise and tracking caveats are preserved. The November 2019 assessments are short guided demonstrations; UploadVR’s April 2021 review reports longer use. Their dates stay separate from shipping, later edits and related stories. These do not establish industrial field reliability, current support, original-HoloLens performance or IVAS results.
+- [Zootopia 2 and Infinity Castle](../../../scripts/products/movie-critic-round9-2026-10-26.json): three original publications per film, preserving differing assessments. Zootopia 2 is also titled Zootropolis 2 in the UK; reviews concern the 2025 sequel rather than the 2016 original. Infinity Castle reviews concern the first Akaza Returns film, not Mugen Train, compilation films or the complete trilogy. The Gleaner’s visible September 18, 2025 byline agrees with its original datePublished despite a September 20 URL path; December modification time was excluded. Screen International was fully readable in the browser despite a plain-fetch 405. No aggregator paraphrases were used as original critic quotations.
+- [QQ Ice Cream](../../../scripts/products/qq-ice-cream-reviews-round9-2026-10-26.json): two original China 2022 170-km Sundae owner accounts, on Autohome and Yiche, plus 车评社Auto’s January 6, 2022 Wuhu launch drive. Owners offer contrasting views of smooth acceleration and stability when turning. The launch drive’s high-speed caveat is family context because its battery trim is unspecified; it is not a measured 170-km range test. The owner accounts are not instrumented professional tests. Yiche uses a custom font whose copied text contains private-use characters; the short quotation was transcribed from the visually inspected rendered page. All scores and unrelated fields were preserved, and the original car-performance catalog’s basis was synchronized. A further professional exact-170-km test remains a follow-up.
+- [Citation repairs](../../../scripts/products/review-source-repairs-round9-2026-10-26.json): Andy Hayler’s review selector explicitly labels La Yeon’s article “11th Apr 2017 review”. That review-day label was initially saved as publication; this was too confident and is superseded by the tenth continuation, which restores null and reopens the publication check. Arán’s shortened ingredient sentence was not verbatim; it was replaced with the opened guide’s short exact verdict. The guide describes the bakery generally, not a firsthand tasting of the award-winning loaf, so its source-eligibility research remains open and its update date was not substituted for publication.
+- [Source-wiki annotations](../../../scripts/products/review-wiki-verification-round9-2026-10-26.json): four readbacks verify the corrected review-day and bakery-scope notes in both environments. Existing wiki content was preserved, with the obsolete missing-date statement corrected where present.
+- [Remaining source checks](../../../scripts/products/review-source-checks-round9-2026-10-26.json): retained specific unresolved reasons for the two Funday customer citations, Arán’s loaf tasting, Hennig-Olsen’s exact strawberry tub and the Anzac Drumstick flavour. A missing customer widget, a 404, manufacturer copy and sibling products do not establish the saved firsthand citation. These checks were not marked completed merely because a source was revisited.
+- [Coverage follow-ups](../../../scripts/products/review-coverage-leads-round9-2026-10-26.json): the newly opened InsideEVs Zeekr 007 test identifies AWD with electromagnetic dampers, so it was excluded from exact base-RWD evidence. QQ Ice Cream’s unavailable 42HOW page, unreadable Dongchedi listing and later Jetour export test were recorded without substituting them for original China findings. Hali 1 Opal still needs another independently verified exact-colourway primary test; a secondary review aggregator and blue operator photos do not establish that the writer tested Opal.
+
+The [queue](../../../scripts/products/review-queue-2026-10-26.json) retains broader
+coverage, all remaining low-count rows and source checks, and explicit QQ Ice
+Cream/Opal coverage follow-ups. Scheduled production-tool verification remains
+outstanding after the previously recorded Anthropic credit failure. No deploy,
+restart or schedule change was performed.
+
+[Validation](../../../scripts/products/review-validation-round9-2026-10-26.json):
+all twelve affected page checks rendered saved quotations and sentiment graphs
+locally and in production. Six native rubric readbacks preserved all scores and
+unrelated fields. Thirteen source-text quote matches plus one visual custom-font
+transcription support the twelve additions and two citation repairs. Four
+source-wiki annotation readbacks passed. All 22 documentation tests, catalog
+constraints, queue counts and whitespace checks passed. This pass changed only
+content/research catalogs and documentation.
+
+
+## Tenth continuation: exact variants, source corrections and scheduled retry
+
+Added nine reviews, then removed five superseded generic/sibling extracts.
+All content changes were saved and read back through native APIs locally and
+in production. Broader critic coverage now totals 102 pins and 307 extracts.
+The raw below-three count remains 73. Three old source checks were resolved by
+replacement, while one overly confident date was corrected and reopened:
+**79 publication/source checks remain**, with 72 verified-undated entries.
+
+- [Windows Mixed Reality](../../../scripts/products/wmr-critic-round10-2026-10-26.json): three distinct original publications assess first-generation Microsoft tracking through Acer AH101 hardware. Road to VR praises inside-out head tracking; UploadVR and PCWorld document limitations. These are not three headset brands. PCWorld tested after the April 2018 Windows/SteamVR release, and its later article date remains explicit rather than being backdated to the October 2017 launch. No Acer-specific fit/display findings were transferred to Samsung Odyssey or other brands, and immersive VR was distinguished from see-through HoloLens AR.
+- [Original QQ Ice Cream professional test](../../../scripts/products/qq-exact-test-round10-2026-10-26.json): recovered the Autohome original linked from the model section, opened the publisher’s full-article expansion and verified 周尤’s December 16, 2021 byline. It explicitly tests the 13.9-kWh, 170-km Sundae; the quote concerns sport-mode pedal response. The professional exact-variant follow-up is resolved. Four accounts now span three publishing platforms, with the Autohome editor and owner still counted as one platform. The previous replay had intentionally preserved the native old basis even though the JSON basis was updated; that stale explanation is now separately corrected and verified in both environments.
+- [Polestar 4 Single Motor replacements](../../../scripts/products/polestar-rwd-reviews-round10-2026-10-26.json): the ADAC German test identifies 200-kW RWD, Driven Car Guide tests the NZ standard-20-inch/passive-damper car, and Autoweek explicitly describes an acceleration impression shared by both single and dual motor test cars. The AWD-only active-damper handling paragraph was excluded from the new Autoweek extract. NZ and later US market/software differences are explicit and do not validate Europe-launch acceleration, range or connectors. The ADAC page’s original first-look metadata does not date its current road-test passage; its native date stays null, with a verified source-wiki explanation.
+- [Exact K4 and Palisade sources](../../../scripts/products/review-source-repairs-round10-2026-10-26.json): replaced the mutable K4 sedan/range overview with the original GT-Line Turbo hatch test, and the generic Palisade page with the original test’s explicit XRT Pro off-road assessment. C/D’s Palisade article originally appeared August 5, 2025 and received instrumented results on October 8; the original article day is retained without claiming later results were available at launch. Other launch-family accounts remain labelled as such.
+- [Five targeted exclusions](../../../scripts/products/review-exclusions-round10-2026-10-26.json): removed the two generic C/D excerpts and all three old Polestar AWD/unspecified-variant extracts only after verifying replacement saves. The old sources remain references for context. All axes, authors and unrelated fields were preserved.
+- [Native basis corrections](../../../scripts/products/review-basis-round10-2026-10-26.json): separately updated QQ Ice Cream, Polestar 4, K4 and Palisade explanations, with fresh-row concurrency guards and eight native readbacks. The ordinary replay deliberately preserves an existing basis. Both original EV catalog bases were synchronized; no score was changed.
+- [Publication correction](../../../scripts/products/review-date-clears-round10-2026-10-26.json): the prior assignment of April 11, 2017 to La Yeon was too confident. A label identifying a dated review does not separately prove publication. Both native dates are now null, the service quote is retained, the research check is reopened and the earlier replay catalog is corrected. Because the ordinary merge intentionally preserves existing dates when incoming evidence has null, the explicit guarded [date-clear replay](../../../scripts/products/replayReviewDateClears.ts) handles this correction. It verifies both environments before writing, rejects a changed citation and preserves every unrelated field. An idempotent replay and a deliberately stale-quote rejection were checked.
+- [Source checks](../../../scripts/products/review-source-checks-round10-2026-10-26.json) and [coverage dispositions](../../../scripts/products/review-coverage-leads-round10-2026-10-26.json) preserve the original evidence and limits. [Four source-wiki readbacks](../../../scripts/products/review-wiki-verification-round10-2026-10-26.json) verify ADAC’s test-date scope and the corrected La Yeon date interpretation while preserving existing content. Hali 1 Opal and broader category coverage remain open.
+
+[Scheduled retry #26](../../../scripts/products/review-production-verification-round10-2026-10-26.json)
+was claimed by the production scheduler but skipped because no
+`ANTHROPIC_API_KEY` is configured in that runtime. It made zero model calls or
+content actions. This is the current blocker; the earlier insufficient-credit
+response from #25 does not establish current billing state while the key is
+missing. The temporary schedule was removed and the complete original settings
+were verified unchanged, including all four disabled original schedules. No
+production deployment, restart or environment change was performed.
+
+[Validation](../../../scripts/products/review-validation-round10-2026-10-26.json):
+ten native rubric readbacks verified unchanged scores and unrelated fields,
+with the four intended basis updates also checked explicitly. Both native date
+clears and all four source-wiki annotations were read back. Twelve page checks
+passed: quotations and expected graphs rendered in both environments, while
+La Yeon correctly has no dated graph after its only assigned day was cleared.
+All 28 focused documentation/review-date/research tests, the guarded replay’s
+idempotent run and stale-citation rejection, catalog constraints, queue totals
+and whitespace checks passed. No application/runtime code was changed; the new
+script is an operator replay utility for explicit researched date corrections.

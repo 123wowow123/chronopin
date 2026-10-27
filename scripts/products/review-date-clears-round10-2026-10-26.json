@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "expectedReview": {
+        "url": "https://www.andyhayler.com/restaurant/la-yeon",
+        "quote": "Service was excellent",
+        "title": "review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017",
+        "publishedDate": "2017-04-11",
+        "sentiment": 0.8
+      },
+      "reason": "Dated review selector is not proof of first publication; restore null and retain the exact quote. Ordinary review merge preserves known dates, so this explicit guarded native correction is required."
+    }
+  ]
+}

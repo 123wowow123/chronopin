@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T03:33:34.089Z",
+  "checkedAt": "2026-10-27T04:13:40.762Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -14,9 +14,9 @@
     {
       "table": "PinCarPerf",
       "pins": 128,
-      "reviews": 346,
+      "reviews": 350,
       "minimum": 3,
-      "belowMinimum": 34,
+      "belowMinimum": 33,
       "undatedNonMichelin": 16,
       "unscoredDated": 0
     },
@@ -26,7 +26,7 @@
       "reviews": 502,
       "minimum": 3,
       "belowMinimum": 12,
-      "undatedNonMichelin": 16,
+      "undatedNonMichelin": 14,
       "unscoredDated": 0
     },
     {
@@ -76,8 +76,8 @@
     },
     {
       "table": "PinCriticReview",
-      "pins": 98,
-      "reviews": 295,
+      "pins": 102,
+      "reviews": 307,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -280,7 +280,7 @@
       "title": "Zeekr Launches the 007 Electric Sedan From RMB 209,900",
       "sourceUrl": "https://cnevpost.com/2023/12/28/zeekr-officially-launches-007-sedan/",
       "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "reason": "Opened Kevin Williams’s original June 5, 2024 InsideEVs drive. The table and body explicitly identify Intelligent Driving Version 4WD, 75 kWh, 259,900 CNY, electromagnetic dampers. The native rubric scores base RWD 75 kWh. Do not add this as an exact RWD road test or infer the same suspension behaviour. Existing two AWD reviews are explicitly sibling context. Exact RWD owner/road-test evidence remains required.",
       "existingResearchBasis": "Variant: 007 RWD, 75 kWh LFP, from RMB 209,900. Range 688 km CLTC (3.5); 800 V, +500 km in 15 min (3.5); 0-100 5.6 s (3); highway navigation assist at launch, LiDAR/dual Orin on higher trims (3); wheelbase 2,928 mm (3); undercuts Model 3/Xiaomi SU7 class with 800 V and Nvidia hardware (4); kids null: ISOFIX/rear child features not found. Reviews cover the AWD/dual-motor car."
     },
     {
@@ -372,15 +372,6 @@
       "reviewCount": 0,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Variant: entry, 119,900 yuan, 57.5 kWh, 540 km CLTC, 200 kW RWD. Flash charging 10-70% in about 5 min (peak kW unpublished) so 4.5; God's Eye B LiDAR is a 12,000 yuan option and not available on the entry trim so 1.5; 2,770 mm wheelbase. Acceleration null: not published. Value 3.5: 4,100 yuan rise, rival (Galaxy E5) prices not opened. No hands-on drive found yet."
-    },
-    {
-      "table": "PinCarPerf",
-      "pinId": 19861,
-      "title": "Chery Launches the QQ Ice Cream Mini EV From RMB 29,900 in Wuhu",
-      "sourceUrl": "https://carnewschina.com/?p=109999",
-      "reviewCount": 0,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: QQ Ice Cream at pre-sale, RMB 29,900-43,900. 120/170 km NEDC (scored on 170 km; NEDC not CLTC); 20 kW, 85 Nm, top speed 100 km/h; 1,960 mm wheelbase, three doors, four seats. Null: charging (no DC rate in launch sources; the 10 kW figure seen only in a Yiche aggregate, not used), 0-100 km/h and driver assist unpublished. Value 3: priced where the Wuling Mini EV Macaron (RMB 37,600-43,600) sits, but larger (CnEVPost). No independent road test found."
     },
     {
       "table": "PinCarPerf",
@@ -752,6 +743,42 @@
       "existingResearchBasis": "Food capped at 3.5: 4.7 over only 30 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
     }
   ],
+  "coverageFollowUps": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 4410,
+      "reason": "Continued Opal identity research: WearTesters linked original video description lists style 313450_01 and article photo URLs were inventoried; direct photo inspection remains pending. Basketpack explicitly identifies Opal. Basket USA uses blue operator images whose filenames include 313455-01, but that alone does not identify the reviewer’s tested pair. HoopsGeek is a secondary aggregator and its paraphrases were not copied as original reviewer quotations. A third independently verified Opal-specific primary test remains required.",
+      "sourcesChecked": [
+        "https://weartesters.com/puma-hali-1-performance-review/",
+        "https://www.youtube.com/watch?v=O39zWmkc4dI",
+        "https://www.basketusa.com/news/847043/test-de-chaussures-la-puma-hali-1-face-a-son-destin/",
+        "https://www.thehoopsgeek.com/shoe-reviews/puma-hali-1/"
+      ]
+    }
+  ],
+  "resolvedCoverageFollowUps": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19861,
+      "status": "resolved",
+      "reason": "Recovered 周尤’s original Autohome December 16, 2021 test, via the exact source linked by the model section. Publisher Read full article explicitly identifies Sundae 13.9 kWh / 170 km and the quoted sport-mode pedal response. Original byline used rather than later reprints. Native explanation corrected in both environments because replay intentionally preserved its old basis. Four reports span three publishing platforms; owner and editor on Autohome are not two publishers.",
+      "sourcesChecked": [
+        "https://www.autohome.com.cn/drive/202112/1231041.html",
+        "https://www.autohome.com.cn/drive/202112/1231041-all.html"
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "status": "resolved",
+      "reason": "Three replacement Single Motor reports now saved: German ADAC test, NZ Driven Car Guide standard passive-damper car and Autoweek explicitly shared single/dual launch acceleration impression. AWD-only active-damper handling extracts and evolving unspecified-variant quote removed from native review array, with sources retained as context. NZ/US market and later-software limitations explicit; all original scores preserved.",
+      "sourcesChecked": [
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+        "https://www.drivencarguide.co.nz/reviews/polestar-4-single-motor-dual-motor-review-less-is-more/",
+        "https://www.autoweek.com/news/a69239281/polestar-4-drive-review/"
+      ]
+    }
+  ],
   "independenceGaps": [],
   "resolvedIndependenceGaps": [
     {
@@ -841,7 +868,7 @@
       "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
       "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Rendered product page exposes no Ms S. customer quotation or original review day. Exact-phrase searches did not locate the quotation on an opened primary source. Original customer review and timestamp still need verification; do not infer from the product launch or unrelated Strawberry & Cream reviews."
     },
     {
       "table": "PinTaste",
@@ -849,7 +876,7 @@
       "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
       "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 404. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+      "reason": "The saved product path returns a rendered 404. Exact Nicole customer quotation was not recovered. Alternate shops have product descriptions, not this firsthand review; original customer review and day remain unverified. A linked existing Instagram account is a separate source, not proof of this quoted customer text."
     },
     {
       "table": "PinTaste",
@@ -881,7 +908,7 @@
       "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
       "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Opened original independent guide and verified its bakery-wide verdict. Repaired the non-verbatim shortened ingredient sentence. This is general bakery context, not a firsthand tasting of the specific award-winning loaf. Last Updated 10-08-2026 is not original publication; retain null. Find an eligible product-specific tasting source rather than marking this date/source check complete."
     },
     {
       "table": "PinTaste",
@@ -921,7 +948,7 @@
       "title": "Peters Drumstick Launches an Anzac Biscuit Ice Cream Cone in Australia",
       "url": "https://www.productreview.com.au/listings/peters-drumstick",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+      "reason": "Rendered ProductReview listing is blocked, so exact author/text/day remain unverified. Saved title explicitly describes the classic Drumstick range rather than the pinned Anzac flavour; the other saved classic-range article also does not establish that flavour. Research an exact Anzac tasting account instead of treating a generic range review date as completion."
     },
     {
       "table": "PinTaste",
@@ -953,7 +980,7 @@
       "title": "Hennig-Olsen Launches Daim Strawberry Tub and Brings Back Anita Ice Cake",
       "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Opened exact Hennig-Olsen 450-ml Strawberry tub product page, GTIN 7041018011209, and searched Norwegian taste tests. Operator description is not firsthand tasting. Existing GB Glace Swedish cone and 2013 Strawberry Dream accounts concern different makers/products; searches found Balltop, Kroneis and older non-strawberry tubs, which do not establish this product taste. Exact tub tasting evidence remains required; dates alone cannot resolve eligibility."
     },
     {
       "table": "PinTaste",
@@ -1207,9 +1234,9 @@
       "table": "PinCarPerf",
       "pinId": 20018,
       "title": "Polestar 4 Goes on Sale in Europe and Australia From EUR 61,900 With 200 kW Charging",
-      "url": "https://www.carwow.co.uk/polestar/4",
-      "status": "needs-research",
-      "reason": "Carwow evolving Polestar4 page matches extract but discussion includes Dual Motor; scored pin is Long Range Single Motor. February2 2024 metadata predates later revisions; establish exact test variant and quote chronology before dating."
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/polestar/polestar-4/",
+      "status": "verified-undated",
+      "reason": "Opened original full Single Motor road test. Original article datePublished February 20, 2024 belongs to earlier coverage; visible July 4, 2025 is a later revision. Neither separately establishes first publication of the quoted current road-test passage. Keep native date null and the excerpt off the graph; scope note verified in source wiki."
     },
     {
       "table": "PinCarPerf",
@@ -1274,22 +1301,6 @@
       "url": "https://www.edmunds.com/toyota/corolla-cross/",
       "status": "needs-research",
       "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 15245,
-      "title": "Hyundai Prices the All-New 2026 Palisade From $38,935 With V6 and Hybrid",
-      "url": "https://www.caranddriver.com/hyundai/palisade",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 15246,
-      "title": "Kia Prices the 2026 K4 Hatchback From $24,890, Turbo GT-Line at $28,790",
-      "url": "https://www.caranddriver.com/kia/k4",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
     },
     {
       "table": "PinGasCarPerf",
@@ -1721,7 +1732,7 @@
       "title": "La Yeon — Seoul restaurant guide",
       "url": "https://www.andyhayler.com/restaurant/la-yeon",
       "status": "needs-research",
-      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Corrected round9 overconfidence: selector labels 11th Apr 2017 review but does not establish a separate original publication day. Review/meal labels are not sufficient publication evidence. Native date restored to null, quotation retained, and source wiki corrected in both environments. Seek explicit publication/archive evidence before dating; do not replay the superseded assignment."
     },
     {
       "table": "PinDining",

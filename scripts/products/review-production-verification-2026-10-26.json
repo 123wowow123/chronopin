@@ -36,5 +36,7 @@
     }
   ],
   "nextStep": "After API credit is restored, repeat a narrowly bounded scheduled sentiment verification. Preserve original job settings and remove the temporary schedule afterward.",
-  "deploymentPerformed": false
+  "deploymentPerformed": false,
+  "supersededBy": "scripts/products/review-production-verification-round10-2026-10-26.json",
+  "currentBlocker": "Retry #26 reports no production ANTHROPIC_API_KEY configured. Earlier insufficient credit is historical; current billing state is unverified."
 }

@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15246,
+      "pinSourceUrl": "https://www.carscoops.com/2025/12/kias-new-hatchback-skips-the-cheap-trims-but-still-feels-like-a-bargain/",
+      "basis": "Scored variant: K4 Hatchback GT-Line Turbo at $28,790 before destination. 190 hp; 0-60 mph 7.0 s (Car and Driver test, not the maker); EPA combined 28 mpg; 22/59 cu ft cargo with an adult-friendly back seat (above average for a compact); 6.6 hp per US$1,000. Handling 3.5: C/D 'competent but not exciting' (0.86 g) and Carscoops 'never had us bracing ourselves in corners'.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a70976563/2026-kia-k4-hatchback-turbo-test/",
+          "title": "2026 Kia K4 Hatchback GT-Line Turbo Tested: Not Quite Hot but Plenty Cool",
+          "quote": "easy agility and secure handling",
+          "publishedDate": "2026-04-09",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a70976563/2026-kia-k4-hatchback-turbo-test/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Tony Quiroga original April 9, 2026 byline/datePublished; exact GT-Line Turbo hatch, 190 hp, 8-speed automatic, not base CVT or sedan."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15245,
+      "pinSourceUrl": "https://www.carscoops.com/?p=3248277",
+      "basis": "Scored variant: XRT Pro AWD, $49,370 before destination. 287 hp; 0-60 mph 8.1 s (Car and Driver test, not the maker); EPA combined 19 mpg; 19/46/87 cu ft cargo with a 'snug third row' (average); 5.8 hp per US$1,000. Handling null: only one road test opened and its text calls handling 'bland'.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a65554982/2026-hyundai-palisade-drive/",
+          "title": "Tested: 2026 Hyundai Palisade Layers On the Luxe and Gears Up for the Great Outdoors",
+          "quote": "handled these off-road tasks with aplomb",
+          "publishedDate": "2025-08-05",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a65554982/2026-hyundai-palisade-drive/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Drew Dorian original datePublished August 5, 2025; visible October 8 update adds instrumented results. Exact off-road passage explicitly concerns XRT Pro; Calligraphy findings not substituted. Article original publication retained without claiming all later test results existed that day."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+      "basis": "Tripadvisor, read 2026-10-18 (89 listing reviews; category sample counts unpublished): Service 4.6/5 -> 4.5; Ambience 5/5 -> 4.5; Value 3.5/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://www.andyhayler.com/restaurant/la-yeon",
+          "quote": "Service was excellent",
+          "title": "review of Korean Seoul restaurant La Yeon by Andy Hayler in April 2017",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.andyhayler.com/restaurant/la-yeon",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Superseded by round10 verification: publisher selector labels 11th Apr 2017 review, but does not separately identify first publication. The dated review label alone is not proof of a publication day. Native date restored to null in both environments; exact short service quotation remains verified."
+        }
+      ]
+    }
+  ]
+}
