@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 6194,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Elio_(film)",
+      "basis": "Three independent primary critic publications for the exact 2025 Pixar Elio film: Guardian, TheWrap and Slant. Justin Clark / Slant and William Bibbiani / TheWrap are distinct original writers/publications, not syndications. Praise and criticism retained; sentiment estimates reflect the cited short excerpt rather than numeric star-rating conversion or whole-article certification. Original publication days distinguished from edits, trailers, release dates and related articles. RogerEbert.com candidates were not used after HTTP 403 responses.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/film/2025/jun/17/elio-review-pixar",
+          "title": "Elio review – Pixar’s goofy, giddy guide to the galaxy offers charm and vulnerability",
+          "quote": "amiable new family animation",
+          "publishedDate": "2025-06-17",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.thewrap.com/elio-review-disney-pixar/",
+          "title": "‘Elio’ Review: Pixar’s Colorful Sci-Fi Film Celebrates Weird Kids, but Only Allegorically",
+          "quote": "reeks of hypocrisy",
+          "publishedDate": "2025-06-17",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.slantmagazine.com/film/elio-review-zoe-saldana-pixar/",
+          "title": "‘Elio’ Review: Princes of the Universe",
+          "quote": "connecting with humanity still has value.",
+          "publishedDate": "2025-06-17",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/film/2025/jun/17/elio-review-pixar",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary publisher article; exact H1, original author byline and datePublished inspected. Modification timestamps not substituted for publication."
+        },
+        {
+          "url": "https://www.thewrap.com/elio-review-disney-pixar/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary publisher article; exact H1, original author byline and datePublished inspected. Modification timestamps not substituted for publication."
+        },
+        {
+          "url": "https://www.slantmagazine.com/film/elio-review-zoe-saldana-pixar/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened primary original article via web reader; visible Justin Clark byline and exact original publication day. Rendered browser hit security page, so no browser metadata is claimed."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6321,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch_(2025_film)",
+      "basis": "Three independent primary critic publications for the exact 2025 live-action remake, not the 2002 animated Lilo & Stitch: Guardian, TheWrap and Slant. Justin Clark / Slant and William Bibbiani / TheWrap are distinct original writers/publications, not syndications. Praise and criticism retained; sentiment estimates reflect the cited short excerpt rather than numeric star-rating conversion or whole-article certification. Original publication days distinguished from edits, trailers, release dates and related articles. RogerEbert.com candidates were not used after HTTP 403 responses.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/film/2025/may/20/lilo-stitch-review-disney",
+          "title": "Lilo & Stitch review – Disney’s latest unnecessary remake is a monstrosity",
+          "quote": "ghastly misfire",
+          "publishedDate": "2025-05-20",
+          "sentiment": -0.9
+        },
+        {
+          "url": "https://www.thewrap.com/lilo-and-stitch-2025-review/",
+          "title": "‘Lilo & Stitch’ Review: Longer and Not as Good, Just the Way Disney Likes It",
+          "quote": "heartfelt and committed performance",
+          "publishedDate": "2025-05-20",
+          "sentiment": 0.2
+        },
+        {
+          "url": "https://www.slantmagazine.com/film/lilo-and-stitch-review-2025/",
+          "title": "‘Lilo & Stitch’ Review: Disney’s Live-Action Remake Is a Heartfelt Tribute to Family",
+          "quote": "the source material has been given a new spark",
+          "publishedDate": "2025-05-20",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/film/2025/may/20/lilo-stitch-review-disney",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary publisher article; exact H1, original author byline and datePublished inspected. Modification timestamps not substituted for publication."
+        },
+        {
+          "url": "https://www.thewrap.com/lilo-and-stitch-2025-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary publisher article; exact H1, original author byline and datePublished inspected. Modification timestamps not substituted for publication."
+        },
+        {
+          "url": "https://www.slantmagazine.com/film/lilo-and-stitch-review-2025/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened primary original article via web reader; visible Justin Clark byline and exact original publication day. Rendered browser hit security page, so no browser metadata is claimed."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6147,
+      "pinSourceUrl": "https://www.imdb.com/title/tt20969586/",
+      "basis": "Three independent primary critic publications for the exact 2025 Thunderbolts* film: Guardian, TheWrap and Slant. Justin Clark / Slant and William Bibbiani / TheWrap are distinct original writers/publications, not syndications. Praise and criticism retained; sentiment estimates reflect the cited short excerpt rather than numeric star-rating conversion or whole-article certification. Original publication days distinguished from edits, trailers, release dates and related articles. RogerEbert.com candidates were not used after HTTP 403 responses.",
+      "reviews": [
+        {
+          "url": "https://www.theguardian.com/culture/2025/apr/29/thunderbolts-review-florence-pugh-marvel",
+          "title": "Thunderbolts* review – Florence Pugh is saving grace of Marvel’s hit-and-miss mess",
+          "quote": "clumsily forced narrative beats",
+          "publishedDate": "2025-04-29",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.thewrap.com/thunderbolts-review-marvel-florence-pugh/",
+          "title": "‘Thunderbolts*’ Review: Marvel’s B-Team Gets an A for Effort",
+          "quote": "Pugh is, as usual, perfection.",
+          "publishedDate": "2025-04-29",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.slantmagazine.com/film/thunderbolts-review-florence-pugh-sebastian-stan/",
+          "title": "‘Thunderbolts*’ Review: MCU’s Leftover Misfits Converge in Surprisingly Intimate Adventure",
+          "quote": "something surprisingly poignant.",
+          "publishedDate": "2025-04-29",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/culture/2025/apr/29/thunderbolts-review-florence-pugh-marvel",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary publisher article; exact H1, original author byline and datePublished inspected. Modification timestamps not substituted for publication."
+        },
+        {
+          "url": "https://www.thewrap.com/thunderbolts-review-marvel-florence-pugh/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary publisher article; exact H1, original author byline and datePublished inspected. Modification timestamps not substituted for publication."
+        },
+        {
+          "url": "https://www.slantmagazine.com/film/thunderbolts-review-florence-pugh-sebastian-stan/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened primary original article via web reader; visible Justin Clark byline and exact original publication day. Rendered browser hit security page, so no browser metadata is claimed."
+        }
+      ]
+    }
+  ]
+}

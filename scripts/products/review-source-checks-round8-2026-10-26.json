@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19930,
+      "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
+      "status": "resolved",
+      "reason": "Original August 15, 2018 author byline and machine-readable time verified in full rendered body; exact 2019-generation 6.2L V8 included in test. Native review date and original title saved in both environments."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 7660,
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "status": "needs-research",
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7663,
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "status": "needs-research",
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age."
+    }
+  ]
+}

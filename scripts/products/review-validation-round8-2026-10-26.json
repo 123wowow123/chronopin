@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-26",
+  "newCriticPins": 4,
+  "newCriticReviews": 12,
+  "publicationChecksResolved": 1,
+  "savedIn": [
+    "local",
+    "production"
+  ],
+  "rubricReadbacks": [
+    {
+      "pinId": 19930,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19930,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    }
+  ],
+  "nativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6194,
+      "url": "http://127.0.0.1:3000/pin/6194/elio-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6321,
+      "url": "http://127.0.0.1:3000/pin/6321/disney-s-live-action-lilo-stitch-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6147,
+      "url": "http://127.0.0.1:3000/pin/6147/thunderbolts-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 4343,
+      "url": "http://127.0.0.1:3000/pin/4343/harry-styles-releases-kiss-all-the-time-disco-occasionally",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19930,
+      "url": "http://127.0.0.1:3000/pin/19930/chevrolet-unveils-the-all-new-silverado-1500-in-detroit-dropping-450-lb-and-addi",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6194,
+      "url": "https://www.chronopin.com/pin/6194/elio-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6321,
+      "url": "https://www.chronopin.com/pin/6321/disney-s-live-action-lilo-stitch-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6147,
+      "url": "https://www.chronopin.com/pin/6147/thunderbolts-opens-in-us-theaters",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 4343,
+      "url": "https://www.chronopin.com/pin/4343/harry-styles-releases-kiss-all-the-time-disco-occasionally",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19930,
+      "url": "https://www.chronopin.com/pin/19930/chevrolet-unveils-the-all-new-silverado-1500-in-detroit-dropping-450-lb-and-addi",
+      "quote": true,
+      "graph": true
+    }
+  ],
+  "sourceVerification": {
+    "renderedPrimaryQuoteAndTitleMatches": 9,
+    "additionalSlantArticlesVerifiedViaPrimaryWebReader": 3,
+    "originalPublicationDatesVerified": 13,
+    "referencesSourceLinksAndWikiResults": "Verified by replayResearchedReviews --references; existing ready wikis preserved"
+  },
+  "tests": {
+    "command": "npx vitest run src/lib/okf.test.ts src/lib/okfLint.test.ts",
+    "passed": 22
+  },
+  "remaining": {
+    "rubricGaps": 74,
+    "sourceChecks": 82,
+    "verifiedUndated": 71,
+    "broaderCoverage": true,
+    "scheduledProductionVerification": "Outstanding; prior Anthropic insufficient-credit failure unchanged"
+  },
+  "deploymentPerformed": false
+}

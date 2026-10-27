@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T03:04:30.509Z",
+  "checkedAt": "2026-10-27T03:33:34.089Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -26,7 +26,7 @@
       "reviews": 502,
       "minimum": 3,
       "belowMinimum": 12,
-      "undatedNonMichelin": 17,
+      "undatedNonMichelin": 16,
       "unscoredDated": 0
     },
     {
@@ -76,8 +76,8 @@
     },
     {
       "table": "PinCriticReview",
-      "pins": 94,
-      "reviews": 283,
+      "pins": 98,
+      "reviews": 295,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -897,7 +897,7 @@
       "title": "Wanglaoji / Walovi Canned Herbal Tea",
       "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age."
     },
     {
       "table": "PinTaste",
@@ -905,7 +905,7 @@
       "title": "Coconut Palm Coconut Milk Drink",
       "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age."
     },
     {
       "table": "PinTaste",
@@ -1338,14 +1338,6 @@
       "url": "https://carmagazine.co.uk/car-reviews/caterham/caterham-seven-620r-2013-review",
       "status": "verified-undated",
       "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Caterham Seven 620R (2013) review. Visible Updated: 26 January 2015 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19930,
-      "title": "Chevrolet Unveils the All-New Silverado 1500 in Detroit, Dropping 450 lb and Adding a 6.2L V8",
-      "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
-      "status": "needs-research",
-      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. Opened Denis Duquet first drive and inspected time/metadata. August15 2018 is explicitly Updated, not original publication. Source covers both 5.3 and 6.2 V8; pin scores 6.2 High Country crew. Find original byline or an exact-powertrain dated firsthand replacement; retain null."
     },
     {
       "table": "PinGasCarPerf",

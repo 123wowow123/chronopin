@@ -112,22 +112,22 @@ or shop is not a firsthand review of the pinned product.
 | --- | ---: | ---: | ---: | ---: |
 | PinTaste | 228 | 493 | 0 (minimum one) | 43 |
 | PinCarPerf | 128 | 346 | 34 | 16 |
-| PinGasCarPerf | 160 | 502 | 12 | 17 |
+| PinGasCarPerf | 160 | 502 | 12 | 16 |
 | PinAircraftPerf | 165 | 562 | 14 | 8 |
 | PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
 | PinDining | 89 | 272 | 8 | 46 |
-| PinCriticReview | 94 | 283 | 0 | 1 |
+| PinCriticReview | 98 | 295 | 0 | 1 |
 
 There are **74 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 94 existing critic rows have at least three extracts.
+this continuation. All 98 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
 The XUV 7XO now has three independent publishers: Autocar India, CarTrade
 and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
-petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 154 non-MICHELIN undated entries, 71
-have verified reasons to retain null dates; **83 date/source checks remain**.
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 153 non-MICHELIN undated entries, 71
+have verified reasons to retain null dates; **82 date/source checks remain**.
 Every dated review with a quote is scored. Category leads still need screening;
 awards, concerts and business events must not receive invented product reviews.
 
@@ -387,3 +387,34 @@ ten sampled pin pages rendered saved quotations and graph sections locally and
 in production. All 22 documentation tests, catalog constraints and queue-total
 checks passed. This pass changed content/research catalogs and documentation,
 with no application-code changes.
+
+
+## Eighth continuation: films, an album and one original publication date
+
+Added twelve reviews across four previously uncovered pins, saved through native
+APIs locally and in production. Critic coverage now totals 98 pins and 295
+extracts. Broader coverage remains open; these additions do not resolve the 74
+rubric gaps. The outstanding publication/source queue decreased from 83 to 82.
+
+- [Film reviews](../../../scripts/products/movie-critic-round8-2026-10-26.json): three independent original publications each for Elio, the 2025 live-action Lilo & Stitch, and Thunderbolts*. The Guardian, TheWrap and Slant provide differing assessments. Exact article titles, original publication days and short verbatim excerpts were verified. The excerpts concern the pinned films, rather than trailers, the 2002 animated film or franchise news. Sentiment estimates describe the cited passages; a positive performance excerpt does not imply a uniformly positive whole-film review. Slant was readable through the primary-source web reader while its browser security page blocked rendering. RogerEbert.com candidates returned HTTP 403 and were excluded.
+- [Album reviews](../../../scripts/products/music-critic-round8-2026-10-26.json): Pitchfork, NME and The Guardian original reviews of Harry Styles’ Kiss All the Time. Disco, Occasionally. Original March 4 and March 9, 2026 article dates are distinguished from the March 6 album release, concert coverage and the Aperture single. All three full original articles were verified in a rendered browser, including NME despite a plain-fetch refusal.
+- [Silverado citation repair](../../../scripts/products/review-source-repairs-round8-2026-10-26.json): Denis Duquet’s Auto123 first drive has an explicit August 15, 2018 byline and matching machine-readable time. The body identifies both 5.3L and 6.2L V8 crew cabs; the retained cabin/ride assessment applies to both. Original title restored, quotation shortened verbatim and publication date saved in both environments. Scores and unrelated rubric fields were verified unchanged. This is a manufacturer-hosted first drive, not a long-term independent ownership test.
+- [Source checks](../../../scripts/products/review-source-checks-round8-2026-10-26.json): verified the two Reddit tasting excerpts in their original authors’ posts, rather than comments or merchant text. The source reader supplies only relative ages and direct browser access was blocked. Both exact publication days remain unresolved and null; their dates were not inferred from those relative ages.
+- [Fashion coverage research](../../../scripts/products/review-coverage-leads-round8-2026-10-26.json): Basketpack explicitly identifies the tested Hali 1 Opal and its original January 5, 2026 publication. WearTesters and Basket USA original article dates were verified, but their tested colourway still needs confirmation. Heartbeat Bash does not identify a tested colourway and its opening timeline conflicts with the launch year. These candidates were recorded for further checks rather than counted as three verified Opal reviews or attached to the separate Pace colourway.
+
+References, Source/PinSource links and source-wiki results were verified by the
+replay tool for all saved citations. Existing ready source wikis were preserved.
+The [research queue](../../../scripts/products/review-queue-2026-10-26.json)
+retains all unfinished work: 74 rubric gaps, 82 publication/source checks and 71
+verified-undated entries, plus broader category coverage and scheduled production
+verification. The earlier insufficient-Anthropic-credit blocker remains recorded;
+no deployment, restart or schedule change was performed.
+
+[Validation](../../../scripts/products/review-validation-round8-2026-10-26.json):
+all ten affected pin-page checks rendered saved quotations and sentiment graphs
+locally and in production. Both Silverado native readbacks preserved scores and
+unrelated fields. Nine rendered primary-source title/quote matches and three
+Slant primary-source reader checks support the twelve additions; the Silverado
+original date was separately verified. All 22 documentation tests, catalog
+constraints and queue-count checks passed. Changes for this pass are limited to
+content/research catalogs and documentation.

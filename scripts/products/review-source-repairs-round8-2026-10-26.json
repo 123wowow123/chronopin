@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19930,
+      "pinSourceUrl": "https://www.thedrive.com/new-cars/17661/chevrolet-reveals-2019-silverado-1500-at-north-american-international-auto-show",
+      "basis": "Scored the 6.2L V8 High Country crew cab: 420 hp =3.8; 0-60 mph 5.4 s Car and Driver test =3.1; EPA 16/20/17 mpg combined (fueleconomy.gov 2019 K10 4WD 6.2) =0.5; handling 2.5 (agile for its size per Autotrader.ca, but bouncy and unrefined per Car and Driver); space 4 for a full-size crew cab with spacious rear seats per Auto123; value 420 hp / $54.5k = 7.7 hp per $1k =3.4.",
+      "reviews": [
+        {
+          "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
+          "quote": "the drive is uneventful and the cabin is well-insulated for sound.",
+          "title": "2019 Chevrolet Silverado First Drive",
+          "publishedDate": "2018-08-15",
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Denis Duquet’s visible August 15, 2018 byline agrees with the rendered time datetime=2018-08-15. Original H1 retained. The body explicitly describes driving both 5.3L and 6.2L V8 crew cabs; the excerpt applies to either. Manufacturer-hosted first drive, not a long-term test."
+        }
+      ]
+    }
+  ]
+}

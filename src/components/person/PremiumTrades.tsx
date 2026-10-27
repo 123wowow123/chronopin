@@ -107,7 +107,15 @@ function Locked({ count, name }: { count: number; name: string }) {
 
 function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
   const [sort, setSort] = useState<Sort>('newest');
-  const positions = useMemo(() => sortPositions(answer.positions, sort), [answer.positions, sort]);
+  // Wide screens put the winners and the losers side by side; the sort applies inside each column.
+  const { gains, losses, unscored } = useMemo(() => {
+    const sorted = sortPositions(answer.positions, sort);
+    return {
+      gains: sorted.filter((p) => p.estimatedPnlPercent != null && p.estimatedPnlPercent >= 0),
+      losses: sorted.filter((p) => p.estimatedPnlPercent != null && p.estimatedPnlPercent < 0),
+      unscored: sorted.filter((p) => p.estimatedPnlPercent == null),
+    };
+  }, [answer.positions, sort]);
   return (
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-3">
@@ -135,33 +143,56 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
           </span>
         </label>
       </div>
-      <ul className="space-y-3">
-        {positions.map((p) => (
-          <li key={p.id} className="surface space-y-1.5 p-4">
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <span className="font-semibold">
-                {VERB[p.action]} {p.ticker} <span className="text-sm font-normal text-muted">{KIND[p.instrument]} · {p.tradeDate}</span>
-              </span>
-              <span className="text-sm tabular-nums">
-                {p.entryPrice != null ? <span className="text-muted">entry ≈ ${p.entryPrice.toFixed(2)} · now {p.lastPrice != null ? `$${p.lastPrice.toFixed(2)}` : '—'} · </span> : null}
-                <span className={`font-semibold ${tone(p.estimatedPnlPercent)}`}>{pct(p.estimatedPnlPercent)}</span>
-              </span>
-            </div>
-            {p.maxGainPercent != null && p.maxDrawdownPercent != null ? (
-              <p className="text-xs tabular-nums text-muted">
-                Since the trade: best <span className="font-semibold text-success">{pct(p.maxGainPercent)}</span> · worst <span className="font-semibold text-danger">{pct(p.maxDrawdownPercent)}</span>
-              </p>
-            ) : null}
-            <p className="text-sm">{p.summary}</p>
-            <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-accent hover:underline">
-              Source: {p.sourceTitle}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className={gains.length && losses.length ? 'grid items-start gap-x-6 gap-y-6 lg:grid-cols-2' : ''}>
+        <Group title="Gains" rows={gains} />
+        <Group title="Losses" rows={losses} />
+      </div>
+      <Group title="Not scored" rows={unscored} />
       <p className="text-xs text-muted">
         PnL is our estimate: the move from the closing price on the trade date to the latest delayed quote, with puts and shorts reversed. A hold is scored from the date it was disclosed; a sell is scored as an exit, so a gain means the price fell after the sale. Best and worst are the extremes since the trade date, using each session&rsquo;s intraday high and low. The headline average counts opening trades only. Options are marked by their underlying&rsquo;s move, not their own premium. It is not the trader&rsquo;s own result, and none of this is investment advice.
       </p>
     </div>
+  );
+}
+
+
+function Group({ title, rows }: { title: string; rows: TraderPositionRow[] }) {
+  if (!rows.length) return null;
+  return (
+    <section aria-label={title} className="space-y-3">
+      <h3 className="text-sm font-semibold text-muted">
+        {title} <span className="tabular-nums font-normal">({rows.length})</span>
+      </h3>
+      <ul className="space-y-3">
+        {rows.map((p) => (
+          <Position key={p.id} p={p} />
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function Position({ p }: { p: TraderPositionRow }) {
+  return (
+    <li className="surface space-y-1.5 p-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <span className="font-semibold">
+          {VERB[p.action]} {p.ticker} <span className="text-sm font-normal text-muted">{KIND[p.instrument]} · {p.tradeDate}</span>
+        </span>
+        <span className="text-sm tabular-nums">
+          {p.entryPrice != null ? <span className="text-muted">entry ≈ ${p.entryPrice.toFixed(2)} · now {p.lastPrice != null ? `$${p.lastPrice.toFixed(2)}` : '—'} · </span> : null}
+          <span className={`font-semibold ${tone(p.estimatedPnlPercent)}`}>{pct(p.estimatedPnlPercent)}</span>
+        </span>
+      </div>
+      {p.maxGainPercent != null && p.maxDrawdownPercent != null ? (
+        <p className="text-xs tabular-nums text-muted">
+          Since the trade: best <span className="font-semibold text-success">{pct(p.maxGainPercent)}</span> · worst <span className="font-semibold text-danger">{pct(p.maxDrawdownPercent)}</span>
+        </p>
+      ) : null}
+      <p className="text-sm">{p.summary}</p>
+      <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-accent hover:underline">
+        Source: {p.sourceTitle}
+      </a>
+    </li>
   );
 }

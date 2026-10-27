@@ -96,6 +96,8 @@ export function PersonView({
   const description = t('person.description', { name: profile.name, site: siteName });
   const jobTitle = profile.office || t.dynamic(`person.roles.${profile.role}`, profile.role);
   const photo = safeUrl(profile.photoUrl);
+  // An organisation's logo is square artwork: show it whole instead of cropping it to a portrait.
+  const isLogo = /-logo\.\w+$/i.test(photo ?? '');
   const hasRecord = years.length > 0 || holdings.length > 0 || trades.length > 0 || contributions.length > 0 || profile.properties.length > 0 || profile.trips.length > 0;
   const lawsHeading = t(isPolitical(profile.role) ? 'person.laws' : 'person.work');
   // Everyone's radar is backed by the wiki. One with nothing documented that
@@ -199,7 +201,7 @@ export function PersonView({
                 src={photo}
                 alt={profile.name}
                 referrerPolicy="no-referrer"
-                className="aspect-[3/4] w-32 rounded-2xl bg-raised object-cover shadow-lg ring-4 ring-panel sm:w-40"
+                className={`w-32 rounded-2xl shadow-lg ring-4 ring-panel sm:w-40 ${isLogo ? 'aspect-square bg-white object-contain p-1' : 'aspect-[3/4] bg-raised object-cover'}`}
               />
               {profile.photoCredit ? <figcaption className="mt-1.5 max-w-40 text-[10px] leading-snug text-subtle">{t('person.photoCredit', { credit: profile.photoCredit })}</figcaption> : null}
             </figure>

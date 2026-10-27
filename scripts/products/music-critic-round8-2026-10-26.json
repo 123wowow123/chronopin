@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 4343,
+      "pinSourceUrl": "https://pitchfork.com/news/harry-styles-releases-new-album-listen-and-read-the-full-credits/",
+      "basis": "Three original reviews of Harry Styles’ fourth studio album, Kiss All the Time. Disco, Occasionally.: Shaad D’Souza (Pitchfork, March 9, 2026), Rhian Daly (NME, March 4), and Alexis Petridis (The Guardian, March 4). These concern the album rather than the Aperture single, Netflix concert or Harry’s House. Distinct publications offer differing assessments. Dates identify original articles, not the March 6 album release or later edits. Sentiment estimates describe the cited passages. NME was verified in a rendered browser despite plain-fetch HTTP 403. No reader-score placeholder was used.",
+      "reviews": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/harry-styles-kiss-all-the-time-disco-occasionally/",
+          "title": "Kiss All the Time. Disco, Occasionally.",
+          "quote": "the man himself rarely feels present",
+          "publishedDate": "2026-03-09",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/harry-styles-kiss-all-the-time-disco-occasionally-review-3932624",
+          "title": "Harry Styles – ‘Kiss All The Time. Disco, Occasionally’ review: pop superstar lets the light in",
+          "quote": "feels liberated and full of light",
+          "publishedDate": "2026-03-04",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.theguardian.com/music/2026/mar/04/harry-styles-kiss-all-the-time-disco-occasionally-review-nice-all-the-time-good-occasionally",
+          "title": "Harry Styles: Kiss All the Time. Disco, Occasionally review – nice all the time. Good, occasionally",
+          "quote": "all mood and no material",
+          "publishedDate": "2026-03-04",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/harry-styles-kiss-all-the-time-disco-occasionally/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary source; visible original Reviewed/Published author day agrees with original datePublished. Exact H1 retained."
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/harry-styles-kiss-all-the-time-disco-occasionally-review-3932624",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary source; visible original Reviewed/Published author day agrees with original datePublished. Exact H1 retained."
+        },
+        {
+          "url": "https://www.theguardian.com/music/2026/mar/04/harry-styles-kiss-all-the-time-disco-occasionally-review-nice-all-the-time-good-occasionally",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Opened full rendered primary source; visible original Reviewed/Published author day agrees with original datePublished. Exact H1 retained."
+        }
+      ]
+    }
+  ]
+}
