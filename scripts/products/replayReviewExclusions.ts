@@ -8,6 +8,7 @@ import * as db from '@/server/db';
 import { adminDbRequest, prodBase, reviewResearchRequest } from '@/server/jobs/pinApi';
 import { REVIEW_ENDPOINTS } from '@/server/jobs/reviewResearch';
 import { REVIEW_TABLES, type PinReview, type ReviewTable } from '@/lib/pinReviews';
+import { findReviewCatalogEntry } from './reviewCatalog';
 
 const { values } = parseArgs({ options: { file: { type: 'string' } } });
 if (!values.file) throw new Error('--file is required');
@@ -49,8 +50,12 @@ async function run() {
     }
     const file = catalogs[entry.table];
     if (file) {
-      const catalog = JSON.parse(readFileSync(file, 'utf8'));
-      for (const row of catalog) if (row.pinId === pins[0].id && row.reviews) row.reviews = row.reviews.filter((r: PinReview) => r.url !== entry.url);
+      const catalog = JSON.parse(readFileSync(file, 'utf8')) as any[];
+      const row = findReviewCatalogEntry(catalog, entry.pinSourceUrl, prepared[0].row.sourceUrl);
+      if (row) {
+        row.pinSourceUrl = entry.pinSourceUrl;
+        row.reviews = prepared[0].row.reviews.filter((r: PinReview) => r.url !== entry.url);
+      }
       writeFileSync(file, JSON.stringify(catalog, null, 2) + '\n');
     }
   }

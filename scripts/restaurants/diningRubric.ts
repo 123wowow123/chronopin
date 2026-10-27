@@ -40,7 +40,7 @@ const ADMIN_USER_ID = 1;
 const ACTOR = 'claude-code/claude-sonnet-5-5';
 
 type Source = { url: string; title?: string; reasoning?: string; text?: string; wiki?: Record<string, unknown>; rewrite?: boolean };
-type Entry = { pinId: number; scores?: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown; sources?: Source[] };
+type Entry = { pinId: number; pinSourceUrl?: string; scores?: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown; sources?: Source[] };
 
 async function run() {
   const file = flags.file ? flags.file : new URL('./diningRubric.json', import.meta.url);
@@ -55,12 +55,14 @@ async function run() {
   let referenced = 0;
   let wikis = 0;
   const invalid: string[] = [];
-  for (const { pinId, scores, basis, sourceUrl, reviews, sources = [] } of entries) {
-    const [pin] = await db.query<{ title: string }>(`SELECT "title" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
+  for (const { pinId: catalogPinId, pinSourceUrl, scores, basis, sourceUrl, reviews, sources = [] } of entries) {
+    const pins = await db.query<{ id: number; title: string }>(`SELECT "id", "title" FROM "Pin" WHERE ${pinSourceUrl ? '"sourceUrl"' : '"id"'} = $1 AND "utcDeletedDateTime" IS NULL`, [pinSourceUrl ?? catalogPinId]);
+    const pin = pins.length === 1 ? pins[0] : undefined;
     if (!pin) {
       skipped++;
       continue;
     }
+    const pinId = pin.id;
     const body = { ...scores, ...(reviews === undefined ? {} : { reviews }), source: 'session', basis: basis ?? null, sourceUrl: sourceUrl ?? null };
     const checked = diningProblem(body);
     if (typeof checked === 'string') {

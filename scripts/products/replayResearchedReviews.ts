@@ -12,6 +12,7 @@ import { sourceKey } from '@/server/model/source';
 import { CAR_PERF_KEYS } from '@/lib/pinCarPerf';
 import { TASTE_KEYS } from '@/lib/pinTaste';
 import { DINING_KEYS } from '@/lib/pinDining';
+import { findReviewCatalogEntry } from './reviewCatalog';
 
 const { values } = parseArgs({ options: { file: { type: 'string' }, references: { type: 'boolean' }, pin: { type: 'string' } } });
 if (!values.file) throw new Error('--file is required');
@@ -69,9 +70,12 @@ async function run() {
       const file = catalogFiles[entry.table];
       if (file) {
         const catalog = JSON.parse(readFileSync(file, 'utf8')) as any[];
+        const [row] = await db.query(`SELECT * FROM "${entry.table}" WHERE "pinId" = $1`, [pinId]);
+        if (!row) throw new Error('Saved rubric missing while synchronizing catalog');
         let changed = false;
-        for (const item of catalog) {
-          if (item?.pinId !== pinId) continue;
+        const item = findReviewCatalogEntry(catalog, entry.pinSourceUrl, row.sourceUrl);
+        if (item) {
+          item.pinSourceUrl = entry.pinSourceUrl;
           const incoming = new Map(entry.reviews.map((r) => [r.url, r]));
           item.reviews = (item.reviews ?? []).map((r: PinReview) => {
             const fresh = incoming.get(r.url);
@@ -82,11 +86,9 @@ async function run() {
           changed = true;
         }
         if (!changed) {
-          const [row] = await db.query(`SELECT * FROM "${entry.table}" WHERE "pinId" = $1`, [pinId]);
-          if (!row) throw new Error('Saved rubric missing while synchronizing catalog');
           const keys = entry.table === 'PinCarPerf' ? CAR_PERF_KEYS : entry.table === 'PinTaste' ? TASTE_KEYS : DINING_KEYS;
           const scores = Object.fromEntries(keys.map((key) => [key, row[key] == null ? null : Number(row[key])]));
-          catalog.push({ pinId, ...(entry.table === 'PinTaste' ? scores : { scores }), ...(row.rubricYear == null ? {} : { rubricYear: row.rubricYear }), basis: row.basis, sourceUrl: row.sourceUrl, reviews: row.reviews });
+          catalog.push({ pinId, pinSourceUrl: entry.pinSourceUrl, ...(entry.table === 'PinTaste' ? scores : { scores }), ...(row.rubricYear == null ? {} : { rubricYear: row.rubricYear }), basis: row.basis, sourceUrl: row.sourceUrl, reviews: row.reviews });
           changed = true;
         }
         if (changed) writeFileSync(file, JSON.stringify(catalog, null, 2) + '\n');

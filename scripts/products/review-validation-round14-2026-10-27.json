@@ -1,0 +1,360 @@
+{
+  "checkedAt": "2026-10-27",
+  "newFilmReviews": 3,
+  "newDiningReviews": 1,
+  "pinsUpdated": 4,
+  "removedUnattributedAggregatorSummaries": 3,
+  "priorSourceChecksClosed": 3,
+  "closedRawRubricGaps": 0,
+  "nativeReviewReadbacks": [
+    {
+      "pinId": 17209,
+      "production": false,
+      "table": "PinDining",
+      "reviews": 3
+    },
+    {
+      "pinId": 17209,
+      "production": true,
+      "table": "PinDining",
+      "reviews": 3
+    },
+    {
+      "pinId": 17212,
+      "production": false,
+      "table": "PinDining",
+      "reviews": 3
+    },
+    {
+      "pinId": 17212,
+      "production": true,
+      "table": "PinDining",
+      "reviews": 3
+    },
+    {
+      "pinId": 17214,
+      "production": false,
+      "table": "PinDining",
+      "reviews": 3
+    },
+    {
+      "pinId": 17214,
+      "production": true,
+      "table": "PinDining",
+      "reviews": 3
+    },
+    {
+      "pinId": 1908,
+      "production": false,
+      "table": "PinCriticReview",
+      "reviews": 3
+    },
+    {
+      "pinId": 1908,
+      "production": true,
+      "table": "PinCriticReview",
+      "reviews": 3
+    }
+  ],
+  "diningPreservation": [
+    {
+      "pinId": 17209,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17209,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17212,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17212,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17214,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17214,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    }
+  ],
+  "renderedPages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 1908,
+      "url": "http://127.0.0.1:3000/pin/1908/how-to-train-your-dragon-2025-opens-in-theaters",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17209,
+      "url": "http://127.0.0.1:3000/pin/17209/onjium-seoul-restaurant-guide",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17212,
+      "url": "http://127.0.0.1:3000/pin/17212/alla-prima-seoul-restaurant-guide",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17214,
+      "url": "http://127.0.0.1:3000/pin/17214/evett-seoul-restaurant-guide",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 1908,
+      "url": "https://www.chronopin.com/pin/1908/how-to-train-your-dragon-2025-opens-in-theaters",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17209,
+      "url": "https://www.chronopin.com/pin/17209/onjium-seoul-restaurant-guide",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17212,
+      "url": "https://www.chronopin.com/pin/17212/alla-prima-seoul-restaurant-guide",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "removedSummaryAbsent": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17214,
+      "url": "https://www.chronopin.com/pin/17214/evett-seoul-restaurant-guide",
+      "status": 200,
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "removedSummaryAbsent": true
+    }
+  ],
+  "sourceWikiReadbacks": [
+    {
+      "pinId": 17209,
+      "production": false,
+      "url": "https://kenscale.com/2026/10/11/onjium/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17209,
+      "production": true,
+      "url": "https://kenscale.com/2026/10/11/onjium/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17209,
+      "production": false,
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17209,
+      "production": true,
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17212,
+      "production": false,
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17212,
+      "production": true,
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17214,
+      "production": false,
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17214,
+      "production": true,
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17214,
+      "production": false,
+      "url": "https://www.travelsforstars.com/blog/2025/05/06/evett-seoul",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17214,
+      "production": true,
+      "url": "https://www.travelsforstars.com/blog/2025/05/06/evett-seoul",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 1908,
+      "production": false,
+      "url": "https://www.slantmagazine.com/film/how-to-train-your-dragon-2025-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 1908,
+      "production": true,
+      "url": "https://www.slantmagazine.com/film/how-to-train-your-dragon-2025-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 1908,
+      "production": false,
+      "url": "https://www.theguardian.com/film/2025/jun/10/how-to-train-your-dragon-review",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 1908,
+      "production": true,
+      "url": "https://www.theguardian.com/film/2025/jun/10/how-to-train-your-dragon-review",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 1908,
+      "production": false,
+      "url": "https://www.thewrap.com/how-to-train-your-dragon-live-action-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 1908,
+      "production": true,
+      "url": "https://www.thewrap.com/how-to-train-your-dragon-live-action-review/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    }
+  ],
+  "catalogRepair": "Removed Onjium extract from unrelated Baek Ill Pyeong Naeng catalog row; synchronized three restaurants by stable URLs. No live cross-restaurant change occurred. Replay helpers and dining importers now honor explicit pinSourceUrl; ambiguous catalog identity is rejected.",
+  "tests": {
+    "focusedTestsPassed": 31,
+    "scopedEslintPassed": true,
+    "catalogConstraintsPassed": true,
+    "diningCatalogSynchronized": true,
+    "queueTotalsVerified": true
+  },
+  "sourceScope": "Original film critics and firsthand restaurant visitors distinguished from aggregator summaries. Onjium retains two undated guides and one dated visitor report; no claim of three professional critic meals. Fiotto meal location after relocation remains unresolved.",
+  "remaining": {
+    "rubricGaps": 65,
+    "sourceChecks": 71,
+    "verifiedUndated": 80,
+    "broaderCoverage": true,
+    "scheduledVerification": "Prior scheduled run #28 skipped; successful scheduled model/tool execution remains unverified."
+  },
+  "productionDeploymentPerformed": false,
+  "productionRestartPerformed": false,
+  "productionEnvironmentChanged": false
+}

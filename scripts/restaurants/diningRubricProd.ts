@@ -29,7 +29,7 @@ const BASE = (flags.base ?? 'https://www.chronopin.com').replace(/\/$/, '');
 const EMAIL = 'flynni2008@gmail.com';
 
 type Source = { url: string; title?: string; reasoning?: string; text?: string; wiki?: Record<string, unknown> };
-type Entry = { pinId: number; scores: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown; sources?: Source[] };
+type Entry = { pinId: number; pinSourceUrl?: string; scores: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown; sources?: Source[] };
 
 async function call(method: string, route: string, token?: string, body?: unknown) {
   const res = await fetch(BASE + route, {
@@ -84,7 +84,8 @@ async function run() {
   let sent = 0;
   const problems: string[] = [];
   for (const entry of entries) {
-    const [local] = await db.query<{ sourceUrl: string; title: string }>(`SELECT "sourceUrl", "title" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [entry.pinId]);
+    const localPins = await db.query<{ sourceUrl: string; title: string }>(`SELECT "sourceUrl", "title" FROM "Pin" WHERE ${entry.pinSourceUrl ? '"sourceUrl"' : '"id"'} = $1 AND "utcDeletedDateTime" IS NULL`, [entry.pinSourceUrl ?? entry.pinId]);
+    const local = localPins.length === 1 ? localPins[0] : undefined;
     if (!local?.sourceUrl) {
       problems.push(`local pin ${entry.pinId}: not found or has no sourceUrl`);
       continue;

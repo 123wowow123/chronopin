@@ -13,14 +13,18 @@ in production, removed two invalid review citations, and preserved all scores,
 authors and unrelated fields. Five raw below-three dining gaps are closed; La
 Scala now has one original firsthand review and still needs two more.
 
+Round 14 adds three original film reviews and one firsthand Onjium review, and
+removes three unattributed restaurant aggregator summaries. Details and validation
+are recorded below.
+
 ## Current inventory
 
 This live snapshot includes concurrent daily-job additions; those are not
 attributed to this dining pass. There are **65 rubric gaps** (EV33, gas12,
-aircraft13, dining1, LLM4, video2), **74 unresolved publication/source checks**
-and **80 verified-undated entries**. One prior operator-source check was closed;
-a concurrent new Reddit tasting citation adds one unresolved publication check,
-so the overall unresolved count stays 74. All dated quoted reviews are scored.
+aircraft13, dining1, LLM4, video2), **71 unresolved publication/source checks**
+and **80 verified-undated entries**. Round 14 closes three prior aggregator-source
+checks by removing unattributed summaries. No publication date was invented.
+All dated quoted reviews are scored.
 Raw review counts do not certify three professional critic meals or complete
 source independence.
 
@@ -33,8 +37,8 @@ source independence.
 | PinLlmPerf | 127 | 446 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 285 | 1 | 48 |
-| PinCriticReview | 107 | 322 | 0 | 1 |
+| PinDining | 89 | 283 | 1 | 45 |
+| PinCriticReview | 108 | 325 | 0 | 1 |
 
 ## Saved evidence and limits
 
@@ -96,3 +100,57 @@ worker mismatch. Scheduled research/scoring execution remains unverified until
 the scheduler can obtain an available client and complete the tools. The README
 now records this narrower, evidence-based blocker instead of asserting the key
 is missing. No credentials or runtime configuration were changed.
+
+
+## Round 14 — film coverage and restaurant attribution
+
+Saved [three original film reviews](../../../scripts/products/movie-critic-round14-2026-10-27.json)
+for *How to Train Your Dragon* (2025), matching the live-action film rather than
+the animated original or sequels. Justin Clark’s Slant article is dated June 9;
+its exact article heading differs from its SEO title. The short dragon-visuals
+praise is explicitly scoped within a broadly critical review. Radheyan
+Simonpillai’s Guardian article was originally published June 10, not its later
+update. TheWrap’s original June 9 review names Michael Ordoña, rather than the
+author incorrectly suggested by an unrelated search result. Sentiment scores
+apply to each quoted passage; star ratings were not converted. Slant’s full
+primary article was available in the reader while its browser view refused access.
+
+The [Onjium replacement](../../../scripts/products/dining-reviews-round14-2026-10-27.json)
+is KenScale’s original lunch report at 49 Hyoja-ro, published October 11, 2026.
+Its September meal period and later modification timestamp were excluded as
+publication evidence. [Three guarded exclusions](../../../scripts/products/review-exclusions-round14-2026-10-27.json)
+remove Wanderlog’s generic review-summary sentences from Onjium, Alla Prima and
+Evett. They are unattributed aggregations, not original critic or firsthand
+accounts. Each restaurant retains three native reviews; this does not establish
+three professional critic meals. Scores and basis remain unchanged. Contextual
+references remain, with source-wiki eligibility corrections. Evett’s existing
+May 6, 2025 publication date was independently verified in original Article
+JSON-LD and `itemprop=datePublished`, rather than inferred from its meal label;
+the October modification was excluded.
+
+[Source dispositions](../../../scripts/products/review-source-checks-round14-2026-10-27.json)
+close those three checks. Fiotto remains unresolved: current-address directory
+pages display older meal reports without proving the meal occurred after its
+move from 432 Jwadongsunhwan-ro to the ECKE building at 219 Dalmaji-gil 117beonga-gil.
+An old-address closure label was not treated as evidence that the current room
+is closed. No uncertain review was added to meet a numerical target.
+
+Verification caught a catalog synchronization defect: numeric pin IDs from a
+prior database snapshot could identify another restaurant. The Onjium replay
+had added its new extract to the Baek Ill Pyeong Naeng catalog row; that addition
+was removed without changing the correct live records. Review replay helpers
+now select catalog entries by stable pin URL, or an unambiguous legacy rubric
+source URL, and reject ambiguity. The three affected restaurant rows carry
+explicit `pinSourceUrl`; the dining importers honor it. A regression test covers
+colliding IDs and ambiguous source URLs. Other catalog rows were preserved.
+
+[Validation](../../../scripts/products/review-validation-round14-2026-10-27.json)
+records eight native readbacks, six dining score/basis preservation checks,
+eight HTTP-200 rendered pin pages with expected quotes and graphs and no removed
+summary, source-wiki readbacks, 31 passing focused tests and scoped ESLint.
+The [wiki verification](../../../scripts/products/review-wiki-verification-round14-2026-10-27.json)
+retains prior wiki content and adds exact attribution/publication notes. The
+current queue and README contain only unfinished work: 65 raw rubric gaps,
+71 publication/source checks, broader critic coverage and successful scheduled
+production verification. Round 14 did not retry the already skipped scheduled
+run, deploy, restart or alter production configuration.

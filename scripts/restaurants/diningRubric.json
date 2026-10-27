@@ -3051,19 +3051,15 @@
         "url": "https://tinyurbankitchen.com/alla-prima-seoul-korea-2-michelin-stars/",
         "quote": "We finished the meal both being very impressed and very pleased with the meal.",
         "title": "Alla Prima Seoul Korea - 2-Michelin Stars - Tiny Urban Kitchen",
+        "sentiment": 0.8,
         "publishedDate": "2025-09-26"
       },
       {
         "url": "https://live2makan.com/2024/09/28/alla-prima-seoul/",
         "quote": "alla prima 알라프리마 is Michelin two-star modern restaurant by the Chef Kim Jin-hyuk who presents bold and creative cuisine of his own.",
         "title": "alla prima @ Seoul – live2makan",
+        "sentiment": 0.5,
         "publishedDate": "2024-09-27"
-      },
-      {
-        "url": "https://wanderlog.com/place/details/1078312/alla-prima",
-        "quote": "Reviewers praise the beautifully crafted dishes, warm and attentive staff, and spot-on wine recommendations.",
-        "title": "Alla Prima, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
       }
     ],
     "sources": [
@@ -3121,12 +3117,12 @@
       {
         "url": "https://wanderlog.com/place/details/1078312/alla-prima",
         "title": "Alla Prima, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "reasoning": "Independent write-up of alla prima: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.5/5 from 449 reviews on Google.",
+        "reasoning": "Contextual aggregator listing only; unattributed review summary excluded from native reviews on 2026-10-27.",
         "text": "Reviewers praise the beautifully crafted dishes, warm and attentive staff, and spot-on wine recommendations.",
         "wiki": {
           "title": "Alla Prima, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-          "summary": "Independent write-up of alla prima: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.5/5 from 449 reviews on Google.",
-          "body": "# Alla Prima, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of alla prima (Seoul).\n\n## What it says\n\n> Reviewers praise the beautifully crafted dishes, warm and attentive staff, and spot-on wine recommendations.\n\nRatings as printed: 4.5/5 from 449 reviews on Google.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n",
+          "summary": "Contextual aggregator listing only; unattributed review summary excluded from native reviews on 2026-10-27.",
+          "body": "# Alla Prima, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of alla prima (Seoul).\n\n## What it says\n\n> Reviewers praise the beautifully crafted dishes, warm and attentive staff, and spot-on wine recommendations.\n\nRatings as printed: 4.5/5 from 449 reviews on Google.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n\n\nSource eligibility correction, 2026-10-27: the previously quoted text is Wanderlog’s unattributed aggregate review summary. It is not a separate original critic or firsthand reviewer. Removed from native independent reviews; retained only as contextual directory information. Do not use the legacy Review evidence attribution to restore it.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -3171,7 +3167,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/alla-prima"
   },
   {
     "pinId": 17161,
@@ -3195,19 +3192,15 @@
         "url": "https://www.travelsforstars.com/blog/2025/05/06/evett-seoul",
         "quote": "This dish was served at most lukewarm, and my donut was not just pretty dry, but also tasted of essentially nothing.",
         "title": "Review: Evett - Seoul",
+        "sentiment": -0.7,
         "publishedDate": "2025-05-06"
       },
       {
         "url": "https://andyquan.com/come-dine-with-me-restaurant-evett-seoul/",
         "quote": "Every dish was a delight and told a story and introduced me to a Korean flavour, texture or ingredient.",
         "title": "Come dine with me: Restaurant Evett, Seoul | Enter the Quaniverse",
+        "sentiment": 0.9,
         "publishedDate": "2025-07-19"
-      },
-      {
-        "url": "https://wanderlog.com/place/details/1136579/evett",
-        "quote": "The bold flavors, creativity in dishes, and exceptional desserts leave a lasting impression on visitors.",
-        "title": "EVETT, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
       }
     ],
     "sources": [
@@ -3236,7 +3229,7 @@
         "wiki": {
           "title": "Review: Evett - Seoul",
           "summary": "Independent write-up of Evett: quoted for the cooking, service or room; read 2026-10-18.",
-          "body": "# Review: Evett - Seoul\n\nPage read on 2026-10-18 for the dining rubric of Evett (Seoul).\n\n## What it says\n\n> This dish was served at most lukewarm, and my donut was not just pretty dry, but also tasted of essentially nothing.\n\n\n\n## Use on the pin\n\nCited as one of the pin's independent reviews. Publication date: 2025-05-06.\n",
+          "body": "# Review: Evett - Seoul\n\nPage read on 2026-10-18 for the dining rubric of Evett (Seoul).\n\n## What it says\n\n> This dish was served at most lukewarm, and my donut was not just pretty dry, but also tasted of essentially nothing.\n\n\n\n## Use on the pin\n\nCited as one of the pin's independent reviews. Publication date: 2025-05-06.\n\n\nPublication verification, 2026-10-27: original Squarespace itemprop=datePublished and Article JSON-LD explicitly give 2025-05-06T03:00:00-0700, independently of the visible May 6 meal label. Publication remains May 6, 2025; October 22 modification is excluded. Exact firsthand criticism retained. Author metadata names Matthias Ruhl; actual Review: Evett - Seoul source title retained.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -3265,12 +3258,12 @@
       {
         "url": "https://wanderlog.com/place/details/1136579/evett",
         "title": "EVETT, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "reasoning": "Independent write-up of Evett: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.6/5 from 303 reviews on Google; 5.0/5 from 15 reviews on Tripadvisor.",
+        "reasoning": "Contextual aggregator listing only; unattributed review summary excluded from native reviews on 2026-10-27.",
         "text": "The bold flavors, creativity in dishes, and exceptional desserts leave a lasting impression on visitors.",
         "wiki": {
           "title": "EVETT, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-          "summary": "Independent write-up of Evett: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.6/5 from 303 reviews on Google; 5.0/5 from 15 reviews on Tripadvisor.",
-          "body": "# EVETT, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of Evett (Seoul).\n\n## What it says\n\n> The bold flavors, creativity in dishes, and exceptional desserts leave a lasting impression on visitors.\n\nRatings as printed: 4.6/5 from 303 reviews on Google; 5.0/5 from 15 reviews on Tripadvisor.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n",
+          "summary": "Contextual aggregator listing only; unattributed review summary excluded from native reviews on 2026-10-27.",
+          "body": "# EVETT, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of Evett (Seoul).\n\n## What it says\n\n> The bold flavors, creativity in dishes, and exceptional desserts leave a lasting impression on visitors.\n\nRatings as printed: 4.6/5 from 303 reviews on Google; 5.0/5 from 15 reviews on Tripadvisor.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n\n\nSource eligibility correction, 2026-10-27: the previously quoted text is Wanderlog’s unattributed aggregate review summary. It is not a separate original critic or firsthand reviewer. Removed from native independent reviews; retained only as contextual directory information. Do not use the legacy Review evidence attribution to restore it.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -3315,7 +3308,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/evett"
   },
   {
     "pinId": 17169,
@@ -3825,10 +3819,11 @@
         "publishedDate": null
       },
       {
-        "url": "https://wanderlog.com/place/details/1699466/onjium",
-        "quote": "Reviewers praise the meticulous preparation of each dish, the celebration of Korean flavors at the highest level, and the exceptional service provided by knowledgeable staff.",
-        "title": "Onjium, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "publishedDate": null
+        "url": "https://kenscale.com/2026/10/11/onjium/",
+        "quote": "just something extra special from the dumplings",
+        "title": "Onjium",
+        "sentiment": 0.8,
+        "publishedDate": "2026-10-11"
       }
     ],
     "sources": [
@@ -3869,12 +3864,12 @@
       {
         "url": "https://wanderlog.com/place/details/1699466/onjium",
         "title": "Onjium, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-        "reasoning": "Independent write-up of Onjium: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.7/5 from 165 reviews on Google.",
+        "reasoning": "Contextual aggregator listing only; unattributed review summary excluded from native reviews on 2026-10-27.",
         "text": "Reviewers praise the meticulous preparation of each dish, the celebration of Korean flavors at the highest level, and the exceptional service provided by knowledgeable staff.",
         "wiki": {
           "title": "Onjium, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
-          "summary": "Independent write-up of Onjium: quoted for the cooking, service or room; read 2026-10-18. Ratings shown: 4.7/5 from 165 reviews on Google.",
-          "body": "# Onjium, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of Onjium (Seoul).\n\n## What it says\n\n> Reviewers praise the meticulous preparation of each dish, the celebration of Korean flavors at the highest level, and the exceptional service provided by knowledgeable staff.\n\nRatings as printed: 4.7/5 from 165 reviews on Google.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n",
+          "summary": "Contextual aggregator listing only; unattributed review summary excluded from native reviews on 2026-10-27.",
+          "body": "# Onjium, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog\n\nPage read on 2026-10-18 for the dining rubric of Onjium (Seoul).\n\n## What it says\n\n> Reviewers praise the meticulous preparation of each dish, the celebration of Korean flavors at the highest level, and the exceptional service provided by knowledgeable staff.\n\nRatings as printed: 4.7/5 from 165 reviews on Google.\n\n## Use on the pin\n\nCited as one of the pin's independent reviews (aggregator). Publication date: not stated on the page.\n\n\nSource eligibility correction, 2026-10-27: the previously quoted text is Wanderlog’s unattributed aggregate review summary. It is not a separate original critic or firsthand reviewer. Removed from native independent reviews; retained only as contextual directory information. Do not use the legacy Review evidence attribution to restore it.",
           "tags": [
             "Seoul",
             "restaurant review",
@@ -3918,8 +3913,24 @@
           ],
           "lastModified": "2026-10-18"
         }
+      },
+      {
+        "url": "https://kenscale.com/2026/10/11/onjium/",
+        "title": "Onjium",
+        "reasoning": "Scope and publication verification, 2026-10-27: Original KenScale firsthand lunch account with partner Jun, October 11, 2026 visible publication and matching original 18:56:37 UTC metadata. September meal period is not publication, 18:57:19 modification excluded. Address 49 Hyoja-ro matches exact restaurant; pine-mushroom/squash dumpling observation belongs to this meal, not other restaurants in opening comparison. No star/score conversion.",
+        "text": "just something extra special from the dumplings",
+        "wiki": {
+          "title": "Onjium",
+          "summary": "Original firsthand lunch report; publication and exact restaurant verified.",
+          "body": "# Review evidence\n\nPublished: 2026-10-11. Checked: 2026-10-27.\n\n> just something extra special from the dumplings\n\nScope and publication verification, 2026-10-27: Original KenScale firsthand lunch account with partner Jun, October 11, 2026 visible publication and matching original 18:56:37 UTC metadata. September meal period is not publication, 18:57:19 modification excluded. Address 49 Hyoja-ro matches exact restaurant; pine-mushroom/squash dumpling observation belongs to this meal, not other restaurants in opening comparison. No star/score conversion.",
+          "tags": [
+            "review",
+            "critical reception"
+          ]
+        }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/onjium"
   },
   {
     "pinId": 17160,
@@ -4721,13 +4732,6 @@
         "title": "평양냉면에 제육 추가해서 드시는걸 추천",
         "publishedDate": "2024-12-19",
         "quote": "광안리에 유일하게 있는 평양냉면집. 육수에서 나는 육항이 일품입니다."
-      },
-      {
-        "url": "https://kenscale.com/2026/10/11/onjium/",
-        "title": "Onjium",
-        "quote": "just something extra special from the dumplings",
-        "publishedDate": "2026-10-11",
-        "sentiment": 0.8
       }
     ],
     "sources": [

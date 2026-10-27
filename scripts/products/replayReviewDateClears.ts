@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { REVIEW_TABLES, type PinReview, type ReviewTable } from '@/lib/pinReviews';
+import { findReviewCatalogEntry } from './reviewCatalog';
 import { reviewPublicationDay } from '@/lib/reviewPublicationDay';
 import { adminDbRequest, prodBase, reviewResearchRequest } from '@/server/jobs/pinApi';
 import { REVIEW_ENDPOINTS } from '@/server/jobs/reviewResearch';
@@ -79,8 +80,10 @@ async function run() {
     }
     const file = catalogs[entry.table];
     if (file) {
-      const catalog = JSON.parse(readFileSync(file, 'utf8'));
-      for (const row of catalog) if (row.pinId === pins[0].id) {
+      const catalog = JSON.parse(readFileSync(file, 'utf8')) as any[];
+      const row = findReviewCatalogEntry(catalog, entry.pinSourceUrl, prepared[0].row.sourceUrl);
+      if (row) {
+        row.pinSourceUrl = entry.pinSourceUrl;
         for (const review of row.reviews ?? []) if (review.url === entry.url) review.publishedDate = null;
       }
       writeFileSync(file, JSON.stringify(catalog, null, 2) + '\n');
