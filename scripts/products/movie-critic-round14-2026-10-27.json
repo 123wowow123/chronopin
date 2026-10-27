@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 1908,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2025_film)",
+      "basis": "Exact 2025 live-action How to Train Your Dragon, not the 2010 animated film, its sequels, books or TV spin-offs. Original critic reports by Justin Clark / Slant, Radheyan Simonpillai / The Guardian and Michael Ordoña / TheWrap. Slant’s selected dragon-visuals praise sits within a broadly critical review; Guardian and TheWrap passages criticize the remake’s visual/staging choices. Sentiment describes each passage, not converted star ratings or a claim of overall consensus. Original June 9/10 publication days verified, not premiere or later modifications. Slant verified via primary reader; browser refused access.",
+      "reviews": [
+        {
+          "url": "https://www.slantmagazine.com/film/how-to-train-your-dragon-2025-review/",
+          "title": "‘How to Train Your Dragon’ Review: Thanks for Nothing, You Useless Reptile",
+          "quote": "the dragons are a huge point in its favor.",
+          "publishedDate": "2025-06-09",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.theguardian.com/film/2025/jun/10/how-to-train-your-dragon-review",
+          "title": "How to Train Your Dragon review – faithful yet utterly soulless remake",
+          "quote": "real actors and sets become deadweight",
+          "publishedDate": "2025-06-10",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.thewrap.com/how-to-train-your-dragon-live-action-review/",
+          "title": "‘How to Train Your Dragon’ Review: Live-Action Redo Is a Squandered Opportunity",
+          "quote": "less atmospheric, less rich",
+          "publishedDate": "2025-06-09",
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.slantmagazine.com/film/how-to-train-your-dragon-2025-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "publicationEvidence": "Full primary publisher article opened in reader: exact H1, Justin Clark byline, June 9, 2025 day. Paragraph praises remake dragon depiction; preceding/following criticism makes overall mixed scope explicit. Browser 403; no browser metadata claimed. Primary H1 differs from SEO title."
+        },
+        {
+          "url": "https://www.theguardian.com/film/2025/jun/10/how-to-train-your-dragon-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original article, Radheyan Simonpillai, exact H1, original June 10, 2025 publication 14:13:01 UTC. Later 15:37:58 update excluded. Quote concerns live-action actors/sets, not review of the original."
+        },
+        {
+          "url": "https://www.thewrap.com/how-to-train-your-dragon-live-action-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered original, exact H1 and Michael Ordoña byline; June 9, 2025 7:20 AM Pacific agrees with 14:20 UTC metadata. Do not substitute William Bibbiani attribution from unrelated aggregator/search result. Short quote concerns remake cinematography."
+        }
+      ]
+    }
+  ]
+}

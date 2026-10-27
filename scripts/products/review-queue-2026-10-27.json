@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T16:02:58.364Z",
+  "checkedAt": "2026-10-27T16:43:07.400Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -68,16 +68,16 @@
     {
       "table": "PinDining",
       "pins": 89,
-      "reviews": 285,
+      "reviews": 283,
       "minimum": 3,
       "belowMinimum": 1,
-      "undatedNonMichelin": 48,
+      "undatedNonMichelin": 45,
       "unscoredDated": 0
     },
     {
       "table": "PinCriticReview",
-      "pins": 107,
-      "reviews": 322,
+      "pins": 108,
+      "reviews": 325,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -1803,14 +1803,6 @@
     },
     {
       "table": "PinDining",
-      "pinId": 17209,
-      "title": "Onjium — Seoul restaurant guide",
-      "url": "https://wanderlog.com/place/details/1699466/onjium",
-      "status": "needs-research",
-      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
-    },
-    {
-      "table": "PinDining",
       "pinId": 17210,
       "title": "Kwonsooksoo — Seoul restaurant guide",
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Kwonsooksoo.html",
@@ -1824,22 +1816,6 @@
       "url": "https://www.theworlds50best.com/discovery/Establishments/South-Korea/Seoul/Soigné.html",
       "status": "verified-undated",
       "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17212,
-      "title": "alla prima — Seoul restaurant guide",
-      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
-      "status": "needs-research",
-      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17214,
-      "title": "Evett — Seoul restaurant guide",
-      "url": "https://wanderlog.com/place/details/1136579/evett",
-      "status": "needs-research",
-      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose."
     },
     {
       "table": "PinDining",
@@ -1927,7 +1903,7 @@
       "title": "Fiotto (피오또) — Busan restaurant guide",
       "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
+      "reason": "Retry original directory and locate a replacement for current ECKE/219 Dalmaji address. Opened Diningcode feed displays an April 2022 member review beneath current address, and Polle reuses current address on old posts; neither proves meal location after relocation from 432 Jwadongsunhwan-ro. Do not infer branch identity from a moved listing. Need opened current-room original visit article; source check remains open."
     },
     {
       "table": "PinDining",

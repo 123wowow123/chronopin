@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "status": "resolved",
+      "reason": "Opened full original aggregator page and verified the saved sentence in the site’s generic review-summary block, with no named critic/firsthand attribution. Removed summary from native reviews after qualifying sources were present; contextual references retained. Onjium received original KenScale replacement; Alla Prima and Evett retain three other source accounts."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17212,
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "status": "resolved",
+      "reason": "Opened full original aggregator page and verified the saved sentence in the site’s generic review-summary block, with no named critic/firsthand attribution. Removed summary from native reviews after qualifying sources were present; contextual references retained. Onjium received original KenScale replacement; Alla Prima and Evett retain three other source accounts."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17214,
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "status": "resolved",
+      "reason": "Opened full original aggregator page and verified the saved sentence in the site’s generic review-summary block, with no named critic/firsthand attribution. Removed summary from native reviews after qualifying sources were present; contextual references retained. Onjium received original KenScale replacement; Alla Prima and Evett retain three other source accounts."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinDining",
+      "pinId": 17266,
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Retry original directory and locate a replacement for current ECKE/219 Dalmaji address. Opened Diningcode feed displays an April 2022 member review beneath current address, and Polle reuses current address on old posts; neither proves meal location after relocation from 432 Jwadongsunhwan-ro. Do not infer branch identity from a moved listing. Need opened current-room original visit article; source check remains open."
+    }
+  ]
+}

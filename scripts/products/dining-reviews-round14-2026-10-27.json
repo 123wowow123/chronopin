@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/onjium",
+      "basis": "Tripadvisor, read 2026-10-18 (4 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 4/5 -> 2.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 4.5 retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://kenscale.com/2026/10/11/onjium/",
+          "title": "Onjium",
+          "quote": "just something extra special from the dumplings",
+          "publishedDate": "2026-10-11",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://kenscale.com/2026/10/11/onjium/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original KenScale firsthand lunch account with partner Jun, October 11, 2026 visible publication and matching original 18:56:37 UTC metadata. September meal period is not publication, 18:57:19 modification excluded. Address 49 Hyoja-ro matches exact restaurant; pine-mushroom/squash dumpling observation belongs to this meal, not other restaurants in opening comparison. No star/score conversion."
+        }
+      ]
+    }
+  ]
+}

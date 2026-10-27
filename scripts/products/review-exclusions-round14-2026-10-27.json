@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/onjium",
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/1699466/onjium",
+        "quote": "Reviewers praise the meticulous preparation of each dish, the celebration of Korean flavors at the highest level, and the exceptional service provided by knowledgeable staff.",
+        "title": "Onjium, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Opened original listing: saved sentence is the site’s aggregate Reviewers praise / Guests rave summary, not an attributed firsthand assessment. Remove from native independent reviews, preserve contextual link. Onjium receives opened original KenScale replacement first; Alla Prima and Evett retain three existing distinct source reviews. No inferred publication day or aggregator consensus sentiment."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17212,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/alla-prima",
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+        "quote": "Reviewers praise the beautifully crafted dishes, warm and attentive staff, and spot-on wine recommendations.",
+        "title": "Alla Prima, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Opened original listing: saved sentence is the site’s aggregate Reviewers praise / Guests rave summary, not an attributed firsthand assessment. Remove from native independent reviews, preserve contextual link. Onjium receives opened original KenScale replacement first; Alla Prima and Evett retain three existing distinct source reviews. No inferred publication day or aggregator consensus sentiment."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17214,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/evett",
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/1136579/evett",
+        "quote": "The bold flavors, creativity in dishes, and exceptional desserts leave a lasting impression on visitors.",
+        "title": "EVETT, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Opened original listing: saved sentence is the site’s aggregate Reviewers praise / Guests rave summary, not an attributed firsthand assessment. Remove from native independent reviews, preserve contextual link. Onjium receives opened original KenScale replacement first; Alla Prima and Evett retain three existing distinct source reviews. No inferred publication day or aggregator consensus sentiment."
+    }
+  ]
+}
