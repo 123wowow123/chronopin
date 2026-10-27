@@ -4,12 +4,11 @@ import { MIN_SOURCES, THIN_TEXT_CHARS, TRANSLATION_MIN_SOURCES, TRANSLATION_TEXT
 import * as db from '../db';
 
 // A pin's summary text length and its cited pages, the SQL twins of
-// pinTextLength and pinSourceCount (src/lib/searchQuality.ts). `p` is the
-// Pin row's alias.
-export const textLengthSql = (p: string) =>
-  `(length(regexp_replace(coalesce(${p}."description", ''), '<[^>]+>', '', 'g')) + length(regexp_replace(coalesce(${p}."longFormSummary", ''), '<[^>]+>', '', 'g')))`;
-export const sourceCountSql = (p: string) =>
-  `((CASE WHEN coalesce(trim(${p}."sourceUrl"), '') <> '' THEN 1 ELSE 0 END) + (SELECT count(*) FROM "PinReference" AS "r" WHERE "r"."pinId" = ${p}."id" AND "r"."url" IS DISTINCT FROM trim(${p}."sourceUrl")))`;
+// pinTextLength and pinSourceCount (src/lib/searchQuality.ts), read from
+// "PinSearchQuality" (0227), which triggers keep current. `p` is the Pin
+// row's alias. To change either rule, change the 0227 functions and rebuild.
+export const textLengthSql = (p: string) => `coalesce((SELECT "q"."textLength" FROM "PinSearchQuality" AS "q" WHERE "q"."pinId" = ${p}."id"), 0)`;
+export const sourceCountSql = (p: string) => `coalesce((SELECT "q"."sourceCount" FROM "PinSearchQuality" AS "q" WHERE "q"."pinId" = ${p}."id"), 0)`;
 
 // Whether the pin is thin (thinReasons is non-empty).
 export const THIN_PIN_SQL = (p: string) => `(${textLengthSql(p)} < ${THIN_TEXT_CHARS} OR ${sourceCountSql(p)} < ${MIN_SOURCES})`;

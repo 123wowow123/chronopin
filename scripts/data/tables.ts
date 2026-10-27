@@ -38,7 +38,7 @@ const { values: flags } = parseArgs({
 
 // PostGIS's reference data comes with the extension, and the pin cache is
 // rebuilt from the tables it copies.
-const SKIP = new Set(['spatial_ref_sys', 'PinBaseCache', 'PinTagCache', 'PinConfidence', 'PinAddressPlace']);
+const SKIP = new Set(['spatial_ref_sys', 'PinBaseCache', 'PinTagCache', 'PinConfidence', 'PinSearchQuality', 'PinAddressPlace']);
 // Written by the migration that made the database being restored into.
 const SKIP_RESTORE = new Set(['schemaMigrations']);
 const BATCH = 5000;
@@ -176,8 +176,9 @@ async function restore() {
       }
     }
   });
-  console.log('Rebuilding PinTagCache, PinBaseCache and PinConfidence');
+  console.log('Rebuilding PinTagCache, PinBaseCache, PinConfidence and PinSearchQuality');
   await db.query('SELECT "pinConfidenceRebuild"()');
+  await db.query('SELECT "pinSearchQualityRebuild"()');
   await db.query('SELECT "pinTagCacheRebuild"()');
   await db.query('SELECT "pinBaseCacheRebuild"()');
 }

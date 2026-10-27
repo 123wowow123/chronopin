@@ -3,7 +3,7 @@
 # warm-up never competes with visitors: the tag cloud's counts for the
 # timeline and for the broadest searches (a cold count was 20s before 0145,
 # and each distinct search misses on its own), then the pages most visitors
-# land on. Runs at the end of a deploy; `npm run warm` runs it alone.
+# land on, and the sitemap. Runs at the end of a deploy; `npm run warm` runs it alone.
 #
 #   npm run warm [-- https://www.chronopin.com]
 set -u
@@ -31,4 +31,7 @@ for q in anime movie game restaurant music sports tv; do
 done
 hit /
 hit /search
+# A cold sitemap.xml is the slowest page; Search Console and crawlers must not be the first to ask.
+hit /sitemap.xml
+hit /robots.txt
 echo "Warm-up done."
