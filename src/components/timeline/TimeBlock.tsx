@@ -35,7 +35,8 @@ const tagRow = 'absolute top-0 end-0 start-0 flex gap-1.5 overflow-hidden max-lg
 // then has, how wide its cards may spread (n x 448 plus their gaps), and the
 // class that takes "View all" away once that width leaves nothing out (and
 // the same width as a media query, for a whole day dealt in script). A
-// width arrives once each of its cards can be 384px (see globals.css), and
+// width arrives once each of its cards can be 384px (see globals.css; the
+// third column is the exception, arriving at 1500px with ~335px cards), and
 // Tailwind only sees classes written out whole, so they are.
 const WIDE_COLUMNS = [
   { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden', query: '(width >= 93.75rem)' },

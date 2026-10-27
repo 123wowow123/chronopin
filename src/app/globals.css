@@ -19,7 +19,8 @@
    The light theme redefines them below, under [data-theme="light"], and cream under [data-theme="cream"]. */
 @theme {
   /* A day's cards get another column (TimeBlock's WIDE_COLUMNS) once every
-     card can still be 384px wide with it; between one column and the next
+     card can still be 384px wide with it (the third column is the exception:
+     it arrives at 1500px, where cards are ~335px); between one column and the next
      they grow, up to 448px. Every day of the timeline shares the window's
      tracks, so its cards are one size on every date. The rail (170px), the
      page's padding and the controls panel (288px) take 474px off the window,
