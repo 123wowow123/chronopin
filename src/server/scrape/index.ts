@@ -16,6 +16,7 @@ import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
 import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
+import { parseScrapedCompetitors, type ScrapedCompetitor } from '@/lib/competitors';
 import { categoryList, hasCategory, parseCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import { isStudioCategory, studioLocationByName } from '../studioLocation';
@@ -60,6 +61,7 @@ export async function scrape(pageUrl: string, { note }: { note?: string } = {}) 
   let pin: Pin;
   let trailer: Medium | undefined;
   let stocks: ScrapedStock[] | undefined;
+  let competitors: ScrapedCompetitor[] | undefined;
   let awards: AwardEntry[] | undefined;
   let tags: string[] | undefined;
   let respondTo: { id: number; title: string } | undefined;
@@ -78,7 +80,7 @@ export async function scrape(pageUrl: string, { note }: { note?: string } = {}) 
       break;
     default:
       type = scrapeType.web;
-      ({ pin, trailer, stocks, awards, tags, respondTo, entries, llmTasks } = await webScrape(pageUrl, note, links));
+      ({ pin, trailer, stocks, competitors, awards, tags, respondTo, entries, llmTasks } = await webScrape(pageUrl, note, links));
       break;
   }
   // trailer is also in media; the form keeps it alongside whichever picture
@@ -97,6 +99,7 @@ export async function scrape(pageUrl: string, { note }: { note?: string } = {}) 
     { type },
     trailer ? { trailer: trailer.toJSON() } : {},
     stocks?.length ? { stocks } : {},
+    competitors?.length ? { competitors } : {},
     tags?.length ? { tags } : {},
     awards?.length ? { awards: awards.map(({ workArticle: _article, ...a }) => a) } : {},
     respondTo ? { respondTo } : {},
@@ -258,6 +261,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   pin: Pin;
   trailer?: Medium;
   stocks?: ScrapedStock[];
+  competitors?: ScrapedCompetitor[];
   awards?: AwardEntry[];
   tags?: string[];
   respondTo?: { id: number; title: string };
@@ -430,7 +434,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   await Promise.all([brandListing, steamListing, movieListings]);
   const llmTasks: LlmTask[] | undefined =
     llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText, note), referencesTask(pageUrl, pageText, 'web page', note)] : undefined;
-  return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
+  return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), competitors: parseScrapedCompetitors(fields?.competitors), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
 }
 
 // The maker's own listing of a product pin's product, from the page's links

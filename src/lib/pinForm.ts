@@ -6,6 +6,7 @@ import { addDays, pickDates } from './dateClaims';
 import { compareDayKeys, dayKeyOf, dayKeyParts, dayKeyToMs } from './format';
 import type { PinAwardJson } from './awards';
 import type { ScrapedStock } from './stocks';
+import type { ScrapedCompetitor } from './competitors';
 import type { PageEntry } from './pageEntries';
 import { joinTags, splitTags } from './tags';
 import { EPISODE_STATUSES } from './types';
@@ -18,6 +19,7 @@ import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson
 export type ScrapedPin = Omit<Partial<PinJson>, 'stocks' | 'tags'> & {
   trailer?: MediumJson;
   stocks?: ScrapedStock[];
+  competitors?: ScrapedCompetitor[];
   awards?: PinAwardJson[];
   tags?: string[];
   // The earlier season's pin this one follows on from (server/scrape/prequel.ts).
@@ -87,6 +89,8 @@ export type PinFormValues = {
   // Stock tickers the scraped article names, sent with the pin, which adds
   // them (never removes: the pin page edits a pin's tickers). Can be dropped.
   stocks: ScrapedStock[];
+  // The competing products the scrape named, saved with a new pin.
+  competitors: ScrapedCompetitor[];
   // What the scraped work won or was nominated for, shown only: the save
   // matches awards from the pin's title itself.
   awards: PinAwardJson[];
@@ -139,6 +143,7 @@ export const EMPTY_FORM: PinFormValues = {
   extraMedia: [],
   ratings: [],
   stocks: [],
+  competitors: [],
   awards: [],
   tags: '',
 };
@@ -271,6 +276,7 @@ export function pinToForm(pin: PinJson): PinFormValues {
     ratings: pin.ratings ? pin.ratings.map((r) => ({ ...r })) : [],
     // A stored pin's tickers are edited on its page, not here.
     stocks: [],
+    competitors: [],
     awards: pin.awards ? pin.awards.map((a) => ({ ...a })) : [],
     tags: joinTags((pin.tags || []).filter((t) => t.source === 'user').map((t) => t.name)),
   };
@@ -338,6 +344,9 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
   }
   if (!next.stocks.length && scraped.stocks?.length) {
     next.stocks = scraped.stocks.map((s) => ({ ...s }));
+  }
+  if (!next.competitors.length && scraped.competitors?.length) {
+    next.competitors = scraped.competitors.map((c) => ({ ...c }));
   }
   if (!next.ratings.length && scraped.ratings?.length) {
     next.ratings = scraped.ratings.map((r) => ({ ...r }));
@@ -441,6 +450,7 @@ export function formToPin(values: PinFormValues) {
     // Only saved when the pin is created; an edit leaves stored ratings alone.
     ratings: values.ratings,
     stocks: values.stocks.length ? values.stocks : undefined,
+    competitors: values.competitors.length ? values.competitors : undefined,
     tags: splitTags(values.tags),
   };
 }

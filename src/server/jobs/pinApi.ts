@@ -174,7 +174,7 @@ export async function pushSentiment(pinId: number, sentiment: number, product: s
 // A model pin's rubric or spec tables, replayed to production through their
 // own endpoints as the pin's author (the modelRubrics task saves locally
 // first). Nothing happens unless the run writes to production.
-export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' | 'video-performance' | 'performance', body: Record<string, unknown>): Promise<boolean> {
+export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' | 'video-performance' | 'performance' | 'competitors', body: Record<string, unknown> | unknown[]): Promise<boolean> {
   if (!prodBase()) return false;
   const pin = await getPin(pinId);
   if (!isCurator(pin.user?.userName)) return false;

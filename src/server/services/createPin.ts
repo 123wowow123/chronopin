@@ -10,6 +10,8 @@ import PinReference from '@/server/model/pinReference';
 import { delayProblem } from '@/lib/delay';
 import { attributeReferences } from '@/lib/referenceAttribution';
 import { parseScrapedStocks } from '@/lib/stocks';
+import { parseScrapedCompetitors } from '@/lib/competitors';
+import { saveCompetitors } from '../model/pinCompetitor';
 import { bodyCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import PinTag from '@/server/model/pinTag';
@@ -59,6 +61,7 @@ export type CreatePinOptions = { noBrowser?: boolean; prebuilt?: PrebuiltWiki[];
 export async function createPin(body: Record<string, any>, user: User, { noBrowser = false, prebuilt, report }: CreatePinOptions = {}) {
   const pin = new Pin(body);
   const stocks = parseScrapedStocks(body.stocks);
+  const competitors = parseScrapedCompetitors(body.competitors);
   const tags = parseTags(body.tags);
   const score = authoredScore(body);
   pin.categories = bodyCategories(body, tags);
@@ -128,6 +131,8 @@ export async function createPin(body: Record<string, any>, user: User, { noBrows
       .catch((err) => log.warn('frontier tag failed:', (err as Error).message)),
   );
   if (stocks.length) after(() => addPinStocksQuietly(saved.id, stocks));
+  // The rivals the scrape named; the productCompetitors task links and sources them.
+  if (competitors.length) await saveCompetitors(saved.id, competitors.map((c, i) => ({ rank: i + 1, name: c.name, maker: c.maker, competitorPinId: null, summary: c.summary, sourceUrl: null }))).catch((err) => log.warn('saving competitors failed:', (err as Error).message));
   await saveTitlePower(saved.id, saved.title, saved.sourceUrl ?? null).catch((err) => log.warn('reading the title\'s power failed:', (err as Error).message));
   // A game's maturity rating, platforms and scores, from its Steam page.
   after(() => refreshGameInfo(saved.id).catch((err) => log.warn('game info lookup failed:', (err as Error).message)));

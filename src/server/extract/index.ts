@@ -59,6 +59,7 @@ export type ExtractedFields = {
   allDayStated: boolean;
   longFormSummary: string | null;
   stocks: { symbol: string; name: string; relation: 'company' | 'related' | 'supplier'; note: string }[];
+  competitors: { name: string; maker: string; summary: string }[];
   tags: string[];
 };
 
@@ -205,6 +206,21 @@ export const SCHEMA = {
         additionalProperties: false,
       },
     },
+    competitors: {
+      type: 'array',
+      description:
+        'For a pin about one purchasable product (a car, aircraft, phone, console, game, snack, drink, watch, sneaker, AI model): its 2-5 main competing products at its launch, in its own segment and market, closest rival first. name is the product as a shop lists it, maker its maker, summary one sentence on how it competes. Only rivals the page names or that you are sure of; never a sibling model of the same maker. Empty for an event, project, company, restaurant, film or anything with no single product.',
+      items: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+          maker: { type: 'string' },
+          summary: { type: 'string' },
+        },
+        required: ['name', 'maker', 'summary'],
+        additionalProperties: false,
+      },
+    },
     tags: {
       type: 'array',
       description:
@@ -219,6 +235,7 @@ export const SCHEMA = {
   },
   required: [
     'stocks',
+    'competitors',
     'tags',
     'title',
     'description',

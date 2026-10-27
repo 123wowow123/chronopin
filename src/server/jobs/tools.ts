@@ -55,6 +55,8 @@ import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { modelRubricGaps } from './modelRubrics';
+import { competitorGaps } from './productCompetitors';
+import { competitorsProblem, saveCompetitors } from '../model/pinCompetitor';
 import { ACTIONS, INSTRUMENTS, TRADER_SOURCES } from '@/lib/traders';
 import TraderPosition from '../model/traderPosition';
 import { addPosition } from '../services/traders';
@@ -525,6 +527,37 @@ export const TOOLS: JobTool[] = [
       const result = await saveResearched(input);
       await act(ctx, { tool: 'save_industry_forecast', detail: `${result.slug}${result.production ? '; prod saved' : ''}` });
       return result;
+    },
+  },
+  // --- Competing products on goods pins (the productCompetitors task) -------
+  {
+    name: 'product_competitor_gaps',
+    description:
+      "Goods pins (tagged Announced or Released, not Predicted) with fewer than two competing products listed, none first, then newest. Each has its title, productName, start, how many `rivals` it has and its author. Not every one is a product: an event, award, shop or one-off auction is skipped (pass it in `skip` and record_learning why). For each real product research 2-5 same-segment rivals by the rules in daily-jobs.md#productcompetitors, then save with save_product_competitors. At most `limit` (default 5, at most 10) per call; `remaining` is how many more wait.",
+    input_schema: obj({ limit: num('At most this many pins, default 5, at most 10'), skip: { type: 'array', items: { type: 'number' }, description: 'Pin ids already judged not products or without a sourceable rival this run' } }),
+    run: async (input, ctx) => {
+      const result = await competitorGaps(int(input.limit, 5, 1, 10), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
+      await act(ctx, { tool: 'product_competitor_gaps', detail: `${result.gaps.length} goods pin(s) listed, ${result.remaining} more waiting` });
+      return result;
+    },
+  },
+  {
+    name: 'save_product_competitors',
+    description:
+      "Replaces a goods pin's competing products with 2-5 rows { rank (1 = closest rival), name, maker, competitorPinId (a live pin for that rival, or omit), summary (how it competes, at most 400 characters), sourceUrl (an HTTPS page opened this run that names the rival) }. Send every row the pin should have, existing ones included. Saved here, and on production when the run writes there, as the pin's author.",
+    input_schema: obj({ pinId: num('Pin id'), competitors: { type: 'array', items: { type: 'object' } } }, ['pinId', 'competitors']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const rows = competitorsProblem(input.competitors);
+      if (typeof rows === 'string') throw new Error(rows);
+      await saveCompetitors(pinId, rows);
+      expirePinPage(pinId);
+      const pushed = await pushModelPerf(pinId, 'competitors', input.competitors as unknown as Record<string, unknown>).catch((err) => {
+        log.warn(`pin ${pinId}'s competitors did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_product_competitors', detail: `Pin ${pinId}: ${rows.length} competitor(s)${pushed ? '; prod saved' : ''}` });
+      return { pinId, competitors: rows.length, production: pushed };
     },
   },
   // --- Model rubrics, reviews and spec tables (the modelRubrics task) -------

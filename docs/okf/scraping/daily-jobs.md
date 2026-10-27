@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -591,7 +591,17 @@ Added 2026-10-24 (owner: product pins carry Announced and Released; a future lau
 **When.** In the news job, morning and evening. `npx tsx scripts/tags/productLifecycle.ts` (local) and `node scripts/tags/productLifecycleProd.mjs` (production) do the same by hand; `--dry-run` only counts.
 **Traps.** New goods pins get both tags from the extraction prompt; this task catches the rest and the dates that have since passed. A start date that moves later takes `Released` off.
 
-**Competitors (owner, 2026-10-26).** Every goods pin also needs 2-5 `PinCompetitor` rows (see AGENTS.md "Product competitors"). The extraction prompt has no competitor field, so new goods pins are gaps until a run fills them: query pins tagged `Announced`/`Released` with no `PinCompetitor` row and fill them through `PUT /api/pins/:id/competitors`. 2026-10-26 backlog: about 720 local goods pins.
+### productCompetitors
+
+Added 2026-10-26 (owner: every product pin mentions its main competing products; see AGENTS.md "Product competitors").
+
+**Reads** `product_competitor_gaps` (a few pins per call): goods pins tagged `Announced` or `Released`, not `Predicted`, with fewer than two `PinCompetitor` rows (none first, then newest) or with a row that has no `sourceUrl` yet (a rival the extraction named; the task sources it, drops it or replaces it). Each comes with its title, `productName`, start, rival count and author.
+**Does** for each real product, one at a time:
+1. `get_pin`, then research 2-5 same-segment rivals **at the pin's time and market** with `web_search` and `web_fetch`. Open every source page and confirm it names the rival; a search snippet alone is not a source.
+2. `save_product_competitors` with `{ rank, name, maker, competitorPinId, summary, sourceUrl }` per rival (send the pin's whole list). `competitorPinId` only for a live pin of that exact product. It saves here and, when the run writes to production, there as the pin's author.
+A pin that is not a product (an event, award, shop, campaign, one-off auction, collection or capsule) or has no sourceable rival goes in `skip` on the next call, with a `record_learning` note saying which.
+**When.** In the news job after productLifecycle, so a new goods pin gets its tags and then its rivals. Limit: about five pins a run.
+**Traps.** Extraction now returns 2-5 `competitors` for a one-product pin (name, maker, summary; no source) and the pin save stores them unsourced, so each new goods pin is a gap until this task sources or replaces them. Never name a rival that released later than the pin unless the source calls it the pin's rival, and never use a ranking list as a head-to-head. A restored backfill (2026-10-26) left about 180 non-product or no-rival pins that this task will keep listing; skip them with a reason. Sites that answer 403 to fetches (Edmunds, Ford Authority, Primagames) need Chrome through `@browser`.
 
 ## Find new events
 
