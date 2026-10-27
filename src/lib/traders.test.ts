@@ -24,4 +24,9 @@ describe('pnlExtremes', () => {
     expect(pnlExtremes(row, closes, 110)).toEqual({ maxGainPercent: 20, maxDrawdownPercent: -20 });
     expect(pnlExtremes({ ...row, instrument: 'put' }, closes, 110)).toEqual({ maxGainPercent: 20, maxDrawdownPercent: -20 });
   });
+  it('uses intraday highs and lows after the trade date', () => {
+    const closes = [{ day: '2026-10-05', close: 100, high: 130, low: 70 }, { day: '2026-10-06', close: 101, high: 125, low: 90 }];
+    const row = { instrument: 'stock' as const, action: 'buy' as const, entryPrice: 100, tradeDate: '2026-10-05' };
+    expect(pnlExtremes(row, closes, 101)).toEqual({ maxGainPercent: 25, maxDrawdownPercent: -10 });
+  });
 });

@@ -121,13 +121,16 @@ const HISTORY_YEARS = 10;
 async function readCloses(symbol: string, assetClass: AssetClass): Promise<DailyClose[]> {
   const today = new Date();
   const from = new Date(Date.UTC(today.getUTCFullYear() - HISTORY_YEARS, today.getUTCMonth(), today.getUTCDate())).toISOString().slice(0, 10);
-  const data = await get<{ tradesTable: { rows: { date: string; close: string }[] | null } }>(
+  const data = await get<{ tradesTable: { rows: { date: string; close: string; high?: string; low?: string }[] | null } }>(
     `/quote/${q(symbol)}/historical?assetclass=${assetClass}&fromdate=${from}&todate=${today.toISOString().slice(0, 10)}&limit=9999`,
   );
   return (data?.tradesTable.rows ?? []).flatMap((row) => {
     const day = nasdaqDay(row.date);
     const close = nasdaqNumber(row.close);
-    return day && close != null ? [{ day, close }] : [];
+    if (!day || close == null) return [];
+    const high = nasdaqNumber(row.high ?? '');
+    const low = nasdaqNumber(row.low ?? '');
+    return [{ day, close, ...(high != null ? { high } : {}), ...(low != null ? { low } : {}) }];
   });
 }
 

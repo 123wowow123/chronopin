@@ -116,7 +116,8 @@ export const closeKnown = (day: string, now: Date = new Date()) => +now >= +clos
 
 /* Choosing a price */
 
-export type DailyClose = { day: string; close: number };
+// high/low are the session's intraday extremes, when the source gave them.
+export type DailyClose = { day: string; close: number; high?: number; low?: number };
 
 // The close of `day`, or of the last trading day before it (a weekend or a
 // holiday). `closes` may be in any order. Null when none is on or before it.

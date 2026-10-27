@@ -41,14 +41,21 @@ export function estimatePnlPercent(row: Pick<TraderPositionRow, 'instrument' | '
   return Math.round(signed * 10) / 10 || 0;
 }
 
-// The largest gain and drawdown the position showed from the trade date to now,
-// scored on daily closes plus the latest quote (intraday extremes are not read).
+// The largest gain and drawdown the position showed from the trade date to now.
+// Each session's intraday high and low are scored when the source has them (else
+// its close), plus the latest quote. On the trade date itself only the close
+// counts, since the position was opened at that close.
 export function pnlExtremes(
   row: Pick<TraderPositionRow, 'instrument' | 'action' | 'entryPrice' | 'tradeDate'>,
-  closes: { day: string; close: number }[],
+  closes: { day: string; close: number; high?: number; low?: number }[],
   lastPrice: number | null | undefined,
 ): { maxGainPercent: number; maxDrawdownPercent: number } | null {
-  const prices = closes.filter((c) => c.day >= row.tradeDate).map((c) => c.close);
+  const prices: number[] = [];
+  for (const c of closes) {
+    if (c.day < row.tradeDate) continue;
+    if (c.day === row.tradeDate) prices.push(c.close);
+    else prices.push(c.close, c.high ?? c.close, c.low ?? c.close);
+  }
   if (lastPrice != null) prices.push(lastPrice);
   let gain = 0;
   let drawdown = 0;

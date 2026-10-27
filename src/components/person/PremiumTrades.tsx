@@ -96,7 +96,7 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
         ))}
       </ul>
       <p className="text-xs text-muted">
-        PnL is our estimate: the move from the closing price on the trade date to the latest delayed quote, with puts and shorts reversed. A hold is scored from the date it was disclosed; a sell is scored as an exit, so a gain means the price fell after the sale. Best and worst are the extremes of daily closes since the trade date. The headline average counts opening trades only. Options are marked by their underlying&rsquo;s move, not their own premium. It is not the trader&rsquo;s own result, and none of this is investment advice.
+        PnL is our estimate: the move from the closing price on the trade date to the latest delayed quote, with puts and shorts reversed. A hold is scored from the date it was disclosed; a sell is scored as an exit, so a gain means the price fell after the sale. Best and worst are the extremes since the trade date, using each session&rsquo;s intraday high and low. The headline average counts opening trades only. Options are marked by their underlying&rsquo;s move, not their own premium. It is not the trader&rsquo;s own result, and none of this is investment advice.
       </p>
     </div>
   );
