@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "pinSourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/VYwrVxxXThytPKoKDemYngAAAaA3b7nt",
+      "expectedBasis": "Acclaim 4: Sushi Kanesaka (the omakase counter at Hinotsuki, Grand InterContinental Seoul Parnas) holds one MICHELIN star in the MICHELIN Guide Seoul & Busan 2026. No diner platform figures were found for the counter itself (the Wanderlog page found was the hotel), so other axes are null. Only the guide page and the hotel's own page were read.",
+      "basis": "Acclaim 4: Sushi Kanesaka, the sushi counter inside Hinotsuki at Grand InterContinental Seoul Parnas, holds one MICHELIN star (Seoul & Busan 2026). Food, Service, Ambience and Value remain null: no counter-specific aggregate score adopted. Replaced generic/incorrect branch guide quotation with the actual Seoul guide entry ending 1244365. Hotel marketing removed from review array, retained as venue information. Revit’s March 2026 dinner account is separate from its November 2024 guest-chef pop-up; meal month does not establish publication. Original Diningcode member complaint identifies this counter but shows July 5 without year; date stays null. Three independent platforms include two visitor accounts, not three professional critic meals. No Kyoto-style kaiseki or Tokyo-counter findings transferred."
+    }
+  ]
+}

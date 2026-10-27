@@ -1,0 +1,200 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17279,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/tokyo-babsang",
+      "basis": "Food 3.5 from 4.3 over 290 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "title": "100 Great Places to Eat in Busan",
+          "quote": "you can finish it as ochazuke",
+          "publishedDate": "2023-10-30",
+          "sentiment": 0
+        },
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "title": "2025 Taste of Busan",
+          "quote": "make you feel like you are in Japan.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "openedAt": "2026-10-26",
+          "verifiedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Complete PDF page 9 / printed page 15 visually inspected; Donggyeong bapsang #20, exact 34-6 Namcheonbada-ro matches main-branch Pin. BR Media / Blue Ribbon Survey, distinct publisher from municipal guide and MICHELIN. Colophon PDF page 28 explicitly first published October 30, 2023. Neutral description of finishing eel rice as ochazuke receives neutral sentiment, not invented praise."
+        },
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "openedAt": "2026-10-26",
+          "verifiedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Complete PDF page 88 / printed page 174 visually inspected, Donggyeongbapsang #9 at exact 34-6 Namcheonbada-ro. Independent municipal selected guide, not neighboring Ramsey entry. Publication day unknown; edition year and compilation cutoff are not dates. Atmosphere verdict only, no transfer of historical menu/prices to current data."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17280,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/anmok",
+      "basis": "Food 4.0 from 4.5 over 235 ratings (the Anmok Headstore listing at 3 Gwangnam-ro 22beon-gil, the pin's address). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+          "title": "익숙한 듯 새롭다, 미쉐린이 선택한 부산의 맛맛맛",
+          "quote": "꼬들꼬들한 식감이 입맛을 더 돋운다.",
+          "publishedDate": "2024-03-06",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://archive19.tistory.com/723",
+          "title": "부산의 하이엔드 국밥, 미슐랭 돼지국밥을 먹어보자! \"안목\"",
+          "quote": "어쨌든 굉장히 만족스러웠던 밥집.",
+          "publishedDate": "2026-09-10",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Full original Kookje staff tasting report rendered. Explicit original input March 6, 2024 19:09:07; March 7 URL/print issue is not publication day. Selected quote is reporter 정인덕’s own head-meat texture verdict in Anmok/Namcheon section, not the preceding MICHELIN quotation or subsequent Budamyeonok section. Three reporters remain one publishing source."
+        },
+        {
+          "url": "https://archive19.tistory.com/723",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original first-person blogger 적기적기; exact visible article heading is not site-wide H1 기록보관소. September 10, 2026 visible byline matches publisher 08:35:21 +09 timestamp. Actual main-branch visit explicitly links 3 Gwangnam-ro 22beon-gil; Busan Station and Seongsu branches excluded. Visitor account, not a professional critic meal."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17282,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/pili-pili",
+      "basis": "Food 2.5 from 4.0 over only 26 ratings (under ~30, so it is capped and treated as indicative). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+          "title": "Eat Like a Local: Thai Treats in the Heart of Suyeong",
+          "quote": "a very warm and comforting atmosphere",
+          "publishedDate": "2022-06-28",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9",
+          "title": "피리피리",
+          "quote": "음식이 짜고 자극적임",
+          "publishedDate": "2025-12-30",
+          "sentiment": -0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Cindy Choi original HAPS local dining report, visible June 28, 2022 and time datetime June 28 00:00:59 +09. UTC article metadata June 27 15:00:59 is same instant; retain publisher-local day. Historical warm-room observation only, no current hours/menu claims. HAPS cadastral Gwangan-dong 94-3 matches current 54 Muhak-ro 33beon-gil through opened original Diningcode dual-address listing."
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Full original member-evaluation feed opened in primary reader. Named reviewer raitto, explicit December 30, 2025 evaluation date, salt/intensity complaint in personally eaten khao kha mu/noodle context. Not merchant description, rating average or syndicated blog. Negative verdict retained alongside HAPS atmosphere praise; not a claim that every diner agrees. Exact dual street/cadastral address verified."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17286,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/yakitori-onjung",
+      "basis": "Food capped at 3.5: 4.7 over only 30 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+          "title": "[부산 서면/전포 맛집] 촉촉한 육즙으로 행복을 느끼게 해주는 야키토리 맛집 야키토리 온정",
+          "quote": "육즙은 잘 가두셨고 겉은 바삭해 술안주로 매우 흡족한 야키토리였습니다",
+          "publishedDate": "2023-08-05",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ",
+          "title": "야키토리 온정",
+          "quote": "코스 음식 하나하나 정갈하고 맛의 균형도 좋아서",
+          "publishedDate": "2024-03-24",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Full original Foodtracer blog by 안냠쩝, actual article title distinct from site H1. Original August 5, 2023 10:04 visible byline; exact personally ordered chicken-wing assessment and original course photographs. 9-7 Dongcheon-ro 108beon-gil matches native Pin, not a similarly named Danggam venue. Historical menu/hours not saved as current."
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Diningcode member 미야옹, explicit March 24, 2024 evaluation date, 17 photos, named Course A visit and personal taste/balance assessment. Original authored evaluation, not blog-reprint section or average rating. Exact Seomyeon street address matches; Michelin, Foodtracer and Diningcode are separate platforms. Visitor/blog sources not represented as three professional critic meals."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "pinSourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/VYwrVxxXThytPKoKDemYngAAAaA3b7nt",
+      "basis": "Acclaim 4: Sushi Kanesaka, the sushi counter inside Hinotsuki at Grand InterContinental Seoul Parnas, holds one MICHELIN star (Seoul & Busan 2026). Food, Service, Ambience and Value remain null: no counter-specific aggregate score adopted. Replaced generic/incorrect branch guide quotation with the actual Seoul guide entry ending 1244365. Hotel marketing removed from review array, retained as venue information. Revit’s March 2026 dinner account is separate from its November 2024 guest-chef pop-up; meal month does not establish publication. Original Diningcode member complaint identifies this counter but shows July 5 without year; date stays null. Three independent platforms include two visitor accounts, not three professional critic meals. No Kyoto-style kaiseki or Tokyo-counter findings transferred.",
+      "reviews": [
+        {
+          "url": "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+          "title": "Sushi Kanesaka",
+          "quote": "plump, deeply flavourful aji sushi",
+          "publishedDate": null,
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+          "title": "Sushi Kanesaka Hinotsuki",
+          "quote": "the course composition is seriously poor.",
+          "publishedDate": null,
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+          "title": "그랜드 인터컨티넨탈 서울 파르나스 스시 카네사카",
+          "quote": "누구도 2시간동안 도를 벗어나는 시끄러움에 대해 눈감고 있었다.",
+          "publishedDate": null,
+          "sentiment": -0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Opened exact original Seoul inspector entry with id 1244365 and hotel street address 521 Teheran-ro, explicitly sushi counter within Hinotsuki. No publication day supplied; keep null, no ceremony date or current year inferred. This replaces an unverified non-id URL whose saved iki quotation does not describe the Seoul entry. The old iki quotation was separately located verbatim in the opened original Tokyo MICHELIN entry at B1F 8-10-3 Ginza: https://guide.michelin.com/th/en/tokyo-region/tokyo/restaurant/sushi-kanesaka ."
+        },
+        {
+          "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Revit member 낙천적인 행복의 미식가 #2, Dinner / Visited 2026/03. Selected course-composition criticism comes from that regular dinner, NOT preceding 우케이 guest-chef November 2024 pop-up. Explicit meal month is not a publication day; keep null. Cadastral Samseong-dong 159-8 matches hotel. Positive food comments in same account retained in scope; passage sentiment not whole review conversion."
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Diningcode member 소풍, 15 photographs, personally attended birthday lunch at Parnas counter after separate Tokyo visit. Selected complaint concerns prolonged noise not addressed by staff at Seoul counter, not Tokyo meal or a rating-average summary. Visible evaluation timestamp July 5 omits year; no ISO day inferred from current year or Michelin mention. Keep null."
+        }
+      ]
+    }
+  ]
+}

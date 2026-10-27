@@ -534,7 +534,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'product_competitor_gaps',
     description:
-      "Goods pins (tagged Announced or Released, not Predicted) with fewer than two competing products listed, none first, then newest. Each has its title, productName, start, how many `rivals` it has and its author. Not every one is a product: an event, award, shop or one-off auction is skipped (pass it in `skip` and record_learning why). For each real product research 2-5 same-segment rivals by the rules in daily-jobs.md#productcompetitors, then save with save_product_competitors. At most `limit` (default 5, at most 10) per call; `remaining` is how many more wait.",
+      "Goods pins (tagged Announced or Released, not Predicted) with fewer than two competing products listed, none first, then newest. Each has its title, productName, start, how many `rivals` it has and its author. Not every one is a product: an event, award, shop or one-off auction is skipped (pass it in `skip` and record_learning why). For each real product research 2-5 same-segment rivals by the rules in daily-jobs.md#productcompetitors. A rival with no pin is not left unlinked: find_pins for it, and when none exists scrape_url its official/publisher page and create_pin it (same curator desk as the pin, dated to its real release or announcement), then save with save_product_competitors using the new pin's id as competitorPinId. At most `limit` (default 5, at most 10) per call; `remaining` is how many more wait.",
     input_schema: obj({ limit: num('At most this many pins, default 5, at most 10'), skip: { type: 'array', items: { type: 'number' }, description: 'Pin ids already judged not products or without a sourceable rival this run' } }),
     run: async (input, ctx) => {
       const result = await competitorGaps(int(input.limit, 5, 1, 10), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
@@ -545,7 +545,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'save_product_competitors',
     description:
-      "Replaces a goods pin's competing products with 2-5 rows { rank (1 = closest rival), name, maker, competitorPinId (a live pin for that rival, or omit), summary (how it competes, at most 400 characters), sourceUrl (an HTTPS page opened this run that names the rival) }. Send every row the pin should have, existing ones included. Saved here, and on production when the run writes there, as the pin's author.",
+      "Replaces a goods pin's competing products with 2-5 rows { rank (1 = closest rival), name, maker, competitorPinId (the live pin for that rival: find_pins first, create_pin it when missing; omit only when it cannot be pinned), summary (how it competes, at most 400 characters), sourceUrl (an HTTPS page opened this run that names the rival) }. Send every row the pin should have, existing ones included. Saved here, and on production when the run writes there, as the pin's author.",
     input_schema: obj({ pinId: num('Pin id'), competitors: { type: 'array', items: { type: 'object' } } }, ['pinId', 'competitors']),
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);

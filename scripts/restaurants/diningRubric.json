@@ -5581,5 +5581,176 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 17279,
+    "scores": {
+      "food": 3.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 3.5 from 4.3 over 290 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/tokyo-babsang",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/tokyo-babsang",
+        "quote": "The restaurant specialises in two classic Japanese eel dishes: unaju and hitsumabushi.",
+        "title": "Tokyo Babsang - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+        "quote": "you can finish it as ochazuke",
+        "title": "100 Great Places to Eat in Busan",
+        "sentiment": 0,
+        "publishedDate": "2023-10-30"
+      },
+      {
+        "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "quote": "make you feel like you are in Japan.",
+        "title": "2025 Taste of Busan",
+        "sentiment": 0.6,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 17280,
+    "scores": {
+      "food": 4,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 4.0 from 4.5 over 235 ratings (the Anmok Headstore listing at 3 Gwangnam-ro 22beon-gil, the pin's address). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/anmok",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/anmok",
+        "quote": "The soup is not merely unconventional.",
+        "title": "Anmok - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+        "quote": "꼬들꼬들한 식감이 입맛을 더 돋운다.",
+        "title": "익숙한 듯 새롭다, 미쉐린이 선택한 부산의 맛맛맛",
+        "sentiment": 0.7,
+        "publishedDate": "2024-03-06"
+      },
+      {
+        "url": "https://archive19.tistory.com/723",
+        "quote": "어쨌든 굉장히 만족스러웠던 밥집.",
+        "title": "부산의 하이엔드 국밥, 미슐랭 돼지국밥을 먹어보자! \"안목\"",
+        "sentiment": 0.8,
+        "publishedDate": "2026-09-10"
+      }
+    ]
+  },
+  {
+    "pinId": 17282,
+    "scores": {
+      "food": 2.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 2.5 from 4.0 over only 26 ratings (under ~30, so it is capped and treated as indicative). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/pili-pili",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/pili-pili",
+        "quote": "The deliberately vintage interior recreates the feel of a local Thai dining eatery in Busan.",
+        "title": "PILI PILI - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+        "quote": "a very warm and comforting atmosphere",
+        "title": "Eat Like a Local: Thai Treats in the Heart of Suyeong",
+        "sentiment": 0.7,
+        "publishedDate": "2022-06-28"
+      },
+      {
+        "url": "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9",
+        "quote": "음식이 짜고 자극적임",
+        "title": "피리피리",
+        "sentiment": -0.7,
+        "publishedDate": "2025-12-30"
+      }
+    ]
+  },
+  {
+    "pinId": 17286,
+    "scores": {
+      "food": 3.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food capped at 3.5: 4.7 over only 30 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/yakitori-onjung",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/yakitori-onjung",
+        "quote": "After savoring the yakitori with some sake, a comforting bowl of chicken gomtang completes a well-rounded meal.",
+        "title": "Yakitori Onjung - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+        "quote": "육즙은 잘 가두셨고 겉은 바삭해 술안주로 매우 흡족한 야키토리였습니다",
+        "title": "[부산 서면/전포 맛집] 촉촉한 육즙으로 행복을 느끼게 해주는 야키토리 맛집 야키토리 온정",
+        "sentiment": 0.8,
+        "publishedDate": "2023-08-05"
+      },
+      {
+        "url": "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ",
+        "quote": "코스 음식 하나하나 정갈하고 맛의 균형도 좋아서",
+        "title": "야키토리 온정",
+        "sentiment": 0.7,
+        "publishedDate": "2024-03-24"
+      }
+    ]
+  },
+  {
+    "pinId": 17218,
+    "scores": {
+      "food": null,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Acclaim 4: Sushi Kanesaka, the sushi counter inside Hinotsuki at Grand InterContinental Seoul Parnas, holds one MICHELIN star (Seoul & Busan 2026). Food, Service, Ambience and Value remain null: no counter-specific aggregate score adopted. Replaced generic/incorrect branch guide quotation with the actual Seoul guide entry ending 1244365. Hotel marketing removed from review array, retained as venue information. Revit’s March 2026 dinner account is separate from its November 2024 guest-chef pop-up; meal month does not establish publication. Original Diningcode member complaint identifies this counter but shows July 5 without year; date stays null. Three independent platforms include two visitor accounts, not three professional critic meals. No Kyoto-style kaiseki or Tokyo-counter findings transferred.",
+    "sourceUrl": "https://guide.michelin.com/sg/en/article/michelin-guide-ceremony/all-the-stars-michelin-guide-seoul-busan-2026",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+        "quote": "plump, deeply flavourful aji sushi",
+        "title": "Sushi Kanesaka",
+        "sentiment": 0.8,
+        "publishedDate": null
+      },
+      {
+        "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+        "quote": "the course composition is seriously poor.",
+        "title": "Sushi Kanesaka Hinotsuki",
+        "sentiment": -0.7,
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+        "quote": "누구도 2시간동안 도를 벗어나는 시끄러움에 대해 눈감고 있었다.",
+        "title": "그랜드 인터컨티넨탈 서울 파르나스 스시 카네사카",
+        "sentiment": -0.8,
+        "publishedDate": null
+      }
+    ]
   }
 ]

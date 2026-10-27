@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "pinSourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/VYwrVxxXThytPKoKDemYngAAAaA3b7nt",
+      "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka",
+      "expectedReview": {
+        "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka",
+        "quote": "Shinji Kanesaka’s watchword is iki, a word spanning a wonderful variety of meanings.",
+        "title": "Sushi Kanesaka – Seoul - a MICHELIN Guide Restaurant",
+        "publishedDate": null
+      },
+      "reason": "The saved iki quotation was located verbatim in the opened original MICHELIN Tokyo entry at B1F 8-10-3 Ginza, not the Seoul hotel counter. Replace it with exact Seoul entry id 1244365. Preserve old link as annotated historical context, not a Seoul review."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "pinSourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/VYwrVxxXThytPKoKDemYngAAAaA3b7nt",
+      "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+      "expectedReview": {
+        "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+        "quote": "Sushi Kanesaka is a global brand recognized as one of Japan’s most renowned sushi houses, offering a high-end dining experience that combines traditional Edomae sushi with modern sensibilities.",
+        "title": "Sushi Kanesaka < Restaurant < Dining < INTERCONTINENTAL",
+        "publishedDate": null
+      },
+      "reason": "Replace unverified non-id guide URL/branch quotation and operator marketing with exact Seoul counter inspector text plus original regular-dinner visitor accounts. Hotel page remains venue information; no hotel marketing counted as independent critic review. Kyoto kaiseki and guest-chef pop-up impressions excluded."
+    }
+  ]
+}

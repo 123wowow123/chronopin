@@ -16,7 +16,10 @@ import { DINING_KEYS } from '@/lib/pinDining';
 const { values } = parseArgs({ options: { file: { type: 'string' }, references: { type: 'boolean' }, pin: { type: 'string' } } });
 if (!values.file) throw new Error('--file is required');
 type Entry = { table: ReviewTable; pinSourceUrl: string; reviews: PinReview[]; basis: string };
-const entries: Entry[] = JSON.parse(readFileSync(values.file, 'utf8')).entries;
+const researchCatalog = JSON.parse(readFileSync(values.file, 'utf8'));
+const entries: Entry[] = researchCatalog.entries;
+const checkedAt = typeof researchCatalog.checkedAt === 'string' && /^\d{4}-\d{2}-\d{2}(?:T|$)/.test(researchCatalog.checkedAt)
+  ? researchCatalog.checkedAt.slice(0, 10) : new Date().toISOString().slice(0, 10);
 const catalogFiles: Partial<Record<ReviewTable, string>> = {
   PinTaste: 'scripts/products/taste.json', PinCarPerf: 'scripts/products/carPerf.json', PinDining: 'scripts/restaurants/diningRubric.json',
 };
@@ -58,7 +61,7 @@ async function run() {
           }
           const wikis = entry.reviews.map((r) => ({ url: r.url, title: r.title, generatedBy: 'codex/session', text: r.quote,
             wiki: { title: r.title!, summary: 'Independent critical review; excerpt and publication date verified.',
-              body: `# Review evidence\n\nPublished: ${r.publishedDate ?? 'Not published'}. Checked: 2026-10-26.\n\n> ${r.quote}\n\nSource: ${r.url}\n\nSupports critical reception; does not independently establish the pin event date. Sentiment is an editorial estimate from the cited verdict.`, tags: ['review', 'critical reception'] } }));
+              body: `# Review evidence\n\nPublished: ${r.publishedDate ?? 'Not published'}. Checked: ${checkedAt}.\n\n> ${r.quote}\n\nSource: ${r.url}\n\nSupports critical reception; does not independently establish the pin event date. Sentiment is an editorial estimate from the cited verdict.`, tags: ['review', 'critical reception'] } }));
           const written = await reviewResearchRequest<{ results: { status: string; url: string }[] }>('POST', '/api/admin/source-wikis', { wikis }, target.production);
           if (written.results.length !== wikis.length || written.results.some((r) => !['saved', 'unchanged'].includes(r.status))) throw new Error(`Source wiki verification failed: ${JSON.stringify(written.results)}`);
         }

@@ -11,7 +11,8 @@ import * as db from '../db';
 export type CompetitorGap = { pinId: number; title: string; productName: string | null; start: string; rivals: number; author: string | null };
 
 // Pins with no rivals first, then pins with a single one (the rule is 2-5),
-// then pins whose rivals came from extraction and still have no source page.
+// then pins whose rivals came from extraction and still have no source page,
+// then pins with a rival that has no pin yet (the task creates it).
 export async function competitorGaps(limit = 5, skip: number[] = []): Promise<{ gaps: CompetitorGap[]; remaining: number }> {
   const rows = await db.query<{ id: number; title: string; productName: string | null; start: Date; rivals: string; author: string | null }>(
     `SELECT p."id", p."title", p."productName", p."utcStartDateTime" AS "start", u."userName" AS "author",
@@ -21,7 +22,8 @@ export async function competitorGaps(limit = 5, skip: number[] = []): Promise<{ 
        AND EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Announced', 'Released'))
        AND NOT EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Predicted')
        AND ((SELECT count(*) FROM "PinCompetitor" c WHERE c."pinId" = p."id") < 2
-            OR EXISTS (SELECT 1 FROM "PinCompetitor" c WHERE c."pinId" = p."id" AND c."sourceUrl" IS NULL))
+            OR EXISTS (SELECT 1 FROM "PinCompetitor" c WHERE c."pinId" = p."id" AND c."sourceUrl" IS NULL
+              OR c."competitorPinId" IS NULL))
      ORDER BY (SELECT count(*) FROM "PinCompetitor" c WHERE c."pinId" = p."id"), p."utcStartDateTime" DESC`,
   );
   const gaps = rows
