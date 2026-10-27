@@ -1,4 +1,4 @@
-import { estimatePnlPercent, type TraderPositionRow } from '@/lib/traders';
+import { estimatePnlPercent, pnlExtremes, type TraderPositionRow } from '@/lib/traders';
 import { closeOnOrBefore } from '@/lib/stocks';
 import PremiumSubscription from '../model/premiumSubscription';
 import TraderPosition from '../model/traderPosition';
@@ -17,7 +17,7 @@ export async function positionsWithPnl(traderSlug: string): Promise<TraderPositi
       const found = await identify(row.ticker).catch(() => null);
       lastBySymbol.set(row.ticker, found?.quote.price ?? null);
     }
-    if (row.entryPrice == null && row.action !== 'hold') {
+    if (row.entryPrice == null) {
       const entry = await entryPriceFor(row.ticker, row.tradeDate);
       if (entry != null) {
         row.entryPrice = entry;
@@ -26,8 +26,20 @@ export async function positionsWithPnl(traderSlug: string): Promise<TraderPositi
     }
     row.lastPrice = lastBySymbol.get(row.ticker) ?? null;
     row.estimatedPnlPercent = estimatePnlPercent(row, row.lastPrice);
+    const range = pnlExtremes(row, await closesFor(row.ticker), row.lastPrice);
+    row.maxGainPercent = range?.maxGainPercent ?? null;
+    row.maxDrawdownPercent = range?.maxDrawdownPercent ?? null;
   }
   return rows;
+}
+
+async function closesFor(ticker: string) {
+  try {
+    const found = await identify(ticker);
+    return found ? await fetchCloses(ticker, found.assetClass) : [];
+  } catch {
+    return [];
+  }
 }
 
 export async function entryPriceFor(ticker: string, day: string): Promise<number | null> {

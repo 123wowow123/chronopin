@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T01:52:03.746Z",
+  "checkedAt": "2026-10-27T02:08:49.065Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -26,15 +26,15 @@
       "reviews": 502,
       "minimum": 3,
       "belowMinimum": 12,
-      "undatedNonMichelin": 28,
+      "undatedNonMichelin": 22,
       "unscoredDated": 0
     },
     {
       "table": "PinAircraftPerf",
       "pins": 165,
-      "reviews": 559,
+      "reviews": 563,
       "minimum": 3,
-      "belowMinimum": 14,
+      "belowMinimum": 13,
       "undatedNonMichelin": 9,
       "unscoredDated": 0
     },
@@ -68,16 +68,16 @@
     {
       "table": "PinDining",
       "pins": 89,
-      "reviews": 271,
+      "reviews": 272,
       "minimum": 3,
-      "belowMinimum": 9,
-      "undatedNonMichelin": 45,
+      "belowMinimum": 8,
+      "undatedNonMichelin": 46,
       "unscoredDated": 0
     },
     {
       "table": "PinCriticReview",
-      "pins": 92,
-      "reviews": 277,
+      "pins": 93,
+      "reviews": 280,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -528,15 +528,6 @@
     },
     {
       "table": "PinAircraftPerf",
-      "pinId": 19565,
-      "title": "NorOntair Takes Delivery of the First Dash 8",
-      "sourceUrl": "https://web.archive.org/web/2021/https://www.baesystems.com/en/heritage/de-havilland-canada-dhc-8-dash-8",
-      "reviewCount": 1,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: Dash 8-100 (PW120 1,800 shp, MTOW 34,500 lb, 37 passengers), BAE Heritage table. Range: 1,174 statute miles = 1,020 NM -> 0. Capacity: 37 -> 0. Efficiency: no fuel burn published -> null. Speed: 310 mph (269 kt), no Mach, about M0.42 -> 0. Runway: no maker planning figure; operator North Star Air lists 3,280 ft -> 5 (operator figure, not a maker chart). Comfort: one pilot account only (cockpit, not cabin) -> null. Seat score = linear between the 2026 anchors, rounded to the nearest half step (halves up)."
-    },
-    {
-      "table": "PinAircraftPerf",
       "pinId": 19572,
       "title": "Delta Flies the First Scheduled DC-9 Passenger Service",
       "sourceUrl": "http://content.deltamuseum.org/reader-rails/DouglasDC9/",
@@ -595,7 +586,7 @@
       "title": "Short 360 Prototype Makes Its First Flight",
       "sourceUrl": "https://www.airwaysmag.com/new-post/short-360-first-flight",
       "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "reason": "Opened SQTalk Carfield report is genuine Pacific Coastal Shorts360 C-GPCF cabin experience (Aug8 2012), but exact -100/-300 applicability is not verified. Existing two entries are secondary history, not firsthand. Simulator reports and accident investigation forms are not routine independent passenger/pilot reviews. Preserve below-target research rather than imply three firsthand publishers.",
       "existingResearchBasis": "Variant: Short 360 (SD3-60), 36 pax, 2x PT6A-65AR, MTOW 12,292 kg. Turboprop: speed and runway use the same 2026 anchors. Range: 861 nmi full tanks, 2,569 kg payload -> 0. Capacity: 36 -> 0. Efficiency: Wikipedia fuel consumption 1.01 kg/km (820 lb/h at 200 kn) / 0.8 kg/L = 1.26 L/km = 126 L/100 km / 36 seats = 3.5 L/seat/100 km -> 2 (secondary source, not a maker figure). Speed: 404 km/h at FL100 = 218 kt, about Mach 0.34 -> 0. Runway: takeoff distance 4,250 ft / 1,300 m (AeroCorner spec page, not the maker's chart) -> 5. Comfort: null; only 2 reviews reached (Simple Flying, Aeroclass blog), neither a firsthand ride; fewer than 3 solid reviews."
     },
     {
@@ -757,7 +748,7 @@
       "title": "Anmok (안목) — Busan restaurant guide",
       "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/anmok",
       "reviewCount": 1,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
+      "reason": "Anmok main branch is 3 Gwangnam-ro22beon-gil, Namcheon. Opened TRVLOGUE article is Busan Station branch (3-10 Jungang-daero214beon-gil), so excluded. krvisitguide explicitly derives its food/review claims from MICHELIN and Google and does not add an independent critic. Operator identifies NYT 36 Hours October2 2025 as main-branch feature, but official NYTimes and first-party nyt.net pages could not be opened (403); no quote fabricated from snippets. Opened current operator locations list Namcheon main at 33 Namcheonbada-ro, conflicting with the MICHELIN/native pin address; resolve relocation/history before attaching current-branch evidence.",
       "existingResearchBasis": "Food 4.0 from 4.5 over 235 ratings (the Anmok Headstore listing at 3 Gwangnam-ro 22beon-gil, the pin's address). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
     },
     {
@@ -768,15 +759,6 @@
       "reviewCount": 1,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Food 2.5 from 4.0 over only 26 ratings (under ~30, so it is capped and treated as indicative). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17285,
-      "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/niurou-mian-guan-zi",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Food 3.5 from 4.3 over 373 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
     },
     {
       "table": "PinDining",
@@ -1220,8 +1202,8 @@
       "pinId": 19936,
       "title": "Ferrari Unveils the 296 GTS, an 830 cv Plug-In Hybrid V6 Spider With a 14-Second Folding Hardtop",
       "url": "https://carmagazine.co.uk/car-reviews/ferrari/296-gts",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Ferrari 296 GTS review and video: drop-top perfection?. Visible Updated: 01 November 2022 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinCarPerf",
@@ -1252,8 +1234,8 @@
       "pinId": 20024,
       "title": "Porsche Unveils the Electric Macan Turbo With 630 hp and 270 kW Charging, From USD 105,300",
       "url": "https://www.carmagazine.co.uk/car-reviews/porsche/macan-electric/",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Porsche Macan Electric (2026) review: still one of the best. Visible Updated: 24 May 2026 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinCarPerf",
@@ -1364,16 +1346,16 @@
       "pinId": 15254,
       "title": "Fiat Opens UK Orders for the Grande Panda Hybrid From GBP 18,035",
       "url": "https://www.carmagazine.co.uk/car-reviews/fiat/grande-panda-hybrid",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Fiat Grande Panda Hybrid (2026) review: cheap and cheerful. Visible Updated: 31 May 2026 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinGasCarPerf",
       "pinId": 15255,
       "title": "DS Unveils the N°7 SUV, Replacing the DS 7, With a 145 hp Hybrid",
       "url": "https://www.carmagazine.co.uk/car-reviews/ds/2026-no-7-hybrid/",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: DS No.7 Hybrid (2026) review: a premium SUV deserves better than a 1.2-litre engine shared with a Corsa. Visible Updated: 09 July 2026 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinGasCarPerf",
@@ -1396,8 +1378,8 @@
       "pinId": 19926,
       "title": "Caterham Unveils the Seven 620R at Goodwood: 310 bhp Supercharged, From 49,995 Pounds",
       "url": "https://carmagazine.co.uk/car-reviews/caterham/caterham-seven-620r-2013-review",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Caterham Seven 620R (2013) review. Visible Updated: 26 January 2015 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinGasCarPerf",
@@ -1406,54 +1388,6 @@
       "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
       "status": "needs-research",
       "reason": "Opened Denis Duquet first drive and inspected time/metadata. August15 2018 is explicitly Updated, not original publication. Source covers both 5.3 and 6.2 V8; pin scores 6.2 High Country crew. Find original byline or an exact-powertrain dated firsthand replacement; retain null."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19953,
-      "title": "Honda's Eleventh-Generation 2022 Civic Sedan Reaches US Dealers From $22,695",
-      "url": "https://www.caranddriver.com/honda/civic-2022",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19955,
-      "title": "Honda's FL5 Civic Type R Reaches US Dealers From $43,990 With 315 hp and a Manual",
-      "url": "https://www.caranddriver.com/honda/civic-type-r-2023",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19956,
-      "title": "Honda Starts US Deliveries of the Sixth-Generation 2023 CR-V From $31,110, Hybrid Following",
-      "url": "https://www.caranddriver.com/honda/cr-v-2023",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19958,
-      "title": "Honda Prices the Redesigned 2023 HR-V From $24,895 With a 158 hp 2.0-Litre and Multi-Link Rear",
-      "url": "https://www.caranddriver.com/honda/hr-v-2023",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19960,
-      "title": "Honda Opens Orders for the Fifth-Generation 2018 Odyssey From $29,990 With a 280 hp V6",
-      "url": "https://www.caranddriver.com/honda/odyssey-2018",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19961,
-      "title": "Honda Prices the Fourth-Generation 2023 Pilot From $40,445 With a 285 hp V6 and a TrailSport",
-      "url": "https://www.caranddriver.com/honda/pilot-2023",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
     },
     {
       "table": "PinGasCarPerf",
@@ -1476,16 +1410,16 @@
       "pinId": 19979,
       "title": "KTM Unveils the Road-Legal X-Bow GT-XR With a 500 PS Audi Five-Cylinder, From 284,900 Euros",
       "url": "https://www.carmagazine.co.uk/car-reviews/ktm/x-bow-gt-xr/",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: KTM X-Bow GT-XR review: the responsible track weapon?. Visible Updated: 18 July 2025 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinGasCarPerf",
       "pinId": 20019,
       "title": "Porsche Adds the 718 Cayman GTS 4.0 With a 400 PS Flat-Six, From EUR 81,926",
       "url": "https://www.carmagazine.co.uk/car-reviews/porsche/718-gts-40/",
-      "status": "needs-research",
-      "reason": "Rendered publisher byline supplies Updated only; JSON-LD year 0001 is a placeholder. Original publication day remains unverified; keep null and seek original byline/archive evidence."
+      "status": "verified-undated",
+      "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Porsche 718 Cayman GTS 4.0 (2020) review: holy grail hunting. Visible Updated: 09 March 2020 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
     },
     {
       "table": "PinGasCarPerf",
@@ -2118,6 +2052,14 @@
       "url": "https://eatbusan.com/",
       "status": "verified-undated",
       "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17285,
+      "title": "Niurou Mian Guan Zi (뉴러우멘관즈) — Busan restaurant guide",
+      "url": "https://korea.stripes.com/food-drink/three-places-to-get-a-taste-of-taiwan-in-busan,-south-korea.html",
+      "status": "verified-undated",
+      "reason": "Stars and Stripes Korea reproduces Dynamic Busan local newspaper guide, explicitly credited July edition; no original day/year exposed. Exact Namcheon branch: 25-4 Suyeong-ro388beon-gil, matches native pin/MICHELIN. Quote concerns interior atmosphere, not a fabricated firsthand diner or numeric subscore. One Dynamic Busan editorial source, not two sources for newspaper and syndication. With MICHELIN and Eat Busan there are three distinct guide publishers. All five dining axes preserved."
     },
     {
       "table": "PinCriticReview",

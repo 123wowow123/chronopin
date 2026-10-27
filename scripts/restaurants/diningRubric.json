@@ -5249,5 +5249,38 @@
         "publishedDate": "2026-08-27"
       }
     ]
+  },
+  {
+    "pinId": 17285,
+    "scores": {
+      "food": 3.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 3.5 from 4.3 over 373 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/niurou-mian-guan-zi",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/kr/en/busan-region/busan_1025838/restaurant/niurou-mian-guan-zi",
+        "quote": "The restaurant limits its daily noodle service to ensure the broth is served at its best.",
+        "title": "Niurou mian guan zi - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://eatbusan.com/",
+        "quote": "Taiwanese beef noodles near Namcheon — just 150 bowls a day, walk-in only.",
+        "title": "Eat Busan — Where Locals Actually Eat in Busan",
+        "publishedDate": null
+      },
+      {
+        "url": "https://korea.stripes.com/food-drink/three-places-to-get-a-taste-of-taiwan-in-busan,-south-korea.html",
+        "quote": "This restaurant has an entirely local feel from the exterior to the interior",
+        "title": "Three places to get a taste of Taiwan in Busan, South Korea",
+        "sentiment": 0.3,
+        "publishedDate": null
+      }
+    ]
   }
 ]

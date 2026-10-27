@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 3757,
+      "pinSourceUrl": "https://wwd.com/footwear-news/sneaker-news/alo-trail-sneaker-release-info-interview-1238891475/",
+      "basis": "Three separate firsthand Alo Trail wear impressions: Olivia Halevy/Toms Guide (Apr14), Tim Kohut/Mens Health (Apr12), Nikki Chwatt/Who What Wear (Apr9), 2026. Short-term walking, office/gym and city-wear comments; not rigorous long-distance trail-running tests. Kohut expressly had not run in them, Halevy disclaims outdoor expertise. Toms Guide and Who What Wear share Future ownership; Mens Health is Hearst. Three critics, two ownership groups, not three independent owners. Affiliate commerce disclosures retained; sample provision not independently established.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/wellness/fitness/ive-been-wearing-alo-yogas-new-trail-running-shoe-heres-my-honest-verdict",
+          "title": "I’ve been wearing Alo Yoga’s new trail running shoe — here’s my honest verdict",
+          "publishedDate": "2026-04-14",
+          "quote": "They’re super comfortable",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.menshealth.com/style/a70977074/alo-trail-shoe-news-april-2026/",
+          "title": "The One Detail That Makes Alo’s New Trail Sneaker So Easy to Wear",
+          "publishedDate": "2026-04-12",
+          "quote": "grippy enough to walk on rougher surfaces",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.whowhatwear.com/fashion/shoes/alo-yoga-trail-sneakers",
+          "title": "FYI: Cool Girls in L.A. And NYC Will Soon Be Wearing These Sneakers for Runyon Hikes and WSH Walks",
+          "publishedDate": "2026-04-09",
+          "quote": "They move effortlessly between settings",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.tomsguide.com/wellness/fitness/ive-been-wearing-alo-yogas-new-trail-running-shoe-heres-my-honest-verdict",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original visible publication and structured datePublished agree; exact article H1 from rendered source."
+        },
+        {
+          "url": "https://www.menshealth.com/style/a70977074/alo-trail-shoe-news-april-2026/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original visible publication and structured datePublished agree; exact article H1 from rendered source."
+        },
+        {
+          "url": "https://www.whowhatwear.com/fashion/shoes/alo-yoga-trail-sneakers",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original visible publication and structured datePublished agree; exact article H1 from rendered source."
+        }
+      ]
+    }
+  ]
+}

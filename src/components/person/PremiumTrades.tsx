@@ -83,6 +83,11 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
                 <span className={`font-semibold ${tone(p.estimatedPnlPercent)}`}>{pct(p.estimatedPnlPercent)}</span>
               </span>
             </div>
+            {p.maxGainPercent != null && p.maxDrawdownPercent != null ? (
+              <p className="text-xs tabular-nums text-muted">
+                Since the trade: best <span className="font-semibold text-success">{pct(p.maxGainPercent)}</span> · worst <span className="font-semibold text-danger">{pct(p.maxDrawdownPercent)}</span>
+              </p>
+            ) : null}
             <p className="text-sm">{p.summary}</p>
             <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-accent hover:underline">
               Source: {p.sourceTitle}
@@ -91,7 +96,7 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
         ))}
       </ul>
       <p className="text-xs text-muted">
-        PnL is our estimate: the move from the closing price on the trade date to the latest delayed quote, with puts and shorts reversed. Options are marked by their underlying&rsquo;s move, not their own premium. It is not the trader&rsquo;s own result, and none of this is investment advice.
+        PnL is our estimate: the move from the closing price on the trade date to the latest delayed quote, with puts and shorts reversed. A hold is scored from the date it was disclosed; a sell is scored as an exit, so a gain means the price fell after the sale. Best and worst are the extremes of daily closes since the trade date. The headline average counts opening trades only. Options are marked by their underlying&rsquo;s move, not their own premium. It is not the trader&rsquo;s own result, and none of this is investment advice.
       </p>
     </div>
   );

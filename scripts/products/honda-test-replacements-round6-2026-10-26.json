@@ -69,6 +69,75 @@
           "publicationEvidence": "Exact US FL5 315hp six-speed test. Original JSON-LD datePublished Nov15 2022; visible Nov29 is explicitly update adding test results. Quote is qualitative driving dynamics, not the later instrumented results. Retain original article day, record revision separately."
         }
       ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19956,
+      "pinSourceUrl": "https://www.foxnews.com/auto/2023-honda-cr-v-price-hike",
+      "basis": "Tested EX-L AWD uses scored EX FWD shared 190hp 1.5T/CVT. Quote concerns engine lag in the tested AWD, not measured FWD acceleration, ride or fuel economy. Original visible and structured Jun14 2023 agree.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a43966130/2023-honda-cr-v-1-5-liter-by-the-numbers/",
+          "title": "2023 Honda CR-V 1.5-Liter Turbo Tested: Less Is Indeed Less",
+          "quote": "Honda's 1.5-liter is largely free of lag.",
+          "publishedDate": "2023-06-14",
+          "sentiment": 0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a43966130/2023-honda-cr-v-1-5-liter-by-the-numbers/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Tested EX-L AWD uses scored EX FWD shared 190hp 1.5T/CVT. Quote concerns engine lag in the tested AWD, not measured FWD acceleration, ride or fuel economy. Original visible and structured Jun14 2023 agree."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19961,
+      "pinSourceUrl": "https://tflcar.com/?p=141166",
+      "basis": "Tested Elite AWD has the same 285hp 3.5 V6/ten-speed as scored Sport FWD. Quote concerns shared gearbox response in tested Elite, not FWD acceleration, tyres, steering, AWD agility or economy. Original visible and structured Aug9 2023 agree.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a44700683/2023-honda-pilot-elite-by-the-numbers/",
+          "title": "2023 Honda Pilot Elite Tested: Birds of a Feather Fly Together",
+          "quote": "The smooth-shifting transmission doesn't hesitate",
+          "publishedDate": "2023-08-09",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a44700683/2023-honda-pilot-elite-by-the-numbers/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Tested Elite AWD has the same 285hp 3.5 V6/ten-speed as scored Sport FWD. Quote concerns shared gearbox response in tested Elite, not FWD acceleration, tyres, steering, AWD agility or economy. Original visible and structured Aug9 2023 agree."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19958,
+      "pinSourceUrl": "https://www.autoguide.com/auto-news/2022/06/2023-honda-hr-v-pricing-and-fuel-economy-revealed-on-sale-this-month.html",
+      "basis": "Tested EX-L AWD versus scored LX FWD; both share 158hp 2.0/CVT, expressly unchanged by trim. Quote is critical powertrain impression from AWD test, not measured FWD acceleration, economy or ride. Original JSON-LD Jun21 2022; Aug24 2022 is update adding instrumented results. No axes change.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a40353162/2023-honda-hrv-drive/",
+          "title": "Tested: 2023 Honda HR-V Surprises with Excellent Ride and Redesign",
+          "quote": "The HR-V powertrain remains unsatisfying.",
+          "publishedDate": "2022-06-21",
+          "sentiment": -0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a40353162/2023-honda-hrv-drive/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Tested EX-L AWD versus scored LX FWD; both share 158hp 2.0/CVT, expressly unchanged by trim. Quote is critical powertrain impression from AWD test, not measured FWD acceleration, economy or ride. Original JSON-LD Jun21 2022; Aug24 2022 is update adding instrumented results. No axes change."
+        }
+      ]
     }
   ]
 }

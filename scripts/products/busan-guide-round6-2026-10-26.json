@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17285,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/niurou-mian-guan-zi",
+      "basis": "Stars and Stripes Korea reproduces Dynamic Busan local newspaper guide, explicitly credited July edition; no original day/year exposed. Exact Namcheon branch: 25-4 Suyeong-ro388beon-gil, matches native pin/MICHELIN. Quote concerns interior atmosphere, not a fabricated firsthand diner or numeric subscore. One Dynamic Busan editorial source, not two sources for newspaper and syndication. With MICHELIN and Eat Busan there are three distinct guide publishers. All five dining axes preserved.",
+      "reviews": [
+        {
+          "url": "https://korea.stripes.com/food-drink/three-places-to-get-a-taste-of-taiwan-in-busan,-south-korea.html",
+          "title": "Three places to get a taste of Taiwan in Busan, South Korea",
+          "quote": "This restaurant has an entirely local feel from the exterior to the interior",
+          "publishedDate": null,
+          "sentiment": 0.3
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://korea.stripes.com/food-drink/three-places-to-get-a-taste-of-taiwan-in-busan,-south-korea.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full opened article credits July edition of Dynamic Busan without year/day. Branch address matches. Retain null; guide commentary rather than claimed firsthand visit."
+        }
+      ]
+    }
+  ]
+}

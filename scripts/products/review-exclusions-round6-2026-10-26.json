@@ -39,6 +39,45 @@
         "publishedDate": null
       },
       "reason": "Replace evolving undated overview with opened dated original test from same publisher. Replacement must be added and verified before removal. Exact US FL5 315hp six-speed test. Original JSON-LD datePublished Nov15 2022; visible Nov29 is explicitly update adding test results. Quote is qualitative driving dynamics, not the later instrumented results. Retain original article day, record revision separately."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19956,
+      "pinSourceUrl": "https://www.foxnews.com/auto/2023-honda-cr-v-price-hike",
+      "url": "https://www.caranddriver.com/honda/cr-v-2023",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/cr-v-2023",
+        "quote": "At our test track, the nonhybrid EX-L needed 8.1 seconds to get to 60 mph, making it a bit sluggish for its class",
+        "title": "2023 Honda CR-V Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated overview with dated underlying test from same publisher after adding/verifying replacement. Tested EX-L AWD uses scored EX FWD shared 190hp 1.5T/CVT. Quote concerns engine lag in the tested AWD, not measured FWD acceleration, ride or fuel economy. Original visible and structured Jun14 2023 agree."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19961,
+      "pinSourceUrl": "https://tflcar.com/?p=141166",
+      "url": "https://www.caranddriver.com/honda/pilot-2023",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/pilot-2023",
+        "quote": "On-road refinement is improved over the 2022 model as well, with more confidence-inspiring steering and braking.",
+        "title": "2023 Honda Pilot Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated overview with dated underlying test from same publisher after adding/verifying replacement. Tested Elite AWD has the same 285hp 3.5 V6/ten-speed as scored Sport FWD. Quote concerns shared gearbox response in tested Elite, not FWD acceleration, tyres, steering, AWD agility or economy. Original visible and structured Aug9 2023 agree."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19958,
+      "pinSourceUrl": "https://www.autoguide.com/auto-news/2022/06/2023-honda-hr-v-pricing-and-fuel-economy-revealed-on-sale-this-month.html",
+      "url": "https://www.caranddriver.com/honda/hr-v-2023",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/hr-v-2023",
+        "quote": "The HR-V managed a 9.4-second launch to 60 mph during our acceleration testing.",
+        "title": "2023 Honda HR-V Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated overview with dated underlying test from same publisher after adding/verifying replacement. Tested EX-L AWD versus scored LX FWD; both share 158hp 2.0/CVT, expressly unchanged by trim. Quote is critical powertrain impression from AWD test, not measured FWD acceleration, economy or ride. Original JSON-LD Jun21 2022; Aug24 2022 is update adding instrumented results. No axes change."
     }
   ]
 }

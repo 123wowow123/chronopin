@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-26",
+  "scope": "Additional leads screened during round6; not attached without exact scope and opened evidence.",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17280,
+      "reason": "Anmok main branch is 3 Gwangnam-ro22beon-gil, Namcheon. Opened TRVLOGUE article is Busan Station branch (3-10 Jungang-daero214beon-gil), so excluded. krvisitguide explicitly derives its food/review claims from MICHELIN and Google and does not add an independent critic. Operator identifies NYT 36 Hours October2 2025 as main-branch feature, but official NYTimes and first-party nyt.net pages could not be opened (403); no quote fabricated from snippets. Opened current operator locations list Namcheon main at 33 Namcheonbada-ro, conflicting with the MICHELIN/native pin address; resolve relocation/history before attaching current-branch evidence.",
+      "sourcesChecked": [
+        "https://www.trvlogue.com/en/anmok-busan-station-dwaeji-gukbap-review",
+        "https://krvisitguide.com/busan/anmok-suyeong-michelin-restaurant/",
+        "https://anmok-intl.com/",
+        "https://www.nytimes.com/interactive/2025/10/02/travel/things-to-do-busan.html",
+        "https://monorepo-sample1.nyt.net/interactive/2025/10/02/travel/things-to-do-busan.html"
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19646,
+      "reason": "Opened SQTalk Carfield report is genuine Pacific Coastal Shorts360 C-GPCF cabin experience (Aug8 2012), but exact -100/-300 applicability is not verified. Existing two entries are secondary history, not firsthand. Simulator reports and accident investigation forms are not routine independent passenger/pilot reviews. Preserve below-target research rather than imply three firsthand publishers.",
+      "sourcesChecked": [
+        "https://www.sqtalk.com/forum/forum/general/trip-reports/11855-",
+        "https://www.airwaysmag.com/new-post/short-360-first-flight"
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4410,
+      "reason": "Puma Hali1 Opal: Basketpack explicitly tested Opal, published Jan5 2026; some template headings mistakenly say Jordan Tatum4 but body is clearly Hali1. WearTesters primary page refused 429. Athletoes generically attributes first-hand experiences and player feedback but does not establish which reviewer tested which colourway; do not use as third independent exact-Opal test without verification. Alo Trail broader footwear coverage was saved separately.",
+      "sourcesChecked": [
+        "https://www.basketpack.fr/33220-on-teste-la-puma-hali-1-de-tyrese-haliburton",
+        "https://weartesters.com/puma-hali-1-performance-review/",
+        "https://athletoes.com/puma-hali-1-basketball-shoes/"
+      ]
+    }
+  ]
+}
