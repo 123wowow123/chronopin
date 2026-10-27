@@ -329,7 +329,7 @@ export function TagCloud({
           onTogglePlace={togglePlace}
           onToggleReserved={toggleReserved}
           onOpenQuery={openQuery}
-          currentQuery={query ?? ''}
+          currentQuery={pending ?? query ?? ''}
           onClear={clear}
           onClose={closeCloud}
         />
@@ -522,6 +522,7 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
           : 'border-line text-muted hover:border-tint/40 hover:text-ink';
   return (
     <div role="group" aria-label={label} className={`flex flex-col gap-2 ${className}`}>
+      <div className="flex items-center justify-between gap-2">
       <span aria-hidden className="inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
         <Icon name="search" className="size-3.5" />
         {label}
@@ -535,11 +536,29 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
           <Icon name={drag && pinned.includes(drag.q) ? 'thumbtackOff' : 'thumbtack'} className="size-3.5" />
         </span>
       </span>
+      {nameable ? (
+        // Collapses the box that names the search on screen.
+        <button
+          type="button"
+          aria-expanded={naming === now}
+          onClick={() => {
+            if (naming === now) return setNaming(null);
+            setSuggested('');
+            setNaming(now);
+            if (!names[now]) suggestQueryName(now).then((name) => name && setSuggested(name));
+          }}
+          className="inline-flex items-center gap-1 rounded-full border border-dashed border-line px-2.5 py-0.5 text-xs text-muted transition-colors hover:border-amber-500 hover:text-ink"
+        >
+          {t('tagCloud.nameQuery')}
+          <Icon name="chevron" aria-hidden className={`size-3.5 transition-transform ${naming === now ? 'rotate-180' : ''}`} />
+        </button>
+      ) : null}
+      </div>
       <div ref={row} className="-mx-1 flex items-center gap-2 overflow-x-auto px-1 py-1 [scrollbar-width:thin]">
         {list.map((q) => {
           const isNamed = !!names[q];
-          // A named pill wears a label icon instead of the pin's; its pin button sits at the end.
-          const isPinned = pinned.includes(q) && !isNamed;
+          // A named pill wears a label icon instead of the pin's, unless it is pinned: then the pin shows.
+          const isPinned = pinned.includes(q);
           const tone = toneFor(q);
           return (
             <span
@@ -550,7 +569,7 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
               <button type="button" data-pill aria-pressed={q === now} onClick={() => !moved.current && onOpen(q)} title={names[q] && queryNamedBy(q) ? `${label_(q)}\n${t('tagCloud.namedBy', { name: queryNamedBy(q) as string })}` : q} className={`rounded-full border py-1 text-sm whitespace-nowrap transition-colors active:scale-100 ${isPinned || isNamed ? 'ps-8 pe-3' : 'px-3'} ${tone}`}>
                 {label_(q)}
               </button>
-              {isNamed ? <Icon name="tag" aria-hidden className="pointer-events-none absolute start-3 top-1/2 size-3.5 -translate-y-1/2 text-emerald-600 dark:text-emerald-400" /> : null}
+              {isNamed && !isPinned ? <Icon name="tag" aria-hidden className="pointer-events-none absolute start-3 top-1/2 size-3.5 -translate-y-1/2 text-emerald-600 dark:text-emerald-400" /> : null}
               {isPinned ? (
                 // Over the pinned pill's own pin icon: click it to unpin.
                 <button
@@ -559,7 +578,7 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
                   title={t('tagCloud.unpinQuery')}
                   onClick={() => togglePin(q)}
                   data-pin-button
-                  className={`absolute start-[3px] top-1/2 grid size-6 -translate-y-1/2 place-items-center rounded-full text-amber-600 transition-colors hover:bg-amber-500 hover:text-white active:bg-amber-600 active:text-white dark:text-amber-400 ${dragging ? 'pointer-events-none' : ''}`}
+                  className={`absolute start-[3px] top-1/2 grid size-6 -translate-y-1/2 place-items-center rounded-full transition-colors ${isNamed ? 'text-emerald-600 hover:bg-emerald-500 active:bg-emerald-600 dark:text-emerald-400' : 'text-amber-600 hover:bg-amber-500 active:bg-amber-600 dark:text-amber-400'} hover:text-white active:text-white ${dragging ? 'pointer-events-none' : ''}`}
                 >
                   <Icon name="thumbtack" aria-hidden className="size-3.5" />
                 </button>
@@ -608,16 +627,7 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
               {t('tagCloud.nameQuerySave')}
             </button>
           </form>
-        ) : (
-          <button type="button" onClick={() => {
-              setSuggested('');
-              setNaming(now);
-              if (!names[now]) suggestQueryName(now).then((name) => name && setSuggested(name));
-            }} className="inline-flex w-fit items-center gap-1 rounded-full border border-dashed border-line px-3 py-1 text-sm text-muted transition-colors hover:border-amber-500 hover:text-ink">
-            <Icon name="thumbtack" className="size-3.5" />
-            {t('tagCloud.nameQuery')}
-          </button>
-        )
+        ) : null
       ) : null}
       {drag &&
         createPortal(

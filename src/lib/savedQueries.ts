@@ -178,9 +178,9 @@ export function useQueryNames(): Record<string, string> {
 // An empty name removes it (and a pin list drops out of the row again).
 export function saveQueryName(q: string, name: string, by: string | null) {
   const clean = name.trim().replace(/\s+/g, ' ').slice(0, 60);
-  const next = { ...remote };
-  if (clean) next[q] = { name: clean, by: remote[q]?.by ?? by };
-  else delete next[q];
+  const { [q]: old, ...rest } = remote;
+  // The newest name leads (as the server lists them), so the cloud shows it at once.
+  const next = clean ? { [q]: { name: clean, by: old?.by ?? by }, ...rest } : rest;
   setRemote(next);
   api.put('/api/saved-searches', { q, name: clean }).catch(() => syncQueryNames());
 }
