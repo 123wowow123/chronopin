@@ -4,6 +4,8 @@ import { useMemo, useRef, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { Icon } from '@/components/ui/Icon';
 import { useMusicPlayer } from './MusicPlayerContext';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 import { pinPath } from '@/lib/seo';
 
 function formatTime(seconds: number): string {
@@ -14,6 +16,8 @@ function formatTime(seconds: number): string {
 }
 
 export function GlobalMusicPlayerBar() {
+  const t = useT();
+  const gm = (key: string, values?: Record<string, string | number>) => t(`guides.music.${key}` as MessageKey, values);
   const {
     currentTrack,
     isPlaying,
@@ -66,8 +70,8 @@ export function GlobalMusicPlayerBar() {
     <Link
       href={`/music${locateHash}`}
       className={locateClass}
-      title="Show this song in the music rankings"
-      aria-label="Show in rankings"
+      title={gm('showInRankings')}
+      aria-label={gm('showInRankingsAria')}
       onClick={(e) => {
         if (!/\/music\/?$/.test(window.location.pathname)) return;
         e.preventDefault();
@@ -101,7 +105,7 @@ export function GlobalMusicPlayerBar() {
       {/* Main Bottom Dock */}
       <aside
         role="region"
-        aria-label="Audio player dock"
+        aria-label={gm('audioDock')}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -125,7 +129,7 @@ export function GlobalMusicPlayerBar() {
                 <Link
                   href={pinHref}
                   className="group relative size-12 shrink-0 max-sm:row-span-2 max-sm:self-center overflow-hidden rounded-lg border border-line bg-raised shadow-xs block hover:opacity-95 transition-opacity"
-                  title={`View pin detail for ${currentTrack.title}`}
+                  title={gm('viewPin', { title: currentTrack.title })}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- external audio artwork */}
                   <img
@@ -170,7 +174,7 @@ export function GlobalMusicPlayerBar() {
                     <Link
                       href={pinHref}
                       className="min-w-0 truncate text-sm font-semibold text-ink hover:text-accent hover:underline"
-                      title={`View pin detail for ${currentTrack.title}`}
+                      title={gm('viewPin', { title: currentTrack.title })}
                     >
                       {currentTrack.title}
                     </Link>
@@ -183,7 +187,7 @@ export function GlobalMusicPlayerBar() {
                   <Link
                     href={`/search?q=${encodeURIComponent(currentTrack.artist)}`}
                     className="min-w-0 shrink truncate text-xs font-medium text-muted hover:text-ink hover:underline cursor-pointer"
-                    title={`Search for pins by ${currentTrack.artist}`}
+                    title={gm('searchPins', { artist: currentTrack.artist })}
                   >
                     {currentTrack.artist}
                   </Link>
@@ -201,13 +205,13 @@ export function GlobalMusicPlayerBar() {
                     closePlayer();
                   }}
                   className="flex items-center gap-1 rounded-full bg-red-600 hover:bg-red-500 px-2.5 py-1 text-[11px] font-semibold text-white shadow-xs cursor-pointer hover:no-underline transition-colors shrink-0"
-                  title="Open pin detail and play full song"
+                  title={gm('openPinFull')}
                 >
                   <svg className="size-3 fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
-                  <span className="hidden min-[520px]:inline">Full Song on Pin</span>
-                  <span className="min-[520px]:hidden">Full Song</span>
+                  <span className="hidden min-[520px]:inline">{gm('fullSongOnPin')}</span>
+                  <span className="min-[520px]:hidden">{gm('fullSong')}</span>
                   <span aria-hidden="true" className="text-[10px]">↗</span>
                 </Link>
               ) : null}
@@ -216,8 +220,8 @@ export function GlobalMusicPlayerBar() {
                 type="button"
                 onClick={prevTrack}
                 className="ms-auto flex size-8 items-center justify-center rounded-full bg-raised hover:bg-raised-2 text-ink active:scale-95 transition-all cursor-pointer ring-1 ring-line/50"
-                aria-label="Previous pin music"
-                title="Previous track"
+                aria-label={gm('prevTrackPin')}
+                title={gm('prevTrack')}
               >
                 <svg className="size-4 fill-current" viewBox="0 0 24 24">
                   <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
@@ -227,7 +231,7 @@ export function GlobalMusicPlayerBar() {
                 type="button"
                 onClick={() => togglePlay()}
                 className="flex size-9 items-center justify-center rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-md active:scale-95 transition-all cursor-pointer ring-1 ring-emerald-500/30"
-                aria-label={isPlaying ? 'Pause' : 'Play'}
+                aria-label={isPlaying ? gm('pauseLabel') : gm('play')}
               >
                 {isPlaying ? (
                   <svg className="size-4.5 fill-current" viewBox="0 0 24 24">
@@ -243,8 +247,8 @@ export function GlobalMusicPlayerBar() {
                 type="button"
                 onClick={nextTrack}
                 className="flex size-8 items-center justify-center rounded-full bg-raised hover:bg-raised-2 text-ink active:scale-95 transition-all cursor-pointer ring-1 ring-line/50"
-                aria-label="Next pin music"
-                title="Next track"
+                aria-label={gm('nextTrackPin')}
+                title={gm('nextTrack')}
               >
                 <svg className="size-4 fill-current" viewBox="0 0 24 24">
                   <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
@@ -266,12 +270,12 @@ export function GlobalMusicPlayerBar() {
                     closePlayer();
                   }}
                   className="inline-flex items-center gap-1.5 rounded-full bg-red-600 hover:bg-red-500 text-white px-3.5 py-1 text-xs font-semibold shadow-xs transition-colors hover:no-underline"
-                  title="Open pin detail and play full song"
+                  title={gm('openPinFull')}
                 >
                   <svg className="size-3.5 fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
-                  <span>Full Song on Pin</span>
+                  <span>{gm('fullSongOnPin')}</span>
                   <span aria-hidden="true" className="text-xs">↗</span>
                 </Link>
               ) : null}
@@ -293,7 +297,7 @@ export function GlobalMusicPlayerBar() {
                   aria-hidden="true"
                   className={`size-1.5 rounded-full ${continuePlaying ? 'bg-accent animate-pulse' : 'bg-muted/60'}`}
                 />
-                <span>Auto-play</span>
+                <span>{gm('autoPlay')}</span>
               </button>
 
               {/* Volume toggle & slider */}
@@ -302,7 +306,7 @@ export function GlobalMusicPlayerBar() {
                   type="button"
                   onClick={toggleMute}
                   className="p-1 text-muted hover:text-ink transition-colors cursor-pointer"
-                  aria-label={isMuted ? 'Unmute' : 'Mute'}
+                  aria-label={isMuted ? gm('unmute') : gm('mute')}
                 >
                   {isMuted || volume === 0 ? (
                     <svg className="size-4 fill-current" viewBox="0 0 24 24">
@@ -322,7 +326,7 @@ export function GlobalMusicPlayerBar() {
                   value={isMuted ? 0 : volume}
                   onChange={(e) => setVolume(parseFloat(e.target.value))}
                   className="w-16 h-1.5 accent-emerald-600 bg-line rounded-full cursor-pointer"
-                  aria-label="Volume slider"
+                  aria-label={gm('volume')}
                 />
               </div>
 
@@ -331,7 +335,7 @@ export function GlobalMusicPlayerBar() {
                 type="button"
                 onClick={closePlayer}
                 className="flex size-8 items-center justify-center rounded-full bg-raised/70 hover:bg-raised-2 text-muted hover:text-ink transition-colors cursor-pointer border border-line"
-                aria-label="Dismiss audio player"
+                aria-label={gm('dismiss')}
               >
                 <svg className="size-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} fill="none">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -347,8 +351,8 @@ export function GlobalMusicPlayerBar() {
               type="button"
               onClick={prevTrack}
               className="hidden sm:flex size-8 items-center justify-center rounded-full bg-raised hover:bg-raised-2 text-ink active:scale-95 transition-all cursor-pointer shrink-0 border border-line"
-              aria-label="Previous pin music"
-              title="Previous music track"
+              aria-label={gm('prevTrackPin')}
+              title={gm('prevMusicTrack')}
             >
               <svg className="size-4 fill-current" viewBox="0 0 24 24">
                 <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
@@ -360,7 +364,7 @@ export function GlobalMusicPlayerBar() {
               type="button"
               onClick={() => togglePlay()}
               className="hidden sm:flex size-9 items-center justify-center rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-md active:scale-95 transition-all cursor-pointer shrink-0 ring-1 ring-emerald-500/30"
-              aria-label={isPlaying ? 'Pause' : 'Play'}
+              aria-label={isPlaying ? gm('pauseLabel') : gm('play')}
             >
               {isPlaying ? (
                 <svg className="size-4.5 fill-current" viewBox="0 0 24 24">
@@ -378,8 +382,8 @@ export function GlobalMusicPlayerBar() {
               type="button"
               onClick={nextTrack}
               className="hidden sm:flex size-8 items-center justify-center rounded-full bg-raised hover:bg-raised-2 text-ink active:scale-95 transition-all cursor-pointer shrink-0 border border-line"
-              aria-label="Next pin music"
-              title="Next music track"
+              aria-label={gm('nextTrackPin')}
+              title={gm('nextMusicTrack')}
             >
               <svg className="size-4 fill-current" viewBox="0 0 24 24">
                 <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
@@ -418,7 +422,7 @@ export function GlobalMusicPlayerBar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 leading-none rounded-full border border-line bg-raised px-2 py-1 font-sans text-[11px] font-semibold text-ink transition-colors hover:bg-raised-2 hover:no-underline"
-                  title="Open the source of this 30-second clip"
+                  title={gm('openSource')}
                 >
                   <svg className="size-3 text-[#fa243c]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M9 18V5l12-2v13a3 3 0 1 1-2-2.82V7.3L11 8.6V18a3 3 0 1 1-2-2.82z" />

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 import type { ResortActivity } from '@/lib/travel';
 
 export function TopActivitiesPane({
@@ -11,6 +13,8 @@ export function TopActivitiesPane({
   activities?: ResortActivity[];
   className?: string;
 }) {
+  const t = useT();
+  const gt = (key: string, values?: Record<string, string | number>) => t(`guides.travel.${key}` as MessageKey, values);
   const [activeIdx, setActiveIdx] = useState(0);
   const [expandedAll, setExpandedAll] = useState(false);
 
@@ -24,13 +28,13 @@ export function TopActivitiesPane({
       <div className="flex flex-wrap items-center justify-between gap-1.5 border-b border-[var(--rule)] pb-2 text-[10px]">
         <div className="flex items-center gap-1.5 font-semibold uppercase tracking-wider text-[var(--soft)]">
           <Icon name="compass" className="size-3.5 text-[var(--green)]" />
-          <span>Top activities</span>
+          <span>{gt('topActivities')}</span>
           <span className="font-normal text-[var(--soft)]">({activities.length})</span>
         </div>
 
         {/* Category Pill Switcher */}
         {!expandedAll && activities.length > 1 && (
-          <div className="flex flex-wrap gap-1" role="tablist" aria-label="Signature activity categories">
+          <div className="flex flex-wrap gap-1" role="tablist" aria-label={gt('signatureCategories')}>
             {activities.map((act, idx) => {
               const isSelected = idx === activeIdx;
               return (
@@ -46,7 +50,7 @@ export function TopActivitiesPane({
                       : 'bg-[var(--paper-raised)] text-[var(--text)] border border-[var(--rule)] hover:bg-[var(--rule)]'
                   }`}
                 >
-                  {act.category === 'Kids' ? '🧒 Kids' : act.category}
+                  {act.category === 'Kids' ? `🧒 ${gt('cat.Kids')}` : t.has(`guides.travel.cat.${act.category}`) ? gt(`cat.${act.category}`) : act.category}
                 </button>
               );
             })}
@@ -68,7 +72,7 @@ export function TopActivitiesPane({
                   {(act.kidsFriendly || act.category === 'Kids') && (
                     <span className="inline-flex items-center gap-1 rounded bg-[#e8f5e9] px-1.5 py-0.5 text-[9px] font-semibold text-[#1b5e20] ring-1 ring-[#c8e6c9]">
                       <Icon name="smile" className="size-2.5 text-[#2e7d32]" />
-                      <span>Kids friendly</span>
+                      <span>{gt('kidsFriendly')}</span>
                     </span>
                   )}
                   {act.season && (
@@ -94,7 +98,7 @@ export function TopActivitiesPane({
               {(current.kidsFriendly || current.category === 'Kids') && (
                 <span className="inline-flex items-center gap-1 rounded bg-[#e8f5e9] px-1.5 py-0.5 text-[9px] font-semibold text-[#1b5e20] ring-1 ring-[#c8e6c9]">
                   <Icon name="smile" className="size-2.5 text-[#2e7d32]" />
-                  <span>Kids friendly</span>
+                  <span>{gt('kidsFriendly')}</span>
                 </span>
               )}
               {current.season && (
@@ -115,8 +119,8 @@ export function TopActivitiesPane({
         <div className="mt-2 flex items-center justify-between border-t border-[var(--rule)] pt-1.5 text-[10px]">
           <span className="text-[10px] text-[var(--soft)]">
             {expandedAll
-              ? `Showing all ${activities.length} curated signature experiences`
-              : `${current.category} experience`}
+              ? gt('showingAll', { count: activities.length })
+              : gt('experienceOf', { category: t.has(`guides.travel.cat.${current.category}`) ? gt(`cat.${current.category}`) : current.category })}
           </span>
           <button
             type="button"
@@ -124,7 +128,7 @@ export function TopActivitiesPane({
             className="inline-flex items-center gap-1 font-semibold text-[var(--green)] hover:underline cursor-pointer"
             aria-expanded={expandedAll}
           >
-            <span>{expandedAll ? 'Show less' : `View all (${activities.length})`}</span>
+            <span>{expandedAll ? gt('showLess') : gt('viewAll', { count: activities.length })}</span>
             <Icon name="chevron" className={`size-2.5 transition-transform ${expandedAll ? 'rotate-180' : ''}`} />
           </button>
         </div>

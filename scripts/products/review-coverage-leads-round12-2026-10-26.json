@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "status": "resolved",
+      "reason": "Verified exact current Haeundae location using saved Pin address, official operator About page, 2025 municipal guide and Jenny Na’s September 30, 2026 original site-visit/profile. Late-November-2024 move from Yongho-dong is explicit in the latter; no precise day invented. Native guide/profile sources now replace old-location award news and unverified listing; atmosphere observation is not a scored meal verdict.",
+      "sourcesChecked": [
+        "https://www.palatebusan.com/about-1",
+        "https://www.mingchu.io/people/article-korean/1932",
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "status": "resolved",
+      "reason": "Added exact Hwamyeong municipal guide entry and original named Diningcode member evaluation, alongside existing MICHELIN description. Three independent platforms, with visitor authorship explicitly distinguished from a professional critic meal. Municipal newspaper shares city publisher and was not counted as another independent platform. Changwon branch, anonymous syndicated blog summaries and sponsored Superchart candidates excluded.",
+      "sourcesChecked": [
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+        "https://shunsaikubo.com/",
+        "https://www.busan.go.kr/bige/daily-busan/view?bbsNo=10&curPage=1&dataNo=71501"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "status": "resolved",
+      "reason": "Third independent guide source added from original 2024 municipal volume on an HTTPS education-site mirror. Exact Sinpyeong main branch verified at 6 Bibong-ro, not Busan Station franchise or neighboring Yeongjin entry. Compilation cutoff is not publication; native date null.",
+      "sourcesChecked": [
+        "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf"
+      ]
+    }
+  ]
+}

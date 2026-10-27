@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "url": "https://www.enprimeurclub.com/restaurants/palate",
+      "status": "resolved",
+      "reason": "Replaced unverified directory extract with opened exact-current-location independent municipal guide and Jenny Na’s dated MINGCHU site-visit/profile. Operator and saved Pin address match Haeundae. Former Nam-gu award-news extract removed from native reviews but retained in references as history. Unverified directory-only award claims removed from basis; all scores unchanged."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide PDF page 131 / printed page 260, full spread visually inspected. Exact current 3F 154 Dalmaji-gil 65beon-gil location matches Pin address and opened operator About page. Dehyphenated line-break only in sophisticated. Publisher identifies compilation cutoff December 2024 but no publication day, keep null."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide PDF page 67 / printed page 133, full spread visually inspected, exact 17 Yangdal-ro 4beon-gil Hwamyeong address. Grilled-eel description, not Changwon branch. No guide publication day stated; keep null and do not infer from edition, content cutoff or metadata."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide reproduced as a complete PDF on an education-site HTTPS mirror. Downloaded and visually inspected PDF page 81 / printed page 161, exact Sinpyeong main branch, 1F 6 Bibong-ro; adjacent Yeongjin restaurant excluded. Korean original praises customizable soup meat/temperature/spice; no borrowed neighboring English refreshing-taste claim. Publisher colophon page 145 identifies Busan Department of Health Hygiene and December 2023 compilation cutoff, not publication day; keep null. Historical menu/prices/hours not applied as current."
+    }
+  ],
+  "needsResearch": []
+}

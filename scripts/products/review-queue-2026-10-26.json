@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T04:41:29.407Z",
+  "checkedAt": "2026-10-27T04:53:57.807Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -68,16 +68,16 @@
     {
       "table": "PinDining",
       "pins": 89,
-      "reviews": 272,
+      "reviews": 275,
       "minimum": 3,
-      "belowMinimum": 8,
-      "undatedNonMichelin": 44,
+      "belowMinimum": 6,
+      "undatedNonMichelin": 46,
       "unscoredDated": 0
     },
     {
       "table": "PinCriticReview",
-      "pins": 104,
-      "reviews": 313,
+      "pins": 107,
+      "reviews": 322,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -681,24 +681,6 @@
     },
     {
       "table": "PinDining",
-      "pinId": 17268,
-      "title": "Jeongjitgan (정짓간 신평본점) — Busan restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/jeongjitgan",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Food 2.5 from 3.9 over 666 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17275,
-      "title": "Shunsai Kubo Hwamyeong (슌사이쿠보 화명) — Busan restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/shunsai-kubo",
-      "reviewCount": 1,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Food 4.5 from 4.7 over 271 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
-    },
-    {
-      "table": "PinDining",
       "pinId": 17279,
       "title": "Tokyo Babsang (동경밥상 본점) — Busan restaurant guide",
       "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/tokyo-babsang",
@@ -791,6 +773,38 @@
           "url": "https://www.aviation24.be/forums/viewtopic.php?t=18433",
           "reason": "Browser security page prevents full original quotation/aircraft verification. Search snippets insufficient; not used."
         }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "status": "resolved",
+      "reason": "Verified exact current Haeundae location using saved Pin address, official operator About page, 2025 municipal guide and Jenny Na’s September 30, 2026 original site-visit/profile. Late-November-2024 move from Yongho-dong is explicit in the latter; no precise day invented. Native guide/profile sources now replace old-location award news and unverified listing; atmosphere observation is not a scored meal verdict.",
+      "sourcesChecked": [
+        "https://www.palatebusan.com/about-1",
+        "https://www.mingchu.io/people/article-korean/1932",
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "status": "resolved",
+      "reason": "Added exact Hwamyeong municipal guide entry and original named Diningcode member evaluation, alongside existing MICHELIN description. Three independent platforms, with visitor authorship explicitly distinguished from a professional critic meal. Municipal newspaper shares city publisher and was not counted as another independent platform. Changwon branch, anonymous syndicated blog summaries and sponsored Superchart candidates excluded.",
+      "sourcesChecked": [
+        "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+        "https://shunsaikubo.com/",
+        "https://www.busan.go.kr/bige/daily-busan/view?bbsNo=10&curPage=1&dataNo=71501"
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "status": "resolved",
+      "reason": "Third independent guide source added from original 2024 municipal volume on an HTTPS education-site mirror. Exact Sinpyeong main branch verified at 6 Bibong-ro, not Busan Station franchise or neighboring Yeongjin entry. Compilation cutoff is not publication; native date null.",
+      "sourcesChecked": [
+        "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf"
       ]
     }
   ],
@@ -1881,9 +1895,9 @@
       "table": "PinDining",
       "pinId": 17265,
       "title": "Palate (팔레트) — Busan restaurant guide",
-      "url": "https://www.enprimeurclub.com/restaurants/palate",
-      "status": "needs-research",
-      "reason": "Original directory extract remains unverified. Located independent 2023 Blue Ribbon guide at Nam-gu and 2025 municipal guide at 154 Dalmaji-gil 65beon-gil, Haeundae; apparent relocation means branch/period must be matched to pin before replacing. No cross-location dining/room attribution saved."
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide PDF page 131 / printed page 260, full spread visually inspected. Exact current 3F 154 Dalmaji-gil 65beon-gil location matches Pin address and opened operator About page. Dehyphenated line-break only in sophisticated. Publisher identifies compilation cutoff December 2024 but no publication day, keep null."
     },
     {
       "table": "PinDining",
@@ -1900,6 +1914,14 @@
       "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
       "status": "verified-undated",
       "reason": "Downloaded opened HTTPS original PDF and visually inspected full relevant pages. Official municipal selected restaurant guide, PDF page 122 / printed page 242, Le DORER #9 at 37 Marine City 3-ro, #213-214. Short exact guide verdict; page 4 explains selection and review, page 144 identifies publisher and content-as-of December 2024, not a publication date. Keep null. Historical prices/hours not applied as current offers."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "title": "Jeongjitgan (정짓간 신평본점) — Busan restaurant guide",
+      "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide reproduced as a complete PDF on an education-site HTTPS mirror. Downloaded and visually inspected PDF page 81 / printed page 161, exact Sinpyeong main branch, 1F 6 Bibong-ro; adjacent Yeongjin restaurant excluded. Korean original praises customizable soup meat/temperature/spice; no borrowed neighboring English refreshing-taste claim. Publisher colophon page 145 identifies Busan Department of Health Hygiene and December 2023 compilation cutoff, not publication day; keep null. Historical menu/prices/hours not applied as current."
     },
     {
       "table": "PinDining",
@@ -1932,6 +1954,14 @@
       "url": "https://eatbusan.com/",
       "status": "verified-undated",
       "reason": "Opened rendered source and verified exact saved extract. Editorial guide or firsthand tasting text has no original publication day; keep null and off the dated graph."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "title": "Shunsai Kubo Hwamyeong (슌사이쿠보 화명) — Busan restaurant guide",
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "verified-undated",
+      "reason": "Original municipal guide PDF page 67 / printed page 133, full spread visually inspected, exact 17 Yangdal-ro 4beon-gil Hwamyeong address. Grilled-eel description, not Changwon branch. No guide publication day stated; keep null and do not infer from edition, content cutoff or metadata."
     },
     {
       "table": "PinDining",

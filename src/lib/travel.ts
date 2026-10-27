@@ -1342,10 +1342,14 @@ export function isMonthInPrimeSeason(timing: BestTimeToGo, month: number): boole
   return timing.recommendedMonths.includes(month);
 }
 
-export function formatMonthRange(months: number[]): string {
-  if (!months.length) return 'Year-round';
+// `intl` is a BCP 47 tag for localized month names; without it the English short names.
+export function formatMonthRange(months: number[], intl?: string, yearRound = 'Year-round'): string {
+  if (!months.length) return yearRound;
+  const names: readonly string[] = intl
+    ? MONTH_NAMES.map((_, i) => new Intl.DateTimeFormat(intl, { month: 'short', timeZone: 'UTC' }).format(Date.UTC(2024, i, 1)))
+    : MONTH_NAMES;
   const sorted = [...new Set(months)].sort((a, b) => a - b);
-  if (sorted.length === 1) return MONTH_NAMES[sorted[0] - 1];
+  if (sorted.length === 1) return names[sorted[0] - 1];
 
   // Group contiguous
   const groups: number[][] = [];
@@ -1361,7 +1365,7 @@ export function formatMonthRange(months: number[]): string {
   groups.push(cur);
 
   return groups
-    .map((g) => (g.length > 1 ? `${MONTH_NAMES[g[0] - 1]} – ${MONTH_NAMES[g[g.length - 1] - 1]}` : MONTH_NAMES[g[0] - 1]))
+    .map((g) => (g.length > 1 ? `${names[g[0] - 1]} – ${names[g[g.length - 1] - 1]}` : names[g[0] - 1]))
     .join(' & ');
 }
 

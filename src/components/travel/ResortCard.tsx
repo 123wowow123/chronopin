@@ -6,6 +6,8 @@ import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { CardImage } from '@/components/pin/CardImage';
 import { pinTextDir } from '@/lib/i18n/config';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
 import type { HotelReview } from '@/lib/pinHotel';
@@ -87,6 +89,8 @@ export function ResortCard({
   viewerOrigin?: ViewerPlace;
   showDistance?: boolean;
 }) {
+  const t = useT();
+  const gt = (key: string, values?: Record<string, string | number>) => t(`guides.travel.${key}` as MessageKey, values);
   const pic = picture(resort.media);
   const name = resort.productName ?? resort.title;
   const blurb = resortBlurb(resort);
@@ -99,11 +103,11 @@ export function ResortCard({
   );
 
   const axes = [
-    { label: 'Rooms', val: hotel.rooms },
-    { label: 'Service', val: hotel.service },
-    { label: 'Location', val: hotel.location },
-    { label: 'Cleanliness', val: hotel.cleanliness },
-    { label: 'Value', val: hotel.value },
+    { label: gt('rooms'), val: hotel.rooms },
+    { label: gt('service'), val: hotel.service },
+    { label: gt('location'), val: hotel.location },
+    { label: gt('cleanliness'), val: hotel.cleanliness },
+    { label: gt('value'), val: hotel.value },
   ].filter((a) => a.val !== null);
 
   const [activeReviewIdx, setActiveReviewIdx] = useState(0);
@@ -124,7 +128,7 @@ export function ResortCard({
   return (
     <article className={styles.card} id={`resort-${resort.id}`}>
       {/* Photo & Badge */}
-      <Link href={pinPath(resort)} className={styles.photoLink} aria-label={`View ${name}`}>
+      <Link href={pinPath(resort)} className={styles.photoLink} aria-label={gt('view', { name })}>
         {pic.thumbName || pic.originalUrl ? (
           <CardImage
             thumbName={pic.thumbName}
@@ -148,12 +152,12 @@ export function ResortCard({
           <p className="text-[11px] font-semibold text-[var(--soft)]">
             <span>{resort.destination}</span>
             {distance !== undefined && (
-              <span className="ml-1.5 font-normal text-[var(--text)]" title="Approximate straight-line distance">
-                · {formatDistance(distance, usesImperial())} away
+              <span className="ml-1.5 font-normal text-[var(--text)]" title={gt('approxDistance')}>
+                {gt('away', { distance: formatDistance(distance, usesImperial()) })}
               </span>
             )}
             {showDistance && distance === undefined && (
-              <span className="ml-1.5 font-normal text-[var(--soft)]">· Distance unavailable</span>
+              <span className="ml-1.5 font-normal text-[var(--soft)]">{gt('distanceUnavailable')}</span>
             )}
           </p>
           <div className="flex items-center gap-1.5">
@@ -195,7 +199,7 @@ export function ResortCard({
           ))}
           {hotel.acclaim !== null && (
             <span className="inline-flex items-center gap-1 rounded bg-[#edf0cf] px-2 py-0.5 text-[10px] font-semibold text-[#244d39] ring-1 ring-[#c8cfb4]">
-              <span>Acclaim:</span>
+              <span>{gt('acclaim')}</span>
               <strong>{hotel.acclaim}/5</strong>
             </span>
           )}
@@ -286,19 +290,19 @@ export function ResortCard({
         <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-[var(--rule)] pt-3 text-xs">
           {price ? (
             <div className="flex items-baseline gap-1">
-              {!price.isRange && <span className="text-[10px] text-[var(--soft)] font-medium">From</span>}
+              {!price.isRange && <span className="text-[10px] text-[var(--soft)] font-medium">{gt('from')}</span>}
               <strong className="text-[13px] font-bold text-[var(--text)] tabular-nums">{price.formatted}</strong>
-              <span className="text-[10px] text-[var(--soft)]">/ night</span>
+              <span className="text-[10px] text-[var(--soft)]">{gt('perNight')}</span>
             </div>
           ) : (
-            <span className="text-[10px] text-[var(--soft)]">Rates on request</span>
+            <span className="text-[10px] text-[var(--soft)]">{gt('ratesOnRequest')}</span>
           )}
           <div className="flex items-center gap-3">
             <Link
               href={pinPath(resort)}
               className="inline-flex items-center gap-1 font-semibold text-[var(--green)] hover:underline"
             >
-              <span>See full rubric</span>
+              <span>{gt('seeRubric')}</span>
               <span aria-hidden="true">↗</span>
             </Link>
             {resort.sourceUrl && (
@@ -308,7 +312,7 @@ export function ResortCard({
                 rel="noopener nofollow"
                 className="text-[11px] text-[var(--soft)] hover:text-[var(--text)] hover:underline"
               >
-                <span>Official site</span>
+                <span>{gt('officialSite')}</span>
                 <span aria-hidden="true" className="ml-0.5">↗</span>
               </Anchor>
             )}

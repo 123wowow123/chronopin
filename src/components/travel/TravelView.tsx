@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import Link from '@/components/ui/Link';
 import { LandingMark } from '@/components/ui/LandingMark';
@@ -19,6 +19,9 @@ import {
   type TravelSort,
 } from '@/lib/travel';
 import { Icon, type IconName } from '@/components/ui/Icon';
+import { useIntlLocale, useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
+import { siteName } from '@/lib/appConfig';
 import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
 import { ResortCard } from './ResortCard';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
@@ -36,16 +39,16 @@ function picture(media: PinJson['media']) {
   };
 }
 
-export const ACTIVITY_FILTERS: { id: string; label: string; icon: IconName }[] = [
-  { id: 'all', label: 'All activities', icon: 'compass' },
-  { id: 'Kids', label: 'Kids & Family', icon: 'smile' },
-  { id: 'Culture', label: 'Culture & Heritage', icon: 'building' },
-  { id: 'Wellness', label: 'Thermal & Wellness', icon: 'sparkle' },
-  { id: 'Water', label: 'Coral & Ocean', icon: 'globe' },
-  { id: 'Snow', label: 'Arctic & Snow', icon: 'snow' },
-  { id: 'Adventure', label: 'Expeditions', icon: 'map' },
-  { id: 'Dining', label: 'Gastronomy', icon: 'coffee' },
-  { id: 'Nature', label: 'Wildlife & Nature', icon: 'sun' },
+export const ACTIVITY_FILTERS: { id: string; icon: IconName }[] = [
+  { id: 'all', icon: 'compass' },
+  { id: 'Kids', icon: 'smile' },
+  { id: 'Culture', icon: 'building' },
+  { id: 'Wellness', icon: 'sparkle' },
+  { id: 'Water', icon: 'globe' },
+  { id: 'Snow', icon: 'snow' },
+  { id: 'Adventure', icon: 'map' },
+  { id: 'Dining', icon: 'coffee' },
+  { id: 'Nature', icon: 'sun' },
 ];
 
 export type { TravelSort };
@@ -63,6 +66,16 @@ export function TravelView({
   path?: string;
   adPlacementsMap?: Record<string, boolean>;
 }) {
+  const t = useT();
+  const intl = useIntlLocale();
+  const gt = (key: string, values?: Record<string, string | number>) => t(`guides.travel.${key}` as MessageKey, values);
+  const em = { em: (c: ReactNode) => <em>{c}</em>, strong: (c: ReactNode) => <strong>{c}</strong> };
+  const seasonName = (id: string) => gt(`season.${id}`);
+  const seasonLabel = (season: { id: string; months: readonly number[] }) => {
+    if (season.id === 'all') return seasonName('all');
+    const month = (m: number) => new Intl.DateTimeFormat(intl, { month: 'short', timeZone: 'UTC' }).format(Date.UTC(2024, m - 1, 1));
+    return `${seasonName(season.id)} (${month(season.months[0])} – ${month(season.months[season.months.length - 1])})`;
+  };
   const [activeShelfId, setActiveShelfId] = useState<string>('all');
   const [selectedSeason, setSelectedSeason] = useState<string>('all');
   const [selectedActivity, setSelectedActivity] = useState<string>('all');
@@ -278,25 +291,25 @@ export function TravelView({
           {/* Top Wordmark Navigation */}
           <div className={styles.guideNav}>
             <Link href={path} className={styles.wordmark}>
-              <span aria-hidden="true">✳</span> The travel guide
+              <span aria-hidden="true">✳</span> {gt('wordmark')}
             </Link>
             <div className="flex items-center gap-3 text-xs text-[var(--soft,#627069)]">
-              <span>Curated Resorts & Best Time to Go</span>
+              <span>{gt('curatedNote')}</span>
             </div>
           </div>
 
           {/* Hero Section */}
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
-              <p className={styles.eyebrow}>WHERE TO STAY. WHEN TO GO.</p>
+              <p className={styles.eyebrow}>{gt('eyebrow')}</p>
               <h1>
-                The resorts worth <em>the journey.</em> And when to go.
+                {t.rich('guides.travel.heading', em)}
               </h1>
               <p className={styles.lead}>{description}</p>
             </div>
 
             {featured && (featuredPic?.thumbName || featuredPic?.originalUrl) ? (
-              <Link href={pinPath(featured)} className={styles.featured} aria-label={`Explore ${featured.productName ?? featured.title}`}>
+              <Link href={pinPath(featured)} className={styles.featured} aria-label={gt('explore', { name: featured.productName ?? featured.title })}>
                 <CardImage
                   thumbName={featuredPic?.thumbName}
                   originalUrl={featuredPic?.originalUrl}
@@ -305,10 +318,10 @@ export function TravelView({
                   className={styles.featuredImage}
                 />
                 <div className={styles.featuredShade} />
-                <span className={styles.featuredBadge}>CHRONOPIN SELECTION</span>
+                <span className={styles.featuredBadge}>{t('guides.products.selection', { site: siteName.toUpperCase() })}</span>
                 <div className={styles.featuredCopy}>
                   <p>
-                    {featured.destination}{featuredPrice ? ` · ${featuredPrice.isRange ? '' : 'From '}${featuredPrice.formatted} / night` : ''} · Score: {featured.rubricScore.toFixed(1)}/5
+                    {featured.destination}{featuredPrice ? ` · ${featuredPrice.isRange ? '' : `${gt('from')} `}${featuredPrice.formatted} ${gt('perNight')}` : ''} · {gt('score', { score: featured.rubricScore.toFixed(1) })}
                   </p>
                   <h2>{featured.productName ?? featured.title}</h2>
                   {featured.hotel.reviews?.[0]?.quote && (
@@ -318,7 +331,7 @@ export function TravelView({
                   )}
                   <span className="flex items-center justify-between">
                     <span>
-                      Best time: {formatMonthRange(featured.bestTimeToGo.recommendedMonths)}
+                      {gt('bestTime', { range: formatMonthRange(featured.bestTimeToGo.recommendedMonths, intl, gt('yearRound')) })}
                     </span>
                     <span aria-hidden="true">↗</span>
                   </span>
@@ -328,7 +341,7 @@ export function TravelView({
               <div className={styles.noFeature}>
                 <span aria-hidden="true">✳</span>
                 <p>
-                  The world&apos;s finest escapes.<br />Timed to perfection.
+                  {gt('noFeature')}
                 </p>
               </div>
             )}
@@ -338,14 +351,14 @@ export function TravelView({
           <section className="my-8 rounded-xl border border-[var(--rule,#d8dcd0)] bg-[var(--paper-raised,#fffdf7)] p-6 shadow-sm">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <p className={styles.eyebrow}>WHEN ARE YOU TRAVELLING?</p>
+                <p className={styles.eyebrow}>{gt('whenEyebrow')}</p>
                 <h2 className="text-xl font-normal text-[var(--text,#263c32)] font-serif">
-                  Match resorts to their optimal climate and season
+                  {gt('whenHeading')}
                 </h2>
               </div>
               {selectedSeason !== 'all' && primeCount !== null && (
                 <div className="rounded-full bg-[#edf0cf] px-3 py-1 text-xs font-bold text-[#244d39] ring-1 ring-[#c8cfb4]">
-                  ✨ {primeCount} {primeCount === 1 ? 'resort' : 'resorts'} in prime season in {activeSeason.label.split(' (')[0]}
+                  ✨ {gt('primeCount', { count: primeCount, season: seasonName(activeSeason.id) })}
                 </div>
               )}
             </div>
@@ -364,7 +377,7 @@ export function TravelView({
                       : 'border border-[var(--rule,#d8dcd0)] bg-[var(--paper,#f6f3eb)] text-[var(--text,#263c32)] hover:border-[var(--green,#244d39)]'
                   }`}
                 >
-                  {season.label}
+                  {seasonLabel(season)}
                 </button>
               ))}
             </div>
@@ -372,31 +385,31 @@ export function TravelView({
             {selectedSeason !== 'all' && (
               <div className="mt-3 flex items-center justify-between text-xs text-[var(--soft,#627069)]">
                 <span>
-                  Showing all properties, sorted with <strong>{activeSeason.label.split(' (')[0]} prime destinations</strong> first.
+                  {t.rich('guides.travel.sortedSeason', { ...em, season: seasonName(activeSeason.id) })}
                 </span>
                 <button
                   type="button"
                   onClick={() => setSelectedSeason('all')}
                   className="font-semibold text-[var(--green,#244d39)] hover:underline"
                 >
-                  Reset season filter
+                  {gt('resetSeason')}
                 </button>
               </div>
             )}
           </section>
 
           {/* Top Activities Discovery Pane */}
-          <section className="my-8 rounded-xl border border-[var(--rule,#d8dcd0)] bg-[var(--paper-raised,#fffdf7)] p-6 shadow-sm" aria-label="Top activities">
+          <section className="my-8 rounded-xl border border-[var(--rule,#d8dcd0)] bg-[var(--paper-raised,#fffdf7)] p-6 shadow-sm" aria-label={gt('topActivities')}>
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <p className={styles.eyebrow}>SIGNATURE EXPERIENCES & TOP ACTIVITIES</p>
+                <p className={styles.eyebrow}>{gt('activitiesEyebrow')}</p>
                 <h2 className="text-xl font-normal text-[var(--text,#263c32)] font-serif">
-                  Explore retreats by their standout activities
+                  {gt('activitiesHeading')}
                 </h2>
               </div>
               {selectedActivity !== 'all' && (
                 <div className="rounded-full bg-[#edf0cf] px-3 py-1 text-xs font-bold text-[#244d39] ring-1 ring-[#c8cfb4]">
-                  ✨ {displayedResorts.length} {displayedResorts.length === 1 ? 'retreat' : 'retreats'} featuring {selectedActivity} experiences
+                  ✨ {gt('retreatCount', { count: displayedResorts.length, activity: gt(`cat.${selectedActivity}`) })}
                 </div>
               )}
             </div>
@@ -416,7 +429,7 @@ export function TravelView({
                   }`}
                 >
                   <Icon name={act.icon} className="size-3.5" />
-                  <span>{act.label}</span>
+                  <span>{gt(`cat.${act.id}`)}</span>
                 </button>
               ))}
             </div>
@@ -424,25 +437,25 @@ export function TravelView({
             {selectedActivity !== 'all' && (
               <div className="mt-3 flex items-center justify-between text-xs text-[var(--soft,#627069)]">
                 <span>
-                  Filtering properties curated with signature <strong>{selectedActivity}</strong> experiences.
+                  {t.rich('guides.travel.filteringActivity', { ...em, activity: gt(`cat.${selectedActivity}`) })}
                 </span>
                 <button
                   type="button"
                   onClick={() => setSelectedActivity('all')}
                   className="font-semibold text-[var(--green,#244d39)] hover:underline"
                 >
-                  Reset activity filter
+                  {gt('resetActivity')}
                 </button>
               </div>
             )}
           </section>
 
           {/* Curated Shelves Navigation */}
-          <section id="resorts" className={styles.openings} aria-label="Browse resorts">
+          <section id="resorts" className={styles.openings} aria-label={gt('browseResorts')}>
             <div className={styles.browseHeading}>
               <div>
-                <p className={styles.eyebrow}>CURATED COLLECTIONS</p>
-                <h2>Something extraordinary for every journey.</h2>
+                <p className={styles.eyebrow}>{gt('collectionsEyebrow')}</p>
+                <h2>{gt('collectionsHeading')}</h2>
               </div>
             </div>
 
@@ -450,7 +463,7 @@ export function TravelView({
               <nav
                 ref={shelfNavRef}
                 className={`${styles.statusFilters} flex min-w-0 max-w-full flex-nowrap items-center gap-1.5 overflow-x-auto py-1 border-b-0 [overscroll-behavior-x:contain] [scrollbar-width:thin]`}
-                aria-label="Resort collections"
+                aria-label={gt('collectionsAria')}
               >
                 <button
                   type="button"
@@ -462,7 +475,7 @@ export function TravelView({
                       : 'text-[var(--soft,#627069)] hover:bg-[var(--rule,#d8dcd0)]'
                   }`}
                 >
-                  All Curated Resorts <span>· {allResorts.length.toString().padStart(2, '0')}</span>
+                  {gt('allCurated')} <span>· {allResorts.length.toString().padStart(2, '0')}</span>
                 </button>
                 {shelves.map((shelf) => (
                   <button
@@ -486,34 +499,34 @@ export function TravelView({
             <div className={`${styles.sectionHeading} ${styles.sortedSectionHeading} mt-8 mb-6`}>
               <div>
                 <h2 className="text-2xl font-serif font-normal text-[var(--text,#263c32)]">
-                  {activeShelfId === 'all' ? 'All Curated Resorts & Retreats' : currentShelf?.label}
+                  {activeShelfId === 'all' ? gt('allCuratedHeading') : currentShelf?.label}
                 </h2>
                 <p className="mt-1 text-sm text-[var(--soft,#627069)]">
                   {sortOrder === 'price-asc'
-                    ? 'Sorted by nightly rate from lowest to highest, paired with verified climate timing.'
+                    ? gt('sortPriceAsc')
                     : sortOrder === 'price-desc'
-                    ? 'Sorted by nightly rate from highest sanctuary tier, paired with verified climate timing.'
+                    ? gt('sortPriceDesc')
                     : sortOrder === 'rating-asc'
-                    ? 'Sorted by guest and critic rubric rating from lowest to highest, paired with verified climate timing.'
+                    ? gt('sortRatingAsc')
                     : sortOrder === 'distance-asc'
-                    ? 'Sorted by approximate distance from your location (nearest first), paired with verified climate timing.'
+                    ? gt('sortDistanceAsc')
                     : sortOrder === 'distance-desc'
-                    ? 'Sorted by approximate distance from your location (farthest first), paired with verified climate timing.'
+                    ? gt('sortDistanceDesc')
                     : sortOrder === 'rating-desc' && activeShelfId !== 'all'
-                    ? `Ranked by guest and critic rating within ${currentShelf?.label ?? 'collection'}, paired with verified climate timing.`
-                    : 'Ranked by overall rubric score and critic acclaim, each with published facts and climate guide.'}
+                    ? gt('sortRatingShelf', { shelf: currentShelf?.label ?? gt('collection') })
+                    : gt('sortDefault')}
                 </p>
                 {(locating || locationError) && (
                   <p className="mt-2 text-xs text-[var(--soft,#627069)]" role="status">
-                    {locating ? 'Finding your location…' : locationError}
+                    {locating ? gt('locating') : locationError}
                   </p>
                 )}
               </div>
 
               {/* Sort controls */}
               <div className={styles.offerSort}>
-                <div role="group" aria-label="Sort resorts">
-                  <span>Sort</span>
+                <div role="group" aria-label={gt('sortGroup')}>
+                  <span>{gt('sort')}</span>
                   <button
                     type="button"
                     aria-pressed={isRating}
@@ -521,12 +534,12 @@ export function TravelView({
                     title={
                       isRating
                         ? sortOrder === 'rating-asc'
-                          ? 'Rating: Lowest first (click to inverse)'
-                          : 'Rating: Highest first (click to inverse)'
-                        : 'Sort by rating'
+                          ? gt('ratingLowFirst')
+                          : gt('ratingHighFirst')
+                        : gt('sortByRating')
                     }
                   >
-                    Rating{isRating ? (sortOrder === 'rating-asc' ? ' ↑' : ' ↓') : ''}
+                    {gt('rating')}{isRating ? (sortOrder === 'rating-asc' ? ' ↑' : ' ↓') : ''}
                   </button>
                   <button
                     type="button"
@@ -535,12 +548,12 @@ export function TravelView({
                     title={
                       isPrice
                         ? sortOrder === 'price-desc'
-                          ? 'Price: Highest first (click to inverse)'
-                          : 'Price: Lowest first (click to inverse)'
-                        : 'Sort by price'
+                          ? gt('priceHighFirst')
+                          : gt('priceLowFirst')
+                        : gt('sortByPrice')
                     }
                   >
-                    Price{isPrice ? (sortOrder === 'price-desc' ? ' ↓' : ' ↑') : ''}
+                    {gt('price')}{isPrice ? (sortOrder === 'price-desc' ? ' ↓' : ' ↑') : ''}
                   </button>
                   <button
                     type="button"
@@ -550,16 +563,16 @@ export function TravelView({
                     title={
                       isDistance
                         ? sortOrder === 'distance-desc'
-                          ? 'Distance: Farthest first (click to inverse)'
-                          : 'Distance: Nearest first (click to inverse)'
-                        : 'Sort by distance'
+                          ? gt('distanceFarFirst')
+                          : gt('distanceNearFirst')
+                        : gt('sortByDistance')
                     }
                   >
-                    {locating ? 'Finding location…' : `Distance${isDistance ? (sortOrder === 'distance-desc' ? ' ↓' : ' ↑') : ''}`}
+                    {locating ? gt('findingLocation') : `${gt('distance')}${isDistance ? (sortOrder === 'distance-desc' ? ' ↓' : ' ↑') : ''}`}
                   </button>
                 </div>
                 <Link href="/map" className={styles.offerMapButton} prefetch={false}>
-                  <Icon name="map" />Map
+                  <Icon name="map" />{gt('map')}
                 </Link>
               </div>
             </div>
@@ -571,10 +584,10 @@ export function TravelView({
                   key={resort.id}
                   resort={resort}
                   shelfLabel={
-                    shelves.find((s) => s.pins.some((p) => p.id === resort.id))?.label ?? 'LUXURY RETREAT'
+                    shelves.find((s) => s.pins.some((p) => p.id === resort.id))?.label ?? gt('luxuryRetreat')
                   }
                   activeSeasonMonths={selectedSeason !== 'all' ? activeSeason.months : null}
-                  activeSeasonLabel={selectedSeason !== 'all' ? activeSeason.label.split(' (')[0] : undefined}
+                  activeSeasonLabel={selectedSeason !== 'all' ? seasonName(activeSeason.id) : undefined}
                   viewerOrigin={viewerOrigin}
                   showDistance={sortOrder.startsWith('distance')}
                 />
@@ -586,14 +599,9 @@ export function TravelView({
           <div className={styles.editorialNote}>
             <span aria-hidden="true">✳</span>
             <div>
-              <h2>About the Chronopin Hotel & Travel Rubric</h2>
+              <h2>{gt('aboutTitle', { site: siteName })}</h2>
               <p className="text-xs leading-relaxed text-[var(--soft,#627069)]">
-                Every property on Chronopin is scored on an objective six-axis rubric: Rooms, Service, Location, Cleanliness,
-                Value, and Critic Acclaim (each 0 to 5 in half steps). The first five are derived from verified published guest
-                sub-scores (halved from 10-point scales across Booking.com, Google, and Tripadvisor). Critic Acclaim is drawn from
-                independent guide selections, including the MICHELIN Guide Keys, Forbes Travel Guide Star Awards, AAA Diamonds,
-                and Relais &amp; Châteaux. Timing insights are based on multi-year Open-Meteo historical climate averages, local
-                seasonal festivals, trade wind cycles, and crowd dynamics.
+                {gt('aboutBody', { site: siteName })}
               </p>
             </div>
           </div>

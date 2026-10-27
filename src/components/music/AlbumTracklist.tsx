@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import type { MusicRankingEntry } from '@/lib/music';
 import { useMusicPlayer } from './MusicPlayerContext';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 
 // Plays an album track as a regular queue entry so the global player bar, next/previous and
 // the 30s progress all work unchanged. The `~t<n>` suffix is stripped for "locate on page".
@@ -35,11 +37,13 @@ export function AlbumTracklist({
 }) {
   const album = song.album;
   const [open, setOpen] = useState(initiallyOpen);
+  const t = useT();
+  const gm = (key: string, values?: Record<string, string | number>) => t(`guides.music.${key}` as MessageKey, values);
   const { currentTrack, isPlaying, togglePlay } = useMusicPlayer();
   if (!album) return null;
 
   const queue = album.tracks.map((t) => albumTrackEntry(song, t.n)!).filter(Boolean);
-  const kind = album.kind === 'album' ? 'Album' : album.kind === 'ep' ? 'EP' : 'Single';
+  const kind = album.kind === 'album' ? gm('kindAlbum') : album.kind === 'ep' ? gm('kindEp') : gm('kindSingle');
 
   return (
     <div className={`${scroll ? 'mb-2 border-[var(--rule)]/60 bg-[var(--paper)]/80' : 'border-line bg-raised/40'} rounded-lg border text-xs`}>
@@ -54,7 +58,7 @@ export function AlbumTracklist({
           <span className="font-semibold text-[var(--text)]">{album.title}</span>
         </span>
         <span className="shrink-0 text-[10px] text-[var(--soft)]">
-          {album.tracks.length} track{album.tracks.length === 1 ? '' : 's'} · 30s {open ? '▴' : '▾'}
+          {gm('tracks', { count: album.tracks.length })} {open ? '▴' : '▾'}
         </span>
       </button>
       {open ? (
@@ -68,7 +72,7 @@ export function AlbumTracklist({
                 <button
                   type="button"
                   onClick={() => togglePlay(entry, queue)}
-                  aria-label={`${playing ? 'Pause' : 'Play'} 30 second preview of ${t.title}`}
+                  aria-label={gm(playing ? 'pausePreviewAria' : 'playPreviewAria', { title: t.title })}
                   className="flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-full border border-[var(--green,#1f7a4d)]/40 text-[var(--green,#1f7a4d)] transition-colors hover:bg-[var(--green,#1f7a4d)]/10"
                 >
                   <svg className="size-3 fill-current" viewBox="0 0 24 24">

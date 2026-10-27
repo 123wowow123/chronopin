@@ -9,12 +9,11 @@ import { travelShelves } from '@/server/services/travel';
 import { siteCardImages } from '@/server/services/shareCard';
 import { adPlacements } from '@/server/services/pages';
 
-const TITLE = 'The best resorts & travel guide';
-const DESCRIPTION = `The best luxury resorts and destinations on ${siteName}, ranked on the published hotel rubric of rooms, service, location, cleanliness, value and critic acclaim, with the optimal season and weather behind every journey.`;
-
 export async function generateMetadata(): Promise<Metadata> {
   await connection();
   const t = await getT();
+  const TITLE = t('guides.travel.title');
+  const DESCRIPTION = t('guides.travel.description', { site: siteName });
   const shelves = await travelShelves(t.locale);
   const images = await siteCardImages();
   const links = await alternates('/travel');
@@ -40,6 +39,8 @@ export default function TravelPage() {
 async function Travel() {
   await connection();
   const t = await getT();
+  const TITLE = t('guides.travel.title');
+  const DESCRIPTION = t('guides.travel.description', { site: siteName });
   const [shelves, placements] = await Promise.all([travelShelves(t.locale), adPlacements()]);
   return (
     <TravelView

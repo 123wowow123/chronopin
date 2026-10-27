@@ -7,12 +7,11 @@ import { alternates, getT } from '@/lib/i18n/server';
 import { musicRankings } from '@/server/services/music';
 import { siteCardImages } from '@/server/services/shareCard';
 
-const TITLE = 'Top music rankings per year';
-const DESCRIPTION = `Top music rankings per year on ${siteName}, grouped by continent and country across official national music charts including Billboard, Oricon, Circle Chart, and the Official Charts UK, each backed by a native timeline pin.`;
-
 export async function generateMetadata(): Promise<Metadata> {
   await connection();
   const t = await getT();
+  const TITLE = t('guides.music.title');
+  const DESCRIPTION = t('guides.music.description', { site: siteName });
   const rankings = await musicRankings(t.locale);
   const images = await siteCardImages();
   const links = await alternates('/music');
@@ -56,6 +55,8 @@ export default function MusicLandingPage() {
 async function MusicContent() {
   await connection();
   const t = await getT();
+  const TITLE = t('guides.music.title');
+  const DESCRIPTION = t('guides.music.description', { site: siteName });
   const rankings = await musicRankings(t.locale);
 
   return (

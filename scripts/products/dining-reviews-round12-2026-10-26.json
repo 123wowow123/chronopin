@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/palate",
+      "basis": "Food 4.0 from 4.5 over 66 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value remain null. Acclaim 4: One MICHELIN Star (2026 edition). Current Haeundae/Dalmaji location matched to operator address and the 2025 municipal guide. Jenny Na’s September 30, 2026 original MINGCHU visit/profile supplies a daylight/sea-view observation, not a scored meal verdict or chef self-quote. Guide publication day is unverified; edition year and compilation cutoff are not dates. Old Nam-gu award news and unverified directory excerpt removed from native reviews, retained as historical references. Unverified La Liste/Wine Spectator directory claims omitted. No axes changed.",
+      "reviews": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "title": "2025 Taste of Busan",
+          "quote": "creative and sophisticated cuisine.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.mingchu.io/people/article-korean/1932",
+          "title": "와인바에서 부산 대표 다이닝이 되기까지 - 김재훈 셰프의 팔레트",
+          "quote": "점심에는 팔레트에 바다와 햇살이 가득 들어온다.",
+          "publishedDate": "2026-09-30",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Original municipal guide PDF page 131 / printed page 260, full spread visually inspected. Exact current 3F 154 Dalmaji-gil 65beon-gil location matches Pin address and opened operator About page. Dehyphenated line-break only in sophisticated. Publisher identifies compilation cutoff December 2024 but no publication day, keep null."
+        },
+        {
+          "url": "https://www.mingchu.io/people/article-korean/1932",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Jenny Na’s original professional food-writer visit/profile, visible article title and September 30, 2026 publication. The actual title is the top article heading, not the CMS h1 deck. Quoted daylight/sea-view observation belongs to current Dalmaji dining room, not chef speech, older Yongho room or a numerical meal review. Article explicitly dates relocation to late November 2024; operator confirms current address. No precise move day inferred."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17275,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/shunsai-kubo",
+      "basis": "Food 4.5 from 4.7 over 271 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "title": "2025 Taste of Busan",
+          "quote": "grilled with care",
+          "publishedDate": null,
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+          "title": "슌사이 쿠보",
+          "quote": "오차즈케 다시가 진짜 이곳의 하이라이트",
+          "publishedDate": "2023-09-14",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Original municipal guide PDF page 67 / printed page 133, full spread visually inspected, exact 17 Yangdal-ro 4beon-gil Hwamyeong address. Grilled-eel description, not Changwon branch. No guide publication day stated; keep null and do not infer from edition, content cutoff or metadata."
+        },
+        {
+          "url": "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Opened original Diningcode visitor-evaluation feed in primary reader, named author 아콩이맛집여행, visible September 14, 2023 evaluation timestamp, short exact Korean dashi verdict and photographs. This is a directly published member evaluation, not the separate republished Naver blog snippets, aggregate rating or editor assessment. Browser 403, so no browser metadata claimed. Original source heading 슌사이 쿠보 and exact Hwamyeong address verified. One visitor report plus two independently published guides; not three professional critic meals."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17268,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/jeongjitgan",
+      "basis": "Food 2.5 from 3.9 over 666 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+          "title": "2024 Taste of Busan",
+          "quote": "국밥 역시 고기와 온도, 맵기 등 취향대로 선택할 수 있는 것이 장점이다.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "verification": "Original municipal guide reproduced as a complete PDF on an education-site HTTPS mirror. Downloaded and visually inspected PDF page 81 / printed page 161, exact Sinpyeong main branch, 1F 6 Bibong-ro; adjacent Yeongjin restaurant excluded. Korean original praises customizable soup meat/temperature/spice; no borrowed neighboring English refreshing-taste claim. Publisher colophon page 145 identifies Busan Department of Health Hygiene and December 2023 compilation cutoff, not publication day; keep null. Historical menu/prices/hours not applied as current."
+        }
+      ]
+    }
+  ]
+}

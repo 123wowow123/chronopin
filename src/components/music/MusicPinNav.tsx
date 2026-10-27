@@ -4,6 +4,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from '@/components/ui/Link';
 import { useMusicPlayer } from './MusicPlayerContext';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 import { type MusicRankingEntry } from '@/lib/music';
 import { pinPath } from '@/lib/seo';
 
@@ -18,6 +20,8 @@ interface Props {
 }
 
 export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: Props) {
+  const t = useT();
+  const gm = (key: string, values?: Record<string, string | number>) => t(`guides.music.${key}` as MessageKey, values);
   const router = useRouter();
   const { pause, togglePlay, currentTrack, isPlaying: isAudioPlaying } = useMusicPlayer();
   const [isVideoPlaying, setIsVideoPlaying] = useState(Boolean(autoplay));
@@ -172,10 +176,10 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
             href={`${pinPath({ id: previous.pinId, title: previous.title })}?autoplay=1`}
             onClick={handleNavClick}
             className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60"
-            title={`Previous song: ${previous.title} by ${previous.artist}`}
+            title={gm('prevSongTitle', { title: previous.title, artist: previous.artist })}
           >
             <span aria-hidden="true">⏮</span>
-            <span>Prev Song</span>
+            <span>{gm('prevSongShort')}</span>
           </Link>
         ) : null}
         {next?.pinId ? (
@@ -183,9 +187,9 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
             href={`${pinPath({ id: next.pinId, title: next.title })}?autoplay=1`}
             onClick={handleNavClick}
             className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60"
-            title={`Next song: ${next.title} by ${next.artist}`}
+            title={gm('nextSongTitle', { title: next.title, artist: next.artist })}
           >
-            <span>Next Song</span>
+            <span>{gm('nextSong')}</span>
             <span aria-hidden="true">⏭</span>
           </Link>
         ) : null}
@@ -219,10 +223,10 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
           href={`${pinPath({ id: previous.pinId, title: previous.title })}?autoplay=1`}
           onClick={handleNavClick}
           className="inline-flex items-center gap-1.5 rounded-full bg-raised px-3 py-1 text-xs font-semibold text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline"
-          title={`Previous song: ${previous.title} by ${previous.artist}`}
+          title={gm('prevSongTitle', { title: previous.title, artist: previous.artist })}
         >
           <span aria-hidden="true">⏮</span>
-          <span>Previous Song</span>
+          <span>{gm('prevSong')}</span>
         </Link>
       ) : null}
       {next?.pinId ? (
@@ -230,9 +234,9 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
           href={`${pinPath({ id: next.pinId, title: next.title })}?autoplay=1`}
           onClick={handleNavClick}
           className="inline-flex items-center gap-1.5 rounded-full bg-raised px-3 py-1 text-xs font-semibold text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline"
-          title={`Next song: ${next.title} by ${next.artist}`}
+          title={gm('nextSongTitle', { title: next.title, artist: next.artist })}
         >
-          <span>Next Song</span>
+          <span>{gm('nextSong')}</span>
           <span aria-hidden="true">⏭</span>
         </Link>
       ) : null}
@@ -255,14 +259,14 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
               ? 'bg-accent/15 text-ink ring-accent'
               : 'bg-raised text-muted ring-line hover:bg-raised-2 hover:text-ink'
           }`}
-          title="Play the full song; when it ends, move to the next pin and play its full song automatically"
+          title={gm('autoplayTitle')}
         >
           <span aria-hidden="true" className={`eq-bars ${isVideoPlaying ? 'eq-bars-on' : ''}`}>
             <i />
             <i />
             <i />
           </span>
-          <span>Play full song on auto play</span>
+          <span>{gm('autoplayLabel')}</span>
         </button>
       ) : null}
     </div>

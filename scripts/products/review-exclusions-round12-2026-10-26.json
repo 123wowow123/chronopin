@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/palate",
+      "url": "https://www.enprimeurclub.com/restaurants/palate",
+      "expectedReview": {
+        "url": "https://www.enprimeurclub.com/restaurants/palate",
+        "quote": "delivering a progressive tasting menu, refined service, and a sommelier-led wine program in a serene, design-forward space.",
+        "title": "Palate Restaurant, Busan - En Primeur Club (editorial listing)",
+        "publishedDate": null
+      },
+      "reason": "Current Haeundae pin: replace inaccessible unverified directory extract and 2024 Michelin-award news about the former Nam-gu location with verified current-location guide/visit evidence. Earlier award news remains a historical reference, not a current-room dining review; no claim that inaccessible text is fabricated."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/palate",
+      "url": "https://www.koreaherald.com/article/3334528",
+      "expectedReview": {
+        "url": "https://www.koreaherald.com/article/3334528",
+        "quote": "chef Kim Jae-hoon’s contemporary French restaurant Palate in Nam-gu",
+        "title": "Michelin Guide’s Busan selections unveiled, Mosu stays tops in Seoul",
+        "sentiment": 0.4,
+        "publishedDate": "2024-02-23"
+      },
+      "reason": "Current Haeundae pin: replace inaccessible unverified directory extract and 2024 Michelin-award news about the former Nam-gu location with verified current-location guide/visit evidence. Earlier award news remains a historical reference, not a current-room dining review; no claim that inaccessible text is fabricated."
+    }
+  ]
+}

@@ -533,4 +533,4 @@ https://www.shrubstack.com/
 
 
 
-are other landing pages translated besides the pins?
+are all landing pages translated besides the pins?

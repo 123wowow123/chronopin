@@ -117,17 +117,17 @@ or shop is not a firsthand review of the pinned product.
 | PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 272 | 8 | 44 |
-| PinCriticReview | 104 | 313 | 0 | 1 |
+| PinDining | 89 | 275 | 6 | 46 |
+| PinCriticReview | 107 | 322 | 0 | 1 |
 
-There are **72 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 104 existing critic rows have at least three extracts.
+There are **70 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 107 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
 The XUV 7XO now has three independent publishers: Autocar India, CarTrade
 and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
-petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 149 non-MICHELIN undated entries, 74
-have verified reasons to retain null dates; **75 date/source checks remain**.
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 151 non-MICHELIN undated entries, 77
+have verified reasons to retain null dates; **74 date/source checks remain**.
 Current scheduled verification: retry #26 is blocked by the missing production
 `ANTHROPIC_API_KEY`; the older credit failure is historical. See the tenth
 continuation below.
@@ -524,3 +524,36 @@ Scheduled production verification remains blocked by the missing runtime
 `ANTHROPIC_API_KEY` established by run #26. This pass made no deployment,
 restart, environment or schedule changes, and does not claim the scheduled
 review tools have been exercised successfully.
+
+
+## Twelfth continuation: original album reviews and exact-location dining evidence
+
+Saved fourteen new review extracts across six pins through authenticated native
+APIs locally and in production: nine album critics and five dining sources.
+Removed two Palate citations after saving current-location replacements. The
+current inventory is **70 rubric gaps** (EV33, gas12, aircraft13, dining6, LLM4,
+video2), **74 unresolved publication/source checks**, and 77 verified-undated
+entries. Broader coverage and the remaining research stay in TODO.
+
+- [Three album review sets](../../../scripts/products/music-critic-round12-2026-10-26.json): Geese’s Getting Killed, Bruno Mars’s The Romantic and Don Toliver’s OCTANE now each have three original critic reviews. Pitchfork, NME and The Guardian provide the first two sets; Pitchfork, Exclaim! and Clash provide OCTANE. Exact titles, authors, short verbatim passages and original publication dates were verified in full rendered articles. Praise and criticism are retained with passage-specific sentiment, without converting ratings. NME’s September 23 Geese review stays distinct from the September 26 release. Guardian’s Bruno original timestamp is February 27 UTC/UK; an Australian February 28 display represents that same instant. Clash’s January 30 review explicitly credits Robin Murray despite its generic ClashMusic header; its separate album announcement was excluded. Pitchfork’s unreliable rendered numerical score was not used. AP was inaccessible and was not substituted with a syndicated review.
+- [Palate](../../../scripts/products/dining-reviews-round12-2026-10-26.json): the saved Pin address, opened operator About page and 2025 municipal guide match the current Haeundae/Dalmaji restaurant. Jenny Na’s original MINGCHU visit/profile explicitly places its move from Yongho-dong in late November 2024; no precise opening/move day was inferred or saved. Her daylight/sea-view observation describes the current dining room, not a scored meal assessment or chef self-quotation. The exact municipal guide verdict remains undated because its edition year and December 2024 compilation cutoff do not establish a publication day. [Guarded exclusions](../../../scripts/products/review-exclusions-round12-2026-10-26.json) remove the inaccessible directory extract and former Nam-gu award-news extract from native reviews, retaining historical references. The [basis correction](../../../scripts/products/review-basis-round12-2026-10-26.json) removes unverified directory-only award claims while preserving all axes. Final native review lists and explanation were checked after the removals; an intermediate overwritten explanation was corrected before completion.
+- Shunsai Kubo Hwamyeong: the original municipal guide’s PDF page 67 / printed page 133 matches 17 Yangdal-ro 4beon-gil. Added that independent guide entry and 아콩이맛집여행’s original Diningcode visitor evaluation dated September 14, 2023. The exact short Korean dashi verdict comes from the named member evaluation, not an aggregate score or syndicated Naver snippet. Primary reader verified the original; browser received 403. The pin now has MICHELIN, municipal guide and a named visitor account across three platforms, not three professional critic meals. Changwon, sponsored candidates and a second city-owned publication were not counted as independent additional publishers.
+- Jeongjitgan Sinpyeong: the original 2024 municipal guide, downloaded from an HTTPS education-site mirror, supplies a third independent source. PDF page 81 / printed page 161 matches 1F, 6 Bibong-ro and praises customizable meat, temperature and spice. The adjacent Yeongjin entry and Busan Station franchise were excluded. Full relevant spread and publisher colophon were visually checked. The December 2023 compilation cutoff does not establish a publication day; date remains null. Historical menus/prices/hours were not applied as current content.
+
+[Source dispositions](../../../scripts/products/review-source-checks-round12-2026-10-26.json)
+close the prior Palate source check and record three newly verified-undated
+guide entries. [Coverage findings](../../../scripts/products/review-coverage-leads-round12-2026-10-26.json)
+retain location and independence limits. Completed Shunsai and Jeongjitgan raw
+review-count gaps have been removed from the open queue; the dining catalog,
+portable replay data, source references and source wikis are synchronized.
+
+[Validation](../../../scripts/products/review-validation-round12-2026-10-26.json):
+all twelve pin-page checks rendered the fourteen saved extracts and expected
+graphs across both environments. Six final dining readbacks checked full review
+lists against the synchronized catalog, unchanged scores/unrelated fields and
+Palate’s corrected basis. Ten scope-annotation readbacks preserved existing wiki
+content. Focused review/documentation checks, catalog constraints and queue
+counts passed. The local development server was restarted after it was found
+stopped; no production deployment, restart, environment or schedule change was
+performed. Scheduled production verification remains blocked by the missing
+runtime key established in run #26.

@@ -5479,5 +5479,107 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 17265,
+    "scores": {
+      "food": 4,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Food 4.0 from 4.5 over 66 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value remain null. Acclaim 4: One MICHELIN Star (2026 edition). Current Haeundae/Dalmaji location matched to operator address and the 2025 municipal guide. Jenny Na’s September 30, 2026 original MINGCHU visit/profile supplies a daylight/sea-view observation, not a scored meal verdict or chef self-quote. Guide publication day is unverified; edition year and compilation cutoff are not dates. Old Nam-gu award news and unverified directory excerpt removed from native reviews, retained as historical references. Unverified La Liste/Wine Spectator directory claims omitted. No axes changed.",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/palate",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/palate",
+        "quote": "Palate offers contemporary French cuisine that is free-spirited and adventurous in style.",
+        "title": "Palate - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "quote": "creative and sophisticated cuisine.",
+        "title": "2025 Taste of Busan",
+        "sentiment": 0.7,
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.mingchu.io/people/article-korean/1932",
+        "quote": "점심에는 팔레트에 바다와 햇살이 가득 들어온다.",
+        "title": "와인바에서 부산 대표 다이닝이 되기까지 - 김재훈 셰프의 팔레트",
+        "sentiment": 0.6,
+        "publishedDate": "2026-09-30"
+      }
+    ]
+  },
+  {
+    "pinId": 17275,
+    "scores": {
+      "food": 4.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 4.5 from 4.7 over 271 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/shunsai-kubo",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/shunsai-kubo",
+        "quote": "The restaurant serves a hitsumabushi menu for children, a considerate gesture that caters to families.",
+        "title": "Shunsai Kubo - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+        "quote": "grilled with care",
+        "title": "2025 Taste of Busan",
+        "sentiment": 0.5,
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+        "quote": "오차즈케 다시가 진짜 이곳의 하이라이트",
+        "title": "슌사이 쿠보",
+        "sentiment": 0.8,
+        "publishedDate": "2023-09-14"
+      }
+    ]
+  },
+  {
+    "pinId": 17268,
+    "scores": {
+      "food": 2.5,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food 2.5 from 3.9 over 666 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+    "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/jeongjitgan",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/jeongjitgan",
+        "quote": "The rich, milky broth, which is reminiscent of a clean, savory beef bone broth is prepared fresh daily.",
+        "title": "Jeongjitgan - Busan - a MICHELIN Guide Restaurant (inspector description)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://seoulkoreaasia.com/busan-michelin-restaurants-guide/",
+        "quote": "it’s on the MICHELIN Bib Gourmand list for serving excellent pork rice soup at wallet-friendly prices",
+        "title": "7 Busan Michelin Guide Restaurants to Try in 2026 (From Market-Style to Fine Dining)",
+        "sentiment": 0.6,
+        "publishedDate": "2026-10-09"
+      },
+      {
+        "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+        "quote": "국밥 역시 고기와 온도, 맵기 등 취향대로 선택할 수 있는 것이 장점이다.",
+        "title": "2024 Taste of Busan",
+        "sentiment": 0.4,
+        "publishedDate": null
+      }
+    ]
   }
 ]

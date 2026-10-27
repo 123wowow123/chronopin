@@ -15,6 +15,8 @@ import {
 } from '@/lib/music';
 import { useMusicPlayer } from './MusicPlayerContext';
 import { AlbumTracklist } from './AlbumTracklist';
+import { useIntlLocale, useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 
@@ -27,6 +29,15 @@ interface Props {
 
 // One label per year the song ranked, best rank that year, newest first.
 const PAGE_SIZE = 60;
+
+const CONTINENT_KEYS: Record<string, string> = {
+  'North America': 'northAmerica',
+  'Latin America': 'latinAmerica',
+  Europe: 'europe',
+  Africa: 'africa',
+  Asia: 'asia',
+  Oceania: 'oceania',
+};
 
 function yearLabels(song: MusicRankingEntry): { year: number; rank: number }[] {
   const best = new Map<number, number>();
@@ -42,6 +53,17 @@ export function MusicRankingView({
   description,
   path = '/music',
 }: Props) {
+  const t = useT();
+  const gm = (key: string, values?: Record<string, string | number>) => t(`guides.music.${key}` as MessageKey, values);
+  const intl = useIntlLocale();
+  const continentLabel = (c: string) => (t.has(`guides.music.continentNames.${CONTINENT_KEYS[c]}`) ? gm(`continentNames.${CONTINENT_KEYS[c]}`) : c);
+  const countryLabel = (code: string | undefined, name: string) => {
+    try {
+      return (code && new Intl.DisplayNames(intl, { type: 'region' }).of(code.toUpperCase())) || name;
+    } catch {
+      return name;
+    }
+  };
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
   const [selectedContinent, setSelectedContinent] = useState<string>('all');
   const [selectedCountryRaw, setSelectedCountry] = useState<string>('all');
@@ -97,7 +119,7 @@ export function MusicRankingView({
     return filterAndGroupMusicRankings(initialRankings, {
       year: selectedYear,
       continent: selectedContinent,
-    }).flatMap((g) => g.countries.map((c) => ({ name: c.country, flag: c.countryFlag })));
+    }).flatMap((g) => g.countries.map((c) => ({ name: c.country, flag: c.countryFlag, code: c.countryCode })));
   }, [initialRankings, selectedYear, selectedContinent]);
 
   // A country that the year / continent no longer offers falls back to all
@@ -277,20 +299,20 @@ export function MusicRankingView({
         {/* Navigation Wordmark */}
         <div className={styles.guideNav}>
           <Link href={path} className={styles.wordmark}>
-            <span aria-hidden="true">✳</span> The music guide
+            <span aria-hidden="true">✳</span> {gm('wordmark')}
           </Link>
           <div className="flex items-center gap-2 text-xs font-medium text-[var(--soft)]">
             <Icon name="music" className="size-3.5 text-[var(--green)]" />
-            <span>Official Global Year-End Charts</span>
+            <span>{gm('chartsNote')}</span>
           </div>
         </div>
 
         {/* Hero Section with Editorial Copy & Featured Card */}
         <header className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>ANNUAL MUSIC CHARTS · RANKED WEST TO EAST</p>
+            <p className={styles.eyebrow}>{gm('eyebrow')}</p>
             <h1>
-              The songs that <em>defined the world.</em>
+              {t.rich('guides.music.heading', { em: (c) => <em>{c}</em> })}
             </h1>
             <p className={styles.lead}>{description}</p>
           </div>
@@ -300,7 +322,7 @@ export function MusicRankingView({
               <Link
                 href={featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl}
                 className={styles.featured}
-                aria-label={`Explore ${featured.title} by ${featured.artist}`}
+                aria-label={gm('explore', { title: featured.title, artist: featured.artist })}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element -- external music artwork images */}
                 <img
@@ -310,7 +332,7 @@ export function MusicRankingView({
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className={styles.featuredShade} />
-                <span className={styles.featuredBadge}>GLOBAL #1 SELECTION</span>
+                <span className={styles.featuredBadge}>{gm('badge')}</span>
                 <div className={styles.featuredCopy}>
                   <p>
                     {featured.countryFlag} {featured.country} · {featured.chartName} · #{featured.rank} ({featured.year})
@@ -335,17 +357,17 @@ export function MusicRankingView({
                   className="flex items-center gap-1.5 rounded-full bg-[var(--green)]/90 hover:bg-[var(--green)] text-[#fffef0] px-3.5 py-1.5 text-xs font-semibold shadow-lg backdrop-blur-xs transition-transform active:scale-95 cursor-pointer"
                   aria-label={
                     currentTrack?.id === featured.id && isPlaying && playbackMode === 'preview'
-                      ? `Pause ${featured.title}`
-                      : `Play ${featured.title} preview`
+                      ? gm('pause', { title: featured.title })
+                      : gm('playPreview', { title: featured.title })
                   }
-                  title="Play 30s preview"
+                  title={gm('play30')}
                 >
                   {currentTrack?.id === featured.id && isPlaying && playbackMode === 'preview' ? (
                     <>
                       <svg className="size-3.5" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                       </svg>
-                      <span>Pause</span>
+                      <span>{gm('pauseLabel')}</span>
                       <span className="flex items-end gap-0.5 h-3">
                         <span className="w-0.5 bg-white animate-pulse" style={{ height: '70%', animationDuration: '0.6s' }} />
                         <span className="w-0.5 bg-white animate-pulse" style={{ height: '100%', animationDuration: '0.4s' }} />
@@ -357,7 +379,7 @@ export function MusicRankingView({
                       <svg className="size-3.5 translate-x-0.5" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M8 5v14l11-7z" />
                       </svg>
-                      <span>Preview</span>
+                      <span>{gm('previewLabel')}</span>
                     </>
                   )}
                 </button>
@@ -367,12 +389,12 @@ export function MusicRankingView({
                     href={`${featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl}${featured.pinId ? '?autoplay=1' : ''}`}
                     onClick={() => pause()}
                     className="flex items-center gap-1.5 rounded-full bg-red-600/90 hover:bg-red-600 text-white px-3.5 py-1.5 text-xs font-semibold shadow-lg backdrop-blur-xs transition-transform active:scale-95 cursor-pointer hover:no-underline"
-                    title={`Play ${featured.title} full song on pin page`}
+                    title={gm('playFullPin', { title: featured.title })}
                   >
                     <svg className="size-3.5 fill-current" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
-                    <span>Full Song</span>
+                    <span>{gm('fullSong')}</span>
                   </Link>
                 ) : null}
               </div>
@@ -391,19 +413,19 @@ export function MusicRankingView({
         <div className={styles.digest}>
           <div className="flex flex-col gap-1">
             <strong className="font-serif text-3xl font-normal text-[var(--text)]">{initialRankings.length}</strong>
-            <span className="text-xs text-[var(--soft)]">Tracked Rankings</span>
+            <span className="text-xs text-[var(--soft)]">{gm('tracked')}</span>
           </div>
           <div className="flex flex-col gap-1 border-l border-[var(--rule)] pl-6">
             <strong className="font-serif text-3xl font-normal text-[var(--text)]">6</strong>
-            <span className="text-xs text-[var(--soft)]">Continents (W → E)</span>
+            <span className="text-xs text-[var(--soft)]">{gm('continents')}</span>
           </div>
           <div className="flex flex-col gap-1 min-[761px]:border-l min-[761px]:border-[var(--rule)] min-[761px]:pl-6">
             <strong className="font-serif text-3xl font-normal text-[var(--text)]">{totalCountries}</strong>
-            <span className="text-xs text-[var(--soft)]">National Music Charts</span>
+            <span className="text-xs text-[var(--soft)]">{gm('nationalCharts')}</span>
           </div>
           <div className="flex flex-col gap-1 border-l border-[var(--rule)] pl-6">
             <strong className="font-serif text-3xl font-normal text-[var(--text)]">100%</strong>
-            <span className="text-xs text-[var(--soft)]">Backed by Native Pins</span>
+            <span className="text-xs text-[var(--soft)]">{gm('backedByPins')}</span>
           </div>
         </div>
 
@@ -414,7 +436,7 @@ export function MusicRankingView({
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
               <div className="flex min-w-0 max-w-full items-center gap-3">
                 <span className="shrink-0 text-[11px] font-bold tracking-wider uppercase text-[var(--soft)]">
-                  Year:
+                  {gm('year')}
                 </span>
                 <div className="flex min-w-0 flex-nowrap gap-1.5 overflow-x-auto pb-1 scrollbar-thin">
                   <button
@@ -426,7 +448,7 @@ export function MusicRankingView({
                         : 'border border-[var(--rule)] bg-[var(--paper)] text-[var(--text)] hover:border-[var(--green)] hover:bg-[var(--rule)]'
                     }`}
                   >
-                    All Years
+                    {gm('allYears')}
                   </button>
                   {availableYears.map((yr) => (
                     <button
@@ -455,7 +477,7 @@ export function MusicRankingView({
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search song, artist, chart..."
+                  placeholder={gm('searchPlaceholder')}
                   className="w-full rounded-full border border-[var(--rule)] bg-[var(--paper)] py-1.5 pe-8 ps-9 text-xs text-[var(--text)] placeholder:text-[var(--soft)] transition-colors focus:border-[var(--green)] focus:outline-none"
                 />
                 {searchQuery ? (
@@ -463,7 +485,7 @@ export function MusicRankingView({
                     type="button"
                     onClick={() => setSearchQuery('')}
                     className="absolute top-1/2 end-3 -translate-y-1/2 text-[var(--soft)] hover:text-[var(--text)] cursor-pointer"
-                    title="Clear search"
+                    title={gm('clearSearch')}
                   >
                     ✕
                   </button>
@@ -474,7 +496,7 @@ export function MusicRankingView({
             {/* Continent Tabs Row (West to East) */}
             <div className="flex items-center gap-3">
               <span className="shrink-0 text-[11px] font-bold tracking-wider uppercase text-[var(--soft)]">
-                Continent:
+                {gm('continent')}
               </span>
               <div
                 ref={continentNavRef}
@@ -492,7 +514,7 @@ export function MusicRankingView({
                       : 'border border-[var(--rule)] bg-[var(--paper)] text-[var(--text)] hover:border-[var(--green)] hover:bg-[var(--rule)]'
                   }`}
                 >
-                  All Continents
+                  {gm('allContinents')}
                 </button>
                 {CONTINENTS.map((c) => (
                   <button
@@ -517,10 +539,10 @@ export function MusicRankingView({
             {/* Country Row (West to East within the chosen continent) */}
             <div className="flex min-w-0 items-center gap-3">
               <span className="shrink-0 text-[11px] font-bold tracking-wider uppercase text-[var(--soft)]">
-                Country:
+                {gm('country')}
               </span>
               <div className="flex min-w-0 flex-nowrap items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
-                {[{ name: 'all', flag: '', label: 'All Countries' }, ...countryOptions.map((c) => ({ ...c, label: c.name }))].map((c) => (
+                {[{ name: 'all', flag: '', label: gm('allCountries') }, ...countryOptions.map((c) => ({ ...c, label: countryLabel(c.code, c.name) }))].map((c) => (
                   <button
                     key={c.name}
                     type="button"
@@ -543,8 +565,8 @@ export function MusicRankingView({
         {/* Results Counter & Reset Filter Link */}
         <div className="mb-8 flex items-center justify-between text-xs text-[var(--soft)]">
           <span>
-            Showing <strong className="text-[var(--text)]">{totalResults}</strong> ranking{totalResults === 1 ? '' : 's'} across{' '}
-            <strong className="text-[var(--text)]">{continentGroups.length}</strong> continent{continentGroups.length === 1 ? '' : 's'}
+            {t.rich('guides.music.showingRankings', { count: totalResults, strong: (c) => <strong className="text-[var(--text)]">{c}</strong> })}{' '}
+            {t.rich('guides.music.acrossContinents', { count: continentGroups.length, strong: (c) => <strong className="text-[var(--text)]">{c}</strong> })}
           </span>
           {searchQuery || selectedYear !== 'all' || selectedContinent !== 'all' || selectedCountry !== 'all' ? (
             <button
@@ -557,7 +579,7 @@ export function MusicRankingView({
               }}
               className="font-semibold text-[var(--green)] hover:underline cursor-pointer"
             >
-              Reset all filters
+              {gm('resetAll')}
             </button>
           ) : null}
         </div>
@@ -566,9 +588,9 @@ export function MusicRankingView({
         {continentGroups.length === 0 ? (
           <div className="my-16 rounded-xl border border-dashed border-[var(--rule)] bg-[var(--paper-raised)] p-12 text-center">
             <Icon name="music" className="mx-auto size-10 text-[var(--soft)]" />
-            <h3 className="mt-4 font-serif text-2xl font-normal text-[var(--text)]">No music rankings found</h3>
+            <h3 className="mt-4 font-serif text-2xl font-normal text-[var(--text)]">{gm('noRankings')}</h3>
             <p className="mt-2 text-xs text-[var(--soft)]">
-              No chart entries match your active filters. Try picking another year, continent, or clearing your search.
+              {gm('noRankingsBody')}
             </p>
             <button
               type="button"
@@ -580,7 +602,7 @@ export function MusicRankingView({
               }}
               className="mt-5 rounded-full bg-[var(--green)] px-5 py-2 text-xs font-semibold text-[#fffef0] shadow-xs hover:opacity-90 cursor-pointer"
             >
-              Reset filters
+              {gm('resetFilters')}
             </button>
           </div>
         ) : null}
@@ -594,14 +616,14 @@ export function MusicRankingView({
                 <div className="flex items-center gap-3">
                   <Icon name="globe" className="size-6 text-[var(--green)]" />
                   <h2 className="font-serif text-3xl font-normal text-[var(--text)] tracking-tight">
-                    {continentGroup.name}
+                    {continentLabel(continentGroup.name)}
                   </h2>
                   <span className="rounded-full border border-[var(--rule)] bg-[var(--paper-raised)] px-2.5 py-0.5 text-xs font-semibold text-[var(--soft)]">
-                    {(continentGroups.find((g) => g.name === continentGroup.name) ?? continentGroup).countries.reduce((acc, c) => acc + c.rankings.length, 0)} songs
+                    {gm('songs', { count: (continentGroups.find((g) => g.name === continentGroup.name) ?? continentGroup).countries.reduce((acc, c) => acc + c.rankings.length, 0) })}
                   </span>
                 </div>
                 <span className="text-xs italic text-[var(--soft)] hidden sm:inline">
-                  West to East geographic order
+                  {gm('westToEast')}
                 </span>
               </div>
 
@@ -612,19 +634,19 @@ export function MusicRankingView({
                     {/* Country Header Bar */}
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--rule)] pb-3 mb-6">
                       <div className="flex items-center gap-2.5">
-                        <span className="text-2xl" role="img" aria-label={countryGroup.country}>
+                        <span className="text-2xl" role="img" aria-label={countryLabel(countryGroup.countryCode, countryGroup.country)}>
                           {countryGroup.countryFlag}
                         </span>
                         <h3 className="font-serif text-2xl font-normal text-[var(--text)]">
-                          {countryGroup.country}
+                          {countryLabel(countryGroup.countryCode, countryGroup.country)}
                         </h3>
                         <span className="text-[var(--soft)]">·</span>
                         <span className="text-sm font-semibold text-[var(--green)]">
-                          Music produced here
+                          {gm('musicHere')}
                         </span>
                       </div>
                       <span className="rounded-md border border-[var(--rule)] bg-[var(--paper-raised)] px-2.5 py-1 text-xs text-[var(--soft)]">
-                        Charted on: <strong className="font-semibold text-[var(--text)]">{countryGroup.chartName}</strong>
+                        {gm('chartedOn')} <strong className="font-semibold text-[var(--text)]">{countryGroup.chartName}</strong>
                       </span>
                     </div>
 
@@ -692,8 +714,8 @@ export function MusicRankingView({
                                 }`}
                                 aria-label={
                                   isThisPlaying
-                                    ? `Pause ${song.title}`
-                                    : `Play ${song.title} preview`
+                                    ? gm('pause', { title: song.title })
+                                    : gm('playPreview', { title: song.title })
                                 }
                                 title={isThisPlaying ? 'Pause preview' : 'Play 30s preview'}
                               >
@@ -716,7 +738,7 @@ export function MusicRankingView({
                                 <Link
                                   href={`/search?q=${encodeURIComponent(song.artist)}`}
                                   className="hover:underline hover:text-[var(--text)] transition-colors"
-                                  title={`Search for pins by ${song.artist}`}
+                                  title={gm('searchPins', { artist: song.artist })}
                                 >
                                   {song.artist}
                                 </Link>
@@ -724,9 +746,9 @@ export function MusicRankingView({
                                 <Link
                                   href={`/search?q=${encodeURIComponent(origin.name)}`}
                                   className="hover:underline hover:text-[var(--text)] transition-colors"
-                                  title={`Music produced in ${origin.name}`}
+                                  title={gm('producedIn', { country: countryLabel(origin.code, origin.name) })}
                                 >
-                                  {origin.flag} {origin.name}
+                                  {origin.flag} {countryLabel(origin.code, origin.name)}
                                 </Link>
                               </p>
 
@@ -749,10 +771,10 @@ export function MusicRankingView({
 
                               {song.songStats?.peak != null || song.songStats?.weeksOnChart != null ? (
                                 <p className="mt-1 text-[11px] text-[var(--soft)]">
-                                  {song.songStats?.peak != null ? <>Peak <strong className="text-[var(--text)]">{song.songStats.peak}</strong></> : null}
+                                  {song.songStats?.peak != null ? <>{gm('peak')} <strong className="text-[var(--text)]">{song.songStats.peak}</strong></> : null}
                                   {song.songStats?.peak != null && song.songStats?.weeksOnChart != null ? ' · ' : null}
-                                  {song.songStats?.weeksOnChart != null ? <><strong className="text-[var(--text)]">{song.songStats.weeksOnChart}</strong> wks on chart</> : null}
-                                  {song.album?.stats?.certifications?.[0] ? <> · Album {song.album.stats.certifications[0].level}</> : null}
+                                  {song.songStats?.weeksOnChart != null ? <>{gm('weeksOnChart', { count: song.songStats.weeksOnChart })}</> : null}
+                                  {song.album?.stats?.certifications?.[0] ? <> · {gm('album', { level: song.album.stats.certifications[0].level })}</> : null}
                                 </p>
                               ) : null}
 
@@ -771,14 +793,14 @@ export function MusicRankingView({
                                           <span className="w-0.5 bg-[var(--green)] animate-pulse" style={{ height: '100%', animationDuration: '0.4s' }} />
                                           <span className="w-0.5 bg-[var(--green)] animate-pulse" style={{ height: '50%', animationDuration: '0.5s' }} />
                                         </span>
-                                        <span>Preview</span>
+                                        <span>{gm('previewLabel')}</span>
                                       </>
                                     ) : (
                                       <>
                                         <svg className="size-3.5 fill-current" viewBox="0 0 24 24">
                                           <path d="M8 5v14l11-7z" />
                                         </svg>
-                                        <span>Preview</span>
+                                        <span>{gm('previewLabel')}</span>
                                       </>
                                     )}
                                   </button>
@@ -790,12 +812,12 @@ export function MusicRankingView({
                                         href={`${pinHref}${pinHref.includes('?') ? '&' : '?'}autoplay=1`}
                                         onClick={() => pause()}
                                         className="flex items-center gap-1 text-[11px] font-semibold text-red-600 hover:underline cursor-pointer"
-                                        title={`Play ${song.title} full song on pin page`}
+                                        title={gm('playFullPin', { title: song.title })}
                                       >
                                         <svg className="size-3 fill-current" viewBox="0 0 24 24">
                                           <path d="M8 5v14l11-7z" />
                                         </svg>
-                                        <span>Full Song</span>
+                                        <span>{gm('fullSong')}</span>
                                       </Link>
                                     </>
                                   ) : null}
@@ -822,7 +844,7 @@ export function MusicRankingView({
                               {/* Card Footer */}
                               <div className={styles.cardFoot}>
                                 <div>
-                                  <span>GENRES</span>
+                                  <span>{gm('genres')}</span>
                                   <span className="flex flex-wrap gap-1">
                                     {song.genres.slice(0, 3).map((g) => (
                                       <Link
@@ -841,8 +863,8 @@ export function MusicRankingView({
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className={styles.cardArrow}
-                                  aria-label={`View source link for ${song.title} on ${song.chartAuthority}`}
-                                  title={`Source chart: ${song.chartName} (${song.chartAuthority})`}
+                                  aria-label={gm('viewSource', { title: song.title, authority: song.chartAuthority })}
+                                  title={gm('sourceChart', { chart: song.chartName, authority: song.chartAuthority })}
                                 >
                                   ↗
                                 </Anchor>

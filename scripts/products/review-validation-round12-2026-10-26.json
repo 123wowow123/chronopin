@@ -1,0 +1,352 @@
+{
+  "checkedAt": "2026-10-26",
+  "newCriticPins": 3,
+  "newCriticReviews": 9,
+  "newDiningReviewExtracts": 5,
+  "excludedPalateContextOrUnverifiedExtracts": 2,
+  "priorSourceChecksResolved": 1,
+  "closedRawRubricGaps": [
+    17268,
+    17275
+  ],
+  "savedIn": [
+    "local",
+    "production"
+  ],
+  "diningReadbacks": [
+    {
+      "pinId": 17265,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17265,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17275,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17275,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17268,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17268,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    }
+  ],
+  "criticReadbacks": [
+    {
+      "pinId": 7392,
+      "production": false,
+      "reviewsVerified": 3,
+      "basisVerified": true
+    },
+    {
+      "pinId": 7392,
+      "production": true,
+      "reviewsVerified": 3,
+      "basisVerified": true
+    },
+    {
+      "pinId": 4344,
+      "production": false,
+      "reviewsVerified": 3,
+      "basisVerified": true
+    },
+    {
+      "pinId": 4344,
+      "production": true,
+      "reviewsVerified": 3,
+      "basisVerified": true
+    },
+    {
+      "pinId": 7388,
+      "production": false,
+      "reviewsVerified": 3,
+      "basisVerified": true
+    },
+    {
+      "pinId": 7388,
+      "production": true,
+      "reviewsVerified": 3,
+      "basisVerified": true
+    }
+  ],
+  "sourceWikiReadbacks": [
+    {
+      "pinId": 17265,
+      "production": false,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17265,
+      "production": true,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17265,
+      "production": false,
+      "url": "https://www.mingchu.io/people/article-korean/1932",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17265,
+      "production": true,
+      "url": "https://www.mingchu.io/people/article-korean/1932",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17275,
+      "production": false,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17275,
+      "production": true,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17275,
+      "production": false,
+      "url": "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17275,
+      "production": true,
+      "url": "https://www.diningcode.com/profile.php?rid=ZFLl6vbCdBqy",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17268,
+      "production": false,
+      "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17268,
+      "production": true,
+      "url": "https://www.adwise-edu.com/_files/ugd/629336_6bb54ec15b914a94925064f21b4bbe49.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    }
+  ],
+  "nativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 7392,
+      "url": "http://127.0.0.1:3000/pin/7392/geese-release-getting-killed-on-partisan-records",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 4344,
+      "url": "http://127.0.0.1:3000/pin/4344/bruno-mars-releases-the-romantic-his-first-solo-album-since-2016",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 7388,
+      "url": "http://127.0.0.1:3000/pin/7388/don-toliver-releases-octane-his-fifth-studio-album",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17265,
+      "url": "http://127.0.0.1:3000/pin/17265/palate-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17275,
+      "url": "http://127.0.0.1:3000/pin/17275/shunsai-kubo-hwamyeong-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17268,
+      "url": "http://127.0.0.1:3000/pin/17268/jeongjitgan-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 7392,
+      "url": "https://www.chronopin.com/pin/7392/geese-release-getting-killed-on-partisan-records",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 4344,
+      "url": "https://www.chronopin.com/pin/4344/bruno-mars-releases-the-romantic-his-first-solo-album-since-2016",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 7388,
+      "url": "https://www.chronopin.com/pin/7388/don-toliver-releases-octane-his-fifth-studio-album",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17265,
+      "url": "https://www.chronopin.com/pin/17265/palate-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17275,
+      "url": "https://www.chronopin.com/pin/17275/shunsai-kubo-hwamyeong-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17268,
+      "url": "https://www.chronopin.com/pin/17268/jeongjitgan-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    }
+  ],
+  "tests": {
+    "focusedCommand": "npx vitest run src/lib/okf.test.ts src/lib/okfLint.test.ts src/lib/reviewPublicationDay.test.ts src/server/jobs/reviewResearch.test.ts",
+    "passed": 28,
+    "documentationChecksAfterEdits": 22,
+    "catalogConstraintsPassed": true,
+    "diningReviewArraysAndBasisSynchronized": true,
+    "queueTotalsVerified": true,
+    "whitespaceChecksPassed": true
+  },
+  "sourceLimits": {
+    "Palate": "Professional site-visit/profile atmosphere observation and selected municipal guide; no claim of three scored meal reviews. Former Nam-gu award news retained as history outside native review array.",
+    "ShunsaiKubo": "MICHELIN and municipal guides plus named original visitor report, not three professional critic meals.",
+    "Jeongjitgan": "Original municipal guide on education-site HTTPS PDF mirror, exact Sinpyeong branch; no inferred publication day."
+  },
+  "intermediateIssuesCorrected": [
+    "Local API stopped; restarted local next dev, then completed all saves.",
+    "Explanation update and citation removals overlapped; final old explanation detected on readback and reapplied after removals. Final arrays and basis verified in both environments."
+  ],
+  "remaining": {
+    "rubricGaps": 70,
+    "publicationSourceChecks": 74,
+    "verifiedUndated": 77,
+    "broaderCoverage": true,
+    "scheduledProductionVerification": "Missing production ANTHROPIC_API_KEY established by run #26; no retry or configuration change in this pass."
+  },
+  "localDevelopmentServerRestarted": true,
+  "productionDeploymentPerformed": false,
+  "productionRestartPerformed": false,
+  "productionEnvironmentChanged": false,
+  "schedulesChanged": false
+}
