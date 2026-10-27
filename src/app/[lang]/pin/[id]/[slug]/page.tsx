@@ -32,6 +32,7 @@ import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
 import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
 import { PinFactory } from '@/components/pin/PinFactory';
+import { PinForecastLinks } from '@/components/forecasts/PinForecastLinks';
 import { IndustryForecastPanel } from '@/components/timeline/IndustryForecastPanel';
 import { PinDining } from '@/components/pin/PinDining';
 import { getAdjacentMusicRankings, getMusicRankingByTitleOrPin } from '@/lib/music';
@@ -291,6 +292,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {factory ? <PinFactoryBuildout factory={factory} t={t} className="mt-4" /> : null}
           {factory ? <PinFactory factory={factory} t={t} className="mt-4" /> : null}
           {industries.length ? <IndustryForecastPanel slugs={industries} limit={3} /> : null}
+          {industries.length ? <PinForecastLinks slugs={industries} t={t} /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {hotel ? (
             <PinHotel
