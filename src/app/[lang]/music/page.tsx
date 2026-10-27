@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { MusicRankingView } from '@/components/music/MusicRankingView';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
-import { musicRankings } from '@/server/services/music';
+import { MIN_INDEXED_RANKINGS, musicRankings } from '@/server/services/music';
 import { siteCardImages } from '@/server/services/shareCard';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: TITLE,
     description: DESCRIPTION,
     alternates: links,
-    ...(rankings.length >= 8 ? {} : { robots: { index: false, follow: true } }),
+    ...(rankings.length >= MIN_INDEXED_RANKINGS ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       type: 'website',
       siteName,

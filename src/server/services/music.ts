@@ -12,6 +12,9 @@ import {
 import { TAGS } from './cache';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
 
+// Fewer rankings than this and /music is noindex and out of the sitemap.
+export const MIN_INDEXED_RANKINGS = 8;
+
 export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<MusicRankingEntry[]> {
   'use cache';
   cacheLife('hours');

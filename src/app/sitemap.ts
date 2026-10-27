@@ -13,6 +13,8 @@ import { personPath } from '@/lib/people';
 import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
+import { MIN_INDEXED_RANKINGS, musicRankings } from '@/server/services/music';
+import { ACTIVITY_CITIES } from '@/lib/activities';
 
 // Google reads at most 50,000 URLs from one sitemap. Chronopin is far below
 // that; past it, split this file with generateSitemaps. Each entry is the
@@ -33,7 +35,8 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...(await personIndex()).map((p) => personPath(p.name)),
   ];
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 9 - topics.length - RESTAURANT_REGIONS.length, (await hideThinPins()).enabled);
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 17 - ACTIVITY_CITIES.length - topics.length - RESTAURANT_REGIONS.length, (await hideThinPins()).enabled);
+  const musicIndexed = (await musicRankings()).length >= MIN_INDEXED_RANKINGS;
   const industries = [...new Set((await forecastPanels()).map((f) => industrySlug(f.industry)))];
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
@@ -57,6 +60,12 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...industries.map((slug) => ({ url: absoluteUrl(`/forecasts/${slug}`), changeFrequency: 'daily' as const, priority: 0.6, alternates: inEveryLanguage(`/forecasts/${slug}`) })),
     { url: absoluteUrl('/travel'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/travel') },
     { url: absoluteUrl('/activities'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/activities') },
+    ...ACTIVITY_CITIES.map((city) => ({ url: absoluteUrl(`/activities/${city.slug}`), changeFrequency: 'daily' as const, priority: 0.6, alternates: inEveryLanguage(`/activities/${city.slug}`) })),
+    { url: absoluteUrl('/restaurants'), changeFrequency: 'daily', priority: 0.7, alternates: inEveryLanguage('/restaurants') },
+    ...(musicIndexed ? [{ url: absoluteUrl('/music'), changeFrequency: 'daily' as const, priority: 0.5, alternates: inEveryLanguage('/music') }] : []),
+    { url: absoluteUrl('/trades'), changeFrequency: 'daily', priority: 0.5, alternates: inEveryLanguage('/trades') },
+    { url: absoluteUrl('/premium'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/premium') },
+    { url: absoluteUrl('/advertise'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/advertise') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },
     { url: absoluteUrl('/people'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/people') },
     ...topics.map((path) => ({ url: absoluteUrl(path), alternates: inEveryLanguage(path), changeFrequency: 'daily' as const, priority: 0.7 })),
