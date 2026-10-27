@@ -74,7 +74,7 @@ const shrubRows: [ReturnType<typeof shrub>, Row[]][] = [
   }
   for (const [meta, list] of [...hfirRows, ...shrubRows] as [Record<string, string>, Row[]][]) {
     for (const [ticker, instrument, action, summary, entryPrice] of list) {
-      const base = { ...meta } as Parameters<typeof addPosition>[0];
+      const base = { ...meta } as unknown as Parameters<typeof addPosition>[0];
       if (await addPosition({ ...base, ticker, instrument, action, summary }, { push: false, entryPrice: entryPrice ?? undefined })) added++;
     }
   }
