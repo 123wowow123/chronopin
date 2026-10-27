@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19867,
+      "pinSourceUrl": "https://cnevpost.com/2022/09/30/li-auto-officially-launches-l8-pre-orders-li-l7/",
+      "basis": "Three distinct published first-generation L8 Pro driving accounts: Xchuxing prospective owner 电动胡辣汤 Dec1 2022 (20-inch, sport/lowest suspension); Autohome certified owner 减脂管理师Manson Feb1 2023 after1110km; Drom Oct2 2023 curated translation of a foreign owner describing three test drives. Drom original reviewer name/Chinese URL unpublished; credit the published Russian translation and do not claim identity verification. Account detail differs from other two, no duplicate reused. Three publishers, owner/prospective-owner evidence rather than three instrumented editorial tests. No Max ADAS, later facelift or five-seat2026 substitution. All axes preserved.",
+      "reviews": [
+        {
+          "url": "https://www.xchuxing.com/article/66415",
+          "title": "试驾L8 Pro，体验车系扛把子",
+          "quote": "转向系统：很轻，还是舒适取向，指向型也还Ok，符合定位。",
+          "publishedDate": "2022-12-01",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01gr68b5rz6gvkje9k68t00000.html",
+          "title": "最帅奶爸神车，一改油车用车理念，个人认为70万内最能打之二",
+          "quote": "变道超车都非常轻松给力",
+          "publishedDate": "2023-02-01",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.drom.ru/reviews/li/l8/1442369/",
+          "title": "Li L8 2023 — отзыв владельца",
+          "quote": "По старой плохой дороге с выбоинами автомобиль шел очень мягко.",
+          "publishedDate": "2023-10-02",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xchuxing.com/article/66415",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Rendered original named author and full exact Pro report verified. Xchuxing Dec1 2022 author date; Autohome Feb1 2023 explicitly first published, not Dec2022 purchase."
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01gr68b5rz6gvkje9k68t00000.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Rendered original named author and full exact Pro report verified. Xchuxing Dec1 2022 author date; Autohome Feb1 2023 explicitly first published, not Dec2022 purchase."
+        },
+        {
+          "url": "https://www.drom.ru/reviews/li/l8/1442369/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Drom explicitly publishes a translation of a real foreign owner, first-generation2023 Pro at359800yuan. Original reviewer name/Chinese URL unpublished; do not claim independently identity-verified owner. Published time datetime and JSON-LD agree Oct2 2023. Distinct account describes three test drives and Lynk09/WeipaiLanshan comparisons, unlike the other two accounts."
+        }
+      ]
+    }
+  ]
+}

@@ -132,6 +132,7 @@
     "reviews:sentiment": "tsx scripts/products/reviewSentiment.ts",
     "reviews:sentiment:prod": "tsx scripts/products/reviewSentimentProd.ts",
     "reviews:critic:prod": "tsx scripts/products/criticReviewsProd.ts",
+    "products:competitors:prod": "tsx scripts/products/competitorsProd.ts",
     "suggestions:review": "tsx scripts/suggestions/review.ts",
     "wiki:sync": "tsx scripts/wiki/sync.ts",
     "wiki:transcripts": "tsx scripts/wiki/transcripts.ts",

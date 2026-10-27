@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T02:18:35.095Z",
+  "checkedAt": "2026-10-27T03:04:30.509Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -14,9 +14,9 @@
     {
       "table": "PinCarPerf",
       "pins": 128,
-      "reviews": 340,
+      "reviews": 346,
       "minimum": 3,
-      "belowMinimum": 37,
+      "belowMinimum": 34,
       "undatedNonMichelin": 16,
       "unscoredDated": 0
     },
@@ -26,16 +26,16 @@
       "reviews": 502,
       "minimum": 3,
       "belowMinimum": 12,
-      "undatedNonMichelin": 19,
+      "undatedNonMichelin": 17,
       "unscoredDated": 0
     },
     {
       "table": "PinAircraftPerf",
       "pins": 165,
-      "reviews": 563,
+      "reviews": 562,
       "minimum": 3,
-      "belowMinimum": 13,
-      "undatedNonMichelin": 9,
+      "belowMinimum": 14,
+      "undatedNonMichelin": 8,
       "unscoredDated": 0
     },
     {
@@ -76,8 +76,8 @@
     },
     {
       "table": "PinCriticReview",
-      "pins": 93,
-      "reviews": 280,
+      "pins": 94,
+      "reviews": 283,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -384,33 +384,6 @@
     },
     {
       "table": "PinCarPerf",
-      "pinId": 19864,
-      "title": "Geely Launches the Panda Mini EV From RMB 39,900 to Take On the Wuling Hongguang Mini",
-      "sourceUrl": "https://autonews.gasgoo.com/articles/news/geely-panda-mini-bev-hits-market-starting-at-39900-yuan-70022214",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: long-range Panda Mini (17 kWh LFP, 30 kW), launch RMB 39,900-53,900. 200 km CLTC (120 km for the short-range trim); 22 kW DC, 30-80% in 30 min; wheelbase 2,015 mm, four-seat micro; value 3: close to the Wuling Mini EV Macaron's RMB 37,600-43,600 but larger. Null: 0-100 km/h (Geely quoted none, per Electrifying) and driver assist (no ADAS listed in opened pages). Only two independent hands-on reviews found (both invited Beijing Auto Show drives)."
-    },
-    {
-      "table": "PinCarPerf",
-      "pinId": 19866,
-      "title": "Li Auto Launches the L6, Its Cheapest Extended-Range SUV, From RMB 249,800",
-      "sourceUrl": "https://cnevpost.com/2024/04/18/li-auto-launches-li-l6/",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: L6 Pro, RMB 249,800 (Max RMB 279,800). 1,390 km CLTC combined, 212 km electric; 20-80% in 20 min (36.8 kWh LFP); 0-100 km/h 5.4 s, 300 kW AWD; Pro has AD Pro (Journey 5, 128 TOPS), highway-only, no LiDAR = 2; 2,920 mm wheelbase five-seat; value 4: 300 kW AWD extended-range at RMB 70,000 under the L7 (editorial, no rival table); kids 4: rear climate zone, heated seats, 491 L boot, ISOFIX not read."
-    },
-    {
-      "table": "PinCarPerf",
-      "pinId": 19867,
-      "title": "Li Auto Launches the Six-Seat L8 SUV From RMB 359,800 and Previews the L7",
-      "sourceUrl": "https://cnevpost.com/2022/09/30/li-auto-officially-launches-l8-pre-orders-li-l7/",
-      "reviewCount": 0,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: L8 Pro, RMB 359,800 (Max RMB 399,800). 1,315 km CLTC combined, 210 km electric; DC 75-90 kW and 30 min to 80% per Wikipedia (low confidence, scored 1.5); 0-100 km/h 5.5 s; Pro uses vision-only AD Pro with NOA, no LiDAR; 3,005 mm six-seat; value 3.5 (no rival price table read); kids 4: six seats, second-row massage/ventilation, no second-row heater/cooler or fridge. No review of a driven L8 found: the CarNewsChina/CnEVPost 2022 pieces say the L8 was not driven, so none listed."
-    },
-    {
-      "table": "PinCarPerf",
       "pinId": 19869,
       "title": "Li Auto Launches the Redesigned L9 With Active Suspension From RMB 459,800",
       "sourceUrl": "https://carnewschina.com/2026/05/15/li-auto-launches-new-l9-flagship-suv-with-active-suspension-starting-from-67600-usd-in-china/",
@@ -642,6 +615,15 @@
       "reviewCount": 0,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Variant: Convair 880-22 (four CJ-805-3, MTOW 184,500 lb), Jane's All The World's Aircraft 1965-66 as tabulated on Wikipedia. Range: 2,472 nmi with 22,500 lb payload and 14,000 lb reserve; 2,500 -> 1, under 1,500 -> 0, so 2,472 -> 0.97 -> 1.0 (This Day in Aviation quotes a 5,056-mile maximum range, which conflicts and is not a typical-load figure; not used). Capacity: 110 passengers (Jane's); 100 -> 1, 150 -> 2, so 110 -> 1.2 -> 1.0. Efficiency: no fuel burn published -> null. Speed: Jane's economy cruise Mach 0.82 at 35,000 ft -> 3.0 (0.82 anchor); the maximum cruise of 534.5 kt is not the typical cruise. Runway: Jane's lists a 8,750 ft takeoff for the 880-22 without stating weight or ISA conditions, so it is treated as the MTOW figure: 7,000 -> 4, 8,500 -> 3, 10,000 -> 2, so 8,750 -> 2.8 -> 3.0 (flagged: not from an airport-planning document). Comfort: no reviews of this variant found (Air Facts Journal pilot article was blocked) -> null. Reviews: 0 found, below the required 3."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "title": "Canadair's CRJ100 Regional Jet Makes Its First Flight",
+      "sourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "reviewCount": 2,
+      "reason": "Removed three CRJ200 sibling cabin citations. Two exact CRJ100 reports now saved: BritAir and Belavia, distinct authors on Flight-Report. Need another independently published exact CRJ100 flight/cabin account; comfort null. No CRJ200 or simulator inference.",
+      "existingResearchBasis": "Variant: CRJ100 / CRJ100ER (CF34-3A1), Wikipedia CRJ100/200 table (one combined table: values assigned to the CRJ100 by column order, which the page does not state explicitly). Range: ER 1,305 nmi, below the 1,500 nmi anchor -> 0.0 (LR 1,650 nmi would be 0.0 too). Capacity: 50 seats -> under 60 -> 0.0. Efficiency: no fuel burn figure -> null. Speed: normal cruise Mach 0.74 -> 1 + (0.74-0.70)/(0.78-0.70) = 1.5. Runway: 5,800 ft (ER) at MTOW, SL, ISA -> 5 - 300/1,500 = 4.8 -> 5.0 (LR 6,290 ft would be 4.5). Comfort remains null: two actual CRJ100 cabin reports now verified (BritAir F-GRJR, published Oct3 2022 from Jun2010 flight; Belavia, published Sep24 2016). Operator/period-specific scratched-window and ageing-but-comfortable comments do not establish a universal launch-era cabin score. Three CRJ200 sibling reviews removed; one more independent exact CRJ100 report needed."
     },
     {
       "table": "PinLlmPerf",
@@ -1251,7 +1233,7 @@
       "title": "Volvo Lifts the V60 Recharge Plug-In to an 18.8 kWh Battery and 350-455 PS, From EUR 56,350",
       "url": "https://www.topgear.com/car-reviews/volvo/v60",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Full browser body verifies TopGear V60 overview quote, but visible Published Apr8 2025 conflicts with structured Apr9 2025 datePublished. Generic overview covers later trims while pin scores350PS RechargeT6 launch. Seek dated exact T6 18.8kWh drive before applying a publication day."
     },
     {
       "table": "PinGasCarPerf",
@@ -1369,17 +1351,9 @@
       "table": "PinGasCarPerf",
       "pinId": 19966,
       "title": "Hyundai Premieres the European-Built Third-Generation i10 at Frankfurt From GBP 12,495",
-      "url": "https://www.vanarama.com/guides/cars/hyundai-i10-review",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19966,
-      "title": "Hyundai Premieres the European-Built Third-Generation i10 at Frankfurt From GBP 12,495",
       "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "status": "verified-undated",
+      "reason": "Full rendered body verifies exact base1.0-litre driving comment. Dimensions3670x1680x1480,252L boot identify third generation, consistent with pin. No original article publication day in visible body/time/metadata;2008 is model-line origin, not publication. Native APIs now include scored exact extract and rendered H1; retain null off graph."
     },
     {
       "table": "PinGasCarPerf",
@@ -1396,14 +1370,6 @@
       "url": "https://www.carmagazine.co.uk/car-reviews/porsche/718-gts-40/",
       "status": "verified-undated",
       "reason": "Opened full rendered CAR road test; saved driving extract matches, allowing typography and whitespace only. Exact scored variant checked against rubric basis: Porsche 718 Cayman GTS 4.0 (2020) review: holy grail hunting. Visible Updated: 09 March 2020 is explicitly Updated. Only structured datePublished is year0001 placeholder; no valid original publication day in body/time/meta. Keep null and off graph; research day is not publication."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 20020,
-      "title": "Porsche Premieres the Eighth-Generation 911 (992) in Los Angeles With a 450 PS Carrera S",
-      "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/2dr-pdk/first-drive",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
     },
     {
       "table": "PinAircraftPerf",
@@ -1459,7 +1425,7 @@
       "title": "Douglas DC-8 Makes Its First Flight From Long Beach",
       "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Full browser body verifies HenryTenby ATI extract, but its October2013 magazine issue has no publication day and covers DC8-62/-72 combis, not scored Series10. Existing basis also mentions later55/-72 freighters; exact-variant replacements needed. Flight/visit dates are not article publication."
     },
     {
       "table": "PinAircraftPerf",
@@ -1470,20 +1436,12 @@
       "reason": "Opened full Julian Waller firsthand Delta MD-90-30 report. Byline renders AGO without an age; original datePublished is empty. June28 2022 is dateModified only, and Back in May describes the flight. Keep original publication null; do not date the report from the trip or update."
     },
     {
-      "table": "PinAircraftPerf",
-      "pinId": 19893,
-      "title": "Canadair's CRJ100 Regional Jet Makes Its First Flight",
-      "url": "https://www.airlinereporter.com/?p=38780",
-      "status": "needs-research",
-      "reason": "Exact CRJ200 criticism verified, but visible author byline says October16 2015 while time datetime says April24 2014. The conflicting time field cannot establish publication; seek original archive/publisher correction. Related October2026 cards are excluded."
-    },
-    {
       "table": "PinLlmPerf",
       "pinId": 2693,
       "title": "Claude Fable 5.1 and Mythos 5.1 Released",
       "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
       "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote."
+      "reason": "Full browser body verifies Endor vendor benchmark and quote. Visible and structured original Apr9 2026 precede pin model launch Sep1 2026; visible modification Sep4 may be model revision rather than original. Resolve historical article/model chronology before dating; not dated from current benchmark text."
     },
     {
       "table": "PinLlmPerf",

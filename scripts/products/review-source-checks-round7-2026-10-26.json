@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
+      "status": "verified-undated",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true,
+      "reason": "Full rendered body verifies exact base1.0-litre driving comment. Dimensions3670x1680x1480,252L boot identify third generation, consistent with pin. No original article publication day in visible body/time/metadata;2008 is model-line origin, not publication. Native APIs now include scored exact extract and rendered H1; retain null off graph."
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 2693,
+      "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
+      "status": "needs-research",
+      "reason": "Full browser body verifies Endor vendor benchmark and quote. Visible and structured original Apr9 2026 precede pin model launch Sep1 2026; visible modification Sep4 may be model revision rather than original. Resolve historical article/model chronology before dating; not dated from current benchmark text.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "needs-research",
+      "reason": "Full browser body verifies TopGear V60 overview quote, but visible Published Apr8 2025 conflicts with structured Apr9 2025 datePublished. Generic overview covers later trims while pin scores350PS RechargeT6 launch. Seek dated exact T6 18.8kWh drive before applying a publication day.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19570,
+      "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
+      "status": "needs-research",
+      "reason": "Full browser body verifies HenryTenby ATI extract, but its October2013 magazine issue has no publication day and covers DC8-62/-72 combis, not scored Series10. Existing basis also mentions later55/-72 freighters; exact-variant replacements needed. Flight/visit dates are not article publication.",
+      "openedAt": "2026-10-26"
+    }
+  ]
+}

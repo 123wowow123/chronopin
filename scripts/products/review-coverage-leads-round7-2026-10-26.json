@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19850,
+      "reason": "DenzaN9 exact2025 launch entry model: English searches predominantly returned D9MPV or2026 upgraded flash-charge N9, excluded. Search-screened2025 exactentry owner accounts exist onAutohome but a second distinct publisher road-test source is still needed, alongside the existing DrivenCarGuide report; do not count multiple same-platform owners as independent publishers. September2026 flash-charge suspension/battery differs from launch2025.",
+      "sourcesChecked": [
+        "https://k.autohome.com.cn/detail/view_01jrzep6y96mtkge9h68v00000.html",
+        "https://chejiahao.autohome.com.cn/info/19881495",
+        "https://chejiahao.m.autohome.com.cn/info/25598298"
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19645,
+      "reason": "Additional exact340A candidates screened: minreiseverdenMay17 2012 identifies SP-MRC/ES-ASN but discussion is airline service, not aircrafthandling/comfort. FlypratNov5 2022 identifies ES-NSB but comfort praise is Fokker50 section, not Saab. Do not borrow wrong-leg quotes. Remains one exactA firsthand publisher plus340B sibling context.",
+      "sourcesChecked": [
+        "https://min-reiseverden.blogspot.com/2012/05/trip-report-estonian-air-tll-rix-tll.html",
+        "https://forum.flyprat.no/threads/sverige-og-aland.156280/"
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19646,
+      "reason": "C-GPCF Shorts360 report subtype remains conflicted: primary photographerslabel360-100, airport-data/modelcataloglabel360-300 and laterphoto caption360-200. Do not establish prototype subtype from conflicting third-party labels; report remains candidate rather than exact-variant source.",
+      "sourcesChecked": [
+        "https://www.sqtalk.com/forum/forum/general/trip-reports/11855-",
+        "https://www.flickr.com/photos/tags/cgpcf/",
+        "https://airport-data.com/aircraft/photo/000102365"
+      ]
+    }
+  ]
+}

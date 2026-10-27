@@ -1,0 +1,292 @@
+{
+  "checkedAt": "2026-10-26",
+  "rubricReadbacks": [
+    {
+      "pinId": 19864,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19864,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19866,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19866,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19867,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19867,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19966,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19966,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20020,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20020,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19893,
+      "production": false,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19893,
+      "production": true,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    }
+  ],
+  "sampledNativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 6509,
+      "url": "http://127.0.0.1:3000/pin/6509/microsoft-unveils-hololens-holographic-headset-with-windows-10",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19866,
+      "url": "http://127.0.0.1:3000/pin/19866/li-auto-launches-the-l6-its-cheapest-extended-range-suv-from-rmb-249-800",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19864,
+      "url": "http://127.0.0.1:3000/pin/19864/geely-launches-the-panda-mini-ev-from-rmb-39-900-to-take-on-the-wuling-hongguang",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19867,
+      "url": "http://127.0.0.1:3000/pin/19867/li-auto-launches-the-six-seat-l8-suv-from-rmb-359-800-and-previews-the-l7",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19893,
+      "url": "http://127.0.0.1:3000/pin/19893/canadair-s-crj100-regional-jet-makes-its-first-flight",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 6509,
+      "url": "https://www.chronopin.com/pin/6509/microsoft-unveils-hololens-holographic-headset-with-windows-10",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19866,
+      "url": "https://www.chronopin.com/pin/19866/li-auto-launches-the-l6-its-cheapest-extended-range-suv-from-rmb-249-800",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19864,
+      "url": "https://www.chronopin.com/pin/19864/geely-launches-the-panda-mini-ev-from-rmb-39-900-to-take-on-the-wuling-hongguang",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19867,
+      "url": "https://www.chronopin.com/pin/19867/li-auto-launches-the-six-seat-l8-suv-from-rmb-359-800-and-previews-the-l7",
+      "quote": true,
+      "graph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19893,
+      "url": "https://www.chronopin.com/pin/19893/canadair-s-crj100-regional-jet-makes-its-first-flight",
+      "quote": true,
+      "graph": true
+    }
+  ],
+  "catalogConstraintsPassed": true,
+  "documentationTests": {
+    "files": 2,
+    "tests": 22,
+    "passed": true
+  },
+  "remaining": {
+    "rubricGaps": 74,
+    "dateSourceChecks": 83,
+    "verifiedUndated": 71
+  },
+  "deploymentPerformed": false,
+  "scheduleChanged": false
+}

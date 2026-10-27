@@ -2766,5 +2766,126 @@
         "publishedDate": "2026-05-11"
       }
     ]
+  },
+  {
+    "pinId": 19866,
+    "scores": {
+      "range": 5,
+      "charging": 2.5,
+      "acceleration": 3,
+      "assistance": 2,
+      "space": 3,
+      "value": 4,
+      "kidsFriendly": 4
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: L6 Pro, RMB 249,800 (Max RMB 279,800). 1,390 km CLTC combined, 212 km electric; 20-80% in 20 min (36.8 kWh LFP); 0-100 km/h 5.4 s, 300 kW AWD; Pro has AD Pro (Journey 5, 128 TOPS), highway-only, no LiDAR = 2; 2,920 mm wheelbase five-seat; value 4: 300 kW AWD extended-range at RMB 70,000 under the L7 (editorial, no rival table); kids 4: rear climate zone, heated seats, 491 L boot, ISOFIX not read. Three publishers now carry firsthand evidence: CNC Max shared-chassis drive, Kolesa import test and Autohome certified2024Pro owner (July7 2024). Owner brake impression is not instrumented testing; Max ADAS does not establish Pro capability.",
+    "sourceUrl": "https://cnevpost.com/2024/04/18/li-auto-launches-li-l6/",
+    "reviews": [
+      {
+        "url": "https://carnewschina.com/2024/07/06/sunday-china-drive-li-auto-l6-chinas-top-nev-startup-hints-at-going-overseas-in-2025/",
+        "quote": "The Li Auto L6 is a feature-packed medium to large SUV that offers a comfortable ride. However, it is not an engaging car to drive, nor should we expect it to.",
+        "title": "Sunday China Drive | Li Auto L6 – China’s top NEV startup hints at going overseas in 2025",
+        "sentiment": 0.1,
+        "publishedDate": "2024-07-06"
+      },
+      {
+        "url": "https://www.kolesa.ru/test-drive/bezmiateznost-i-odna-ploxaia-novost-test-draiv-li-l6",
+        "quote": "Плавность хода впечатляет, и машина ощущается очень мягкой",
+        "title": "Безмятежность и одна плохая новость: тест-драйв Li L6 (Russian-market import, in Russian)",
+        "sentiment": 0.7,
+        "publishedDate": "2026-08-25"
+      },
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01j26fzkk96mskjcsh6ws00000.html",
+        "quote": "刹车总体还可以",
+        "title": "理想L6Pro真实用车情况，电耗，智驾，空调，驾驶感受等",
+        "sentiment": 0.2,
+        "publishedDate": "2024-07-07"
+      }
+    ]
+  },
+  {
+    "pinId": 19867,
+    "scores": {
+      "range": 5,
+      "charging": 1.5,
+      "acceleration": 3,
+      "assistance": 2,
+      "space": 4,
+      "value": 3.5,
+      "kidsFriendly": 4
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: L8 Pro, RMB 359,800 (Max RMB 399,800). 1,315 km CLTC combined, 210 km electric; DC 75-90 kW and 30 min to 80% per Wikipedia (low confidence, scored 1.5); 0-100 km/h 5.5 s; Pro uses vision-only AD Pro with NOA, no LiDAR; 3,005 mm six-seat; value 3.5 (no rival price table read); kids 4: six seats, second-row massage/ventilation, no second-row heater/cooler or fridge. Three distinct published Pro driving accounts: Xchuxing Dec1 2022 prospective-owner drive, Autohome Feb1 2023 certified owner after1110km and Drom Oct2 2023 curated foreign-owner translation. Drom original name/Chinese URL unpublished; credit translation, not identity verification. Owner evidence, not3 instrumented editorial tests. Launch news without driving remains excluded.",
+    "sourceUrl": "https://cnevpost.com/2022/09/30/li-auto-officially-launches-l8-pre-orders-li-l7/",
+    "reviews": [
+      {
+        "url": "https://www.xchuxing.com/article/66415",
+        "title": "试驾L8 Pro，体验车系扛把子",
+        "quote": "转向系统：很轻，还是舒适取向，指向型也还Ok，符合定位。",
+        "publishedDate": "2022-12-01",
+        "sentiment": 0.4
+      },
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01gr68b5rz6gvkje9k68t00000.html",
+        "title": "最帅奶爸神车，一改油车用车理念，个人认为70万内最能打之二",
+        "quote": "变道超车都非常轻松给力",
+        "publishedDate": "2023-02-01",
+        "sentiment": 0.7
+      },
+      {
+        "url": "https://www.drom.ru/reviews/li/l8/1442369/",
+        "title": "Li L8 2023 — отзыв владельца",
+        "quote": "По старой плохой дороге с выбоинами автомобиль шел очень мягко.",
+        "publishedDate": "2023-10-02",
+        "sentiment": 0.6
+      }
+    ]
+  },
+  {
+    "pinId": 19864,
+    "scores": {
+      "range": 0.5,
+      "charging": 1,
+      "acceleration": null,
+      "assistance": null,
+      "space": 1,
+      "value": 3,
+      "kidsFriendly": 1.5
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: long-range Panda Mini (17 kWh LFP, 30 kW), launch RMB 39,900-53,900. 200 km CLTC (120 km for the short-range trim); 22 kW DC, 30-80% in 30 min; wheelbase 2,015 mm, four-seat micro; value 3: close to the Wuling Mini EV Macaron's RMB 37,600-43,600 but larger. Null: 0-100 km/h (Geely quoted none, per Electrifying) and driver assist (no ADAS listed in opened pages). Four firsthand reports now verified: Autocar/Electrifying invited Beijing drives and two Autohome certified2023 200km owners (Mar2023/Aug2025); three publishers. Owners are not instrumented tests. No later210km CATL variant substitution.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Geely_Panda_Mini_EV",
+    "reviews": [
+      {
+        "url": "https://www.autocar.co.uk/car-news/new-cars/inside-chinas-%C2%A36k-mini-evs-geely-geometry-panda-driven",
+        "quote": "It’s also pretty fun to drive, as I experienced on a Beijing race track (improbably).",
+        "title": "Inside China's £6k mini-EVs: Geely Geometry Panda driven (Beijing track drive)",
+        "sentiment": 0.7,
+        "publishedDate": "2024-04-29"
+      },
+      {
+        "url": "https://www.electrifying.com/reviews/geely/panda/review",
+        "quote": "the ride seemed surprisingly comfortable in the Panda; a little bouncy, perhaps, but not as hard as we expected.",
+        "title": "Geely Panda Review & Buying Guide 2026 (invited Beijing Auto Show drive)",
+        "sentiment": 0.3,
+        "publishedDate": "2024-04-27"
+      },
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01gw9jstdc6gw3ee1j6cwg0000.html",
+        "quote": "提速我认为在这个价格价位来讲已经不错了",
+        "title": "通勤代步小能手",
+        "sentiment": 0.4,
+        "publishedDate": "2023-03-24"
+      },
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01k2cmb0y76mv3cd1s6rw00000.html",
+        "quote": "油门跟脚，方向盘轻巧，指哪打哪",
+        "title": "买了熊猫mini，使用一年多，有些优缺点不吐不快",
+        "sentiment": 0.6,
+        "publishedDate": "2025-08-11"
+      }
+    ]
   }
 ]

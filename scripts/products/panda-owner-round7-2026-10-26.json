@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19864,
+      "pinSourceUrl": "https://autonews.gasgoo.com/articles/news/geely-panda-mini-bev-hits-market-starting-at-39900-yuan-70022214",
+      "basis": "Two certified exact2023 Panda Mini200km Endurance Bear owner accounts on Autohome: 致远星的车子 after288km, first published Mar24 2023; 不快乐的面包 after11000km, first published Aug11 2025 (2023 purchase/model year, not a2025 facelift). Owner acceleration/steering impressions, not instrumented performance. Complements Autocar/Electrifying invited Beijing drives: four reports across three publishers; two Autohome authors count as one publisher. No2026 17.2kWh CATL/210km update substituted. All axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01gw9jstdc6gw3ee1j6cwg0000.html",
+          "title": "通勤代步小能手",
+          "publishedDate": "2023-03-24",
+          "quote": "提速我认为在这个价格价位来讲已经不错了",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01k2cmb0y76mv3cd1s6rw00000.html",
+          "title": "买了熊猫mini，使用一年多，有些优缺点不吐不快",
+          "publishedDate": "2025-08-11",
+          "quote": "油门跟脚，方向盘轻巧，指哪打哪",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01gw9jstdc6gw3ee1j6cwg0000.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original page explicitly labels first publication day, certified2023 200km model/trim and owner odometer; purchase month distinguished."
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01k2cmb0y76mv3cd1s6rw00000.html",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original page explicitly labels first publication day, certified2023 200km model/trim and owner odometer; purchase month distinguished."
+        }
+      ]
+    }
+  ]
+}

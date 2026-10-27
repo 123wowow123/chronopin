@@ -111,23 +111,23 @@ or shop is not a firsthand review of the pinned product.
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
 | PinTaste | 228 | 493 | 0 (minimum one) | 43 |
-| PinCarPerf | 128 | 340 | 37 | 16 |
-| PinGasCarPerf | 160 | 502 | 12 | 19 |
-| PinAircraftPerf | 165 | 563 | 13 | 9 |
+| PinCarPerf | 128 | 346 | 34 | 16 |
+| PinGasCarPerf | 160 | 502 | 12 | 17 |
+| PinAircraftPerf | 165 | 562 | 14 | 8 |
 | PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
 | PinDining | 89 | 272 | 8 | 46 |
-| PinCriticReview | 93 | 280 | 0 | 1 |
+| PinCriticReview | 94 | 283 | 0 | 1 |
 
-There are **76 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 93 existing critic rows have at least three extracts.
+There are **74 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 94 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
 The XUV 7XO now has three independent publishers: Autocar India, CarTrade
 and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
-petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 157 non-MICHELIN undated entries, 70
-have verified reasons to retain null dates; **87 date/source checks remain**.
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 154 non-MICHELIN undated entries, 71
+have verified reasons to retain null dates; **83 date/source checks remain**.
 Every dated review with a quote is scored. Category leads still need screening;
 awards, concerts and business events must not receive invented product reviews.
 
@@ -352,3 +352,38 @@ The entirely undated Niurou guide correctly has no time-series graph, while the
 sampled dated-review pins show their graph sections. All 22 documentation tests,
 catalog constraints and queue-count checks passed. Application code was not
 changed by this content-maintenance pass.
+
+
+## Original hardware and exact-model owner evidence — October 26
+
+This continuation closes three EV raw-count gaps and restores the CRJ100 to the
+research queue after removing three CRJ200 sibling citations. The net inventory
+is **74 rubric gaps** (EV34, gas12, aircraft14, dining8, LLM4, video2), **83
+unresolved date/source checks** and **71 verified-undated citations**. Counts
+remain distinct from certification of three independent professional road tests.
+
+- [Original HoloLens prototype](../../../scripts/products/hololens-prototype-critic-round7-2026-10-26.json): three original January 2015 firsthand demo reports from WIRED, Ars Technica and Engadget. Praise for visuals and criticism of uncomfortable prototype hardware are preserved. These concern controlled prototype demonstrations, not the 2016 Developer Edition, HoloLens 2, retail reliability or battery endurance. WIRED and Ars share ownership; the Wired UK republication of Ars was excluded. The publisher-local January 21 dates are distinguished from next-day UTC metadata.
+- [Exact original L6 Pro owner](../../../scripts/products/l6-owner-round7-2026-10-26.json): Autohome’s certified 2024 Pro owner reports after 1,905 km, first published July 7, 2024. The short Chinese quotation concerns brake response without an invented braking distance. It complements the existing CarNewsChina shared-chassis Max test and Kolesa import account; owner evidence is explicitly labelled and does not establish Max ADAS capability on Pro.
+- [Original L8 Pro accounts](../../../scripts/products/l8-owner-round7-2026-10-26.json): Xchuxing’s December 1, 2022 prospective-owner drive, Autohome’s February 1, 2023 certified-owner report after 1,110 km, and Drom’s October 2, 2023 curated translation of a foreign owner’s three test drives. Drom does not disclose the original reviewer’s name or Chinese URL; that attribution limit stays explicit, and no independently verified identity is claimed. The report’s distinct comparative details were checked against the other accounts. Three published accounts do not mean three instrumented editorial tests.
+- [Panda Mini owners](../../../scripts/products/panda-owner-round7-2026-10-26.json): two certified owners of the exact 2023 200-km Endurance Bear, first published March 24, 2023 and August 11, 2025. The latter publication date does not make it a 2025 facelift. These complement the existing two invited Beijing drives; four reports span three publishers because both owners use Autohome. No later CATL 210-km variant findings were substituted.
+- [Review source repairs](../../../scripts/products/review-source-repairs-round7-2026-10-26.json): Stephen Dobie’s March 21, 2019 review contains an explicit RWD Carrera S grip assessment, replacing a base non-S Carrera test. Sean Carson’s January 31, 2020 third-generation 1.0 MPi i10 review replaces the unavailable Vanarama citation; The AA’s exact base-engine comment was verified in the full body, with null date retained. Both preserve the existing rubric scores.
+- AirlineReporter’s CRJ200 article date was resolved from its visible October 16, 2015 byline and the publisher’s public WordPress post record, which agreed on the original date and content despite an incorrect HTML time attribute. The citation was briefly dated, then removed from the CRJ100 review list on exact-variant audit. The retired proposal is retained outside replay entries, so future replay cannot reintroduce the sibling review.
+- [Exact CRJ100 replacements](../../../scripts/products/crj100-source-replacement-round7-2026-10-26.json): Brit Air F-GRJR’s scratched window and Belavia’s ageing but comfortable cabin are supported by original passenger reports. Publication days (October 3, 2022 and September 24, 2016) are distinguished from flight days. Two authors on Flight-Report count as one publisher. Generic scoring criteria, commenters and other-leg aircraft were excluded. The row remains below three and comfort remains null.
+- [Targeted exclusions](../../../scripts/products/review-exclusions-round7-2026-10-26.json): replaced the base Carrera and unavailable i10 source only after saving replacements; removed all three CRJ200 citations from the CRJ100 review array, preserving references as family/history context. All other fields were verified after each exclusion.
+- [Coverage bases](../../../scripts/products/review-basis-round7-2026-10-26.json): replaced stale no-review/two-review statements, identified owner and translation limits, and removed the obsolete CRJ200-based cabin argument. Every axis, author and unrelated field remained unchanged in both environments. The original EV catalog was synchronized.
+- [Full-document browser pass](../../../scripts/products/review-browser-audit-round7-2026-10-26.json): revisited all 87 intermediate unresolved URLs using full document bodies instead of article selectors that sometimes returned only related advertisements. Exact strings appeared on 31 pages; this is an audit aid, not proof of eligible independent testing. Current source dispositions and successful replacements supersede intermediate metadata candidates.
+- [Source dispositions](../../../scripts/products/review-source-checks-round7-2026-10-26.json): the i10 AA extract is verified-undated. Top Gear’s V60 visible April 8 versus metadata April 9, 2025 remains conflicted; Endor’s April publication preceding the model’s September launch remains unresolved; Henry Tenby’s October 2013 issue lacks a day and concerns later DC-8 variants. No inferred dates were saved.
+- [Specific remaining research leads](../../../scripts/products/review-coverage-leads-round7-2026-10-26.json): Denza N9 search results distinguish the 2025 launch SUV, D9 MPV and later flash-charge revisions. Additional Saab 340A reports discussed service rather than aircraft comfort; the positive Flyprat comfort passage describes the Fokker 50 leg. C-GPCF’s Shorts 360 subtype labels conflict. None was used to fill a count with mismatched evidence.
+
+All changes used existing authenticated native APIs in both environments, with
+references/source wikis checked and existing ready wikis preserved. No deployment,
+restart or schedule change was performed. Scheduled model verification remains
+outstanding after the previously recorded insufficient-credit failure.
+
+
+[Validation](../../../scripts/products/review-validation-round7-2026-10-26.json):
+twelve native rubric readbacks verified unchanged scores and unrelated fields;
+ten sampled pin pages rendered saved quotations and graph sections locally and
+in production. All 22 documentation tests, catalog constraints and queue-total
+checks passed. This pass changed content/research catalogs and documentation,
+with no application-code changes.

@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20020,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Porsche_911_(992)",
+      "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/2dr-pdk/first-drive",
+      "expectedReview": {
+        "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/2dr-pdk/first-drive",
+        "quote": "Yes, it\u2019s too bloated and intimidating to fling down the roads last-gen narrow 911s would revel in, but for its class, it\u2019ll still out-point an AMG GT or Jaguar F-Type on an actual real-life road.",
+        "title": "Porsche 911 Carrera review: surprise, the cheaper 911 is the one to buy (Top Gear, base Carrera)",
+        "publishedDate": null
+      },
+      "reason": "Old TopGear article explicitly drives base non-S Carrera, not scored CarreraS. Save and verify exact S-labelled sentence from March2019 test before removing sibling-variant citation. Preserve all axes and other reviews."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "pinSourceUrl": "https://www.koreajoongangdaily.com/business/hyundai-motor-45-unveiled-at-frankfurt/10953657",
+      "url": "https://www.vanarama.com/guides/cars/hyundai-i10-review",
+      "expectedReview": {
+        "url": "https://www.vanarama.com/guides/cars/hyundai-i10-review",
+        "quote": "the Hyundai is planted and secure as it travels along, rarely deflected from its path by bumps in the road.",
+        "title": "Hyundai i10 Review (Vanarama)",
+        "publishedDate": null
+      },
+      "reason": "Old Vanarama link currently redirects to an Autotrader security-block page and its quote cannot be re-verified. Replace with opened original dated Jan31 2020 exact1.0MPI test; removal only after replacement saved/read back. Preserve three other sources and axes."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "url": "https://www.airlinereporter.com/?p=38780",
+      "expectedReview": {
+        "url": "https://www.airlinereporter.com/?p=38780",
+        "title": "Flyers, Rejoice! American CRJ200s Being Replaced By E-175s",
+        "quote": "claustrophobic cabin, tiny overhead bins",
+        "publishedDate": "2015-10-16",
+        "sentiment": -0.6
+      },
+      "reason": "This source explicitly reviews CRJ200, while pin scores CRJ100. No sibling cabin assessment is treated as exact-variant review. Add/read back two actual CRJ100 reports first; retain below-target gap and comfort null. Preserve references as family/history context and other technical axes."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "url": "https://travelupdate.com/5-reasons-why-hate-crj-200-worst",
+      "expectedReview": {
+        "url": "https://travelupdate.com/5-reasons-why-hate-crj-200-worst",
+        "quote": "I'm a little over 5'10\" and I barely fit on the CRJ-200.",
+        "title": "5 Reasons Why I Hate The CRJ-200",
+        "sentiment": -0.5,
+        "publishedDate": "2019-09-17"
+      },
+      "reason": "This source explicitly reviews CRJ200, while pin scores CRJ100. No sibling cabin assessment is treated as exact-variant review. Add/read back two actual CRJ100 reports first; retain below-target gap and comfort null. Preserve references as family/history context and other technical axes."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "url": "https://liveandletsfly.com/bombardier-crj-200-devils-chariot/",
+      "expectedReview": {
+        "url": "https://liveandletsfly.com/bombardier-crj-200-devils-chariot/",
+        "quote": "The CRJ-200 earned the \"Devil's Chariot\" nickname because it is cramped, dated, and thoroughly unpleasant compared to newer regional jets.",
+        "title": "I Flew The \"Devil's Chariot\" From Palm Springs To San Francisco",
+        "sentiment": -0.9,
+        "publishedDate": "2026-09-08"
+      },
+      "reason": "This source explicitly reviews CRJ200, while pin scores CRJ100. No sibling cabin assessment is treated as exact-variant review. Add/read back two actual CRJ100 reports first; retain below-target gap and comfort null. Preserve references as family/history context and other technical axes."
+    }
+  ]
+}

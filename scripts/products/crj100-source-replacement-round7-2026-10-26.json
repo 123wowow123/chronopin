@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "basis": "Two original exact CRJ100 cabin reports replace CRJ200 sibling context: ChrisFGITI BritAir F-GRJR, flown Jun27 2010/published Oct3 2022; LGaddict Belavia business cabin, flown Sep2 2016/published Sep24 2016. Quote describes scratched window and ageing but comfortable cabin, respectively. Distinct authors/operations, same Flight-Report platform; not three independent publishers. No commenter or general scoring-criteria text quoted. Comfort remains null: operator/period-specific evidence is not universal launch-cabin scoring. Only2 exact reports, third still needed. All technical axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://flight-report.com/en/report/58230/brit-air-af5892-madrid-mad-lyon-lys/",
+          "title": "Review of Brit Air flight from Madrid to Lyon in Economy",
+          "quote": "A few scratches on the window.",
+          "publishedDate": "2022-10-03",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://flight-report.com/fr/report/18813/Belavia-B2-835-Minsk-MSQ-Kharkiv-HRK/",
+          "title": "Avis du vol entre Minsk et Kharkiv en classe Affaires avec Belavia",
+          "quote": "la cabine est ancienne mais encore confortable",
+          "publishedDate": "2016-09-24",
+          "sentiment": 0.2
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://flight-report.com/en/report/58230/brit-air-af5892-madrid-mad-lyon-lys/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact CRJ100 model specified in original firsthand report; original publication byline distinguished from flight date. Native-language quote retained."
+        },
+        {
+          "url": "https://flight-report.com/fr/report/18813/Belavia-B2-835-Minsk-MSQ-Kharkiv-HRK/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact CRJ100 model specified in original firsthand report; original publication byline distinguished from flight date. Native-language quote retained."
+        }
+      ]
+    }
+  ]
+}

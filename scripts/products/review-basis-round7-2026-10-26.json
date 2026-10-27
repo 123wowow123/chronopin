@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19866,
+      "pinSourceUrl": "https://cnevpost.com/2024/04/18/li-auto-launches-li-l6/",
+      "expectedBasis": "Variant: L6 Pro, RMB 249,800 (Max RMB 279,800). 1,390 km CLTC combined, 212 km electric; 20-80% in 20 min (36.8 kWh LFP); 0-100 km/h 5.4 s, 300 kW AWD; Pro has AD Pro (Journey 5, 128 TOPS), highway-only, no LiDAR = 2; 2,920 mm wheelbase five-seat; value 4: 300 kW AWD extended-range at RMB 70,000 under the L7 (editorial, no rival table); kids 4: rear climate zone, heated seats, 491 L boot, ISOFIX not read.",
+      "basis": "Variant: L6 Pro, RMB 249,800 (Max RMB 279,800). 1,390 km CLTC combined, 212 km electric; 20-80% in 20 min (36.8 kWh LFP); 0-100 km/h 5.4 s, 300 kW AWD; Pro has AD Pro (Journey 5, 128 TOPS), highway-only, no LiDAR = 2; 2,920 mm wheelbase five-seat; value 4: 300 kW AWD extended-range at RMB 70,000 under the L7 (editorial, no rival table); kids 4: rear climate zone, heated seats, 491 L boot, ISOFIX not read. Three publishers now carry firsthand evidence: CNC Max shared-chassis drive, Kolesa import test and Autohome certified2024Pro owner (July7 2024). Owner brake impression is not instrumented testing; Max ADAS does not establish Pro capability."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19867,
+      "pinSourceUrl": "https://cnevpost.com/2022/09/30/li-auto-officially-launches-l8-pre-orders-li-l7/",
+      "expectedBasis": "Variant: L8 Pro, RMB 359,800 (Max RMB 399,800). 1,315 km CLTC combined, 210 km electric; DC 75-90 kW and 30 min to 80% per Wikipedia (low confidence, scored 1.5); 0-100 km/h 5.5 s; Pro uses vision-only AD Pro with NOA, no LiDAR; 3,005 mm six-seat; value 3.5 (no rival price table read); kids 4: six seats, second-row massage/ventilation, no second-row heater/cooler or fridge. Two exact Pro firsthand accounts now verified: Xchuxing Dec1 2022 prospective-owner test drive and Autohome Feb1 2023 certified owner after1110km. Fewer than3 independent reviews; keep researching. Launch news without driving remains excluded.",
+      "basis": "Variant: L8 Pro, RMB 359,800 (Max RMB 399,800). 1,315 km CLTC combined, 210 km electric; DC 75-90 kW and 30 min to 80% per Wikipedia (low confidence, scored 1.5); 0-100 km/h 5.5 s; Pro uses vision-only AD Pro with NOA, no LiDAR; 3,005 mm six-seat; value 3.5 (no rival price table read); kids 4: six seats, second-row massage/ventilation, no second-row heater/cooler or fridge. Three distinct published Pro driving accounts: Xchuxing Dec1 2022 prospective-owner drive, Autohome Feb1 2023 certified owner after1110km and Drom Oct2 2023 curated foreign-owner translation. Drom original name/Chinese URL unpublished; credit translation, not identity verification. Owner evidence, not3 instrumented editorial tests. Launch news without driving remains excluded.",
+      "originalBasis": "Variant: L8 Pro, RMB 359,800 (Max RMB 399,800). 1,315 km CLTC combined, 210 km electric; DC 75-90 kW and 30 min to 80% per Wikipedia (low confidence, scored 1.5); 0-100 km/h 5.5 s; Pro uses vision-only AD Pro with NOA, no LiDAR; 3,005 mm six-seat; value 3.5 (no rival price table read); kids 4: six seats, second-row massage/ventilation, no second-row heater/cooler or fridge. No review of a driven L8 found: the CarNewsChina/CnEVPost 2022 pieces say the L8 was not driven, so none listed."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19864,
+      "pinSourceUrl": "https://autonews.gasgoo.com/articles/news/geely-panda-mini-bev-hits-market-starting-at-39900-yuan-70022214",
+      "expectedBasis": "Variant: long-range Panda Mini (17 kWh LFP, 30 kW), launch RMB 39,900-53,900. 200 km CLTC (120 km for the short-range trim); 22 kW DC, 30-80% in 30 min; wheelbase 2,015 mm, four-seat micro; value 3: close to the Wuling Mini EV Macaron's RMB 37,600-43,600 but larger. Null: 0-100 km/h (Geely quoted none, per Electrifying) and driver assist (no ADAS listed in opened pages). Only two independent hands-on reviews found (both invited Beijing Auto Show drives).",
+      "basis": "Variant: long-range Panda Mini (17 kWh LFP, 30 kW), launch RMB 39,900-53,900. 200 km CLTC (120 km for the short-range trim); 22 kW DC, 30-80% in 30 min; wheelbase 2,015 mm, four-seat micro; value 3: close to the Wuling Mini EV Macaron's RMB 37,600-43,600 but larger. Null: 0-100 km/h (Geely quoted none, per Electrifying) and driver assist (no ADAS listed in opened pages). Four firsthand reports now verified: Autocar/Electrifying invited Beijing drives and two Autohome certified2023 200km owners (Mar2023/Aug2025); three publishers. Owners are not instrumented tests. No later210km CATL variant substitution."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "expectedBasis": "Variant: CRJ100 / CRJ100ER (CF34-3A1), Wikipedia CRJ100/200 table (one combined table: values assigned to the CRJ100 by column order, which the page does not state explicitly). Range: ER 1,305 nmi, below the 1,500 nmi anchor -> 0.0 (LR 1,650 nmi would be 0.0 too). Capacity: 50 seats -> under 60 -> 0.0. Efficiency: no fuel burn figure -> null. Speed: normal cruise Mach 0.74 -> 1 + (0.74-0.70)/(0.78-0.70) = 1.5. Runway: 5,800 ft (ER) at MTOW, SL, ISA -> 5 - 300/1,500 = 4.8 -> 5.0 (LR 6,290 ft would be 4.5). Comfort: all three reviews are of the CRJ200, whose fuselage and 50-seat cabin are identical to the CRJ100's (FlyRadius: only the engine differs); all three call the cabin cramped -> criticised = 1. This applies a sibling's cabin reviews to the CRJ100, flagged here; if that is unacceptable set comfort null. Reviews dated: the AirlineReporter piece's date is not shown on the page (comments from Oct 2015), so null. Comfort null: reviews cover the CRJ200 cabin.",
+      "basis": "Variant: CRJ100 / CRJ100ER (CF34-3A1), Wikipedia CRJ100/200 table (one combined table: values assigned to the CRJ100 by column order, which the page does not state explicitly). Range: ER 1,305 nmi, below the 1,500 nmi anchor -> 0.0 (LR 1,650 nmi would be 0.0 too). Capacity: 50 seats -> under 60 -> 0.0. Efficiency: no fuel burn figure -> null. Speed: normal cruise Mach 0.74 -> 1 + (0.74-0.70)/(0.78-0.70) = 1.5. Runway: 5,800 ft (ER) at MTOW, SL, ISA -> 5 - 300/1,500 = 4.8 -> 5.0 (LR 6,290 ft would be 4.5). Comfort remains null: two actual CRJ100 cabin reports now verified (BritAir F-GRJR, published Oct3 2022 from Jun2010 flight; Belavia, published Sep24 2016). Operator/period-specific scratched-window and ageing-but-comfortable comments do not establish a universal launch-era cabin score. Three CRJ200 sibling reviews removed; one more independent exact CRJ100 report needed."
+    }
+  ]
+}

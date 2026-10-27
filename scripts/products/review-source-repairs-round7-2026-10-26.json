@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20020,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Porsche_911_(992)",
+      "basis": "Opened Stephen Dobie March21 2019 UK992 first drive of CarreraS/4S; chosen sentence explicitly describes RWD CarreraS grip, matching scored450PS S. Replaces base non-S August2019 test. Original visible Published matches structured date; one TopGear publisher, not two. All axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/s-2dr-pdk/first-drive",
+          "title": "Porsche 911 review: new 992 driven in Britain",
+          "quote": "the \u00a35,000-cheaper Carrera S doesn\u2019t especially struggle for grip.",
+          "publishedDate": "2019-03-21",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/s-2dr-pdk/first-drive",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible Published21Mar2019 and structured datePublished03/21/2019. Sentence names CarreraS, not base non-S or4S-specific findings."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "pinSourceUrl": "https://www.koreajoongangdaily.com/business/hyundai-motor-45-unveiled-at-frankfurt/10953657",
+      "basis": "Sean Carson original Jan31 2020 AutoExpress review: exact third-generation UK1.0MPi five-speed, not NLine turbo. Replaces unavailable Vanarama citation. AA exact base1.0 commentary verified in full page: dimensions3670x1680x1480 confirm third generation; no original publication day, retain null with editorial score. No generic2008 model-origin date assigned. All axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://www.autoexpress.co.uk/hyundai/i10/84740/new-hyundai-i10-2020-review",
+          "title": "New Hyundai i10 2020 review",
+          "quote": "the steering is a good weight for around town",
+          "publishedDate": "2020-01-31",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
+          "quote": "The basic 1.0-litre engine in particular can feel painfully slow when getting up to high speeds",
+          "title": "Hyundai I10 Review",
+          "publishedDate": null,
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.autoexpress.co.uk/hyundai/i10/84740/new-hyundai-i10-2020-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible SeanCarson Jan31 2020 agrees with original structured datePublished;1.0MPI66bhp manual tested."
+        },
+        {
+          "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Full rendered body matches exact quote and third-generation dimensions. No original publication day returned; MichaelGreen mechanic bio is not treated as road-test authorship."
+        }
+      ]
+    }
+  ],
+  "retiredEntries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "pinSourceUrl": "https://skiesmag.com/news/30-years-marked-since-maiden-flight-canadair-regional-jet/",
+      "basis": "Opened rendered JohnNguyen CRJ200 article and publisher public WordPress post38780. APIoriginal date2015-10-16T11:33:44 agrees with visible October16 2015 byline, modifiedsame day. One HTMLdatetime2014-04-24 is inconsistent/incorrect and not used. Quote is contiguous cabin-criticism excerpt, not a changed aircraft or E175 ride description. Technical axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://www.airlinereporter.com/?p=38780",
+          "title": "Flyers, Rejoice! American CRJ200s Being Replaced By E-175s",
+          "quote": "claustrophobic cabin, tiny overhead bins",
+          "publishedDate": "2015-10-16",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.airlinereporter.com/?p=38780",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible original byline October16 2015 corroborated by https://www.airlinereporter.com/wp-json/wp/v2/posts/38780 original date2015-10-16T11:33:44, content and canonical article link. One erroneous HTML time attribute documented."
+        }
+      ],
+      "laterDisposition": "Publication day verified and temporarily saved, then citation removed from CRJ100 review array because it explicitly reviews CRJ200 sibling. Preserved as reference/history evidence only. Do not replay into CRJ100; use crj100-source-replacement-round7 catalog instead."
+    }
+  ]
+}
