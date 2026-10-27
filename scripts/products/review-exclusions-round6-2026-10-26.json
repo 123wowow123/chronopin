@@ -78,6 +78,45 @@
         "publishedDate": null
       },
       "reason": "Replace evolving undated overview with dated underlying test from same publisher after adding/verifying replacement. Tested EX-L AWD versus scored LX FWD; both share 158hp 2.0/CVT, expressly unchanged by trim. Quote is critical powertrain impression from AWD test, not measured FWD acceleration, economy or ride. Original JSON-LD Jun21 2022; Aug24 2022 is update adding instrumented results. No axes change."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15244,
+      "pinSourceUrl": "https://www.autoguide.com/auto/auto-news/kia-prices-2027-telluride-from-40-735-44628949",
+      "url": "https://www.caranddriver.com/kia/telluride",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/kia/telluride",
+        "quote": "Spacious seating in all three rows, quiet and comfortable ride, well-sorted powertrain.",
+        "title": "2027 Kia Telluride Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Exact scored US X-Line SX-Prestige AWD 274hp 2.5T eight-speed instrumented test. Original visible Published and JSON-LD datePublished agree. Replace undated evolving overview with the underlying dated test; one publisher, not two. All rubric axes preserved. Replacement saved and verified before removal."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15243,
+      "pinSourceUrl": "https://www.carscoops.com/2026/06/2027-kia-seltos-pricing/",
+      "url": "https://www.caranddriver.com/kia/seltos",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/kia/seltos",
+        "quote": "Lackluster acceleration even with the optional turbo engine, handling could be sharper.",
+        "title": "2027 Kia Seltos Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Exact scored US X-Line SX AWD 190hp 1.6T eight-speed instrumented test. Original visible Published and JSON-LD datePublished agree. Replace undated evolving overview with the underlying dated test; one publisher, not two. All rubric axes preserved. Replacement saved and verified before removal."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20040,
+      "pinSourceUrl": "https://media.subaru.com/newsrelease.do?id=2013",
+      "url": "https://www.autoexpress.co.uk/subaru/crosstrek",
+      "expectedReview": {
+        "url": "https://www.autoexpress.co.uk/subaru/crosstrek",
+        "quote": "The steering is accurate and decently weighted, while there\u2019s more than enough grip, and surprisingly little body roll when pushing on.",
+        "title": "Subaru Crosstrek review (Auto Express, UK-market 2.0i e-Boxer)",
+        "publishedDate": null
+      },
+      "reason": "Opened source explicitly scores UK134bhp2.0i e-Boxer mild hybrid, whereas pin scores US152hp nonhybrid2.0. Replace with opened exact US Premium152hp test before removal; preserve other reviews. No guessed cross-market calibration."
     }
   ]
 }

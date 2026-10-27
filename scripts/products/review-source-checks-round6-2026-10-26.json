@@ -72,7 +72,745 @@
       "openedAt": "2026-10-26",
       "quoteVerified": true,
       "reason": "Stars and Stripes Korea reproduces Dynamic Busan local newspaper guide, explicitly credited July edition; no original day/year exposed. Exact Namcheon branch: 25-4 Suyeong-ro388beon-gil, matches native pin/MICHELIN. Quote concerns interior atmosphere, not a fabricated firsthand diner or numeric subscore. One Dynamic Busan editorial source, not two sources for newspaper and syndication. With MICHELIN and Eat Busan there are three distinct guide publishers. All five dining axes preserved."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2557,
+      "url": "https://projects.sfchronicle.com/2017/top-100-restaurants/swan-oyster-depot",
+      "status": "verified-undated",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true,
+      "reason": "Opened full exact Swan Oyster Depot editorial capsule in San Francisco Chronicle Top100 Restaurants2017. Saved food assessment matches verbatim. The package edition establishes 2017 only; the leaf page supplies no original publication day in body, time or metadata. Retain null rather than infer a day from guide year."
     }
   ],
-  "needsResearch": []
+  "needsResearch": [
+    {
+      "table": "PinTaste",
+      "pinId": 5631,
+      "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7013,
+      "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7014,
+      "url": "https://www.totalwine.com/beer/seltzers-flavored-beverages/hard-seltzer/high-noon-vodka-seltzer-transfusion/p/2126277428",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5633,
+      "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 404. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7660,
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7663,
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13912,
+      "url": "https://www.productreview.com.au/listings/peters-drumstick",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13915,
+      "url": "https://www.melbourneroyal.com.au/australian-food-awards/results/2026-champions/",
+      "status": "needs-research",
+      "reason": "Saved extract matches official food-award results, not a firsthand product tasting. Awards support achievement but cannot substitute for a verified tasting review; research exact winning product and judge/taster account.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "url": "https://www.facebook.com/triumfglass/videos/1081267804769728/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13918,
+      "url": "https://www.facebook.com/triumfglass/videos/1568022244557404/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13921,
+      "url": "https://www.hennig-olsen.no/iskrem/boksis/daim-strawberry-floteis-450ml",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13926,
+      "url": "https://restaurantguru.com/Alberto-Marchetti-Turin",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7626,
+      "url": "https://www.ireland-guide.com/establishment/aran-artisan-bakery-deli-and-bistro.14026.html",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13971,
+      "url": "https://www.instagram.com/reel/DeRM1E_zg99/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13973,
+      "url": "https://www.walmart.com.mx/ip/helado-holanda-oreo-sabor-vainilla-con-trozos-de-galleta-1-89-l/00750630641517",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "url": "https://www.facebook.com/blogcheiasdecharmeplussize/posts/provamos-o-mini-pa%C3%A7oquita-kibon-que-%C3%A9-um-bombom-de-sorvete-cremoso-sabor-amendoi/1653389256359622/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13934,
+      "url": "https://www.facebook.com/LickGelatoNI/videos/guess-where-you-can-find-our-cans-now-get-yours-today-lickgelato-viral-icecream-/1986148565668332/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13978,
+      "url": "https://www.instagram.com/reel/DdFsf7gReMq/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13976,
+      "url": "https://www.paguemenos.com.br/minisorvete-pacoquita-kibon-caixa-92g-edicao-limitada/p",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "url": "https://silverstreamdistribution.com/collections/all-products/products/cortina-shamiso-bubblegum-ice-cream-5lt",
+      "status": "needs-research",
+      "reason": "Saved flavour description matches distributor product copy, not an attributed firsthand tasting. Need independent exact-flavour tasting source; do not turn merchant text or product timestamps into a review.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13983,
+      "url": "https://silverstreamdistribution.com/products/cortina-shamiso-banana-ice-cream-5lt",
+      "status": "needs-research",
+      "reason": "Saved flavour description matches distributor product copy, not an attributed firsthand tasting. Need independent exact-flavour tasting source; do not turn merchant text or product timestamps into a review.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13991,
+      "url": "https://www.yelp.com/biz/ben-and-jerrys-san-diego-10",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13987,
+      "url": "https://www.tiktok.com/@classywithnoregards/video/7690772384281922829",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19948,
+      "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 13996,
+      "url": "https://www.threads.com/@penangfoodie/post/DM1qxCUzihk",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14000,
+      "url": "https://www.xchuxing.com/article/162814",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14076,
+      "url": "https://www.xchuxing.com/article/158922",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "url": "https://www.xchuxing.com/article/162486",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14164,
+      "url": "https://www.xchuxing.com/article/174048",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14228,
+      "url": "https://www.xchuxing.com/article/174108",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 503. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14218,
+      "url": "https://www.xchuxing.com/article/160445",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "url": "https://electricvehicleweb.com/voyah-dream/",
+      "status": "needs-research",
+      "reason": "Voyah source is explicitly First Look of updated 2024-26 cabin, not the scored 2022 launch BEV. Visible July2 2026 is Last Updated On despite datePublished sharing that value. Resolve updated-version eligibility and original day; do not date as independent launch road test.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19969,
+      "url": "https://www.exchangeandmart.co.uk/reviews/hyundai/santa-fe-plug-in-hybrid/14433",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20024,
+      "url": "https://www.evo.co.uk/porsche/macan",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20018,
+      "url": "https://www.carwow.co.uk/polestar/4",
+      "status": "needs-research",
+      "reason": "Carwow evolving Polestar4 page matches extract but discussion includes Dual Motor; scored pin is Long Range Single Motor. February2 2024 metadata predates later revisions; establish exact test variant and quote chronology before dating.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "status": "needs-research",
+      "reason": "AutoExpress generic Superb page now covers multiple petrol/diesel/PHEV versions. Scored pin is UK iV Estate; June6 2024 metadata alone does not establish when this PHEV-specific assessment appeared. Exact iV road-test replacement still needed.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15220,
+      "url": "https://www.caranddriver.com/bmw/7-series",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15222,
+      "url": "https://www.motor1.com/reviews/797008/merecdes-amg-glc53-review/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15227,
+      "url": "https://www.autotrader.co.uk/content/car-reviews/aston-martin-db12-s-review-2026",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15238,
+      "url": "https://www.edmunds.com/toyota/corolla-cross/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15243,
+      "url": "https://www.caranddriver.com/kia/seltos",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. Publication candidate requires further exact-model or original-publication verification; not applied.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15244,
+      "url": "https://www.caranddriver.com/kia/telluride",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. Publication candidate requires further exact-model or original-publication verification; not applied.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "url": "https://www.pcauto.com.cn/reviews/31211.html",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15245,
+      "url": "https://www.caranddriver.com/hyundai/palisade",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15246,
+      "url": "https://www.caranddriver.com/kia/k4",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15271,
+      "url": "https://www.edmunds.com/chevrolet/corvette/",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19911,
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "status": "needs-research",
+      "reason": "Opened evo SQ8 page is titled 2024 and visibly dated February2 2024 while original datePublished is May28 2021. Both petrol V8 model scope and whether saved quote appeared in original versus facelift revision need historical verification; do not assign update as original.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "url": "https://www.vanarama.com/guides/cars/hyundai-i10-review",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19966,
+      "url": "https://www.theaa.com/cars/reviews/hyundai/i10",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20040,
+      "url": "https://www.autoexpress.co.uk/subaru/crosstrek",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20020,
+      "url": "https://www.topgear.com/car-reviews/porsche/911-992-carrera-coupe-2019/2dr-pdk/first-drive",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19930,
+      "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. Opened Denis Duquet first drive and inspected time/metadata. August15 2018 is explicitly Updated, not original publication. Source covers both 5.3 and 6.2 V8; pin scores 6.2 High Country crew. Find original byline or an exact-powertrain dated firsthand replacement; retain null.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 2693,
+      "url": "https://www.endorlabs.com/learn/fable-5-1-takes-the-top-spot----faster-than-opus-5-cheaper-and-cleaner",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+      "status": "needs-research",
+      "reason": "Exact corrected Akkio extract verified. Visible publication January3 2024 conflicts with JSON-LD December22 2023 original and December26 2023 modification. Date remains null in both environments; seek original archive/publisher evidence.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19893,
+      "url": "https://www.airlinereporter.com/?p=38780",
+      "status": "needs-research",
+      "reason": "Exact CRJ200 criticism verified, but visible author byline says October16 2015 while time datetime says April24 2014. The conflicting time field cannot establish publication; seek original archive/publisher correction. Related October2026 cards are excluded.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15115,
+      "url": "https://www.verdent.ai/guides/model/glm-4-7-flash",
+      "status": "needs-research",
+      "reason": "Exact Verdent quotation verified, but source explicitly repeats Z.AI-reported results and recommends future tests rather than reporting its own hands-on results. It is an undated coding-agent vendor guide; independent-review eligibility needs replacement or documented guide-only scope.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19570,
+      "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+      "status": "needs-research",
+      "reason": "Saved Wikipedia text matches, but Wikipedia page creation February15 2024 and last revision October24 2026 are not an independent Sora2Pro model test or its publication date. Find actual primary independent evaluator/reviewer; do not graph encyclopedia timestamps.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15166,
+      "url": "https://megalens.ai/research/llm-latency-timeouts-code-review",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+      "status": "needs-research",
+      "reason": "Opened GeeLark comparison has original metadata November18 2025 and visible updated October6 2026; generic Analysis and tests assertion lacks attributed protocol or samples, and publisher promotes its Seedance service. Independent-test eligibility remains unresolved, so no date assigned.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2464,
+      "url": "https://forbestravelguide.com/restaurants/new-york-city-new-york/eleven-madison-park",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 2581,
+      "url": "https://www.hungryfordesignreview.com/reviews/union-oyster-house",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "url": "https://wanderlog.com/place/details/4236393",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "url": "https://wanderlog.com/place/details/4228626",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17198,
+      "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+      "status": "needs-research",
+      "reason": "Saved text matches aggregator listing. Establish underlying named critic/guide and independent attribution before treating it as a separate dining review; no original publication day returned.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "url": "https://wanderlog.com/place/details/396544/la-yeon",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17209,
+      "url": "https://wanderlog.com/place/details/1699466/onjium",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17212,
+      "url": "https://wanderlog.com/place/details/1078312/alla-prima",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17214,
+      "url": "https://wanderlog.com/place/details/1136579/evett",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17222,
+      "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17208,
+      "url": "https://www.andyhayler.com/restaurant/la-yeon",
+      "status": "needs-research",
+      "reason": "Saved extract matched the rendered source, but no reliable original publication day or independent exact-product/branch eligibility was established. No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17223,
+      "url": "https://wanderlog.com/place/details/1699464/the-library",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17225,
+      "url": "https://wanderlog.com/place/details/428273/bicena",
+      "status": "needs-research",
+      "reason": "Saved text matches a Wanderlog summary of other reviewers, not an attributed critic or firsthand review. Verify original credited critic/guide evidence or replace this summary; do not assign a user-review date to aggregator prose.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17218,
+      "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+      "status": "needs-research",
+      "reason": "Saved extract matches hotel operator restaurant description, not independent critic review. Research exact Sushi Kanesaka counter guide/critic source rather than date hotel marketing.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17264,
+      "url": "https://www.enprimeurclub.com/restaurants/mori-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17257,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17265,
+      "url": "https://www.enprimeurclub.com/restaurants/palate",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17266,
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17267,
+      "url": "https://www.enprimeurclub.com/restaurants/le-dorer-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17269,
+      "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17277,
+      "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5588,
+      "url": "https://www.allmusic.com/album/mw0000507740",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead.",
+      "openedAt": "2026-10-26"
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17270,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "status": "needs-research",
+      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote.",
+      "openedAt": "2026-10-26"
+    }
+  ]
 }

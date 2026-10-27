@@ -1,0 +1,597 @@
+{
+  "checkedAt": "2026-10-26",
+  "nativeRubricReadbacks": [
+    {
+      "pinId": 19564,
+      "production": false,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19564,
+      "production": true,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19565,
+      "production": false,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19565,
+      "production": true,
+      "table": "PinAircraftPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "capacity",
+        "efficiency",
+        "speed",
+        "runway",
+        "comfort",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19953,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19953,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19955,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19955,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19956,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19956,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19958,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19958,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19960,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19960,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19961,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 19961,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 17285,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17285,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 20024,
+      "production": false,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20024,
+      "production": true,
+      "table": "PinCarPerf",
+      "unrelatedFieldsVerified": [
+        "range",
+        "charging",
+        "acceleration",
+        "assistance",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15243,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15243,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15244,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 15244,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20040,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    },
+    {
+      "pinId": 20040,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "unrelatedFieldsVerified": [
+        "power",
+        "acceleration",
+        "economy",
+        "handling",
+        "space",
+        "value",
+        "kidsFriendly",
+        "source",
+        "sourceUrl",
+        "rubricYear"
+      ]
+    }
+  ],
+  "deliberateAxisCorrection": "scripts/products/review-axis-correction-round6-2026-10-26.json",
+  "sampledPages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19565,
+      "url": "http://127.0.0.1:3000/pin/19565/norontair-takes-delivery-of-the-first-dash-8",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 3757,
+      "url": "http://127.0.0.1:3000/pin/3757/alo-releases-the-alo-trail-its-first-trail-running-shoe",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19960,
+      "url": "http://127.0.0.1:3000/pin/19960/honda-opens-orders-for-the-fifth-generation-2018-odyssey-from-29-990-with-a-280",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 19955,
+      "url": "http://127.0.0.1:3000/pin/19955/honda-s-fl5-civic-type-r-reaches-us-dealers-from-43-990-with-315-hp-and-a-manual",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19565,
+      "url": "https://www.chronopin.com/pin/19565/norontair-takes-delivery-of-the-first-dash-8",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 3757,
+      "url": "https://www.chronopin.com/pin/3757/alo-releases-the-alo-trail-its-first-trail-running-shoe",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19960,
+      "url": "https://www.chronopin.com/pin/19960/honda-opens-orders-for-the-fifth-generation-2018-odyssey-from-29-990-with-a-280",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 19955,
+      "url": "https://www.chronopin.com/pin/19955/honda-s-fl5-civic-type-r-reaches-us-dealers-from-43-990-with-315-hp-and-a-manual",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 15243,
+      "url": "http://127.0.0.1:3000/pin/15243/kia-prices-the-redesigned-2027-seltos-from-24-990-in-the-us",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 20024,
+      "url": "http://127.0.0.1:3000/pin/20024/porsche-unveils-the-electric-macan-turbo-with-630-hp-and-270-kw-charging-from-us",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 20040,
+      "url": "http://127.0.0.1:3000/pin/20040/subaru-debuts-the-all-new-2024-crosstrek-at-the-chicago-auto-show-from-usd-24-99",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17285,
+      "url": "http://127.0.0.1:3000/pin/17285/niurou-mian-guan-zi-busan-restaurant-guide",
+      "quote": true,
+      "graph": false,
+      "expectedGraph": false,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 15243,
+      "url": "https://www.chronopin.com/pin/15243/kia-prices-the-redesigned-2027-seltos-from-24-990-in-the-us",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 20024,
+      "url": "https://www.chronopin.com/pin/20024/porsche-unveils-the-electric-macan-turbo-with-630-hp-and-270-kw-charging-from-us",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 20040,
+      "url": "https://www.chronopin.com/pin/20040/subaru-debuts-the-all-new-2024-crosstrek-at-the-chicago-auto-show-from-usd-24-99",
+      "quote": true,
+      "graph": true,
+      "expectedGraph": true,
+      "passed": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17285,
+      "url": "https://www.chronopin.com/pin/17285/niurou-mian-guan-zi-busan-restaurant-guide",
+      "quote": true,
+      "graph": false,
+      "expectedGraph": false,
+      "passed": true
+    }
+  ],
+  "documentationTests": {
+    "command": "npx vitest run src/lib/okf.test.ts src/lib/okfLint.test.ts",
+    "tests": 22,
+    "files": 2,
+    "passed": true
+  },
+  "remaining": {
+    "rubricGaps": 76,
+    "needsSourceResearch": 87,
+    "verifiedUndated": 70
+  },
+  "deploymentPerformed": false,
+  "scheduledSettingsChanged": false
+}

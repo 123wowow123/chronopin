@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15244,
+      "pinSourceUrl": "https://www.autoguide.com/auto/auto-news/kia-prices-2027-telluride-from-40-735-44628949",
+      "basis": "Exact scored US X-Line SX-Prestige AWD 274hp 2.5T eight-speed instrumented test. Original visible Published and JSON-LD datePublished agree. Replace undated evolving overview with the underlying dated test; one publisher, not two. All rubric axes preserved.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a70589062/2027-kia-telluride-test/",
+          "title": "2027 Kia Telluride Tested: Is the Sequel as Good as the Original?",
+          "quote": "a smooth and well-sorted eight-speed automatic transmission",
+          "publishedDate": "2026-03-06",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a70589062/2027-kia-telluride-test/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact scored US X-Line SX-Prestige AWD 274hp 2.5T eight-speed instrumented test. Original visible Published and JSON-LD datePublished agree. Replace undated evolving overview with the underlying dated test; one publisher, not two. All rubric axes preserved."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15243,
+      "pinSourceUrl": "https://www.carscoops.com/2026/06/2027-kia-seltos-pricing/",
+      "basis": "Exact scored US X-Line SX AWD 190hp 1.6T eight-speed instrumented test. Original visible Published and JSON-LD datePublished agree. Replace undated evolving overview with the underlying dated test; one publisher, not two. All rubric axes preserved.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a73189820/2027-kia-seltos-x-line-sx-test/",
+          "title": "2027 Kia Seltos X-Line SX Tested: What a Glow-Up",
+          "quote": "Body motion is smooth, and impacts are nicely damped.",
+          "publishedDate": "2026-07-21",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a73189820/2027-kia-seltos-x-line-sx-test/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact scored US X-Line SX AWD 190hp 1.6T eight-speed instrumented test. Original visible Published and JSON-LD datePublished agree. Replace undated evolving overview with the underlying dated test; one publisher, not two. All rubric axes preserved."
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20024,
+      "pinSourceUrl": "https://autos.yahoo.com/2024-porsche-macan-ev-debuts-123000882.html",
+      "basis": "Opened Stuart Gallagher/Yousuf Ashraf EV Macan road test, May11 2026 visible byline agrees with datePublished. Article covers Macan Turbo Electric as scored, not first-generation combustion Macan. Quote is a contiguous steering impression. All axes preserved.",
+      "reviews": [
+        {
+          "url": "https://www.evo.co.uk/porsche/macan",
+          "title": "Porsche Macan Electric review \u2013 Germany's answer to Hyundai's Ioniq 5 N",
+          "quote": "the responses are calm, clean and precise",
+          "publishedDate": "2026-05-11",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.evo.co.uk/porsche/macan",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Visible 11 May2026 byline matches original datePublished; current electric Macan including Turbo driven."
+        }
+      ]
+    }
+  ]
+}

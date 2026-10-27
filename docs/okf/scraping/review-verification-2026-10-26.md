@@ -111,23 +111,23 @@ or shop is not a firsthand review of the pinned product.
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
 | PinTaste | 228 | 493 | 0 (minimum one) | 43 |
-| PinCarPerf | 128 | 340 | 37 | 17 |
-| PinGasCarPerf | 160 | 502 | 12 | 28 |
-| PinAircraftPerf | 165 | 559 | 14 | 9 |
+| PinCarPerf | 128 | 340 | 37 | 16 |
+| PinGasCarPerf | 160 | 502 | 12 | 19 |
+| PinAircraftPerf | 165 | 563 | 13 | 9 |
 | PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 271 | 9 | 45 |
-| PinCriticReview | 92 | 277 | 0 | 1 |
+| PinDining | 89 | 272 | 8 | 46 |
+| PinCriticReview | 93 | 280 | 0 | 1 |
 
-There are **78 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 92 existing critic rows have at least three extracts.
+There are **76 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 93 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
 The XUV 7XO now has three independent publishers: Autocar India, CarTrade
 and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
-petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 166 non-MICHELIN undated entries, 61
-have verified reasons to retain null dates; **105 date/source checks remain**.
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 157 non-MICHELIN undated entries, 70
+have verified reasons to retain null dates; **87 date/source checks remain**.
 Every dated review with a quote is scored. Category leads still need screening;
 awards, concerts and business events must not receive invented product reviews.
 
@@ -312,3 +312,43 @@ Native API readbacks verified all content saves in both environments; references
 source wikis and Source/PinSource links were checked. Chromium rendered the
 corrected NYU and Seedance pages and the MD-90 and Civic pages locally and in
 production, with their saved quotes and sentiment graph sections visible.
+
+
+## Further exact-variant and source verification — October 26
+
+This continuation saved and read back all changes locally and in production,
+resolving two more raw rubric shortfalls and eighteen publication/source checks.
+The remaining inventory is **76 rubric rows below three reviews** and **87
+unresolved publication/source checks**, alongside **70 verified-undated entries**.
+These counts still do not certify that every stored extract is an independent
+firsthand test. Aggregator summaries, vendor claims and variant conflicts stay
+explicitly queued for replacement or attribution research.
+
+- [Dash 8-100 firsthand reports](../../../scripts/products/dash8-firsthand-round6-2026-10-26.json): added Paliparan’s April 3, 2021 Olympic Air report and Lia_K’s June 9, 2024 CemAir report to #19564 and #19565. The latter date is publication, distinct from the March 25 flight. NorOntair now has three firsthand publishers including Ben Brown’s Henson pilot recollections; the prototype pin also has three firsthand publishers, with its two Flight-Report contributors counting as one publisher. Later operator cabins do not establish prototype or delivery-era comfort.
+- [Dash 8 coverage bases](../../../scripts/products/review-basis-round6-2026-10-26.json): corrected stale one-pilot coverage statements in both environments; technical scores, comfort null and unrelated fields remain unchanged.
+- [Alo Trail wear impressions](../../../scripts/products/alo-trail-critic-round6-2026-10-26.json): three scored citations from Olivia Halevy, Tim Kohut and Nikki Chwatt. These support short-term walking, city/office and gym wear, not a long-distance trail-running verdict. Tom’s Guide and Who What Wear share Future ownership, while Men’s Health is Hearst; three authors do not imply three independent owners. Exact rendered article titles and original April 2026 publication days were verified, with affiliate disclosures and test limits recorded.
+- [Six Honda underlying tests](../../../scripts/products/honda-test-replacements-round6-2026-10-26.json): replaced evolving undated overviews for Civic sedan, Civic Type R, CR-V, HR-V, Odyssey and Pilot. Tested trim/drivetrain differences are recorded explicitly. Shared-powertrain quotes do not claim that AWD/Elite/Touring test measurements apply to scored FWD/base trims. Type R and HR-V original publication dates come from original metadata; the later visible updates are recorded separately, and the saved quotations are qualitative impressions.
+- [Kia tests and Macan date](../../../scripts/products/review-dates-extra-round6-2026-10-26.json): dated original exact X-Line SX Seltos and X-Line SX-Prestige Telluride road tests replace their overview citations. The electric Macan assessment has a verified May 11, 2026 byline matching original metadata and covers the scored Turbo. These are one publisher per vehicle, not extra independent votes for overview and test URLs.
+- [Crosstrek exact-market replacement](../../../scripts/products/crosstrek-review-replacement-round6-2026-10-26.json): the UK 134-bhp e-Boxer hybrid assessment was replaced with Elana Scherr’s US Premium 152-hp non-hybrid 2.0/CVT/AWD report. Its original March 13, 2023 article date is distinguished from the August 15 instrumented-results update. Three exact-powertrain road-test publishers remain after the exclusion.
+- [Crosstrek acceleration correction](../../../scripts/products/review-axis-correction-round6-2026-10-26.json): the independently measured 9.5-second 0–60 result fills its previously null acceleration axis at **1**, following the frozen 2026 anchor. The basis identifies the tested Premium and results-update date. Every other score, review and unrelated native field was preserved and read back in both environments. This deliberate score correction is separate from the review-only replay helper.
+- [Busan guide addition](../../../scripts/products/busan-guide-round6-2026-10-26.json): Niurou Mian Guan Zi now has MICHELIN, Eat Busan and Dynamic Busan guide sources. Stars and Stripes reproduces the latter and is counted once with its original publisher, not as another source. The branch address matches 25-4 Suyeong-ro 388beon-gil. The newspaper edition supplies only July without an original day/year, so the date stays null; atmosphere commentary is not presented as an invented diner or subscore.
+- [Nine overview/variant exclusions](../../../scripts/products/review-exclusions-round6-2026-10-26.json): removed each old citation only after its replacement was saved and verified. Remaining reviews and unrelated scores were checked after every removal.
+- [Verified-undated cases](../../../scripts/products/review-source-checks-round6-2026-10-26.json): seven CAR extracts match the rendered original bodies exactly. Each source exposes an Updated label and a year-0001 datePublished placeholder; none received an invented original date. Swan Oyster Depot’s Chronicle capsule identifies the 2017 guide edition but no publication day. These eight existing undated entries close source checks while staying off the time-series graph; the new Dynamic Busan citation is likewise deliberately undated.
+- [All 92 remaining URLs opened in a browser](../../../scripts/products/review-browser-audit-round6-2026-10-26.json): captured HTTP/load outcomes, exact quote matches and unverified metadata candidates. Later successful saves override the intermediate findings. A returned date never automatically became a publication date. AirlineReporter’s CRJ200 visible October 16, 2015 byline conflicts with an April 24, 2014 time attribute; the conflict stays queued. Several Wanderlog extracts are summaries of other reviewers, Verdent repeats maker figures, and distributor/award copy is not a firsthand taste review. Their eligibility questions remain explicit.
+- [Screened coverage leads](../../../scripts/products/review-coverage-leads-round6-2026-10-26.json): Anmok’s Busan Station branch was excluded from Namcheon research, the opened current operator address conflicts with the older pin/MICHELIN address, and the identified NYT feature could not be opened. Shorts 360 subtype applicability and exact Hali 1 Opal sources also remain genuine research gaps; no simulator, other-branch or unverifiable quote was used to satisfy a count.
+
+The README removes the two closed rubric gaps and eighteen closed source checks.
+The original car and dining replay catalogs were synchronized by the API replay
+workflow; the portable catalogs retain the gas-car corrections. Production model
+verification remains outstanding after scheduled run #25’s insufficient-credit
+failure. No deployment, restart or production schedule change was performed.
+
+
+[Validation evidence](../../../scripts/products/review-validation-round6-2026-10-26.json):
+26 native rubric readbacks verified unchanged unrelated fields against snapshots;
+the one deliberate Crosstrek acceleration change was separately verified.
+Sixteen sampled native pages rendered the saved excerpts locally and in production.
+The entirely undated Niurou guide correctly has no time-series graph, while the
+sampled dated-review pins show their graph sections. All 22 documentation tests,
+catalog constraints and queue-count checks passed. Application code was not
+changed by this content-maintenance pass.

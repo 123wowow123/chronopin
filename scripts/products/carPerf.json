@@ -2729,5 +2729,42 @@
         "publishedDate": "2024-09-18"
       }
     ]
+  },
+  {
+    "pinId": 20024,
+    "scores": {
+      "range": 3,
+      "charging": 3.5,
+      "acceleration": 4,
+      "assistance": 2,
+      "space": 3,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Scored: Macan Turbo Electric. Range up to 366 mi (589 km) WLTP (CAR) = 3. Charging 270 kW peak, 10-80% in 21 min (CAR) = 3.5. Acceleration 0-100 km/h 3.3 s (Wikipedia) = 4. Assistance: radar cruise with lane centring, no LiDAR (CarExpert) = 2. Space: 2,893 mm wheelbase (Wikipedia), 480 L boot = 3. Value null: no rival price opened. Kids null: ISOFIX and rear-vent detail not opened.",
+    "sourceUrl": "https://insideevs.com/news/707167/2024-porsche-macan-specs-pricing-overview/",
+    "reviews": [
+      {
+        "url": "https://www.autocar.co.uk/car-review/porsche/macan-turbo-electric",
+        "quote": "Low grip conspires with an over-active (optional) rear-wheel steering system and a four-wheel drive system that’s somewhat unpredictable in its torque distribution to create a car that inspires little confidence.",
+        "title": "Tested: 2026 Porsche Macan Turbo Electric - Full review, price & features (Autocar)",
+        "sentiment": -0.7,
+        "publishedDate": "2025-02-28"
+      },
+      {
+        "url": "https://www.carmagazine.co.uk/car-reviews/porsche/macan-electric/",
+        "quote": "Across the vast majority of road surfaces, the top-spec Turbo model felt composed and largely unfussed by all but the largest road imperfections.",
+        "title": "Porsche Macan Electric (2026) review: every version of this electric SUV tested (CAR)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.evo.co.uk/porsche/macan",
+        "quote": "the responses are calm, clean and precise",
+        "title": "Porsche Macan Electric review – Germany's answer to Hyundai's Ioniq 5 N",
+        "sentiment": 0.6,
+        "publishedDate": "2026-05-11"
+      }
+    ]
   }
 ]

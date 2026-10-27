@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20040,
+      "pinSourceUrl": "https://media.subaru.com/newsrelease.do?id=2013",
+      "basis": "Exact US2024 Crosstrek Premium 152hp 2.0/CVT/AWD, same scored Base/Premium powertrain. Original JSON-LD publication Mar13 2023; Aug15 2023 update adds instrumented results. Qualitative quote is ride impression; 9.5s 0-60 is specifically updated instrumented result, not launch maker claim. Replace UK134bhp e-Boxer review rather than borrowing hybrid calibration.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a43265191/2024-subaru-crosstrek-drive/",
+          "title": "Tested: 2024 Subaru Crosstrek Quiets Down and Softens Up",
+          "quote": "The Crosstrek rides wonderfully on pavement and cushions vibration on dirt",
+          "publishedDate": "2023-03-13",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a43265191/2024-subaru-crosstrek-drive/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact US2024 Crosstrek Premium 152hp 2.0/CVT/AWD, same scored Base/Premium powertrain. Original JSON-LD publication Mar13 2023; Aug15 2023 update adds instrumented results. Qualitative quote is ride impression; 9.5s 0-60 is specifically updated instrumented result, not launch maker claim. Replace UK134bhp e-Boxer review rather than borrowing hybrid calibration."
+        }
+      ]
+    }
+  ]
+}

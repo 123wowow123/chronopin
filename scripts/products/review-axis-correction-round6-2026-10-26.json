@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-26",
+  "scope": "Deliberate researched native axis maintenance; review-only replay helpers do not apply this score change.",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 20040,
+      "pinSourceUrl": "https://media.subaru.com/newsrelease.do?id=2013",
+      "scoreChanges": {
+        "acceleration": {
+          "from": null,
+          "to": 1
+        }
+      },
+      "expectedBasis": "Scored: 2024 Crosstrek Base/Premium 2.0 (152 hp, USD 24,995). Power 152 hp = 1. Acceleration null: no 0-60 figure opened (reviewers call it 'laughably slow'). Economy 29 mpg EPA combined (The Drive) = 3. Handling: mixed reviews (solid feedback, inconsistent steering) = 3. Space: 19.9 cu ft behind the rear seat (The Drive) = 3. Value: 152 hp / USD 24,995 = 6.1 hp per USD 1,000 = 2.5.",
+      "basis": "Scored: 2024 Crosstrek Base/Premium 2.0 (152 hp, USD 24,995). Power 152 hp = 1. Acceleration 1: Car and Driver independently measured the exact US Premium 152hp 2.0/CVT/AWD at 9.5s 0-60mph (Aug15 2023 test-results update), matching the 2026 9.5s=1 anchor; not a maker claim. Economy 29 mpg EPA combined (The Drive) = 3. Handling 3 retained: exact US road-test comments; UK134bhp e-Boxer citation removed as a different powertrain. Space: 19.9 cu ft behind the rear seat (The Drive) = 3. Value: 152 hp / USD 24,995 = 6.1 hp per USD 1,000 = 2.5.",
+      "evidence": {
+        "url": "https://www.caranddriver.com/reviews/a43265191/2024-subaru-crosstrek-drive/",
+        "quote": "60 mph: 9.5 sec",
+        "testResultsUpdate": "2023-08-15",
+        "reviewOriginalPublication": "2023-03-13",
+        "variant": "US2024 Premium 152hp 2.0/CVT/AWD",
+        "rubricAnchor": "docs/okf/scraping/strategy.md:155; 9.5s = 1"
+      }
+    }
+  ],
+  "applyResult": [
+    {
+      "pinId": 20040,
+      "production": false,
+      "acceleration": 1,
+      "otherFieldsUnchanged": true
+    },
+    {
+      "pinId": 20040,
+      "production": true,
+      "acceleration": 1,
+      "otherFieldsUnchanged": true
+    }
+  ]
+}
