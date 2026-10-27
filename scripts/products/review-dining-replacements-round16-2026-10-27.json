@@ -1,0 +1,120 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17198,
+      "pinSourceUrl": "http://www.tosokchon.co.kr/",
+      "basis": "Tripadvisor, read 2026-10-18 (2,723 listing reviews; category sample counts unpublished): Service 3.5/5 -> 1.5; Ambience 3.7/5 -> 2; Value 3.7/5 -> 2. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3 and Critic acclaim null retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/seoul/restaurants/tosokchon",
+          "title": "Tosokchon",
+          "quote": "Cooked to perfection, the chicken's so tender that it doesn't require a lot of chewing at all.",
+          "publishedDate": "2016-07-11",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.timeout.com/seoul/restaurants/tosokchon",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Opened original Time Out guide, original Monday July11 2016 byline/time datetime+09:00. Exact Jongno Tosokchon website/address/photo, not Annandale, USA. Historical guide assessment, not current meal-price verification."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "pinSourceUrl": "https://www.lottehotel.com/busan-signiel/ko/dining/restaurant-chaoran",
+      "basis": "Tripadvisor, read 2026-10-18 (3 listing reviews; category sample counts unpublished): Service 4/5 -> 2.5; Ambience 4/5 -> 2.5; Value 4/5 -> 2.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 3.5 and Critic acclaim 2 retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://sos471.tistory.com/6",
+          "title": "[부산 시그니엘 차오란] 모둠 딤섬, 차오란 덕 후기",
+          "quote": "고기가 정말 부드러웠고 기름기도 다 빠져서 아주 담백한 맛이었습니다.",
+          "publishedDate": "2022-10-24",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://sos471.tistory.com/6",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Named blogger 망치고래 personally ate dim sum and Chaoran duck at Signiel Busan. Original October24 19:31+09:00, December14 modified excluded. Explicit hotel link and original meal photos, not Seoul Signiel or operator copy."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17269,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+      "basis": "Food 4.5 from 4.8 over 61 ratings (5 not given: no independent diner reviews were found). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition, new this year).",
+      "reviews": [
+        {
+          "url": "https://saline1.tistory.com/625",
+          "title": "부산 해운대 마린시티 뫼밀집",
+          "quote": "면 자체도 고소한 데다가 들깨와 들기름이 고소함을 증폭시켜서 너무 맛있었다.",
+          "publishedDate": "2026-09-19",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://saline1.tistory.com/625",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Named 세일린 personal September2026 meal report explicitly pins23MarineCity3-ro. Original September19 byline and article metadata; September22 modification excluded. Perilla noodles, not a similarly named store or operator description."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17277,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+      "basis": "Food 4.5 from 4.6 over 53 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition, new this year).",
+      "reviews": [
+        {
+          "url": "https://familytripkorea.com/%EB%B6%80%EC%82%B0-%EA%B4%91%EC%95%88%EB%A6%AC-%EB%A7%9B%EC%A7%91-%EB%AF%B8%EC%89%90%EB%A6%B0-%EB%96%A1%EA%B0%88%EB%B9%84%EB%9D%BC%EB%8B%88-%EC%86%A1%ED%97%8C%EC%A7%91-%EA%B0%80%EC%84%9C/",
+          "title": "부산 광안리 송헌집 후기｜아이와 떡갈비 정식·웨이팅·주차 팁",
+          "quote": "살치살은 더 부드러웠고, 갈비살은 고기 풍미가 진했습니다.",
+          "publishedDate": "2026-09-29",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://familytripkorea.com/%EB%B6%80%EC%82%B0-%EA%B4%91%EC%95%88%EB%A6%AC-%EB%A7%9B%EC%A7%91-%EB%AF%B8%EC%89%90%EB%A6%B0-%EB%96%A1%EA%B0%88%EB%B9%84%EB%9D%BC%EB%8B%88-%EC%86%A1%ED%97%8C%EC%A7%91-%EA%B0%80%EC%84%9C/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original author kskk first-person family meal account; exact18Millak-ro19beon-gil/1-2F and cadastral171-19. Original publication September29, July2026 is visit month. Whole primary-reader original opened; not Sajik stadium sausage branch. A different Tistory candidate contradicted Minrak/Namcheon and was excluded."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17266,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+      "basis": "Food null: the current Dalmaji-gil 117beonga-gil listing shows 4.0 from only 5 ratings and the older Jwadongsunhwan-ro listing (4.4 from 32) is marked permanently closed, so no usable diner figure for the current address. Service, Ambience and Value are not scored (no published figure). Acclaim 4: One MICHELIN Star plus the MICHELIN Green Star (2026 edition).",
+      "reviews": [
+        {
+          "url": "https://m.blog.naver.com/liin_studio/224356394823",
+          "title": "[내돈내산 | 한식 파인다이닝] 부산 미슐랭 1스타 피오또 방문 후기",
+          "quote": "다만 간이 제 입에는 너무 셌고 모든 코스에 들어가는 재료들이 중복되어서 그런지는 몰라도 맛이 하나하나 개성이 없었다는 느낌을 받았습니다..",
+          "publishedDate": "2026-07-24",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://m.blog.naver.com/liin_studio/224356394823",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Naver mobile post by 막갈옹/LiinStudio opened rendered200. Exact219Dalmaji-gil117beonga-gil, ECKE2FH in post body and check-in. Original July24 11:32 byline; May15 is meal date, not publication. Personally eaten twelve-course meal; explicit room/interior and course photographs, seasoning criticism. Another candidate mixed Gijang/Osiria and Dalmaji references, so not used. No old April2022 comment moved with the listing."
+        }
+      ]
+    }
+  ]
+}

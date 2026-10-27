@@ -7,15 +7,16 @@ import * as db from '@/server/db';
 import { adminDbRequest, prodBase, reviewResearchRequest } from '@/server/jobs/pinApi';
 import { REVIEW_ENDPOINTS } from '@/server/jobs/reviewResearch';
 import { findReviewCatalogEntry } from './reviewCatalog';
+import { REVIEW_TABLES, type ReviewTable } from '@/lib/pinReviews';
 
-type Entry = { table: 'PinCarPerf' | 'PinGasCarPerf'; pinSourceUrl: string; expectedBasis: string; expectedHandling?: null; changes: { basis: string; handling?: number } };
+type Entry = { table: ReviewTable; pinSourceUrl: string; expectedBasis: string; expectedHandling?: null; changes: { basis: string; handling?: number } };
 const { values } = parseArgs({ options: { file: { type: 'string' }, output: { type: 'string' } } });
 async function run() {
   if (!values.file) throw new Error('--file required');
   const { entries } = JSON.parse(readFileSync(values.file, 'utf8')) as { entries: Entry[] };
   const prepared = [];
   for (const entry of entries) {
-    if (!['PinCarPerf', 'PinGasCarPerf'].includes(entry.table) || !entry.pinSourceUrl.startsWith('https://') || !entry.changes.basis?.trim() || entry.changes.basis.length > 1000
+    if (!(REVIEW_TABLES as readonly string[]).includes(entry.table) || !entry.pinSourceUrl.startsWith('https://') || !entry.changes.basis?.trim() || entry.changes.basis.length > 1000
       || Object.keys(entry.changes).some((key) => !['basis', 'handling'].includes(key))) throw new Error('Invalid researched correction');
     if (entry.changes.handling !== undefined && (entry.table !== 'PinGasCarPerf' || entry.expectedHandling !== null || !Number.isFinite(entry.changes.handling)
       || entry.changes.handling < 0 || entry.changes.handling > 5 || entry.changes.handling * 2 % 1)) throw new Error('Invalid handling correction');
@@ -48,14 +49,18 @@ async function run() {
     }
     results.push({ pinId: target.pinId, production: target.production, table: target.entry.table, changes: target.entry.changes, otherFieldsPreserved: true });
   }
-  const file = 'scripts/products/carPerf.json';
-  const catalog = JSON.parse(readFileSync(file, 'utf8')) as any[];
-  for (const target of prepared.filter((t) => !t.production && t.entry.table === 'PinCarPerf')) {
+  const files: Partial<Record<ReviewTable, string>> = {
+    PinCarPerf: 'scripts/products/carPerf.json', PinTaste: 'scripts/products/taste.json', PinDining: 'scripts/restaurants/diningRubric.json',
+  };
+  for (const target of prepared.filter((t) => !t.production)) {
+    const file = files[target.entry.table];
+    if (!file) continue;
+    const catalog = JSON.parse(readFileSync(file, 'utf8')) as any[];
     const item = findReviewCatalogEntry(catalog, target.entry.pinSourceUrl, target.row.sourceUrl);
-    if (!item) throw new Error('Missing synchronized car catalog entry');
+    if (!item) throw new Error('Missing synchronized rubric catalog entry');
     item.basis = target.entry.changes.basis;
+    writeFileSync(file, JSON.stringify(catalog, null, 2) + '\n');
   }
-  writeFileSync(file, JSON.stringify(catalog, null, 2) + '\n');
   if (values.output) writeFileSync(values.output, JSON.stringify(results, null, 2) + '\n');
   console.log(`${results.length} rubric corrections saved and read back; other fields preserved`);
 }

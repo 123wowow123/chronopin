@@ -1,0 +1,215 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 7013,
+      "pinSourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+      "basis": "A four-berry flavoured vodka with no added sugar: berry aroma, a clean, dry finish. Tasting-review scope: Exact Berry Rouge vodka tasted by the reviewer. Existing seven-axis editorial estimates are retained.",
+      "reviews": [
+        {
+          "url": "https://www.drinkhacker.com/2026/10/15/review-grey-goose-berry-rouge-vodka/",
+          "title": "Review: Grey Goose Berry Rouge Vodka",
+          "quote": "It finishes with a surprising cleanliness",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.drinkhacker.com/2026/10/15/review-grey-goose-berry-rouge-vodka/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Christopher Null original October 15 firsthand tasting; exact 80-proof Berry Rouge, not reduced-proof Essences."
+        }
+      ]
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19948,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+      "basis": "Toffee and vanilla ice cream in compound chocolate and biscuit crumbs; consumers describe airy, very sweet ice cream. Sweetness 4.5; toffee/biscuit aroma 2; low bitterness from compound chocolate; coolness 1 (frozen but no menthol).",
+      "reviews": [
+        {
+          "url": "https://www.candycritic.org/golden%20gaytime.htm",
+          "title": "Golden Gaytime",
+          "quote": "In general, I liked this ice cream.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.candycritic.org/golden%20gaytime.htm",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original firsthand tasting and product photo: original Streets Golden Gaytime stick, not plant-based or tub. No original publication byline/metadata; retain null. Toffee dominance and soft crumbs are noted, not invented flavor claims."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "pinSourceUrl": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960",
+      "basis": "Tripadvisor, read 2026-10-18 (59 listing reviews; category sample counts unpublished): Service 3.9/5 -> 2.5; Ambience 4.2/5 -> 3; Value 3.9/5 -> 2.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3 and Critic acclaim null retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://en.trippose.com/restaurant/yeongyang-center-main-branch",
+          "title": "Yeongyang Center - Main Branch - Korea Restaurant | Trippose",
+          "quote": "栄養センタの鶏肉がとてもやわらかくてジューシーなのでとても好きです。",
+          "publishedDate": "2016-12-26",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://en.trippose.com/restaurant/yeongyang-center-main-branch",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original named Trippose visitor Crimson review beneath review section, not operator description. Exact 52 Myeongdong 2-gil branch. Opened original reader has name/date/quote; browser403. Not three professional critic meals."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "pinSourceUrl": "https://www.hanilkwan.co.kr/",
+      "basis": "Tripadvisor, read 2026-10-18 (17 listing reviews; category sample counts unpublished): Service 3.5/5 -> 1.5; Ambience unpublished (null); Value 3.3/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 2.5 and Critic acclaim null retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://revitguide.com/en/stores/a16hjfuqgzsv3c",
+          "title": "Hanilkwan(Apgujeong)",
+          "quote": "The seasoning had a well-balanced sweet and salty flavor, the meat was tender, and the serving bowl kept it warm until the very end.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://revitguide.com/en/stores/a16hjfuqgzsv3c",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original named reviewer 하니카이야; explicit Apgujeong main branch, Sinsa-dong619-4 corresponding to 14 Apgujeong-ro38-gil. November2025 is visited month, not publication. Opened original reader quote verified; browser shell has no body."
+        }
+      ]
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17222,
+      "pinSourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview",
+      "basis": "Tripadvisor, read 2026-10-18 (26 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 3.6/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4 and Critic acclaim null retained from prior cited research.",
+      "reviews": [
+        {
+          "url": "https://pinayajumma.wordpress.com/2018/01/24/the-shilla-seoul-the-parkview-buffet/",
+          "title": "The Shilla Seoul | The Parkview",
+          "quote": "I love The Parkview’s authentic Peking duck, tenderloin steak and sushi.",
+          "publishedDate": "2018-01-24",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://pinayajumma.wordpress.com/2018/01/24/the-shilla-seoul-the-parkview-buffet/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Mrs Jo original January24 2018; July9 2020 is modified timestamp. Personally eaten Seoul Shilla dinner, first-floor buffet; not Jeju Parkview. Historical108000KRW meal price not current menu pricing."
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "basis": "Variant: 650 BEV Comfort, 67 kWh Qingtao, RMB 108,900 official / 105,900 limited (the 845 km 91 kWh 5C version would score range 4.0, charging 3.5, 0-100 5.9 s). 650 km CLTC; 400 V, 3C, 30-80% in 20 min; 0-100 in 6.9 s (176 kW); entry uses Horizon J6B with no highway or urban NOA and no LiDAR (higher trims LiDAR + Momenta R7); wheelbase 2,825 mm. Value: BYD Seal 07 DM-i from RMB 149,800 (PHEV, 2,900 mm; CnEVPost) and Lynk & Co 07 EM-P RMB 139,800-159,800 limited (CarNewsChina), about 25-30% under, though BEV vs PHEV. Price correction: 650 BEV Comfort is RMB 116,900 official / 113,900 limited; 108,900/105,900 is the Hybrid 245 Comfort (CarNewsChina 21 Aug 2026, News18). Value rescored 4.0 on the corrected price.",
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01m1zj0twm6mwk2dhg6rw00000.html",
+          "title": "mg07提车感受",
+          "quote": "底盘cdc电磁悬架质感好",
+          "publishedDate": "2026-09-08",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01m1zj0twm6mwk2dhg6rw00000.html",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Named allentree exact 2026 BEV650舒享 entry, original 首次发表 September8, bought September2026. Owner test/207km use, not professional instrumented test, not higher610/845 trim. Published original Chinese, no paraphrase."
+        }
+      ]
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "basis": "Variant: IM LS9 52 Ultra EREV, RMB 322,800, 52 kWh, 320 km EV / 1,454 km combined CLTC, 380 kW, 0-100 4.9 s, 10-80% in 19 min; 3,160 mm wheelbase, six seats, LiDAR/Thor/Momenta. The 390 kW and 16.5-min figures belong to 66 Ultra and are excluded. Prior axis scores preserved. Review verification, 2026-10-27: XCX original November 28, 2025 test is 66 Ultra (402 km EV), not base 52 Ultra. Original Chinese quotation repaired; retain as scoped context only, not validation of the base battery or charging figures. Exact-52-Ultra review coverage remains open.",
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01kztf90dm6mw3je9n6wr00000.html",
+          "title": "买了智己后再看竞品，发现还是ls9",
+          "quote": "5米3大车转弯掉头比A级小车还灵活！",
+          "publishedDate": "2026-08-12",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://dianping.yiche.com/zhijils9/koubei/10041515740419968/",
+          "title": "智己ls9用车感受",
+          "quote": "底盘质感确实顶",
+          "publishedDate": "2026-09-17",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://dianping.yiche.com/sid_11866/koubei/9375809057593984/",
+          "title": "试驾智己LS9，发现网友说的都是对的！",
+          "quote": "半幅方向盘需要学习适应！直走没问题，转弯掉头的时候，两手要打架了！",
+          "publishedDate": "2026-01-25",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01kztf90dm6mw3je9n6wr00000.html",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Named ashleychoi, exact 52Ultra certified-owner page, original 首次发表 August12; bought April2026. 10000km owner report; not independent professional testing."
+        },
+        {
+          "url": "https://dianping.yiche.com/zhijils9/koubei/10041515740419968/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Named owner 书院大师兄 exact 2026 320km52Ultra ordinary version; bought December2025, published September17. Chosen original literal substring is readable without anti-scraping glyph decoding. No charging/energy score inferred."
+        },
+        {
+          "url": "https://dianping.yiche.com/sid_11866/koubei/9375809057593984/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Named Carmen exact52Ultra personally driven; 66Ultra explicitly only the showroom car. Original January25 byline vs January visit month. Custom font maps private-use text to Chinese: entire relevant rendered review screenshot visually inspected and sentence transcribed from visible glyphs. Owner/reviewer, not a professional instrumented test."
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15102,
+      "pinSourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "basis": "Granite4.2 family pin, scoring30B flagship at August25 launch. Maker supports native128K with extension to512K; context axis uses published512K maximum. Text-only. Launch independently measured AA Index and Terminal-Bench4.0 were not established; maker29.24% is Terminal-Bench2.1 and cannot fill coding. No verified launch API list price or output throughput, so those axes are null. Two firsthand independent tests verified after broader search; fewer than3 reviews. KGP tested quantized30B onRTX5090; Carwash is a narrow two-run30B constraint test, not a general ranking.",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/models/granite-4-2-30b",
+          "title": "Granite 4.2 30B Intelligence, Performance & Price Analysis",
+          "quote": "Granite 4.2 30B scores 13 on the Artificial Analysis Intelligence Index",
+          "publishedDate": null,
+          "sentiment": 0
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://artificialanalysis.ai/models/granite-4-2-30b",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Opened/rendered evaluator’s original30B reasoning measurement, not maker or directory. Live current v4.3.2 result, no original publication day; model release August25 is not review date. Preserve launch axes, do not backdate current index. Speed varies by provider/live state, no speed axis changed."
+        }
+      ]
+    }
+  ]
+}

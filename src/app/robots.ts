@@ -24,7 +24,7 @@ export default function robots(): MetadataRoute.Robots {
       // are closed here too.
       { userAgent: THROTTLED_BOT_NAMES, allow: '/', disallow: DISALLOW, crawlDelay: 1 / PER_SECOND },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: [`${siteUrl}/sitemap.xml`, `${siteUrl}/sitemap-restaurants.xml`],
     host: siteUrl,
   };
 }

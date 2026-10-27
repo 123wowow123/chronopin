@@ -33,5 +33,6 @@ hit /
 hit /search
 # A cold sitemap.xml is the slowest page; Search Console and crawlers must not be the first to ask.
 hit /sitemap.xml
+hit /sitemap-restaurants.xml
 hit /robots.txt
 echo "Warm-up done."

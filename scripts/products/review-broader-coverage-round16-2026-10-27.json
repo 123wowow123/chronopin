@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 395,
+      "pinSourceUrl": "https://www.imdb.com/title/tt27419420/",
+      "basis": "Original independent reviews of the exact named work. Quoted sentiment estimates are not converted star ratings.",
+      "reviews": [
+        {
+          "url": "https://awardswatch.com/street-fighter-2026-review-hollywood-poorly-adapting-video-games-will-commence-until-morale-improves-d/",
+          "title": "‘Street Fighter’ (2026) Review: Hollywood Poorly Adapting Video Games Will Commence Until Morale Improves [D-]",
+          "quote": "it’s also persistently, grievously uninteresting.",
+          "publishedDate": "2026-10-15",
+          "sentiment": -0.8
+        },
+        {
+          "url": "https://consequence.net/2026/10/street-fighter-movie-review-2026-cast/",
+          "title": "The New Street Fighter Movie Misses the Knockout Blow: Review",
+          "quote": "At its best — and for a good percentage of its screen time — Street Fighter operates like a deranged live-action cartoon, which is exactly what I wanted from it.",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.gamesradar.com/entertainment/live-action-movies/street-fighter-movie-review/",
+          "title": "Street Fighter movie review: \"This reboot is far from a perfect knockout\"",
+          "quote": "Excellent animated sequences and fun slapstick fights make up for some of the messy action, but this reboot is far from a perfect knockout.",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.1
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://awardswatch.com/street-fighter-2026-review-hollywood-poorly-adapting-video-games-will-commence-until-morale-improves-d/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Trace Sauveur original October 15 byline; exact 2026 Kitao Sakurai adaptation, not the 1994 film."
+        },
+        {
+          "url": "https://consequence.net/2026/10/street-fighter-movie-review-2026-cast/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Liz Shannon Miller original October 15 12:00 EDT and original article metadata. Browser full original 200 despite primary-reader 402. Not an aggregator reprint."
+        },
+        {
+          "url": "https://www.gamesradar.com/entertainment/live-action-movies/street-fighter-movie-review/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Jack Shepherd original October 15. Mixed verdict on the exact 2026 film, not the original game."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2022,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3701737/the-diplomat-4x01-tba",
+      "basis": "Original independent reviews of the exact named work. Quoted sentiment estimates are not converted star ratings.",
+      "reviews": [
+        {
+          "url": "https://www.radiotimes.com/tv/drama/the-diplomat-season-4-review-netflix/",
+          "title": "The Diplomat season 4 review: Sharp, smart and this drama's best series yet",
+          "quote": "the show with the best-written dialogue on TV just got even sharper.",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.tomsguide.com/entertainment/netflix/the-diplomat-season-4-review-netflixs-best-drama-delivers-its-best-season-yet",
+          "title": "‘The Diplomat’ season 4 review: Netflix’s best drama delivers its best season yet",
+          "quote": "The plotting is intricate without becoming incomprehensible",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.avclub.com/the-diplomat-season-4-episode-7-west-wing-scandal",
+          "title": "The Diplomat has achieved its true form",
+          "quote": "Season four is certainly the most melodramatic season of The Diplomat to date, but it’s also satisfying",
+          "publishedDate": "2026-10-21",
+          "sentiment": 0.5
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.radiotimes.com/tv/drama/the-diplomat-season-4-review-netflix/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Jack Seale original Thursday October 15 at 08:00; fourth season specifically."
+        },
+        {
+          "url": "https://www.tomsguide.com/entertainment/netflix/the-diplomat-season-4-review-netflixs-best-drama-delivers-its-best-season-yet",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Kelly Woo original October 15; author explicitly watched all eight season-four episodes. Original structured day matches byline."
+        },
+        {
+          "url": "https://www.avclub.com/the-diplomat-season-4-episode-7-west-wing-scandal",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Saloni Gajjar original October 21 12:27. Season-four critical essay with episode-seven focus. Does not imply assessment of later unreleased episodes. Exact article H1, not search-result suffix."
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2056,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3616304/visionquest-1x01-tba",
+      "basis": "Original independent reviews of the exact named work. Quoted sentiment estimates are not converted star ratings.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/streaming/disney-plus/visionquest-review",
+          "title": "VisionQuest review: Paul Bettany and James Spader delight as the MCU’s best new double act in emotionally rich and subversive Marvel TV show on Disney+",
+          "quote": "Spader is an utter delight from the outset",
+          "publishedDate": "2026-10-12",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://au.variety.com/2026/tv/global/visionquest-review-marvel-ai-41248/",
+          "title": "Like Its Hero, Marvel’s ‘VisionQuest’ Struggles to Connect Emotionally: TV Review",
+          "quote": "“VisionQuest” often tells the audience what we’re supposed to be feeling, yet rarely achieves its stated aim.",
+          "publishedDate": "2026-10-13",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.latimes.com/entertainment-arts/tv/story/2026-10-14/visionquest-review-marvel-paul-bettany",
+          "title": "‘VisionQuest’ explores themes of love and loss, though it’s more intellectual than emotional",
+          "quote": "I found it highly entertaining and fun, if more intellectually than emotionally moving.",
+          "publishedDate": "2026-10-14",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.techradar.com/streaming/disney-plus/visionquest-review",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Tom Power original October 12 19:00 UTC, not show premiere date."
+        },
+        {
+          "url": "https://au.variety.com/2026/tv/global/visionquest-review-marvel-ai-41248/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Alison Herman original Variety review, opened licensed ANZ publication. ANZ byline October 13 08:39 equals October 12 21:39 UTC in original metadata; save displayed local day. One publication, not a second independent US/ANZ review."
+        },
+        {
+          "url": "https://www.latimes.com/entertainment-arts/tv/story/2026-10-14/visionquest-review-marvel-paul-bettany",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Robert Lloyd original October 14 10:50 AM PT. Opened original primary-reader article, lines 226-230 and 290. Browser 403; reader full text verified. Following sentence explicitly calls intellectual emphasis an observation, not criticism."
+        }
+      ]
+    }
+  ]
+}

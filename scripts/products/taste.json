@@ -3910,5 +3910,75 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 7013,
+    "pinSourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+    "aroma": 4,
+    "bitterness": 0.5,
+    "sweetness": 2,
+    "astringency": 1,
+    "umami": 0,
+    "pungent": 1,
+    "coolness": 0,
+    "basis": "A four-berry flavoured vodka with no added sugar: berry aroma, a clean, dry finish. Tasting-review scope: Exact Berry Rouge vodka tasted by the reviewer. Existing seven-axis editorial estimates are retained.",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+    "reviews": [
+      {
+        "url": "https://www.besttastingspirits.com/review-grey-goose-berry-rouge/",
+        "quote": "The sweet strawberry and blueberry jam entry has a soft creamy mouth feel.",
+        "title": "Jeff Ellingson — Grey Goose Berry Rouge (Best Tasting Spirits)",
+        "sentiment": 0.5,
+        "publishedDate": "2026-01-26"
+      },
+      {
+        "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+        "quote": "Tastes really good. This might be my new favorite. It tastes equally as good if not better, has 40% abv rather than 35%.",
+        "title": "Total Wine customer review by 'Snacks 55' (5/5)",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.drinkhacker.com/2026/10/15/review-grey-goose-berry-rouge-vodka/",
+        "quote": "It finishes with a surprising cleanliness",
+        "title": "Review: Grey Goose Berry Rouge Vodka",
+        "sentiment": 0.7,
+        "publishedDate": "2026-10-15"
+      }
+    ]
+  },
+  {
+    "pinId": 19948,
+    "pinSourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+    "aroma": 2,
+    "bitterness": 0.5,
+    "sweetness": 4.5,
+    "astringency": 0,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 1,
+    "basis": "Toffee and vanilla ice cream in compound chocolate and biscuit crumbs; consumers describe airy, very sweet ice cream. Sweetness 4.5; toffee/biscuit aroma 2; low bitterness from compound chocolate; coolness 1 (frozen but no menthol).",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+    "reviews": [
+      {
+        "url": "https://www.pedestrian.tv/bites/streets-icecream-tub-bubble-o-bill-gaytime/",
+        "quote": "But there's definitely less biscuit bits. Like, significantly less, it's more that they're swirled through a little.",
+        "title": "We Tried Those Streets Bubble O Bill / Golden Gaytime Ice-cream Tubs",
+        "sentiment": -0.3,
+        "publishedDate": "2020-07-14"
+      },
+      {
+        "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+        "quote": "The ice cream has a strange airy and fatty texture that leaves a strange taste in my mouth",
+        "title": "Streets Golden Gaytime reviews | ProductReview.com.au",
+        "publishedDate": null
+      },
+      {
+        "url": "https://www.candycritic.org/golden%20gaytime.htm",
+        "quote": "In general, I liked this ice cream.",
+        "title": "Golden Gaytime",
+        "sentiment": 0.4,
+        "publishedDate": null
+      }
+    ]
   }
 ]

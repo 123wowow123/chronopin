@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Append only. Preserve manually curated source, basis, axes and every existing citation; refuse edits of existing citation URLs. References and scope notes are synchronized by source wiki annotation receipt.",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15136,
+      "pinSourceUrl": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "basis": "Scored as launched (2 Jun 2026). Reasoning null: I found no Artificial Analysis score published at launch in any page I could open; AA's page now shows 25 on v4.3.2 (39 on an older comparison page) and the maker's headline (ScreenSpot Pro 79.0, Terminal-Bench 2.0 70.3) is not comparable to the anchors. Coding null: no TB 4.0. Context 1M (Alibaba help page: 991,808 input tokens). Price $0.40 in / $1.60 out per 1M (Alibaba, VentureBeat, Gigazine, AA) = $0.80 blended; The Decoder printed $2.40 output, which conflicts with the other sources. Speed 59 tok/s from AA's current page (not launch-day). Modalities text, image, video in. Only 3 reviews: no genuine independent hands-on test found (WaveSpeed's page runs no tests). (A review whose quote could not be re-verified was dropped.)",
+      "reviews": [
+        {
+          "url": "https://tessl.io/blog/open-source-coding-agents-one-ties-sonnet-one-wont-listen/",
+          "title": "Open-Source Agents vs Sonnet 4.6: GLM 5.2, MiniMax M3, Kimi 2.7 and Qwen 3.7 Tested",
+          "quote": "Handed the conventions for a tool, Qwen frequently builds something that works, in its own way, ignoring how it was asked to build it.",
+          "publishedDate": "2026-06-18",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.sparkthai.com/en/model-arena/Qwen3.7-Plus",
+          "title": "Qwen3.7-Plus",
+          "quote": "The original 18 cases catch broken output rather than rank models — across nine runs, 13 of them passed identically for every model.",
+          "publishedDate": null,
+          "sentiment": 0
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://tessl.io/blog/open-source-coding-agents-one-ties-sonnet-one-wont-listen/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Nicolas Fortuin/Baptiste Fernandez original June18 14:51:20UTC. First-party paired evaluation nearly1000coding scenarios, named Qwen3.7-Plus endpoint, baseline vs skills. Do not repeat article’s incorrect blanket open-source characterization of this closed API model; evaluator sells agent-context products, disclosed."
+        },
+        {
+          "url": "https://www.sparkthai.com/en/model-arena/Qwen3.7-Plus",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Own disclosed cloud qwen3.7-plus API trials,18floorcases/5gradedcases; published outputs, repeat trials and uncertainty. Neutral measurement limitation, no generalized best-model praise. August17/18 are test-run dates, not original publication day; no publication metadata. Hardware seller with disclosed commercial interest; closed API test, not local open weights."
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15170,
+      "pinSourceUrl": "https://help.aliyun.com/en/model-studio/newly-released-models",
+      "basis": "Scored as launched (qwen-plus-2025-01-25, 30 Jan 2025; proprietary Qwen2.5-generation API model, not open weights). Reasoning null: no Artificial Analysis Intelligence Index entry or comparable maker headline benchmark for this snapshot (the Qwen2.5 report gives MMLU-Pro 72.5 / Arena-Hard 81.4, not comparable to the anchors). Coding null: no Terminal-Bench 4.0. Context 131,072 tokens (Alibaba Model Studio page) -> 1. Price: Alibaba Model Studio Singapore list $0.40 in / $1.20 out per 1M = $0.60 blended at 3:1 -> 5 (page read 24 Oct 2026, so it is the current list, which the pin also quotes as the launch price; OpenRouter listed $0.26/$0.78). Speed null: none published at launch. Modalities 1: text only. No independent review of this snapshot was found (only maker material, aggregator tables and an arXiv domain benchmark), so reviews are empty.",
+      "reviews": [
+        {
+          "url": "https://aclanthology.org/2025.findings-emnlp.45.pdf",
+          "title": "Mitigating Geospatial Knowledge Hallucination in Large Language Models: Benchmarking and Dynamic Factuality Aligning",
+          "quote": "Qwen-plus-2025-01-25 Proprietary - 0.4183 0.4840 0.5360 0.4794 3",
+          "publishedDate": null,
+          "sentiment": 0
+        },
+        {
+          "url": "https://epoch.ai/data-insights/output-length",
+          "title": "LLM responses to benchmark questions are getting longer over time",
+          "quote": "Qwen Plus qwen-plus-2025-01-25 2025-01-25 MATH level 5 0.65 910.23 N 2025.07",
+          "publishedDate": "2025-04-17",
+          "sentiment": 0
+        },
+        {
+          "url": "https://www.llm-reasoning-benchmark.com/",
+          "title": "LLM Reasoning Benchmark",
+          "quote": "qwen-plus-2025-01-25 4.67 / 5 385",
+          "publishedDate": null,
+          "sentiment": 0
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://aclanthology.org/2025.findings-emnlp.45.pdf",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original GeoHALUBench paper, whole PDF page5/table1 and footnotes rendered/visually verified. Literal row linearized with whitespace normalization: entity/relation/attribute accuracy .4183/.4840/.5360, overall macro .4794, rank3 of20. Independent Tsinghua evaluation, not maker. ACL publication November2025 lacks day; PDF creation timestamp is not publication. Neutral measurement, no general ranking axis inferred."
+        },
+        {
+          "url": "https://epoch.ai/data-insights/output-length",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Epoch internal benchmark table, exact snapshot ID. Literal row linearized; score.65 and910.23output tokens per question, not tokens/sec. Original article date April17 2025; row January25 is model release, not review date. Primary-reader full original table verified; browser omitted client table. Best score across scorers as table heading, not a new Artificial Analysis or Terminal-Bench result."
+        },
+        {
+          "url": "https://www.llm-reasoning-benchmark.com/",
+          "openedAt": "2026-10-27",
+          "quoteVerified": true,
+          "verification": "Original Santeri Salonen small reasoning benchmark, exact snapshot identifier. Literal assisted-performance row, whitespace normalized. 4.67/5 and385average words apply only assisted questions; overall3.65/5, not this number. Published question/answer pairs and expert judgments inspected. Subjective, non-general small benchmark; no original publication date. Neutral sentiment, no launch axis rescoring."
+        }
+      ]
+    }
+  ]
+}

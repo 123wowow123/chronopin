@@ -232,7 +232,7 @@ export async function proxy(request: NextRequest) {
   }
   // robots.txt, the sitemap and llms.txt are what a crawler reads first; they
   // come through only to be counted.
-  if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname === '/llms.txt') {
+  if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname === '/sitemap-restaurants.xml' || pathname === '/llms.txt') {
     return NextResponse.next();
   }
   const { locale: prefix, path } = splitLocale(pathname);

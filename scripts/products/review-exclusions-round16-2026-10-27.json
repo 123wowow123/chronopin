@@ -1,0 +1,204 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17203,
+      "pinSourceUrl": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960",
+      "url": "https://wanderlog.com/place/details/4228626",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/4228626",
+        "quote": "Reviewers praised the old-school charm of the place, with efficient and friendly service despite being busy.",
+        "title": "Yeongyang Center Main, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Original reopened: unattributed platform description/summary of other reviewers is not an independent critic or original firsthand review. Replaced with an opened exact-branch original account; preserved context references/wikis."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17205,
+      "pinSourceUrl": "https://www.hanilkwan.co.kr/",
+      "url": "https://wanderlog.com/place/details/4236393",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/4236393",
+        "quote": "However, there are positive mentions of well-prepared local Korean food in a clean setting with good flavors and prompt service.",
+        "title": "Hanilkwan, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Original reopened: unattributed platform description/summary of other reviewers is not an independent critic or original firsthand review. Replaced with an opened exact-branch original account; preserved context references/wikis."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17222,
+      "pinSourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview",
+      "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+      "expectedReview": {
+        "url": "https://wanderlog.com/place/details/2509728/seoul-shilla-hotel-the-parkview",
+        "quote": "It is known for its amazing buffet with top-notch quality seafood, sushi, dim sum, meats, fruit, and desserts.",
+        "title": "Seoul Shilla Hotel The Parkview, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+        "publishedDate": null
+      },
+      "reason": "Original reopened: unattributed platform description/summary of other reviewers is not an independent critic or original firsthand review. Replaced with an opened exact-branch original account; preserved context references/wikis."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7013,
+      "pinSourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+      "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+      "expectedReview": {
+        "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
+        "quote": "Tastes really good. This might be my new favorite. It tastes equally as good if not better, has 40% abv rather than 35%.",
+        "title": "Total Wine customer review by 'Snacks 55' (5/5)",
+        "publishedDate": null
+      },
+      "reason": "The named tasting extract could not be independently located in the opened retailer source. Replaced with an opened Christopher Null firsthand professional tasting; existing original Jeff Ellingson review retained. Not a claim that the retailer review is fake or permanently unavailable."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19948,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+      "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+      "expectedReview": {
+        "url": "https://www.productreview.com.au/listings/selecta-streets-golden-gaytime",
+        "quote": "The ice cream has a strange airy and fatty texture that leaves a strange taste in my mouth",
+        "title": "Streets Golden Gaytime reviews | ProductReview.com.au",
+        "publishedDate": null
+      },
+      "reason": "Original customer attribution/publication and exact original-stick scope remained unverified. Replaced with opened Candy Critic original Streets stick tasting, retaining null original publication day. Original page is not declared dead."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 19948,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Golden_Gaytime",
+      "url": "https://www.pedestrian.tv/bites/streets-icecream-tub-bubble-o-bill-gaytime/",
+      "expectedReview": {
+        "url": "https://www.pedestrian.tv/bites/streets-icecream-tub-bubble-o-bill-gaytime/",
+        "quote": "But there's definitely less biscuit bits. Like, significantly less, it's more that they're swirled through a little.",
+        "title": "We Tried Those Streets Bubble O Bill / Golden Gaytime Ice-cream Tubs",
+        "sentiment": -0.3,
+        "publishedDate": "2020-07-14"
+      },
+      "reason": "Original article and stored headline explicitly review the Golden Gaytime ice-cream TUB. The scored pin is the original toffee/vanilla stick in biscuit crumbs. Replaced with exact original-stick tasting, not the tub or plant-based edition."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "url": "https://www.pcauto.com.cn/reviews/31211.html",
+      "expectedReview": {
+        "url": "https://www.pcauto.com.cn/reviews/31211.html",
+        "quote": "Paraphrase: PCauto's aggregate verdict: strong original design, class-beating space, good cockpit and assistance, but the entry trim has a downgraded cabin chip, the fastback roof squeezes rear headroom and the assistance is conservative; measured 0-100 times average 5.95 s across trims.",
+        "title": "[roundup of 30-45 creator tests, mostly higher trims] MG 07评测_MG 07性能能耗数据实测-太平洋汽车",
+        "publishedDate": null
+      },
+      "reason": "Stored extract is explicitly an English Paraphrase of an aggregate of30-45creator tests, mostly higher trims, not a literal independent entry-650-Comfort road test. Original retry inaccessible; not a dead-page assertion. Replaced with opened exact650Comfort named-owner drive, coverage gap retained."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14219,
+      "pinSourceUrl": "https://cnevpost.com/2026/08/21/mg-07-goes-on-sale/",
+      "url": "https://club.autohome.com.cn/bbs/thread/1f5e15aa4e210a56/115874403-1.html",
+      "expectedReview": {
+        "url": "https://club.autohome.com.cn/bbs/thread/1f5e15aa4e210a56/115874403-1.html",
+        "quote": "Paraphrase: A buyer who waited two hours for a 20-minute drive of the 610 km car liked the front/rear storage, 30 L fridge and price, found the chassis with mCDC dampers fine, and criticised single-pane frameless glass, no rear-centre headrest and about two fists of rear legroom at 170 cm.",
+        "title": "[610 km flagship trim; Autohome forum user post] 汽车之家|【深度体验】等了2小时才试驾上MG 07，这台车到底值不值得冲？|MG 07|论坛",
+        "sentiment": 0.3,
+        "publishedDate": "2026-08-17"
+      },
+      "reason": "Original reopened: author explicitly drove610km higher trim, not scored650Comfort; saved English Paraphrase is not literal source wording. Replaced with actual original Chinese exact650Comfort owner verdict. Do not transfer higher-trim dynamics or ADAS."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "url": "https://www.xchuxing.com/article/162486",
+      "expectedReview": {
+        "url": "https://www.xchuxing.com/article/162486",
+        "quote": "先说结论，智己 LS9 就是五米二的大六座里最好开的，没有之一。",
+        "title": "XCX 深度体验 30期：深度体验智己 LS9",
+        "sentiment": 0.8,
+        "publishedDate": "2025-11-28"
+      },
+      "reason": "Opened XCX original was specifically66Ultra/402km. Despite repaired literal Chinese text/day, this does not assess the scored52Ultra. Moved out of native reviews after saving three original exact52Ultra owner accounts; contextual reference/wiki retained."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 14109,
+      "pinSourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
+      "url": "https://chejiahao.m.autohome.com.cn/info/25220827",
+      "expectedReview": {
+        "url": "https://chejiahao.m.autohome.com.cn/info/25220827",
+        "quote": "Paraphrase: The practicality report finds the turning diameter among the best in class and a generally strong package; the only weak point was the nearest parking-radar detection distance.",
+        "title": "[Autohome creator practicality test] 2026款智己LS9日常实用性测试报告_车家号_汽车之家",
+        "sentiment": 0.3,
+        "publishedDate": "2026-04-15"
+      },
+      "reason": "Saved English sentence is explicitly Paraphrase, not a verbatim article extract, and no exact52Ultra driving scope was verified for this practicality report. Replaced with three actual exact52Ultra owner/driver accounts, not scored from sibling performance."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17198,
+      "pinSourceUrl": "http://www.tosokchon.co.kr/",
+      "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+      "expectedReview": {
+        "url": "https://www.tripexpert.com/seoul/restaurants/tosokchon-samgyetang",
+        "quote": "There’s always a line of people waiting for the bubbling samgyetang (ginseng chicken soup) at this venerable restaurant spread over a series of hanok.",
+        "title": "Tosokchon Samgyetang Reviews | Tripexpert",
+        "publishedDate": null
+      },
+      "reason": "Replaced unresolved directory/aggregator citation with opened exact-branch original Time Out guide assessment; aggregator credited LonelyPlanet original remained blocked, not counted twice."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17261,
+      "pinSourceUrl": "https://www.lottehotel.com/busan-signiel/ko/dining/restaurant-chaoran",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "expectedReview": {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+        "quote": "The dim sum were ok, the fried shrimps with chilly sauce were excellent.",
+        "title": "Good Chinese Food",
+        "publishedDate": null
+      },
+      "reason": "Replaced unresolved directory/aggregator citation with opened exact-branch original firsthand dining account. Original wording/attribution of the old citation was not sufficiently verified; not a claim of a permanently dead source. "
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17266,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/fiotto",
+      "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+      "expectedReview": {
+        "url": "https://www.enprimeurclub.com/restaurants/fiotto-busan-restaurant",
+        "quote": "almost everything on the table originates from their own family farm or kitchen: house-grown vegetables, fresh-cut pastas, cured hams, and fermented vinegars.",
+        "title": "Fiotto Restaurant, Busan - En Primeur Club (editorial listing)",
+        "publishedDate": null
+      },
+      "reason": "Replaced unresolved directory/aggregator citation with opened exact-branch original firsthand dining account. Original wording/attribution of the old citation was not sufficiently verified; not a claim of a permanently dead source. New original post explicitly identifies current ECKE2FH room; not an old review attached to a moved listing."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17269,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/moemiljip",
+      "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+      "expectedReview": {
+        "url": "https://www.enprimeurclub.com/restaurants/moemiljip-busan-restaurant",
+        "quote": "Moemiljip builds its entire menu around 100% Korean buckwheat, milled in-house.",
+        "title": "Moemiljip Restaurant, Busan - En Primeur Club (editorial listing)",
+        "publishedDate": null
+      },
+      "reason": "Replaced unresolved directory/aggregator citation with opened exact-branch original firsthand dining account. Original wording/attribution of the old citation was not sufficiently verified; not a claim of a permanently dead source. "
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17277,
+      "pinSourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/songheonjip",
+      "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+      "expectedReview": {
+        "url": "https://www.enprimeurclub.com/restaurants/songheonjip-busan-restaurant",
+        "quote": "eat tteokgalbi from charcoal-grilled patties that arrive smoky and dense with rendered fat.",
+        "title": "Songheonjip Restaurant, Busan - En Primeur Club (editorial listing)",
+        "publishedDate": null
+      },
+      "reason": "Replaced unresolved directory/aggregator citation with opened exact-branch original firsthand dining account. Original wording/attribution of the old citation was not sufficiently verified; not a claim of a permanently dead source. "
+    }
+  ]
+}

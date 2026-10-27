@@ -3342,6 +3342,13 @@
         "title": "Review: Seoul's Best Buffet, The Parkview at Shilla Hotel",
         "publishedDate": "2013-11-08",
         "quote": "The pasta dishes were definitely misses. The ravioli was very dry as was the spinach lasagna roll-up."
+      },
+      {
+        "url": "https://pinayajumma.wordpress.com/2018/01/24/the-shilla-seoul-the-parkview-buffet/",
+        "title": "The Shilla Seoul | The Parkview",
+        "quote": "I love The Parkview’s authentic Peking duck, tenderloin steak and sushi.",
+        "publishedDate": "2018-01-24",
+        "sentiment": 0.8
       }
     ],
     "sources": [
@@ -3417,7 +3424,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview"
   },
   {
     "pinId": 17223,
@@ -4205,6 +4213,13 @@
         "quote": "However, there are positive mentions of well-prepared local Korean food in a clean setting with good flavors and prompt service.",
         "title": "Hanilkwan, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
         "publishedDate": null
+      },
+      {
+        "url": "https://revitguide.com/en/stores/a16hjfuqgzsv3c",
+        "title": "Hanilkwan(Apgujeong)",
+        "quote": "The seasoning had a well-balanced sweet and salty flavor, the meat was tender, and the serving bowl kept it warm until the very end.",
+        "publishedDate": null,
+        "sentiment": 0.7
       }
     ],
     "sources": [
@@ -4278,7 +4293,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://www.hanilkwan.co.kr/"
   },
   {
     "pinId": 17150,
@@ -4309,6 +4325,13 @@
         "quote": "Reviewers praised the old-school charm of the place, with efficient and friendly service despite being busy.",
         "title": "Yeongyang Center Main, Seoul, South Korea - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
         "publishedDate": null
+      },
+      {
+        "url": "https://en.trippose.com/restaurant/yeongyang-center-main-branch",
+        "title": "Yeongyang Center - Main Branch - Korea Restaurant | Trippose",
+        "quote": "栄養センタの鶏肉がとてもやわらかくてジューシーなのでとても好きです。",
+        "publishedDate": "2016-12-26",
+        "sentiment": 0.8
       }
     ],
     "sources": [
@@ -4382,7 +4405,8 @@
           "lastModified": "2026-10-18"
         }
       }
-    ]
+    ],
+    "pinSourceUrl": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960"
   },
   {
     "pinId": 17147,

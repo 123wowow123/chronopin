@@ -13,13 +13,10 @@ import { personPath } from '@/lib/people';
 import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
-import { GUIDE_PAGE_SIZE, GUIDE_VIEWS, guideListPath } from '@/lib/restaurantGuide';
-import { restaurantGuideRegionSlugs } from '@/server/services/restaurants';
-import { guideSummary } from '@/server/services/restaurantGuidePage';
 
 // Google reads at most 50,000 URLs from one sitemap. Chronopin is far below
 // that; past it, split this file with generateSitemaps. Each entry is the
-// English page, with the other languages offered as hreflang alternates
+// English page (the restaurant guides' list pages are in /sitemap-restaurants.xml), with the other languages offered as hreflang alternates
 // (src/lib/multilingual.ts).
 const MAX_URLS = 50_000;
 
@@ -35,17 +32,8 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     // A person's page is a profile, not a list of pins: every one is worth indexing.
     ...(await personIndex()).map((p) => personPath(p.name)),
   ];
-  // Each city guide's lists, and their later pages, are crawlable URLs (?view=&page=).
-  const now = new Date();
-  const guidePaths = (await Promise.all((await restaurantGuideRegionSlugs()).map(async (slug) => {
-    const summary = await guideSummary(slug, now);
-    if (!summary) return [];
-    // The default view's first page is the bare city URL, already listed with the regions.
-    return GUIDE_VIEWS.filter((view) => view !== 'discounts' && summary.counts[view] > 0).flatMap((view) =>
-      Array.from({ length: Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE) }, (_, index) => guideListPath(slug, summary.counts, view, index + 1)).filter((path, index) => index > 0 || path.includes('?')));
-  }))).flat();
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 9 - topics.length - RESTAURANT_REGIONS.length - guidePaths.length, (await hideThinPins()).enabled);
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 9 - topics.length - RESTAURANT_REGIONS.length, (await hideThinPins()).enabled);
   const industries = [...new Set((await forecastPanels()).map((f) => industrySlug(f.industry)))];
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
@@ -55,7 +43,6 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   return [
     { url: absoluteUrl('/'), changeFrequency: 'hourly', priority: 1, alternates: inEveryLanguage('/') },
     ...RESTAURANT_REGIONS.map((region) => ({ url: absoluteUrl(`/restaurants/${region.slug}`), changeFrequency: 'daily' as const, priority: 0.7 })),
-    ...guidePaths.map((path) => ({ url: absoluteUrl(path), changeFrequency: 'daily' as const, priority: 0.5 })),
     { url: absoluteUrl('/about'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/about') },
     { url: absoluteUrl('/contact'), changeFrequency: 'yearly', priority: 0.3, alternates: inEveryLanguage('/contact') },
     // English only: the other languages' copies show the English text (src/components/legal/LegalPage.tsx).
