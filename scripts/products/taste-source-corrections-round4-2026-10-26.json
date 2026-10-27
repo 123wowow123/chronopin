@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 4503,
+      "pinSourceUrl": "https://www.buffalotracedistillery.com/draws/",
+      "basis": "Opened Richard Thomas firsthand cask-strength Elmer T. Lee 40th Anniversary bourbon tasting, rated A-. Replaces the prior stitched, noncontiguous extract with one verbatim sentence fragment. Full rendered article has no original publication day in byline, time elements, meta or JSON-LD; site masthead and September URL are not publication-day evidence. Keep null. No taste axes, author or other review changes.",
+      "reviews": [
+        {
+          "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
+          "title": "Sneak Peek: Elmer T. Lee 40th Anniversary Bourbon Review",
+          "publishedDate": null,
+          "quote": "It’s like liquid cinnamon toast, but with more bite",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened full firsthand tasting and inspected original publication metadata; exact product and single contiguous extract verified"
+        }
+      ]
+    }
+  ]
+}

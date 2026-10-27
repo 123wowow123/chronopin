@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19954,
+      "pinSourceUrl": "https://www.thedrive.com/news/42443/the-2022-honda-civic-hatchback-starts-at-22695",
+      "basis": "Opened Rich Ceppos original October12 2021 instrumented test: exact US 2022 Sport Touring hatchback, 1.5T 180hp, six-speed manual, $30415 base. Replace the undated evolving model overview with the dated underlying test. This remains one Car and Driver publisher, not an additional independent source. All axes/basis preserved.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a37936938/2022-honda-civic-hatchback-by-the-numbers/",
+          "title": "Tested: 2022 Honda Civic Hatchback Brings Stick-Shift Fun",
+          "publishedDate": "2021-10-12",
+          "quote": "The hatchback's ride is supple and its handling secure",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a37936938/2022-honda-civic-hatchback-by-the-numbers/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened exact model/trim/transmission road test; visible author byline Published Oct12 2021, specifications confirm 180hp 1.5T 6MT"
+        }
+      ]
+    }
+  ]
+}

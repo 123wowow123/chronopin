@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19953,
+      "pinSourceUrl": "https://www.autoguide.com/auto-news/2021/06/2022-honda-civic-sedan-starts-from-22695-arrives-at-dealers-today.html",
+      "basis": "Tested Touring sedan 180hp 1.5T CVT shares the scored EX powertrain. Extract is explicitly the measured test-car acceleration already identified as Touring in rubric basis; not a claimed measurement of the lighter EX. Original visible and structured publication Jun16 2021 agree.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a36732132/2022-honda-civic-sedan-15t-by-the-numbers/",
+          "title": "Tested: 2022 Honda Civic Grows Up",
+          "publishedDate": "2021-06-16",
+          "quote": "the new Civic needs 7.5 seconds to accelerate to 60 mph",
+          "sentiment": -0.15
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a36732132/2022-honda-civic-sedan-15t-by-the-numbers/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Tested Touring sedan 180hp 1.5T CVT shares the scored EX powertrain. Extract is explicitly the measured test-car acceleration already identified as Touring in rubric basis; not a claimed measurement of the lighter EX. Original visible and structured publication Jun16 2021 agree."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19960,
+      "pinSourceUrl": "https://www.thedrive.com/article/10621/2018-honda-odyssey-available-to-order-thursday-starts-at-29990",
+      "basis": "Tested EX-L 280hp V6/ZF nine-speed; article expressly says this powertrain equips LX/EX/EX-L. Scored pin is LX, so quote concerns shared nine-speed behaviour only, not EX-L equipment, weight, or Elite ten-speed. Visible and structured original Dec22 2017 agree.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a14498175/2018-honda-odyssey-tested-with-nine-speed-automatic-review/",
+          "title": "Tested: 2018 Honda Odyssey Nine-Speed Automatic",
+          "publishedDate": "2017-12-22",
+          "quote": "the nine-speed is smooth and does a good enough job managing the engine\u2019s power.",
+          "sentiment": 0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a14498175/2018-honda-odyssey-tested-with-nine-speed-automatic-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Tested EX-L 280hp V6/ZF nine-speed; article expressly says this powertrain equips LX/EX/EX-L. Scored pin is LX, so quote concerns shared nine-speed behaviour only, not EX-L equipment, weight, or Elite ten-speed. Visible and structured original Dec22 2017 agree."
+        }
+      ]
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19955,
+      "pinSourceUrl": "https://www.motor1.com/news/619058/civic-type-r-price-starts-at/",
+      "basis": "Exact US FL5 315hp six-speed test. Original JSON-LD datePublished Nov15 2022; visible Nov29 is explicitly update adding test results. Quote is qualitative driving dynamics, not the later instrumented results. Retain original article day, record revision separately.",
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a41952459/2023-honda-civic-type-r-by-the-numbers/",
+          "title": "Tested: The 2023 Honda Civic Type R Shares Our Faith",
+          "publishedDate": "2022-11-15",
+          "quote": "On the street, front-end grip seems inexhaustible",
+          "sentiment": 0.8
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a41952459/2023-honda-civic-type-r-by-the-numbers/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Exact US FL5 315hp six-speed test. Original JSON-LD datePublished Nov15 2022; visible Nov29 is explicitly update adding test results. Quote is qualitative driving dynamics, not the later instrumented results. Retain original article day, record revision separately."
+        }
+      ]
+    }
+  ]
+}

@@ -73,6 +73,8 @@ const es: Messages = {
     or: 'o',
     somethingWrong: 'Algo salió mal. Inténtalo de nuevo.',
     backToTimeline: 'Volver a la línea de tiempo',
+    oauthFailed: 'No se pudo iniciar sesión con ese proveedor. Inténtalo de nuevo o usa tu correo y contraseña.',
+    oauthUnavailable: 'Esa opción de inicio de sesión no está disponible ahora. Usa tu correo y contraseña.',
     showFewer: 'Mostrar menos',
     showAllN: 'Mostrar las {count} {noun}',
   },

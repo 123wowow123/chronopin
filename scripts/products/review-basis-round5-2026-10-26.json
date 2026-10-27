@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/McDonnell_Douglas_MD-90",
+      "expectedBasis": "MD-90-30 (V2525-D5, MTOW 156,000 lb). Range 2,045 nmi with 153 passengers = 0.5. Capacity 153-158 two-class = 2. Speed Mach 0.76 cruise = 2. Runway 7,000 ft at 156,000 lb, sea level, ISA (MD-90-30 airport-planning manual, via Wikipedia) = 4. Comfort null: only one passenger trip report. Efficiency null: Delta says only that annual fuel use per aircraft could fall by hundreds of thousands of gallons against the MD-88 (no per-seat burn). Reviews are weak: one passenger trip report, one press explainer that repeats Delta's claim, and one Delta executive quote from Delta's museum page (operator, not independent).",
+      "basis": "MD-90-30 (V2525-D5, MTOW 156,000 lb). Range 2,045 nmi with 153 passengers = 0.5. Capacity 153-158 two-class = 2. Speed Mach 0.76 cruise = 2. Runway 7,000 ft at 156,000 lb, sea level, ISA (MD-90-30 airport-planning manual, via Wikipedia) = 4. Comfort null: three independent firsthand publishers now describe Delta MD-90 cabins, including economy and first class in different periods; these do not establish a universal launch-era comfort score. Efficiency null: Delta publishes no per-seat burn. AeroXplorer, AirlineReporter (2017) and Kinda Boring Travels (2020) are firsthand MD-90 reports; Simple Flying is supplemental history, not firsthand testing. The museum executive statement was removed from reviews but retained as a specification/history reference."
+    }
+  ]
+}

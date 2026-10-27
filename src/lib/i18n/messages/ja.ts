@@ -73,6 +73,8 @@ const ja: Messages = {
     or: 'または',
     somethingWrong: '問題が発生しました。もう一度お試しください。',
     backToTimeline: 'タイムラインに戻る',
+    oauthFailed: 'そのプロバイダーでのサインインに失敗しました。もう一度試すか、メールとパスワードをご利用ください。',
+    oauthUnavailable: 'そのサインイン方法は現在ご利用いただけません。メールとパスワードをご利用ください。',
     showFewer: '表示を減らす',
     showAllN: '{noun}をすべて表示（{count} 件）',
   },

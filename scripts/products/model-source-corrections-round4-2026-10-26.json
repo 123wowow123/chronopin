@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 19805,
+      "pinSourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "basis": "Opened primary Vals model page including explicitly dated Oct 24, 2026 Updates evaluation report. Quote is from that dated original Vals Index v2.2 report, not the floating profile intro; model released Oct 23 is distinct. Evaluation comparison, not an all-task superiority claim. Exact report wording replaces the earlier nonverbatim introductory ranking extract. No axes changed.",
+      "reviews": [
+        {
+          "url": "https://www.vals.ai/models/kimi_kimi-k3.1-pro",
+          "title": "Kimi K3.1 Pro",
+          "publishedDate": "2026-10-24",
+          "quote": "the top open-weights model, ahead of DeepSeek V4.1 Flash 1017",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.vals.ai/models/kimi_kimi-k3.1-pro",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened primary evaluator report; date semantics and exact table/report extract verified"
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "pinSourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "basis": "Opened ETH Zurich SRI Lab / INSAIT primary MathArena model evaluation page. Exact Apex Final-Answer Comps accuracy cell 5.21% \u00b13.14%, rank25/48, checked Oct26 2026. Replaces prior synthetic Accuracy/CI/Rank string with verbatim table text. July25 2025 is explicitly model release, not report publication; keep null and off graph. Score refers to this difficult competition result only; no rubric axes changed.",
+      "reviews": [
+        {
+          "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+          "title": "Qwen3-235B-2507-Think",
+          "publishedDate": null,
+          "quote": "5.21% \u00b1 3.14%",
+          "sentiment": -0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened primary evaluator report; date semantics and exact table/report extract verified"
+        }
+      ],
+      "laterDisposition": "Manual citation-only correction saved and verified locally and in production; source hand, axes and unrelated fields preserved. See manual-review-corrections-2026-10-26.json. Automatic hand guard remains unchanged."
+    }
+  ],
+  "applyResult": {
+    "savedPinIds": [
+      19805
+    ],
+    "blockedHandPinIds": [
+      15130
+    ]
+  }
+}

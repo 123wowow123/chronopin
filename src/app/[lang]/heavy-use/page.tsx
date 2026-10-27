@@ -1,3 +1,4 @@
+import { soft } from '@/server/util/soft';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
 import { getT } from '@/lib/i18n/server';
@@ -21,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // "Heavy user" ad tile points. Reachable by anyone, never indexed.
 export default async function HeavyUse({ searchParams }: { searchParams: Promise<{ limited?: string; paid?: string }> }) {
   const [query, user, t] = await Promise.all([searchParams, getUser(), getT()]);
-  const plan = user ? await HeavyUserPlan.status(user.id) : null;
+  const plan = user ? await soft(HeavyUserPlan.status(user.id), null, 'heavy plan status') : null;
   const limited = query.limited === '1';
   const perks = [1, 2, 3].map((n) => ({
     title: t(`heavy.perk${n}Title` as MessageKey),

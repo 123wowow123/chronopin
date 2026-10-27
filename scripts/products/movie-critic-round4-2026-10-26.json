@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 1918,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Superman_(2025_film)",
+      "basis": "Three independent viewing reviews of James Gunn’s Superman (2025), not the 1978 film or Superman Returns. William Bibbiani, Richard Brody and Michael Balderston original publisher articles opened. New Yorker original web byline July 10 is distinguished from July 21 print issue/URL. Positive and critical excerpts retained; editorial sentiment estimates concern the quoted verdicts.",
+      "reviews": [
+        {
+          "url": "https://www.thewrap.com/superman-2025-review-james-gunn-david-corenswet/",
+          "title": "‘Superman’ Review: James Gunn Reboots the DC Universe — and Gets It Right",
+          "publishedDate": "2025-07-08",
+          "quote": "a fabulously smart and entertaining film",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.newyorker.com/magazine/2025/07/21/superman-movie-review",
+          "title": "The Simplistic Moral Lessons of “Superman”",
+          "publishedDate": "2025-07-10",
+          "quote": "Gunn is admirably overflowing with imagination, but he squanders his best material.",
+          "sentiment": -0.65
+        },
+        {
+          "url": "https://www.whattowatch.com/reviews/superman-review-james-gunns-man-of-steel-is-a-little-too-busy",
+          "title": "Superman review: James Gunn's Man of Steel is a little too busy",
+          "publishedDate": "2025-07-08",
+          "quote": "Gunn’s ambitious scope gets too big",
+          "sentiment": -0.4
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.thewrap.com/superman-2025-review-james-gunn-david-corenswet/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original viewing review and verified exact film, title, byline and quote"
+        },
+        {
+          "url": "https://www.newyorker.com/magazine/2025/07/21/superman-movie-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original viewing review and verified exact film, title, byline and quote"
+        },
+        {
+          "url": "https://www.whattowatch.com/reviews/superman-review-james-gunns-man-of-steel-is-a-little-too-busy",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original viewing review and verified exact film, title, byline and quote"
+        }
+      ]
+    }
+  ]
+}

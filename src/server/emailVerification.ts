@@ -172,7 +172,13 @@ export async function resendVerificationEmail(user: User, request: NextRequest):
   if (last && Date.now() - last < RESEND_GAP_MS) {
     throw new HttpError(429, 'A confirmation email was just sent.', { code: 'emailVerifyTooSoon', message: 'A confirmation email was just sent. Try again in a minute.' });
   }
-  await sendVerificationEmail(user, request);
+  try {
+    await sendVerificationEmail(user, request);
+  } catch (err) {
+    log.error(`verification email to user ${user.id} failed:`, (err as Error).message);
+    lastSent.delete(user.id);
+    throw new HttpError(503, 'We could not send the email just now. Please try again in a few minutes.');
+  }
 }
 
 // Posting needs a confirmed email; browsing, liking and following do not.

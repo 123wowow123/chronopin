@@ -74,6 +74,8 @@ const ms: Messages = {
     or: 'atau',
     somethingWrong: 'Sesuatu tidak kena, sila cuba lagi.',
     backToTimeline: 'Kembali ke garis masa',
+    oauthFailed: 'Log masuk dengan penyedia itu gagal. Cuba lagi, atau guna e-mel dan kata laluan.',
+    oauthUnavailable: 'Pilihan log masuk itu tidak tersedia sekarang. Guna e-mel dan kata laluan.',
     showFewer: 'Tunjuk lebih sedikit',
     showAllN: 'Tunjuk semua {count} {noun}',
   },

@@ -73,6 +73,8 @@ const ko: Messages = {
     or: '또는',
     somethingWrong: '문제가 발생했습니다. 다시 시도해 주세요.',
     backToTimeline: '타임라인으로 돌아가기',
+    oauthFailed: '해당 제공업체로 로그인하지 못했습니다. 다시 시도하거나 이메일과 비밀번호를 사용하세요.',
+    oauthUnavailable: '해당 로그인 방식은 지금 사용할 수 없습니다. 이메일과 비밀번호를 사용하세요.',
     showFewer: '간략히 보기',
     showAllN: '{noun} {count}개 모두 보기',
   },

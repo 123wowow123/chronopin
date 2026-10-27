@@ -1,0 +1,330 @@
+{
+  "checkedAt": "2026-10-26",
+  "scope": "Manually researched review-only maintenance requested by the owner with do remainder. Preserve hand status, all rubric axes, basis, authors and unrelated fields. Automatic-job hand-row protection is unchanged.",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
+      "researchBasis": "Rendered article explicitly says Published on January 3, 2024, but JSON-LD says datePublished Dec22 2023 and dateModified Dec26 2023. Conflicting original dates remain unresolved; retain null rather than choose one. Exact Gemini Pro vs GPT-3.5 quote verified; quotation corrected, hand-set axes/status preserved.",
+      "review": {
+        "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+        "quote": "competent reasoning ability, and superior instruction following",
+        "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
+        "publishedDate": null,
+        "sentiment": 0.6
+      },
+      "expectedReviews": {
+        "local": {
+          "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+          "quote": "Gemini Pro delivers strong results across critical language and model performance benchmarks, demonstrating fastest-in-class throughput, competent reasoning ability, and superior instruction following compared to the formidable GPT-3.5.",
+          "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
+          "publishedDate": null
+        },
+        "production": {
+          "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+          "quote": "Gemini Pro delivers strong results across critical language and model performance benchmarks, demonstrating fastest-in-class throughput, competent reasoning ability, and superior instruction following compared to the formidable GPT-3.5.",
+          "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
+          "publishedDate": null
+        }
+      },
+      "targets": [
+        {
+          "pinId": 5000,
+          "production": false
+        },
+        {
+          "pinId": 5000,
+          "production": true
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15110,
+      "pinSourceUrl": "https://www.deepseek.com/en/news/v4-preview/",
+      "researchBasis": "Rendered article date April 24, 2026, first matching article time element; other date belongs to a related distillation story. Independent university analysis of V4-Pro, not a new firsthand benchmark run.",
+      "review": {
+        "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
+        "quote": "V4 still trails Anthropic\u2019s Opus 4.6 on MRCR 1M long-context recall (92.9%)",
+        "title": "DeepSeek Releases V4: Open-Source 1.6T MoE with 1M Context",
+        "publishedDate": "2026-04-24",
+        "sentiment": -0.35
+      },
+      "expectedReviews": {
+        "local": {
+          "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
+          "quote": "V4 still trails Anthropic's Opus 4.6 on MRCR 1M long-context recall (92.9%) and trails Kimi K2.6 on the newer SWE-bench Pro.",
+          "title": "DeepSeek Releases V4: Open-Source 1.6T MoE with 1M Context",
+          "publishedDate": null
+        },
+        "production": {
+          "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
+          "quote": "V4 still trails Anthropic's Opus 4.6 on MRCR 1M long-context recall (92.9%) and trails Kimi K2.6 on the newer SWE-bench Pro.",
+          "title": "DeepSeek Releases V4: Open-Source 1.6T MoE with 1M Context",
+          "publishedDate": null
+        }
+      },
+      "targets": [
+        {
+          "pinId": 15110,
+          "production": false
+        },
+        {
+          "pinId": 15110,
+          "production": true
+        }
+      ]
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "pinSourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "researchBasis": "Opened ETH Zurich SRI Lab / INSAIT primary MathArena model evaluation page. Exact Apex Final-Answer Comps accuracy cell 5.21% \u00b13.14%, rank25/48, checked Oct26 2026. Replaces prior synthetic Accuracy/CI/Rank string with verbatim table text. July25 2025 is explicitly model release, not report publication; keep null and off graph. Score refers to this difficult competition result only; no rubric axes changed.",
+      "review": {
+        "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+        "title": "Qwen3-235B-2507-Think",
+        "publishedDate": null,
+        "quote": "5.21% \u00b1 3.14%",
+        "sentiment": -0.6
+      },
+      "expectedReviews": {
+        "local": {
+          "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+          "quote": "Accuracy 5.21% CI: \u00b1 3.14% Rank: 25/48",
+          "title": "MathArena: Qwen3-235B-2507-Think",
+          "publishedDate": null
+        },
+        "production": {
+          "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+          "quote": "Accuracy 5.21% CI: \u00b1 3.14% Rank: 25/48",
+          "title": "MathArena: Qwen3-235B-2507-Think",
+          "publishedDate": null
+        }
+      },
+      "targets": [
+        {
+          "pinId": 15130,
+          "production": false
+        },
+        {
+          "pinId": 15130,
+          "production": true
+        }
+      ]
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19636,
+      "pinSourceUrl": "https://gigazine.net/gsc_news/en/20260624-bytedance-seedance-2-5/",
+      "researchBasis": "Opened primary AA-Video-T2V v2.1 overall text-to-video leaderboard, Oct26 2026. Exact current model/Elo/uncertainty table fragment replaces previous snapshot; changed vote counts are not a publication date. Live table has no original report day, so retain null and off graph. Editorial sentiment reflects relative rank, not a publisher prose verdict. No rubric axes, authors or other citations changed.",
+      "review": {
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models",
+        "publishedDate": null,
+        "quote": "Dreamina Seedance 2.5\n\t\n1156\n\u00b114",
+        "sentiment": 0.65
+      },
+      "expectedReviews": {
+        "local": {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "quote": "5 2-8 Dreamina Seedance 2.5 1158 \u00b115 95% interval 1143 to 1173 6,477 Jul 2026 $34.12 /min",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models | Artificial Analysis",
+          "publishedDate": null
+        },
+        "production": {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "quote": "5 2-8 Dreamina Seedance 2.5 1158 \u00b115 95% interval 1143 to 1173 6,477 Jul 2026 $34.12 /min",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models | Artificial Analysis",
+          "publishedDate": null
+        }
+      },
+      "targets": [
+        {
+          "pinId": 19636,
+          "production": false
+        },
+        {
+          "pinId": 19636,
+          "production": true
+        }
+      ]
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19665,
+      "pinSourceUrl": "https://blog.google/technology/ai/veo-updates-flow/",
+      "researchBasis": "Opened primary AA-Video-T2V v2.1 overall text-to-video leaderboard, Oct26 2026. Exact current model/Elo/uncertainty table fragment replaces previous snapshot; changed vote counts are not a publication date. Live table has no original report day, so retain null and off graph. Editorial sentiment reflects relative rank, not a publisher prose verdict. No rubric axes, authors or other citations changed.",
+      "review": {
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models",
+        "publishedDate": null,
+        "quote": "Veo 3.1\n\t\n961\n\u00b116",
+        "sentiment": -0.25
+      },
+      "expectedReviews": {
+        "local": {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "quote": "Veo 3.1 963 \u00b116 95% interval 947 to 979 3,591 Jan 2026 $24.00 /min",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models | Artificial Analysis",
+          "publishedDate": null
+        },
+        "production": {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "quote": "Veo 3.1 963 \u00b116 95% interval 947 to 979 3,591 Jan 2026 $24.00 /min",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models | Artificial Analysis",
+          "publishedDate": null
+        }
+      },
+      "targets": [
+        {
+          "pinId": 19665,
+          "production": false
+        },
+        {
+          "pinId": 19665,
+          "production": true
+        }
+      ]
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19666,
+      "pinSourceUrl": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/",
+      "researchBasis": "Opened primary AA-Video-T2V v2.1 overall text-to-video leaderboard, Oct26 2026. Exact current model/Elo/uncertainty table fragment replaces previous snapshot; changed vote counts are not a publication date. Live table has no original report day, so retain null and off graph. Editorial sentiment reflects relative rank, not a publisher prose verdict. No rubric axes, authors or other citations changed.",
+      "review": {
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models",
+        "publishedDate": null,
+        "quote": "Veo 3.1 Lite\n\t\n951\n\u00b116",
+        "sentiment": -0.35
+      },
+      "expectedReviews": {
+        "local": {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "quote": "Veo 3.1 Lite 950 \u00b117 95% interval 933 to 967 3,443 Mar 2026 $4.80 /min",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models | Artificial Analysis",
+          "publishedDate": null
+        },
+        "production": {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "quote": "Veo 3.1 Lite 950 \u00b117 95% interval 933 to 967 3,443 Mar 2026 $4.80 /min",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models | Artificial Analysis",
+          "publishedDate": null
+        }
+      },
+      "targets": [
+        {
+          "pinId": 19666,
+          "production": false
+        },
+        {
+          "pinId": 19666,
+          "production": true
+        }
+      ]
+    }
+  ],
+  "publicationConflict": {
+    "pinId": 5000,
+    "visiblePublished": "2024-01-03",
+    "structuredPublished": "2023-12-22",
+    "structuredModified": "2023-12-26",
+    "resolution": "Retain null; seek publisher clarification or corroborated original archive."
+  },
+  "applyResult": {
+    "savedTargets": 12,
+    "results": [
+      {
+        "pinId": 5000,
+        "production": false,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 5000,
+        "production": true,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 15110,
+        "production": false,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 15110,
+        "production": true,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 15130,
+        "production": false,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 15130,
+        "production": true,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 19636,
+        "production": false,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 19636,
+        "production": true,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 19665,
+        "production": false,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 19665,
+        "production": true,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 19666,
+        "production": false,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      },
+      {
+        "pinId": 19666,
+        "production": true,
+        "source": "hand",
+        "reviewsVerified": true,
+        "unrelatedFieldsUnchanged": true
+      }
+    ]
+  },
+  "evidenceLinkVerification": {
+    "targets": 12,
+    "referencesVerified": true,
+    "sourceWikiLinksVerified": true,
+    "existingReadyWikisPreserved": true
+  }
+}

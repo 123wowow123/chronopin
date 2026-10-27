@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19997,
+      "pinSourceUrl": "https://www.motor1.com/news/677326/2024-amg-glc-43-63-debut/",
+      "basis": "Tom Baker Australian X254 GLC43 SUV four-cylinder 310 kW/500 Nm road test. Original article:published_time and JSON-LD datePublished both July10 2024; relative article age agrees. Other page time elements belong to related stories. New contiguous winding-road extract replaces the earlier artificially punctuated fragment. Australian 20-inch-wheel road behaviour is labelled context for the scored US version; no axes or authors changed.",
+      "reviews": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/sports-suvs/mercedes-amg-glc43-2024-review/",
+          "title": "Mercedes-AMG GLC43 2024 review",
+          "publishedDate": "2024-07-10",
+          "quote": "the GLC43 proves to be a highly capable partner on a winding road.",
+          "sentiment": 0.75
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.chasingcars.com.au/reviews/sports-suvs/mercedes-amg-glc43-2024-review/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened complete publisher road test and inspected article-level original publication metadata; exact model and market scope checked"
+        }
+      ]
+    }
+  ]
+}

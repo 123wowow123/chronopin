@@ -74,6 +74,8 @@ const it: Messages = {
     or: 'o',
     somethingWrong: 'Qualcosa è andato storto, riprova.',
     backToTimeline: 'Torna alla timeline',
+    oauthFailed: 'Accesso con quel provider non riuscito. Riprova o usa email e password.',
+    oauthUnavailable: 'Quell’opzione di accesso non è disponibile al momento. Usa email e password.',
     showFewer: 'Mostra meno',
     showAllN: 'Mostra tutti i {count} {noun}',
   },

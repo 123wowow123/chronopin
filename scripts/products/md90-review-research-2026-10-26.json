@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/McDonnell_Douglas_MD-90",
+      "basis": "Two independent firsthand Delta MD-90 reports: Aaron Giddings MD-90 economy leg, March3 2017; James seat4A MD90 first class, January22 2020. Extracts are from MD90 sections, not their CRJ900/757/737 legs. Original typo quite retained. Together with Julian Waller/AeroXplorer there are three firsthand publishers. Operator-specific cabins and periods, not prototype or universal seating; technical axes unchanged.",
+      "reviews": [
+        {
+          "url": "https://www.airlinereporter.com/2017/03/flying-delta-economy-first-class/",
+          "title": "Flying Delta Air Lines – From Back to Front",
+          "publishedDate": "2017-03-03",
+          "quote": "one knee jammed into the seat ahead of me",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://kindaboringtravels.com/2020/01/22/gsp-atl-mke-delta-737-900-economy-md90-first/",
+          "title": "GSP-ATL-MKE. Delta 737-900 Economy, MD90 First.",
+          "publishedDate": "2020-01-22",
+          "quote": "Plenty of room, nice and quite",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.airlinereporter.com/2017/03/flying-delta-economy-first-class/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand multi-leg trip report; excerpt tied specifically to MD90 flight and original publication byline"
+        },
+        {
+          "url": "https://kindaboringtravels.com/2020/01/22/gsp-atl-mke-delta-737-900-economy-md90-first/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened firsthand multi-leg trip report; excerpt tied specifically to MD90 flight and original publication byline"
+        }
+      ]
+    }
+  ]
+}

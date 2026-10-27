@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15130,
+      "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json.",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19636,
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json.",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19665,
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json.",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19666,
+      "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json.",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "url": "https://aeroxplorer.com/articles/flying-on-the-delta-md-90.php",
+      "status": "verified-undated",
+      "reason": "Opened full Julian Waller firsthand Delta MD-90-30 report. Byline renders AGO without an age; original datePublished is empty. June28 2022 is dateModified only, and Back in May describes the flight. Keep original publication null; do not date the report from the trip or update.",
+      "openedAt": "2026-10-26",
+      "quoteVerified": true
+    }
+  ],
+  "needsResearch": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+      "status": "needs-research",
+      "reason": "Rendered article explicitly says Published on January 3, 2024, but JSON-LD says datePublished Dec22 2023 and dateModified Dec26 2023. Conflicting original dates remain unresolved; retain null rather than choose one. Exact Gemini Pro vs GPT-3.5 quote verified; quotation corrected, hand-set axes/status preserved."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19930,
+      "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
+      "status": "needs-research",
+      "reason": "Opened Denis Duquet first drive and inspected time/metadata. August15 2018 is explicitly Updated, not original publication. Source covers both 5.3 and 6.2 V8; pin scores 6.2 High Country crew. Find original byline or an exact-powertrain dated firsthand replacement; retain null."
+    }
+  ]
+}

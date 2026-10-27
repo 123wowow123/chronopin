@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15259,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/new-mahindra-xuv-7xo-suv-revealed-438720",
+      "basis": "Independent firsthand AX7 L petrol automatic owner driving report by BHPian D'Ro@dSt@r, edited/published by Utkarsh Chaudhary at Team-BHP on May 26, 2026. This is an owner highway impression, not Team-BHP's diesel media test and not a professional instrumented road test. Explicit exact petrol AT and smooth-engine observation. Adds a third independent publisher alongside Autocar India and CarTrade; axes preserved. Continue seeking extended professional petrol-AT tests as they become available. Same 2.0 petrol automatic powertrain, but AX7 L trim differs from scored AX3; quote concerns engine refinement only.",
+      "reviews": [
+        {
+          "url": "https://www.team-bhp.com/news/mahindra-xuv-7xo-ax7-l-petrol-buying-experience-first-highway-run",
+          "title": "Mahindra XUV 7XO AX7 L Petrol AT: Buying experience & first highway run",
+          "publishedDate": "2026-05-26",
+          "quote": "The 200-horsepower petrol engine is incredibly smooth",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.team-bhp.com/news/mahindra-xuv-7xo-ax7-l-petrol-buying-experience-first-highway-run",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened edited firsthand owner report, original byline and exact petrol automatic variant verified"
+        }
+      ]
+    }
+  ]
+}

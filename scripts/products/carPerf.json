@@ -2601,5 +2601,133 @@
         "publishedDate": "2020-02-19"
       }
     ]
+  },
+  {
+    "pinId": 19871,
+    "scores": {
+      "range": 4,
+      "charging": null,
+      "acceleration": 2.5,
+      "assistance": null,
+      "space": 2.5,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: Tank 300 Hi4-T, RMB 269,800. 860 km combined CLTC (110 km electric) -> 4; 0-100 in 6.3 s per Driven Car Guide's export-market drive -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: no DC kW, assist spec, rival price or child-seat detail published on opened pages (only sibling Tank 400 Hi4-T RMB 285,800). Reviews are Australia/NZ-market cars with the same powertrain. Third independent drive: Max Davies/CarExpert, 2026-05-25, Australian Ultra PHEV 300 kW/750 Nm, 37.1 kWh, 9-speed hybrid. Not plugless HEV; market steering calibration may differ. Axes unchanged.",
+    "sourceUrl": "https://cnevpost.com/2024/04/23/tank-launches-tank-300-hi4-t/",
+    "reviews": [
+      {
+        "url": "https://www.drivencarguide.co.nz/reviews/gwm-tank-300-hi4-t-first-drive-fits-to-a-t/",
+        "quote": "lively and responsive in a way you simply don't expect in a ladder chassis off-road focussed SUV.",
+        "title": "GWM Tank 300 Hi4-T first drive: fits to a T (NZ-market car)",
+        "sentiment": 0.7,
+        "publishedDate": "2026-05-15"
+      },
+      {
+        "url": "https://www.4x4australia.com.au/reviews/gwm-tank-300-phev-review",
+        "quote": "The Tank 300 PHEV is a sweet little thing to drive around town.",
+        "title": "GWM Tank 300 PHEV review: Is this Australia's best-value off-road hybrid? (AU-market car)",
+        "sentiment": 0.6,
+        "publishedDate": "2026-07-08"
+      },
+      {
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gwm-tank-300-phev-review",
+        "quote": "It's not particularly communicative or direct, even for a big off-road SUV",
+        "title": "2026 GWM Tank 300 PHEV review",
+        "sentiment": -0.35,
+        "publishedDate": "2026-05-25"
+      }
+    ]
+  },
+  {
+    "pinId": 19870,
+    "scores": {
+      "range": 3,
+      "charging": 3,
+      "acceleration": 2.5,
+      "assistance": 3,
+      "space": 3,
+      "value": null,
+      "kidsFriendly": 3
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: 625 Max (73 kWh, 200 kW). Range 625 km CLTC -> 3; 3C charging adds 400 km in 19 min (~200 kW class) -> 3; 0-100 'just over six seconds' (CarNewsChina) -> 2.5; Momenta assist handled dense urban merges, no LiDAR/NOA claim -> 3; wheelbase 2,915 mm -> 3; kids 3 from 504 L trunk, ISOFIX/vents unpublished. Value null: no priced rival on an opened page. Third independent exact 625 Max road test: Zhou Xin Liao Che/Sohu (2025-07-15), chassis criticism. Do not use its horsepower typo. Axes unchanged.",
+    "sourceUrl": "https://carnewschina.com/2025/04/28/nissan-n7-ev-sedan-from-dongfeng-launched-in-china-for-16450-usd/",
+    "reviews": [
+      {
+        "url": "https://carnewschina.com/2025/06/28/sunday-china-drive-nissan-n7-surprise-export-hint-found-practical-ev-design/",
+        "quote": "Rather than chasing headline-grabbing acceleration figures, Nissan tuned the N7 for real-world usability.",
+        "title": "Sunday China Drive | Nissan N7: surprise export hint found, practical EV design",
+        "sentiment": 0,
+        "publishedDate": "2025-06-28"
+      },
+      {
+        "url": "https://www.topgear.com.ph/drives/car-reviews/nissan-n7-2026-ph-first-impressions-a6888-20260313",
+        "quote": "Once engaged, it lightens the steering, loosens the pedal, and washes you in torque for a more substantial acceleration.",
+        "title": "First impressions: The fully electric N7 is Nissan's do-it-all sedan (invited Nissan China drive)",
+        "sentiment": 0.2,
+        "publishedDate": "2026-03-13"
+      },
+      {
+        "url": "https://www.sohu.com/a/913972946_121099092",
+        "quote": "不过整车底盘对连续减速带的过滤尚欠火候，后排乘客能感受到较为清晰的纵向振动。",
+        "title": "试驾2025款日产N7，11.99万起，标配400V快充，真有那么好？",
+        "sentiment": -0.4,
+        "publishedDate": "2025-07-15"
+      }
+    ]
+  },
+  {
+    "pinId": 19879,
+    "scores": {
+      "range": 2.5,
+      "charging": null,
+      "acceleration": 2.5,
+      "assistance": null,
+      "space": 2.5,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Variant: ME RWD, RMB 189,800, 66 kWh. 560 km CLTC -> 2.5; 0-100 5.8 s -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: not published on the opened launch article. Three added independent 66 kWh/200 kW RWD tests: Sgcarmart (2024-08-14), OneShift (2024-09-18), Motorist (2025-01-01). These are Singapore export Standard RWD, not launch-China ME tuning/software. Existing AWD reviews remain labelled context. China axes unchanged.",
+    "sourceUrl": "https://carnewschina.com/2023/04/12/zeekr-x-launched-with-560-km-range-for-27600-usd-coming-to-europe/",
+    "reviews": [
+      {
+        "url": "https://www.goodwood.com/grr/car-reviews/zeeker/zeekr-x/",
+        "quote": "With its autonomous driving sorted, the X is a decent motorway car with a silent drivetrain.",
+        "title": "Zeekr X 2025 review | First Drive (export AWD)",
+        "sentiment": 0.4,
+        "publishedDate": "2025-06-06"
+      },
+      {
+        "url": "https://www.tatlerasia.com/lifestyle/gear/review-zeekr-x",
+        "quote": "remarkably agile and provides for a spirited drive.",
+        "title": "Review: The Zeekr X, China's luxe EV newcomer (Tatler Asia, China track drive)",
+        "sentiment": 0.7,
+        "publishedDate": "2024-07-01"
+      },
+      {
+        "url": "https://www.sgcarmart.com/articles/car-reviews/zeekr-x-standard-rwd-review-35618",
+        "quote": "The suspension setup is pretty good.",
+        "title": "Zeekr X Standard RWD Review",
+        "sentiment": 0.6,
+        "publishedDate": "2024-08-14"
+      },
+      {
+        "url": "https://www.motorist.sg/article/4022/mreview-zeekr-x-standard-rwd-new-kid-on-the-block",
+        "quote": "The ride quality is lovely",
+        "title": "mReview: Zeekr X Standard RWD – New Kid On The Block",
+        "sentiment": 0.8,
+        "publishedDate": "2025-01-01"
+      },
+      {
+        "url": "https://www.oneshift.com/articles/car-reviews/zeekr-x-standard-rwd-review-it-pays-to-be-different/",
+        "quote": "At speed, the X is beautifully hushed and damped for a cosseting ride.",
+        "title": "Zeekr X Standard RWD Review: It Pays to be Different",
+        "sentiment": 0.8,
+        "publishedDate": "2024-09-18"
+      }
+    ]
   }
 ]

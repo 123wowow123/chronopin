@@ -73,6 +73,8 @@ const fr: Messages = {
     or: 'ou',
     somethingWrong: 'Un problème est survenu, veuillez réessayer.',
     backToTimeline: 'Retour à la chronologie',
+    oauthFailed: 'La connexion avec ce fournisseur a échoué. Réessayez ou utilisez votre e-mail et votre mot de passe.',
+    oauthUnavailable: 'Cette option de connexion est indisponible pour le moment. Utilisez votre e-mail et votre mot de passe.',
     showFewer: 'Afficher moins',
     showAllN: 'Afficher les {count} {noun}',
   },

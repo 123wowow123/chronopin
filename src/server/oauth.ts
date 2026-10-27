@@ -26,6 +26,10 @@ import log from './util/log';
 
 export type Provider = 'google' | 'facebook' | 'apple' | 'alibaba' | 'alibabacn';
 
+// Every call out to a provider gives up after this, so a provider that hangs
+// sends the person back to the login page instead of hanging the callback.
+const TIMEOUT_MS = 10000;
+
 const STATE_COOKIE = 'oauth_state';
 // The @handle the sign-up page stored before sending the user to the provider.
 const HANDLE_COOKIE = 'handle';
@@ -130,7 +134,7 @@ function callbackUrl(request: NextRequest, provider: Provider) {
 export async function startSignIn(request: NextRequest, provider: Provider): Promise<Response> {
   // An old link or a stale page can still ask for one that is not set up.
   if (!signInProviders().includes(provider)) {
-    return Response.redirect(`${publicOrigin(request)}/login`, 302);
+    return Response.redirect(`${publicOrigin(request)}/login?oauth=unavailable`, 302);
   }
   const p = PROVIDERS[provider];
   const state = randomBytes(24).toString('base64url');
@@ -164,7 +168,7 @@ export async function finishSignIn(request: NextRequest, provider: Provider): Pr
   const status = request.method === 'POST' ? 303 : 302;
   const fail = (reason: string) => {
     log.warn(`${provider} sign-in failed:`, reason);
-    return Response.redirect(`${origin}/signup`, status);
+    return Response.redirect(`${origin}/login?oauth=failed`, status);
   };
 
   const jar = await cookies();
@@ -246,6 +250,7 @@ async function postForm(url: string, body: Record<string, string>) {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/json' },
     body: new URLSearchParams(body),
+    signal: AbortSignal.timeout(TIMEOUT_MS),
   });
   const data = await res.json();
   if (!res.ok || data.error) {
@@ -255,7 +260,7 @@ async function postForm(url: string, body: Record<string, string>) {
 }
 
 async function getJson(url: string, accessToken: string) {
-  const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
+  const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` }, signal: AbortSignal.timeout(TIMEOUT_MS) });
   const data = await res.json();
   if (!res.ok || data.error) {
     throw new Error(`profile request failed: ${res.status}`);
@@ -289,7 +294,7 @@ async function facebookProfile(code: string, redirectUri: string): Promise<Profi
   tokenUrl.searchParams.set('client_secret', config.facebook.clientSecret);
   tokenUrl.searchParams.set('redirect_uri', redirectUri);
   tokenUrl.searchParams.set('code', code);
-  const tokenRes = await fetch(tokenUrl);
+  const tokenRes = await fetch(tokenUrl, { signal: AbortSignal.timeout(TIMEOUT_MS) });
   const token = await tokenRes.json();
   if (!tokenRes.ok || token.error) {
     throw new Error(`token exchange failed: ${tokenRes.status}`);

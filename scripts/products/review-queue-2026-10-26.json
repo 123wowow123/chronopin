@@ -1,41 +1,41 @@
 {
-  "checkedAt": "2026-10-27T00:15:36.847Z",
+  "checkedAt": "2026-10-27T01:52:03.746Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
       "table": "PinTaste",
       "pins": 228,
-      "reviews": 494,
+      "reviews": 493,
       "minimum": 1,
       "belowMinimum": 0,
-      "undatedNonMichelin": 44,
+      "undatedNonMichelin": 43,
       "unscoredDated": 0
     },
     {
       "table": "PinCarPerf",
       "pins": 128,
-      "reviews": 335,
+      "reviews": 340,
       "minimum": 3,
-      "belowMinimum": 40,
+      "belowMinimum": 37,
       "undatedNonMichelin": 17,
       "unscoredDated": 0
     },
     {
       "table": "PinGasCarPerf",
       "pins": 160,
-      "reviews": 501,
+      "reviews": 502,
       "minimum": 3,
       "belowMinimum": 12,
-      "undatedNonMichelin": 30,
+      "undatedNonMichelin": 28,
       "unscoredDated": 0
     },
     {
       "table": "PinAircraftPerf",
       "pins": 165,
-      "reviews": 548,
+      "reviews": 559,
       "minimum": 3,
-      "belowMinimum": 19,
-      "undatedNonMichelin": 21,
+      "belowMinimum": 14,
+      "undatedNonMichelin": 9,
       "unscoredDated": 0
     },
     {
@@ -44,7 +44,7 @@
       "reviews": 440,
       "minimum": 3,
       "belowMinimum": 4,
-      "undatedNonMichelin": 20,
+      "undatedNonMichelin": 18,
       "unscoredDated": 0
     },
     {
@@ -68,16 +68,16 @@
     {
       "table": "PinDining",
       "pins": 89,
-      "reviews": 270,
+      "reviews": 271,
       "minimum": 3,
-      "belowMinimum": 10,
+      "belowMinimum": 9,
       "undatedNonMichelin": 45,
       "unscoredDated": 0
     },
     {
       "table": "PinCriticReview",
-      "pins": 90,
-      "reviews": 271,
+      "pins": 92,
+      "reviews": 277,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 1,
@@ -419,33 +419,6 @@
       "existingResearchBasis": "Variant: Ultra, RMB 459,800 (Livis RMB 509,800 has the active chassis). 1,650 km CLTC combined, 420 km electric; 10-80% in 10 min at up to 420 kW; 0-100 km/h 4.9 s; one Mach M100 with VLA driving model, stable on highway and urban roads in the test drive (36Kr); 3,125 mm six-seat; value 3.5: RMB 30,000 above the previous Ultra, RMB 20,000 launch incentive; kids 4.5: 21-inch rear screen, sunshades, zero-gravity seats, ISOFIX not read. Only one independent hands-on found (36Kr pre-launch test drive of the Livis)."
     },
     {
-      "table": "PinCarPerf",
-      "pinId": 19870,
-      "title": "Dongfeng Nissan Launches the N7 Electric Sedan From RMB 119,900 at Auto Shanghai",
-      "sourceUrl": "https://carnewschina.com/2025/04/28/nissan-n7-ev-sedan-from-dongfeng-launched-in-china-for-16450-usd/",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: 625 Max (73 kWh, 200 kW). Range 635 km CLTC -> 3; 3C charging adds 400 km in 19 min (~200 kW class) -> 3; 0-100 'just over six seconds' (CarNewsChina) -> 2.5; Momenta assist handled dense urban merges, no LiDAR/NOA claim -> 3; wheelbase 2,915 mm -> 3; kids 3 from 504 L trunk, ISOFIX/vents unpublished. Value null: no priced rival on an opened page."
-    },
-    {
-      "table": "PinCarPerf",
-      "pinId": 19871,
-      "title": "Great Wall's Tank Launches the Tank 300 Hi4-T Hybrid Off-Roader From RMB 269,800",
-      "sourceUrl": "https://cnevpost.com/2024/04/23/tank-launches-tank-300-hi4-t/",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: Tank 300 Hi4-T, RMB 269,800. 860 km combined CLTC (110 km electric) -> 4; 0-100 in 6.3 s per Driven Car Guide's export-market drive -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: no DC kW, assist spec, rival price or child-seat detail published on opened pages (only sibling Tank 400 Hi4-T RMB 285,800). Reviews are Australia/NZ-market cars with the same powertrain."
-    },
-    {
-      "table": "PinCarPerf",
-      "pinId": 19879,
-      "title": "Zeekr Launches the X Compact Electric SUV From RMB 189,800 With 560 km Range",
-      "sourceUrl": "https://carnewschina.com/2023/04/12/zeekr-x-launched-with-560-km-range-for-27600-usd-coming-to-europe/",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: ME RWD, RMB 189,800, 66 kWh. 560 km CLTC -> 2.5; 0-100 5.8 s -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: not published on the opened launch article. Reviews are mostly export-market AWD cars (labelled), not the RWD ME."
-    },
-    {
       "table": "PinGasCarPerf",
       "pinId": 15217,
       "title": "Audi Unveils the Q9, Its First Full-Size SUV, in New York",
@@ -582,15 +555,6 @@
     },
     {
       "table": "PinAircraftPerf",
-      "pinId": 19586,
-      "title": "FAA Certifies the Stretched Boeing 767-300",
-      "sourceUrl": "https://web.archive.org/web/20180929014303if_/http://www.airweb.faa.gov/Regulatory_and_Guidance_Library/rgMakeModel.nsf/0/b9e61e631046f10186257fd900588ed4/%24FILE/A1NM_Rev35.pdf#b76-08",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "767-300 (JT9D-7R4D/CF6-80A, 350,000 lb MTOW, Boeing planning layout 261 seats: 24 first + 237 economy). Range 3,900 nmi with 269 pax (Wikipedia) = 2.5. Capacity 261 = 3.5. Efficiency null: Aircraft Commerce burn tables cover only the -300ER/-400ER. Speed Mach 0.80 = 2.5. Runway ~10,400 ft at MTOW, sea level, standard day, read from ACAPS graph 3.3.9 (JT9D) = 1.5. Comfort 3.5 from two pilot reviews (sweet handling, light controls); only 2 reviews, no 3rd independent -300 review found."
-    },
-    {
-      "table": "PinAircraftPerf",
       "pinId": 19609,
       "title": "Irkut MC-21-300 Makes Its First Flight From Irkutsk",
       "sourceUrl": "https://ainonline.com/aviation-news/air-transport/2017-05-30/irkut-mc-21-300-performs-first-flight",
@@ -609,15 +573,6 @@
     },
     {
       "table": "PinAircraftPerf",
-      "pinId": 19642,
-      "title": "Bombardier Delivers the First CRJ1000s to Brit Air and Air Nostrum at Mirabel",
-      "sourceUrl": "https://www.firmenpresse.de/pressrelease49704/bombardier-showcases-first-air-nostrum-and-brit-air-crj1000-nextgen-regional-jets.html",
-      "reviewCount": 1,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: CRJ1000 NextGen, baseline MTOW 90,000 lb (ER 91,800), up to 104 seats (Bombardier release: up to 100), two CF34-8C5A1 of 14,510 lbf (Wikipedia CRJ700 series; AIN Dec 2010). Range 1,457 nmi baseline (ER 1,657) -> 0. Capacity 100 -> 1.0. Efficiency null: none published. Speed null: only max Mach 0.82 published, no typical cruise. Runway: takeoff 6,155-6,955 ft (Wikipedia table; midpoint 6,555) -> 4.5. Comfort null: fewer than 3 reviews found (only 2: a paywalled Flight International test standfirst and a Garuda passenger blog); too few to score comfort."
-    },
-    {
-      "table": "PinAircraftPerf",
       "pinId": 19644,
       "title": "BAC One-Eleven Flies Its First Scheduled Service for British United",
       "sourceUrl": "https://british-caledonian.com/1-11_200.html",
@@ -630,9 +585,9 @@
       "pinId": 19645,
       "title": "Saab 340 Enters Airline Service With Crossair",
       "sourceUrl": "https://airwaysmag.com/new-post/saab-340-enters-service-crossair",
-      "reviewCount": 1,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort: null; only 1 independent review reached (Rex 340B, Executive Traveller); airliners.net/Infinite Flight forum posts excluded as forum threads; FlightGlobal 1998 retrofit item is vendor news. Fewer than 3 reviews."
+      "reviewCount": 2,
+      "reason": "Two saved extracts, but only EX-YU Aviation covers exact Saab 340A (YL-RAL); existing Rex 340B is sibling context. Need two more independent A cabin/flight reports. Checked Link Airways and Loganair reports: B-family or unverified A; excluded simulator reviews and pure vendor news.",
+      "existingResearchBasis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort null: EX-YU Aviation (2025-05-11) reports cramped seating and noise on exact 340A YL-RAL. Existing Rex review is later 340B, not launch-A cabin evidence. Two extracts, only one exact-A firsthand report; seek two more independent A reports. No simulator or vendor-news reviews added."
     },
     {
       "table": "PinAircraftPerf",
@@ -660,15 +615,6 @@
       "reviewCount": 0,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Variant: A330-200F (freighter). Range: Airbus's launch-day release gives more than 64 t over 4,000 nmi (7,400 km) -> 2 + 500/1,500 = 2.33 -> 2.5 (maker's maximum range with its heavier payload; the 69 t / 3,200 nmi option would score lower). Capacity: a freighter -> null. Efficiency: only unquantified Airbus cost claims -> null. Speed: no maker cruise Mach in an opened source for this variant -> null. Runway: no airport-planning figure in an opened source -> null. Comfort: not applicable to a freighter -> null. Reviews: no independent reviews found (searches returned only Airbus, operator and trade-press launch coverage); fewer than 3, none padded."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19884,
-      "title": "The Airbus A340-500 Makes Its First Flight From Toulouse",
-      "sourceUrl": "https://www.aero-news.net/index.cfm?do=main.textpost&id=1cdf4d50-e91d-44d5-be95-dec3abeb1510",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: A340-500 (Trent 553), Wikipedia A340 article. Range: 8,650 nmi -> above the 8,000 nmi anchor -> 5.0. Capacity: 313 in three classes -> 4 + 13/100 = 4.13 -> 4.0. Efficiency: no fuel burn figure in an opened source -> null. Speed: cruise Mach 0.82 (A340 family table) -> 3.0. Runway: the take-off figure in the Wikipedia table could not be tied to the -500 column -> null. Comfort: null, only one review of the -500 cabin (Singapore all-business layout) plus one range anecdote; fewer than two cabin reviews. Reviews: 2 of the required 3 found (Flight International 2002 and the ALPA 2003 pilot report exist but are paywalled/blocked); none padded."
     },
     {
       "table": "PinAircraftPerf",
@@ -705,24 +651,6 @@
       "reviewCount": 0,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Variant: Convair 880-22 (four CJ-805-3, MTOW 184,500 lb), Jane's All The World's Aircraft 1965-66 as tabulated on Wikipedia. Range: 2,472 nmi with 22,500 lb payload and 14,000 lb reserve; 2,500 -> 1, under 1,500 -> 0, so 2,472 -> 0.97 -> 1.0 (This Day in Aviation quotes a 5,056-mile maximum range, which conflicts and is not a typical-load figure; not used). Capacity: 110 passengers (Jane's); 100 -> 1, 150 -> 2, so 110 -> 1.2 -> 1.0. Efficiency: no fuel burn published -> null. Speed: Jane's economy cruise Mach 0.82 at 35,000 ft -> 3.0 (0.82 anchor); the maximum cruise of 534.5 kt is not the typical cruise. Runway: Jane's lists a 8,750 ft takeoff for the 880-22 without stating weight or ISA conditions, so it is treated as the MTOW figure: 7,000 -> 4, 8,500 -> 3, 10,000 -> 2, so 8,750 -> 2.8 -> 3.0 (flagged: not from an airport-planning document). Comfort: no reviews of this variant found (Air Facts Journal pilot article was blocked) -> null. Reviews: 0 found, below the required 3."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19894,
-      "title": "Bombardier's CRJ700 Stretch Makes Its First Flight",
-      "sourceUrl": "https://www.airwaysmag.com/new-post/maiden-flight-crj700",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: baseline CRJ700 (CF34-8C), Wikipedia CRJ700 series. Range: 1,702 nmi (ER 2,032 nmi) -> 0 + ... under 2,500 nmi anchor line: 1 - (2,500-1,702)/1,000 = 0.2 -> 0.0 for the baseline (the ER would score 0.5). Capacity: 70 seats (Airways, Mighty Travels) -> 1 - (100-70)/40 = 0.25 -> 0.5 (halves up). Efficiency: no fuel burn -> null. Speed: sources disagree (Wikipedia Mach 0.82-0.85 maximum, an AirlineReporter author says cruise Mach 0.78) and no maker cruise Mach was opened -> null. Runway: 4,975-5,265 ft (Wikipedia, not the Bombardier chart) -> under 5,500 ft -> 5.0. Comfort: 2+2 leather seats, 32 in pitch, 'comfortable, modern' (Mighty Travels) and a smooth, quick ride (AirlineReporter) -> competent = 3. Reviews: 2 of the required 3 found (Flight International 'Bigger brother' 2000 is paywalled); none padded. AirlineReporter date not shown on the page (comments begin 27 Aug 2010) so publishedDate is null."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19896,
-      "title": "Xi'an Aircraft's MA60 Turboprop Airliner Makes Its First Flight",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Xi%27an_MA60",
-      "reviewCount": 1,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "Variant: MA60 (PW127J, MTOW 21,800 kg), Wikipedia and flugzeuginfo.net. Range: 1,600 km (Wikipedia; flugzeuginfo says 1,430 km = 772 nmi) = about 864 nmi -> under 1,500 nmi -> 0.0. Capacity: 62 (Wikipedia) or about 60 (Airport Technology) -> under 60 anchor line -> 0.0. Efficiency: no fuel burn figure -> null. Speed: maximum 514 km/h (Airport Technology), cruise 430 km/h (Wikipedia), roughly Mach 0.35-0.45, under the 0.60 anchor -> 0.0 (no maker Mach published, but any plausible turboprop value is below 0.60). Runway: no field-length figure -> null. Comfort: null, only one trip report. Reviews: 1 of the required 3 found (airportspotting trip report 'very mediocre and simple'); the Nepali Times piece found in search is about a purchase, not a flying review; none padded."
     },
     {
       "table": "PinLlmPerf",
@@ -777,15 +705,6 @@
       "reviewCount": 2,
       "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
       "existingResearchBasis": "Scored as of the 31 Jul 2026 update to grok-imagine-video-1.5. Resolution 4: native 1080p for text- and image-to-video (reference-to-video stayed at 720p per the docs). Duration 4: up to 15 s per xAI's docs (the post itself states no maximum). Audio 5: native speech, effects and ambience plus voice reference for a consistent character voice. Control 4: text, up to seven reference images and a voice reference, plus pinned frames in the docs; there is no video reference or video editing in this entry (editing exists on the separate API endpoint), so it lands at the 4 anchor ('multiple image ... and audio references'). Speed is null: no maker figure for the 1080p or reference modes (Curious Refuge saw about 60 s, resolution unstated). Realism is null: only one hands-on test (Curious Refuge, which found it behind Seedance 2.0) and one news explainer (Tech Times, no quality verdict) were found, fewer than the two independent reviews required."
-    },
-    {
-      "table": "PinDining",
-      "pinId": 17202,
-      "title": "3rd Samgyetang — Seoul restaurant guide",
-      "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/3rd-samgyetang",
-      "reviewCount": 2,
-      "reason": "Independent review coverage below target; verify exact model, variant or branch before adding sources.",
-      "existingResearchBasis": "No diner rating figure was opened, so the diner axes are null. Acclaim 3: MICHELIN Bib Gourmand, Seoul & Busan 2026 (Pearl listing) on the guide's own entry for 3rd Samgyetang (opened 1973)."
     },
     {
       "table": "PinDining",
@@ -869,14 +788,14 @@
       "existingResearchBasis": "Food capped at 3.5: 4.7 over only 30 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition)."
     }
   ],
-  "independenceGaps": [
+  "independenceGaps": [],
+  "resolvedIndependenceGaps": [
     {
       "table": "PinGasCarPerf",
       "pinId": 15259,
-      "title": "Mahindra XUV 7XO",
-      "reviewCount": 3,
-      "independentPublishers": 2,
-      "reason": "Two reviews are from Autocar India and one from CarTrade. Find a third independent exact petrol-automatic road test. Moneycontrol and DriveSpark drove diesel automatic; Top Gear India drove diesel manual, so those tests were not added."
+      "independentPublishers": 3,
+      "resolution": "Added edited Team-BHP exact petrol-automatic owner highway impression, 2026-05-26. This is owner evidence, not an instrumented professional test; two Autocar extracts still count as one publisher.",
+      "evidenceCatalog": "scripts/products/xuv-owner-review-2026-10-26.json"
     }
   ],
   "publicationResearch": [
@@ -893,8 +812,8 @@
       "pinId": 4503,
       "title": "Buffalo Trace's First Bottle Draw Winners Collect Uncut Elmer T. Lee 40th Anniversary",
       "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened Richard Thomas exact cask-strength 40th Anniversary tasting. Native APIs now hold one contiguous verbatim extract rather than the former stitched sentences. Full rendered article and metadata expose no original publication day; masthead date and September URL month are not article publication evidence. Keep null and off graph."
     },
     {
       "table": "PinTaste",
@@ -970,14 +889,6 @@
     },
     {
       "table": "PinTaste",
-      "pinId": 5633,
-      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
-      "url": "https://www.lemon8-app.com/@barleysgotitall/7478272148637778474?region=us",
-      "status": "needs-research",
-      "reason": "Exact-product firsthand tasting still needs verification. Original FUNDAY URL redirects to US landing page or returns 404; shop listings at Keto Direct and Low Carb Emporium provide merchant copy without accessible customer comment text. Do not substitute another FUNDAY flavour or promotion date. Reopen the original customer/Lemon8 account or find an exact-product independent tasting."
-    },
-    {
-      "table": "PinTaste",
       "pinId": 7013,
       "title": "GREY GOOSE Berry Rouge Launches in United States",
       "url": "https://www.totalwine.com/spirits/vodka/flavored-vodka/grey-goose-berry-rouge-vodka/p/2126272956",
@@ -1022,7 +933,7 @@
       "title": "Wanglaoji / Walovi Canned Herbal Tea",
       "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Opened primary original post and verified firsthand canned-product tasting and author. Rendered source exposes only a relative age; no exact publication timestamp was returned by time/meta inspection or the public JSON endpoint. Keep null; do not derive a date from the Reddit id or relative age."
     },
     {
       "table": "PinTaste",
@@ -1030,7 +941,7 @@
       "title": "Coconut Palm Coconut Milk Drink",
       "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Opened primary original post and verified firsthand canned-product tasting and author. Rendered source exposes only a relative age; no exact publication timestamp was returned by time/meta inspection or the public JSON endpoint. Keep null; do not derive a date from the Reddit id or relative age."
     },
     {
       "table": "PinTaste",
@@ -1494,20 +1405,12 @@
       "title": "Chevrolet Unveils the All-New Silverado 1500 in Detroit, Dropping 450 lb and Adding a 6.2L V8",
       "url": "https://www.auto123.com/en/car-reviews/2019-chevrolet-silverado-first-drive/65004/",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Opened Denis Duquet first drive and inspected time/metadata. August15 2018 is explicitly Updated, not original publication. Source covers both 5.3 and 6.2 V8; pin scores 6.2 High Country crew. Find original byline or an exact-powertrain dated firsthand replacement; retain null."
     },
     {
       "table": "PinGasCarPerf",
       "pinId": 19953,
       "title": "Honda's Eleventh-Generation 2022 Civic Sedan Reaches US Dealers From $22,695",
-      "url": "https://www.caranddriver.com/honda/civic-2022",
-      "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
-    },
-    {
-      "table": "PinGasCarPerf",
-      "pinId": 19954,
-      "title": "Honda Prices the Eleventh-Generation 2022 Civic Hatchback From $23,915 With a Stick-Shift Turbo",
       "url": "https://www.caranddriver.com/honda/civic-2022",
       "status": "needs-research",
       "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
@@ -1578,14 +1481,6 @@
     },
     {
       "table": "PinGasCarPerf",
-      "pinId": 19997,
-      "title": "Mercedes-AMG Unveils the GLC 43 With a 416 hp Four-Cylinder, From EUR 86,870 in Germany",
-      "url": "https://www.chasingcars.com.au/reviews/sports-suvs/mercedes-amg-glc43-2024-review/",
-      "status": "needs-research",
-      "reason": "Publication metadata found but saved quote did not match opened body; reverify extract and exact product."
-    },
-    {
-      "table": "PinGasCarPerf",
       "pinId": 20019,
       "title": "Porsche Adds the 718 Cayman GTS 4.0 With a 400 PS Flat-Six, From EUR 81,926",
       "url": "https://www.carmagazine.co.uk/car-reviews/porsche/718-gts-40/",
@@ -1605,14 +1500,6 @@
       "pinId": 20040,
       "title": "Subaru Debuts the All-New 2024 Crosstrek at the Chicago Auto Show, From USD 24,995",
       "url": "https://www.autoexpress.co.uk/subaru/crosstrek",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 947,
-      "title": "Lufthansa Takes Delivery of Its First Airbus A350-900",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
       "status": "needs-research",
       "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
     },
@@ -1650,62 +1537,6 @@
     },
     {
       "table": "PinAircraftPerf",
-      "pinId": 19508,
-      "title": "Airbus A350 XWB Makes Its First Flight",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19509,
-      "title": "EASA Certifies the Airbus A350-900",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19510,
-      "title": "Airbus Delivers the First A350 XWB to Qatar Airways",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19511,
-      "title": "Qatar Airways Flies the First A350 Passenger Service to Frankfurt",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19512,
-      "title": "Airbus A350-1000 Makes Its First Flight",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19513,
-      "title": "EASA and FAA Certify the Airbus A350-1000",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19514,
-      "title": "Airbus Delivers the First A350-1000 to Qatar Airways",
-      "url": "https://www.cathaypacific.com/cx/en_AU/inspiration/cathay-stories/a-pilots-10-favourite-features-of-the-airbus-a350.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
       "pinId": 19564,
       "title": "De Havilland Canada Dash 8 Prototype Makes Its First Flight",
       "url": "https://modelingmadness.com/review/civil/airlines/browndhc8.htm",
@@ -1726,47 +1557,15 @@
       "title": "Douglas DC-8 Makes Its First Flight From Long Beach",
       "url": "https://www.henrytenby.com/farewell-to-atis-dc-8s/",
       "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19573,
-      "title": "McDonnell Douglas DC-9 Super 80 (MD-80) Makes Its First Flight",
-      "url": "https://www.airlinepilotcentral.com/articles/news/airline-pilots-say-goodbye-to-the-md-80.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19574,
-      "title": "Swissair Puts the First MD-81 Into Passenger Service",
-      "url": "https://www.airlinepilotcentral.com/articles/news/airline-pilots-say-goodbye-to-the-md-80.html",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "reason": "Opened firsthand Henry Tenby ATI interview has October 2013 magazine issue only, not a publication day. May 9 is the 2013 visit date. It covers DC-8-62/-72 combis, not the scored original DC-8-32. Exact-variant eligibility/replacement remains unresolved; no invented date."
     },
     {
       "table": "PinAircraftPerf",
       "pinId": 19575,
       "title": "McDonnell Douglas MD-90 Makes Its First Flight From Long Beach",
       "url": "https://aeroxplorer.com/articles/flying-on-the-delta-md-90.php",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19575,
-      "title": "McDonnell Douglas MD-90 Makes Its First Flight From Long Beach",
-      "url": "https://deltamuseum.org/research/history/aircraft/jets/jets/mcdonnell-douglas-md-90-1995-2020",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinAircraftPerf",
-      "pinId": 19640,
-      "title": "Bombardier CRJ900 Stretch Makes Its Maiden Flight From Mirabel",
-      "url": "https://runwaygirlnetwork.com/2025/05/the-indignities-of-flying-fluffy-aboard-a-crj/",
-      "status": "needs-research",
-      "reason": "Page could not be opened"
+      "status": "verified-undated",
+      "reason": "Opened full Julian Waller firsthand Delta MD-90-30 report. Byline renders AGO without an age; original datePublished is empty. June28 2022 is dateModified only, and Back in May describes the flight. Keep original publication null; do not date the report from the trip or update."
     },
     {
       "table": "PinAircraftPerf",
@@ -1789,8 +1588,8 @@
       "pinId": 4812,
       "title": "DeepSeek-V4.1-Flash Released",
       "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
@@ -1798,23 +1597,15 @@
       "title": "Gemini 1.0 Released",
       "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
       "status": "needs-research",
-      "reason": "Original Published on January 3, 2024 verified in rendered article. Native save refused hand-edited rubric; unchanged in both environments. Proposed date retained in review-dates-next catalog; requires a deliberate hand-row-preserving decision."
-    },
-    {
-      "table": "PinLlmPerf",
-      "pinId": 15110,
-      "title": "DeepSeek-V4-Pro and DeepSeek-V4-Flash Released",
-      "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
-      "status": "needs-research",
-      "reason": "Original April 24, 2026 byline verified, distinguishing related-article dates. Native save refused hand-edited rubric; unchanged in both environments. Proposed date retained in review-dates-next catalog; requires a deliberate hand-row-preserving decision."
+      "reason": "Rendered article explicitly says Published on January 3, 2024, but JSON-LD says datePublished Dec22 2023 and dateModified Dec26 2023. Conflicting original dates remain unresolved; retain null rather than choose one. Exact Gemini Pro vs GPT-3.5 quote verified; quotation corrected, hand-set axes/status preserved."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15114,
       "title": "GLM-4.7 Released",
       "url": "https://epoch.ai/models/glm-4-7",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
@@ -1829,56 +1620,56 @@
       "pinId": 15128,
       "title": "Step 5 Preview Released",
       "url": "https://artificialanalysis.ai/models/step-5",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15129,
       "title": "Qwen3-235B-A22B-Instruct-2507 Released",
       "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-2507",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15130,
       "title": "Qwen3-235B-A22B-Thinking-2507 Released",
       "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-2507-reasoning",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15130,
       "title": "Qwen3-235B-A22B-Thinking-2507 Released",
       "url": "https://matharena.ai/models/qwen_qwen3_235b_a22b_2507",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15131,
       "title": "Qwen3-30B-A3B-Instruct-2507 Released",
       "url": "https://artificialanalysis.ai/models/qwen3-30b-a3b-2507",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15132,
       "title": "Qwen3-Next-80B-A3B-Instruct and Qwen3-Next-80B-A3B-Thinking Released",
       "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15132,
       "title": "Qwen3-Next-80B-A3B-Instruct and Qwen3-Next-80B-A3B-Thinking Released",
       "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-reasoning",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
@@ -1901,40 +1692,32 @@
       "pinId": 15166,
       "title": "Muse Spark 1.2 Released",
       "url": "https://epoch.ai/models/muse-spark-1-2",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15176,
       "title": "Qwen3-32B and the Qwen3 Family Released",
       "url": "https://artificialanalysis.ai/models/qwen3-32b-instruct-reasoning",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15193,
       "title": "Qwen3-VL-235B-A22B-Instruct and Qwen3-VL-235B-A22B-Thinking Released",
       "url": "https://artificialanalysis.ai/models/qwen3-vl-235b-a22b-instruct",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15308,
       "title": "Gemini 4 Argon Released to Paying Users",
       "url": "https://artificialanalysis.ai/models/gemini-4-argon",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
-    },
-    {
-      "table": "PinLlmPerf",
-      "pinId": 19805,
-      "title": "Kimi K3.1 Pro Released on the API, With Weights Promised by November 4",
-      "url": "https://www.vals.ai/models/kimi_kimi-k3.1-pro",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Opened rendered primary evaluator model page and matched the saved extract. This is a live benchmark/profile with no original publication byline; model release dates and changing rankings are not publication dates. Keep null and off the time-series graph. Current checkedAt is research provenance only."
     },
     {
       "table": "PinVideoPerf",
@@ -1942,31 +1725,31 @@
       "title": "Seedance 1.0 Pro Fast Released",
       "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
       "status": "needs-research",
-      "reason": "Publication candidate requires further exact-model or original-publication verification; not applied."
+      "reason": "Opened full commercial-provider comparison. Structured datePublished and article:published_time both say 2025-11-18; visible Oct6 2026 is Updated only. However the generic Analysis and tests assertion has no attributed test protocol or samples and the page promotes its own Seedance service. Independent-review eligibility remains unresolved; retain null rather than put an unverified test claim on the graph."
     },
     {
       "table": "PinVideoPerf",
       "pinId": 19636,
       "title": "Seedance 2.5 Released",
       "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
     },
     {
       "table": "PinVideoPerf",
       "pinId": 19665,
       "title": "Veo 3.1 and Veo 3.1 Fast Released",
       "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
     },
     {
       "table": "PinVideoPerf",
       "pinId": 19666,
       "title": "Veo 3.1 Lite Released",
       "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
-      "status": "needs-research",
-      "reason": "No unambiguous explicit original publication date in opened HTML; browser/body/archive research remains. Shop, directory, leaderboard or encyclopedia entries must not receive invented publication dates."
+      "status": "verified-undated",
+      "reason": "Exact primary evaluator excerpt manually corrected and saved/read back in both environments, preserving hand status, axes and all unrelated fields. Live model/leaderboard page has no original publication day; model release dates are not publication. Keep null. See manual-review-corrections-2026-10-26.json."
     },
     {
       "table": "PinVideoPerf",

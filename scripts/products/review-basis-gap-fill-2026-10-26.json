@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19894,
+      "pinSourceUrl": "https://www.airwaysmag.com/new-post/maiden-flight-crj700",
+      "expectedBasis": "Variant: baseline CRJ700 (CF34-8C), Wikipedia CRJ700 series. Range: 1,702 nmi (ER 2,032 nmi) -> 0 + ... under 2,500 nmi anchor line: 1 - (2,500-1,702)/1,000 = 0.2 -> 0.0 for the baseline (the ER would score 0.5). Capacity: 70 seats (Airways, Mighty Travels) -> 1 - (100-70)/40 = 0.25 -> 0.5 (halves up). Efficiency: no fuel burn -> null. Speed: sources disagree (Wikipedia Mach 0.82-0.85 maximum, an AirlineReporter author says cruise Mach 0.78) and no maker cruise Mach was opened -> null. Runway: 4,975-5,265 ft (Wikipedia, not the Bombardier chart) -> under 5,500 ft -> 5.0. Comfort: 2+2 leather seats, 32 in pitch, 'comfortable, modern' (Mighty Travels) and a smooth, quick ride (AirlineReporter) -> competent = 3. Reviews: 2 of the required 3 found (Flight International 'Bigger brother' 2000 is paywalled); none padded. AirlineReporter date not shown on the page (comments begin 27 Aug 2010) so publishedDate is null.",
+      "basis": "Variant: baseline CRJ700 (CF34-8C), Wikipedia CRJ700 series. Range: 1,702 nmi (ER 2,032 nmi) -> 0 + ... under 2,500 nmi anchor line: 1 - (2,500-1,702)/1,000 = 0.2 -> 0.0 for the baseline (the ER would score 0.5). Capacity: 70 seats (Airways, Mighty Travels) -> 1 - (100-70)/40 = 0.25 -> 0.5 (halves up). Efficiency: no fuel burn -> null. Speed: sources disagree (Wikipedia Mach 0.82-0.85 maximum, an AirlineReporter author says cruise Mach 0.78) and no maker cruise Mach was opened -> null. Runway: 4,975-5,265 ft (Wikipedia, not the Bombardier chart) -> under 5,500 ft -> 5.0. Comfort: 2+2 leather seats, 32 in pitch, 'comfortable, modern' (Mighty Travels) and a smooth, quick ride (AirlineReporter) -> competent = 3. Three firsthand publishers now: AirlineReporter (2010-08-26 byline verified), Business Traveller (2011-09-30), RGV Jetsetter (2026-10-13, flight October 2025). Operator-specific cabin observations; technical axes unchanged."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19586,
+      "pinSourceUrl": "https://web.archive.org/web/20180929014303if_/http://www.airweb.faa.gov/Regulatory_and_Guidance_Library/rgMakeModel.nsf/0/b9e61e631046f10186257fd900588ed4/%24FILE/A1NM_Rev35.pdf#b76-08",
+      "expectedBasis": "767-300 (JT9D-7R4D/CF6-80A, 350,000 lb MTOW, Boeing planning layout 261 seats: 24 first + 237 economy). Range 3,900 nmi with 269 pax (Wikipedia) = 2.5. Capacity 261 = 3.5. Efficiency null: Aircraft Commerce burn tables cover only the -300ER/-400ER. Speed Mach 0.80 = 2.5. Runway ~10,400 ft at MTOW, sea level, standard day, read from ACAPS graph 3.3.9 (JT9D) = 1.5. Comfort 3.5 from two pilot reviews (sweet handling, light controls); only 2 reviews, no 3rd independent -300 review found.",
+      "basis": "767-300 (JT9D-7R4D/CF6-80A, 350,000 lb MTOW, Boeing planning layout 261 seats: 24 first + 237 economy). Range 3,900 nmi with 269 pax (Wikipedia) = 2.5. Capacity 261 = 3.5. Efficiency null: Aircraft Commerce burn tables cover only the -300ER/-400ER. Speed Mach 0.80 = 2.5. Runway ~10,400 ft at MTOW, sea level, standard day, read from ACAPS graph 3.3.9 (JT9D) = 1.5. Comfort 3.5 from two pilot reviews (sweet handling, light controls). Third independent review: World Traveller 73, Asiana non-ER -300 cabin, published 2020-11-09 (flight 2012-05-06); not a -300ER test."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19884,
+      "pinSourceUrl": "https://www.aero-news.net/index.cfm?do=main.textpost&id=1cdf4d50-e91d-44d5-be95-dec3abeb1510",
+      "expectedBasis": "Variant: A340-500 (Trent 553), Wikipedia A340 article. Range: 8,650 nmi -> above the 8,000 nmi anchor -> 5.0. Capacity: 313 in three classes -> 4 + 13/100 = 4.13 -> 4.0. Efficiency: no fuel burn figure in an opened source -> null. Speed: cruise Mach 0.82 (A340 family table) -> 3.0. Runway: the take-off figure in the Wikipedia table could not be tied to the -500 column -> null. Comfort: null, only one review of the -500 cabin (Singapore all-business layout) plus one range anecdote; fewer than two cabin reviews. Reviews: 2 of the required 3 found (Flight International 2002 and the ALPA 2003 pilot report exist but are paywalled/blocked); none padded.",
+      "basis": "Variant: A340-500 (Trent 553), Wikipedia A340 article. Range: 8,650 nmi -> above the 8,000 nmi anchor -> 5.0. Capacity: 313 in three classes -> 4 + 13/100 = 4.13 -> 4.0. Efficiency: no fuel burn figure in an opened source -> null. Speed: cruise Mach 0.82 (A340 family table) -> 3.0. Runway: the take-off figure in the Wikipedia table could not be tied to the -500 column -> null. Comfort remains null: three firsthand reports concern Singapore all-business, Emirates first-class and AZAL business cabins, not the typical three-class layout. TPG (2012-03-22), Sven (2012-06-11) and Sam Chui (2016-02-20). Simple Flying development history is supplemental. No technical axes changed."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19645,
+      "pinSourceUrl": "https://airwaysmag.com/new-post/saab-340-enters-service-crossair",
+      "expectedBasis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort: null; only 1 independent review reached (Rex 340B, Executive Traveller); airliners.net/Infinite Flight forum posts excluded as forum threads; FlightGlobal 1998 retrofit item is vendor news. Fewer than 3 reviews.",
+      "basis": "Variant: Saab SF340/340A as delivered to Crossair (34 pax, CT7-5A2). Specs are Wikipedia's 340B-era box (launch-aircraft figures not published separately), used only where every plausible value lands on the same anchor. Turboprop: speed and runway use the same 2026 anchors. Range: 730 nmi with 34 pax -> 0. Capacity: 34 -> 0. Efficiency: null (fuel figure 0.94 kg/km is not variant-specific). Speed: cruise 283 kt, about Mach 0.43 -> 0. Runway: take-off 4,220 ft (Wikipedia box, not a maker planning chart) -> 5. Comfort null: EX-YU Aviation (2025-05-11) reports cramped seating and noise on exact 340A YL-RAL. Existing Rex review is later 340B, not launch-A cabin evidence. Two extracts, only one exact-A firsthand report; seek two more independent A reports. No simulator or vendor-news reviews added."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19642,
+      "pinSourceUrl": "https://www.firmenpresse.de/pressrelease49704/bombardier-showcases-first-air-nostrum-and-brit-air-crj1000-nextgen-regional-jets.html",
+      "expectedBasis": "Variant: CRJ1000 NextGen, baseline MTOW 90,000 lb (ER 91,800), up to 104 seats (Bombardier release: up to 100), two CF34-8C5A1 of 14,510 lbf (Wikipedia CRJ700 series; AIN Dec 2010). Range 1,457 nmi baseline (ER 1,657) -> 0. Capacity 100 -> 1.0. Efficiency null: none published. Speed null: only max Mach 0.82 published, no typical cruise. Runway: takeoff 6,155-6,955 ft (Wikipedia table; midpoint 6,555) -> 4.5. Comfort null: fewer than 3 reviews found (only 2: a paywalled Flight International test standfirst and a Garuda passenger blog); too few to score comfort.",
+      "basis": "Variant: CRJ1000 NextGen, baseline MTOW 90,000 lb (ER 91,800), up to 104 seats (Bombardier release: up to 100), two CF34-8C5A1 of 14,510 lbf (Wikipedia CRJ700 series; AIN Dec 2010). Range 1,457 nmi baseline (ER 1,657) -> 0. Capacity 100 -> 1.0. Efficiency null: none published. Speed null: only max Mach 0.82 published, no typical cruise. Runway: takeoff 6,155-6,955 ft (Wikipedia table; midpoint 6,555) -> 4.5. Comfort remains null: firsthand Garuda and Air Nostrum reports concern different operator cabins, not the Brit Air launch layout. Three independent sources now include Flight International flight-test standfirst, Auf Nach Irgendwo (2018-06-24) and nafandra/Flight-Report (2017-10-20). Axes retained."
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19896,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Xi%27an_MA60",
+      "expectedBasis": "Variant: MA60 (PW127J, MTOW 21,800 kg), Wikipedia and flugzeuginfo.net. Range: 1,600 km (Wikipedia; flugzeuginfo says 1,430 km = 772 nmi) = about 864 nmi -> under 1,500 nmi -> 0.0. Capacity: 62 (Wikipedia) or about 60 (Airport Technology) -> under 60 anchor line -> 0.0. Efficiency: no fuel burn figure -> null. Speed: maximum 514 km/h (Airport Technology), cruise 430 km/h (Wikipedia), roughly Mach 0.35-0.45, under the 0.60 anchor -> 0.0 (no maker Mach published, but any plausible turboprop value is below 0.60). Runway: no field-length figure -> null. Comfort: null, only one trip report. Reviews: 1 of the required 3 found (airportspotting trip report 'very mediocre and simple'); the Nepali Times piece found in search is about a purchase, not a flying review; none padded.",
+      "basis": "Variant: MA60 (PW127J, MTOW 21,800 kg), Wikipedia and flugzeuginfo.net. Range: 1,600 km (Wikipedia; flugzeuginfo says 1,430 km = 772 nmi) = about 864 nmi -> under 1,500 nmi -> 0.0. Capacity: 62 (Wikipedia) or about 60 (Airport Technology) -> under 60 anchor line -> 0.0. Efficiency: no fuel burn figure -> null. Speed: maximum 514 km/h (Airport Technology), cruise 430 km/h (Wikipedia), roughly Mach 0.35-0.45, under the 0.60 anchor -> 0.0 (no maker Mach published, but any plausible turboprop value is below 0.60). Runway: no field-length figure -> null. Comfort remains null: different operator cabins and mixed noise/legroom reports. Three firsthand publishers: Airport Spotting, biaman94/Flight-Report (2013-04-12) and Peter White/3rd Level NZ (2014-03-22). Publication dates differ from flights. No passenger-estimated takeoff distances used for axes."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19871,
+      "pinSourceUrl": "https://cnevpost.com/2024/04/23/tank-launches-tank-300-hi4-t/",
+      "expectedBasis": "Variant: Tank 300 Hi4-T, RMB 269,800. 860 km combined CLTC (110 km electric) -> 4; 0-100 in 6.3 s per Driven Car Guide's export-market drive -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: no DC kW, assist spec, rival price or child-seat detail published on opened pages (only sibling Tank 400 Hi4-T RMB 285,800). Reviews are Australia/NZ-market cars with the same powertrain.",
+      "basis": "Variant: Tank 300 Hi4-T, RMB 269,800. 860 km combined CLTC (110 km electric) -> 4; 0-100 in 6.3 s per Driven Car Guide's export-market drive -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: no DC kW, assist spec, rival price or child-seat detail published on opened pages (only sibling Tank 400 Hi4-T RMB 285,800). Reviews are Australia/NZ-market cars with the same powertrain. Third independent drive: Max Davies/CarExpert, 2026-05-25, Australian Ultra PHEV 300 kW/750 Nm, 37.1 kWh, 9-speed hybrid. Not plugless HEV; market steering calibration may differ. Axes unchanged."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19870,
+      "pinSourceUrl": "https://carnewschina.com/2025/04/28/nissan-n7-ev-sedan-from-dongfeng-launched-in-china-for-16450-usd/",
+      "expectedBasis": "Variant: 625 Max (73 kWh, 200 kW). Range 635 km CLTC -> 3; 3C charging adds 400 km in 19 min (~200 kW class) -> 3; 0-100 'just over six seconds' (CarNewsChina) -> 2.5; Momenta assist handled dense urban merges, no LiDAR/NOA claim -> 3; wheelbase 2,915 mm -> 3; kids 3 from 504 L trunk, ISOFIX/vents unpublished. Value null: no priced rival on an opened page.",
+      "basis": "Variant: 625 Max (73 kWh, 200 kW). Range 625 km CLTC -> 3; 3C charging adds 400 km in 19 min (~200 kW class) -> 3; 0-100 'just over six seconds' (CarNewsChina) -> 2.5; Momenta assist handled dense urban merges, no LiDAR/NOA claim -> 3; wheelbase 2,915 mm -> 3; kids 3 from 504 L trunk, ISOFIX/vents unpublished. Value null: no priced rival on an opened page. Third independent exact 625 Max road test: Zhou Xin Liao Che/Sohu (2025-07-15), chassis criticism. Do not use its horsepower typo. Axes unchanged."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19879,
+      "pinSourceUrl": "https://carnewschina.com/2023/04/12/zeekr-x-launched-with-560-km-range-for-27600-usd-coming-to-europe/",
+      "expectedBasis": "Variant: ME RWD, RMB 189,800, 66 kWh. 560 km CLTC -> 2.5; 0-100 5.8 s -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: not published on the opened launch article. Reviews are mostly export-market AWD cars (labelled), not the RWD ME.",
+      "basis": "Variant: ME RWD, RMB 189,800, 66 kWh. 560 km CLTC -> 2.5; 0-100 5.8 s -> 2.5; wheelbase 2,750 mm -> 2.5. Charging, assist, value and kids null: not published on the opened launch article. Three added independent 66 kWh/200 kW RWD tests: Sgcarmart (2024-08-14), OneShift (2024-09-18), Motorist (2025-01-01). These are Singapore export Standard RWD, not launch-China ME tuning/software. Existing AWD reviews remain labelled context. China axes unchanged."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15259,
+      "pinSourceUrl": "https://www.autocarindia.com/car-news/new-mahindra-xuv-7xo-suv-revealed-438720",
+      "expectedBasis": "Scored variant: 2.0 turbo-petrol automatic (AX3, Rs 17.47 lakh introductory). Power 203 hp (Autocar test sheet) = 2; acceleration 0-100 kph 9.79 s (Autocar India test) = 1; economy 8.7 kpl tested average (ARAI not yet published) = 20.5 mpg = 1.5; space 3 (third row tight for adults, limited boot with all rows up); value 203 hp / US$18,198 = 11.2 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 4.5. Handling null (tests from one outlet only). Review update: third publisher Team-BHP (2026-05-26), edited exact AX7 L petrol AT owner highway impression; not its diesel media test. Autocar India has two extracts but counts as one publisher. CarTrade is the other. Owner impression is not an instrumented professional test.",
+      "basis": "Scored variant: 2.0 turbo-petrol automatic (AX3, Rs 17.47 lakh introductory). Power 203 hp (Autocar test sheet) = 2; acceleration 0-100 kph 9.79 s (Autocar India test) = 1; economy 8.7 kpl tested average (ARAI not yet published) = 20.5 mpg = 1.5; space 3 (third row tight for adults, limited boot with all rows up); value 203 hp / US$18,198 = 11.2 hp per US$1,000 at about Rs 96 to the US dollar (the rate implied by Carscoops quoting Rs 5.29 lakh as US$5,500) = 4.5. Handling remains null; this review pass assigns no new handling-axis score. Review update: third publisher Team-BHP (2026-05-26), edited AX7 L petrol AT owner highway impression (same engine/transmission, different trim from scored AX3); not its diesel media test. Autocar India has two extracts but counts as one publisher. CarTrade is the other. Owner impression is not an instrumented professional test."
+    },
+    {
+      "table": "PinDining",
+      "pinId": 17202,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/3rd-samgyetang",
+      "expectedBasis": "No diner rating figure was opened, so the diner axes are null. Acclaim 3: MICHELIN Bib Gourmand, Seoul & Busan 2026 (Pearl listing) on the guide's own entry for 3rd Samgyetang (opened 1973).",
+      "basis": "Food, Service, Ambience and Value remain null: Oliverham publishes one overall personal 5/5 verdict, not separate axis figures or an aggregate diner rating. Acclaim 3 retained: MICHELIN Bib Gourmand, Seoul & Busan 2026, for 3rd Generation Samgyetang Master / 3rd Samgyetang (opened 1973), 56-3 Banpo-daero 28-gil, Seocho-gu. Review coverage: MICHELIN, Pearl guide editorial, and Oliverham firsthand pine-nut samgyetang lunch (2026-08-27). No unpublished axis scores invented."
+    }
+  ]
+}

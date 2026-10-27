@@ -353,9 +353,10 @@
     "reviews": [
       {
         "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
-        "title": "Sneak Peek: Elmer T. Lee 40th Anniversary Bourbon Review (rated A-)",
+        "title": "Sneak Peek: Elmer T. Lee 40th Anniversary Bourbon Review",
         "publishedDate": null,
-        "quote": "I found the nose led with butterscotch and caramel, underscored by a current of clove and oak shavings. It's like liquid cinnamon toast, but with more bite"
+        "quote": "It’s like liquid cinnamon toast, but with more bite",
+        "sentiment": 0.6
       }
     ]
   },

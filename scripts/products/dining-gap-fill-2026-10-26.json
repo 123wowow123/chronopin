@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinDining",
+      "pinId": 17202,
+      "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/3rd-samgyetang",
+      "basis": "Independent Oliverham firsthand Saturday lunch with spouse at exact 56-3 Banpo-daero 28-gil Seocho branch; original August 27, 2026 byline. Opened photographed pine-nut samgyetang review. This is a personal food critic blog, not MICHELIN text or a shop listing. The author’s 5/5 is one overall personal verdict, not published Food/Service/Ambience/Value axis scores; axes are preserved.",
+      "reviews": [
+        {
+          "url": "https://oliverham.com/en/gyodae-samdae-samgyejangin",
+          "title": "Samdae Samgyejangin, Gyodae: pine nut samgyetang",
+          "publishedDate": "2026-08-27",
+          "quote": "The nut aroma hits first. The broth is unusually rich",
+          "sentiment": 0.7
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://oliverham.com/en/gyodae-samdae-samgyejangin",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened original photographed meal review, original byline and exact branch address verified"
+        }
+      ]
+    }
+  ]
+}

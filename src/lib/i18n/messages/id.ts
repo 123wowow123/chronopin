@@ -74,6 +74,8 @@ const id: Messages = {
     or: 'atau',
     somethingWrong: 'Terjadi kesalahan, silakan coba lagi.',
     backToTimeline: 'Kembali ke linimasa',
+    oauthFailed: 'Masuk dengan penyedia itu gagal. Coba lagi, atau gunakan email dan kata sandi.',
+    oauthUnavailable: 'Opsi masuk itu sedang tidak tersedia. Gunakan email dan kata sandi.',
     showFewer: 'Tampilkan lebih sedikit',
     showAllN: 'Tampilkan semua {count} {noun}',
   },

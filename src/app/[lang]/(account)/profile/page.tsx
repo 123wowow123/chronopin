@@ -1,3 +1,4 @@
+import { soft } from '@/server/util/soft';
 import type { Metadata } from 'next';
 import { toJson, type SessionUser } from '@/lib/types';
 import { requireViewer } from '@/server/guard';
@@ -20,9 +21,12 @@ export async function generateMetadata(): Promise<Metadata> {
 // Who you are, the first of the account's tabs: who you follow, how the app
 // behaves for you and your password are the others (ProfileTabs). /following
 // and /preferences, pages of their own once, redirect to theirs (next.config.ts).
+// Billing unreadable: show the free tier rather than fail the profile page.
+const FREE_PLAN = { active: false, status: null, currentPeriodEnd: null, cancelAtPeriodEnd: false, hasCustomer: false };
+
 export default async function ProfilePage({ searchParams }: { searchParams: Promise<{ adfree?: string }> }) {
   const user = await requireViewer('/profile');
-  const [t, plan, query] = await Promise.all([getT(), AdFreeSubscription.status(user.id), searchParams]);
+  const [t, plan, query] = await Promise.all([getT(), soft(AdFreeSubscription.status(user.id), FREE_PLAN, 'adFree status'), searchParams]);
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile" />

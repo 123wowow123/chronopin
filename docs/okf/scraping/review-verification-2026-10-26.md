@@ -110,22 +110,24 @@ or shop is not a firsthand review of the pinned product.
 
 | Table | Pins | Reviews | Below minimum | Non-MICHELIN undated |
 | --- | ---: | ---: | ---: | ---: |
-| PinTaste | 228 | 494 | 0 (minimum one) | 44 |
-| PinCarPerf | 128 | 335 | 40 | 17 |
-| PinGasCarPerf | 160 | 501 | 12 | 30 |
-| PinAircraftPerf | 165 | 548 | 19 | 21 |
-| PinLlmPerf | 125 | 440 | 4 | 20 |
+| PinTaste | 228 | 493 | 0 (minimum one) | 43 |
+| PinCarPerf | 128 | 340 | 37 | 17 |
+| PinGasCarPerf | 160 | 502 | 12 | 28 |
+| PinAircraftPerf | 165 | 559 | 14 | 9 |
+| PinLlmPerf | 125 | 440 | 4 | 18 |
 | PinVideoPerf | 32 | 111 | 2 | 5 |
 | PinHotel | 41 | 123 | 0 | 0 |
-| PinDining | 89 | 270 | 10 | 45 |
-| PinCriticReview | 90 | 271 | 0 | 1 |
+| PinDining | 89 | 271 | 9 | 45 |
+| PinCriticReview | 92 | 277 | 0 | 1 |
 
-There are **87 rubric rows below three reviews**, down from 95 at the start of
-this continuation. All 90 existing critic rows have at least three extracts.
+There are **78 rubric rows below three reviews**, down from 95 at the start of
+this continuation. All 92 existing critic rows have at least three extracts.
 These are raw counts, not certification of source independence or eligibility.
-The XUV 7XO has three extracts but only two independent publishers and remains
-in the separate independence queue. Of 183 non-MICHELIN undated entries, 43
-have verified reasons to retain null dates; **140 date/source checks remain**.
+The XUV 7XO now has three independent publishers: Autocar India, CarTrade
+and Team-BHP. The last is an edited firsthand owner highway impression, not
+an instrumented professional road test; its AX7 L trim shares the scored AX3
+petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 166 non-MICHELIN undated entries, 61
+have verified reasons to retain null dates; **105 date/source checks remain**.
 Every dated review with a quote is scored. Category leads still need screening;
 awards, concerts and business events must not receive invented product reviews.
 
@@ -205,8 +207,8 @@ The 29 completed source checks distinguish actual customer tasting comments
 from merchant copy, guide editorial from anonymous dining-visit claims, and
 month-only tasting records from exact publication days. Missing dates remain
 null. Akkio Gemini and NYU DeepSeek dates were researched but the save helper
-refused their hand-edited rows during preflight; both remain unchanged and in
-the queue. Endor Labs has conflicting publication/release chronology, also
+refused their hand-edited rows during preflight; both were initially unchanged. The later manual pass below saved the NYU
+correction and corrected Akkio’s quote while retaining its conflicted null date. Endor Labs has conflicting publication/release chronology, also
 retained for research. The remaining FUNDAY sources require exact-product
 firsthand verification; regional redirects and unavailable comment widgets
 were not treated as tasting evidence.
@@ -218,3 +220,95 @@ and in production: saved quotes and sentiment graphs render in both. The
 focused review/date and documentation regression run passed **28 tests** in
 four files. This continuation made content/catalog/documentation changes; the
 full-suite result above describes the earlier implementation validation.
+
+
+## Further gap fill: 17 reviews across 11 pins
+
+Saved and read back **17 additional dated reviews**, their reference links and
+source wikis locally and in production. No rubric axes, authors or hand rows
+were replaced. Nine more rows reached the raw three-review threshold: CRJ700,
+767-300, A340-500, CRJ1000, MA60, Tank 300 Hi4-T, Nissan N7, Zeekr X and
+3rd Generation Samgyetang Master. The shortfall fell from 87 to **78**.
+At the end of that pass, **140 date/source checks** remained; new citations all had verified original
+publication days, and no unresolved source was relabelled complete.
+
+- [Aircraft reports and variant/cabin limits](../../../scripts/products/aircraft-gap-fill-2026-10-26.json): ten reviews across six pins. CRJ700 now has three firsthand publishers in addition to the supplemental Mighty Travels article; A340-500 has three firsthand publishers plus supplemental development history. The 767 report is Asiana’s non-ER -300, avoiding LAN/United ER substitutions. MA60 criticism stays in the original French. Flight-Report publication days were distinguished from flight dates. The exact Saab 340A report adds useful evidence, but its row remains below target; the existing Rex 340B report is sibling context, so two more independent exact-A reports are still needed.
+- [EV road tests and market limits](../../../scripts/products/ev-gap-fill-2026-10-26.json): five reviews across three pins. Tank PHEV is the 300 kW/750 Nm, 37.1 kWh, nine-speed hybrid, not the plugless HEV. Nissan explicitly matches 625 Max/73 kWh/200 kW; its source’s horsepower typo is excluded. Three Zeekr tests concern Singapore Standard RWD 66 kWh/200 kW; they do not establish launch-China ME software or suspension calibration, and China rubric axes remain unchanged.
+- [XUV edited owner report](../../../scripts/products/xuv-owner-review-2026-10-26.json): an exact petrol-automatic owner impression adds a third publisher. Autocar’s two extracts still count as one publisher. More extended professional petrol-AT testing remains useful.
+- [Seoul dining review](../../../scripts/products/dining-gap-fill-2026-10-26.json): Oliverham’s photographed pine-nut samgyetang meal at 56-3 Banpo-daero 28-gil, published August 27, 2026. It is a personal food critic blog; one overall 5/5 verdict was not converted into unpublished axis ratings.
+- [Coverage-basis amendments](../../../scripts/products/review-basis-gap-fill-2026-10-26.json): updated stale review-count statements through native APIs. Each amendment preflighted both environments, refused hand rows or changed bases, and read back all unrelated fields unchanged. Nissan’s basis now correctly says 625 km for 625 Max, replacing its prior 635 km text; its range score is unchanged.
+
+The car and dining catalogs are synchronized. Browser checks of the CRJ700 and
+Zeekr X native detail pages confirmed the new quotes and sentiment graphs in
+both environments. Creatrip’s Busan page returned 403 and the municipal Anmok
+article timed out on this pass; neither was added from search snippets.
+The documentation regression check passed 22 tests; catalog records, quote
+lengths, report links and queue totals also validated. Scheduled model
+verification remains blocked by the API-credit condition recorded above; no
+deployment was performed.
+
+
+## Broader coverage and date/source continuation
+
+Added **six independent critic reviews** across Superman (2025) and Rosalía’s
+LUX, with three publishers per work. Saved **12 original publication dates**:
+eight A350 pin citations, two MD-80-family citations, one CRJ900 citation and
+one Vals evaluation report. All successful changes were verified through native
+APIs in both environments, preserving authors, rubric axes and other reviews.
+The queue fell from **140 to 114 unresolved date/source checks**: 12 dates saved,
+13 sources verified as undated, and one wrong-product citation removed.
+The 78 rubric rows below three reviews remain a separate coverage task.
+
+- [Superman criticism](../../../scripts/products/movie-critic-round4-2026-10-26.json): William Bibbiani, Richard Brody and Michael Balderston. The New Yorker web byline is July 10, 2025, not the July 21 print issue/URL. Praise and negative assessments are both retained.
+- [LUX criticism](../../../scripts/products/music-critic-round4-2026-10-26.json): Gio Santiago, Rhian Daly and Kelefa Sanneh. The New Yorker original November 7, 2025 web date is distinct from November 17 print publication. NME was opened in a rendered browser after a plain-fetch refusal.
+- [Aircraft publication dates](../../../scripts/products/review-dates-round4-2026-10-26.json): Cathay’s Phil Heard byline is November 5, 2019 and explicitly covers both -900 and -1000. This is an operator-published pilot interview, not independent Lufthansa/Qatar cabin testing. Airline Pilot Central is a September 16, 2019 editorial MD-80-family pilot-reception feature, not a firsthand Swissair MD-81 test. Runway Girl’s original CRJ900 article is May 28, 2025. Extracts were shortened to contiguous verbatim passages.
+- [Primary model source corrections](../../../scripts/products/model-source-corrections-round4-2026-10-26.json): the Kimi K3.1 Pro excerpt now comes from Vals’ explicitly dated October 24, 2026 evaluation update, distinct from the October 23 model release. **Initially saved: Vals only.** The automatic MathArena save was refused by hand-row preflight; the later manual pass below applied the citation-only correction.
+- [Verified-undated dispositions and specific remaining problems](../../../scripts/products/review-source-checks-round4-2026-10-26.json): ten Artificial Analysis and two Epoch profiles are primary evaluator pages with matching extracts, but model releases and moving rankings are not article dates. A thirteenth verified-undated entry is the bourbon tasting described below. No check date was assigned as publication.
+- [Bourbon quotation correction](../../../scripts/products/taste-source-corrections-round4-2026-10-26.json): Richard Thomas’ Elmer T. Lee 40th Anniversary tasting now uses one contiguous exact excerpt, replacing stitched sentences. Neither the rendered byline nor metadata exposes an original publication day; the URL month and site masthead were not used. Null date and all taste axes are preserved.
+- [Wrong-flavour exclusion](../../../scripts/products/review-exclusions-round4-2026-10-26.json): H.Bar’s Lemon8 post is FUNDAY Strawberry & Cream from The Can’t Decide Box, not Mr Whippy Strawberry & Vanilla. Its Edited date was not treated as publication. Removed that citation from #5633 in both environments; two exact-product citations remain.
+- [Unapplied video proposals](../../../scripts/products/video-source-corrections-round4-2026-10-26.json): the live AA table now shows Seedance 2.5 at 1156, Veo 3.1 at 961 and Veo 3.1 Lite at 951. **All three automatic saves were refused by hand-row preflight** in that pass. The later manual pass below applied the citation-only corrections while preserving hand status and all axes; these historical refusals remain recorded.
+- [Fashion coverage research](../../../scripts/products/critic-coverage-leads-round4-2026-10-26.json): Caitlin 1 candidates distinguish Warning Code, Hot Punch, Caitlin Blue and Philippine EP versus US-standard outsoles. The pre-release retailer analysis explicitly disclaims wear testing. Unmatched colourway/version reviews were not added to fill a quota.
+
+The two Reddit tasting posts were opened and their authors/quotes verified, but
+only relative ages were exposed; original timestamps remain unresolved. The
+Henry Tenby DC-8 article gives an October 2013 magazine issue, not a day, and
+covers -62/-72 combis rather than the scored -32. GeeLark’s structured original
+date is November 18, 2025, distinct from its visible October 2026 update, but its
+unattributed test claims still need source-eligibility review. These remain in
+the queue with specific reasons.
+
+The original taste catalog is synchronized. Browsers confirmed the Superman,
+LUX and A350 native quotes and sentiment graphs locally and in production.
+Scheduled model verification remains blocked by API credit; no deployment was
+performed during this continuation.
+
+
+## Manual citation maintenance and firsthand replacements — October 26
+
+The owner’s “do remainder” continued the requested research maintenance.
+Six researched citations on hand-edited rows were deliberately corrected through
+the native admin APIs in both environments, preserving `source: hand`, every
+rubric axis, the existing basis and every unrelated field. The automatic research
+helper still refuses hand rows. All twelve saved targets were read back and
+compared against their preflight snapshots.
+
+- [Manual citation corrections](../../../scripts/products/manual-review-corrections-2026-10-26.json): NYU’s DeepSeek V4 article now has its verified April 24, 2026 date and exact quote. It is an AI-assisted, staff-reviewed university summary of reported benchmarks, not a new independent benchmark run. MathArena’s Qwen Apex cell and the Seedance 2.5, Veo 3.1 and Veo 3.1 Lite leaderboard cells now use exact current excerpts. Those four evaluator pages have no original publication day and retain null dates.
+- Akkio’s Gemini 1.0 Pro quote was corrected, but its date remains unresolved: the visible January 3, 2024 publication label conflicts with JSON-LD December 22, 2023 publication and December 26 modification metadata. Both saved rows retain null. The earlier replay proposal was corrected to prevent assigning the conflicting date.
+- [MD-90 firsthand reports](../../../scripts/products/md90-review-research-2026-10-26.json): added Aaron Giddings’ March 3, 2017 AirlineReporter economy report and James’ January 22, 2020 Kinda Boring Travels first-class report. Extracts refer to the MD-90 legs, excluding their 737, CRJ900 and other aircraft sections. With AeroXplorer, the pin has three firsthand publishers. Operator, cabin and period differences remain explicit.
+- [Exclusions](../../../scripts/products/review-exclusions-round5-2026-10-26.json): removed Delta Museum’s executive marketing statement from the review list, keeping it as a history/specification reference. Removed the undated Civic model overview after saving its dated underlying road test. No other reviews or axes changed.
+- [MD-90 basis amendment](../../../scripts/products/review-basis-round5-2026-10-26.json): corrected stale coverage statements. Comfort and efficiency remain null; different operator cabins do not establish a universal launch-era comfort score or per-seat fuel burn. Both APIs verified every unrelated field unchanged.
+- [Exact Civic replacement](../../../scripts/products/civic-review-replacement-2026-10-26.json): Rich Ceppos’ October 12, 2021 Car and Driver test matches the US Sport Touring hatchback, 180-hp 1.5T and six-speed manual. The replacement remains one publisher, rather than counting the overview and test separately.
+- [GLC43 date and quote](../../../scripts/products/review-dates-round5-2026-10-26.json): Chasing Cars’ original July 10, 2024 publication agrees across article metadata and JSON-LD. The quote is a contiguous driving extract. Its Australian test shares the X254 four-cylinder powertrain; no US calibration or rubric-axis change is claimed.
+- [Five verified-undated dispositions and unresolved chronology](../../../scripts/products/review-source-checks-round5-2026-10-26.json): the four corrected evaluator pages and AeroXplorer MD-90 report retain null dates. AeroXplorer’s June 28, 2022 timestamp is modification only. Auto123’s Silverado August 15, 2018 label is explicitly Updated, so its original publication day remains unresolved.
+
+This pass closed nine date/source checks: two publication corrections, two
+undated citation removals/replacements and five verified-undated dispositions.
+The current queue is **105 unresolved checks** plus **61 verified-undated
+entries**. The **78 raw rubric gaps** and broader critic coverage still require
+research. The scheduled production model verification still requires restored
+Anthropic API credit; no deployment, restart or schedule change was performed.
+
+Native API readbacks verified all content saves in both environments; references,
+source wikis and Source/PinSource links were checked. Chromium rendered the
+corrected NYU and Seedance pages and the MD-90 and Civic pages locally and in
+production, with their saved quotes and sentiment graph sections visible.

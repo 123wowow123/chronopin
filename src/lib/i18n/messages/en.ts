@@ -74,6 +74,8 @@ const en = {
     or: 'or',
     somethingWrong: 'Something went wrong, please try again.',
     backToTimeline: 'Back to the timeline',
+    oauthFailed: 'Sign-in with that provider failed. Try again, or use your email and password.',
+    oauthUnavailable: 'That sign-in option is unavailable right now. Use your email and password instead.',
     showFewer: 'Show fewer',
     showAllN: 'Show all {count} {noun}',
   },

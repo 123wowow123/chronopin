@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useLocale, useT } from '@/lib/client/i18n';
 import { localizePath } from '@/lib/i18n/config';
 
@@ -22,7 +23,19 @@ export function OAuthButtons({
   validate?: () => boolean;
 }) {
   const locale = useLocale();
-  if (!providers.length) return null;
+  const t = useT();
+  // The server sends a failed or unavailable sign-in back here with ?oauth=.
+  const [problem, setProblem] = useState<'failed' | 'unavailable' | null>(null);
+  useEffect(() => {
+    const value = new URLSearchParams(window.location.search).get('oauth');
+    setProblem(value === 'failed' || value === 'unavailable' ? value : null);
+  }, []);
+  const notice = problem ? (
+    <p className="text-sm text-danger" role="alert">
+      {t(problem === 'failed' ? 'common.oauthFailed' : 'common.oauthUnavailable')}
+    </p>
+  ) : null;
+  if (!providers.length) return notice;
   function go(provider: SignInProvider) {
     if (validate && !validate()) return;
     // Apple posts its callback back cross-site, and only a SameSite=None
@@ -42,6 +55,7 @@ export function OAuthButtons({
   return (
     <>
       <OrDivider />
+      {notice}
       <div className={`grid gap-2.5 ${columns}`}>
         {providers.includes('google') ? (
           <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">

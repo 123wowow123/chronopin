@@ -5,6 +5,8 @@
 
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import config from './config';
+import { HttpError } from './util/httpError';
+import log from './util/log';
 
 const API = 'https://api.stripe.com/v1';
 const TIMEOUT_MS = 15000;
@@ -32,14 +34,24 @@ export function formEncode(value: Record<string, unknown>, prefix = '', out: URL
 export async function stripeRequest<T = Record<string, any>>(method: 'GET' | 'POST' | 'DELETE', path: string, body?: Record<string, unknown>): Promise<T> {
   const { secretKey } = config.stripe;
   if (!secretKey) throw new Error('STRIPE_SECRET_KEY is not set');
-  const res = await fetch(`${API}${path}`, {
-    method,
-    headers: { Authorization: `Bearer ${secretKey}`, ...(body ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}) },
-    body: body ? formEncode(body).toString() : undefined,
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  });
+  let res: Response;
+  try {
+    res = await fetch(`${API}${path}`, {
+      method,
+      headers: { Authorization: `Bearer ${secretKey}`, ...(body ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}) },
+      body: body ? formEncode(body).toString() : undefined,
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    });
+  } catch (err) {
+    log.error(`Stripe ${method} ${path} unreachable:`, (err as Error).message);
+    throw new HttpError(503, 'Payments are temporarily unavailable. Please try again shortly.');
+  }
   const data = await res.json().catch(() => null);
-  if (!res.ok) throw new Error(`Stripe refused ${method} ${path} (${res.status}): ${String(data?.error?.message ?? '').slice(0, 300)}`);
+  if (!res.ok) {
+    // The detail is for the log; the person just sees that payments are down.
+    log.error(`Stripe refused ${method} ${path} (${res.status}): ${String(data?.error?.message ?? '').slice(0, 300)}`);
+    throw new HttpError(res.status >= 500 || res.status === 429 ? 503 : 502, 'Payments are temporarily unavailable. Please try again shortly.');
+  }
   return data as T;
 }
 

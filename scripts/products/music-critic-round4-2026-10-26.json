@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 7384,
+      "pinSourceUrl": "https://www.billboard.com/music/latin/rosalia-lux-album-details-london-symphonic-orchestra-bjork-1236093844/",
+      "basis": "Three independent listening reviews of Rosalía’s fourth studio album LUX, not just Berghain single or a live performance. Gio Santiago, Rhian Daly, Kelefa Sanneh original publisher articles opened; NME rendered after plain fetch 403. New Yorker web publication November 7 is distinct from November 17 print issue/URL. Excerpts retain praise and criticism; editorial sentiment is excerpt-specific, not publisher numeric rating.",
+      "reviews": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/rosalia-lux/",
+          "title": "LUX",
+          "publishedDate": "2025-11-07",
+          "quote": "an exquisite oratorio for the messy heart.",
+          "sentiment": 0.85
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/rosalia-lux-review-3906350",
+          "title": "Rosalía – ‘Lux’ review: an arresting album of astonishing scope and ambition",
+          "publishedDate": "2025-11-07",
+          "quote": "It is an astonishing record",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.newyorker.com/magazine/2025/11/17/lux-rosalia-music-review",
+          "title": "Rosalía Doesn’t Want to Take It Easy",
+          "publishedDate": "2025-11-07",
+          "quote": "The combined effect can be exhausting",
+          "sentiment": -0.35
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://pitchfork.com/reviews/albums/rosalia-lux/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened independent original listening review; exact album, title, original web byline and quote verified"
+        },
+        {
+          "url": "https://www.nme.com/reviews/album/rosalia-lux-review-3906350",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened independent original listening review; exact album, title, original web byline and quote verified"
+        },
+        {
+          "url": "https://www.newyorker.com/magazine/2025/11/17/lux-rosalia-music-review",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened independent original listening review; exact album, title, original web byline and quote verified"
+        }
+      ]
+    }
+  ]
+}

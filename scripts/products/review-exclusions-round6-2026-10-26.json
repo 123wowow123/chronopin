@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19953,
+      "pinSourceUrl": "https://www.autoguide.com/auto-news/2021/06/2022-honda-civic-sedan-starts-from-22695-arrives-at-dealers-today.html",
+      "url": "https://www.caranddriver.com/honda/civic-2022",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/civic-2022",
+        "quote": "At our test track, our turbocharged Touring sedan needed 7.5 seconds to reach 60 mph",
+        "title": "2022 Honda Civic Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated overview with opened dated original test from same publisher. Replacement must be added and verified before removal. Tested Touring sedan 180hp 1.5T CVT shares the scored EX powertrain. Extract is explicitly the measured test-car acceleration already identified as Touring in rubric basis; not a claimed measurement of the lighter EX. Original visible and structured publication Jun16 2021 agree."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19960,
+      "pinSourceUrl": "https://www.thedrive.com/article/10621/2018-honda-odyssey-available-to-order-thursday-starts-at-29990",
+      "url": "https://www.caranddriver.com/honda/odyssey-2018",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/odyssey-2018",
+        "quote": "With its crisp steering and nimble handling, the Odyssey is the best-driving minivan available.",
+        "title": "2018 Honda Odyssey Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated overview with opened dated original test from same publisher. Replacement must be added and verified before removal. Tested EX-L 280hp V6/ZF nine-speed; article expressly says this powertrain equips LX/EX/EX-L. Scored pin is LX, so quote concerns shared nine-speed behaviour only, not EX-L equipment, weight, or Elite ten-speed. Visible and structured original Dec22 2017 agree."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19955,
+      "pinSourceUrl": "https://www.motor1.com/news/619058/civic-type-r-price-starts-at/",
+      "url": "https://www.caranddriver.com/honda/civic-type-r-2023",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/civic-type-r-2023",
+        "quote": "At our test track, the Civic Type-R bolted to 60 mph in 4.9 seconds and eclipsed the quarter-mile marker in 13.5 seconds at 106 mph. More impressively, it circled our skidpad at 1.02 g's.",
+        "title": "2023 Honda Civic Type R Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated overview with opened dated original test from same publisher. Replacement must be added and verified before removal. Exact US FL5 315hp six-speed test. Original JSON-LD datePublished Nov15 2022; visible Nov29 is explicitly update adding test results. Quote is qualitative driving dynamics, not the later instrumented results. Retain original article day, record revision separately."
+    }
+  ]
+}

@@ -74,6 +74,8 @@ const zh: Messages = {
     or: '或',
     somethingWrong: '出了点问题，请重试。',
     backToTimeline: '返回时间线',
+    oauthFailed: '使用该提供商登录失败。请重试，或使用邮箱和密码。',
+    oauthUnavailable: '该登录方式暂时不可用。请改用邮箱和密码。',
     showFewer: '收起',
     showAllN: '显示全部 {count} 条{noun}',
   },

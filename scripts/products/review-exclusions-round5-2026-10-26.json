@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19575,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/McDonnell_Douglas_MD-90",
+      "url": "https://deltamuseum.org/research/history/aircraft/jets/jets/mcdonnell-douglas-md-90-1995-2020",
+      "expectedReview": {
+        "url": "https://deltamuseum.org/research/history/aircraft/jets/jets/mcdonnell-douglas-md-90-1995-2020",
+        "quote": "The MD-90 performs exceptionally well at hot and high-altitude airports, making it possible for us to schedule this aircraft for operations throughout North America",
+        "title": "McDonnell Douglas MD-90 1995-2020",
+        "publishedDate": null
+      },
+      "reason": "Opened Delta Flight Museum operator history. The extract is a Delta technical-operations executive marketing statement, not an independent review. Preserve references/specification sources and rubric axes; remove only this review citation after adding two independent firsthand MD-90 cabin reports."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19954,
+      "pinSourceUrl": "https://www.thedrive.com/news/42443/the-2022-honda-civic-hatchback-starts-at-22695",
+      "url": "https://www.caranddriver.com/honda/civic-2022",
+      "expectedReview": {
+        "url": "https://www.caranddriver.com/honda/civic-2022",
+        "quote": "The manual Sport Touring hatchback we tested did slightly better at 7.3 seconds to 60 mph",
+        "title": "2022 Honda Civic Review, Pricing, and Specs",
+        "publishedDate": null
+      },
+      "reason": "Replace evolving undated model overview citation with the opened dated October12 2021 underlying instrumented test of exact Sport Touring hatchback 1.5T six-speed manual. Add and verify replacement first; do not count two Car and Driver URLs as independent publishers."
+    }
+  ]
+}

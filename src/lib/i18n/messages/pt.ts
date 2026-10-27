@@ -74,6 +74,8 @@ const pt: Messages = {
     or: 'ou',
     somethingWrong: 'Algo deu errado, tente novamente.',
     backToTimeline: 'Voltar à linha do tempo',
+    oauthFailed: 'Falha ao entrar com esse provedor. Tente novamente ou use e-mail e senha.',
+    oauthUnavailable: 'Essa opção de login está indisponível agora. Use e-mail e senha.',
     showFewer: 'Mostrar menos',
     showAllN: 'Mostrar todos os {count} {noun}',
   },

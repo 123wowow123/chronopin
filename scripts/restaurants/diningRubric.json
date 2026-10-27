@@ -5215,5 +5215,39 @@
         "publishedDate": null
       }
     ]
+  },
+  {
+    "pinId": 17202,
+    "scores": {
+      "food": null,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 3
+    },
+    "basis": "Food, Service, Ambience and Value remain null: Oliverham publishes one overall personal 5/5 verdict, not separate axis figures or an aggregate diner rating. Acclaim 3 retained: MICHELIN Bib Gourmand, Seoul & Busan 2026, for 3rd Generation Samgyetang Master / 3rd Samgyetang (opened 1973), 56-3 Banpo-daero 28-gil, Seocho-gu. Review coverage: MICHELIN, Pearl guide editorial, and Oliverham firsthand pine-nut samgyetang lunch (2026-08-27). No unpublished axis scores invented.",
+    "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/3rd-samgyetang",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/3rd-samgyetang",
+        "quote": "The grains give the broth a satisfying body, and the meat from young chickens falls effortlessly off the bone.",
+        "title": "3rd Samgyetang – Seoul - a MICHELIN Guide Restaurant",
+        "publishedDate": null
+      },
+      {
+        "url": "https://joinpearl.co/restaurants/seoul/3rd-samgyetang",
+        "quote": "Locals line up for the same bowl they’ve trusted for decades",
+        "title": "3rd Samgyetang: Restaurant in Seoul, South Korea | Pearl",
+        "sentiment": 0.5,
+        "publishedDate": "2026-08-10"
+      },
+      {
+        "url": "https://oliverham.com/en/gyodae-samdae-samgyejangin",
+        "quote": "The nut aroma hits first. The broth is unusually rich",
+        "title": "Samdae Samgyejangin, Gyodae: pine nut samgyetang",
+        "sentiment": 0.7,
+        "publishedDate": "2026-08-27"
+      }
+    ]
   }
 ]

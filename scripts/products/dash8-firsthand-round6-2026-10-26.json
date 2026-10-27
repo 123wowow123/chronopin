@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19564,
+      "pinSourceUrl": "https://web.archive.org/web/2021/https://www.baesystems.com/en/heritage/de-havilland-canada-dhc-8-dash-8",
+      "basis": "Exact Dash8-100 operator-cabin reports: Koen/Paliparan Olympic Air seat3F (published Apr3 2021, updated Jul21 2023); Lia_K/Flight-Report CemAir ZS-DHC Y37 seat2A (published Jun9 2024, flown Mar25 2024). These independent firsthand reports supplement Ben Brown Henson pilot recollections; differing operator cabins and periods do not establish NorOntair delivery/prototype cabin comfort. No technical axes change.",
+      "reviews": [
+        {
+          "url": "https://paliparan.com/2021/04/03/olympic-air-dash-8-100/",
+          "title": "Review: Olympic Air Kastellorizo to Rhodes (Dash 8-100)",
+          "publishedDate": "2021-04-03",
+          "quote": "The seats on the Olympic Air Dash 8-100 are fairly comfortable",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://flight-report.com/en/report/64334/cemair-5z518-johannesburg-jnb-kimberley-kim/",
+          "title": "Review of CemAir flight from Johannesburg to Kimberley in Economy",
+          "publishedDate": "2024-06-09",
+          "quote": "the legroom on this one is really good.",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://paliparan.com/2021/04/03/olympic-air-dash-8-100/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original article byline; flight day and update day distinguished; exact DHC8-100, not -200/-300/-400."
+        },
+        {
+          "url": "https://flight-report.com/en/report/64334/cemair-5z518-johannesburg-jnb-kimberley-kim/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original article byline; flight day and update day distinguished; exact DHC8-100, not -200/-300/-400."
+        }
+      ]
+    },
+    {
+      "table": "PinAircraftPerf",
+      "pinId": 19565,
+      "pinSourceUrl": "https://web.archive.org/web/2021/https://www.baesystems.com/en/heritage/de-havilland-canada-dhc-8-dash-8",
+      "basis": "Exact Dash8-100 operator-cabin reports: Koen/Paliparan Olympic Air seat3F (published Apr3 2021, updated Jul21 2023); Lia_K/Flight-Report CemAir ZS-DHC Y37 seat2A (published Jun9 2024, flown Mar25 2024). These independent firsthand reports supplement Ben Brown Henson pilot recollections; differing operator cabins and periods do not establish NorOntair delivery/prototype cabin comfort. No technical axes change.",
+      "reviews": [
+        {
+          "url": "https://paliparan.com/2021/04/03/olympic-air-dash-8-100/",
+          "title": "Review: Olympic Air Kastellorizo to Rhodes (Dash 8-100)",
+          "publishedDate": "2021-04-03",
+          "quote": "The seats on the Olympic Air Dash 8-100 are fairly comfortable",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://flight-report.com/en/report/64334/cemair-5z518-johannesburg-jnb-kimberley-kim/",
+          "title": "Review of CemAir flight from Johannesburg to Kimberley in Economy",
+          "publishedDate": "2024-06-09",
+          "quote": "the legroom on this one is really good.",
+          "sentiment": 0.6
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://paliparan.com/2021/04/03/olympic-air-dash-8-100/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original article byline; flight day and update day distinguished; exact DHC8-100, not -200/-300/-400."
+        },
+        {
+          "url": "https://flight-report.com/en/report/64334/cemair-5z518-johannesburg-jnb-kimberley-kim/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "publicationEvidence": "Original article byline; flight day and update day distinguished; exact DHC8-100, not -200/-300/-400."
+        }
+      ]
+    }
+  ]
+}

@@ -64,7 +64,7 @@
       "table": "PinAircraftPerf",
       "pinId": 19884,
       "pinSourceUrl": "https://www.aero-news.net/index.cfm?do=main.textpost&id=1cdf4d50-e91d-44d5-be95-dec3abeb1510",
-      "basis": "Sam Chui firsthand January 2016 AZAL A340-500 registration 4K-AZ85 cabin review, published February 20, 2016. Quote taken from the A340-500 section, not the later B767 leg in the same article. Describes the former Kingfisher-design business cabin; not a universal or prototype cabin claim. Technical axes unchanged.",
+      "basis": "Sam Chui firsthand January 2016 AZAL A340-500 registration 4K-AZ85 cabin review, published February 20, 2016. Quote taken from the A340-500 section, not the later B767 leg in the same article. Describes the former Kingfisher-design business cabin; not a universal or prototype cabin claim. Technical axes unchanged. Also Sven’s June 11, 2012 firsthand Emirates A340-500 first-class seat review. Original typo in short quote retained. With TPG Singapore and Sam Chui AZAL there are now three firsthand publisher reports, each for its own cabin; Simple Flying history is supplemental, not a firsthand review.",
       "reviews": [
         {
           "url": "https://samchui.com/2016/02/20/azerbaijan-airlines-a340-500-and-b767-300-business-class/",
@@ -72,6 +72,13 @@
           "publishedDate": "2016-02-20",
           "quote": "Very generous leg room and ottoman.",
           "sentiment": 0.75
+        },
+        {
+          "url": "https://svenblogt.boardingarea.com/review-emirates-first-class-private-suites-in-the-a340-500/",
+          "title": "Review: Emirates First Class Private Suites in the A340-500",
+          "publishedDate": "2012-06-11",
+          "quote": "The seat itself is broad an comfortable",
+          "sentiment": 0.7
         }
       ],
       "evidence": [
@@ -80,6 +87,12 @@
           "openedAt": "2026-10-26",
           "quoteVerified": true,
           "method": "Opened firsthand flight report; aircraft model, cabin period, original byline and exact extract checked"
+        },
+        {
+          "url": "https://svenblogt.boardingarea.com/review-emirates-first-class-private-suites-in-the-a340-500/",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened Sven firsthand Hamburg-Dubai A340-500 first-class review and original June 11, 2012 byline; original wording preserved"
         }
       ]
     },

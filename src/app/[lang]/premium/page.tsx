@@ -1,3 +1,4 @@
+import { soft } from '@/server/util/soft';
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import Link from '@/components/ui/Link';
@@ -19,7 +20,7 @@ export default async function PremiumPage({ searchParams }: { searchParams: Prom
   await connection();
   const [query, user, traders] = await Promise.all([searchParams, getUser(), TraderPosition.counts()]);
   const people = new Set((await db.query<{ name: string }>(`SELECT "name"::text FROM "Person" WHERE "name"::text = ANY($1)`, [traders.map((t) => t.traderName)])).map((p) => p.name));
-  const plan = user ? await PremiumSubscription.status(user.id) : null;
+  const plan = user ? await soft(PremiumSubscription.status(user.id), null, 'premium status') : null;
   const perks = [
     ['Portfolio moves', 'Every disclosed buy, sell and hold from the investors we follow, summarized in our words and linked to the source.'],
     ['Estimated PnL', 'How each opening trade has moved since its trade date, from market closes. Options are marked by the underlying.'],

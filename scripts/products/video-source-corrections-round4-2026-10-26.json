@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-26",
+  "entries": [
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19636,
+      "pinSourceUrl": "https://gigazine.net/gsc_news/en/20260624-bytedance-seedance-2-5/",
+      "basis": "Opened primary AA-Video-T2V v2.1 overall text-to-video leaderboard, Oct26 2026. Exact current model/Elo/uncertainty table fragment replaces previous snapshot; changed vote counts are not a publication date. Live table has no original report day, so retain null and off graph. Editorial sentiment reflects relative rank, not a publisher prose verdict. No rubric axes, authors or other citations changed.",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models",
+          "publishedDate": null,
+          "quote": "Dreamina Seedance 2.5\n\t\n1156\n\u00b114",
+          "sentiment": 0.65
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened rendered primary evaluator table; exact model and current row values matched; no original publication day"
+        }
+      ],
+      "laterDisposition": "Manual citation-only correction saved and verified locally and in production; source hand, axes and unrelated fields preserved. See manual-review-corrections-2026-10-26.json. Automatic hand guard remains unchanged."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19665,
+      "pinSourceUrl": "https://blog.google/technology/ai/veo-updates-flow/",
+      "basis": "Opened primary AA-Video-T2V v2.1 overall text-to-video leaderboard, Oct26 2026. Exact current model/Elo/uncertainty table fragment replaces previous snapshot; changed vote counts are not a publication date. Live table has no original report day, so retain null and off graph. Editorial sentiment reflects relative rank, not a publisher prose verdict. No rubric axes, authors or other citations changed.",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models",
+          "publishedDate": null,
+          "quote": "Veo 3.1\n\t\n961\n\u00b116",
+          "sentiment": -0.25
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened rendered primary evaluator table; exact model and current row values matched; no original publication day"
+        }
+      ],
+      "laterDisposition": "Manual citation-only correction saved and verified locally and in production; source hand, axes and unrelated fields preserved. See manual-review-corrections-2026-10-26.json. Automatic hand guard remains unchanged."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19666,
+      "pinSourceUrl": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/",
+      "basis": "Opened primary AA-Video-T2V v2.1 overall text-to-video leaderboard, Oct26 2026. Exact current model/Elo/uncertainty table fragment replaces previous snapshot; changed vote counts are not a publication date. Live table has no original report day, so retain null and off graph. Editorial sentiment reflects relative rank, not a publisher prose verdict. No rubric axes, authors or other citations changed.",
+      "reviews": [
+        {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "title": "AA-Video-T2V v2.1 Leaderboard - Top AI Video Models",
+          "publishedDate": null,
+          "quote": "Veo 3.1 Lite\n\t\n951\n\u00b116",
+          "sentiment": -0.35
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+          "openedAt": "2026-10-26",
+          "quoteVerified": true,
+          "method": "Opened rendered primary evaluator table; exact model and current row values matched; no original publication day"
+        }
+      ],
+      "laterDisposition": "Manual citation-only correction saved and verified locally and in production; source hand, axes and unrelated fields preserved. See manual-review-corrections-2026-10-26.json. Automatic hand guard remains unchanged."
+    }
+  ],
+  "applyResult": {
+    "savedPinIds": [],
+    "blockedHandPinIds": [
+      19636,
+      19665,
+      19666
+    ]
+  }
+}

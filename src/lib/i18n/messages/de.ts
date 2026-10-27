@@ -73,6 +73,8 @@ const de: Messages = {
     or: 'oder',
     somethingWrong: 'Etwas ist schiefgelaufen, bitte versuche es erneut.',
     backToTimeline: 'Zurück zur Zeitleiste',
+    oauthFailed: 'Die Anmeldung über diesen Anbieter ist fehlgeschlagen. Versuche es erneut oder nutze E-Mail und Passwort.',
+    oauthUnavailable: 'Diese Anmeldeoption ist gerade nicht verfügbar. Nutze stattdessen E-Mail und Passwort.',
     showFewer: 'Weniger anzeigen',
     showAllN: 'Alle {count} {noun} anzeigen',
   },

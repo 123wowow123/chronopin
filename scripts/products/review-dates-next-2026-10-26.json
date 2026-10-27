@@ -101,13 +101,13 @@
       "table": "PinLlmPerf",
       "pinId": 5000,
       "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
-      "basis": "Rendered explicit Published on January 3, 2024. Analysis of Gemini 1.0 Pro versus GPT-3.5, not Ultra.",
+      "basis": "Rendered article explicitly says Published on January 3, 2024, but JSON-LD says datePublished Dec22 2023 and dateModified Dec26 2023. Conflicting original dates remain unresolved; retain null rather than choose one. Exact Gemini Pro vs GPT-3.5 quote verified; quotation corrected, hand-set axes/status preserved.",
       "reviews": [
         {
           "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
           "quote": "competent reasoning ability, and superior instruction following",
           "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
-          "publishedDate": "2024-01-03",
+          "publishedDate": null,
           "sentiment": 0.6
         }
       ],
@@ -116,20 +116,21 @@
           "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
           "openedAt": "2026-10-26",
           "method": "Rendered Chromium publisher page, visible original byline",
-          "publicationEvidence": "Rendered explicit Published on January 3, 2024. Analysis of Gemini 1.0 Pro versus GPT-3.5, not Ultra.",
+          "publicationEvidence": "Rendered article explicitly says Published on January 3, 2024, but JSON-LD says datePublished Dec22 2023 and dateModified Dec26 2023. Conflicting original dates remain unresolved; retain null rather than choose one. Exact Gemini Pro vs GPT-3.5 quote verified; quotation corrected, hand-set axes/status preserved.",
           "quoteVerified": true
         }
-      ]
+      ],
+      "laterDisposition": "Manual citation-only correction saved and verified locally and in production; source hand, axes and unrelated fields preserved. See manual-review-corrections-2026-10-26.json. Automatic hand guard remains unchanged. Publication date remains unresolved: visible January3 2024 conflicts with JSON-LD December22 2023; saved null."
     },
     {
       "table": "PinLlmPerf",
       "pinId": 15110,
       "pinSourceUrl": "https://www.deepseek.com/en/news/v4-preview/",
-      "basis": "Rendered article date April 24, 2026, first matching article time element; other date belongs to a related distillation story. Independent university analysis of V4-Pro, not a new firsthand benchmark run.",
+      "basis": "Visible April24 2026 article date verified. NYU RITS AI-assisted, staff-reviewed summary of reported V4 benchmarks, not original independent benchmark testing.",
       "reviews": [
         {
           "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
-          "quote": "V4 still trails Anthropic's Opus 4.6 on MRCR 1M long-context recall (92.9%)",
+          "quote": "V4 still trails Anthropic\u2019s Opus 4.6 on MRCR 1M long-context recall (92.9%)",
           "title": "DeepSeek Releases V4: Open-Source 1.6T MoE with 1M Context",
           "publishedDate": "2026-04-24",
           "sentiment": -0.35
@@ -140,10 +141,11 @@
           "url": "https://rits.shanghai.nyu.edu/ai/deepseek-releases-v4-open-source-1-6t-moe-with-1m-context",
           "openedAt": "2026-10-26",
           "method": "Rendered Chromium publisher page, visible original byline",
-          "publicationEvidence": "Rendered article date April 24, 2026, first matching article time element; other date belongs to a related distillation story. Independent university analysis of V4-Pro, not a new firsthand benchmark run.",
+          "publicationEvidence": "Visible April24 2026 article date verified. NYU RITS AI-assisted, staff-reviewed summary of reported V4 benchmarks, not original independent benchmark testing.",
           "quoteVerified": true
         }
-      ]
+      ],
+      "laterDisposition": "Manual citation-only correction saved and verified locally and in production; source hand, axes and unrelated fields preserved. See manual-review-corrections-2026-10-26.json. Automatic hand guard remains unchanged."
     }
   ]
 }

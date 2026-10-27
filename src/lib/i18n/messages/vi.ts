@@ -73,6 +73,8 @@ const vi: Messages = {
     or: 'hoặc',
     somethingWrong: 'Đã xảy ra lỗi, vui lòng thử lại.',
     backToTimeline: 'Quay lại dòng thời gian',
+    oauthFailed: 'Đăng nhập bằng nhà cung cấp đó không thành công. Hãy thử lại hoặc dùng email và mật khẩu.',
+    oauthUnavailable: 'Tùy chọn đăng nhập đó hiện không khả dụng. Hãy dùng email và mật khẩu.',
     showFewer: 'Hiện ít hơn',
     showAllN: 'Hiện tất cả {count} {noun}',
   },

@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 import { birthdayMessage, birthdayProblem } from '@/lib/birthday';
 import { normalizePhone, phoneMessage, phoneProblem } from '@/lib/phone';
 import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
+import { soft } from '@/server/util/soft';
 import { sendVerificationEmailInBackground } from '@/server/emailVerification';
 import { json, readJson, route } from '@/server/http';
 import AdFreeSubscription from '@/server/model/adFreeSubscription';
@@ -17,7 +18,7 @@ import { loadUser } from '@/server/services/users';
 export const GET = route(async (request: NextRequest) => {
   const user = await getUser(request);
   if (!user) return json(null);
-  return json({ ...user.pick(pickUserProps), ...((await AdFreeSubscription.isActive(user.id)) ? { adFree: true } : {}), ...((await PremiumSubscription.hasAccess(user)) ? { premium: true } : {}) });
+  return json({ ...user.pick(pickUserProps), ...((await soft(AdFreeSubscription.isActive(user.id), false, 'adFree status')) ? { adFree: true } : {}), ...((await soft(PremiumSubscription.hasAccess(user), false, 'premium status')) ? { premium: true } : {}) });
 });
 
 // The longest profile description, in characters.
