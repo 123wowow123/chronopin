@@ -18,5 +18,12 @@
   "apiDriverConfigured": true,
   "temporaryJobRemoved": true,
   "originalSettingsVerifiedUnchanged": true,
-  "productionDeploymentPerformed": false
+  "productionDeploymentPerformed": false,
+  "diagnosis": {
+    "adminReportedApiAvailableBeforeRun": true,
+    "schedulerReportedClientUnavailable": true,
+    "codeFinding": "getClient() returns null both for missing/placeholder key and for process-local 30-minute no-credit cooldown. API job driver labels every null result as missing ANTHROPIC_API_KEY. Admin endpoint and scheduler may execute in different module/process contexts.",
+    "conclusion": "Run #28 does not prove the production key is absent. Successful scheduled review-tool execution is unverified; investigate scheduler client availability/cooldown. Credit state and process mismatch are not established by this run.",
+    "modelCallsOrActionsObserved": false
+  }
 }

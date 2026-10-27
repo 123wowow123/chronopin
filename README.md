@@ -186,7 +186,7 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
   - Expand Movie/TV, Music albums, Computing and Fashion critic coverage; screen category leads for actual reviewable products/works.
   - Research the 72 rubric rows below three reviews: EV 33, gas cars 12, aircraft 13, dining 8, LLMs 4 and video models 2. Verify independent sources and the exact variant/branch.
   - Resolve the 75 remaining publication/source checks in the research queue. Another 74 entries are verified as undated and retain null dates. Verify actual firsthand comments separately from merchant copy; undated guide extracts stay off the graph.
-  - Exercise the deployed review research/scoring tools in a scheduled production job after the production `ANTHROPIC_API_KEY` is configured and model access works. Retry #26 on 2026-10-26 was claimed but skipped for the missing key; earlier #25 reported insufficient credit. The temporary verification schedule was removed and all four original schedules remain disabled and unchanged.
+  - Complete scheduled production review-tool verification. Retry #28 on 2026-10-27 was claimed but skipped: scheduler reported no API client although the admin endpoint reported one available. The same message also covers credit cooldown; key absence is not established. Investigate worker/client availability and verify a successful model/tool run. Temporary schedule removed; all four original schedules remain disabled and unchanged.
 
 
 ### Map
@@ -473,7 +473,7 @@ ask for anything more to add to pin detail page
 
 
 
-
+new pins were updated and added on prod. do translation on them
 
 
 

@@ -128,9 +128,7 @@ and Team-BHP. The last is an edited firsthand owner highway impression, not
 an instrumented professional road test; its AX7 L trim shares the scored AX3
 petrol-automatic powertrain, and the excerpt concerns engine refinement only. Of 151 non-MICHELIN undated entries, 77
 have verified reasons to retain null dates; **74 date/source checks remain**.
-Current scheduled verification: retry #26 is blocked by the missing production
-`ANTHROPIC_API_KEY`; the older credit failure is historical. See the tenth
-continuation below.
+Scheduled verification: run #26 reported no API client. The [October 27 retry](review-verification-2026-10-27.md) supersedes the earlier missing-key diagnosis: admin availability and scheduler availability disagree, and the same worker message also covers credit cooldown. Successful scheduled tool execution remains open.
 
 Every dated review with a quote is scored. Category leads still need screening;
 awards, concerts and business events must not receive invented product reviews.

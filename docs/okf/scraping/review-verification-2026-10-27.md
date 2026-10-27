@@ -76,3 +76,23 @@ The [current queue](../../../scripts/products/review-queue-2026-10-27.json) and
 README retain broader critic coverage, the remaining 65 rubric gaps, publication
 research and scheduled production verification. No production deployment,
 restart or environment change was performed.
+
+
+## Scheduled production retry #28
+
+The [read-only status](../../../scripts/products/review-production-status-round13-2026-10-27.json)
+reported API availability and no active jobs. A temporary sentiment-only schedule
+with zero new pins and at most one pin update was installed, claimed with
+`trigger: schedule`, then removed. Complete original settings, including all four
+disabled schedules, were verified unchanged. No deployment or restart occurred.
+
+The [retry result](../../../scripts/products/review-production-verification-round13-2026-10-27.json)
+was skipped with zero recorded actions and no model usage. It reported a missing
+key despite the admin endpoint reporting the API driver available. Code inspection
+shows `getClient()` also returns null during its process-local thirty-minute
+credit pause, while the API driver describes every null as a missing key. Thus
+this result does not prove key absence, current credit exhaustion, or a specific
+worker mismatch. Scheduled research/scoring execution remains unverified until
+the scheduler can obtain an available client and complete the tools. The README
+now records this narrower, evidence-based blocker instead of asserting the key
+is missing. No credentials or runtime configuration were changed.

@@ -1,0 +1,548 @@
+{
+  "checkedAt": "2026-10-27",
+  "newDiningExtracts": 12,
+  "pinsUpdated": 6,
+  "closedRawRubricGaps": [
+    17218,
+    17279,
+    17280,
+    17282,
+    17286
+  ],
+  "excludedWrongBranchOrOperatorCitations": 2,
+  "priorNonMichelinSourceChecksResolved": 1,
+  "newUndatedFirsthandSourcesVerified": 3,
+  "concurrentNewUnresolvedTasteSource": {
+    "pinId": 5609,
+    "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+    "originalPostQuoteVerified": true,
+    "publicationDayUnresolved": true
+  },
+  "nativeRubricReadbacks": [
+    {
+      "pinId": 17218,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17218,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17263,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17263,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17279,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17279,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17280,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17280,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17282,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17282,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17286,
+      "production": false,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    },
+    {
+      "pinId": 17286,
+      "production": true,
+      "table": "PinDining",
+      "unrelatedFieldsVerified": [
+        "food",
+        "service",
+        "ambience",
+        "value",
+        "acclaim",
+        "source",
+        "sourceUrl"
+      ]
+    }
+  ],
+  "nativePages": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17279,
+      "url": "http://127.0.0.1:3000/pin/17279/tokyo-babsang-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17280,
+      "url": "http://127.0.0.1:3000/pin/17280/anmok-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17282,
+      "url": "http://127.0.0.1:3000/pin/17282/pili-pili-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17286,
+      "url": "http://127.0.0.1:3000/pin/17286/yakitori-onjeong-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17218,
+      "url": "http://127.0.0.1:3000/pin/17218/hinotsuki-sushi-kanesaka-grand-intercontinental-seoul-parnas-seoul-restaurant-gu",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": false,
+      "expectedGraph": false
+    },
+    {
+      "base": "http://127.0.0.1:3000",
+      "pinId": 17263,
+      "url": "http://127.0.0.1:3000/pin/17263/la-scala-paradise-hotel-busan-busan-restaurant",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17279,
+      "url": "https://www.chronopin.com/pin/17279/tokyo-babsang-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17280,
+      "url": "https://www.chronopin.com/pin/17280/anmok-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17282,
+      "url": "https://www.chronopin.com/pin/17282/pili-pili-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17286,
+      "url": "https://www.chronopin.com/pin/17286/yakitori-onjeong-busan-restaurant-guide",
+      "quote": true,
+      "verifiedQuotes": 2,
+      "graph": true,
+      "expectedGraph": true
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17218,
+      "url": "https://www.chronopin.com/pin/17218/hinotsuki-sushi-kanesaka-grand-intercontinental-seoul-parnas-seoul-restaurant-gu",
+      "quote": true,
+      "verifiedQuotes": 3,
+      "graph": false,
+      "expectedGraph": false
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pinId": 17263,
+      "url": "https://www.chronopin.com/pin/17263/la-scala-paradise-hotel-busan-busan-restaurant",
+      "quote": true,
+      "verifiedQuotes": 1,
+      "graph": true,
+      "expectedGraph": true
+    }
+  ],
+  "sourceWikiReadbacks": [
+    {
+      "pinId": 17279,
+      "production": false,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17279,
+      "production": true,
+      "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17279,
+      "production": false,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17279,
+      "production": true,
+      "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17280,
+      "production": false,
+      "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17280,
+      "production": true,
+      "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1600&key=20240307.22010001468&kid=020928",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17280,
+      "production": false,
+      "url": "https://archive19.tistory.com/723",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17280,
+      "production": true,
+      "url": "https://archive19.tistory.com/723",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17282,
+      "production": false,
+      "url": "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17282,
+      "production": true,
+      "url": "https://www.hapskorea.com/eat-like-a-local-thai-treats-in-the-heart-of-suyeong/",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17282,
+      "production": false,
+      "url": "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17282,
+      "production": true,
+      "url": "https://www.diningcode.com/profile.php?rid=w520d9tUnBP9",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17286,
+      "production": false,
+      "url": "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17286,
+      "production": true,
+      "url": "https://foodtracer.tistory.com/entry/부산-서면전포-맛집-촉촉한-육즙으로-행복을-느끼게-해주는-야키토리-맛집-야키토리-온정",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17286,
+      "production": false,
+      "url": "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17286,
+      "production": true,
+      "url": "https://www.diningcode.com/profile.php?rid=oQ7HAyTKyeXQ",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": false,
+      "url": "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": true,
+      "url": "https://guide.michelin.com/us/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka-1244365",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": false,
+      "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": true,
+      "url": "https://revitguide.com/en/stores/a27rt2z2ffq1uq",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": false,
+      "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": true,
+      "url": "https://www.diningcode.com/profile.php?rid=nGurOKId0Wme",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": false,
+      "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": true,
+      "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/sushi-kanesaka",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": false,
+      "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17218,
+      "production": true,
+      "url": "https://seoul.intercontinental.com/en/dining/restaurants/sushi-kanesaka",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17263,
+      "production": false,
+      "url": "https://a-room-of-my-own.tistory.com/7",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    },
+    {
+      "pinId": 17263,
+      "production": true,
+      "url": "https://a-room-of-my-own.tistory.com/7",
+      "noteVerified": true,
+      "priorContentPreserved": true
+    }
+  ],
+  "tests": {
+    "focusedTestsPassed": 28,
+    "documentationFrontmatterRepair": "Added missing OKF frontmatter to docs/okf/scraping/news-run-2026-10-27-6am.md; body preserved.",
+    "scopedEslintPassed": true,
+    "catalogConstraintsPassed": true,
+    "diningCatalogSynchronized": true,
+    "queueTotalsVerified": true
+  },
+  "sourceScope": "Firsthand visitors and independent guides are labelled; raw counts do not claim three professional critic meals. Kanesaka meal-month/yearless sources remain null and its graph absent. La Scala still requires two sources.",
+  "remaining": {
+    "rubricGaps": 65,
+    "sourceChecks": 74,
+    "verifiedUndated": 80,
+    "broaderCoverage": true,
+    "scheduledVerification": "Run #28 claimed by scheduler but skipped; admin reported API available. Missing-key error also covers credit cooldown, so absence of key not established."
+  },
+  "scheduledRun": {
+    "checkedAt": "2026-10-27",
+    "run": {
+      "id": 28,
+      "jobId": "review-verify-r13-20261027",
+      "trigger": "schedule",
+      "status": "skipped",
+      "driver": "api",
+      "tasks": [
+        "sentiment"
+      ],
+      "started": "2026-10-27T16:14:20.960Z",
+      "finished": "2026-10-27T16:14:22.752Z",
+      "usage": null,
+      "error": "No LLM was available. api: No ANTHROPIC_API_KEY is configured"
+    },
+    "actions": [],
+    "apiDriverConfigured": true,
+    "temporaryJobRemoved": true,
+    "originalSettingsVerifiedUnchanged": true,
+    "productionDeploymentPerformed": false,
+    "diagnosis": {
+      "adminReportedApiAvailableBeforeRun": true,
+      "schedulerReportedClientUnavailable": true,
+      "codeFinding": "getClient() returns null both for missing/placeholder key and for process-local 30-minute no-credit cooldown. API job driver labels every null result as missing ANTHROPIC_API_KEY. Admin endpoint and scheduler may execute in different module/process contexts.",
+      "conclusion": "Run #28 does not prove the production key is absent. Successful scheduled review-tool execution is unverified; investigate scheduler client availability/cooldown. Credit state and process mismatch are not established by this run.",
+      "modelCallsOrActionsObserved": false
+    }
+  },
+  "replayUtilityChange": "Source-wiki check day now taken from catalog instead of hardcoded October 26; existing ready wikis preserved.",
+  "productionDeploymentPerformed": false,
+  "productionRestartPerformed": false,
+  "productionEnvironmentChanged": false
+}
