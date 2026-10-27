@@ -2,9 +2,9 @@
 
 import { useLayoutEffect, useRef, type ReactNode } from 'react';
 
-// Columns are a fixed width so a card is the same size wherever the grid
-// appears; phones get one full column.
-const GRID = 'relative grid grid-cols-[repeat(auto-fill,22rem)] items-start gap-2.5 max-sm:grid-cols-1 *:relative';
+// Columns are at least 22rem and share any leftover width, so the grid fills
+// its row instead of leaving a gap at the end; phones get one full column.
+const GRID = 'relative grid grid-cols-[repeat(auto-fill,minmax(22rem,1fr))] items-start gap-2.5 max-sm:grid-cols-1 *:relative';
 
 // A ranked grid of pin cards packed like masonry. The CSS grid still places the
 // cards row by row (so reading and tab order follow the ranking), then each card
