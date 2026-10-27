@@ -38,7 +38,7 @@ const tagRow = 'absolute top-0 end-0 start-0 flex gap-1.5 overflow-hidden max-lg
 // width arrives once each of its cards can be 384px (see globals.css), and
 // Tailwind only sees classes written out whole, so they are.
 const WIDE_COLUMNS = [
-  { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden', query: '(width >= 104rem)' },
+  { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden', query: '(width >= 93.75rem)' },
   { column: '4xl:flex', tracks: '4xl:grid-cols-4', row: '4xl:max-w-[1822px]', hide: '4xl:hidden', query: '(width >= 129rem)' },
   { column: '5xl:flex', tracks: '5xl:grid-cols-5', row: '5xl:max-w-[2280px]', hide: '5xl:hidden', query: '(width >= 154rem)' },
   { column: '6xl:flex', tracks: '6xl:grid-cols-6', row: '6xl:max-w-[2738px]', hide: '6xl:hidden', query: '(width >= 178rem)' },

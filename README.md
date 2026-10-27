@@ -522,15 +522,4 @@ Add prod translations for all pins without translation or outdated translation. 
 
 
 
-Add substack trader position PnL and push live notifictions if user has paied for the $20 / mo for premium users for activating this feature. Admin will have this showing
-
-people section will show go premium message to to go landing page to purchase and unlock additonal section for poeple page and futre paid content
-
-use below substack sites to get premium user content that I'll put behind paywall for their personal trades and PnL and reasoning
-https://michaeljburry.substack.com/
-https://www.hfir.com/
-https://www.shrubstack.com/
-
-
-
 are all landing pages translated besides the pins?
