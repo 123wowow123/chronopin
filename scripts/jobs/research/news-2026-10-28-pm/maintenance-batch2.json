@@ -1,0 +1,60 @@
+[
+  {
+    "pinId": 17379,
+    "patch": {
+      "title": "First Night Boston 2027 — New Year’s Eve Celebration",
+      "description": "Boston’s free First Night celebration welcomes 2027 on December 31, 2026, with Copley Square as its announced hub. The new edition’s performer schedule is still pending.",
+      "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+      "utcEndDateTime": "2027-01-01T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Current operator page says Countdown to 2027, Copley Square, and entirely free and open to all. New Year’s Eve is December 31, 2026; the page’s separately labelled 2026 performers are not the 2027 lineup. Replaces an unsupported month-long placeholder.",
+      "address": "Copley Square, Boston, MA, United States",
+      "latitude": null,
+      "longitude": null,
+      "sourceUrl": "https://www.firstnightboston.org/",
+      "longFormSummary": "<ul><li>The current operator announces a free New Year’s Eve celebration welcoming 2027, with Copley Square as the hub. No purchase is required.<cite data-ref=\"https://www.firstnightboston.org/\"></cite></li><li>This pin is dated December 31, 2026. Detailed programming and exact times for the new edition remain to be confirmed; the website’s explicitly labelled 2026 performer list is not carried forward.</li></ul>"
+    },
+    "note": "Corrected month-long placeholder and stale City Hall hub from current 2027 operator page; no inferred map coordinates."
+  },
+  {
+    "pinId": 17456,
+    "patch": {
+      "title": "2026 BMW Dallas Marathon Festival — December 11–13",
+      "description": "The 2026 BMW Dallas Marathon festival runs December 11–13 in Dallas; the marathon itself is on Sunday, December 13. Registration options and entry prices depend on the race.",
+      "utcStartDateTime": "2026-12-11T00:00:00.000Z",
+      "utcEndDateTime": "2026-12-14T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "The current operator homepage explicitly publishes 2026 BMW Dallas Marathon December 11–13. This covers the festival, not a three-day marathon; end is exclusive.",
+      "addReferences": [
+        {
+          "url": "https://dallasmarathon.com/?hg=0",
+          "title": "2026 BMW Dallas Marathon",
+          "confidence": 100,
+          "reasoning": "Official December 11–13 festival dates."
+        }
+      ],
+      "longFormSummary": "<ul><li>The official 2026 festival runs December 11–13, replacing the prior month-long placeholder.<cite data-ref=\"https://dallasmarathon.com/?hg=0\"></cite></li><li>The marathon is the Sunday event, December 13. Other weekend races have separate distances, registration and eligibility; no single entry price or inventory claim is applied to the whole weekend.</li></ul>"
+    },
+    "note": "Official festival dates replace December placeholder; inclusive end converted to exclusive December 14."
+  },
+  {
+    "pinId": 17570,
+    "patch": {
+      "utcStartDateTime": "2027-01-01T16:00:00.000Z",
+      "utcEndDateTime": "2027-01-01T18:00:00.000Z",
+      "allDay": false,
+      "allDayStated": false,
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "The rendered official parade-day guide states the 138th Rose Parade on January 1, 2027, 8–10 a.m. Pasadena local time (PST), equivalent to 16–18 UTC. Floatfest and other ancillary dates are separate."
+    },
+    "note": "Replaced all-day parade marker with operator’s exact PST start and end."
+  },
+  {
+    "pinId": 5023,
+    "patch": {
+      "dateConfidenceReasoning": "Google’s September 30 announcement introduced Gemini 4 Argon to trusted cyber defenders. Broad paying-user release followed October 13 and is covered by pin 15308, which carries the canonical release rubric. Pin 4810 is an announcement duplicate, not the release rubric."
+    },
+    "note": "Corrected stale estimated-release cross-reference; kept announcement separate from actual release.",
+    "resolve": "Verified announcement/release distinction against official pages; release 15308 already has its native rubric and reviews. No duplicate rubric on September 30 announcement. Corrected stale reference in both environments."
+  }
+]

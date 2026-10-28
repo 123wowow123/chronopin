@@ -1,0 +1,35 @@
+{
+  "reasoning": null,
+  "coding": null,
+  "context": null,
+  "price": null,
+  "speed": null,
+  "modalities": 1,
+  "reviews": [
+    {
+      "url": "https://aibynick.com/thread/17",
+      "title": "arcee-ai/trinity-large-thinking",
+      "publishedDate": "2026-04-11",
+      "quote": "my first impressions are that it's very very good.",
+      "sentiment": 0.8
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/trinity-large-thinking",
+      "title": "Trinity Large Thinking Intelligence, Performance & Price Analysis",
+      "publishedDate": null,
+      "quote": "At 367 tokens per second, Trinity Large Thinking is notably fast (80).",
+      "sentiment": 0.5
+    },
+    {
+      "url": "https://www.llmverifications.com/models/trinity-large-thinking",
+      "title": "Trinity Large Thinking benchmarks, speed and API pricing",
+      "publishedDate": null,
+      "quote": "Generates 329 output tokens per second, faster than 97% of the models we measure.",
+      "sentiment": 0.5
+    }
+  ],
+  "rubricYear": 2026,
+  "source": "session",
+  "sourceUrl": "https://www.arcee.ai/blog/trinity-large-thinking",
+  "basis": "April1,2026 Trinity-Large-Thinking release,not January Preview. Text-only inputs support modalities1. Launch-edition AA index,TB4,window,input price and throughput not established; currentAA512k conflicts with currentOpenRouter262k,so these axes remain null. Maker states launchoutputUS$0.90/M but that cannot establish3:1 blend without launchinputprice. Three independent first-person/evaluation sources: NickApril11 knowledge test and two current independent testing pages. Their publication days are not stated; October testdates are not publication dates and remain off the dated graph."
+}

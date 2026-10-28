@@ -623,21 +623,9 @@
     "umami": 0,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Estimate from the maker's description (Baskin-Robbins Japan release, 6 Oct 2026): Love Potion 31 ice cream blended with milk and a special raspberry sauce, topped with whipped cream, raspberry sauce, sliced white chocolate and mini heart chocolates; the maker describes rich white-chocolate sweetness balanced by raspberry acidity. No tasting review of the shake itself found as of 2026-10-11 (searched Japanese web, impress Gourmet Watch, ASCII). Reviews listed are of the same flavour: a tasting of the Love Potion ice cream cake and user comments on the base ice cream, both clearly different products. Sourness is moderate from raspberry (not an axis); texture is thick and creamy; no notable salt.",
-    "reviews": [
-      {
-        "url": "https://macaro-ni.jp/175574",
-        "title": "「ラブポーションサーティワン」がアイスクリームケーキになった！専用開発されたガトーショコラと味わう贅沢 (macaroni; tasting of the cake, not the shake; page updated 2026-03-27)",
-        "publishedDate": null,
-        "quote": "甘くて爽やか。チョコの食感がアクセントに"
-      },
-      {
-        "url": "https://ranking.net/items/f9afbb",
-        "title": "ラブポーションサーティワンに関するランキングと口コミ・評判 | みんなのランキング (user comments on the base ice cream flavour)",
-        "publishedDate": null,
-        "quote": "ラズベリーは酸味は効いてますが、酸っぱくなくほどよくいい感じ！"
-      }
-    ]
+    "basis": "Seven-axis estimate preserved from the maker’s October 6 shake description, not an independent tasting score. Audit October 28: removed the macaroni ice-cream-cake review and ranking.net base-ice-cream comments because neither evaluates this Grand Shake. Japanese searches located launch announcements and a GourmetBiz roundup of unattributed SNS comments, but no verifiable original firsthand shake tasting. Exact-product review research remains open.",
+    "reviews": [],
+    "sourceUrl": "https://www.31ice.co.jp/contents/topics/261009_02.html"
   },
   {
     "pinId": 7700,

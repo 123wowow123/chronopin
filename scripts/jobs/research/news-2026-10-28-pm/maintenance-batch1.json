@@ -1,0 +1,105 @@
+[
+  {
+    "pinId": 1678,
+    "patch": {
+      "title": "Fed Holds Rates at 3.75%–4.00% in October 2026, With Two Dissents",
+      "description": "The Federal Reserve voted 10–2 on October 28, 2026 to hold its policy rate at 3.75%–4.00%. Lisa Cook and Beth Hammack preferred a quarter-point increase.",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The official October 28 statement, released at 2:00 p.m. EDT, says “maintain the target range for the federal funds rate at 3-3/4 to 4 percent”. This records the realized decision, not a forecast.",
+      "longFormSummary": "<ul><li>The October 28 decision left rates unchanged at 3.75%–4.00%; the vote was 10–2. Cook and Hammack favored a quarter-point increase.<cite data-ref=\"https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm\"></cite></li><li>The statement describes strong activity but persistent inflation; further evidence will guide policy. No future rate move is confirmed.<cite data-ref=\"https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm\"></cite></li><li>The hold followed September’s increase. Reuters reports policymakers waited for more inflation data.<cite data-ref=\"https://www.investing.com/news/economy-news/fed-holds-rates-steady-as-it-awaits-accumulation-of-more-information-4980411\"></cite></li><li>Forecast comparison: the pin’s archived October 22 Kalshi snapshot favored a hold at 94%, versus 6% for a quarter-point hike; the realized hold matched that modal forecast. Its dollar-volume figure was a turnover proxy, not exchange-reported cash turnover.</li></ul>",
+      "addReferences": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+          "title": "Federal Reserve issues FOMC statement",
+          "publishedDate": "2026-10-28",
+          "startDate": "2026-10-28",
+          "confidence": 100,
+          "reasoning": "Official realized 10–2 vote; unchanged target range."
+        },
+        {
+          "url": "https://www.investing.com/news/economy-news/fed-holds-rates-steady-as-it-awaits-accumulation-of-more-information-4980411",
+          "title": "Fed leaves rates unchanged as it awaits accumulation of more information",
+          "publishedDate": "2026-10-28",
+          "confidence": 95,
+          "reasoning": "Independent reporting of the decision and policy context."
+        }
+      ]
+    },
+    "note": "Realized October FOMC decision: hold3.75–4.00,10–2; forecast archived."
+  },
+  {
+    "pinId": 6976,
+    "patch": {
+      "title": "NAIA Opens on Las Olas on October 22, 2026",
+      "description": "NAIA opened on October 22, 2026 at 904 East Las Olas Boulevard in Fort Lauderdale, with coastal Mediterranean cooking and an Asian-influenced sushi program.",
+      "utcStartDateTime": "2026-10-22T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Resident states “Naia opens Thursday, October 22, 2026”; Axios independently reports the same Thursday. The operator now publishes dining hours, menus and reservations. This supersedes the earlier October18 target and November30 seasonal marker.",
+      "longFormSummary": "<ul><li>Resident gives October 22, 2026 as NAIA’s opening date, superseding the earlier tourism-board target of October 18.<cite data-ref=\"https://resident.com/news/2026/10/16/naia-las-olas-opening\"></cite></li><li>The kitchen combines coastal Mediterranean dishes, live robata cooking and a separate sushi program.<cite data-ref=\"https://resident.com/news/2026/10/16/naia-las-olas-opening\"></cite></li><li>Axios corroborates the October 22 opening.<cite data-ref=\"https://www.axios.com/local/fort-lauderdale/2026/10/20/naia-las-olas-asian-mediterranean-restaurant-opening\"></cite></li><li>The operator now accepts reservations and lists dinner hours and menus at the exact Las Olas branch.<cite data-ref=\"https://naialasolas.com/\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://resident.com/news/2026/10/16/naia-las-olas-opening",
+          "title": "Naia Opens on Las Olas October 22 From The Restaurant People",
+          "publishedDate": "2026-10-16",
+          "startDate": "2026-10-22",
+          "confidence": 100,
+          "reasoning": "Explicit opening day."
+        },
+        {
+          "url": "https://www.axios.com/local/fort-lauderdale/2026/10/20/naia-las-olas-asian-mediterranean-restaurant-opening",
+          "title": "New Asian-Mediterranean restaurant opens this week on Las Olas",
+          "publishedDate": "2026-10-20",
+          "startDate": "2026-10-22",
+          "confidence": 95,
+          "reasoning": "Independent Thursday opening confirmation."
+        }
+      ]
+    },
+    "resolve": "Re-researched October28: explicit October22 opening corroborated by Resident/Axios and live operator hours/reservations; saved and read back in both environments, author preserved."
+  },
+  {
+    "pinId": 17523,
+    "patch": {
+      "title": "Minnesota Twins 2027 Home Games at Target Field",
+      "sourceUrl": "https://www.mlb.com/amp/press-release/twins-announce-2027-schedule.html",
+      "description": "Target Field home opener April2; final home game September26,2027.",
+      "utcStartDateTime": "2027-04-02T00:00:00.000Z",
+      "utcEndDateTime": "2027-09-27T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Target Field home opener April2; final home game September26,2027. Official2027 schedule; end timestamps are exclusive.",
+      "longFormSummary": "<ul><li>Target Field home opener April2; final home game September26,2027.<cite data-ref=\"https://www.mlb.com/amp/press-release/twins-announce-2027-schedule.html\"></cite></li><li>This pin covers home fixtures at this venue. Exact game times, admission inventory and prices must be checked for the chosen fixture; older-season ticket offers are not carried forward.</li></ul>",
+      "references": []
+    },
+    "resolve": "Replaced prior-year or placeholder schedule with opened official2027 home-schedule evidence; corrected exclusive end where supported; verified both environments. Admission prices remain unpublished for this scope."
+  },
+  {
+    "pinId": 17405,
+    "patch": {
+      "title": "Washington Nationals 2027 Home Games at Nationals Park",
+      "sourceUrl": "https://www.mlb.com/amp/press-release/washington-nationals-announce-2027-schedule.html",
+      "description": "Nationals Park opens March25; final homestand ends September26,2027.",
+      "utcStartDateTime": "2027-03-25T00:00:00.000Z",
+      "utcEndDateTime": "2027-09-27T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Nationals Park opens March25; final homestand ends September26,2027. Official2027 schedule; end timestamps are exclusive.",
+      "longFormSummary": "<ul><li>Nationals Park opens March25; final homestand ends September26,2027.<cite data-ref=\"https://www.mlb.com/amp/press-release/washington-nationals-announce-2027-schedule.html\"></cite></li><li>This pin covers home fixtures at this venue. Exact game times, admission inventory and prices must be checked for the chosen fixture; older-season ticket offers are not carried forward.</li></ul>",
+      "references": []
+    },
+    "resolve": "Replaced prior-year or placeholder schedule with opened official2027 home-schedule evidence; corrected exclusive end where supported; verified both environments. Admission prices remain unpublished for this scope."
+  },
+  {
+    "pinId": 17437,
+    "patch": {
+      "title": "Miami Marlins 2027 Home Games at loanDepot Park",
+      "sourceUrl": "https://www.mlb.com/news/miami-marlins-announce-2027-regular-season-schedule",
+      "description": "Marlins home opener March25,2027. Full home-season end remains unrecorded.",
+      "utcStartDateTime": "2027-03-25T00:00:00.000Z",
+      "utcEndDateTime": null,
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Marlins home opener March25,2027. Full home-season end remains unrecorded. Official2027 schedule; end timestamps are exclusive.",
+      "longFormSummary": "<ul><li>Marlins home opener March25,2027. Full home-season end remains unrecorded.<cite data-ref=\"https://www.mlb.com/news/miami-marlins-announce-2027-regular-season-schedule\"></cite></li><li>This pin covers home fixtures at this venue. Exact game times, admission inventory and prices must be checked for the chosen fixture; older-season ticket offers are not carried forward.</li></ul>",
+      "references": []
+    },
+    "resolve": "Replaced prior-year or placeholder schedule with opened official2027 home-schedule evidence; corrected exclusive end where supported; verified both environments. Admission prices remain unpublished for this scope."
+  }
+]

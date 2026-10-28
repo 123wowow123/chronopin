@@ -1,0 +1,108 @@
+{
+  "sector": "Battery-electric Class 8 trucks",
+  "status": "production",
+  "source": "session",
+  "rubricYear": 2026,
+  "assessmentDate": "2026-10-28",
+  "axes": {
+    "scale": {
+      "score": null,
+      "basis": "unknown",
+      "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+      "sources": []
+    },
+    "automation": {
+      "score": null,
+      "basis": "unknown",
+      "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+      "sources": []
+    },
+    "technical": {
+      "score": null,
+      "basis": "unknown",
+      "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+      "sources": []
+    },
+    "efficiency": {
+      "score": null,
+      "basis": "unknown",
+      "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+      "sources": []
+    },
+    "supplyChain": {
+      "score": null,
+      "basis": "unknown",
+      "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+      "sources": []
+    },
+    "workforce": {
+      "score": null,
+      "basis": "unknown",
+      "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+      "sources": []
+    }
+  },
+  "metrics": [
+    {
+      "key": "floorArea",
+      "label": "Dedicated factory floor area",
+      "value": "1.8 million square feet, according to Tesla at the opening",
+      "basis": "demonstrated",
+      "source": {
+        "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+        "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+        "publishedDate": "2026-09-25",
+        "quote": "the plant covers 1.8 million square feet"
+      }
+    },
+    {
+      "key": "capacity",
+      "label": "Design capacity",
+      "value": "Up to 50,000 trucks per year; target capacity, not verified achieved output",
+      "basis": "planned",
+      "source": {
+        "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+        "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+        "publishedDate": "2026-09-25",
+        "quote": "a plant it says can build 50,000 electric trucks per year"
+      }
+    },
+    {
+      "key": "products",
+      "label": "Truck variants",
+      "value": "Standard Range, Long Range and European specification on one line",
+      "basis": "demonstrated",
+      "source": {
+        "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+        "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+        "publishedDate": "2026-09-25",
+        "quote": "builds every variant (Standard, Long Range, and a European spec) on the same line"
+      }
+    },
+    {
+      "key": "timeline",
+      "label": "Factory opening",
+      "value": "September 24, 2026; deliveries announced at the opening",
+      "basis": "demonstrated",
+      "source": {
+        "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+        "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+        "publishedDate": "2026-09-25",
+        "quote": "Tesla officially launched high-volume production of the Tesla Semi last night"
+      }
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Opening and production launch",
+      "date": "2026-09-24",
+      "basis": "demonstrated",
+      "source": {
+        "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+        "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+        "publishedDate": "2026-09-25",
+        "quote": "Tesla officially launched high-volume production of the Tesla Semi last night"
+      }
+    }
+  ]
+}

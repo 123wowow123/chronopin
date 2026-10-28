@@ -1,0 +1,21 @@
+{
+  "house": {
+    "filings": 0,
+    "trades": 0,
+    "unmatched": [],
+    "failed": []
+  },
+  "executive": {
+    "filings": 0,
+    "trades": 0,
+    "unmatched": [],
+    "failed": [
+      "Bryan Bedford BC33926D1346296F85258D86003449A3: all transaction line(s) unreadable (scanned report or unknown layout) - not stored, https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/BC33926D1346296F85258D86003449A3/$FILE/Bryan-Bedford-11.03.2025-278T.pdf"
+    ]
+  },
+  "production": {
+    "filings": 28,
+    "added": 37,
+    "missing": []
+  }
+}

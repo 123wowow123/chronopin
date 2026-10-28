@@ -4054,5 +4054,22 @@
         "publishedDate": "2026-09-28"
       }
     ]
+  },
+  {
+    "aroma": 3,
+    "bitterness": 0,
+    "sweetness": 4.5,
+    "astringency": 0.5,
+    "umami": 0,
+    "pungent": 0,
+    "coolness": 0,
+    "abv": null,
+    "abvSourceUrl": null,
+    "reviews": [],
+    "source": "session",
+    "basis": "Seven-axis estimate preserved from the maker’s October 6 shake description, not an independent tasting score. Audit October 28: removed the macaroni ice-cream-cake review and ranking.net base-ice-cream comments because neither evaluates this Grand Shake. Japanese searches located launch announcements and a GourmetBiz roundup of unattributed SNS comments, but no verifiable original firsthand shake tasting. Exact-product review research remains open.",
+    "sourceUrl": "https://www.31ice.co.jp/contents/topics/261009_02.html",
+    "checkedAt": "2026-10-12T03:56:23.517Z",
+    "pinId": 13962
   }
 ]

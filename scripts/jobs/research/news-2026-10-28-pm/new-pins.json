@@ -1,0 +1,564 @@
+[
+  {
+    "key": "dropbox",
+    "userName": "@EconDesk",
+    "pin": {
+      "title": "Dropbox Cuts About 200 Jobs, 9% of Its Global Workforce",
+      "sourceUrl": "https://blog.dropbox.com/topics/company/an-update-on-organizational-changes-2026",
+      "company": "Dropbox",
+      "description": "Dropbox told staff on October 28, 2026 that about 200 roles will be eliminated. Its filing forecasts US$27–33 million of cash outlays and US$20–25 million of incremental expense.",
+      "utcStartDateTime": "2026-10-28T00:00:00.000Z",
+      "allDay": true,
+      "allDayStated": true,
+      "dateConfidence": "confirmed",
+      "tags": [
+        "Layoffs",
+        "Dropbox"
+      ],
+      "categories": [
+        "Labour",
+        "Business",
+        "Software"
+      ],
+      "references": [
+        {
+          "url": "https://investors.dropbox.com/node/14381/html",
+          "title": "Dropbox Form 8-K, October 28, 2026",
+          "publishedDate": "2026-10-28",
+          "confidence": 95,
+          "reasoning": "Item2.05 gives9% workforce reduction,US$27–33million cash expenditures andUS$20–25million incremental expense."
+        },
+        {
+          "url": "https://new.streetinsider.com/Reuters/Dropbox%2Bplans%2B9%25%2Bworkforce%2Bcut,%2Btechnology%2Bchief%2Bto%2Bexit/27246335.html",
+          "title": "Dropbox plans 9% workforce cut, technology chief to exit",
+          "publishedDate": "2026-10-28",
+          "confidence": 95,
+          "reasoning": "Reuters independently reports the reduction, expected cash costs and timing of the CTO departure."
+        }
+      ],
+      "longFormSummary": "<ul><li>The employee memo identifies about 200 affected roles, roughly 9% of the global workforce, across engineering, product, design and corporate functions. Most affected staff leave that day.<cite data-ref=\"https://blog.dropbox.com/topics/company/an-update-on-organizational-changes-2026\"></cite></li><li>The company frames the reduction as prioritizing its product and growth strategy. It says remaining teams must simplify or stop some work rather than distribute every task among fewer employees.<cite data-ref=\"https://blog.dropbox.com/topics/company/an-update-on-organizational-changes-2026\"></cite></li><li>The 8-K separates US$27–33 million of expected cash outlays from US$20–25 million of incremental accounting expense. The pin’s US$22.5 million price is the latter range’s midpoint, not projected savings.<cite data-ref=\"https://investors.dropbox.com/node/14381/html\"></cite></li><li>Most incremental expense and cash payments are expected in the fourth quarter of 2026, with the balance in 2027. These remain estimates subject to local employment rules.<cite data-ref=\"https://investors.dropbox.com/node/14381/html\"></cite></li><li>Reuters also reports that CTO Ali Dasdan’s departure takes effect November 18. That leadership date is separate from the October 28 workforce notification.<cite data-ref=\"https://new.streetinsider.com/Reuters/Dropbox%2 Bplans%2 B 9%25%2 Bworkforce%2 Bcut,%2 Btechnology%2 Bchief%2 Bto%2 Bexit/27246335.html\"></cite></li></ul><p>Image: Dropbox logo accompanying its October 28, 2026 workforce announcement. Credit: Dropbox.</p>",
+      "media": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-28-pm/dropbox.webp",
+          "type": 1
+        }
+      ],
+      "sourceWikis": [
+        {
+          "url": "https://blog.dropbox.com/topics/company/an-update-on-organizational-changes-2026",
+          "title": "Dropbox Cuts About 200 Jobs, 9% of Its Global Workforce",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Dropbox Cuts About 200 Jobs, 9% of Its Global Workforce",
+            "summary": "Dropbox told staff on October 28, 2026 that about 200 roles will be eliminated. Its filing forecasts US$27–33 million of cash outlays and US$20–25 million of incremental expense.",
+            "body": "Dropbox told staff on October 28, 2026 that about 200 roles will be eliminated. Its filing forecasts US$27–33 million of cash outlays and US$20–25 million of incremental expense.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        },
+        {
+          "url": "https://investors.dropbox.com/node/14381/html",
+          "title": "Dropbox Form 8-K, October 28, 2026",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Dropbox Form 8-K, October 28, 2026",
+            "summary": "Item2.05 gives9% workforce reduction,US$27–33million cash expenditures andUS$20–25million incremental expense.",
+            "body": "Item2.05 gives9% workforce reduction,US$27–33million cash expenditures andUS$20–25million incremental expense.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        },
+        {
+          "url": "https://new.streetinsider.com/Reuters/Dropbox%2Bplans%2B9%25%2Bworkforce%2Bcut,%2Btechnology%2Bchief%2Bto%2Bexit/27246335.html",
+          "title": "Dropbox plans 9% workforce cut, technology chief to exit",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Dropbox plans 9% workforce cut, technology chief to exit",
+            "summary": "Reuters independently reports the reduction, expected cash costs and timing of the CTO departure.",
+            "body": "Reuters independently reports the reduction, expected cash costs and timing of the CTO departure.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        }
+      ],
+      "price": 22500000,
+      "priceLowerBound": 20000000,
+      "priceUpperBound": 25000000,
+      "priceCurrency": "USD",
+      "parentId": null,
+      "dateConfidenceReasoning": "The October 28 employee memo says “For most impacted Dropboxers, today will be their last day.” The 8-K gives the same announcement date."
+    }
+  },
+  {
+    "key": "honeywell-tempe",
+    "userName": "@BuildDesk",
+    "pin": {
+      "title": "Honeywell Aerospace Announces $500 Million Tempe Factory and 600 Jobs",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+      "company": "Honeywell Aerospace",
+      "description": "Honeywell Aerospace announced a US$500 million, 300,000-square-foot Tempe factory on October 28, 2026, targeting late 2028 opening and about 600 jobs over time.",
+      "utcStartDateTime": "2026-10-28T00:00:00.000Z",
+      "allDay": true,
+      "allDayStated": true,
+      "dateConfidence": "confirmed",
+      "tags": [
+        "Manufacturing",
+        "Factory",
+        "Proposed",
+        "Job creation",
+        "Honeywell Aerospace"
+      ],
+      "categories": [
+        "Aerospace",
+        "Business",
+        "Labour"
+      ],
+      "references": [
+        {
+          "url": "https://www.bizjournals.com/phoenix/news/2026/10/28/honeywell-aerospace-new-tempe-facility.html",
+          "title": "Honeywell Aerospace to build $500 million East Valley manufacturing facility",
+          "publishedDate": "2026-10-28",
+          "confidence": 95,
+          "reasoning": "Public preview independently corroborates the Tempe project,planned600jobs and late2028 target; full article gated."
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-reports-third-quarter-results-updates-2026-outlook-302921767.html",
+          "title": "Honeywell Aerospace reports third quarter results; updates 2026 outlook",
+          "publishedDate": "2026-10-28",
+          "confidence": 95,
+          "reasoning": "Corporate earnings release corroborates the300,000-square-foot expansion andlate2028 target."
+        }
+      ],
+      "longFormSummary": "<ul><li>The US$500 million commitment covers a new 300,000-square-foot factory at the existing Tempe campus. This pin dates the investment announcement; commercial operation is still planned.<cite data-ref=\"https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html\"></cite></li><li>About 600 operating jobs are planned over time. Construction is expected to support more than 1,000 local jobs. These temporary roles are a separate category from the operating workforce.<cite data-ref=\"https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html\"></cite></li><li>The intended production system combines modular robotics, automated inspection and digital twins. Internal complex machining is intended to relieve a constrained part of the supplier base.<cite data-ref=\"https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html\"></cite></li><li>Named product scope includes Assure actuation and Attune cooling subsystems. Output rates and training outcomes are not published in the opened material.<cite data-ref=\"https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html\"></cite></li><li>The quarterly release repeats the late-2028 opening target, and the Phoenix Business Journal preview corroborates the project. Neither establishes completed construction or already-filled jobs.<cite data-ref=\"https://www.prnewswire.com/news-releases/honeywell-aerospace-reports-third-quarter-results-updates-2026-outlook-302921767.html\"></cite></li></ul><p>Image: Honeywell Aerospace rendering of the proposed Tempe manufacturing facility; planned opening late 2028, not an operating factory photograph. Credit: Honeywell Aerospace, via Phoenix Business Journal.</p>",
+      "media": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-28-pm/honeywell-tempe.webp",
+          "type": 1
+        }
+      ],
+      "sourceWikis": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+          "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Honeywell Aerospace Announces $500 Million Tempe Factory and 600 Jobs",
+            "summary": "Honeywell Aerospace announced a US$500 million, 300,000-square-foot Tempe factory on October 28, 2026, targeting late 2028 opening and about 600 jobs over time.",
+            "body": "Honeywell Aerospace announced a US$500 million, 300,000-square-foot Tempe factory on October 28, 2026, targeting late 2028 opening and about 600 jobs over time.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        },
+        {
+          "url": "https://www.bizjournals.com/phoenix/news/2026/10/28/honeywell-aerospace-new-tempe-facility.html",
+          "title": "Honeywell Aerospace to build $500 million East Valley manufacturing facility",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Honeywell Aerospace to build $500 million East Valley manufacturing facility",
+            "summary": "Public preview independently corroborates the Tempe project,planned600jobs and late2028 target; full article gated.",
+            "body": "Public preview independently corroborates the Tempe project,planned600jobs and late2028 target; full article gated.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-reports-third-quarter-results-updates-2026-outlook-302921767.html",
+          "title": "Honeywell Aerospace reports third quarter results; updates 2026 outlook",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Honeywell Aerospace reports third quarter results; updates 2026 outlook",
+            "summary": "Corporate earnings release corroborates the300,000-square-foot expansion andlate2028 target.",
+            "body": "Corporate earnings release corroborates the300,000-square-foot expansion andlate2028 target.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        }
+      ],
+      "price": 500000000,
+      "priceCurrency": "USD",
+      "address": "Existing Honeywell Aerospace campus, Tempe, Arizona, United States",
+      "parentId": null,
+      "dateConfidenceReasoning": "Honeywell’s release is dated October 28,2026. The opening target is “late 2028”; this announcement is Proposed until physical work is verified."
+    },
+    "factory": {
+      "sector": "Aerospace control systems and complex machining",
+      "status": "announced",
+      "assessmentDate": "2026-10-28",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Project investment",
+          "value": "US$500 million planned",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "$500 million, 300,000-square-foot"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned floor area",
+          "value": "300,000 square feet",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "$500 million, 300,000-square-foot"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Operating jobs",
+          "value": "Approximately 600 over time; separate from more than 1,000 construction jobs",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "approximately 600 jobs"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Production scope",
+          "value": "Complex machining, Assure actuation and Attune cooling subsystems",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "Assure advanced actuation systems"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Opening target",
+          "value": "Late 2028; exact day unpublished",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "Opening in late 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Investment announced",
+          "date": "2026-10-28",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "Oct. 28, 2026"
+          }
+        },
+        {
+          "label": "Planned opening",
+          "date": "Late 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28",
+            "quote": "Opening in late 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "helix-hollywood",
+    "userName": "@BuildDesk",
+    "pin": {
+      "title": "Helix Electric Breaks Ground on $45.3 Million Alabama Fabrication Campus",
+      "sourceUrl": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+      "company": "Helix Electric",
+      "description": "Helix Electric broke ground in Hollywood, Alabama on October 27, 2026. The announced US$45.3 million fabrication campus plans about 160 jobs in its first phase.",
+      "utcStartDateTime": "2026-10-27T00:00:00.000Z",
+      "allDay": true,
+      "allDayStated": true,
+      "dateConfidence": "confirmed",
+      "tags": [
+        "Manufacturing",
+        "Factory",
+        "In Progress",
+        "Job creation",
+        "Helix Electric"
+      ],
+      "categories": [
+        "Infrastructure",
+        "Business",
+        "Labour"
+      ],
+      "references": [
+        {
+          "url": "https://clarionnews.org/helix-electric-breaks-ground-on-45-28-million-facility-in-jackson-county/",
+          "title": "Helix Electric breaks ground on $45.28 million facility in Jackson County",
+          "publishedDate": "2026-10-27",
+          "confidence": 95,
+          "reasoning": "Local reporting dates the groundbreaking October27and identifies160first-phase jobs and a multi-phasecampus."
+        },
+        {
+          "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+          "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+          "publishedDate": "2026-10-28",
+          "confidence": 95,
+          "reasoning": "CorroboratesTuesdaygroundbreaking and planned first-phase duration; distinguishes later campus expansion."
+        }
+      ],
+      "longFormSummary": "<ul><li>The governor’s announcement identifies a US$45.3 million facility and an October 27 groundbreaking. Physical work supports the In Progress construction tag; production has not been established.<cite data-ref=\"https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/\"></cite></li><li>The site is in Jackson County Industrial Park behind the Kevin Dukes Career and Innovation Academy. Local reporting identifies about 160 first-phase jobs, including skilled trades and CAD/BIM work. These remain planned positions.<cite data-ref=\"https://clarionnews.org/helix-electric-breaks-ground-on-45-28-million-facility-in-jackson-county/\"></cite></li><li>The plant will make prefabricated electrical components and modular assemblies, including duct banks, risers, hangers and electrical skids. These supply construction and industrial projects.<cite data-ref=\"https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/\"></cite></li><li>The Alabama Reporter describes a three-phase expansion and a first phase expected to take just under two years. That duration does not date completion of the whole campus.<cite data-ref=\"https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/\"></cite></li><li>Later floor-area targets and workforce effects remain separate from the announced facility investment. No verified annual output rate is published; manufacturing electrical components does not make this a power-generation plant.<cite data-ref=\"https://clarionnews.org/helix-electric-breaks-ground-on-45-28-million-facility-in-jackson-county/\"></cite></li></ul><p>Image: Alabama’s October 27, 2026 Helix announcement graphic: US$45.3 million investment and 160 planned jobs; not a photograph of the construction site. Credit: Office of the Governor of Alabama.</p>",
+      "media": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-28-pm/helix-hollywood.webp",
+          "type": 1
+        }
+      ],
+      "sourceWikis": [
+        {
+          "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+          "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Helix Electric Breaks Ground on $45.3 Million Alabama Fabrication Campus",
+            "summary": "Helix Electric broke ground in Hollywood, Alabama on October 27, 2026. The announced US$45.3 million fabrication campus plans about 160 jobs in its first phase.",
+            "body": "Helix Electric broke ground in Hollywood, Alabama on October 27, 2026. The announced US$45.3 million fabrication campus plans about 160 jobs in its first phase.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        },
+        {
+          "url": "https://clarionnews.org/helix-electric-breaks-ground-on-45-28-million-facility-in-jackson-county/",
+          "title": "Helix Electric breaks ground on $45.28 million facility in Jackson County",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Helix Electric breaks ground on $45.28 million facility in Jackson County",
+            "summary": "Local reporting dates the groundbreaking October27and identifies160first-phase jobs and a multi-phasecampus.",
+            "body": "Local reporting dates the groundbreaking October27and identifies160first-phase jobs and a multi-phasecampus.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        },
+        {
+          "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+          "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+          "generatedBy": "codex/session",
+          "wiki": {
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "summary": "CorroboratesTuesdaygroundbreaking and planned first-phase duration; distinguishes later campus expansion.",
+            "body": "CorroboratesTuesdaygroundbreaking and planned first-phase duration; distinguishes later campus expansion.",
+            "tags": [
+              "Business"
+            ],
+            "lastModified": "2026-10-28",
+            "topics": []
+          }
+        }
+      ],
+      "price": 45300000,
+      "priceCurrency": "USD",
+      "address": "Jackson County Industrial Park, Hollywood, Alabama, United States",
+      "parentId": null,
+      "dateConfidenceReasoning": "The governor’s October 27 release states Helix Electric “broke ground”; local coverage dates the ceremony that Tuesday. This pin dates groundbreaking,not opening."
+    },
+    "factory": {
+      "sector": "Prefabricated electrical components and modular electrical assemblies",
+      "status": "construction",
+      "assessmentDate": "2026-10-28",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced facility investment",
+          "value": "US$45.3 million; no phase allocation published",
+          "basis": "planned",
+          "source": {
+            "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+            "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+            "publishedDate": "2026-10-27",
+            "quote": "$45.3 million facility"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "First-phase jobs",
+          "value": "Approximately 160 planned positions",
+          "basis": "planned",
+          "source": {
+            "url": "https://clarionnews.org/helix-electric-breaks-ground-on-45-28-million-facility-in-jackson-county/",
+            "title": "Helix Electric breaks ground on $45.28 million facility in Jackson County",
+            "publishedDate": "2026-10-27",
+            "quote": "approximately 160 jobs in its first phase"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Duct banks, risers, hangers, electrical devices and modular electrical skids",
+          "basis": "planned",
+          "source": {
+            "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+            "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+            "publishedDate": "2026-10-27",
+            "quote": "underground duct banks"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "First-phase duration",
+          "value": "Expected just under two years; later phases separately planned",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "publishedDate": "2026-10-28",
+            "quote": "just under two years"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking",
+          "date": "2026-10-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+            "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+            "publishedDate": "2026-10-27",
+            "quote": "broke ground"
+          }
+        },
+        {
+          "label": "First-phase completion target",
+          "date": "Just under two years after groundbreaking",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "publishedDate": "2026-10-28",
+            "quote": "just under two years"
+          }
+        },
+        {
+          "label": "Whole-campus completion",
+          "date": "Date not announced",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "publishedDate": "2026-10-28",
+            "quote": "develop the campus in three phases"
+          }
+        }
+      ]
+    }
+  }
+]

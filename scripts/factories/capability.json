@@ -4553,5 +4553,403 @@
         }
       ]
     }
+  },
+  {
+    "key": "honeywell-tempe",
+    "pinIds": {
+      "local": 20447,
+      "production": 20447
+    },
+    "title": "Honeywell Aerospace Announces $500 Million Tempe Factory and 600 Jobs",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+    "profile": {
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        }
+      },
+      "sector": "Aerospace control systems and complex machining",
+      "source": "session",
+      "status": "announced",
+      "metrics": [
+        {
+          "key": "investment",
+          "basis": "planned",
+          "label": "Project investment",
+          "value": "US$500 million planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "$500 million, 300,000-square-foot",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        },
+        {
+          "key": "floorArea",
+          "basis": "planned",
+          "label": "Planned floor area",
+          "value": "300,000 square feet",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "$500 million, 300,000-square-foot",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        },
+        {
+          "key": "employment",
+          "basis": "planned",
+          "label": "Operating jobs",
+          "value": "Approximately 600 over time; separate from more than 1,000 construction jobs",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "approximately 600 jobs",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Production scope",
+          "value": "Complex machining, Assure actuation and Attune cooling subsystems",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "Assure advanced actuation systems",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        },
+        {
+          "key": "timeline",
+          "basis": "planned",
+          "label": "Opening target",
+          "value": "Late 2028; exact day unpublished",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "Opening in late 2028",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-10-28",
+          "basis": "demonstrated",
+          "label": "Investment announced",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "Oct. 28, 2026",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        },
+        {
+          "date": "Late 2028",
+          "basis": "planned",
+          "label": "Planned opening",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/honeywell-aerospace-to-build-new-state-of-the-art-manufacturing-facility-in-arizona-to-support-growing-commercial-and-defense-demand-302922548.html",
+            "quote": "Opening in late 2028",
+            "title": "Honeywell Aerospace to build new state-of-the-art manufacturing facility in Arizona to support growing commercial and defense demand",
+            "publishedDate": "2026-10-28"
+          }
+        }
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-28",
+      "checkedAt": "2026-10-28T22:47:38.851Z"
+    }
+  },
+  {
+    "key": "helix-hollywood",
+    "pinIds": {
+      "local": 20448,
+      "production": 20448
+    },
+    "title": "Helix Electric Breaks Ground on $45.3 Million Alabama Fabrication Campus",
+    "sourceUrl": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+    "profile": {
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable peer cohort or sufficiently assessed capability evidence for a numerical score in this run. Project facts are recorded separately."
+        }
+      },
+      "sector": "Prefabricated electrical components and modular electrical assemblies",
+      "source": "session",
+      "status": "construction",
+      "metrics": [
+        {
+          "key": "investment",
+          "basis": "planned",
+          "label": "Announced facility investment",
+          "value": "US$45.3 million; no phase allocation published",
+          "source": {
+            "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+            "quote": "$45.3 million facility",
+            "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+            "publishedDate": "2026-10-27"
+          }
+        },
+        {
+          "key": "employment",
+          "basis": "planned",
+          "label": "First-phase jobs",
+          "value": "Approximately 160 planned positions",
+          "source": {
+            "url": "https://clarionnews.org/helix-electric-breaks-ground-on-45-28-million-facility-in-jackson-county/",
+            "quote": "approximately 160 jobs in its first phase",
+            "title": "Helix Electric breaks ground on $45.28 million facility in Jackson County",
+            "publishedDate": "2026-10-27"
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Products",
+          "value": "Duct banks, risers, hangers, electrical devices and modular electrical skids",
+          "source": {
+            "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+            "quote": "underground duct banks",
+            "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+            "publishedDate": "2026-10-27"
+          }
+        },
+        {
+          "key": "timeline",
+          "basis": "planned",
+          "label": "First-phase duration",
+          "value": "Expected just under two years; later phases separately planned",
+          "source": {
+            "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+            "quote": "just under two years",
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "publishedDate": "2026-10-28"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-10-27",
+          "basis": "demonstrated",
+          "label": "Groundbreaking",
+          "source": {
+            "url": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-announces-helix-electric-to-build-45-3-million-facility-in-jackson-county-create-160-jobs/",
+            "quote": "broke ground",
+            "title": "Governor Ivey Announces Helix Electric to Build $45.3 Million Facility in Jackson County, Create 160 Jobs",
+            "publishedDate": "2026-10-27"
+          }
+        },
+        {
+          "date": "Just under two years after groundbreaking",
+          "basis": "planned",
+          "label": "First-phase completion target",
+          "source": {
+            "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+            "quote": "just under two years",
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "publishedDate": "2026-10-28"
+          }
+        },
+        {
+          "date": "Date not announced",
+          "basis": "planned",
+          "label": "Whole-campus completion",
+          "source": {
+            "url": "https://www.alreporter.com/2026/10/28/helix-electric-to-invest-45-3-million-in-jackson-county-manufacturing-facility/",
+            "quote": "develop the campus in three phases",
+            "title": "Helix Electric to invest $45.3 million in Jackson County manufacturing facility",
+            "publishedDate": "2026-10-28"
+          }
+        }
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-28",
+      "checkedAt": "2026-10-28T22:47:41.275Z"
+    }
+  },
+  {
+    "key": "tesla-semi-nevada",
+    "pinIds": {
+      "local": 2828,
+      "production": 2828
+    },
+    "title": "Tesla Semi Rollout Event Opens the Nevada Semi Factory",
+    "sourceUrl": "https://x.com/tesla_semi/status/2092024765389410352",
+    "profile": {
+      "sector": "Battery-electric Class 8 trucks",
+      "status": "production",
+      "source": "session",
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-28",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No assessed peer cohort or independently quantified capability supports a numerical rating in this run.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Dedicated factory floor area",
+          "value": "1.8 million square feet, according to Tesla at the opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+            "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+            "publishedDate": "2026-09-25",
+            "quote": "the plant covers 1.8 million square feet"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Design capacity",
+          "value": "Up to 50,000 trucks per year; target capacity, not verified achieved output",
+          "basis": "planned",
+          "source": {
+            "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+            "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+            "publishedDate": "2026-09-25",
+            "quote": "a plant it says can build 50,000 electric trucks per year"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Truck variants",
+          "value": "Standard Range, Long Range and European specification on one line",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+            "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+            "publishedDate": "2026-09-25",
+            "quote": "builds every variant (Standard, Long Range, and a European spec) on the same line"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Factory opening",
+          "value": "September 24, 2026; deliveries announced at the opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+            "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+            "publishedDate": "2026-09-25",
+            "quote": "Tesla officially launched high-volume production of the Tesla Semi last night"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Opening and production launch",
+          "date": "2026-09-24",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/?trk=article-ssr-frontend-pulse_little-text-block",
+            "title": "Tesla Semi finally enters volume production, 7 years behind schedule",
+            "publishedDate": "2026-09-25",
+            "quote": "Tesla officially launched high-volume production of the Tesla Semi last night"
+          }
+        }
+      ]
+    }
   }
 ]
