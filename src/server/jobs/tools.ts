@@ -57,6 +57,8 @@ import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { modelRubricGaps } from './modelRubrics';
 import { competitorGaps } from './productCompetitors';
+import { buildFactoryProfile, factoryEvidenceProblem, factoryGaps } from './factoryProfiles';
+import { saveFactory } from '../model/pinFactory';
 import { competitorsProblem, saveCompetitors } from '../model/pinCompetitor';
 import { ACTIONS, INSTRUMENTS, TRADER_SOURCES } from '@/lib/traders';
 import TraderPosition from '../model/traderPosition';
@@ -559,6 +561,42 @@ export const TOOLS: JobTool[] = [
       });
       await act(ctx, { tool: 'save_product_competitors', detail: `Pin ${pinId}: ${rows.length} competitor(s)${pushed ? '; prod saved' : ''}` });
       return { pinId, competitors: rows.length, production: pushed };
+    },
+  },
+  // --- Factory buildout profiles on plant pins (the factoryProfiles task) ---
+  {
+    name: 'factory_profile_gaps',
+    description:
+      "Plant, factory and fab pins (tagged Manufacturing or Factory, with a construction price or a Proposed / In Progress / Completed tag, not Predicted) that have no factory buildout profile, newest first. Each has its title, start, construction `status` tag, price, author and sourceUrl. Not every one is a build: a closure, sale or layoff is skipped (pass it in `skip` and record_learning why). A pin covering several plants is split: one create_pin per plant with parentId = this pin, then a profile for each (daily-jobs.md#factoryprofiles). For each real plant research the profile by the rules in daily-jobs.md#factoryprofiles, then save with save_factory_profile. At most `limit` (default 5, at most 10) per call; `remaining` is how many more wait.",
+    input_schema: obj({ limit: num('At most this many pins, default 5, at most 10'), skip: { type: 'array', items: { type: 'number' }, description: 'Pin ids already judged not a single plant build, or with too little published to profile, this run' } }),
+    run: async (input, ctx) => {
+      const result = await factoryGaps(int(input.limit, 5, 1, 10), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
+      await act(ctx, { tool: 'factory_profile_gaps', detail: `${result.gaps.length} plant pin(s) listed, ${result.remaining} more waiting` });
+      return result;
+    },
+  },
+  {
+    name: 'save_factory_profile',
+    description:
+      "Saves a plant pin's factory buildout profile: { sector, status ('announced' | 'construction' | 'commissioning' | 'production' | 'offline', the project's stage today), axes (all six of scale, automation, technical, efficiency, supplyChain, workforce; each { score: 0-5 in half steps or null, basis: 'planned' | 'demonstrated' | 'unknown', reasoning, sources }; null needs basis 'unknown' and the gap named, and null is the right answer whenever no peer cohort or named capability is published), metrics (up to 12 { key: investment | employment | floorArea | siteArea | capacity | timeline | stage | products, label, value with units and planned/actual wording, basis, source }), milestones (up to 12 { label, date at the source's precision, basis, source }, in time order) }. Every source is { url (HTTPS, opened this run), title (exact), publishedDate (YYYY-MM-DD or null), quote (verbatim, at most 300 characters) } and its page must already be the pin's sourceUrl or one of its references (update_pin with addReferences first). At least three distinct metric keys, or the panel stays hidden. Saved here, and on production when the run writes there, as the pin's author.",
+    input_schema: obj({ pinId: num('Pin id'), profile: { type: 'object', description: 'The profile above; source, rubricYear and assessmentDate are filled in' } }, ['pinId', 'profile']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const profile = buildFactoryProfile((input.profile ?? {}) as Record<string, unknown>, new Date().toISOString().slice(0, 10));
+      if (typeof profile === 'string') throw new Error(profile);
+      const [pin] = await db.query<{ sourceUrl: string | null }>('SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL', [pinId]);
+      if (!pin) throw new Error(`Pin ${pinId} not found`);
+      const refs = await db.query<{ url: string }>('SELECT "url" FROM "PinReference" WHERE "pinId" = $1', [pinId]);
+      const problem = factoryEvidenceProblem(profile, [...(pin.sourceUrl ? [pin.sourceUrl] : []), ...refs.map((r) => r.url)]);
+      if (problem) throw new Error(problem);
+      if (!(await saveFactory(pinId, profile))) throw new Error('This factory profile was set by hand and stays.');
+      expirePinPage(pinId);
+      const pushed = await pushModelPerf(pinId, 'factory', profile as unknown as Record<string, unknown>).catch((err) => {
+        log.warn(`pin ${pinId}'s factory profile did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_factory_profile', detail: `Pin ${pinId}: ${profile.status}, ${profile.metrics.length} metric(s), ${profile.milestones?.length ?? 0} milestone(s)${pushed ? '; prod saved' : ''}` });
+      return { pinId, status: profile.status, metrics: profile.metrics.length, milestones: profile.milestones?.length ?? 0, production: pushed };
     },
   },
   // --- Model rubrics, reviews and spec tables (the modelRubrics task) -------

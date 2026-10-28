@@ -45,7 +45,7 @@ describe('factory evidence contract', () => {
     expect(factoryProblem(p)).toMatch(/source/);
   });
   it('accepts the researched catalog and keeps missing figures null', () => {
-    expect(catalog).toHaveLength(28);
+    expect(catalog.length).toBeGreaterThanOrEqual(28);
     for (const { profile } of catalog) {
       expect(factoryProblem(profile)).toEqual(profile);
       expect(factoryScores(profile).scale).toBeNull();

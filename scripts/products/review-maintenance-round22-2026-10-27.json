@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Small researched source-replacement round. Match each environment by sourceUrl; guard full reviews/basis, preserve author/axes and unrelated fields.",
+  "entries": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769",
+      "expectedSource": "session",
+      "expectedBasis": "Scored variant: T-Roc 1.5 eTSI 85 kW (116 PS, 48V mild hybrid), base price EUR 30,845. Power 114 hp (under 120 = 0); economy WLTP 5.6-5.5 l/100 km, about 42 US mpg; space 475 l boot, above average for a compact SUV; value 116 PS / EUR 30,845 = 3.8 PS per 1,000 EUR (local-currency basis); acceleration not published; handling null. Value re-based to US$ for cross-market ranking: 116 hp / US$35,780 (at 1.16 US$ per EUR) = 3.2 hp per US$1,000 = 0.5 (was 1.0).",
+      "expectedReviews": [
+        {
+          "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+          "quote": "The ride is comfortable and stable, with an electrical torque boost from the 48V starter-generator providing smooth stop-start reactions and competitive 475-litre boot space.",
+          "title": "What Car?: Volkswagen T-Roc Review: 1.5 eTSI Mild Hybrid Practicality",
+          "publishedDate": null
+        },
+        {
+          "url": "https://www.driverreviews.com/news/volkswagen-t-roc-2026-review",
+          "quote": "The T-Roc's handling is straightforward and confidence-inspiring rather than exciting.",
+          "title": "Volkswagen T-Roc Review 2026: Is This the Best Compact SUV to Buy?",
+          "sentiment": 0.3,
+          "publishedDate": "2026-07-13"
+        },
+        {
+          "url": "https://www.parkers.co.uk/volkswagen/t-roc/suv/review",
+          "quote": "The T-Roc is a comfortable car to spend time in, particularly on longer journeys where its refinement really stands out.",
+          "title": "Volkswagen T-Roc Review 2026: Boot Space, MPG and Reliability",
+          "sentiment": 0.6,
+          "publishedDate": "2025-11-22"
+        },
+        {
+          "url": "https://completecar.ie/car-reviews/article/Volkswagen/T-Roc/T-Roc/2700/14915/2026-Volkswagen-T-Roc-review.html",
+          "quote": "Initially, the T-Roc feels pretty enthusiastic to drive, helped by a relatively trim kerb weight and well-weighted steering that feels impressively direct.",
+          "title": "Volkswagen T-Roc review | CompleteCar.ie",
+          "sentiment": 0.6,
+          "publishedDate": "2026-05-21"
+        }
+      ],
+      "reviews": [
+        {
+          "url": "https://autonet.bug.hr/test/test-dva-volkswagen-t-roca-je-li-skromniji-trend-zapravo-bolji-izbor-od-skupog-62878",
+          "title": "Test dva Volkswagen T-Roca: Je li skromniji Trend zapravo bolji izbor od skupog R-Linea?",
+          "publishedDate": "2026-09-17",
+          "quote": "Po lošijim gradskim cestama Trend mi je bio osjetno ugodniji, a pritom nije postao ‘ljuljav’ ni neprecizan.",
+          "sentiment": 0.6
+        }
+      ],
+      "exclusions": [
+        {
+          "review": {
+            "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+            "quote": "The ride is comfortable and stable, with an electrical torque boost from the 48V starter-generator providing smooth stop-start reactions and competitive 475-litre boot space.",
+            "title": "What Car?: Volkswagen T-Roc Review: 1.5 eTSI Mild Hybrid Practicality",
+            "publishedDate": null
+          },
+          "reason": "Rolling What Car? original remains inaccessible; its saved sentence and original day are unverified. Replace with opened, named original Autonet 116-PS Trend drive. This closes the active citation by replacement, not by recovering the old publication day."
+        }
+      ],
+      "basis": "Scored variant: T-Roc 1.5 eTSI 85 kW (116 PS, 48V mild hybrid), base price EUR 30,845. Power 114 hp (under 120 = 0); economy WLTP 5.6-5.5 l/100 km, about 42 US mpg; space 475 l boot, above average for a compact SUV; value 116 PS / EUR 30,845 = 3.8 PS per 1,000 EUR (local-currency basis); acceleration not published; handling null. Value re-based to US$ for cross-market ranking: 116 hp / US$35,780 (at 1.16 US$ per EUR) = 3.2 hp per US$1,000 = 0.5 (was 1.0). Round22: Original Autonet 17 Sep2026 tests 116-PS/85-kW Trend on 225/60R16 tyres against 150-PS R-Line/20-inch. Croatian Trend costs differ from German launch price. Literal Croatian comfort/control praise retained; all axes incl handling null preserved. Three retained reports need exact-trim screening; one new Trend test is not three matching tests.",
+      "scope": "Ivan Cvetković original test, visible 17 September2026 08:30 and datePublished/dateModified both2026-09-17T08:30:00+02:00. Explicit seven-speed DSG, 1.5 eTSI85kW/116PS Trend, 225/60R16; comparison R-Line is150PS/20-inch. Quote is the author’s Trend comfort/control judgment, not the R-Line paragraph. Original Croatian retained; sentiment+0.6 is an editorial passage estimate. Croatian test price is not substituted for German launch price. All native axes unchanged; seek more independent exact-variant evidence before rescoring.",
+      "intermediateReviews": [
+        {
+          "url": "https://www.driverreviews.com/news/volkswagen-t-roc-2026-review",
+          "quote": "The T-Roc's handling is straightforward and confidence-inspiring rather than exciting.",
+          "title": "Volkswagen T-Roc Review 2026: Is This the Best Compact SUV to Buy?",
+          "sentiment": 0.3,
+          "publishedDate": "2026-07-13"
+        },
+        {
+          "url": "https://www.parkers.co.uk/volkswagen/t-roc/suv/review",
+          "quote": "The T-Roc is a comfortable car to spend time in, particularly on longer journeys where its refinement really stands out.",
+          "title": "Volkswagen T-Roc Review 2026: Boot Space, MPG and Reliability",
+          "sentiment": 0.6,
+          "publishedDate": "2025-11-22"
+        },
+        {
+          "url": "https://completecar.ie/car-reviews/article/Volkswagen/T-Roc/T-Roc/2700/14915/2026-Volkswagen-T-Roc-review.html",
+          "quote": "Initially, the T-Roc feels pretty enthusiastic to drive, helped by a relatively trim kerb weight and well-weighted steering that feels impressively direct.",
+          "title": "Volkswagen T-Roc review | CompleteCar.ie",
+          "sentiment": 0.6,
+          "publishedDate": "2026-05-21"
+        },
+        {
+          "url": "https://autonet.bug.hr/test/test-dva-volkswagen-t-roca-je-li-skromniji-trend-zapravo-bolji-izbor-od-skupog-62878",
+          "title": null,
+          "publishedDate": "2026-09-17",
+          "quote": "Po lošijim gradskim cestama Trend mi je bio osjetno ugodniji, a pritom nije postao ‘ljuljav’ ni neprecizan.",
+          "sentiment": 0.6
+        }
+      ],
+      "recoveryNote": "Initial local write normalized an accidentally empty extracted h1 title to null; readback guard stopped before production write. Correct exact article h1 and accept only the complete guarded intermediate review array for idempotent recovery; all other fields remain protected."
+    }
+  ]
+}

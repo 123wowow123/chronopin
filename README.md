@@ -484,6 +484,3 @@ are all landing pages translated besides the pins?
 
 
 
-
-pin square enix games and make thread 
-pin nintendo game and make thread 

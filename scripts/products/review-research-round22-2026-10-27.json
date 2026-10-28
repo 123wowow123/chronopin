@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-27",
+  "openedSources": [
+    {
+      "url": "https://autonet.bug.hr/test/test-dva-volkswagen-t-roca-je-li-skromniji-trend-zapravo-bolji-izbor-od-skupog-62878",
+      "status": 200,
+      "title": "Test dva Volkswagen T-Roca: Je li skromniji Trend zapravo bolji izbor od skupog R-Linea?",
+      "publishedDate": "2026-09-17",
+      "originalTimestamp": "2026-09-17T08:30:00+02:00",
+      "scope": "Ivan Cvetković original test, visible 17 September2026 08:30 and datePublished/dateModified both2026-09-17T08:30:00+02:00. Explicit seven-speed DSG, 1.5 eTSI85kW/116PS Trend, 225/60R16; comparison R-Line is150PS/20-inch. Quote is the author’s Trend comfort/control judgment, not the R-Line paragraph. Original Croatian retained; sentiment+0.6 is an editorial passage estimate. Croatian test price is not substituted for German launch price. All native axes unchanged; seek more independent exact-variant evidence before rescoring.",
+      "snapshotSha256": "c79b8b7e9a23e81702fc14db5c97515941997f7d379eccd3d16cab00e983054b"
+    }
+  ],
+  "notAdded": [
+    {
+      "url": "https://www.autobild.de/artikel/vw-t-roc-1.5-etsi-test-28688773.html",
+      "status": 200,
+      "reason": "Genuine116PS Style test, but visible June21 agrees with dateModified, while datePublished isJune12. Original publication chronology not resolved; candidate not saved or dated."
+    },
+    {
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/vw-t-roc-test/",
+      "reason": "Original opened, discusses116PS Life and150PS R-Line. Not selected in this bounded round; no original date certified."
+    }
+  ],
+  "replacedSource": {
+    "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+    "reason": "Rolling What Car? original remains inaccessible; its saved sentence and original day are unverified. Replace with opened, named original Autonet 116-PS Trend drive. This closes the active citation by replacement, not by recovering the old publication day.",
+    "latestAccess": "Original HTTPS reader retry inaccessible; no day or quotation inferred."
+  }
+}

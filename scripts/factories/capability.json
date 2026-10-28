@@ -3771,5 +3771,391 @@
       ]
     },
     "constructionStatus": "Proposed"
+  },
+  {
+    "key": "gm-orion",
+    "pinIds": {
+      "local": 20121,
+      "production": 20123
+    },
+    "title": "GM's Orion Assembly Is Due to Start Gas Full-Size SUVs and Pickups in Early 2027",
+    "sourceUrl": "https://www.cbsnews.com/detroit/news/general-motors-4-billion-investment-orion-assembly-plant",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Orion Assembly conversion do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Programme investment",
+          "value": "About USD 4 billion over two years across three plants (Orion, Fairfax, Spring Hill); GM did not split it by plant, so no plant-level figure is claimed.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "plans to invest about $4 billion over the next two years in its domestic manufacturing plants"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Gas-powered full-size SUVs and light-duty pickups.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "GM will begin production of gas-powered full-size SUVs and light duty pickup trucks at Orion in early 2027"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "Early 2027; no exact day published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "at Orion in early 2027 to help meet continued strong demand"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Change of plan",
+          "value": "Moves Orion away from the electric-truck plan it had been slated for.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cbsnews.com/detroit/news/general-motors-4-billion-investment-orion-assembly-plant",
+            "title": "General Motors commits $4 billion in Michigan's Orion Assembly Plant, two other facilities",
+            "publishedDate": "2025-06-11",
+            "quote": "GM's push away from turning the Orion plant into an EV factory"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Three-plant investment announced",
+          "date": "2025-06-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "General Motors today announced plans to invest about $4 billion over the next two years"
+          }
+        },
+        {
+          "label": "Gas SUV and pickup production starts",
+          "date": "Early 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "GM will begin production of gas-powered full-size SUVs and light duty pickup trucks at Orion in early 2027"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "gm-fairfax",
+    "pinIds": {
+      "local": 20122,
+      "production": 20124
+    },
+    "title": "GM's Fairfax Plant Is Slated for Gas Chevrolet Equinox Production From Mid-2027",
+    "sourceUrl": "https://fox4kc.com/business/900-workers-laid-of-at-gms-fairfax-assembly-plant-in-kansas-city-kansas/amp/",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Fairfax Equinox shift do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Programme investment",
+          "value": "About USD 4 billion over two years across three plants (Orion, Fairfax, Spring Hill); GM did not split it by plant, so no plant-level figure is claimed.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "plans to invest about $4 billion over the next two years in its domestic manufacturing plants"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Gas-powered Chevrolet Equinox.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "Fairfax Assembly will support production of the gas-powered Chevrolet Equinox beginning in mid-2027"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "Mid-2027 as announced; the second phase of the shift was later reported delayed with no new date in the sources opened.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "beginning in mid-2027"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Delay reported",
+          "value": "GM was reported delaying the second phase of its Equinox shift at Fairfax.",
+          "basis": "planned",
+          "source": {
+            "url": "https://fox4kc.com/business/900-workers-laid-of-at-gms-fairfax-assembly-plant-in-kansas-city-kansas/amp/",
+            "title": "900 workers laid off at GM's Fairfax Assembly plant in Kansas City, Kansas",
+            "publishedDate": null,
+            "quote": "delaying the second phase of its shift to produce the Chevrolet Equinox at Fairfax Assembly"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Three-plant investment announced",
+          "date": "2025-06-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "General Motors today announced plans to invest about $4 billion over the next two years"
+          }
+        },
+        {
+          "label": "Second phase of Equinox shift delayed",
+          "date": "Reported autumn 2025",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://fox4kc.com/business/900-workers-laid-of-at-gms-fairfax-assembly-plant-in-kansas-city-kansas/amp/",
+            "title": "900 workers laid off at GM's Fairfax Assembly plant in Kansas City, Kansas",
+            "publishedDate": null,
+            "quote": "delaying the second phase of its shift to produce the Chevrolet Equinox at Fairfax Assembly"
+          }
+        },
+        {
+          "label": "Gas Equinox production",
+          "date": "Mid-2027 (as announced)",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "beginning in mid-2027"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "gm-springhill",
+    "pinIds": {
+      "local": 20123,
+      "production": 20125
+    },
+    "title": "GM Plans to Add Gas Chevrolet Blazer Production at Spring Hill in 2027",
+    "sourceUrl": "https://www.newschannel5.com/news/gm-invests-4-billion-in-us-production-including-spring-hill-expansion",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Spring Hill Blazer addition do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Programme investment",
+          "value": "About USD 4 billion over two years across three plants (Orion, Fairfax, Spring Hill); GM did not split it by plant, so no plant-level figure is claimed.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "plans to invest about $4 billion over the next two years in its domestic manufacturing plants"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Gas-powered Chevrolet Blazer, alongside the Cadillac LYRIQ, VISTIQ and XT5.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newschannel5.com/news/gm-invests-4-billion-in-us-production-including-spring-hill-expansion",
+            "title": "GM invests $4 billion in US production, including Spring Hill expansion",
+            "publishedDate": "2025-06-11",
+            "quote": "GM will add production of the gas-powered Chevrolet Blazer starting in 2027."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "2027; no month published in the opened sources.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newschannel5.com/news/gm-invests-4-billion-in-us-production-including-spring-hill-expansion",
+            "title": "GM invests $4 billion in US production, including Spring Hill expansion",
+            "publishedDate": "2025-06-11",
+            "quote": "starting in 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Three-plant investment announced",
+          "date": "2025-06-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+            "title": "GM to invest $4 billion in U.S. manufacturing plants",
+            "publishedDate": "2025-06-10",
+            "quote": "General Motors today announced plans to invest about $4 billion over the next two years"
+          }
+        },
+        {
+          "label": "Gas Blazer production",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newschannel5.com/news/gm-invests-4-billion-in-us-production-including-spring-hill-expansion",
+            "title": "GM invests $4 billion in US production, including Spring Hill expansion",
+            "publishedDate": "2025-06-11",
+            "quote": "starting in 2027"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
   }
 ]
