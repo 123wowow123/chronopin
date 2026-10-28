@@ -139,7 +139,7 @@ export function ActivitiesView({
   const city = cityFilter ? activityCity(cityFilter) : undefined;
   const [radiusKm, setRadiusKm] = useState<number>(DEFAULT_ACTIVITY_RADIUS_KM);
   const [search, setSearch] = useState('');
-  const [sort, setSort] = useState<'season' | 'nearest' | 'name'>('season');
+  const [sort, setSort] = useState<'soonest' | 'nearest' | 'name'>('soonest');
   const scoped = useMemo(() => city ? activitiesNearCity(pins, city, radiusKm) : pins, [pins, city, radiusKm]);
   const searched = useMemo(() => {
     const words = search.trim().toLowerCase().split(/\s+/).filter(Boolean);
@@ -197,6 +197,16 @@ export function ActivitiesView({
   const shown = (effectiveCategory === 'all' ? [...base] : base.filter((p) => p.activity.category === effectiveCategory)).sort((a, b) => {
     if (sort === 'nearest' && city) return distanceKm(city, a.activity) - distanceKm(city, b.activity) || a.activity.name.localeCompare(b.activity.name);
     if (sort === 'name') return a.activity.name.localeCompare(b.activity.name);
+    if (sort === 'soonest') {
+      const dayA = todayIn(a);
+      const dayB = todayIn(b);
+      const runA = isActiveOn(a.activity, dayA);
+      const runB = isActiveOn(b.activity, dayB);
+      if (runA !== runB) return runA ? -1 : 1;
+      const byStart = runA ? 0 : windowStart(a.activity, dayA).localeCompare(windowStart(b.activity, dayB));
+      const byDistance = city ? distanceKm(city, a.activity) - distanceKm(city, b.activity) : 0;
+      return byStart || byDistance || a.activity.name.localeCompare(b.activity.name);
+    }
     return 0;
   });
 
@@ -265,8 +275,8 @@ export function ActivitiesView({
             )}
             <label className="flex flex-col gap-1 text-xs font-semibold">
               {ga('sortBy')}
-              <select value={sort === 'nearest' && !city ? 'season' : sort} onChange={(event) => setSort(event.target.value as typeof sort)} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] appearance-none bg-no-repeat py-2 pl-3 pr-9 [background-position:right_0.75rem_center] [background-size:0.75rem] [background-image:url(data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2012%2012%27%3E%3Cpath%20d=%27M2%204l4%204%204-4%27%20fill=%27none%27%20stroke=%27%23666%27%20stroke-width=%271.6%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27/%3E%3C/svg%3E)] text-sm text-[var(--text)]">
-                <option value="season">{ga('sortSeason')}</option>
+              <select value={sort === 'nearest' && !city ? 'soonest' : sort} onChange={(event) => setSort(event.target.value as typeof sort)} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] appearance-none bg-no-repeat py-2 pl-3 pr-9 [background-position:right_0.75rem_center] [background-size:0.75rem] [background-image:url(data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2012%2012%27%3E%3Cpath%20d=%27M2%204l4%204%204-4%27%20fill=%27none%27%20stroke=%27%23666%27%20stroke-width=%271.6%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27/%3E%3C/svg%3E)] text-sm text-[var(--text)]">
+                <option value="soonest">{ga('sortSoonest')}</option>
                 {city && <option value="nearest">{ga('sortNearest')}</option>}
                 <option value="name">{ga('sortName')}</option>
               </select>

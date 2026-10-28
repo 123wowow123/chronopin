@@ -12,10 +12,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Download the embedding models at build time so the container starts offline.
 ENV EMBEDDING_MODEL=BAAI/bge-small-en-v1.5 \
-    MULTILINGUAL_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 \
+    MULTILINGUAL_MODEL=sentence-transformers/paraphrase-multilingual-mpnet-base-v2 \
     FASTEMBED_CACHE_PATH=/models \
     INDEX_PATH=/data/pins.faiss \
-    MULTILINGUAL_INDEX_PATH=/data/pins-multi.faiss
+    MULTILINGUAL_INDEX_PATH=/data/pins-multi-mpnet.faiss
 RUN python -c "import os; from fastembed import TextEmbedding; TextEmbedding(os.environ['EMBEDDING_MODEL']); TextEmbedding(os.environ['MULTILINGUAL_MODEL'])"
 
 COPY app.py .

@@ -553,8 +553,9 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
       if (!content) return;
       const limit = content.getBoundingClientRect().bottom;
       for (let i = items.length - 1; i >= 2 && list.getBoundingClientRect().bottom > limit; i--) items[i].style.display = 'none';
-      // Left column much shorter: even two ads would stretch the page, so none.
-      if (box && box.getBoundingClientRect().bottom > limit + 120) box.style.display = 'none';
+      // The left column's own fill (AdFill) hides when it has no room, so this
+      // column keeps its first two ads even when they stretch the page: a pin
+      // page always shows ads on one side.
     };
     fit();
     const observer = new ResizeObserver(fit);

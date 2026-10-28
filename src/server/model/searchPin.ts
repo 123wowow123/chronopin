@@ -132,7 +132,8 @@ export class SearchPins extends BasePins<SearchPin> {
   static async hits(searchText: string): Promise<{ id: number; score: number }[]> {
     const result = await semanticSearch(searchText, config.faiss.maxHits, 'both');
     const seen = new Set<number>();
-    return result.res.filter((hit) => !seen.has(hit.index) && !!seen.add(hit.index)).map((hit) => ({ id: hit.index, score: hit.match }));
+    const hits = result.res.filter((hit) => !seen.has(hit.index) && !!seen.add(hit.index)).map((hit) => ({ id: hit.index, score: hit.match }));
+    return withFuzzyTitles(searchText, hits);
   }
 
   // The k pins closest to the text, best first.
@@ -178,4 +179,36 @@ export class SearchPins extends BasePins<SearchPin> {
 function semanticSearch(searchText: string, numberOfResults: number, model: SearchModel = 'en') {
   const index = model === 'en' ? '' : `&model=${model}`;
   return faissRequest<FaissSearchResult>('GET', `/search?q=${encodeURIComponent(searchText)}&k=${numberOfResults}${index}`, undefined, SEARCH_TIMEOUT_MS);
+}
+
+// A misspelled title ("Trcaker Season 2 Prmeieres") reads as noise to both
+// embedding models and as no word to the text match. When the best semantic
+// score is weak, pins whose title is a close trigram match for the text join
+// the hits with a score above the usual cosine, so the typo's pin ranks first. The
+// match is the mean of word and whole-title similarity: word similarity alone
+// ranks "The Rainmaker Season 2" over "Tracker Season 2" for "Trcaker Season 2".
+// The candidates come from IX_Pin_title_trgm (0228), and the query only runs
+// behind a gate: Latin text of 8+ characters that the models were not sure of.
+const FUZZY_GATE_SCORE = 0.8;
+const FUZZY_MIN_SIMILARITY = 0.5;
+const FUZZY_LIMIT = 3;
+
+async function withFuzzyTitles(text: string, hits: { id: number; score: number }[]) {
+  const query = text.trim();
+  if (query.length < 8 || query.length > 120 || !/^[\p{Script=Latin}\p{N}\s'’&.,:!?-]+$/u.test(query)) return hits;
+  if (hits.some((hit) => hit.score >= FUZZY_GATE_SCORE)) return hits;
+  const rows = await db.query<{ id: number; sim: number }>(
+    `SELECT "id", ((word_similarity($1, "title") + similarity($1, "title")) / 2)::float8 AS "sim"
+     FROM "Pin"
+     WHERE "utcDeletedDateTime" IS NULL AND ("title"::text % $1 OR $1 <% "title"::text)
+     ORDER BY "sim" DESC LIMIT $2`,
+    [query, FUZZY_LIMIT],
+  );
+  const fuzzy = new Map<number, number>();
+  rows.filter((row) => row.sim >= FUZZY_MIN_SIMILARITY).forEach((row) => fuzzy.set(row.id, 0.8 + 0.2 * row.sim));
+  if (!fuzzy.size) return hits;
+  const merged = hits.map((hit) => ({ id: hit.id, score: Math.max(hit.score, fuzzy.get(hit.id) ?? 0) }));
+  const known = new Set(hits.map((hit) => hit.id));
+  fuzzy.forEach((score, id) => known.has(id) || merged.push({ id, score }));
+  return merged.sort((a, b) => b.score - a.score);
 }

@@ -16,17 +16,24 @@ Two indexes of the same pins, each with its own model:
 
   en     BAAI/bge-small-en-v1.5, English only. What duplicate detection's
          thresholds and the address match's score are calibrated against.
-  multi  paraphrase-multilingual-MiniLM-L12-v2, which puts a query in any of
-         the site's languages near the English text it means: a Chinese or
-         Japanese search found 2 of 14 test pins in the English index and 10
-         and 12 in this one. It reads English a little worse (12 of 14).
+  multi  paraphrase-multilingual-mpnet-base-v2 (was MiniLM-L12 until 2026-10-28),
+         which puts a query in any of the site's languages near the English
+         text it means: a Chinese or Japanese search found 2 of 14 test pins in
+         the English index and 10 and 12 in the MiniLM one. It reads English a
+         little worse than bge (12 of 14). On 1,732 translated titles and
+         description sentences (80 pins, 15 languages, whole corpus) mpnet found
+         the pin in the top ten 0.948 / 0.513 of the time (title / description)
+         against MiniLM's 0.918 / 0.406, at a quarter of its indexing speed.
 
 model=both reads a query with each and keeps each pin's better score, the
 multilingual one raised by MULTILINGUAL_BOOST (its scores run lower): a search
 then finds its pins in whatever language it was typed, whatever the page's
 language. On 84 test queries (14 pins, in en/zh/ja/es/de/fr) it found 74 in the
 top ten, against 45 for the English index and 69 for the multilingual one,
-English still 14 of 14; boosts from 0.10 to 0.15 all found 71-74.
+English still 14 of 14; boosts from 0.10 to 0.15 all found 71-74. With mpnet
+(2026-10-28) the best boost is lower, as its English reads closer to bge's: end to
+end, boost 0.05 gave English MRR 0.902 (0.15: 0.857) and 15-language recall@10
+0.843 (0.15: 0.845; best 0.848 at 0.08).
 
 Both embed only the pin's English words: indexing its translations as well
 found no more (65 of 84 test queries against 69).
@@ -45,11 +52,11 @@ from fastembed import TextEmbedding
 MODEL_PATHS = {
     "en": (os.environ.get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5"), os.environ.get("INDEX_PATH", "/data/pins.faiss")),
     "multi": (
-        os.environ.get("MULTILINGUAL_MODEL", "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"),
-        os.environ.get("MULTILINGUAL_INDEX_PATH", "/data/pins-multi.faiss"),
+        os.environ.get("MULTILINGUAL_MODEL", "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"),
+        os.environ.get("MULTILINGUAL_INDEX_PATH", "/data/pins-multi-mpnet.faiss"),
     ),
 }
-MULTILINGUAL_BOOST = float(os.environ.get("MULTILINGUAL_BOOST", "0.12"))
+MULTILINGUAL_BOOST = float(os.environ.get("MULTILINGUAL_BOOST", "0.05"))
 # Devanagari, Thai, Hangul (syllables and jamo), CJK ideographs, hiragana and katakana.
 CJK = re.compile("[\u0900-\u097f\u0e00-\u0e7f\u1100-\u11ff\u3040-\u30ff\u3130-\u318f\u3400-\u9fff\uac00-\ud7a3\uf900-\ufaff]")
 lock = threading.Lock()

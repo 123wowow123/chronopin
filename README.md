@@ -296,10 +296,6 @@ https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-
 organize admin pages to more intuitive layout and groupings
 
 
-Is there any improvement we can do to make search better? Should we check the search model and strategy?
-
-
-
 Build KG with people, companies, properties, vacations, products / shows
 
 
@@ -480,3 +476,8 @@ this is to be added only to the pin wiki
 
 are all landing pages translated besides the pins?
 
+
+
+- pin thorium reactor constructions
+
+- can we pin any long tail pins that can improve google search organic growth
