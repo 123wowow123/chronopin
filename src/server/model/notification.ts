@@ -59,6 +59,9 @@ const groupKey = (zone: string) => `
           CASE n."type"
             WHEN 'pin' THEN concat('pin:', n."actorId")
             WHEN 'company' THEN concat('company:', n."companyId")
+            WHEN 'today' THEN concat('watch:', n."userId", ':', n."pinId")
+            WHEN 'soon' THEN concat('watch:', n."userId", ':', n."pinId")
+            WHEN 'start' THEN concat('watch:', n."userId", ':', n."pinId")
             ELSE concat('one:', n."id")
           END,
           ':', (n."utcCreatedDateTime" AT TIME ZONE ${zone})::date
@@ -479,7 +482,9 @@ export default class Notification {
         -- The newest of each batch stands for it, and a batch counts as read
         -- only once every notification in it has been.
         SELECT DISTINCT ON ("groupKey") *,
-               COUNT(*) OVER (PARTITION BY "groupKey")::int AS "groupCount",
+               -- Alerts for one pin fold into one entry, not a batch of pins.
+               (CASE WHEN "type" IN ('today', 'soon', 'start') THEN 1
+                     ELSE COUNT(*) OVER (PARTITION BY "groupKey") END)::int AS "groupCount",
                bool_and("utcReadDateTime" IS NOT NULL) OVER (PARTITION BY "groupKey") AS "read",
                array_agg("pinId") FILTER (WHERE "pinId" IS NOT NULL)
                  OVER (PARTITION BY "groupKey" ORDER BY "utcCreatedDateTime" DESC, "id" DESC
