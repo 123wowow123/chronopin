@@ -1,0 +1,33 @@
+{
+  "id": 29,
+  "jobId": "news",
+  "slot": "manual:2026-10-27T23:32:33.707Z",
+  "status": "ok",
+  "utcStartedDateTime": "2026-10-27T23:32:33.708Z",
+  "utcFinishedDateTime": "2026-10-27T23:58:13.501Z",
+  "actions": 40,
+  "learnings": 4,
+  "tasks": [
+    "weekReview",
+    "freshSources",
+    "eventInfo",
+    "pinAds",
+    "holidayAds",
+    "adTranslations",
+    "personTrades",
+    "traderPositions",
+    "threadPredicted",
+    "productLifecycle",
+    "productCompetitors",
+    "breakingNews",
+    "predictionMarkets",
+    "earthquakes",
+    "layoffs",
+    "hiringJobCreation",
+    "modelScores",
+    "modelRubrics",
+    "horoscopes",
+    "industryForecasts",
+    "sentiment"
+  ]
+}

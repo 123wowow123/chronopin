@@ -1,0 +1,78 @@
+[
+  [
+    17516,
+    {
+      "utcStartDateTime": "2027-02-14T00:00:00.000Z",
+      "utcEndDateTime": "2027-02-14T04:00:00.000Z",
+      "allDay": false
+    },
+    "Luminary Loppet operator and 2027 checkout state February 13 6\u201310 pm CST; date crosses UTC midnight."
+  ],
+  [
+    17616,
+    {
+      "utcStartDateTime": "2027-09-04T00:00:00.000Z",
+      "utcEndDateTime": "2027-09-06T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "scheduled"
+    },
+    "Operator headline explicitly announces September 4 + 5, 2027, replacing month placeholder; 2026 lineup is not 2027 billing."
+  ],
+  [
+    17586,
+    {
+      "utcEndDateTime": "2027-07-26T00:00:00.000Z"
+    },
+    "Comic-Con operator confirms July 22\u201325, 2027 inclusive; preview July 21 is separately described."
+  ],
+  [
+    17566,
+    {
+      "utcEndDateTime": "2027-02-22T00:00:00.000Z"
+    },
+    "Race operator confirms February 20\u201321, 2027 inclusive; end is exclusive."
+  ],
+  [
+    17466,
+    {
+      "utcStartDateTime": "2027-03-12T00:00:00.000Z",
+      "utcEndDateTime": "2027-03-28T00:00:00.000Z",
+      "dateConfidence": "scheduled"
+    },
+    "Rodeo Austin official ticket FAQ explicitly states March 12\u201327, 2027 inclusive; no borrowing 2026 tickets."
+  ],
+  [
+    17463,
+    {
+      "utcStartDateTime": "2026-10-02T00:00:00.000Z",
+      "utcEndDateTime": "2026-10-12T00:00:00.000Z"
+    },
+    "Opened exact-edition Tribeza source gives October 2\u20134 and 9\u201311, 2026. Span includes the inter-weekend break, not daily performances."
+  ],
+  [
+    17449,
+    {
+      "utcStartDateTime": "2026-09-25T00:00:00.000Z",
+      "utcEndDateTime": "2026-10-19T00:00:00.000Z"
+    },
+    "Opened Big Tex ticket page and exact-edition Visit Dallas source give September 25\u2013October 18, 2026 inclusive, replacing month placeholder."
+  ],
+  [
+    17459,
+    {
+      "utcStartDateTime": "2026-10-24T00:00:00.000Z",
+      "utcEndDateTime": "2027-04-12T00:00:00.000Z",
+      "dateConfidence": "scheduled"
+    },
+    "Exact-edition Fox4 schedule gives home opener October 24 and finale April 11. Regular-season games only; no playoff dates inferred."
+  ],
+  [
+    17471,
+    {
+      "utcStartDateTime": "2026-02-21T00:00:00.000Z",
+      "utcEndDateTime": "2026-11-08T00:00:00.000Z",
+      "dateConfidence": "scheduled"
+    },
+    "ATXtoday exact-edition fan guide states February 21 home opener and November 7 final regular-season home match."
+  ]
+]

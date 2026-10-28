@@ -36,6 +36,11 @@ export default class TraderPosition {
     return db.query(`UPDATE "TraderPosition" SET "utcPushedDateTime" = now() WHERE "id" = $1`, [id]);
   }
 
+  // Moves traded on or after a day (YYYY-MM-DD) across every trader, for the notification panel.
+  static since(day: string, limit: number): Promise<TraderPositionRow[]> {
+    return db.query<TraderPositionRow>(`SELECT ${COLUMNS} FROM "TraderPosition" WHERE "tradeDate" >= $1::date ORDER BY "tradeDate" DESC, "id" DESC LIMIT $2`, [day, limit]);
+  }
+
   static async unpushed(): Promise<TraderPositionRow[]> {
     return db.query<TraderPositionRow>(`SELECT ${COLUMNS} FROM "TraderPosition" WHERE "utcPushedDateTime" IS NULL ORDER BY "tradeDate", "id"`);
   }

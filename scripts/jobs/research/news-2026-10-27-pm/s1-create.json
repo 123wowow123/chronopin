@@ -1,0 +1,63 @@
+{
+  "pin": {
+    "title": "Anthropic Files Its Public S-1 for a Proposed Nasdaq IPO",
+    "description": "Anthropic publicly files its IPO registration statement on October 26, seeking the Nasdaq ticker ANT. Share count, price range and first trading date remain unset.",
+    "sourceUrl": "https://www.anthropic.com/news/s1-sec",
+    "utcStartDateTime": "2026-10-26T00:00:00.000Z",
+    "allDay": true,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated: Anthropic\u2019s announcement and the SEC filing both date the public Form S-1 to October 26, 2026. This pin records filing, not effectiveness, pricing or the first trading day.",
+    "price": null,
+    "priceCurrency": null,
+    "company": "Anthropic",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Anthropic",
+    "categories": [
+      "Finance",
+      "Business",
+      "AI"
+    ],
+    "tags": [
+      "IPO",
+      "SEC Filing"
+    ],
+    "longFormSummary": "<ul><li>Anthropic publicly filed its Form S-1 on October 26, 2026 for a proposed Class A share offering. It intends to seek a Nasdaq Global Select Market listing under ANT, but the number of offered shares and price range were still undetermined. Filing does not make the offering effective or open shares for trading.<cite data-ref=\"https://www.anthropic.com/news/s1-sec\"></cite></li><li>This is a later, public milestone after the confidential draft submitted June 1. That earlier submission preserved the option to go public subject to SEC review and market conditions; neither filing by itself guarantees the eventual offering.<cite data-ref=\"https://www.anthropic.com/news/confidential-draft-s1-sec?ftag=YHF4eb9d17\"></cite></li><li>The preliminary prospectus reports USD16.286 billion in first-half 2026 revenue, against USD1.163 billion a year earlier, and a USD80.748 billion net loss. Much of the loss reflects financing-related fair-value adjustments, including USD72.388 billion from convertible notes, derivative liabilities and SAFEs; it is not a measure of cash burn.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm\"></cite></li><li>The filing also sets out a public-benefit corporate structure, a Long-Term Benefit Trust with board-election rights, and a founder entity due to hold 50.1% of general voting power. Those control rights are distinct from the economic interests of public Class A shares.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm\"></cite></li><li>AP\u2019s reporting treats a possible USD2 trillion valuation and USD100 billion raise as reported possibilities. They are not terms established in this initial filing, so neither is entered as an offering price or capital actually raised.<cite data-ref=\"https://apnews.com/article/anthropic-ipo-amodei-valuation-80f77cfda96027779cccecf7741570f8\"></cite></li><li>The next steps remain SEC effectiveness and eventual pricing/listing if the offering proceeds. Chronopin separately tracks the market-defined confirmation milestone and the first day of trading; neither future prediction is marked realized merely because an S-1 is public.<cite data-ref=\"https://www.anthropic.com/news/s1-sec\"></cite></li></ul>",
+    "sentiment": 0.4,
+    "productLine": "",
+    "media": [
+      {
+        "type": 1,
+        "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-27-pm/anthropic-s1.webp"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+        "title": "Anthropic, PBC \u2014 Form S-1",
+        "publishedDate": "2026-10-26",
+        "confidence": 95,
+        "reasoning": "Original SEC preliminary prospectus: financial tables, governance and incomplete terms."
+      },
+      {
+        "url": "https://apnews.com/article/anthropic-ipo-amodei-valuation-80f77cfda96027779cccecf7741570f8",
+        "title": "The Anthropic IPO by the numbers, from a possible valuation in the trillions to surging revenue",
+        "publishedDate": "2026-10-26",
+        "confidence": 95,
+        "reasoning": "Independent explanation distinguishes reported possible proceeds/valuation from filed terms."
+      },
+      {
+        "url": "https://www.anthropic.com/news/confidential-draft-s1-sec?ftag=YHF4eb9d17",
+        "title": "Anthropic confidentially submits draft S-1",
+        "publishedDate": "2026-06-01",
+        "confidence": 95,
+        "reasoning": "Earlier private-draft milestone, not the later public filing."
+      }
+    ]
+  },
+  "result": {
+    "created": 20122,
+    "title": "Anthropic Files Its Public S-1 for a Proposed Nasdaq IPO",
+    "needs": [
+      "check for a model performance rubric with 3 verified independent reviews, if this pin is a product, restaurant, hotel or model (no review markup without it)"
+    ]
+  }
+}

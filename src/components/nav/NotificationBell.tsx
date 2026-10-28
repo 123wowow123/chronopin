@@ -17,6 +17,7 @@ import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import { term } from '@/lib/searchTerms';
 import { useSession } from '@/lib/client/session';
 import { sunSign } from '@/lib/horoscope';
+import type { TraderPositionRow } from '@/lib/traders';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
 
@@ -821,6 +822,74 @@ function HoroscopeRow({ className = '', onNavigate }: { className?: string; onNa
   );
 }
 
+const PREMIUM_MOVE: Record<string, 'notifications.premiumBuy' | 'notifications.premiumSell' | 'notifications.premiumHold' | 'notifications.premiumSwap'> = {
+  buy: 'notifications.premiumBuy',
+  sell: 'notifications.premiumSell',
+  hold: 'notifications.premiumHold',
+  swap: 'notifications.premiumSwap',
+};
+
+// Premium readers' section: the newest disclosed moves of the traders they
+// follow on /premium, with the estimated PnL. Signed-in readers without the
+// plan see a one-line way in; visitors see nothing.
+function PremiumRow({ className = '', onNavigate }: { className?: string; onNavigate?: () => void }) {
+  const t = useT();
+  const { user } = useSession();
+  const userId = user?.id;
+  const [answer, setAnswer] = useState<{ locked: boolean; positions: TraderPositionRow[] } | null>(null);
+  useEffect(() => {
+    if (!userId) return;
+    let live = true;
+    const day = (offset: number) => {
+      const d = new Date();
+      d.setDate(d.getDate() + offset);
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    };
+    api.get<{ locked: boolean; positions: TraderPositionRow[] }>(`/api/traders/recent?since=${day(-1)}`).then((a) => live && setAnswer(a)).catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [userId]);
+  if (!user || !answer) return null;
+  if (answer.locked) {
+    return (
+      <Link href="/premium" onClick={onNavigate} className={`flex items-center gap-3 px-4 py-2.5 text-sm text-muted hover:bg-raised hover:text-ink hover:no-underline ${className}`}>
+        <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+          <Icon name="trending-up" className="size-4" />
+        </span>
+        {t('notifications.premiumTeaser')}
+      </Link>
+    );
+  }
+  if (!answer.positions.length) return null;
+  return (
+    <div className={className}>
+      <div className="flex items-center gap-2 px-4 pt-2.5 pb-1 text-xs font-semibold uppercase tracking-wide text-subtle">
+        {t('notifications.premiumHeading')}
+        <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[10px] text-accent">{t('notifications.premiumWindow')}</span>
+      </div>
+      <ul className="max-h-60 overflow-auto">
+        {answer.positions.map((p) => {
+          const pnl = p.estimatedPnlPercent;
+          return (
+            <li key={p.id}>
+              <Link href={`/person/${p.traderSlug}#premium-trades`} onClick={onNavigate} className="block px-4 py-2 text-sm hover:bg-raised hover:no-underline">
+                <div className="flex items-baseline gap-2">
+                  <span className="min-w-0 flex-1 truncate font-semibold text-ink">
+                    {t(PREMIUM_MOVE[p.action] ?? 'notifications.premiumBuy', { name: p.traderName, ticker: p.ticker })}
+                  </span>
+                  {pnl != null ? <span className={`shrink-0 text-xs font-semibold ${pnl >= 0 ? 'text-success' : 'text-danger'}`}>{pnl > 0 ? '+' : ''}{pnl}%</span> : null}
+                </div>
+                <div className="truncate text-xs text-subtle">{p.summary}</div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 // The weather beside the bell rather than over it: the conditions with the
 // degrees right under them, flush on one left edge. It stands next to the
 // bell, not on it, so the bell itself stays plain to read.
@@ -1025,6 +1094,7 @@ export function NotificationBell({ className = '' }: { className?: string }) {
         <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
           <LocalWeatherRow className="border-b border-line" />
           <HoroscopeRow className="border-b border-line" onNavigate={() => setOpen(false)} />
+          <PremiumRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <Link href="/notifications" onClick={() => setOpen(false)} className="block border-b border-line px-4 py-2.5 text-sm font-semibold text-ink hover:bg-raised hover:no-underline">
             {t('notifications.title')}
           </Link>
@@ -1058,6 +1128,7 @@ export function NotificationsFeed() {
   return (
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />
+      <PremiumRow className="border-b border-line" />
       <NotificationItems {...list} wide />
     </div>
   );

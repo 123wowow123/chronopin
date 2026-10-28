@@ -33,6 +33,22 @@ export async function positionsWithPnl(traderSlug: string): Promise<TraderPositi
   return rows;
 }
 
+// The moves of all traders since a day, with the estimated PnL, for the bell panel.
+// Only the last price is fetched (not the daily range), one lookup per ticker.
+export async function recentPositions(since: string, limit: number): Promise<TraderPositionRow[]> {
+  const rows = await TraderPosition.since(since, limit);
+  const lastBySymbol = new Map<string, number | null>();
+  for (const row of rows) {
+    if (!lastBySymbol.has(row.ticker)) {
+      const found = await identify(row.ticker).catch(() => null);
+      lastBySymbol.set(row.ticker, found?.quote.price ?? null);
+    }
+    row.lastPrice = lastBySymbol.get(row.ticker) ?? null;
+    row.estimatedPnlPercent = estimatePnlPercent(row, row.lastPrice);
+  }
+  return rows;
+}
+
 async function closesFor(ticker: string) {
   try {
     const found = await identify(ticker);

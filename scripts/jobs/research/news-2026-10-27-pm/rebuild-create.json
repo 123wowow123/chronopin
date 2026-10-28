@@ -1,0 +1,54 @@
+{
+  "pin": {
+    "title": "Re:Build Announces $2.1 Billion to Expand US Manufacturing",
+    "description": "Re:Build secures $2.1 billion led by General Catalyst and JPMorganChase\u2019s Strategic Investment Group. It plans manufacturing expansion and future US jobs; announced capital is not a count of new hires.",
+    "sourceUrl": "https://www.globenewswire.com/news-release/2026/10/27/3389070/0/en/re-build-announces-2-1-billion-to-accelerate-america-s-reindustrialization.html",
+    "utcStartDateTime": "2026-10-27T13:00:00.000Z",
+    "allDay": false,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated: the company\u2019s October 27 release says it has secured the funding; its announcement is timestamped 09:00 ET (13:00 UTC). This is the public announcement, not an inferred transaction-closing time.",
+    "price": 2100000000,
+    "priceCurrency": "USD",
+    "company": "Re:Build Manufacturing",
+    "categories": [
+      "Business",
+      "Labour",
+      "Finance"
+    ],
+    "tags": [
+      "Manufacturing",
+      "Job Creation",
+      "Funding"
+    ],
+    "address": "Framingham, Massachusetts, United States",
+    "longFormSummary": "<ul><li>Re:Build announced USD2.1 billion of new funding on October 27, led by General Catalyst and JPMorganChase\u2019s Strategic Investment Group. The capital supports a US manufacturing platform across aerospace, electrification, medical products, energy and robotics, rather than one named factory\u2019s construction budget.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/10/27/3389070/0/en/re-build-announces-2-1-billion-to-accelerate-america-s-reindustrialization.html\"></cite></li><li>The company reports more than 2,100 existing US employees and over 2.4 million square feet of manufacturing capacity. Its ambition is tens of thousands of additional American jobs over the next decade; these are projected future roles, not workers hired on the announcement date or a firm annual hiring commitment.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/10/27/3389070/0/en/re-build-announces-2-1-billion-to-accelerate-america-s-reindustrialization.html\"></cite></li><li>Re:Build combines engineering/manufacturing partnerships with incubation of industrial businesses. Early design involvement aims to make products easier to manufacture at scale. Funding at the holding-company level gives that strategy a longer runway, but the release provides no plant-by-plant allocation or opening schedule.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/10/27/3389070/0/en/re-build-announces-2-1-billion-to-accelerate-america-s-reindustrialization.html\"></cite></li><li>S&P Capital IQ reports that the round used convertible preferred shares. Its funding total is rounded to USD4 billion, while the company says more than USD4 billion; the primary wording is retained rather than treating the rounded total as a ceiling.<cite data-ref=\"https://www.marketscreener.com/news/re-build-manufacturing-llc-announced-that-it-has-received-2-1-billion-in-funding-from-general-cata-ce785cddde88ff2d\"></cite></li><li>TechCrunch connects Re:Build to Slate Auto, spun out in 2023. The manufacturing-platform raise is separate from Slate\u2019s own vehicle funding.<cite data-ref=\"https://techcrunch.com/2026/10/27/rebuild-which-spun-out-slate-auto-raises-2-1b/\"></cite></li></ul>",
+    "sentiment": 0.5,
+    "productLine": "",
+    "media": [
+      {
+        "type": 1,
+        "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-27-pm/rebuild.webp"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.marketscreener.com/news/re-build-manufacturing-llc-announced-that-it-has-received-2-1-billion-in-funding-from-general-cata-ce785cddde88ff2d",
+        "title": "Re:Build Manufacturing receives $2.1 billion in funding",
+        "publishedDate": "2026-10-27",
+        "confidence": 95,
+        "reasoning": "S&P Capital IQ identifies financing instruments and rounds cumulative funding."
+      },
+      {
+        "url": "https://techcrunch.com/2026/10/27/rebuild-which-spun-out-slate-auto-raises-2-1b/",
+        "title": "Re:Build, which spun out Slate Auto, raises $2.1B",
+        "publishedDate": "2026-10-27",
+        "confidence": 95,
+        "reasoning": "Independent coverage distinguishes the incubator from its spun-out vehicle business."
+      }
+    ]
+  },
+  "result": {
+    "created": 20121,
+    "title": "Re:Build Announces $2.1 Billion to Expand US Manufacturing"
+  }
+}

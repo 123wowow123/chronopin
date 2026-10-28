@@ -1,0 +1,39 @@
+{
+  "pinId": 15155,
+  "sourceUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury-2",
+  "body": {
+    "reasoning": null,
+    "coding": null,
+    "context": 1,
+    "price": 5,
+    "speed": 5,
+    "modalities": 1,
+    "reviews": [
+      {
+        "url": "https://computertech.co/mercury-2-review/",
+        "title": "Mercury 2 Review 2026: Inception Labs\u2019 Diffusion LLM That Hits 1,000 Tokens Per Second",
+        "publishedDate": "2026-03-13",
+        "quote": "Mercury 2\u2019s pricing is genuinely competitive.",
+        "sentiment": 0.6
+      },
+      {
+        "url": "https://www.datacamp.com/tutorial/mercury-2-tutorial",
+        "title": "Mercury 2 Tutorial: Building a Real-Time Multi-Step Research Agent",
+        "publishedDate": "2026-03-05",
+        "quote": "Mercury 2 handles schema-constrained JSON reliably and supports tool-style interactions.",
+        "sentiment": 0.5
+      },
+      {
+        "url": "https://awesomeagents.ai/reviews/review-mercury-2/",
+        "title": "Mercury 2 Review: 1,000 Tokens per Second, Tested",
+        "publishedDate": "2026-03-04",
+        "quote": "The speed is real, independently verified, and transformative for latency-sensitive use cases.",
+        "sentiment": 0.7
+      }
+    ],
+    "rubricYear": 2026,
+    "source": "session",
+    "sourceUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury-2",
+    "basis": "Original Mercury 2, February 24 launch, not Mercury 2.5/3. Maker: 128K context (1), text only (1), $0.25 input/$0.75 output per million, $0.375 at 3:1 (5), and 1,009 tokens/sec on Blackwell (5; maker hardware-specific claim, not a universal serving guarantee). Reasoning null: early reviews cite AA 33 without index edition; current AA 11 is rebased v4.3.2, not launch-comparable. Coding null: published Terminal-Bench 2.0/Hard is not TB4. Three independent hands-on sources: ComputerTech review, DataCamp research-agent tutorial, Awesome Agents review; quotes describe price, structured output and speed. Voice-app suitability does not imply native audio input."
+  }
+}

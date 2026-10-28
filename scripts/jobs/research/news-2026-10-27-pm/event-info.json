@@ -1,0 +1,2118 @@
+[
+  {
+    "pinId": 17380,
+    "reading": {
+      "pinId": 17380,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.tdgarden.com/events/detail/beanpot-finals"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.tdgarden.com/events",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.tdgarden.com/events",
+        "checkedAt": "2026-10-19T03:16:30.069Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.tdgarden.com/events",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.tdgarden.com/events/detail/beanpot-finals",
+        "checkedAt": "2026-10-27T23:50:26.169Z"
+      }
+    }
+  },
+  {
+    "pinId": 17394,
+    "reading": {
+      "pinId": 17394,
+      "performers": [],
+      "lowPrice": 20,
+      "highPrice": 105,
+      "priceCurrency": "USD",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.phillyvoice.com/philadelphia-flower-show-theme-2027-iconic/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://phsonline.org/the-flower-show/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://phsonline.org/the-flower-show/tickets",
+        "checkedAt": "2026-10-19T03:16:29.309Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://phsonline.org/the-flower-show/tickets",
+        "lowPrice": 20,
+        "highPrice": 105,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.phillyvoice.com/philadelphia-flower-show-theme-2027-iconic/",
+        "checkedAt": "2026-10-27T23:50:06.549Z"
+      }
+    }
+  },
+  {
+    "pinId": 17399,
+    "reading": {
+      "pinId": 17399,
+      "performers": [],
+      "lowPrice": 15,
+      "highPrice": 114,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "label": "10 Mile",
+          "price": 67,
+          "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration)."
+        },
+        {
+          "label": "Double Blossom",
+          "price": 114,
+          "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration)."
+        },
+        {
+          "label": "5K",
+          "price": 47,
+          "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration)."
+        },
+        {
+          "label": "Kids Run",
+          "price": 15,
+          "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration)."
+        }
+      ],
+      "availability": "PreOrder",
+      "onSaleDate": "2026-12-14",
+      "ticketUrl": "https://cherryblossom.org/pre-race/entry-info/lottery-entry/",
+      "sourceUrl": "https://www.cherryblossom.org/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://cherryblossom.org/pre-race/entry-info/lottery-entry/registration-changes",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://cherryblossom.org/pre-race/entry-info/lottery-entry/registration-changes",
+        "checkedAt": "2026-10-19T03:29:48.217Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://cherryblossom.org/pre-race/entry-info/lottery-entry/",
+        "lowPrice": 15,
+        "highPrice": 114,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration).",
+            "label": "10 Mile",
+            "price": 67
+          },
+          {
+            "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration).",
+            "label": "Double Blossom",
+            "price": 114
+          },
+          {
+            "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration).",
+            "label": "5K",
+            "price": 47
+          },
+          {
+            "note": "Excludes processing fees. Lottery Dec14\u2013Jan5 except Kids Run (January registration).",
+            "label": "Kids Run",
+            "price": 15
+          }
+        ],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": "2026-12-14T00:00:00.000Z",
+        "source": "hand",
+        "sourceUrl": "https://www.cherryblossom.org/",
+        "checkedAt": "2026-10-27T23:55:05.726Z"
+      }
+    }
+  },
+  {
+    "pinId": 17442,
+    "reading": {
+      "pinId": 17442,
+      "sourceUrl": "https://www.greekfestival.org/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.greekfestival.org/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.greekfestival.org/",
+        "checkedAt": "2026-10-19T03:12:42.723Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.greekfestival.org/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.greekfestival.org/",
+        "checkedAt": "2026-10-27T23:33:50.917Z"
+      }
+    }
+  },
+  {
+    "pinId": 17448,
+    "reading": {
+      "pinId": 17448,
+      "performers": [
+        {
+          "name": "Houston Rockets",
+          "type": "PerformingGroup"
+        }
+      ],
+      "sourceUrl": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.nba.com/rockets/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/rockets/tickets",
+        "checkedAt": "2026-10-19T03:12:42.736Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Houston Rockets",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.nba.com/rockets/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+        "checkedAt": "2026-10-27T23:34:09.941Z"
+      }
+    }
+  },
+  {
+    "pinId": 17449,
+    "reading": {
+      "pinId": 17449,
+      "performers": [
+        {
+          "name": "Clint Black",
+          "type": "Person"
+        },
+        {
+          "name": "Bowling for Soup",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Lee Brice",
+          "type": "Person"
+        },
+        {
+          "name": "Kansas",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Queensr\u00ffche",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "RaeLynn",
+          "type": "Person"
+        },
+        {
+          "name": "Gym Class Heroes",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Toadies",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Deep Blue Something",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Tripping Daisy",
+          "type": "PerformingGroup"
+        }
+      ],
+      "sourceUrl": "https://www.visitdallas.com/ja/blog/state-fair-favorites/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://bigtex.com/buy-tickets-new/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://bigtex.com/buy-tickets-new/",
+        "checkedAt": "2026-10-19T03:12:42.733Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Clint Black",
+            "type": "Person"
+          },
+          {
+            "name": "Bowling for Soup",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Lee Brice",
+            "type": "Person"
+          },
+          {
+            "name": "Kansas",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Queensr\u00ffche",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "RaeLynn",
+            "type": "Person"
+          },
+          {
+            "name": "Gym Class Heroes",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Toadies",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Deep Blue Something",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Tripping Daisy",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://bigtex.com/buy-tickets-new/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.visitdallas.com/ja/blog/state-fair-favorites/",
+        "checkedAt": "2026-10-27T23:34:02.088Z"
+      }
+    }
+  },
+  {
+    "pinId": 17455,
+    "reading": {
+      "pinId": 17455,
+      "sourceUrl": "https://dfwchild.com/?p=21215"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.mesquiterodeo.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.mesquiterodeo.com/tickets",
+        "checkedAt": "2026-10-19T03:12:43.089Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.mesquiterodeo.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://dfwchild.com/?p=21215",
+        "checkedAt": "2026-10-27T23:34:27.083Z"
+      }
+    }
+  },
+  {
+    "pinId": 17459,
+    "reading": {
+      "pinId": 17459,
+      "performers": [
+        {
+          "name": "Dallas Mavericks",
+          "type": "PerformingGroup"
+        }
+      ],
+      "sourceUrl": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.nba.com/mavs/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/mavs/tickets",
+        "checkedAt": "2026-10-19T03:12:43.098Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Dallas Mavericks",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.nba.com/mavs/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+        "checkedAt": "2026-10-27T23:35:59.724Z"
+      }
+    }
+  },
+  {
+    "pinId": 17463,
+    "reading": {
+      "pinId": 17463,
+      "sourceUrl": "https://tribeza.com/events/austin-city-limits-music-festival-2026/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.aclfestival.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.aclfestival.com/tickets",
+        "checkedAt": "2026-10-19T03:12:43.100Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.aclfestival.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://tribeza.com/events/austin-city-limits-music-festival-2026/",
+        "checkedAt": "2026-10-27T23:36:03.988Z"
+      }
+    }
+  },
+  {
+    "pinId": 17466,
+    "reading": {
+      "pinId": 17466,
+      "ticketUrl": "https://rodeoaustin.com/tickets/",
+      "sourceUrl": "https://www.austintexas.org/austin-insider-blog/blog/post/rodeo-austin/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://rodeoaustin.com/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://rodeoaustin.com/tickets/",
+        "checkedAt": "2026-10-19T03:12:43.412Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://rodeoaustin.com/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.austintexas.org/austin-insider-blog/blog/post/rodeo-austin/",
+        "checkedAt": "2026-10-27T23:36:08.210Z"
+      }
+    }
+  },
+  {
+    "pinId": 17471,
+    "reading": {
+      "pinId": 17471,
+      "performers": [
+        {
+          "name": "Austin FC",
+          "type": "PerformingGroup"
+        }
+      ],
+      "availability": "InStock",
+      "ticketUrl": "https://www.austinfc.com/tickets/singlematch",
+      "sourceUrl": "https://atxtoday.6amcity.com/sports/austin-fc-2026-fan-guide"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.austinfc.com/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.austinfc.com/tickets/",
+        "checkedAt": "2026-10-19T03:12:43.413Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Austin FC",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.austinfc.com/tickets/singlematch",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://atxtoday.6amcity.com/sports/austin-fc-2026-fan-guide",
+        "checkedAt": "2026-10-27T23:36:12.422Z"
+      }
+    }
+  },
+  {
+    "pinId": 17481,
+    "reading": {
+      "pinId": 17481,
+      "performers": [
+        {
+          "name": "San Antonio Spurs",
+          "type": "PerformingGroup"
+        }
+      ],
+      "availability": "InStock",
+      "sourceUrl": "https://foxsanantonio.com/news/local/spurs-unveil-2026-27-schedule-home-opener-vs-thunder-on-october-20"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.nba.com/spurs/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/spurs/tickets",
+        "checkedAt": "2026-10-19T03:12:43.774Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "San Antonio Spurs",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.nba.com/spurs/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://foxsanantonio.com/news/local/spurs-unveil-2026-27-schedule-home-opener-vs-thunder-on-october-20",
+        "checkedAt": "2026-10-27T23:39:35.015Z"
+      }
+    }
+  },
+  {
+    "pinId": 17486,
+    "reading": {
+      "pinId": 17486,
+      "performers": [
+        {
+          "name": "San Antonio Missions",
+          "type": "PerformingGroup"
+        }
+      ],
+      "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+      "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.milb.com/san-antonio/tickets",
+        "checkedAt": "2026-10-19T03:12:43.765Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "San Antonio Missions",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
+        "checkedAt": "2026-10-27T23:39:24.940Z"
+      }
+    }
+  },
+  {
+    "pinId": 17497,
+    "reading": {
+      "pinId": 17497,
+      "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.iroquoissteeplechase.org/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.iroquoissteeplechase.org/tickets",
+        "checkedAt": "2026-10-19T03:12:44.141Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.iroquoissteeplechase.org/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase",
+        "checkedAt": "2026-10-27T23:39:55.409Z"
+      }
+    }
+  },
+  {
+    "pinId": 17516,
+    "reading": {
+      "pinId": 17516,
+      "performers": [
+        {
+          "name": "Park Brook Elementary Choir",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Annie and Linnea",
+          "type": "PerformingGroup"
+        }
+      ],
+      "availability": "InStock",
+      "lowPrice": 10,
+      "highPrice": 30,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "label": "Adult Ticket",
+          "price": 30,
+          "note": "Age17+; increases to $35 on December9."
+        },
+        {
+          "label": "Youth Ticket",
+          "price": 10,
+          "note": "Ages4\u201316; increases to $15 on December9."
+        },
+        {
+          "label": "Age3 and under",
+          "price": 0,
+          "note": "Free."
+        }
+      ],
+      "ticketUrl": "https://runsignup.com/TicketEvent/LuminaryLoppet2027",
+      "sourceUrl": "https://www.loppet.org/events/luminary/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://loppet.org/event/luminary-loppet/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://loppet.org/event/luminary-loppet/",
+        "checkedAt": "2026-10-19T03:12:44.148Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Park Brook Elementary Choir",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Annie and Linnea",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://runsignup.com/TicketEvent/LuminaryLoppet2027",
+        "lowPrice": 10,
+        "highPrice": 30,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "Age17+; increases to $35 on December9.",
+            "label": "Adult Ticket",
+            "price": 30
+          },
+          {
+            "note": "Ages4\u201316; increases to $15 on December9.",
+            "label": "Youth Ticket",
+            "price": 10
+          },
+          {
+            "note": "Free.",
+            "label": "Age3 and under",
+            "price": 0
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.loppet.org/events/luminary/",
+        "checkedAt": "2026-10-27T23:40:01.376Z"
+      }
+    }
+  },
+  {
+    "pinId": 17523,
+    "reading": {
+      "pinId": 17523,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.fox9.com/sports/minnesota-twins-open-2026-regular-season-baltimore-march-26"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.mlb.com/twins/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.mlb.com/twins/tickets",
+        "checkedAt": "2026-10-19T03:12:44.455Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.mlb.com/twins/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.fox9.com/sports/minnesota-twins-open-2026-regular-season-baltimore-march-26",
+        "checkedAt": "2026-10-27T23:43:59.946Z"
+      }
+    }
+  },
+  {
+    "pinId": 17551,
+    "reading": {
+      "pinId": 17551,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.abc15.com/entertainment/events/arizona-state-fair-announces-2026-dates-and-theme"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.etix.com/ticket/p/92883711/2026-arizona-state-fair-general-admission-phoenix-arizona-state-fair",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.etix.com/ticket/p/92883711/2026-arizona-state-fair-general-admission-phoenix-arizona-state-fair",
+        "checkedAt": "2026-10-19T03:16:30.741Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.etix.com/ticket/p/92883711/2026-arizona-state-fair-general-admission-phoenix-arizona-state-fair",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.abc15.com/entertainment/events/arizona-state-fair-announces-2026-dates-and-theme",
+        "checkedAt": "2026-10-27T23:52:29.872Z"
+      }
+    }
+  },
+  {
+    "pinId": 17556,
+    "reading": {
+      "pinId": 17556,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.azfamily.com/2026/03/30/batter-up-what-know-about-d-backs-2026-home-opener-chase-field/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.mlb.com/dbacks/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.mlb.com/dbacks/tickets",
+        "checkedAt": "2026-10-19T03:12:44.429Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.mlb.com/dbacks/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.azfamily.com/2026/03/30/batter-up-what-know-about-d-backs-2026-home-opener-chase-field/",
+        "checkedAt": "2026-10-27T23:43:54.637Z"
+      }
+    }
+  },
+  {
+    "pinId": 17565,
+    "reading": {
+      "pinId": 17565,
+      "performers": [
+        {
+          "name": "Rider Kiesner",
+          "type": "Person",
+          "url": ""
+        },
+        {
+          "name": "Bethany Kiesner",
+          "type": "Person",
+          "url": ""
+        },
+        {
+          "name": "Shelby Pierson",
+          "type": "Person",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://roundtable.io/sports/rodeo/lifestyle/the-voices-and-crew-for-the-2026-wrangler-nfr-are-set"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.axs.com/events/1567526/2026-nfr-tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.axs.com/events/1567526/2026-nfr-tickets",
+        "checkedAt": "2026-10-19T03:16:30.375Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Rider Kiesner",
+            "type": "Person"
+          },
+          {
+            "name": "Bethany Kiesner",
+            "type": "Person"
+          },
+          {
+            "name": "Shelby Pierson",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.axs.com/events/1567526/2026-nfr-tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://roundtable.io/sports/rodeo/lifestyle/the-voices-and-crew-for-the-2026-wrangler-nfr-are-set",
+        "checkedAt": "2026-10-27T23:50:31.435Z"
+      }
+    }
+  },
+  {
+    "pinId": 17566,
+    "reading": {
+      "pinId": 17566,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.runrocknroll.com/events/las-vegas/register",
+      "sourceUrl": "https://www.runrocknroll.com/las-vegas/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.runrocknroll.com/events/las-vegas",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.runrocknroll.com/events/las-vegas",
+        "checkedAt": "2026-10-19T03:12:44.810Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.runrocknroll.com/events/las-vegas/register",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.runrocknroll.com/las-vegas/",
+        "checkedAt": "2026-10-27T23:44:35.020Z"
+      }
+    }
+  },
+  {
+    "pinId": 17586,
+    "reading": {
+      "pinId": 17586,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "PreOrder",
+      "onSaleDate": "2026-11-14",
+      "ticketUrl": "https://www.comic-con.org/cc/badges/open-registration/",
+      "sourceUrl": "https://www.comic-con.org/cci/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.comic-con.org/cc/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.comic-con.org/cc/",
+        "checkedAt": "2026-10-19T03:12:44.809Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.comic-con.org/cc/badges/open-registration/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": "2026-11-14T00:00:00.000Z",
+        "source": "hand",
+        "sourceUrl": "https://www.comic-con.org/cci/",
+        "checkedAt": "2026-10-27T23:44:05.609Z"
+      }
+    }
+  },
+  {
+    "pinId": 17603,
+    "reading": {
+      "pinId": 17603,
+      "performers": [
+        {
+          "name": "San Francisco Giants",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.mlb.com/giants/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.mlb.com/giants/tickets",
+        "checkedAt": "2026-10-19T03:12:45.188Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "San Francisco Giants",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.mlb.com/giants/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/",
+        "checkedAt": "2026-10-27T23:46:00.438Z"
+      }
+    }
+  },
+  {
+    "pinId": 17611,
+    "reading": {
+      "pinId": 17611,
+      "performers": [
+        {
+          "name": "Seattle Mariners",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.mlb.com/mariners/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.mlb.com/mariners/tickets",
+        "checkedAt": "2026-10-19T03:12:45.193Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Seattle Mariners",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.mlb.com/mariners/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star",
+        "checkedAt": "2026-10-27T23:46:04.808Z"
+      }
+    }
+  },
+  {
+    "pinId": 17612,
+    "reading": {
+      "pinId": 17612,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.seafair.org/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.seafair.org/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.seafair.org/",
+        "checkedAt": "2026-10-19T03:12:45.428Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.seafair.org/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.seafair.org/",
+        "checkedAt": "2026-10-27T23:46:09.046Z"
+      }
+    }
+  },
+  {
+    "pinId": 17616,
+    "reading": {
+      "pinId": 17616,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.bumbershoot.com/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://bumbershoot.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://bumbershoot.com/tickets",
+        "checkedAt": "2026-10-19T03:12:45.474Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://bumbershoot.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.bumbershoot.com/",
+        "checkedAt": "2026-10-27T23:47:30.289Z"
+      }
+    }
+  },
+  {
+    "pinId": 17620,
+    "reading": {
+      "pinId": 17620,
+      "performers": [
+        {
+          "name": "Seattle Kraken",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.nhl.com/kraken/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nhl.com/kraken/tickets/",
+        "checkedAt": "2026-10-19T03:12:45.473Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Seattle Kraken",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.nhl.com/kraken/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season",
+        "checkedAt": "2026-10-27T23:46:13.272Z"
+      }
+    }
+  },
+  {
+    "pinId": 17645,
+    "reading": {
+      "pinId": 17645,
+      "performers": [
+        {
+          "name": "Georgia Tech Yellow Jackets football",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.ramblinwreck.com/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://ramblinwreck.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://ramblinwreck.com/tickets",
+        "checkedAt": "2026-10-19T03:12:45.765Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Georgia Tech Yellow Jackets football",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://ramblinwreck.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.ramblinwreck.com/",
+        "checkedAt": "2026-10-27T23:47:34.930Z"
+      }
+    }
+  },
+  {
+    "pinId": 17661,
+    "reading": {
+      "pinId": 17661,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.oktoberfestinfbg.com"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.oktoberfestinfbg.com/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.oktoberfestinfbg.com/",
+        "checkedAt": "2026-10-19T03:12:45.856Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.oktoberfestinfbg.com/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.oktoberfestinfbg.com",
+        "checkedAt": "2026-10-27T23:47:43.943Z"
+      }
+    }
+  },
+  {
+    "pinId": 17679,
+    "reading": {
+      "pinId": 17679,
+      "performers": [
+        {
+          "name": "Providence Bruins",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.providencebruins.com/schedule",
+      "sourceUrl": "https://www.providencebruins.com/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.providencebruins.com/schedule/promo-calendar",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.providencebruins.com/schedule/promo-calendar",
+        "checkedAt": "2026-10-19T03:12:45.840Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Providence Bruins",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.providencebruins.com/schedule",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.providencebruins.com/",
+        "checkedAt": "2026-10-27T23:47:39.357Z"
+      }
+    }
+  },
+  {
+    "pinId": 17702,
+    "reading": {
+      "pinId": 17702,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://store.summerfest.com/tickets",
+      "sourceUrl": "https://www.summerfest.com"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.summerfest.com/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.summerfest.com/tickets/",
+        "checkedAt": "2026-10-19T03:16:29.328Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://store.summerfest.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.summerfest.com",
+        "checkedAt": "2026-10-27T23:50:19.116Z"
+      }
+    }
+  },
+  {
+    "pinId": 17708,
+    "reading": {
+      "pinId": 17708,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.srfestival.com/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.srfestival.com/ticket-information/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.srfestival.com/ticket-information/",
+        "checkedAt": "2026-10-19T03:16:31.070Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.srfestival.com/ticket-information/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.srfestival.com/",
+        "checkedAt": "2026-10-27T23:52:41.304Z"
+      }
+    }
+  },
+  {
+    "pinId": 17744,
+    "reading": {
+      "pinId": 17744,
+      "performers": [
+        {
+          "name": "Denver Nuggets",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.nba.com/nuggets/single",
+      "sourceUrl": "https://www.nba.com/nuggets/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.nba.com/nuggets/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/nuggets/tickets",
+        "checkedAt": "2026-10-19T03:12:46.188Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Denver Nuggets",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.nba.com/nuggets/single",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/nuggets/",
+        "checkedAt": "2026-10-27T23:48:35.074Z"
+      }
+    }
+  },
+  {
+    "pinId": 17763,
+    "reading": {
+      "pinId": 17763,
+      "performers": [
+        {
+          "name": "Houston Dash",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.houstondynamofc.com/houstondash/tickets/single-game",
+      "sourceUrl": "https://www.houstondash.com"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.houstondynamofc.com/houstondash/tickets/index",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.houstondynamofc.com/houstondash/tickets/index",
+        "checkedAt": "2026-10-19T03:16:31.070Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Houston Dash",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.houstondynamofc.com/houstondash/tickets/single-game",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.houstondash.com",
+        "checkedAt": "2026-10-27T23:52:36.435Z"
+      }
+    }
+  },
+  {
+    "pinId": 17787,
+    "reading": {
+      "pinId": 17787,
+      "performers": [],
+      "lowPrice": 81,
+      "highPrice": 3178,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "label": "General Admission",
+          "price": 81,
+          "note": "Single-day FROM; starting price, not a maximum."
+        },
+        {
+          "label": "Grandstands",
+          "price": 99,
+          "note": "Single-day FROM; starting price."
+        },
+        {
+          "label": "Hospitality",
+          "price": 1383,
+          "note": "Single-day FROM; starting price."
+        },
+        {
+          "label": "Grand Prix\u2122 Trio",
+          "price": 3178,
+          "note": "FROM; three days/three views. Highest advertised starting price, not an upper ticket-price cap."
+        }
+      ],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.f1lasvegasgp.com/tickets/",
+      "sourceUrl": "https://www.f1lasvegasgp.com"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.f1lasvegasgp.com/tickets/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.f1lasvegasgp.com/tickets/",
+        "checkedAt": "2026-10-19T03:16:31.108Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.f1lasvegasgp.com/tickets/",
+        "lowPrice": 81,
+        "highPrice": 3178,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "Single-day FROM; starting price, not a maximum.",
+            "label": "General Admission",
+            "price": 81
+          },
+          {
+            "note": "Single-day FROM; starting price.",
+            "label": "Grandstands",
+            "price": 99
+          },
+          {
+            "note": "Single-day FROM; starting price.",
+            "label": "Hospitality",
+            "price": 1383
+          },
+          {
+            "note": "FROM; three days/three views. Highest advertised starting price, not an upper ticket-price cap.",
+            "label": "Grand Prix\u2122 Trio",
+            "price": 3178
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.f1lasvegasgp.com",
+        "checkedAt": "2026-10-27T23:52:46.588Z"
+      }
+    }
+  },
+  {
+    "pinId": 17812,
+    "reading": {
+      "pinId": 17812,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "PreOrder",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.themiamimarathon.com/registration/#1706569743359-c959937b-2c91",
+      "sourceUrl": "https://www.themiamimarathon.com/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.themiamimarathon.com/registration/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.themiamimarathon.com/registration/",
+        "checkedAt": "2026-10-19T03:29:47.527Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.themiamimarathon.com/registration/#1706569743359-c959937b-2c91",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.themiamimarathon.com/",
+        "checkedAt": "2026-10-27T23:54:53.060Z"
+      }
+    }
+  },
+  {
+    "pinId": 17854,
+    "reading": {
+      "pinId": 17854,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.runrocknroll.com/events/nashville/register",
+      "sourceUrl": "https://www.runrocknroll.com/nashville"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.runrocknroll.com/events/nashville/register",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.runrocknroll.com/events/nashville/register",
+        "checkedAt": "2026-10-19T03:29:47.755Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.runrocknroll.com/events/nashville/register",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.runrocknroll.com/nashville",
+        "checkedAt": "2026-10-27T23:54:57.289Z"
+      }
+    }
+  },
+  {
+    "pinId": 17867,
+    "reading": {
+      "pinId": 17867,
+      "performers": [
+        {
+          "name": "Vanderbilt Commodores football",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.vucommodores.com"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://vucommodores.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://vucommodores.com/tickets",
+        "checkedAt": "2026-10-19T03:12:47.801Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "Vanderbilt Commodores football",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://vucommodores.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.vucommodores.com",
+        "checkedAt": "2026-10-27T23:48:39.318Z"
+      }
+    }
+  },
+  {
+    "pinId": 17950,
+    "reading": {
+      "pinId": 17950,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.runrocknroll.com/events/san-diego/register",
+      "sourceUrl": "https://www.runrocknroll.com/san-diego/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.runrocknroll.com/events/san-diego/register",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.runrocknroll.com/events/san-diego/register",
+        "checkedAt": "2026-10-19T03:29:47.783Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.runrocknroll.com/events/san-diego/register",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.runrocknroll.com/san-diego/",
+        "checkedAt": "2026-10-27T23:55:01.518Z"
+      }
+    }
+  },
+  {
+    "pinId": 17957,
+    "reading": {
+      "pinId": 17957,
+      "performers": [
+        {
+          "name": "San Diego State Aztecs football",
+          "type": "PerformingGroup",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://goaztecs.com/"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://goaztecs.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://goaztecs.com/tickets",
+        "checkedAt": "2026-10-19T03:12:48.446Z"
+      },
+      "saved": {
+        "performers": [
+          {
+            "name": "San Diego State Aztecs football",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://goaztecs.com/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://goaztecs.com/",
+        "checkedAt": "2026-10-27T23:48:43.554Z"
+      }
+    }
+  },
+  {
+    "pinId": 17979,
+    "reading": {
+      "pinId": 17979,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.nba.com/warriors"
+    },
+    "verified": {
+      "before": {
+        "performers": [],
+        "ticketUrl": "https://www.nba.com/warriors/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/warriors/tickets",
+        "checkedAt": "2026-10-19T03:12:48.665Z"
+      },
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.nba.com/warriors/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.nba.com/warriors",
+        "checkedAt": "2026-10-27T23:48:47.746Z"
+      }
+    }
+  }
+]
