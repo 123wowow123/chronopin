@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
 import { authHrefHere } from '@/lib/client/returnSpot';
+import { useT } from '@/lib/client/i18n';
 
 // Buy or manage the premium plan. Signed-out visitors go to sign in first;
 // paying and managing happen on Stripe's pages.
 export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { active: boolean; endsOn: string | null; cancelling: boolean; paid: boolean; configured: boolean }) {
+  const t = useT();
   const { status, user } = useSession();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -19,7 +21,7 @@ export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { 
       const { url } = await api.post<{ url: string }>(path, {});
       window.location.assign(url);
     } catch {
-      setError('Could not reach checkout. Please try again.');
+      setError(t('premium.checkoutError'));
       setBusy(false);
     }
   }
@@ -27,11 +29,11 @@ export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { 
   if (active || user?.premium) {
     return (
       <div className="surface mx-auto max-w-xl space-y-3 p-6 text-center" role="status">
-        <p className="text-lg font-semibold">Premium is on{user?.role === 'admin' && !active ? ' (admin)' : ''}</p>
-        {endsOn ? <p className="text-muted">{cancelling ? `Ends on ${endsOn}.` : `Renews on ${endsOn}.`}</p> : null}
+        <p className="text-lg font-semibold">{user?.role === 'admin' && !active ? t('premium.onAdmin') : t('premium.on')}</p>
+        {endsOn ? <p className="text-muted">{cancelling ? t('premium.ends', { date: endsOn }) : t('premium.renews', { date: endsOn })}</p> : null}
         {active ? (
           <button type="button" className="btn btn-secondary" disabled={busy} onClick={() => void go('/api/premium/portal')}>
-            Manage plan
+            {t('premium.manage')}
           </button>
         ) : null}
         {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}
@@ -41,12 +43,12 @@ export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { 
   const signedOut = status === 'ready' && !user;
   return (
     <div className="mx-auto max-w-xl space-y-3 text-center">
-      {paid ? <p className="surface p-4 text-success" role="status">Thanks. Premium turns on as soon as the payment clears; refresh in a moment.</p> : null}
+      {paid ? <p className="surface p-4 text-success" role="status">{t('premium.thanks')}</p> : null}
       {signedOut ? (
-        <a className="btn btn-primary" href={authHrefHere('/login')}>Sign in to go premium</a>
+        <a className="btn btn-primary" href={authHrefHere('/login')}>{t('premium.signIn')}</a>
       ) : (
         <button type="button" className="btn btn-primary" disabled={busy || !configured} onClick={() => void go('/api/premium/checkout')}>
-          {configured ? 'Go premium · $20 / month' : 'Premium opens soon'}
+          {configured ? t('premium.go') : t('premium.soon')}
         </button>
       )}
       {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}

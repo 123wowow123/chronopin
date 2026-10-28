@@ -4,23 +4,25 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 import type { TraderPositionRow } from '@/lib/traders';
 
 type Answer =
   | { locked: true; count: number }
   | { locked: false; count: number; averagePnlPercent: number | null; positions: TraderPositionRow[] };
 
-const VERB: Record<string, string> = { buy: 'Bought', sell: 'Sold', hold: 'Holding', swap: 'Swapped into' };
-const KIND: Record<string, string> = { stock: 'Stock', call: 'Calls', put: 'Puts', short: 'Short' };
+const VERB: Record<string, MessageKey> = { buy: 'premium.bought', sell: 'premium.sold', hold: 'premium.holding', swap: 'premium.swapped' };
+const KIND: Record<string, MessageKey> = { stock: 'premium.kindStock', call: 'premium.kindCalls', put: 'premium.kindPuts', short: 'premium.kindShort' };
 
 type Sort = 'newest' | 'oldest' | 'best' | 'worst' | 'peak' | 'drawdown';
-const SORTS: { value: Sort; label: string }[] = [
-  { value: 'newest', label: 'Newest first' },
-  { value: 'oldest', label: 'Oldest first' },
-  { value: 'best', label: 'Best PnL' },
-  { value: 'worst', label: 'Worst PnL' },
-  { value: 'peak', label: 'Highest peak' },
-  { value: 'drawdown', label: 'Deepest drawdown' },
+const SORTS: { value: Sort; label: MessageKey }[] = [
+  { value: 'newest', label: 'premium.sortNewest' },
+  { value: 'oldest', label: 'premium.sortOldest' },
+  { value: 'best', label: 'premium.sortBest' },
+  { value: 'worst', label: 'premium.sortWorst' },
+  { value: 'peak', label: 'premium.sortPeak' },
+  { value: 'drawdown', label: 'premium.sortDrawdown' },
 ];
 
 // Positions without the sorted figure (holds, unpriced tickers) always sort last on the numeric orders.
@@ -50,6 +52,7 @@ const tone = (v: number | null | undefined) => (v == null ? 'text-muted' : v >= 
 // and admins see them; everyone else sees a prompt to go premium. Fetched per
 // viewer because the person page itself is cached for everyone.
 export function PremiumTrades({ slug, name, count }: { slug: string; name: string; count: number }) {
+  const t = useT();
   const { status } = useSession();
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [failed, setFailed] = useState(false);
@@ -67,10 +70,10 @@ export function PremiumTrades({ slug, name, count }: { slug: string; name: strin
     <section id="premium-trades" aria-labelledby="premium-trades-heading" className="scroll-mt-20">
       <div className="mb-5 border-s-4 border-accent ps-4">
         <h2 id="premium-trades-heading" className="flex items-center gap-2.5 text-2xl font-semibold tracking-tight">
-          {name}&rsquo;s portfolio moves
-          <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">Premium</span>
+          {t('premium.tradesHeading', { name })}
+          <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">{t('premium.title')}</span>
         </h2>
-        <p className="text-sm text-muted">Disclosed trades with an estimated PnL and our summary of the reasoning, linked to the source post.</p>
+        <p className="text-sm text-muted">{t('premium.tradesIntro')}</p>
       </div>
       {answer && !answer.locked ? <Unlocked answer={answer} /> : !answer && !failed ? <Loading /> : <Locked count={answer?.count ?? count} name={name} />}
     </section>
@@ -80,8 +83,9 @@ export function PremiumTrades({ slug, name, count }: { slug: string; name: strin
 // Held until the session and the per-viewer answer arrive, so a premium reader never
 // sees the paywall flash before their moves load.
 function Loading() {
+  const t = useT();
   return (
-    <div className="space-y-4" role="status" aria-busy="true" aria-label="Loading moves">
+    <div className="space-y-4" role="status" aria-busy="true" aria-label={t('premium.loading')}>
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="h-[72px] animate-pulse rounded-xl border border-line bg-panel motion-reduce:animate-none" />
         <div className="h-[72px] animate-pulse rounded-xl border border-line bg-panel motion-reduce:animate-none" />
@@ -94,18 +98,20 @@ function Loading() {
 }
 
 function Locked({ count, name }: { count: number; name: string }) {
+  const t = useT();
   return (
     <div className="surface space-y-3 p-6 text-center">
-      <p className="text-lg font-semibold">Go premium to unlock {name}&rsquo;s {count} tracked {count === 1 ? 'move' : 'moves'}</p>
-      <p className="mx-auto max-w-xl text-muted">Positions, an estimated PnL on each, a short summary of the reasoning, and a live alert the moment a new trade is disclosed. $20 a month, cancel any time.</p>
+      <p className="text-lg font-semibold">{t('premium.lockedTitle', { name, count })}</p>
+      <p className="mx-auto max-w-xl text-muted">{t('premium.lockedBody')}</p>
       <Link href="/premium" className="btn btn-primary">
-        Go premium
+        {t('premium.goPremium')}
       </Link>
     </div>
   );
 }
 
 function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
+  const t = useT();
   const [sort, setSort] = useState<Sort>('newest');
   // Wide screens put the winners and the losers side by side; the sort applies inside each column.
   const { gains, losses, unscored } = useMemo(() => {
@@ -120,20 +126,20 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="floating flex flex-col gap-1 px-4 py-3">
-          <span className="text-xs text-muted">Tracked moves</span>
+          <span className="text-xs text-muted">{t('premium.statMoves')}</span>
           <span className="text-xl font-semibold tabular-nums">{answer.count}</span>
         </div>
         <div className="floating flex flex-col gap-1 px-4 py-3">
-          <span className="text-xs text-muted">Avg. estimated PnL on opening trades</span>
+          <span className="text-xs text-muted">{t('premium.statAvg')}</span>
           <span className={`text-xl font-semibold tabular-nums ${tone(answer.averagePnlPercent)}`}>{pct(answer.averagePnlPercent)}</span>
         </div>
         <label className="flex items-center justify-start gap-2 text-sm text-muted sm:justify-end">
-          Sort
+          {t('premium.sort')}
           <span className="relative inline-flex">
             <select value={sort} onChange={(e) => setSort(e.target.value as Sort)} className="appearance-none rounded-md border border-line bg-popover py-1.5 ps-2.5 pe-8 text-sm text-ink">
               {SORTS.map((o) => (
                 <option key={o.value} value={o.value}>
-                  {o.label}
+                  {t(o.label)}
                 </option>
               ))}
             </select>
@@ -144,13 +150,11 @@ function Unlocked({ answer }: { answer: Extract<Answer, { locked: false }> }) {
         </label>
       </div>
       <div className={gains.length && losses.length ? 'grid items-start gap-x-6 gap-y-6 lg:grid-cols-2' : ''}>
-        <Group title="Gains" rows={gains} />
-        <Group title="Losses" rows={losses} />
+        <Group title={t('premium.gains')} rows={gains} />
+        <Group title={t('premium.losses')} rows={losses} />
       </div>
-      <Group title="Not scored" rows={unscored} />
-      <p className="text-xs text-muted">
-        PnL is our estimate: the move from the closing price on the trade date to the latest delayed quote, with puts and shorts reversed. A hold is scored from the date it was disclosed; a sell is scored as an exit, so a gain means the price fell after the sale. Best and worst are the extremes since the trade date, using each session&rsquo;s intraday high and low. The headline average counts opening trades only. Options are marked by their underlying&rsquo;s move, not their own premium. It is not the trader&rsquo;s own result, and none of this is investment advice.
-      </p>
+      <Group title={t('premium.unscored')} rows={unscored} />
+      <p className="text-xs text-muted">{t('premium.disclaimer')}</p>
     </div>
   );
 }
@@ -173,25 +177,26 @@ function Group({ title, rows }: { title: string; rows: TraderPositionRow[] }) {
 }
 
 function Position({ p }: { p: TraderPositionRow }) {
+  const t = useT();
   return (
     <li className="surface space-y-1.5 p-4">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <span className="font-semibold">
-          {VERB[p.action]} {p.ticker} <span className="text-sm font-normal text-muted">{KIND[p.instrument]} · {p.tradeDate}</span>
+          {t(VERB[p.action])} {p.ticker} <span className="text-sm font-normal text-muted">{t(KIND[p.instrument])} · {p.tradeDate}</span>
         </span>
         <span className="text-sm tabular-nums">
-          {p.entryPrice != null ? <span className="text-muted">entry ≈ ${p.entryPrice.toFixed(2)} · now {p.lastPrice != null ? `$${p.lastPrice.toFixed(2)}` : '—'} · </span> : null}
+          {p.entryPrice != null ? <span className="text-muted">{t('premium.entry')} ${p.entryPrice.toFixed(2)} · {t('premium.entryNow')} {p.lastPrice != null ? `$${p.lastPrice.toFixed(2)}` : '—'} · </span> : null}
           <span className={`font-semibold ${tone(p.estimatedPnlPercent)}`}>{pct(p.estimatedPnlPercent)}</span>
         </span>
       </div>
       {p.maxGainPercent != null && p.maxDrawdownPercent != null ? (
         <p className="text-xs tabular-nums text-muted">
-          Since the trade: best <span className="font-semibold text-success">{pct(p.maxGainPercent)}</span> · worst <span className="font-semibold text-danger">{pct(p.maxDrawdownPercent)}</span>
+          {t('premium.sinceTrade')} {t('premium.best')} <span className="font-semibold text-success">{pct(p.maxGainPercent)}</span> · {t('premium.worst')} <span className="font-semibold text-danger">{pct(p.maxDrawdownPercent)}</span>
         </p>
       ) : null}
       <p className="text-sm">{p.summary}</p>
       <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-accent hover:underline">
-        Source: {p.sourceTitle}
+        {t('premium.source', { title: p.sourceTitle })}
       </a>
     </li>
   );
