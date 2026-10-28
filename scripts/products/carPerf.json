@@ -2493,7 +2493,7 @@
       "kidsFriendly": 4
     },
     "rubricYear": 2026,
-    "basis": "Variant: all-electric 7-seat, 605 km CLTC, dual 160 kW, 0-100 5.8 s (launch priced from RMB 369,900; which trim is cheapest not stated). Range -> 3; 20-80% in as little as 20 min -> 2.5; 5.8 s -> 2.5; L2 assist and remote parking -> 2; 3,200 mm wheelbase 7-seat MPV, air suspension unconfirmed -> 4.5; kids 4 from sliding doors/3-zone climate (EVW). Value null. Only reviews of the 2024-26 updated Dream exist (labelled); no 2022 road test found.",
+    "basis": "Variant scored: China-launch seven-seat BEV, 605 km CLTC, dual160kW, 0-100 5.8s, from RMB369900; exact cheapest trim unclear. Range3, charging2.5, acceleration2.5, assistance2, space4.5, kids4 and value null preserved. Round21: 42HOW's 3 Feb2023 original family drive explicitly tested a seven-seat entirely electric early Dreamer; Tao Yanyan credited, posted by Zhu Yulong. Battery/range trim unspecified, so it does not verify the scored 605km trim. English publisher-hosted wording is quoted verbatim. Updated global-spec EVW first-look excluded. Retained AutoHled2026 and Bitauto2024 are labelled later-model context; three citations still do not establish three independent exact-launch-trim road tests.",
     "sourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/",
     "reviews": [
       {
@@ -2511,13 +2511,14 @@
         "publishedDate": "2024-07-30"
       },
       {
-        "url": "https://electricvehicleweb.com/voyah-dream/",
-        "quote": "I could stretch out properly, and the cabin felt bright and open.",
-        "title": "First Look Review: Voyah's Dream MPV is a wake-up call for Mercedes & Lexus",
-        "sentiment": 0.55,
-        "publishedDate": null
+        "url": "https://en.42how.com/2023/02/03/zhi-test-drive-lantu-dreamer-test-drive-experience/",
+        "quote": "The driving feature of Dream Home is mild – even if you step on the accelerator, there won’t be much of a back-kick feeling.",
+        "title": "“Zhi test drive” Voyah dreamer test drive experience.",
+        "sentiment": 0.1,
+        "publishedDate": "2023-02-03"
       }
-    ]
+    ],
+    "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/"
   },
   {
     "pinId": 20018,
@@ -3039,6 +3040,38 @@
         "title": "Test: Volvo V60 Recharge T6",
         "sentiment": 0.75,
         "publishedDate": "2022-05-02"
+      }
+    ]
+  },
+  {
+    "pinId": 19875,
+    "pinSourceUrl": "https://insideevs.com/news/541793/zeekr-001-enters-production-china/",
+    "rubricYear": 2026,
+    "scores": {
+      "range": 3.5,
+      "charging": 3,
+      "acceleration": 2.5,
+      "assistance": null,
+      "space": null,
+      "value": null,
+      "kidsFriendly": null
+    },
+    "basis": "Variant: 100 kWh RWD, RMB 281,000. Range 712 km is NEDC (CLTC not published, so score is conservative) -> 3.5; 360 kW peak but 10-80% in ~30 min -> 3; 0-100 6.9 s -> 2.5. Assist, space (wheelbase not on opened page), value (CnEVPost price conflict) and kids null. Reviews are of later or export 001s (labelled). Round20: InsideEVs Romanian AWD Privilege/air-suspension test excluded from native reviews; not launch China RWD evidence. Two labelled export RWD reviews remain contextual. Exact launch-variant independent review coverage remains open; axes unchanged.",
+    "sourceUrl": "https://insideevs.com/news/541793/zeekr-001-enters-production-china/",
+    "reviews": [
+      {
+        "url": "https://www.goodwood.com/grr/car-reviews/zeeker/001-long-range-rwd/",
+        "quote": "It's never exactly what you'd call fun, though.",
+        "title": "Zeekr 001 Long Range RWD 2024 review | First Drive (export car)",
+        "sentiment": -0.4,
+        "publishedDate": "2024-11-28"
+      },
+      {
+        "url": "https://www.autoexpress.co.uk/zeekr/361085/zeekr-001-review",
+        "quote": "However, bigger bumps and undulations can create a bouncy effect, breaking the car's composure.",
+        "title": "Zeekr 001 review (export car)",
+        "sentiment": -0.6,
+        "publishedDate": "2023-09-29"
       }
     ]
   }

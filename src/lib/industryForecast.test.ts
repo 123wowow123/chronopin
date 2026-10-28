@@ -54,7 +54,7 @@ describe('industry forecast', () => {
   });
   it('does not turn broad categories into unrelated specialist panels', () => {
     const slugs = (names: string[]) => forecasts.filter((f) => matchesPinForecast(f, names)).map((f) => f.slug);
-    expect(slugs(['Finance', 'Economy'])).toEqual(['imf-global-growth']);
+    expect(slugs(['Finance', 'Economy'])).toEqual(['imf-global-growth', 'cbo-10-year-treasury-yield', 'cbo-federal-funds-rate', 'fed-sep-federal-funds-rate', 'swiss-re-global-premium-growth']);
     expect(slugs(['Computing'])).toEqual(['gartner-worldwide-it-spending']);
     expect(slugs(['Business'])).toEqual(['wto-merchandise-trade']);
     expect(slugs(['Space'])).not.toContain('nasa-sunspot-median');

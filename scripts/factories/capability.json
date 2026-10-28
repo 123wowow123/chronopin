@@ -954,5 +954,2822 @@
       ]
     },
     "constructionStatus": "In Progress"
+  },
+  {
+    "key": "audi",
+    "pinIds": {
+      "local": 19806,
+      "production": 19806
+    },
+    "title": "Audi Announces a Proposed $4 Billion Georgia Plant and 4,500 Planned Jobs",
+    "sourceUrl": "https://georgia.org/press-releases/audi-ag-selects-georgia-invest-4-billion-first-us-manufacturing-facility",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Capacity of up to 200,000 vehicles a year is published, but no comparable cohort of at least five assembly plants was established; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage published for the plant.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Audi cites flexible, efficient processes and advanced technologies only in general terms; no named process specification to anchor a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per vehicle published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "A local supplier network is mentioned as an aim, but no named supplier chain or quantified import substitution was established.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "About 4,500 planned jobs are published, but no training program, apprenticeship pathway or outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Site investment",
+          "value": "About USD 4 billion planned investment; proposed, not yet committed to construction.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "The company intends to invest around $4 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "Approximately 4,500 planned jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "create approximately 4,500 jobs"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Design capacity",
+          "value": "Designed for up to 200,000 vehicles per year.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "designed for an annual production capacity of up to 200,000 vehicles"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Construction and production targets",
+          "value": "Construction scheduled to begin in 2027; production planned to start in the early 2030s.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "is scheduled to begin in 2027, with production planned to start in the early 2030s"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Premium SUVs tailored to North American customers.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "premium SUVs tailored to North American customers and manufactured locally"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Georgia plant and $4 billion investment announced",
+          "date": "2026-10-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "Media release 10/25/2026"
+          }
+        },
+        {
+          "label": "Construction begins",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "scheduled to begin in 2027"
+          }
+        },
+        {
+          "label": "Production starts",
+          "date": "Early 2030s",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.audi.com/en/press-releases/audi-to-establish-first-us-production-site-in-georgia-investing-4-billion-and-creating-4500-jobs-18420",
+            "title": "Audi to establish first U.S. production site in Georgia, investing $4 billion and creating 4,500 jobs",
+            "publishedDate": "2026-10-25",
+            "quote": "production planned to start in the early 2030s"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "mitsubishi",
+    "pinIds": {
+      "local": 20082,
+      "production": 20082
+    },
+    "title": "Mitsubishi Power Proposes $490 Million Savannah Expansion and 220-Plus Jobs",
+    "sourceUrl": "https://power.mhi.com/regions/amer/news/261022",
+    "profile": {
+      "sector": "Gas-turbine and power-equipment manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Savannah expansion do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Expansion investment",
+          "value": "USD 490 million planned expansion investment from Mitsubishi Heavy Industries; groundbreaking is still ahead.",
+          "basis": "planned",
+          "source": {
+            "url": "https://power.mhi.com/regions/amer/news/261022",
+            "title": "Mitsubishi Power Announces $490 Million Investment in Savannah Facility to Support Rising Power Generation Needs | Mitsubishi Power Americas, Inc.",
+            "publishedDate": null,
+            "quote": "supported by a $490 million investment from Mitsubishi Heavy Industries"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "More than 220 planned new jobs; not hires already made.",
+          "basis": "planned",
+          "source": {
+            "url": "https://power.mhi.com/regions/amer/news/261022",
+            "title": "Mitsubishi Power Announces $490 Million Investment in Savannah Facility to Support Rising Power Generation Needs | Mitsubishi Power Americas, Inc.",
+            "publishedDate": null,
+            "quote": "create more than 220 new jobs at Savannah Machinery Works"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Added floor area",
+          "value": "450,000 square feet added to an existing facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://power.mhi.com/regions/amer/news/261022",
+            "title": "Mitsubishi Power Announces $490 Million Investment in Savannah Facility to Support Rising Power Generation Needs | Mitsubishi Power Americas, Inc.",
+            "publishedDate": null,
+            "quote": "will add 450,000 square feet to the existing facility"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Production capacity",
+          "value": "Reported expectation that the expansion doubles factory production capacity; no unit figure published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ajc.com/news/2026/10/georgia-power-turbine-plant-mitsubishi/",
+            "title": "Mitsubishi to double power turbine factory capacity at Georgia plant",
+            "publishedDate": "2026-10-23",
+            "quote": "expected to double its production capacity"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Parts for gas turbines.",
+          "basis": "planned",
+          "source": {
+            "url": "https://gov.georgia.gov/press-releases/2026-10-23/gov-kemp-mitsubishi-power-doubles-footprint-chatham-county",
+            "title": "Gov. Kemp: Mitsubishi Power Doubles Footprint in Chatham County",
+            "publishedDate": "2026-10-23",
+            "quote": "to manufacture parts for gas turbines"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expansion and $490 million investment announced",
+          "date": "2026-10-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://gov.georgia.gov/press-releases/2026-10-23/gov-kemp-mitsubishi-power-doubles-footprint-chatham-county",
+            "title": "Gov. Kemp: Mitsubishi Power Doubles Footprint in Chatham County",
+            "publishedDate": "2026-10-23",
+            "quote": "is investing $490 million in expanding its existing footprint in Georgia"
+          }
+        },
+        {
+          "label": "Groundbreaking",
+          "date": "Date not announced",
+          "basis": "planned",
+          "source": {
+            "url": "https://power.mhi.com/regions/amer/news/261022",
+            "title": "Mitsubishi Power Announces $490 Million Investment in Savannah Facility to Support Rising Power Generation Needs | Mitsubishi Power Americas, Inc.",
+            "publishedDate": null,
+            "quote": "We look forward to a future groundbreaking ceremony to get the construction phase underway"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "usteel-monvalley",
+    "pinIds": {
+      "local": 19613,
+      "production": 19613
+    },
+    "title": "U.S. Steel Approves Nearly $3 Billion for a New Mon Valley Hot Strip Mill",
+    "sourceUrl": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+    "profile": {
+      "sector": "Steel hot-rolling (hot strip mill)",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Edgar Thomson hot strip mill do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Board-approved investment",
+          "value": "Nearly USD 3 billion approved by the board for a new hot strip mill at Mon Valley Works - Edgar Thomson Plant.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+            "title": "U. S. STEEL BOARD AUTHORIZES NEARLY $3 BILLION INVESTMENT IN NEW HOT STRIP MILL AT MON VALLEY WORKS - www.ussteel.com",
+            "publishedDate": "2026-10-22",
+            "quote": "approved full funding for a nearly $3 billion investment in a new hot strip mill"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Annual capacity",
+          "value": "Planned rise from about 2.2 million to about 3.5 million tons a year.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+            "title": "U. S. STEEL BOARD AUTHORIZES NEARLY $3 BILLION INVESTMENT IN NEW HOT STRIP MILL AT MON VALLEY WORKS - www.ussteel.com",
+            "publishedDate": "2026-10-22",
+            "quote": "increasing annual production capacity from approximately 2.2 million tons to approximately 3.5 million tons"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Construction and production targets",
+          "value": "Construction after permits are received; initial production expected in late 2029.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+            "title": "U. S. STEEL BOARD AUTHORIZES NEARLY $3 BILLION INVESTMENT IN NEW HOT STRIP MILL AT MON VALLEY WORKS - www.ussteel.com",
+            "publishedDate": "2026-10-22",
+            "quote": "Construction will begin after necessary permits are received, with initial production expected in late 2029."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Permit status",
+          "value": "Air-quality and stormwater construction permits were still outstanding at the announcement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.monvalleyindependent.com/2026/10/23/u-s-steel-advances-3b-strip-mill-project/",
+            "title": "U.S. Steel advances $3B strip mill project",
+            "publishedDate": "2026-10-23",
+            "quote": "still requires an air quality permit from the county health department and a stormwater construction permit from the state Department of Environmental Protection before it can be built"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Board approves full funding",
+          "date": "2026-10-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+            "title": "U. S. STEEL BOARD AUTHORIZES NEARLY $3 BILLION INVESTMENT IN NEW HOT STRIP MILL AT MON VALLEY WORKS - www.ussteel.com",
+            "publishedDate": "2026-10-22",
+            "quote": "Board of Directors has approved full funding for a nearly $3 billion investment"
+          }
+        },
+        {
+          "label": "Construction starts after permits",
+          "date": "After permits are received",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+            "title": "U. S. STEEL BOARD AUTHORIZES NEARLY $3 BILLION INVESTMENT IN NEW HOT STRIP MILL AT MON VALLEY WORKS - www.ussteel.com",
+            "publishedDate": "2026-10-22",
+            "quote": "Construction will begin after necessary permits are received"
+          }
+        },
+        {
+          "label": "Initial production",
+          "date": "Late 2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/media/newsroom-details/-/blogs/u-s-steel-board-authorizes-nearly-3-billion-investment-in-new-hot-strip-mill-at-mon-valley-works",
+            "title": "U. S. STEEL BOARD AUTHORIZES NEARLY $3 BILLION INVESTMENT IN NEW HOT STRIP MILL AT MON VALLEY WORKS - www.ussteel.com",
+            "publishedDate": "2026-10-22",
+            "quote": "initial production expected in late 2029"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "carrier-fortworth",
+    "pinIds": {
+      "local": 19422,
+      "production": 19422
+    },
+    "title": "Carrier Plans a Fort Worth Chiller Factory With More Than $600 Million and 1,500 Jobs",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+    "profile": {
+      "sector": "Commercial HVAC chiller manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Fort Worth facility do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Planned investment",
+          "value": "More than USD 600 million over three years for a manufacturing and engineering center.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "invest more than $600 million over the next three years in a new advanced manufacturing and engineering center in Fort Worth, Texas"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "1,500 planned manufacturing, engineering and other jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "The investment will create 1,500 advanced manufacturing, engineering and other jobs."
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Facility size",
+          "value": "More than 1 million square feet.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "the more than 1-million-square-foot facility"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Operations start",
+          "value": "Operations expected to begin in 2027.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "Carrier is expected to begin operations in the more than 1-million-square-foot facility in 2027."
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Air- and water-cooled commercial chillers and thermal management systems.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "advanced thermal management systems, including air- and water-cooled commercial chillers"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Fort Worth investment announced",
+          "date": "2026-10-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "today announced plans to invest more than $600 million over the next three years"
+          }
+        },
+        {
+          "label": "Operations begin",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+            "title": "Carrier to Invest More Than $600 Million to Expand Advanced U.S. Manufacturing and Engineering Capacity",
+            "publishedDate": "2026-10-22",
+            "quote": "Carrier is expected to begin operations in the more than 1-million-square-foot facility in 2027."
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "amazon-austin",
+    "pinIds": {
+      "local": 19330,
+      "production": 19330
+    },
+    "title": "Amazon Schedules Austin Robotics Factory’s US$100 Million Building Phase",
+    "sourceUrl": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2027003891",
+    "profile": {
+      "sector": "Robotics manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for Project Toaster do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Core-and-shell filed cost",
+          "value": "USD 100 million is the state-filed cost of the single core-and-shell building project, not the whole multi-billion-dollar development.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mysanantonio.com/news/austin/article/amazon-new-facility-austin-22485174.php",
+            "title": "Amazon plans new $100M manufacturing facility in Central Texas",
+            "publishedDate": "2026-10-21",
+            "quote": "preparing to build a new $100 million facility in Central Texas"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "300-500 planned manufacturing and engineering jobs across the new facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://press.aboutamazon.com/2026/8/amazon-announces-new-manufacturing-facility-in-austin-texas",
+            "title": "Amazon Announces New Manufacturing Facility in Austin, Texas",
+            "publishedDate": "2026-08-19",
+            "quote": "the new facility will create 300 - 500 high-paying jobs in manufacturing and engineering"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Building size",
+          "value": "1.2 million-square-foot building with office, factory, casting and utility-plant areas.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mysanantonio.com/news/austin/article/amazon-new-facility-austin-22485174.php",
+            "title": "Amazon plans new $100M manufacturing facility in Central Texas",
+            "publishedDate": "2026-10-21",
+            "quote": "a 1.2 million-square-foot building comprised of four areas: office, factory, casting and utility plant"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Core-and-shell schedule",
+          "value": "Core-and-shell construction expected to begin November 16, 2026, tentatively completing July 13, 2027.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mysanantonio.com/news/austin/article/amazon-new-facility-austin-22485174.php",
+            "title": "Amazon plans new $100M manufacturing facility in Central Texas",
+            "publishedDate": "2026-10-21",
+            "quote": "Construction on the core and shell of the facility is expected to begin on November 16 and is tentatively planned to be completed by July 13, 2027."
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Robotics systems that work alongside Amazon employees.",
+          "basis": "planned",
+          "source": {
+            "url": "https://press.aboutamazon.com/2026/8/amazon-announces-new-manufacturing-facility-in-austin-texas",
+            "title": "Amazon Announces New Manufacturing Facility in Austin, Texas",
+            "publishedDate": "2026-08-19",
+            "quote": "produce the robotics systems that work alongside Amazon's employees"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Austin manufacturing facility announced",
+          "date": "2026-08-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.aboutamazon.com/2026/8/amazon-announces-new-manufacturing-facility-in-austin-texas",
+            "title": "Amazon Announces New Manufacturing Facility in Austin, Texas",
+            "publishedDate": "2026-08-19",
+            "quote": "the new facility will create 300 - 500 high-paying jobs in manufacturing and engineering"
+          }
+        },
+        {
+          "label": "Core-and-shell construction starts",
+          "date": "2026-11-16",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mysanantonio.com/news/austin/article/amazon-new-facility-austin-22485174.php",
+            "title": "Amazon plans new $100M manufacturing facility in Central Texas",
+            "publishedDate": "2026-10-21",
+            "quote": "expected to begin on November 16"
+          }
+        },
+        {
+          "label": "Core-and-shell completion",
+          "date": "2027-07-13",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mysanantonio.com/news/austin/article/amazon-new-facility-austin-22485174.php",
+            "title": "Amazon plans new $100M manufacturing facility in Central Texas",
+            "publishedDate": "2026-10-21",
+            "quote": "tentatively planned to be completed by July 13, 2027"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "hitachi-london",
+    "pinIds": {
+      "local": 17113,
+      "production": 17113
+    },
+    "title": "Hitachi Energy Announces C$479 Million London Factory and 100+ Planned Jobs",
+    "sourceUrl": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+    "profile": {
+      "sector": "Transformer insulation materials manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the London, Ontario factory do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "CAD 479 million (more than USD 330 million), stated in Canadian dollars.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "will invest $479 million CAD (more than $330 million USD)"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "Over 100 planned permanent skilled jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "is expected to create over 100 permanent skilled jobs"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Facility size",
+          "value": "Planned 21,000-square-meter facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "the planned 21,000-square-meter facility"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Completion target",
+          "value": "Expected completion by 2028.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "Expected to be completed by 2028"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Electrical insulation pressboard and laminates for transformers; Canada's first pressboard line.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "will manufacture electrical insulation pressboard and laminates critical to transformer production and operation"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Investment announced",
+          "date": "2026-10-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "October 16, 2026"
+          }
+        },
+        {
+          "label": "Factory completion",
+          "date": "By 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/10/hitachi-energy-invests-479-million-cad-to-bring-critical-transformer-manufacturing-capability-to-canada",
+            "title": "Hitachi Energy invests $479 million CAD to bring critical transformer manufacturing capability to Canada",
+            "publishedDate": "2026-10-16",
+            "quote": "Expected to be completed by 2028"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "byd-szeged",
+    "pinIds": {
+      "local": 14012,
+      "production": 14012
+    },
+    "title": "BYD Announces Its First European Car Factory in Szeged, Hungary",
+    "sourceUrl": "https://www.byd.com/eu/news-list/BYD_to_Build_A_New_Energy_Passenger_Vehicle_Factory_in_Hungary_for_Localised_Production_in_Europe",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Szeged plant do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "\"Thousands\" of local jobs expected; no exact figure in BYD's release.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.byd.com/eu/news-list/BYD_to_Build_A_New_Energy_Passenger_Vehicle_Factory_in_Hungary_for_Localised_Production_in_Europe",
+            "title": "BYD to Build A New Energy Passenger Vehicle Factory in Hungary for Localised Production in Europe",
+            "publishedDate": "2023-12-22",
+            "quote": "expected to create thousands of local jobs"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Build approach",
+          "value": "To be built in phases; BYD said more specific details would follow.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.byd.com/eu/news-list/BYD_to_Build_A_New_Energy_Passenger_Vehicle_Factory_in_Hungary_for_Localised_Production_in_Europe",
+            "title": "BYD to Build A New Energy Passenger Vehicle Factory in Hungary for Localised Production in Europe",
+            "publishedDate": "2023-12-22",
+            "quote": "The factory will be built in phases"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "New-energy passenger vehicles on highly automated lines.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.byd.com/eu/news-list/BYD_to_Build_A_New_Energy_Passenger_Vehicle_Factory_in_Hungary_for_Localised_Production_in_Europe",
+            "title": "BYD to Build A New Energy Passenger Vehicle Factory in Hungary for Localised Production in Europe",
+            "publishedDate": "2023-12-22",
+            "quote": "highly automated production processes to create a leading global new energy passenger vehicle manufacturing facility"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Szeged factory announced",
+          "date": "2023-12-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://autonews.gasgoo.com/articles/ev/byd-inks-agreement-for-building-passenger-car-production-facility-in-hungary-70031067",
+            "title": "BYD inks agreement for building passenger car production facility in Hungary - Gasgoo",
+            "publishedDate": "2023-12-22",
+            "quote": "A state-of-the-art manufacturing facility is set to be constructed in Szeged"
+          }
+        },
+        {
+          "label": "Szeged plant still described as forthcoming",
+          "date": "2025-05-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.byd.com/eu/news-list/BYD_commits_to_new_HQ_and_RD_base_in_Hungary",
+            "title": "BYD commits to new HQ and R&D base in Hungary - BYD Europe newsroom",
+            "publishedDate": "2025-05-15",
+            "quote": "the location of our forthcoming passenger-car manufacturing plant"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "terafab-grimes",
+    "pinIds": {
+      "local": 4785,
+      "production": 4785
+    },
+    "title": "Construction of the SpaceX-Tesla Terafab Chip Plant in Grimes County",
+    "sourceUrl": "https://www.statesman.com/business/article/elon-musk-tesla-terafab-texas-timeline-22403413.php",
+    "profile": {
+      "sector": "Semiconductor fabrication",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Grimes County Terafab do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Initial investment",
+          "value": "Initial USD 16.8 billion; SpaceX filings suggest a much larger multi-phase total.",
+          "basis": "planned",
+          "source": {
+            "url": "https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/",
+            "title": "Tesla and SpaceX will invest $16.8B to start building 'Terafab' chip factory in Texas",
+            "publishedDate": "2026-08-06",
+            "quote": "SpaceX alone has suggested in filings that it may spend as much as $119 billion on the project"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "At least 3,000 planned jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.statesman.com/business/article/elon-musk-tesla-terafab-texas-timeline-22403413.php",
+            "title": "Tesla advances Austin chip facility as Musk's Terafab takes shape",
+            "publishedDate": null,
+            "quote": "The plant eventually is expected to employ at least 3,000 people"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned floor area",
+          "value": "More than 100 million square feet of manufacturing space planned.",
+          "basis": "planned",
+          "source": {
+            "url": "https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/",
+            "title": "Tesla and SpaceX will invest $16.8B to start building 'Terafab' chip factory in Texas",
+            "publishedDate": "2026-08-06",
+            "quote": "More than 100 million square feet of manufacturing space is planned for the facility"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Construction schedule",
+          "value": "Agreements list a December 1 construction start and completion planned by the end of 2028.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.statesman.com/business/article/elon-musk-tesla-terafab-texas-timeline-22403413.php",
+            "title": "Tesla advances Austin chip facility as Musk's Terafab takes shape",
+            "publishedDate": null,
+            "quote": "The agreements list a Dec. 1 construction start date and planned completion by the end of 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Terafab Grimes County plan announced",
+          "date": "2026-08-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/",
+            "title": "Tesla and SpaceX will invest $16.8B to start building 'Terafab' chip factory in Texas",
+            "publishedDate": "2026-08-06",
+            "quote": "“Terafab,” the advanced chip factory they are jointly developing"
+          }
+        },
+        {
+          "label": "Construction start",
+          "date": "2026-12-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.statesman.com/business/article/elon-musk-tesla-terafab-texas-timeline-22403413.php",
+            "title": "Tesla advances Austin chip facility as Musk's Terafab takes shape",
+            "publishedDate": null,
+            "quote": "The agreements list a Dec. 1 construction start date"
+          }
+        },
+        {
+          "label": "Planned completion",
+          "date": "End of 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.statesman.com/business/article/elon-musk-tesla-terafab-texas-timeline-22403413.php",
+            "title": "Tesla advances Austin chip facility as Musk's Terafab takes shape",
+            "publishedDate": null,
+            "quote": "planned completion by the end of 2028"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "lilly-richmond",
+    "pinIds": {
+      "local": 19423,
+      "production": 19423
+    },
+    "title": "Lilly Breaks Ground on Its $5 Billion Richmond Medicines Plant",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+    "profile": {
+      "sector": "Pharmaceutical API and finished-medicine manufacturing",
+      "status": "construction",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Richmond site do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "USD 5 billion for a new manufacturing facility in Goochland County.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+            "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020",
+            "publishedDate": "2026-10-22",
+            "quote": "broke ground today on a new $5 billion manufacturing facility just west of Richmond, Virginia"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "650 planned high-wage operational jobs, distinct from about 1,800 construction jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+            "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020",
+            "publishedDate": "2026-10-22",
+            "quote": "expects the new facility to create 650 high-wage jobs"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products and processes",
+          "value": "Lilly's first site making both active ingredients and finished medicines in one integrated facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+            "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020",
+            "publishedDate": "2026-10-22",
+            "quote": "Lilly's first to produce both API and finished medicines in a fully integrated facility"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Construction stage",
+          "value": "Groundbreaking held October 22, 2026; no operations date was stated in the release.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+            "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020",
+            "publishedDate": "2026-10-22",
+            "quote": "broke ground today on a new $5 billion manufacturing facility"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking",
+          "date": "2026-10-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+            "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020",
+            "publishedDate": "2026-10-22",
+            "quote": "broke ground today on a new $5 billion manufacturing facility"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "In Progress"
+  },
+  {
+    "key": "purina-ohio",
+    "pinIds": {
+      "local": 3088,
+      "production": 3088
+    },
+    "title": "Purina Opens Its $550 Million Pet Food Factory in Ohio",
+    "sourceUrl": "https://newscenter.purina.com/2026-08-31-Purina-Opens-New-Pet-Food-Factory-in-Ohio,-Its-First-Built-from-the-Ground-Up-in-More-Than-50-Years",
+    "profile": {
+      "sector": "Pet-food manufacturing",
+      "status": "production",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Batavia factory do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "More than USD 550 million; Nestlé's largest investment in a Purina factory.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newscenter.purina.com/2026-08-31-Purina-Opens-New-Pet-Food-Factory-in-Ohio,-Its-First-Built-from-the-Ground-Up-in-More-Than-50-Years",
+            "title": "Purina Opens New Pet Food Factory in Ohio, Its First Built from the Ground Up in More Than 50 Years",
+            "publishedDate": "2026-08-31",
+            "quote": "Representing an investment of more than $550 million"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Workforce",
+          "value": "More than 430 associates today, planned to exceed 500 when fully operational.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newscenter.purina.com/2026-08-31-Purina-Opens-New-Pet-Food-Factory-in-Ohio,-Its-First-Built-from-the-Ground-Up-in-More-Than-50-Years",
+            "title": "Purina Opens New Pet Food Factory in Ohio, Its First Built from the Ground Up in More Than 50 Years",
+            "publishedDate": "2026-08-31",
+            "quote": "currently employs more than 430 associates, with plans to grow to more than 500 team members when fully operational"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Facility size",
+          "value": "1.3 million square feet.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newscenter.purina.com/2026-08-31-Purina-Opens-New-Pet-Food-Factory-in-Ohio,-Its-First-Built-from-the-Ground-Up-in-More-Than-50-Years",
+            "title": "Purina Opens New Pet Food Factory in Ohio, Its First Built from the Ground Up in More Than 50 Years",
+            "publishedDate": "2026-08-31",
+            "quote": "The 1.3 million-square-foot facility"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Purina Pro Plan, Purina ONE and Dog Chow already in production.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newscenter.purina.com/2026-08-31-Purina-Opens-New-Pet-Food-Factory-in-Ohio,-Its-First-Built-from-the-Ground-Up-in-More-Than-50-Years",
+            "title": "Purina Opens New Pet Food Factory in Ohio, Its First Built from the Ground Up in More Than 50 Years",
+            "publishedDate": "2026-08-31",
+            "quote": "already producing trusted Purina brands including Purina Pro Plan, Purina ONE and Dog Chow"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Opening",
+          "value": "Grand opening held August 31, 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103893-nestle-purina-petcare-opens-550m-pet-food-plant-in-ohio",
+            "title": "Nestlé Purina PetCare Opens $550M Pet Food Plant in Ohio",
+            "publishedDate": "2026-09-01",
+            "quote": "celebrated the grand opening of its new pet food manufacturing facility in Batavia, Ohio"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening",
+          "date": "2026-08-31",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103893-nestle-purina-petcare-opens-550m-pet-food-plant-in-ohio",
+            "title": "Nestlé Purina PetCare Opens $550M Pet Food Plant in Ohio",
+            "publishedDate": "2026-09-01",
+            "quote": "celebrated the grand opening of its new pet food manufacturing facility in Batavia, Ohio"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Completed"
+  },
+  {
+    "key": "on-zurich",
+    "pinIds": {
+      "local": 5554,
+      "production": 5554
+    },
+    "title": "On Opens the World's First LightSpray Robot Factory in Zurich",
+    "sourceUrl": "https://press.on-running.com/on-opens-the-worlds-first-lightspray-production-facility-in-zurich",
+    "profile": {
+      "sector": "Footwear upper manufacturing (robotic)",
+      "status": "production",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Zurich LightSpray factory do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Production line",
+          "value": "Four robots; one robot arm sprays an upper from 1.5 km of filament in about three minutes.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.on-running.com/on-opens-the-worlds-first-lightspray-production-facility-in-zurich",
+            "title": "On opens the world's first LightSpray™ production facility in Zurich",
+            "publishedDate": "2025-07-02",
+            "quote": "The facility comprises four robots"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Performance running-shoe uppers made directly in Switzerland by a fully automated process.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.on-running.com/on-opens-the-worlds-first-lightspray-production-facility-in-zurich",
+            "title": "On opens the world's first LightSpray™ production facility in Zurich",
+            "publishedDate": "2025-07-02",
+            "quote": "manufacture all the uppers for its performance running shoes directly in Switzerland using fully automated and industrially scalable processes and procedures"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operating stage",
+          "value": "Unveiled by On's co-founders; further facilities are planned worldwide.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.on-running.com/on-opens-the-worlds-first-lightspray-production-facility-in-zurich",
+            "title": "On opens the world's first LightSpray™ production facility in Zurich",
+            "publishedDate": "2025-07-02",
+            "quote": "unveiled the new LightSpray™ Factory"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Zurich LightSpray factory unveiled",
+          "date": "2025-07-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.on-running.com/on-opens-the-worlds-first-lightspray-production-facility-in-zurich",
+            "title": "On opens the world's first LightSpray™ production facility in Zurich",
+            "publishedDate": "2025-07-02",
+            "quote": "unveiled the new LightSpray™ Factory"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Completed"
+  },
+  {
+    "key": "on-busan",
+    "pinIds": {
+      "local": 5555,
+      "production": 5555
+    },
+    "title": "On Opens Its Second LightSpray Factory Near Busan With 32 Robots",
+    "sourceUrl": "https://press.on-running.com/-1wgx4h",
+    "profile": {
+      "sector": "Footwear upper manufacturing (robotic)",
+      "status": "production",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Busan LightSpray factory do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Production line",
+          "value": "32 fully automated robots, set to raise global LightSpray capacity 30-fold in 2026.",
+          "basis": "planned",
+          "source": {
+            "url": "https://press.on-running.com/-1wgx4h",
+            "title": "On Scales LightSpray™ with New South Korea Factory, Unlocking 30-Fold Production Increase",
+            "publishedDate": "2026-02-25",
+            "quote": "adds another 32 fully automated robots set to increase the brand’s global LightSpray™ production capacity 30-fold in 2026"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "One-piece robot-sprayed shoe uppers from 1.5 km of filament in about three minutes.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.on-running.com/-1wgx4h",
+            "title": "On Scales LightSpray™ with New South Korea Factory, Unlocking 30-Fold Production Increase",
+            "publishedDate": "2026-02-25",
+            "quote": "A robotic arm sprays 1.5 kilometers of specialized filament onto a last, creating an ultra-light, one-piece upper in around three minutes."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "First shoe launch",
+          "value": "First shoe from the factory launches March 5, 2026, with a full global launch April 16, 2026.",
+          "basis": "planned",
+          "source": {
+            "url": "https://press.on-running.com/-1wgx4h",
+            "title": "On Scales LightSpray™ with New South Korea Factory, Unlocking 30-Fold Production Increase",
+            "publishedDate": "2026-02-25",
+            "quote": "with a full global launch on April 16, 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Busan factory opening announced",
+          "date": "2026-02-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://press.on-running.com/-1wgx4h",
+            "title": "On Scales LightSpray™ with New South Korea Factory, Unlocking 30-Fold Production Increase",
+            "publishedDate": "2026-02-25",
+            "quote": "adds another 32 fully automated robots"
+          }
+        },
+        {
+          "label": "Global launch of first Busan shoe",
+          "date": "2026-04-16",
+          "basis": "planned",
+          "source": {
+            "url": "https://press.on-running.com/-1wgx4h",
+            "title": "On Scales LightSpray™ with New South Korea Factory, Unlocking 30-Fold Production Increase",
+            "publishedDate": "2026-02-25",
+            "quote": "with a full global launch on April 16, 2026"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Completed"
+  },
+  {
+    "key": "bae-weld",
+    "pinIds": {
+      "local": 19329,
+      "production": 19329
+    },
+    "title": "BAE Systems Announces Weld County Factory Expansion and 200-Plus Hires",
+    "sourceUrl": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+    "profile": {
+      "sector": "Space and sensor hardware manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Weld County facility do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Acquisition price",
+          "value": "USD 30 million paid for the existing facility; not a total build-out budget.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+            "title": "BAE buys Weld County Danfoss facility for $30M – BizWest",
+            "publishedDate": "2026-10-21",
+            "quote": "in early October paid $30 million for the 130,000-square-foot facility"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "More than 200 hires over 12-24 months; about 600 jobs possible at full capacity.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+            "title": "BAE buys Weld County Danfoss facility for $30M – BizWest",
+            "publishedDate": "2026-10-21",
+            "quote": "At full capacity, the company estimates that the new facility could provide approximately 600 new jobs"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Existing building",
+          "value": "130,000-square-foot former Danfoss facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+            "title": "BAE buys Weld County Danfoss facility for $30M – BizWest",
+            "publishedDate": "2026-10-21",
+            "quote": "in early October paid $30 million for the 130,000-square-foot facility"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production target",
+          "value": "Retrofit and equipment procurement through the rest of the year; production opening targeted for early 2028.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+            "title": "BAE buys Weld County Danfoss facility for $30M – BizWest",
+            "publishedDate": "2026-10-21",
+            "quote": "anticipates opening the facility for production in early-2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Facility acquired",
+          "date": "Early October 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+            "title": "BAE buys Weld County Danfoss facility for $30M – BizWest",
+            "publishedDate": "2026-10-21",
+            "quote": "in early October paid $30 million for the 130,000-square-foot facility"
+          }
+        },
+        {
+          "label": "Production opens",
+          "date": "Early 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+            "title": "BAE buys Weld County Danfoss facility for $30M – BizWest",
+            "publishedDate": "2026-10-21",
+            "quote": "anticipates opening the facility for production in early-2028"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "westinghouse-hopkins",
+    "pinIds": {
+      "local": 18957,
+      "production": 18957
+    },
+    "title": "Westinghouse Announces US$1 Billion Hopkins Nuclear-Fuel Expansion",
+    "sourceUrl": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+    "profile": {
+      "sector": "Nuclear-fuel fabrication",
+      "status": "construction",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the LEU+ fuel factory do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "USD 1 billion, as stated by South Carolina's governor in the release.",
+          "basis": "planned",
+          "source": {
+            "url": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+            "title": "Westinghouse Announces Landmark Expansion in South Carolina to Advance Next-Generation Nuclear Fuel",
+            "publishedDate": "2026-10-21",
+            "quote": "Not only does this $1 billion mean more affordable power for South Carolinians"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Operations start",
+          "value": "Construction underway; operations expected to begin in 2030.",
+          "basis": "planned",
+          "source": {
+            "url": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+            "title": "Westinghouse Announces Landmark Expansion in South Carolina to Advance Next-Generation Nuclear Fuel",
+            "publishedDate": "2026-10-21",
+            "quote": "Construction on the new LEU+ Fuel factory is underway and on track to begin operations in 2030."
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Commercial-scale LEU+ (5%-8% enriched) nuclear fuel.",
+          "basis": "planned",
+          "source": {
+            "url": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+            "title": "Westinghouse Announces Landmark Expansion in South Carolina to Advance Next-Generation Nuclear Fuel",
+            "publishedDate": "2026-10-21",
+            "quote": "commercial scale Low Enriched Uranium Plus (LEU+) fuel production"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Distinction",
+          "value": "Described as the first fleet-scale nuclear fuel factory built in the United States in more than 50 years.",
+          "basis": "planned",
+          "source": {
+            "url": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+            "title": "Westinghouse Announces Landmark Expansion in South Carolina to Advance Next-Generation Nuclear Fuel",
+            "publishedDate": "2026-10-21",
+            "quote": "the first fleet-scale nuclear fuel factory built in the United States in more than 50 years"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction underway, expansion announced",
+          "date": "2026-10-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+            "title": "Westinghouse Announces Landmark Expansion in South Carolina to Advance Next-Generation Nuclear Fuel",
+            "publishedDate": "2026-10-21",
+            "quote": "Construction on the new LEU+ Fuel factory is underway"
+          }
+        },
+        {
+          "label": "Operations begin",
+          "date": "2030",
+          "basis": "planned",
+          "source": {
+            "url": "https://info.westinghousenuclear.com/news/westinghouse-announces-landmark-expansion-in-south-carolinato-advance-next-generation-nuclear-fuel",
+            "title": "Westinghouse Announces Landmark Expansion in South Carolina to Advance Next-Generation Nuclear Fuel",
+            "publishedDate": "2026-10-21",
+            "quote": "on track to begin operations in 2030"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "In Progress"
+  },
+  {
+    "key": "itt-memphis",
+    "pinIds": {
+      "local": 18457,
+      "production": 18457
+    },
+    "title": "ITT Goulds Pumps Plans US$31 Million Memphis Expansion and 57 Jobs",
+    "sourceUrl": "https://tnecd.com/news/itt-goulds-pumps-announces-establishment-of-tennessee-manufacturing-distribution-presence-in-shelby-county/",
+    "profile": {
+      "sector": "Industrial pump manufacturing and distribution",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Memphis center do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "USD 31 million for a new manufacturing and distribution center.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tnecd.com/news/itt-goulds-pumps-announces-establishment-of-tennessee-manufacturing-distribution-presence-in-shelby-county/",
+            "title": "ITT Goulds Pumps Announces Establishment of Tennessee Manufacturing, Distribution Presence in Shelby County - TNECD",
+            "publishedDate": "2026-10-19",
+            "quote": "plans to invest $31 million and create 57 new jobs in Memphis"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "57 planned new jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tnecd.com/news/itt-goulds-pumps-announces-establishment-of-tennessee-manufacturing-distribution-presence-in-shelby-county/",
+            "title": "ITT Goulds Pumps Announces Establishment of Tennessee Manufacturing, Distribution Presence in Shelby County - TNECD",
+            "publishedDate": "2026-10-19",
+            "quote": "create 57 new jobs in Memphis"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Pumps for energy, mining, power, chemical, water and industrial markets.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tnecd.com/news/itt-goulds-pumps-announces-establishment-of-tennessee-manufacturing-distribution-presence-in-shelby-county/",
+            "title": "ITT Goulds Pumps Announces Establishment of Tennessee Manufacturing, Distribution Presence in Shelby County - TNECD",
+            "publishedDate": "2026-10-19",
+            "quote": "industry leading manufacturer of pumps serving customers in the energy, mining, power, chemical, pulp and paper, water and wastewater and general industrial markets"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Memphis center announced",
+          "date": "2026-10-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://tnecd.com/news/itt-goulds-pumps-announces-establishment-of-tennessee-manufacturing-distribution-presence-in-shelby-county/",
+            "title": "ITT Goulds Pumps Announces Establishment of Tennessee Manufacturing, Distribution Presence in Shelby County - TNECD",
+            "publishedDate": "2026-10-19",
+            "quote": "plans to invest $31 million and create 57 new jobs in Memphis"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "lockheed-grandprairie",
+    "pinIds": {
+      "local": 16354,
+      "production": 16354
+    },
+    "title": "Lockheed Martin Announces $300 Million Grand Prairie Expansion",
+    "sourceUrl": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+    "profile": {
+      "sector": "Defense munitions manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Grand Prairie expansion do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "USD 300 million at the Grand Prairie operation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+            "title": "Lockheed Martin Corporation | Lockheed Martin",
+            "publishedDate": "2026-10-14",
+            "quote": "where the company is investing $300 million and expanding its manufacturing footprint to more than 735,000 square feet"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Footprint",
+          "value": "More than 735,000 square feet, including 100,000 sq ft of new space and 85,000 sq ft of converted office space.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+            "title": "Lockheed Martin Corporation | Lockheed Martin",
+            "publishedDate": "2026-10-14",
+            "quote": "The expansion includes 100,000 square feet of new space and 85,000 square feet of office space being transformed for advanced manufacturing"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Hadrian cell",
+          "value": "The 24-machine Hadrian cell is expected to be operational in early 2027.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+            "title": "Lockheed Martin Corporation | Lockheed Martin",
+            "publishedDate": "2026-10-14",
+            "quote": "Expected to be operational in early 2027, the 24-machine cell"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Capability",
+          "value": "Added capacity for automation, digital manufacturing and high-precision machining.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+            "title": "Lockheed Martin Corporation | Lockheed Martin",
+            "publishedDate": "2026-10-14",
+            "quote": "creating additional capacity for automation, digital manufacturing and high-precision machining"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expansion announced",
+          "date": "2026-10-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+            "title": "Lockheed Martin Corporation | Lockheed Martin",
+            "publishedDate": "2026-10-14",
+            "quote": "where the company is investing $300 million"
+          }
+        },
+        {
+          "label": "Hadrian machining cell operational",
+          "date": "Early 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.lockheedmartin.com/2026-10-14-Lockheed-Martin-Expands-Advanced-Munitions-Manufacturing-in-Texas,-Driving-Thousands-of-New-American-Jobs",
+            "title": "Lockheed Martin Corporation | Lockheed Martin",
+            "publishedDate": "2026-10-14",
+            "quote": "Expected to be operational in early 2027, the 24-machine cell"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "gwm-brazil",
+    "pinIds": {
+      "local": 14232,
+      "production": 14232
+    },
+    "title": "GWM Starts Production at Its Brazil Plant in Iracemápolis",
+    "sourceUrl": "https://cnevpost.com/2025/08/16/gwm-brazil-plant-begins-production/",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "production",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Iracemápolis plant do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Annual capacity",
+          "value": "50,000 vehicles per year.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://cnevpost.com/2025/08/16/gwm-brazil-plant-begins-production/",
+            "title": "GWM's Brazil plant begins production with annual capacity of 50,000 cars",
+            "publishedDate": "2025-08-16",
+            "quote": "has an annual production capacity of 50,000 vehicles"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Initial models",
+          "value": "Haval H6 series, Haval H9 and 2.4T Poer.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cnevpost.com/2025/08/16/gwm-brazil-plant-begins-production/",
+            "title": "GWM's Brazil plant begins production with annual capacity of 50,000 cars",
+            "publishedDate": "2025-08-16",
+            "quote": "Initially, it will produce models including the Haval H6 series, Haval H9, and the 2.4T Poer."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "Production began August 15, 2025.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://cnevpost.com/2025/08/16/gwm-brazil-plant-begins-production/",
+            "title": "GWM's Brazil plant begins production with annual capacity of 50,000 cars",
+            "publishedDate": "2025-08-16",
+            "quote": "began production on August 15 local time"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Site history",
+          "value": "Converted from a Daimler plant GWM acquired in 2021.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://cnevpost.com/2025/08/16/gwm-brazil-plant-begins-production/",
+            "title": "GWM's Brazil plant begins production with annual capacity of 50,000 cars",
+            "publishedDate": "2025-08-16",
+            "quote": "The factory was converted from a Daimler plant acquired by GWM in 2021"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Production begins",
+          "date": "2025-08-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://cnevpost.com/2025/08/16/gwm-brazil-plant-begins-production/",
+            "title": "GWM's Brazil plant begins production with annual capacity of 50,000 cars",
+            "publishedDate": "2025-08-16",
+            "quote": "began production on August 15 local time"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Completed"
+  },
+  {
+    "key": "mg-galicia",
+    "pinIds": {
+      "local": 14220,
+      "production": 14220
+    },
+    "title": "MG's First European Plant, in Galicia, Spain, Is Due to Start Production in 2028",
+    "sourceUrl": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+    "profile": {
+      "sector": "Automotive vehicle assembly",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Galicia plant do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Initial investment",
+          "value": "About EUR 200 million, stated in euros.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+            "title": "SAIC MG to build its first European auto plant in Spain to dodge tariffs",
+            "publishedDate": "2026-06-03",
+            "quote": "The initial investment in the plant is about 200 million euros ($233 million)"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Annual capacity",
+          "value": "Planned 120,000 vehicles per year.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+            "title": "SAIC MG to build its first European auto plant in Spain to dodge tariffs",
+            "publishedDate": "2026-06-03",
+            "quote": "with a planned annual production capacity of 120,000 vehicles"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "More than 2,000 projected jobs in Europe.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+            "title": "SAIC MG to build its first European auto plant in Spain to dodge tariffs",
+            "publishedDate": "2026-06-03",
+            "quote": "is projected to create more than 2,000 jobs in Europe"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "Scheduled to begin production in 2028.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+            "title": "SAIC MG to build its first European auto plant in Spain to dodge tariffs",
+            "publishedDate": "2026-06-03",
+            "quote": "The plant is scheduled to begin production in 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Galicia plant announced",
+          "date": "2026-06-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+            "title": "SAIC MG to build its first European auto plant in Spain to dodge tariffs",
+            "publishedDate": "2026-06-03",
+            "quote": "MG announced on Tuesday that its first production plant on the European mainland is being built in Galicia, Spain."
+          }
+        },
+        {
+          "label": "Production starts",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://cnevpost.com/2026/06/03/saic-mg-to-build-its-first-european-auto-plant/",
+            "title": "SAIC MG to build its first European auto plant in Spain to dodge tariffs",
+            "publishedDate": "2026-06-03",
+            "quote": "The plant is scheduled to begin production in 2028"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "magnum-heppenheim",
+    "pinIds": {
+      "local": 13919,
+      "production": 13919
+    },
+    "title": "Magnum Ice Cream Company Starts Ben & Jerry's Pint Line in Heppenheim",
+    "sourceUrl": "https://news.magnumicecream.com/tmicc-commences-production-ben-jerrys-heppenheim/",
+    "profile": {
+      "sector": "Ice-cream manufacturing",
+      "status": "production",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Heppenheim pint line do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Expansion programme",
+          "value": "EUR 30 million ongoing expansion programme at the site, stated in euros.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodbev.com/news/the-magnum-ice-cream-company-begins-ben-jerry-s-production-in-heppenheim-germany",
+            "title": "The Magnum Ice Cream Company begins Ben & Jerry's production at Germany facility - FoodBev Media",
+            "publishedDate": "2026-09-14",
+            "quote": "as part of an ongoing €30 million expansion programme"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Site size",
+          "value": "Heppenheim is TMICC's largest European factory, spanning 100,000 square metres.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodbev.com/news/the-magnum-ice-cream-company-begins-ben-jerry-s-production-in-heppenheim-germany",
+            "title": "The Magnum Ice Cream Company begins Ben & Jerry's production at Germany facility - FoodBev Media",
+            "publishedDate": "2026-09-14",
+            "quote": "Heppenheim is the largest factory in TMICC’s European network, spanning 100,000 square metres"
+          }
+        },
+        {
+          "key": "products",
+          "label": "New line",
+          "value": "Ben & Jerry's ice cream pints.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodbev.com/news/the-magnum-ice-cream-company-begins-ben-jerry-s-production-in-heppenheim-germany",
+            "title": "The Magnum Ice Cream Company begins Ben & Jerry's production at Germany facility - FoodBev Media",
+            "publishedDate": "2026-09-14",
+            "quote": "has commissioned a new production line for Ben & Jerry’s ice cream pints at its factory in Heppenheim, Germany"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Commissioning",
+          "value": "New pint line commissioned, reported September 14, 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodbev.com/news/the-magnum-ice-cream-company-begins-ben-jerry-s-production-in-heppenheim-germany",
+            "title": "The Magnum Ice Cream Company begins Ben & Jerry's production at Germany facility - FoodBev Media",
+            "publishedDate": "2026-09-14",
+            "quote": "has commissioned a new production line for Ben & Jerry’s ice cream pints"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Ben & Jerry's pint line commissioned",
+          "date": "2026-09-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodbev.com/news/the-magnum-ice-cream-company-begins-ben-jerry-s-production-in-heppenheim-germany",
+            "title": "The Magnum Ice Cream Company begins Ben & Jerry's production at Germany facility - FoodBev Media",
+            "publishedDate": "2026-09-14",
+            "quote": "has commissioned a new production line for Ben & Jerry’s ice cream pints"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Completed"
+  },
+  {
+    "key": "mesabi-iowa",
+    "pinIds": {
+      "local": 4801,
+      "production": 4801
+    },
+    "title": "Trump Unveils Mesabi Metallics' $15 Billion Iowa Steel Plant, the Largest in US History",
+    "sourceUrl": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+    "profile": {
+      "sector": "Integrated steelmaking",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Iowa steel plant do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "About USD 15 billion planned investment.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+            "title": "Trump announces plan for $15 billion steel plant, would be largest in U.S. history",
+            "publishedDate": "2026-09-28",
+            "quote": "plan to invest about $15 billion to build what would be the largest plant of its kind in U.S. history"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Annual capacity",
+          "value": "First phase about 7.5 million tons a year, later ramping to 10 million.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+            "title": "Trump announces plan for $15 billion steel plant, would be largest in U.S. history",
+            "publishedDate": "2026-09-28",
+            "quote": "The first phase of the Iowa steel plant is estimated to produce some 7.5 million tons per year"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned jobs",
+          "value": "At least 1,750 permanent jobs; first phase supports up to 6,000 construction jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+            "title": "Trump announces plan for $15 billion steel plant, would be largest in U.S. history",
+            "publishedDate": "2026-09-28",
+            "quote": "support at least 1,750 permanent jobs"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "Aims to begin production in 2030.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+            "title": "Trump announces plan for $15 billion steel plant, would be largest in U.S. history",
+            "publishedDate": "2026-09-28",
+            "quote": "aims to begin production in 2030"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Plant announced at the White House",
+          "date": "2026-09-28",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+            "title": "Trump announces plan for $15 billion steel plant, would be largest in U.S. history",
+            "publishedDate": "2026-09-28",
+            "quote": "announced a steel-making company's plan to invest about $15 billion"
+          }
+        },
+        {
+          "label": "Production starts",
+          "date": "2030",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html",
+            "title": "Trump announces plan for $15 billion steel plant, would be largest in U.S. history",
+            "publishedDate": "2026-09-28",
+            "quote": "aims to begin production in 2030"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
+  },
+  {
+    "key": "hershey-reese",
+    "pinIds": {
+      "local": 3136,
+      "production": 3136
+    },
+    "title": "Hershey Opens Its Reese Chocolate Processing Plant in Hershey, PA",
+    "sourceUrl": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-shapiro-hershey-reese-chocolate-processing-facility-streamli",
+    "profile": {
+      "sector": "Chocolate processing",
+      "status": "production",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Reese chocolate processing plant do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Plant size",
+          "value": "250,000 square feet.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-shapiro-hershey-reese-chocolate-processing-facility-streamli",
+            "title": "Gov Shapiro Hershey Reese Chocolate Processing Facility Streamline Permitting",
+            "publishedDate": "2025-04-17",
+            "quote": "The new 250,000-square-foot chocolate processing facility"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Site size",
+          "value": "55-acre site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-shapiro-hershey-reese-chocolate-processing-facility-streamli",
+            "title": "Gov Shapiro Hershey Reese Chocolate Processing Facility Streamline Permitting",
+            "publishedDate": "2025-04-17",
+            "quote": "sits on a 55-acre site"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Jobs",
+          "value": "More than 125 jobs created.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-shapiro-hershey-reese-chocolate-processing-facility-streamli",
+            "title": "Gov Shapiro Hershey Reese Chocolate Processing Facility Streamline Permitting",
+            "publishedDate": "2025-04-17",
+            "quote": "creating more than 125 jobs"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Build time",
+          "value": "Opened in less than two and a half years from the start of the project.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-shapiro-hershey-reese-chocolate-processing-facility-streamli",
+            "title": "Gov Shapiro Hershey Reese Chocolate Processing Facility Streamline Permitting",
+            "publishedDate": "2025-04-17",
+            "quote": "the Reese Chocolate Processing plant opened in less than two and half years"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Plant opens with Gov. Shapiro",
+          "date": "2025-04-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-shapiro-hershey-reese-chocolate-processing-facility-streamli",
+            "title": "Gov Shapiro Hershey Reese Chocolate Processing Facility Streamline Permitting",
+            "publishedDate": "2025-04-17",
+            "quote": "the Reese Chocolate Processing plant opened in less than two and half years"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Completed"
+  },
+  {
+    "key": "purina-mantua",
+    "pinIds": {
+      "local": 3089,
+      "production": 3089
+    },
+    "title": "Purina's Wet Pet Food Plant in Mantua Starts Production",
+    "sourceUrl": "https://www.nestle.com/media/news/purina-expands-pet-food-production-italy",
+    "profile": {
+      "sector": "Pet-food manufacturing",
+      "status": "announced",
+      "assessmentDate": "2026-10-27",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published figures for the Mantova plant do not establish a comparable cohort of at least five same-sector plants; no percentile score can be justified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named automated production steps or quantified automation coverage appear in the opened project sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named process specification beyond the product scope is published; a marketing adjective alone cannot support a score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No energy, water or material consumption per unit of output is published for the planned plant.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No named supplier chain, import substitution or quantified bottleneck relief was established in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No training program, apprenticeship pathway or published workforce outcomes were established in the opened sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Investment",
+          "value": "CHF 520 million (about USD 648 million as reported), stated in Swiss francs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103822-nestle-purina-to-open-pet-food-plant-in-italy",
+            "title": "Nestlé Purina to Open Pet Food Plant in Italy",
+            "publishedDate": "2026-07-24",
+            "quote": "Nestlé Purina is investing CHF 520 million ($648 million) into a new plant in Mantova, Italy"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products",
+          "value": "Super-premium wet pet food plus a logistics platform.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103822-nestle-purina-to-open-pet-food-plant-in-italy",
+            "title": "Nestlé Purina to Open Pet Food Plant in Italy",
+            "publishedDate": "2026-07-24",
+            "quote": "The plant will produce super-premium wet pet food for key Purina brands."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Production start",
+          "value": "Production expected to start in 2029.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103822-nestle-purina-to-open-pet-food-plant-in-italy",
+            "title": "Nestlé Purina to Open Pet Food Plant in Italy",
+            "publishedDate": "2026-07-24",
+            "quote": "production expected to start in 2029"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Mantova investment announced",
+          "date": "2026-07-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103822-nestle-purina-to-open-pet-food-plant-in-italy",
+            "title": "Nestlé Purina to Open Pet Food Plant in Italy",
+            "publishedDate": "2026-07-24",
+            "quote": "Nestlé Purina is investing CHF 520 million ($648 million) into a new plant in Mantova, Italy"
+          }
+        },
+        {
+          "label": "Production starts",
+          "date": "2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.foodengineeringmag.com/articles/103822-nestle-purina-to-open-pet-food-plant-in-italy",
+            "title": "Nestlé Purina to Open Pet Food Plant in Italy",
+            "publishedDate": "2026-07-24",
+            "quote": "production expected to start in 2029"
+          }
+        }
+      ]
+    },
+    "constructionStatus": "Proposed"
   }
 ]

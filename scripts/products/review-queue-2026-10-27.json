@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T02:38:37.632Z",
+  "checkedAt": "2026-10-28T03:52:45.713315+00:00",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -14,10 +14,10 @@
     {
       "table": "PinCarPerf",
       "pins": 128,
-      "reviews": 350,
+      "reviews": 349,
       "minimum": 3,
-      "belowMinimum": 30,
-      "undatedNonMichelin": 11,
+      "belowMinimum": 31,
+      "undatedNonMichelin": 9,
       "unscoredDated": 0
     },
     {
@@ -44,16 +44,16 @@
       "reviews": 456,
       "minimum": 3,
       "belowMinimum": 0,
-      "undatedNonMichelin": 21,
+      "undatedNonMichelin": 20,
       "unscoredDated": 0
     },
     {
       "table": "PinVideoPerf",
       "pins": 32,
-      "reviews": 111,
+      "reviews": 113,
       "minimum": 3,
       "belowMinimum": 2,
-      "undatedNonMichelin": 5,
+      "undatedNonMichelin": 3,
       "unscoredDated": 0
     },
     {
@@ -561,6 +561,15 @@
       "reviewCount": 1,
       "reason": "Fresh Korean searches stillmostlyIncheonbranch, officialpackagepromotions or duplicateCH_ post. Rebeccadream collage mixes Busan/Incheon and copied social captions, so not counted as original exact-venue meal. Need2distinct originalBusan critic/visitoraccounts; no changes.",
       "existingResearchBasis": "Food 4.5 from 4.9 over 444 ratings (5 not given: no independent reviews found). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 0: Not shown on pages 1-2 of the MICHELIN Guide Busan restaurant list (57 restaurants) read 2026-10-18, so 0."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "title": "Zeekr Starts 001 Deliveries in China From RMB 281,000, With 800 V and 700 km Range",
+      "sourceUrl": "https://insideevs.com/news/541793/zeekr-001-enters-production-china/",
+      "reviewCount": 2,
+      "reason": "InsideEVs AWD Privilege excluded after original variant verification. Two later export RWD reports remain labelled context; seek independent exact 2021 China-launch 100-kWh RWD reviews. Do not use export AWD air-suspension findings to fill this gap.",
+      "existingResearchBasis": "Variant: 100 kWh RWD, RMB 281,000. Range 712 km is NEDC (CLTC not published, so score is conservative) -> 3.5; 360 kW peak but 10-80% in ~30 min -> 3; 0-100 6.9 s -> 2.5. Assist, space (wheelbase not on opened page), value (CnEVPost price conflict) and kids null. Reviews are of later or export 001s (labelled). Round20: InsideEVs Romanian AWD Privilege/air-suspension test excluded from native reviews; not launch China RWD evidence. Two labelled export RWD reviews remain contextual. Exact launch-variant independent review coverage remains open; axes unchanged."
     }
   ],
   "coverageFollowUps": [
@@ -574,6 +583,12 @@
         "https://www.basketusa.com/news/847043/test-de-chaussures-la-puma-hali-1-face-a-son-destin/",
         "https://www.thehoopsgeek.com/shoe-reviews/puma-hali-1/"
       ]
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "reason": "Two original launch-era Japanese Pro web hands-ons replace encyclopedia relay. Web 10/15-second and UI-resolution findings are not launch API endpoint measurements. Preserve source hand, launch API axes, speed and realism null; seek direct API-specific generation tests before rescoring. MindStudio remains commentary, not a hands-on test.",
+      "evidenceCatalog": "scripts/products/review-maintenance-round21-2026-10-27.json"
     }
   ],
   "resolvedCoverageFollowUps": [
@@ -832,6 +847,18 @@
       "distinctFirsthandAuthors": 3,
       "reason": "Three named Autohome owner anecdotes of exact 2022 RWD Comfort, with criticism retained. Seek additional independent professional exact-variant road tests. No independent verification of ownership or instrumented validation of technical axes is claimed.",
       "evidenceCatalog": "scripts/products/review-replacements-round19-2026-10-27.json"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "reason": "Raw count four: all current publishers sell model access. Wiro shows five outputs but lacks recorded seeds and per-output timing; Artlist shows a critical same-prompt transition test. Seek credible non-vendor independent exact 1.0 Pro Fast tests; realism remains null.",
+      "evidenceCatalog": "scripts/products/review-maintenance-round21-2026-10-27.json"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "reason": "Raw count three: 42HOW is an early seven-seat entirely electric family drive, battery/range trim unspecified; retained two reviews concern updated models. Seek three independent exact China-launch 605-km BEV trim road tests; no exact-trim consensus established.",
+      "evidenceCatalog": "scripts/products/review-maintenance-round21-2026-10-27.json"
     }
   ],
   "resolvedIndependenceGaps": [
@@ -1193,16 +1220,16 @@
       "pinId": 19873,
       "title": "Voyah Launches the Dream Electric and Range-Extender MPV From RMB 369,900",
       "url": "https://electricvehicleweb.com/voyah-dream/",
-      "status": "needs-research",
-      "reason": "Voyah source is explicitly First Look of updated 2024-26 cabin, not the scored 2022 launch BEV. Visible July2 2026 is Last Updated On despite datePublished sharing that value. Resolve updated-version eligibility and original day; do not date as independent launch road test. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 8347 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round21: Opened first-look explicitly covers updated Huawei/global-spec Dream, not launch 2022 BEV; July2 2026 is Last Updated. Replace with early seven-seat entirely electric Dreamer family test, retaining battery/trim uncertainty. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered."
     },
     {
       "table": "PinCarPerf",
       "pinId": 19875,
       "title": "Zeekr Starts 001 Deliveries in China From RMB 281,000, With 800 V and 700 km Range",
       "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 20: Original canonical InsideEVs article opened. Verified quote describes European 400-V dual-motor AWD Privilege with adaptive air suspension and 22-inch wheels, not scored launch China RWD. Removed citation from native reviews locally and in production, retained scoped reference/wiki context and synchronized catalog. Closes active citation by exclusion; original full publication day remains unknown."
     },
     {
       "table": "PinCarPerf",
@@ -1266,7 +1293,7 @@
       "title": "Volkswagen Premieres the Second-Generation T-Roc as a Mild Hybrid",
       "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open. Round20: original HTTPS reader retry inaccessible; body and original publication remain unverified. No date or sentiment inferred."
     },
     {
       "table": "PinGasCarPerf",
@@ -1441,8 +1468,8 @@
       "pinId": 5000,
       "title": "Gemini 1.0 Released",
       "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
-      "status": "needs-research",
-      "reason": "Exact corrected Akkio extract verified. Visible publication January3 2024 conflicts with JSON-LD December22 2023 original and December26 2023 modification. Date remains null in both environments; seek original archive/publisher evidence. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 17122 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round21: Akkio original publication chronology remains conflicting. Replace active citation with version-fixed original third-party Gemini Pro benchmark paper; this does not resolve the old article date. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered."
     },
     {
       "table": "PinLlmPerf",
@@ -1601,8 +1628,8 @@
       "pinId": 19633,
       "title": "Seedance 1.0 Pro Fast Released",
       "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
-      "status": "needs-research",
-      "reason": "Opened GeeLark comparison has original metadata November18 2025 and visible updated October6 2026; generic Analysis and tests assertion lacks attributed protocol or samples, and publisher promotes its Seedance service. Independent-test eligibility remains unresolved, so no date assigned. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 12285 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round21: Generic vendor comparison asserts tests without attributed samples/protocol. Replace with Wiro five published-output tests and Artlist demonstrated same-prompt comparison, both explicitly vendor-affiliated, not independent consensus. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered."
     },
     {
       "table": "PinVideoPerf",
@@ -1633,8 +1660,8 @@
       "pinId": 19669,
       "title": "Sora 2 and Sora 2 Pro Released in the API",
       "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
-      "status": "needs-research",
-      "reason": "Saved Wikipedia text matches, but Wikipedia page creation February15 2024 and last revision October24 2026 are not an independent Sora2Pro model test or its publication date. Find actual primary independent evaluator/reviewer; do not graph encyclopedia timestamps. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 31311 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round21: Encyclopedia relay of a mutable leaderboard is not an original independent Sora 2 Pro test. Replace with named original Gizmodo Japan and TechnoEdge Pro hands-on accounts; no Wikipedia creation/revision day plotted. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered."
     },
     {
       "table": "PinDining",

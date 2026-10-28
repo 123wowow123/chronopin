@@ -45,12 +45,13 @@ describe('factory evidence contract', () => {
     expect(factoryProblem(p)).toMatch(/source/);
   });
   it('accepts the researched catalog and keeps missing figures null', () => {
-    expect(catalog).toHaveLength(6);
+    expect(catalog).toHaveLength(28);
     for (const { profile } of catalog) {
       expect(factoryProblem(profile)).toEqual(profile);
       expect(factoryScores(profile).scale).toBeNull();
       expect(factoryScores(profile).efficiency).toBeNull();
-      expect(hasFactoryScores(profile)).toBe(true);
+      // All-null research profiles are valid: they document gaps and still drive the buildout panel.
+      expect(hasFactoryScores(profile)).toBe(Object.values(profile.axes).some(a => a.score !== null));
     }
   });
   it('requires all six axes but allows a useful all-unknown research profile', () => {

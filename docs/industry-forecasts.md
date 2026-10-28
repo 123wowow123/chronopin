@@ -69,3 +69,24 @@ forecast. Art uses a cited dealer-survey outlook rather than a numerical market
 projection. Conditional scenarios, upper estimates and dated election-model
 snapshots are labeled explicitly; this is contextual coverage, not a forecast
 of the entire market for every matching category.
+
+## Graphs and new panels, October 27, 2026
+
+Rows may carry `history` (up to 3 lines, 30 points each, stored as the row's
+snapshot and drawn solid before the dashed projection). 18 existing panels gained
+sourced actuals (IFR, IMF, WSTS, WTO, Ember, IEA GEVO, FAO, IATA, UN, Pew, DefiLlama
+for stablecoins, plus one-point Grand View/Newzoo/WEF base years). 23 panels were added
+with 6-10 actuals and 2-11 projected points each: World Bank Commodity Markets
+Outlook (Brent, gas, gold, silver, copper, aluminium, nickel, cocoa, coffee, urea, rice),
+IATA Global Outlook, UN WPP 2024 and OECD-FAO 2026-2035. Gartner, PwC and IDC
+history stayed unfound (403 or definition drift). Still no verified panel for
+Electronics, Software, Telecom, TV, Music, Literature, Housing, Banking, Insurance.
+Not yet on production (`npm run industry:forecasts:prod`).
+
+Second round, October 27, 2026: 16 more panels cover Software, Electronics and Telecom
+(Gartner IT spending), Property (Fannie Mae, CBO house prices), Finance (CBO and Fed
+rates, Swiss Re premium growth, tagged Insurance), TV (Netflix revenue guidance, BLS) and
+Music/Literature (BLS employment). Source limit per row is now 14. Left out: Swiss Re life
+and non-life (values matched by chart position), Goldman recorded music (IFPI history
+joined to a secondary-reported projection). Still unfound: Ericsson subscriptions, OBR,
+Allianz, McKinsey banking, PwC history (one 2025 point only).

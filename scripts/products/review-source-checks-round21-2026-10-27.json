@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "title": "Gemini 1.0 Released",
+      "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+      "status": "resolved",
+      "reason": "Round21: Akkio original publication chronology remains conflicting. Replace active citation with version-fixed original third-party Gemini Pro benchmark paper; this does not resolve the old article date. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered.",
+      "previousReason": "Exact corrected Akkio extract verified. Visible publication January3 2024 conflicts with JSON-LD December22 2023 original and December26 2023 modification. Date remains null in both environments; seek original archive/publisher evidence. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 17122 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "title": "Seedance 1.0 Pro Fast Released",
+      "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+      "status": "resolved",
+      "reason": "Round21: Generic vendor comparison asserts tests without attributed samples/protocol. Replace with Wiro five published-output tests and Artlist demonstrated same-prompt comparison, both explicitly vendor-affiliated, not independent consensus. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered.",
+      "previousReason": "Opened GeeLark comparison has original metadata November18 2025 and visible updated October6 2026; generic Analysis and tests assertion lacks attributed protocol or samples, and publisher promotes its Seedance service. Independent-test eligibility remains unresolved, so no date assigned. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 12285 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "title": "Sora 2 and Sora 2 Pro Released in the API",
+      "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+      "status": "resolved",
+      "reason": "Round21: Encyclopedia relay of a mutable leaderboard is not an original independent Sora 2 Pro test. Replace with named original Gizmodo Japan and TechnoEdge Pro hands-on accounts; no Wikipedia creation/revision day plotted. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered.",
+      "previousReason": "Saved Wikipedia text matches, but Wikipedia page creation February15 2024 and last revision October24 2026 are not an independent Sora2Pro model test or its publication date. Find actual primary independent evaluator/reviewer; do not graph encyclopedia timestamps. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 31311 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "title": "Voyah Launches the Dream Electric and Range-Extender MPV From RMB 369,900",
+      "url": "https://electricvehicleweb.com/voyah-dream/",
+      "status": "resolved",
+      "reason": "Round21: Opened first-look explicitly covers updated Huawei/global-spec Dream, not launch 2022 BEV; July2 2026 is Last Updated. Replace with early seven-seat entirely electric Dreamer family test, retaining battery/trim uncertainty. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered.",
+      "previousReason": "Voyah source is explicitly First Look of updated 2024-26 cabin, not the scored 2022 launch BEV. Visible July2 2026 is Last Updated On despite datePublished sharing that value. Resolve updated-version eligibility and original day; do not date as independent launch road test. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 8347 body characters. No new original publication/eligibility evidence accepted; remain open."
+    }
+  ],
+  "remainingNeedsResearch": 23,
+  "verifiedUndated": 98
+}

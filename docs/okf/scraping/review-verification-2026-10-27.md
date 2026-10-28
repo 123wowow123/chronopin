@@ -428,3 +428,69 @@ was removed and the entire original setting, including all four disabled
 schedules, was verified unchanged. No deployment or production restart occurred.
 Successful scheduled model/tool verification and the broader backfill remain
 unfinished.
+
+## Round 20 — small source-scope correction
+
+Checked two sources. The opened [original InsideEVs Zeekr test](https://insideevs.com/reviews/793428/zeekr-001-ev-review/)
+explicitly drove a European 400-V dual-motor AWD Privilege with adaptive air
+suspension and 22-inch wheels. Its saved ride quote is genuine, but does not
+test #19875's China-launch 100-kWh RWD. The citation was removed from native
+reviews locally and in production, while its scope was preserved in a reference
+and source wiki in each environment. The visible April 21 date lacks a year;
+no full publication day was inferred. Both remaining reviews are labelled later
+export RWD context; exact launch-variant coverage remains open.
+
+[Guarded exclusion](../../../scripts/products/review-exclusions-round20-2026-10-27.json),
+[basis correction and readbacks](../../../scripts/products/review-native-verification-round20-2026-10-27.json),
+and [reference/wiki verification](../../../scripts/products/review-evidence-verification-round20-2026-10-27.json)
+preserve axes and unrelated rubric/evidence fields. A source-identified canonical
+entry was appended to the EV replay catalog from the fresh native row; no numeric-id
+fallback was used. The initial basis replay saved both environments but stopped
+at its missing catalog identity; after synchronization, the idempotent replay
+completed and verified both environments.
+
+The What Car? T-Roc original remained inaccessible through the HTTPS reader;
+its saved passage and publication day remain unverified. No date or score was
+assigned. [Research and dispositions](../../../scripts/products/review-source-checks-round20-2026-10-27.json)
+close one active check by exclusion, not by discovering its publication year.
+The queue now records **54 raw rubric gaps**, **27 source checks**, **98
+verified-undated entries**, and **zero dated reviews awaiting sentiment**.
+The extra raw gap honestly reflects Zeekr dropping from three citations to two.
+[Validation](../../../scripts/products/review-validation-round20-2026-10-27.json)
+includes both-environment API readbacks and three passing catalog tests.
+Scheduled verification was not retried; its prior unresolved driver/cooldown
+failure remains outstanding. No deployment or restart occurred.
+
+## Round 21 — medium batch of original tests and scoped replacements
+
+Saved six new dated excerpts across four pins in both environments and removed
+four weaker citations. Eight native readbacks preserve all axes, manual `hand`
+provenance where present, unrelated rubric fields, authors, titles, source
+identities and event dates. Eight rendered sentiment tables show every incoming
+publication day and passage score, with the excluded links absent from those
+tables. Twenty reference/source-wiki checks preserve existing attribution and
+prior wiki content. Nine focused tests pass.
+
+- Gemini 1.0 (#5000): the opened, version-fixed December 18, 2023 arXiv v1 of *An In-depth Look at Gemini's Language Abilities* replaces the conflicting-date Akkio analysis. Its transparent ten-dataset Gemini Pro comparison supplies a modest negative comparative verdict, rather than testing unreleased Ultra or establishing current model quality. December 24's v2 revision is not substituted for publication. Akkio's original date remains unknown.
+- Seedance 1.0 Pro Fast (#19633): Wiro's five published 480p/vertical/five-second outputs and Artlist's demonstrated bride-to-beach transition replace GeeLark's generic test assertion. Artlist's criticism of jerky motion is retained. Original visible March 26 and March 29, 2026 days are used; Wiro's September modification is recorded separately. Both publishers sell model access. Wiro lacks recorded seeds and per-output timing; these examples do not establish reproducible benchmark results or independent non-vendor consensus. Realism remains null and the independence follow-up stays open.
+- Sora 2 Pro (#19669): original Japanese Gizmodo Japan (October 9, 2025) and TechnoEdge (October 3, 2025) hands-ons replace Wikipedia's secondary leaderboard relay. Original Japanese passages retain rendering praise and standard-resolution criticism. Both explicitly tested the Pro web product; TechnoEdge predates API launch. Their UI resolutions and 10/15-second web modes do not replace launch API specifications. Speed/realism remain null, and direct API-specific test coverage remains open. The standard-Sora2 Tom's Guide comparison and DataCamp author without access were not added as Pro firsthand evidence.
+- Voyah Dreamer (#19873): Tao Yanyan's early seven-seat, entirely electric family drive, hosted by 42HOW and posted February 3, 2023, replaces the updated Huawei/global-spec EVW first-look. The publisher's literal English wording is quoted. Battery/range trim is unspecified: this does not prove the scored 605-km trim. The retained two later-model reviews remain labelled context; three raw citations do not close exact-launch-trim coverage. A hybrid drive and a track test not isolating the BEV were rejected.
+
+The original reader displayed the full Artlist and 42HOW articles; plain HTTPS
+returned 403 and a redirected 404 respectively. These access differences are
+recorded without declaring either source permanently dead. Original days and
+source scope are detailed in the [research record](../../../scripts/products/review-research-round21-2026-10-27.json).
+
+The [guarded maintenance catalog](../../../scripts/products/review-maintenance-round21-2026-10-27.json)
+records complete expected reviews/bases, replacements, exclusions and deliberate
+hand-row maintenance. The source-identified EV replay entry and current queue
+are synchronized; historical research/backup snapshots remain history.
+[Source dispositions](../../../scripts/products/review-source-checks-round21-2026-10-27.json)
+close four active citations by replacement/exclusion, not by discovering their
+old publication days. The inventory is now **54 raw rubric gaps**, **23 source
+checks**, **98 verified-undated entries**, and **zero dated reviews awaiting
+sentiment**. Scoped independence/variant/API follow-ups remain explicit.
+[Validation](../../../scripts/products/review-validation-round21-2026-10-27.json)
+records the native, rendered and evidence readbacks. Scheduled verification was
+not retried; its previous unresolved driver/cooldown failure remains outstanding.
+No deployment or restart occurred.

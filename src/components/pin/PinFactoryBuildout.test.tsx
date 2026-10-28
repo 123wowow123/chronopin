@@ -15,7 +15,7 @@ const t = createTranslator(en, 'en');
 const render = (p: PinFactoryJson) => renderToStaticMarkup(createElement(PinFactoryBuildout, { factory: p, t }));
 
 describe('factual factory buildout display', () => {
-  it('shows all six researched projects independently of radar eligibility', () => {
+  it('shows every researched project independently of radar eligibility', () => {
     for (const e of entries) {
       expect(hasFactoryBuildout(e.profile)).toBe(true);
       expect(render(e.profile)).toContain('Factory buildout');

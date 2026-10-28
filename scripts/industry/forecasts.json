@@ -637,9 +637,50 @@
         "url": "https://ifr.org/news/five-million-robots-now-operate-in-factories-globally/",
         "date": "2026-09-24",
         "quote": "Installations are forecast to rise by 9% to 655,000 units in 2026 and reach 806,000 units in 2029."
+      },
+      {
+        "label": "IFR: World Robotics 2023 Executive Summary (2021 figure)",
+        "url": "https://ifr.org/img/worldrobotics/Executive_Summary_WR_Industrial_Robots_2023.pdf",
+        "date": "2023-09-26",
+        "quote": "adding another 5% to the then record figure of 526,144 units installed in 2021."
+      },
+      {
+        "label": "IFR: Record of 4 million robots working in factories worldwide (World Robotics 2024)",
+        "url": "https://ifr.org/news/record-of-4-million-robots-working-in-factories-worldwide",
+        "date": "2024-09-24",
+        "quote": "The annual installation figure of 541,302 units in 2023 is the second highest in history. It is only 2% lower than the record of 552,946 units installed in 2022."
+      },
+      {
+        "label": "IFR: Global robot demand in factories doubles over 10 years (World Robotics 2025)",
+        "url": "https://ifr.org/news/global-robot-demand-in-factories-doubles-over-10-years",
+        "date": "2025-09-25",
+        "quote": "The new World Robotics 2025 statistics on industrial robots showed 542,000 robots installed in 2024 - more than double the number 10 years ago."
       }
     ],
-    "note": "International Federation of Robotics forecast of annual industrial robot installations; 2025 installations were above 600,000 units, up 11%."
+    "note": "International Federation of Robotics forecast of annual industrial robot installations; 2025 installations were above 600,000 units, up 11%. History: Annual global industrial robot installations in units; each year is taken from the newest IFR edition that states it (IFR revises prior years: WR2023 first reported 2022 as 553,052). 2025 is only given as 'more than 600,000' so it is omitted.",
+    "history": [
+      {
+        "label": "IFR reported (World Robotics, latest edition per year)",
+        "points": [
+          {
+            "x": "2021",
+            "value": 526144
+          },
+          {
+            "x": "2022",
+            "value": 552946
+          },
+          {
+            "x": "2023",
+            "value": 541302
+          },
+          {
+            "x": "2024",
+            "value": 542000
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "goldman-humanoid-robot-market",
@@ -701,9 +742,54 @@
         "url": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026",
         "date": "2026-10-13",
         "quote": "global growth to slow to 3.1 percent in 2026 and rebound to 3.4 percent in 2027."
+      },
+      {
+        "label": "IMF World Economic Outlook October 2026, Online Statistical Appendix Table A1",
+        "url": "https://www.imf.org/-/media/files/publications/weo/2026/october/english/tablea.pdf.md",
+        "date": "2026-10-13",
+        "quote": "World growth: 3.3 3.6 3.0 –2.7 6.7 3.8 3.3 3.5 3.5 3.1 3.4 3.1 (average 2008–17; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025; 2026; 2027; 2031)"
       }
     ],
-    "note": "Annual real GDP growth, not nominal market size. October 2026 baseline; geopolitical, trade and financial risks can change the outlook."
+    "note": "Annual real GDP growth, not nominal market size. October 2026 baseline; geopolitical, trade and financial risks can change the outlook. History: Annual % change in world real GDP from the same Oct 2026 table as the projection (2026 3.1, 2027 3.4); 2025 is still an IMF estimate. Column mapping read from the table's own parenthetical; page read via WebFetch (direct curl is 403).",
+    "history": [
+      {
+        "label": "IMF WEO October 2026 (actuals/estimates)",
+        "points": [
+          {
+            "x": "2018",
+            "value": 3.6
+          },
+          {
+            "x": "2019",
+            "value": 3.0
+          },
+          {
+            "x": "2020",
+            "value": -2.7
+          },
+          {
+            "x": "2021",
+            "value": 6.7
+          },
+          {
+            "x": "2022",
+            "value": 3.8
+          },
+          {
+            "x": "2023",
+            "value": 3.3
+          },
+          {
+            "x": "2024",
+            "value": 3.5
+          },
+          {
+            "x": "2025",
+            "value": 3.5
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "wsts-semiconductor-market",
@@ -735,9 +821,64 @@
         "url": "https://www.wsts.org/76/Global-Semiconductor-Market-records-exceptional-growth-in-Q2-2026",
         "date": null,
         "quote": "The calculation for 2027 reaches approximately 2.1 trillion US dollars"
+      },
+      {
+        "label": "SIA: Global Semiconductor Sales, Units Shipped Reach All-Time Highs in 2021",
+        "url": "https://www.semiconductors.org/global-semiconductor-sales-units-shipped-reach-all-time-highs-in-2021",
+        "date": "2022-02-14",
+        "quote": "global semiconductor industry sales totaled $555.9 billion in 2021 ... the 2020 total of $440.4 billion"
+      },
+      {
+        "label": "SIA: Global Semiconductor Sales Decrease 8.2% in 2023",
+        "url": "https://www.semiconductors.org/global-semiconductor-sales-decrease-8-2-in-2023-market-rebounds-late-in-year/",
+        "date": "2024-02-05",
+        "quote": "global semiconductor industry sales totaled $526.8 billion in 2023 ... a decrease of 8.2% compared to the 2022 total of $574.1 billion"
+      },
+      {
+        "label": "SIA: Global Annual Semiconductor Sales Increase 25.6% to $791.7 Billion in 2025",
+        "url": "https://semiconductors.org/global-annual-semiconductor-sales-increase-25-6-to-791-7-billion-in-2025/",
+        "date": "2026-02-06",
+        "quote": "global semiconductor sales hit $791.7 billion in 2025, an increase of 25.6% compared to the 2024 total of $630.5 billion."
+      },
+      {
+        "label": "WSTS: Global Semiconductor Market grows 26% in 2025 to $796 billion",
+        "url": "https://www.wsts.org/76/103/Global-Semiconductor-Market-grows-26-in-2025-to-796B",
+        "date": "2026-03-06",
+        "quote": "Global semiconductor sales reached USD 795.6 billion in 2025, representing an increase of 26.2 percent year-over-year"
       }
     ],
-    "note": "USD trillions. WSTS calculates $1,655 billion for 2026 and approximately $2.1 trillion for 2027 after replacing Q2 estimates with actuals. WSTS explicitly says these are calculations using the original Spring growth assumptions, not a new forecast scenario."
+    "note": "USD trillions. WSTS calculates $1,655 billion for 2026 and approximately $2.1 trillion for 2027 after replacing Q2 estimates with actuals. WSTS explicitly says these are calculations using the original Spring growth assumptions, not a new forecast scenario. History: USD trillions (billions/1000). SIA monthly/annual figures are WSTS data; 2025 uses WSTS's finalized 795.6 (SIA's earlier 791.7 was before Q4 finalization); 2024 (630.5) is as stated in the Feb 2026 SIA release.",
+    "history": [
+      {
+        "label": "WSTS data reported (SIA/WSTS releases)",
+        "points": [
+          {
+            "x": "2020",
+            "value": 0.4404
+          },
+          {
+            "x": "2021",
+            "value": 0.5559
+          },
+          {
+            "x": "2022",
+            "value": 0.5741
+          },
+          {
+            "x": "2023",
+            "value": 0.5268
+          },
+          {
+            "x": "2024",
+            "value": 0.6305
+          },
+          {
+            "x": "2025",
+            "value": 0.7956
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "iea-low-emissions-electricity",
@@ -765,9 +906,72 @@
         "url": "https://www.iea.org/reports/electricity-2026/executive-summary",
         "date": null,
         "quote": "Renewables and nuclear are together expected to account for around half of global electricity generation by 2030."
+      },
+      {
+        "label": "Ember yearly full release (long format CSV), World / Electricity generation / Clean, %",
+        "url": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv",
+        "date": "2026-01-01",
+        "quote": "World,Year 2024,Electricity generation,Aggregate fuel,Clean,% share of generation = 40.94; Year 2025 = 42.64; 2023 = 39.45; 2015 = 33.52 (CSV rows)"
+      },
+      {
+        "label": "Ember Global Electricity Review 2025",
+        "url": "https://ember-energy.org/latest-insights/global-electricity-review-2025/",
+        "date": "2025-04-08",
+        "quote": "The record increase in renewables coupled with a small increase in nuclear output of 69 TWh brought low-carbon power to 40.9% (12,609 TWh) of the mix in 2024"
       }
     ],
-    "note": "Approximately 50% of electricity generation, not all energy consumption. Includes nuclear and renewables; an outlook rather than a measured 2030 result."
+    "note": "Approximately 50% of electricity generation, not all energy consumption. Includes nuclear and renewables; an outlook rather than a measured 2030 result. History: Not the IEA's own series: Ember's 'Clean' category (renewables plus nuclear) share of world electricity generation, %, 2015-2025 from its public CSV (Area=World, Category=Electricity generation, Unit=%); matches the panel's definition but a different publisher than the IEA projection (the CSV date field is approximate, file downloaded 2026-10-27).",
+    "history": [
+      {
+        "label": "Ember reported (renewables + nuclear share of global generation)",
+        "points": [
+          {
+            "x": "2015",
+            "value": 33.52
+          },
+          {
+            "x": "2016",
+            "value": 34.15
+          },
+          {
+            "x": "2017",
+            "value": 34.67
+          },
+          {
+            "x": "2018",
+            "value": 35.13
+          },
+          {
+            "x": "2019",
+            "value": 36.34
+          },
+          {
+            "x": "2020",
+            "value": 37.91
+          },
+          {
+            "x": "2021",
+            "value": 37.89
+          },
+          {
+            "x": "2022",
+            "value": 38.62
+          },
+          {
+            "x": "2023",
+            "value": 39.45
+          },
+          {
+            "x": "2024",
+            "value": 40.94
+          },
+          {
+            "x": "2025",
+            "value": 42.64
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "iea-electric-car-sales",
@@ -794,9 +998,66 @@
         "url": "https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
         "date": null,
         "quote": "Global electric car sales are expected to grow to 23 million in 2026, representing 28% of total car sales."
+      },
+      {
+        "label": "IEA Global EV Outlook 2022, Executive summary (Wayback copy)",
+        "url": "https://web.archive.org/web/2/https://www.iea.org/reports/global-ev-outlook-2022/executive-summary",
+        "date": "2022-05-23",
+        "quote": "Sales of electric vehicles (EVs) doubled in 2021 from the previous year to a new record of 6.6 million."
+      },
+      {
+        "label": "IEA Global EV Outlook 2023, Executive summary (Wayback copy)",
+        "url": "https://web.archive.org/web/20250601/https://www.iea.org/reports/global-ev-outlook-2023/executive-summary",
+        "date": "2023-04-26",
+        "quote": "Electric car markets are seeing exponential growth as sales exceeded 10 million in 2022."
+      },
+      {
+        "label": "IEA Global EV Outlook 2024, Executive summary (Wayback copy)",
+        "url": "https://web.archive.org/web/2/https://www.iea.org/reports/global-ev-outlook-2024/executive-summary",
+        "date": "2024-04-23",
+        "quote": "in 2023, global sales of electric cars neared 14 million, reaching 18% of all cars sold."
+      },
+      {
+        "label": "IEA Global EV Outlook 2025, Executive summary (Wayback copy)",
+        "url": "https://web.archive.org/web/20240601/https://www.iea.org/reports/global-ev-outlook-2025/executive-summary",
+        "date": "2025-05-14",
+        "quote": "Electric car sales exceeded 17 million globally in 2024, reaching a sales share of more than 20%."
+      },
+      {
+        "label": "IEA Global EV Outlook 2026, Executive summary (Wayback copy)",
+        "url": "https://web.archive.org/web/2/https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
+        "date": "2026-05-20",
+        "quote": "Electric car sales grew by 20% globally to exceed 20 million in 2025, meaning one-quarter of all new cars sold were electric."
       }
     ],
-    "note": "Millions of battery electric and plug-in hybrid cars sold worldwide. The IEA outlook is sensitive to affordability, policy and energy prices; this is not a forecast of all vehicle sales."
+    "note": "Millions of battery electric and plug-in hybrid cars sold worldwide. The IEA outlook is sensitive to affordability, policy and energy prices; this is not a forecast of all vehicle sales. History: Millions of electric (BEV+PHEV) cars from successive IEA executive summaries (iea.org returns 403 to scripts, so read via Wayback copies); 2022-2025 are IEA's rounded headline figures ('exceeded 10', 'neared 14', 'exceeded 17', 'exceed 20') so treat them as approximate, each from the report of that vintage.",
+    "history": [
+      {
+        "label": "IEA reported",
+        "points": [
+          {
+            "x": "2021",
+            "value": 6.6
+          },
+          {
+            "x": "2022",
+            "value": 10
+          },
+          {
+            "x": "2023",
+            "value": 14
+          },
+          {
+            "x": "2024",
+            "value": 17
+          },
+          {
+            "x": "2025",
+            "value": 20
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "newzoo-games-revenue",
@@ -822,9 +1083,26 @@
         "url": "https://newzoo.com/articles/executive-summary-ggmr-2026-free-edition",
         "date": "2026-09-15",
         "quote": "The global games market is forecast to generate $213.9 billion in 2026, an increase of 6.1% year over year."
+      },
+      {
+        "label": "PocketGamer.biz: Global Games revenue surpasses $200bn for the first time (Newzoo)",
+        "url": "https://www.pocketgamer.biz/global-games-revenue-surpasses-200bn-for-the-first-time-mobile-generates-113bn/",
+        "date": "2026-06-19",
+        "quote": "Global games revenue reached $201.6 billion in 2025"
       }
     ],
-    "note": "USD billions across PC, console and mobile games; excludes a separate forecast for tabletop games. Published forecast, not realized annual revenue."
+    "note": "USD billions across PC, console and mobile games; excludes a separate forecast for tabletop games. Published forecast, not realized annual revenue. History: Only one same-vintage actual verified (Newzoo restates prior years each edition; older 2024 figures of $182.7B/$184.3B are on a different vintage, and newzoo.com/gamesbeat blocked access), so not enough for a line.",
+    "history": [
+      {
+        "label": "Newzoo reported",
+        "points": [
+          {
+            "x": "2025",
+            "value": 201.6
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "wto-merchandise-trade",
@@ -858,9 +1136,40 @@
         "url": "https://www.wto.org/english/news_e/news26_e/stat_08oct26_510_e.htm",
         "date": "2026-10-08",
         "quote": "merchandise trade volume is now expected to grow by 3.9% in 2026"
+      },
+      {
+        "label": "WTO Global Trade Outlook and Statistics Update, October 2025 (Table 1, Historical)",
+        "url": "https://www.wto.org/english/news_e/news25_e/stat_07oct25_e.pdf",
+        "date": "2025-10-07",
+        "quote": "Table 1: Merchandise trade volume and GDP growth, 2023-2026 ... Historical 2023 2024 ... World Trade a -0.9 2.8 2.4 0.5"
+      },
+      {
+        "label": "WTO Annual Report 2026 Spotlight: Global trade developments and outlook",
+        "url": "https://www.wto.org/english/res_e/booksp_e/ar26_spotlight_global-trade-dev_e.pdf",
+        "date": "2026-03-19",
+        "quote": "World trade grew faster than expected in 2025, with the volume of world merchandise trade rising 4.6 per cent in volume terms (up from 2.7 per cent in 2024)"
       }
     ],
-    "note": "Annual volume growth in goods trade, not trade value or commercial services. The same October update forecasts 4.1% in 2027; shipping disruption and energy costs remain risks."
+    "note": "Annual volume growth in goods trade, not trade value or commercial services. The same October update forecasts 4.1% in 2027; shipping disruption and energy costs remain risks. History: Annual % growth in world merchandise trade volume; 2023 (-0.9) is from the Oct 2025 vintage, 2024 and 2025 from the March 2026 vintage (WTO revised 2024 from 2.8 to 2.7). Only three points verified.",
+    "history": [
+      {
+        "label": "WTO reported (merchandise trade volume, annual % change)",
+        "points": [
+          {
+            "x": "2023",
+            "value": -0.9
+          },
+          {
+            "x": "2024",
+            "value": 2.7
+          },
+          {
+            "x": "2025",
+            "value": 4.6
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "gartner-information-security",
@@ -981,9 +1290,26 @@
         "url": "https://www.weforum.org/media/space-economy-set-to-triple-to-1-8-trillion-by-2035-new-research-reveals",
         "date": "2024-04-08",
         "quote": "The global space economy will be worth $1.8 trillion by 2035"
+      },
+      {
+        "label": "WEF and McKinsey: Space: The $1.8 Trillion Opportunity for Global Economic Growth",
+        "url": "https://www3.weforum.org/docs/WEF_Space_2024.pdf",
+        "date": "2024-04-08",
+        "quote": "The space economy is forecast to reach $1.8 trillion by 2035, up from $630 billion in 2023"
       }
     ],
-    "note": "USD trillions, a 2024 long-term projection. Includes space-enabled activity as well as the core space industry; not launch-service revenue alone. No newer comparable edition was verified in this research."
+    "note": "USD trillions, a 2024 long-term projection. Includes space-enabled activity as well as the core space industry; not launch-service revenue alone. No newer comparable edition was verified in this research. History: Single 2023 base-year value in USD trillions; the report publishes no earlier series on the same definition (Space Foundation's $546B/$570B/$613B series is a different publisher and was not opened).",
+    "history": [
+      {
+        "label": "WEF/McKinsey reported",
+        "points": [
+          {
+            "x": "2023",
+            "value": 0.63
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "iea-copper-demand-growth",
@@ -1066,9 +1392,58 @@
         "url": "https://www.fao.org/newsroom/detail/sustained-agricultural-market-volatility-could-lead-to-reduced-farmer-incomes-over-the-next-decade/en",
         "date": "2026-06-29",
         "quote": "Global cereal (grain) production is projected to increase steadily, reaching a record 3.22 billion tonnes by 2035."
+      },
+      {
+        "label": "FAO Cereal Supply and Demand Brief, csdb-data-2026-10.xlsx, World cereal market table (Production, million tonnes)",
+        "url": "https://www.fao.org/worldfoodsituation/csdb/en/",
+        "date": "2026-10-02",
+        "quote": "World cereal market, Production (million tonnes): 2017/18 2690.8; 2018/19 2635.0; 2019/20 2711.1; 2020/21 2769.7; 2021/22 2809.0; 2022/23 2811.0; 2023/24 2863.3; 2024/25 2870.7; 2025/26 3042.0 (2026/27 forecast 2979.1)"
       }
     ],
-    "note": "Billions of tonnes of annual cereal production, under the baseline outlook. Weather, energy and fertilizer shocks can change the projection. This is not seafood production."
+    "note": "Billions of tonnes of annual cereal production, under the baseline outlook. Weather, energy and fertilizer shocks can change the projection. This is not seafood production. History: FAO's own world cereal production (wheat + coarse grains + milled rice), million tonnes converted to billions of tonnes (/1000, 3 decimals); FAO footnote says production refers to the calendar year of the first year shown; 2025 is the latest season (2026 is only a forecast and omitted); the panel's projection is the OECD-FAO Outlook, a different compilation.",
+    "history": [
+      {
+        "label": "FAO reported (Cereal Supply and Demand Brief)",
+        "points": [
+          {
+            "x": "2017",
+            "value": 2.691
+          },
+          {
+            "x": "2018",
+            "value": 2.635
+          },
+          {
+            "x": "2019",
+            "value": 2.711
+          },
+          {
+            "x": "2020",
+            "value": 2.77
+          },
+          {
+            "x": "2021",
+            "value": 2.809
+          },
+          {
+            "x": "2022",
+            "value": 2.811
+          },
+          {
+            "x": "2023",
+            "value": 2.863
+          },
+          {
+            "x": "2024",
+            "value": 2.871
+          },
+          {
+            "x": "2025",
+            "value": 3.042
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "unesco-teacher-recruitment",
@@ -1126,9 +1501,46 @@
         "url": "https://www.iata.org/en/iata-repository/publications/economic-reports/global-outlook-for-air-transport-june-2026/",
         "date": null,
         "quote": "Passenger traffic is now forecast to grow by 2.1% in 2026"
+      },
+      {
+        "label": "IATA press release, Jan 2024 (full-year 2023 traffic)",
+        "url": "https://www.iata.org/en/pressroom/2024-releases/2024-01-31-02/",
+        "date": "2024-01-31",
+        "quote": "Total traffic in 2023 (measured in revenue passenger kilometers or RPKs) rose 36.9% compared to 2022."
+      },
+      {
+        "label": "IATA press release, Jan 2025 (full-year 2024 traffic)",
+        "url": "https://www.iata.org/en/pressroom/2025-releases/2025-01-30-01/",
+        "date": "2025-01-30",
+        "quote": "Total full-year traffic in 2024 (measured in revenue passenger kilometers or RPKs) rose 10.4% compared to 2023."
+      },
+      {
+        "label": "IATA press release, Jan 2026 (full-year 2025 demand)",
+        "url": "https://www.iata.org/en/pressroom/2026-releases/2026-01-29-02/",
+        "date": "2026-01-29",
+        "quote": "Total full-year demand in 2025 (measured in revenue passenger kilometers or RPKs) rose 5.3% compared to 2024."
       }
     ],
-    "note": "Annual global passenger traffic growth measured in revenue passenger kilometres (RPK), not passenger headcount. June 2026 outlook reflects fuel costs and airspace disruption; it is not a tourism-arrivals forecast."
+    "note": "Annual global passenger traffic growth measured in revenue passenger kilometres (RPK), not passenger headcount. June 2026 outlook reflects fuel costs and airspace disruption; it is not a tourism-arrivals forecast. History: Total industry RPK growth vs previous year as first reported in IATA's annual press releases (later outlooks may revise, e.g. 2024 to about 10.6); 2023 reflects pandemic-recovery base effects.",
+    "history": [
+      {
+        "label": "IATA reported (RPK growth vs prior year)",
+        "points": [
+          {
+            "x": "2023",
+            "value": 36.9
+          },
+          {
+            "x": "2024",
+            "value": 10.4
+          },
+          {
+            "x": "2025",
+            "value": 5.3
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "ramp-token-volume",
@@ -1228,7 +1640,18 @@
         "quote": "projected to grow from USD 41.7 billion in 2026 to USD 77.2 billion by 2033"
       }
     ],
-    "note": "USD billions. Covers anime distribution, merchandising and other licensed activity, not only studio production revenue. Commercial publisher estimate from its public summary; the underlying research is paid. Rounded figures follow the summary text, not the more precise chart."
+    "note": "USD billions. Covers anime distribution, merchandising and other licensed activity, not only studio production revenue. Commercial publisher estimate from its public summary; the underlying research is paid. Rounded figures follow the summary text, not the more precise chart. History: Single publisher base-year estimate in USD billions (2025 value); a commercial market-size estimate rather than audited actuals, so only one historical point exists.",
+    "history": [
+      {
+        "label": "Grand View Research base-year estimate",
+        "points": [
+          {
+            "x": "2025",
+            "value": 37.7
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "gvr-manga-market",
@@ -1261,7 +1684,18 @@
         "quote": "projected to grow from USD 11.9 billion in 2026 to USD 43.9 billion by 2033"
       }
     ],
-    "note": "USD billions, covering printed and digital manga. A commercial publisher estimate rather than audited sales; underlying research is paid. Not additive to overlapping comic-book market estimates."
+    "note": "USD billions, covering printed and digital manga. A commercial publisher estimate rather than audited sales; underlying research is paid. Not additive to overlapping comic-book market estimates. History: Single publisher base-year estimate in USD billions (2025 value); a commercial market-size estimate rather than audited actuals, so only one historical point exists.",
+    "history": [
+      {
+        "label": "Grand View Research base-year estimate",
+        "points": [
+          {
+            "x": "2025",
+            "value": 10.2
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "gvr-comic-books-market",
@@ -1294,7 +1728,18 @@
         "quote": "projected to grow from USD 20.5 billion in 2026 to USD 37.2 billion by 2033"
       }
     ],
-    "note": "USD billions. The publisher includes manga among comic-book genres, so this must not be added to the separate manga forecast. Rounded summary values are used consistently. Fortune Business Insights publishes a different 2034 estimate under a separate methodology; estimates are not blended."
+    "note": "USD billions. The publisher includes manga among comic-book genres, so this must not be added to the separate manga forecast. Rounded summary values are used consistently. Fortune Business Insights publishes a different 2034 estimate under a separate methodology; estimates are not blended. History: Single publisher base-year estimate in USD billions (2025 value); a commercial market-size estimate rather than audited actuals, so only one historical point exists.",
+    "history": [
+      {
+        "label": "Grand View Research base-year estimate",
+        "points": [
+          {
+            "x": "2025",
+            "value": 19.0
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "gvr-games-and-puzzles",
@@ -1326,7 +1771,18 @@
         "quote": "projected to grow from USD 26.3 billion in 2026 to USD 104.0 billion by 2033"
       }
     ],
-    "note": "USD billions. Broad physical games and puzzles scope, including board/tabletop games and puzzles; not a board-games-only, trading-card-only or video-game forecast. Commercial estimate from the public summary; underlying methodology is paid and scope differs across publishers."
+    "note": "USD billions. Broad physical games and puzzles scope, including board/tabletop games and puzzles; not a board-games-only, trading-card-only or video-game forecast. Commercial estimate from the public summary; underlying methodology is paid and scope differs across publishers. History: Single publisher base-year estimate in USD billions (2025 value); a commercial market-size estimate rather than audited actuals, so only one historical point exists.",
+    "history": [
+      {
+        "label": "Grand View Research base-year estimate",
+        "points": [
+          {
+            "x": "2025",
+            "value": 22.5
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "wef-sports-economy",
@@ -1420,9 +1876,46 @@
         "url": "https://www.citigroup.com/global/insights/exec-x-ten-global-insights-for-leaders-q1-2026",
         "date": "2026-02-25",
         "quote": null
+      },
+      {
+        "label": "DefiLlama stablecoins API: stablecoincharts/all (totalCirculatingUSD, USD-denominated)",
+        "url": "https://stablecoins.llama.fi/stablecoincharts/all",
+        "date": "2026-10-27",
+        "quote": "date 1609372800 totalCirculatingUSD peggedUSD 27064715439; 1640908800 162533919428; 1672444800 137457066907; 1703980800 130040500486; 1735603200 203763644082; 1767139200 304427074719"
       }
     ],
-    "note": "USD trillions of stablecoin issuance in Citi’s September 2025 base case. Not annual payment volume, all crypto assets or a token price target. The bull case is $4 trillion; Citi’s Q1 2026 summary still cites the $1.9 trillion projection. Other banks’ estimates are separate forecasts."
+    "note": "USD trillions of stablecoin issuance in Citi’s September 2025 base case. Not annual payment volume, all crypto assets or a token price target. The bull case is $4 trillion; Citi’s Q1 2026 summary still cites the $1.9 trillion projection. Other banks’ estimates are separate forecasts. History: USD trillions of total stablecoin supply outstanding at each 31 Dec (UTC; values rounded to $0.1B from DefiLlama's USD series), not Citi data; it matches the stock-of-issuance definition of Citi's $1.9T 2030 base case but is a different publisher, so label it accordingly.",
+    "history": [
+      {
+        "label": "DefiLlama reported (total stablecoin circulating supply, year-end)",
+        "points": [
+          {
+            "x": "2020",
+            "value": 0.0271
+          },
+          {
+            "x": "2021",
+            "value": 0.1625
+          },
+          {
+            "x": "2022",
+            "value": 0.1375
+          },
+          {
+            "x": "2023",
+            "value": 0.13
+          },
+          {
+            "x": "2024",
+            "value": 0.2038
+          },
+          {
+            "x": "2025",
+            "value": 0.3044
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "nato-core-defence-threshold",
@@ -1614,7 +2107,18 @@
         "quote": "projected to grow from USD 1,158.2 billion in 2026 to USD 1,375.6 billion by 2030"
       }
     ],
-    "note": "USD billions. Commercial revenue forecast covering corporate, litigation, taxation and other legal services. Not the size of public justice budgets, a prediction of court outcomes or prison population. Public summary only; underlying research is paid."
+    "note": "USD billions. Commercial revenue forecast covering corporate, litigation, taxation and other legal services. Not the size of public justice budgets, a prediction of court outcomes or prison population. Public summary only; underlying research is paid. History: Single publisher base-year estimate in USD billions (2024 value); a commercial market-size estimate rather than audited actuals, so only one historical point exists.",
+    "history": [
+      {
+        "label": "Grand View Research base-year estimate",
+        "points": [
+          {
+            "x": "2024",
+            "value": 1052.9
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "un-homicide-trend",
@@ -1641,9 +2145,40 @@
         "url": "https://unstats.un.org/sdgs/report/2026/Goal-16/",
         "date": null,
         "quote": "the global homicide rate in 2030 will be around one quarter lower than in 2015"
+      },
+      {
+        "label": "UN SDG Report 2024, Goal 16",
+        "url": "https://unstats.un.org/sdgs/report/2024/Goal-16/",
+        "date": null,
+        "quote": "The global homicide rate declined by 5 per cent between 2015 and 2022."
+      },
+      {
+        "label": "UN SDG Report 2025, Goal 16",
+        "url": "https://unstats.un.org/sdgs/report/2025/Goal-16/",
+        "date": null,
+        "quote": "While global homicide rates fell by 12 per cent between 2015 and 2023."
       }
     ],
-    "note": "Approximately 25% lower global intentional-homicide rate in 2030 relative to 2015 if current trends continue; a cumulative rate reduction, not a 25% annual decline, all-crime forecast or number of deaths. The source’s “one quarter” is represented as 25%. Regional trajectories vary; the target is not treated as achieved."
+    "note": "Approximately 25% lower global intentional-homicide rate in 2030 relative to 2015 if current trends continue; a cumulative rate reduction, not a 25% annual decline, all-crime forecast or number of deaths. The source’s “one quarter” is represented as 25%. Regional trajectories vary; the target is not treated as achieved. History: Same unit as the panel (cumulative % decline in global intentional-homicide rate relative to 2015) taken from three successive UN reports, so earlier values may reflect later data revisions; 2015 baseline is 0 by definition (rates: 5.9 per 100,000 in 2015, 5.1 in 2024).",
+    "history": [
+      {
+        "label": "UN SDG Report reported (cumulative % fall in global homicide rate since 2015)",
+        "points": [
+          {
+            "x": "2022",
+            "value": 5
+          },
+          {
+            "x": "2023",
+            "value": 12
+          },
+          {
+            "x": "2024",
+            "value": 14
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "pew-us-christian-share-scenario",
@@ -1678,7 +2213,26 @@
         "quote": null
       }
     ],
-    "note": "A conditional demographic scenario, explicitly not a prediction: religious switching and other assumptions remain at the rates used in Pew’s 2020 baseline. Includes children; not worldwide religious composition. This is a 2022 scenario, not a refreshed 2026 forecast. Pew’s February 2025 observations found that the US Christian decline had slowed or may have leveled off, so the old scenario should not be read as inevitable."
+    "note": "A conditional demographic scenario, explicitly not a prediction: religious switching and other assumptions remain at the rates used in Pew’s 2020 baseline. Includes children; not worldwide religious composition. This is a 2022 scenario, not a refreshed 2026 forecast. Pew’s February 2025 observations found that the US Christian decline had slowed or may have leveled off, so the old scenario should not be read as inevitable. History: Share of US adults identifying as Christian in the three Religious Landscape Studies (the 2023-24 survey is plotted at 2024); note the 2022 projection scenario started from a different 2020 baseline (about 64%) so the lines are not on identical survey bases.",
+    "history": [
+      {
+        "label": "Pew Religious Landscape Study reported",
+        "points": [
+          {
+            "x": "2007",
+            "value": 78
+          },
+          {
+            "x": "2014",
+            "value": 71
+          },
+          {
+            "x": "2024",
+            "value": 62
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "mckinsey-quantum-company-revenue",
@@ -1778,5 +2332,3630 @@
       }
     ],
     "note": "IDC October 22, 2026 HPC/AI Index: non-service-provider buyers (enterprises and governments). Publisher’s 2025 baseline and 2030 forecast, USD billions, not an observed actual series. Excludes service-provider procurement and non-AI IT infrastructure; not comparable to Gartner worldwide total AI spending or IDC US AI spending."
+  },
+  {
+    "slug": "wb-brent-crude-price",
+    "industry": "Energy",
+    "title": "Brent crude oil price, World Bank outlook",
+    "tags": [
+      "Energy",
+      "Economy",
+      "Marine"
+    ],
+    "prefix": "$",
+    "suffix": "/bbl",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 86.0
+        },
+        {
+          "x": "2027",
+          "value": 70.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 64
+          },
+          {
+            "x": "2020",
+            "value": 42.3
+          },
+          {
+            "x": "2021",
+            "value": 70.4
+          },
+          {
+            "x": "2022",
+            "value": 99.8
+          },
+          {
+            "x": "2023",
+            "value": 82.6
+          },
+          {
+            "x": "2024",
+            "value": 80.7
+          },
+          {
+            "x": "2025",
+            "value": 69
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Crude oil, Brent $/bbl 80.7 69.0 86.0 70.0"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Crude oil, Brent ($/bbl), annual nominal: 2019 64; 2020 42.3; 2021 70.4; 2022 99.8; 2023 82.6; 2024 80.7; 2025 69"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/bbl); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-europe-natural-gas-price",
+    "industry": "Energy",
+    "title": "European natural gas price, World Bank outlook",
+    "tags": [
+      "Energy",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/mmbtu",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 15.0
+        },
+        {
+          "x": "2027",
+          "value": 12.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 4.8
+          },
+          {
+            "x": "2020",
+            "value": 3.24
+          },
+          {
+            "x": "2021",
+            "value": 16.12
+          },
+          {
+            "x": "2022",
+            "value": 40.34
+          },
+          {
+            "x": "2023",
+            "value": 13.11
+          },
+          {
+            "x": "2024",
+            "value": 10.96
+          },
+          {
+            "x": "2025",
+            "value": 11.96
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Natural gas, Europe $/mmbtu 11.0 12.0 15.0 12.0"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Natural gas, Europe ($/mmbtu), annual nominal: 2019 4.8; 2020 3.24; 2021 16.12; 2022 40.34; 2023 13.11; 2024 10.96; 2025 11.96"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mmbtu); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-gold-price",
+    "industry": "Mining",
+    "title": "Gold price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Finance",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/oz",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 4700
+        },
+        {
+          "x": "2027",
+          "value": 4300
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 1392
+          },
+          {
+            "x": "2020",
+            "value": 1770
+          },
+          {
+            "x": "2021",
+            "value": 1800
+          },
+          {
+            "x": "2022",
+            "value": 1801
+          },
+          {
+            "x": "2023",
+            "value": 1943
+          },
+          {
+            "x": "2024",
+            "value": 2388
+          },
+          {
+            "x": "2025",
+            "value": 3442
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Gold $/toz 2,388 3,442 4,700 4,300"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Gold ($/troy oz), annual nominal: 2019 1392; 2020 1770; 2021 1800; 2022 1801; 2023 1943; 2024 2388; 2025 3442"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/troy oz); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-copper-price",
+    "industry": "Mining",
+    "title": "Copper price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Electronics",
+      "Construction",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 12000
+        },
+        {
+          "x": "2027",
+          "value": 11000
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 6010
+          },
+          {
+            "x": "2020",
+            "value": 6174
+          },
+          {
+            "x": "2021",
+            "value": 9317
+          },
+          {
+            "x": "2022",
+            "value": 8822
+          },
+          {
+            "x": "2023",
+            "value": 8490
+          },
+          {
+            "x": "2024",
+            "value": 9142
+          },
+          {
+            "x": "2025",
+            "value": 9947
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Copper $/mt 9,142 9,947 12,000 11,000"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Copper ($/mt), annual nominal: 2019 6010; 2020 6174; 2021 9317; 2022 8822; 2023 8490; 2024 9142; 2025 9947"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-cocoa-price",
+    "industry": "Food",
+    "title": "Cocoa price, World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "$",
+    "suffix": "/kg",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 3.8
+        },
+        {
+          "x": "2027",
+          "value": 4.2
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 2.34
+          },
+          {
+            "x": "2020",
+            "value": 2.37
+          },
+          {
+            "x": "2021",
+            "value": 2.43
+          },
+          {
+            "x": "2022",
+            "value": 2.39
+          },
+          {
+            "x": "2023",
+            "value": 3.28
+          },
+          {
+            "x": "2024",
+            "value": 7.33
+          },
+          {
+            "x": "2025",
+            "value": 7.8
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Cocoa $/kg 7.33 7.80 3.80 4.20"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Cocoa ($/kg), annual nominal: 2019 2.34; 2020 2.37; 2021 2.43; 2022 2.39; 2023 3.28; 2024 7.33; 2025 7.8"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/kg); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-arabica-coffee-price",
+    "industry": "Food",
+    "title": "Arabica coffee price, World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "$",
+    "suffix": "/kg",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 7.25
+        },
+        {
+          "x": "2027",
+          "value": 7.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 2.88
+          },
+          {
+            "x": "2020",
+            "value": 3.32
+          },
+          {
+            "x": "2021",
+            "value": 4.51
+          },
+          {
+            "x": "2022",
+            "value": 5.63
+          },
+          {
+            "x": "2023",
+            "value": 4.54
+          },
+          {
+            "x": "2024",
+            "value": 5.62
+          },
+          {
+            "x": "2025",
+            "value": 8.47
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Coffee, Arabica $/kg 5.62 8.47 7.25 7.00"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Coffee, Arabica ($/kg), annual nominal: 2019 2.88; 2020 3.32; 2021 4.51; 2022 5.63; 2023 4.54; 2024 5.62; 2025 8.47"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/kg); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-urea-fertilizer-price",
+    "industry": "Food",
+    "title": "Urea fertilizer price, World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Energy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 675
+        },
+        {
+          "x": "2027",
+          "value": 500
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 245.3
+          },
+          {
+            "x": "2020",
+            "value": 229.1
+          },
+          {
+            "x": "2021",
+            "value": 483.2
+          },
+          {
+            "x": "2022",
+            "value": 700
+          },
+          {
+            "x": "2023",
+            "value": 358
+          },
+          {
+            "x": "2024",
+            "value": 338.3
+          },
+          {
+            "x": "2025",
+            "value": 422.7
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Urea, E. Europe $/mt 338 423 675 500"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Urea ($/mt), annual nominal: 2019 245.3; 2020 229.1; 2021 483.2; 2022 700; 2023 358; 2024 338.3; 2025 422.7"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Urea is the Eastern Europe benchmark. Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-aluminum-price",
+    "industry": "Mining",
+    "title": "Aluminum price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Manufacturing",
+      "Automotive",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 3200
+        },
+        {
+          "x": "2027",
+          "value": 3000
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 1794
+          },
+          {
+            "x": "2020",
+            "value": 1704
+          },
+          {
+            "x": "2021",
+            "value": 2473
+          },
+          {
+            "x": "2022",
+            "value": 2705
+          },
+          {
+            "x": "2023",
+            "value": 2256
+          },
+          {
+            "x": "2024",
+            "value": 2419
+          },
+          {
+            "x": "2025",
+            "value": 2632
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Aluminum $/mt 2,419 2,632 3,200 3,000"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Aluminum ($/mt), annual nominal: 2019 1794; 2020 1704; 2021 2473; 2022 2705; 2023 2256; 2024 2419; 2025 2632"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-silver-price",
+    "industry": "Mining",
+    "title": "Silver price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Electronics",
+      "Finance",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/oz",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 70.0
+        },
+        {
+          "x": "2027",
+          "value": 65.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 16.2
+          },
+          {
+            "x": "2020",
+            "value": 20.5
+          },
+          {
+            "x": "2021",
+            "value": 25.2
+          },
+          {
+            "x": "2022",
+            "value": 21.8
+          },
+          {
+            "x": "2023",
+            "value": 23.4
+          },
+          {
+            "x": "2024",
+            "value": 28.3
+          },
+          {
+            "x": "2025",
+            "value": 39.8
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Silver $/toz 28.3 39.8 70.0 65.0"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Silver ($/troy oz), annual nominal: 2019 16.2; 2020 20.5; 2021 25.2; 2022 21.8; 2023 23.4; 2024 28.3; 2025 39.8"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/troy oz); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-nickel-price",
+    "industry": "Mining",
+    "title": "Nickel price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Automotive",
+      "Manufacturing",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 17000
+        },
+        {
+          "x": "2027",
+          "value": 17500
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 13914
+          },
+          {
+            "x": "2020",
+            "value": 13787
+          },
+          {
+            "x": "2021",
+            "value": 18465
+          },
+          {
+            "x": "2022",
+            "value": 25834
+          },
+          {
+            "x": "2023",
+            "value": 21521
+          },
+          {
+            "x": "2024",
+            "value": 16814
+          },
+          {
+            "x": "2025",
+            "value": 15162
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Nickel $/mt 16,814 15,162 17,000 17,500"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Nickel ($/mt), annual nominal: 2019 13914; 2020 13787; 2021 18465; 2022 25834; 2023 21521; 2024 16814; 2025 15162"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-rice-price",
+    "industry": "Food",
+    "title": "Rice price (Thailand 5%), World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 401
+        },
+        {
+          "x": "2027",
+          "value": 413
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 418
+          },
+          {
+            "x": "2020",
+            "value": 496.8
+          },
+          {
+            "x": "2021",
+            "value": 458.3
+          },
+          {
+            "x": "2022",
+            "value": 436.8
+          },
+          {
+            "x": "2023",
+            "value": 553.7
+          },
+          {
+            "x": "2024",
+            "value": 588.4
+          },
+          {
+            "x": "2025",
+            "value": 407.8
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Rice, Thailand, 5% $/mt 588 408 401 413"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Rice, Thai 5% ($/mt), annual nominal: 2019 418; 2020 496.8; 2021 458.3; 2022 436.8; 2023 553.7; 2024 588.4; 2025 407.8"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Benchmark is Thai 5% broken white rice. Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "wb-us-natural-gas-price",
+    "industry": "Energy",
+    "title": "US natural gas price, World Bank outlook",
+    "tags": [
+      "Energy",
+      "Economy",
+      "Construction"
+    ],
+    "prefix": "$",
+    "suffix": "/mmbtu",
+    "projection": {
+      "label": "World Bank CMO April 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 3.8
+        },
+        {
+          "x": "2027",
+          "value": 4.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 2.57
+          },
+          {
+            "x": "2020",
+            "value": 2.01
+          },
+          {
+            "x": "2021",
+            "value": 3.85
+          },
+          {
+            "x": "2022",
+            "value": 6.37
+          },
+          {
+            "x": "2023",
+            "value": 2.54
+          },
+          {
+            "x": "2024",
+            "value": 2.19
+          },
+          {
+            "x": "2025",
+            "value": 3.53
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Natural gas, U.S. $/mmbtu 2.2 3.5 3.8 4.0"
+      },
+      {
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "quote": "Natural gas, US ($/mmbtu), annual nominal: 2019 2.57; 2020 2.01; 2021 3.85; 2022 6.37; 2023 2.54; 2024 2.19; 2025 3.53"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mmbtu); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update."
+  },
+  {
+    "slug": "iata-airline-net-profit",
+    "industry": "Aerospace",
+    "title": "Global airline industry net profit",
+    "tags": [
+      "Aerospace",
+      "Transport",
+      "Travel",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "IATA Global Outlook June 2026 (2025 estimate, 2026 forecast)",
+      "points": [
+        {
+          "x": "2025",
+          "value": 45.0
+        },
+        {
+          "x": "2026",
+          "value": 23.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "IATA reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 26.4
+          },
+          {
+            "x": "2020",
+            "value": -137.7
+          },
+          {
+            "x": "2021",
+            "value": -40.4
+          },
+          {
+            "x": "2022",
+            "value": -3.5
+          },
+          {
+            "x": "2023",
+            "value": 40.5
+          },
+          {
+            "x": "2024",
+            "value": 37.7
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "IATA Global Outlook for Air Transport, June 2026 (table)",
+        "url": "https://www.iata.org/en/iata-repository/publications/economic-reports/global-outlook-for-air-transport-june-2026/",
+        "date": "2026-06-07",
+        "quote": "Global airline industry 2019 2020 2021 2022 2023 2024 2025E 2026F ... Net profit, USD billion 26.4 -137.7 -40.4 -3.5 40.5 37.7 45.0 23.0"
+      }
+    ],
+    "note": "USD billions, whole industry. 2019-2024 are IATA reported values (subject to IATA revision); 2025 is an IATA estimate (E) and 2026 an IATA forecast (F). IATA halved its 2026 forecast from USD 45 billion after the Middle East conflict lifted jet fuel prices; net margin 2.0% in 2026."
+  },
+  {
+    "slug": "iata-airline-passengers",
+    "industry": "Travel",
+    "title": "Global airline segment passengers",
+    "tags": [
+      "Travel",
+      "Transport",
+      "Aerospace"
+    ],
+    "prefix": "",
+    "suffix": "M",
+    "projection": {
+      "label": "IATA Global Outlook June 2026 (2025 estimate, 2026 forecast)",
+      "points": [
+        {
+          "x": "2025",
+          "value": 4967
+        },
+        {
+          "x": "2026",
+          "value": 5085
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "IATA reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 4560
+          },
+          {
+            "x": "2020",
+            "value": 1779
+          },
+          {
+            "x": "2021",
+            "value": 2304
+          },
+          {
+            "x": "2022",
+            "value": 3452
+          },
+          {
+            "x": "2023",
+            "value": 4414
+          },
+          {
+            "x": "2024",
+            "value": 4781
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "IATA Global Outlook for Air Transport, June 2026 (table)",
+        "url": "https://www.iata.org/en/iata-repository/publications/economic-reports/global-outlook-for-air-transport-june-2026/",
+        "date": "2026-06-07",
+        "quote": "Global airline industry 2019 2020 2021 2022 2023 2024 2025E 2026F ... Segment passengers, millions 4,560 1,779 2,304 3,452 4,414 4,781 4,967 5,085"
+      }
+    ],
+    "note": "Millions of passenger segments flown (each flight leg counted), not unique travellers or O&D passengers (IATA's O&D series is lower). 2025 is an IATA estimate and 2026 an IATA forecast."
+  },
+  {
+    "slug": "iata-air-freight-tonnes",
+    "industry": "Transport",
+    "title": "Freight carried by air worldwide",
+    "tags": [
+      "Transport",
+      "Retail",
+      "Aerospace",
+      "Business"
+    ],
+    "prefix": "",
+    "suffix": "M t",
+    "projection": {
+      "label": "IATA Global Outlook June 2026 (2025 estimate, 2026 forecast)",
+      "points": [
+        {
+          "x": "2025",
+          "value": 71.5
+        },
+        {
+          "x": "2026",
+          "value": 71.7
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "IATA reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 62.7
+          },
+          {
+            "x": "2020",
+            "value": 56.5
+          },
+          {
+            "x": "2021",
+            "value": 65.0
+          },
+          {
+            "x": "2022",
+            "value": 60.9
+          },
+          {
+            "x": "2023",
+            "value": 61.4
+          },
+          {
+            "x": "2024",
+            "value": 68.5
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "IATA Global Outlook for Air Transport, June 2026 (table)",
+        "url": "https://www.iata.org/en/iata-repository/publications/economic-reports/global-outlook-for-air-transport-june-2026/",
+        "date": "2026-06-07",
+        "quote": "Global airline industry 2019 2020 2021 2022 2023 2024 2025E 2026F ... Freight carried by air, million tonnes 62.7 56.5 65.0 60.9 61.4 68.5 71.5 71.7"
+      }
+    ],
+    "note": "Million tonnes of freight carried by air. 2025 is an IATA estimate (E) and 2026 an IATA forecast (F); the forecast reflects fuel-price and Middle East airspace disruption."
+  },
+  {
+    "slug": "iata-airline-fuel-spend",
+    "industry": "Transport",
+    "title": "Global airline fuel bill",
+    "tags": [
+      "Transport",
+      "Energy",
+      "Aerospace",
+      "Travel"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "IATA Global Outlook June 2026 (2025 estimate, 2026 forecast)",
+      "points": [
+        {
+          "x": "2025",
+          "value": 252
+        },
+        {
+          "x": "2026",
+          "value": 350
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "IATA reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 190
+          },
+          {
+            "x": "2020",
+            "value": 80
+          },
+          {
+            "x": "2021",
+            "value": 106
+          },
+          {
+            "x": "2022",
+            "value": 215
+          },
+          {
+            "x": "2023",
+            "value": 269
+          },
+          {
+            "x": "2024",
+            "value": 261
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "IATA Global Outlook for Air Transport, June 2026 (table)",
+        "url": "https://www.iata.org/en/iata-repository/publications/economic-reports/global-outlook-for-air-transport-june-2026/",
+        "date": "2026-06-07",
+        "quote": "Global airline industry 2019 2020 2021 2022 2023 2024 2025E 2026F ... Fuel spend, USD billion 190 80 106 215 269 261 252 350"
+      }
+    ],
+    "note": "USD billions of jet fuel spend by airlines worldwide. 2025 is an IATA estimate and 2026 an IATA forecast; IATA assumes a jet fuel price of USD 152 per barrel in 2026 (USD 90 in 2025E)."
+  },
+  {
+    "slug": "un-world-population",
+    "industry": "Demographics",
+    "title": "World population (UN medium variant)",
+    "tags": [
+      "Demographics",
+      "Economy",
+      "Futurism"
+    ],
+    "prefix": "",
+    "suffix": "B",
+    "projection": {
+      "label": "UN WPP 2024 medium-variant projection",
+      "points": [
+        {
+          "x": "2030",
+          "value": 8.57
+        },
+        {
+          "x": "2040",
+          "value": 9.18
+        },
+        {
+          "x": "2050",
+          "value": 9.66
+        },
+        {
+          "x": "2060",
+          "value": 9.99
+        },
+        {
+          "x": "2070",
+          "value": 10.19
+        },
+        {
+          "x": "2080",
+          "value": 10.28
+        },
+        {
+          "x": "2090",
+          "value": 10.27
+        },
+        {
+          "x": "2100",
+          "value": 10.18
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "UN WPP 2024 estimates",
+        "points": [
+          {
+            "x": "1950",
+            "value": 2.49
+          },
+          {
+            "x": "1960",
+            "value": 3.02
+          },
+          {
+            "x": "1970",
+            "value": 3.69
+          },
+          {
+            "x": "1980",
+            "value": 4.45
+          },
+          {
+            "x": "1990",
+            "value": 5.33
+          },
+          {
+            "x": "2000",
+            "value": 6.17
+          },
+          {
+            "x": "2010",
+            "value": 7.02
+          },
+          {
+            "x": "2020",
+            "value": 7.89
+          },
+          {
+            "x": "2024",
+            "value": 8.16
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "UN DESA, World Population Prospects 2024: Summary of Results",
+        "url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpp_2024_advance_unedited_0.pdf",
+        "date": "2024-07-11",
+        "quote": "The world’s population is expected to continue growing over the coming fifty or sixty years, reaching a peak of around 10.3 billion people in the mid-2080s, up from 8.2 billion in 2024."
+      },
+      {
+        "label": "UN DESA, WPP 2024 Demographic Indicators (medium variant) data file",
+        "url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+        "date": "2024-07-11",
+        "quote": "WPP2024_Demographic_Indicators_Medium.csv, Location=World, Variant=Medium, TPopulation1July (thousands): 1990 5327803.11; 2024 8161972.572; 2050 9664378.587; 2100 10180160.751"
+      }
+    ],
+    "note": "Billions of people at 1 July; the UN files give thousands, shown here divided by one million and rounded to two decimals. 1950-2024 are UN estimates; 2030-2100 are the medium-variant projection, which carries wide uncertainty (UN 95% interval for 2100 is 9.0-11.4 billion). Decadal points are chosen for readability; the UN publishes every year."
+  },
+  {
+    "slug": "un-world-fertility-rate",
+    "industry": "Demographics",
+    "title": "Global total fertility rate (UN medium variant)",
+    "tags": [
+      "Demographics",
+      "Health",
+      "Futurism"
+    ],
+    "prefix": "",
+    "suffix": "births/woman",
+    "projection": {
+      "label": "UN WPP 2024 medium-variant projection",
+      "points": [
+        {
+          "x": "2030",
+          "value": 2.2
+        },
+        {
+          "x": "2040",
+          "value": 2.13
+        },
+        {
+          "x": "2050",
+          "value": 2.1
+        },
+        {
+          "x": "2060",
+          "value": 2.03
+        },
+        {
+          "x": "2070",
+          "value": 1.97
+        },
+        {
+          "x": "2080",
+          "value": 1.92
+        },
+        {
+          "x": "2090",
+          "value": 1.88
+        },
+        {
+          "x": "2100",
+          "value": 1.84
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "UN WPP 2024 estimates",
+        "points": [
+          {
+            "x": "1950",
+            "value": 4.85
+          },
+          {
+            "x": "1960",
+            "value": 4.7
+          },
+          {
+            "x": "1970",
+            "value": 4.83
+          },
+          {
+            "x": "1980",
+            "value": 3.74
+          },
+          {
+            "x": "1990",
+            "value": 3.31
+          },
+          {
+            "x": "2000",
+            "value": 2.75
+          },
+          {
+            "x": "2010",
+            "value": 2.6
+          },
+          {
+            "x": "2020",
+            "value": 2.32
+          },
+          {
+            "x": "2024",
+            "value": 2.25
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "UN DESA, World Population Prospects 2024: Summary of Results",
+        "url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpp_2024_advance_unedited_0.pdf",
+        "date": "2024-07-11",
+        "quote": "Currently, the global fertility rate stands at 2.25 live births per woman, down from 3.31 births in 1990."
+      },
+      {
+        "label": "UN DESA, WPP 2024 Demographic Indicators (medium variant) data file",
+        "url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+        "date": "2024-07-11",
+        "quote": "WPP2024_Demographic_Indicators_Medium.csv, Location=World, Variant=Medium, TFR: 1990 3.3098; 2024 2.2477; 2050 2.0966; 2100 1.838"
+      }
+    ],
+    "note": "Average live births per woman, world total. 1950-2024 are UN estimates; 2030-2100 are the medium-variant projection. Replacement level is about 2.1. Decadal points chosen for readability."
+  },
+  {
+    "slug": "un-world-life-expectancy",
+    "industry": "Demographics",
+    "title": "Global life expectancy at birth (UN medium variant)",
+    "tags": [
+      "Demographics",
+      "Health",
+      "Futurism"
+    ],
+    "prefix": "",
+    "suffix": " yrs",
+    "projection": {
+      "label": "UN WPP 2024 medium-variant projection",
+      "points": [
+        {
+          "x": "2030",
+          "value": 74.4
+        },
+        {
+          "x": "2040",
+          "value": 75.8
+        },
+        {
+          "x": "2050",
+          "value": 77.0
+        },
+        {
+          "x": "2060",
+          "value": 78.1
+        },
+        {
+          "x": "2070",
+          "value": 79.1
+        },
+        {
+          "x": "2080",
+          "value": 80.0
+        },
+        {
+          "x": "2090",
+          "value": 80.9
+        },
+        {
+          "x": "2100",
+          "value": 81.7
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "UN WPP 2024 estimates",
+        "points": [
+          {
+            "x": "1950",
+            "value": 46.4
+          },
+          {
+            "x": "1960",
+            "value": 47.8
+          },
+          {
+            "x": "1970",
+            "value": 56.3
+          },
+          {
+            "x": "1980",
+            "value": 60.5
+          },
+          {
+            "x": "1990",
+            "value": 64.0
+          },
+          {
+            "x": "2000",
+            "value": 66.4
+          },
+          {
+            "x": "2010",
+            "value": 70.1
+          },
+          {
+            "x": "2020",
+            "value": 71.9
+          },
+          {
+            "x": "2024",
+            "value": 73.3
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "UN DESA, World Population Prospects 2024: Summary of Results",
+        "url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpp_2024_advance_unedited_0.pdf",
+        "date": "2024-07-11",
+        "quote": "Globally, life expectancy at birth reached 73.3 years in 2024, an increase of 8.4 years since 1995. Further reductions in mortality are projected to result in an average longevity of around 77.4 years globally in 2054."
+      },
+      {
+        "label": "UN DESA, WPP 2024 Demographic Indicators (medium variant) data file",
+        "url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+        "date": "2024-07-11",
+        "quote": "WPP2024_Demographic_Indicators_Medium.csv, Location=World, Variant=Medium, LEx (both sexes): 1990 63.955; 2024 73.3217; 2050 77.023; 2100 81.7342"
+      }
+    ],
+    "note": "Years, both sexes combined, world. 1950-2024 are UN estimates (including the 2020-21 COVID dip, not shown at decade points); 2030-2100 are the medium-variant projection. Decadal points chosen for readability."
+  },
+  {
+    "slug": "oecd-fao-world-wheat-production",
+    "industry": "Food",
+    "title": "World wheat production, OECD-FAO outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Climate"
+    ],
+    "prefix": "",
+    "suffix": "Mt",
+    "projection": {
+      "label": "OECD-FAO Agricultural Outlook 2026-2035",
+      "points": [
+        {
+          "x": "2025",
+          "value": 817.2
+        },
+        {
+          "x": "2026",
+          "value": 806.9
+        },
+        {
+          "x": "2027",
+          "value": 813.7
+        },
+        {
+          "x": "2028",
+          "value": 825.0
+        },
+        {
+          "x": "2029",
+          "value": 833.3
+        },
+        {
+          "x": "2030",
+          "value": 841.6
+        },
+        {
+          "x": "2031",
+          "value": 849.1
+        },
+        {
+          "x": "2032",
+          "value": 856.1
+        },
+        {
+          "x": "2033",
+          "value": 863.0
+        },
+        {
+          "x": "2034",
+          "value": 869.9
+        },
+        {
+          "x": "2035",
+          "value": 877.0
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "OECD-FAO reported (base-period history)",
+        "points": [
+          {
+            "x": "2015",
+            "value": 737.3
+          },
+          {
+            "x": "2016",
+            "value": 766.4
+          },
+          {
+            "x": "2017",
+            "value": 760.3
+          },
+          {
+            "x": "2018",
+            "value": 730.0
+          },
+          {
+            "x": "2019",
+            "value": 759.9
+          },
+          {
+            "x": "2020",
+            "value": 775.1
+          },
+          {
+            "x": "2021",
+            "value": 781.9
+          },
+          {
+            "x": "2022",
+            "value": 809.6
+          },
+          {
+            "x": "2023",
+            "value": 791.5
+          },
+          {
+            "x": "2024",
+            "value": 799.4
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OECD-FAO Agricultural Outlook 2026-2035 (full report)",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-fao-agricultural-outlook-2026-2035_5610f218/47874669-en.pdf",
+        "date": "2026-06-29",
+        "quote": "Global wheat production is projected to increase by 74 Mt from current levels to reach 877 Mt by 2035."
+      },
+      {
+        "label": "OECD Data Explorer API, OECD-FAO Agricultural Outlook 2026-2035 dataflow",
+        "url": "https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2026_2035/W.A.CPC_0111.QP..?startPeriod=2015&endPeriod=2035",
+        "date": "2026-06-29",
+        "quote": "OECD Data Explorer, DF_OUTLOOK_2026_2035, World, Wheat production (thousand tonnes): 2024 799.4; 2025 817.2; 2030 841.6; 2035 877.0"
+      }
+    ],
+    "note": "Million tonnes. OECD-FAO data are in thousand tonnes and shown here divided by 1,000, rounded to 0.1. 2015-2024 are historical values; 2025 belongs to the Outlook's 2023-25 base period and is an estimate; 2026-2035 are projections."
+  },
+  {
+    "slug": "oecd-fao-world-poultry-consumption",
+    "industry": "Food",
+    "title": "World poultry meat consumption, OECD-FAO outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "",
+    "suffix": "Mt",
+    "projection": {
+      "label": "OECD-FAO Agricultural Outlook 2026-2035",
+      "points": [
+        {
+          "x": "2025",
+          "value": 152.4
+        },
+        {
+          "x": "2026",
+          "value": 154.9
+        },
+        {
+          "x": "2027",
+          "value": 157.5
+        },
+        {
+          "x": "2028",
+          "value": 159.8
+        },
+        {
+          "x": "2029",
+          "value": 162.2
+        },
+        {
+          "x": "2030",
+          "value": 164.7
+        },
+        {
+          "x": "2031",
+          "value": 167.0
+        },
+        {
+          "x": "2032",
+          "value": 169.5
+        },
+        {
+          "x": "2033",
+          "value": 171.9
+        },
+        {
+          "x": "2034",
+          "value": 174.4
+        },
+        {
+          "x": "2035",
+          "value": 176.9
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "OECD-FAO reported (base-period history)",
+        "points": [
+          {
+            "x": "2015",
+            "value": 115.7
+          },
+          {
+            "x": "2016",
+            "value": 119.2
+          },
+          {
+            "x": "2017",
+            "value": 122.7
+          },
+          {
+            "x": "2018",
+            "value": 125.7
+          },
+          {
+            "x": "2019",
+            "value": 131.7
+          },
+          {
+            "x": "2020",
+            "value": 135.9
+          },
+          {
+            "x": "2021",
+            "value": 137.6
+          },
+          {
+            "x": "2022",
+            "value": 140.0
+          },
+          {
+            "x": "2023",
+            "value": 143.7
+          },
+          {
+            "x": "2024",
+            "value": 147.9
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OECD-FAO Agricultural Outlook 2026-2035 (full report)",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-fao-agricultural-outlook-2026-2035_5610f218/47874669-en.pdf",
+        "date": "2026-06-29",
+        "quote": "Poultry consumption is projected to reach 177 Mt ready‑to‑cook (rtc) by 2035, accounting for around two‑thirds of the additional meat consumed globally over the Outlook period"
+      },
+      {
+        "label": "OECD Data Explorer API, OECD-FAO Agricultural Outlook 2026-2035 dataflow",
+        "url": "https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2026_2035/W.A.CPC_EX_PT.QC..?startPeriod=2015&endPeriod=2035",
+        "date": "2026-06-29",
+        "quote": "OECD Data Explorer, DF_OUTLOOK_2026_2035, World, Poultry meat consumption (thousand tonnes): 2024 147.9; 2025 152.4; 2030 164.7; 2035 176.9"
+      }
+    ],
+    "note": "Million tonnes ready-to-cook equivalent; OECD-FAO data are in thousand tonnes divided by 1,000. 2015-2024 historical, 2025 base-period estimate, 2026-2035 projection. Highly pathogenic avian influenza outbreaks are a stated downside risk."
+  },
+  {
+    "slug": "oecd-fao-world-aquaculture-production",
+    "industry": "Marine",
+    "title": "World aquaculture production, OECD-FAO outlook",
+    "tags": [
+      "Marine",
+      "Food",
+      "Economy"
+    ],
+    "prefix": "",
+    "suffix": "Mt",
+    "projection": {
+      "label": "OECD-FAO Agricultural Outlook 2026-2035",
+      "points": [
+        {
+          "x": "2025",
+          "value": 105.7
+        },
+        {
+          "x": "2026",
+          "value": 106.9
+        },
+        {
+          "x": "2027",
+          "value": 108.0
+        },
+        {
+          "x": "2028",
+          "value": 109.2
+        },
+        {
+          "x": "2029",
+          "value": 110.9
+        },
+        {
+          "x": "2030",
+          "value": 112.6
+        },
+        {
+          "x": "2031",
+          "value": 114.1
+        },
+        {
+          "x": "2032",
+          "value": 115.7
+        },
+        {
+          "x": "2033",
+          "value": 117.4
+        },
+        {
+          "x": "2034",
+          "value": 119.0
+        },
+        {
+          "x": "2035",
+          "value": 120.7
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "OECD-FAO reported (base-period history)",
+        "points": [
+          {
+            "x": "2015",
+            "value": 72.9
+          },
+          {
+            "x": "2016",
+            "value": 76.5
+          },
+          {
+            "x": "2017",
+            "value": 79.6
+          },
+          {
+            "x": "2018",
+            "value": 82.5
+          },
+          {
+            "x": "2019",
+            "value": 85.1
+          },
+          {
+            "x": "2020",
+            "value": 87.7
+          },
+          {
+            "x": "2021",
+            "value": 91.3
+          },
+          {
+            "x": "2022",
+            "value": 94.6
+          },
+          {
+            "x": "2023",
+            "value": 98.7
+          },
+          {
+            "x": "2024",
+            "value": 102.6
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OECD-FAO Agricultural Outlook 2026-2035 (full report)",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-fao-agricultural-outlook-2026-2035_5610f218/47874669-en.pdf",
+        "date": "2026-06-29",
+        "quote": "Global aquaculture production is projected to reach 121 Mt by 2035, a 18% increase from the base period, compared with 51% growth in the previous decade."
+      },
+      {
+        "label": "OECD Data Explorer API, OECD-FAO Agricultural Outlook 2026-2035 dataflow",
+        "url": "https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2026_2035/W.A.CPC_EX_AC.QP..?startPeriod=2015&endPeriod=2035",
+        "date": "2026-06-29",
+        "quote": "OECD Data Explorer, DF_OUTLOOK_2026_2035, World, Fish from aquaculture production (thousand tonnes): 2024 102.6; 2025 105.7; 2030 112.6; 2035 120.7"
+      }
+    ],
+    "note": "Million tonnes live weight equivalent (OECD-FAO thousand tonnes divided by 1,000). Farmed fish and other aquatic animals, excluding capture fisheries. 2015-2024 historical, 2025 base-period estimate, 2026-2035 projection."
+  },
+  {
+    "slug": "oecd-fao-agriculture-ghg-emissions",
+    "industry": "Climate",
+    "title": "Direct agricultural greenhouse gas emissions, OECD-FAO outlook",
+    "tags": [
+      "Climate",
+      "Food",
+      "Economy"
+    ],
+    "prefix": "",
+    "suffix": "Mt CO2e",
+    "projection": {
+      "label": "OECD-FAO Agricultural Outlook 2026-2035",
+      "points": [
+        {
+          "x": "2025",
+          "value": 6233.6
+        },
+        {
+          "x": "2026",
+          "value": 6265.9
+        },
+        {
+          "x": "2027",
+          "value": 6299.3
+        },
+        {
+          "x": "2028",
+          "value": 6337.1
+        },
+        {
+          "x": "2029",
+          "value": 6376.2
+        },
+        {
+          "x": "2030",
+          "value": 6411.7
+        },
+        {
+          "x": "2031",
+          "value": 6443.0
+        },
+        {
+          "x": "2032",
+          "value": 6481.8
+        },
+        {
+          "x": "2033",
+          "value": 6522.1
+        },
+        {
+          "x": "2034",
+          "value": 6562.4
+        },
+        {
+          "x": "2035",
+          "value": 6601.5
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "OECD-FAO reported (base-period history)",
+        "points": [
+          {
+            "x": "2015",
+            "value": 5777.1
+          },
+          {
+            "x": "2016",
+            "value": 5813.9
+          },
+          {
+            "x": "2017",
+            "value": 5897.6
+          },
+          {
+            "x": "2018",
+            "value": 5878.8
+          },
+          {
+            "x": "2019",
+            "value": 5870.2
+          },
+          {
+            "x": "2020",
+            "value": 5992.6
+          },
+          {
+            "x": "2021",
+            "value": 6047.6
+          },
+          {
+            "x": "2022",
+            "value": 6063.5
+          },
+          {
+            "x": "2023",
+            "value": 6177.4
+          },
+          {
+            "x": "2024",
+            "value": 6193.1
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OECD-FAO Agricultural Outlook 2026-2035 (full report)",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-fao-agricultural-outlook-2026-2035_5610f218/47874669-en.pdf",
+        "date": "2026-06-29",
+        "quote": "While productivity gains are expected to account for the bulk of agricultural production growth over the next decade, some expansion of crop areas and livestock numbers will still be necessary, leading to a 6.5% increase in direct greenhouse gas emissions."
+      },
+      {
+        "label": "OECD Data Explorer API, OECD-FAO Agricultural Outlook 2026-2035 dataflow",
+        "url": "https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2026_2035/W.A.CPC_EX_AG_COM.ECOE_TOT..?startPeriod=2015&endPeriod=2035",
+        "date": "2026-06-29",
+        "quote": "OECD Data Explorer, DF_OUTLOOK_2026_2035, World, Agricultural commodities, direct GHG emissions (million tonnes CO2e): 2024 6193.1; 2025 6233.6; 2030 6411.7; 2035 6601.5"
+      }
+    ],
+    "note": "Million tonnes of CO2-equivalent from crop and livestock production on farms (direct on-farm emissions). 2015-2024 historical, 2025 base-period estimate, 2026-2035 projection."
+  },
+  {
+    "slug": "gartner-software-spending",
+    "industry": "Software",
+    "title": "Worldwide software spending (Gartner)",
+    "tags": [
+      "Software",
+      "Computing",
+      "AI"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Gartner worldwide IT spending forecast, October 2026 edition",
+      "points": [
+        {
+          "x": "2026",
+          "value": 1464
+        },
+        {
+          "x": "2027",
+          "value": 1679
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "Gartner reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 783.462
+          },
+          {
+            "x": "2023",
+            "value": 913.334
+          },
+          {
+            "x": "2024",
+            "value": 1091.569
+          },
+          {
+            "x": "2025",
+            "value": 1249.509
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Gartner IT spending forecast, October 2026 (Table 1, billions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-21-gartner-forecasts-worldwide-it-spending-to-grow-15-percent-in-2027-totaling-7-point-35-trillion",
+        "date": "2026-10-21",
+        "quote": "Table 1. Worldwide IT Spending Forecast (Billions of U.S. Dollars) | 2026 Spending | 2026 Growth (%) | 2027 Spending | 2027 Growth (%) | Software | 1,464 | 15.2 | 1,679 | 14.6"
+      },
+      {
+        "label": "Gartner IT spending forecast, February 2026 (2025 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-forecasts-worldwide-it-spending-to-grow-10-point-8-percent-in-2026-totaling-6-point-15-trillion-dollars",
+        "date": "2026-02-03",
+        "quote": "Table 1 ... 2025 Spending | 2025 Growth (%) | 2026 Spending | 2026 Growth (%) ... Software | 1,249,509 | 11.5 | 1,433,633 | 14.7"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2025 (2024 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-01-21-gartner-forecasts-worldwide-it-spending-to-grow-9-point-8-percent-in-2025",
+        "date": "2025-01-21",
+        "quote": "Table 1 ... 2024 Spending | 2024 Growth (%) | 2025 Spending | 2025 Growth (%) ... Software | 1,091,569 | 12.0 | 1,246,842 | 14.2"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2024 (2023 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/01-17-2024-gartner-forecasts-worldwide-it-spending-to-grow-six-point-eight-percent-in-2024",
+        "date": "2024-01-17",
+        "quote": "Table 1 ... 2023 Spending | 2023 Growth (%) | 2024 Spending | 2024 Growth (%) ... Software | 913,334 | 12.4 | 1,029,421 | 12.7"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2023 (2022 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2023-01-18-gartner-forecasts-worldwide-it-spending-to-grow-2-percent-in-2023",
+        "date": "2023-01-18",
+        "quote": "Table 1 ... 2022 Spending | 2022 Growth (%) | 2023 Spending | 2023 Growth (%) ... Software | 783,462 | 7.1 | 856,029 | 9.3"
+      }
+    ],
+    "note": "USD billions, nominal. Gartner's 'Software' segment. Projection is Gartner's October 2026 forecast for 2026 and 2027 (a forecast, not an outcome). History points are the earlier-year column from each January/February release (2022 Jan 2023, 2023 Jan 2024, 2024 Jan 2025, 2025 Feb 2026), published in millions of US dollars and shown here in billions by decimal scaling only; Gartner restates segment baselines between editions (e.g. scope and currency changes), so steps between editions are not purely market movement, and the 2026 projection starts from a different baseline than the 2025 history. Includes application and infrastructure software and GenAI models."
+  },
+  {
+    "slug": "gartner-devices-spending",
+    "industry": "Electronics",
+    "title": "Worldwide devices (phones, PCs, tablets) spending (Gartner)",
+    "tags": [
+      "Electronics",
+      "Computing",
+      "Telecom"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Gartner worldwide IT spending forecast, October 2026 edition",
+      "points": [
+        {
+          "x": "2026",
+          "value": 847
+        },
+        {
+          "x": "2027",
+          "value": 916
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "Gartner reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 722.181
+          },
+          {
+            "x": "2023",
+            "value": 699.791
+          },
+          {
+            "x": "2024",
+            "value": 734.162
+          },
+          {
+            "x": "2025",
+            "value": 788.335
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Gartner IT spending forecast, October 2026 (Table 1, billions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-21-gartner-forecasts-worldwide-it-spending-to-grow-15-percent-in-2027-totaling-7-point-35-trillion",
+        "date": "2026-10-21",
+        "quote": "Table 1. Worldwide IT Spending Forecast (Billions of U.S. Dollars) | 2026 Spending | 2026 Growth (%) | 2027 Spending | 2027 Growth (%) | Devices | 847 | 7.2 | 916 | 8.1"
+      },
+      {
+        "label": "Gartner IT spending forecast, February 2026 (2025 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-forecasts-worldwide-it-spending-to-grow-10-point-8-percent-in-2026-totaling-6-point-15-trillion-dollars",
+        "date": "2026-02-03",
+        "quote": "Table 1 ... 2025 Spending | 2025 Growth (%) | 2026 Spending | 2026 Growth (%) ... Devices | 788,335 | 9.1 | 836,417 | 6.1"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2025 (2024 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-01-21-gartner-forecasts-worldwide-it-spending-to-grow-9-point-8-percent-in-2025",
+        "date": "2025-01-21",
+        "quote": "Table 1 ... 2024 Spending | 2024 Growth (%) | 2025 Spending | 2025 Growth (%) ... Devices | 734,162 | 6.0 | 810,234 | 10.4"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2024 (2023 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/01-17-2024-gartner-forecasts-worldwide-it-spending-to-grow-six-point-eight-percent-in-2024",
+        "date": "2024-01-17",
+        "quote": "Table 1 ... 2023 Spending | 2023 Growth (%) | 2024 Spending | 2024 Growth (%) ... Devices | 699,791 | -8.7 | 732,287 | 4.6"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2023 (2022 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2023-01-18-gartner-forecasts-worldwide-it-spending-to-grow-2-percent-in-2023",
+        "date": "2023-01-18",
+        "quote": "Table 1 ... 2022 Spending | 2022 Growth (%) | 2023 Spending | 2023 Growth (%) ... Devices | 722,181 | -10.6 | 685,633 | -5.1"
+      }
+    ],
+    "note": "USD billions, nominal. Gartner's 'Devices' segment. Projection is Gartner's October 2026 forecast for 2026 and 2027 (a forecast, not an outcome). History points are the earlier-year column from each January/February release (2022 Jan 2023, 2023 Jan 2024, 2024 Jan 2025, 2025 Feb 2026), published in millions of US dollars and shown here in billions by decimal scaling only; Gartner restates segment baselines between editions (e.g. scope and currency changes), so steps between editions are not purely market movement, and the 2026 projection starts from a different baseline than the 2025 history. Gartner's devices segment covers mobile phones, PCs and tablets; Gartner attributes slower growth to rising memory prices (memflation), so part of the projected growth is price rather than units."
+  },
+  {
+    "slug": "gartner-communications-services-spending",
+    "industry": "Telecom",
+    "title": "Worldwide communications services spending (Gartner)",
+    "tags": [
+      "Telecom",
+      "Computing"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Gartner worldwide IT spending forecast, October 2026 edition",
+      "points": [
+        {
+          "x": "2026",
+          "value": 1352
+        },
+        {
+          "x": "2027",
+          "value": 1391
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "Gartner reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 1422.506
+          },
+          {
+            "x": "2023",
+            "value": 1440.827
+          },
+          {
+            "x": "2024",
+            "value": 1371.787
+          },
+          {
+            "x": "2025",
+            "value": 1303.651
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Gartner IT spending forecast, October 2026 (Table 1, billions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-21-gartner-forecasts-worldwide-it-spending-to-grow-15-percent-in-2027-totaling-7-point-35-trillion",
+        "date": "2026-10-21",
+        "quote": "Table 1. Worldwide IT Spending Forecast (Billions of U.S. Dollars) | 2026 Spending | 2026 Growth (%) | 2027 Spending | 2027 Growth (%) | Communications Services | 1,352 | 4.1 | 1,391 | 2.9"
+      },
+      {
+        "label": "Gartner IT spending forecast, February 2026 (2025 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-forecasts-worldwide-it-spending-to-grow-10-point-8-percent-in-2026-totaling-6-point-15-trillion-dollars",
+        "date": "2026-02-03",
+        "quote": "Table 1 ... 2025 Spending | 2025 Growth (%) | 2026 Spending | 2026 Growth (%) ... Communications Services | 1,303,651 | 3.8 | 1,365,184 | 4.7"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2025 (2024 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-01-21-gartner-forecasts-worldwide-it-spending-to-grow-9-point-8-percent-in-2025",
+        "date": "2025-01-21",
+        "quote": "Table 1 ... 2024 Spending | 2024 Growth (%) | 2025 Spending | 2025 Growth (%) ... Communications Services | 1,371,787 | 2.3 | 1,423,746 | 3.8"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2024 (2023 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/01-17-2024-gartner-forecasts-worldwide-it-spending-to-grow-six-point-eight-percent-in-2024",
+        "date": "2024-01-17",
+        "quote": "Table 1 ... 2023 Spending | 2023 Growth (%) | 2024 Spending | 2024 Growth (%) ... Communications Services | 1,440,827 | 1.5 | 1,473,314 | 2.3"
+      },
+      {
+        "label": "Gartner IT spending forecast, January 2023 (2022 value, millions of US dollars)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2023-01-18-gartner-forecasts-worldwide-it-spending-to-grow-2-percent-in-2023",
+        "date": "2023-01-18",
+        "quote": "Table 1 ... 2022 Spending | 2022 Growth (%) | 2023 Spending | 2023 Growth (%) ... Communications Services | 1,422,506 | -2.4 | 1,423,367 | 0.1"
+      }
+    ],
+    "note": "USD billions, nominal. Gartner's 'Communications Services' segment. Projection is Gartner's October 2026 forecast for 2026 and 2027 (a forecast, not an outcome). History points are the earlier-year column from each January/February release (2022 Jan 2023, 2023 Jan 2024, 2024 Jan 2025, 2025 Feb 2026), published in millions of US dollars and shown here in billions by decimal scaling only; Gartner restates segment baselines between editions (e.g. scope and currency changes), so steps between editions are not purely market movement, and the 2026 projection starts from a different baseline than the 2025 history. Telecom services (consumer and enterprise voice, data, messaging). The dip from 2023 to 2024 in the history reflects Gartner's restated baselines between editions (Jan 2024 vs Jan 2025), not a published decline of that size."
+  },
+  {
+    "slug": "fannie-mae-total-housing-starts",
+    "industry": "Property",
+    "title": "US total housing starts",
+    "tags": [
+      "Property",
+      "Economy",
+      "Finance"
+    ],
+    "prefix": "",
+    "suffix": "k",
+    "projection": {
+      "label": "Fannie Mae ESR Housing Forecast, October 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 1341
+        },
+        {
+          "x": "2027",
+          "value": 1301
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2026 (2025 actual, 2026-2027 forecast)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102026",
+        "date": "2026-10-12",
+        "quote": "Total Housing Starts 1,397 1,356 1,347 1,323 1,418 1,345 1,293 1,307 1,307 1,300 1,299 1,299 1,356 1,341 1,301"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2025 (2024 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102025",
+        "date": null,
+        "quote": "Total Housing Starts 1,415 1,343 1,338 1,387 1,401 1,354 1,336 1,295 1,306 1,305 1,311 1,311 1,367 1,346 1,308"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2024 (2023 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102024",
+        "date": null,
+        "quote": "Total Housing Starts 1,369 1,455 1,380 1,481 1,407 1,340 1,317 1,308 1,334 1,356 1,365 1,387 1,420 1,343 1,360"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2023 (2022 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102023",
+        "date": null,
+        "quote": "Total Housing Starts 1,718 1,636 1,446 1,405 1,385 1,450 1,365 1,283 1,211 1,221 1,250 1,281 1,553 1,371 1,241"
+      }
+    ],
+    "note": "Total US housing starts (single-family plus multifamily), thousands of units, seasonally adjusted annual rate averaged over the year. Fannie Mae Economic and Strategic Research annual columns; each historical year is the actual shown in the October edition that follows that year (2022 from Oct 2023, 2023 from Oct 2024, 2024 from Oct 2025, 2025 from Oct 2026), so later Census/NAR/Freddie Mac revisions are not applied. 2026 and 2027 are Fannie Mae forecasts (estimates), not outcomes. Oct 2026 edition: 1,356 (2025), 1,341 (2026), 1,301 (2027). Fannie Mae's site returns 403 to direct fetches; the PDFs were read through the Internet Archive copy of the same URLs.",
+    "history": [
+      {
+        "label": "Fannie Mae reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 1553
+          },
+          {
+            "x": "2023",
+            "value": 1420
+          },
+          {
+            "x": "2024",
+            "value": 1367
+          },
+          {
+            "x": "2025",
+            "value": 1356
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fannie-mae-30-year-mortgage-rate",
+    "industry": "Property",
+    "title": "US 30-year fixed mortgage rate",
+    "tags": [
+      "Property",
+      "Finance",
+      "Economy"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "Fannie Mae ESR Housing Forecast, October 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 6.7
+        },
+        {
+          "x": "2027",
+          "value": 7.5
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2026 (2025 actual, 2026-2027 forecast)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102026",
+        "date": "2026-10-12",
+        "quote": "30-Year Fixed Rate Mortgage 6.8 6.8 6.6 6.2 6.1 6.4 6.7 7.4 7.5 7.5 7.5 7.5 6.6 6.7 7.5"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2025 (2024 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102025",
+        "date": null,
+        "quote": "30-Year Fixed Rate Mortgage 6.7 7.0 6.5 6.7 6.8 6.8 6.6 6.3 6.2 6.0 6.0 5.9 6.7 6.6 6.0"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2024 (2023 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102024",
+        "date": null,
+        "quote": "30-Year Fixed Rate Mortgage 6.4 6.5 7.0 7.3 6.7 7.0 6.5 6.0 5.9 5.7 5.6 5.6 6.8 6.6 5.7"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2023 (2022 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102023",
+        "date": null,
+        "quote": "30-Year Fixed Rate Mortgage 3.8 5.2 5.6 6.7 6.4 6.5 7.0 7.3 7.1 7.0 6.9 6.7 5.3 6.8 6.9"
+      }
+    ],
+    "note": "Annual average of the 30-year fixed mortgage rate, percent. Fannie Mae Economic and Strategic Research annual columns; each historical year is the actual shown in the October edition that follows that year (2022 from Oct 2023, 2023 from Oct 2024, 2024 from Oct 2025, 2025 from Oct 2026), so later Census/NAR/Freddie Mac revisions are not applied. 2026 and 2027 are Fannie Mae forecasts (estimates), not outcomes. The forecast is based on rates from September 30, 2026 and sits well above Fannie Mae's earlier vintages (the October 2025 edition had 6.0% for 2026). Fannie Mae's site returns 403 to direct fetches; the PDFs were read through the Internet Archive copy of the same URLs.",
+    "history": [
+      {
+        "label": "Fannie Mae reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 5.3
+          },
+          {
+            "x": "2023",
+            "value": 6.8
+          },
+          {
+            "x": "2024",
+            "value": 6.7
+          },
+          {
+            "x": "2025",
+            "value": 6.6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fannie-mae-mortgage-originations",
+    "industry": "Property",
+    "title": "US single-family mortgage originations",
+    "tags": [
+      "Property",
+      "Finance",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "bn",
+    "projection": {
+      "label": "Fannie Mae ESR Housing Forecast, October 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 2085
+        },
+        {
+          "x": "2027",
+          "value": 1865
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2026 (2025 actual, 2026-2027 forecast)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102026",
+        "date": "2026-10-12",
+        "quote": "Single-Family Mortgage Originations 379 517 511 585 571 553 513 448 377 507 501 480 1,992 2,085 1,865"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2025 (2024 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102025",
+        "date": null,
+        "quote": "Single-Family Mortgage Originations 330 437 456 473 372 509 493 507 474 638 628 608 1,695 1,881 2,348"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2024 (2023 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102024",
+        "date": null,
+        "quote": "Single-Family Mortgage Originations 320 430 411 342 332 439 443 460 421 582 598 540 1,503 1,674 2,142"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2023 (2022 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102023",
+        "date": null,
+        "quote": "Single-Family Mortgage Originations 754 668 544 408 343 431 400 386 330 496 560 510 2,374 1,559 1,896"
+      }
+    ],
+    "note": "NSA, billions of US dollars, 1-4 unit single-family mortgages (purchase plus refinance). Fannie Mae states all origination data are its own estimates as there is no universal market-wide source. Fannie Mae Economic and Strategic Research annual columns; each historical year is the actual shown in the October edition that follows that year (2022 from Oct 2023, 2023 from Oct 2024, 2024 from Oct 2025, 2025 from Oct 2026), so later Census/NAR/Freddie Mac revisions are not applied. 2026 and 2027 are Fannie Mae forecasts (estimates), not outcomes. Nominal dollars; 2022 is the figure in the October 2023 edition. Fannie Mae's site returns 403 to direct fetches; the PDFs were read through the Internet Archive copy of the same URLs.",
+    "history": [
+      {
+        "label": "Fannie Mae reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 2374
+          },
+          {
+            "x": "2023",
+            "value": 1503
+          },
+          {
+            "x": "2024",
+            "value": 1695
+          },
+          {
+            "x": "2025",
+            "value": 1992
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fannie-mae-total-home-sales",
+    "industry": "Property",
+    "title": "US total home sales",
+    "tags": [
+      "Property",
+      "Economy",
+      "Finance"
+    ],
+    "prefix": "",
+    "suffix": "k",
+    "projection": {
+      "label": "Fannie Mae ESR Housing Forecast, October 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 4672
+        },
+        {
+          "x": "2027",
+          "value": 4713
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2026 (2025 actual, 2026-2027 forecast)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102026",
+        "date": "2026-10-12",
+        "quote": "Total Home Sales 4,741 4,676 4,733 4,867 4,675 4,770 4,641 4,603 4,650 4,697 4,734 4,773 4,754 4,672 4,713"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2025 (2024 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102025",
+        "date": null,
+        "quote": "Total Home Sales 4,820 4,708 4,643 4,835 4,781 4,660 4,724 4,787 4,922 5,115 5,260 5,339 4,746 4,738 5,159"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2024 (2023 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102024",
+        "date": null,
+        "quote": "Total Home Sales 4,953 4,885 4,702 4,526 4,863 4,883 4,659 4,755 4,993 5,165 5,319 5,469 4,756 4,772 5,236"
+      },
+      {
+        "label": "Fannie Mae ESR Housing Forecast, October 2023 (2022 column)",
+        "url": "https://web.archive.org/web/2026id_/https://www.fanniemae.com/media/document/pdf/housing-forecast-102023",
+        "date": null,
+        "quote": "Total Home Sales 6,747 5,970 5,359 4,795 4,965 4,941 4,708 4,607 4,590 4,732 4,868 4,993 5,671 4,805 4,796"
+      }
+    ],
+    "note": "New single-family plus existing single-family, condo and co-op home sales, thousands of units, SAAR averaged over the year. Fannie Mae Economic and Strategic Research annual columns; each historical year is the actual shown in the October edition that follows that year (2022 from Oct 2023, 2023 from Oct 2024, 2024 from Oct 2025, 2025 from Oct 2026), so later Census/NAR/Freddie Mac revisions are not applied. 2026 and 2027 are Fannie Mae forecasts (estimates), not outcomes. Fannie Mae cites Census Bureau and NAR as its sources for actuals. Fannie Mae's site returns 403 to direct fetches; the PDFs were read through the Internet Archive copy of the same URLs.",
+    "history": [
+      {
+        "label": "Fannie Mae reported",
+        "points": [
+          {
+            "x": "2022",
+            "value": 5671
+          },
+          {
+            "x": "2023",
+            "value": 4756
+          },
+          {
+            "x": "2024",
+            "value": 4746
+          },
+          {
+            "x": "2025",
+            "value": 4754
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cbo-fhfa-house-price-index",
+    "industry": "Property",
+    "title": "FHFA house price index (CBO)",
+    "tags": [
+      "Property",
+      "Economy",
+      "Finance"
+    ],
+    "prefix": "",
+    "suffix": "",
+    "projection": {
+      "label": "CBO Budget and Economic Outlook, February 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 438.0
+        },
+        {
+          "x": "2027",
+          "value": 451.0
+        },
+        {
+          "x": "2028",
+          "value": 466.5
+        },
+        {
+          "x": "2029",
+          "value": 483.2
+        },
+        {
+          "x": "2030",
+          "value": 500.7
+        },
+        {
+          "x": "2031",
+          "value": 519.0
+        },
+        {
+          "x": "2032",
+          "value": 538.0
+        },
+        {
+          "x": "2033",
+          "value": 557.7
+        },
+        {
+          "x": "2034",
+          "value": 578.1
+        },
+        {
+          "x": "2035",
+          "value": 599.2
+        },
+        {
+          "x": "2036",
+          "value": 621.1
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "CBO, The Budget and Economic Outlook: 2026 to 2036, economic projections (calendar year sheet)",
+        "url": "https://www.cbo.gov/system/files/2026-02/51135-2026-02-Economic-Projections.xlsx",
+        "date": "2026-02-11",
+        "quote": "FHFA house price index, purchase only 1991Q1 100 396.762 418.13 429.576 438.036 450.982 466.454 483.172 500.726 518.995 537.980 557.668 578.049 599.173 621.086"
+      },
+      {
+        "label": "CBO Historical Economic Data and Economic Projections, February 2026 (Annual_CY_February2026.csv)",
+        "url": "https://www.cbo.gov/system/files/2026-02/55022-2026-02-Historical-Economic-Data.zip",
+        "date": "2026-02-11",
+        "quote": null
+      }
+    ],
+    "note": "FHFA purchase-only house price index, 1991Q1 = 100, calendar-year average; 2023-2036 columns read from the xlsx. CBO February 2026 baseline, calendar years; 2026-2036 are CBO projections (estimates under current law), and CBO's most recent year (2025) may still be an estimate rather than final data. History and projection come from the same CBO release, so there is no definition break. Index level, not a price in dollars or a growth rate. Files were opened in Chrome (cbo.gov returns 403 to curl/WebFetch) and read from the xlsx and the historical CSV; history and projection values here are rounded to 1-2 decimals from the CSV (quotes show the raw digits).",
+    "history": [
+      {
+        "label": "CBO reported",
+        "points": [
+          {
+            "x": "2016",
+            "value": 225.1
+          },
+          {
+            "x": "2017",
+            "value": 238.8
+          },
+          {
+            "x": "2018",
+            "value": 253.3
+          },
+          {
+            "x": "2019",
+            "value": 266.0
+          },
+          {
+            "x": "2020",
+            "value": 286.8
+          },
+          {
+            "x": "2021",
+            "value": 334.2
+          },
+          {
+            "x": "2022",
+            "value": 378.9
+          },
+          {
+            "x": "2023",
+            "value": 396.8
+          },
+          {
+            "x": "2024",
+            "value": 418.1
+          },
+          {
+            "x": "2025",
+            "value": 429.6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cbo-occupied-housing-units",
+    "industry": "Property",
+    "title": "US occupied housing units (CBO)",
+    "tags": [
+      "Property",
+      "Demographics",
+      "Economy"
+    ],
+    "prefix": "",
+    "suffix": "m",
+    "projection": {
+      "label": "CBO Budget and Economic Outlook, February 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 133.98
+        },
+        {
+          "x": "2027",
+          "value": 135.19
+        },
+        {
+          "x": "2028",
+          "value": 136.38
+        },
+        {
+          "x": "2029",
+          "value": 137.52
+        },
+        {
+          "x": "2030",
+          "value": 138.6
+        },
+        {
+          "x": "2031",
+          "value": 139.55
+        },
+        {
+          "x": "2032",
+          "value": 140.38
+        },
+        {
+          "x": "2033",
+          "value": 141.13
+        },
+        {
+          "x": "2034",
+          "value": 141.85
+        },
+        {
+          "x": "2035",
+          "value": 142.54
+        },
+        {
+          "x": "2036",
+          "value": 143.2
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "CBO, The Budget and Economic Outlook: 2026 to 2036, economic projections (calendar year sheet)",
+        "url": "https://www.cbo.gov/system/files/2026-02/51135-2026-02-Economic-Projections.xlsx",
+        "date": "2026-02-11",
+        "quote": "Households, total occupied housing units Millions 130.263 131.615 132.747 133.982 135.19 136.381 137.521 138.595 139.548 140.38 141.131 141.85 142.536 143.194"
+      },
+      {
+        "label": "CBO Historical Economic Data and Economic Projections, February 2026 (Annual_CY_February2026.csv)",
+        "url": "https://www.cbo.gov/system/files/2026-02/55022-2026-02-Historical-Economic-Data.zip",
+        "date": "2026-02-11",
+        "quote": null
+      }
+    ],
+    "note": "Households: total occupied housing units, millions (2023-2036 columns read from the xlsx). CBO February 2026 baseline, calendar years; 2026-2036 are CBO projections (estimates under current law), and CBO's most recent year (2025) may still be an estimate rather than final data. History and projection come from the same CBO release, so there is no definition break.  Files were opened in Chrome (cbo.gov returns 403 to curl/WebFetch) and read from the xlsx and the historical CSV; history and projection values here are rounded to 1-2 decimals from the CSV (quotes show the raw digits).",
+    "history": [
+      {
+        "label": "CBO reported",
+        "points": [
+          {
+            "x": "2016",
+            "value": 118.79
+          },
+          {
+            "x": "2017",
+            "value": 119.85
+          },
+          {
+            "x": "2018",
+            "value": 121.37
+          },
+          {
+            "x": "2019",
+            "value": 122.76
+          },
+          {
+            "x": "2020",
+            "value": 125.88
+          },
+          {
+            "x": "2021",
+            "value": 126.77
+          },
+          {
+            "x": "2022",
+            "value": 128.61
+          },
+          {
+            "x": "2023",
+            "value": 130.26
+          },
+          {
+            "x": "2024",
+            "value": 131.62
+          },
+          {
+            "x": "2025",
+            "value": 132.75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cbo-10-year-treasury-yield",
+    "industry": "Finance",
+    "title": "10-year Treasury note yield (CBO)",
+    "tags": [
+      "Finance",
+      "Economy",
+      "Property"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "CBO Budget and Economic Outlook, February 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 4.13
+        },
+        {
+          "x": "2027",
+          "value": 4.25
+        },
+        {
+          "x": "2028",
+          "value": 4.3
+        },
+        {
+          "x": "2029",
+          "value": 4.33
+        },
+        {
+          "x": "2030",
+          "value": 4.34
+        },
+        {
+          "x": "2031",
+          "value": 4.35
+        },
+        {
+          "x": "2032",
+          "value": 4.36
+        },
+        {
+          "x": "2033",
+          "value": 4.37
+        },
+        {
+          "x": "2034",
+          "value": 4.37
+        },
+        {
+          "x": "2035",
+          "value": 4.38
+        },
+        {
+          "x": "2036",
+          "value": 4.39
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "CBO, The Budget and Economic Outlook: 2026 to 2036, economic projections (calendar year sheet)",
+        "url": "https://www.cbo.gov/system/files/2026-02/51135-2026-02-Economic-Projections.xlsx",
+        "date": "2026-02-11",
+        "quote": "10-Year Treasury note Percent 3.956 4.208 4.288 4.126 4.253 4.302 4.328 4.341 4.351 4.359 4.365 4.373 4.381 4.387"
+      },
+      {
+        "label": "CBO Historical Economic Data and Economic Projections, February 2026 (Annual_CY_February2026.csv)",
+        "url": "https://www.cbo.gov/system/files/2026-02/55022-2026-02-Historical-Economic-Data.zip",
+        "date": "2026-02-11",
+        "quote": null
+      }
+    ],
+    "note": "Interest rate on 10-year Treasury notes, percent, calendar-year average (2023-2036 columns read from the xlsx). CBO February 2026 baseline, calendar years; 2026-2036 are CBO projections (estimates under current law), and CBO's most recent year (2025) may still be an estimate rather than final data. History and projection come from the same CBO release, so there is no definition break.  Files were opened in Chrome (cbo.gov returns 403 to curl/WebFetch) and read from the xlsx and the historical CSV; history and projection values here are rounded to 1-2 decimals from the CSV (quotes show the raw digits).",
+    "history": [
+      {
+        "label": "CBO reported",
+        "points": [
+          {
+            "x": "2016",
+            "value": 1.84
+          },
+          {
+            "x": "2017",
+            "value": 2.33
+          },
+          {
+            "x": "2018",
+            "value": 2.91
+          },
+          {
+            "x": "2019",
+            "value": 2.14
+          },
+          {
+            "x": "2020",
+            "value": 0.89
+          },
+          {
+            "x": "2021",
+            "value": 1.44
+          },
+          {
+            "x": "2022",
+            "value": 2.95
+          },
+          {
+            "x": "2023",
+            "value": 3.96
+          },
+          {
+            "x": "2024",
+            "value": 4.21
+          },
+          {
+            "x": "2025",
+            "value": 4.29
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cbo-federal-funds-rate",
+    "industry": "Finance",
+    "title": "Federal funds rate (CBO)",
+    "tags": [
+      "Finance",
+      "Economy",
+      "Property"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "CBO Budget and Economic Outlook, February 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 3.45
+        },
+        {
+          "x": "2027",
+          "value": 3.39
+        },
+        {
+          "x": "2028",
+          "value": 3.39
+        },
+        {
+          "x": "2029",
+          "value": 3.39
+        },
+        {
+          "x": "2030",
+          "value": 3.39
+        },
+        {
+          "x": "2031",
+          "value": 3.38
+        },
+        {
+          "x": "2032",
+          "value": 3.36
+        },
+        {
+          "x": "2033",
+          "value": 3.35
+        },
+        {
+          "x": "2034",
+          "value": 3.34
+        },
+        {
+          "x": "2035",
+          "value": 3.33
+        },
+        {
+          "x": "2036",
+          "value": 3.33
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "CBO, The Budget and Economic Outlook: 2026 to 2036, economic projections (calendar year sheet)",
+        "url": "https://www.cbo.gov/system/files/2026-02/51135-2026-02-Economic-Projections.xlsx",
+        "date": "2026-02-11",
+        "quote": "Federal funds rate Percent 5.024 5.142 4.205 3.452 3.388 3.39 3.388 3.387 3.383 3.362 3.347 3.339 3.334 3.331"
+      },
+      {
+        "label": "CBO Historical Economic Data and Economic Projections, February 2026 (Annual_CY_February2026.csv)",
+        "url": "https://www.cbo.gov/system/files/2026-02/55022-2026-02-Historical-Economic-Data.zip",
+        "date": "2026-02-11",
+        "quote": null
+      }
+    ],
+    "note": "Federal funds rate, percent, calendar-year average (2023-2036 columns read from the xlsx). This is CBO's annual average, not the year-end SEP midpoint. CBO February 2026 baseline, calendar years; 2026-2036 are CBO projections (estimates under current law), and CBO's most recent year (2025) may still be an estimate rather than final data. History and projection come from the same CBO release, so there is no definition break.  Files were opened in Chrome (cbo.gov returns 403 to curl/WebFetch) and read from the xlsx and the historical CSV; history and projection values here are rounded to 1-2 decimals from the CSV (quotes show the raw digits).",
+    "history": [
+      {
+        "label": "CBO reported",
+        "points": [
+          {
+            "x": "2016",
+            "value": 0.4
+          },
+          {
+            "x": "2017",
+            "value": 1.0
+          },
+          {
+            "x": "2018",
+            "value": 1.83
+          },
+          {
+            "x": "2019",
+            "value": 2.16
+          },
+          {
+            "x": "2020",
+            "value": 0.38
+          },
+          {
+            "x": "2021",
+            "value": 0.08
+          },
+          {
+            "x": "2022",
+            "value": 1.68
+          },
+          {
+            "x": "2023",
+            "value": 5.02
+          },
+          {
+            "x": "2024",
+            "value": 5.14
+          },
+          {
+            "x": "2025",
+            "value": 4.21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fed-sep-federal-funds-rate",
+    "industry": "Finance",
+    "title": "Fed policy rate path (SEP median)",
+    "tags": [
+      "Finance",
+      "Economy",
+      "Policy",
+      "Property"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "FOMC Summary of Economic Projections, September 2026 (median, year-end)",
+      "points": [
+        {
+          "x": "2026",
+          "value": 4.1
+        },
+        {
+          "x": "2027",
+          "value": 4.1
+        },
+        {
+          "x": "2028",
+          "value": 3.9
+        },
+        {
+          "x": "2029",
+          "value": 3.6
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Federal Reserve Board, FOMC projection materials, September 16, 2026, Table 1",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+        "date": "2026-09-16",
+        "quote": "Memo: Projected appropriate policy path Federal funds rate 4.1 4.1 3.9 3.6 3.2 4.1–4.4 3.6–4.4 3.1–4.1 3.1–3.6 3.0–3.6 (June projection 3.8 3.6 3.4 3.1)"
+      },
+      {
+        "label": "Federal Reserve Board via FRED, Federal Funds Effective Rate (FEDFUNDS), monthly",
+        "url": "https://fred.stlouisfed.org/data/FEDFUNDS.txt",
+        "date": null,
+        "quote": "2022-12-01 4.10 / 2023-12-01 5.33 / 2024-12-01 4.48 / 2025-12-01 3.72 (Source: Board of Governors of the Federal Reserve System (US); Units: Percent)"
+      }
+    ],
+    "note": "Projection is the median participant view of the appropriate year-end federal funds rate under each participant's own policy assumption (columns 2026, 2027, 2028, 2029, longer run 3.2, which is not plotted because it has no year). These are estimates, not a commitment. The history line is the monthly effective federal funds rate for December of each year (Board of Governors via FRED; 2019 1.55, 2020 0.09, 2021 0.08 read from the same file), a different definition from the SEP's year-end target midpoint, so the join is approximate: December 2025's effective rate 3.72 versus the SEP's 4.1 for end-2026 follows the September 2026 hike to a 3.75-4.00 range (reported). The FRED file was read via WebFetch (direct curl failed); the Fed table was read from the Fed's own HTML page.",
+    "history": [
+      {
+        "label": "Federal Reserve reported (effective rate, December)",
+        "points": [
+          {
+            "x": "2019",
+            "value": 1.55
+          },
+          {
+            "x": "2020",
+            "value": 0.09
+          },
+          {
+            "x": "2021",
+            "value": 0.08
+          },
+          {
+            "x": "2022",
+            "value": 4.1
+          },
+          {
+            "x": "2023",
+            "value": 5.33
+          },
+          {
+            "x": "2024",
+            "value": 4.48
+          },
+          {
+            "x": "2025",
+            "value": 3.72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "swiss-re-global-premium-growth",
+    "industry": "Finance",
+    "title": "Global insurance premium growth (real, total)",
+    "tags": [
+      "Finance",
+      "Economy",
+      "Business",
+      "Insurance"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "Swiss Re Institute sigma 2/2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 1.3
+        },
+        {
+          "x": "2027",
+          "value": 1.6
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Swiss Re Institute, sigma No 2/2026 World insurance: Shock absorbers in a fragmenting world",
+        "url": "https://www.swissre.com/dam/jcr:409c0f6b-ae4a-4de3-aec1-9864abb3fa62/2026-07-sri-world-insurance-sigma.pdf",
+        "date": "2026-06-30",
+        "quote": "We estimate total premium growth (life and non-life) of 1.3% in real terms (2025: 3.9%) before a modest recovery to 1.6% in 2027 and a return to the long-term trend of 2% thereafter"
+      },
+      {
+        "label": "Swiss Re Institute, sigma 2/2026 Figure 7 (real premium growth, total, non-life and life, 2023-2027F)",
+        "url": "https://www.swissre.com/institute/research/sigma-research/sigma-2026-07-world-insurance.html",
+        "date": "2026-06-30",
+        "quote": "Real premium growth, total, non-life and life, 2023-2027F. Source: Swiss Re Institute"
+      }
+    ],
+    "note": "Real (inflation-adjusted) annual growth in global direct premiums, per Swiss Re Institute sigma 2/2026, not nominal premium volume or other publishers' (for example Allianz euro nominal) series. 2026 and 2027 are Swiss Re forecasts (estimates); 2023-2025 are Swiss Re's own estimates from Figure 7 of the same report, read from the chart's data labels in the PDF text. Insurance is not one of the fixed categories, so the panel uses Finance, the closest. Only three history years are published in Figure 7.",
+    "history": [
+      {
+        "label": "Swiss Re Institute reported",
+        "points": [
+          {
+            "x": "2023",
+            "value": 3.5
+          },
+          {
+            "x": "2024",
+            "value": 5.9
+          },
+          {
+            "x": "2025",
+            "value": 3.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "netflix-annual-revenue-guidance",
+    "industry": "TV",
+    "title": "Netflix annual revenue and 2026 guidance",
+    "tags": [
+      "TV",
+      "Movie",
+      "Business"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Netflix 2026 revenue guidance (company forecast)",
+      "points": [
+        {
+          "x": "2026",
+          "value": 51.1
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "Netflix reported",
+        "points": [
+          {
+            "x": "2021",
+            "value": 29.698
+          },
+          {
+            "x": "2022",
+            "value": 31.616
+          },
+          {
+            "x": "2023",
+            "value": 33.723
+          },
+          {
+            "x": "2024",
+            "value": 39.001
+          },
+          {
+            "x": "2025",
+            "value": 45.183
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Netflix Q3 2026 shareholder letter (SEC 8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000290/ex991_q326.htm",
+        "date": "2026-10-20",
+        "quote": "For 2026, we expect revenue of $51.1B (+13% year over year) and an operating margin of 31.5%."
+      },
+      {
+        "label": "Netflix 10-K for FY2025 (revenues 2025, 2024, 2023)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+        "date": "2026-01-23",
+        "quote": "Revenues $ 45,183,036 $ 39,000,966 $ 33,723,297"
+      },
+      {
+        "label": "Netflix 10-K for FY2023 (revenues 2023, 2022, 2021)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528024000030/nflx-20231231.htm",
+        "date": "2024-01-26",
+        "quote": "Revenues $ 33,723,297 $ 31,615,550 $ 29,697,844"
+      }
+    ],
+    "note": "Company guidance, not an independent industry forecast: Netflix's own full-year 2026 revenue expectation from its Q3 2026 letter (it trimmed 2026 ad revenue to ~$2.7B vs ~$3B earlier; total is 0.2% below the prior range mid-point). USD billions; actuals are the 10-K figures in thousands divided by one million, shown to three decimals, no FX or inflation adjustment. Single streaming service, not the whole TV market; the projection is one point (2026) and no later years are given."
+  },
+  {
+    "slug": "bls-producers-directors-employment",
+    "industry": "TV",
+    "title": "Producers and directors employment, BLS projection to 2034",
+    "tags": [
+      "TV",
+      "Movie",
+      "Theatre"
+    ],
+    "prefix": "",
+    "suffix": "",
+    "projection": {
+      "label": "BLS Employment Projections, 2024-34",
+      "points": [
+        {
+          "x": "2034",
+          "value": 175200
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "BLS reported (base-year employment in each OOH edition)",
+        "points": [
+          {
+            "x": "2014",
+            "value": 122600
+          },
+          {
+            "x": "2016",
+            "value": 134700
+          },
+          {
+            "x": "2018",
+            "value": 152400
+          },
+          {
+            "x": "2019",
+            "value": 159500
+          },
+          {
+            "x": "2020",
+            "value": 131000
+          },
+          {
+            "x": "2021",
+            "value": 166200
+          },
+          {
+            "x": "2022",
+            "value": 175300
+          },
+          {
+            "x": "2023",
+            "value": 167900
+          },
+          {
+            "x": "2024",
+            "value": 167000
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "BLS Occupational Outlook Handbook, Producers and directors (Employment Projections table, archived copy)",
+        "url": "https://web.archive.org/web/20251101id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Producers and directors 27-2012 167,000 175,200 5 8,300"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2014 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2015id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2014 122,600"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2016 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2018id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2016 134,700"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2018 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2019id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2018 152,400"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2019 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2020id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2019 159,500"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2020 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2021id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2020 131,000"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2021 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2022id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2021 166,200"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2022 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2023id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2022 175,300"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2023 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2024id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2023 167,900"
+      },
+      {
+        "label": "BLS OOH Producers and directors, edition showing 2024 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/20251101id_/https://www.bls.gov/ooh/entertainment-and-sports/producers-and-directors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2024 167,000"
+      }
+    ],
+    "note": "BLS covers film, television, stage and other productions together; it is not TV-only, and the OOH lists television broadcasting stations among employers. Jobs (number of workers). History joins the base-year employment shown in successive Occupational Outlook Handbook editions (read from Internet Archive copies of bls.gov); each edition re-estimates the base, so jumps between years can reflect method and classification changes, not only real change. The projection is BLS's 2034 figure, a single point; no intermediate years are published. This is workforce size, not industry revenue."
+  },
+  {
+    "slug": "bls-musicians-singers-employment",
+    "industry": "Music",
+    "title": "Musicians and singers employment, BLS projection to 2034",
+    "tags": [
+      "Music",
+      "Audio"
+    ],
+    "prefix": "",
+    "suffix": "",
+    "projection": {
+      "label": "BLS Employment Projections, 2024-34",
+      "points": [
+        {
+          "x": "2034",
+          "value": 171600
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "BLS reported (base-year employment in each OOH edition)",
+        "points": [
+          {
+            "x": "2012",
+            "value": 167400
+          },
+          {
+            "x": "2014",
+            "value": 173300
+          },
+          {
+            "x": "2016",
+            "value": 172400
+          },
+          {
+            "x": "2018",
+            "value": 187600
+          },
+          {
+            "x": "2019",
+            "value": 175600
+          },
+          {
+            "x": "2020",
+            "value": 157300
+          },
+          {
+            "x": "2021",
+            "value": 151300
+          },
+          {
+            "x": "2022",
+            "value": 173500
+          },
+          {
+            "x": "2023",
+            "value": 169300
+          },
+          {
+            "x": "2024",
+            "value": 169800
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "BLS Occupational Outlook Handbook, Musicians and singers (Employment Projections table, archived copy)",
+        "url": "https://web.archive.org/web/20260101id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Musicians and singers 27-2042 169,800 171,600 1 1,800"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2012 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2014id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2012 167,400"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2014 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2016id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2014 173,300"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2016 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2018id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2016 172,400"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2018 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2019id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2018 187,600"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2019 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2020id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2019 175,600"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2020 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2021id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2020 157,300"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2021 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2022id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2021 151,300"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2022 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2023id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2022 173,500"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2023 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2024id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2023 169,300"
+      },
+      {
+        "label": "BLS OOH Musicians and singers, edition showing 2024 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/20260101id_/https://www.bls.gov/ooh/entertainment-and-sports/musicians-and-singers.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2024 169,800"
+      }
+    ],
+    "note": "BLS counts wage-and-salary and self-employed musicians and singers. Jobs (number of workers). History joins the base-year employment shown in successive Occupational Outlook Handbook editions (read from Internet Archive copies of bls.gov); each edition re-estimates the base, so jumps between years can reflect method and classification changes, not only real change. The projection is BLS's 2034 figure, a single point; no intermediate years are published. This is workforce size, not industry revenue."
+  },
+  {
+    "slug": "bls-writers-authors-employment",
+    "industry": "Literature",
+    "title": "Writers and authors employment, BLS projection to 2034",
+    "tags": [
+      "Literature",
+      "Education"
+    ],
+    "prefix": "",
+    "suffix": "",
+    "projection": {
+      "label": "BLS Employment Projections, 2024-34",
+      "points": [
+        {
+          "x": "2034",
+          "value": 140300
+        }
+      ]
+    },
+    "history": [
+      {
+        "label": "BLS reported (base-year employment in each OOH edition)",
+        "points": [
+          {
+            "x": "2012",
+            "value": 129100
+          },
+          {
+            "x": "2014",
+            "value": 136500
+          },
+          {
+            "x": "2016",
+            "value": 131200
+          },
+          {
+            "x": "2018",
+            "value": 123200
+          },
+          {
+            "x": "2019",
+            "value": 131200
+          },
+          {
+            "x": "2020",
+            "value": 143200
+          },
+          {
+            "x": "2021",
+            "value": 142800
+          },
+          {
+            "x": "2022",
+            "value": 151200
+          },
+          {
+            "x": "2023",
+            "value": 150700
+          },
+          {
+            "x": "2024",
+            "value": 135400
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "BLS Occupational Outlook Handbook, Writers and authors (Employment Projections table, archived copy)",
+        "url": "https://web.archive.org/web/20251101id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Writers and authors 27-3043 135,400 140,300 4 4,900"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2012 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2014id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2012 129,100"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2014 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2015id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2014 136,500"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2016 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2018id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2016 131,200"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2018 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2019id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2018 123,200"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2019 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2020id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2019 131,200"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2020 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2021id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2020 143,200"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2021 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2022id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2021 142,800"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2022 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2023id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2022 151,200"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2023 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/2024id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2023 150,700"
+      },
+      {
+        "label": "BLS OOH Writers and authors, edition showing 2024 base-year employment (Internet Archive copy)",
+        "url": "https://web.archive.org/web/20251101id_/https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm",
+        "date": null,
+        "quote": "Number of Jobs, 2024 135,400"
+      }
+    ],
+    "note": "BLS notes many writers and authors are self-employed; the occupation covers all written media, not only books. Jobs (number of workers). History joins the base-year employment shown in successive Occupational Outlook Handbook editions (read from Internet Archive copies of bls.gov); each edition re-estimates the base, so jumps between years can reflect method and classification changes, not only real change. The projection is BLS's 2034 figure, a single point; no intermediate years are published. This is workforce size, not industry revenue."
   }
 ]

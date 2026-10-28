@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Small round: two source checks; one researched citation exclusion.",
+  "nativeReadbacks": [
+    {
+      "pinId": 19875,
+      "production": false,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: 100 kWh RWD, RMB 281,000. Range 712 km is NEDC (CLTC not published, so score is conservative) -> 3.5; 360 kW peak but 10-80% in ~30 min -> 3; 0-100 6.9 s -> 2.5. Assist, space (wheelbase not on opened page), value (CnEVPost price conflict) and kids null. Reviews are of later or export 001s (labelled). Round20: InsideEVs Romanian AWD Privilege/air-suspension test excluded from native reviews; not launch China RWD evidence. Two labelled export RWD reviews remain contextual. Exact launch-variant independent review coverage remains open; axes unchanged."
+      },
+      "otherFieldsPreserved": true
+    },
+    {
+      "pinId": 19875,
+      "production": true,
+      "table": "PinCarPerf",
+      "changes": {
+        "basis": "Variant: 100 kWh RWD, RMB 281,000. Range 712 km is NEDC (CLTC not published, so score is conservative) -> 3.5; 360 kW peak but 10-80% in ~30 min -> 3; 0-100 6.9 s -> 2.5. Assist, space (wheelbase not on opened page), value (CnEVPost price conflict) and kids null. Reviews are of later or export 001s (labelled). Round20: InsideEVs Romanian AWD Privilege/air-suspension test excluded from native reviews; not launch China RWD evidence. Two labelled export RWD reviews remain contextual. Exact launch-variant independent review coverage remains open; axes unchanged."
+      },
+      "otherFieldsPreserved": true
+    }
+  ],
+  "evidenceReadbacks": [
+    {
+      "production": false,
+      "pinId": 19875,
+      "referenceId": 54778,
+      "wikiId": 12689,
+      "scopeNoteVerified": true,
+      "otherFieldsPreserved": true
+    },
+    {
+      "production": true,
+      "pinId": 19875,
+      "referenceId": 54794,
+      "wikiId": 12689,
+      "scopeNoteVerified": true,
+      "otherFieldsPreserved": true
+    }
+  ],
+  "tests": {
+    "command": "npx vitest run scripts/products/reviewCatalog.test.ts",
+    "passed": 3
+  },
+  "rawRubricGaps": 54,
+  "remainingSourceChecks": 27,
+  "datedReviewsAwaitingSentiment": 0,
+  "catalogRepair": "No stable pin/source identity existed in carPerf.json; appended canonical row from fresh native local rubric, including unchanged axes and two retained reviews. No numeric-id fallback used.",
+  "limitations": "No new exact-launch RWD review found in this bounded round. Full article publication year not established. WhatCar remains inaccessible. Scheduled verification not rerun."
+}

@@ -472,6 +472,9 @@ https://search.google.com/search-console?utm_source=about-page&resource_id=sc-do
 
 
 Add prod translations for all pins without translation or outdated translation. Add in the pin wiki that translations was done with this model for tracking
+do not add any notes in pin content that:
+Translations completed using Gemini 3.8 Flash.
+this is to be added only to the pin wiki
 
 
 

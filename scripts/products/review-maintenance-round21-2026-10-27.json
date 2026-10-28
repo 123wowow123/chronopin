@@ -1,0 +1,235 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Owner-authorized researched manual content maintenance; preserve all axes/authors and hand provenance. Guard complete original reviews and basis in each environment; stable source URL identity. Incoming publication days from original visible/metadata evidence, no modification-date substitution.",
+  "entries": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
+      "expectedSource": "hand",
+      "expectedBasis": "Scored as launched (Gemini 1.0, 6 Dec 2023: Ultra/Pro/Nano; Pro live in Bard that day, API from 13 Dec; Ultra not yet released). Reasoning null: no Artificial Analysis Intelligence Index entry existed at launch; Google's headline was Gemini Ultra MMLU 90.0% (CoT@32, unreleased model) and Ultra MMMU 59.4%, which is not comparable to the anchors. Coding null: no Terminal-Bench figure. Context 32,000 tokens (Google's Feb 2024 1.5 post: 'original 32,000 tokens for Gemini 1.0') -> 0. Price null: the Dec 2023 launch page gives no per-token list price . Speed null: none published. Modalities 5: Google describes the family as natively multimodal over text, code, audio, image and video; Bard/Pro shipped text-only (4 if scoring the shipped text-only Bard). Reviews cover Gemini Pro only (Ultra unreleased); Akkio and Zvi are analysis.",
+      "expectedReviews": [
+        {
+          "url": "https://artificialcorner.com/p/a-hands-on-comparison-gemini-pro",
+          "quote": "I’d say both models are on the same level.",
+          "title": "A Hands-On Comparison: Gemini Pro vs GPT-3.5",
+          "sentiment": 0.2,
+          "publishedDate": "2023-12-12"
+        },
+        {
+          "url": "https://skift.com/2023/12/09/google-bards-gemini-upgrade-we-tested-it-for-travel/",
+          "quote": "The updated version of Bard did well with some travel tasks, particularly finding flight options, but its answers still need to be taken with a grain of salt.",
+          "title": "Google Bard’s Gemini Upgrade: We Tested it for Travel",
+          "sentiment": 0,
+          "publishedDate": "2023-12-09"
+        },
+        {
+          "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+          "quote": "competent reasoning ability, and superior instruction following",
+          "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
+          "sentiment": 0.6,
+          "publishedDate": null
+        },
+        {
+          "url": "https://thezvi.substack.com/p/gemini-10",
+          "quote": "I love that ‘above 90%’ turns out to be exactly 90.04%, whereas human expert is 89.8%, prior SOTA was 86.4%.",
+          "title": "Gemini 1.0",
+          "sentiment": 0.6,
+          "publishedDate": "2023-12-07"
+        }
+      ],
+      "reviews": [
+        {
+          "url": "https://arxiv.org/abs/2312.11444v1",
+          "title": "An In-depth Look at Gemini's Language Abilities",
+          "publishedDate": "2023-12-18",
+          "quote": "Gemini Pro achieves accuracy that is close but slightly inferior to the corresponding GPT 3.5 Turbo",
+          "sentiment": -0.25
+        }
+      ],
+      "exclusions": [
+        {
+          "review": {
+            "url": "https://akkio.com/post/gemini-pro-vs-gpt-3-5",
+            "quote": "competent reasoning ability, and superior instruction following",
+            "title": "Gemini Pro vs. GPT-3.5: How Google's New LLM Stacks Up",
+            "sentiment": 0.6,
+            "publishedDate": null
+          },
+          "reason": "Akkio original publication chronology remains conflicting. Replace active citation with version-fixed original third-party Gemini Pro benchmark paper; this does not resolve the old article date."
+        }
+      ],
+      "basis": "Scored as launched: Gemini 1.0 family, 6 Dec 2023; Pro in Bard then, API from 13 Dec, Ultra unreleased. Existing axes preserved: reasoning/coding/speed/price null, 32k context=0, family modalities=5 (Bard shipped text-only). Reviews concern Gemini Pro or launch analysis, not an independently tested Ultra. Round21 replaces conflicting-date Akkio analysis with Akter et al. arXiv v1 (18 Dec 2023), a transparent ten-dataset comparison with code. Gemini Pro is slightly below GPT-3.5 Turbo overall, with task-specific strengths. This small early API-era study does not establish current model performance or anchor-compatible scores.",
+      "scope": "Original arXiv v1 submission 2023-12-18 18:47:42 UTC, not Dec24 v2 revision. Abstract and linked code identify ten datasets and Gemini Pro; no Ultra test or present-day Gemini inferred. Passage sentiment is a modest negative comparative verdict, not a benchmark-derived axis."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "pinSourceUrl": "https://www.aibase.com/news/22276",
+      "expectedSource": "hand",
+      "expectedBasis": "Scored as launched (1.0 Pro Fast): 1080p, 4-12 s clips, no native audio, text and image input with a first-frame lock. Speed from Volcano Engine's 10 s for a 5 s 720p clip. Realism is left unscored: every review found is vendor material, and only one is close to a hands-on test.",
+      "expectedReviews": [
+        {
+          "url": "https://getimg.ai/blog/seedance-1-0-pro-fast-ai-video-model-review",
+          "quote": "The motion is stable, the scenes make sense, and prompts come through clearly.",
+          "title": "Seedance 1.0 Pro Fast Review: For Creators Who Hate The Loading Bar",
+          "sentiment": 0.6,
+          "publishedDate": "2025-10-27"
+        },
+        {
+          "url": "https://www.rundiffusion.com/seedance-1-0-pro-fast",
+          "quote": "remarkably comparable to the full \"Pro\" model for most narrative and storyboarding purposes",
+          "title": "Seedance 1.0 Pro Fast: Cinematic AI Video on a Budget and a Deadline",
+          "sentiment": 0.5,
+          "publishedDate": "2025-10-24"
+        },
+        {
+          "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+          "quote": "Analysis and tests show that Pro Fast stays very close to Pro in visual quality.",
+          "title": "Seedance 1.0 Pro vs Pro Fast vs Lite: Complete Comparison Guide",
+          "publishedDate": null
+        }
+      ],
+      "reviews": [
+        {
+          "url": "https://wiro.ai/blog/seedance-v1-pro-fast-fast-text-to-video-in-5-tests/",
+          "title": "Seedance V1 Pro Fast: Fast Text-to-Video in 5 Tests",
+          "publishedDate": "2026-03-26",
+          "quote": "For a shot that needs exact extras, readable signage, or a repeatable path through a crowd, it needs closer review.",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://artlist.io/blog/how-to-use-seedance/",
+          "title": "How to use Seedance for AI video creation",
+          "publishedDate": "2026-03-29",
+          "quote": "the motion is a little jerky, and the transition from the bride’s pupil to a beach isn’t smooth or cinematic.",
+          "sentiment": -0.5
+        }
+      ],
+      "exclusions": [
+        {
+          "review": {
+            "url": "https://www.geelark.com/blog/seedance-pro-vs-pro-fast-vs-lite/",
+            "quote": "Analysis and tests show that Pro Fast stays very close to Pro in visual quality.",
+            "title": "Seedance 1.0 Pro vs Pro Fast vs Lite: Complete Comparison Guide",
+            "publishedDate": null
+          },
+          "reason": "Generic vendor comparison asserts tests without attributed samples/protocol. Replace with Wiro five published-output tests and Artlist demonstrated same-prompt comparison, both explicitly vendor-affiliated, not independent consensus."
+        }
+      ],
+      "basis": "Scored as launched: Seedance 1.0 Pro Fast, 1080p, 4-12 s, no native audio, text/image input with first-frame lock; speed from Volcano Engine's 10 s for a 5 s 720p clip. All original axes/source hand preserved, including realism null. Round21 replaces generic GeeLark assertion with Wiro's five 480p vertical five-second examples (no recorded seed, per-output runtime or reproducible benchmark claim) and Artlist's critical bride-to-beach transition demonstration. Both publishers sell model access, as do retained getimg/RunDiffusion sources; vendor examples do not meet independent review consensus. Later 2026 observations do not change launch specs or establish all resolutions.",
+      "scope": "Opened originals: Wiro visible March26 and original metadata agree (later modified Sep27); five output examples are 480p/9:16/5sec, without recorded seed or per-output timing. Artlist visible original March29 names Felicity Kay, links generated bride transition and explicitly discusses 1.0 Pro Fast separately from 1.5/2.0. Primary reader opened Artlist; plain HTTPS request returned403. Both are commercial access providers, not independent road-test-style consensus."
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "pinSourceUrl": "https://techcrunch.com/2025/10/06/openai-ramps-up-developer-push-with-more-powerful-models-in-its-api/",
+      "expectedSource": "hand",
+      "expectedBasis": "Scored as launched on the API (6 Oct 2025): the best size at launch was sora-2-pro at 1792x1024 (about 1024p; 1080p was added on 12 Mar 2026 per the official changelog), so 3.5 between the 720p and 1080p anchors. Duration 12 s is the launch maximum as reported by Replicate's readme ('4 to 12 seconds') and AIBase ('12 or 16 seconds'); OpenAI's own launch-day page was not readable, so 3.5 is cautious. Native synced audio. Input is text plus one image reference, with a remix call, so 2.5. Speed and realism null: no published render time, and only one genuine hands-on review of the API-era model exists (DIY AI, July 2026, praise) against Artificial Analysis ranking Sora 2 Pro below rivals as relayed by Wikipedia and a MindStudio comparison that is not a test, so there is no two-review consensus.",
+      "expectedReviews": [
+        {
+          "url": "https://diyai.io/ai-tools/video-generation/reviews/sora-2-review/",
+          "quote": "Sora 2 produced some of the strongest raw AI video quality we have evaluated, particularly for cinematic realism, prompt accuracy, physical motion and synchronised audio.",
+          "title": "Sora 2 Review 2026: OpenAI’s Video Generator Tested",
+          "sentiment": 0.8,
+          "publishedDate": "2026-07-31"
+        },
+        {
+          "url": "https://www.mindstudio.ai/blog/sora-2-vs-sora-2-pro-upgrade-worth-it",
+          "quote": "Pro dedicates more processing to refining textures, calculating accurate lighting, and maintaining temporal consistency across longer sequences.",
+          "title": "Sora 2 vs Sora 2 Pro: Is the Pro Upgrade Worth It?",
+          "sentiment": 0.5,
+          "publishedDate": "2026-02-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+          "quote": "The Artificial Analysis have placed Sora 2 pro lower than other text-to-video AI generators in the market on its leaderboard.",
+          "title": "Sora (text-to-video model) - Wikipedia (relaying Artificial Analysis)",
+          "publishedDate": null
+        }
+      ],
+      "reviews": [
+        {
+          "url": "https://www.gizmodo.jp/article/openai_sora_2_pro_handson_jp/",
+          "title": "OpenAI渾身の新動画AI「Sora 2 Pro」を試す。空想は美しい映像となった",
+          "publishedDate": "2025-10-09",
+          "quote": "描写力は相当な水準だと思いました。",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.techno-edge.net/article/2025/10/03/4638.html",
+          "title": "Sora 2にはまだ上があった。15秒までAI動画生成できるSora 2 Proがやってきた（CloseBox）",
+          "publishedDate": "2025-10-03",
+          "quote": "Sora 2 Proの標準解像度の方が、Sora 2よりも劣るわけです。",
+          "sentiment": -0.4
+        }
+      ],
+      "exclusions": [
+        {
+          "review": {
+            "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)",
+            "quote": "The Artificial Analysis have placed Sora 2 pro lower than other text-to-video AI generators in the market on its leaderboard.",
+            "title": "Sora (text-to-video model) - Wikipedia (relaying Artificial Analysis)",
+            "publishedDate": null
+          },
+          "reason": "Encyclopedia relay of a mutable leaderboard is not an original independent Sora 2 Pro test. Replace with named original Gizmodo Japan and TechnoEdge Pro hands-on accounts; no Wikipedia creation/revision day plotted."
+        }
+      ],
+      "basis": "Scored at API launch, 6 Oct 2025: Pro 1792x1024 (~1024p)=3.5; 12 s cautious launch API duration=3.5; synced audio=5; text plus image/remix control=2.5. Source hand and all axes preserved, speed/realism null. Round21 replaces Wikipedia's secondary ranking with original Japanese Pro hands-ons: Gizmodo Japan (9 Oct) praises rendering but reports text-only softness and restricted image motion; TechnoEdge (3 Oct) criticizes slow generation and its web UI's standard resolution. Both tested the web product, not API endpoints; their 10/15 s and UI resolutions are not substituted for launch API limits. TechnoEdge predates API launch. Retained MindStudio is comparison commentary, not an independent test; later DIYAI remains separately dated. Original Japanese passages retained.",
+      "scope": "Gizmodo: かみやまたくみ, Oct9 2025 12:30 JST, original metadata agrees, later update Oct24 not used. Exact Pro selection, own prompts, output links and test via web explicitly described; praise passage refers to samurai/crystal generation. TechnoEdge: 松尾公也, Oct3 2025 14:18 JST, original metadata agrees; Pro web model selector/standard output resolution and slow generation observed before API launch. Quoted Japanese sentence criticizes Pro standard resolution versus standard Sora2, not every output mode. No translated quotation or API performance inferred."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/",
+      "expectedSource": "session",
+      "expectedBasis": "Variant: all-electric 7-seat, 605 km CLTC, dual 160 kW, 0-100 5.8 s (launch priced from RMB 369,900; which trim is cheapest not stated). Range -> 3; 20-80% in as little as 20 min -> 2.5; 5.8 s -> 2.5; L2 assist and remote parking -> 2; 3,200 mm wheelbase 7-seat MPV, air suspension unconfirmed -> 4.5; kids 4 from sliding doors/3-zone climate (EVW). Value null. Only reviews of the 2024-26 updated Dream exist (labelled); no 2022 road test found.",
+      "expectedReviews": [
+        {
+          "url": "https://www.autohled.cz/en/magazin/voyah-dream-recenze-2026-luxusni-cinsky-van-s-komfortem-business-class-ale-s-kompromisy-za-25-milionu/11090",
+          "quote": "The steering is light and precise, but devoid of any feedback.",
+          "title": "Voyah Dream review 2026: luxurious Chinese van with business-class comfort, but compromises for 2.5 million (updated Dream)",
+          "sentiment": 0,
+          "publishedDate": "2026-04-07"
+        },
+        {
+          "url": "https://www.bitauto.com/global/news/100193103585.html",
+          "quote": "The power is readily available as you press the pedal, and the acceleration is very linear.",
+          "title": "Testing the Voyah Dream: Has New Energy Changed the MPV Game? (Bitauto, updated Dream)",
+          "sentiment": 0.4,
+          "publishedDate": "2024-07-30"
+        },
+        {
+          "url": "https://electricvehicleweb.com/voyah-dream/",
+          "quote": "I could stretch out properly, and the cabin felt bright and open.",
+          "title": "First Look Review: Voyah's Dream MPV is a wake-up call for Mercedes & Lexus",
+          "sentiment": 0.55,
+          "publishedDate": null
+        }
+      ],
+      "reviews": [
+        {
+          "url": "https://en.42how.com/2023/02/03/zhi-test-drive-lantu-dreamer-test-drive-experience/",
+          "title": "“Zhi test drive” Voyah dreamer test drive experience.",
+          "publishedDate": "2023-02-03",
+          "quote": "The driving feature of Dream Home is mild – even if you step on the accelerator, there won’t be much of a back-kick feeling.",
+          "sentiment": 0.1
+        }
+      ],
+      "exclusions": [
+        {
+          "review": {
+            "url": "https://electricvehicleweb.com/voyah-dream/",
+            "quote": "I could stretch out properly, and the cabin felt bright and open.",
+            "title": "First Look Review: Voyah's Dream MPV is a wake-up call for Mercedes & Lexus",
+            "sentiment": 0.55,
+            "publishedDate": null
+          },
+          "reason": "Opened first-look explicitly covers updated Huawei/global-spec Dream, not launch 2022 BEV; July2 2026 is Last Updated. Replace with early seven-seat entirely electric Dreamer family test, retaining battery/trim uncertainty."
+        }
+      ],
+      "basis": "Variant scored: China-launch seven-seat BEV, 605 km CLTC, dual160kW, 0-100 5.8s, from RMB369900; exact cheapest trim unclear. Range3, charging2.5, acceleration2.5, assistance2, space4.5, kids4 and value null preserved. Round21: 42HOW's 3 Feb2023 original family drive explicitly tested a seven-seat entirely electric early Dreamer; Tao Yanyan credited, posted by Zhu Yulong. Battery/range trim unspecified, so it does not verify the scored 605km trim. English publisher-hosted wording is quoted verbatim. Updated global-spec EVW first-look excluded. Retained AutoHled2026 and Bitauto2024 are labelled later-model context; three citations still do not establish three independent exact-launch-trim road tests.",
+      "scope": "Original 42HOW reader opens full article with Feb3 2023 date/byline, Tao Yanyan authorship, seven seats and entirely electric test vehicle. Page's literal English text used, not a new translation. Primary reader accessible; plain HTTPS redirects to a404, recorded without calling source permanently dead. Other Sept2022 track test does not isolate BEV from hybrid, and May2022 GeekCar test explicitly drove multi-mode/hybrid; neither added."
+    }
+  ]
+}

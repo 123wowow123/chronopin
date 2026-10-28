@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://insideevs.com/news/541793/zeekr-001-enters-production-china/",
+      "expectedBasis": "Variant: 100 kWh RWD, RMB 281,000. Range 712 km is NEDC (CLTC not published, so score is conservative) -> 3.5; 360 kW peak but 10-80% in ~30 min -> 3; 0-100 6.9 s -> 2.5. Assist, space (wheelbase not on opened page), value (CnEVPost price conflict) and kids null. Reviews are of later or export 001s (labelled).",
+      "changes": {
+        "basis": "Variant: 100 kWh RWD, RMB 281,000. Range 712 km is NEDC (CLTC not published, so score is conservative) -> 3.5; 360 kW peak but 10-80% in ~30 min -> 3; 0-100 6.9 s -> 2.5. Assist, space (wheelbase not on opened page), value (CnEVPost price conflict) and kids null. Reviews are of later or export 001s (labelled). Round20: InsideEVs Romanian AWD Privilege/air-suspension test excluded from native reviews; not launch China RWD evidence. Two labelled export RWD reviews remain contextual. Exact launch-variant independent review coverage remains open; axes unchanged."
+      }
+    }
+  ]
+}

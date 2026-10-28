@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "pinSourceUrl": "https://insideevs.com/news/541793/zeekr-001-enters-production-china/",
+      "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+      "expectedReview": {
+        "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+        "quote": "The car was really good at soaking up bumps and even going over rough roads.",
+        "title": "I Drove The 'Old' Zeekr 001. This Chinese EV Still Feels Like The Future (InsideEVs, export Privilege)",
+        "publishedDate": null
+      },
+      "reason": "Opened original canonical InsideEVs review: Romanian 400-V dual-motor AWD Privilege, adaptive air suspension and 22-inch wheels. Its verified ride quote does not test the scored 2021 China 100-kWh RWD. Remove from native reviews; retain as scoped export-AWD context. Visible April 21 date lacks a year; original day not established."
+    }
+  ]
+}

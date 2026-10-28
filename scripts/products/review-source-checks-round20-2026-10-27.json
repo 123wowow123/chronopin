@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 19875,
+      "title": "Zeekr Starts 001 Deliveries in China From RMB 281,000, With 800 V and 700 km Range",
+      "url": "https://insideevs.com/news/793428/zeekr-001-ev-review/",
+      "status": "resolved",
+      "reason": "Round 20: Original canonical InsideEVs article opened. Verified quote describes European 400-V dual-motor AWD Privilege with adaptive air suspension and 22-inch wheels, not scored launch China RWD. Removed citation from native reviews locally and in production, retained scoped reference/wiki context and synchronized catalog. Closes active citation by exclusion; original full publication day remains unknown.",
+      "previousReason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "title": "Volkswagen Premieres the Second-Generation T-Roc as a Mild Hybrid",
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open. Round20: original HTTPS reader retry inaccessible; body and original publication remain unverified. No date or sentiment inferred."
+    }
+  ],
+  "remainingNeedsResearch": 27,
+  "verifiedUndated": 98
+}

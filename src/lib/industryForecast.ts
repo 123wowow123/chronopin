@@ -95,7 +95,7 @@ export function forecastProblem(input: unknown): IndustryForecastInput | string 
   if (typeof input.slug !== 'string' || !/^[a-z0-9-]{1,80}$/.test(input.slug)) return 'slug: lowercase letters, digits and hyphens.';
   if (!text(input.industry, 80) || !text(input.title, 200)) return 'industry and title are required.';
   if (!Array.isArray(input.tags) || !input.tags.length || !input.tags.every((t) => text(t, 80))) return 'tags: at least one pin tag or category name.';
-  if (!Array.isArray(input.sources) || !input.sources.length || input.sources.length > 8) return 'sources: 1 to 8, each opened this run.';
+  if (!Array.isArray(input.sources) || !input.sources.length || input.sources.length > 14) return 'sources: 1 to 14, each opened this run.';
   const sources: ForecastSource[] = [];
   for (const s of input.sources) {
     if (!isRecord(s) || !text(s.label, 300) || typeof s.url !== 'string') return 'sources: { label, url, date, quote }.';

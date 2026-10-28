@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-10-27",
+  "newReviewExcerpts": 6,
+  "citationsExcluded": 4,
+  "pinsUpdated": 4,
+  "nativeReadbacks": [
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "production": false,
+      "reviews": 4,
+      "added": 1,
+      "excluded": 1,
+      "source": "hand",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/"
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 5000,
+      "production": true,
+      "reviews": 4,
+      "added": 1,
+      "excluded": 1,
+      "source": "hand",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "production": false,
+      "reviews": 4,
+      "added": 2,
+      "excluded": 1,
+      "source": "hand",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://www.aibase.com/news/22276"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19633,
+      "production": true,
+      "reviews": 4,
+      "added": 2,
+      "excluded": 1,
+      "source": "hand",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://www.aibase.com/news/22276"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "production": false,
+      "reviews": 4,
+      "added": 2,
+      "excluded": 1,
+      "source": "hand",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://techcrunch.com/2025/10/06/openai-ramps-up-developer-push-with-more-powerful-models-in-its-api/"
+    },
+    {
+      "table": "PinVideoPerf",
+      "pinId": 19669,
+      "production": true,
+      "reviews": 4,
+      "added": 2,
+      "excluded": 1,
+      "source": "hand",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://techcrunch.com/2025/10/06/openai-ramps-up-developer-push-with-more-powerful-models-in-its-api/"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "production": false,
+      "reviews": 3,
+      "added": 1,
+      "excluded": 1,
+      "source": "session",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/"
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19873,
+      "production": true,
+      "reviews": 3,
+      "added": 1,
+      "excluded": 1,
+      "source": "session",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/"
+    }
+  ],
+  "renderedReadbacks": [
+    {
+      "pinId": 5000,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/5000/gemini-1-0-released",
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 19633,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/19633/seedance-1-0-pro-fast-released",
+      "pinSourceUrl": "https://www.aibase.com/news/22276",
+      "newDatedPointsVerified": 2,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 19669,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/19669/sora-2-and-sora-2-pro-released-in-the-api",
+      "pinSourceUrl": "https://techcrunch.com/2025/10/06/openai-ramps-up-developer-push-with-more-powerful-models-in-its-api/",
+      "newDatedPointsVerified": 2,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 19873,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/19873/voyah-launches-the-dream-electric-and-range-extender-mpv-from-rmb-369-900",
+      "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 5000,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5000/gemini-1-0-released",
+      "pinSourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 19633,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/19633/seedance-1-0-pro-fast-released",
+      "pinSourceUrl": "https://www.aibase.com/news/22276",
+      "newDatedPointsVerified": 2,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 19669,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/19669/sora-2-and-sora-2-pro-released-in-the-api",
+      "pinSourceUrl": "https://techcrunch.com/2025/10/06/openai-ramps-up-developer-push-with-more-powerful-models-in-its-api/",
+      "newDatedPointsVerified": 2,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 19873,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/19873/voyah-launches-the-dream-electric-and-range-extender-mpv-from-rmb-369-900",
+      "pinSourceUrl": "https://cnevpost.com/2022/05/08/voyahs-dreamer-mpv-officially-launched-with-starting-price-of-about-55490/",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    }
+  ],
+  "referenceWikiReadbacks": 20,
+  "tests": {
+    "command": "npx vitest run src/server/jobs/reviewResearch.test.ts src/lib/reviewPublicationDay.test.ts scripts/products/reviewCatalog.test.ts",
+    "passed": 9
+  },
+  "rawRubricGaps": 54,
+  "remainingSourceChecks": 23,
+  "verifiedUndated": 98,
+  "datedReviewsAwaitingSentiment": 0,
+  "catalogSynchronization": "Source-identified EV catalog entry updated; guarded round21 maintenance catalog records full original reviews, basis, exclusions and replacements for deliberate hand-row replay. Historical research/backup snapshots retained as history.",
+  "limits": "Seedance vendor independence, Dreamer exact battery trim and Sora web/API delivery differences explicitly queued. No axis rescore, scheduled retry, deployment or restart."
+}

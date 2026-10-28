@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-27",
+  "openedSources": [
+    {
+      "pinId": 5000,
+      "url": "https://arxiv.org/abs/2312.11444v1",
+      "title": "An In-depth Look at Gemini's Language Abilities",
+      "publishedDate": "2023-12-18",
+      "quote": "Gemini Pro achieves accuracy that is close but slightly inferior to the corresponding GPT 3.5 Turbo",
+      "sentiment": -0.25,
+      "scope": "Original arXiv v1 submission 2023-12-18 18:47:42 UTC, not Dec24 v2 revision. Abstract and linked code identify ten datasets and Gemini Pro; no Ultra test or present-day Gemini inferred. Passage sentiment is a modest negative comparative verdict, not a benchmark-derived axis."
+    },
+    {
+      "pinId": 19633,
+      "url": "https://wiro.ai/blog/seedance-v1-pro-fast-fast-text-to-video-in-5-tests/",
+      "title": "Seedance V1 Pro Fast: Fast Text-to-Video in 5 Tests",
+      "publishedDate": "2026-03-26",
+      "quote": "For a shot that needs exact extras, readable signage, or a repeatable path through a crowd, it needs closer review.",
+      "sentiment": -0.2,
+      "scope": "Opened originals: Wiro visible March26 and original metadata agree (later modified Sep27); five output examples are 480p/9:16/5sec, without recorded seed or per-output timing. Artlist visible original March29 names Felicity Kay, links generated bride transition and explicitly discusses 1.0 Pro Fast separately from 1.5/2.0. Primary reader opened Artlist; plain HTTPS request returned403. Both are commercial access providers, not independent road-test-style consensus."
+    },
+    {
+      "pinId": 19633,
+      "url": "https://artlist.io/blog/how-to-use-seedance/",
+      "title": "How to use Seedance for AI video creation",
+      "publishedDate": "2026-03-29",
+      "quote": "the motion is a little jerky, and the transition from the bride’s pupil to a beach isn’t smooth or cinematic.",
+      "sentiment": -0.5,
+      "scope": "Opened originals: Wiro visible March26 and original metadata agree (later modified Sep27); five output examples are 480p/9:16/5sec, without recorded seed or per-output timing. Artlist visible original March29 names Felicity Kay, links generated bride transition and explicitly discusses 1.0 Pro Fast separately from 1.5/2.0. Primary reader opened Artlist; plain HTTPS request returned403. Both are commercial access providers, not independent road-test-style consensus."
+    },
+    {
+      "pinId": 19669,
+      "url": "https://www.gizmodo.jp/article/openai_sora_2_pro_handson_jp/",
+      "title": "OpenAI渾身の新動画AI「Sora 2 Pro」を試す。空想は美しい映像となった",
+      "publishedDate": "2025-10-09",
+      "quote": "描写力は相当な水準だと思いました。",
+      "sentiment": 0.6,
+      "scope": "Gizmodo: かみやまたくみ, Oct9 2025 12:30 JST, original metadata agrees, later update Oct24 not used. Exact Pro selection, own prompts, output links and test via web explicitly described; praise passage refers to samurai/crystal generation. TechnoEdge: 松尾公也, Oct3 2025 14:18 JST, original metadata agrees; Pro web model selector/standard output resolution and slow generation observed before API launch. Quoted Japanese sentence criticizes Pro standard resolution versus standard Sora2, not every output mode. No translated quotation or API performance inferred."
+    },
+    {
+      "pinId": 19669,
+      "url": "https://www.techno-edge.net/article/2025/10/03/4638.html",
+      "title": "Sora 2にはまだ上があった。15秒までAI動画生成できるSora 2 Proがやってきた（CloseBox）",
+      "publishedDate": "2025-10-03",
+      "quote": "Sora 2 Proの標準解像度の方が、Sora 2よりも劣るわけです。",
+      "sentiment": -0.4,
+      "scope": "Gizmodo: かみやまたくみ, Oct9 2025 12:30 JST, original metadata agrees, later update Oct24 not used. Exact Pro selection, own prompts, output links and test via web explicitly described; praise passage refers to samurai/crystal generation. TechnoEdge: 松尾公也, Oct3 2025 14:18 JST, original metadata agrees; Pro web model selector/standard output resolution and slow generation observed before API launch. Quoted Japanese sentence criticizes Pro standard resolution versus standard Sora2, not every output mode. No translated quotation or API performance inferred."
+    },
+    {
+      "pinId": 19873,
+      "url": "https://en.42how.com/2023/02/03/zhi-test-drive-lantu-dreamer-test-drive-experience/",
+      "title": "“Zhi test drive” Voyah dreamer test drive experience.",
+      "publishedDate": "2023-02-03",
+      "quote": "The driving feature of Dream Home is mild – even if you step on the accelerator, there won’t be much of a back-kick feeling.",
+      "sentiment": 0.1,
+      "scope": "Original 42HOW reader opens full article with Feb3 2023 date/byline, Tao Yanyan authorship, seven seats and entirely electric test vehicle. Page's literal English text used, not a new translation. Primary reader accessible; plain HTTPS redirects to a404, recorded without calling source permanently dead. Other Sept2022 track test does not isolate BEV from hybrid, and May2022 GeekCar test explicitly drove multi-mode/hybrid; neither added."
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "url": "https://www.datacamp.com/blog/sora-2",
+      "reason": "Author explicitly has no access, so not a firsthand test."
+    },
+    {
+      "url": "https://www.tomsguide.com/ai/ai-image-video/sora-2-vs-veo-3-1-i-gave-them-7-wild-prompts-and-one-clearly-crushed-it",
+      "reason": "Genuine seven-prompt standard-Sora2 comparison, but Pro tier not established; selected explicitly Pro hands-ons instead."
+    },
+    {
+      "url": "https://en.42how.com/2022/05/08/lantu-dreamer-want-to-roll-over-joint-venture-mpv/",
+      "reason": "Author explicitly drove intelligent multi-mode/hybrid, not scored BEV."
+    },
+    {
+      "url": "https://en.42how.com/2022/09/27/mpv-known-for-handling-dreamer-test-drive-on-the-track/",
+      "reason": "Track comparison discusses both powertrains; exact BEV test scope not isolated."
+    }
+  ],
+  "access": {
+    "arxiv": "Original v1 body/citation metadata opened via HTTPS and reader, first submission Dec18 2023; v2 Dec24 not substituted.",
+    "wiro": "HTTPS200, visible original March26 agrees with article:published_time/JSON-LD; modified Sep27 recorded separately. No benchmark reproducibility claimed.",
+    "artlist": "Original primary reader displayed full text and March29 2026 author/date; plain HTTPS403.",
+    "gizmodo": "HTTPS200; visible Oct9 2025 12:30JST agrees with original metadata; Oct24 modification not substituted.",
+    "technoedge": "HTTPS200; visible Oct3 2025 14:18JST agrees with original metadata; modification14:19 not substituted.",
+    "dreamer": "Original primary reader displayed full byline/date/text, while plain request redirected to404; no claim source is permanently dead."
+  },
+  "sourceSnapshots": {
+    "gemini": "771e4a679431943a6dc27bc29bd910c4bf4b44e22d2f359041165761cdba46a9",
+    "wiro": "6ecc67044b0cf25b049021db7b4518e5e932528b977d26b9e5aa77c7a8ee3ee3",
+    "artlist": "8476fe2172c1d21ce66c294b90953d458c4b3f04a525bf3fc074d8c795da8617",
+    "gizmodo": "cbc88090351bc5abbf9bf6c03d57114ad08cc4ecd3e1b0da6b95ce2b8d2fb021",
+    "technoedge": "e49f8b45152f5b5f712826baa0070d781aa1518a567b883394f6f31aaab09caf",
+    "dreamer": "fc6ffbeffb5564f132505094cff4b5ae69fa8f1bae1c9555d9898920eb3cb66b"
+  }
+}

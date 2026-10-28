@@ -1,12 +1,12 @@
 // Replay sourced factory profiles through the same API locally or after deployment.
-// npx tsx scripts/factories/capability.ts [--apply] [--base https://www.chronopin.com]
+// npx tsx scripts/factories/capability.ts [--apply] [--only key] [--base https://www.chronopin.com]
 import '../env';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { parseArgs, isDeepStrictEqual } from 'node:util';
 import { factoryProblem } from '@/server/model/pinFactory';
 import type { FactoryProfile } from '@/lib/pinFactory';
 
-const { values } = parseArgs({ options: { apply: { type: 'boolean', default: false }, base: { type: 'string', default: 'http://127.0.0.1:3000' } } });
+const { values } = parseArgs({ options: { apply: { type: 'boolean', default: false }, only: { type: 'string' }, base: { type: 'string', default: 'http://127.0.0.1:3000' } } });
 const base = values.base!.replace(/\/$/, '');
 const environment = base === 'https://www.chronopin.com' ? 'production' : 'local';
 if (!['http://127.0.0.1:3000', 'http://localhost:3000', 'https://www.chronopin.com'].includes(base)) throw Error('Use the known local or production API; credentials are never sent to another host.');
@@ -22,6 +22,7 @@ async function call(method: string, path: string, body?: unknown) {
 const results: Record<string, unknown>[] = [];
 async function run() {
   for (const e of entries) {
+    if (values.only && e.key !== values.only) continue;
     const profile = factoryProblem(e.profile);
     if (typeof profile === 'string') throw Error(`${e.key}: ${profile}`);
     const id = e.pinIds[environment];
