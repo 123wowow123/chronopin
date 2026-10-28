@@ -585,11 +585,11 @@ export async function pinComments(id: number) {
 }
 
 // The industry forecast panels a pin's tags and categories file it under.
-export async function pinIndustries(id: number, names: string[]) {
+export async function pinIndustries(id: number, names: string[], title?: string | null) {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id), TAGS.industryForecasts);
-  return forecastSlugsForNames(names, 'pin');
+  return forecastSlugsForNames(names, 'pin', title);
 }
 
 // A factory capability profile; missing axes remain explicit research gaps.

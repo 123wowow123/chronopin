@@ -36,12 +36,28 @@ export function matchesTags(forecastTags: readonly string[], names: readonly (st
   return names.some((n) => !!n && wanted.has(norm(n)));
 }
 
+// Commodity charts inside a broad industry (Food) need the pin to be about
+// that commodity: its tags or title must name one of these words.
+const PIN_SUBJECT_TERMS: Record<string, RegExp> = {
+  'fao-cereal-production': /\b(cereals?|grains?|wheat|rice|maize|corn|barley|oats?|flour|crops?|farming)\b/i,
+  'wb-cocoa-price': /\b(cocoa|cacao|chocolat(e|es|ier|iers)?|confectioner(y|ies))\b/i,
+  'wb-arabica-coffee-price': /\b(coffee|espresso|arabica|baristas?|cafe|café)\b/i,
+  'wb-urea-fertilizer-price': /\b(fertili[sz]ers?|urea|agricultur(e|al)|farming|crops?)\b/i,
+  'wb-rice-price': /\b(rice|grains?|paddy)\b/i,
+  'oecd-fao-world-wheat-production': /\b(wheat|bread|flour|bakery|grains?|cereals?|pasta)\b/i,
+  'oecd-fao-world-poultry-consumption': /\b(poultry|chicken|turkey|nuggets?|wings?)\b/i,
+};
+
 // Pin sidebars require the forecast's own industry, rather than any related
-// tag. AI sector charts additionally require AI on the pin.
+// tag, and, for commodity charts, the commodity in the pin's tags or title.
+// AI sector charts additionally require AI on the pin.
 export function matchesPinForecast(
-  forecast: Pick<IndustryForecastJson, 'industry' | 'title' | 'tags'>,
+  forecast: Pick<IndustryForecastJson, 'industry' | 'title' | 'tags'> & { slug?: string },
   names: readonly (string | null | undefined)[],
+  title?: string | null,
 ): boolean {
+  const subject = forecast.slug ? PIN_SUBJECT_TERMS[forecast.slug] : undefined;
+  if (subject && ![...names, title].some((n) => !!n && subject.test(n))) return false;
   const aiNames = ['AI', 'AI Models'];
   const aiPin = matchesTags(aiNames, names);
   const aiForecast = matchesTags(aiNames, [forecast.industry, ...forecast.tags]) || /\bAI\b/i.test(forecast.title);

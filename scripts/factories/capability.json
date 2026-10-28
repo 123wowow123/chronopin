@@ -4157,5 +4157,401 @@
       ]
     },
     "constructionStatus": "Proposed"
+  },
+  {
+    "key": "1x-neo-hayward",
+    "pinIds": {
+      "local": 2328,
+      "production": 2328
+    },
+    "title": "1X Opens the NEO Factory in Hayward",
+    "sourceUrl": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+    "profile": {
+      "sector": "Humanoid home robot manufacturing",
+      "status": "production",
+      "assessmentDate": "2026-10-28",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five plants with matched output units and reference year was verified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sector-normalized automation assessment was researched; named processes remain factual context.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No capability ranking against a cited sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized energy, water or emissions figure and comparable peer cohort was verified.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Domestic production is documented but no quantified peer baseline for supply-chain contribution was established.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Headcounts and hiring plans are factual metrics; training outcomes were not evaluated for a capability score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Factory floor area",
+          "value": "58,000 square feet reported at the opening.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "Spanning 58,000 square feet"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Opening workforce",
+          "value": "More than 200 team members reported at the opening; expansion plans are not a verified later headcount.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "currently employing more than 200 team members"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Published capacity",
+          "value": "10,000 NEO robots per year stated capacity; 100,000+ by end-2027 is a future target, not achieved output.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "the capacity to build 10,000 NEOs per year, with plans to reach 100,000+ by the end of 2027"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Factory product",
+          "value": "NEO general-purpose home robot. The release describes in-house critical-component manufacture.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "The factory is producing 1X’s flagship product: NEO"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Customer shipments",
+          "value": "First customer shipments planned for 2026 in the April release; the factory opening does not verify customer deliveries.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "first customer shipments of NEO planned for 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Full-scale production announced",
+          "date": "2026-04-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "has commenced full-scale production"
+          }
+        },
+        {
+          "label": "First customer shipments target",
+          "date": "2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "first customer shipments of NEO planned for 2026"
+          }
+        },
+        {
+          "label": "Annual capacity expansion target",
+          "date": "End of 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+            "title": "1X Opens NEO Factory in Hayward, CA – America's First Vertically Integrated Humanoid Robot Factory, with Consumer Shipments Planned for 2026",
+            "publishedDate": "2026-04-30",
+            "quote": "plans to reach 100,000+ by the end of 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "wiwynn-socorro",
+    "pinIds": {
+      "local": 2874,
+      "production": 2874
+    },
+    "title": "Amazon and Wiwynn Expand Texas Server Rack Plant, Adding 1,000 Jobs",
+    "sourceUrl": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+    "profile": {
+      "sector": "Server systems and rack integration",
+      "status": "production",
+      "assessmentDate": "2026-10-28",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five plants with matched output units and reference year was verified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sector-normalized automation assessment was researched; named processes remain factual context.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No capability ranking against a cited sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized energy, water or emissions figure and comparable peer cohort was verified.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Domestic production is documented but no quantified peer baseline for supply-chain contribution was established.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Headcounts and hiring plans are factual metrics; training outcomes were not evaluated for a capability score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Texas facility investment",
+          "value": "Over USD 1.6 billion cumulative Wiwynn facility investment; incremental expansion cost is not separately stated.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+            "title": "Amazon and Wiwynn announce expansion of advanced manufacturing facility in Texas, creating nearly 1,000 jobs and boosting the US supply chain",
+            "publishedDate": "2026-09-09",
+            "quote": "over $1.6 billion investment in the Texas facility"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Workforce targets",
+          "value": "Nearly 1,000 new manufacturing jobs by end-2027; over 2,500 total in 2027 and 4,000 at full capacity. Targets overlap and are not added together.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+            "title": "Amazon and Wiwynn announce expansion of advanced manufacturing facility in Texas, creating nearly 1,000 jobs and boosting the US supply chain",
+            "publishedDate": "2026-09-09",
+            "quote": "nearly 1,000 new advanced manufacturing jobs by the end of 2027"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Production scope",
+          "value": "Manufacturing and integrating server systems and racks for Amazon data centers; no annual unit capacity published.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+            "title": "Amazon and Wiwynn announce expansion of advanced manufacturing facility in Texas, creating nearly 1,000 jobs and boosting the US supply chain",
+            "publishedDate": "2026-09-09",
+            "quote": "manufacturing and integrating server systems and racks"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Hiring horizon",
+          "value": "End of 2027 target for nearly 1,000 additional roles; full-capacity timing not published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+            "title": "Amazon and Wiwynn announce expansion of advanced manufacturing facility in Texas, creating nearly 1,000 jobs and boosting the US supply chain",
+            "publishedDate": "2026-09-09",
+            "quote": "nearly 1,000 new advanced manufacturing jobs by the end of 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expansion publicly announced",
+          "date": "2026-09-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+            "title": "Amazon and Wiwynn announce expansion of advanced manufacturing facility in Texas, creating nearly 1,000 jobs and boosting the US supply chain",
+            "publishedDate": "2026-09-09",
+            "quote": "Amazon and Wiwynn announced an expansion of Wiwynn’s manufacturing operations in Socorro, Texas."
+          }
+        },
+        {
+          "label": "Additional manufacturing jobs target",
+          "date": "End of 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/company-news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+            "title": "Amazon and Wiwynn announce expansion of advanced manufacturing facility in Texas, creating nearly 1,000 jobs and boosting the US supply chain",
+            "publishedDate": "2026-09-09",
+            "quote": "nearly 1,000 new advanced manufacturing jobs by the end of 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "lilly-houston",
+    "pinIds": {
+      "local": 2903,
+      "production": 2903
+    },
+    "title": "Lilly Breaks Ground on $6.5B Foundayo Plant in Houston's Generation Park",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-houston-one-of-ten-us-manufacturing-sites-announced-since-2020-302885255.html",
+    "profile": {
+      "sector": "Pharmaceutical active ingredient manufacturing",
+      "status": "construction",
+      "assessmentDate": "2026-10-28",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five plants with matched output units and reference year was verified.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sector-normalized automation assessment was researched; named processes remain factual context.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No capability ranking against a cited sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized energy, water or emissions figure and comparable peer cohort was verified.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Domestic production is documented but no quantified peer baseline for supply-chain contribution was established.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Headcounts and hiring plans are factual metrics; training outcomes were not evaluated for a capability score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Site investment",
+          "value": "USD 6.5 billion announced for the Houston site; separate from Lilly’s USD 50 billion US program.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-houston-one-of-ten-us-manufacturing-sites-announced-since-2020-302885255.html",
+            "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020",
+            "publishedDate": "2026-09-21",
+            "quote": "the $6.5 billion Houston site"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Jobs planned",
+          "value": "More than 600 high-wage operating roles; 4,000 construction jobs. Distinct categories, not an achieved hiring count.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-houston-one-of-ten-us-manufacturing-sites-announced-since-2020-302885255.html",
+            "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020",
+            "publishedDate": "2026-09-21",
+            "quote": "more than 600 high-wage jobs like engineers, scientists, operations personnel, and lab technicians — along with 4,000 construction jobs"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Planned production",
+          "value": "Foundayo (orforglipron) API, other small-molecule medicines and advanced therapeutics including oligonucleotides.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-houston-one-of-ten-us-manufacturing-sites-announced-since-2020-302885255.html",
+            "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020",
+            "publishedDate": "2026-09-21",
+            "quote": "This will include oligonucleotides"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Construction milestone",
+          "value": "Groundbreaking reported on 21 September 2026; commercial operation is not established by the release.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-houston-one-of-ten-us-manufacturing-sites-announced-since-2020-302885255.html",
+            "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020",
+            "publishedDate": "2026-09-21",
+            "quote": "broke ground today in Houston, Texas"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Houston groundbreaking",
+          "date": "2026-09-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-houston-one-of-ten-us-manufacturing-sites-announced-since-2020-302885255.html",
+            "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020",
+            "publishedDate": "2026-09-21",
+            "quote": "broke ground today in Houston, Texas"
+          }
+        }
+      ]
+    }
   }
 ]

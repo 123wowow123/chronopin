@@ -450,6 +450,79 @@ export function AdRow({ slot, pinId, count, className = '' }: { slot: 'timeline-
   );
 }
 
+// Up to two more rows of ads under the left column of a pin's page, when the
+// side column runs longer: as many rows (two to a row, one on a phone) as fit
+// in the gap, none when it is small. Drawn from the side column's inventory so
+// the row above and the column beside it keep theirs.
+export function AdFill({ pinId, className = '' }: { pinId: number; className?: string }) {
+  const slot = 'pin-side';
+  const t = useT();
+  const { ref, ads } = useAds(slot, pinId, 4);
+  const text = useAdText();
+  const boxRef = useRef<HTMLElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+  const adCount = ads?.length ?? 0;
+  useLayoutEffect(() => {
+    const box = boxRef.current;
+    const list = listRef.current;
+    if (!box || !list || !adCount) return;
+    const grid = box.closest<HTMLElement>('[data-pin-grid]');
+    const side = grid?.querySelector<HTMLElement>('[data-pin-side]');
+    if (!grid || !side) return;
+    const items = [...list.children] as HTMLElement[];
+    const wide = window.matchMedia('(min-width: 1024px)');
+    const fit = () => {
+      box.style.display = '';
+      for (const item of items) item.style.display = '';
+      if (!wide.matches) {
+        for (let i = 2; i < items.length; i++) items[i].style.display = 'none';
+        return;
+      }
+      // The bottom of the side column's last block, not its grid cell, which
+      // stretches to hold whatever the left column grows to.
+      const content = side.lastElementChild as HTMLElement | null;
+      if (!content) return;
+      const limit = content.getBoundingClientRect().bottom;
+      const rows = Math.min(2, Math.ceil(items.length / 2));
+      for (let row = rows; row >= 1; row--) {
+        for (let i = 0; i < items.length; i++) items[i].style.display = i < row * 2 ? '' : 'none';
+        if (box.getBoundingClientRect().bottom <= limit) return;
+      }
+      box.style.display = 'none';
+    };
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(grid);
+    observer.observe(side);
+    wide.addEventListener('change', fit);
+    return () => {
+      observer.disconnect();
+      wide.removeEventListener('change', fit);
+    };
+  }, [adCount]);
+  if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
+  if (!ads.length) return null;
+  return (
+    <aside ref={boxRef} aria-label={t('ads.sponsored')} className={className}>
+      <div className="mb-1.5 flex items-baseline gap-2">
+        <SponsoredLabel />
+      </div>
+      <ul ref={listRef} className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+        {ads.map((ad) => {
+          const { title, body, urgency, cta } = text(ad);
+          return (
+            <li key={ad.key} className="min-w-0">
+              <AdLink ad={ad} slot={slot} pinId={pinId} className="surface flex h-full items-center gap-3 p-2.5 hover:no-underline hover:ring-1 hover:ring-line">
+                <RowTileContent ad={ad} wide={false} title={title} body={body} urgency={urgency} cta={cta} />
+              </AdLink>
+            </li>
+          );
+        })}
+      </ul>
+    </aside>
+  );
+}
+
 // The tall space under a pin's comments: a column of larger ads on a desktop,
 // only the first two on a phone. Up to ten are fetched; on a desktop only as
 // many show as fit beside the pin's own column (the references and suggest
@@ -463,13 +536,15 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
   const adCount = ads?.length ?? 0;
   useLayoutEffect(() => {
     const list = listRef.current;
-    if (!list || adCount < 3) return;
+    if (!list || !adCount) return;
     const grid = list.closest<HTMLElement>('[data-pin-grid]');
     const end = grid?.querySelector<HTMLElement>('[data-pin-main-end]');
     if (!grid || !end) return;
     const items = [...list.children] as HTMLElement[];
     const wide = window.matchMedia('(min-width: 1024px)');
     const fit = () => {
+      const box = list.closest<HTMLElement>('aside');
+      if (box) box.style.display = '';
       for (const item of items) item.style.display = '';
       if (!wide.matches) return;
       // The bottom of the left column's last block, not the grid row, which
@@ -478,6 +553,8 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
       if (!content) return;
       const limit = content.getBoundingClientRect().bottom;
       for (let i = items.length - 1; i >= 2 && list.getBoundingClientRect().bottom > limit; i--) items[i].style.display = 'none';
+      // Left column much shorter: even two ads would stretch the page, so none.
+      if (box && box.getBoundingClientRect().bottom > limit + 120) box.style.display = 'none';
     };
     fit();
     const observer = new ResizeObserver(fit);

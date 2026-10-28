@@ -49,7 +49,7 @@ describe('industry forecast', () => {
     for (const forecast of forecasts) {
       const related = forecast.tags.filter((tag) => tag !== forecast.industry);
       expect(matchesPinForecast(forecast, related), forecast.slug).toBe(false);
-      expect(matchesPinForecast(forecast, [forecast.industry, 'AI']), forecast.slug).toBe(true);
+      expect(matchesPinForecast(forecast, [forecast.industry, 'AI'], `${forecast.title} cereal cocoa coffee fertilizer rice wheat poultry`), forecast.slug).toBe(true);
     }
   });
   it('does not turn broad categories into unrelated specialist panels', () => {
@@ -60,6 +60,12 @@ describe('industry forecast', () => {
     expect(slugs(['Space'])).not.toContain('nasa-sunspot-median');
     expect(slugs(['Food'])).not.toContain('us-ai-adoption-hospitality');
     expect(slugs(['Travel'])).not.toContain('wef-sports-economy');
+  });
+  it('keeps commodity charts off Food pins about something else', () => {
+    const slugs = (names: string[], title: string) => forecasts.filter((f) => matchesPinForecast(f, names, title)).map((f) => f.slug);
+    const choc = slugs(['Food', 'Shows'], 'Salon du Chocolat Paris 2026 Fills Porte de Versailles for Five Days');
+    expect(choc).toEqual(['wb-cocoa-price']);
+    expect(slugs(['Food'], 'New ramen shop opens')).toEqual([]);
   });
   it('formats values with their unit', () => {
     expect(formatForecastValue({ prefix: '$', suffix: 'T' }, 2.6704)).toBe('$2.67T');

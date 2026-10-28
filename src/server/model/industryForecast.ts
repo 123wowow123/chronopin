@@ -56,7 +56,7 @@ async function all(): Promise<Row[]> {
 }
 
 // Searches match related tags; pin sidebars require the forecast's industry.
-export async function forecastSlugsForNames(names: readonly (string | null | undefined)[], scope: 'search' | 'pin' = 'search'): Promise<string[]> {
+export async function forecastSlugsForNames(names: readonly (string | null | undefined)[], scope: 'search' | 'pin' = 'search', title?: string | null): Promise<string[]> {
   const wanted = names.filter((n): n is string => !!n).map((n) => n.trim().toLowerCase());
   if (scope === 'pin' && matchesTags(['AI Models'], wanted)) wanted.push('ai');
   if (!wanted.length) return [];
@@ -66,7 +66,7 @@ export async function forecastSlugsForNames(names: readonly (string | null | und
      ORDER BY "id"`,
     [wanted],
   );
-  return rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted)).map((r) => r.slug);
+  return rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted, title)).map((r) => r.slug);
 }
 
 export async function allForecasts(): Promise<IndustryForecastJson[]> {

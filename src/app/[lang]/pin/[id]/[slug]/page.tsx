@@ -65,7 +65,7 @@ import { contentForSource } from '@/server/model/restaurantContent';
 import { StoreLogo } from '@/components/pin/StoreLogo';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
-import { AdColumn, AdRow } from '@/components/ads/AdBlock';
+import { AdColumn, AdFill, AdRow } from '@/components/ads/AdBlock';
 import { AdsenseBanner, AdsenseColumn } from '@/components/ads/AdsensePanel';
 import { adsenseAllowed } from '@/lib/adsense';
 import { ageOn } from '@/lib/ads';
@@ -203,7 +203,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     soft(pinLlmPerf(pin.id), null, 'pinLlmPerf'),
     soft(pinDining(pin.id), null, 'pinDining'),
     soft(pinFactory(pin.id), null, 'pinFactory'),
-    soft(pinIndustries(pin.id, [...(pin.categories ?? []), ...(pin.tags?.map((tag) => tag.name) ?? [])]), [], 'pinIndustries'),
+    soft(pinIndustries(pin.id, [...(pin.categories ?? []), ...(pin.tags?.map((tag) => tag.name) ?? [])], pin.title), [], 'pinIndustries'),
     soft(pinHotel(pin.id), null, 'pinHotel'),
     soft(pinCriticReviews(pin.id), null, 'pinCriticReviews'),
     soft(pinCandidates(pin.id), [], 'pinCandidates'),
@@ -245,7 +245,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} autoplay={autoplay} />
         </article>
 
-        <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+        <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
           {pin.latitude != null && pin.longitude != null ? (
             <div>
               <div className="mb-2 flex items-center justify-between gap-3 text-sm">
@@ -350,8 +350,8 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
         <div data-pin-main-end className="min-w-0 lg:col-start-1 lg:row-start-2 lg:-mt-4 [&>:first-child]:mt-0">
           <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={pinDateRanges(pin, timeZone)} timeZone={timeZone} />
           <PinSuggest pinId={pin.id} />
-          {/* Fills the space the taller side column leaves under the left one. */}
-          {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} count={4} className="mt-6" /> : null}
+          {/* Up to two rows of ads in the space the taller side column leaves under the left one. */}
+          {ads['pin-strip'] ? <AdFill pinId={pin.id} className="mt-6" /> : null}
         </div>
       </div>
 
