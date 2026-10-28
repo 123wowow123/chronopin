@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "status": "resolved",
+      "reason": "Round23: Saved COREFITLAB quotation is an English translation that repeated original-source checks have not independently reverified. Existing title explicitly labels it brand-affiliated, not independent tasting. Remove from native reviews rather than certify an unverified translated promotional extract; original day remains unknown. This does not assert fraud or establish sponsorship contract terms. Removal, retained consumer tasting, scope evidence and rendered tables verified locally and in production. Closed by exclusion; no original publication day recovered.",
+      "previousReason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 11 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15251,
+      "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
+      "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
+      "status": "needs-research",
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open. Round23: exact2027 facelift search yielded pre-facelift August2026 B3 drive and September stationary studio preview; neither establishes driven facelift B3. Do not borrow EX40 EV or older B3 test."
+    }
+  ],
+  "remainingNeedsResearch": 21,
+  "verifiedUndated": 98
+}

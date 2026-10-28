@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-27",
+  "results": [
+    {
+      "production": false,
+      "pinId": 5629,
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "referenceId": 54817,
+      "sourceId": 189386,
+      "wikiId": 12701,
+      "incoming": false,
+      "originalDay": null,
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    },
+    {
+      "production": true,
+      "pinId": 5629,
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "referenceId": 54827,
+      "sourceId": 189472,
+      "wikiId": 15875,
+      "incoming": false,
+      "originalDay": null,
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    }
+  ]
+}

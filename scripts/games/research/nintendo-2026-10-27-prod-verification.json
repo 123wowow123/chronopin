@@ -1,0 +1,659 @@
+{
+  "base": "https://www.chronopin.com",
+  "checkedAt": "2026-10-27",
+  "pinCount": 89,
+  "createdCount": 78,
+  "reusedCount": 11,
+  "seriesCount": 32,
+  "competitorCount": 224,
+  "nativePlatformProfiles": 73,
+  "verifiedAzureImages": 67,
+  "readySourceWikis": 78,
+  "checks": [
+    {
+      "id": 20126,
+      "key": "gba/advance_wars",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20127,
+      "key": "advance-wars-1-plus-2-re-boot-camp-switch",
+      "competitors": 3,
+      "parentId": 20126,
+      "authorPreserved": true
+    },
+    {
+      "id": 20128,
+      "key": "3ds/animal_crossing_new_leaf",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20129,
+      "key": "animal-crossing-new-horizons-switch",
+      "competitors": 3,
+      "parentId": 20128,
+      "authorPreserved": true
+    },
+    {
+      "id": 20130,
+      "key": "bayonetta-2-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 173,
+      "key": "bayonetta-3-switch",
+      "competitors": 3,
+      "parentId": 20130,
+      "authorPreserved": true
+    },
+    {
+      "id": 20131,
+      "key": "bayonetta-origins-cereza-and-the-lost-demon-switch",
+      "competitors": 2,
+      "parentId": 173,
+      "authorPreserved": true
+    },
+    {
+      "id": 20132,
+      "key": "donkey-kong-country-tropical-freeze-switch",
+      "competitors": 3,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20133,
+      "key": "donkey-kong-country-returns-hd-switch",
+      "competitors": 3,
+      "parentId": 20132,
+      "authorPreserved": true
+    },
+    {
+      "id": 20134,
+      "key": "donkey-kong-bananza-switch-2",
+      "competitors": 3,
+      "parentId": 20133,
+      "authorPreserved": true
+    },
+    {
+      "id": 20135,
+      "key": "famicom-detective-club-the-girl-who-stands-behind-switch",
+      "competitors": 3,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20136,
+      "key": "famicom-detective-club-the-missing-heir-switch",
+      "competitors": 3,
+      "parentId": 20135,
+      "authorPreserved": true
+    },
+    {
+      "id": 20137,
+      "key": "emio-the-smiling-man-famicom-detective-club-switch",
+      "competitors": 3,
+      "parentId": 20136,
+      "authorPreserved": true
+    },
+    {
+      "id": 20138,
+      "key": "3ds/fire_emblem_awakening",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20139,
+      "key": "fire-emblem-three-houses-switch",
+      "competitors": 3,
+      "parentId": 20138,
+      "authorPreserved": true
+    },
+    {
+      "id": 20140,
+      "key": "fire-emblem-engage-switch",
+      "competitors": 3,
+      "parentId": 20139,
+      "authorPreserved": true
+    },
+    {
+      "id": 20141,
+      "key": "fire-emblem-warriors-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20142,
+      "key": "fire-emblem-warriors-three-hopes-switch",
+      "competitors": 3,
+      "parentId": 20141,
+      "authorPreserved": true
+    },
+    {
+      "id": 20143,
+      "key": "hyrule-warriors-definitive-edition-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20144,
+      "key": "hyrule-warriors-age-of-calamity-switch",
+      "competitors": 2,
+      "parentId": 20143,
+      "authorPreserved": true
+    },
+    {
+      "id": 20145,
+      "key": "kirby-star-allies-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 174,
+      "key": "kirby-and-the-forgotten-land-switch",
+      "competitors": 3,
+      "parentId": 20145,
+      "authorPreserved": true
+    },
+    {
+      "id": 20146,
+      "key": "kirbys-return-to-dream-land-deluxe-switch",
+      "competitors": 3,
+      "parentId": 174,
+      "authorPreserved": true
+    },
+    {
+      "id": 20147,
+      "key": "gamecube/kirby_air_ride",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20148,
+      "key": "kirby-air-riders-switch-2",
+      "competitors": 3,
+      "parentId": 20147,
+      "authorPreserved": true
+    },
+    {
+      "id": 20149,
+      "key": "3ds/luigis_mansion_dark_moon",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20150,
+      "key": "luigis-mansion-3-switch",
+      "competitors": 3,
+      "parentId": 20149,
+      "authorPreserved": true
+    },
+    {
+      "id": 20151,
+      "key": "luigis-mansion-2-hd-switch",
+      "competitors": 3,
+      "parentId": 20150,
+      "authorPreserved": true
+    },
+    {
+      "id": 20152,
+      "key": "3ds/mario_and_luigi_superstar_saga_plus_bowsers_minions",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20153,
+      "key": "mario-and-luigi-brothership-switch",
+      "competitors": 3,
+      "parentId": 20152,
+      "authorPreserved": true
+    },
+    {
+      "id": 20203,
+      "key": "mario-plus-rabbids-kingdom-battle-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 182,
+      "key": "mario-plus-rabbids-sparks-of-hope-switch",
+      "competitors": 2,
+      "parentId": 20203,
+      "authorPreserved": true
+    },
+    {
+      "id": 20154,
+      "key": "3ds/mario_golf_world_tour",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20155,
+      "key": "mario-golf-super-rush-switch",
+      "competitors": 3,
+      "parentId": 20154,
+      "authorPreserved": true
+    },
+    {
+      "id": 20156,
+      "key": "mario-kart-8-deluxe-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20157,
+      "key": "mario-kart-world-switch-2",
+      "competitors": 3,
+      "parentId": 20156,
+      "authorPreserved": true
+    },
+    {
+      "id": 20158,
+      "key": "super-mario-party-switch",
+      "competitors": 3,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20159,
+      "key": "mario-party-superstars-switch",
+      "competitors": 3,
+      "parentId": 20158,
+      "authorPreserved": true
+    },
+    {
+      "id": 20160,
+      "key": "super-mario-party-jamboree-switch",
+      "competitors": 3,
+      "parentId": 20159,
+      "authorPreserved": true
+    },
+    {
+      "id": 20161,
+      "key": "wii/mario_strikers_charged",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20162,
+      "key": "mario-strikers-battle-league-switch",
+      "competitors": 2,
+      "parentId": 20161,
+      "authorPreserved": true
+    },
+    {
+      "id": 20163,
+      "key": "wiiu/mario_tennis_ultra_smash",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20164,
+      "key": "mario-tennis-aces-switch",
+      "competitors": 2,
+      "parentId": 20163,
+      "authorPreserved": true
+    },
+    {
+      "id": 20165,
+      "key": "mario-tennis-fever-switch-2",
+      "competitors": 3,
+      "parentId": 20164,
+      "authorPreserved": true
+    },
+    {
+      "id": 20166,
+      "key": "3ds/metroid_samus_returns",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20167,
+      "key": "metroid-dread-switch",
+      "competitors": 3,
+      "parentId": 20166,
+      "authorPreserved": true
+    },
+    {
+      "id": 298,
+      "key": "metroid-ravenous-switch-2",
+      "competitors": 2,
+      "parentId": 20167,
+      "authorPreserved": true
+    },
+    {
+      "id": 20168,
+      "key": "metroid-prime-remastered-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20169,
+      "key": "metroid-prime-4-beyond-switch",
+      "competitors": 2,
+      "parentId": 20168,
+      "authorPreserved": true
+    },
+    {
+      "id": 20170,
+      "key": "paper-mario-the-origami-king-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20171,
+      "key": "paper-mario-the-thousand-year-door-switch",
+      "competitors": 2,
+      "parentId": 20170,
+      "authorPreserved": true
+    },
+    {
+      "id": 20172,
+      "key": "pikmin-3-deluxe-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20173,
+      "key": "pikmin-1-switch",
+      "competitors": 3,
+      "parentId": 20172,
+      "authorPreserved": true
+    },
+    {
+      "id": 20174,
+      "key": "pikmin-2-switch",
+      "competitors": 3,
+      "parentId": 20173,
+      "authorPreserved": true
+    },
+    {
+      "id": 20175,
+      "key": "pikmin-4-switch",
+      "competitors": 3,
+      "parentId": 20174,
+      "authorPreserved": true
+    },
+    {
+      "id": 20176,
+      "key": "pokemon-lets-go-pikachu-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20177,
+      "key": "pokemon-sword-switch",
+      "competitors": 3,
+      "parentId": 20176,
+      "authorPreserved": true
+    },
+    {
+      "id": 20178,
+      "key": "pokemon-brilliant-diamond-switch",
+      "competitors": 3,
+      "parentId": 20177,
+      "authorPreserved": true
+    },
+    {
+      "id": 20179,
+      "key": "pokemon-legends-arceus-switch",
+      "competitors": 3,
+      "parentId": 20178,
+      "authorPreserved": true
+    },
+    {
+      "id": 184,
+      "key": "pokemon-scarlet-switch",
+      "competitors": 3,
+      "parentId": 20179,
+      "authorPreserved": true
+    },
+    {
+      "id": 20180,
+      "key": "pokemon-legends-z-a-switch",
+      "competitors": 3,
+      "parentId": 184,
+      "authorPreserved": true
+    },
+    {
+      "id": 5199,
+      "key": "pokemon-winds-switch-2",
+      "competitors": 2,
+      "parentId": 20180,
+      "authorPreserved": true
+    },
+    {
+      "id": 20181,
+      "key": "3ds/pokemon_super_mystery_dungeon",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20182,
+      "key": "pokemon-mystery-dungeon-rescue-team-dx-switch",
+      "competitors": 2,
+      "parentId": 20181,
+      "authorPreserved": true
+    },
+    {
+      "id": 20183,
+      "key": "wiiu/splatoon",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20184,
+      "key": "splatoon-2-switch",
+      "competitors": 2,
+      "parentId": 20183,
+      "authorPreserved": true
+    },
+    {
+      "id": 183,
+      "key": "splatoon-3-switch",
+      "competitors": 2,
+      "parentId": 20184,
+      "authorPreserved": true
+    },
+    {
+      "id": 20185,
+      "key": "super-mario-odyssey-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20186,
+      "key": "super-mario-3d-world-plus-bowsers-fury-switch",
+      "competitors": 3,
+      "parentId": 20185,
+      "authorPreserved": true
+    },
+    {
+      "id": 20187,
+      "key": "new-super-mario-bros-u-deluxe-switch",
+      "competitors": 3,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20188,
+      "key": "super-mario-bros-wonder-switch",
+      "competitors": 3,
+      "parentId": 20187,
+      "authorPreserved": true
+    },
+    {
+      "id": 20189,
+      "key": "wiiu/super_mario_maker",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20190,
+      "key": "3ds/super_mario_maker_for_nintendo_3ds",
+      "competitors": 2,
+      "parentId": 20189,
+      "authorPreserved": true
+    },
+    {
+      "id": 20191,
+      "key": "super-mario-maker-2-switch",
+      "competitors": 3,
+      "parentId": 20190,
+      "authorPreserved": true
+    },
+    {
+      "id": 20192,
+      "key": "3ds/super_smash_bros_for_nintendo_3ds",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20193,
+      "key": "wiiu/super_smash_bros_for_wii_u",
+      "competitors": 2,
+      "parentId": 20192,
+      "authorPreserved": true
+    },
+    {
+      "id": 20194,
+      "key": "super-smash-bros-ultimate-switch",
+      "competitors": 3,
+      "parentId": 20193,
+      "authorPreserved": true
+    },
+    {
+      "id": 196,
+      "key": "the-legend-of-zelda-breath-of-the-wild-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20195,
+      "key": "the-legend-of-zelda-links-awakening-switch",
+      "competitors": 2,
+      "parentId": 196,
+      "authorPreserved": true
+    },
+    {
+      "id": 20196,
+      "key": "the-legend-of-zelda-skyward-sword-hd-switch",
+      "competitors": 3,
+      "parentId": 20195,
+      "authorPreserved": true
+    },
+    {
+      "id": 145,
+      "key": "the-legend-of-zelda-tears-of-the-kingdom-switch",
+      "competitors": 3,
+      "parentId": 196,
+      "authorPreserved": true
+    },
+    {
+      "id": 20197,
+      "key": "the-legend-of-zelda-echoes-of-wisdom-switch",
+      "competitors": 3,
+      "parentId": 145,
+      "authorPreserved": true
+    },
+    {
+      "id": 296,
+      "key": "zelda-ocarina-of-time-remake-switch-2",
+      "competitors": 2,
+      "parentId": 20197,
+      "authorPreserved": true
+    },
+    {
+      "id": 20198,
+      "key": "warioware-get-it-together-switch",
+      "competitors": 3,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20199,
+      "key": "warioware-move-it-switch",
+      "competitors": 3,
+      "parentId": 20198,
+      "authorPreserved": true
+    },
+    {
+      "id": 20200,
+      "key": "xenoblade-chronicles-2-switch",
+      "competitors": 2,
+      "parentId": null,
+      "authorPreserved": true
+    },
+    {
+      "id": 20201,
+      "key": "xenoblade-chronicles-definitive-edition-switch",
+      "competitors": 3,
+      "parentId": 20200,
+      "authorPreserved": true
+    },
+    {
+      "id": 187,
+      "key": "xenoblade-chronicles-3-switch",
+      "competitors": 3,
+      "parentId": 20201,
+      "authorPreserved": true
+    },
+    {
+      "id": 20202,
+      "key": "xenoblade-chronicles-x-definitive-edition-switch",
+      "competitors": 3,
+      "parentId": 187,
+      "authorPreserved": true
+    }
+  ],
+  "reviewBoundaries": [
+    {
+      "id": 146,
+      "parentId": 163,
+      "status": "verified"
+    },
+    {
+      "id": 175,
+      "parentId": 172,
+      "status": "verified"
+    },
+    {
+      "id": 185,
+      "parentId": 181,
+      "status": "verified"
+    },
+    {
+      "id": 188,
+      "parentId": 186,
+      "status": "verified"
+    }
+  ]
+}

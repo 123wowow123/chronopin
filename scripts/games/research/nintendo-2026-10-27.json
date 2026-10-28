@@ -1,0 +1,4448 @@
+{
+  "checkedAt": "2026-10-27",
+  "threadPolicy": "Separate Nintendo series and spinoffs; chronological edition-release history, not fictional story chronology. Each pin names its platform and region. Original editions and remakes are distinct milestones. Existing authors preserved.",
+  "games": [
+    {
+      "key": "gba/advance_wars",
+      "series": "Advance Wars",
+      "name": "Advance Wars",
+      "date": "2001-09-10",
+      "platform": "Game Boy Advance",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/gba/advance_wars",
+      "sourceTitle": "Advance Wars — Nintendo Life",
+      "dateQuote": "North America 10th Sep 2001",
+      "gameplay": "Command military units in turn-based tactical battles.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Heroes of Might and Magic II",
+          "maker": "KnowWonder / 3DO",
+          "sourceUrl": "https://www.nintendolife.com/games/gbc/heroes_of_might_and_magic_ii",
+          "releaseDate": "2000-12-01",
+          "rank": 1,
+          "summary": "An alternative handheld strategy game available on Game Boy Color, whose cartridges are supported by the Game Boy Advance."
+        },
+        {
+          "name": "Warlocked",
+          "maker": "Bits Studios / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/gbc/warlocked",
+          "releaseDate": "2000-07-24",
+          "rank": 2,
+          "summary": "An alternative handheld strategy game available on Game Boy Color, whose cartridges are supported by the Game Boy Advance."
+        }
+      ]
+    },
+    {
+      "key": "advance-wars-1-plus-2-re-boot-camp-switch",
+      "series": "Advance Wars",
+      "name": "Advance Wars 1+2: Re-Boot Camp",
+      "date": "2023-04-21",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/advance-wars-1-plus-2-re-boot-camp-switch/",
+      "sourceTitle": "Advance Wars 1+2: Re-Boot Camp — Nintendo Official Site",
+      "dateQuote": "Release date: April 21, 2023",
+      "gameplay": "Command military units in turn-based tactical battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000064132/cf6a52d93890df44059d7ba1376beec19155112c7b9cff000ba10eabea0f6ecd",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Wargroove",
+          "maker": "Chucklefish",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/wargroove-switch/",
+          "releaseDate": "2019-02-01",
+          "rank": 1,
+          "summary": "An alternative for players seeking turn-based strategy."
+        },
+        {
+          "name": "Into the Breach",
+          "maker": "Subset Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/into-the-breach-switch/",
+          "releaseDate": "2018-08-28",
+          "rank": 2,
+          "summary": "An alternative for players seeking turn-based strategy."
+        },
+        {
+          "name": "TRIANGLE STRATEGY",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/triangle-strategy-switch/",
+          "releaseDate": "2022-03-04",
+          "rank": 3,
+          "summary": "An alternative for players seeking turn-based strategy."
+        }
+      ]
+    },
+    {
+      "key": "3ds/animal_crossing_new_leaf",
+      "series": "Animal Crossing",
+      "name": "Animal Crossing: New Leaf",
+      "date": "2013-06-09",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/animal_crossing_new_leaf",
+      "sourceTitle": "Animal Crossing: New Leaf — Nintendo Life",
+      "dateQuote": "North America 9th Jun 2013",
+      "gameplay": "Build a daily life among animal neighbours, with collecting and customisation.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/H2x1_3DS_AnimalCrossingNewLeaf_WelcomeAmiibo_image1280w.jpg",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "imageCredit": "Nintendo — Welcome amiibo update artwork (2016); this pin dates the original 2013 North American release",
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Animal-Crossing-New-Leaf-273841.html",
+          "title": "Animal Crossing: New Leaf — Nintendo UK",
+          "confidence": 100,
+          "reasoning": "Official platform and game information; European release date may differ from this pin’s U.S. milestone."
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Harvest Moon: A New Beginning",
+          "maker": "Marvelous / Natsume",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/harvest_moon_a_new_beginning",
+          "releaseDate": "2012-11-06",
+          "rank": 1,
+          "summary": "Competes through town life, relationships, collecting and customisation."
+        },
+        {
+          "name": "Rune Factory 3: A Fantasy Harvest Moon",
+          "maker": "Neverland / Natsume",
+          "sourceUrl": "https://www.nintendolife.com/games/ds/rune_factory_3_a_fantasy_harvest_moon",
+          "releaseDate": "2010-11-09",
+          "rank": 2,
+          "summary": "Competes through town life, relationships, collecting and customisation."
+        }
+      ],
+      "imageSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Animal-Crossing-New-Leaf-273841.html"
+    },
+    {
+      "key": "animal-crossing-new-horizons-switch",
+      "series": "Animal Crossing",
+      "name": "Animal Crossing: New Horizons",
+      "date": "2020-03-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/animal-crossing-new-horizons-switch/",
+      "sourceTitle": "Animal Crossing: New Horizons — Nintendo Official Site",
+      "dateQuote": "Release date: March 20, 2020",
+      "gameplay": "Build a daily life among animal neighbours, with collecting and customisation.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Stardew Valley",
+          "maker": "ConcernedApe",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/stardew-valley-switch/",
+          "releaseDate": "2017-10-05",
+          "rank": 1,
+          "summary": "An alternative for players seeking daily-life simulation and personalisation."
+        },
+        {
+          "name": "My Time at Portia",
+          "maker": "Focus Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/my-time-at-portia-switch/",
+          "releaseDate": "2019-04-16",
+          "rank": 2,
+          "summary": "An alternative for players seeking daily-life simulation and personalisation."
+        },
+        {
+          "name": "Harvest Moon: A New Beginning",
+          "maker": "Marvelous / Natsume",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/harvest_moon_a_new_beginning",
+          "releaseDate": "2012-11-06",
+          "rank": 3,
+          "summary": "An alternative for players seeking daily-life simulation and personalisation."
+        }
+      ]
+    },
+    {
+      "key": "bayonetta-2-switch",
+      "name": "Bayonetta 2",
+      "series": "Bayonetta",
+      "date": "2018-02-16",
+      "platform": "Nintendo Switch",
+      "region": "Europe",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Bayonetta-2-1313750.html",
+      "sourceTitle": "Bayonetta 2 — Nintendo UK",
+      "dateQuote": "Release date: 16/02/2018",
+      "gameplay": "Battle supernatural enemies in a character-driven action game.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Bayonetta2_image1280w.jpg",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "PEGI",
+      "maturityRating": "16",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Bayonetta",
+          "maker": "PlatinumGames / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/bayonetta",
+          "releaseDate": "2014-10-24",
+          "rank": 1,
+          "summary": "Competes through character-driven action and supernatural combat."
+        },
+        {
+          "name": "Fate/EXTELLA: The Umbral Star",
+          "maker": "Marvelous (XSEED)",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+          "releaseDate": "2017-07-25",
+          "rank": 2,
+          "summary": "Competes through character-driven action and supernatural combat."
+        }
+      ]
+    },
+    {
+      "key": "bayonetta-3-switch",
+      "name": "Bayonetta 3",
+      "series": "Bayonetta",
+      "date": "2022-10-28",
+      "platform": "Nintendo Switch",
+      "region": "Europe",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Bayonetta-3-2045649.html",
+      "sourceTitle": "Bayonetta 3 — Nintendo UK",
+      "dateQuote": "Release date: 28/10/2022",
+      "gameplay": "Battle supernatural enemies in a character-driven action game.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Bayonetta3_image1280w.jpg",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "PEGI",
+      "maturityRating": "16",
+      "publisher": "Nintendo",
+      "existingProdId": 173,
+      "competitors": [
+        {
+          "name": "ASTRAL CHAIN",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/astral-chain-switch/",
+          "releaseDate": "2019-08-30",
+          "rank": 1,
+          "summary": "An alternative for players seeking stylish action combat."
+        },
+        {
+          "name": "Hades",
+          "maker": "Supergiant Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hades-switch/",
+          "releaseDate": "2020-09-17",
+          "rank": 2,
+          "summary": "An alternative for players seeking stylish action combat."
+        },
+        {
+          "name": "Fate/EXTELLA: The Umbral Star",
+          "maker": "Marvelous (XSEED)",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+          "releaseDate": "2017-07-25",
+          "rank": 3,
+          "summary": "An alternative for players seeking stylish action combat."
+        }
+      ],
+      "existingSourceUrl": "https://www.ign.com/articles/bayonetta-3-review"
+    },
+    {
+      "key": "bayonetta-origins-cereza-and-the-lost-demon-switch",
+      "series": "Bayonetta",
+      "name": "Bayonetta Origins: Cereza and the Lost Demon",
+      "date": "2023-03-17",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/bayonetta-origins-cereza-and-the-lost-demon-switch/",
+      "sourceTitle": "Bayonetta Origins: Cereza and the Lost Demon — Nintendo Official Site",
+      "dateQuote": "Release date: March 17, 2023",
+      "gameplay": "Follow a fantasy action adventure in the Bayonetta series.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000061846/73f01ba2458a1430673d64b58bd0b21e2cb6b3e64859a520bd0b93de615aed91",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Lost in Random",
+          "maker": "Electronic Arts",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/lost-in-random-switch/",
+          "releaseDate": "2021-09-10",
+          "rank": 1,
+          "summary": "An alternative for players seeking stylish action combat."
+        },
+        {
+          "name": "OKAMI HD",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/okami-hd-switch/",
+          "releaseDate": "2018-08-09",
+          "rank": 2,
+          "summary": "An alternative for players seeking stylish action combat."
+        }
+      ]
+    },
+    {
+      "key": "donkey-kong-country-tropical-freeze-switch",
+      "series": "Donkey Kong",
+      "name": "Donkey Kong Country: Tropical Freeze",
+      "date": "2018-05-04",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-country-tropical-freeze-switch/",
+      "sourceTitle": "Donkey Kong Country: Tropical Freeze — Nintendo Official Site",
+      "dateQuote": "Release date: May 4, 2018",
+      "gameplay": "Traverse platforming challenges in a Donkey Kong adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000001339/d01cba67eb98fec32ac98027c07fa8d92dd52773565bfadc69f817c860e34b8a",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Super Mario Odyssey",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+          "releaseDate": "2017-10-27",
+          "rank": 1,
+          "summary": "An alternative for players seeking platforming challenges."
+        },
+        {
+          "name": "Rayman Legends Definitive Edition",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/rayman-legends-definitive-edition-switch/",
+          "releaseDate": "2017-09-12",
+          "rank": 2,
+          "summary": "An alternative for players seeking platforming challenges."
+        },
+        {
+          "name": "Sonic Mania",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-mania-switch/",
+          "releaseDate": "2017-08-15",
+          "rank": 3,
+          "summary": "An alternative for players seeking platforming challenges."
+        }
+      ]
+    },
+    {
+      "key": "donkey-kong-country-returns-hd-switch",
+      "series": "Donkey Kong",
+      "name": "Donkey Kong Country Returns HD",
+      "date": "2025-01-16",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-country-returns-hd-switch/",
+      "sourceTitle": "Donkey Kong Country Returns HD — Nintendo Official Site",
+      "dateQuote": "Release date: January 16, 2025",
+      "gameplay": "Traverse platforming challenges in a Donkey Kong adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000084604/50b3b71a75022699ab39d631df7a6b1571df102f96d5f10e6267cbecadfa4cd6",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Sonic Frontiers",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-frontiers-switch/",
+          "releaseDate": "2022-11-08",
+          "rank": 1,
+          "summary": "An alternative for players seeking platforming challenges."
+        },
+        {
+          "name": "Yooka-Laylee and the Impossible Lair",
+          "maker": "Playtonic Friends",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/yooka-laylee-and-the-impossible-lair-switch/",
+          "releaseDate": "2019-10-08",
+          "rank": 2,
+          "summary": "An alternative for players seeking platforming challenges."
+        },
+        {
+          "name": "Super Mario Odyssey",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+          "releaseDate": "2017-10-27",
+          "rank": 3,
+          "summary": "An alternative for players seeking platforming challenges."
+        }
+      ]
+    },
+    {
+      "key": "donkey-kong-bananza-switch-2",
+      "series": "Donkey Kong",
+      "name": "Donkey Kong Bananza",
+      "date": "2025-07-17",
+      "platform": "Nintendo Switch 2",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-bananza-switch-2/",
+      "sourceTitle": "Donkey Kong Bananza — Nintendo Official Site",
+      "dateQuote": "Release date: July 17, 2025",
+      "gameplay": "Traverse platforming challenges in a Donkey Kong adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch2/70010000096809/3c8219fbdcd3bdd0ebd6239cf32c651fe10f2157aa7730fcc6a7d96cd27460e5",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Super Mario Odyssey",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+          "releaseDate": "2017-10-27",
+          "rank": 1,
+          "summary": "An alternative for players seeking platforming challenges."
+        },
+        {
+          "name": "Sonic Frontiers",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-frontiers-switch/",
+          "releaseDate": "2022-11-08",
+          "rank": 2,
+          "summary": "An alternative for players seeking platforming challenges."
+        },
+        {
+          "name": "A Hat in Time",
+          "maker": "Balor Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/a-hat-in-time-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 3,
+          "summary": "An alternative for players seeking platforming challenges."
+        }
+      ]
+    },
+    {
+      "key": "famicom-detective-club-the-girl-who-stands-behind-switch",
+      "series": "Famicom Detective Club",
+      "name": "Famicom Detective Club: The Girl Who Stands Behind",
+      "date": "2021-05-14",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/famicom-detective-club-the-girl-who-stands-behind-switch/",
+      "sourceTitle": "Famicom Detective Club: The Girl Who Stands Behind — Nintendo Official Site",
+      "dateQuote": "Release date: May 14, 2021",
+      "gameplay": "Investigate mysteries through conversations and gathering evidence.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000039214/cb27694d95028f043301cb9d232229a15d5317a829ad5a2412a774e7e70f3173",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Phoenix Wright: Ace Attorney Trilogy",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/phoenix-wright-ace-attorney-trilogy-switch/",
+          "releaseDate": "2019-04-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        },
+        {
+          "name": "Murder by Numbers",
+          "maker": "The Irregular Corporation",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/murder-by-numbers-switch/",
+          "releaseDate": "2020-03-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        },
+        {
+          "name": "Jenny LeClue - Detectivu",
+          "maker": "Mografi",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/jenny-leclue-detectivu-switch/",
+          "releaseDate": "2020-08-26",
+          "rank": 3,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        }
+      ]
+    },
+    {
+      "key": "famicom-detective-club-the-missing-heir-switch",
+      "series": "Famicom Detective Club",
+      "name": "Famicom Detective Club: The Missing Heir",
+      "date": "2021-05-14",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/famicom-detective-club-the-missing-heir-switch/",
+      "sourceTitle": "Famicom Detective Club: The Missing Heir — Nintendo Official Site",
+      "dateQuote": "Release date: May 14, 2021",
+      "gameplay": "Investigate mysteries through conversations and gathering evidence.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000039215/9f48da5a01b3859ab7d67a51bccabdb121b98468c9f40093c8bdb0fcc1c45e21",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Phoenix Wright: Ace Attorney Trilogy",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/phoenix-wright-ace-attorney-trilogy-switch/",
+          "releaseDate": "2019-04-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        },
+        {
+          "name": "Murder by Numbers",
+          "maker": "The Irregular Corporation",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/murder-by-numbers-switch/",
+          "releaseDate": "2020-03-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        },
+        {
+          "name": "Jenny LeClue - Detectivu",
+          "maker": "Mografi",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/jenny-leclue-detectivu-switch/",
+          "releaseDate": "2020-08-26",
+          "rank": 3,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        }
+      ]
+    },
+    {
+      "key": "emio-the-smiling-man-famicom-detective-club-switch",
+      "name": "Emio – The Smiling Man: Famicom Detective Club",
+      "series": "Famicom Detective Club",
+      "date": "2024-08-29",
+      "platform": "Nintendo Switch",
+      "region": "Europe",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Emio-The-Smiling-Man-Famicom-Detective-Club-2615498.html",
+      "sourceTitle": "Emio – The Smiling Man: Famicom Detective Club — Nintendo UK",
+      "dateQuote": "Release date: 29/08/2024",
+      "gameplay": "Investigate a dark mystery through dialogue and evidence.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_EmioTSMFamDetClub_Gamepage_GB_en_image1280w.jpg",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "PEGI",
+      "maturityRating": "18",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Phoenix Wright: Ace Attorney Trilogy",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/phoenix-wright-ace-attorney-trilogy-switch/",
+          "releaseDate": "2019-04-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        },
+        {
+          "name": "Murder by Numbers",
+          "maker": "The Irregular Corporation",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/murder-by-numbers-switch/",
+          "releaseDate": "2020-03-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        },
+        {
+          "name": "Jenny LeClue - Detectivu",
+          "maker": "Mografi",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/jenny-leclue-detectivu-switch/",
+          "releaseDate": "2020-08-26",
+          "rank": 3,
+          "summary": "An alternative for players seeking detective stories and puzzle solving."
+        }
+      ]
+    },
+    {
+      "key": "3ds/fire_emblem_awakening",
+      "series": "Fire Emblem",
+      "name": "Fire Emblem: Awakening",
+      "date": "2013-02-04",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/fire_emblem_awakening",
+      "sourceTitle": "Fire Emblem: Awakening — Nintendo Life",
+      "dateQuote": "North America 4th Feb 2013",
+      "gameplay": "Command units in a tactical role-playing adventure.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_FireEmblemAwakening_image1280w.jpg",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "imageCredit": "Nintendo / respective rights holders",
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Fire-Emblem-Awakening-725039.html",
+          "title": "Fire Emblem: Awakening — Nintendo UK",
+          "confidence": 100,
+          "reasoning": "Official platform and game information; European release date may differ from this pin’s U.S. milestone."
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Shin Megami Tensei: Devil Survivor Overclocked",
+          "maker": "Atlus",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/shin_megami_tensei_devil_survivor_overclocked",
+          "releaseDate": "2011-08-23",
+          "rank": 1,
+          "summary": "Competes through tactical positioning, turn-based combat and character progression."
+        },
+        {
+          "name": "Tom Clancy's Ghost Recon: Shadow Wars 3D",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/tom_clancys_ghost_recon_shadow_wars",
+          "releaseDate": "2011-03-27",
+          "rank": 2,
+          "summary": "Competes through tactical positioning, turn-based combat and character progression."
+        }
+      ],
+      "imageSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Fire-Emblem-Awakening-725039.html"
+    },
+    {
+      "key": "fire-emblem-three-houses-switch",
+      "series": "Fire Emblem",
+      "name": "Fire Emblem: Three Houses",
+      "date": "2019-07-26",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-three-houses-switch/",
+      "sourceTitle": "Fire Emblem: Three Houses — Nintendo Official Site",
+      "dateQuote": "Release date: July 26, 2019",
+      "gameplay": "Command units in a tactical role-playing adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000007606/c499fdc86779ca95e61daed1f94288a245d196360d278138e56d44097d1a3878",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Wargroove",
+          "maker": "Chucklefish",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/wargroove-switch/",
+          "releaseDate": "2019-02-01",
+          "rank": 1,
+          "summary": "An alternative for players seeking turn-based tactical battles."
+        },
+        {
+          "name": "Mario + Rabbids Kingdom Battle",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/mario-plus-rabbids-kingdom-battle-switch/",
+          "releaseDate": "2017-08-29",
+          "rank": 2,
+          "summary": "An alternative for players seeking turn-based tactical battles."
+        },
+        {
+          "name": "Tom Clancy's Ghost Recon: Shadow Wars 3D",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/tom_clancys_ghost_recon_shadow_wars",
+          "releaseDate": "2011-03-27",
+          "rank": 3,
+          "summary": "An alternative for players seeking turn-based tactical battles."
+        }
+      ]
+    },
+    {
+      "key": "fire-emblem-engage-switch",
+      "series": "Fire Emblem",
+      "name": "Fire Emblem Engage",
+      "date": "2023-01-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-engage-switch/",
+      "sourceTitle": "Fire Emblem Engage — Nintendo Official Site",
+      "dateQuote": "Release date: January 20, 2023",
+      "gameplay": "Command units in a tactical role-playing adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000058802/88b8db494399e659522af36331b7f588439bc4312af5c0ee57035c063651ab4a",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "TRIANGLE STRATEGY",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/triangle-strategy-switch/",
+          "releaseDate": "2022-03-04",
+          "rank": 1,
+          "summary": "An alternative for players seeking turn-based tactical battles."
+        },
+        {
+          "name": "Wargroove",
+          "maker": "Chucklefish",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/wargroove-switch/",
+          "releaseDate": "2019-02-01",
+          "rank": 2,
+          "summary": "An alternative for players seeking turn-based tactical battles."
+        },
+        {
+          "name": "Mario + Rabbids Kingdom Battle",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/mario-plus-rabbids-kingdom-battle-switch/",
+          "releaseDate": "2017-08-29",
+          "rank": 3,
+          "summary": "An alternative for players seeking turn-based tactical battles."
+        }
+      ]
+    },
+    {
+      "key": "fire-emblem-warriors-switch",
+      "series": "Fire Emblem Warriors",
+      "name": "Fire Emblem Warriors",
+      "date": "2017-10-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-switch/",
+      "sourceTitle": "Fire Emblem Warriors — Nintendo Official Site",
+      "dateQuote": "Release date: October 20, 2017",
+      "gameplay": "Fight large enemy forces in a Fire Emblem action spinoff.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000600/579e11645c978f72253e4668b6ab2de2b618bc1bd8f19275ed4636312d07f069",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Hyrule Warriors",
+          "maker": "Omega Force / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/hyrule_warriors",
+          "releaseDate": "2014-09-26",
+          "rank": 1,
+          "summary": "Competes through battles against large enemy armies."
+        },
+        {
+          "name": "Fate/EXTELLA: The Umbral Star",
+          "maker": "Marvelous (XSEED)",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+          "releaseDate": "2017-07-25",
+          "rank": 2,
+          "summary": "Competes through battles against large enemy armies."
+        }
+      ]
+    },
+    {
+      "key": "fire-emblem-warriors-three-hopes-switch",
+      "series": "Fire Emblem Warriors",
+      "name": "Fire Emblem Warriors: Three Hopes",
+      "date": "2022-06-24",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-three-hopes-switch/",
+      "sourceTitle": "Fire Emblem Warriors: Three Hopes — Nintendo Official Site",
+      "dateQuote": "Release date: June 24, 2022",
+      "gameplay": "Fight large enemy forces in a Fire Emblem action spinoff.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000050778/fbcfc3d8329a53a3922652262d1eed43f81769867716d27047323835ec796603",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Hyrule Warriors: Age of Calamity",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-calamity-switch/",
+          "releaseDate": "2020-11-20",
+          "rank": 1,
+          "summary": "An alternative for players seeking large-scale action battles."
+        },
+        {
+          "name": "Hyrule Warriors: Definitive Edition",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-definitive-edition-switch/",
+          "releaseDate": "2018-05-18",
+          "rank": 2,
+          "summary": "An alternative for players seeking large-scale action battles."
+        },
+        {
+          "name": "Fate/EXTELLA: The Umbral Star",
+          "maker": "Marvelous (XSEED)",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+          "releaseDate": "2017-07-25",
+          "rank": 3,
+          "summary": "An alternative for players seeking large-scale action battles."
+        }
+      ]
+    },
+    {
+      "key": "hyrule-warriors-definitive-edition-switch",
+      "series": "Hyrule Warriors",
+      "name": "Hyrule Warriors: Definitive Edition",
+      "date": "2018-05-18",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-definitive-edition-switch/",
+      "sourceTitle": "Hyrule Warriors: Definitive Edition — Nintendo Official Site",
+      "dateQuote": "Release date: May 18, 2018",
+      "gameplay": "Battle large enemy forces in a Zelda action spinoff.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000006023/4b035b357b10e59dce73609dd071e61d131d90b2e477c29088f26fbe50b44d1b",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Fire Emblem Warriors",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-switch/",
+          "releaseDate": "2017-10-20",
+          "rank": 1,
+          "summary": "An alternative for players seeking large-scale action battles."
+        },
+        {
+          "name": "Fate/EXTELLA: The Umbral Star",
+          "maker": "Marvelous (XSEED)",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+          "releaseDate": "2017-07-25",
+          "rank": 2,
+          "summary": "An alternative for players seeking large-scale action battles."
+        }
+      ]
+    },
+    {
+      "key": "hyrule-warriors-age-of-calamity-switch",
+      "series": "Hyrule Warriors",
+      "name": "Hyrule Warriors: Age of Calamity",
+      "date": "2020-11-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-calamity-switch/",
+      "sourceTitle": "Hyrule Warriors: Age of Calamity — Nintendo Official Site",
+      "dateQuote": "Release date: November 20, 2020",
+      "gameplay": "Battle large enemy forces in a Zelda action spinoff.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000034760/1123ea0e4079a8aaa32187dcaa94b8ef407e028f9b6b8d5ff944bd750f1ce347",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Fire Emblem Warriors",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-switch/",
+          "releaseDate": "2017-10-20",
+          "rank": 1,
+          "summary": "An alternative for players seeking large-scale action battles."
+        },
+        {
+          "name": "Fate/EXTELLA: The Umbral Star",
+          "maker": "Marvelous (XSEED)",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+          "releaseDate": "2017-07-25",
+          "rank": 2,
+          "summary": "An alternative for players seeking large-scale action battles."
+        }
+      ]
+    },
+    {
+      "key": "kirby-star-allies-switch",
+      "series": "Kirby (platformers)",
+      "name": "Kirby Star Allies",
+      "date": "2018-03-16",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/kirby-star-allies-switch/",
+      "sourceTitle": "Kirby Star Allies — Nintendo Official Site",
+      "dateQuote": "Release date: March 16, 2018",
+      "gameplay": "Guide Kirby through a platforming adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000002365/56eb33b93862176250495b53d3ad8fee4f84a73a5d99da99585260b403a6ec69",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Rayman Legends Definitive Edition",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/rayman-legends-definitive-edition-switch/",
+          "releaseDate": "2017-09-12",
+          "rank": 1,
+          "summary": "An alternative for players seeking accessible platforming."
+        },
+        {
+          "name": "Sonic Mania",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-mania-switch/",
+          "releaseDate": "2017-08-15",
+          "rank": 2,
+          "summary": "An alternative for players seeking accessible platforming."
+        }
+      ]
+    },
+    {
+      "key": "kirby-and-the-forgotten-land-switch",
+      "series": "Kirby (platformers)",
+      "name": "Kirby and the Forgotten Land",
+      "date": "2022-03-25",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/kirby-and-the-forgotten-land-switch/",
+      "sourceTitle": "Kirby and the Forgotten Land — Nintendo Official Site",
+      "dateQuote": "Release date: March 25, 2022",
+      "gameplay": "Guide Kirby through a platforming adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000046405/d1cf83dea46094b85247f40ca30ea4557730a319be0bfe544a4fa929144cf6c2",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": 174,
+      "existingSourceUrl": "https://www.ign.com/articles/kirby-and-the-forgotten-land-review",
+      "competitors": [
+        {
+          "name": "Yoshi’s Crafted World",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/yoshis-crafted-world-switch/",
+          "releaseDate": "2019-03-29",
+          "rank": 1,
+          "summary": "An alternative for players seeking accessible platforming."
+        },
+        {
+          "name": "Super Mario 3D World + Bowser’s Fury",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-3d-world-plus-bowsers-fury-switch/",
+          "releaseDate": "2021-02-12",
+          "rank": 2,
+          "summary": "An alternative for players seeking accessible platforming."
+        },
+        {
+          "name": "Rayman Legends Definitive Edition",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/rayman-legends-definitive-edition-switch/",
+          "releaseDate": "2017-09-12",
+          "rank": 3,
+          "summary": "An alternative for players seeking accessible platforming."
+        }
+      ]
+    },
+    {
+      "key": "kirbys-return-to-dream-land-deluxe-switch",
+      "series": "Kirby (platformers)",
+      "name": "Kirby’s Return to Dream Land Deluxe",
+      "date": "2023-02-24",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/kirbys-return-to-dream-land-deluxe-switch/",
+      "sourceTitle": "Kirby’s Return to Dream Land Deluxe — Nintendo Official Site",
+      "dateQuote": "Release date: February 24, 2023",
+      "gameplay": "Guide Kirby through a platforming adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000058797/f37d3c4f766c56db53734e7b74328b66d2a1d9cf37257dcc623435862b145bad",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Yoshi’s Crafted World",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/yoshis-crafted-world-switch/",
+          "releaseDate": "2019-03-29",
+          "rank": 1,
+          "summary": "An alternative for players seeking accessible platforming."
+        },
+        {
+          "name": "Super Mario 3D World + Bowser’s Fury",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-3d-world-plus-bowsers-fury-switch/",
+          "releaseDate": "2021-02-12",
+          "rank": 2,
+          "summary": "An alternative for players seeking accessible platforming."
+        },
+        {
+          "name": "Rayman Legends Definitive Edition",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/rayman-legends-definitive-edition-switch/",
+          "releaseDate": "2017-09-12",
+          "rank": 3,
+          "summary": "An alternative for players seeking accessible platforming."
+        }
+      ]
+    },
+    {
+      "key": "gamecube/kirby_air_ride",
+      "series": "Kirby (racing)",
+      "name": "Kirby Air Ride",
+      "date": "2003-10-13",
+      "platform": "Nintendo GameCube",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/gamecube/kirby_air_ride",
+      "sourceTitle": "Kirby Air Ride — Nintendo Life",
+      "dateQuote": "North America 13th Oct 2003",
+      "gameplay": "Race and battle aboard Kirby’s rideable machines.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "F-Zero GX",
+          "maker": "Amusement Vision / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/gamecube/f-zero_gx",
+          "releaseDate": "2003-08-26",
+          "rank": 1,
+          "summary": "A competing GameCube arcade racing game available at this launch; the handling and presentation differ from Kirby’s vehicle combat."
+        },
+        {
+          "name": "Smashing Drive",
+          "maker": "Gaelco / Namco",
+          "sourceUrl": "https://www.nintendolife.com/games/gamecube/smashing_drive",
+          "releaseDate": "2002-02-18",
+          "rank": 2,
+          "summary": "A competing GameCube arcade racing game available at this launch; the handling and presentation differ from Kirby’s vehicle combat."
+        }
+      ]
+    },
+    {
+      "key": "kirby-air-riders-switch-2",
+      "series": "Kirby (racing)",
+      "name": "Kirby Air Riders",
+      "date": "2025-11-20",
+      "platform": "Nintendo Switch 2",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/kirby-air-riders-switch-2/",
+      "sourceTitle": "Kirby Air Riders — Nintendo Official Site",
+      "dateQuote": "Release date: November 20, 2025",
+      "gameplay": "Race and battle aboard Kirby’s rideable machines.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch2/70010000103775/61c47511e5fc392c271d6f4736fa0575e2aed19c30e6fe73b50906cadb9b2996",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Mario Kart World",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-world-switch-2/",
+          "releaseDate": "2025-06-05",
+          "rank": 1,
+          "summary": "An alternative for players seeking arcade racing with character abilities."
+        },
+        {
+          "name": "Sonic Racing: CrossWorlds",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-racing-crossworlds-switch/",
+          "releaseDate": "2025-09-25",
+          "rank": 2,
+          "summary": "An alternative for players seeking arcade racing with character abilities."
+        },
+        {
+          "name": "Crash Team Racing Nitro-Fueled",
+          "maker": "Activision",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/crash-team-racing-nitro-fueled-switch/",
+          "releaseDate": "2019-06-21",
+          "rank": 3,
+          "summary": "An alternative for players seeking arcade racing with character abilities."
+        }
+      ]
+    },
+    {
+      "key": "3ds/luigis_mansion_dark_moon",
+      "series": "Luigi’s Mansion",
+      "name": "Luigi's Mansion: Dark Moon",
+      "date": "2013-03-24",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/luigis_mansion_dark_moon",
+      "sourceTitle": "Luigi's Mansion: Dark Moon — Nintendo Life",
+      "dateQuote": "North America 24th Mar 2013",
+      "gameplay": "Investigate haunted locations and capture ghosts as Luigi.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Spirit Camera: The Cursed Memoir",
+          "maker": "Koei Tecmo / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/spirit_camera_the_cursed_memoir",
+          "releaseDate": "2012-04-13",
+          "rank": 1,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        },
+        {
+          "name": "Resident Evil Revelations",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/resident_evil_revelations",
+          "releaseDate": "2012-02-07",
+          "rank": 2,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        }
+      ]
+    },
+    {
+      "key": "luigis-mansion-3-switch",
+      "series": "Luigi’s Mansion",
+      "name": "Luigi’s Mansion 3",
+      "date": "2019-10-31",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/luigis-mansion-3-switch/",
+      "sourceTitle": "Luigi’s Mansion 3 — Nintendo Official Site",
+      "dateQuote": "Release date: October 31, 2019",
+      "gameplay": "Investigate haunted locations and capture ghosts as Luigi.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000001620/2b166fb3197dacfde1d939acd6a976b9fbe3b1a32c54f9f0d2c8d23efb22412d",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Ghostbusters: The Video Game Remastered",
+          "maker": "Saber Interactive Incorporated",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/ghostbusters-the-video-game-remastered-switch/",
+          "releaseDate": "2019-10-04",
+          "rank": 1,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        },
+        {
+          "name": "Hello Neighbor",
+          "maker": "tinyBuild Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hello-neighbor-switch/",
+          "releaseDate": "2018-07-27",
+          "rank": 2,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        },
+        {
+          "name": "Spirit Camera: The Cursed Memoir",
+          "maker": "Koei Tecmo / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/spirit_camera_the_cursed_memoir",
+          "releaseDate": "2012-04-13",
+          "rank": 3,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        }
+      ]
+    },
+    {
+      "key": "luigis-mansion-2-hd-switch",
+      "series": "Luigi’s Mansion",
+      "name": "Luigi's Mansion 2 HD",
+      "date": "2024-06-27",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/luigis-mansion-2-hd-switch/",
+      "sourceTitle": "Luigi's Mansion 2 HD — Nintendo Official Site",
+      "dateQuote": "Release date: June 27, 2024",
+      "gameplay": "Investigate haunted locations and capture ghosts as Luigi.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000072954/00eac347ef3029bfe156b030be64c0274cd5dea1df4df57b12855c823ef7deb4",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Ghostbusters: The Video Game Remastered",
+          "maker": "Saber Interactive Incorporated",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/ghostbusters-the-video-game-remastered-switch/",
+          "releaseDate": "2019-10-04",
+          "rank": 1,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        },
+        {
+          "name": "Hello Neighbor",
+          "maker": "tinyBuild Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hello-neighbor-switch/",
+          "releaseDate": "2018-07-27",
+          "rank": 2,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        },
+        {
+          "name": "Spirit Camera: The Cursed Memoir",
+          "maker": "Koei Tecmo / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/spirit_camera_the_cursed_memoir",
+          "releaseDate": "2012-04-13",
+          "rank": 3,
+          "summary": "An alternative for players seeking spooky exploration and ghost-themed action."
+        }
+      ]
+    },
+    {
+      "key": "3ds/mario_and_luigi_superstar_saga_plus_bowsers_minions",
+      "series": "Mario & Luigi",
+      "name": "Mario & Luigi: Superstar Saga + Bowser's Minions",
+      "date": "2017-10-06",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_superstar_saga_plus_bowsers_minions",
+      "sourceTitle": "Mario & Luigi: Superstar Saga + Bowser's Minions — Nintendo Life",
+      "dateQuote": "Image: US†www.nintendolife.com】 6th Oct 2017",
+      "gameplay": "Join Mario and Luigi in a role-playing adventure.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Mario & Luigi: Paper Jam",
+          "maker": "AlphaDream / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_paper_jam",
+          "releaseDate": "2016-01-22",
+          "rank": 1,
+          "summary": "An alternative for players seeking character-led role-playing adventures."
+        },
+        {
+          "name": "Paper Mario: Sticker Star",
+          "maker": "Intelligent Systems / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/paper_mario_sticker_star",
+          "releaseDate": "2012-11-11",
+          "rank": 2,
+          "summary": "An alternative for players seeking character-led role-playing adventures."
+        }
+      ]
+    },
+    {
+      "key": "mario-and-luigi-brothership-switch",
+      "series": "Mario & Luigi",
+      "name": "Mario & Luigi: Brothership",
+      "date": "2024-11-07",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-and-luigi-brothership-switch/",
+      "sourceTitle": "Mario & Luigi: Brothership — Nintendo Official Site",
+      "dateQuote": "Release date: November 7, 2024",
+      "gameplay": "Join Mario and Luigi in a role-playing adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000084613/9afc95d7bb55198b983e6942649af01932c45df112e8b8842e0578143dcdeaeb",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Paper Mario: The Thousand-Year Door",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-thousand-year-door-switch/",
+          "releaseDate": "2024-05-23",
+          "rank": 1,
+          "summary": "An alternative for players seeking character-led role-playing adventures."
+        },
+        {
+          "name": "Paper Mario: The Origami King",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-origami-king-switch/",
+          "releaseDate": "2020-07-17",
+          "rank": 2,
+          "summary": "An alternative for players seeking character-led role-playing adventures."
+        },
+        {
+          "name": "Mario & Luigi: Paper Jam",
+          "maker": "AlphaDream / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_paper_jam",
+          "releaseDate": "2016-01-22",
+          "rank": 3,
+          "summary": "An alternative for players seeking character-led role-playing adventures."
+        }
+      ]
+    },
+    {
+      "key": "mario-plus-rabbids-kingdom-battle-switch",
+      "name": "Mario + Rabbids Kingdom Battle",
+      "series": "Mario + Rabbids",
+      "date": "2017-08-29",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-plus-rabbids-kingdom-battle-switch/",
+      "sourceTitle": "Mario + Rabbids Kingdom Battle — Nintendo Official Site",
+      "dateQuote": "Release date: August 29, 2017",
+      "gameplay": "Lead Mario and Rabbids characters through tactical battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000819/c0544d71c50c0595b8589451e9fc8b2deaf5cab52415202e0585e137fbe3d5fb",
+      "imageCredit": "Ubisoft / Nintendo",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Ubisoft",
+      "competitors": [
+        {
+          "name": "Shin Megami Tensei: Devil Survivor Overclocked",
+          "maker": "Atlus",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/shin_megami_tensei_devil_survivor_overclocked",
+          "releaseDate": "2011-08-23",
+          "rank": 1,
+          "summary": "Competes through squad positioning and turn-based tactical battles."
+        },
+        {
+          "name": "Tom Clancy's Ghost Recon: Shadow Wars 3D",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/tom_clancys_ghost_recon_shadow_wars",
+          "releaseDate": "2011-03-27",
+          "rank": 2,
+          "summary": "Competes through squad positioning and turn-based tactical battles."
+        }
+      ]
+    },
+    {
+      "key": "mario-plus-rabbids-sparks-of-hope-switch",
+      "name": "Mario + Rabbids Sparks of Hope",
+      "series": "Mario + Rabbids",
+      "date": "2022-10-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-plus-rabbids-sparks-of-hope-switch/",
+      "sourceTitle": "Mario + Rabbids Sparks of Hope — Nintendo Official Site",
+      "dateQuote": "Release date: October 20, 2022",
+      "gameplay": "Lead Mario and Rabbids characters through tactical battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000035797/f3dc6aa2e25ab6d713ac5da17e90ce676dfadf6a0b8fefb37b8b5159d89fc36c",
+      "imageCredit": "Ubisoft / Nintendo",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Ubisoft",
+      "competitors": [
+        {
+          "name": "TRIANGLE STRATEGY",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/triangle-strategy-switch/",
+          "releaseDate": "2022-03-04",
+          "rank": 1,
+          "summary": "Competes through squad positioning and turn-based tactical battles."
+        },
+        {
+          "name": "Wargroove",
+          "maker": "Chucklefish",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/wargroove-switch/",
+          "releaseDate": "2019-02-01",
+          "rank": 2,
+          "summary": "Competes through squad positioning and turn-based tactical battles."
+        }
+      ],
+      "existingProdId": 182,
+      "existingSourceUrl": "https://www.ign.com/articles/mario-rabbids-sparks-of-hope-review"
+    },
+    {
+      "key": "3ds/mario_golf_world_tour",
+      "series": "Mario Golf",
+      "name": "Mario Golf: World Tour",
+      "date": "2014-05-02",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_golf_world_tour",
+      "sourceTitle": "Mario Golf: World Tour — Nintendo Life",
+      "dateQuote": "North America 2nd May 2014",
+      "gameplay": "Play golf on courses featuring Mario characters.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Let's Golf! 3D",
+          "maker": "Gameloft",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds-eshop/lets_golf_3d",
+          "releaseDate": "2011-07-28",
+          "rank": 1,
+          "summary": "Offers a competing portable golf game."
+        },
+        {
+          "name": "True Swing Golf",
+          "maker": "T&E Soft / Nintendo",
+          "sourceUrl": "https://www.gamespot.com/reviews/true-swing-golf-review/1900-6142778/",
+          "releaseDate": "2006-01-23",
+          "rank": 2,
+          "summary": "Offers a competing portable golf game."
+        }
+      ]
+    },
+    {
+      "key": "mario-golf-super-rush-switch",
+      "series": "Mario Golf",
+      "name": "Mario Golf: Super Rush",
+      "date": "2021-06-25",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-golf-super-rush-switch/",
+      "sourceTitle": "Mario Golf: Super Rush — Nintendo Official Site",
+      "dateQuote": "Release date: June 25, 2021",
+      "gameplay": "Play golf on courses featuring Mario characters.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000038622/af5246b2f01dee8111a70bcb3f556e65a492801d6677d0ab0f17b566a7b0285b",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "PGA TOUR 2K21",
+          "maker": "2K",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/pga-tour-2k21-switch/",
+          "releaseDate": "2020-08-21",
+          "rank": 1,
+          "summary": "An alternative for players seeking golf competition."
+        },
+        {
+          "name": "Golf With Your Friends",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/golf-with-your-friends-switch/",
+          "releaseDate": "2020-05-19",
+          "rank": 2,
+          "summary": "An alternative for players seeking golf competition."
+        },
+        {
+          "name": "Golf Story",
+          "maker": "Sidebar Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/golf-story-switch/",
+          "releaseDate": "2017-09-28",
+          "rank": 3,
+          "summary": "An alternative for players seeking golf competition."
+        }
+      ]
+    },
+    {
+      "key": "mario-kart-8-deluxe-switch",
+      "series": "Mario Kart",
+      "name": "Mario Kart 8 Deluxe",
+      "date": "2017-04-28",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-8-deluxe-switch/",
+      "sourceTitle": "Mario Kart 8 Deluxe — Nintendo Official Site",
+      "dateQuote": "Release date: April 28, 2017",
+      "gameplay": "Race Nintendo characters through courses with items and multiplayer competition.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "FAST RMX",
+          "maker": "Shin’en Multimedia",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fast-rmx-switch/",
+          "releaseDate": "2017-03-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking arcade racing."
+        },
+        {
+          "name": "Sonic & All-Stars Racing Transformed",
+          "maker": "Sumo Digital / Sega",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/sonic_and_all-stars_racing_transformed",
+          "releaseDate": "2012-11-18",
+          "rank": 2,
+          "summary": "An alternative for players seeking arcade racing."
+        }
+      ]
+    },
+    {
+      "key": "mario-kart-world-switch-2",
+      "series": "Mario Kart",
+      "name": "Mario Kart World",
+      "date": "2025-06-05",
+      "platform": "Nintendo Switch 2",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-world-switch-2/",
+      "sourceTitle": "Mario Kart World — Nintendo Official Site",
+      "dateQuote": "Release date: June 5, 2025",
+      "gameplay": "Race Nintendo characters through courses with items and multiplayer competition.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch2/70010000095431/0485f410193ca12f92a2f615ea608bb437540f321bd05e464593c33fefa09bf2",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Crash Team Racing Nitro-Fueled",
+          "maker": "Activision",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/crash-team-racing-nitro-fueled-switch/",
+          "releaseDate": "2019-06-21",
+          "rank": 1,
+          "summary": "An alternative for players seeking arcade racing."
+        },
+        {
+          "name": "Team Sonic Racing",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/team-sonic-racing-switch/",
+          "releaseDate": "2019-05-21",
+          "rank": 2,
+          "summary": "An alternative for players seeking arcade racing."
+        },
+        {
+          "name": "FAST RMX",
+          "maker": "Shin’en Multimedia",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fast-rmx-switch/",
+          "releaseDate": "2017-03-03",
+          "rank": 3,
+          "summary": "An alternative for players seeking arcade racing."
+        }
+      ]
+    },
+    {
+      "key": "super-mario-party-switch",
+      "series": "Mario Party",
+      "name": "Super Mario Party",
+      "date": "2018-10-05",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-switch/",
+      "sourceTitle": "Super Mario Party — Nintendo Official Site",
+      "dateQuote": "Release date: October 5, 2018",
+      "gameplay": "Compete in a party-game collection of boards and minigames.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000014158/0ca41128bf40b7e0dc32a046a659ecdc69e4d7cc7a3257d6280be665d2f795b5",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Overcooked! 2",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-2-switch/",
+          "releaseDate": "2018-08-07",
+          "rank": 1,
+          "summary": "An alternative for players seeking multiplayer party play."
+        },
+        {
+          "name": "Overcooked Special Edition",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-special-edition-switch/",
+          "releaseDate": "2017-07-27",
+          "rank": 2,
+          "summary": "An alternative for players seeking multiplayer party play."
+        },
+        {
+          "name": "1-2-Switch",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/1-2-switch-switch/",
+          "releaseDate": "2017-03-03",
+          "rank": 3,
+          "summary": "An alternative for players seeking multiplayer party play."
+        }
+      ]
+    },
+    {
+      "key": "mario-party-superstars-switch",
+      "series": "Mario Party",
+      "name": "Mario Party Superstars",
+      "date": "2021-10-29",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-party-superstars-switch/",
+      "sourceTitle": "Mario Party Superstars — Nintendo Official Site",
+      "dateQuote": "Release date: October 29, 2021",
+      "gameplay": "Compete in a party-game collection of boards and minigames.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000042934/ae43ce2e25afbc4c069c2920075ead01a84f02dfe55b87876268409f6ccc0304",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Overcooked! 2",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-2-switch/",
+          "releaseDate": "2018-08-07",
+          "rank": 1,
+          "summary": "An alternative for players seeking multiplayer party play."
+        },
+        {
+          "name": "Moving Out",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/moving-out-switch/",
+          "releaseDate": "2020-04-28",
+          "rank": 2,
+          "summary": "An alternative for players seeking multiplayer party play."
+        },
+        {
+          "name": "Overcooked Special Edition",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-special-edition-switch/",
+          "releaseDate": "2017-07-27",
+          "rank": 3,
+          "summary": "An alternative for players seeking multiplayer party play."
+        }
+      ]
+    },
+    {
+      "key": "super-mario-party-jamboree-switch",
+      "series": "Mario Party",
+      "name": "Super Mario Party Jamboree",
+      "date": "2024-10-17",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-jamboree-switch/",
+      "sourceTitle": "Super Mario Party Jamboree — Nintendo Official Site",
+      "dateQuote": "Release date: October 17, 2024",
+      "gameplay": "Compete in a party-game collection of boards and minigames.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000084608/ba0572bf9d840b03bf9958809943fb3c76c3adfd6d8f2704b0f1b766f8aa4027",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Overcooked! 2",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-2-switch/",
+          "releaseDate": "2018-08-07",
+          "rank": 1,
+          "summary": "An alternative for players seeking multiplayer party play."
+        },
+        {
+          "name": "Moving Out",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/moving-out-switch/",
+          "releaseDate": "2020-04-28",
+          "rank": 2,
+          "summary": "An alternative for players seeking multiplayer party play."
+        },
+        {
+          "name": "Overcooked Special Edition",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-special-edition-switch/",
+          "releaseDate": "2017-07-27",
+          "rank": 3,
+          "summary": "An alternative for players seeking multiplayer party play."
+        }
+      ]
+    },
+    {
+      "key": "wii/mario_strikers_charged",
+      "series": "Mario Strikers",
+      "name": "Mario Strikers Charged",
+      "date": "2007-07-30",
+      "platform": "Wii",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/wii/mario_strikers_charged",
+      "sourceTitle": "Mario Strikers Charged — Nintendo Life",
+      "dateQuote": "North America 30th Jul 2007",
+      "gameplay": "Compete in arcade-style football with Mario characters.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Mario Smash Football (Super Mario Strikers)",
+          "maker": "Next Level Games / Nintendo",
+          "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-GameCube/Mario-Smash-Football-268335.html",
+          "releaseDate": "2005-11-18",
+          "rank": 1,
+          "summary": "A GameCube arcade football alternative available to Wii owners through backward compatibility."
+        },
+        {
+          "name": "Sega Soccer Slam",
+          "maker": "Black Box / Sega",
+          "sourceUrl": "https://www.nintendolife.com/games/gamecube/sega_soccer_slam",
+          "releaseDate": "2002-03-18",
+          "rank": 2,
+          "summary": "A GameCube arcade football alternative available to Wii owners through backward compatibility."
+        }
+      ]
+    },
+    {
+      "key": "mario-strikers-battle-league-switch",
+      "series": "Mario Strikers",
+      "name": "Mario Strikers: Battle League",
+      "date": "2022-06-10",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-strikers-battle-league-switch/",
+      "sourceTitle": "Mario Strikers: Battle League — Nintendo Official Site",
+      "dateQuote": "Release date: June 10, 2022",
+      "gameplay": "Compete in arcade-style football with Mario characters.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000049936/c280b6843af262757f041d2aa3543992ec076b97545abea4dbadda797d9056fc",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Super Soccer Blast: America VS Europe",
+          "maker": "Unfinished Pixel",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-soccer-blast-america-vs-europe-switch/",
+          "releaseDate": "2021-06-11",
+          "rank": 1,
+          "summary": "Competes through fast-paced arcade sports."
+        },
+        {
+          "name": "Rocket League",
+          "maker": "Epic Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/rocket-league-switch/",
+          "releaseDate": "2017-11-14",
+          "rank": 2,
+          "summary": "Competes through fast-paced arcade sports."
+        }
+      ]
+    },
+    {
+      "key": "wiiu/mario_tennis_ultra_smash",
+      "series": "Mario Tennis",
+      "name": "Mario Tennis: Ultra Smash",
+      "date": "2015-11-20",
+      "platform": "Wii U",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/mario_tennis_ultra_smash",
+      "sourceTitle": "Mario Tennis: Ultra Smash — Nintendo Life",
+      "dateQuote": "North America: 2015-11-20",
+      "gameplay": "Play arcade-style tennis with Mario characters.",
+      "imageUrl": null,
+      "publisher": "Nintendo",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "competitors": [
+        {
+          "name": "Mario Tennis Open",
+          "maker": "Camelot / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_tennis_open",
+          "releaseDate": "2012-05-20",
+          "rank": 1,
+          "summary": "Offers an alternative tennis game on Nintendo hardware."
+        },
+        {
+          "name": "Wii Sports Club",
+          "maker": "Nintendo / Bandai Namco",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/wii_sports_club",
+          "releaseDate": "2014-07-25",
+          "rank": 2,
+          "summary": "Offers an alternative tennis game on Nintendo hardware."
+        }
+      ]
+    },
+    {
+      "key": "mario-tennis-aces-switch",
+      "series": "Mario Tennis",
+      "name": "Mario Tennis Aces",
+      "date": "2018-06-22",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-tennis-aces-switch/",
+      "sourceTitle": "Mario Tennis Aces — Nintendo Official Site",
+      "dateQuote": "Release date: June 22, 2018",
+      "gameplay": "Play tennis with Mario characters and special shots.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000003889/7d4bb0a9ace1fb56a41aae8ef0d4ee806419e6187afdb4697a598458f02cd8e7",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tennis",
+          "maker": "D3PUBLISHER",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/tennis-switch/",
+          "releaseDate": "2018-01-25",
+          "rank": 1,
+          "summary": "An alternative for players seeking tennis competition."
+        },
+        {
+          "name": "Mario Tennis: Ultra Smash",
+          "maker": "Camelot / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/mario_tennis_ultra_smash",
+          "releaseDate": "2015-11-20",
+          "rank": 2,
+          "summary": "An alternative for players seeking tennis competition."
+        }
+      ]
+    },
+    {
+      "key": "mario-tennis-fever-switch-2",
+      "series": "Mario Tennis",
+      "name": "Mario Tennis Fever",
+      "date": "2026-02-12",
+      "platform": "Nintendo Switch 2",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-tennis-fever-switch-2/",
+      "sourceTitle": "Mario Tennis Fever — Nintendo Official Site",
+      "dateQuote": "Release date: February 12, 2026",
+      "gameplay": "Play tennis with Mario characters and special shots.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch2/70010000105869/86a26a6d9a870eee16d0ff1b5591f055d63dee475fe688c42c46fcd96a199805",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tennis World Tour 2",
+          "maker": "Nacon",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/tennis-world-tour-2-switch/",
+          "releaseDate": "2020-11-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking tennis competition."
+        },
+        {
+          "name": "AO Tennis 2",
+          "maker": "Nacon",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/ao-tennis-2-switch/",
+          "releaseDate": "2020-02-11",
+          "rank": 2,
+          "summary": "An alternative for players seeking tennis competition."
+        },
+        {
+          "name": "Tennis World Tour",
+          "maker": "Nacon",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/tennis-world-tour-switch/",
+          "releaseDate": "2018-10-29",
+          "rank": 3,
+          "summary": "An alternative for players seeking tennis competition."
+        }
+      ]
+    },
+    {
+      "key": "3ds/metroid_samus_returns",
+      "series": "Metroid (2D)",
+      "name": "Metroid: Samus Returns",
+      "date": "2017-09-15",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/metroid_samus_returns",
+      "sourceTitle": "Metroid: Samus Returns — Nintendo Life",
+      "dateQuote": "North America 15th Sep 2017",
+      "gameplay": "Explore interconnected environments in a side-scrolling Samus Aran adventure.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/H2x1_3DS_MetroidSamusReturns_image1280w.jpg",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "imageCredit": "Nintendo / respective rights holders",
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Metroid-Samus-Returns-1234232.html",
+          "title": "Metroid: Samus Returns — Nintendo UK",
+          "confidence": 100,
+          "reasoning": "Official platform and game information; European release date may differ from this pin’s U.S. milestone."
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Castlevania: Lords of Shadow - Mirror of Fate",
+          "maker": "MercurySteam / Konami",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/castlevania_lords_of_shadow_-_mirror_of_fate",
+          "releaseDate": "2013-03-05",
+          "rank": 1,
+          "summary": "Competes through side-scrolling exploration, ability upgrades and combat."
+        },
+        {
+          "name": "Shantae And The Pirate's Curse",
+          "maker": "WayForward",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds-eshop/shantae_and_the_pirates_curse",
+          "releaseDate": "2014-10-23",
+          "rank": 2,
+          "summary": "Competes through side-scrolling exploration, ability upgrades and combat."
+        }
+      ],
+      "imageSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Metroid-Samus-Returns-1234232.html"
+    },
+    {
+      "key": "metroid-dread-switch",
+      "series": "Metroid (2D)",
+      "name": "Metroid Dread",
+      "date": "2021-10-08",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/metroid-dread-switch/",
+      "sourceTitle": "Metroid Dread — Nintendo Official Site",
+      "dateQuote": "Release date: October 8, 2021",
+      "gameplay": "Explore interconnected environments in a side-scrolling Samus Aran adventure.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000042924/4f2c683f0196210ec212a2ab8bf6952223c0b88e827b820953407a2ba61c9cb2",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Hollow Knight",
+          "maker": "Team Cherry",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hollow-knight-switch/",
+          "releaseDate": "2018-06-12",
+          "rank": 1,
+          "summary": "An alternative for players seeking side-scrolling exploration and combat."
+        },
+        {
+          "name": "Ori and the Will of the Wisps",
+          "maker": "iam8bit",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/ori-and-the-will-of-the-wisps-switch/",
+          "releaseDate": "2020-09-17",
+          "rank": 2,
+          "summary": "An alternative for players seeking side-scrolling exploration and combat."
+        },
+        {
+          "name": "Axiom Verge",
+          "maker": "Thomas Happ Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/axiom-verge-switch/",
+          "releaseDate": "2017-10-05",
+          "rank": 3,
+          "summary": "An alternative for players seeking side-scrolling exploration and combat."
+        }
+      ]
+    },
+    {
+      "key": "metroid-ravenous-switch-2",
+      "name": "Metroid Ravenous",
+      "series": "Metroid (2D)",
+      "date": "2027-01-28",
+      "dateConfidence": "scheduled",
+      "existingOnly": true,
+      "existingProdId": 298,
+      "existingSourceUrl": "https://gameranx.com/updates/id/564028/article/metroid-ravenous-releasing-on-switch-2-this-january-28-2027/",
+      "platform": "Nintendo Switch 2",
+      "region": "As announced",
+      "sourceUrl": "https://gameranx.com/updates/id/564028/article/metroid-ravenous-releasing-on-switch-2-this-january-28-2027/",
+      "sourceTitle": "Metroid Ravenous — existing release pin, source re-opened 2026-10-27",
+      "dateQuote": "Metroid Ravenous is releasing on the Switch 2 on January 28, 2027.",
+      "gameplay": "Existing announced release; original content, author and date confidence are preserved.",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "imageUrl": null,
+      "competitors": [
+        {
+          "name": "Metroid Dread",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/metroid-dread-switch/",
+          "releaseDate": "2021-10-08",
+          "rank": 1,
+          "summary": "Competes through side-scrolling exploration and ability-based progression."
+        },
+        {
+          "name": "Hollow Knight",
+          "maker": "Team Cherry",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/hollow-knight-switch/",
+          "releaseDate": "2018-06-12",
+          "rank": 2,
+          "summary": "Competes through side-scrolling exploration and ability-based progression."
+        }
+      ]
+    },
+    {
+      "key": "metroid-prime-remastered-switch",
+      "series": "Metroid Prime",
+      "name": "Metroid Prime Remastered",
+      "date": "2023-02-08",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/metroid-prime-remastered-switch/",
+      "sourceTitle": "Metroid Prime Remastered — Nintendo Official Site",
+      "dateQuote": "Release date: February 8, 2023",
+      "gameplay": "Experience a first-person exploration adventure starring Samus Aran.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000063709/32b85837beea0eee31220a59e247219662de4011f7a8c18fce61cf99a4933eb7",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Journey to the Savage Planet",
+          "maker": "505 Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/journey-to-the-savage-planet-switch/",
+          "releaseDate": "2020-05-21",
+          "rank": 1,
+          "summary": "An alternative for players seeking first-person exploration and survival."
+        },
+        {
+          "name": "Subnautica",
+          "maker": "Unknown Worlds Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/subnautica-switch/",
+          "releaseDate": "2021-05-14",
+          "rank": 2,
+          "summary": "An alternative for players seeking first-person exploration and survival."
+        }
+      ]
+    },
+    {
+      "key": "metroid-prime-4-beyond-switch",
+      "series": "Metroid Prime",
+      "name": "Metroid Prime 4: Beyond",
+      "date": "2025-12-04",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/metroid-prime-4-beyond-switch/",
+      "sourceTitle": "Metroid Prime 4: Beyond — Nintendo Official Site",
+      "dateQuote": "Release date: December 4, 2025",
+      "gameplay": "Experience a first-person exploration adventure starring Samus Aran.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000084766/1bcf06d845f9027b4330e8d07658845a2fe3d66882bdaeb70325aeb35c54f1c9",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Journey to the Savage Planet",
+          "maker": "505 Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/journey-to-the-savage-planet-switch/",
+          "releaseDate": "2020-05-21",
+          "rank": 1,
+          "summary": "An alternative for players seeking first-person exploration and survival."
+        },
+        {
+          "name": "Subnautica",
+          "maker": "Unknown Worlds Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/subnautica-switch/",
+          "releaseDate": "2021-05-14",
+          "rank": 2,
+          "summary": "An alternative for players seeking first-person exploration and survival."
+        }
+      ]
+    },
+    {
+      "key": "paper-mario-the-origami-king-switch",
+      "series": "Paper Mario",
+      "name": "Paper Mario: The Origami King",
+      "date": "2020-07-17",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-origami-king-switch/",
+      "sourceTitle": "Paper Mario: The Origami King — Nintendo Official Site",
+      "dateQuote": "Release date: July 17, 2020",
+      "gameplay": "Explore an adventure in the Paper Mario role-playing series.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000029726/7f079a1e3927ea4752fb448ea7f2ccbd86933f5483ad9dd6de23ec96ed4df70b",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Bug Fables: The Everlasting Sapling",
+          "maker": "DANGEN Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/bug-fables-the-everlasting-sapling-switch/",
+          "releaseDate": "2020-05-28",
+          "rank": 1,
+          "summary": "Competes through character-led turn-based role-playing and action-timed battles."
+        },
+        {
+          "name": "Mario & Luigi: Paper Jam",
+          "maker": "AlphaDream / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_paper_jam",
+          "releaseDate": "2016-01-22",
+          "rank": 2,
+          "summary": "Competes through character-led turn-based role-playing and action-timed battles."
+        }
+      ]
+    },
+    {
+      "key": "paper-mario-the-thousand-year-door-switch",
+      "series": "Paper Mario",
+      "name": "Paper Mario: The Thousand-Year Door",
+      "date": "2024-05-23",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-thousand-year-door-switch/",
+      "sourceTitle": "Paper Mario: The Thousand-Year Door — Nintendo Official Site",
+      "dateQuote": "Release date: May 23, 2024",
+      "gameplay": "Explore an adventure in the Paper Mario role-playing series.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000072957/fdd5d8ca46d7ea4e45397ae560e807742de2d7d744570297ddbabf69d6d23f33",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Bug Fables: The Everlasting Sapling",
+          "maker": "DANGEN Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/bug-fables-the-everlasting-sapling-switch/",
+          "releaseDate": "2020-05-28",
+          "rank": 1,
+          "summary": "Competes through character-led turn-based role-playing and action-timed battles."
+        },
+        {
+          "name": "Mario & Luigi: Paper Jam",
+          "maker": "AlphaDream / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_paper_jam",
+          "releaseDate": "2016-01-22",
+          "rank": 2,
+          "summary": "Competes through character-led turn-based role-playing and action-timed battles."
+        }
+      ]
+    },
+    {
+      "key": "pikmin-3-deluxe-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 3 Deluxe",
+      "date": "2020-10-30",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pikmin-3-deluxe-switch/",
+      "sourceTitle": "Pikmin 3 Deluxe — Nintendo Official Site",
+      "dateQuote": "Release date: October 30, 2020",
+      "gameplay": "Guide teams of Pikmin through exploration and environmental challenges.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000005302/a32f7ed0a032b291746ee878475521b685ef6c2b2de2caab3f8d40fec2d7ffce",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Masters of Anima",
+          "maker": "Focus Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/masters-of-anima-switch/",
+          "releaseDate": "2018-04-10",
+          "rank": 1,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "Little King's Story",
+          "maker": "Cing / Marvelous",
+          "sourceUrl": "https://www.nintendolife.com/games/wii/little_kings_story",
+          "releaseDate": "2009-07-21",
+          "rank": 2,
+          "summary": "An alternative for players seeking squad management and exploration."
+        }
+      ]
+    },
+    {
+      "key": "pikmin-1-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 1",
+      "date": "2023-06-21",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pikmin-1-switch/",
+      "sourceTitle": "Pikmin 1 — Nintendo Official Site",
+      "dateQuote": "Release date: June 21, 2023",
+      "gameplay": "Guide teams of Pikmin through exploration and environmental challenges.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000068669/f914703be359d59c4fced6c076adce7eae9ddbbdd0cfa13a10d008ae154c9b61",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tinykin",
+          "maker": "tinyBuild Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/tinykin-switch/",
+          "releaseDate": "2022-08-30",
+          "rank": 1,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "The Wild at Heart",
+          "maker": "Balor Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/the-wild-at-heart-switch/",
+          "releaseDate": "2021-11-16",
+          "rank": 2,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "Masters of Anima",
+          "maker": "Focus Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/masters-of-anima-switch/",
+          "releaseDate": "2018-04-10",
+          "rank": 3,
+          "summary": "An alternative for players seeking squad management and exploration."
+        }
+      ]
+    },
+    {
+      "key": "pikmin-2-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 2",
+      "date": "2023-06-21",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pikmin-2-switch/",
+      "sourceTitle": "Pikmin 2 — Nintendo Official Site",
+      "dateQuote": "Release date: June 21, 2023",
+      "gameplay": "Guide teams of Pikmin through exploration and environmental challenges.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000068673/94e7e930658b4970c3e98eeb8f8fff34de4b43067874c1968a607bc2c78bfd9d",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tinykin",
+          "maker": "tinyBuild Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/tinykin-switch/",
+          "releaseDate": "2022-08-30",
+          "rank": 1,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "The Wild at Heart",
+          "maker": "Balor Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/the-wild-at-heart-switch/",
+          "releaseDate": "2021-11-16",
+          "rank": 2,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "Masters of Anima",
+          "maker": "Focus Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/masters-of-anima-switch/",
+          "releaseDate": "2018-04-10",
+          "rank": 3,
+          "summary": "An alternative for players seeking squad management and exploration."
+        }
+      ]
+    },
+    {
+      "key": "pikmin-4-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 4",
+      "date": "2023-07-21",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pikmin-4-switch/",
+      "sourceTitle": "Pikmin 4 — Nintendo Official Site",
+      "dateQuote": "Release date: July 21, 2023",
+      "gameplay": "Guide teams of Pikmin through exploration and environmental challenges.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000005308/43af89ed5bd76ac5ec6b367b4b53092f8bf94a1d1312fdfc1d4664329fd5077b",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tinykin",
+          "maker": "tinyBuild Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/tinykin-switch/",
+          "releaseDate": "2022-08-30",
+          "rank": 1,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "The Wild at Heart",
+          "maker": "Balor Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/the-wild-at-heart-switch/",
+          "releaseDate": "2021-11-16",
+          "rank": 2,
+          "summary": "An alternative for players seeking squad management and exploration."
+        },
+        {
+          "name": "Masters of Anima",
+          "maker": "Focus Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/masters-of-anima-switch/",
+          "releaseDate": "2018-04-10",
+          "rank": 3,
+          "summary": "An alternative for players seeking squad management and exploration."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-lets-go-pikachu-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon: Let’s Go, Pikachu! and Let’s Go, Eevee!",
+      "date": "2018-11-16",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-lets-go-pikachu-switch/",
+      "sourceTitle": "Pokémon: Let’s Go, Pikachu! — Nintendo Official Site",
+      "dateQuote": "Release date: November 16, 2018",
+      "gameplay": "Explore, catch Pokémon and build a team for battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000447/8b2acaf2549895635f8d706eac06b3751e56bc3a970b04a937dcdec3e87ad3bf",
+      "imageCredit": "Nintendo / The Pokémon Company; representative artwork of the Let’s Go, Pikachu! edition",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/us/store/products/pokemon-lets-go-eevee-switch/",
+          "title": "Pokémon™: Let’s Go, Eevee! for Nintendo Switch",
+          "confidence": 100,
+          "reasoning": "Paired edition independently verified: Release date: November 16, 2018"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Monster Hunter Stories",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+          "releaseDate": "2017-09-08",
+          "rank": 1,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Yo-kai Watch 2: Bony Spirits & Fleshy Souls",
+          "maker": "Level-5 / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/yo-kai_watch_2_bony_spirits_and_fleshy_souls",
+          "releaseDate": "2016-09-30",
+          "rank": 2,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-sword-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Sword and Shield",
+      "date": "2019-11-15",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-sword-switch/",
+      "sourceTitle": "Pokémon Sword — Nintendo Official Site",
+      "dateQuote": "Release date: November 15, 2019",
+      "gameplay": "Explore, catch Pokémon and build a team for battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000004496/1a7e765fe91da863330208620c5446908cc7ae47108a80a168ff65356df764db",
+      "imageCredit": "Nintendo / The Pokémon Company; representative artwork of the Sword edition",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/us/store/products/pokemon-shield-switch/",
+          "title": "Pokémon™ Shield  for Nintendo Switch",
+          "confidence": 100,
+          "reasoning": "Paired edition independently verified: Release date: November 15, 2019"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Digimon Story Cyber Sleuth: Complete Edition",
+          "maker": "Bandai Namco Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/digimon-story-cyber-sleuth-complete-edition-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 1,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Monster Hunter Stories",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+          "releaseDate": "2017-09-08",
+          "rank": 2,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Yo-kai Watch 2: Bony Spirits & Fleshy Souls",
+          "maker": "Level-5 / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/yo-kai_watch_2_bony_spirits_and_fleshy_souls",
+          "releaseDate": "2016-09-30",
+          "rank": 3,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-brilliant-diamond-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Brilliant Diamond and Shining Pearl",
+      "date": "2021-11-19",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-brilliant-diamond-switch/",
+      "sourceTitle": "Pokémon Brilliant Diamond — Nintendo Official Site",
+      "dateQuote": "Release date: November 19, 2021",
+      "gameplay": "Explore, catch Pokémon and build a team for battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000039950/37fdb03bef333221200ace5554c0d43e17ab547d8c3285d444d71808ee52f83a",
+      "imageCredit": "Nintendo / The Pokémon Company; representative artwork of the Brilliant Diamond edition",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/us/store/products/pokemon-shining-pearl-switch/",
+          "title": "Pokémon™ Shining Pearl for Nintendo Switch",
+          "confidence": 100,
+          "reasoning": "Paired edition independently verified: Release date: November 19, 2021"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Monster Hunter Stories 2: Wings of Ruin",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-hunter-stories-2-wings-of-ruin-switch/",
+          "releaseDate": "2021-07-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Digimon Story Cyber Sleuth: Complete Edition",
+          "maker": "Bandai Namco Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/digimon-story-cyber-sleuth-complete-edition-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 2,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Monster Sanctuary",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-sanctuary-switch/",
+          "releaseDate": "2020-12-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-legends-arceus-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Legends: Arceus",
+      "date": "2022-01-28",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-legends-arceus-switch/",
+      "sourceTitle": "Pokémon Legends: Arceus — Nintendo Official Site",
+      "dateQuote": "Release date: January 28, 2022",
+      "gameplay": "Explore, catch Pokémon and build a team for battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000039945/dcb496d7cf954c7eb51ab2e5d0c27918fb7f055e50f4e902135bd4a70a44b491",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Monster Hunter Stories 2: Wings of Ruin",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-hunter-stories-2-wings-of-ruin-switch/",
+          "releaseDate": "2021-07-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Digimon Story Cyber Sleuth: Complete Edition",
+          "maker": "Bandai Namco Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/digimon-story-cyber-sleuth-complete-edition-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 2,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Monster Sanctuary",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-sanctuary-switch/",
+          "releaseDate": "2020-12-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-scarlet-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Scarlet and Violet",
+      "date": "2022-11-18",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-scarlet-switch/",
+      "sourceTitle": "Pokémon Scarlet — Nintendo Official Site",
+      "dateQuote": "Release date: November 18, 2022",
+      "gameplay": "Explore, catch Pokémon and build a team for battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000053966/849c234de8df7265201d26d9d72f88eed3f32438d3dca12fc135beb4c3befc85",
+      "imageCredit": "Nintendo / The Pokémon Company; representative artwork of the Scarlet edition",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": 184,
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/us/store/products/pokemon-violet-switch/",
+          "title": "Pokemon Violet",
+          "confidence": 100,
+          "reasoning": "Paired edition independently verified: Release date: November 18, 2022"
+        }
+      ],
+      "existingSourceUrl": "https://www.ign.com/articles/pokemon-scarlet-and-violet-review",
+      "competitors": [
+        {
+          "name": "Monster Hunter Stories 2: Wings of Ruin",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-hunter-stories-2-wings-of-ruin-switch/",
+          "releaseDate": "2021-07-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Digimon Story Cyber Sleuth: Complete Edition",
+          "maker": "Bandai Namco Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/digimon-story-cyber-sleuth-complete-edition-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 2,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Monster Sanctuary",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-sanctuary-switch/",
+          "releaseDate": "2020-12-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-legends-z-a-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Legends: Z-A",
+      "date": "2025-10-16",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-legends-z-a-switch/",
+      "sourceTitle": "Pokémon Legends: Z-A — Nintendo Official Site",
+      "dateQuote": "Release date: October 16, 2025",
+      "gameplay": "Explore, catch Pokémon and build a team for battles.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000094234/357e68d5f1e168a213f3b2db2dda7da9e0ba2c0f0900360cc72c3f90649f7091",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Monster Hunter Stories 2: Wings of Ruin",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-hunter-stories-2-wings-of-ruin-switch/",
+          "releaseDate": "2021-07-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Digimon Story Cyber Sleuth: Complete Edition",
+          "maker": "Bandai Namco Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/digimon-story-cyber-sleuth-complete-edition-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 2,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        },
+        {
+          "name": "Monster Sanctuary",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-sanctuary-switch/",
+          "releaseDate": "2020-12-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking collecting creatures and building a role-playing team."
+        }
+      ]
+    },
+    {
+      "key": "pokemon-winds-switch-2",
+      "name": "Pokémon Winds and Pokémon Waves",
+      "series": "Pokémon (main series)",
+      "date": "2027-11-19",
+      "dateConfidence": "estimated",
+      "existingOnly": true,
+      "existingProdId": 5199,
+      "existingSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-winds-switch-2/",
+      "platform": "Nintendo Switch 2",
+      "region": "As announced",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-winds-switch-2/",
+      "sourceTitle": "Pokémon Winds and Pokémon Waves — existing release pin, source re-opened 2026-10-27",
+      "dateQuote": "Release date: 2027",
+      "gameplay": "Existing announced release; original content, author and date confidence are preserved.",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "imageUrl": null,
+      "competitors": [
+        {
+          "name": "Pokémon Scarlet and Violet",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-scarlet-switch/",
+          "releaseDate": "2022-11-18",
+          "rank": 1,
+          "summary": "Competes through collecting creatures, building teams and role-playing battles."
+        },
+        {
+          "name": "Monster Hunter Stories 2: Wings of Ruin",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/monster-hunter-stories-2-wings-of-ruin-switch/",
+          "releaseDate": "2021-07-09",
+          "rank": 2,
+          "summary": "Competes through collecting creatures, building teams and role-playing battles."
+        }
+      ],
+      "researchNote": "Nintendo confirms only 2027. The saved 19 November date is explicitly estimated, with an existing explanation of the unconfirmed leak; do not upgrade to scheduled or confirmed."
+    },
+    {
+      "key": "3ds/pokemon_super_mystery_dungeon",
+      "series": "Pokémon Mystery Dungeon",
+      "name": "Pokémon Super Mystery Dungeon",
+      "date": "2015-11-20",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/pokemon_super_mystery_dungeon",
+      "sourceTitle": "Pokémon Super Mystery Dungeon — Nintendo Life",
+      "dateQuote": "North America 20th Nov 2015",
+      "gameplay": "Explore changing dungeons as a Pokémon with a partner.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_PokemonSuperMysteryDungeon_enGB.jpg",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "imageCredit": "Nintendo / respective rights holders",
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Pokemon-Super-Mystery-Dungeon-1021842.html",
+          "title": "Pokémon Super Mystery Dungeon — Nintendo UK",
+          "confidence": 100,
+          "reasoning": "Official platform and game information; European release date may differ from this pin’s U.S. milestone."
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Etrian Mystery Dungeon",
+          "maker": "Atlus / Spike Chunsoft",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/etrian_mystery_dungeon",
+          "releaseDate": "2015-04-07",
+          "rank": 1,
+          "summary": "Competes through turn-based battles, dungeon exploration and team building."
+        },
+        {
+          "name": "Pokémon X & Y",
+          "maker": "Game Freak / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/pokemon_x_and_y",
+          "releaseDate": "2013-10-12",
+          "rank": 2,
+          "summary": "Competes through turn-based battles, dungeon exploration and team building."
+        }
+      ],
+      "imageSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Pokemon-Super-Mystery-Dungeon-1021842.html"
+    },
+    {
+      "key": "pokemon-mystery-dungeon-rescue-team-dx-switch",
+      "series": "Pokémon Mystery Dungeon",
+      "name": "Pokémon Mystery Dungeon: Rescue Team DX",
+      "date": "2020-03-06",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-mystery-dungeon-rescue-team-dx-switch/",
+      "sourceTitle": "Pokémon Mystery Dungeon: Rescue Team DX — Nintendo Official Site",
+      "dateQuote": "Release date: March 6, 2020",
+      "gameplay": "Explore changing dungeons as a Pokémon with a partner.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000012523/66593a5969de4b12d9de025e80843ed7cf69671e26b382994c7c0afe00ada30d",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Chocobo's Mystery Dungeon EVERY BUDDY!",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/chocobos-mystery-dungeon-every-buddy-switch/",
+          "releaseDate": "2019-03-20",
+          "rank": 1,
+          "summary": "An alternative for players seeking dungeon exploration and turn-based role-playing."
+        },
+        {
+          "name": "Etrian Mystery Dungeon",
+          "maker": "Atlus / Spike Chunsoft",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/etrian_mystery_dungeon",
+          "releaseDate": "2015-04-07",
+          "rank": 2,
+          "summary": "An alternative for players seeking dungeon exploration and turn-based role-playing."
+        }
+      ]
+    },
+    {
+      "key": "wiiu/splatoon",
+      "series": "Splatoon",
+      "name": "Splatoon",
+      "date": "2015-05-29",
+      "platform": "Wii U",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/splatoon",
+      "sourceTitle": "Splatoon — Nintendo Life",
+      "dateQuote": "North America 29th May 2015",
+      "gameplay": "Compete in ink-based action battles in Nintendo’s Splatoon series.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Call of Duty: Black Ops II",
+          "maker": "Treyarch / Activision",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/call_of_duty_black_ops_ii",
+          "releaseDate": "2012-11-18",
+          "rank": 1,
+          "summary": "An alternative for players seeking team-based online shooting."
+        },
+        {
+          "name": "Call of Duty: Ghosts",
+          "maker": "Infinity Ward / Activision",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/call_of_duty_ghosts",
+          "releaseDate": "2013-11-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking team-based online shooting."
+        }
+      ]
+    },
+    {
+      "key": "splatoon-2-switch",
+      "series": "Splatoon",
+      "name": "Splatoon 2",
+      "date": "2017-07-21",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/splatoon-2-switch/",
+      "sourceTitle": "Splatoon 2 — Nintendo Official Site",
+      "dateQuote": "Release date: July 21, 2017",
+      "gameplay": "Compete in ink-based action battles in Nintendo’s Splatoon series.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000529/b0b183a9860296016649fadb03b929411e7e5e0809af241e2e9652ebf0c5a715",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Plants vs. Zombies: Garden Warfare 2",
+          "maker": "PopCap / Electronic Arts",
+          "sourceUrl": "https://www.ea.com/games/plants-vs-zombies/plants-vs-zombies-garden-warfare-2",
+          "releaseDate": "2016-02-23",
+          "rank": 1,
+          "summary": "A contemporary team shooter on other home consoles and PC, competing for the same multiplayer audience."
+        },
+        {
+          "name": "Overwatch",
+          "maker": "Blizzard",
+          "sourceUrl": "https://blizzard.gamespress.com/zh-CN/THE-FUTURE-IS-NOW-OVERWATCH-IS-LIVE-ON-CONSOLE-AND-PC",
+          "releaseDate": "2016-05-24",
+          "rank": 2,
+          "summary": "A contemporary team shooter on other home consoles and PC, competing for the same multiplayer audience."
+        }
+      ]
+    },
+    {
+      "key": "splatoon-3-switch",
+      "series": "Splatoon",
+      "name": "Splatoon 3",
+      "date": "2022-09-09",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/splatoon-3-switch/",
+      "sourceTitle": "Splatoon 3 — Nintendo Official Site",
+      "dateQuote": "Release date: September 9, 2022",
+      "gameplay": "Compete in ink-based action battles in Nintendo’s Splatoon series.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000046395/94a4095cda06c4d85c637d1af451979f9933302b6b17174d97c45de7a68584a2",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": 183,
+      "existingSourceUrl": "https://www.ign.com/articles/splatoon-3-review-single-player",
+      "competitors": [
+        {
+          "name": "Plants vs. Zombies: Battle for Neighborville Complete Edition",
+          "maker": "Electronic Arts",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/plants-vs-zombies-battle-for-neighborville-complete-edition-switch/",
+          "releaseDate": "2021-03-19",
+          "rank": 1,
+          "summary": "A colorful online shooter available on Nintendo Switch at this launch."
+        },
+        {
+          "name": "Fortnite",
+          "maker": "Epic Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/fortnite-switch/",
+          "releaseDate": "2018-06-12",
+          "rank": 2,
+          "summary": "A colorful online shooter available on Nintendo Switch at this launch."
+        }
+      ]
+    },
+    {
+      "key": "super-mario-odyssey-switch",
+      "series": "Super Mario (3D)",
+      "name": "Super Mario Odyssey",
+      "date": "2017-10-27",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+      "sourceTitle": "Super Mario Odyssey — Nintendo Official Site",
+      "dateQuote": "Release date: October 27, 2017",
+      "gameplay": "Explore three-dimensional platforming courses with Mario.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Poi: Explorer Edition",
+          "maker": "PolyKid",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/poi-explorer-edition-switch/",
+          "releaseDate": "2017-10-24",
+          "rank": 1,
+          "summary": "An alternative for players seeking 3D platforming and exploration."
+        },
+        {
+          "name": "Snake Pass",
+          "maker": "Secret Mode",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/snake-pass-switch/",
+          "releaseDate": "2017-03-28",
+          "rank": 2,
+          "summary": "An alternative for players seeking 3D platforming and exploration."
+        }
+      ]
+    },
+    {
+      "key": "super-mario-3d-world-plus-bowsers-fury-switch",
+      "series": "Super Mario (3D)",
+      "name": "Super Mario 3D World + Bowser’s Fury",
+      "date": "2021-02-12",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-3d-world-plus-bowsers-fury-switch/",
+      "sourceTitle": "Super Mario 3D World + Bowser’s Fury — Nintendo Official Site",
+      "dateQuote": "Release date: February 12, 2021",
+      "gameplay": "Explore three-dimensional platforming courses with Mario.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000034439/ccb69a8bf2746b2dc0a9b11a9e48c9893baa1631486326f0d681b7a36385221f",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "A Hat in Time",
+          "maker": "Balor Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/a-hat-in-time-switch/",
+          "releaseDate": "2019-10-18",
+          "rank": 1,
+          "summary": "An alternative for players seeking 3D platforming and exploration."
+        },
+        {
+          "name": "Spyro Reignited Trilogy",
+          "maker": "Activision",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/spyro-reignited-trilogy-switch/",
+          "releaseDate": "2019-09-03",
+          "rank": 2,
+          "summary": "An alternative for players seeking 3D platforming and exploration."
+        },
+        {
+          "name": "Crash Bandicoot N. Sane Trilogy",
+          "maker": "Activision",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/crash-bandicoot-n-sane-trilogy-switch/",
+          "releaseDate": "2018-06-29",
+          "rank": 3,
+          "summary": "An alternative for players seeking 3D platforming and exploration."
+        }
+      ]
+    },
+    {
+      "key": "new-super-mario-bros-u-deluxe-switch",
+      "series": "Super Mario Bros. (2D)",
+      "name": "New Super Mario Bros. U Deluxe",
+      "date": "2019-01-11",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/new-super-mario-bros-u-deluxe-switch/",
+      "sourceTitle": "New Super Mario Bros. U Deluxe — Nintendo Official Site",
+      "dateQuote": "Release date: January 11, 2019",
+      "gameplay": "Run, jump and navigate side-scrolling Mario courses.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000006411/73d58198e35bf94be752cf3d9ba0b44dea877cab1487e2cc1b7eeb02157f066f",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Sonic Mania",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-mania-switch/",
+          "releaseDate": "2017-08-15",
+          "rank": 1,
+          "summary": "An alternative for players seeking side-scrolling platforming."
+        },
+        {
+          "name": "Rayman Legends Definitive Edition",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/rayman-legends-definitive-edition-switch/",
+          "releaseDate": "2017-09-12",
+          "rank": 2,
+          "summary": "An alternative for players seeking side-scrolling platforming."
+        },
+        {
+          "name": "Celeste",
+          "maker": "Maddy Makes Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/celeste-switch/",
+          "releaseDate": "2018-01-25",
+          "rank": 3,
+          "summary": "An alternative for players seeking side-scrolling platforming."
+        }
+      ]
+    },
+    {
+      "key": "super-mario-bros-wonder-switch",
+      "series": "Super Mario Bros. (2D)",
+      "name": "Super Mario Bros. Wonder",
+      "date": "2023-10-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-bros-wonder-switch/",
+      "sourceTitle": "Super Mario Bros. Wonder — Nintendo Official Site",
+      "dateQuote": "Release date: October 20, 2023",
+      "gameplay": "Run, jump and navigate side-scrolling Mario courses.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000068688/87e8aa5f1fdc950b88eae7d7c62ed185c8a6373c845090bbdb2e2cf039b38da1",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "SONIC SUPERSTARS",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-superstars-switch/",
+          "releaseDate": "2023-10-17",
+          "rank": 1,
+          "summary": "An alternative for players seeking side-scrolling platforming."
+        },
+        {
+          "name": "Yooka-Laylee and the Impossible Lair",
+          "maker": "Playtonic Friends",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/yooka-laylee-and-the-impossible-lair-switch/",
+          "releaseDate": "2019-10-08",
+          "rank": 2,
+          "summary": "An alternative for players seeking side-scrolling platforming."
+        },
+        {
+          "name": "Sonic Mania",
+          "maker": "SEGA",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-mania-switch/",
+          "releaseDate": "2017-08-15",
+          "rank": 3,
+          "summary": "An alternative for players seeking side-scrolling platforming."
+        }
+      ]
+    },
+    {
+      "key": "wiiu/super_mario_maker",
+      "series": "Super Mario Maker",
+      "name": "Super Mario Maker",
+      "date": "2015-09-11",
+      "platform": "Wii U",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/super_mario_maker",
+      "sourceTitle": "Super Mario Maker — Nintendo Life",
+      "dateQuote": "North America: 2015-09-11",
+      "gameplay": "Create, share and play side-scrolling Mario courses.",
+      "imageUrl": null,
+      "publisher": "Nintendo",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "competitors": [
+        {
+          "name": "New Super Mario Bros. 2",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/new_super_mario_bros_2",
+          "releaseDate": "2012-08-19",
+          "rank": 1,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        },
+        {
+          "name": "Ultimate NES Remix",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/ultimate_nes_remix",
+          "releaseDate": "2014-12-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        }
+      ]
+    },
+    {
+      "key": "3ds/super_mario_maker_for_nintendo_3ds",
+      "series": "Super Mario Maker",
+      "name": "Super Mario Maker for Nintendo 3DS",
+      "date": "2016-12-02",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/super_mario_maker_for_nintendo_3ds",
+      "sourceTitle": "Super Mario Maker for Nintendo 3DS — Nintendo Life",
+      "dateQuote": "North America 2nd Dec 2016",
+      "gameplay": "Create and play side-scrolling Mario courses.",
+      "imageUrl": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/H2x1_3DS_SuperMarioMakerForNintendo3DS_image1280w.jpg",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "imageCredit": "Nintendo / respective rights holders",
+      "additionalReferences": [
+        {
+          "url": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Super-Mario-Maker-for-Nintendo-3DS-1136170.html",
+          "title": "Super Mario Maker for Nintendo 3DS — Nintendo UK",
+          "confidence": 100,
+          "reasoning": "Official platform and game information; European release date may differ from this pin’s U.S. milestone."
+        }
+      ],
+      "competitors": [
+        {
+          "name": "New Super Mario Bros. 2",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/new_super_mario_bros_2",
+          "releaseDate": "2012-08-19",
+          "rank": 1,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        },
+        {
+          "name": "Ultimate NES Remix",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/ultimate_nes_remix",
+          "releaseDate": "2014-12-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        }
+      ],
+      "imageSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-3DS-games/Super-Mario-Maker-for-Nintendo-3DS-1136170.html"
+    },
+    {
+      "key": "super-mario-maker-2-switch",
+      "series": "Super Mario Maker",
+      "name": "Super Mario Maker 2",
+      "date": "2019-06-28",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-maker-2-switch/",
+      "sourceTitle": "Super Mario Maker 2 — Nintendo Official Site",
+      "dateQuote": "Release date: June 28, 2019",
+      "gameplay": "Create and play side-scrolling Mario courses.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000018694/aac100206f1c50349fd2c48595e55603259ae60a4ab4eefc28e71f41efb78b97",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Ultimate Chicken Horse",
+          "maker": "Clever Endeavour Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/ultimate-chicken-horse-switch/",
+          "releaseDate": "2018-09-25",
+          "rank": 1,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        },
+        {
+          "name": "New Super Mario Bros. 2",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/new_super_mario_bros_2",
+          "releaseDate": "2012-08-19",
+          "rank": 2,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        },
+        {
+          "name": "Ultimate NES Remix",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/ultimate_nes_remix",
+          "releaseDate": "2014-12-05",
+          "rank": 3,
+          "summary": "An alternative for players seeking platforming and short-course challenges."
+        }
+      ]
+    },
+    {
+      "key": "3ds/super_smash_bros_for_nintendo_3ds",
+      "series": "Super Smash Bros.",
+      "name": "Super Smash Bros. for Nintendo 3DS",
+      "date": "2014-10-03",
+      "platform": "Nintendo 3DS",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/super_smash_bros_for_nintendo_3ds",
+      "sourceTitle": "Super Smash Bros. for Nintendo 3DS — Nintendo Life",
+      "dateQuote": "North America 3rd Oct 2014",
+      "gameplay": "Battle with crossover characters in a platform fighting game.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tekken 3D Prime Edition",
+          "maker": "Bandai Namco",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/tekken_3d_prime_edition",
+          "releaseDate": "2012-02-14",
+          "rank": 1,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        },
+        {
+          "name": "Dead or Alive: Dimensions",
+          "maker": "Team Ninja / Koei Tecmo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/dead_or_alive_dimensions",
+          "releaseDate": "2011-05-24",
+          "rank": 2,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        }
+      ]
+    },
+    {
+      "key": "wiiu/super_smash_bros_for_wii_u",
+      "series": "Super Smash Bros.",
+      "name": "Super Smash Bros. for Wii U",
+      "date": "2014-11-21",
+      "platform": "Wii U",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/super_smash_bros_for_wii_u",
+      "sourceTitle": "Super Smash Bros. for Wii U — Nintendo Life",
+      "dateQuote": "North America 21st Nov 2014",
+      "gameplay": "Battle with crossover characters in a platform fighting game.",
+      "imageUrl": null,
+      "maturityBoard": null,
+      "maturityRating": null,
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Tekken 3D Prime Edition",
+          "maker": "Bandai Namco",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/tekken_3d_prime_edition",
+          "releaseDate": "2012-02-14",
+          "rank": 1,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        },
+        {
+          "name": "Dead or Alive: Dimensions",
+          "maker": "Team Ninja / Koei Tecmo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/dead_or_alive_dimensions",
+          "releaseDate": "2011-05-24",
+          "rank": 2,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        }
+      ]
+    },
+    {
+      "key": "super-smash-bros-ultimate-switch",
+      "series": "Super Smash Bros.",
+      "name": "Super Smash Bros. Ultimate",
+      "date": "2018-12-07",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-smash-bros-ultimate-switch/",
+      "sourceTitle": "Super Smash Bros. Ultimate — Nintendo Official Site",
+      "dateQuote": "Release date: December 7, 2018",
+      "gameplay": "Battle with crossover characters in a platform fighting game.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Brawlhalla",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/brawlhalla-switch/",
+          "releaseDate": "2018-11-06",
+          "rank": 1,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        },
+        {
+          "name": "Brawlout",
+          "maker": "Angry Mob Games",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/brawlout-switch/",
+          "releaseDate": "2017-12-19",
+          "rank": 2,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        },
+        {
+          "name": "Tekken 3D Prime Edition",
+          "maker": "Bandai Namco",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/tekken_3d_prime_edition",
+          "releaseDate": "2012-02-14",
+          "rank": 3,
+          "summary": "An alternative for players seeking multiplayer fighting."
+        }
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-breath-of-the-wild-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "date": "2017-03-03",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-breath-of-the-wild-switch/",
+      "sourceTitle": "The Legend of Zelda: Breath of the Wild — Nintendo Official Site",
+      "dateQuote": "Release date: March 3, 2017",
+      "gameplay": "Explore a Zelda adventure with combat, puzzles and discovery.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": 196,
+      "existingSourceUrl": "https://www.ign.com/articles/the-10-best-legend-of-zelda-games",
+      "competitors": [
+        {
+          "name": "The Legend of Zelda: Twilight Princess HD",
+          "maker": "Tantalus / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/legend_of_zelda_twilight_princess_hd",
+          "releaseDate": "2016-03-04",
+          "rank": 1,
+          "summary": "Offers a different Zelda adventure built around exploration, puzzles and combat."
+        },
+        {
+          "name": "Legend of Zelda: The Wind Waker HD",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/wiiu/legend_of_zelda_the_wind_waker_hd",
+          "releaseDate": "2013-10-04",
+          "rank": 2,
+          "summary": "Offers a different Zelda adventure built around exploration, puzzles and combat."
+        }
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-links-awakening-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Link’s Awakening",
+      "date": "2019-09-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-links-awakening-switch/",
+      "sourceTitle": "The Legend of Zelda: Link’s Awakening — Nintendo Official Site",
+      "dateQuote": "Release date: September 20, 2019",
+      "gameplay": "Explore a Zelda adventure with combat, puzzles and discovery.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000020033/df825d5fc6747b66b051f5d3ba6a412fe625ea7878b6a10c93bb8312195682b1",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "OKAMI HD",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/okami-hd-switch/",
+          "releaseDate": "2018-08-09",
+          "rank": 1,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "Oceanhorn - Monster of Uncharted Seas",
+          "maker": "FDG Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/oceanhorn-monster-of-uncharted-seas-switch/",
+          "releaseDate": "2017-06-22",
+          "rank": 2,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        }
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-skyward-sword-hd-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Skyward Sword HD",
+      "date": "2021-07-16",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-skyward-sword-hd-switch/",
+      "sourceTitle": "The Legend of Zelda: Skyward Sword HD — Nintendo Official Site",
+      "dateQuote": "Release date: July 16, 2021",
+      "gameplay": "Explore a Zelda adventure with combat, puzzles and discovery.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000038612/63595b0826bb6ece7b95e4eb2a33e5ad0559224b350a5e2974a44f772963ae59",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Immortals Fenyx Rising",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/immortals-fenyx-rising-switch/",
+          "releaseDate": "2020-12-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "OKAMI HD",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/okami-hd-switch/",
+          "releaseDate": "2018-08-09",
+          "rank": 2,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "Oceanhorn - Monster of Uncharted Seas",
+          "maker": "FDG Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/oceanhorn-monster-of-uncharted-seas-switch/",
+          "releaseDate": "2017-06-22",
+          "rank": 3,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        }
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-tears-of-the-kingdom-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Tears of the Kingdom",
+      "date": "2023-05-12",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/",
+      "sourceTitle": "The Legend of Zelda: Tears of the Kingdom — Nintendo Official Site",
+      "dateQuote": "Release date: May 12, 2023",
+      "gameplay": "Explore a Zelda adventure with combat, puzzles and discovery.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000063714/fb30eab428df3fc993b41c76e20f72e4d76d49734d17d31996b5ab61c414b117",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": 145,
+      "existingSourceUrl": "https://www.polygon.com/zelda-tears-of-the-kingdom-guide/23592513/totk-pre-order-nintendo-switch-collectors-edition-botw-2",
+      "competitors": [
+        {
+          "name": "Immortals Fenyx Rising",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/immortals-fenyx-rising-switch/",
+          "releaseDate": "2020-12-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "OKAMI HD",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/okami-hd-switch/",
+          "releaseDate": "2018-08-09",
+          "rank": 2,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "Oceanhorn - Monster of Uncharted Seas",
+          "maker": "FDG Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/oceanhorn-monster-of-uncharted-seas-switch/",
+          "releaseDate": "2017-06-22",
+          "rank": 3,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        }
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-echoes-of-wisdom-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Echoes of Wisdom",
+      "date": "2024-09-26",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-echoes-of-wisdom-switch/",
+      "sourceTitle": "The Legend of Zelda: Echoes of Wisdom — Nintendo Official Site",
+      "dateQuote": "Release date: September 26, 2024",
+      "gameplay": "Explore a Zelda adventure with combat, puzzles and discovery.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000084618/e3a49cf14180cec09c515595fb7121b048a0f8327eae2d248909d0f0c64a9dc9",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Immortals Fenyx Rising",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/immortals-fenyx-rising-switch/",
+          "releaseDate": "2020-12-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "OKAMI HD",
+          "maker": "CAPCOM",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/okami-hd-switch/",
+          "releaseDate": "2018-08-09",
+          "rank": 2,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        },
+        {
+          "name": "Oceanhorn - Monster of Uncharted Seas",
+          "maker": "FDG Entertainment",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/oceanhorn-monster-of-uncharted-seas-switch/",
+          "releaseDate": "2017-06-22",
+          "rank": 3,
+          "summary": "An alternative for players seeking exploration, action and adventure puzzles."
+        }
+      ]
+    },
+    {
+      "key": "zelda-ocarina-of-time-remake-switch-2",
+      "name": "The Legend of Zelda: Ocarina of Time Remake",
+      "series": "The Legend of Zelda",
+      "date": "2026-11-05",
+      "dateConfidence": "scheduled",
+      "existingOnly": true,
+      "existingProdId": 296,
+      "existingSourceUrl": "https://gameranx.com/updates/id/564006/article/the-legend-of-zelda-ocarina-of-time-releases-this-november-5-on-switch-2/",
+      "platform": "Nintendo Switch 2",
+      "region": "As announced",
+      "sourceUrl": "https://gameranx.com/updates/id/564006/article/the-legend-of-zelda-ocarina-of-time-releases-this-november-5-on-switch-2/",
+      "sourceTitle": "The Legend of Zelda: Ocarina of Time Remake — existing release pin, source re-opened 2026-10-27",
+      "dateQuote": "Nintendo confirmed the release date of November 5, 2026.",
+      "gameplay": "Existing announced release; original content, author and date confidence are preserved.",
+      "maturityBoard": null,
+      "maturityRating": null,
+      "imageUrl": null,
+      "competitors": [
+        {
+          "name": "The Legend of Zelda: Tears of the Kingdom",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/",
+          "releaseDate": "2023-05-12",
+          "rank": 1,
+          "summary": "Competes through exploration, adventure puzzles and action combat."
+        },
+        {
+          "name": "Immortals Fenyx Rising",
+          "maker": "Ubisoft",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/immortals-fenyx-rising-switch/",
+          "releaseDate": "2020-12-03",
+          "rank": 2,
+          "summary": "Competes through exploration, adventure puzzles and action combat."
+        }
+      ]
+    },
+    {
+      "key": "warioware-get-it-together-switch",
+      "series": "WarioWare",
+      "name": "WarioWare: Get It Together!",
+      "date": "2021-09-10",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/warioware-get-it-together-switch/",
+      "sourceTitle": "WarioWare: Get It Together! — Nintendo Official Site",
+      "dateQuote": "Release date: September 10, 2021",
+      "gameplay": "Complete rapid-fire microgames featuring Wario and friends.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000042929/b572221a658515d2bf2c10961c049727eb147a75290b7a134d4d659f86dc6912",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "1-2-Switch",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/1-2-switch-switch/",
+          "releaseDate": "2017-03-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking short multiplayer and party challenges."
+        },
+        {
+          "name": "Super Mario Party",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-switch/",
+          "releaseDate": "2018-10-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking short multiplayer and party challenges."
+        },
+        {
+          "name": "Overcooked! 2",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-2-switch/",
+          "releaseDate": "2018-08-07",
+          "rank": 3,
+          "summary": "An alternative for players seeking short multiplayer and party challenges."
+        }
+      ]
+    },
+    {
+      "key": "warioware-move-it-switch",
+      "series": "WarioWare",
+      "name": "WarioWare: Move It!",
+      "date": "2023-11-03",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/warioware-move-it-switch/",
+      "sourceTitle": "WarioWare: Move It! — Nintendo Official Site",
+      "dateQuote": "Release date: November 3, 2023",
+      "gameplay": "Complete rapid-fire microgames featuring Wario and friends.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000068678/5b072b55e8a6993071b4cde9f74d9cf7aeac0b52141177efed6c8ce9b580a435",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Everyone 10+",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "1-2-Switch",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/1-2-switch-switch/",
+          "releaseDate": "2017-03-03",
+          "rank": 1,
+          "summary": "An alternative for players seeking short multiplayer and party challenges."
+        },
+        {
+          "name": "Super Mario Party",
+          "maker": "Nintendo",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-switch/",
+          "releaseDate": "2018-10-05",
+          "rank": 2,
+          "summary": "An alternative for players seeking short multiplayer and party challenges."
+        },
+        {
+          "name": "Overcooked! 2",
+          "maker": "Team17",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-2-switch/",
+          "releaseDate": "2018-08-07",
+          "rank": 3,
+          "summary": "An alternative for players seeking short multiplayer and party challenges."
+        }
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-2-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles 2",
+      "date": "2017-12-01",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-2-switch/",
+      "sourceTitle": "Xenoblade Chronicles 2 — Nintendo Official Site",
+      "dateQuote": "Release date: December 1, 2017",
+      "gameplay": "Explore a large-scale role-playing adventure with party-based combat.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000000707/4cd12c9f2233dc671d0ac2bc208f8551d1d0b62c956d6d477585bb42c1ef09ea",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "Monster Hunter Stories",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+          "releaseDate": "2017-09-08",
+          "rank": 1,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Mario & Luigi: Paper Jam",
+          "maker": "AlphaDream / Nintendo",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_paper_jam",
+          "releaseDate": "2016-01-22",
+          "rank": 2,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        }
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-definitive-edition-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles Definitive Edition",
+      "date": "2020-05-29",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-definitive-edition-switch/",
+      "sourceTitle": "Xenoblade Chronicles Definitive Edition — Nintendo Official Site",
+      "dateQuote": "Release date: May 29, 2020",
+      "gameplay": "Explore a large-scale role-playing adventure with party-based combat.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000029711/d55f4d73ad88beed1ea061aaaacbe772e40f46b598db513f3f85369d3455aa82",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition-switch/",
+          "releaseDate": "2019-09-27",
+          "rank": 1,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Octopath Traveler",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/octopath-traveler-switch/",
+          "releaseDate": "2018-07-13",
+          "rank": 2,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Monster Hunter Stories",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+          "releaseDate": "2017-09-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        }
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-3-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles 3",
+      "date": "2022-07-29",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-3-switch/",
+      "sourceTitle": "Xenoblade Chronicles 3 — Nintendo Official Site",
+      "dateQuote": "Release date: July 29, 2022",
+      "gameplay": "Explore a large-scale role-playing adventure with party-based combat.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000053336/e933b48650b33b355e9cf2583da5c94b77180e40fb02d050041083dd62f4df39",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": 187,
+      "existingSourceUrl": "https://www.ign.com/articles/xenoblade-chronicles-3-review",
+      "competitors": [
+        {
+          "name": "DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition-switch/",
+          "releaseDate": "2019-09-27",
+          "rank": 1,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Octopath Traveler",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/octopath-traveler-switch/",
+          "releaseDate": "2018-07-13",
+          "rank": 2,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Monster Hunter Stories",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+          "releaseDate": "2017-09-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        }
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-x-definitive-edition-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles X: Definitive Edition",
+      "date": "2025-03-20",
+      "platform": "Nintendo Switch",
+      "region": "United States",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-x-definitive-edition-switch/",
+      "sourceTitle": "Xenoblade Chronicles X: Definitive Edition — Nintendo Official Site",
+      "dateQuote": "Release date: March 20, 2025",
+      "gameplay": "Explore a large-scale role-playing adventure with party-based combat.",
+      "imageUrl": "https://assets.nintendo.com/image/upload/q_auto/f_jpg/store/software/switch/70010000088832/d33ed7f51de601b10cafa5814fd786bbad317b0421a43d54917a2c647be2f23b",
+      "imageCredit": "Nintendo / respective rights holders",
+      "maturityBoard": "ESRB",
+      "maturityRating": "Teen",
+      "publisher": "Nintendo",
+      "existingProdId": null,
+      "competitors": [
+        {
+          "name": "DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition-switch/",
+          "releaseDate": "2019-09-27",
+          "rank": 1,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Octopath Traveler",
+          "maker": "SQUARE ENIX",
+          "sourceUrl": "https://www.nintendo.com/us/store/products/octopath-traveler-switch/",
+          "releaseDate": "2018-07-13",
+          "rank": 2,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        },
+        {
+          "name": "Monster Hunter Stories",
+          "maker": "Capcom",
+          "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+          "releaseDate": "2017-09-08",
+          "rank": 3,
+          "summary": "An alternative for players seeking character-led console role-playing."
+        }
+      ]
+    }
+  ],
+  "researchQueue": [],
+  "competitorMethod": "Editorial ranking inferred from opened product/genre specifications. All selected rival editions were released by the pin’s date. Cross-platform entries address the same gaming segment. Queued gaps are explicit; no future rival is backdated.",
+  "rivalSources": [
+    {
+      "name": "Sonic Mania",
+      "maker": "SEGA",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-mania-switch/",
+      "releaseDate": "2017-08-15"
+    },
+    {
+      "name": "Rayman Legends Definitive Edition",
+      "maker": "Ubisoft",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/rayman-legends-definitive-edition-switch/",
+      "releaseDate": "2017-09-12"
+    },
+    {
+      "name": "A Hat in Time",
+      "maker": "Balor Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/a-hat-in-time-switch/",
+      "releaseDate": "2019-10-18"
+    },
+    {
+      "name": "Spyro Reignited Trilogy",
+      "maker": "Activision",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/spyro-reignited-trilogy-switch/",
+      "releaseDate": "2019-09-03"
+    },
+    {
+      "name": "Crash Bandicoot N. Sane Trilogy",
+      "maker": "Activision",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/crash-bandicoot-n-sane-trilogy-switch/",
+      "releaseDate": "2018-06-29"
+    },
+    {
+      "name": "Celeste",
+      "maker": "Maddy Makes Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/celeste-switch/",
+      "releaseDate": "2018-01-25"
+    },
+    {
+      "name": "Hollow Knight",
+      "maker": "Team Cherry",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hollow-knight-switch/",
+      "releaseDate": "2018-06-12"
+    },
+    {
+      "name": "Axiom Verge",
+      "maker": "Thomas Happ Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/axiom-verge-switch/",
+      "releaseDate": "2017-10-05"
+    },
+    {
+      "name": "Ori and the Will of the Wisps",
+      "maker": "iam8bit",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/ori-and-the-will-of-the-wisps-switch/",
+      "releaseDate": "2020-09-17"
+    },
+    {
+      "name": "FAST RMX",
+      "maker": "Shin’en Multimedia",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fast-rmx-switch/",
+      "releaseDate": "2017-03-03"
+    },
+    {
+      "name": "Team Sonic Racing",
+      "maker": "SEGA",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/team-sonic-racing-switch/",
+      "releaseDate": "2019-05-21"
+    },
+    {
+      "name": "Crash Team Racing Nitro-Fueled",
+      "maker": "Activision",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/crash-team-racing-nitro-fueled-switch/",
+      "releaseDate": "2019-06-21"
+    },
+    {
+      "name": "Rocket League",
+      "maker": "Epic Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/rocket-league-switch/",
+      "releaseDate": "2017-11-14"
+    },
+    {
+      "name": "Overcooked Special Edition",
+      "maker": "Team17",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-special-edition-switch/",
+      "releaseDate": "2017-07-27"
+    },
+    {
+      "name": "Overcooked! 2",
+      "maker": "Team17",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/overcooked-2-switch/",
+      "releaseDate": "2018-08-07"
+    },
+    {
+      "name": "Moving Out",
+      "maker": "Team17",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/moving-out-switch/",
+      "releaseDate": "2020-04-28"
+    },
+    {
+      "name": "Stardew Valley",
+      "maker": "ConcernedApe",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/stardew-valley-switch/",
+      "releaseDate": "2017-10-05"
+    },
+    {
+      "name": "My Time at Portia",
+      "maker": "Focus Entertainment",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/my-time-at-portia-switch/",
+      "releaseDate": "2019-04-16"
+    },
+    {
+      "name": "DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition",
+      "maker": "SQUARE ENIX",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition-switch/",
+      "releaseDate": "2019-09-27"
+    },
+    {
+      "name": "Octopath Traveler",
+      "maker": "SQUARE ENIX",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/octopath-traveler-switch/",
+      "releaseDate": "2018-07-13"
+    },
+    {
+      "name": "Monster Hunter Stories 2: Wings of Ruin",
+      "maker": "CAPCOM",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/monster-hunter-stories-2-wings-of-ruin-switch/",
+      "releaseDate": "2021-07-09"
+    },
+    {
+      "name": "TRIANGLE STRATEGY",
+      "maker": "SQUARE ENIX",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/triangle-strategy-switch/",
+      "releaseDate": "2022-03-04"
+    },
+    {
+      "name": "Wargroove",
+      "maker": "Chucklefish",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/wargroove-switch/",
+      "releaseDate": "2019-02-01"
+    },
+    {
+      "name": "Into the Breach",
+      "maker": "Subset Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/into-the-breach-switch/",
+      "releaseDate": "2018-08-28"
+    },
+    {
+      "name": "Mario + Rabbids Kingdom Battle",
+      "maker": "Ubisoft",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-plus-rabbids-kingdom-battle-switch/",
+      "releaseDate": "2017-08-29"
+    },
+    {
+      "name": "Brawlhalla",
+      "maker": "Ubisoft",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/brawlhalla-switch/",
+      "releaseDate": "2018-11-06"
+    },
+    {
+      "name": "Golf Story",
+      "maker": "Sidebar Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/golf-story-switch/",
+      "releaseDate": "2017-09-28"
+    },
+    {
+      "name": "PGA TOUR 2K21",
+      "maker": "2K",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pga-tour-2k21-switch/",
+      "releaseDate": "2020-08-21"
+    },
+    {
+      "name": "Tennis World Tour",
+      "maker": "Nacon",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/tennis-world-tour-switch/",
+      "releaseDate": "2018-10-29"
+    },
+    {
+      "name": "AO Tennis 2",
+      "maker": "Nacon",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/ao-tennis-2-switch/",
+      "releaseDate": "2020-02-11"
+    },
+    {
+      "name": "Phoenix Wright: Ace Attorney Trilogy",
+      "maker": "CAPCOM",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/phoenix-wright-ace-attorney-trilogy-switch/",
+      "releaseDate": "2019-04-09"
+    },
+    {
+      "name": "Immortals Fenyx Rising",
+      "maker": "Ubisoft",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/immortals-fenyx-rising-switch/",
+      "releaseDate": "2020-12-03"
+    },
+    {
+      "name": "OKAMI HD",
+      "maker": "CAPCOM",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/okami-hd-switch/",
+      "releaseDate": "2018-08-09"
+    },
+    {
+      "name": "Oceanhorn - Monster of Uncharted Seas",
+      "maker": "FDG Entertainment",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/oceanhorn-monster-of-uncharted-seas-switch/",
+      "releaseDate": "2017-06-22"
+    },
+    {
+      "name": "Hades",
+      "maker": "Supergiant Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hades-switch/",
+      "releaseDate": "2020-09-17"
+    },
+    {
+      "name": "ASTRAL CHAIN",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/astral-chain-switch/",
+      "releaseDate": "2019-08-30"
+    },
+    {
+      "name": "Yoshi’s Crafted World",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/yoshis-crafted-world-switch/",
+      "releaseDate": "2019-03-29"
+    },
+    {
+      "name": "Brawlout",
+      "maker": "Angry Mob Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/brawlout-switch/",
+      "releaseDate": "2017-12-19"
+    },
+    {
+      "name": "Tennis",
+      "maker": "D3PUBLISHER",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/tennis-switch/",
+      "releaseDate": "2018-01-25"
+    },
+    {
+      "name": "Masters of Anima",
+      "maker": "Focus Entertainment",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/masters-of-anima-switch/",
+      "releaseDate": "2018-04-10"
+    },
+    {
+      "name": "Tinykin",
+      "maker": "tinyBuild Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/tinykin-switch/",
+      "releaseDate": "2022-08-30"
+    },
+    {
+      "name": "The Wild at Heart",
+      "maker": "Balor Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-wild-at-heart-switch/",
+      "releaseDate": "2021-11-16"
+    },
+    {
+      "name": "Journey to the Savage Planet",
+      "maker": "505 Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/journey-to-the-savage-planet-switch/",
+      "releaseDate": "2020-05-21"
+    },
+    {
+      "name": "Subnautica",
+      "maker": "Unknown Worlds Entertainment",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/subnautica-switch/",
+      "releaseDate": "2021-05-14"
+    },
+    {
+      "name": "Ghostbusters: The Video Game Remastered",
+      "maker": "Saber Interactive Incorporated",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/ghostbusters-the-video-game-remastered-switch/",
+      "releaseDate": "2019-10-04"
+    },
+    {
+      "name": "Hello Neighbor",
+      "maker": "tinyBuild Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hello-neighbor-switch/",
+      "releaseDate": "2018-07-27"
+    },
+    {
+      "name": "1-2-Switch",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/1-2-switch-switch/",
+      "releaseDate": "2017-03-03"
+    },
+    {
+      "name": "Murder by Numbers",
+      "maker": "The Irregular Corporation",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/murder-by-numbers-switch/",
+      "releaseDate": "2020-03-05"
+    },
+    {
+      "name": "Jenny LeClue - Detectivu",
+      "maker": "Mografi",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/jenny-leclue-detectivu-switch/",
+      "releaseDate": "2020-08-26"
+    },
+    {
+      "name": "Fate/EXTELLA: The Umbral Star",
+      "maker": "Marvelous (XSEED)",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fate-extella-the-umbral-star-switch/",
+      "releaseDate": "2017-07-25"
+    },
+    {
+      "name": "Lost in Random",
+      "maker": "Electronic Arts",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/lost-in-random-switch/",
+      "releaseDate": "2021-09-10"
+    },
+    {
+      "name": "Golf With Your Friends",
+      "maker": "Team17",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/golf-with-your-friends-switch/",
+      "releaseDate": "2020-05-19"
+    },
+    {
+      "name": "Tennis World Tour 2",
+      "maker": "Nacon",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/tennis-world-tour-2-switch/",
+      "releaseDate": "2020-11-03"
+    },
+    {
+      "name": "Monster Sanctuary",
+      "maker": "Team17",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/monster-sanctuary-switch/",
+      "releaseDate": "2020-12-08"
+    },
+    {
+      "name": "Digimon Story Cyber Sleuth: Complete Edition",
+      "maker": "Bandai Namco Entertainment",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/digimon-story-cyber-sleuth-complete-edition-switch/",
+      "releaseDate": "2019-10-18"
+    },
+    {
+      "name": "Chocobo's Mystery Dungeon EVERY BUDDY!",
+      "maker": "SQUARE ENIX",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/chocobos-mystery-dungeon-every-buddy-switch/",
+      "releaseDate": "2019-03-20"
+    },
+    {
+      "name": "Snake Pass",
+      "maker": "Secret Mode",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/snake-pass-switch/",
+      "releaseDate": "2017-03-28"
+    },
+    {
+      "name": "Poi: Explorer Edition",
+      "maker": "PolyKid",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/poi-explorer-edition-switch/",
+      "releaseDate": "2017-10-24"
+    },
+    {
+      "name": "Ultimate Chicken Horse",
+      "maker": "Clever Endeavour Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/ultimate-chicken-horse-switch/",
+      "releaseDate": "2018-09-25"
+    },
+    {
+      "name": "Super Soccer Blast: America VS Europe",
+      "maker": "Unfinished Pixel",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-soccer-blast-america-vs-europe-switch/",
+      "releaseDate": "2021-06-11"
+    },
+    {
+      "name": "Yooka-Laylee and the Impossible Lair",
+      "maker": "Playtonic Friends",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/yooka-laylee-and-the-impossible-lair-switch/",
+      "releaseDate": "2019-10-08"
+    },
+    {
+      "name": "Sonic Frontiers",
+      "maker": "SEGA",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-frontiers-switch/",
+      "releaseDate": "2022-11-08"
+    },
+    {
+      "name": "SONIC SUPERSTARS",
+      "maker": "SEGA",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-superstars-switch/",
+      "releaseDate": "2023-10-17"
+    },
+    {
+      "name": "Sonic Racing: CrossWorlds",
+      "maker": "SEGA",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/sonic-racing-crossworlds-switch/",
+      "releaseDate": "2025-09-25"
+    },
+    {
+      "name": "Super Mario Odyssey",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+      "releaseDate": "2017-10-27"
+    },
+    {
+      "name": "Super Mario 3D World + Bowser’s Fury",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-3d-world-plus-bowsers-fury-switch/",
+      "releaseDate": "2021-02-12"
+    },
+    {
+      "name": "Mario Kart World",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-world-switch-2/",
+      "releaseDate": "2025-06-05"
+    },
+    {
+      "name": "Super Mario Party",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-switch/",
+      "releaseDate": "2018-10-05"
+    },
+    {
+      "name": "The Legend of Zelda: Tears of the Kingdom",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/",
+      "releaseDate": "2023-05-12"
+    },
+    {
+      "name": "Pokémon Scarlet",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/pokemon-scarlet-switch/",
+      "releaseDate": "2022-11-18"
+    },
+    {
+      "name": "Metroid Dread",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/metroid-dread-switch/",
+      "releaseDate": "2021-10-08"
+    },
+    {
+      "name": "Paper Mario: The Origami King",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-origami-king-switch/",
+      "releaseDate": "2020-07-17"
+    },
+    {
+      "name": "Paper Mario: The Thousand-Year Door",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-thousand-year-door-switch/",
+      "releaseDate": "2024-05-23"
+    },
+    {
+      "name": "Fire Emblem Warriors",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-switch/",
+      "releaseDate": "2017-10-20"
+    },
+    {
+      "name": "Hyrule Warriors: Definitive Edition",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-definitive-edition-switch/",
+      "releaseDate": "2018-05-18"
+    },
+    {
+      "name": "Hyrule Warriors: Age of Calamity",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-calamity-switch/",
+      "releaseDate": "2020-11-20"
+    },
+    {
+      "name": "New Super Mario Bros. 2",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/new_super_mario_bros_2",
+      "releaseDate": "2012-08-19"
+    },
+    {
+      "name": "Ultimate NES Remix",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/ultimate_nes_remix",
+      "releaseDate": "2014-12-05"
+    },
+    {
+      "name": "Etrian Mystery Dungeon",
+      "maker": "Atlus / Spike Chunsoft",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/etrian_mystery_dungeon",
+      "releaseDate": "2015-04-07"
+    },
+    {
+      "name": "Call of Duty: Black Ops II",
+      "maker": "Treyarch / Activision",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/call_of_duty_black_ops_ii",
+      "releaseDate": "2012-11-18"
+    },
+    {
+      "name": "Call of Duty: Ghosts",
+      "maker": "Infinity Ward / Activision",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/call_of_duty_ghosts",
+      "releaseDate": "2013-11-05"
+    },
+    {
+      "name": "Spirit Camera: The Cursed Memoir",
+      "maker": "Koei Tecmo / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/spirit_camera_the_cursed_memoir",
+      "releaseDate": "2012-04-13"
+    },
+    {
+      "name": "Resident Evil Revelations",
+      "maker": "Capcom",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/resident_evil_revelations",
+      "releaseDate": "2012-02-07"
+    },
+    {
+      "name": "Harvest Moon: A New Beginning",
+      "maker": "Marvelous / Natsume",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/harvest_moon_a_new_beginning",
+      "releaseDate": "2012-11-06"
+    },
+    {
+      "name": "Tekken 3D Prime Edition",
+      "maker": "Bandai Namco",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/tekken_3d_prime_edition",
+      "releaseDate": "2012-02-14"
+    },
+    {
+      "name": "Dead or Alive: Dimensions",
+      "maker": "Team Ninja / Koei Tecmo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/dead_or_alive_dimensions",
+      "releaseDate": "2011-05-24"
+    },
+    {
+      "name": "Tom Clancy's Ghost Recon: Shadow Wars 3D",
+      "maker": "Ubisoft",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/tom_clancys_ghost_recon_shadow_wars",
+      "releaseDate": "2011-03-27"
+    },
+    {
+      "name": "Mario & Luigi: Paper Jam",
+      "maker": "AlphaDream / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_paper_jam",
+      "releaseDate": "2016-01-22"
+    },
+    {
+      "name": "Paper Mario: Sticker Star",
+      "maker": "Intelligent Systems / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/paper_mario_sticker_star",
+      "releaseDate": "2012-11-11"
+    },
+    {
+      "name": "Sonic & All-Stars Racing Transformed",
+      "maker": "Sumo Digital / Sega",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/sonic_and_all-stars_racing_transformed",
+      "releaseDate": "2012-11-18"
+    },
+    {
+      "name": "Monster Hunter Stories",
+      "maker": "Capcom",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/monster_hunter_stories",
+      "releaseDate": "2017-09-08"
+    },
+    {
+      "name": "Yo-kai Watch 2: Bony Spirits & Fleshy Souls",
+      "maker": "Level-5 / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/yo-kai_watch_2_bony_spirits_and_fleshy_souls",
+      "releaseDate": "2016-09-30"
+    },
+    {
+      "name": "Little King's Story",
+      "maker": "Cing / Marvelous",
+      "sourceUrl": "https://www.nintendolife.com/games/wii/little_kings_story",
+      "releaseDate": "2009-07-21"
+    },
+    {
+      "name": "Mario Tennis: Ultra Smash",
+      "maker": "Camelot / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/mario_tennis_ultra_smash",
+      "releaseDate": "2015-11-20"
+    },
+    {
+      "name": "Legend of Zelda: The Wind Waker HD",
+      "maker": "Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/legend_of_zelda_the_wind_waker_hd",
+      "releaseDate": "2013-10-04"
+    },
+    {
+      "name": "The Legend of Zelda: Twilight Princess HD",
+      "maker": "Tantalus / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/legend_of_zelda_twilight_princess_hd",
+      "releaseDate": "2016-03-04"
+    },
+    {
+      "name": "Castlevania: Lords of Shadow - Mirror of Fate",
+      "maker": "MercurySteam / Konami",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/castlevania_lords_of_shadow_-_mirror_of_fate",
+      "releaseDate": "2013-03-05"
+    },
+    {
+      "name": "Hyrule Warriors",
+      "maker": "Omega Force / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/hyrule_warriors",
+      "releaseDate": "2014-09-26"
+    },
+    {
+      "name": "Bayonetta",
+      "maker": "PlatinumGames / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/bayonetta",
+      "releaseDate": "2014-10-24"
+    },
+    {
+      "name": "F-Zero GX",
+      "maker": "Amusement Vision / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/gamecube/f-zero_gx",
+      "releaseDate": "2003-08-26"
+    },
+    {
+      "name": "Pokémon X & Y",
+      "maker": "Game Freak / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/pokemon_x_and_y",
+      "releaseDate": "2013-10-12"
+    },
+    {
+      "name": "Sega Soccer Slam",
+      "maker": "Black Box / Sega",
+      "sourceUrl": "https://www.nintendolife.com/games/gamecube/sega_soccer_slam",
+      "releaseDate": "2002-03-18"
+    },
+    {
+      "name": "Warlocked",
+      "maker": "Bits Studios / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/gbc/warlocked",
+      "releaseDate": "2000-07-24"
+    },
+    {
+      "name": "Heroes of Might and Magic II",
+      "maker": "KnowWonder / 3DO",
+      "sourceUrl": "https://www.nintendolife.com/games/gbc/heroes_of_might_and_magic_ii",
+      "releaseDate": "2000-12-01"
+    },
+    {
+      "name": "Rune Factory 3: A Fantasy Harvest Moon",
+      "maker": "Neverland / Natsume",
+      "sourceUrl": "https://www.nintendolife.com/games/ds/rune_factory_3_a_fantasy_harvest_moon",
+      "releaseDate": "2010-11-09"
+    },
+    {
+      "name": "Smashing Drive",
+      "maker": "Gaelco / Namco",
+      "sourceUrl": "https://www.nintendolife.com/games/gamecube/smashing_drive",
+      "releaseDate": "2002-02-18"
+    },
+    {
+      "name": "Let's Golf! 3D",
+      "maker": "Gameloft",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds-eshop/lets_golf_3d",
+      "releaseDate": "2011-07-28"
+    },
+    {
+      "name": "Shantae And The Pirate's Curse",
+      "maker": "WayForward",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds-eshop/shantae_and_the_pirates_curse",
+      "releaseDate": "2014-10-23"
+    },
+    {
+      "name": "Mario Tennis Open",
+      "maker": "Camelot / Nintendo",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/mario_tennis_open",
+      "releaseDate": "2012-05-20"
+    },
+    {
+      "name": "Wii Sports Club",
+      "maker": "Nintendo / Bandai Namco",
+      "sourceUrl": "https://www.nintendolife.com/games/wiiu/wii_sports_club",
+      "releaseDate": "2014-07-25"
+    },
+    {
+      "name": "Shin Megami Tensei: Devil Survivor Overclocked",
+      "maker": "Atlus",
+      "sourceUrl": "https://www.nintendolife.com/games/3ds/shin_megami_tensei_devil_survivor_overclocked",
+      "releaseDate": "2011-08-23"
+    },
+    {
+      "name": "Fortnite",
+      "maker": "Epic Games",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/fortnite-switch/",
+      "releaseDate": "2018-06-12"
+    },
+    {
+      "name": "Plants vs. Zombies: Battle for Neighborville Complete Edition",
+      "maker": "Electronic Arts",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/plants-vs-zombies-battle-for-neighborville-complete-edition-switch/",
+      "releaseDate": "2021-03-19"
+    },
+    {
+      "name": "Bug Fables: The Everlasting Sapling",
+      "maker": "DANGEN Entertainment",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/bug-fables-the-everlasting-sapling-switch/",
+      "releaseDate": "2020-05-28"
+    },
+    {
+      "name": "Overwatch",
+      "maker": "Blizzard",
+      "sourceUrl": "https://blizzard.gamespress.com/zh-CN/THE-FUTURE-IS-NOW-OVERWATCH-IS-LIVE-ON-CONSOLE-AND-PC",
+      "releaseDate": "2016-05-24"
+    },
+    {
+      "name": "Plants vs. Zombies: Garden Warfare 2",
+      "maker": "PopCap / Electronic Arts",
+      "sourceUrl": "https://www.ea.com/games/plants-vs-zombies/plants-vs-zombies-garden-warfare-2",
+      "releaseDate": "2016-02-23"
+    },
+    {
+      "name": "True Swing Golf",
+      "maker": "T&E Soft / Nintendo",
+      "sourceUrl": "https://www.gamespot.com/reviews/true-swing-golf-review/1900-6142778/",
+      "releaseDate": "2006-01-23"
+    },
+    {
+      "name": "Mario Smash Football (Super Mario Strikers)",
+      "maker": "Next Level Games / Nintendo",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-GameCube/Mario-Smash-Football-268335.html",
+      "releaseDate": "2005-11-18"
+    }
+  ],
+  "reviewBoundaryMoves": [
+    {
+      "childSourceUrl": "https://www.pcgamesn.com/street-fighter-6/release-date#:~:text=Street%20Fighter%206%20release%20date%20Street%20Fighter%206,date%20was%20revealed%20at%20The%20Game%20Awards%202022.",
+      "fromSourceUrl": "https://www.polygon.com/zelda-tears-of-the-kingdom-guide/23592513/totk-pre-order-nintendo-switch-collectors-edition-botw-2",
+      "toSourceUrl": "https://www.ign.com/articles/resident-evil-4-remake-review",
+      "reason": "Keep this unrelated review outside the Nintendo series after extracting its Nintendo predecessor."
+    },
+    {
+      "childSourceUrl": "https://www.pcgamer.com/call-of-duty-modern-warfare-2-review/",
+      "fromSourceUrl": "https://www.ign.com/articles/kirby-and-the-forgotten-land-review",
+      "toSourceUrl": "https://www.ign.com/articles/gran-turismo-7-review",
+      "reason": "Keep this unrelated review outside the Nintendo series after extracting its Nintendo predecessor."
+    },
+    {
+      "childSourceUrl": "https://www.ign.com/articles/a-plague-tale-requiem-review",
+      "fromSourceUrl": "https://www.ign.com/articles/pokemon-scarlet-and-violet-review",
+      "toSourceUrl": "https://www.ign.com/articles/stray-review",
+      "reason": "Keep this unrelated review outside the Nintendo series after extracting its Nintendo predecessor."
+    },
+    {
+      "childSourceUrl": "https://www.ign.com/articles/the-last-of-us-part-i-review",
+      "fromSourceUrl": "https://www.ign.com/articles/xenoblade-chronicles-3-review",
+      "toSourceUrl": "https://www.ign.com/articles/sifu-review-ps5",
+      "reason": "Keep this unrelated review outside the Nintendo series after extracting its Nintendo predecessor."
+    }
+  ],
+  "mediaResearchGaps": [
+    {
+      "key": "gba/advance_wars",
+      "name": "Advance Wars",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "gamecube/kirby_air_ride",
+      "name": "Kirby Air Ride",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "3ds/luigis_mansion_dark_moon",
+      "name": "Luigi's Mansion: Dark Moon",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "3ds/mario_and_luigi_superstar_saga_plus_bowsers_minions",
+      "name": "Mario & Luigi: Superstar Saga + Bowser's Minions",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "3ds/mario_golf_world_tour",
+      "name": "Mario Golf: World Tour",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "wii/mario_strikers_charged",
+      "name": "Mario Strikers Charged",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "wiiu/splatoon",
+      "name": "Splatoon",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "3ds/super_smash_bros_for_nintendo_3ds",
+      "name": "Super Smash Bros. for Nintendo 3DS",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "wiiu/super_smash_bros_for_wii_u",
+      "name": "Super Smash Bros. for Wii U",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "wiiu/super_mario_maker",
+      "name": "Super Mario Maker",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    },
+    {
+      "key": "wiiu/mario_tennis_ultra_smash",
+      "name": "Mario Tennis: Ultra Smash",
+      "reason": "Historical release specifications were opened. No verified downloadable original-edition official artwork was retained; no substitute image was used."
+    }
+  ]
+}

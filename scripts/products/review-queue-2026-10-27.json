@@ -1,14 +1,14 @@
 {
-  "checkedAt": "2026-10-28T03:52:45.713315+00:00",
+  "checkedAt": "2026-10-28T04:51:29.663949+00:00",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
       "table": "PinTaste",
       "pins": 228,
-      "reviews": 491,
+      "reviews": 490,
       "minimum": 1,
       "belowMinimum": 0,
-      "undatedNonMichelin": 36,
+      "undatedNonMichelin": 35,
       "unscoredDated": 0
     },
     {
@@ -26,7 +26,7 @@
       "reviews": 511,
       "minimum": 3,
       "belowMinimum": 8,
-      "undatedNonMichelin": 10,
+      "undatedNonMichelin": 9,
       "unscoredDated": 0
     },
     {
@@ -589,6 +589,12 @@
       "pinId": 19669,
       "reason": "Two original launch-era Japanese Pro web hands-ons replace encyclopedia relay. Web 10/15-second and UI-resolution findings are not launch API endpoint measurements. Preserve source hand, launch API axes, speed and realism null; seek direct API-specific generation tests before rescoring. MindStudio remains commentary, not a hands-on test.",
       "evidenceCatalog": "scripts/products/review-maintenance-round21-2026-10-27.json"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "reason": "One original 116-PS Trend/16-inch Autonet road test verified. Three retained reports require exact-trim screening; do not claim three exact base-variant independent tests. Croatian price and wheel/suspension findings do not replace German launch price or justify rescoring handling null.",
+      "evidenceCatalog": "scripts/products/review-maintenance-round22-2026-10-27.json"
     }
   ],
   "resolvedCoverageFollowUps": [
@@ -948,8 +954,8 @@
       "pinId": 5629,
       "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
       "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
-      "status": "needs-research",
-      "reason": "Opened rendered original URL, but exact saved quotation was not found in returned body. Inspect original source, typography/translation and exact product or branch before correcting or replacing; returned metadata alone cannot date an unverified quote. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 11 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round23: Saved COREFITLAB quotation is an English translation that repeated original-source checks have not independently reverified. Existing title explicitly labels it brand-affiliated, not independent tasting. Remove from native reviews rather than certify an unverified translated promotional extract; original day remains unknown. This does not assert fraud or establish sponsorship contract terms. Removal, retained consumer tasting, scope evidence and rendered tables verified locally and in production. Closed by exclusion; no original publication day recovered."
     },
     {
       "table": "PinTaste",
@@ -1292,8 +1298,8 @@
       "pinId": 15221,
       "title": "Volkswagen Premieres the Second-Generation T-Roc as a Mild Hybrid",
       "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open. Round20: original HTTPS reader retry inaccessible; body and original publication remain unverified. No date or sentiment inferred."
+      "status": "resolved",
+      "reason": "Round21: Rolling What Car? original remains inaccessible; its saved sentence and original day are unverified. Replace with opened, named original Autonet 116-PS Trend drive. This closes the active citation by replacement, not by recovering the old publication day. Native replacement/exclusion and scoped reference/wiki evidence verified locally and in production. Active citation closed by replacement; original old-source publication day not discovered."
     },
     {
       "table": "PinGasCarPerf",
@@ -1317,7 +1323,7 @@
       "title": "Volvo Unveils the Facelifted 2027 XC40 With Mild-Hybrid B3 and B4 Petrols",
       "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
       "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 513 body characters. No new original publication/eligibility evidence accepted; remain open. Round23: exact2027 facelift search yielded pre-facelift August2026 B3 drive and September stationary studio preview; neither establishes driven facelift B3. Do not borrow EX40 EV or older B3 test."
     },
     {
       "table": "PinGasCarPerf",

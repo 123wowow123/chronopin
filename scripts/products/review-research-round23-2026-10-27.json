@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Two-source small continuation; no new quotation/date/score inferred.",
+  "checks": [
+    {
+      "pinId": 5629,
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "result": "Original HTTPS reader retry throttled. Previously saved translated text remains unverified. Excluded under full native-array guard; affiliated nature was already explicitly labelled in the old native title. No newly verified sponsorship facts asserted."
+    },
+    {
+      "pinId": 15251,
+      "url": "https://www.whatcar.com/volvo/xc40/estate/review/n17332",
+      "result": "Exact2027 facelift B3 road-test gap remains open. Research found Aug2026 pre-facelift B3 test and Sept2026 stationary facelift preview, neither verifies a driven facelift B3.",
+      "sourcesChecked": [
+        "https://www.motor.es/pruebas-coches/prueba-volvo-xc40-2026115262.html",
+        "https://de.motor1.com/news/807705/volvo-xc40-ex40-2026-facelift-infos/",
+        "https://www.carexpert.com.au/car-news/2027-volvo-ex40-xc40-updated-with-new-tech-and-looks"
+      ],
+      "openedEvidence": {
+        "url": "https://de.motor1.com/news/807705/volvo-xc40-ex40-2026-facelift-infos/",
+        "title": "Volvo XC40 und EX40 (2026): Das Facelift in der Sitzprobe",
+        "reason": "Sep11 update explicitly studio viewing in Gothenburg, added above originalSep10 announcement. Not a road test, update date not original publication of firsthand content. Do not substitute pre-facelift B3 driving or EX40 EV testing."
+      }
+    }
+  ]
+}

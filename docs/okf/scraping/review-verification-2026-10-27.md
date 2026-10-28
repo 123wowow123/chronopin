@@ -494,3 +494,79 @@ sentiment**. Scoped independence/variant/API follow-ups remain explicit.
 records the native, rendered and evidence readbacks. Scheduled verification was
 not retried; its previous unresolved driver/cooldown failure remains outstanding.
 No deployment or restart occurred.
+
+## Round 22 — small exact-engine T-Roc replacement
+
+Replaced #15221's unverified rolling What Car? citation with Ivan Cvetković's
+original Autonet comparison, published September 17, 2026 at 08:30 CEST.
+The tested base Trend is explicitly the 85-kW/116-PS 1.5 eTSI DSG on
+225/60 R16 tyres; the compared R-Line has 150 PS and 20-inch wheels. The
+literal Croatian passage praises the Trend's comfort without loss of control.
+Visible publication and original structured metadata agree; no translation or
+modification day was substituted. Croatian test prices do not replace the
+German launch price. Every axis, including handling null, is preserved.
+
+The [maintenance catalog](../../../scripts/products/review-maintenance-round22-2026-10-27.json)
+guards complete review arrays and bases, resolves each environment by source
+URL, and preserves the author, pin dates and unrelated rubric fields. Initial
+local title extraction selected an empty decorative h1: the API normalized it
+to null and the readback guard stopped before production was written. The exact
+nonempty article h1 was corrected, the complete intermediate array was guarded,
+and both final native saves passed verification.
+
+The opened AUTO BILD 116-PS Style test was not added: its visible June 21 date
+matches modification metadata while original metadata says June 12. That
+chronology remains unresolved. The What Car? original remains inaccessible;
+its old sentence/day were not certified. The active citation closes by verified
+replacement, not by recovering its original date. Three retained reviews still
+need exact-trim screening; one newly verified Trend test does not establish
+three independent matching tests. [Research evidence](../../../scripts/products/review-research-round22-2026-10-27.json)
+records the scope and source checks.
+
+[Validation](../../../scripts/products/review-validation-round22-2026-10-27.json)
+records two native readbacks, two rendered sentiment tables, four reference/wiki
+readbacks and nine passing focused tests. Both rendered pages contain the exact
+new title, original publication day, quote and sentiment; the excluded source
+is absent from the sentiment tables. The current source-identified maintenance
+catalog and queue are synchronized. Remaining: **54 raw rubric gaps**, **22
+source checks**, **98 verified-undated entries**, **zero dated reviews awaiting
+sentiment**. Scheduled verification was not retried; the previous driver/cooldown
+failure remains unresolved. No deployment or restart occurred.
+
+## Round 23 — small Avvatar source-quality correction
+
+Removed #5629's unverified translated COREFITLAB promotional extract from native
+taste reviews locally and in production. Repeated original-reader checks,
+including this round's throttled retry, did not independently verify the saved
+passage. The old native title already disclosed company association; this round
+does not establish sponsorship payments or contract terms. No date, translation
+or tasting score was invented. The existing September 28, 2026 Varun dutt dubey
+consumer tasting remains, including its self-purchase claim and affiliate
+code disclosure. It is not a blind sensory-panel result. All seven editorial
+taste scores and pin authors/dates remain unchanged. The stale basis saying no
+firsthand review had been found was corrected to describe the retained evidence.
+
+The [guarded maintenance catalog](../../../scripts/products/review-maintenance-round23-2026-10-27.json)
+and source-identified taste catalog are synchronized. A [legacy alias repair](../../../scripts/products/review-catalog-repair-round23-2026-10-27.json)
+removes a uniquely matched source-less duplicate using its complete
+URL/title/quote/day arrays, original basis and seven axes; the alias lacks only
+the later sentiment field. Numeric id alone did not establish identity.
+Existing source/wiki context and reference attribution are preserved with an
+explicit exclusion note; the unverified translated sentence is not newly
+certified as source evidence.
+
+The XC40 #15251 check remains open. Research found a pre-facelift August B3
+drive and a September stationary studio preview of the facelift. Neither is a
+road test of the scored 2027 facelift B3; older petrol or EX40 electric tests
+were not borrowed. [Research](../../../scripts/products/review-research-round23-2026-10-27.json)
+and [dispositions](../../../scripts/products/review-source-checks-round23-2026-10-27.json)
+record the source limitations. The Avvatar active citation closes by exclusion,
+not discovery of its old publication day.
+
+[Validation](../../../scripts/products/review-validation-round23-2026-10-27.json)
+records two native readbacks, two rendered sentiment tables, two reference/wiki
+checks and nine passing focused tests. Remaining: **54 raw rubric gaps**, **21
+source checks**, **98 verified-undated entries**, **zero dated reviews awaiting
+sentiment**. No new excerpt was added. Scheduled verification was not retried;
+the prior driver/cooldown failure remains unresolved. No deployment or restart
+occurred.

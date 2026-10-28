@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-27",
+  "results": [
+    {
+      "pinId": 5629,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/5629/parag-milk-foods-launches-avvatar-popped-protein-chips-in-india",
+      "retainedDatedTastingVerified": true,
+      "excludedCitationAbsentFromSentimentTable": true
+    },
+    {
+      "pinId": 5629,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5629/parag-milk-foods-launches-avvatar-popped-protein-chips-in-india",
+      "retainedDatedTastingVerified": true,
+      "excludedCitationAbsentFromSentimentTable": true
+    }
+  ]
+}

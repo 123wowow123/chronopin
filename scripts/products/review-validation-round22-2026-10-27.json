@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-27",
+  "newReviewExcerpts": 1,
+  "citationsExcluded": 1,
+  "pinsUpdated": 1,
+  "nativeReadbacks": [
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "production": false,
+      "reviews": 4,
+      "added": 1,
+      "excluded": 1,
+      "source": "session",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769"
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15221,
+      "production": true,
+      "reviews": 4,
+      "added": 1,
+      "excluded": 1,
+      "source": "session",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true,
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769"
+    }
+  ],
+  "renderedReadbacks": [
+    {
+      "pinId": 15221,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/15221/volkswagen-premieres-the-second-generation-t-roc-as-a-mild-hybrid",
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 15221,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15221/volkswagen-premieres-the-second-generation-t-roc-as-a-mild-hybrid",
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    }
+  ],
+  "referenceWikiReadbacks": 4,
+  "tests": {
+    "command": "npx vitest run src/server/jobs/reviewResearch.test.ts src/lib/reviewPublicationDay.test.ts scripts/products/reviewCatalog.test.ts",
+    "passed": 9
+  },
+  "rawRubricGaps": 54,
+  "remainingSourceChecks": 22,
+  "verifiedUndated": 98,
+  "datedReviewsAwaitingSentiment": 0,
+  "catalogSynchronization": "Guarded source-identified round22 maintenance catalog records complete original reviews/basis and corrected native replacement. Historical enrichment snapshots retained as history; current replay uses fresh full-row guards and stable source URLs.",
+  "limits": "Only one exact 116-PS Trend source newly verified. AUTO BILD original/visible date conflict not resolved; not added. An initial empty h1 title normalized to null locally; native guard stopped before production write, exact title corrected and complete intermediate array guarded before idempotent recovery. All final checks passed. No axis rescore, scheduled retry, deployment or restart."
+}

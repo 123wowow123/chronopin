@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-27",
+  "results": [
+    {
+      "production": false,
+      "pinId": 15221,
+      "url": "https://autonet.bug.hr/test/test-dva-volkswagen-t-roca-je-li-skromniji-trend-zapravo-bolji-izbor-od-skupog-62878",
+      "referenceId": 54812,
+      "sourceId": 189364,
+      "wikiId": 12699,
+      "incoming": true,
+      "originalDay": "2026-09-17",
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    },
+    {
+      "production": false,
+      "pinId": 15221,
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "referenceId": 54813,
+      "sourceId": 189365,
+      "wikiId": 12700,
+      "incoming": false,
+      "originalDay": null,
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    },
+    {
+      "production": true,
+      "pinId": 15221,
+      "url": "https://autonet.bug.hr/test/test-dva-volkswagen-t-roca-je-li-skromniji-trend-zapravo-bolji-izbor-od-skupog-62878",
+      "referenceId": 54822,
+      "sourceId": 189450,
+      "wikiId": 15873,
+      "incoming": true,
+      "originalDay": "2026-09-17",
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    },
+    {
+      "production": true,
+      "pinId": 15221,
+      "url": "https://www.whatcar.com/volkswagen/t-roc/estate/review/n17316",
+      "referenceId": 54823,
+      "sourceId": 189451,
+      "wikiId": 15874,
+      "incoming": false,
+      "originalDay": null,
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    }
+  ]
+}

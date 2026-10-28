@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-27",
+  "results": [
+    {
+      "pinId": 15221,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/15221/volkswagen-premieres-the-second-generation-t-roc-as-a-mild-hybrid",
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    },
+    {
+      "pinId": 15221,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15221/volkswagen-premieres-the-second-generation-t-roc-as-a-mild-hybrid",
+      "pinSourceUrl": "https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-t-roc-new-generation-of-the-best-seller-is-high-quality-and-innovative-19769",
+      "newDatedPointsVerified": 1,
+      "excludedCitationsAbsentFromSentimentTables": true
+    }
+  ]
+}

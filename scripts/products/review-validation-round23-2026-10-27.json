@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-10-27",
+  "pinsUpdated": 1,
+  "newExcerpts": 0,
+  "citationsExcluded": 1,
+  "nativeReadbacks": [
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "production": false,
+      "reviews": 1,
+      "added": 0,
+      "excluded": 1,
+      "source": "session",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5629,
+      "production": true,
+      "reviews": 1,
+      "added": 0,
+      "excluded": 1,
+      "source": "session",
+      "allAxesAndUnrelatedFieldsPreserved": true,
+      "pinAuthorTitleSourceAndDatesPreserved": true
+    }
+  ],
+  "renderedReadbacks": [
+    {
+      "pinId": 5629,
+      "production": false,
+      "status": 200,
+      "url": "http://localhost:3000/pin/5629/parag-milk-foods-launches-avvatar-popped-protein-chips-in-india",
+      "retainedDatedTastingVerified": true,
+      "excludedCitationAbsentFromSentimentTable": true
+    },
+    {
+      "pinId": 5629,
+      "production": true,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5629/parag-milk-foods-launches-avvatar-popped-protein-chips-in-india",
+      "retainedDatedTastingVerified": true,
+      "excludedCitationAbsentFromSentimentTable": true
+    }
+  ],
+  "referenceWikiReadbacks": [
+    {
+      "production": false,
+      "pinId": 5629,
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "referenceId": 54817,
+      "sourceId": 189386,
+      "wikiId": 12701,
+      "incoming": false,
+      "originalDay": null,
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    },
+    {
+      "production": true,
+      "pinId": 5629,
+      "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+      "referenceId": 54827,
+      "sourceId": 189472,
+      "wikiId": 15875,
+      "incoming": false,
+      "originalDay": null,
+      "scopeVerified": true,
+      "unrelatedEvidenceFieldsPreserved": true
+    }
+  ],
+  "tests": {
+    "command": "npx vitest run src/server/jobs/reviewResearch.test.ts src/lib/reviewPublicationDay.test.ts scripts/products/reviewCatalog.test.ts",
+    "passed": 9
+  },
+  "rawRubricGaps": 54,
+  "remainingSourceChecks": 21,
+  "verifiedUndated": 98,
+  "datedReviewsAwaitingSentiment": 0,
+  "limits": "No new tasting, source day or sponsorship fact certified. Original YouTube requests throttled. Retained prior dated consumer tasting has affiliate disclosure. XC40 remains open. Scheduled verification not retried; no deployment or restart."
+}

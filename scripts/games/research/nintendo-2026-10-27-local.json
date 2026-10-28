@@ -1,0 +1,1634 @@
+{
+  "base": "http://localhost:3000",
+  "checkedAt": "2026-10-27",
+  "pins": [
+    {
+      "key": "gba/advance_wars",
+      "series": "Advance Wars",
+      "name": "Advance Wars",
+      "id": 20124,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/gba/advance_wars",
+      "date": "2001-09-10",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "advance-wars-1-plus-2-re-boot-camp-switch",
+      "series": "Advance Wars",
+      "name": "Advance Wars 1+2: Re-Boot Camp",
+      "id": 20125,
+      "parentId": 20124,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/advance-wars-1-plus-2-re-boot-camp-switch/",
+      "date": "2023-04-21",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/81ca23d0-dd73-46a2-9ee8-31dc568161f5.jpeg"
+      ]
+    },
+    {
+      "key": "3ds/animal_crossing_new_leaf",
+      "series": "Animal Crossing",
+      "name": "Animal Crossing: New Leaf",
+      "id": 20126,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/animal_crossing_new_leaf",
+      "date": "2013-06-09",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/add6680b-83a4-43b6-b5bc-b7f768814514.jpeg"
+      ]
+    },
+    {
+      "key": "animal-crossing-new-horizons-switch",
+      "series": "Animal Crossing",
+      "name": "Animal Crossing: New Horizons",
+      "id": 20127,
+      "parentId": 20126,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/animal-crossing-new-horizons-switch/",
+      "date": "2020-03-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0e2b43b2-6d35-4349-9a6b-ef1497da5f6e.jpeg"
+      ]
+    },
+    {
+      "key": "bayonetta-2-switch",
+      "series": "Bayonetta",
+      "name": "Bayonetta 2",
+      "id": 20128,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Bayonetta-2-1313750.html",
+      "date": "2018-02-16",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/f1013713-74c7-4c3d-9bb0-ca07f4b5d2a0.jpeg"
+      ]
+    },
+    {
+      "key": "bayonetta-3-switch",
+      "series": "Bayonetta",
+      "name": "Bayonetta 3",
+      "id": 173,
+      "parentId": 20128,
+      "savedSourceUrl": "https://www.ign.com/articles/bayonetta-3-review",
+      "date": "2022-10-28",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 3,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "bayonetta-origins-cereza-and-the-lost-demon-switch",
+      "series": "Bayonetta",
+      "name": "Bayonetta Origins: Cereza and the Lost Demon",
+      "id": 20129,
+      "parentId": 173,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/bayonetta-origins-cereza-and-the-lost-demon-switch/",
+      "date": "2023-03-17",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0353b59a-3245-4a06-8461-094c0332cace.jpeg"
+      ]
+    },
+    {
+      "key": "donkey-kong-country-tropical-freeze-switch",
+      "series": "Donkey Kong",
+      "name": "Donkey Kong Country: Tropical Freeze",
+      "id": 20130,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-country-tropical-freeze-switch/",
+      "date": "2018-05-04",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/3548b3bf-48aa-43f4-86e8-be171e5ff934.jpeg"
+      ]
+    },
+    {
+      "key": "donkey-kong-country-returns-hd-switch",
+      "series": "Donkey Kong",
+      "name": "Donkey Kong Country Returns HD",
+      "id": 20131,
+      "parentId": 20130,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-country-returns-hd-switch/",
+      "date": "2025-01-16",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/e463f55d-c64f-4c03-bd01-311f50f8f26c.jpeg"
+      ]
+    },
+    {
+      "key": "donkey-kong-bananza-switch-2",
+      "series": "Donkey Kong",
+      "name": "Donkey Kong Bananza",
+      "id": 20132,
+      "parentId": 20131,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-bananza-switch-2/",
+      "date": "2025-07-17",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/37400373-20a1-47a6-98e0-97b115f4c5d4.jpeg"
+      ]
+    },
+    {
+      "key": "famicom-detective-club-the-girl-who-stands-behind-switch",
+      "series": "Famicom Detective Club",
+      "name": "Famicom Detective Club: The Girl Who Stands Behind",
+      "id": 20133,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/famicom-detective-club-the-girl-who-stands-behind-switch/",
+      "date": "2021-05-14",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/fcdd8463-b78b-480b-9b42-a9d4432a41ab.jpeg"
+      ]
+    },
+    {
+      "key": "famicom-detective-club-the-missing-heir-switch",
+      "series": "Famicom Detective Club",
+      "name": "Famicom Detective Club: The Missing Heir",
+      "id": 20134,
+      "parentId": 20133,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/famicom-detective-club-the-missing-heir-switch/",
+      "date": "2021-05-14",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/f8af3c8d-eab1-4929-8f92-3306949efd97.jpeg"
+      ]
+    },
+    {
+      "key": "emio-the-smiling-man-famicom-detective-club-switch",
+      "series": "Famicom Detective Club",
+      "name": "Emio – The Smiling Man: Famicom Detective Club",
+      "id": 20135,
+      "parentId": 20134,
+      "savedSourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Emio-The-Smiling-Man-Famicom-Detective-Club-2615498.html",
+      "date": "2024-08-29",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0307c60f-0395-4678-aa8c-8952f82e429c.jpeg"
+      ]
+    },
+    {
+      "key": "3ds/fire_emblem_awakening",
+      "series": "Fire Emblem",
+      "name": "Fire Emblem: Awakening",
+      "id": 20136,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/fire_emblem_awakening",
+      "date": "2013-02-04",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/ddb2c54f-15b7-4c48-afde-6fef600af70e.jpeg"
+      ]
+    },
+    {
+      "key": "fire-emblem-three-houses-switch",
+      "series": "Fire Emblem",
+      "name": "Fire Emblem: Three Houses",
+      "id": 20137,
+      "parentId": 20136,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-three-houses-switch/",
+      "date": "2019-07-26",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/3ef48344-3b22-4538-bc86-264b0512866d.jpeg"
+      ]
+    },
+    {
+      "key": "fire-emblem-engage-switch",
+      "series": "Fire Emblem",
+      "name": "Fire Emblem Engage",
+      "id": 20138,
+      "parentId": 20137,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-engage-switch/",
+      "date": "2023-01-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0b6cf974-7c28-4196-9bfe-56d73fc618da.jpeg"
+      ]
+    },
+    {
+      "key": "fire-emblem-warriors-switch",
+      "series": "Fire Emblem Warriors",
+      "name": "Fire Emblem Warriors",
+      "id": 20139,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-switch/",
+      "date": "2017-10-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/f5d979db-5f4f-4aa8-9fc8-da77708c7127.jpeg"
+      ]
+    },
+    {
+      "key": "fire-emblem-warriors-three-hopes-switch",
+      "series": "Fire Emblem Warriors",
+      "name": "Fire Emblem Warriors: Three Hopes",
+      "id": 20140,
+      "parentId": 20139,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-warriors-three-hopes-switch/",
+      "date": "2022-06-24",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/edf6ae90-4744-437e-9b84-b877202ceeab.jpeg"
+      ]
+    },
+    {
+      "key": "hyrule-warriors-definitive-edition-switch",
+      "series": "Hyrule Warriors",
+      "name": "Hyrule Warriors: Definitive Edition",
+      "id": 20141,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-definitive-edition-switch/",
+      "date": "2018-05-18",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0473f4ce-d139-4cff-a001-70ceecb36216.jpeg"
+      ]
+    },
+    {
+      "key": "hyrule-warriors-age-of-calamity-switch",
+      "series": "Hyrule Warriors",
+      "name": "Hyrule Warriors: Age of Calamity",
+      "id": 20142,
+      "parentId": 20141,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-calamity-switch/",
+      "date": "2020-11-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/b941f22d-181c-4e6a-a0af-e04b880acffe.jpeg"
+      ]
+    },
+    {
+      "key": "kirby-star-allies-switch",
+      "series": "Kirby (platformers)",
+      "name": "Kirby Star Allies",
+      "id": 20143,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/kirby-star-allies-switch/",
+      "date": "2018-03-16",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/89426b71-9087-4367-b368-b5744f9c13dd.jpeg"
+      ]
+    },
+    {
+      "key": "kirby-and-the-forgotten-land-switch",
+      "series": "Kirby (platformers)",
+      "name": "Kirby and the Forgotten Land",
+      "id": 174,
+      "parentId": 20143,
+      "savedSourceUrl": "https://www.ign.com/articles/kirby-and-the-forgotten-land-review",
+      "date": "2022-03-25",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 3,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "kirbys-return-to-dream-land-deluxe-switch",
+      "series": "Kirby (platformers)",
+      "name": "Kirby’s Return to Dream Land Deluxe",
+      "id": 20144,
+      "parentId": 174,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/kirbys-return-to-dream-land-deluxe-switch/",
+      "date": "2023-02-24",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/e9716c97-c97f-4c62-a2cb-3a18ef9ea5e7.jpeg"
+      ]
+    },
+    {
+      "key": "gamecube/kirby_air_ride",
+      "series": "Kirby (racing)",
+      "name": "Kirby Air Ride",
+      "id": 20145,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/gamecube/kirby_air_ride",
+      "date": "2003-10-13",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "kirby-air-riders-switch-2",
+      "series": "Kirby (racing)",
+      "name": "Kirby Air Riders",
+      "id": 20146,
+      "parentId": 20145,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/kirby-air-riders-switch-2/",
+      "date": "2025-11-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/2ce44bcd-b7c7-4b8f-a859-4d7e9ab37d40.jpeg"
+      ]
+    },
+    {
+      "key": "3ds/luigis_mansion_dark_moon",
+      "series": "Luigi’s Mansion",
+      "name": "Luigi's Mansion: Dark Moon",
+      "id": 20147,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/luigis_mansion_dark_moon",
+      "date": "2013-03-24",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "luigis-mansion-3-switch",
+      "series": "Luigi’s Mansion",
+      "name": "Luigi’s Mansion 3",
+      "id": 20148,
+      "parentId": 20147,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/luigis-mansion-3-switch/",
+      "date": "2019-10-31",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/62c41a19-1b16-42ad-b7b0-5b3c9aae1c28.jpeg"
+      ]
+    },
+    {
+      "key": "luigis-mansion-2-hd-switch",
+      "series": "Luigi’s Mansion",
+      "name": "Luigi's Mansion 2 HD",
+      "id": 20149,
+      "parentId": 20148,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/luigis-mansion-2-hd-switch/",
+      "date": "2024-06-27",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/4adc84a7-0c01-4c4d-bef5-59f45aa6958e.jpeg"
+      ]
+    },
+    {
+      "key": "3ds/mario_and_luigi_superstar_saga_plus_bowsers_minions",
+      "series": "Mario & Luigi",
+      "name": "Mario & Luigi: Superstar Saga + Bowser's Minions",
+      "id": 20150,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/mario_and_luigi_superstar_saga_plus_bowsers_minions",
+      "date": "2017-10-06",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "mario-and-luigi-brothership-switch",
+      "series": "Mario & Luigi",
+      "name": "Mario & Luigi: Brothership",
+      "id": 20151,
+      "parentId": 20150,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-and-luigi-brothership-switch/",
+      "date": "2024-11-07",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/42d9b537-0021-4519-b6d7-6a9a39e91f46.jpeg"
+      ]
+    },
+    {
+      "key": "mario-plus-rabbids-kingdom-battle-switch",
+      "series": "Mario + Rabbids",
+      "name": "Mario + Rabbids Kingdom Battle",
+      "id": 20152,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-plus-rabbids-kingdom-battle-switch/",
+      "date": "2017-08-29",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/17f61a02-43f6-44c1-a2af-c4aff24846a3.jpeg"
+      ]
+    },
+    {
+      "key": "mario-plus-rabbids-sparks-of-hope-switch",
+      "series": "Mario + Rabbids",
+      "name": "Mario + Rabbids Sparks of Hope",
+      "id": 182,
+      "parentId": 20152,
+      "savedSourceUrl": "https://www.ign.com/articles/mario-rabbids-sparks-of-hope-review",
+      "date": "2022-10-20",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "3ds/mario_golf_world_tour",
+      "series": "Mario Golf",
+      "name": "Mario Golf: World Tour",
+      "id": 20153,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/mario_golf_world_tour",
+      "date": "2014-05-02",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "mario-golf-super-rush-switch",
+      "series": "Mario Golf",
+      "name": "Mario Golf: Super Rush",
+      "id": 20154,
+      "parentId": 20153,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-golf-super-rush-switch/",
+      "date": "2021-06-25",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/1e124e2b-383c-46ff-a6d8-29999054961e.jpeg"
+      ]
+    },
+    {
+      "key": "mario-kart-8-deluxe-switch",
+      "series": "Mario Kart",
+      "name": "Mario Kart 8 Deluxe",
+      "id": 20155,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-8-deluxe-switch/",
+      "date": "2017-04-28",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/47d25da8-b924-4ed0-ad07-3eef99afdacd.jpeg"
+      ]
+    },
+    {
+      "key": "mario-kart-world-switch-2",
+      "series": "Mario Kart",
+      "name": "Mario Kart World",
+      "id": 20156,
+      "parentId": 20155,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-world-switch-2/",
+      "date": "2025-06-05",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/dcdbb7f9-cbaa-4418-9f4c-45966229e699.jpeg"
+      ]
+    },
+    {
+      "key": "super-mario-party-switch",
+      "series": "Mario Party",
+      "name": "Super Mario Party",
+      "id": 20157,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-switch/",
+      "date": "2018-10-05",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/34410dc8-0fca-40b5-a2f9-bd8a9035a3cd.jpeg"
+      ]
+    },
+    {
+      "key": "mario-party-superstars-switch",
+      "series": "Mario Party",
+      "name": "Mario Party Superstars",
+      "id": 20158,
+      "parentId": 20157,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-party-superstars-switch/",
+      "date": "2021-10-29",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/bec36865-9c0b-4458-a5d2-01765ef34da1.jpeg"
+      ]
+    },
+    {
+      "key": "super-mario-party-jamboree-switch",
+      "series": "Mario Party",
+      "name": "Super Mario Party Jamboree",
+      "id": 20159,
+      "parentId": 20158,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-party-jamboree-switch/",
+      "date": "2024-10-17",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/1bc5f01f-b93e-40a9-aa75-f7bf2b55b9ca.jpeg"
+      ]
+    },
+    {
+      "key": "wii/mario_strikers_charged",
+      "series": "Mario Strikers",
+      "name": "Mario Strikers Charged",
+      "id": 20160,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/wii/mario_strikers_charged",
+      "date": "2007-07-30",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "mario-strikers-battle-league-switch",
+      "series": "Mario Strikers",
+      "name": "Mario Strikers: Battle League",
+      "id": 20161,
+      "parentId": 20160,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-strikers-battle-league-switch/",
+      "date": "2022-06-10",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/bd6226a7-a9b5-4155-8db0-16840886fe21.jpeg"
+      ]
+    },
+    {
+      "key": "wiiu/mario_tennis_ultra_smash",
+      "series": "Mario Tennis",
+      "name": "Mario Tennis: Ultra Smash",
+      "id": 20162,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/wiiu/mario_tennis_ultra_smash",
+      "date": "2015-11-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "mario-tennis-aces-switch",
+      "series": "Mario Tennis",
+      "name": "Mario Tennis Aces",
+      "id": 20163,
+      "parentId": 20162,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-tennis-aces-switch/",
+      "date": "2018-06-22",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/5d9d2bd4-66b1-4f7c-a7c4-976c2f182568.jpeg"
+      ]
+    },
+    {
+      "key": "mario-tennis-fever-switch-2",
+      "series": "Mario Tennis",
+      "name": "Mario Tennis Fever",
+      "id": 20164,
+      "parentId": 20163,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/mario-tennis-fever-switch-2/",
+      "date": "2026-02-12",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/875b9ef8-ad75-48b5-9213-52c9ff07b1de.jpeg"
+      ]
+    },
+    {
+      "key": "3ds/metroid_samus_returns",
+      "series": "Metroid (2D)",
+      "name": "Metroid: Samus Returns",
+      "id": 20165,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/metroid_samus_returns",
+      "date": "2017-09-15",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/ec76387d-464a-4a9f-90c3-91f96955f1f0.jpeg"
+      ]
+    },
+    {
+      "key": "metroid-dread-switch",
+      "series": "Metroid (2D)",
+      "name": "Metroid Dread",
+      "id": 20166,
+      "parentId": 20165,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/metroid-dread-switch/",
+      "date": "2021-10-08",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/39bada42-146f-47f9-93ea-b085d71683ff.jpeg"
+      ]
+    },
+    {
+      "key": "metroid-ravenous-switch-2",
+      "series": "Metroid (2D)",
+      "name": "Metroid Ravenous",
+      "id": 298,
+      "parentId": 20166,
+      "savedSourceUrl": "https://gameranx.com/updates/id/564028/article/metroid-ravenous-releasing-on-switch-2-this-january-28-2027/",
+      "date": "2027-01-28",
+      "authorId": 22,
+      "created": false,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "metroid-prime-remastered-switch",
+      "series": "Metroid Prime",
+      "name": "Metroid Prime Remastered",
+      "id": 20167,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/metroid-prime-remastered-switch/",
+      "date": "2023-02-08",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/d664a75d-5852-4032-a6db-1e9264791b59.jpeg"
+      ]
+    },
+    {
+      "key": "metroid-prime-4-beyond-switch",
+      "series": "Metroid Prime",
+      "name": "Metroid Prime 4: Beyond",
+      "id": 20168,
+      "parentId": 20167,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/metroid-prime-4-beyond-switch/",
+      "date": "2025-12-04",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0790ee98-9dbe-4653-bc7a-aea5fd0db689.jpeg"
+      ]
+    },
+    {
+      "key": "paper-mario-the-origami-king-switch",
+      "series": "Paper Mario",
+      "name": "Paper Mario: The Origami King",
+      "id": 20169,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-origami-king-switch/",
+      "date": "2020-07-17",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/8f216128-77e4-4099-8c25-df11a66cba40.jpeg"
+      ]
+    },
+    {
+      "key": "paper-mario-the-thousand-year-door-switch",
+      "series": "Paper Mario",
+      "name": "Paper Mario: The Thousand-Year Door",
+      "id": 20170,
+      "parentId": 20169,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-thousand-year-door-switch/",
+      "date": "2024-05-23",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/1d7ce33c-aade-4344-b95d-b28940caeeac.jpeg"
+      ]
+    },
+    {
+      "key": "pikmin-3-deluxe-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 3 Deluxe",
+      "id": 20171,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pikmin-3-deluxe-switch/",
+      "date": "2020-10-30",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/811b4bbd-90ea-4b49-b22a-dbbcc6c68410.jpeg"
+      ]
+    },
+    {
+      "key": "pikmin-1-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 1",
+      "id": 20172,
+      "parentId": 20171,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pikmin-1-switch/",
+      "date": "2023-06-21",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/3570881b-2dac-4eec-aa1c-3cf66f914c4f.jpeg"
+      ]
+    },
+    {
+      "key": "pikmin-2-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 2",
+      "id": 20173,
+      "parentId": 20172,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pikmin-2-switch/",
+      "date": "2023-06-21",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/beaff631-14c2-4853-a672-3cad5fe62ed3.jpeg"
+      ]
+    },
+    {
+      "key": "pikmin-4-switch",
+      "series": "Pikmin",
+      "name": "Pikmin 4",
+      "id": 20174,
+      "parentId": 20173,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pikmin-4-switch/",
+      "date": "2023-07-21",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/55aa6002-d43f-43f7-9cf2-9d80b1513203.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-lets-go-pikachu-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon: Let’s Go, Pikachu! and Let’s Go, Eevee!",
+      "id": 20175,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-lets-go-pikachu-switch/",
+      "date": "2018-11-16",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/a39f9fec-5929-4f10-981e-e18c5070c7e7.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-sword-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Sword and Shield",
+      "id": 20176,
+      "parentId": 20175,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-sword-switch/",
+      "date": "2019-11-15",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/49b03959-7d7c-49ce-9039-c37b236eb50b.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-brilliant-diamond-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Brilliant Diamond and Shining Pearl",
+      "id": 20177,
+      "parentId": 20176,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-brilliant-diamond-switch/",
+      "date": "2021-11-19",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/388bafc8-41d5-4c50-83f9-ad3aa8adb28b.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-legends-arceus-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Legends: Arceus",
+      "id": 20178,
+      "parentId": 20177,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-legends-arceus-switch/",
+      "date": "2022-01-28",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/baa6b8ca-4248-4e22-9a32-676170882e60.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-scarlet-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Scarlet and Violet",
+      "id": 184,
+      "parentId": 20178,
+      "savedSourceUrl": "https://www.ign.com/articles/pokemon-scarlet-and-violet-review",
+      "date": "2022-11-18",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 3,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "pokemon-legends-z-a-switch",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Legends: Z-A",
+      "id": 20179,
+      "parentId": 184,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-legends-z-a-switch/",
+      "date": "2025-10-16",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/0c07d7b7-9736-4f93-a88a-92616dc61860.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-winds-switch-2",
+      "series": "Pokémon (main series)",
+      "name": "Pokémon Winds and Pokémon Waves",
+      "id": 5199,
+      "parentId": 20179,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-winds-switch-2/",
+      "date": "2027-11-19",
+      "authorId": 425,
+      "created": false,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "3ds/pokemon_super_mystery_dungeon",
+      "series": "Pokémon Mystery Dungeon",
+      "name": "Pokémon Super Mystery Dungeon",
+      "id": 20180,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/pokemon_super_mystery_dungeon",
+      "date": "2015-11-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/ab8bafaf-756b-41bd-b676-65948d785f37.jpeg"
+      ]
+    },
+    {
+      "key": "pokemon-mystery-dungeon-rescue-team-dx-switch",
+      "series": "Pokémon Mystery Dungeon",
+      "name": "Pokémon Mystery Dungeon: Rescue Team DX",
+      "id": 20181,
+      "parentId": 20180,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-mystery-dungeon-rescue-team-dx-switch/",
+      "date": "2020-03-06",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/8b64800b-8606-40e5-ab6c-fc0ae4f4f536.jpeg"
+      ]
+    },
+    {
+      "key": "wiiu/splatoon",
+      "series": "Splatoon",
+      "name": "Splatoon",
+      "id": 20182,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/wiiu/splatoon",
+      "date": "2015-05-29",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "splatoon-2-switch",
+      "series": "Splatoon",
+      "name": "Splatoon 2",
+      "id": 20183,
+      "parentId": 20182,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/splatoon-2-switch/",
+      "date": "2017-07-21",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/9e8cb1d4-2ada-43b2-99a4-d9df87903dd9.jpeg"
+      ]
+    },
+    {
+      "key": "splatoon-3-switch",
+      "series": "Splatoon",
+      "name": "Splatoon 3",
+      "id": 183,
+      "parentId": 20183,
+      "savedSourceUrl": "https://www.ign.com/articles/splatoon-3-review-single-player",
+      "date": "2022-09-09",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "super-mario-odyssey-switch",
+      "series": "Super Mario (3D)",
+      "name": "Super Mario Odyssey",
+      "id": 20184,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+      "date": "2017-10-27",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/473f13d8-ea05-4699-94a0-01874aa27e5b.jpeg"
+      ]
+    },
+    {
+      "key": "super-mario-3d-world-plus-bowsers-fury-switch",
+      "series": "Super Mario (3D)",
+      "name": "Super Mario 3D World + Bowser’s Fury",
+      "id": 20185,
+      "parentId": 20184,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-3d-world-plus-bowsers-fury-switch/",
+      "date": "2021-02-12",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/3f22eef7-4b4a-4603-86d9-ba5ec036c08b.jpeg"
+      ]
+    },
+    {
+      "key": "new-super-mario-bros-u-deluxe-switch",
+      "series": "Super Mario Bros. (2D)",
+      "name": "New Super Mario Bros. U Deluxe",
+      "id": 20186,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/new-super-mario-bros-u-deluxe-switch/",
+      "date": "2019-01-11",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/83aea450-6ee3-4735-b66c-0d86264ebf93.jpeg"
+      ]
+    },
+    {
+      "key": "super-mario-bros-wonder-switch",
+      "series": "Super Mario Bros. (2D)",
+      "name": "Super Mario Bros. Wonder",
+      "id": 20187,
+      "parentId": 20186,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-bros-wonder-switch/",
+      "date": "2023-10-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/aeecdaf2-ec9d-4746-9c61-9c9d94aa2e8f.jpeg"
+      ]
+    },
+    {
+      "key": "wiiu/super_mario_maker",
+      "series": "Super Mario Maker",
+      "name": "Super Mario Maker",
+      "id": 20188,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/wiiu/super_mario_maker",
+      "date": "2015-09-11",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "3ds/super_mario_maker_for_nintendo_3ds",
+      "series": "Super Mario Maker",
+      "name": "Super Mario Maker for Nintendo 3DS",
+      "id": 20189,
+      "parentId": 20188,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/super_mario_maker_for_nintendo_3ds",
+      "date": "2016-12-02",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/e6a637ae-c859-45ec-a7a6-e5cbdf137352.jpeg"
+      ]
+    },
+    {
+      "key": "super-mario-maker-2-switch",
+      "series": "Super Mario Maker",
+      "name": "Super Mario Maker 2",
+      "id": 20190,
+      "parentId": 20189,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-maker-2-switch/",
+      "date": "2019-06-28",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/b41ad893-fb6f-45ae-a049-3bfab74e2767.jpeg"
+      ]
+    },
+    {
+      "key": "3ds/super_smash_bros_for_nintendo_3ds",
+      "series": "Super Smash Bros.",
+      "name": "Super Smash Bros. for Nintendo 3DS",
+      "id": 20191,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendolife.com/games/3ds/super_smash_bros_for_nintendo_3ds",
+      "date": "2014-10-03",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "wiiu/super_smash_bros_for_wii_u",
+      "series": "Super Smash Bros.",
+      "name": "Super Smash Bros. for Wii U",
+      "id": 20192,
+      "parentId": 20191,
+      "savedSourceUrl": "https://www.nintendolife.com/games/wiiu/super_smash_bros_for_wii_u",
+      "date": "2014-11-21",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "super-smash-bros-ultimate-switch",
+      "series": "Super Smash Bros.",
+      "name": "Super Smash Bros. Ultimate",
+      "id": 20193,
+      "parentId": 20192,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/super-smash-bros-ultimate-switch/",
+      "date": "2018-12-07",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/7cb5508d-c1ac-4783-854a-8c6bd9b34c04.jpeg"
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-breath-of-the-wild-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "id": 196,
+      "parentId": null,
+      "savedSourceUrl": "https://www.ign.com/articles/the-10-best-legend-of-zelda-games",
+      "date": "2017-03-03",
+      "authorId": 2,
+      "created": false,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "the-legend-of-zelda-links-awakening-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Link’s Awakening",
+      "id": 20194,
+      "parentId": 196,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-links-awakening-switch/",
+      "date": "2019-09-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/e89acfb5-404a-4a81-b1f1-749f559dba83.jpeg"
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-skyward-sword-hd-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Skyward Sword HD",
+      "id": 20195,
+      "parentId": 20194,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-skyward-sword-hd-switch/",
+      "date": "2021-07-16",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/9cc6bf10-9c79-4e8b-89cf-35714baf0339.jpeg"
+      ]
+    },
+    {
+      "key": "the-legend-of-zelda-tears-of-the-kingdom-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Tears of the Kingdom",
+      "id": 145,
+      "parentId": 196,
+      "savedSourceUrl": "https://www.polygon.com/zelda-tears-of-the-kingdom-guide/23592513/totk-pre-order-nintendo-switch-collectors-edition-botw-2",
+      "date": "2023-05-12",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 3,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "the-legend-of-zelda-echoes-of-wisdom-switch",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Echoes of Wisdom",
+      "id": 20196,
+      "parentId": 145,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-echoes-of-wisdom-switch/",
+      "date": "2024-09-26",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/6721bf55-bb80-4b4a-a21e-959168b426d9.jpeg"
+      ]
+    },
+    {
+      "key": "zelda-ocarina-of-time-remake-switch-2",
+      "series": "The Legend of Zelda",
+      "name": "The Legend of Zelda: Ocarina of Time Remake",
+      "id": 296,
+      "parentId": 20196,
+      "savedSourceUrl": "https://gameranx.com/updates/id/564006/article/the-legend-of-zelda-ocarina-of-time-releases-this-november-5-on-switch-2/",
+      "date": "2026-11-05",
+      "authorId": 22,
+      "created": false,
+      "competitorCount": 2,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "warioware-get-it-together-switch",
+      "series": "WarioWare",
+      "name": "WarioWare: Get It Together!",
+      "id": 20197,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/warioware-get-it-together-switch/",
+      "date": "2021-09-10",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/a89c4a33-0da1-47c9-be5a-e2c756d8d399.jpeg"
+      ]
+    },
+    {
+      "key": "warioware-move-it-switch",
+      "series": "WarioWare",
+      "name": "WarioWare: Move It!",
+      "id": 20198,
+      "parentId": 20197,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/warioware-move-it-switch/",
+      "date": "2023-11-03",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/40032d0c-9e4e-4e07-863d-a104771e6aa9.jpeg"
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-2-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles 2",
+      "id": 20199,
+      "parentId": null,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-2-switch/",
+      "date": "2017-12-01",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 2,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/5ac2b58e-1fa3-46fb-8402-d4bd1f7a80b4.jpeg"
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-definitive-edition-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles Definitive Edition",
+      "id": 20200,
+      "parentId": 20199,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-definitive-edition-switch/",
+      "date": "2020-05-29",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/be5217b9-1663-4199-b794-e230724757d6.jpeg"
+      ]
+    },
+    {
+      "key": "xenoblade-chronicles-3-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles 3",
+      "id": 187,
+      "parentId": 20200,
+      "savedSourceUrl": "https://www.ign.com/articles/xenoblade-chronicles-3-review",
+      "date": "2022-07-29",
+      "authorId": 1,
+      "created": false,
+      "competitorCount": 3,
+      "imageBlobUrls": []
+    },
+    {
+      "key": "xenoblade-chronicles-x-definitive-edition-switch",
+      "series": "Xenoblade Chronicles",
+      "name": "Xenoblade Chronicles X: Definitive Edition",
+      "id": 20201,
+      "parentId": 187,
+      "savedSourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-x-definitive-edition-switch/",
+      "date": "2025-03-20",
+      "authorId": 22,
+      "created": true,
+      "competitorCount": 3,
+      "imageBlobUrls": [
+        "http://127.0.0.1:10000/devstoreaccount1/thumb/ea2807dd-168c-4d1f-8d1e-55a9e23edc2f.jpeg"
+      ]
+    }
+  ],
+  "reviewBoundaries": [
+    {
+      "id": 146,
+      "parentId": 163,
+      "status": "verified"
+    },
+    {
+      "id": 175,
+      "parentId": 172,
+      "status": "verified"
+    },
+    {
+      "id": 185,
+      "parentId": 181,
+      "status": "verified"
+    },
+    {
+      "id": 188,
+      "parentId": 186,
+      "status": "verified"
+    }
+  ],
+  "seriesIndexes": [
+    {
+      "series": "Advance Wars",
+      "rootId": 20124,
+      "gameCount": 2,
+      "ids": [
+        20124,
+        20125
+      ]
+    },
+    {
+      "series": "Animal Crossing",
+      "rootId": 20126,
+      "gameCount": 2,
+      "ids": [
+        20126,
+        20127
+      ]
+    },
+    {
+      "series": "Bayonetta",
+      "rootId": 20128,
+      "gameCount": 3,
+      "ids": [
+        20128,
+        173,
+        20129
+      ]
+    },
+    {
+      "series": "Donkey Kong",
+      "rootId": 20130,
+      "gameCount": 3,
+      "ids": [
+        20130,
+        20131,
+        20132
+      ]
+    },
+    {
+      "series": "Famicom Detective Club",
+      "rootId": 20133,
+      "gameCount": 3,
+      "ids": [
+        20133,
+        20134,
+        20135
+      ]
+    },
+    {
+      "series": "Fire Emblem",
+      "rootId": 20136,
+      "gameCount": 3,
+      "ids": [
+        20136,
+        20137,
+        20138
+      ]
+    },
+    {
+      "series": "Fire Emblem Warriors",
+      "rootId": 20139,
+      "gameCount": 2,
+      "ids": [
+        20139,
+        20140
+      ]
+    },
+    {
+      "series": "Hyrule Warriors",
+      "rootId": 20141,
+      "gameCount": 2,
+      "ids": [
+        20141,
+        20142
+      ]
+    },
+    {
+      "series": "Kirby (platformers)",
+      "rootId": 20143,
+      "gameCount": 3,
+      "ids": [
+        20143,
+        174,
+        20144
+      ]
+    },
+    {
+      "series": "Kirby (racing)",
+      "rootId": 20145,
+      "gameCount": 2,
+      "ids": [
+        20145,
+        20146
+      ]
+    },
+    {
+      "series": "Luigi’s Mansion",
+      "rootId": 20147,
+      "gameCount": 3,
+      "ids": [
+        20147,
+        20148,
+        20149
+      ]
+    },
+    {
+      "series": "Mario & Luigi",
+      "rootId": 20150,
+      "gameCount": 2,
+      "ids": [
+        20150,
+        20151
+      ]
+    },
+    {
+      "series": "Mario + Rabbids",
+      "rootId": 20152,
+      "gameCount": 2,
+      "ids": [
+        20152,
+        182
+      ]
+    },
+    {
+      "series": "Mario Golf",
+      "rootId": 20153,
+      "gameCount": 2,
+      "ids": [
+        20153,
+        20154
+      ]
+    },
+    {
+      "series": "Mario Kart",
+      "rootId": 20155,
+      "gameCount": 2,
+      "ids": [
+        20155,
+        20156
+      ]
+    },
+    {
+      "series": "Mario Party",
+      "rootId": 20157,
+      "gameCount": 3,
+      "ids": [
+        20157,
+        20158,
+        20159
+      ]
+    },
+    {
+      "series": "Mario Strikers",
+      "rootId": 20160,
+      "gameCount": 2,
+      "ids": [
+        20160,
+        20161
+      ]
+    },
+    {
+      "series": "Mario Tennis",
+      "rootId": 20162,
+      "gameCount": 3,
+      "ids": [
+        20162,
+        20163,
+        20164
+      ]
+    },
+    {
+      "series": "Metroid (2D)",
+      "rootId": 20165,
+      "gameCount": 3,
+      "ids": [
+        20165,
+        20166,
+        298
+      ]
+    },
+    {
+      "series": "Metroid Prime",
+      "rootId": 20167,
+      "gameCount": 2,
+      "ids": [
+        20167,
+        20168
+      ]
+    },
+    {
+      "series": "Paper Mario",
+      "rootId": 20169,
+      "gameCount": 2,
+      "ids": [
+        20169,
+        20170
+      ]
+    },
+    {
+      "series": "Pikmin",
+      "rootId": 20171,
+      "gameCount": 4,
+      "ids": [
+        20171,
+        20172,
+        20173,
+        20174
+      ]
+    },
+    {
+      "series": "Pokémon (main series)",
+      "rootId": 20175,
+      "gameCount": 7,
+      "ids": [
+        20175,
+        20176,
+        20177,
+        20178,
+        184,
+        20179,
+        5199
+      ]
+    },
+    {
+      "series": "Pokémon Mystery Dungeon",
+      "rootId": 20180,
+      "gameCount": 2,
+      "ids": [
+        20180,
+        20181
+      ]
+    },
+    {
+      "series": "Splatoon",
+      "rootId": 20182,
+      "gameCount": 3,
+      "ids": [
+        20182,
+        20183,
+        183
+      ]
+    },
+    {
+      "series": "Super Mario (3D)",
+      "rootId": 20184,
+      "gameCount": 2,
+      "ids": [
+        20184,
+        20185
+      ]
+    },
+    {
+      "series": "Super Mario Bros. (2D)",
+      "rootId": 20186,
+      "gameCount": 2,
+      "ids": [
+        20186,
+        20187
+      ]
+    },
+    {
+      "series": "Super Mario Maker",
+      "rootId": 20188,
+      "gameCount": 3,
+      "ids": [
+        20188,
+        20189,
+        20190
+      ]
+    },
+    {
+      "series": "Super Smash Bros.",
+      "rootId": 20191,
+      "gameCount": 3,
+      "ids": [
+        20191,
+        20192,
+        20193
+      ]
+    },
+    {
+      "series": "The Legend of Zelda",
+      "rootId": 196,
+      "gameCount": 6,
+      "ids": [
+        196,
+        20194,
+        20195,
+        145,
+        20196,
+        296
+      ]
+    },
+    {
+      "series": "WarioWare",
+      "rootId": 20197,
+      "gameCount": 2,
+      "ids": [
+        20197,
+        20198
+      ]
+    },
+    {
+      "series": "Xenoblade Chronicles",
+      "rootId": 20199,
+      "gameCount": 4,
+      "ids": [
+        20199,
+        20200,
+        187,
+        20201
+      ]
+    }
+  ]
+}

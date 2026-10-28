@@ -478,9 +478,5 @@ this is to be added only to the pin wiki
 
 
 
-
-
 are all landing pages translated besides the pins?
-
-
 

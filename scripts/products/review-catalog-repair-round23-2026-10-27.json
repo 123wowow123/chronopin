@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-27",
+  "pinSourceUrl": "https://nsearchives.nseindia.com/corporate/PARAGMILK_09092026153109_Intimation.pdf",
+  "removedLegacyEntry": {
+    "pinId": 5629,
+    "aroma": 4,
+    "bitterness": 0.5,
+    "sweetness": 1,
+    "astringency": 1,
+    "umami": 3,
+    "basis": "Popped (not fried) chips in Magic Masala and Pudina: spice and mint aroma, savoury rather than sweet. Review check (October 11, 2026): No firsthand tasting review verified for Avvatar Popped Protein Chips. The manufacturer’s review widget exposes no written reviews; protein powder, wafer and other-brand chip reviews were excluded.",
+    "pungent": 2,
+    "coolness": 1.5,
+    "reviews": [
+      {
+        "url": "https://www.youtube.com/watch?v=uOTflGVE61g",
+        "quote": "The pudina one tastes just like the pani puri water, mouth-watering. Masala is written but I didn't find it that spicy; pudina seemed tastier. (translated)",
+        "title": "Varun dutt dubey: '10g Protein in CHIPS?! Avvatar Popped Chips Review | Magic Masala & Pudina' (YouTube, Hindi; exact product, both flavours; reviewer says he bought the packs himself, affiliate discount code in the description)",
+        "publishedDate": "2026-09-28"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=56lyoWRDWFw",
+        "quote": "Smell is of pani puri, with a little jaljeera. I can't even tell whether there's whey protein; it just feels like a tasty pani puri or jaljeera-type masala. (translated)",
+        "title": "Maker's own copy: COREFITLAB: 'Avvatar Non Baked WHEY PROTEIN Popped Chips | No Preservative | No Trans Fat | No Sugar & Palm Oil' (YouTube, Hindi; Pudina flavour only; presenter says he is associated with the company, so treat as brand-affiliated)",
+        "publishedDate": null
+      }
+    ]
+  },
+  "reason": "Unique source-less alias matched by complete URL/title/quote/day arrays, original basis and all seven original axes; old alias lacks only the later sentiment field. Numeric id did not decide identity. Canonical source-identified row preserves fresh native reviews/basis and all scores."
+}
