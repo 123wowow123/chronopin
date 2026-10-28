@@ -113,6 +113,8 @@ multilingual, see `Docker/faiss/app.py`) without emptying them first, so search
 keeps answering while it runs (a few minutes). Run it after a change to the
 service's models (`DEPLOY_ON_VM=1 npm run deploy:vm -- app faiss`), which leaves a new index empty.
 
+The service's image is built by CI too (`.github/workflows/build-faiss-image.yml`, only when `Docker/faiss` changes) and is not part of `npm run deploy`. After such a change run `npm run deploy:faiss`: it pulls that commit's image, restarts the container and fills the new index with `search:index:db`. Make the `chronopin-faiss` GHCR package public once, after its first build, so the VM can pull it without a login.
+
 Rebuild it (`--profile tools build tools`) after a code change the script needs.
 
 ## Thumbnails

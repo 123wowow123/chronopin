@@ -3,7 +3,8 @@
 # fastembed runs the embedding model on ONNX Runtime rather than PyTorch, which
 # keeps the image small, and both it and faiss-cpu publish arm64 and amd64
 # wheels, so this builds natively on Apple Silicon and Intel alike.
-FROM python:3.11-slim
+ARG PYTHON_IMAGE=python:3.11-slim
+FROM ${PYTHON_IMAGE}
 
 WORKDIR /app
 

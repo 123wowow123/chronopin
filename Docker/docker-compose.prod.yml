@@ -25,7 +25,9 @@ services:
 
   faiss:
     build: ./faiss
-    image: chronopin-faiss:latest
+    # FAISS_IMAGE (Docker/.env, written by scripts/deploy-faiss.sh) names the
+    # image CI built; without it, the one built on the VM.
+    image: ${FAISS_IMAGE:-chronopin-faiss:latest}
     volumes:
       - faiss-data:/data
     # "Too many open files" on accept() stalled every search on 2026-10-12.

@@ -10,6 +10,7 @@
     "deploy": "sh scripts/deploy-image.sh",
     "deploy:vm": "sh scripts/deploy.sh",
     "deploy:image": "sh scripts/deploy-image.sh",
+    "deploy:faiss": "sh scripts/deploy-faiss.sh",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
