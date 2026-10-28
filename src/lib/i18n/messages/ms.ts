@@ -700,6 +700,7 @@ const ms: Messages = {
       collapse: 'Tutup carta yang dibesarkan',
       alt: 'Model AI yang dikeluarkan pada {year}: {count} model, harga sejuta token berbanding Elo arena. Pin ini: {model}.',
       notPriced: 'Tiada harga awam semasa tersedia.',
+      performanceUnpublished: 'Prestasi model ini belum diterbitkan.',
       awaiting: '{model} · {price}/juta token · belum dinilai oleh arena',
       price: '$ sejuta token (5:1 input:output, skala log)',
       elo: 'Elo arena (teks)',

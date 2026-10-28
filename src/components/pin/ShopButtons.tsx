@@ -69,7 +69,7 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
     } catch {}
   };
 
-  const all = withMatches(links, matches);
+  const all = withMatches(links, matches, productName ?? '');
   const usable = all.filter((link) => availableIn(link, country));
   // A pin with its own listing (a ticket page, the maker's shop) keeps that
   // up front; the generic store searches (Amazon, eBay, ...) go behind the …

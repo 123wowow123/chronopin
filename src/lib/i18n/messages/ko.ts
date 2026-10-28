@@ -695,6 +695,7 @@ const ko: Messages = {
       collapse: '확대한 차트 닫기',
       alt: '{year}년에 출시된 AI 모델 {count}개: 100만 토큰당 가격과 아레나 Elo. 이 핀: {model}.',
       notPriced: '현재 공개 가격이 없습니다.',
+      performanceUnpublished: '이 모델의 성능 평가가 아직 공개되지 않았습니다.',
       awaiting: '{model} · {price}/M 토큰 · 아레나 점수 아직 없음',
       price: '100만 토큰당 $ (입력:출력 5:1, 로그 척도)',
       elo: '아레나 Elo (텍스트)',

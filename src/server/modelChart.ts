@@ -143,14 +143,10 @@ export function cachedModelUniverse(): Promise<ModelUniverse | null> {
   return entry.promise;
 }
 
-// The model a pin is about, among the chart's points: the exact key, or the
-// shortest key that continues it ("gemini 3.1 pro" -> "gemini 3.1 pro
-// preview"), which is how a router names a model that the title does not.
+// Keys already normalize preview, date and effort suffixes. A prefix match
+// can substitute a different variant (Gemini 4 Argon for Gemini 4 Carbon).
 export function findPinned(points: ModelPoint[], key: string): ModelPoint | null {
-  const exact = points.find((p) => p.key === key);
-  if (exact) return exact;
-  const longer = points.filter((p) => p.key.startsWith(`${key} `)).sort((a, b) => a.key.length - b.key.length);
-  return longer[0] ?? null;
+  return points.find((p) => p.key === key) ?? null;
 }
 
 // The pin that announced each model the site has one for. Of the AI Models
@@ -305,7 +301,7 @@ export function unscoredFor(universe: ModelUniverse, title: string): UnscoredMod
 }
 
 // The chart for a model that has a price but no score: the field as usual, no
-// pinned dot, and the model's price carried in `unscored`.
+// pinned dot, and the model's price carried in `unscored` for the caption.
 export function buildUnscoredChart(universe: ModelUniverse, unscored: UnscoredModel, pins: ModelPinIndex, pinId: number, title: string): ModelChartData {
   const chart = buildModelChart(universe, null, pins, pinId, title);
   const years = chart.years.includes(unscored.year) ? chart.years : [unscored.year, ...chart.years].sort((a, b) => b - a);
@@ -340,4 +336,26 @@ export async function frontierModelsOf(pin: { id: number; title: string }): Prom
   return buildModelChart(universe, null, only)
     .points.filter((p) => p.frontier && p.pinId === pin.id)
     .map((p) => p.name);
+}
+
+// Resolve from the title's full model name, including on later update pins.
+// The series parser identifies a family for threading, not a scored variant.
+export function buildPinModelChart(
+  universe: ModelUniverse,
+  pins: ModelPinIndex,
+  pin: { id: number; title: string; utcStartDateTime: string | Date },
+): ModelChartData | null {
+  const ownIndex = [{ id: pin.id, title: pin.title, words: wordsOf(pin.title) }];
+  const mine = buildModelChart(universe, null, ownIndex).points
+    .sort((a, b) => b.elo - a.elo)[0];
+  if (mine) return buildModelChart(universe, mine.key, pins, pin.id, pin.title);
+
+  const unscored = unscoredFor(universe, pin.title);
+  if (unscored) return buildUnscoredChart(universe, unscored, pins, pin.id, pin.title);
+  const unpriced = buildUnpricedChart(universe, pins, pin);
+  if (unpriced) return unpriced;
+  if (!modelRelease(pin.title)) return null;
+
+  // New models may not have a router listing or an Arena score yet.
+  return { ...buildModelChart(universe, null, pins, pin.id, pin.title), performanceUnpublished: true };
 }

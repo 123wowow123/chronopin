@@ -496,3 +496,4 @@ Tomb Raider: Chronicles: Metacritic 49.
 The rest don't have scores in the sources the backfill reads (Steam, Wikidata, OpenCritic). That is mostly pre-2010 and Japan-only games. After both passes, about 107 of the 239 pins show a review score. About 130 show none, including some that do have a Metacritic or OpenCritic score online.
 
 The only way to get more would be adding scores by hand from Metacritic or OpenCritic pages. Metacritic blocks scripts, so that means reading them in Chrome. I haven't started that.
+

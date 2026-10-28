@@ -104,6 +104,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   const shown = useMemo(() => (pinned ? [...field, pinned] : field), [field, pinned]);
   const unscored = data.unscored ?? null;
   const unpriced = data.unpriced ?? null;
+  const performanceUnpublished = Boolean(unscored || data.performanceUnpublished);
   const awaiting = unscored ? t('pin.modelChart.awaiting', { model: unscored.name, price: showPrice(unscored.price) }) : null;
 
   const awaitingParts = useMemo(() => {
@@ -201,7 +202,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
               }`}
             >
               {y}
-              {(pinned ?? unscored ?? unpriced)?.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
+              {(pinned ?? unpriced)?.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
             </button>
           ))}
         </div>
@@ -233,6 +234,12 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
         </div>
         </div>
 
+        {performanceUnpublished ? (
+          <p role="status" className="mb-2 text-xs font-medium text-danger-soft">
+            {t('pin.modelChart.performanceUnpublished')}
+          </p>
+        ) : null}
+
         <svg
           ref={svg}
           viewBox={`0 0 ${VIEW.w} ${VIEW.h}`}
@@ -241,7 +248,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
           aria-label={t('pin.modelChart.alt', {
             year,
             count: shown.length,
-            model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : (unpriced ? `${unpriced.name}: ${unpriced.elo} Elo. ${t('pin.modelChart.notPriced')}` : awaiting ?? t('pin.modelChart.notPriced')),
+            model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : (unpriced ? `${unpriced.name}: ${unpriced.elo} Elo. ${t('pin.modelChart.notPriced')}` : awaiting ?? t(performanceUnpublished ? 'pin.modelChart.performanceUnpublished' : 'pin.modelChart.notPriced')),
           })}
           onPointerMove={nearest}
           onPointerDown={nearest}
@@ -300,26 +307,6 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
                 {p.name}
               </text>
             ))}
-
-          {/* A model the arena has not scored: only its price is known, so a
-              dashed line down the plot at that price, in every year's tab. */}
-          {unscored ? (
-            <g>
-              <line x1={x(unscored.price)} x2={x(unscored.price)} y1={PAD.top} y2={PAD.top + PLOT.h} className="stroke-accent" strokeWidth="2" strokeDasharray="6 4" />
-              <text
-                x={x(unscored.price)}
-                y={PAD.top + 12}
-                textAnchor={x(unscored.price) > PAD.left + PLOT.w * 0.65 ? 'end' : 'start'}
-                dx={x(unscored.price) > PAD.left + PLOT.w * 0.65 ? -6 : 6}
-                className="fill-current text-[12px] font-bold text-ink"
-                paintOrder="stroke"
-                strokeWidth="3"
-                stroke="var(--color-panel, transparent)"
-              >
-                {unscored.name}
-              </text>
-            </g>
-          ) : null}
 
           {unpriced ? (
             <g>
@@ -386,7 +373,6 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             </span>
           ) : awaiting ? (
             <span className="text-ink tabular-nums">
-              <span className="me-1.5 inline-block h-0.5 w-3 bg-accent align-middle" aria-hidden />
               {/* The caption is "model · price · not scored yet" in every
                   language; the last part, the status, is the dark red. */}
               {awaitingParts ? (
@@ -397,9 +383,9 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
                 awaiting
               )}
             </span>
-          ) : (
+          ) : !performanceUnpublished ? (
             <span className="text-subtle">{t('pin.modelChart.notPriced')}</span>
-          )}
+          ) : null}
         </div>
 
         <p className="mt-2 text-xs text-subtle">

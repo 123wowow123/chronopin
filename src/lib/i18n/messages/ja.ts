@@ -695,6 +695,7 @@ const ja: Messages = {
       collapse: '拡大表示を閉じる',
       alt: '{year}年に公開されたAIモデル：{count}件。100万トークンあたりの価格とアリーナEloの関係。このピン：{model}。',
       notPriced: '現在の公開価格はありません。',
+      performanceUnpublished: 'このモデルの性能評価はまだ公開されていません。',
       awaiting: '{model} · {price}/Mトークン · アリーナの評価はまだありません',
       price: '100万トークンあたり$（入力:出力＝5:1、対数目盛）',
       elo: 'アリーナElo（テキスト）',

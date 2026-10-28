@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { amazonAssociateTag } from './affiliate';
-import { cheapestExact, isExactListing, shopLinks, withMatches, withoutTracking } from './shopping';
+import { allowsMarketplaceSearch, cheapestExact, isExactListing, shopLinks, withMatches, withoutTracking } from './shopping';
 import type { PinJson } from './types';
 
 const sneaker = {
@@ -100,6 +100,11 @@ describe('isExactListing', () => {
 
   it("lets an accessory word through when it is in the product's own name", () => {
     expect(isExactListing('Apple AirPods Pro 3 Charging Case', 'Apple AirPods Pro 3 Charging Case USB-C')).toBe(true);
+    expect(isExactListing('Apple AirPods Pro 3 Charging Case', 'Cover for Apple AirPods Pro 3 Charging Case')).toBe(false);
+  });
+
+  it('does not confuse a fractional pipe size with a model version', () => {
+    expect(isExactListing('Gemini 4 Carbon', 'NEW! Gemini 1/4" NPT Carbon Steel DBL Acting Pneu Act Valve 120VAC w/Solenoid!!')).toBe(false);
   });
 });
 
@@ -125,13 +130,19 @@ describe('withMatches', () => {
   it("puts a live listing and its price in place of that store's search, and leaves the rest", () => {
     const links = withMatches(shopLinks(sneaker), [
       { store: 'eBay', url: 'https://www.ebay.com/itm/123', price: 112.5, currency: 'USD', title: 'PUMA MB.06 Puerto Rico' },
-    ]);
+    ], sneaker.productName!);
     const ebay = links.find((l) => l.store === 'eBay')!;
     // The live listing earns too: our EPN campaign is on its link.
     expect(ebay).toMatchObject({ price: 112.5, currency: 'USD', search: false, ebay: true });
     expect(new URL(ebay.url).pathname).toBe('/itm/123');
     expect(new URL(ebay.url).searchParams.get('campid')).toBe('5338380156');
     expect(links.filter((l) => l.search).map((l) => l.store)).toEqual(['StockX', 'GOAT', 'Amazon', 'Mercari', 'Facebook']);
+  });
+
+  it('hides eBay when there is no verified match, including stale matches for another product', () => {
+    for (const matches of [[], [{ store: 'eBay', url: 'https://www.ebay.com/itm/123', price: 759.95, currency: 'USD', title: 'Gemini Carbon Valve' }]]) {
+      expect(withMatches(shopLinks(sneaker), matches, sneaker.productName!).some((l) => l.store === 'eBay')).toBe(false);
+    }
   });
 });
 
@@ -145,6 +156,13 @@ describe('shopLinks for a game', () => {
 });
 
 describe('AI model plan link', () => {
+  it('excludes marketplace searches and stored marketplace links for Gemini, preserving provider links', () => {
+    const pin = { company: 'Google', productName: 'Gemini 4 Carbon', tags: [{ name: 'AI Models', kind: 'topic', source: 'user' } as const], categories: ['AI', 'Cybersecurity'], merchants: [{ url: 'https://www.ebay.com/itm/115950132910', price: 759.95 }] };
+    expect(allowsMarketplaceSearch(pin)).toBe(false);
+    expect(shopLinks(pin).map((l) => l.store)).toEqual(['Gemini']);
+    expect(shopLinks({ ...pin, company: 'Unknown provider' })).toEqual([]);
+  });
+
   it('sends a Grok model pin to the Grok subscribe page', () => {
     const links = shopLinks({ company: 'SpaceXAI', categories: ['AI'], tags: [{ name: 'AI Models' } as any] });
     expect(links.map((l) => [l.store, l.url])).toEqual([['Grok', 'https://grok.com/#subscribe']]);

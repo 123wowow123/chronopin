@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { buildUnpricedChart, readModelUniverse, type ModelUniverse } from './modelChart';
+import { buildPinModelChart, buildUnpricedChart, findPinned, readModelUniverse, type ModelUniverse } from './modelChart';
 
 vi.mock('./db', () => ({ query: vi.fn() }));
 afterEach(() => vi.unstubAllGlobals());
@@ -43,5 +43,54 @@ describe('models without a current price', () => {
 
   it('rejects an invalid release date', () => {
     expect(buildUnpricedChart(universe, pins, { ...pin, utcStartDateTime: 'invalid' })).toBeNull();
+  });
+});
+
+
+describe('pin model identity', () => {
+  const carbon = { id: 20445, title: 'Google announces Gemini 4 Carbon with cybersecurity focus', utcStartDateTime: '2026-10-28T00:00:00Z' };
+
+  it('does not highlight Argon on an unpublished Carbon pin', () => {
+    const chart = buildPinModelChart(universe, pins, carbon)!;
+    expect(chart.pinned).toBeNull();
+    expect(chart.performanceUnpublished).toBe(true);
+    expect(chart.points.map((p) => p.pinId)).toEqual([5023]);
+    expect(chart.unpriced).toBeUndefined();
+  });
+
+  it('does not substitute a variant for a family key', () => {
+    expect(findPinned(universe.points, 'gemini 4')).toBeNull();
+    expect(findPinned(universe.points, 'gemini 4 argon')?.elo).toBe(1530);
+  });
+
+  it('keeps a priced but unscored model out of the scored highlights', () => {
+    const unscored = { key: 'gemini 4 carbon', name: 'Gemini 4 Carbon', organization: 'Google', price: 2, year: 2026 };
+    const chart = buildPinModelChart({ ...universe, unscored: [unscored] }, pins, carbon)!;
+    expect(chart.pinned).toBeNull();
+    expect(chart.unscored).toEqual(unscored);
+  });
+
+  it('highlights the exact model once its score is published', () => {
+    const scored = { ...universe.points[0], key: 'gemini 4 carbon', name: 'Gemini 4 Carbon', elo: 1500 };
+    const chart = buildPinModelChart({ ...universe, points: [...universe.points, scored] }, pins, carbon)!;
+    expect(chart.pinned).toBe('gemini 4 carbon');
+    expect(chart.points.find((p) => p.key === chart.pinned)?.pinId).toBe(carbon.id);
+    expect(chart.performanceUnpublished).toBeUndefined();
+  });
+
+  it('recognizes the full model name on a later update pin', () => {
+    const chart = buildPinModelChart(universe, pins, { ...carbon, title: 'Google updates Gemini 4 Argon with new tools' })!;
+    expect(chart.pinned).toBe('gemini 4 argon');
+    expect(chart.points.find((p) => p.key === chart.pinned)?.href).toContain('5023');
+  });
+
+  it('preserves published scores without current pricing', () => {
+    const chart = buildPinModelChart(universe, pins, pin)!;
+    expect(chart.unpriced?.elo).toBe(1450);
+    expect(chart.performanceUnpublished).toBeUndefined();
+  });
+
+  it('does not invent model coverage for an unrelated title', () => {
+    expect(buildPinModelChart(universe, pins, { ...carbon, title: 'Google opens a new office' })).toBeNull();
   });
 });

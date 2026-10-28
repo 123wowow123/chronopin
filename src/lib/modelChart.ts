@@ -36,7 +36,7 @@ export type ModelPoint = {
 export const FRONTIER_TAG = 'Frontier Model';
 
 // A model with a price but no arena score yet (a release the leaderboard has not
-// caught up with). It has no Elo, so the chart marks its price on the x axis.
+// caught up with). It has no Elo; only its caption shows the known price.
 export type UnscoredModel = {
   key: string;
   name: string;
@@ -60,8 +60,10 @@ export type ModelChartData = {
   // When the arena published the scores this reads (YYYY-MM-DD).
   publishedOn: string | null;
   // The pin's own model when the router prices it but the arena has not scored
-  // it: drawn as a price line with no dot, and `pinned` is then null.
+  // it: shown in the caption with no plot highlight; `pinned` is null.
   unscored?: UnscoredModel | null;
+  // Neither source lists a score for the model named by the pin.
+  performanceUnpublished?: boolean;
   unpriced?: (UnpricedModel & { year: number }) | null;
 };
 
@@ -70,7 +72,7 @@ export type ModelChartData = {
 // expired: a new data field (the same-thread flag) showed nothing for an hour
 // after the deploy. Bump this with any change to what the route sends, and the
 // URL - and so the cache entry - is new.
-export const CHART_VERSION = 7;
+export const CHART_VERSION = 8;
 
 export async function loadModelChart(pinId: number): Promise<ModelChartData | null> {
   try {

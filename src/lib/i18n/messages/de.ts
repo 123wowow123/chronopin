@@ -695,6 +695,7 @@ const de: Messages = {
       collapse: 'Vergrößerte Ansicht schließen',
       alt: 'KI-Modelle, erschienen {year}: {count} Modelle, Preis für eine Million Token gegen Arena-Elo. Dieser Pin: {model}.',
       notPriced: 'Es ist kein aktueller öffentlicher Preis verfügbar.',
+      performanceUnpublished: 'Für dieses Modell wurden noch keine Leistungswerte veröffentlicht.',
       awaiting: '{model} · {price}/M Token · von der Arena noch nicht bewertet',
       price: '$ pro Million Token (5:1 Eingabe:Ausgabe, log. Skala)',
       elo: 'Arena-Elo (Text)',

@@ -59,6 +59,16 @@ describe('exactListing', () => {
     expect(calls.filter((c) => c.url.includes('/item_summary/search'))).toHaveLength(2);
   });
 
+  it('rejects the Gemini carbon-steel valve collision', async () => {
+    fakeEbay([{
+      title: 'NEW! Gemini 1/4" NPT Carbon Steel DBL Acting Pneu Act Valve 120VAC w/Solenoid!!',
+      price: { value: '759.95', currency: 'USD' },
+      itemWebUrl: 'https://www.ebay.com/itm/115950132910',
+    }]);
+    const { exactListing } = await load();
+    expect(await exactListing('Gemini 4 Carbon')).toBeNull();
+  });
+
   it("links through the Partner Network campaign when there is one", async () => {
     ebay.campaignID = '5338';
     const calls = fakeEbay([

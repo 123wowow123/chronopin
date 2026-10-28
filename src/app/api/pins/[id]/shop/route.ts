@@ -3,6 +3,7 @@ import * as db from '@/server/db';
 import * as ebay from '@/server/ebay';
 import { intParam, json, noContent, route } from '@/server/http';
 import log from '@/server/util/log';
+import { allowsMarketplaceSearch } from '@/lib/shopping';
 
 // Listings found live for a product pin's buy buttons (src/lib/shopping.ts):
 // the cheapest exact eBay listing of its product, when it has no stored eBay
@@ -11,14 +12,22 @@ import log from '@/server/util/log';
 export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/pins/[id]/shop'>) => {
   const id = intParam((await ctx.params).id);
   if (!ebay.hasKeys()) return noContent();
-  const [pin] = await db.query<{ productName: string | null; hasEbay: boolean }>(
+  const [pin] = await db.query<{ productName: string | null; hasEbay: boolean; tagNames: string[]; categories: string[] }>(
     `SELECT "productName",
+       ARRAY(SELECT "name"::text FROM "PinTag" WHERE "pinId" = "Pin"."id") AS "tagNames",
+       ARRAY(SELECT "name"::text FROM "PinTag" WHERE "pinId" = "Pin"."id" AND "kind" = 'category') AS "categories",
        EXISTS (SELECT 1 FROM "Merchant" WHERE "pinId" = "Pin"."id" AND "url" ~* '^https?://([^/]+\\.)?ebay\\.com/') AS "hasEbay"
      FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [id],
   );
   if (!pin) return new Response(null, { status: 404 });
   if (!pin.productName || pin.hasEbay) return noContent();
+  const eligible = allowsMarketplaceSearch({
+    productName: pin.productName,
+    categories: pin.categories,
+    tags: pin.tagNames.map((name) => ({ name, kind: 'topic', source: 'user' })),
+  });
+  if (!eligible) return noContent();
 
   try {
     const match = await ebay.exactListing(pin.productName);

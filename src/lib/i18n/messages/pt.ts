@@ -693,6 +693,7 @@ const pt: Messages = {
       collapse: 'Fechar gráfico ampliado',
       alt: 'Modelos de IA lançados em {year}: {count} modelos, preço de um milhão de tokens contra o Elo da arena. Este pin: {model}.',
       notPriced: 'Não há preço público atual disponível.',
+      performanceUnpublished: 'O desempenho deste modelo ainda não foi publicado.',
       awaiting: '{model} · {price}/M tokens · ainda sem pontuação na arena',
       price: '$ por milhão de tokens (5:1 entrada:saída, escala log.)',
       elo: 'Elo da arena (texto)',

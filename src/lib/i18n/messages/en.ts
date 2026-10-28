@@ -700,6 +700,7 @@ const en = {
       collapse: 'Close expanded chart',
       alt: 'AI models released in {year}: {count} models, price of a million tokens against arena Elo. This pin: {model}.',
       notPriced: 'No current public price is available.',
+      performanceUnpublished: 'Performance has not been published for this model yet.',
       awaiting: '{model} · {price}/M tokens · not scored by the arena yet',
       price: '$ per million tokens (5:1 input:output, log scale)',
       elo: 'Arena Elo (text)',

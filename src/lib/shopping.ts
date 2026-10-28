@@ -124,6 +124,17 @@ const MODEL_KIT = /\b(tamiya|mini 4wd|1\/\d{1,2}|1:\d{1,2}|diecast|die-cast|hot 
 
 const GENERAL: StoreId[] = ['amazon', 'ebay', 'mercari', 'facebook'];
 
+type ShoppingPin = Pick<PinJson, 'productName' | 'tags' | 'categories'>;
+
+const isAiModel = (pin: Pick<PinJson, 'tags'>) => pin.tags?.some((t) => t.name.toLowerCase() === 'ai models') ?? false;
+
+// Model access is sold by the provider; marketplace results are unrelated
+// physical products sharing the model's name. Real cars also need direct links.
+export function allowsMarketplaceSearch(pin: ShoppingPin): boolean {
+  const product = pin.productName?.trim();
+  return !!product && !isAiModel(pin) && !(listingKindOf(pin) === 'vehicle' && !MODEL_KIT.test(product));
+}
+
 // A vertical's own stores, shown ahead of the general ones: by one of the
 // pin's tags or categories.
 const SPECIALTY: { stores: StoreId[]; tags?: string[]; categories?: string[] }[] = [
@@ -237,7 +248,7 @@ const FILLER = new Set(['a', 'an', 'and', 'the', 'of', 'x', 'with', 'edition']);
 // toy or scale model of it ("Xiaomi SU7 Ultra 1:24 diecast"), which carries
 // every word of the product's name and costs a fraction of it.
 const NOT_THE_PRODUCT =
-  /\b(for|fits|compatible|replacement|case|cover|band|strap|charger|cable|protector|skin|sticker|decal|stand|mount|holder|adapter|box only|empty box|no box|parts|broken|repair|lot|bundle|toys?|diecast|die cast|miniatures?|replica|figures?|figurines?|rc|remote control|kids|children|hot wheels|matchbox|lego|plush)\b|\b1 (12|18|24|32|36|43|64)\b/;
+  /\b(for|fits|compatible|replacement|case|cover|band|strap|charger|cable|protector|skin|sticker|decal|stand|mount|holder|adapter|box only|empty box|no box|parts|broken|repair|lot|bundle|toys?|diecast|die cast|miniatures?|replica|figures?|figurines?|rc|remote control|kids|children|hot wheels|matchbox|lego|plush)\b|\b1(?: |fraction)(12|18|24|32|36|43|64)\b/;
 
 // Trademark signs go first: NFKD spells ™ as "TM", which would fuse onto the
 // word before it ("Kingdom™" -> "kingdomtm").
@@ -247,6 +258,8 @@ const words = (text: string) =>
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
+    // A pipe's 1/4-inch fitting is not model/version 4.
+    .replace(/(\d+)\s*\/\s*(\d+)/g, '$1fraction$2')
     .replace(/[^a-z0-9.]+/g, ' ')
     .replace(/(^|\s)\.|\.(\s|$)/g, ' ')
     .split(' ')
@@ -260,7 +273,11 @@ export function isExactListing(product: string, title: string): boolean {
   if (!wanted.length) return false;
   const have = new Set(words(title));
   if (!wanted.every((w) => have.has(w))) return false;
-  return !NOT_THE_PRODUCT.test(words(title).join(' ')) || NOT_THE_PRODUCT.test(words(product).join(' '));
+  const productText = words(product).join(' ');
+  const exclusions = new RegExp(NOT_THE_PRODUCT.source, 'g');
+  return [...words(title).join(' ').matchAll(exclusions)].every((match) =>
+    new RegExp(`\\b${match[0]}\\b`).test(productText),
+  );
 }
 
 // The cheapest of a search's exact listings, leaving out any priced under
@@ -274,9 +291,11 @@ export function cheapestExact<T extends { title: string; price: number }>(produc
 }
 
 // The buttons with each live match in place of its store's search.
-export function withMatches(links: ShopLink[], matches: ShopMatch[]): ShopLink[] {
-  return links.map((link) => {
-    const match = link.search && matches.find((m) => m.store === link.store);
+export function withMatches(links: ShopLink[], matches: ShopMatch[], product: string): ShopLink[] {
+  return links.flatMap((link) => {
+    const match = link.search && matches.find((m) => m.store === link.store && isExactListing(product, m.title));
+    // A failed/unavailable lookup should not leave an unverified eBay search.
+    if (link.search && link.store === 'eBay' && !match) return [];
     return match ? { ...link, url: affiliateUrl(match.url), price: match.price, currency: match.currency, search: false } : link;
   });
 }
@@ -321,7 +340,7 @@ const MODEL_PLANS: { company: RegExp; store: string; url: string; background: st
 ];
 
 function modelPlanLink(pin: Pick<PinJson, 'tags'> & { company?: string | null }): ShopLink | undefined {
-  if (!pin.tags?.some((t) => t.name === 'AI Models')) return undefined;
+  if (!isAiModel(pin)) return undefined;
   const plan = MODEL_PLANS.find((p) => pin.company && p.company.test(pin.company.trim()));
   if (!plan) return undefined;
   return { store: plan.store, url: plan.url, search: false, amazon: false, background: plan.background, text: plan.text, border: plan.border };
@@ -331,7 +350,7 @@ function modelPlanLink(pin: Pick<PinJson, 'tags'> & { company?: string | null })
 // every store it has no listing on. Links are ready to click: tracking
 // stripped and Amazon's tag added (affiliateUrl).
 export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags' | 'categories'> & { company?: string | null }): ShopLink[] {
-  const listed = (pin.merchants ?? []).filter(isPurchase);
+  const listed = (pin.merchants ?? []).filter(isPurchase).filter((m) => !isAiModel(pin) || !storeOf(m.url));
   const covered = new Set(listed.map((m) => storeOf(m.url)).filter(Boolean));
   const links: ShopLink[] = listed.map((m) => {
     const url = withoutTracking(m.url);
@@ -358,7 +377,7 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
   // A car is not sold from a marketplace search: the stores' results for its
   // name are toys, parts and other people's cars. A vehicle keeps its stored
   // listings (the maker's own page) and the readers' listings panel.
-  if (product && !(listingKindOf(pin) === 'vehicle' && !MODEL_KIT.test(product))) {
+  if (product && allowsMarketplaceSearch(pin)) {
     for (const id of storesFor(pin)) {
       if (covered.has(id)) continue;
       const store: Store = STORES[id];

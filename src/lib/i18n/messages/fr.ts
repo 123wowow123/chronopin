@@ -695,6 +695,7 @@ const fr: Messages = {
       collapse: 'Fermer le graphique agrandi',
       alt: 'Modèles d’IA sortis en {year} : {count} modèles, prix d’un million de jetons face au Elo de l’arène. Cette épingle : {model}.',
       notPriced: 'Aucun prix public actuel n’est disponible.',
+      performanceUnpublished: 'Les performances de ce modèle n’ont pas encore été publiées.',
       awaiting: '{model} · {price}/M tokens · pas encore noté par l’arène',
       price: '$ par million de jetons (5:1 entrée:sortie, échelle log.)',
       elo: 'Elo de l’arène (texte)',

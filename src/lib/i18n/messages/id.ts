@@ -700,6 +700,7 @@ const id: Messages = {
       collapse: 'Tutup grafik yang diperbesar',
       alt: 'Model AI yang dirilis pada {year}: {count} model, harga sejuta token terhadap Elo arena. Pin ini: {model}.',
       notPriced: 'Harga publik saat ini tidak tersedia.',
+      performanceUnpublished: 'Performa model ini belum dipublikasikan.',
       awaiting: '{model} · {price}/juta token · belum dinilai arena',
       price: '$ per sejuta token (5:1 input:output, skala log)',
       elo: 'Elo arena (teks)',

@@ -2,7 +2,7 @@
 // product pin (src/lib/shopping.ts). eBay refuses plain fetches of its pages,
 // so this is its Browse API, with an application token from the client
 // credentials grant. Keys in config.ebay; without them there is no answer and
-// the button stays a search.
+// the button stays hidden.
 //
 // Only new, buy-it-now listings count: an auction's current bid is not what
 // the item costs, and a used one's price says little about the product. Of
