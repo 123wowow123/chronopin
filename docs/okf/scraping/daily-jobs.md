@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -171,7 +171,8 @@ prod's pin is the one the run worked on ([admin table API](../api/admin-db.md#jo
 
 # Rules every run follows
 
-* **Write through the real API as a curator.** The server signs a token for
+* **Write through the real API.** New pins use a curator; maintenance may use
+  authenticated admin fallback while preserving the original author. The server signs a token for
   the curator desk (never a password, never a person's account), and the save
   goes through `POST`/`PUT /api/pins`, so the live feed, search, duplicate
   checks, threading and tags all follow ([pinApi.ts](../../../src/server/jobs/pinApi.ts)).
@@ -233,6 +234,41 @@ and order the admin page shows and a run's instructions list.
 
 Re-check the pins that exist before adding to them.
 
+
+**Repair discovered issues in the 6am/6pm run (owner, 2026-10-28).** Both
+news runs begin with `revisit_queue` as well as their normal weekly/fresh-source
+checks. Work repairable marks, including ones found by a previous news run,
+instead of repeatedly describing them as pending. This rule overrides older
+curator-only deferral wording below. `update_pin` uses authenticated admin
+fallback for authors outside the curator allowlist and preserves the author.
+
+Before sentiment scoring, check that a pin's company, title, description,
+source, references, date and tags describe the same entity and event. A resort
+linked to a data-center company is a content collision to repair, not neutral
+company news to score. Open `get_pin`, research the actual source and search
+for existing canonical pins for both subjects. Preserve both real subjects;
+never blindly restore an old ID over an unrelated current pin, duplicate an
+already recovered project, or clear a company association on title alone.
+
+When supported by the evidence, fix the wrong company link and all inherited
+fields (dates/reasoning, references, categories/tags, product classification,
+media and subject-specific profiles). Remove invalid old sentiment data and
+stale translations; replace unsupported prices/review claims only with verified
+evidence. Match production records by unique source URL, not assumed equal
+IDs. Save through authenticated management/native APIs in both environments,
+preserve authors and unrelated content, and synchronize affected replay
+catalogs. A resolved company mismatch may make a hotel ineligible for company
+sentiment; do not invent a replacement score merely to empty the queue.
+
+Read back the saved pin and relationships, verify its native detail page and
+that the relevant pending queue is clear, and only then resolve its revisit
+mark. If a source or API fails, try an appropriate fallback and record the
+specific remaining blocker. Queue only genuinely missing/conflicting evidence,
+an actual failed save, or work beyond the run limit; an allowlist mismatch or
+an existing mark is not a reason to defer an otherwise supported repair. Report
+partial environment saves explicitly. See the [resort collision repair](resort-collision-repair-2026-10-28.md)
+for an example and the retired fixed-ID seed that caused it.
+
 ### revisits
 
 **Reads** `revisit_queue` and `soft_dated_soon`.
@@ -252,8 +288,8 @@ yet (a date "to be announced"); resolving it with nothing done hides it.
 **Does** make sure every pin happening in the next seven days is right today:
 the date and time still hold (events slip in their last week), the place is
 the venue, the date confidence reflects the latest word, there are
-references beyond the source, and the summary is current. Update curators'
-pins; mark the rest.
+references beyond the source, and the summary is current. Apply supported
+repairs for every author; use admin fallback when needed.
 **Traps.** A pin with no reference and `unknown` confidence a few days out
 is the most urgent - it will be on everyone's timeline soonest.
 
@@ -968,6 +1004,11 @@ any unavailable graphs, inaccessible source assets or incompatible data.
 Keep the numbers the pages graph up to date. Last, so they cover the pins the run just added.
 
 ### sentiment
+
+**Identity check (2026-10-28).** Apply the repair workflow under Keep pins right
+before scoring. Fix source-supported company/content collisions in this run,
+verify both environments, then re-fetch `pending_sentiment`. A hotel detached
+from an unrelated company should leave the company queue without a score.
 
 **Review collection (2026-10-26).** Before the final scoring pass, call
 `review_research_gaps`. Research a bounded batch of the returned exact products,

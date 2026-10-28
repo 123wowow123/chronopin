@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as db from '../db';
-import { sponsoredTranslationRequest, apiBase, prodBase, pushEventInfo, pushSentiment, scrapeUrl } from './pinApi';
+import { sponsoredTranslationRequest, apiBase, prodBase, pushEventInfo, pushSentiment, scrapeUrl, updatePin } from './pinApi';
 import { sentimentHash } from '../model/pinSentiment';
 import { productionWrite } from './productionWrites';
 
@@ -64,12 +64,18 @@ describe('writing to production', () => {
     expect(fetch).toHaveBeenCalledTimes(2);
   });
 
-  it('does not send production scores for a personal pin', async () => {
+  it('uses admin fallback for non-curator sentiment while retaining hash checks', async () => {
     process.env.JOBS_PROD_BASE = 'https://prod.example';
     process.env.JOBS_PROD_SESSION_SECRET = 'prod-secret';
-    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ id: 5, title: 'T', description: 'D', user: { userName: '@Owner' } }))));
-    expect(await pushSentiment(5, 0, '', { title: 'T', description: 'D' })).toBe(false);
-    expect(productionWrite).not.toHaveBeenCalled();
+    vi.mocked(db.query).mockResolvedValue([{ id: 1 }]);
+    const fetcher = vi.fn(async (_url: string, init: any) => new Response(JSON.stringify(init.method === 'GET'
+      ? { id: 5, title: 'T', description: 'D', user: { id: 99, userName: '@Owner' } }
+      : { saved: 1, refused: [] })));
+    vi.stubGlobal('fetch', fetcher);
+    expect(await pushSentiment(5, 0, '', { title: 'T', description: 'D' })).toBe(true);
+    expect(fetcher.mock.calls[1][1].headers.Authorization).toMatch(/^Bearer ey/);
+    expect(JSON.parse(fetcher.mock.calls[1][1].body)[0].textHash).toBe(sentimentHash({ title: 'T', description: 'D' }));
+    expect(productionWrite).toHaveBeenCalledOnce();
   });
 
   it('reads and scrapes on this machine even when writing to prod', () => {
@@ -105,5 +111,38 @@ describe('sponsored translation job API', () => {
     await expect(sponsoredTranslationRequest('POST', '/api/admin/db/User', {})).rejects.toThrow(/Not a sponsored/);
     vi.mocked(db.query).mockResolvedValue([]);
     await expect(sponsoredTranslationRequest('GET', '/api/admin/sponsored-ads/translations')).rejects.toThrow(/No admin/);
+  });
+});
+
+
+describe('routine maintenance across authors', () => {
+  it('repairs a non-curator pin through admin, preserves its other fields and reads it back', async () => {
+    delete process.env.JOBS_PROD_BASE;
+    vi.mocked(db.query).mockResolvedValue([{ id: 1 }]);
+    let pin = { id: 5, title: 'Hotel', company: 'Wrong company', user: { id: 99, userName: '@Owner' }, media: [{ originalUrl: 'https://images.example/hotel.jpg' }], references: [{ url: 'https://hotel.example' }] };
+    const fetcher = vi.fn(async (_url: string, init: any) => {
+      if (init.method === 'PUT') pin = { ...pin, ...JSON.parse(init.body) };
+      return new Response(JSON.stringify(pin));
+    });
+    vi.stubGlobal('fetch', fetcher);
+    const saved = await updatePin(5, { company: null, companyId: null });
+    expect(saved.company).toBeNull();
+    expect(saved.user?.id).toBe(99);
+    expect(saved.media).toEqual([{ originalUrl: 'https://images.example/hotel.jpg' }]);
+    expect(saved.references).toEqual([{ url: 'https://hotel.example' }]);
+    expect(fetcher.mock.calls.map(call => call[1].method)).toEqual(['GET', 'PUT', 'GET']);
+    expect(fetcher.mock.calls[1][1].headers.Authorization).toBe('Bearer local-token');
+    expect(db.query).toHaveBeenCalledWith(expect.stringContaining('admin'));
+  });
+
+  it('does not silently accept an author change in the readback', async () => {
+    delete process.env.JOBS_PROD_BASE;
+    vi.mocked(db.query).mockResolvedValue([{ id: 1 }]);
+    let reads = 0;
+    vi.stubGlobal('fetch', vi.fn(async (_url: string, init: any) => {
+      if (init.method === 'GET') reads++;
+      return new Response(JSON.stringify({ id: 5, title: 'Hotel', user: { id: reads > 1 ? 1 : 99, userName: '@Owner' } }));
+    }));
+    await expect(updatePin(5, { company: null })).rejects.toThrow(/author changed/);
   });
 });

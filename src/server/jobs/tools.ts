@@ -370,7 +370,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'pending_sentiment',
     description:
-      "The company pins whose title or summary changed since their tone was scored, or that were never scored, the comments with no tone yet, and the scraped rubric reviews with no sentiment yet (the ones kept beside a taste, car, aircraft, model, hotel or dining rubric, each with its quote and publication day) - with the rubric for each. Score each from -1 to 1 by its rubric, name each pin's product (reusing one of its company's knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
+      "The company pins whose title or summary changed since their tone was scored, or that were never scored, the comments with no tone yet, and the scraped rubric reviews with no sentiment yet (the ones kept beside a taste, car, aircraft, model, hotel or dining rubric, each with its quote and publication day) - with the rubric for each. Before scoring, check that company, title and summary describe the same entity. If they conflict, get_pin and research the sources and existing canonical pins; repair stale company links, dates, references, tags and other collided fields in this run, verify the readback, then fetch this queue again. Do not score unrelated hotel text for an energy company or merely re-queue a repairable mismatch. Score each valid item from -1 to 1 by its rubric, name each pin's product (reusing one of its company's knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
     input_schema: obj({ limit: num('At most this many of each, default 50, at most 200') }),
     run: async (input) => {
       const limit = int(input.limit, 50, 1, 200);
@@ -1119,7 +1119,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'update_pin',
     description:
-      "Edits a pin a curator posted, through the real API as that curator. `patch` holds only the fields that change (e.g. parentId to thread the pin, title, description, longFormSummary, dateConfidence, utcStartDateTime), plus the helpers addReferences [{url, title, confidence, publishedDate, reasoning}], addMedia [{type, originalUrl}] and removeMediumIds [ids]; everything else is kept. A pin by anyone who is not a curator cannot be edited here - mark it for revisiting with what should change.",
+      "Edits a pin through the real API as its curator or an authenticated admin. `patch` holds only the fields that change (e.g. parentId to thread the pin, title, description, longFormSummary, dateConfidence, utcStartDateTime), plus the helpers addReferences [{url, title, confidence, publishedDate, reasoning}], addMedia [{type, originalUrl}] and removeMediumIds [ids]; everything else is kept. Uses authenticated admin fallback for non-curator authors, preserving ownership, and reads the saved pin back. Repair verified identity/content mismatches in this run; an allowlist mismatch alone is not a reason to defer.",
     input_schema: obj({ pinId: num('Pin id'), patch: { type: 'object', description: 'Changed fields and helpers' }, reason: str('What changed and on what evidence') }, ['pinId', 'patch', 'reason']),
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);

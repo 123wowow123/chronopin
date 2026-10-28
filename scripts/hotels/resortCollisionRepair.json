@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-10-28",
+  "reason": "Fixed-ID legacy hotel seed left unrelated data-center relationships on three hotel pins. Match replay targets by sourceUrl; IDs recorded for audit only.",
+  "pins": [
+    {
+      "id": 15801,
+      "title": "Our Jungle House Establishes Its Khao Sok Treehouse Retreat Around 1985",
+      "description": "Our Jungle House is a riverside treehouse and bungalow lodge in Khlong Sok, Thailand. Its approximate founding year is reported as 1985; the exact opening date is unverified.",
+      "utcStartDateTime": "1985-01-01T00:00:00.000Z",
+      "dateConfidenceReasoning": "Year-level estimate only: ThailandAddict describes the lodge as going back to around 1985. January 1 is a placeholder for that approximate year, not a verified opening day. The operator confirms the property and founder but does not give an opening year.",
+      "longFormSummary": "<ul><li>Our Jungle House offers treehouses and bungalows beside the Sok River in Khlong Sok. The operator describes natural ventilation, private bathrooms, and Wi-Fi in shared areas rather than rooms.<cite data-ref=\"https://www.khaosokaccommodation.com/accommodation\"></cite></li><li>A travel guide places its origins around 1985. The exact opening date remains unverified; the pin uses year-level precision.<cite data-ref=\"https://www.thailandaddict.com/en/review-our-jungle-house-khao-sok-surat-thani\"></cite></li><li>The operator names Dick Sandler as founder and describes rainforest protection and community education among its aims.<cite data-ref=\"https://www.khaosokaccommodation.com/why-us\"></cite></li></ul>",
+      "address": "183 Moo 6, Khlong Sok, Phanom, Surat Thani 84250, Thailand",
+      "tags": [
+        "Hotels",
+        "Eco-Resort",
+        "Thailand",
+        "Rainforest",
+        "Treehouse"
+      ],
+      "refs": [
+        {
+          "url": "https://www.khaosokaccommodation.com/accommodation",
+          "title": "Khao Sok national park accommodation in unique treehouses",
+          "confidence": 95,
+          "reasoning": "Official property accommodation page; confirms rooms, facilities and address."
+        },
+        {
+          "url": "https://www.khaosokaccommodation.com/why-us",
+          "title": "Find out more about Our Jungle House values and history",
+          "confidence": 90,
+          "reasoning": "Official founder/history page; no exact opening year is stated."
+        },
+        {
+          "url": "https://www.thailandaddict.com/en/review-our-jungle-house-khao-sok-surat-thani",
+          "title": "Our Jungle House — Sleep in a Treehouse by the Sok River, Walk to the Khao Sok National Park Entrance",
+          "confidence": 60,
+          "reasoning": "Approximate historical origin: “going back to around 1985”. Exact year/day needs stronger archival confirmation."
+        }
+      ],
+      "photo": "jungle",
+      "credit": "Our Jungle House",
+      "photoPage": "https://www.khaosokaccommodation.com/accommodation",
+      "caption": "Aerial view of Our Jungle House treehouses beside the forest and river; official accommodation-page video poster.",
+      "sourceUrl": "https://www.khaosokaccommodation.com/",
+      "companyId": null,
+      "price": null,
+      "priceCurrency": null,
+      "dateConfidence": "estimated",
+      "categories": [
+        "Travel"
+      ],
+      "hotelRubric": null,
+      "rubricReason": "Legacy scores, awards and purported guest quotations were not verified. Removed; only regenerate from opened property-specific published scores and genuine reviews.",
+      "media": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/hotels/repair-2026-10-28/jungle-27fe35457079d8b6.jpg",
+          "downloadSource": "https://www.khaosokaccommodation.com/images/pages/rooms/room-video-poster.jpg",
+          "sourceUrl": "https://www.khaosokaccommodation.com/accommodation",
+          "credit": "Our Jungle House",
+          "caption": "Aerial view of Our Jungle House treehouses beside the forest and river; official accommodation-page video poster.",
+          "sha256": "27fe35457079d8b69ea2da3aa188e641587b61ad704b8b1728ff973d8c59022c"
+        }
+      ],
+      "productName": null
+    },
+    {
+      "id": 15802,
+      "title": "The Birdhouse El Nido Opens in September 2016; Later Reported Closed",
+      "description": "The Birdhouse began as a glamping retreat above Maremegmeg Beach in El Nido in September 2016. A firsthand travel account was updated January 6, 2024 to report permanent closure; no reopening was verified.",
+      "utcStartDateTime": "2016-09-01T00:00:00.000Z",
+      "dateConfidenceReasoning": "Month-level opening evidence: Illustrado July 23, 2018 says the property opened in September 2016. September 1 is a month placeholder, not the verified day. Closure was reported by January 6, 2024; the actual closure date is not established.",
+      "longFormSummary": "<ul><li>Illustrado’s July 2018 founder profile dates the opening of The Birdhouse El Nido to September 2016 and identifies Camille and Mark-Anthony Villaflor as founders.<cite data-ref=\"https://illustradolife.com/filipino-founded-startups-that-are-making-a-difference-hospitality/\"></cite></li><li>The historical retreat occupied a ridge above Maremegmeg Beach, with tent accommodation and views toward Bacuit Bay. A firsthand account describes steep bamboo access steps and private-bathroom tents.<cite data-ref=\"https://offbeatappetite.com/stories/experiential-stays-the-el-nido-island-experience\"></cite></li><li>That account carries a January 6, 2024 update reporting permanent closure. This pin records the historical opening and does not advertise current bookings; no reopening was verified in this repair.<cite data-ref=\"https://offbeatappetite.com/stories/experiential-stays-the-el-nido-island-experience\"></cite></li></ul>",
+      "tags": [
+        "Hotels",
+        "Glamping",
+        "Philippines",
+        "Palawan",
+        "Beach",
+        "Closed"
+      ],
+      "refs": [
+        {
+          "url": "https://illustradolife.com/filipino-founded-startups-that-are-making-a-difference-hospitality/",
+          "title": "Filipino – founded startups that are making a difference – Hospitality",
+          "publishedDate": "2018-07-23",
+          "confidence": 90,
+          "reasoning": "Explicitly dates the opening to September2016; day not published."
+        },
+        {
+          "url": "https://offbeatappetite.com/stories/experiential-stays-the-el-nido-island-experience",
+          "title": "Eco Stays: An Island Experience in El Nido",
+          "confidence": 85,
+          "reasoning": "Firsthand stay with dated January6,2024 update: “The Birdhouse El Nido is permanently closed.” Exact closure day not stated."
+        }
+      ],
+      "photo": "birdhouse",
+      "credit": "The Offbeat Appetite",
+      "photoPage": "https://offbeatappetite.com/stories/experiential-stays-the-el-nido-island-experience",
+      "caption": "Historical view from inside a tent at The Birdhouse El Nido, photographed for The Offbeat Appetite; the property was later reported closed.",
+      "sourceUrl": "https://www.thebirdhouseelnido.com/",
+      "companyId": null,
+      "price": null,
+      "priceCurrency": null,
+      "dateConfidence": "estimated",
+      "categories": [
+        "Travel"
+      ],
+      "hotelRubric": null,
+      "rubricReason": "Legacy scores, awards and purported guest quotations were not verified. Removed; only regenerate from opened property-specific published scores and genuine reviews.",
+      "media": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/hotels/repair-2026-10-28/birdhouse-630d6e412b921baf.jpg",
+          "downloadSource": "https://cdn.sanity.io/images/gpe6axmm/production/9dcbfbb6e7556e69789d62467bbdb1367f5361bb-4928x3264.jpg?w=1400",
+          "sourceUrl": "https://offbeatappetite.com/stories/experiential-stays-the-el-nido-island-experience",
+          "credit": "The Offbeat Appetite",
+          "caption": "Historical view from inside a tent at The Birdhouse El Nido, photographed for The Offbeat Appetite; the property was later reported closed.",
+          "sha256": "630d6e412b921baf47fe62a127be9db0936a1a9ce0e54bbad5742db65130c681"
+        }
+      ],
+      "productName": null
+    },
+    {
+      "id": 15803,
+      "title": "Riad Yasmine Opens in Marrakech in 2002",
+      "description": "Riad Yasmine is an eight-room guesthouse in the Marrakech medina. Its operator dates its opening to 2002 and distinguishes that from Alice and Gabriel taking over management in November 2015.",
+      "utcStartDateTime": "2002-01-01T00:00:00.000Z",
+      "dateConfidenceReasoning": "Year-level precision: the operator’s French about page explicitly says “ouverture en 2002”. January 1 is a year placeholder, not an evidenced opening day. November 2015 was a management takeover, not the original opening.",
+      "longFormSummary": "<ul><li>The operator dates Riad Yasmine’s opening to 2002 and says Alice and Gabriel took over management in November 2015.<cite data-ref=\"https://www.riad-yasmine.com/fr/qui-sommes-nous/\"></cite></li><li>The guesthouse is at 209 rue Ank Jemel, Bab Taghzout, in the Marrakech medina. Its courtyard pool, rooms and rooftop are presented on the property’s official pages.<cite data-ref=\"https://www.riad-yasmine.com/\"></cite></li><li>An interview with Alice describes taking over the existing family guesthouse and progressively redecorating its rooms, patio and rooftop. The adjoining Le Petit Yasmine is a separate property.<cite data-ref=\"https://thatsrandomkate.com/interview-riad-yasmine-marrakesh/\"></cite></li></ul>",
+      "tags": [
+        "Hotels",
+        "Riad",
+        "Morocco",
+        "Marrakech"
+      ],
+      "refs": [
+        {
+          "url": "https://www.riad-yasmine.com/fr/qui-sommes-nous/",
+          "title": "Qui sommes-nous? – Le Riad Yasmine",
+          "confidence": 95,
+          "reasoning": "Official opening-year evidence: “ouverture en 2002”; separately identifies November2015 management takeover."
+        },
+        {
+          "url": "https://thatsrandomkate.com/interview-riad-yasmine-marrakesh/",
+          "title": "Interview: the Owners of Riad Yasmine in Marrakesh, Morocco",
+          "confidence": 85,
+          "reasoning": "Owner interview confirms takeover of an existing family guesthouse, eight rooms and gradual redecoration."
+        }
+      ],
+      "photo": "riad",
+      "credit": "Le Riad Yasmine",
+      "photoPage": "https://www.riad-yasmine.com/",
+      "caption": "Riad Yasmine courtyard and green-tiled pool, from the property’s official website.",
+      "sourceUrl": "https://www.riad-yasmine.com/",
+      "companyId": null,
+      "price": null,
+      "priceCurrency": null,
+      "dateConfidence": "estimated",
+      "categories": [
+        "Travel"
+      ],
+      "hotelRubric": null,
+      "rubricReason": "Legacy scores, awards and purported guest quotations were not verified. Removed; only regenerate from opened property-specific published scores and genuine reviews.",
+      "media": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/hotels/repair-2026-10-28/riad-3500e28081c2fea6.jpg",
+          "downloadSource": "https://www.riad-yasmine.com/wp-content/uploads/2018/02/PATIO-1024x664.jpg",
+          "sourceUrl": "https://www.riad-yasmine.com/",
+          "credit": "Le Riad Yasmine",
+          "caption": "Riad Yasmine courtyard and green-tiled pool, from the property’s official website.",
+          "sha256": "3500e28081c2fea68d63f61f0d2ee676ee9b79ac15c7edcacb7d8e7068c3fa35"
+        }
+      ],
+      "productName": null
+    }
+  ]
+}

@@ -222,3 +222,17 @@ describe('twice-daily hiring and job creation research', () => {
     expect(news.tasks.at(-1)).toBe('sentiment');
   });
 });
+
+
+describe('twice-daily repair maintenance', () => {
+  it('adds revisits before growth to saved news jobs without changing schedules or limits', () => {
+    const oldNews = { ...news, enabled: true, driver: 'session' as const, maxNewPins: 17, maxUpdates: 43, tasks: news.tasks.filter(task => task !== 'revisits') };
+    const saved = { jobs: [midnight, oldNews, monthly, weekly] };
+    const upgraded = withDefaultJobs(saved);
+    expect(upgraded.jobs[1]).toEqual({ ...oldNews, tasks: news.tasks });
+    expect(upgraded.jobs[1].tasks[0]).toBe('revisits');
+    expect(upgraded.jobs[1].times).toEqual(['06:00', '18:00']);
+    expect(upgraded.jobs[0]).toBe(midnight);
+    expect(withDefaultJobs(upgraded)).toBe(upgraded);
+  });
+});

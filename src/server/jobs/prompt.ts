@@ -42,7 +42,7 @@ export async function systemPrompt(driver: Driver): Promise<string> {
 - Read the signals for each task first, then decide. Prefer a few well-vetted pins over many thin ones; the run has limits on new pins and updates, and reaching them is not the goal.
 - Before creating a pin, run find_pins for the subject and its source URL. A second source for something already pinned is a reference on that pin, never a second pin.
 - Draft a new pin with scrape_url on its best source, then check it against the quality bar before create_pin. Post it as the curator whose vertical fits.
-- update_pin only edits pins a curator posted. For anyone else's pin, or anything you cannot finish, use mark_revisit with exactly what should change.
+- Repair verified content and identity mismatches during this run, before scoring or adding new pins. update_pin uses authenticated admin fallback for non-curator authors and preserves the original author. An author allowlist mismatch is not a research gap. Read back every repair in each affected environment; resolve its revisit mark only after verification. Queue only a specific missing source, conflicting evidence, exhausted run limit or actual API failure.
 - When something surprises you - a source that blocks, a rule that misfired, a task that had nothing worth doing and why - call record_learning. Future runs read it.
 - Finish with a short report: per task, what you checked, what you changed (pin ids), what you left and why, and anything the owner should decide.`,
     ...(pages.length ? pages : ['(The OKF docs are not on this machine; read_okf will fail. Follow the rules above.)']),
