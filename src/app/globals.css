@@ -296,6 +296,10 @@
   .btn-primary {
     @apply bg-accent text-white hover:bg-accent-hover active:brightness-90;
   }
+  /* Buy buttons with no brand colours of their own: a solid orange, not the blue accent. */
+  .btn-buy {
+    @apply border border-white/10 bg-orange-700 text-white hover:bg-orange-800 active:brightness-90;
+  }
   .btn-secondary {
     @apply bg-raised text-ink ring-1 ring-line ring-inset hover:bg-raised-2 active:ring-subtle/60;
   }

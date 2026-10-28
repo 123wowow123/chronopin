@@ -19,6 +19,7 @@ type Row = {
   prefix?: string;
   suffix?: string;
   live?: unknown[];
+  history?: unknown[];
   projection?: unknown;
   earlier?: unknown[];
   sources: { url: string }[];

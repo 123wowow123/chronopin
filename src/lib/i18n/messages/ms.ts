@@ -663,6 +663,8 @@ const ms: Messages = {
     // The price of a pin about one product: the maker's list price.
     msrp: 'MSRP',
     buyOnHeading: 'Beli di',
+    moreStores: 'Lebih banyak kedai',
+    otherCountries: 'Kedai di negara lain',
     buyOn: 'Beli di {store}',
     searchStore: 'Cari {product} di {store}',
     watchOn: 'Tonton di {service}',

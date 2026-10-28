@@ -70,7 +70,12 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
   };
 
   const all = withMatches(links, matches);
-  const here = all.filter((link) => availableIn(link, country));
+  const usable = all.filter((link) => availableIn(link, country));
+  // A pin with its own listing (a ticket page, the maker's shop) keeps that
+  // up front; the generic store searches (Amazon, eBay, ...) go behind the …
+  const hasListing = usable.some((link) => !link.search);
+  const here = hasListing ? usable.filter((link) => !link.search) : usable;
+  const lessRelevant = hasListing ? usable.filter((link) => link.search) : [];
   const elsewhere = all.filter((link) => !availableIn(link, country));
   const countryName = (code: string) => {
     try {
@@ -85,6 +90,8 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
     const key = (link.countries ?? []).map(countryName).join(', ');
     groups.set(key, [...(groups.get(key) ?? []), link]);
   }
+  const moreLabel = t('pin.moreStores');
+  const sections: [string, ShopLink[]][] = [...(lessRelevant.length ? ([[moreLabel, lessRelevant]] as [string, ShopLink[]][]) : []), ...groups];
 
   const button = (link: ShopLink) => (
     <Anchor
@@ -102,7 +109,7 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
             })
           : t('pin.buyOn', { store: link.store })
       }
-      className={`btn h-8 gap-1.5 px-3 py-0 shadow-sm transition hover:-translate-y-px hover:shadow-md ${link.background ? 'border border-white/15 hover:brightness-110' : 'btn-secondary'}`}
+      className={`btn h-8 gap-1.5 px-3 py-0 shadow-sm transition hover:-translate-y-px hover:shadow-md ${link.background ? 'border border-white/15 hover:brightness-110' : 'btn-buy'}`}
       style={
         link.background
           ? {
@@ -134,20 +141,20 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
     <div className="mt-2 flex flex-wrap items-center gap-2">
       <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.buyOnHeading')}</span>
       {here.map(button)}
-      {elsewhere.length ? (
+      {sections.length ? (
         <button
           type="button"
           onClick={() => setShowOther((v) => !v)}
           aria-expanded={showOther}
-          aria-label={t.dynamic('pin.otherCountries', 'Stores in other countries')}
-          title={t.dynamic('pin.otherCountries', 'Stores in other countries')}
+          aria-label={lessRelevant.length ? moreLabel : t('pin.otherCountries')}
+          title={lessRelevant.length ? moreLabel : t('pin.otherCountries')}
           className="btn btn-secondary h-8 px-3 py-0"
         >
           …
         </button>
       ) : null}
       {showOther
-        ? [...groups].map(([name, group]) => (
+        ? sections.map(([name, group]) => (
             <div key={name} className="flex basis-full flex-wrap items-center gap-2">
               <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{name}</span>
               {group.map(button)}

@@ -658,6 +658,8 @@ const es: Messages = {
     cost: 'Coste',
     msrp: 'PVP recomendado',
     buyOnHeading: 'Comprar en',
+    moreStores: 'Más tiendas',
+    otherCountries: 'Tiendas en otros países',
     buyOn: 'Comprar en {store}',
     searchStore: 'Buscar {product} en {store}',
     watchOn: 'Ver en {service}',

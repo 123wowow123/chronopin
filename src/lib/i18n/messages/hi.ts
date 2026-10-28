@@ -661,6 +661,8 @@ const hi: Messages = {
     cost: 'कीमत',
     msrp: 'एमआरपी',
     buyOnHeading: 'यहां खरीदें',
+    moreStores: 'और स्टोर',
+    otherCountries: 'अन्य देशों के स्टोर',
     buyOn: '{store} पर खरीदें',
     searchStore: '{store} पर {product} खोजें',
     watchOn: '{service} पर देखें',

@@ -65,6 +65,9 @@ export type IndustryForecastInput = {
   prefix: string;
   suffix: string;
   live?: { fredId: string; label: string }[];
+  // Published actuals drawn solid before the projection (stored as the row's
+  // snapshot); omitted keeps whatever the row holds (the BTOS lines).
+  history?: ForecastLine[];
   projection: ForecastLine | null;
   earlier: ForecastLine[];
   sources: ForecastSource[];
@@ -75,10 +78,10 @@ const isRecord = (v: unknown): v is Record<string, unknown> => !!v && typeof v =
 const text = (v: unknown, max: number): v is string => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
 const isDay = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
 
-function lineProblem(v: unknown, what: string, dated: boolean): ForecastLine | string {
+function lineProblem(v: unknown, what: string, dated: boolean, max = 12): ForecastLine | string {
   if (!isRecord(v) || !text(v.label, 120)) return `${what}: needs a label.`;
   if (dated && !isDay(v.publishedDate)) return `${what}: publishedDate must be YYYY-MM-DD.`;
-  if (!Array.isArray(v.points) || !v.points.length || v.points.length > 12) return `${what}: 1 to 12 points.`;
+  if (!Array.isArray(v.points) || !v.points.length || v.points.length > max) return `${what}: 1 to ${max} points.`;
   const points: ForecastPoint[] = [];
   for (const p of v.points) {
     if (!isRecord(p) || typeof p.x !== 'string' || !/^\d{4}(-\d{2}-\d{2})?$/.test(p.x) || typeof p.value !== 'number' || !Number.isFinite(p.value)) return `${what}: points are { x: "2027", value: number }.`;
@@ -121,6 +124,16 @@ export function forecastProblem(input: unknown): IndustryForecastInput | string 
     earlier.push(line);
   }
   if (earlier.length && !projection) return 'earlier editions need a current projection to compare with.';
+  let history: ForecastLine[] | undefined;
+  if (input.history != null) {
+    if (!Array.isArray(input.history) || input.history.length > 3) return 'history: up to 3 lines.';
+    history = [];
+    for (const h of input.history) {
+      const line = lineProblem(h, 'history', false, 30);
+      if (typeof line === 'string') return line;
+      history.push(line);
+    }
+  }
   const live = Array.isArray(input.live) ? input.live : undefined;
   if (live && !live.every((l) => isRecord(l) && typeof l.fredId === 'string' && /^[A-Z0-9_]{1,40}$/.test(l.fredId) && text(l.label, 120))) return 'live: [{ fredId, label }].';
   return {
@@ -131,6 +144,7 @@ export function forecastProblem(input: unknown): IndustryForecastInput | string 
     prefix: typeof input.prefix === 'string' ? input.prefix.slice(0, 8) : '',
     suffix: typeof input.suffix === 'string' ? input.suffix.slice(0, 8) : '',
     ...(live ? { live: live as { fredId: string; label: string }[] } : {}),
+    ...(history ? { history } : {}),
     projection,
     earlier,
     sources,

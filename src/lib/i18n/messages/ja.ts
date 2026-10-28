@@ -658,6 +658,8 @@ const ja: Messages = {
     cost: '価格',
     msrp: '希望小売価格',
     buyOnHeading: '購入',
+    moreStores: 'その他のストア',
+    otherCountries: '他の国のストア',
     buyOn: '{store}で購入',
     searchStore: '{store}で{product}を検索',
     watchOn: '{service}で視聴',

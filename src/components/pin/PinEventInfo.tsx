@@ -65,17 +65,17 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
         href={info.ticketUrl}
         target="_blank"
         rel="noopener nofollow sponsored"
-        className={`btn gap-1.5 ${seller ? 'border border-white/15 hover:brightness-110' : 'btn-secondary'}`}
+        className={`btn h-8 gap-1.5 px-3 py-0 ${seller ? 'border border-white/15 hover:brightness-110' : 'btn-buy'}`}
         style={seller ? { backgroundColor: seller.background, color: seller.text } : undefined}
       >
         {seller ? (
           <TicketLogo seller={seller.label} className={isTicketWordmark(seller.label) ? 'h-3 w-auto shrink-0' : 'size-4 shrink-0'} />
         ) : (
-          <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
+          <Icon name="cart" className="size-4 shrink-0" />
         )}
         {seller && isTicketWordmark(seller.label) ? <span className="sr-only">{seller.label}</span> : null}
         {t(ACTION_KEY[ticketAction(info.ticketUrl)])}
-        {seller ? <Icon name="external" className="size-3 shrink-0 opacity-60" /> : null}
+        <Icon name="external" className="size-3 shrink-0 opacity-60" />
       </Anchor>
     ) : null;
   const saleLine = sale ? (

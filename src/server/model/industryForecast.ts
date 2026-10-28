@@ -81,7 +81,7 @@ export async function forecastsBySlugs(slugs: string[]): Promise<IndustryForecas
 
 // Saves one row whole (checked by forecastProblem). The live handles and the
 // snapshot are the row's own unless the input gives live.
-export async function saveIndustryForecast(r: IndustryForecastInput, snapshot?: ForecastLine[]): Promise<void> {
+export async function saveIndustryForecast(r: IndustryForecastInput, snapshot: ForecastLine[] | undefined = r.history): Promise<void> {
   await db.query(
     `INSERT INTO "IndustryForecast" ("slug","industry","title","tags","prefix","suffix","live","snapshot","projection","earlier","sources","note","checkedAt")
      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,now())

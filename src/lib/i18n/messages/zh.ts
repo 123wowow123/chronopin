@@ -659,6 +659,8 @@ const zh: Messages = {
     cost: '价格',
     msrp: '建议零售价',
     buyOnHeading: '购买',
+    moreStores: '更多商店',
+    otherCountries: '其他国家的商店',
     buyOn: '在 {store} 购买',
     searchStore: '在 {store} 搜索 {product}',
     watchOn: '在 {service} 观看',

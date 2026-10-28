@@ -663,6 +663,8 @@ const en = {
     // The price of a pin about one product: the maker's list price.
     msrp: 'MSRP',
     buyOnHeading: 'Buy on',
+    moreStores: 'More stores',
+    otherCountries: 'Stores in other countries',
     buyOn: 'Buy on {store}',
     searchStore: 'Search {store} for {product}',
     watchOn: 'Watch on {service}',

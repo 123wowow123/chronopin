@@ -656,6 +656,8 @@ const pt: Messages = {
     cost: 'Custo',
     msrp: 'Preço sugerido',
     buyOnHeading: 'Comprar em',
+    moreStores: 'Mais lojas',
+    otherCountries: 'Lojas em outros países',
     buyOn: 'Comprar em {store}',
     searchStore: 'Buscar {product} em {store}',
     watchOn: 'Assistir em {service}',

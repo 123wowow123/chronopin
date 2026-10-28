@@ -662,6 +662,8 @@ const vi: Messages = {
     // The price of a pin about one product: the maker's list price.
     msrp: 'Giá đề xuất',
     buyOnHeading: 'Mua tại',
+    moreStores: 'Cửa hàng khác',
+    otherCountries: 'Cửa hàng ở quốc gia khác',
     buyOn: 'Mua tại {store}',
     searchStore: 'Tìm {product} trên {store}',
     watchOn: 'Xem trên {service}',

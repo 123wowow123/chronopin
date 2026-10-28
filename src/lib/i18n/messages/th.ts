@@ -655,6 +655,8 @@ const th: Messages = {
     cost: 'ราคา',
     msrp: 'ราคาแนะนำ',
     buyOnHeading: 'ซื้อที่',
+    moreStores: 'ร้านค้าอื่น ๆ',
+    otherCountries: 'ร้านค้าในประเทศอื่น',
     buyOn: 'ซื้อที่ {store}',
     searchStore: 'ค้นหา {product} ใน {store}',
     watchOn: 'ดูทาง {service}',

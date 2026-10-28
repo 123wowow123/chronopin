@@ -732,6 +732,8 @@ const ar: Messages = {
     cost: 'التكلفة',
     msrp: 'السعر الموصى به',
     buyOnHeading: 'اشترِ من',
+    moreStores: 'متاجر أخرى',
+    otherCountries: 'متاجر في دول أخرى',
     buyOn: 'اشترِ من {store}',
     searchStore: 'ابحث عن {product} في {store}',
     watchOn: 'شاهد على {service}',

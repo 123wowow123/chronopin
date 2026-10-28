@@ -667,6 +667,8 @@ const ru: Messages = {
     cost: 'Стоимость',
     msrp: 'Рекомендованная цена',
     buyOnHeading: 'Купить в',
+    moreStores: 'Другие магазины',
+    otherCountries: 'Магазины в других странах',
     buyOn: 'Купить в {store}',
     searchStore: 'Найти {product} в {store}',
     watchOn: 'Смотреть на {service}',

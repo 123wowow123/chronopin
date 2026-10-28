@@ -658,6 +658,8 @@ const ko: Messages = {
     cost: '비용',
     msrp: '권장 소비자가',
     buyOnHeading: '구매',
+    moreStores: '더 많은 스토어',
+    otherCountries: '다른 국가의 스토어',
     buyOn: '{store}에서 구매',
     searchStore: '{store}에서 {product} 검색',
     watchOn: '{service}에서 시청',
