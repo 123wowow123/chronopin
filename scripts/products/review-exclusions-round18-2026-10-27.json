@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Opened original-source review maintenance; preserve rubric axes and authors.",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "pinSourceUrl": "https://www.skoda.co.uk/news/details/new-superb-iv-phev-open-for-order-with-up-to-eighty-four-of-all-electic-range",
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "expectedReview": {
+        "url": "https://www.autoexpress.co.uk/skoda/superb",
+        "quote": "The Skoda Superb is a big, hefty car that focuses on comfort, so it’d be slightly unfair to expect a handling masterpiece.",
+        "title": "Skoda Superb review (Auto Express, rolling review of the Superb range incl. PHEV estate)",
+        "publishedDate": null
+      },
+      "reason": "Rolling generic Superb range page does not isolate the scored iV Estate. Replaced with original exact-powertrain UK test; L&K chassis options explicit and original day remains null."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "pinSourceUrl": "https://www.autozine.nl/volvo/nieuws/sterkere-batterij-voor-volvo-90-en-60-se",
+      "url": "https://www.autoexpress.co.uk/road-tests/353080/...",
+      "expectedReview": {
+        "url": "https://www.autoexpress.co.uk/road-tests/353080/...",
+        "quote": "there’s nothing wrong with the V60’s focus on comfort. It rides smoothly, and excellent refinement makes for a quiet, relaxing drive over longer distances.",
+        "title": "New Volvo V60 T6 Recharge 2023 review (Auto Express)",
+        "sentiment": 0.6,
+        "publishedDate": "2023-01-20"
+      },
+      "reason": "Replace generic Top Gear range/T8 Malaysian review and shortened Auto Express URL with three opened original 18.8-kWh 350-PS T6 AWD tests. The Auto Express correct URL has a 2023 visible day versus 2020 structured original date; no original day asserted. Retain these sources only as scoped context."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "pinSourceUrl": "https://www.autozine.nl/volvo/nieuws/sterkere-batterij-voor-volvo-90-en-60-se",
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "expectedReview": {
+        "url": "https://www.topgear.com/car-reviews/volvo/v60",
+        "quote": "The estate car of choice if comfort (and style) means more to you than handling",
+        "title": "Volvo V60 Review (Top Gear, rolling review of the generation)",
+        "publishedDate": null
+      },
+      "reason": "Replace generic Top Gear range/T8 Malaysian review and shortened Auto Express URL with three opened original 18.8-kWh 350-PS T6 AWD tests. The Auto Express correct URL has a 2023 visible day versus 2020 structured original date; no original day asserted. Retain these sources only as scoped context."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "pinSourceUrl": "https://www.autozine.nl/volvo/nieuws/sterkere-batterij-voor-volvo-90-en-60-se",
+      "url": "https://benautobahn.com/index.php/2022/08/11/the-volvo-v60-recharge-t8-review",
+      "expectedReview": {
+        "url": "https://benautobahn.com/index.php/2022/08/11/the-volvo-v60-recharge-t8-review",
+        "quote": "while the V60 is no sports car, the handling nevertheless exceeded our expectations.",
+        "title": "The Understated Wagon. The Volvo V60 Recharge T8 review! (BenAutobahn, Malaysian-market T8)",
+        "sentiment": 0.5,
+        "publishedDate": "2022-08-11"
+      },
+      "reason": "Replace generic Top Gear range/T8 Malaysian review and shortened Auto Express URL with three opened original 18.8-kWh 350-PS T6 AWD tests. The Auto Express correct URL has a 2023 visible day versus 2020 structured original date; no original day asserted. Retain these sources only as scoped context."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19911,
+      "pinSourceUrl": "https://www.motorauthority.com/news/1123743_review-2020-audi-sq8-price-photos-specs-info",
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "expectedReview": {
+        "url": "https://www.evo.co.uk/audi/sq8",
+        "quote": "On the slippery winter roads of our test the handling was one-dimensional – carry speed into a corner and the nose pushes wide lazily, and there isn’t much you can do to bring it back.",
+        "title": "Audi SQ8 2024 review – too restrained for its own good? (evo, undated update)",
+        "publishedDate": null
+      },
+      "reason": "Mutable evo page is now facelift/2024 and has conflicting original/update chronology. Replace with opened original 2020 US SQ8 tests, keeping test options explicit."
+    }
+  ]
+}

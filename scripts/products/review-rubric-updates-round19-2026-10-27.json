@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.amazon.com/dp/B0F286F1X4",
+      "expectedBasis": "Editorial estimate for sweetened Wanglaoji/Walovi herbal tea. A Yami community tasting describes tea fragrance, herbal flavor and a little sweetness; a Reddit firsthand canned-drink account compares it to slightly herbal iced tea. These are Wanglaoji product-family reviews, not verified tastings of this exact US WALOVI 24-can listing. Market formulations and perceived sweetness may differ. The existing seven-axis scores remain lower-confidence editorial estimates, not measured sensory-panel results.",
+      "changes": {
+        "basis": "Wanglaoji canned-tea family: named Japanese firsthand import tasting (October 12, 2024) criticizes excessive sweetness; existing Yami and Reddit tastings retained, the latter dated from original February 16, 2025 post timestamp. Original Japanese quote, not note.com AI translation. These reports do not establish the exact US WALOVI 24-can listing formulation. Seven editorial taste axes preserved; no health claims adopted."
+      }
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.amazon.com/dp/B08K2HJSW6",
+      "expectedBasis": "Editorial estimate for Coconut Palm ready-to-drink coconut milk, not cooking coconut milk. Trang’s Weee community ambassador post describes a strong coconut aroma and slight sweetness; the post links both 1 L cartons and cans. A separate Reddit firsthand review of the canned version describes a thinner, milky drink with a mild coconut taste. These are subjective consumer accounts; the canned review is product-family evidence, not a tasting of this exact 1 L pack. Existing seven-axis scores are retained and are not measured panel results.",
+      "changes": {
+        "basis": "Editorial estimate for Coconut Palm ready-to-drink coconut milk, not cooking coconut milk. Trang’s Weee community ambassador post describes a strong coconut aroma and slight sweetness; the post links both 1 L cartons and cans. A separate Reddit firsthand review, originally published March 8, 2026 (original post datetime verified), of the canned version describes a thinner, milky drink with a mild coconut taste. These are subjective consumer accounts; the canned review is product-family evidence, not a tasting of this exact 1 L pack. Existing seven-axis scores are retained and are not measured panel results."
+      }
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://vietnamnews.vn/media-outreach/1800320/an-iconic-duo-toblerone-launches-truffles-with-biscoff.html",
+      "expectedBasis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness. October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review.",
+      "changes": {
+        "basis": "Milk-chocolate/Biscoff truffles. Original u/minutemaiding Canadian Costco tasting, photographed exact Diamond Truffles with Biscoff, posted October 17, 2026 at 19:18:59.771 UTC. Describes rich, not overly sweet, crunchy texture; consumer account, not professional sensory panel. Remove unattributed expanded Lemon8 recommendation. Existing seven editorial axes remain unchanged and are not measured panel findings."
+      }
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://pressroom.toyota.com/assembled-in-america-and-arriving-now-2026-toyota-corolla-cross/",
+      "expectedBasis": "Scored: 2026 Corolla Cross gas L FWD, $24,635 MSRP, 169 hp. Economy EPA 31 mpg combined (FWD, Toyota's 2027 release). Space 17-20 cu ft behind the rear seats / 44-47 cu ft, class average. Value 169 hp / $24,635 = 6.9 hp per US$1,000. Acceleration null (only a 7.3-9.2 s Car and Driver range spanning gas and hybrid); handling null (one road test).",
+      "changes": {
+        "basis": "Scored: 2026 Corolla Cross gas L FWD, $24,635 MSRP, 169 hp. Economy EPA 31 mpg combined (FWD, Toyota's 2027 release). Space 17-20 cu ft behind the rear seats / 44-47 cu ft, class average. Value 169 hp / $24,635 = 6.9 hp per US$1,000. Acceleration null (only a 7.3-9.2 s Car and Driver range spanning gas and hybrid); handling null (one road test). Review maintenance: MotorTrend original March 24, 2026 XLE FWD test replaces rolling Edmunds; 18-inch test tyres differ from base L, so all axes including handling null preserved."
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765",
+      "expectedBasis": "Variant: M7 RWD EREV, 40 kWh, 1,100 km combined (5), from RMB 319,800. 0-100 7.8 s (1.5). Six seats, wheelbase 2,820 mm (4, six-seat rule). Priced under the Li L9 it was compared with (4). Charging, assist and kids null: not published in sources read. Reviews are of export Seres 7 (AWD and RE-EV).",
+      "changes": {
+        "basis": "Variant: 2022 M7 1.5T RWD Comfort EREV, 40 kWh, 1,100 km combined, RMB319800 launch, 0-1007.8s, six seats/2820mm wheelbase. All prior technical axes preserved. Three original owner reports on Autohome, first published July2/Aug29/Sep17 2023: light steering praise, weak transient response and firm rear suspension criticism. One publishing platform, three named authors; not professional test consensus or independent validation of technical anchors. Later2024 AWD UAE Seres7 removed. A RWD-tagged Guangzhou candidate actually claims AWD and was excluded."
+      }
+    }
+  ]
+}

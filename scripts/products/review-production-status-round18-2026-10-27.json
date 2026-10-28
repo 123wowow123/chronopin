@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-27",
+  "drivers": {
+    "api": false,
+    "session": null
+  },
+  "runningJobs": [],
+  "schedules": [
+    {
+      "id": "midnight",
+      "enabled": false
+    },
+    {
+      "id": "news",
+      "enabled": false
+    },
+    {
+      "id": "monthly",
+      "enabled": false
+    },
+    {
+      "id": "weekly",
+      "enabled": false
+    }
+  ],
+  "retryAttempted": false,
+  "reason": "Admin endpoint now reports no API driver and no session driver. No scheduled retry started without an available driver. A null client may mean missing/placeholder key or process-local credit cooldown; current key or billing state is not established.",
+  "settingsChanged": false,
+  "productionDeploymentPerformed": false
+}

@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Twelve new original-source extracts across five pins, five replaced citations. No axes or authors changed.",
+  "literalDownloadedQuoteMatches": 11,
+  "primaryReaderQuoteMatches": [
+    {
+      "url": "https://apnews.com/article/inside-out-2-movie-review-62caaed0d956b9b1f1db9a098bd650f4",
+      "quote": "in its finest moments packs an emotional wallop",
+      "publishedDate": "2024-06-12",
+      "evidence": "Primary HTTPS reader opened the complete original AP review; original AP news-feed timestamp June 12, 2024 16:19:37 UTC. Direct curl/requests 403, not claimed as a downloaded match."
+    }
+  ],
+  "publicationRules": [
+    "Car Enthusiast Last-Modified not accepted as original day; null.",
+    "Time Out visible UK dates agree with prior-day 23:00Z metadata after BST conversion.",
+    "L’argus original September 13 09:24 distinguished from 11:24 update.",
+    "Caradisiac visible August 18 2022 and structured original match; typo 388 ch conflicts with its 350-ch tested model, no specifications changed.",
+    "Volvo Auto Express visible January 20 2023 conflicts with 2020 structured original; shortened stored pointer removed rather than assigning either day."
+  ],
+  "rejectedLeads": [
+    {
+      "pinId": 20068,
+      "url": "https://noticias.coches.com/pruebas/volvo-v60-t6-recharge-prueba-opiniones/461658",
+      "reason": "Original explicitly says tested 341-CV/11.6-kWh older T6 despite current 350-CV/18.8-kWh comparison table. Not eligible for extended-range pin."
+    },
+    {
+      "pinId": 19646,
+      "url": "https://www.sqtalk.com/forum/forum/general/trip-reports/11855-",
+      "reason": "Round 18 original checks: SQTalk Carfield’s C-GPCF has a comfort verdict and August 8, 2012 publication but prior 100/200 subtype conflict remains unresolved. Chris Melaisi’s real January 2017 jumpseat report explicitly identifies Short 360-300 OY-MUG (SH3716), with six-blade propellers; not scored launch PT6A-65AR configuration. Airlines-Inform original reader failed Unicode decoding. No sibling or simulator account added."
+    },
+    {
+      "pinId": 19646,
+      "url": "https://www.chrismelaisi.co.uk/portfolio-2/scotlands-super-shed-benairs-short-360",
+      "reason": "Explicit -300 OY-MUG/SH3716 cargo jumpseat and six-blade/-300 configuration differs from scored launch variant; no native review added."
+    },
+    {
+      "pinId": 19646,
+      "url": "https://www.airlines-inform.com/flight-reports/reporter_en-575.html",
+      "reason": "Primary reader Unicode decoding error; text not certified."
+    },
+    {
+      "pinId": 17263,
+      "reason": "Focused English/Korean discovery found hotel promotions, branch-mixed Trip.com entries and Google-review aggregations. No two opened original Busan-specific critic/meal accounts verified. Existing gap remains."
+    }
+  ],
+  "unchangedBroaderBackfill": true
+}

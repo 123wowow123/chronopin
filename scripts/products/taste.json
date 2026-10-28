@@ -452,32 +452,6 @@
     ]
   },
   {
-    "pinId": 5609,
-    "aroma": 3.5,
-    "bitterness": 1,
-    "sweetness": 5,
-    "astringency": 0.5,
-    "umami": 1,
-    "basis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness. October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review.",
-    "pungent": 0,
-    "coolness": 0,
-    "reviews": [
-      {
-        "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
-        "quote": "The addition of honey gives a subtle sweetness that perfectly balances the earthy caramel notes from the Biscoff biscuit.",
-        "title": "Biscoff Toblerone Truffles at Costco: A Delicious Milk Chocolate Treat (Lemon8 @costcobuys)",
-        "publishedDate": null
-      },
-      {
-        "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
-        "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
-        "title": "These Toblerone Biscoff truffles are dangerously good",
-        "sentiment": 0.7,
-        "publishedDate": null
-      }
-    ]
-  },
-  {
     "pinId": 5610,
     "aroma": 3,
     "bitterness": 1,
@@ -1274,7 +1248,7 @@
     "umami": 0,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Editorial estimate for sweetened Wanglaoji/Walovi herbal tea. A Yami community tasting describes tea fragrance, herbal flavor and a little sweetness; a Reddit firsthand canned-drink account compares it to slightly herbal iced tea. These are Wanglaoji product-family reviews, not verified tastings of this exact US WALOVI 24-can listing. Market formulations and perceived sweetness may differ. The existing seven-axis scores remain lower-confidence editorial estimates, not measured sensory-panel results.",
+    "basis": "Wanglaoji canned-tea family: named Japanese firsthand import tasting (October 12, 2024) criticizes excessive sweetness; existing Yami and Reddit tastings retained, the latter dated from original February 16, 2025 post timestamp. Original Japanese quote, not note.com AI translation. These reports do not establish the exact US WALOVI 24-can listing formulation. Seven editorial taste axes preserved; no health claims adopted.",
     "reviews": [
       {
         "url": "https://www.yami.com/en/show/article/1740193",
@@ -1286,10 +1260,19 @@
         "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
         "quote": "It was delicious like a slightly herbal lipton iced tea.",
         "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
-        "publishedDate": null
+        "publishedDate": "2025-02-16",
+        "sentiment": 0.8
+      },
+      {
+        "url": "https://note.com/cooldogenjoylife/n/nc51893e5acc9",
+        "title": "おうろうきちを飲みます！【中華を喰らう】",
+        "publishedDate": "2024-10-12",
+        "quote": "と自分には甘すぎてどのシーンで役に立つかは全く思いつかず",
+        "sentiment": -0.6
       }
     ],
-    "sourceUrl": "https://www.yami.com/en/show/article/1740193"
+    "sourceUrl": "https://www.yami.com/en/show/article/1740193",
+    "pinSourceUrl": "https://www.amazon.com/dp/B0F286F1X4"
   },
   {
     "pinId": 7661,
@@ -1341,7 +1324,7 @@
     "umami": 0.5,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Editorial estimate for Coconut Palm ready-to-drink coconut milk, not cooking coconut milk. Trang’s Weee community ambassador post describes a strong coconut aroma and slight sweetness; the post links both 1 L cartons and cans. A separate Reddit firsthand review of the canned version describes a thinner, milky drink with a mild coconut taste. These are subjective consumer accounts; the canned review is product-family evidence, not a tasting of this exact 1 L pack. Existing seven-axis scores are retained and are not measured panel results.",
+    "basis": "Editorial estimate for Coconut Palm ready-to-drink coconut milk, not cooking coconut milk. Trang’s Weee community ambassador post describes a strong coconut aroma and slight sweetness; the post links both 1 L cartons and cans. A separate Reddit firsthand review, originally published March 8, 2026 (original post datetime verified), of the canned version describes a thinner, milky drink with a mild coconut taste. These are subjective consumer accounts; the canned review is product-family evidence, not a tasting of this exact 1 L pack. Existing seven-axis scores are retained and are not measured panel results.",
     "reviews": [
       {
         "url": "https://www.weee.com/zht/social/video/60201",
@@ -1351,12 +1334,14 @@
       },
       {
         "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+        "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
         "title": "fractal324 — Coconut Palm canned-version tasting",
-        "publishedDate": null,
-        "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut"
+        "publishedDate": "2026-03-08",
+        "sentiment": -0.35
       }
     ],
-    "sourceUrl": "https://www.weee.com/zht/social/video/60201"
+    "sourceUrl": "https://www.weee.com/zht/social/video/60201",
+    "pinSourceUrl": "https://www.amazon.com/dp/B08K2HJSW6"
   },
   {
     "pinId": 7664,
@@ -4046,6 +4031,28 @@
         "title": "GLASSNYHET! Matcha & Karamell.",
         "sentiment": -0.8,
         "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 5609,
+    "pinSourceUrl": "https://vietnamnews.vn/media-outreach/1800320/an-iconic-duo-toblerone-launches-truffles-with-biscoff.html",
+    "aroma": 3.5,
+    "bitterness": 1,
+    "sweetness": 5,
+    "astringency": 0.5,
+    "umami": 1,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "Milk-chocolate/Biscoff truffles. Original u/minutemaiding Canadian Costco tasting, photographed exact Diamond Truffles with Biscoff, posted October 17, 2026 at 19:18:59.771 UTC. Describes rich, not overly sweet, crunchy texture; consumer account, not professional sensory panel. Remove unattributed expanded Lemon8 recommendation. Existing seven editorial axes remain unchanged and are not measured panel findings.",
+    "sourceUrl": "https://vietnamnews.vn/media-outreach/1800320/an-iconic-duo-toblerone-launches-truffles-with-biscoff.html",
+    "reviews": [
+      {
+        "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+        "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+        "title": "These Toblerone Biscoff truffles are dangerously good",
+        "sentiment": 0.7,
+        "publishedDate": "2026-10-17"
       }
     ]
   }

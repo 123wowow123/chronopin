@@ -63,6 +63,7 @@
   --color-tag-today: var(--color-amber-400);
   --color-tag-trivia: var(--color-emerald-400);
   --color-tag-holiday: var(--color-violet-300);
+  --color-tag-history: var(--color-sky-300);
   --color-rail: #373c45;
 
   --color-past: #dca75c;
@@ -85,6 +86,7 @@
   --color-warning-soft: var(--color-amber-300);
   --color-info-soft: var(--color-sky-300);
   --color-trivia-soft: var(--color-emerald-200);
+  --color-history-soft: var(--color-sky-200);
   --color-holiday-ink: var(--color-violet-950);
   --color-tradition-soft: var(--color-violet-300);
   /* What only a pin's authors or admins see (duplicate suggestions). */
@@ -154,6 +156,7 @@
   --color-tag-today: var(--color-amber-500);
   --color-tag-trivia: var(--color-emerald-500);
   --color-tag-holiday: oklch(50% 0.13 295);
+  --color-tag-history: var(--color-sky-600);
   --color-rail: #cdd2d9;
 
   --color-past: #8f5f12;
@@ -171,6 +174,7 @@
   --color-warning-soft: var(--color-amber-800);
   --color-info-soft: var(--color-sky-800);
   --color-trivia-soft: var(--color-emerald-800);
+  --color-history-soft: var(--color-sky-800);
   --color-holiday-ink: #ffffff;
   --color-tradition-soft: oklch(47% 0.13 295);
   --color-privileged: var(--color-violet-700);
@@ -387,6 +391,13 @@
   /* A marker chip that searches the web for the day's trivia. */
   a.tag-trivia {
     @apply transition-colors hover:bg-tag-trivia/20 hover:no-underline hover:ring-tag-trivia/50;
+  }
+  /* What happened on the date in history: a sky-blue tint, under the specialty day. */
+  .tag-history {
+    @apply bg-tag-history/10 text-history-soft ring-tag-history/25;
+  }
+  a.tag-history {
+    @apply transition-colors hover:bg-tag-history/20 hover:no-underline hover:ring-tag-history/50;
   }
   /* A national or cultural holiday and the foods and customs of its day: the
      last of the stack, and the one solid, inverted chip among the tinted ones

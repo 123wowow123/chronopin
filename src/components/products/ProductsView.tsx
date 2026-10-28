@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { ShelfTabs } from '@/components/products/ShelfTabs';
 import { CardImage } from '@/components/pin/CardImage';
+import { CardLike } from '@/components/pin/CardLike';
 import { JsonLd } from '@/components/JsonLd';
 import { RatingSummary } from '@/components/pin/PinRatings';
 import Anchor from '@/components/ui/Anchor';
@@ -134,6 +135,7 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                   const isKidsFriendly = isKidsFriendlyProduct(pin, shelf.name);
                   return (
                     <article key={pin.id} className={styles.card}>
+                      <CardLike pin={pin} />
                       <Link href={pinPath(pin)} className={styles.photoLink} aria-label={t('guides.products.see', { name })}>
                         {image ? (
                           <CardImage thumbName={picture(pin.media).thumbName!} alt={name} portrait={picture(pin.media).portrait} className={styles.cardImage} />

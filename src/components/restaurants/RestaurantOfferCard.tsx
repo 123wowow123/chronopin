@@ -4,6 +4,7 @@ import { useId, useState, type KeyboardEvent } from 'react';
 import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
+import { CardLike } from '@/components/pin/CardLike';
 import { deduplicateRestaurantOffers, restaurantOfferDistance, offerEndLabel, type ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
 import { formatDistance } from '@/lib/distance';
 import type { ViewerPlace } from '@/lib/client/viewerPlace';
@@ -18,6 +19,7 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
   const offers = deduplicateRestaurantOffers(card.offers ?? [card]);
   const offer = offers.find((item) => item.id === selected) ?? offers[0];
   const index = offers.indexOf(offer);
+  const pinId = Number(/^\/pin\/(\d+)\//.exec(card.restaurantHref)?.[1]) || null;
   const upcoming = !!offer.startsAt;
   const distance = restaurantOfferDistance(card, origin);
   const nextTime = (startsAt: string) => new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }).format(new Date(startsAt));
@@ -32,6 +34,7 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
   };
 
   return <article className={styles.card}>
+    {pinId ? <CardLike pin={{ id: pinId }} /> : null}
     <Link href={card.restaurantHref} className={styles.photoLink} aria-label={`See ${card.name}'s restaurant details`}>
       {card.photo ? (
         <>

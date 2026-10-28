@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Three original unresolved checks closed only after native saves verified locally and in production; remaining entries unchanged unless explicitly noted.",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "title": "Škoda Opens UK Orders for the Superb iV Estate With 84 Miles of EV Range, From GBP 41,465",
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "status": "resolved",
+      "reason": "Round 18: Rolling generic Superb range page does not isolate the scored iV Estate. Replaced with original exact-powertrain UK test; L&K chassis options explicit and original day remains null. Native removal and replacements verified in both environments."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20068,
+      "title": "Volvo Lifts the V60 Recharge Plug-In to an 18.8 kWh Battery and 350-455 PS, From EUR 56,350",
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "resolved",
+      "reason": "Round 18: Replace generic Top Gear range/T8 Malaysian review and shortened Auto Express URL with three opened original 18.8-kWh 350-PS T6 AWD tests. The Auto Express correct URL has a 2023 visible day versus 2020 structured original date; no original day asserted. Retain these sources only as scoped context. Native removal and replacements verified in both environments."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 19911,
+      "title": "Audi Prices the 2020 SQ8 With a 500 hp V8 at USD 89,995 for the US",
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "status": "resolved",
+      "reason": "Round 18: Mutable evo page is now facelift/2024 and has conflicting original/update chronology. Replace with opened original 2020 US SQ8 tests, keeping test options explicit. Native removal and replacements verified in both environments."
+    }
+  ],
+  "verifiedUndated": [
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "title": "Škoda Superb iV Estate",
+      "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+      "status": "verified-undated",
+      "reason": "Opened original 1,200-mile UK 204 PS PHEV estate test, exact excerpt verified. L&K adaptive suspension differs from base SE Technology. September 11, 2024 appears only in Last-Modified metadata; no original publication day supplied. Saved null and kept off dated graph in both environments."
+    }
+  ],
+  "remainingNeedsResearch": 34
+}

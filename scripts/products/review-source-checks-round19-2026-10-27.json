@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+      "status": "resolved",
+      "reason": "Round 19: The saved sentence occurs in expanded recommendations outside CostcoBuys’ original caption. Firsthand authorship is not established; now replace with verified, absolutely dated original u/minutemaiding tasting. Do not label unattributed recommendations as a named firsthand review. Removal and replacement verified in both environments. This resolves the active citation by replacement, not the old source publication day.",
+      "previousReason": "Full original reopened: exact sentence is present in the expanded recommendation section, outside CostcoBuys’ short original caption. Firsthand authorship/attribution of the expanded text is unclear. Visible 9/15 Edited label has no year and is not original publication. Need attributed original-post evidence/day; do not certify this as a named firsthand tasting. Round17: Rendered original retry: HTTP200, 2711 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2026-10-17T19:18:59.771Z; save 2026-10-17 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back.",
+      "previousReason": "Opened original Reddit post by u/minutemaiding; saved exact rich/not-overly-sweet/crunch tasting sentence verified in post body, not comments or merchant copy. Canadian Costco product photograph identifies Lotus Biscoff Toblerone Diamond Truffles. Reader exposes only relative 2d age, and original public RSS returned HTTP 403 to curl (reader does not support Atom). Exact original publication day remains unresolved; keep null and do not infer day from the relative age or pin launch. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTP200, 0 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7660,
+      "title": "Wanglaoji / Walovi Canned Herbal Tea",
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2025-02-16T21:40:56.344Z; save 2025-02-16 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back.",
+      "previousReason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTPunknown, 0 body characters; Error: Execution context was destroyed, most likely because of a navigation.. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinTaste",
+      "pinId": 7663,
+      "title": "Coconut Palm Coconut Milk Drink",
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2026-03-08T11:04:30.638Z; save 2026-03-08 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back.",
+      "previousReason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTPunknown, 0 body characters; Error: Execution context was destroyed, most likely because of a navigation.. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15238,
+      "title": "Toyota's Refreshed 2026 Corolla Cross Reaches Dealers From $24,635",
+      "url": "https://www.edmunds.com/toyota/corolla-cross/",
+      "status": "resolved",
+      "reason": "Round 19: Rolling overview remained inaccessible and does not provide a verifiable original exact-FWD review excerpt/day. Replaced after saving opened original MotorTrend 2026 XLE FWD test; base L tyre/trim differences explicit. Removal and replacement verified in both environments. This resolves the active citation by replacement, not the old source publication day.",
+      "previousReason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 357 body characters. No new original publication/eligibility evidence accepted; remain open."
+    },
+    {
+      "table": "PinLlmPerf",
+      "pinId": 15140,
+      "title": "GPT-5.4 mini and GPT-5.4 nano Released",
+      "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2026-03-26T05:46:43.000Z; save 2026-03-26 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back.",
+      "previousReason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 98 body characters. No new original publication/eligibility evidence accepted; remain open."
+    }
+  ],
+  "remainingNeedsResearch": 28,
+  "verifiedUndated": 98
+}

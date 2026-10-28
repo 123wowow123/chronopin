@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Five new original-source excerpts and three existing Reddit date/tone corrections. Preserve authors and axes; three M7 owners share one platform.",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.amazon.com/dp/B0F286F1X4",
+      "reviews": [
+        {
+          "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+          "quote": "It was delicious like a slightly herbal lipton iced tea.",
+          "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+          "publishedDate": "2025-02-16",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://note.com/cooldogenjoylife/n/nc51893e5acc9",
+          "title": "おうろうきちを飲みます！【中華を喰らう】",
+          "publishedDate": "2024-10-12",
+          "quote": "と自分には甘すぎてどのシーンで役に立つかは全く思いつかず",
+          "sentiment": -0.6
+        }
+      ],
+      "basis": "Wanglaoji canned-tea family: named Japanese firsthand import tasting (October 12, 2024) criticizes excessive sweetness; existing Yami and Reddit tastings retained, the latter dated from original February 16, 2025 post timestamp. Original Japanese quote, not note.com AI translation. These reports do not establish the exact US WALOVI 24-can listing formulation. Seven editorial taste axes preserved; no health claims adopted."
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://www.amazon.com/dp/B08K2HJSW6",
+      "reviews": [
+        {
+          "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+          "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
+          "title": "fractal324 — Coconut Palm canned-version tasting",
+          "publishedDate": "2026-03-08",
+          "sentiment": -0.35
+        }
+      ],
+      "basis": "Original firsthand post, author and exact extract verified in the browser. Absolute post timestamp resolved from main time[datetime]; UTC publication day saved, not inferred from relative age. Product-family/market limitations in the existing native basis remain applicable. Existing seven-axis taste scores are preserved."
+    },
+    {
+      "table": "PinTaste",
+      "pinSourceUrl": "https://vietnamnews.vn/media-outreach/1800320/an-iconic-duo-toblerone-launches-truffles-with-biscoff.html",
+      "reviews": [
+        {
+          "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+          "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+          "title": "These Toblerone Biscoff truffles are dangerously good",
+          "sentiment": 0.7,
+          "publishedDate": "2026-10-17"
+        }
+      ],
+      "basis": "Original firsthand post, author and exact extract verified in the browser. Absolute post timestamp resolved from main time[datetime]; UTC publication day saved, not inferred from relative age. Product-family/market limitations in the existing native basis remain applicable. Existing seven-axis taste scores are preserved."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://pressroom.toyota.com/assembled-in-america-and-arriving-now-2026-toyota-corolla-cross/",
+      "reviews": [
+        {
+          "url": "https://www.motortrend.com/reviews/first-test-2026-toyota-corolla-cross-xle-gas",
+          "title": "2026 Toyota Corolla Cross First Test: Is the Gas-Powered Model Too Boring to Be Good?",
+          "publishedDate": "2026-03-24",
+          "quote": "its body felt unsettled through corners.",
+          "sentiment": -0.45
+        }
+      ],
+      "basis": "Original 2026 US 169-hp nonhybrid FWD road/instrumented test by Alex Leanse, March 24, 2026. Tested XLE FWD on 18-inch wheels rather than base L FWD; tyre/trim-specific dynamics do not rescore the base handling axis. Existing axes preserved; replace inaccessible rolling Edmunds citation. The Drive’s March 2026 Base Model or Bust article actually tests AWD and is not substituted for FWD."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765",
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01hagd2sgv6mrkachr70r00000.html",
+          "title": "华为顶呱呱，增程M7顶呱呱",
+          "publishedDate": "2023-09-17",
+          "quote": "我就感觉后悬挂偏硬，走在路上就感觉有点颠",
+          "sentiment": -0.35
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01h8yg17gw6mrk4d1n6wwg0000.html",
+          "title": "问界M7配置丰富，空间也领先同级",
+          "publishedDate": "2023-08-29",
+          "quote": "不能瞬间响应，欠缺了些爆发力",
+          "sentiment": -0.35
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01h4b0scja6mr36d1h6wv00000.html",
+          "title": "质量很靠谱家用很舒服的M7",
+          "publishedDate": "2023-07-02",
+          "quote": "方向盘很轻盈并不会觉得方向盘很沉重",
+          "sentiment": 0.6
+        }
+      ],
+      "basis": "Three distinct named owner accounts of the exact 2022 1.5T RWD Comfort six-seat M7, on one publisher (Autohome): 上海车友5517321, 临沂车友1426506 and 我喜欢你的一切哟. Each original first-publication day and driving passage checked in browser. Retain suspension/response criticism alongside light-steering praise. Owner anecdotes are not three professional independent road tests, proof of ownership, or validation of battery/output/efficiency specs. All technical axes unchanged. Removed later AWD export Seres 7 review. A fourth RWD-labelled candidate explicitly claims AWD and was rejected."
+    }
+  ]
+}

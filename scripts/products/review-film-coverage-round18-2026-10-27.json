@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Opened original film criticism with dated passage sentiment.",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Inside_Out_2",
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/movies/inside-out-2-review-2024",
+          "title": "Inside Out 2",
+          "publishedDate": "2024-06-12",
+          "quote": "Sparky, kaleidoscopic and boldly honest about the tougher side of growing up",
+          "sentiment": 0.65
+        },
+        {
+          "url": "https://www.radiotimes.com/movies/inside-out-2-review/",
+          "title": "Inside Out 2 review: No need for fear or anxiety, Pixar's sequel is a joy",
+          "publishedDate": "2024-06-12",
+          "quote": "They’re a delight throughout",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://apnews.com/article/inside-out-2-movie-review-62caaed0d956b9b1f1db9a098bd650f4",
+          "title": "Movie Review: Peace (and pieces) of mind ‘Inside Out 2'",
+          "publishedDate": "2024-06-12",
+          "quote": "in its finest moments packs an emotional wallop",
+          "sentiment": 0.6
+        }
+      ],
+      "basis": "Three original reviews of the 2024 animated sequel, not Inside Out (2015): Phil de Semlyen/Time Out, Terry Staunton/Radio Times and Jake Coyle/AP. Exact excerpts and publisher-local June 12 publication dates; Time Out structured June 11 23:00Z is June 12 BST. AP original opened with the primary web reader; original news feed provides June 12 2024 publication rather than the film release day. Scores describe the cited passages, not aggregate star ratings. Radio Times excerpt praises the Joy/Sadness pairing."
+    },
+    {
+      "table": "PinCriticReview",
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Alien:_Romulus",
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/movies/alien-romulus-review-2024",
+          "title": "Alien: Romulus",
+          "publishedDate": "2024-08-15",
+          "quote": "Romulus is best when it’s single-minded, streamlined and ferocious.",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.theguardian.com/film/article/2024/aug/14/alien-romulus-review-lack-originality-fede-alvarez-ridley-scott",
+          "title": "Alien: Romulus review – grungy, back-to-basics instalment goes over same old ground",
+          "publishedDate": "2024-08-14",
+          "quote": "a fundamental lack of originality",
+          "sentiment": -0.55
+        },
+        {
+          "url": "https://www.bfi.org.uk/sight-and-sound/reviews/alien-romulus-terrifying-return-visceral-menace-original",
+          "title": "Alien: Romulus: a terrifying return to the visceral menace of the original",
+          "publishedDate": "2024-08-16",
+          "quote": "adds visceral menace to the jump-scare encounters.",
+          "sentiment": 0.6
+        }
+      ],
+      "basis": "Three independent original reviews of Fede Alvarez’s 2024 Alien: Romulus: Phil de Semlyen/Time Out, Peter Bradshaw/The Guardian and Roger Luckhurst/Sight and Sound (BFI). Positive craft assessments and negative originality criticism retained. Publisher-local original dates August 14-16, not subsequent modifications or the release date. Time Out August 14 23:00Z corresponds to its visible August 15 BST publication. Short exact excerpts scored for their tone, not copied star ratings."
+    }
+  ]
+}

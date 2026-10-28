@@ -145,7 +145,7 @@
 .sectionHeading p { font-size:11px; color:var(--soft); margin-top:6px; }
 .sectionSymbol { font-size:32px; color:var(--green); }
 .cardGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px 22px; }
-.card { border:1px solid var(--rule); border-radius:5px; background:var(--paper-raised); overflow:hidden; display:flex; flex-direction:column; }
+.card { position:relative; border:1px solid var(--rule); border-radius:5px; background:var(--paper-raised); overflow:hidden; display:flex; flex-direction:column; }
 .photoLink { position:relative; display:block; aspect-ratio:1.6; overflow:hidden; }
 .guide .photoLink:focus-visible { outline:none; }
 .photoLink:focus-visible::after { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; box-shadow:inset 0 0 0 3px var(--green),inset 0 0 0 5px #fff; }

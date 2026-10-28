@@ -359,3 +359,72 @@ prior content and identify consumer/owner evidence and publication limits.
 README TODO removes resolved counts and retains the 54 raw rubric gaps, 37
 source/date checks, broader coverage and scheduled production verification.
 No deployment, restart or schedule change was performed.
+
+
+## Round 18 — exact extended-range T6 tests and two film backfills
+
+Saved twelve new review excerpts across five pins locally and in production,
+then removed five superseded citations after replacement verification. All ten
+native readbacks preserve every axis and unrelated rubric field; pin authors,
+titles and source identities are unchanged. The current inventory retains
+**54 rubric gaps** (EV31, gas8, aircraft12, dining1, video2),
+**34 unresolved publication/source checks**, and **98 verified-undated entries**.
+Critic coverage is now 121 pins and 364 extracts. This is a bounded continuation;
+the broader backfill remains unfinished.
+
+- [Vehicle replacements](../../../scripts/products/review-vehicle-replacements-round18-2026-10-27.json): #20068 now has three original 18.8-kWh/350-PS T6 AWD road tests from Caradisiac, L’argus and Bil og Motorbloggen, including a negative steering extract. The opened Coches.com candidate explicitly drove the older 341-CV/11.6-kWh version despite its current comparison table and was excluded. #20034 replaces a rolling Superb overview with a 1,200-mile UK 204-PS iV Estate drive; the L&K suspension differs from the base SE Technology and its day remains null because only Last-Modified is supplied. #19911 gains original 2020 US petrol SQ8 drives from Road & Track and MotorTrend. Sport-package and wheel differences remain explicit; both publications are Hearst-owned, with separate testers, rather than independent corporate ownership. Existing labelled Australian evidence stays contextual.
+- [Guarded exclusions](../../../scripts/products/review-exclusions-round18-2026-10-27.json): removed the generic Superb and Top Gear V60 overviews, Malaysian T8 review, shortened Auto Express URL and mutable evo SQ8 citation only after saving replacements. Auto Express’s correct V60 URL has a visible January 2023 day versus 2020 structured original metadata, so neither was assigned. Existing references are retained for context; exclusion reasons remain in the replay catalog and native bases. The [shortened Auto Express reference was separately corrected](../../../scripts/products/review-reference-repair-round18-2026-10-27.json) to its opened full URL in both environments, with null publication date and an explicit chronology warning; reference identity and attribution are preserved.
+- [Film coverage](../../../scripts/products/review-film-coverage-round18-2026-10-27.json): Inside Out 2 (#6192) gets Time Out, Radio Times and AP; Alien: Romulus (#6319) gets Time Out, The Guardian and Sight and Sound/BFI. Exact film/version, original publication days and short verbatim passages were checked. Praise and negative originality criticism remain distinct. Time Out’s prior-day 23:00 UTC timestamps agree with the visible UK publication day under BST; updates and theatrical dates were not substituted. AP was opened through the primary reader and its original news-feed timestamp; plain requests returned 403. Blocked RogerEbert.com and Screen Daily pages were not used.
+- [Basis corrections](../../../scripts/products/review-rubric-updates-round18-2026-10-27.json) preserve all axes. [Source dispositions](../../../scripts/products/review-source-checks-round18-2026-10-27.json) close the three former rolling-page checks only after both native saves were verified. The new Superb extract is verified-undated and stays off the dated graph. The original EV catalog and current research queue are synchronized.
+- [Research limits](../../../scripts/products/review-research-round18-2026-10-27.json): SQTalk’s exact C-GPCF subtype conflict remains unresolved. Chris Melaisi’s opened real-flight account explicitly concerns -300 OY-MUG, not the launch configuration. Airlines-Inform failed primary-reader decoding. No simulator, sibling model, hotel promotion, branch-mixed review or unattributed aggregation was added to fill a quota.
+
+[Production status](../../../scripts/products/review-production-status-round18-2026-10-27.json)
+now reports neither API nor session driver available. No retry was started, no
+schedule changed and no deployment or restart occurred. This does not establish
+missing credentials versus the process-local credit cooldown; successful
+scheduled review-tool verification remains outstanding.
+
+[Validation](../../../scripts/products/review-validation-round18-2026-10-27.json)
+records both-environment native readbacks, rendered sentiment tables, source/wiki
+checks, nine focused passing tests and current queue counts.
+
+
+## Round 19 — original social timestamps and exact RWD M7 owner accounts
+
+Completed the interrupted continuation: five new excerpts, four resolved
+publication days and three citation exclusions across six pins, saved and
+verified through native APIs locally and in production. No rubric axis or pin
+author changed. The inventory is now **53 raw rows below their review minimum**
+(EV30, gas8, aircraft12, dining1, video2), **28 publication/source checks**,
+and 98 verified-undated entries. Zero dated reviews await sentiment scores.
+The M7 raw count is met, with professional/publisher diversity still open.
+
+- [Original timestamp evidence](../../../scripts/products/review-timestamps-round19-2026-10-27.json): the logged-in browser exposed original main-post `time[datetime]` attributes for ChimaFanIndiana’s Wanglaoji post (February 16, 2025), fractal324’s Coconut Palm post (March 8, 2026), minutemaiding’s Toblerone Biscoff post (October 17, 2026), and Artificial Analysis’s model evaluation (March 26, 2026 UTC). Authors and exact post passages were checked, rather than comments or inferred relative ages. The X caption displays March 25 at 22:46 in the browser’s Pacific zone; its absolute source timestamp is March 26 at 05:46 UTC. This is a follow-up evaluation nine days after release, not a launch-day publication.
+- [New and corrected reviews](../../../scripts/products/review-replacements-round19-2026-10-27.json): three named original Autohome accounts of the 2022 RWD Comfort six-seat Aito M7 replace a later UAE AWD export review. Firm rear suspension and weak transient response criticism are retained alongside light-steering praise. Three authors on one platform do not establish three professional road tests or independently validate ownership/technical figures. A fourth RWD-labelled candidate explicitly describes AWD and was rejected. The independent professional/source-diversity follow-up remains open.
+- The Corolla Cross replacement is MotorTrend’s original March 24, 2026 nonhybrid FWD test; its XLE/18-inch tyres differ from the scored base L and do not rescore handling. The Drive’s Base Model headline did not make its actual AWD test applicable. Wanglaoji gains a dated original Japanese import tasting criticizing excessive sweetness; the original text, not note.com’s AI translation, is quoted. Market/formulation differences from the US WALOVI listing stay explicit, and existing taste axes remain editorial estimates.
+- [Guarded exclusions](../../../scripts/products/review-exclusions-round19-2026-10-27.json) remove the inaccessible rolling Edmunds citation, unmatched AWD Seres 7 report and unattributed expanded Lemon8 recommendation after verified replacement saves. CostcoBuys’ caption does not establish authorship of that expanded tasting sentence. The Toblerone pin retains its verified, now-dated firsthand consumer account. These two old source checks close by replacement; their original publication days were not discovered.
+- [Manual hand-row citation](../../../scripts/products/review-manual-citation-round19-2026-10-27.json) and [readbacks](../../../scripts/products/review-manual-verification-round19-2026-10-27.json): AA’s publication date and passage sentiment were deliberately saved through native admin endpoints, preserving `source: hand`, every axis, basis and unrelated review. Automatic hand-row protection remains unchanged. [Five basis clarifications](../../../scripts/products/review-rubric-updates-round19-2026-10-27.json) preserve all axes on the other pins.
+- [Source dispositions](../../../scripts/products/review-source-checks-round19-2026-10-27.json) close six active checks only after both environments were verified. [Eighteen reference/wiki readbacks](../../../scripts/products/review-evidence-verification-round19-2026-10-27.json) preserve reference attribution and prior wiki content while adding original publication evidence and scope. The [catalog repair](../../../scripts/products/review-catalog-repairs-round19-2026-10-27.json) removes one stale id-only Toblerone alias after matching its complete prior reviews, basis and seven axes to the preflight snapshot; the canonical source-identified catalog entry matches the native row. Id alone did not decide identity. Taste/EV catalogs and the current queue are synchronized.
+
+[Validation](../../../scripts/products/review-validation-round19-2026-10-27.json)
+records twelve native readbacks, twelve rendered sentiment tables across six pins
+in both environments, eighteen reference/wiki checks and nine passing focused
+tests. A transient 502 on the final production M7 basis write was followed by
+a fresh read showing the old value, then a successful idempotent retry.
+Local API and page checks used a temporary isolated HEAD checkout on port 3001
+against the same local database because concurrent feature work temporarily
+lacked a generated JSON import. No concurrent application edits were changed.
+
+[Production status](../../../scripts/products/review-production-status-round19-2026-10-27.json)
+reported the API driver available again on the final read-only check. A temporary
+read-only sentiment verification job with zero new pins and zero updates was
+installed. [Retry #30](../../../scripts/products/review-production-verification-round19-2026-10-27.json)
+was claimed with `trigger: schedule` but skipped before any model calls or
+content actions. The scheduler reported a null client while the admin endpoint
+reported API availability both before and after. Its missing-key error label
+also covers process-local credit cooldown; missing credentials, current billing
+health and a particular worker mismatch are not established. The temporary job
+was removed and the entire original setting, including all four disabled
+schedules, was verified unchanged. No deployment or production restart occurred.
+Successful scheduled model/tool verification and the broader backfill remain
+unfinished.

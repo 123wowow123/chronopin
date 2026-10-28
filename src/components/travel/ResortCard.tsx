@@ -5,6 +5,7 @@ import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { CardImage } from '@/components/pin/CardImage';
+import { CardLike } from '@/components/pin/CardLike';
 import { pinTextDir } from '@/lib/i18n/config';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
@@ -127,6 +128,7 @@ export function ResortCard({
 
   return (
     <article className={styles.card} id={`resort-${resort.id}`}>
+      <CardLike pin={resort} />
       {/* Photo & Badge */}
       <Link href={pinPath(resort)} className={styles.photoLink} aria-label={gt('view', { name })}>
         {pic.thumbName || pic.originalUrl ? (

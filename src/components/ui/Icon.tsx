@@ -51,6 +51,7 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
     </>
   ),
+  heart: <path d="M12 20.5s-8.5-5-8.5-11A4.8 4.8 0 0 1 12 6.6a4.8 4.8 0 0 1 8.5 2.9c0 6-8.5 11-8.5 11z" />,
   eye: (
     <>
       <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" />

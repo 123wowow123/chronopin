@@ -1,0 +1,335 @@
+{
+  "checkedAt": "2026-10-27",
+  "results": [
+    {
+      "pinId": 7660,
+      "production": false,
+      "table": "PinTaste",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.yami.com/en/show/article/1740193",
+          "quote": "It has a little tea fragrance but also has the taste of Chinese herbal medicine. The overall taste is a little sweet.",
+          "title": "爱吃的小猪 — Yami community Wanglaoji tasting (product-family review)",
+          "sentiment": 0,
+          "publishedDate": "2022-11-15"
+        },
+        {
+          "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+          "quote": "It was delicious like a slightly herbal lipton iced tea.",
+          "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+          "sentiment": 0.8,
+          "publishedDate": "2025-02-16"
+        },
+        {
+          "url": "https://note.com/cooldogenjoylife/n/nc51893e5acc9",
+          "quote": "と自分には甘すぎてどのシーンで役に立つかは全く思いつかず",
+          "title": "おうろうきちを飲みます！【中華を喰らう】",
+          "sentiment": -0.6,
+          "publishedDate": "2024-10-12"
+        }
+      ]
+    },
+    {
+      "pinId": 7663,
+      "production": false,
+      "table": "PinTaste",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.weee.com/zht/social/video/60201",
+          "quote": "smells strongly of natural coconut. Great taste and slightly sweet. Tasty and refreshing.",
+          "title": "Trang — Weee community tasting (ambassador post)",
+          "sentiment": 0.7,
+          "publishedDate": "2023-04-29"
+        },
+        {
+          "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+          "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
+          "title": "fractal324 — Coconut Palm canned-version tasting",
+          "sentiment": -0.35,
+          "publishedDate": "2026-03-08"
+        }
+      ]
+    },
+    {
+      "pinId": 5609,
+      "production": false,
+      "table": "PinTaste",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+          "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+          "title": "These Toblerone Biscoff truffles are dangerously good",
+          "sentiment": 0.7,
+          "publishedDate": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "pinId": 15238,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a68006193/2026-toyota-corolla-cross-drive/",
+          "quote": "Steering is light and easy but doesn't load up or transmit much information from the road.",
+          "title": "2026 Toyota Corolla Cross Drive: Barely Moving the Needle",
+          "sentiment": -0.2,
+          "publishedDate": "2025-09-24"
+        },
+        {
+          "url": "https://www.autoguide.com/auto/manufacturers/toyota/2026-toyota-corolla-cross-first-drive-review-playing-it-safe-44625664",
+          "quote": "Sluggish if anything, because its meagre 152 pound-feet of peak torque doesn’t join the party until 4,400 rpm",
+          "title": "2026 Toyota Corolla Cross First Drive Review: Playing It Safe",
+          "sentiment": -0.4,
+          "publishedDate": "2025-09-24"
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/first-test-2026-toyota-corolla-cross-xle-gas",
+          "quote": "its body felt unsettled through corners.",
+          "title": "2026 Toyota Corolla Cross First Test: Is the Gas-Powered Model Too Boring to Be Good?",
+          "sentiment": -0.45,
+          "publishedDate": "2026-03-24"
+        }
+      ]
+    },
+    {
+      "pinId": 19652,
+      "production": false,
+      "table": "PinCarPerf",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01hagd2sgv6mrkachr70r00000.html",
+          "quote": "我就感觉后悬挂偏硬，走在路上就感觉有点颠",
+          "title": "华为顶呱呱，增程M7顶呱呱",
+          "sentiment": -0.35,
+          "publishedDate": "2023-09-17"
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01h8yg17gw6mrk4d1n6wwg0000.html",
+          "quote": "不能瞬间响应，欠缺了些爆发力",
+          "title": "问界M7配置丰富，空间也领先同级",
+          "sentiment": -0.35,
+          "publishedDate": "2023-08-29"
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01h4b0scja6mr36d1h6wv00000.html",
+          "quote": "方向盘很轻盈并不会觉得方向盘很沉重",
+          "title": "质量很靠谱家用很舒服的M7",
+          "sentiment": 0.6,
+          "publishedDate": "2023-07-02"
+        }
+      ]
+    },
+    {
+      "pinId": 15140,
+      "production": false,
+      "table": "PinLlmPerf",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://the-decoder.com/openai-ships-gpt-5-4-mini-and-nano-faster-and-more-capable-but-up-to-4x-pricier/",
+          "quote": "GPT-5.4 mini nearly matches the full model's performance, but both new models come with a steep price hike over their predecessors.",
+          "title": "OpenAI ships GPT-5.4 mini and nano, faster and more capable but up to 4x pricier",
+          "sentiment": 0.1,
+          "publishedDate": "2026-03-17"
+        },
+        {
+          "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+          "quote": "they are more verbose, using 200M+ output tokens to run the Intelligence Index, higher than even select frontier models",
+          "title": "Artificial Analysis on X: \"OpenAI released GPT-5.4 mini and nano, cheaper variants of GPT-5.4 with the same reasoning modes. GPT-5.4 nano is the standout, scoring ahead of both Claude Haiku 4.5 and Gemini 3.1 Flash-Lite Preview with lower per token pricing  @OpenAI released GPT-5.4 mini (xhigh,…\"",
+          "sentiment": -0.25,
+          "publishedDate": "2026-03-26"
+        },
+        {
+          "url": "https://simonwillison.net/2026/mar/17/mini-and-nano/",
+          "quote": "loop through all five reasoning effort levels and all three models and produce this combined SVG grid of pelicans riding bicycles",
+          "title": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+          "sentiment": 0,
+          "publishedDate": "2026-03-17"
+        }
+      ]
+    },
+    {
+      "pinId": 7660,
+      "production": true,
+      "table": "PinTaste",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.yami.com/en/show/article/1740193",
+          "quote": "It has a little tea fragrance but also has the taste of Chinese herbal medicine. The overall taste is a little sweet.",
+          "title": "爱吃的小猪 — Yami community Wanglaoji tasting (product-family review)",
+          "sentiment": 0,
+          "publishedDate": "2022-11-15"
+        },
+        {
+          "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+          "quote": "It was delicious like a slightly herbal lipton iced tea.",
+          "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+          "sentiment": 0.8,
+          "publishedDate": "2025-02-16"
+        },
+        {
+          "url": "https://note.com/cooldogenjoylife/n/nc51893e5acc9",
+          "quote": "と自分には甘すぎてどのシーンで役に立つかは全く思いつかず",
+          "title": "おうろうきちを飲みます！【中華を喰らう】",
+          "sentiment": -0.6,
+          "publishedDate": "2024-10-12"
+        }
+      ]
+    },
+    {
+      "pinId": 7663,
+      "production": true,
+      "table": "PinTaste",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.weee.com/zht/social/video/60201",
+          "quote": "smells strongly of natural coconut. Great taste and slightly sweet. Tasty and refreshing.",
+          "title": "Trang — Weee community tasting (ambassador post)",
+          "sentiment": 0.7,
+          "publishedDate": "2023-04-29"
+        },
+        {
+          "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+          "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
+          "title": "fractal324 — Coconut Palm canned-version tasting",
+          "sentiment": -0.35,
+          "publishedDate": "2026-03-08"
+        }
+      ]
+    },
+    {
+      "pinId": 5609,
+      "production": true,
+      "table": "PinTaste",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+          "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+          "title": "These Toblerone Biscoff truffles are dangerously good",
+          "sentiment": 0.7,
+          "publishedDate": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "pinId": 15238,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://www.caranddriver.com/reviews/a68006193/2026-toyota-corolla-cross-drive/",
+          "quote": "Steering is light and easy but doesn't load up or transmit much information from the road.",
+          "title": "2026 Toyota Corolla Cross Drive: Barely Moving the Needle",
+          "sentiment": -0.2,
+          "publishedDate": "2025-09-24"
+        },
+        {
+          "url": "https://www.autoguide.com/auto/manufacturers/toyota/2026-toyota-corolla-cross-first-drive-review-playing-it-safe-44625664",
+          "quote": "Sluggish if anything, because its meagre 152 pound-feet of peak torque doesn’t join the party until 4,400 rpm",
+          "title": "2026 Toyota Corolla Cross First Drive Review: Playing It Safe",
+          "sentiment": -0.4,
+          "publishedDate": "2025-09-24"
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/first-test-2026-toyota-corolla-cross-xle-gas",
+          "quote": "its body felt unsettled through corners.",
+          "title": "2026 Toyota Corolla Cross First Test: Is the Gas-Powered Model Too Boring to Be Good?",
+          "sentiment": -0.45,
+          "publishedDate": "2026-03-24"
+        }
+      ]
+    },
+    {
+      "pinId": 19652,
+      "production": true,
+      "table": "PinCarPerf",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01hagd2sgv6mrkachr70r00000.html",
+          "quote": "我就感觉后悬挂偏硬，走在路上就感觉有点颠",
+          "title": "华为顶呱呱，增程M7顶呱呱",
+          "sentiment": -0.35,
+          "publishedDate": "2023-09-17"
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01h8yg17gw6mrk4d1n6wwg0000.html",
+          "quote": "不能瞬间响应，欠缺了些爆发力",
+          "title": "问界M7配置丰富，空间也领先同级",
+          "sentiment": -0.35,
+          "publishedDate": "2023-08-29"
+        },
+        {
+          "url": "https://k.autohome.com.cn/detail/view_01h4b0scja6mr36d1h6wv00000.html",
+          "quote": "方向盘很轻盈并不会觉得方向盘很沉重",
+          "title": "质量很靠谱家用很舒服的M7",
+          "sentiment": 0.6,
+          "publishedDate": "2023-07-02"
+        }
+      ]
+    },
+    {
+      "pinId": 15140,
+      "production": true,
+      "table": "PinLlmPerf",
+      "authorPreserved": true,
+      "unrelatedFieldsAndAxesPreserved": true,
+      "basisVerified": true,
+      "reviews": [
+        {
+          "url": "https://the-decoder.com/openai-ships-gpt-5-4-mini-and-nano-faster-and-more-capable-but-up-to-4x-pricier/",
+          "quote": "GPT-5.4 mini nearly matches the full model's performance, but both new models come with a steep price hike over their predecessors.",
+          "title": "OpenAI ships GPT-5.4 mini and nano, faster and more capable but up to 4x pricier",
+          "sentiment": 0.1,
+          "publishedDate": "2026-03-17"
+        },
+        {
+          "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+          "quote": "they are more verbose, using 200M+ output tokens to run the Intelligence Index, higher than even select frontier models",
+          "title": "Artificial Analysis on X: \"OpenAI released GPT-5.4 mini and nano, cheaper variants of GPT-5.4 with the same reasoning modes. GPT-5.4 nano is the standout, scoring ahead of both Claude Haiku 4.5 and Gemini 3.1 Flash-Lite Preview with lower per token pricing  @OpenAI released GPT-5.4 mini (xhigh,…\"",
+          "sentiment": -0.25,
+          "publishedDate": "2026-03-26"
+        },
+        {
+          "url": "https://simonwillison.net/2026/mar/17/mini-and-nano/",
+          "quote": "loop through all five reasoning effort levels and all three models and produce this combined SVG grid of pelicans riding bicycles",
+          "title": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+          "sentiment": 0,
+          "publishedDate": "2026-03-17"
+        }
+      ]
+    }
+  ]
+}

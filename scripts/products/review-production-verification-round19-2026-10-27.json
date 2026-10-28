@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-27",
+  "jobId": "review-verify-r19-20261027",
+  "temporaryScheduleInstalled": true,
+  "temporaryScheduleRemoved": true,
+  "originalSettingsVerifiedUnchanged": true,
+  "productionDeploymentPerformed": false,
+  "apiDriverAvailableBeforeRun": true,
+  "time": "02:43",
+  "outcome": "skipped",
+  "scheduledTriggerVerified": true,
+  "apiDriverAvailableAfterRun": true,
+  "run": {
+    "id": 30,
+    "jobId": "review-verify-r19-20261027",
+    "slot": "review-verify-r19-20261027@2026-10-28T02:43 UTC",
+    "trigger": "schedule",
+    "status": "skipped",
+    "driver": "api",
+    "tasks": [
+      "sentiment"
+    ],
+    "actions": [],
+    "learnings": [],
+    "report": null,
+    "error": "No LLM was available. api: No ANTHROPIC_API_KEY is configured",
+    "usage": null,
+    "userId": null,
+    "started": "2026-10-28T02:45:15.310Z",
+    "finished": "2026-10-28T02:45:15.318Z"
+  }
+}

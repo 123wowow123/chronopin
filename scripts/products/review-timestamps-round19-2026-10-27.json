@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "pinId": 7660,
+      "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+      "author": "ChimaFanIndiana",
+      "originalTimestamp": "2025-02-16T21:40:56.344Z",
+      "publicationDay": "2025-02-16",
+      "timestampBasis": "Original post main time[datetime] and visible first-post author/body verified in authenticated browser; UTC source timestamp, not relative age or a comment time.",
+      "expectedReview": {
+        "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+        "quote": "It was delicious like a slightly herbal lipton iced tea.",
+        "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+        "publishedDate": null
+      },
+      "review": {
+        "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+        "quote": "It was delicious like a slightly herbal lipton iced tea.",
+        "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+        "publishedDate": "2025-02-16",
+        "sentiment": 0.8
+      }
+    },
+    {
+      "pinId": 7663,
+      "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+      "author": "fractal324",
+      "originalTimestamp": "2026-03-08T11:04:30.638Z",
+      "publicationDay": "2026-03-08",
+      "timestampBasis": "Original post main time[datetime] and visible first-post author/body verified in authenticated browser; UTC source timestamp, not relative age or a comment time.",
+      "expectedReview": {
+        "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+        "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
+        "title": "fractal324 — Coconut Palm canned-version tasting",
+        "publishedDate": null
+      },
+      "review": {
+        "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+        "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
+        "title": "fractal324 — Coconut Palm canned-version tasting",
+        "publishedDate": "2026-03-08",
+        "sentiment": -0.35
+      }
+    },
+    {
+      "pinId": 5609,
+      "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+      "author": "minutemaiding",
+      "originalTimestamp": "2026-10-17T19:18:59.771Z",
+      "publicationDay": "2026-10-17",
+      "timestampBasis": "Original post main time[datetime] and visible first-post author/body verified in authenticated browser; UTC source timestamp, not relative age or a comment time.",
+      "expectedReview": {
+        "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+        "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+        "title": "These Toblerone Biscoff truffles are dangerously good",
+        "sentiment": 0.7,
+        "publishedDate": null
+      },
+      "review": {
+        "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+        "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+        "title": "These Toblerone Biscoff truffles are dangerously good",
+        "sentiment": 0.7,
+        "publishedDate": "2026-10-17"
+      }
+    },
+    {
+      "pinId": 15140,
+      "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+      "author": "ArtificialAnlys",
+      "originalTimestamp": "2026-03-26T05:46:43.000Z",
+      "publicationDay": "2026-03-26",
+      "timestampBasis": "Original post main time[datetime] and visible first-post author/body verified in authenticated browser; UTC source timestamp, not relative age or a comment time.",
+      "expectedReview": {
+        "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+        "quote": "they are more verbose, using 200M+ output tokens to run the Intelligence Index, higher than even select frontier models",
+        "title": "Artificial Analysis on X: \"OpenAI released GPT-5.4 mini and nano, cheaper variants of GPT-5.4 with the same reasoning modes. GPT-5.4 nano is the standout, scoring ahead of both Claude Haiku 4.5 and Gemini 3.1 Flash-Lite Preview with lower per token pricing  @OpenAI released GPT-5.4 mini (xhigh,…\"",
+        "publishedDate": null
+      },
+      "review": {
+        "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+        "quote": "they are more verbose, using 200M+ output tokens to run the Intelligence Index, higher than even select frontier models",
+        "title": "Artificial Analysis on X: \"OpenAI released GPT-5.4 mini and nano, cheaper variants of GPT-5.4 with the same reasoning modes. GPT-5.4 nano is the standout, scoring ahead of both Claude Haiku 4.5 and Gemini 3.1 Flash-Lite Preview with lower per token pricing  @OpenAI released GPT-5.4 mini (xhigh,…\"",
+        "publishedDate": "2026-03-26",
+        "sentiment": -0.25
+      }
+    }
+  ]
+}

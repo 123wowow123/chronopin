@@ -2295,16 +2295,32 @@
       "value": 4,
       "kidsFriendly": null
     },
-    "basis": "Variant: M7 RWD EREV, 40 kWh, 1,100 km combined (5), from RMB 319,800. 0-100 7.8 s (1.5). Six seats, wheelbase 2,820 mm (4, six-seat rule). Priced under the Li L9 it was compared with (4). Charging, assist and kids null: not published in sources read. Reviews are of export Seres 7 (AWD and RE-EV).",
+    "basis": "Variant: 2022 M7 1.5T RWD Comfort EREV, 40 kWh, 1,100 km combined, RMB319800 launch, 0-1007.8s, six seats/2820mm wheelbase. All prior technical axes preserved. Three original owner reports on Autohome, first published July2/Aug29/Sep17 2023: light steering praise, weak transient response and firm rear suspension criticism. One publishing platform, three named authors; not professional test consensus or independent validation of technical anchors. Later2024 AWD UAE Seres7 removed. A RWD-tagged Guangzhou candidate actually claims AWD and was excluded.",
     "sourceUrl": "https://carnewschina.com/2022/07/04/aito-m7-launched-in-china-with-449-hp-and-starting-price-of-47780-usd/",
     "reviews": [
       {
-        "url": "https://www.drivearabia.com/news/2024/07/01/first-drive-2024-seres-7-in-the-uae/",
-        "title": "First Drive: 2024 Seres 7 in the UAE (Drive Arabia, AWD export version of the M7)",
-        "publishedDate": "2024-07-01",
-        "quote": "The suspension is also tuned towards comfort, soaking up bumps nicely."
+        "url": "https://k.autohome.com.cn/detail/view_01hagd2sgv6mrkachr70r00000.html",
+        "quote": "我就感觉后悬挂偏硬，走在路上就感觉有点颠",
+        "title": "华为顶呱呱，增程M7顶呱呱",
+        "sentiment": -0.35,
+        "publishedDate": "2023-09-17"
+      },
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01h8yg17gw6mrk4d1n6wwg0000.html",
+        "quote": "不能瞬间响应，欠缺了些爆发力",
+        "title": "问界M7配置丰富，空间也领先同级",
+        "sentiment": -0.35,
+        "publishedDate": "2023-08-29"
+      },
+      {
+        "url": "https://k.autohome.com.cn/detail/view_01h4b0scja6mr36d1h6wv00000.html",
+        "quote": "方向盘很轻盈并不会觉得方向盘很沉重",
+        "title": "质量很靠谱家用很舒服的M7",
+        "sentiment": 0.6,
+        "publishedDate": "2023-07-02"
       }
-    ]
+    ],
+    "pinSourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765"
   },
   {
     "pinId": 19872,
@@ -2945,6 +2961,84 @@
         "quote": "电动机对加速踏板的响应更加积极",
         "publishedDate": "2021-12-16",
         "sentiment": 0.5
+      }
+    ]
+  },
+  {
+    "pinId": 20034,
+    "pinSourceUrl": "https://www.skoda.co.uk/news/details/new-superb-iv-phev-open-for-order-with-up-to-eighty-four-of-all-electic-range",
+    "scores": {
+      "range": null,
+      "charging": 1.5,
+      "acceleration": 1.5,
+      "assistance": null,
+      "space": 3.5,
+      "value": 3,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Scored: UK Superb iV Estate SE Technology, 204 PS, GBP 41,465. Range null: only electric range (84 miles WLTP) published, no total. Charging: 50 kW DC, 10-80% in about 26 min (Skoda UK) = 1.5. Acceleration: 8.1 s 0-62 mph (Motoring Research, Parkers) = 1.5. Assist null: not checked. Space: 510 l boot, 1,770 l folded, sector-best rear legroom = 3.5. Value: L&K costs as much as a BMW 330e Touring, at market = 3. Kids null. Review maintenance 2026-10-27: Exact 2024 fourth-generation UK 204 PS 1.5 iV Estate test, 1,200-mile drive. L&K with adaptive damping rather than base SE Technology; chassis praise does not validate base suspension. Only Last-Modified metadata is supplied; no original publication day established, so null.",
+    "sourceUrl": "https://www.skoda.co.uk/news/details/new-superb-iv-phev-open-for-order-with-up-to-eighty-four-of-all-electic-range",
+    "reviews": [
+      {
+        "url": "https://www.motoringresearch.com/car-reviews/skoda-superb-iv-estate-2025/",
+        "quote": "With a degree of body-roll and light but precise steering, the Superb iV Estate feels akin to a classic American station wagon , offering smooth and relaxed progress.",
+        "title": "Skoda Superb iV Estate 2025 review",
+        "sentiment": 0.4,
+        "publishedDate": "2025-01-14"
+      },
+      {
+        "url": "https://parkers.co.uk/skoda/superb/hybrid/review",
+        "quote": "even in Normal it enjoys tight body control and excellent damping, with moderate levels of roll in the corners. In tighter bends, it steers with precision and turns in with agility and accuracy.",
+        "title": "Skoda Superb Hybrid Review (Parkers)",
+        "sentiment": 0.7,
+        "publishedDate": "2024-09-17"
+      },
+      {
+        "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+        "quote": "The steering and body control are both above average",
+        "title": "First drive: Skoda Superb iV Estate",
+        "sentiment": 0.5,
+        "publishedDate": null
+      }
+    ]
+  },
+  {
+    "pinId": 20068,
+    "pinSourceUrl": "https://www.autozine.nl/volvo/nieuws/sterkere-batterij-voor-volvo-90-en-60-se",
+    "scores": {
+      "range": null,
+      "charging": null,
+      "acceleration": 3,
+      "assistance": 2,
+      "space": 3,
+      "value": 3,
+      "kidsFriendly": null
+    },
+    "rubricYear": 2026,
+    "basis": "Scored: V60 Recharge T6 AWD, 350 PS, EUR 56,350. Range null: only electric range is published (about 90 km projected), no total range. Charging null: only AC 3.7 kW stated (Auto Express), no DC figure. Acceleration: 5.4 s 0-62 mph (Auto Express) = 3. Assist: Pilot Assist adaptive cruise with steering, no lidar = 2. Space: 529-litre estate boot = 3. Value: priced at market against BMW 330e = 3. Kids null: no child-seat data opened. Review maintenance 2026-10-27: Three independent original tests of the extended-range 18.8-kWh/350-PS T6 AWD: Caradisiac (France), L’argus (France), Bil og Motorbloggen (Norway). Original-language excerpts, visible original days corroborated by structured publication metadata. T8, pre-upgrade 11.6-kWh T6 and generic range overview excluded. Trim, wheel, infotainment and September 2022 charger differences are context, not evidence that launch specifications changed. All native axes preserved.",
+    "sourceUrl": "https://www.autozine.nl/volvo/nieuws/sterkere-batterij-voor-volvo-90-en-60-se",
+    "reviews": [
+      {
+        "url": "https://www.caradisiac.com/essai-volvo-v60-recharge-t6-2022-style-et-efficient-197492.htm",
+        "quote": "Le châssis est très convaincant.",
+        "title": "Essai - Volvo V60 Recharge T6 (2022) : stylé et efficient",
+        "sentiment": 0.65,
+        "publishedDate": "2022-08-18"
+      },
+      {
+        "url": "https://www.largus.fr/actualite-automobile/essai-volvo-v60-recharge-t6-les-vraies-consommations-du-break-hybride-30001420.html",
+        "quote": "Direction peu directe, train avant un peu paresseux",
+        "title": "Essai Volvo V60 Recharge T6 : les vraies consommations du break hybride",
+        "sentiment": -0.35,
+        "publishedDate": "2022-09-13"
+      },
+      {
+        "url": "https://bilogmotorbloggen.no/2022/05/02/test-volvo-v60-recharge-t6/",
+        "quote": "I realiteten går dette virkelig unna – forbikjørings-kapasiteten er voldsom",
+        "title": "Test: Volvo V60 Recharge T6",
+        "sentiment": 0.75,
+        "publishedDate": "2022-05-02"
       }
     ]
   }

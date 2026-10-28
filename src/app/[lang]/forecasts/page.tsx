@@ -69,7 +69,7 @@ async function Forecasts() {
             ))}
           </dl>
         </header>
-        <nav aria-label={t('forecasts.byIndustry')} className="mt-6 flex flex-wrap items-center gap-2 text-sm">
+        <nav aria-label={t('forecasts.byIndustry')} className="sr-only">
           <span className="text-[11px] font-bold tracking-[1.5px] text-(--soft) uppercase">{t('forecasts.byIndustry')}</span>
           {industryLinks.map(([name, count]) => (
             <Link key={name} href={`/forecasts/${industrySlug(name)}`} className="rounded-full border border-(--rule) px-3 py-1 text-(--soft) hover:text-(--text)">{name} <span className="opacity-60">{count}</span></Link>

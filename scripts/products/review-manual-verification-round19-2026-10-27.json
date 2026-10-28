@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-27",
+  "results": [
+    {
+      "pinId": 15140,
+      "production": false,
+      "review": {
+        "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+        "quote": "they are more verbose, using 200M+ output tokens to run the Intelligence Index, higher than even select frontier models",
+        "title": "Artificial Analysis on X: \"OpenAI released GPT-5.4 mini and nano, cheaper variants of GPT-5.4 with the same reasoning modes. GPT-5.4 nano is the standout, scoring ahead of both Claude Haiku 4.5 and Gemini 3.1 Flash-Lite Preview with lower per token pricing  @OpenAI released GPT-5.4 mini (xhigh,…\"",
+        "publishedDate": "2026-03-26",
+        "sentiment": -0.25
+      },
+      "sourceHandPreserved": true,
+      "axesBasisAndOtherFieldsPreserved": true
+    },
+    {
+      "pinId": 15140,
+      "production": true,
+      "review": {
+        "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
+        "quote": "they are more verbose, using 200M+ output tokens to run the Intelligence Index, higher than even select frontier models",
+        "title": "Artificial Analysis on X: \"OpenAI released GPT-5.4 mini and nano, cheaper variants of GPT-5.4 with the same reasoning modes. GPT-5.4 nano is the standout, scoring ahead of both Claude Haiku 4.5 and Gemini 3.1 Flash-Lite Preview with lower per token pricing  @OpenAI released GPT-5.4 mini (xhigh,…\"",
+        "publishedDate": "2026-03-26",
+        "sentiment": -0.25
+      },
+      "sourceHandPreserved": true,
+      "axesBasisAndOtherFieldsPreserved": true
+    }
+  ]
+}

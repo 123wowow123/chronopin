@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Opened original-source review maintenance; preserve rubric axes and authors.",
+  "entries": [
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://www.skoda.co.uk/news/details/new-superb-iv-phev-open-for-order-with-up-to-eighty-four-of-all-electic-range",
+      "expectedBasis": "Scored: UK Superb iV Estate SE Technology, 204 PS, GBP 41,465. Range null: only electric range (84 miles WLTP) published, no total. Charging: 50 kW DC, 10-80% in about 26 min (Skoda UK) = 1.5. Acceleration: 8.1 s 0-62 mph (Motoring Research, Parkers) = 1.5. Assist null: not checked. Space: 510 l boot, 1,770 l folded, sector-best rear legroom = 3.5. Value: L&K costs as much as a BMW 330e Touring, at market = 3. Kids null.",
+      "changes": {
+        "basis": "Scored: UK Superb iV Estate SE Technology, 204 PS, GBP 41,465. Range null: only electric range (84 miles WLTP) published, no total. Charging: 50 kW DC, 10-80% in about 26 min (Skoda UK) = 1.5. Acceleration: 8.1 s 0-62 mph (Motoring Research, Parkers) = 1.5. Assist null: not checked. Space: 510 l boot, 1,770 l folded, sector-best rear legroom = 3.5. Value: L&K costs as much as a BMW 330e Touring, at market = 3. Kids null. Review maintenance 2026-10-27: Exact 2024 fourth-generation UK 204 PS 1.5 iV Estate test, 1,200-mile drive. L&K with adaptive damping rather than base SE Technology; chassis praise does not validate base suspension. Only Last-Modified metadata is supplied; no original publication day established, so null."
+      }
+    },
+    {
+      "table": "PinCarPerf",
+      "pinSourceUrl": "https://www.autozine.nl/volvo/nieuws/sterkere-batterij-voor-volvo-90-en-60-se",
+      "expectedBasis": "Scored: V60 Recharge T6 AWD, 350 PS, EUR 56,350. Range null: only electric range is published (about 90 km projected), no total range. Charging null: only AC 3.7 kW stated (Auto Express), no DC figure. Acceleration: 5.4 s 0-62 mph (Auto Express) = 3. Assist: Pilot Assist adaptive cruise with steering, no lidar = 2. Space: 529-litre estate boot = 3. Value: priced at market against BMW 330e = 3. Kids null: no child-seat data opened.",
+      "changes": {
+        "basis": "Scored: V60 Recharge T6 AWD, 350 PS, EUR 56,350. Range null: only electric range is published (about 90 km projected), no total range. Charging null: only AC 3.7 kW stated (Auto Express), no DC figure. Acceleration: 5.4 s 0-62 mph (Auto Express) = 3. Assist: Pilot Assist adaptive cruise with steering, no lidar = 2. Space: 529-litre estate boot = 3. Value: priced at market against BMW 330e = 3. Kids null: no child-seat data opened. Review maintenance 2026-10-27: Three independent original tests of the extended-range 18.8-kWh/350-PS T6 AWD: Caradisiac (France), L’argus (France), Bil og Motorbloggen (Norway). Original-language excerpts, visible original days corroborated by structured publication metadata. T8, pre-upgrade 11.6-kWh T6 and generic range overview excluded. Trim, wheel, infotainment and September 2022 charger differences are context, not evidence that launch specifications changed. All native axes preserved."
+      }
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinSourceUrl": "https://www.motorauthority.com/news/1123743_review-2020-audi-sq8-price-photos-specs-info",
+      "expectedBasis": "Scored: US SQ8 4.0 TFSI, 500 hp, USD 89,995. Power 500 hp = 4.5. Acceleration 4.3 s 0-60 mph (Motor Authority) = 4. Economy 12.2 l/100 km combined (CarExpert) = 19 mpg US = 1. Handling: praised by CarExpert and Motor Authority, one-dimensional per evo, little steering feel per Top Gear = 3.5. Space: 30.5 cu ft behind the rear seats, 605 L = 4. Value: 500 hp / USD 90k = 5.6 hp per USD 1,000 = 2.5.",
+      "changes": {
+        "basis": "Scored: US SQ8 4.0 TFSI, 500 hp, USD 89,995. Power 500 hp = 4.5. Acceleration 4.3 s 0-60 mph (Motor Authority) = 4. Economy 12.2 l/100 km combined (CarExpert) = 19 mpg US = 1. Handling: praised by CarExpert and Motor Authority, one-dimensional per evo, little steering feel per Top Gear = 3.5. Space: 30.5 cu ft behind the rear seats, 605 L = 4. Value: 500 hp / USD 90k = 5.6 hp per USD 1,000 = 2.5. Review maintenance 2026-10-27: Original 2020 US 500-hp petrol SQ8 tests: Road & Track drove without Sport package on optional 22-inch wheels; MotorTrend drove Sport/Prestige-equipped car. Independent testers/publications, both Hearst-owned; not independent corporate ownership. Their option-specific dynamics do not rescore base handling. Existing Motor Authority US and labelled Australian CarExpert evidence preserved; mutable evo facelift overview replaced. All axes preserved."
+      }
+    }
+  ]
+}

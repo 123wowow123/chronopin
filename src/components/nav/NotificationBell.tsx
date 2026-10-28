@@ -779,6 +779,7 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
 // The signed-in viewer's sun sign, read from the birthday on the account, under
 // the weather. Signed out it is nothing; with no birthday it asks for one.
 function HoroscopeRow({ className = '', onNavigate }: { className?: string; onNavigate?: () => void }) {
+  const t = useT();
   const { user } = useSession();
   const sign = user ? sunSign(user.birthday) : null;
   const slug = sign?.slug;
@@ -806,7 +807,7 @@ function HoroscopeRow({ className = '', onNavigate }: { className?: string; onNa
         <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
           <Icon name="sparkle" className="size-4" />
         </span>
-        Add your birthday for your daily horoscope
+        {t('horoscope.addBirthdayRow')}
       </Link>
     );
   }
@@ -814,7 +815,10 @@ function HoroscopeRow({ className = '', onNavigate }: { className?: string; onNa
     <div className={`flex items-start gap-3 px-4 py-2.5 text-sm text-ink ${className}`}>
       <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-lg text-accent">{sign.symbol}</span>
       <div className="min-w-0 flex-1">
-        <div className="font-semibold">{sign.name} <span className="font-normal text-muted">· Horoscope</span></div>
+        <div className="flex items-baseline justify-between gap-2">
+          <div className="font-semibold">{sign.name} <span className="font-normal text-muted">· {t('horoscope.suffix')}</span></div>
+          <Link href="/horoscope" onClick={onNavigate} className="shrink-0 text-xs font-medium">{t('horoscope.seeMore')}</Link>
+        </div>
         <div className="truncate text-xs text-subtle">{reading?.aspect ? `${reading.aspect} · ` : ''}{sign.element} · {sign.range}</div>
         {reading?.slug === sign.slug ? <p className="mt-1.5 text-sm leading-snug text-muted">{reading.text}</p> : null}
       </div>
@@ -989,11 +993,11 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
-        <div className="floating absolute end-0 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-80 flex-col overflow-hidden">
+        <div className="floating absolute end-0 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-[26rem] max-w-[calc(100vw-1rem)] flex-col overflow-hidden">
           <LocalWeatherRow className="shrink-0" />
-          <HoroscopeRow className="shrink-0 border-t border-line" onNavigate={() => setOpen(false)} />
           {/* Only what is under the weather row scrolls, as under the bell's heading. */}
           <div className="min-h-0 overflow-y-auto">
+          <HoroscopeRow className="border-t border-line" onNavigate={() => setOpen(false)} />
           <div className="peer border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
           <ul className={`pt-1.5 ${weather ? 'peer-empty:border-t peer-empty:border-line' : ''}`}>
             <li className="px-1.5">
@@ -1091,14 +1095,14 @@ export function NotificationBell({ className = '' }: { className?: string }) {
         </span>
       </button>
       {open ? (
-        <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
+        <div className="floating absolute end-0 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-[26rem] max-w-[calc(100vw-1rem)] overflow-y-auto">
           <LocalWeatherRow className="border-b border-line" />
           <HoroscopeRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <PremiumRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <Link href="/notifications" onClick={() => setOpen(false)} className="block border-b border-line px-4 py-2.5 text-sm font-semibold text-ink hover:bg-raised hover:no-underline">
             {t('notifications.title')}
           </Link>
-          <NotificationItems {...list} listClassName="max-h-96 overflow-auto" onNavigate={() => setOpen(false)} />
+          <NotificationItems {...list} onNavigate={() => setOpen(false)} />
         </div>
       ) : null}
     </div>

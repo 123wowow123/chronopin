@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-27",
+  "repairs": [
+    {
+      "pinId": 5609,
+      "removedLegacyEntry": {
+        "pinId": 5609,
+        "aroma": 3.5,
+        "bitterness": 1,
+        "sweetness": 5,
+        "astringency": 0.5,
+        "umami": 1,
+        "basis": "Milk-chocolate truffles round a Biscoff spread with honey and almond nougat: caramel-spiced and very sweet, little bitterness. October 27 research: firsthand CostcoCanada account by u/minutemaiding, with photographed Toblerone Diamond Truffles with Biscoff packaging. Exact publication day could not be reconciled from relative page dates and inconsistent search dating; left null. This is a consumer tasting, not a professional blind review.",
+        "pungent": 0,
+        "coolness": 0,
+        "reviews": [
+          {
+            "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+            "quote": "The addition of honey gives a subtle sweetness that perfectly balances the earthy caramel notes from the Biscoff biscuit.",
+            "title": "Biscoff Toblerone Truffles at Costco: A Delicious Milk Chocolate Treat (Lemon8 @costcobuys)",
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
+            "quote": "They’re rich, but not overly sweet, and have a good texture with some crunch.",
+            "title": "These Toblerone Biscoff truffles are dangerously good",
+            "sentiment": 0.7,
+            "publishedDate": null
+          }
+        ]
+      },
+      "canonicalPinSourceUrl": "https://vietnamnews.vn/media-outreach/1800320/an-iconic-duo-toblerone-launches-truffles-with-biscoff.html",
+      "evidence": "All seven axes, complete preflight review array and full prior basis matched uniquely; not matched by database id alone. Canonical source-identified entry matches saved native reviews."
+    }
+  ]
+}

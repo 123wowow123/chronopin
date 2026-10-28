@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import Link from '@/components/ui/Link';
+import { CardLike } from '@/components/pin/CardLike';
 import { LandingMark } from '@/components/ui/LandingMark';
 import { CardImage } from '@/components/pin/CardImage';
 import { useIntlLocale, useLocale, useT } from '@/lib/client/i18n';
@@ -257,14 +258,14 @@ export function ActivitiesView({
             {city && (
               <label className="flex flex-col gap-1 text-xs font-semibold">
                 {ga('distanceFrom', { city: city.name })}
-                <select value={radiusKm} onChange={(event) => setRadiusKm(Number(event.target.value))} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] px-3 py-2 text-sm text-[var(--text)]">
+                <select value={radiusKm} onChange={(event) => setRadiusKm(Number(event.target.value))} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] appearance-none bg-no-repeat py-2 pl-3 pr-9 [background-position:right_0.75rem_center] [background-size:0.75rem] [background-image:url(data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2012%2012%27%3E%3Cpath%20d=%27M2%204l4%204%204-4%27%20fill=%27none%27%20stroke=%27%23666%27%20stroke-width=%271.6%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27/%3E%3C/svg%3E)] text-sm text-[var(--text)]">
                   {ACTIVITY_RADII_KM.map((km) => <option key={km} value={km}>{ga('within', { miles: miles(km), km })}</option>)}
                 </select>
               </label>
             )}
             <label className="flex flex-col gap-1 text-xs font-semibold">
               {ga('sortBy')}
-              <select value={sort === 'nearest' && !city ? 'season' : sort} onChange={(event) => setSort(event.target.value as typeof sort)} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] px-3 py-2 text-sm text-[var(--text)]">
+              <select value={sort === 'nearest' && !city ? 'season' : sort} onChange={(event) => setSort(event.target.value as typeof sort)} className="rounded-md border border-[var(--rule)] bg-[var(--paper)] appearance-none bg-no-repeat py-2 pl-3 pr-9 [background-position:right_0.75rem_center] [background-size:0.75rem] [background-image:url(data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2012%2012%27%3E%3Cpath%20d=%27M2%204l4%204%204-4%27%20fill=%27none%27%20stroke=%27%23666%27%20stroke-width=%271.6%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27/%3E%3C/svg%3E)] text-sm text-[var(--text)]">
                 <option value="season">{ga('sortSeason')}</option>
                 {city && <option value="nearest">{ga('sortNearest')}</option>}
                 <option value="name">{ga('sortName')}</option>
@@ -343,6 +344,7 @@ export function ActivitiesView({
                 const end = windowEnd(a, start);
                 return (
                   <article key={pin.id} className={styles.card} id={`activity-${pin.id}`}>
+                    <CardLike pin={pin} />
                     <Link href={pinPath(pin)} className={styles.photoLink} aria-label={ga('view', { name: a.name })}>
                       {pic.thumbName || pic.originalUrl ? (
                         <CardImage thumbName={pic.thumbName} originalUrl={pic.originalUrl} alt={a.name} className={styles.cardImage} />

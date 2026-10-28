@@ -8,7 +8,9 @@ import { useDayNews } from '@/lib/client/dayNews';
 import { leaveTimelineForDay } from '@/lib/client/dayReturn';
 import { useImpression } from '@/lib/client/impressions';
 import { stackDuplicates, type PinStack } from '@/lib/duplicates';
-import { formatDayKey, lunarDate, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
+import { formatDayKey, lunarDate, monthDayOf, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
+import { useOnThisDay } from '@/lib/client/onThisDay';
+import type { OnThisDay } from '@/lib/onThisDay';
 import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
 import { timelineDayCandidates } from '@/lib/restaurantTimeline';
@@ -62,7 +64,7 @@ const rowTracks = `grid grid-cols-1 sm:grid-cols-2 sm:gap-x-2.5 ${WIDE_COLUMNS.m
 // centred on them.
 export const rowWidth = `sm:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
 
-type TagVariant = 'date' | 'countdown' | 'today' | 'trivia' | 'holiday' | 'tradition';
+type TagVariant = 'date' | 'countdown' | 'today' | 'trivia' | 'holiday' | 'tradition' | 'history';
 
 // A day's markers are trivia the site holds no pin for, so the chip hands the
 // name to a web search in the viewer's language.
@@ -139,6 +141,9 @@ function splitMarkers<T extends { title: string }>(dateTimes: T[], culturalDays:
 const holidayLines = (label: string): TagLines => tagLines(label, 2);
 // The specialty day's name takes three at least, to five.
 const specialtyLines = (days: SpecialtyDay[]): TagLines => tagLines(days[0].label, 3);
+// The history tag is the year and the event, two lines at least, to five.
+const historyLabel = (h: OnThisDay) => `${h.year}: ${h.text}`;
+const historyHeight = (h?: OnThisDay) => (h ? tagHeight(tagLines(historyLabel(h), 2)) : 0);
 const specialtyHeight = (days: SpecialtyDay[]) =>
   days.length ? tagHeight(specialtyLines(days)) + (days[0].traditions ?? []).reduce((sum, tradition) => sum + tagHeight(tagLines(tradition.label, 2)), 0) : 0;
 
@@ -231,9 +236,10 @@ export function TimeBlock({
   const moon = moonPhase(bag.day, 16, locale);
   const lunar = lunarDate(bag.day, locale);
   const { astronomy, national } = splitMarkers(bag.dateTimes, culturalDays);
+  const history = useOnThisDay(monthDayOf(bag.day));
   // 42px a one-line tag, 54 a date marker's two lines and 68 to 96 the specialty
   // day's three to five; the holidays' tags come last.
-  const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0)) + 54 * astronomy.length + specialtyHeight(specialtyDays) + holidayStackHeight(national.length, culturalDays);
+  const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0)) + 54 * astronomy.length + specialtyHeight(specialtyDays) + historyHeight(history) + holidayStackHeight(national.length, culturalDays);
   // On phones only one extra tag fits beside the date and countdown: the
   // day's holiday if it has one, else its first marker, else its specialty day.
   const phoneTag = culturalDays.length ? `c:${culturalDays[0].id}` : national.length ? `m:${national[0].id}` : astronomy.length ? `m:${astronomy[0].id}` : 'specialty';
@@ -307,6 +313,7 @@ export function TimeBlock({
           <HolidayTags days={culturalDays} phoneTag={phoneTag} />
           {specialtyDays.length ? <SpecialtyTag days={specialtyDays} className={hideOnPhone('specialty')} /> : null}
           <SpecialtyTraditions days={specialtyDays} />
+          {history ? <HistoryTag history={history} className="max-sm:hidden" /> : null}
         </div>
       </div>
 
@@ -602,10 +609,21 @@ export function SpecialtyTraditions({ days }: { days: SpecialtyDay[] }) {
   );
 }
 
+// What happened on the day in history ("1904: the first New York City Subway
+// line opened"), the last tag of the stack, linking to its Wikipedia article.
+export function HistoryTag({ history, className = '' }: { history: OnThisDay; className?: string }) {
+  return (
+    <Tag variant="history" wrap lines={tagLines(historyLabel(history), 2)} title={historyLabel(history)} href={history.url} className={`${extraTag} ${className}`}>
+      {historyLabel(history)}
+    </Tag>
+  );
+}
+
 // `day` is today's key: the day the URL's hash names while it is at the top.
 export function TodayMarker({ day, specialtyDays, culturalDays = [] }: { day: string; specialtyDays: SpecialtyDay[]; culturalDays?: CulturalDay[] }) {
   const t = useT();
   const tagRowRef = useFitTraditions([culturalDays, t]);
+  const history = useOnThisDay(monthDayOf(day));
   return (
     <div data-day={day} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
       <div className="today-dot absolute top-[7px] start-[140px] z-10 -ms-[7px] hidden size-3.5 rounded-full lg:block" />
@@ -616,8 +634,9 @@ export function TodayMarker({ day, specialtyDays, culturalDays = [] }: { day: st
         <HolidayTags days={culturalDays} />
         {specialtyDays.length ? <SpecialtyTag days={specialtyDays} /> : null}
         <SpecialtyTraditions days={specialtyDays} />
+        {history ? <HistoryTag history={history} /> : null}
       </div>
-      {specialtyDays.length || culturalDays.length ? <div className="hidden lg:block" style={{ height: (specialtyDays.length ? specialtyHeight(specialtyDays) + 4 : 0) + holidayStackHeight(0, culturalDays) }} /> : null}
+      {specialtyDays.length || culturalDays.length || history ? <div className="hidden lg:block" style={{ height: (specialtyDays.length ? specialtyHeight(specialtyDays) + 4 : 0) + historyHeight(history) + holidayStackHeight(0, culturalDays) }} /> : null}
     </div>
   );
 }

@@ -35,3 +35,43 @@ export function sunSign(birthday: string | null | undefined): SunSign | null {
 }
 
 export const SUN_SIGN_SLUGS = SIGNS.map((s) => s.sign.slug);
+
+export const SUN_SIGNS: SunSign[] = SIGNS.map((s) => s.sign);
+
+// Signs of the same element or the complementary one (Fire-Air, Earth-Water),
+// the traditional rule of thumb for sun-sign compatibility.
+export function compatibleSigns(sign: SunSign): SunSign[] {
+  const partner = { Fire: 'Air', Air: 'Fire', Earth: 'Water', Water: 'Earth' }[sign.element];
+  return SUN_SIGNS.filter((s) => s.slug !== sign.slug && (s.element === sign.element || s.element === partner));
+}
+
+const LUCKY_COLORS = ['Red', 'Orange', 'Gold', 'Green', 'Teal', 'Blue', 'Indigo', 'Violet', 'Pink', 'Silver', 'White', 'Black'];
+const MOODS = ['Calm', 'Curious', 'Confident', 'Playful', 'Focused', 'Romantic', 'Restless', 'Reflective', 'Ambitious', 'Generous'];
+
+// Lucky number, colour and mood for a sign on a day (a YYYY-MM-DD key). They are
+// a fixed function of the two, so everyone with the sign sees the same, all day.
+export function dailyExtras(slug: string, day: string): { luckyNumber: number; luckyColor: string; mood: string } {
+  let h = 2166136261;
+  for (const ch of `${slug}|${day}`) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0;
+  return {
+    luckyNumber: (h % 99) + 1,
+    luckyColor: LUCKY_COLORS[(h >>> 8) % LUCKY_COLORS.length],
+    mood: MOODS[(h >>> 16) % MOODS.length],
+  };
+}
+
+// Traditional ruling planet, modality and keywords for each sign.
+export const SIGN_PROFILE: Record<string, { ruler: string; modality: 'Cardinal' | 'Fixed' | 'Mutable'; traits: string }> = {
+  aries: { ruler: 'Mars', modality: 'Cardinal', traits: 'Bold, direct, energetic' },
+  taurus: { ruler: 'Venus', modality: 'Fixed', traits: 'Steady, sensual, patient' },
+  gemini: { ruler: 'Mercury', modality: 'Mutable', traits: 'Curious, quick, talkative' },
+  cancer: { ruler: 'Moon', modality: 'Cardinal', traits: 'Caring, intuitive, protective' },
+  leo: { ruler: 'Sun', modality: 'Fixed', traits: 'Warm, creative, proud' },
+  virgo: { ruler: 'Mercury', modality: 'Mutable', traits: 'Analytical, practical, precise' },
+  libra: { ruler: 'Venus', modality: 'Cardinal', traits: 'Diplomatic, charming, fair' },
+  scorpio: { ruler: 'Pluto (traditionally Mars)', modality: 'Fixed', traits: 'Intense, private, determined' },
+  sagittarius: { ruler: 'Jupiter', modality: 'Mutable', traits: 'Adventurous, candid, optimistic' },
+  capricorn: { ruler: 'Saturn', modality: 'Cardinal', traits: 'Disciplined, ambitious, reliable' },
+  aquarius: { ruler: 'Uranus (traditionally Saturn)', modality: 'Fixed', traits: 'Independent, inventive, idealistic' },
+  pisces: { ruler: 'Neptune (traditionally Jupiter)', modality: 'Mutable', traits: 'Imaginative, empathetic, dreamy' },
+};

@@ -91,6 +91,7 @@ import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadList } from '@/components/pin/ThreadList';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
 import { ThreadWatchButton } from '@/components/pin/ThreadWatchButton';
+import { LikeButton } from '@/components/pin/LikeButton';
 import { WatchButton } from '@/components/pin/WatchButton';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
@@ -682,6 +683,7 @@ async function PinBody({
         </div>
         <div className="flex items-center gap-1">
           <ViewCount pinId={pin.id} initial={pin.viewCount} track />
+          <LikeButton pin={pin} loadForViewer />
           <WatchButton pin={pin} loadForViewer />
           <PinAdminLink pinId={pin.id} />
         </div>

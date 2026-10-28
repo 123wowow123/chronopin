@@ -17,6 +17,7 @@ import { useMusicPlayer } from './MusicPlayerContext';
 import { AlbumTracklist } from './AlbumTracklist';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
+import { CardLike } from '@/components/pin/CardLike';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 
@@ -319,6 +320,7 @@ export function MusicRankingView({
 
           {featured ? (
             <div className="relative group">
+              {featured.pinId ? <CardLike pin={{ id: featured.pinId }} /> : null}
               <Link
                 href={featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl}
                 className={styles.featured}
@@ -667,6 +669,7 @@ export function MusicRankingView({
                               isThisPlaying || focusId === song.id ? 'ring-2 ring-[var(--green)] shadow-md' : ''
                             }`}
                           >
+                            {song.pinId ? <CardLike pin={{ id: song.pinId }} /> : null}
                             {/* Photo / Artwork with Play Button Overlay */}
                             <div className="relative group/art aspect-[1.6] overflow-hidden bg-[var(--rule)]">
                               <Link

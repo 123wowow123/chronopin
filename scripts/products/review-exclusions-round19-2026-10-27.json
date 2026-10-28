@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-27",
+  "entries": [
+    {
+      "table": "PinTaste",
+      "pinId": 5609,
+      "pinSourceUrl": "https://vietnamnews.vn/media-outreach/1800320/an-iconic-duo-toblerone-launches-truffles-with-biscoff.html",
+      "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+      "expectedReview": {
+        "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+        "quote": "The addition of honey gives a subtle sweetness that perfectly balances the earthy caramel notes from the Biscoff biscuit.",
+        "title": "Biscoff Toblerone Truffles at Costco: A Delicious Milk Chocolate Treat (Lemon8 @costcobuys)",
+        "publishedDate": null
+      },
+      "reason": "The saved sentence occurs in expanded recommendations outside CostcoBuys’ original caption. Firsthand authorship is not established; now replace with verified, absolutely dated original u/minutemaiding tasting. Do not label unattributed recommendations as a named firsthand review."
+    },
+    {
+      "table": "PinGasCarPerf",
+      "pinId": 15238,
+      "pinSourceUrl": "https://pressroom.toyota.com/assembled-in-america-and-arriving-now-2026-toyota-corolla-cross/",
+      "url": "https://www.edmunds.com/toyota/corolla-cross/",
+      "expectedReview": {
+        "url": "https://www.edmunds.com/toyota/corolla-cross/",
+        "quote": "But other extra-small crossover SUVs outclass this Toyota in driving excitement, interior room and overall desirability.",
+        "title": "2026 Toyota Corolla Cross Prices, Reviews, and Pictures | Edmunds",
+        "sentiment": -0.3,
+        "publishedDate": null
+      },
+      "reason": "Rolling overview remained inaccessible and does not provide a verifiable original exact-FWD review excerpt/day. Replaced after saving opened original MotorTrend 2026 XLE FWD test; base L tyre/trim differences explicit."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19652,
+      "pinSourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765",
+      "url": "https://www.drivearabia.com/news/2024/07/01/first-drive-2024-seres-7-in-the-uae/",
+      "expectedReview": {
+        "url": "https://www.drivearabia.com/news/2024/07/01/first-drive-2024-seres-7-in-the-uae/",
+        "quote": "The suspension is also tuned towards comfort, soaking up bumps nicely.",
+        "title": "First Drive: 2024 Seres 7 in the UAE (Drive Arabia, AWD export version of the M7)",
+        "sentiment": 0.5,
+        "publishedDate": "2024-07-01"
+      },
+      "reason": "Original 2024 Seres 7 UAE AWD export review is not the scored 2022 China RWD Comfort. Replace after saving three exact-RWD original owner reports; keep export source as scoped history only."
+    }
+  ]
+}

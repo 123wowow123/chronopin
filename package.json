@@ -147,6 +147,7 @@
     "wiki:apply": "tsx scripts/wiki/apply.ts",
     "wiki:prod": "tsx scripts/wiki/prod.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
+    "on-this-day:build": "node scripts/specialtyDays/onThisDay.cjs",
     "specialty-days:translate": "tsx scripts/specialtyDays/translate.ts",
     "specialty-days:traditions": "tsx scripts/specialtyDays/traditions.ts",
     "specialty-days:traditions-generate": "tsx scripts/specialtyDays/traditions-generate.ts",

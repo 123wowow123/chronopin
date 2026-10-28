@@ -1,0 +1,788 @@
+{
+  "checkedAt": "2026-10-27",
+  "newReviews": 12,
+  "replacedNativeCitations": 5,
+  "pinsUpdated": [
+    20034,
+    20068,
+    19911,
+    6192,
+    6319
+  ],
+  "nativeReadbacks": [
+    {
+      "pinId": 20034,
+      "production": false,
+      "table": "PinCarPerf",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.motoringresearch.com/car-reviews/skoda-superb-iv-estate-2025/",
+          "quote": "With a degree of body-roll and light but precise steering, the Superb iV Estate feels akin to a classic American station wagon , offering smooth and relaxed progress.",
+          "title": "Skoda Superb iV Estate 2025 review",
+          "sentiment": 0.4,
+          "publishedDate": "2025-01-14"
+        },
+        {
+          "url": "https://parkers.co.uk/skoda/superb/hybrid/review",
+          "quote": "even in Normal it enjoys tight body control and excellent damping, with moderate levels of roll in the corners. In tighter bends, it steers with precision and turns in with agility and accuracy.",
+          "title": "Skoda Superb Hybrid Review (Parkers)",
+          "sentiment": 0.7,
+          "publishedDate": "2024-09-17"
+        },
+        {
+          "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+          "quote": "The steering and body control are both above average",
+          "title": "First drive: Skoda Superb iV Estate",
+          "sentiment": 0.5,
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 20034,
+      "production": true,
+      "table": "PinCarPerf",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.motoringresearch.com/car-reviews/skoda-superb-iv-estate-2025/",
+          "quote": "With a degree of body-roll and light but precise steering, the Superb iV Estate feels akin to a classic American station wagon , offering smooth and relaxed progress.",
+          "title": "Skoda Superb iV Estate 2025 review",
+          "sentiment": 0.4,
+          "publishedDate": "2025-01-14"
+        },
+        {
+          "url": "https://parkers.co.uk/skoda/superb/hybrid/review",
+          "quote": "even in Normal it enjoys tight body control and excellent damping, with moderate levels of roll in the corners. In tighter bends, it steers with precision and turns in with agility and accuracy.",
+          "title": "Skoda Superb Hybrid Review (Parkers)",
+          "sentiment": 0.7,
+          "publishedDate": "2024-09-17"
+        },
+        {
+          "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+          "quote": "The steering and body control are both above average",
+          "title": "First drive: Skoda Superb iV Estate",
+          "sentiment": 0.5,
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 20068,
+      "production": false,
+      "table": "PinCarPerf",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.caradisiac.com/essai-volvo-v60-recharge-t6-2022-style-et-efficient-197492.htm",
+          "quote": "Le châssis est très convaincant.",
+          "title": "Essai - Volvo V60 Recharge T6 (2022) : stylé et efficient",
+          "sentiment": 0.65,
+          "publishedDate": "2022-08-18"
+        },
+        {
+          "url": "https://www.largus.fr/actualite-automobile/essai-volvo-v60-recharge-t6-les-vraies-consommations-du-break-hybride-30001420.html",
+          "quote": "Direction peu directe, train avant un peu paresseux",
+          "title": "Essai Volvo V60 Recharge T6 : les vraies consommations du break hybride",
+          "sentiment": -0.35,
+          "publishedDate": "2022-09-13"
+        },
+        {
+          "url": "https://bilogmotorbloggen.no/2022/05/02/test-volvo-v60-recharge-t6/",
+          "quote": "I realiteten går dette virkelig unna – forbikjørings-kapasiteten er voldsom",
+          "title": "Test: Volvo V60 Recharge T6",
+          "sentiment": 0.75,
+          "publishedDate": "2022-05-02"
+        }
+      ]
+    },
+    {
+      "pinId": 20068,
+      "production": true,
+      "table": "PinCarPerf",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.caradisiac.com/essai-volvo-v60-recharge-t6-2022-style-et-efficient-197492.htm",
+          "quote": "Le châssis est très convaincant.",
+          "title": "Essai - Volvo V60 Recharge T6 (2022) : stylé et efficient",
+          "sentiment": 0.65,
+          "publishedDate": "2022-08-18"
+        },
+        {
+          "url": "https://www.largus.fr/actualite-automobile/essai-volvo-v60-recharge-t6-les-vraies-consommations-du-break-hybride-30001420.html",
+          "quote": "Direction peu directe, train avant un peu paresseux",
+          "title": "Essai Volvo V60 Recharge T6 : les vraies consommations du break hybride",
+          "sentiment": -0.35,
+          "publishedDate": "2022-09-13"
+        },
+        {
+          "url": "https://bilogmotorbloggen.no/2022/05/02/test-volvo-v60-recharge-t6/",
+          "quote": "I realiteten går dette virkelig unna – forbikjørings-kapasiteten er voldsom",
+          "title": "Test: Volvo V60 Recharge T6",
+          "sentiment": 0.75,
+          "publishedDate": "2022-05-02"
+        }
+      ]
+    },
+    {
+      "pinId": 19911,
+      "production": false,
+      "table": "PinGasCarPerf",
+      "reviewCount": 4,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.motorauthority.com/news/1131464_first-drive-review-2020-audi-sq8-stands-out-by-fitting-in",
+          "quote": "In Comfort mode, the air suspension helped soak up road seams and relaxed the steering feedback.",
+          "title": "First drive review: 2020 Audi SQ8 stands out by fitting in",
+          "sentiment": 0.4,
+          "publishedDate": "2021-03-04"
+        },
+        {
+          "url": "https://www.carexpert.com.au/car-reviews/2023-audi-sq8-tfsi-review",
+          "quote": "it’s hard to think of many cars you’d rather pelt across the Nullarbor (or preferably belt down an Autobahn) in: It’s a true executive express, which offers excellent dynamic engagement for such a porky beast.",
+          "title": "2023 Audi SQ8 TFSI review (CarExpert, Australian-spec)",
+          "sentiment": 0.8,
+          "publishedDate": "2022-11-03"
+        },
+        {
+          "url": "https://www.roadandtrack.com/new-cars/first-drives/a33912999/2020-audi-sq8-first-drive-review/",
+          "quote": "It'll hustle down a country road while remaining supple most everywhere else.",
+          "title": "The 2020 Audi SQ8 Is an Everyday Muscle Truck",
+          "sentiment": 0.65,
+          "publishedDate": "2020-09-03"
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/2020-audi-sq-8-test-drive",
+          "quote": "the brisk acceleration is more than satisfying.",
+          "title": "2020 Audi SQ8 Test: Satisfaction, not Surprises",
+          "sentiment": 0.65,
+          "publishedDate": "2020-10-21"
+        }
+      ]
+    },
+    {
+      "pinId": 19911,
+      "production": true,
+      "table": "PinGasCarPerf",
+      "reviewCount": 4,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.motorauthority.com/news/1131464_first-drive-review-2020-audi-sq8-stands-out-by-fitting-in",
+          "quote": "In Comfort mode, the air suspension helped soak up road seams and relaxed the steering feedback.",
+          "title": "First drive review: 2020 Audi SQ8 stands out by fitting in",
+          "sentiment": 0.4,
+          "publishedDate": "2021-03-04"
+        },
+        {
+          "url": "https://www.carexpert.com.au/car-reviews/2023-audi-sq8-tfsi-review",
+          "quote": "it’s hard to think of many cars you’d rather pelt across the Nullarbor (or preferably belt down an Autobahn) in: It’s a true executive express, which offers excellent dynamic engagement for such a porky beast.",
+          "title": "2023 Audi SQ8 TFSI review (CarExpert, Australian-spec)",
+          "sentiment": 0.8,
+          "publishedDate": "2022-11-03"
+        },
+        {
+          "url": "https://www.roadandtrack.com/new-cars/first-drives/a33912999/2020-audi-sq8-first-drive-review/",
+          "quote": "It'll hustle down a country road while remaining supple most everywhere else.",
+          "title": "The 2020 Audi SQ8 Is an Everyday Muscle Truck",
+          "sentiment": 0.65,
+          "publishedDate": "2020-09-03"
+        },
+        {
+          "url": "https://www.motortrend.com/reviews/2020-audi-sq-8-test-drive",
+          "quote": "the brisk acceleration is more than satisfying.",
+          "title": "2020 Audi SQ8 Test: Satisfaction, not Surprises",
+          "sentiment": 0.65,
+          "publishedDate": "2020-10-21"
+        }
+      ]
+    },
+    {
+      "pinId": 6192,
+      "production": false,
+      "table": "PinCriticReview",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/movies/inside-out-2-review-2024",
+          "quote": "Sparky, kaleidoscopic and boldly honest about the tougher side of growing up",
+          "title": "Inside Out 2",
+          "sentiment": 0.65,
+          "publishedDate": "2024-06-12"
+        },
+        {
+          "url": "https://www.radiotimes.com/movies/inside-out-2-review/",
+          "quote": "They’re a delight throughout",
+          "title": "Inside Out 2 review: No need for fear or anxiety, Pixar's sequel is a joy",
+          "sentiment": 0.6,
+          "publishedDate": "2024-06-12"
+        },
+        {
+          "url": "https://apnews.com/article/inside-out-2-movie-review-62caaed0d956b9b1f1db9a098bd650f4",
+          "quote": "in its finest moments packs an emotional wallop",
+          "title": "Movie Review: Peace (and pieces) of mind ‘Inside Out 2'",
+          "sentiment": 0.6,
+          "publishedDate": "2024-06-12"
+        }
+      ]
+    },
+    {
+      "pinId": 6192,
+      "production": true,
+      "table": "PinCriticReview",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/movies/inside-out-2-review-2024",
+          "quote": "Sparky, kaleidoscopic and boldly honest about the tougher side of growing up",
+          "title": "Inside Out 2",
+          "sentiment": 0.65,
+          "publishedDate": "2024-06-12"
+        },
+        {
+          "url": "https://www.radiotimes.com/movies/inside-out-2-review/",
+          "quote": "They’re a delight throughout",
+          "title": "Inside Out 2 review: No need for fear or anxiety, Pixar's sequel is a joy",
+          "sentiment": 0.6,
+          "publishedDate": "2024-06-12"
+        },
+        {
+          "url": "https://apnews.com/article/inside-out-2-movie-review-62caaed0d956b9b1f1db9a098bd650f4",
+          "quote": "in its finest moments packs an emotional wallop",
+          "title": "Movie Review: Peace (and pieces) of mind ‘Inside Out 2'",
+          "sentiment": 0.6,
+          "publishedDate": "2024-06-12"
+        }
+      ]
+    },
+    {
+      "pinId": 6319,
+      "production": false,
+      "table": "PinCriticReview",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/movies/alien-romulus-review-2024",
+          "quote": "Romulus is best when it’s single-minded, streamlined and ferocious.",
+          "title": "Alien: Romulus",
+          "sentiment": 0.6,
+          "publishedDate": "2024-08-15"
+        },
+        {
+          "url": "https://www.theguardian.com/film/article/2024/aug/14/alien-romulus-review-lack-originality-fede-alvarez-ridley-scott",
+          "quote": "a fundamental lack of originality",
+          "title": "Alien: Romulus review – grungy, back-to-basics instalment goes over same old ground",
+          "sentiment": -0.55,
+          "publishedDate": "2024-08-14"
+        },
+        {
+          "url": "https://www.bfi.org.uk/sight-and-sound/reviews/alien-romulus-terrifying-return-visceral-menace-original",
+          "quote": "adds visceral menace to the jump-scare encounters.",
+          "title": "Alien: Romulus: a terrifying return to the visceral menace of the original",
+          "sentiment": 0.6,
+          "publishedDate": "2024-08-16"
+        }
+      ]
+    },
+    {
+      "pinId": 6319,
+      "production": true,
+      "table": "PinCriticReview",
+      "reviewCount": 3,
+      "unchangedAxesAndFields": true,
+      "authorPreserved": true,
+      "reviews": [
+        {
+          "url": "https://www.timeout.com/movies/alien-romulus-review-2024",
+          "quote": "Romulus is best when it’s single-minded, streamlined and ferocious.",
+          "title": "Alien: Romulus",
+          "sentiment": 0.6,
+          "publishedDate": "2024-08-15"
+        },
+        {
+          "url": "https://www.theguardian.com/film/article/2024/aug/14/alien-romulus-review-lack-originality-fede-alvarez-ridley-scott",
+          "quote": "a fundamental lack of originality",
+          "title": "Alien: Romulus review – grungy, back-to-basics instalment goes over same old ground",
+          "sentiment": -0.55,
+          "publishedDate": "2024-08-14"
+        },
+        {
+          "url": "https://www.bfi.org.uk/sight-and-sound/reviews/alien-romulus-terrifying-return-visceral-menace-original",
+          "quote": "adds visceral menace to the jump-scare encounters.",
+          "title": "Alien: Romulus: a terrifying return to the visceral menace of the original",
+          "sentiment": 0.6,
+          "publishedDate": "2024-08-16"
+        }
+      ]
+    }
+  ],
+  "browserChecks": [
+    {
+      "pinId": 20034,
+      "production": false,
+      "sentimentTableRows": 2,
+      "passed": true
+    },
+    {
+      "pinId": 20034,
+      "production": true,
+      "sentimentTableRows": 2,
+      "passed": true
+    },
+    {
+      "pinId": 20068,
+      "production": false,
+      "sentimentTableRows": 3,
+      "passed": true
+    },
+    {
+      "pinId": 20068,
+      "production": true,
+      "sentimentTableRows": 3,
+      "passed": true
+    },
+    {
+      "pinId": 19911,
+      "production": false,
+      "sentimentTableRows": 4,
+      "passed": true
+    },
+    {
+      "pinId": 19911,
+      "production": true,
+      "sentimentTableRows": 4,
+      "passed": true
+    },
+    {
+      "pinId": 6192,
+      "production": false,
+      "sentimentTableRows": 3,
+      "passed": true
+    },
+    {
+      "pinId": 6192,
+      "production": true,
+      "sentimentTableRows": 3,
+      "passed": true
+    },
+    {
+      "pinId": 6319,
+      "production": false,
+      "sentimentTableRows": 3,
+      "passed": true
+    },
+    {
+      "pinId": 6319,
+      "production": true,
+      "sentimentTableRows": 3,
+      "passed": true
+    }
+  ],
+  "undatedSuperbQuoteVisibleBothEnvironments": true,
+  "sourceWikiReadbacks": [
+    {
+      "production": false,
+      "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.caradisiac.com/essai-volvo-v60-recharge-t6-2022-style-et-efficient-197492.htm",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.largus.fr/actualite-automobile/essai-volvo-v60-recharge-t6-les-vraies-consommations-du-break-hybride-30001420.html",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://bilogmotorbloggen.no/2022/05/02/test-volvo-v60-recharge-t6/",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.roadandtrack.com/new-cars/first-drives/a33912999/2020-audi-sq8-first-drive-review/",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.motortrend.com/reviews/2020-audi-sq-8-test-drive",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.timeout.com/movies/inside-out-2-review-2024",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.radiotimes.com/movies/inside-out-2-review/",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://apnews.com/article/inside-out-2-movie-review-62caaed0d956b9b1f1db9a098bd650f4",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.timeout.com/movies/alien-romulus-review-2024",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.theguardian.com/film/article/2024/aug/14/alien-romulus-review-lack-originality-fede-alvarez-ridley-scott",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": false,
+      "url": "https://www.bfi.org.uk/sight-and-sound/reviews/alien-romulus-terrifying-return-visceral-menace-original",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.caradisiac.com/essai-volvo-v60-recharge-t6-2022-style-et-efficient-197492.htm",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.largus.fr/actualite-automobile/essai-volvo-v60-recharge-t6-les-vraies-consommations-du-break-hybride-30001420.html",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://bilogmotorbloggen.no/2022/05/02/test-volvo-v60-recharge-t6/",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.roadandtrack.com/new-cars/first-drives/a33912999/2020-audi-sq8-first-drive-review/",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.motortrend.com/reviews/2020-audi-sq-8-test-drive",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.timeout.com/movies/inside-out-2-review-2024",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.radiotimes.com/movies/inside-out-2-review/",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://apnews.com/article/inside-out-2-movie-review-62caaed0d956b9b1f1db9a098bd650f4",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.timeout.com/movies/alien-romulus-review-2024",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.theguardian.com/film/article/2024/aug/14/alien-romulus-review-lack-originality-fede-alvarez-ridley-scott",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    },
+    {
+      "production": true,
+      "url": "https://www.bfi.org.uk/sight-and-sound/reviews/alien-romulus-terrifying-return-visceral-menace-original",
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quotePresent": true,
+      "wikiPages": 1
+    }
+  ],
+  "focusedTests": {
+    "command": "npx vitest run src/server/jobs/reviewResearch.test.ts src/lib/reviewPublicationDay.test.ts scripts/products/reviewCatalog.test.ts",
+    "filesPassed": 3,
+    "testsPassed": 9
+  },
+  "catalogChecks": {
+    "originalCarPerfSynchronized": true,
+    "reviewPayloadConstraintsPassed": true,
+    "publicationChecksRemaining": 34,
+    "verifiedUndated": 98,
+    "rawRubricGaps": 54,
+    "unscoredDatedReviews": 0
+  },
+  "schedulerVerification": {
+    "availableApiDriver": false,
+    "availableSessionDriver": false,
+    "retryAttempted": false,
+    "settingsChanged": false
+  },
+  "deploymentPerformed": false,
+  "referenceRepairReadbacks": [
+    {
+      "production": false,
+      "pinId": 20068,
+      "referenceBefore": {
+        "id": 54723,
+        "pinId": 20068,
+        "url": "https://www.autoexpress.co.uk/road-tests/353080/...",
+        "title": "New Volvo V60 T6 Recharge 2023 review - Auto Express",
+        "confidence": 80,
+        "publishedDate": "2023-01-20T08:00:00.000Z",
+        "utcCreatedDateTime": "2026-10-26T04:18:10.003Z",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Independent review: 18.8 kWh, 5.4 s, 3.7 kW charging, 529-litre boot.",
+        "addedByUserId": null
+      },
+      "referenceAfter": {
+        "id": 54723,
+        "pinId": 20068,
+        "url": "https://www.autoexpress.co.uk/volvo/v60/353080/new-volvo-v60-t6-recharge-2023-review",
+        "title": "New Volvo V60 T6 Recharge 2023 review",
+        "confidence": 80,
+        "publishedDate": null,
+        "utcCreatedDateTime": "2026-10-26T04:18:10.003Z",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Exact extended-range T6 Ultimate road test with 18.8-kWh battery. Corrected a shortened nonfunctional stored URL. Visible January 20, 2023 conflicts with structured original August 28, 2020; original publication day unverified, so null. Context for specifications only; excluded from native review graph in favor of three dated original T6 tests.",
+        "addedByUserId": null
+      },
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quoteVerified": true
+    },
+    {
+      "production": true,
+      "pinId": 20068,
+      "referenceBefore": {
+        "id": 54739,
+        "pinId": 20068,
+        "url": "https://www.autoexpress.co.uk/road-tests/353080/...",
+        "title": "New Volvo V60 T6 Recharge 2023 review - Auto Express",
+        "confidence": 80,
+        "publishedDate": "2023-01-20T00:00:00.000Z",
+        "utcCreatedDateTime": "2026-10-26T04:18:10.003Z",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Independent review: 18.8 kWh, 5.4 s, 3.7 kW charging, 529-litre boot.",
+        "addedByUserId": null
+      },
+      "referenceAfter": {
+        "id": 54739,
+        "pinId": 20068,
+        "url": "https://www.autoexpress.co.uk/volvo/v60/353080/new-volvo-v60-t6-recharge-2023-review",
+        "title": "New Volvo V60 T6 Recharge 2023 review",
+        "confidence": 80,
+        "publishedDate": null,
+        "utcCreatedDateTime": "2026-10-26T04:18:10.003Z",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Exact extended-range T6 Ultimate road test with 18.8-kWh battery. Corrected a shortened nonfunctional stored URL. Visible January 20, 2023 conflicts with structured original August 28, 2020; original publication day unverified, so null. Context for specifications only; excluded from native review graph in favor of three dated original T6 tests.",
+        "addedByUserId": null
+      },
+      "sourceRegistered": true,
+      "wikiExists": true,
+      "quoteVerified": true
+    }
+  ],
+  "sourceScopeAnnotations": [
+    {
+      "production": false,
+      "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+      "status": "verified",
+      "priorContentPreserved": true,
+      "noteVerified": true
+    },
+    {
+      "production": false,
+      "url": "https://www.roadandtrack.com/new-cars/first-drives/a33912999/2020-audi-sq8-first-drive-review/",
+      "status": "verified",
+      "priorContentPreserved": true,
+      "noteVerified": true
+    },
+    {
+      "production": false,
+      "url": "https://www.motortrend.com/reviews/2020-audi-sq-8-test-drive",
+      "status": "verified",
+      "priorContentPreserved": true,
+      "noteVerified": true
+    },
+    {
+      "production": false,
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "status": "unavailable",
+      "reason": "Source URL not unique; no content overwritten"
+    },
+    {
+      "production": false,
+      "url": "https://www.autoexpress.co.uk/road-tests/353080/...",
+      "status": "unavailable",
+      "reason": "No unique existing root wiki to annotate; exclusion reason retained in replay catalog"
+    },
+    {
+      "production": false,
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "unavailable",
+      "reason": "No unique existing root wiki to annotate; exclusion reason retained in replay catalog"
+    },
+    {
+      "production": false,
+      "url": "https://benautobahn.com/index.php/2022/08/11/the-volvo-v60-recharge-t8-review",
+      "status": "unavailable",
+      "reason": "Source URL not unique; no content overwritten"
+    },
+    {
+      "production": false,
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "status": "unavailable",
+      "reason": "Source URL not unique; no content overwritten"
+    },
+    {
+      "production": true,
+      "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+      "status": "verified",
+      "priorContentPreserved": true,
+      "noteVerified": true
+    },
+    {
+      "production": true,
+      "url": "https://www.roadandtrack.com/new-cars/first-drives/a33912999/2020-audi-sq8-first-drive-review/",
+      "status": "verified",
+      "priorContentPreserved": true,
+      "noteVerified": true
+    },
+    {
+      "production": true,
+      "url": "https://www.motortrend.com/reviews/2020-audi-sq-8-test-drive",
+      "status": "verified",
+      "priorContentPreserved": true,
+      "noteVerified": true
+    },
+    {
+      "production": true,
+      "url": "https://www.autoexpress.co.uk/skoda/superb",
+      "status": "unavailable",
+      "reason": "Source URL not unique; no content overwritten"
+    },
+    {
+      "production": true,
+      "url": "https://www.autoexpress.co.uk/road-tests/353080/...",
+      "status": "unavailable",
+      "reason": "No unique existing root wiki to annotate; exclusion reason retained in replay catalog"
+    },
+    {
+      "production": true,
+      "url": "https://www.topgear.com/car-reviews/volvo/v60",
+      "status": "unavailable",
+      "reason": "No unique existing root wiki to annotate; exclusion reason retained in replay catalog"
+    },
+    {
+      "production": true,
+      "url": "https://benautobahn.com/index.php/2022/08/11/the-volvo-v60-recharge-t8-review",
+      "status": "unavailable",
+      "reason": "Source URL not unique; no content overwritten"
+    },
+    {
+      "production": true,
+      "url": "https://www.evo.co.uk/audi/sq8",
+      "status": "unavailable",
+      "reason": "Source URL not unique; no content overwritten"
+    }
+  ],
+  "whitespaceCheckPassed": true
+}

@@ -158,7 +158,6 @@ Node is pinned by `.nvmrc` (`nvm use`). Run `npm outdated` to list what packages
 Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwright tests against a running app (`npm run build && npm start`, or `npm run dev`; `BASE_URL` picks the server). The e2e specs sign up throwaway accounts and post pins as them; the run removes both when it ends (`KEEP_E2E_DATA=1` keeps them for a look at a failure, and `npm run clean:e2e` removes them later). A run against a `BASE_URL` elsewhere leaves its own database alone.
 
 
-## Cool Things
 
 ### Loaders Animations
 
@@ -172,11 +171,8 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 ### High Priority
 
-- Historically happens on date
 
-- Filter by like threashold  
-
-- Stacking/grouping of related pins
+- Filter by like threshold  
 
 - Amazon/Ebay product price check and show deals
 
@@ -203,9 +199,6 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 - Add pin group and can see iteniary map view and invite people for each location (support open invitation where anyone can join and buy tickets).
 
 
-## Architecture
-
-- [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 
 
 ## Before Usable
@@ -226,11 +219,6 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Add product Accessory section feature listing below detailed pin
 
-# Horoscope
-
-- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
-- Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
-- add holiday and perforated placeholder block for holiday and special events
 
 
 # Injestion Methodology
@@ -242,15 +230,6 @@ GOOGLE_PLACES_API_KEY
 yelp key
 
 
-# Daily Job
-
-
-# OKF
-
-
-# Scraping
-
-pin can have user uploadable pictures in comments.
 
 # Others:
 
@@ -295,7 +274,6 @@ run 6am job here in this session
 - add ads on mapped marketplace pin like logging, also auto show related item in area
 
 
-- ability to buy an ad to the sponsored blocks
 
 - ability to pay subscription and not display ads on their own pins
 
@@ -369,20 +347,6 @@ tenmu ads
 
 
 
-sync watch list to calendar
-add a pin to calendar and keep in sync
-
-
-get live politicians stock trading alerts
-For people pages, add trading data and etc like these pages. use browser to view if needed. Should be able to subscribe to stock trades via notification on the profile page
-
-https://www.quiverquant.com/congresstrading/politician/Nancy%20Pelosi-P000197/opponents
-
-https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=1055439
-
-
-https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
-
 
 
 
@@ -397,7 +361,6 @@ WeChat Pay
 Alipay
 
 
-stripe payment reocurring payment disable monthly ads
 
 
 
@@ -427,14 +390,6 @@ political figure in other countries
 
 
 do 6am/6pm job on prod using this session
-
-
-
-
-datacenter
-https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html
-
-
 
 
 
@@ -512,14 +467,20 @@ https://hub.tslombard.com/the-perkini-report
 
 
 
-How can Chronopin improve organic search growth. Use my brower to check if needed
+How can Chronopin improve organic search growth. Use my broswer to check if needed
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com
 
 
-Add prod translations for all pins without translation or outdated translation.  Add in the pin wiki that translations was done with this model for tracking
+Add prod translations for all pins without translation or outdated translation. Add in the pin wiki that translations was done with this model for tracking
 
 
 
 
 
 are all landing pages translated besides the pins?
+
+
+
+
+pin square enix games and make thread 
+pin nintendo game and make thread 

@@ -32,6 +32,7 @@ import { EpisodeCount } from './EpisodeCount';
 import { RefineLink } from './RefineLink';
 import { PlaceLinks } from './PlaceLinks';
 import { ViewCount } from './ViewCount';
+import { LikeButton } from './LikeButton';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
 import { useT } from '@/lib/client/i18n';
@@ -334,6 +335,7 @@ export function PinCard({
         </div>
         <div className="flex items-center justify-end gap-1">
           <ViewCount pinId={pin.id} initial={pin.viewCount} />
+          <LikeButton pin={pin} />
           <WatchButton pin={pin} />
         </div>
       </div>

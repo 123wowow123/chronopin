@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
+import { CardLike } from '@/components/pin/CardLike';
 import { RESTAURANT_COUNTRIES, RESTAURANT_REGIONS, openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
 import type { ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
 import { guidePageHref, type GuideItem, type GuidePage, type GuideSummary, type GuideView } from '@/lib/restaurantGuide';
@@ -215,6 +216,7 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
       const isKidsFriendly = Boolean(restaurant.kidsFriendly || details[restaurant.pinId]?.kidsFriendly);
       return (
       <article key={restaurant.slug} className={styles.card}>
+        <CardLike pin={{ id: restaurant.pinId }} />
         <Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} className={styles.photoLink} aria-label={`See ${restaurant.name}'s restaurant details`}>
           {restaurant.image ? <Image src={restaurant.image} alt={restaurant.name} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>}
           <span className={`${styles.cardBadge} ${styles.openBadge}`}>{restaurant.recognition}</span>
@@ -244,6 +246,7 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
       const isKidsFriendly = Boolean(restaurant.kidsFriendly || details[restaurant.id]?.kidsFriendly);
       return (
       <article key={restaurant.id} className={styles.card}>
+        <CardLike pin={{ id: restaurant.id }} />
         <Link href={href(restaurant)} className={styles.photoLink} aria-label={`See ${restaurant.name}'s opening details`}>
           {restaurant.image ? <Image src={restaurant.image} alt={`${restaurant.name} · ${restaurant.imageNote ?? 'restaurant photo'}`} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <div className={styles.photoPlaceholder}><span aria-hidden="true">✳</span></div>}
           <span className={`${styles.cardBadge} ${group === 'new' ? styles.openBadge : ''}`}>{group === 'new' ? 'JUST OPENED' : restaurant.day <= today ? 'AWAITING UPDATE' : 'COMING SOON'}</span>

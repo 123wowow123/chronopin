@@ -91,14 +91,14 @@ export function NewPins({ pins }: { pins: NewPin[] }) {
   );
 }
 
-// One new pin: its picture (or its market's trend), title, when it starts, and
+// One new pin: its picture (or, with none, its market's trend), title, when it starts, and
 // its category and city. Also the nav drawer's new pins list
 // (src/components/nav/DrawerHighlights.tsx).
 export function NewPinRow({ pin }: { pin: NewPin }) {
   const t = useT();
   return (
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
-      {pin.hasMarket ? (
+      {pin.hasMarket && !pin.thumbName && !pin.originalUrl ? (
         <MarketTrend pinId={pin.id} fallback={<PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />} />
       ) : (
         <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />

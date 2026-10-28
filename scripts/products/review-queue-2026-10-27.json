@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T22:50:37.957Z",
+  "checkedAt": "2026-10-28T02:38:37.632Z",
   "scope": "Local live database inventory; category leads require human eligibility screening and are not counts of reviewable products.",
   "summary": [
     {
@@ -8,25 +8,25 @@
       "reviews": 491,
       "minimum": 1,
       "belowMinimum": 0,
-      "undatedNonMichelin": 40,
+      "undatedNonMichelin": 36,
       "unscoredDated": 0
     },
     {
       "table": "PinCarPerf",
       "pins": 128,
-      "reviews": 348,
+      "reviews": 350,
       "minimum": 3,
-      "belowMinimum": 31,
-      "undatedNonMichelin": 12,
+      "belowMinimum": 30,
+      "undatedNonMichelin": 11,
       "unscoredDated": 0
     },
     {
       "table": "PinGasCarPerf",
       "pins": 160,
-      "reviews": 510,
+      "reviews": 511,
       "minimum": 3,
       "belowMinimum": 8,
-      "undatedNonMichelin": 12,
+      "undatedNonMichelin": 10,
       "unscoredDated": 0
     },
     {
@@ -40,11 +40,11 @@
     },
     {
       "table": "PinLlmPerf",
-      "pins": 127,
-      "reviews": 453,
+      "pins": 128,
+      "reviews": 456,
       "minimum": 3,
       "belowMinimum": 0,
-      "undatedNonMichelin": 22,
+      "undatedNonMichelin": 21,
       "unscoredDated": 0
     },
     {
@@ -76,8 +76,8 @@
     },
     {
       "table": "PinCriticReview",
-      "pins": 119,
-      "reviews": 358,
+      "pins": 121,
+      "reviews": 364,
       "minimum": 3,
       "belowMinimum": 0,
       "undatedNonMichelin": 0,
@@ -273,15 +273,6 @@
       "reviewCount": 2,
       "reason": "Li i8 Pro 90.1 kWh: Max/97.8-kWh tests and invited launch rides do not establish three exact Pro road tests. Round 16 exact-product discovery search did not yield additional opened eligible original evidence; keep the shortage open.",
       "existingResearchBasis": "Variant: i8 Pro, 90.1 kWh, 670 km CLTC (3.5). 5C charging: 5C x 90.1 kWh = about 450 kW (4.5, computed, peak not stated in sources). 0-100 4.5 s (3.5). VLA/MindVLA with LiDAR, VLA driver from Aug on AD Max (4). Wheelbase 3,050 mm six-seat, air suspension (4.5). Priced near Onvo L90 at RMB 279,900 (3). Kids null: Pro lacks the fridge and rear screens; ISOFIX not verified. Only 2 reviews found."
-    },
-    {
-      "table": "PinCarPerf",
-      "pinId": 19652,
-      "title": "Huawei and Seres Launch the Aito M7 Six-Seat EREV SUV From RMB 319,800",
-      "sourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765",
-      "reviewCount": 1,
-      "reason": "Launch Aito M7 RWD 40 kWh: 2024 export Seres 7 AWD and later five-seat versions differ. Need exact early RWD six-seat driving accounts. Round 16 exact-product discovery search did not yield additional opened eligible original evidence; keep the shortage open.",
-      "existingResearchBasis": "Variant: M7 RWD EREV, 40 kWh, 1,100 km combined (5), from RMB 319,800. 0-100 7.8 s (1.5). Six seats, wheelbase 2,820 mm (4, six-seat rule). Priced under the Li L9 it was compared with (4). Charging, assist and kids null: not published in sources read. Reviews are of export Seres 7 (AWD and RE-EV)."
     },
     {
       "table": "PinCarPerf",
@@ -487,7 +478,7 @@
       "title": "Short 360 Prototype Makes Its First Flight",
       "sourceUrl": "https://www.airwaysmag.com/new-post/short-360-first-flight",
       "reviewCount": 2,
-      "reason": "Short 360: virtual-airline simulator reports and anniversary histories are not original real-aircraft cabin/flight assessments. Third eligible original report not verified. Round 16 exact-product discovery search did not yield additional opened eligible original evidence; keep the shortage open.",
+      "reason": "Round 18 original checks: SQTalk Carfield’s C-GPCF has a comfort verdict and August 8, 2012 publication but prior 100/200 subtype conflict remains unresolved. Chris Melaisi’s real January 2017 jumpseat report explicitly identifies Short 360-300 OY-MUG (SH3716), with six-blade propellers; not scored launch PT6A-65AR configuration. Airlines-Inform original reader failed Unicode decoding. No sibling or simulator account added.",
       "existingResearchBasis": "Variant: Short 360 (SD3-60), 36 pax, 2x PT6A-65AR, MTOW 12,292 kg. Turboprop: speed and runway use the same 2026 anchors. Range: 861 nmi full tanks, 2,569 kg payload -> 0. Capacity: 36 -> 0. Efficiency: Wikipedia fuel consumption 1.01 kg/km (820 lb/h at 200 kn) / 0.8 kg/L = 1.26 L/km = 126 L/100 km / 36 seats = 3.5 L/seat/100 km -> 2 (secondary source, not a maker figure). Speed: 404 km/h at FL100 = 218 kt, about Mach 0.34 -> 0. Runway: takeoff distance 4,250 ft / 1,300 m (AeroCorner spec page, not the maker's chart) -> 5. Comfort: null; only 2 reviews reached (Simple Flying, Aeroclass blog), neither a firsthand ride; fewer than 3 solid reviews."
     },
     {
@@ -790,6 +781,16 @@
       "title": "Qwen-Plus (Qwen2.5-Plus, qwen-plus-2025-01-25) Released",
       "status": "resolved",
       "reason": "Three exact qwen-plus-2025-01-25 original evaluations: ACL GeoHALUBench table, Epoch MATH-output table and Salonen small expert-judged reasoning tasks. Model release day, test day and PDF metadata are not publication dates. Manual launch-axis scores preserved."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19652,
+      "title": "Huawei and Seres Launch the Aito M7 Six-Seat EREV SUV From RMB 319,800",
+      "sourceUrl": "https://autonews.gasgoo.com/articles/Video/huawei-backed-aito-unveils-second-model-m7-priced-at-rmb319800-rmb379800-70020765",
+      "reviewCount": 1,
+      "reason": "Round 19: three distinct exact 2022 RWD Comfort owner accounts replace later AWD export review. Raw minimum reached on one publisher, not three professional tests; professional/publisher diversity remains open in independenceGaps.",
+      "existingResearchBasis": "Variant: M7 RWD EREV, 40 kWh, 1,100 km combined (5), from RMB 319,800. 0-100 7.8 s (1.5). Six seats, wheelbase 2,820 mm (4, six-seat rule). Priced under the Li L9 it was compared with (4). Charging, assist and kids null: not published in sources read. Reviews are of export Seres 7 (AWD and RE-EV).",
+      "status": "raw-minimum-met"
     }
   ],
   "independenceGaps": [
@@ -817,12 +818,20 @@
     {
       "table": "PinLlmPerf",
       "pinId": 15140,
-      "reason": "Rawcountnow3 afteroriginalSimonWillisonAPI/SVGexperiment. ExistingAApostsource/day remains unverified; smallqualitativeexperiment does not validate launchreasoning/coding/speedaxes."
+      "reason": "AA original post, assessment and March26 UTC publication now verified; Simon Willison provides a small qualitative API/SVG experiment and The Decoder reports launch results. Broader independent hands-on/instrumented evaluation remains desirable; three citations are not three reproduced benchmark suites."
     },
     {
       "table": "PinGasCarPerf",
       "pinId": 15220,
       "reason": "OriginalGerman400PS740xDrive report now replacesunverifiedoverview. ExistingUSlaunch drives remain scopedcontext; exact-market3-reviewgoal notestablishedandhandlingnull retained."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 19652,
+      "independentPublishers": 1,
+      "distinctFirsthandAuthors": 3,
+      "reason": "Three named Autohome owner anecdotes of exact 2022 RWD Comfort, with criticism retained. Seek additional independent professional exact-variant road tests. No independent verification of ownership or instrumented validation of technical axes is claimed.",
+      "evidenceCatalog": "scripts/products/review-replacements-round19-2026-10-27.json"
     }
   ],
   "resolvedIndependenceGaps": [
@@ -864,16 +873,16 @@
       "pinId": 5609,
       "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
       "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
-      "status": "needs-research",
-      "reason": "Full original reopened: exact sentence is present in the expanded recommendation section, outside CostcoBuys’ short original caption. Firsthand authorship/attribution of the expanded text is unclear. Visible 9/15 Edited label has no year and is not original publication. Need attributed original-post evidence/day; do not certify this as a named firsthand tasting. Round17: Rendered original retry: HTTP200, 2711 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 19: The saved sentence occurs in expanded recommendations outside CostcoBuys’ original caption. Firsthand authorship is not established; now replace with verified, absolutely dated original u/minutemaiding tasting. Do not label unattributed recommendations as a named firsthand review. Removal and replacement verified in both environments. This resolves the active citation by replacement, not the old source publication day."
     },
     {
       "table": "PinTaste",
       "pinId": 5609,
       "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
       "url": "https://www.reddit.com/r/CostcoCanada/comments/1x8ipdv/these_toblerone_biscoff_truffles_are_dangerously/",
-      "status": "needs-research",
-      "reason": "Opened original Reddit post by u/minutemaiding; saved exact rich/not-overly-sweet/crunch tasting sentence verified in post body, not comments or merchant copy. Canadian Costco product photograph identifies Lotus Biscoff Toblerone Diamond Truffles. Reader exposes only relative 2d age, and original public RSS returned HTTP 403 to curl (reader does not support Atom). Exact original publication day remains unresolved; keep null and do not infer day from the relative age or pin launch. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTP200, 0 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2026-10-17T19:18:59.771Z; save 2026-10-17 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back."
     },
     {
       "table": "PinTaste",
@@ -960,16 +969,16 @@
       "pinId": 7660,
       "title": "Wanglaoji / Walovi Canned Herbal Tea",
       "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
-      "status": "needs-research",
-      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTPunknown, 0 body characters; Error: Execution context was destroyed, most likely because of a navigation.. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2025-02-16T21:40:56.344Z; save 2025-02-16 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back."
     },
     {
       "table": "PinTaste",
       "pinId": 7663,
       "title": "Coconut Palm Coconut Milk Drink",
       "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
-      "status": "needs-research",
-      "reason": "Primary post opened via web reader; exact saved tasting quotation and author verified in original post, not a comment or retailer text. Reader exposes relative age only and direct rendered browser was blocked. Exact original publication day remains unverified; retain null, not an inferred date from relative age. Full-queue retry 2026-10-27: rendered retry could not obtain a stable article body; this is not proof the source is dead. Round17: Rendered original retry: HTTPunknown, 0 body characters; Error: Execution context was destroyed, most likely because of a navigation.. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2026-03-08T11:04:30.638Z; save 2026-03-08 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back."
     },
     {
       "table": "PinTaste",
@@ -1240,16 +1249,16 @@
       "pinId": 20034,
       "title": "Škoda Opens UK Orders for the Superb iV Estate With 84 Miles of EV Range, From GBP 41,465",
       "url": "https://www.autoexpress.co.uk/skoda/superb",
-      "status": "needs-research",
-      "reason": "AutoExpress generic Superb page now covers multiple petrol/diesel/PHEV versions. Scored pin is UK iV Estate; June6 2024 metadata alone does not establish when this PHEV-specific assessment appeared. Exact iV road-test replacement still needed. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 34664 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 18: Rolling generic Superb range page does not isolate the scored iV Estate. Replaced with original exact-powertrain UK test; L&K chassis options explicit and original day remains null. Native removal and replacements verified in both environments."
     },
     {
       "table": "PinCarPerf",
       "pinId": 20068,
       "title": "Volvo Lifts the V60 Recharge Plug-In to an 18.8 kWh Battery and 350-455 PS, From EUR 56,350",
       "url": "https://www.topgear.com/car-reviews/volvo/v60",
-      "status": "needs-research",
-      "reason": "Full browser body verifies TopGear V60 overview quote, but visible Published Apr8 2025 conflicts with structured Apr9 2025 datePublished. Generic overview covers later trims while pin scores350PS RechargeT6 launch. Seek dated exact T6 18.8kWh drive before applying a publication day. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 11164 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 18: Replace generic Top Gear range/T8 Malaysian review and shortened Auto Express URL with three opened original 18.8-kWh 350-PS T6 AWD tests. The Auto Express correct URL has a 2023 visible day versus 2020 structured original date; no original day asserted. Retain these sources only as scoped context. Native removal and replacements verified in both environments."
     },
     {
       "table": "PinGasCarPerf",
@@ -1272,8 +1281,8 @@
       "pinId": 15238,
       "title": "Toyota's Refreshed 2026 Corolla Cross Reaches Dealers From $24,635",
       "url": "https://www.edmunds.com/toyota/corolla-cross/",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 357 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 19: Rolling overview remained inaccessible and does not provide a verifiable original exact-FWD review excerpt/day. Replaced after saving opened original MotorTrend 2026 XLE FWD test; base L tyre/trim differences explicit. Removal and replacement verified in both environments. This resolves the active citation by replacement, not the old source publication day."
     },
     {
       "table": "PinGasCarPerf",
@@ -1312,8 +1321,8 @@
       "pinId": 19911,
       "title": "Audi Prices the 2020 SQ8 With a 500 hp V8 at USD 89,995 for the US",
       "url": "https://www.evo.co.uk/audi/sq8",
-      "status": "needs-research",
-      "reason": "Opened evo SQ8 page is titled 2024 and visibly dated February2 2024 while original datePublished is May28 2021. Both petrol V8 model scope and whether saved quote appeared in original versus facelift revision need historical verification; do not assign update as original. Full-queue retry 2026-10-27: original page reopened; no sufficient new evidence to close the specific attribution/publication issue. Round17: Rendered original retry: HTTP200, 6580 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 18: Mutable evo page is now facelift/2024 and has conflicting original/update chronology. Replace with opened original 2020 US SQ8 tests, keeping test options explicit. Native removal and replacements verified in both environments."
     },
     {
       "table": "PinGasCarPerf",
@@ -1528,8 +1537,8 @@
       "pinId": 15140,
       "title": "GPT-5.4 mini and GPT-5.4 nano Released",
       "url": "https://x.com/ArtificialAnlys/status/2037043552405119395",
-      "status": "needs-research",
-      "reason": "Rendered original source returned HTTP 403. Body and original publication could not be verified; retry publisher or an independently sourced archive. This is not proof the page is permanently dead. Full-queue retry 2026-10-27: original returned HTTP 403; original text/day still unverified. Round17: Rendered original retry: HTTP403, 98 body characters. No new original publication/eligibility evidence accepted; remain open."
+      "status": "resolved",
+      "reason": "Round 19: original post author and exact review body verified in browser. Main-post time[datetime] is 2026-03-26T05:46:43.000Z; save 2026-03-26 UTC, not a relative-age estimate or a comment timestamp. Native date and passage sentiment verified in both environments; reference and source-wiki evidence read back."
     },
     {
       "table": "PinLlmPerf",
@@ -1906,6 +1915,14 @@
       "url": "https://korea.stripes.com/food-drink/three-places-to-get-a-taste-of-taiwan-in-busan,-south-korea.html",
       "status": "verified-undated",
       "reason": "Stars and Stripes Korea reproduces Dynamic Busan local newspaper guide, explicitly credited July edition; no original day/year exposed. Exact Namcheon branch: 25-4 Suyeong-ro388beon-gil, matches native pin/MICHELIN. Quote concerns interior atmosphere, not a fabricated firsthand diner or numeric subscore. One Dynamic Busan editorial source, not two sources for newspaper and syndication. With MICHELIN and Eat Busan there are three distinct guide publishers. All five dining axes preserved."
+    },
+    {
+      "table": "PinCarPerf",
+      "pinId": 20034,
+      "title": "Škoda Superb iV Estate",
+      "url": "https://www.carenthusiast.com/reviews/article/13742/-/2024-Skoda-Superb/First%2Bdrive%3A%2B1.5%2BTSI%2BiV%2BPHEV%2BEstate%2BLaurin%2B%26%2BKlement.html",
+      "status": "verified-undated",
+      "reason": "Opened original 1,200-mile UK 204 PS PHEV estate test, exact excerpt verified. L&K adaptive suspension differs from base SE Technology. September 11, 2024 appears only in Last-Modified metadata; no original publication day supplied. Saved null and kept off dated graph in both environments."
     }
   ]
 }

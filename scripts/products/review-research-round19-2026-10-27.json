@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-27",
+  "scope": "Original exact-variant driving reports and original social publication timestamps. New excerpts are subjective owner/taster assessments; no axes rescored.",
+  "newReviewLiteralMatches": 5,
+  "timestampEvidenceCatalog": "scripts/products/review-timestamps-round19-2026-10-27.json",
+  "rejected": [
+    {
+      "url": "https://k.autohome.com.cn/detail/view_01hk4f22vb6ms3cd1s64v00000.html",
+      "reason": "Header tags 2022 RWD Comfort but driving paragraph explicitly says 四驱. Reject rather than treating header as proof of exact variant."
+    },
+    {
+      "url": "https://www.thedrive.com/car-reviews/2026-toyota-corolla-cross-review-base-model-or-bust-baby",
+      "reason": "Despite Base Model title, original test is XLE AWD. Does not replace the scored FWD review; opened MotorTrend XLE FWD instead."
+    },
+    {
+      "url": "https://chinaallcaps.wordpress.com/2010/07/03/china-can-reviews-pt-1/",
+      "reason": "2010 historical Wang Lo Kat canned tasting predates later licensing/brand changes; visible date formatting and original RSS did not newly establish exact modern US WALOVI applicability. Not added."
+    },
+    {
+      "url": "https://cnalifestyle.channelnewsasia.com/8days/johor-bahru-liang-teh-auntie-sells-potent-s030-wang-lao-ji-herbal-tea-cough-and-sore-throat-429341",
+      "reason": "Stall-brewed bitter liang teh is not the canned sweetened Wanglaoji product. Not added."
+    },
+    {
+      "url": "https://www.jiemian.com/article/2058537.html",
+      "reason": "Syndicated 330-ml coconut product discussion does not establish the exact pinned 1-L import pack; original attribution and formulation scope remain unresolved, so not used to close Coconut Palm gap."
+    },
+    {
+      "url": "https://mt.sohu.com/food/d20170809/163413588_293675.shtml",
+      "reason": "Historical 15-product tasting found, but no original publication byline exposed in opened document and exact 1-L pack not established. Discovery only, not saved as dated modern-pack review."
+    }
+  ],
+  "localRuntime": {
+    "base": "http://localhost:3001",
+    "isolatedCheckout": ".scrape/review-runtime",
+    "reason": "Concurrent on-this-day feature temporarily lacks generated JSON and breaks main dev compilation. Separate HEAD checkout uses same local DB through native APIs and leaves concurrent work intact. No production build/deploy/restart."
+  }
+}
