@@ -441,14 +441,14 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
     batch_size = 20
     batches = [missing[i:i + batch_size] for i in range(0, len(missing), batch_size)]
 
-    for b in batches:
+    for idx, b in enumerate(batches, 1):
         res = call_batch(b, locale)
         for src_core, tr in res.items():
             if locale == 'th':
                 tr = fix_thai_years(src_core, tr)
             cache[src_core] = tr
-
-    cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding='utf-8')
+        if idx % 5 == 0 or idx == len(batches):
+            cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding='utf-8')
 
     rows: List[dict] = []
     for p in pins_for_locale:
@@ -573,6 +573,7 @@ def main():
         print(f"Dry-run sample (up to 20):\n{json.dumps(sample, indent=2)}")
         return
 
+def sync_pin_chunk(due_pins: List[dict]) -> int:
     # Group pins and needed text fragments per locale
     pins_by_locale: Dict[str, List[dict]] = {loc: [] for loc in LOCALES}
     texts_by_locale: Dict[str, Set[str]] = {loc: set() for loc in LOCALES}
@@ -609,13 +610,51 @@ def main():
             all_rows.extend(rows)
 
     if not all_rows:
-        print("No valid translation rows generated.")
-        return
+        print("No valid translation rows generated for chunk.")
+        return 0
 
-    print(f"Total rows to push: {len(all_rows)}")
+    print(f"Total rows to push for chunk: {len(all_rows)}")
     token = ensure_admin_token()
     saved = push_translations(token, all_rows)
     print(f"Successfully saved {saved} / {len(all_rows)} translation rows on production.")
+    return saved
+
+def main():
+    parser = argparse.ArgumentParser(description="Synchronize production translations.")
+    parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
+    parser.add_argument('--chunk-size', type=int, default=25, help="Number of pins to process and push per outer chunk (default: 25)")
+    parser.add_argument('--pin', type=int, help="Translate a specific pin id")
+    parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
+    parser.add_argument('--dry-run', action='store_true', help="Only display due pins without translating")
+    args = parser.parse_args()
+
+    token = ensure_admin_token()
+    due_pins = fetch_due_pins(token, pin_id=args.pin, limit=args.limit, locale=args.locale)
+    print(f"Found {len(due_pins)} pin(s) due for translation.")
+    if not due_pins:
+        print("All matching pins are already up to date!")
+        return
+
+    if args.dry_run:
+        sample = [
+            {
+                'id': p['id'],
+                'locales': p.get('locales', []),
+                'states': p.get('states', {}),
+            }
+            for p in due_pins[:20]
+        ]
+        print(f"Dry-run sample (up to 20):\n{json.dumps(sample, indent=2)}")
+        return
+
+    chunk_size = max(1, args.chunk_size)
+    total_saved = 0
+    for idx in range(0, len(due_pins), chunk_size):
+        chunk = due_pins[idx:idx + chunk_size]
+        print(f"\n--- Processing pin chunk {idx // chunk_size + 1} / {(len(due_pins) + chunk_size - 1) // chunk_size} ({len(chunk)} pins: {chunk[0]['id']}..{chunk[-1]['id']}) ---")
+        total_saved += sync_pin_chunk(chunk)
+
+    print(f"\nCompleted all chunks. Total translation rows saved: {total_saved}")
 
 if __name__ == '__main__':
     main()
