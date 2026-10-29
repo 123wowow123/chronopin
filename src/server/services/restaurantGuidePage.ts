@@ -34,19 +34,24 @@ async function guideBase(regionSlug: string) {
 // The four list sizes alone, for the sitemap. guideBase also assembles every
 // card's menus and visit details (restaurantGuideDetails), which a count never
 // reads: across ~100 regions that made /sitemap-restaurants.xml a 75 s build.
-export async function guideCounts(regionSlug: string, now: Date, venues?: RestaurantSpecialVenue[]): Promise<Record<GuideView, number> | null> {
+export async function guideCounts(regionSlug: string, now: Date, venues?: RestaurantSpecialVenue[], withDiscounts = true): Promise<Record<GuideView, number> | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
   if (!region) return null;
   const [data, tops] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
   const today = dayKeyIn(now, region.timeZone);
-  const offers = await regionalRestaurantOffers(data.restaurants, tops, today, region.slug, venues);
-  const sections = arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, region.timeZone));
+  // Building the offers is the costly part; `withDiscounts: false` (the sitemap, which never lists the discounts view) leaves it at 0.
+  let discounts = 0;
+  if (withDiscounts) {
+    const offers = await regionalRestaurantOffers(data.restaurants, tops, today, region.slug, venues);
+    const sections = arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, region.timeZone));
+    discounts = sections.available.length + sections.upcoming.length;
+  }
   const groups = data.restaurants.map((restaurant) => openingGroup(restaurant, today));
   return {
     upcoming: groups.filter((group) => group === 'upcoming').length,
     new: groups.filter((group) => group === 'new').length,
     top: tops.length,
-    discounts: sections.available.length + sections.upcoming.length,
+    discounts,
   };
 }
 
