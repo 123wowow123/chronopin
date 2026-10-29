@@ -2053,5 +2053,1397 @@
         }
       }
     ]
+  },
+  {
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "charts": [
+      {
+        "title": "AA Index v5.0",
+        "unit": "points",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "note": "Google launch comparison, 2026-10-28. Cybersecurity evaluations run without guardrails; benchmark results are not a deployment guarantee.",
+        "bars": [
+          {
+            "label": "Gemini 4 Argon",
+            "value": 50
+          },
+          {
+            "label": "GPT-6 Astra",
+            "value": 57
+          },
+          {
+            "label": "Claude Opus 5.5",
+            "value": 58
+          },
+          {
+            "label": "Claude Fable 5.1",
+            "value": 49
+          },
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 59,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "ar": {
+            "title": "AA Index v5.0",
+            "unit": "نقاط",
+            "note": "مقارنة Google عند الإطلاق، 2026-10-28. اختبارات الأمن السيبراني دون ضوابط حماية؛ النتائج ليست ضمانًا للنشر."
+          },
+          "de": {
+            "title": "AA Index v5.0",
+            "unit": "Punkte",
+            "note": "Google-Vergleich zur Einführung, 2026-10-28. Cybersicherheitstests ohne Schutzmaßnahmen; Ergebnisse garantieren keine Einsatzleistung."
+          },
+          "es": {
+            "title": "AA Index v5.0",
+            "unit": "puntos",
+            "note": "Comparación de Google al lanzamiento, 2026-10-28. Pruebas de ciberseguridad sin salvaguardas; los resultados no garantizan el rendimiento en producción."
+          },
+          "fr": {
+            "title": "AA Index v5.0",
+            "unit": "points",
+            "note": "Comparaison Google au lancement, 2026-10-28. Évaluations de cybersécurité sans garde-fous ; les résultats ne garantissent pas les performances en production."
+          },
+          "hi": {
+            "title": "AA Index v5.0",
+            "unit": "अंक",
+            "note": "Google की लॉन्च तुलना, 2026-10-28। साइबर सुरक्षा परीक्षण सुरक्षा उपायों के बिना किए गए; नतीजे वास्तविक तैनाती की गारंटी नहीं हैं।"
+          },
+          "id": {
+            "title": "AA Index v5.0",
+            "unit": "poin",
+            "note": "Perbandingan Google saat peluncuran, 2026-10-28. Evaluasi keamanan siber tanpa pengaman; hasil bukan jaminan kinerja penerapan."
+          },
+          "it": {
+            "title": "AA Index v5.0",
+            "unit": "punti",
+            "note": "Confronto Google al lancio, 2026-10-28. Valutazioni di cybersicurezza senza protezioni; i risultati non garantiscono le prestazioni in produzione."
+          },
+          "ja": {
+            "title": "AA Index v5.0",
+            "unit": "ポイント",
+            "note": "2026-10-28発表時のGoogleによる比較。サイバーセキュリティ評価はガードレールなしで実施。結果は実運用での性能を保証しません。"
+          },
+          "ko": {
+            "title": "AA Index v5.0",
+            "unit": "점",
+            "note": "2026-10-28 Google 출시 비교. 사이버 보안 평가는 보호 장치 없이 수행되었으며 결과가 실제 배포 성능을 보장하지는 않습니다."
+          },
+          "pt": {
+            "title": "AA Index v5.0",
+            "unit": "pontos",
+            "note": "Comparação do Google no lançamento, 2026-10-28. Avaliações de cibersegurança sem salvaguardas; os resultados não garantem o desempenho em produção."
+          },
+          "ru": {
+            "title": "AA Index v5.0",
+            "unit": "баллы",
+            "note": "Сравнение Google на дату анонса, 2026-10-28. Тесты кибербезопасности без защитных ограничений; результаты не гарантируют работу в реальных условиях."
+          },
+          "th": {
+            "title": "AA Index v5.0",
+            "unit": "คะแนน",
+            "note": "การเปรียบเทียบโดย Google เมื่อเปิดตัว 2026-10-28 การทดสอบความปลอดภัยไซเบอร์ไม่มีมาตรการป้องกัน ผลลัพธ์ไม่รับประกันประสิทธิภาพในการใช้งานจริง"
+          },
+          "vi": {
+            "title": "AA Index v5.0",
+            "unit": "điểm",
+            "note": "So sánh của Google khi ra mắt, 2026-10-28. Đánh giá an ninh mạng không có biện pháp bảo vệ; kết quả không bảo đảm hiệu năng triển khai."
+          },
+          "zh-CN": {
+            "title": "AA Index v5.0",
+            "unit": "分",
+            "note": "Google于2026-10-28发布的比较。网络安全评估在无护栏条件下进行；结果不保证实际部署性能。"
+          },
+          "zh-TW": {
+            "title": "AA Index v5.0",
+            "unit": "分",
+            "note": "Google於2026-10-28發布的比較。網路安全評估在無防護欄條件下進行；結果不保證實際部署效能。"
+          }
+        }
+      },
+      {
+        "title": "Terminal-Bench 4.0 (AA)",
+        "unit": "%",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "note": "Google launch comparison, 2026-10-28. Cybersecurity evaluations run without guardrails; benchmark results are not a deployment guarantee.",
+        "bars": [
+          {
+            "label": "Gemini 4 Argon",
+            "value": 57.1
+          },
+          {
+            "label": "GPT-6 Astra",
+            "value": 59.1
+          },
+          {
+            "label": "Claude Opus 5.5",
+            "value": 59.6
+          },
+          {
+            "label": "Claude Fable 5.1",
+            "value": 52
+          },
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 65.2,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "ar": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "مقارنة Google عند الإطلاق، 2026-10-28. اختبارات الأمن السيبراني دون ضوابط حماية؛ النتائج ليست ضمانًا للنشر."
+          },
+          "de": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Google-Vergleich zur Einführung, 2026-10-28. Cybersicherheitstests ohne Schutzmaßnahmen; Ergebnisse garantieren keine Einsatzleistung."
+          },
+          "es": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Comparación de Google al lanzamiento, 2026-10-28. Pruebas de ciberseguridad sin salvaguardas; los resultados no garantizan el rendimiento en producción."
+          },
+          "fr": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Comparaison Google au lancement, 2026-10-28. Évaluations de cybersécurité sans garde-fous ; les résultats ne garantissent pas les performances en production."
+          },
+          "hi": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Google की लॉन्च तुलना, 2026-10-28। साइबर सुरक्षा परीक्षण सुरक्षा उपायों के बिना किए गए; नतीजे वास्तविक तैनाती की गारंटी नहीं हैं।"
+          },
+          "id": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Perbandingan Google saat peluncuran, 2026-10-28. Evaluasi keamanan siber tanpa pengaman; hasil bukan jaminan kinerja penerapan."
+          },
+          "it": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Confronto Google al lancio, 2026-10-28. Valutazioni di cybersicurezza senza protezioni; i risultati non garantiscono le prestazioni in produzione."
+          },
+          "ja": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "2026-10-28発表時のGoogleによる比較。サイバーセキュリティ評価はガードレールなしで実施。結果は実運用での性能を保証しません。"
+          },
+          "ko": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "2026-10-28 Google 출시 비교. 사이버 보안 평가는 보호 장치 없이 수행되었으며 결과가 실제 배포 성능을 보장하지는 않습니다."
+          },
+          "pt": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Comparação do Google no lançamento, 2026-10-28. Avaliações de cibersegurança sem salvaguardas; os resultados não garantem o desempenho em produção."
+          },
+          "ru": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Сравнение Google на дату анонса, 2026-10-28. Тесты кибербезопасности без защитных ограничений; результаты не гарантируют работу в реальных условиях."
+          },
+          "th": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "การเปรียบเทียบโดย Google เมื่อเปิดตัว 2026-10-28 การทดสอบความปลอดภัยไซเบอร์ไม่มีมาตรการป้องกัน ผลลัพธ์ไม่รับประกันประสิทธิภาพในการใช้งานจริง"
+          },
+          "vi": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "So sánh của Google khi ra mắt, 2026-10-28. Đánh giá an ninh mạng không có biện pháp bảo vệ; kết quả không bảo đảm hiệu năng triển khai."
+          },
+          "zh-CN": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Google于2026-10-28发布的比较。网络安全评估在无护栏条件下进行；结果不保证实际部署性能。"
+          },
+          "zh-TW": {
+            "title": "Terminal-Bench 4.0 (AA)",
+            "unit": "%",
+            "note": "Google於2026-10-28發布的比較。網路安全評估在無防護欄條件下進行；結果不保證實際部署效能。"
+          }
+        }
+      },
+      {
+        "title": "SEC-bench Pro",
+        "unit": "%",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "note": "Google launch comparison, 2026-10-28. Cybersecurity evaluations run without guardrails; benchmark results are not a deployment guarantee.",
+        "bars": [
+          {
+            "label": "Gemini 4 Argon",
+            "value": 83.4
+          },
+          {
+            "label": "GPT-6 Astra",
+            "value": 85.4
+          },
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 88.2,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "ar": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "مقارنة Google عند الإطلاق، 2026-10-28. اختبارات الأمن السيبراني دون ضوابط حماية؛ النتائج ليست ضمانًا للنشر."
+          },
+          "de": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Google-Vergleich zur Einführung, 2026-10-28. Cybersicherheitstests ohne Schutzmaßnahmen; Ergebnisse garantieren keine Einsatzleistung."
+          },
+          "es": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Comparación de Google al lanzamiento, 2026-10-28. Pruebas de ciberseguridad sin salvaguardas; los resultados no garantizan el rendimiento en producción."
+          },
+          "fr": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Comparaison Google au lancement, 2026-10-28. Évaluations de cybersécurité sans garde-fous ; les résultats ne garantissent pas les performances en production."
+          },
+          "hi": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Google की लॉन्च तुलना, 2026-10-28। साइबर सुरक्षा परीक्षण सुरक्षा उपायों के बिना किए गए; नतीजे वास्तविक तैनाती की गारंटी नहीं हैं।"
+          },
+          "id": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Perbandingan Google saat peluncuran, 2026-10-28. Evaluasi keamanan siber tanpa pengaman; hasil bukan jaminan kinerja penerapan."
+          },
+          "it": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Confronto Google al lancio, 2026-10-28. Valutazioni di cybersicurezza senza protezioni; i risultati non garantiscono le prestazioni in produzione."
+          },
+          "ja": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "2026-10-28発表時のGoogleによる比較。サイバーセキュリティ評価はガードレールなしで実施。結果は実運用での性能を保証しません。"
+          },
+          "ko": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "2026-10-28 Google 출시 비교. 사이버 보안 평가는 보호 장치 없이 수행되었으며 결과가 실제 배포 성능을 보장하지는 않습니다."
+          },
+          "pt": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Comparação do Google no lançamento, 2026-10-28. Avaliações de cibersegurança sem salvaguardas; os resultados não garantem o desempenho em produção."
+          },
+          "ru": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Сравнение Google на дату анонса, 2026-10-28. Тесты кибербезопасности без защитных ограничений; результаты не гарантируют работу в реальных условиях."
+          },
+          "th": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "การเปรียบเทียบโดย Google เมื่อเปิดตัว 2026-10-28 การทดสอบความปลอดภัยไซเบอร์ไม่มีมาตรการป้องกัน ผลลัพธ์ไม่รับประกันประสิทธิภาพในการใช้งานจริง"
+          },
+          "vi": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "So sánh của Google khi ra mắt, 2026-10-28. Đánh giá an ninh mạng không có biện pháp bảo vệ; kết quả không bảo đảm hiệu năng triển khai."
+          },
+          "zh-CN": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Google于2026-10-28发布的比较。网络安全评估在无护栏条件下进行；结果不保证实际部署性能。"
+          },
+          "zh-TW": {
+            "title": "SEC-bench Pro",
+            "unit": "%",
+            "note": "Google於2026-10-28發布的比較。網路安全評估在無防護欄條件下進行；結果不保證實際部署效能。"
+          }
+        }
+      },
+      {
+        "title": "ExploitGym",
+        "unit": "%",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "note": "Google launch comparison, 2026-10-28. Cybersecurity evaluations run without guardrails; benchmark results are not a deployment guarantee.",
+        "bars": [
+          {
+            "label": "Gemini 4 Argon",
+            "value": 42
+          },
+          {
+            "label": "GPT-6 Astra",
+            "value": 42.4
+          },
+          {
+            "label": "Claude Opus 5.5",
+            "value": 34.5
+          },
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 54.8,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "ar": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "مقارنة Google عند الإطلاق، 2026-10-28. اختبارات الأمن السيبراني دون ضوابط حماية؛ النتائج ليست ضمانًا للنشر."
+          },
+          "de": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Google-Vergleich zur Einführung, 2026-10-28. Cybersicherheitstests ohne Schutzmaßnahmen; Ergebnisse garantieren keine Einsatzleistung."
+          },
+          "es": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Comparación de Google al lanzamiento, 2026-10-28. Pruebas de ciberseguridad sin salvaguardas; los resultados no garantizan el rendimiento en producción."
+          },
+          "fr": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Comparaison Google au lancement, 2026-10-28. Évaluations de cybersécurité sans garde-fous ; les résultats ne garantissent pas les performances en production."
+          },
+          "hi": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Google की लॉन्च तुलना, 2026-10-28। साइबर सुरक्षा परीक्षण सुरक्षा उपायों के बिना किए गए; नतीजे वास्तविक तैनाती की गारंटी नहीं हैं।"
+          },
+          "id": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Perbandingan Google saat peluncuran, 2026-10-28. Evaluasi keamanan siber tanpa pengaman; hasil bukan jaminan kinerja penerapan."
+          },
+          "it": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Confronto Google al lancio, 2026-10-28. Valutazioni di cybersicurezza senza protezioni; i risultati non garantiscono le prestazioni in produzione."
+          },
+          "ja": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "2026-10-28発表時のGoogleによる比較。サイバーセキュリティ評価はガードレールなしで実施。結果は実運用での性能を保証しません。"
+          },
+          "ko": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "2026-10-28 Google 출시 비교. 사이버 보안 평가는 보호 장치 없이 수행되었으며 결과가 실제 배포 성능을 보장하지는 않습니다."
+          },
+          "pt": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Comparação do Google no lançamento, 2026-10-28. Avaliações de cibersegurança sem salvaguardas; os resultados não garantem o desempenho em produção."
+          },
+          "ru": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Сравнение Google на дату анонса, 2026-10-28. Тесты кибербезопасности без защитных ограничений; результаты не гарантируют работу в реальных условиях."
+          },
+          "th": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "การเปรียบเทียบโดย Google เมื่อเปิดตัว 2026-10-28 การทดสอบความปลอดภัยไซเบอร์ไม่มีมาตรการป้องกัน ผลลัพธ์ไม่รับประกันประสิทธิภาพในการใช้งานจริง"
+          },
+          "vi": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "So sánh của Google khi ra mắt, 2026-10-28. Đánh giá an ninh mạng không có biện pháp bảo vệ; kết quả không bảo đảm hiệu năng triển khai."
+          },
+          "zh-CN": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Google于2026-10-28发布的比较。网络安全评估在无护栏条件下进行；结果不保证实际部署性能。"
+          },
+          "zh-TW": {
+            "title": "ExploitGym",
+            "unit": "%",
+            "note": "Google於2026-10-28發布的比較。網路安全評估在無防護欄條件下進行；結果不保證實際部署效能。"
+          }
+        }
+      },
+      {
+        "title": "CWE-bench",
+        "unit": "%",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "note": "Google launch comparison, 2026-10-28. Cybersecurity evaluations run without guardrails; benchmark results are not a deployment guarantee.",
+        "bars": [
+          {
+            "label": "Gemini 4 Argon",
+            "value": 68
+          },
+          {
+            "label": "GPT-6 Astra",
+            "value": 68
+          },
+          {
+            "label": "Claude Opus 5.5",
+            "value": 67
+          },
+          {
+            "label": "Claude Fable 5.1",
+            "value": 58
+          },
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 71,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "ar": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "مقارنة Google عند الإطلاق، 2026-10-28. اختبارات الأمن السيبراني دون ضوابط حماية؛ النتائج ليست ضمانًا للنشر."
+          },
+          "de": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Google-Vergleich zur Einführung, 2026-10-28. Cybersicherheitstests ohne Schutzmaßnahmen; Ergebnisse garantieren keine Einsatzleistung."
+          },
+          "es": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Comparación de Google al lanzamiento, 2026-10-28. Pruebas de ciberseguridad sin salvaguardas; los resultados no garantizan el rendimiento en producción."
+          },
+          "fr": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Comparaison Google au lancement, 2026-10-28. Évaluations de cybersécurité sans garde-fous ; les résultats ne garantissent pas les performances en production."
+          },
+          "hi": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Google की लॉन्च तुलना, 2026-10-28। साइबर सुरक्षा परीक्षण सुरक्षा उपायों के बिना किए गए; नतीजे वास्तविक तैनाती की गारंटी नहीं हैं।"
+          },
+          "id": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Perbandingan Google saat peluncuran, 2026-10-28. Evaluasi keamanan siber tanpa pengaman; hasil bukan jaminan kinerja penerapan."
+          },
+          "it": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Confronto Google al lancio, 2026-10-28. Valutazioni di cybersicurezza senza protezioni; i risultati non garantiscono le prestazioni in produzione."
+          },
+          "ja": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "2026-10-28発表時のGoogleによる比較。サイバーセキュリティ評価はガードレールなしで実施。結果は実運用での性能を保証しません。"
+          },
+          "ko": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "2026-10-28 Google 출시 비교. 사이버 보안 평가는 보호 장치 없이 수행되었으며 결과가 실제 배포 성능을 보장하지는 않습니다."
+          },
+          "pt": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Comparação do Google no lançamento, 2026-10-28. Avaliações de cibersegurança sem salvaguardas; os resultados não garantem o desempenho em produção."
+          },
+          "ru": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Сравнение Google на дату анонса, 2026-10-28. Тесты кибербезопасности без защитных ограничений; результаты не гарантируют работу в реальных условиях."
+          },
+          "th": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "การเปรียบเทียบโดย Google เมื่อเปิดตัว 2026-10-28 การทดสอบความปลอดภัยไซเบอร์ไม่มีมาตรการป้องกัน ผลลัพธ์ไม่รับประกันประสิทธิภาพในการใช้งานจริง"
+          },
+          "vi": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "So sánh của Google khi ra mắt, 2026-10-28. Đánh giá an ninh mạng không có biện pháp bảo vệ; kết quả không bảo đảm hiệu năng triển khai."
+          },
+          "zh-CN": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Google于2026-10-28发布的比较。网络安全评估在无护栏条件下进行；结果不保证实际部署性能。"
+          },
+          "zh-TW": {
+            "title": "CWE-bench",
+            "unit": "%",
+            "note": "Google於2026-10-28發布的比較。網路安全評估在無防護欄條件下進行；結果不保證實際部署效能。"
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Launch benchmark comparison",
+        "columns": [
+          "Benchmark",
+          "Gemini 4 Carbon",
+          "Gemini 4 Argon",
+          "GPT-6 Astra",
+          "Claude Opus 5.5",
+          "Claude Fable 5.1"
+        ],
+        "rows": [
+          [
+            "AA Index v5.0",
+            "59",
+            "50",
+            "57",
+            "58",
+            "49"
+          ],
+          [
+            "Terminal-Bench 4.0 (AA)",
+            "65.2%",
+            "57.1%",
+            "59.1%",
+            "59.6%",
+            "52%"
+          ],
+          [
+            "SEC-bench Pro",
+            "88.2%",
+            "83.4%",
+            "85.4%",
+            "—",
+            "—"
+          ],
+          [
+            "ExploitGym",
+            "54.8%",
+            "42%",
+            "42.4%",
+            "34.5%",
+            "—"
+          ],
+          [
+            "CWE-bench",
+            "71%",
+            "68%",
+            "68%",
+            "67%",
+            "58%"
+          ]
+        ],
+        "note": "Google launch comparison, 2026-10-28. Cybersecurity evaluations run without guardrails; benchmark results are not a deployment guarantee.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "i18n": {
+          "ar": {
+            "title": "مقارنة معايير الإطلاق",
+            "columns": [
+              "المعيار",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "مقارنة Google عند الإطلاق، 2026-10-28. اختبارات الأمن السيبراني دون ضوابط حماية؛ النتائج ليست ضمانًا للنشر."
+          },
+          "de": {
+            "title": "Benchmarkvergleich zur Einführung",
+            "columns": [
+              "Benchmark",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Google-Vergleich zur Einführung, 2026-10-28. Cybersicherheitstests ohne Schutzmaßnahmen; Ergebnisse garantieren keine Einsatzleistung."
+          },
+          "es": {
+            "title": "Comparación de pruebas de lanzamiento",
+            "columns": [
+              "Prueba",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Comparación de Google al lanzamiento, 2026-10-28. Pruebas de ciberseguridad sin salvaguardas; los resultados no garantizan el rendimiento en producción."
+          },
+          "fr": {
+            "title": "Comparaison des benchmarks au lancement",
+            "columns": [
+              "Benchmark",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Comparaison Google au lancement, 2026-10-28. Évaluations de cybersécurité sans garde-fous ; les résultats ne garantissent pas les performances en production."
+          },
+          "hi": {
+            "title": "लॉन्च बेंचमार्क तुलना",
+            "columns": [
+              "बेंचमार्क",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Google की लॉन्च तुलना, 2026-10-28। साइबर सुरक्षा परीक्षण सुरक्षा उपायों के बिना किए गए; नतीजे वास्तविक तैनाती की गारंटी नहीं हैं।"
+          },
+          "id": {
+            "title": "Perbandingan tolok ukur peluncuran",
+            "columns": [
+              "Tolok ukur",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Perbandingan Google saat peluncuran, 2026-10-28. Evaluasi keamanan siber tanpa pengaman; hasil bukan jaminan kinerja penerapan."
+          },
+          "it": {
+            "title": "Confronto dei benchmark al lancio",
+            "columns": [
+              "Benchmark",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Confronto Google al lancio, 2026-10-28. Valutazioni di cybersicurezza senza protezioni; i risultati non garantiscono le prestazioni in produzione."
+          },
+          "ja": {
+            "title": "発表時のベンチマーク比較",
+            "columns": [
+              "ベンチマーク",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "2026-10-28発表時のGoogleによる比較。サイバーセキュリティ評価はガードレールなしで実施。結果は実運用での性能を保証しません。"
+          },
+          "ko": {
+            "title": "출시 벤치마크 비교",
+            "columns": [
+              "벤치마크",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "2026-10-28 Google 출시 비교. 사이버 보안 평가는 보호 장치 없이 수행되었으며 결과가 실제 배포 성능을 보장하지는 않습니다."
+          },
+          "pt": {
+            "title": "Comparação de benchmarks no lançamento",
+            "columns": [
+              "Benchmark",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Comparação do Google no lançamento, 2026-10-28. Avaliações de cibersegurança sem salvaguardas; os resultados não garantem o desempenho em produção."
+          },
+          "ru": {
+            "title": "Сравнение тестов на момент анонса",
+            "columns": [
+              "Тест",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Сравнение Google на дату анонса, 2026-10-28. Тесты кибербезопасности без защитных ограничений; результаты не гарантируют работу в реальных условиях."
+          },
+          "th": {
+            "title": "การเปรียบเทียบเบนช์มาร์กเมื่อเปิดตัว",
+            "columns": [
+              "เบนช์มาร์ก",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "การเปรียบเทียบโดย Google เมื่อเปิดตัว 2026-10-28 การทดสอบความปลอดภัยไซเบอร์ไม่มีมาตรการป้องกัน ผลลัพธ์ไม่รับประกันประสิทธิภาพในการใช้งานจริง"
+          },
+          "vi": {
+            "title": "So sánh điểm chuẩn khi ra mắt",
+            "columns": [
+              "Điểm chuẩn",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "So sánh của Google khi ra mắt, 2026-10-28. Đánh giá an ninh mạng không có biện pháp bảo vệ; kết quả không bảo đảm hiệu năng triển khai."
+          },
+          "zh-CN": {
+            "title": "发布时基准比较",
+            "columns": [
+              "基准",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Google于2026-10-28发布的比较。网络安全评估在无护栏条件下进行；结果不保证实际部署性能。"
+          },
+          "zh-TW": {
+            "title": "發布時基準比較",
+            "columns": [
+              "基準",
+              "Gemini 4 Carbon",
+              "Gemini 4 Argon",
+              "GPT-6 Astra",
+              "Claude Opus 5.5",
+              "Claude Fable 5.1"
+            ],
+            "rows": [
+              [
+                "AA Index v5.0",
+                "59",
+                "50",
+                "57",
+                "58",
+                "49"
+              ],
+              [
+                "Terminal-Bench 4.0 (AA)",
+                "65.2%",
+                "57.1%",
+                "59.1%",
+                "59.6%",
+                "52%"
+              ],
+              [
+                "SEC-bench Pro",
+                "88.2%",
+                "83.4%",
+                "85.4%",
+                "—",
+                "—"
+              ],
+              [
+                "ExploitGym",
+                "54.8%",
+                "42%",
+                "42.4%",
+                "34.5%",
+                "—"
+              ],
+              [
+                "CWE-bench",
+                "71%",
+                "68%",
+                "68%",
+                "67%",
+                "58%"
+              ]
+            ],
+            "note": "Google於2026-10-28發布的比較。網路安全評估在無防護欄條件下進行；結果不保證實際部署效能。"
+          }
+        }
+      }
+    ]
   }
 ]
