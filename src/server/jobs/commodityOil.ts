@@ -445,7 +445,7 @@ export async function syncMonthlyOilCommodities(options: { apply?: boolean } = {
       const existing = existingMap.get(mapKey);
 
       if (existing) {
-        let pinId = existing.id;
+        const pinId = existing.id;
         let currentParentId = existing.parentId;
 
         // Check threading: if pin has no parent and we have a previous month pin, thread it!

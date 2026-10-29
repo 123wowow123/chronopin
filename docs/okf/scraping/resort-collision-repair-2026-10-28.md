@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Resort/data-center collision repair, 2026-10-28"
+description: "Repair of fixed Pin IDs 15801-15803 that a resort seed overwrote on top of data-center pins."
+tags: [scraping, news-job]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Resort/data-center collision repair — 2026-10-28
 
 The legacy `scripts/hotels/seedBudgetFriendlyResorts.ts` and generated SQL used

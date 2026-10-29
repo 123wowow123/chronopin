@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Nintendo game threads, 2026-10-27"
+description: "How the Nintendo game pins were threaded on 2026-10-27."
+tags: [scraping, news-job]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Nintendo game release threads — 2026-10-27
 
 Requested scope: add Nintendo game pins and series threads on production. This catalog covers 89 selected releases in 32 series and spinoffs; it is not an exhaustive all-time Nintendo software bibliography.
