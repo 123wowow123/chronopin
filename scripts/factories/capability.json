@@ -17136,5 +17136,2844 @@
         }
       ]
     }
+  },
+  {
+    "key": "sydney-opera-house",
+    "pinIds": {
+      "local": 737,
+      "production": 737
+    },
+    "title": "Sydney Opera House Officially Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=51m-YvjmijI",
+    "profile": {
+      "sector": "Culture: performing arts complex",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Historical construction cost",
+          "value": "AUD 102 million in historical currency; no present-day conversion.",
+          "source": {
+            "url": "https://mhnsw.au/stories/on-this-day/20-october-1973/",
+            "title": "20 Oct 1973 – Sydney Opera House officially opened",
+            "publishedDate": "2022-12-05",
+            "quote": "cost of $102 million"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Construction participation",
+          "value": "About 10,000 construction workers; historical build participation, not current employment.",
+          "source": {
+            "url": "https://www.nfsa.gov.au/collection/item/queen-opera-house-opening-ceremony",
+            "title": "Queen at the Opera House: opening ceremony",
+            "publishedDate": null,
+            "quote": "10,000 construction workers"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Formal opening",
+          "value": "20 October 1973, following a first public performance in September.",
+          "source": {
+            "url": "https://mhnsw.au/stories/on-this-day/20-october-1973/",
+            "title": "20 Oct 1973 – Sydney Opera House officially opened",
+            "publishedDate": "2022-12-05",
+            "quote": "20 October 1973"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction begins",
+          "date": "1959",
+          "source": {
+            "url": "https://mhnsw.au/stories/on-this-day/20-october-1973/",
+            "title": "20 Oct 1973 – Sydney Opera House officially opened",
+            "publishedDate": "2022-12-05",
+            "quote": "began on the building in 1959"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Formal royal opening",
+          "date": "1973-10-20",
+          "source": {
+            "url": "https://mhnsw.au/stories/on-this-day/20-october-1973/",
+            "title": "20 Oct 1973 – Sydney Opera House officially opened",
+            "publishedDate": "2022-12-05",
+            "quote": "20 October 1973"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "habitat67-montreal",
+    "pinIds": {
+      "local": 626,
+      "production": 626
+    },
+    "title": "Habitat 67 Opens at Montreal's Expo 67",
+    "sourceUrl": "https://www.youtube.com/watch?v=Qwbp9T-WS-I",
+    "profile": {
+      "sector": "Housing: prefabricated residential complex",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published project cost",
+          "value": "CAD 17 million, as published by the architect.",
+          "source": {
+            "url": "https://www.safdiearchitects.com/projects/habitat-67",
+            "title": "Habitat 67 – Safdie Architects",
+            "publishedDate": null,
+            "quote": "CAD $17 million"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Published complex area",
+          "value": "238,000 sq ft / 22,160 sq m.",
+          "source": {
+            "url": "https://www.safdiearchitects.com/projects/habitat-67",
+            "title": "Habitat 67 – Safdie Architects",
+            "publishedDate": null,
+            "quote": "238,000 sq ft | 22,160 sq m"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Original residential program",
+          "value": "158 residences; original project count, not a claim about units after later combinations.",
+          "source": {
+            "url": "https://www.safdiearchitects.com/projects/habitat-67",
+            "title": "Habitat 67 – Safdie Architects",
+            "publishedDate": null,
+            "quote": "158 residences"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Built for Expo 67",
+          "value": "1967, explicitly marked Built by the architect.",
+          "source": {
+            "url": "https://www.safdiearchitects.com/projects/habitat-67",
+            "title": "Habitat 67 – Safdie Architects",
+            "publishedDate": null,
+            "quote": "1967 / Built"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Complex built for Montreal World Exposition",
+          "date": "1967",
+          "source": {
+            "url": "https://www.safdiearchitects.com/projects/habitat-67",
+            "title": "Habitat 67 – Safdie Architects",
+            "publishedDate": null,
+            "quote": "1967 / Built"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "golden-gate-bridge",
+    "pinIds": {
+      "local": 762,
+      "production": 762
+    },
+    "title": "Golden Gate Bridge Opens to Pedestrians",
+    "sourceUrl": "https://www.youtube.com/watch?v=OC5C9a2udjo",
+    "profile": {
+      "sector": "Roads: suspension bridge construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Historical construction financing total",
+          "value": "USD 35 million total including engineering, administrative costs, financing and surplus in the operator’s account; not structure-only cost.",
+          "source": {
+            "url": "https://www.goldengate.org/bridge/history-research/bridge-construction/construction/",
+            "title": "Golden Gate Bridge – Construction",
+            "publishedDate": null,
+            "quote": "total construction cost came in at $35 million"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Suspension crossing scope",
+          "value": "Bridge connecting San Francisco and Marin County, with a 4,200 ft main span.",
+          "source": {
+            "url": "https://www.goldengate.org/exhibits/facts-and-figures-about-the-bridge/",
+            "title": "Facts & Figures About the Bridge",
+            "publishedDate": null,
+            "quote": "4,200"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Pedestrian opening",
+          "value": "27 May 1937; pedestrian opening distinguished from motor traffic.",
+          "source": {
+            "url": "https://www.goldengate.org/bridge/history-research/moments-events/key-dates/",
+            "title": "Golden Gate Bridge – Key Dates",
+            "publishedDate": null,
+            "quote": "May 27, 1937"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction begins",
+          "date": "1933-01-05",
+          "source": {
+            "url": "https://www.goldengate.org/bridge/history-research/moments-events/key-dates/",
+            "title": "Golden Gate Bridge – Key Dates",
+            "publishedDate": null,
+            "quote": "January 5, 1933"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Pedestrian opening",
+          "date": "1937-05-27",
+          "source": {
+            "url": "https://www.goldengate.org/bridge/history-research/moments-events/key-dates/",
+            "title": "Golden Gate Bridge – Key Dates",
+            "publishedDate": null,
+            "quote": "May 27, 1937"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "forth-rail-bridge",
+    "pinIds": {
+      "local": 943,
+      "production": 943
+    },
+    "title": "Sir William Arrol & Co.’s Forth Bridge Opens as the World’s Longest Cantilever Span",
+    "sourceUrl": "https://www.youtube.com/watch?v=AOwtB80NIsU",
+    "profile": {
+      "sector": "Rail: steel cantilever estuary crossing",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Whole bridge length",
+          "value": "2,467 m overall; main portal-to-portal structure is shorter.",
+          "source": {
+            "url": "https://www.theforthbridges.org/about-the-forth-bridges/forth-bridge/forth-bridge-facts-figures/",
+            "title": "Forth Bridge Facts & Figures",
+            "publishedDate": null,
+            "quote": "2,467 metres"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Peak construction workforce",
+          "value": "More than 4,000 people at the height of construction; not operating jobs.",
+          "source": {
+            "url": "https://www.theforthbridges.org/about-the-forth-bridges/forth-bridge/forth-bridge-facts-figures/",
+            "title": "Forth Bridge Facts & Figures",
+            "publishedDate": null,
+            "quote": "more than 4,000 men were employed"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Formal opening",
+          "value": "4 March 1890.",
+          "source": {
+            "url": "https://www.theforthbridges.org/about-the-forth-bridges/forth-bridge/forth-bridge-facts-figures/",
+            "title": "Forth Bridge Facts & Figures",
+            "publishedDate": null,
+            "quote": "4 March 1890"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Cantilever construction begins",
+          "date": "1883",
+          "source": {
+            "url": "https://www.theforthbridges.org/about-the-forth-bridges/forth-bridge/forth-bridge-facts-figures/",
+            "title": "Forth Bridge Facts & Figures",
+            "publishedDate": null,
+            "quote": "1883 Construction"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Formal opening",
+          "date": "1890-03-04",
+          "source": {
+            "url": "https://www.theforthbridges.org/about-the-forth-bridges/forth-bridge/forth-bridge-facts-figures/",
+            "title": "Forth Bridge Facts & Figures",
+            "publishedDate": null,
+            "quote": "4 March 1890"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "brooklyn-bridge-original-build",
+    "pinIds": {
+      "local": 694,
+      "production": 694
+    },
+    "title": "The Brooklyn Bridge Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=Rm0kSZRrLzw",
+    "profile": {
+      "sector": "Roads: East River suspension bridge",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Bridge and approach length",
+          "value": "6,016 ft including approaches; main span is 1,595.5 ft.",
+          "source": {
+            "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+            "title": "NYC DOT – Brooklyn Bridge",
+            "publishedDate": null,
+            "quote": "6,016 feet"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published daily usage in 2024",
+          "value": "103,051 vehicles, 28,845 pedestrians and 5,504 cyclists per day, as of 2024; usage, not design capacity or a fresh 2026 measurement.",
+          "source": {
+            "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+            "title": "NYC DOT – Brooklyn Bridge",
+            "publishedDate": null,
+            "quote": "103,051 vehicles, 28,845 pedestrians, and 5,504 cyclists"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Original construction completion",
+          "value": "1883, following construction starting in 1869; later rehabilitations are separate scopes.",
+          "source": {
+            "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+            "title": "NYC DOT – Brooklyn Bridge",
+            "publishedDate": null,
+            "quote": "completed in 1883"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original construction begins",
+          "date": "1869",
+          "source": {
+            "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+            "title": "NYC DOT – Brooklyn Bridge",
+            "publishedDate": null,
+            "quote": "Construction began in 1869"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Original bridge completed",
+          "date": "1883",
+          "source": {
+            "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+            "title": "NYC DOT – Brooklyn Bridge",
+            "publishedDate": null,
+            "quote": "completed in 1883"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "metropolitan-railway-first-line",
+    "pinIds": {
+      "local": 975,
+      "production": 975
+    },
+    "title": "Metropolitan Railway Opens the World's First Underground Line",
+    "sourceUrl": "https://www.youtube.com/watch?v=J8iKNhM3q7g",
+    "profile": {
+      "sector": "Rail: original underground railway",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Original line scope",
+          "value": "Three and a half miles from Paddington to Farringdon Street via King’s Cross; source’s own length precision retained.",
+          "source": {
+            "url": "https://library.ltmuseum.co.uk/Portal/Default/en-GB/RecordView/Index/108",
+            "title": "When did the first underground railway open? – London Transport Museum",
+            "publishedDate": null,
+            "quote": "three and a half miles long"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Opening-day passengers",
+          "value": "40,000 on the first operating day; a historical observed count, not daily capacity.",
+          "source": {
+            "url": "https://library.ltmuseum.co.uk/Portal/Default/en-GB/RecordView/Index/108",
+            "title": "When did the first underground railway open? – London Transport Museum",
+            "publishedDate": null,
+            "quote": "40,000 passengers on its first day"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Public opening",
+          "value": "10 January 1863.",
+          "source": {
+            "url": "https://library.ltmuseum.co.uk/Portal/Default/en-GB/RecordView/Index/108",
+            "title": "When did the first underground railway open? – London Transport Museum",
+            "publishedDate": null,
+            "quote": "10 January 1863"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original line opens to public",
+          "date": "1863-01-10",
+          "source": {
+            "url": "https://library.ltmuseum.co.uk/Portal/Default/en-GB/RecordView/Index/108",
+            "title": "When did the first underground railway open? – London Transport Museum",
+            "publishedDate": null,
+            "quote": "10 January 1863"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "millau-viaduct",
+    "pinIds": {
+      "local": 535,
+      "production": 535
+    },
+    "title": "The Millau Viaduct Opens to Traffic",
+    "sourceUrl": "https://www.youtube.com/watch?v=gQA8303vxjE",
+    "profile": {
+      "sector": "Roads: multi-span cable-stayed viaduct",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Viaduct dimensions",
+          "value": "2,460 m long and 343 m high, with seven concrete piers and steel deck.",
+          "source": {
+            "url": "https://www.eiffagegeniecivil.com/milau-viaduct",
+            "title": "Millau Viaduct – Eiffage Génie Civil",
+            "publishedDate": null,
+            "quote": "343 metres high and 2,460 metres long"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Peak project participation",
+          "value": "600 master craftsmen at the height of the project, per the contractor.",
+          "source": {
+            "url": "https://www.eiffagegeniecivil.com/milau-viaduct",
+            "title": "Millau Viaduct – Eiffage Génie Civil",
+            "publishedDate": null,
+            "quote": "600 master craftsmen"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Inauguration",
+          "value": "14 December 2004; formal inauguration, not a newly inferred first-traffic date.",
+          "source": {
+            "url": "https://www.eiffagegeniecivil.com/milau-viaduct",
+            "title": "Millau Viaduct – Eiffage Génie Civil",
+            "publishedDate": null,
+            "quote": "inaugurated on 14 December 2004"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First stone / official project start",
+          "date": "2001-12-14",
+          "source": {
+            "url": "https://www.eiffagegeniecivil.com/milau-viaduct",
+            "title": "Millau Viaduct – Eiffage Génie Civil",
+            "publishedDate": null,
+            "quote": "14 December 2001"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Formal inauguration",
+          "date": "2004-12-14",
+          "source": {
+            "url": "https://www.eiffagegeniecivil.com/milau-viaduct",
+            "title": "Millau Viaduct – Eiffage Génie Civil",
+            "publishedDate": null,
+            "quote": "14 December 2004"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "channel-tunnel-original-build",
+    "pinIds": {
+      "local": 594,
+      "production": 594
+    },
+    "title": "The Channel Tunnel Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=gAPahZAapMQ",
+    "profile": {
+      "sector": "Rail: cross-Channel fixed link",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Terminal-to-terminal length",
+          "value": "50.5 km between Folkestone and Calais; operator’s published rounded length.",
+          "source": {
+            "url": "https://www.leshuttle.com/uk-en/discover/why-choose-leshuttle/build/the-channel-tunnel?viewmode=0",
+            "title": "The Channel Tunnel – interesting facts",
+            "publishedDate": null,
+            "quote": "50.5 km"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Historical construction workforce",
+          "value": "13,000 people worked on the project, per LeShuttle.",
+          "source": {
+            "url": "https://www.leshuttle.com/uk-en/discover/why-choose-leshuttle/build/the-channel-tunnel?viewmode=0",
+            "title": "The Channel Tunnel – interesting facts",
+            "publishedDate": null,
+            "quote": "13,000 people worked on the project"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Shuttle journey time",
+          "value": "35 minutes under normal operating conditions; a service journey time rather than passengers/hour.",
+          "source": {
+            "url": "https://www.leshuttle.com/uk-en/discover/why-choose-leshuttle/build/the-channel-tunnel?viewmode=0",
+            "title": "The Channel Tunnel – interesting facts",
+            "publishedDate": null,
+            "quote": "journey time of a LeShuttle crossing is 35 minutes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Official opening",
+          "value": "6 May 1994; distinct from excavation and phased service launches.",
+          "source": {
+            "url": "https://www.leshuttle.com/uk-en/discover/why-choose-leshuttle/build/the-channel-tunnel?viewmode=0",
+            "title": "The Channel Tunnel – interesting facts",
+            "publishedDate": null,
+            "quote": "officially opened on 6th May 1994"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "UK excavation starts",
+          "date": "December 1987",
+          "source": {
+            "url": "https://www.leshuttle.com/uk-en/discover/why-choose-leshuttle/build/the-channel-tunnel?viewmode=0",
+            "title": "The Channel Tunnel – interesting facts",
+            "publishedDate": null,
+            "quote": "December 1987 - Excavation starts"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Official opening",
+          "date": "1994-05-06",
+          "source": {
+            "url": "https://www.leshuttle.com/uk-en/discover/why-choose-leshuttle/build/the-channel-tunnel?viewmode=0",
+            "title": "The Channel Tunnel – interesting facts",
+            "publishedDate": null,
+            "quote": "6th May 1994"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "docklands-light-railway-initial-system",
+    "pinIds": {
+      "local": 744,
+      "production": 744
+    },
+    "title": "London's Docklands Light Railway Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=i1pAfKsL1bk",
+    "profile": {
+      "sector": "Rail: initial Docklands light railway",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Original route termini",
+          "value": "Tower Gateway, Stratford and Island Gardens; later extensions excluded.",
+          "source": {
+            "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-docklands-light-railway/",
+            "title": "The history of the Docklands Light Railway – London Museum",
+            "publishedDate": null,
+            "quote": "Tower Gateway, Stratford and Island Gardens"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Initial station count",
+          "value": "15 stations, not the larger present-day network.",
+          "source": {
+            "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-docklands-light-railway/",
+            "title": "The history of the Docklands Light Railway – London Museum",
+            "publishedDate": null,
+            "quote": "15 stations"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Royal opening and first public service",
+          "value": "Royal opening 30 July 1987; first passenger service 31 August 1987.",
+          "source": {
+            "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-docklands-light-railway/",
+            "title": "The history of the Docklands Light Railway – London Museum",
+            "publishedDate": null,
+            "quote": "opened the DLR on 30 July 1987"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Royal opening",
+          "date": "1987-07-30",
+          "source": {
+            "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-docklands-light-railway/",
+            "title": "The history of the Docklands Light Railway – London Museum",
+            "publishedDate": null,
+            "quote": "30 July 1987"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "First public passenger service",
+          "date": "1987-08-31",
+          "source": {
+            "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-docklands-light-railway/",
+            "title": "The history of the Docklands Light Railway – London Museum",
+            "publishedDate": null,
+            "quote": "first passenger service ran on 31 August"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "australia108-residential-tower",
+    "pinIds": {
+      "local": 710,
+      "production": 710
+    },
+    "title": "Inside Australia's Tallest New Skyscraper",
+    "sourceUrl": "https://www.youtube.com/watch?v=aJGiiMIeWxA",
+    "profile": {
+      "sector": "Housing: residential skyscraper",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Gross floor area",
+          "value": "138,000 sq m, as published by the architect.",
+          "source": {
+            "url": "https://fkaustralia.com/project/australia-108/",
+            "title": "Australia 108 – Fender Katsalidis",
+            "publishedDate": null,
+            "quote": "GFA 138,000sqm"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Residential program",
+          "value": "1,105 apartments over 100 floors, per the architect.",
+          "source": {
+            "url": "https://fkaustralia.com/project/australia-108/",
+            "title": "Australia 108 – Fender Katsalidis",
+            "publishedDate": null,
+            "quote": "1,105 luxury apartments over 100 floors"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion",
+          "value": "2021, as published by the architect; earlier topping-out milestone is a separate pin.",
+          "source": {
+            "url": "https://fkaustralia.com/project/australia-108/",
+            "title": "Australia 108 – Fender Katsalidis",
+            "publishedDate": null,
+            "quote": "Completion 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Tower completion",
+          "date": "2021",
+          "source": {
+            "url": "https://fkaustralia.com/project/australia-108/",
+            "title": "Australia 108 – Fender Katsalidis",
+            "publishedDate": null,
+            "quote": "Completion 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "hamburg-rethe-rail-bascule-bridge",
+    "pinIds": {
+      "local": 967,
+      "production": 967
+    },
+    "title": "Hamburg Port Authority Opens the Rethebrücke as Europe's Largest Rail Bascule Bridge",
+    "sourceUrl": "https://www.youtube.com/watch?v=zBvP7-zmFNo",
+    "profile": {
+      "sector": "Rail and roads: replacement bascule crossing",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Crossing configuration",
+          "value": "Separated road and rail crossings replace the 1934 lift bridge, reducing road closures for passing trains.",
+          "source": {
+            "url": "https://www.hamburg-port-authority.de/en/press-latest-news/hpa-opens-rethebruecke-europes-largest-rail-bascule-bridge-goes-into-operation-in-the-port-of-hamburg/",
+            "title": "HPA opens Rethebrücke – Europe’s largest rail bascule bridge goes into operation in the Port of Hamburg",
+            "publishedDate": "2017-12-18",
+            "quote": "separation of rail and road traffic"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Navigation channel width",
+          "value": "64 m compared with 44 m previously; physical navigation clearance rather than train throughput.",
+          "source": {
+            "url": "https://www.hamburg-port-authority.de/en/press-latest-news/hpa-opens-rethebruecke-europes-largest-rail-bascule-bridge-goes-into-operation-in-the-port-of-hamburg/",
+            "title": "HPA opens Rethebrücke – Europe’s largest rail bascule bridge goes into operation in the Port of Hamburg",
+            "publishedDate": "2017-12-18",
+            "quote": "64 metres in width instead of 44 metres"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Rail crossing opens",
+          "value": "15 December 2017; partial road opening was July 2016.",
+          "source": {
+            "url": "https://www.hamburg-port-authority.de/en/press-latest-news/hpa-opens-rethebruecke-europes-largest-rail-bascule-bridge-goes-into-operation-in-the-port-of-hamburg/",
+            "title": "HPA opens Rethebrücke – Europe’s largest rail bascule bridge goes into operation in the Port of Hamburg",
+            "publishedDate": "2017-12-18",
+            "quote": "Hamburg, 15 December 2017"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Partial road opening",
+          "date": "July 2016",
+          "source": {
+            "url": "https://www.hamburg-port-authority.de/en/press-latest-news/hpa-opens-rethebruecke-europes-largest-rail-bascule-bridge-goes-into-operation-in-the-port-of-hamburg/",
+            "title": "HPA opens Rethebrücke – Europe’s largest rail bascule bridge goes into operation in the Port of Hamburg",
+            "publishedDate": "2017-12-18",
+            "quote": "partially opened for cars in July 2016"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Rail opening ceremony",
+          "date": "2017-12-15",
+          "source": {
+            "url": "https://www.hamburg-port-authority.de/en/press-latest-news/hpa-opens-rethebruecke-europes-largest-rail-bascule-bridge-goes-into-operation-in-the-port-of-hamburg/",
+            "title": "HPA opens Rethebrücke – Europe’s largest rail bascule bridge goes into operation in the Port of Hamburg",
+            "publishedDate": "2017-12-18",
+            "quote": "15 December 2017"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "platov-airport-rostov",
+    "pinIds": {
+      "local": 753,
+      "production": 753
+    },
+    "title": "Platov International Airport Opens Near Rostov-on-Don",
+    "sourceUrl": "https://www.youtube.com/watch?v=KXwu5I0n0pA",
+    "profile": {
+      "sector": "Aviation: new airport construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "New airport scope",
+          "value": "New Rostov-on-Don airport built from scratch in the Don steppe, in Aksaisky District.",
+          "source": {
+            "url": "https://ar-rov.ru/en/about/news/platov-airport-celebrates-first-year-of-operation/",
+            "title": "Platov Airport Celebrates First Year of Operation",
+            "publishedDate": null,
+            "quote": "built from scratch in the Don steppe"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "First-year passenger traffic",
+          "value": "Over 3.23 million passengers between 7 December 2017 and 7 December 2018; historical observed traffic, not current traffic or design capacity.",
+          "source": {
+            "url": "https://ar-rov.ru/en/about/news/platov-airport-celebrates-first-year-of-operation/",
+            "title": "Platov Airport Celebrates First Year of Operation",
+            "publishedDate": null,
+            "quote": "over 3.23 million passengers"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "First scheduled flight",
+          "value": "7 December 2017.",
+          "source": {
+            "url": "https://ar-rov.ru/en/about/news/platov-airport-celebrates-first-year-of-operation/",
+            "title": "Platov Airport Celebrates First Year of Operation",
+            "publishedDate": null,
+            "quote": "first scheduled passenger flight on December 7, 2017"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First scheduled passenger flight",
+          "date": "2017-12-07",
+          "source": {
+            "url": "https://ar-rov.ru/en/about/news/platov-airport-celebrates-first-year-of-operation/",
+            "title": "Platov Airport Celebrates First Year of Operation",
+            "publishedDate": null,
+            "quote": "December 7, 2017"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "kamenz-second-battery-factory",
+    "pinIds": {
+      "local": 111,
+      "production": 111
+    },
+    "title": "Daimler begins construction on a $562 million lithium-ion battery factory in Germany",
+    "sourceUrl": "https://arstechnica.com/cars/2017/05/daimler-begins-construction-on-a-562-million-lithium-ion-battery-in-germany/",
+    "profile": {
+      "sector": "Manufacturing: second vehicle battery factory",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Second-factory investment",
+          "value": "Approximately EUR 500 million; native published currency without FX conversion.",
+          "source": {
+            "url": "https://media.mercedes-benz.nl/daimler-bouwt-aan-wereldwijd-productienetwerk-voor-lithium-ion-accus/",
+            "title": "Daimler bouwt aan wereldwijd productienetwerk voor lithium-ion-accu’s",
+            "publishedDate": "2016-10-24",
+            "quote": "500 miljoen euro"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Battery-system production",
+          "value": "Second factory makes battery systems for EQ vehicles since 2019 and compact electric SUVs since 2021; first factory and campus-wide totals excluded.",
+          "source": {
+            "url": "https://group.mercedes-benz.com/careers/about-us/locations/location-detail-page-5066.html?r=dai",
+            "title": "Accumotive GmbH & Co. KG, Kamenz – Mercedes-Benz",
+            "publishedDate": null,
+            "quote": "battery systems for EQ vehicles since 2019"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Factory enters operation",
+          "value": "2018, explicitly confirmed by Mercedes-Benz.",
+          "source": {
+            "url": "https://group.mercedes-benz.com/careers/about-us/locations/location-detail-page-5066.html?r=dai",
+            "title": "Accumotive GmbH & Co. KG, Kamenz – Mercedes-Benz",
+            "publishedDate": null,
+            "quote": "went into operation in 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction phase begins",
+          "date": "2016-10-24",
+          "source": {
+            "url": "https://media.mercedes-benz.nl/daimler-bouwt-aan-wereldwijd-productienetwerk-voor-lithium-ion-accus/",
+            "title": "Daimler bouwt aan wereldwijd productienetwerk voor lithium-ion-accu’s",
+            "publishedDate": "2016-10-24",
+            "quote": "starts the construction phase for a second battery factory"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Second factory enters operation",
+          "date": "2018",
+          "source": {
+            "url": "https://group.mercedes-benz.com/careers/about-us/locations/location-detail-page-5066.html?r=dai",
+            "title": "Accumotive GmbH & Co. KG, Kamenz – Mercedes-Benz",
+            "publishedDate": null,
+            "quote": "went into operation in 2018"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "EQ vehicle battery-system production",
+          "date": "2019",
+          "source": {
+            "url": "https://group.mercedes-benz.com/careers/about-us/locations/location-detail-page-5066.html?r=dai",
+            "title": "Accumotive GmbH & Co. KG, Kamenz – Mercedes-Benz",
+            "publishedDate": null,
+            "quote": "EQ vehicles since 2019"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "ferrero-bloomington-kinder-bueno",
+    "pinIds": {
+      "local": 3469,
+      "production": 3469
+    },
+    "title": "Ferrero Breaks Ground on $214M Kinder Bueno Plant in Bloomington",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/ferrero-breaks-ground-on-new-214-million-kinder-bueno-production-facility-in-bloomington-il-301666528.html",
+    "profile": {
+      "sector": "Manufacturing: Kinder Bueno production facility",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Kinder Bueno facility investment",
+          "value": "USD 214 million; separate chocolate-processing facility cost is excluded.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+            "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+            "publishedDate": "2024-09-30",
+            "quote": "$214 million dollar investment"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Production facility floor area",
+          "value": "169,000 sq ft; distinct from the 70,000 sq ft chocolate-processing plant.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+            "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+            "publishedDate": "2024-09-30",
+            "quote": "169,000 square foot facility"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Announced new local jobs",
+          "value": "Approximately 200 new jobs; announcement rather than independently measured staffing.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+            "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+            "publishedDate": "2024-09-30",
+            "quote": "approximately 200 new jobs"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Facility opening celebrated",
+          "value": "30 September 2024.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+            "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+            "publishedDate": "2024-09-30",
+            "quote": "celebrated the opening of its new Kinder Bueno production facility"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Kinder Bueno production facility opens",
+          "date": "2024-09-30",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+            "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+            "publishedDate": "2024-09-30",
+            "quote": "celebrated the opening of its new Kinder Bueno production facility"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "east-colfax-brt",
+    "pinIds": {
+      "local": 4689,
+      "production": 4689
+    },
+    "title": "East Colfax Bus Rapid Transit Construction",
+    "sourceUrl": "https://www.rtd-denver.com/community/news/denver-to-construct-a-better-faster-bus-service-for-east-colfax-ave",
+    "profile": {
+      "sector": "Transit: bus rapid transit corridor construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Bus-priority works",
+          "value": "Two center lanes on East Colfax from Broadway to Colorado Boulevard planned as bus-only lanes; whole BRT opening is separate.",
+          "source": {
+            "url": "https://www.rtd-denver.com/community/news/2026/colfax-reopens-from-broadway-to-colorado-blvd-this-fall",
+            "title": "Colfax reopens from Broadway to Colorado Boulevard this fall",
+            "publishedDate": "2026-06-15",
+            "quote": "two center lanes of East Colfax Avenue"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Construction progress report",
+          "value": "RTD reports construction continuing on time and on budget in June 2026.",
+          "source": {
+            "url": "https://www.rtd-denver.com/community/news/2026/colfax-reopens-from-broadway-to-colorado-blvd-this-fall",
+            "title": "Colfax reopens from Broadway to Colorado Boulevard this fall",
+            "publishedDate": "2026-06-15",
+            "quote": "Progress continues on time and on budget"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Full BRT service target",
+          "value": "End of 2027; roadway/bus-only-lane access in Fall 2026 does not establish full BRT operation.",
+          "source": {
+            "url": "https://www.rtd-denver.com/community/news/2026/colfax-reopens-from-broadway-to-colorado-blvd-this-fall",
+            "title": "Colfax reopens from Broadway to Colorado Boulevard this fall",
+            "publishedDate": "2026-06-15",
+            "quote": "construction is complete at the end of 2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Roadway and bus-only-lane opening target for initial segment",
+          "date": "Fall 2026",
+          "source": {
+            "url": "https://www.rtd-denver.com/community/news/2026/colfax-reopens-from-broadway-to-colorado-blvd-this-fall",
+            "title": "Colfax reopens from Broadway to Colorado Boulevard this fall",
+            "publishedDate": "2026-06-15",
+            "quote": "In fall 2026"
+          },
+          "basis": "planned"
+        },
+        {
+          "label": "Full BRT service target",
+          "date": "End of 2027",
+          "source": {
+            "url": "https://www.rtd-denver.com/community/news/2026/colfax-reopens-from-broadway-to-colorado-blvd-this-fall",
+            "title": "Colfax reopens from Broadway to Colorado Boulevard this fall",
+            "publishedDate": "2026-06-15",
+            "quote": "end of 2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "metro-a-line-azusa-pomona",
+    "pinIds": {
+      "local": 3362,
+      "production": 3362
+    },
+    "title": "Metro's A Line Opens Its Extension to Pomona",
+    "sourceUrl": "https://www.nbclosangeles.com/news/local/grand-opening-metro-a-line-extension-project/3780718/",
+    "profile": {
+      "sector": "Rail: Azusa–Pomona light rail extension",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Rail extension project cost",
+          "value": "USD 1.5 billion for the extension, not the entire A Line.",
+          "source": {
+            "url": "https://www.metro.net/about/media-relations/possibility-travels-with-you-metro-a-line-extension-between-azusa-pomona-officially-opens-providing-more-connections-from-san-gabriel-valley-to-destinations-throughout-la-county/",
+            "title": "Possibility Travels with You: Metro A Line Extension Between Azusa, Pomona Officially Opens Providing More Connections from San Gabriel Valley to Destinations Throughout LA County",
+            "publishedDate": "2025-09-30",
+            "quote": "$1.5 billion rail extension project"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Added rail alignment",
+          "value": "Nine miles added from Azusa toward Pomona.",
+          "source": {
+            "url": "https://www.metro.net/about/media-relations/possibility-travels-with-you-metro-a-line-extension-between-azusa-pomona-officially-opens-providing-more-connections-from-san-gabriel-valley-to-destinations-throughout-la-county/",
+            "title": "Possibility Travels with You: Metro A Line Extension Between Azusa, Pomona Officially Opens Providing More Connections from San Gabriel Valley to Destinations Throughout LA County",
+            "publishedDate": "2025-09-30",
+            "quote": "adds nine miles"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "New station program",
+          "value": "Four new stations; the 23-of-25 figure refers to the wider Foothill program.",
+          "source": {
+            "url": "https://www.metro.net/about/media-relations/possibility-travels-with-you-metro-a-line-extension-between-azusa-pomona-officially-opens-providing-more-connections-from-san-gabriel-valley-to-destinations-throughout-la-county/",
+            "title": "Possibility Travels with You: Metro A Line Extension Between Azusa, Pomona Officially Opens Providing More Connections from San Gabriel Valley to Destinations Throughout LA County",
+            "publishedDate": "2025-09-30",
+            "quote": "four new stations"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening celebration reported",
+          "value": "30 September 2025, the date of Metro’s celebration release; not a claim this was the first passenger-service day.",
+          "source": {
+            "url": "https://www.metro.net/about/media-relations/possibility-travels-with-you-metro-a-line-extension-between-azusa-pomona-officially-opens-providing-more-connections-from-san-gabriel-valley-to-destinations-throughout-la-county/",
+            "title": "Possibility Travels with You: Metro A Line Extension Between Azusa, Pomona Officially Opens Providing More Connections from San Gabriel Valley to Destinations Throughout LA County",
+            "publishedDate": "2025-09-30",
+            "quote": "Hundreds gathered in Pomona today"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Official opening celebration reported by Metro",
+          "date": "2025-09-30",
+          "source": {
+            "url": "https://www.metro.net/about/media-relations/possibility-travels-with-you-metro-a-line-extension-between-azusa-pomona-officially-opens-providing-more-connections-from-san-gabriel-valley-to-destinations-throughout-la-county/",
+            "title": "Possibility Travels with You: Metro A Line Extension Between Azusa, Pomona Officially Opens Providing More Connections from San Gabriel Valley to Destinations Throughout LA County",
+            "publishedDate": "2025-09-30",
+            "quote": "Hundreds gathered in Pomona today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "techo-international-airport-phase1",
+    "pinIds": {
+      "local": 544,
+      "production": 544
+    },
+    "title": "Techo International Airport Opens in Phnom Penh",
+    "sourceUrl": "https://www.youtube.com/watch?v=gyxyUfDCXTE",
+    "profile": {
+      "sector": "Aviation: first airport operating phase",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "First-phase passenger design",
+          "value": "15 million passengers annually; design capacity, not actual first-year traffic.",
+          "source": {
+            "url": "https://tools.prnewswire.com/en-us/live/20823/release/20251003EN89835",
+            "title": "Phnom Penh’s Techo International Airport Opens: Cambodia’s New Global Gateway",
+            "publishedDate": "2025-10-03",
+            "quote": "15 million passengers annually in its first phase"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Construction participation",
+          "value": "More than 200 Cambodian engineers and 17,000 workers engaged in the project; not permanent airport jobs.",
+          "source": {
+            "url": "https://tools.prnewswire.com/en-us/live/20823/release/20251003EN89835",
+            "title": "Phnom Penh’s Techo International Airport Opens: Cambodia’s New Global Gateway",
+            "publishedDate": "2025-10-03",
+            "quote": "200 Cambodian engineers and 17,000 workers"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening and initial commercial service",
+          "value": "9 September 2025, with first Air Cambodia commercial arrival.",
+          "source": {
+            "url": "https://tools.prnewswire.com/en-us/live/20823/release/20251003EN89835",
+            "title": "Phnom Penh’s Techo International Airport Opens: Cambodia’s New Global Gateway",
+            "publishedDate": "2025-10-03",
+            "quote": "On 9 September"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Airport opens with first commercial flight",
+          "date": "2025-09-09",
+          "source": {
+            "url": "https://tools.prnewswire.com/en-us/live/20823/release/20251003EN89835",
+            "title": "Phnom Penh’s Techo International Airport Opens: Cambodia’s New Global Gateway",
+            "publishedDate": "2025-10-03",
+            "quote": "On 9 September"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "chenab-rail-arch-bridge",
+    "pinIds": {
+      "local": 479,
+      "production": 479
+    },
+    "title": "Chenab Rail Bridge Opens as World's Highest Railway Bridge",
+    "sourceUrl": "https://www.youtube.com/watch?v=O-9WRcYlu7g",
+    "profile": {
+      "sector": "Rail: steel arch gorge crossing",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Rail bridge geometry",
+          "value": "1.3 km long, 359 m above the river; the wider USBRL rail project is excluded.",
+          "source": {
+            "url": "https://afcons.com/wp-content/uploads/2025/12/Press-Release-09.06.2025-Prime-Minister-of-India-Narendra-Modi-inaugurates-Chenab-Railway-Bridge-built-by-Afcons.pdf",
+            "title": "Afcons builds world’s highest single-arch railway bridge",
+            "publishedDate": "2025-06-09",
+            "quote": "The 1.3 km long bridge"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Structural wind design rating",
+          "value": "Designed for wind speeds up to 266 km/h / 74 m/s; not a train operating speed.",
+          "source": {
+            "url": "https://afcons.com/wp-content/uploads/2025/12/Press-Release-09.06.2025-Prime-Minister-of-India-Narendra-Modi-inaugurates-Chenab-Railway-Bridge-built-by-Afcons.pdf",
+            "title": "Afcons builds world’s highest single-arch railway bridge",
+            "publishedDate": "2025-06-09",
+            "quote": "wind speeds of up to 266 km/h"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Bridge inaugurated and operational",
+          "value": "Inaugurated 6 June 2025; contractor confirms operational status in its 9 June release.",
+          "source": {
+            "url": "https://afcons.com/wp-content/uploads/2025/12/Press-Release-09.06.2025-Prime-Minister-of-India-Narendra-Modi-inaugurates-Chenab-Railway-Bridge-built-by-Afcons.pdf",
+            "title": "Afcons builds world’s highest single-arch railway bridge",
+            "publishedDate": "2025-06-09",
+            "quote": "June 6, 2025"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Bridge inauguration",
+          "date": "2025-06-06",
+          "source": {
+            "url": "https://afcons.com/wp-content/uploads/2025/12/Press-Release-09.06.2025-Prime-Minister-of-India-Narendra-Modi-inaugurates-Chenab-Railway-Bridge-built-by-Afcons.pdf",
+            "title": "Afcons builds world’s highest single-arch railway bridge",
+            "publishedDate": "2025-06-09",
+            "quote": "June 6, 2025"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "marina-bay-sands-new-resort-tower",
+    "pinIds": {
+      "local": 488,
+      "production": 488
+    },
+    "title": "Marina Bay Sands breaks ground on its fourth tower",
+    "sourceUrl": "https://www.youtube.com/watch?v=GUCsENcaoqo",
+    "profile": {
+      "sector": "Hospitality: new resort tower and arena",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Hotel and arena design",
+          "value": "570 hotel suites and a separate 15,000-seat arena; existing resort rooms excluded.",
+          "source": {
+            "url": "https://www.marinabaysands.com/company-information/groundbreaking-ceremony.html",
+            "title": "Las Vegas Sands breaks ground on new ultra-luxury development in Singapore",
+            "publishedDate": "2025-07-15",
+            "quote": "570-suite luxury hotel tower"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Premium meeting space",
+          "value": "Approximately 200,000 sq ft meeting space, not whole-tower GFA.",
+          "source": {
+            "url": "https://www.marinabaysands.com/company-information/groundbreaking-ceremony.html",
+            "title": "Las Vegas Sands breaks ground on new ultra-luxury development in Singapore",
+            "publishedDate": "2025-07-15",
+            "quote": "200,000 square feet of premium meeting space"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Project groundbreaking",
+          "value": "15 July 2025; no construction-completion date inferred from the groundbreaking.",
+          "source": {
+            "url": "https://www.marinabaysands.com/company-information/groundbreaking-ceremony.html",
+            "title": "Las Vegas Sands breaks ground on new ultra-luxury development in Singapore",
+            "publishedDate": "2025-07-15",
+            "quote": "15 July 2025"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "New development groundbreaking",
+          "date": "2025-07-15",
+          "source": {
+            "url": "https://www.marinabaysands.com/company-information/groundbreaking-ceremony.html",
+            "title": "Las Vegas Sands breaks ground on new ultra-luxury development in Singapore",
+            "publishedDate": "2025-07-15",
+            "quote": "groundbreaking of its new US$8 billion"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "athletics-las-vegas-ballpark",
+    "pinIds": {
+      "local": 3347,
+      "production": 3347
+    },
+    "title": "The Athletics Break Ground on Their Las Vegas Ballpark",
+    "sourceUrl": "https://news3lv.com/news/local/athletics-groundbreaking-new-las-vegas-strip-baseball-stadium-mlb-john-fisher-rob-manfred-tropicana-ballpark-construction",
+    "profile": {
+      "sector": "Sports: MLB ballpark construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published contractor project figure",
+          "value": "USD 1.75 billion as published by Mortenson; estimate rather than final outturn.",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "$1.75 Billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Ballpark area",
+          "value": "963,000 sq ft.",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "963,000 Square Feet"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Seating design",
+          "value": "33,000 seats.",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "33,000 Seats"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Estimated completion",
+          "value": "February 2028; distinct from Opening Day in the 2028 season.",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "Estimated Completion Date February 2028"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction start listed by contractor",
+          "date": "April 2025",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "Started April 2025"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Groundbreaking ceremony",
+          "date": "2025-06-23",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "June 23 rd , 2025"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Estimated construction completion",
+          "date": "February 2028",
+          "source": {
+            "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+            "title": "Las Vegas Athletics Ballpark Construction – Mortenson",
+            "publishedDate": null,
+            "quote": "February 2028"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "chop-roberts-childrens-health-tower",
+    "pinIds": {
+      "local": 2220,
+      "production": 2220
+    },
+    "title": "CHOP Tops Out the Roberts Children's Health Tower",
+    "sourceUrl": "https://www.chop.edu/giving/roberts-childrens-health",
+    "profile": {
+      "sector": "Healthcare: inpatient hospital tower",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "New inpatient tower area",
+          "value": "More than 1 million sq ft; wider hospital renovations are separate scope.",
+          "source": {
+            "url": "https://www.chop.edu/giving/roberts-childrens-health",
+            "title": "Roberts Children’s Health – Children’s Hospital of Philadelphia",
+            "publishedDate": null,
+            "quote": "more than 1 million-square-foot new inpatient tower"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Structural topping-out",
+          "value": "Final structural beam placed 28 January 2026; this does not establish clinical operation.",
+          "source": {
+            "url": "https://www.chop.edu/giving/roberts-childrens-health",
+            "title": "Roberts Children’s Health – Children’s Hospital of Philadelphia",
+            "publishedDate": null,
+            "quote": "final structural beam was placed"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Hospital opening target",
+          "value": "2028, per CHOP.",
+          "source": {
+            "url": "https://www.chop.edu/giving/roberts-childrens-health",
+            "title": "Roberts Children’s Health – Children’s Hospital of Philadelphia",
+            "publishedDate": null,
+            "quote": "opening in 2028"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Final structural beam / topping out",
+          "date": "2026-01-28",
+          "source": {
+            "url": "https://www.chop.edu/giving/roberts-childrens-health",
+            "title": "Roberts Children’s Health – Children’s Hospital of Philadelphia",
+            "publishedDate": null,
+            "quote": "January 28, 2026"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Opening target",
+          "date": "2028",
+          "source": {
+            "url": "https://www.chop.edu/giving/roberts-childrens-health",
+            "title": "Roberts Children’s Health – Children’s Hospital of Philadelphia",
+            "publishedDate": null,
+            "quote": "opening in 2028"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "beijing-tongzhou-railway-station",
+    "pinIds": {
+      "local": 2300,
+      "production": 2300
+    },
+    "title": "Beijing Tongzhou Station Opens as Asia's Largest Underground Station",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Beijing_Tongzhou_railway_station",
+    "profile": {
+      "sector": "Rail: underground intercity interchange",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Station levels and interchanges",
+          "value": "Three underground levels plus two mezzanines, integrating intercity railways, metro, buses and public facilities.",
+          "source": {
+            "url": "https://english.beijing.gov.cn/livinginbeijing/transportation/railway/202512/t20251231_4381067.html",
+            "title": "Beijing Tongzhou Railway Station Goes Into Operation",
+            "publishedDate": "2025-12-31",
+            "quote": "three underground levels plus two mezzanine levels"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published fastest journey at launch",
+          "value": "11 minutes to Yanjiao per the launch-day scheduled train diagram; not a universal journey guarantee.",
+          "source": {
+            "url": "https://english.beijing.gov.cn/livinginbeijing/transportation/railway/202512/t20251231_4381067.html",
+            "title": "Beijing Tongzhou Railway Station Goes Into Operation",
+            "publishedDate": "2025-12-31",
+            "quote": "11 minutes to Yanjiao Railway Station"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Passenger operations begin",
+          "value": "30 December 2025, on Jingtang and Jingbin intercity railways.",
+          "source": {
+            "url": "https://english.beijing.gov.cn/livinginbeijing/transportation/railway/202512/t20251231_4381067.html",
+            "title": "Beijing Tongzhou Railway Station Goes Into Operation",
+            "publishedDate": "2025-12-31",
+            "quote": "officially began operations on December 30"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Station begins passenger operation",
+          "date": "2025-12-30",
+          "source": {
+            "url": "https://english.beijing.gov.cn/livinginbeijing/transportation/railway/202512/t20251231_4381067.html",
+            "title": "Beijing Tongzhou Railway Station Goes Into Operation",
+            "publishedDate": "2025-12-31",
+            "quote": "officially began operations on December 30"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "danjiang-bridge-tamsui-bali",
+    "pinIds": {
+      "local": 425,
+      "production": 425
+    },
+    "title": "Danjiang Bridge Opens in Taiwan",
+    "sourceUrl": "https://www.youtube.com/watch?v=j9w7rYXvmM0",
+    "profile": {
+      "sector": "Roads: asymmetric cable-stayed bridge",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Main crossing geometry",
+          "value": "920 m total bridge length; 450 m main span and 211 m tower per New Taipei City.",
+          "source": {
+            "url": "https://sdgs.ntpc.gov.tw/en/home.jsp?act=be4f48068b2b0031&dataserno=b491a2c7ae3d4d317556ce02d06c6aac&id=3d145d2a095e211d",
+            "title": "A New Daily Commute Across the River Mouth: Danjiang Bridge Officially Opens",
+            "publishedDate": "2026-06-15",
+            "quote": "total length of 920 meters"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Future light rail provision",
+          "value": "Dedicated light rail lane provision for future rail transport; not a claim trains currently operate across the bridge.",
+          "source": {
+            "url": "https://sdgs.ntpc.gov.tw/en/home.jsp?act=be4f48068b2b0031&dataserno=b491a2c7ae3d4d317556ce02d06c6aac&id=3d145d2a095e211d",
+            "title": "A New Daily Commute Across the River Mouth: Danjiang Bridge Officially Opens",
+            "publishedDate": "2026-06-15",
+            "quote": "integrates a dedicated light rail lane"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Official traffic opening",
+          "value": "12 May 2026, explicitly confirmed by the city.",
+          "source": {
+            "url": "https://sdgs.ntpc.gov.tw/en/home.jsp?act=be4f48068b2b0031&dataserno=b491a2c7ae3d4d317556ce02d06c6aac&id=3d145d2a095e211d",
+            "title": "A New Daily Commute Across the River Mouth: Danjiang Bridge Officially Opens",
+            "publishedDate": "2026-06-15",
+            "quote": "On May 12, 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Bridge officially opens",
+          "date": "2026-05-12",
+          "source": {
+            "url": "https://sdgs.ntpc.gov.tw/en/home.jsp?act=be4f48068b2b0031&dataserno=b491a2c7ae3d4d317556ce02d06c6aac&id=3d145d2a095e211d",
+            "title": "A New Daily Commute Across the River Mouth: Danjiang Bridge Officially Opens",
+            "publishedDate": "2026-06-15",
+            "quote": "On May 12, 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "linz-danube-valley-bridge",
+    "pinIds": {
+      "local": 615,
+      "production": 615
+    },
+    "title": "Danube Valley Bridge Opens in Linz, Austria",
+    "sourceUrl": "https://www.youtube.com/watch?v=pZHBpgt7kYQ",
+    "profile": {
+      "sector": "Roads: earth-anchored suspension bridge",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Bridge span",
+          "value": "305 m span, directly anchored into rocky slopes without pylons.",
+          "source": {
+            "url": "https://www.sbp.de/en/project/danube-valley-bridge/",
+            "title": "Danube Valley Bridge – schlaich bergermann partner",
+            "publishedDate": null,
+            "quote": "305 m"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Design road configuration",
+          "value": "Four-lane highway bridge design; not a claim that every designed lane is presently open.",
+          "source": {
+            "url": "https://www.sbp.de/en/project/danube-valley-bridge/",
+            "title": "Danube Valley Bridge – schlaich bergermann partner",
+            "publishedDate": null,
+            "quote": "four-lane highway bridge"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion celebrated",
+          "value": "Completion reported 28 October 2024; the report says the ceremony took place the previous Friday without assigning a new exact ceremony date.",
+          "source": {
+            "url": "https://www.sbp.de/en/news/completion-of-the-danube-valley-bridge-in-linz/",
+            "title": "Completion of the Danube Valley Bridge in Linz",
+            "publishedDate": "2024-10-28",
+            "quote": "completion of the Danube Valley Bridge in Linz was officially celebrated"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Bridge completion celebration reported",
+          "date": "2024-10-28",
+          "source": {
+            "url": "https://www.sbp.de/en/news/completion-of-the-danube-valley-bridge-in-linz/",
+            "title": "Completion of the Danube Valley Bridge in Linz",
+            "publishedDate": "2024-10-28",
+            "quote": "officially celebrated"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "the-ethel-hill-east-housing",
+    "pinIds": {
+      "local": 7078,
+      "production": 7078
+    },
+    "title": "The Ethel — Washington, DC affordable housing",
+    "sourceUrl": "https://beta.dc.gov/news/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+    "profile": {
+      "sector": "Housing: permanent supportive apartments",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Ethel housing count",
+          "value": "100 permanent supportive housing units; combined Hill East Phase 1 totals for both buildings are excluded.",
+          "source": {
+            "url": "https://beta.dc.gov/news/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+            "title": "Mayor Bowser Celebrates the Opening of The Ethel, a Permanent Supportive Housing Building in Hill East",
+            "publishedDate": "2023-02-13",
+            "quote": "100 units of permanent supportive housing"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "On-site resident support",
+          "value": "On-site caseworkers, fitness facilities, cooking classes, clothing closet and hair salon.",
+          "source": {
+            "url": "https://beta.dc.gov/news/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+            "title": "Mayor Bowser Celebrates the Opening of The Ethel, a Permanent Supportive Housing Building in Hill East",
+            "publishedDate": "2023-02-13",
+            "quote": "fitness facilities, cooking classes, a clothing closet, hair salon"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "stage",
+          "label": "Opened building",
+          "value": "Mayor’s release explicitly celebrates opening; not an announcement of a future construction start.",
+          "source": {
+            "url": "https://beta.dc.gov/news/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+            "title": "Mayor Bowser Celebrates the Opening of The Ethel, a Permanent Supportive Housing Building in Hill East",
+            "publishedDate": "2023-02-13",
+            "quote": "celebrated the opening of The Ethel"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Building opening celebration reported",
+          "date": "13 February 2023",
+          "source": {
+            "url": "https://beta.dc.gov/news/mayor-bowser-celebrates-opening-ethel-permanent-supportive-housing-building-hill-east",
+            "title": "Mayor Bowser Celebrates the Opening of The Ethel, a Permanent Supportive Housing Building in Hill East",
+            "publishedDate": "2023-02-13",
+            "quote": "celebrated the opening of The Ethel"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
   }
 ]
