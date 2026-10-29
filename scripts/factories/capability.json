@@ -22700,5 +22700,2895 @@
         }
       ]
     }
+  },
+  {
+    "key": "gotthard-base-tunnel",
+    "pinIds": {
+      "local": 6211,
+      "production": 6211
+    },
+    "title": "Gotthard Base Tunnel Opens as the World's Longest Rail Tunnel",
+    "sourceUrl": "https://www.swissinfo.ch/eng/society/as-it-happens_switzerland-celebrates-the-gotthard-tunnel/42194112",
+    "profile": {
+      "sector": "Rail: Alpine base tunnel",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Main tunnel route length",
+          "value": "57 km, per the contractor; not the length of every access gallery.",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/implenia-joins-the-celebrations-official-opening-of-the-gotthard-base-tunnel/",
+            "title": "Implenia joins the celebrations: official opening of the Gotthard Base Tunnel",
+            "publishedDate": "2016-06-01",
+            "quote": "57 kilometre Gotthard base tunnel"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Contractor peak participation",
+          "value": "More than 400 Implenia employees at peak on its lots; not the whole project workforce.",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/implenia-joins-the-celebrations-official-opening-of-the-gotthard-base-tunnel/",
+            "title": "Implenia joins the celebrations: official opening of the Gotthard Base Tunnel",
+            "publishedDate": "2016-06-01",
+            "quote": "more than 400 Implenia employees"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Formal inauguration",
+          "value": "1 June 2016; regular passenger service is a separate milestone.",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/implenia-joins-the-celebrations-official-opening-of-the-gotthard-base-tunnel/",
+            "title": "Implenia joins the celebrations: official opening of the Gotthard Base Tunnel",
+            "publishedDate": "2016-06-01",
+            "quote": "Dietlikon, 1 June 2016"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Tunnel formally opened",
+          "date": "2016-06-01",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/implenia-joins-the-celebrations-official-opening-of-the-gotthard-base-tunnel/",
+            "title": "Implenia joins the celebrations: official opening of the Gotthard Base Tunnel",
+            "publishedDate": "2016-06-01",
+            "quote": "finished Gotthard base tunnel was officially opened today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "panama-canal-original-construction",
+    "pinIds": {
+      "local": 6092,
+      "production": 6092
+    },
+    "title": "SS Ancon Makes the First Official Transit as the Panama Canal Opens",
+    "sourceUrl": "https://en.wikipedia.org/wiki/History_of_the_Panama_Canal",
+    "profile": {
+      "sector": "Shipping: original interoceanic canal",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Interoceanic waterway length",
+          "value": "Approximately 80 km between the Atlantic and Pacific; later third-lock expansion is excluded.",
+          "source": {
+            "url": "https://pancanal.com/en/history-of-the-panama-canal/",
+            "title": "Learn about the history of the Panama Canal – Panama Canal Authority",
+            "publishedDate": null,
+            "quote": "length of approximately 80 kilometers"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Original lock-chamber geometry",
+          "value": "33.53 m wide by 304.8 m long; not dimensions of the later Neopanamax locks.",
+          "source": {
+            "url": "https://pancanal.com/en/history-of-the-panama-canal/",
+            "title": "Learn about the history of the Panama Canal – Panama Canal Authority",
+            "publishedDate": null,
+            "quote": "33.53 meters wide by 304.8 meters long"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "investment",
+          "label": "American construction account",
+          "value": "Around USD 375 million including purchases from Panama and the French company; French-era sunk spending and extra fortifications are distinct.",
+          "source": {
+            "url": "https://pancanal.com/en/end-of-the-construction/",
+            "title": "End Of The Construction – Panama Canal Authority",
+            "publishedDate": null,
+            "quote": "cost Americans around $375,000,000"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Official canal opening",
+          "value": "15 August 1914, marked by Ancon’s official transit; earlier technical passages are distinct.",
+          "source": {
+            "url": "https://pancanal.com/en/end-of-the-construction/",
+            "title": "End Of The Construction – Panama Canal Authority",
+            "publishedDate": null,
+            "quote": "official opening of the Panama Canal on August 15, 1914"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Official opening and Ancon transit",
+          "date": "1914-08-15",
+          "source": {
+            "url": "https://pancanal.com/en/end-of-the-construction/",
+            "title": "End Of The Construction – Panama Canal Authority",
+            "publishedDate": null,
+            "quote": "official opening of the Panama Canal on August 15, 1914"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "taiwan-high-speed-rail-initial-service",
+    "pinIds": {
+      "local": 6577,
+      "production": 6577
+    },
+    "title": "Taiwan High Speed Rail Opens Between Taipei and Kaohsiung",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Taiwan_High_Speed_Rail",
+    "profile": {
+      "sector": "Rail: initial high-speed railway",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Train technology",
+          "value": "700T high-speed train service; not an assertion that all later station extensions opened in 2007.",
+          "source": {
+            "url": "https://tdiscovery.thsrc.com.tw/exhibition_en.html",
+            "title": "Taiwan High Speed Rail Museum",
+            "publishedDate": null,
+            "quote": "The 700T is Taiwan's first high speed train."
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published service speed",
+          "value": "300 km/h for the 700T; speed, not passengers per hour.",
+          "source": {
+            "url": "https://tdiscovery.thsrc.com.tw/exhibition_en.html",
+            "title": "Taiwan High Speed Rail Museum",
+            "publishedDate": null,
+            "quote": "Type 700T (Speed: 300km/h)"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Commercial service begins",
+          "value": "5 January 2007, as documented by the operator’s museum.",
+          "source": {
+            "url": "https://tdiscovery.thsrc.com.tw/exhibition_en.html",
+            "title": "Taiwan High Speed Rail Museum",
+            "publishedDate": null,
+            "quote": "commercial operation of THSR on January 5, 2007"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Commercial operation begins",
+          "date": "2007-01-05",
+          "source": {
+            "url": "https://tdiscovery.thsrc.com.tw/exhibition_en.html",
+            "title": "Taiwan High Speed Rail Museum",
+            "publishedDate": null,
+            "quote": "commercial operation of THSR on January 5, 2007"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "houston-astrodome-original-build",
+    "pinIds": {
+      "local": 505,
+      "production": 505
+    },
+    "title": "The Astrodome Opens as the World's First Domed Stadium",
+    "sourceUrl": "https://www.youtube.com/watch?v=OAahf85aTMI",
+    "profile": {
+      "sector": "Sports: original enclosed stadium construction",
+      "status": "offline",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Dome geometry",
+          "value": "642 ft clear span and 208 ft interior height, per the Handbook of Texas.",
+          "source": {
+            "url": "https://www.tshaonline.org/handbook/entries/astrodome",
+            "title": "Astrodome – Handbook of Texas",
+            "publishedDate": null,
+            "quote": "clear span of 642 feet, an inside height of 208 feet"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Historical seating configurations",
+          "value": "52,000 for baseball and about 62,000 for football in the handbook’s historical account; not an opening-day or currently usable capacity.",
+          "source": {
+            "url": "https://www.tshaonline.org/handbook/entries/astrodome",
+            "title": "Astrodome – Handbook of Texas",
+            "publishedDate": null,
+            "quote": "for baseball was 52,000, for football about 62,000"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Original opening and later closure",
+          "value": "First event 9 April 1965; source explicitly reports public closure in 2009. Completed original build does not imply current operation.",
+          "source": {
+            "url": "https://www.tshaonline.org/handbook/entries/astrodome",
+            "title": "Astrodome – Handbook of Texas",
+            "publishedDate": null,
+            "quote": "permanently closed to the public"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original groundbreaking",
+          "date": "1962-01-03",
+          "source": {
+            "url": "https://www.tshaonline.org/handbook/entries/astrodome",
+            "title": "Astrodome – Handbook of Texas",
+            "publishedDate": null,
+            "quote": "Ground was broken on January 3, 1962"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "First event",
+          "date": "1965-04-09",
+          "source": {
+            "url": "https://www.tshaonline.org/handbook/entries/astrodome",
+            "title": "Astrodome – Handbook of Texas",
+            "publishedDate": null,
+            "quote": "first event in the Astrodome was held on April 9, 1965"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Public closure",
+          "date": "2009",
+          "source": {
+            "url": "https://www.tshaonline.org/handbook/entries/astrodome",
+            "title": "Astrodome – Handbook of Texas",
+            "publishedDate": null,
+            "quote": "In 2009 the Astrodome was permanently closed to the public"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "bt-tower-original-build",
+    "pinIds": {
+      "local": 484,
+      "production": 484
+    },
+    "title": "BT Tower Goes Live as a Cold War Microwave Relay Hub",
+    "sourceUrl": "https://www.youtube.com/watch?v=I_IruM3zdzs",
+    "profile": {
+      "sector": "Communications: original microwave relay tower",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Tower dimensions",
+          "value": "177 m main structure, 189 m including aerial rigging; historical original structure, not a new hotel build.",
+          "source": {
+            "url": "https://newsroom.bt.com/bt-group-announces-sale-of-bt-tower-to-mcr-hotels/",
+            "title": "BT Group announces sale of BT Tower to MCR Hotels",
+            "publishedDate": "2024-02-21",
+            "quote": "main structure is 177 metres"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "stage",
+          "label": "Original operational role",
+          "value": "Originally a UK communications hub and live-television interchange; later sale/reuse is distinct from the original completed construction.",
+          "source": {
+            "url": "https://newsroom.bt.com/bt-group-announces-sale-of-bt-tower-to-mcr-hotels/",
+            "title": "BT Group announces sale of BT Tower to MCR Hotels",
+            "publishedDate": "2024-02-21",
+            "quote": "one of the key global interchange points for live television"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Original operational opening",
+          "value": "1965, confirmed by BT; no exact day inferred from this release.",
+          "source": {
+            "url": "https://newsroom.bt.com/bt-group-announces-sale-of-bt-tower-to-mcr-hotels/",
+            "title": "BT Group announces sale of BT Tower to MCR Hotels",
+            "publishedDate": "2024-02-21",
+            "quote": "opened for operations in 1965"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original tower opens for operations",
+          "date": "1965",
+          "source": {
+            "url": "https://newsroom.bt.com/bt-group-announces-sale-of-bt-tower-to-mcr-hotels/",
+            "title": "BT Group announces sale of BT Tower to MCR Hotels",
+            "publishedDate": "2024-02-21",
+            "quote": "opened for operations in 1965"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "icon-of-the-seas-newbuild",
+    "pinIds": {
+      "local": 618,
+      "production": 618
+    },
+    "title": "Icon of the Seas Enters Service as World's Largest Cruise Ship",
+    "sourceUrl": "https://www.youtube.com/watch?v=CNdNV1er-9c",
+    "profile": {
+      "sector": "Shipbuilding: passenger cruise vessel",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published ship build cost",
+          "value": "USD 2 billion, as published by the operator; no independent FX conversion.",
+          "source": {
+            "url": "https://www.royalcaribbean.com/guides/how-cruise-ships-built",
+            "title": "How Cruise Ships Are Built – Royal Caribbean",
+            "publishedDate": null,
+            "quote": "Icon of the Seas costs $2 billion"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Maximum passenger count",
+          "value": "Up to 7,600 guests; not double-occupancy capacity.",
+          "source": {
+            "url": "https://www.royalcaribbean.com/guides/how-cruise-ships-built",
+            "title": "How Cruise Ships Are Built – Royal Caribbean",
+            "publishedDate": null,
+            "quote": "can welcome up to 7,600 guests"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Vessel length",
+          "value": "1,197 ft, per the operator.",
+          "source": {
+            "url": "https://www.royalcaribbean.com/guides/how-cruise-ships-built",
+            "title": "How Cruise Ships Are Built – Royal Caribbean",
+            "publishedDate": null,
+            "quote": "At 1,197 feet"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "First sailing",
+          "value": "27 January 2024, confirmed retrospectively by Royal Caribbean Group.",
+          "source": {
+            "url": "https://www.royalcaribbeangroup.com/fourth-icon-class-ship",
+            "title": "More Icons are coming! – Royal Caribbean Group",
+            "publishedDate": "2024-08-27",
+            "quote": "sailed for the first time on January 27, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First sailing",
+          "date": "2024-01-27",
+          "source": {
+            "url": "https://www.royalcaribbeangroup.com/fourth-icon-class-ship",
+            "title": "More Icons are coming! – Royal Caribbean Group",
+            "publishedDate": "2024-08-27",
+            "quote": "sailed for the first time on January 27, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "oleg-strashnov-crane-vessel",
+    "pinIds": {
+      "local": 937,
+      "production": 937
+    },
+    "title": "IHC Merwede Delivers the Oleg Strashnov Crane Vessel to Seaway Heavy Lifting",
+    "sourceUrl": "https://www.youtube.com/watch?v=fgpRRoyBPoE",
+    "profile": {
+      "sector": "Shipbuilding: heavy-lift crane vessel",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Main crane single-lift rating",
+          "value": "5,000 metric tonnes up to 100 m; design lifting capability, not a claimed routine lift.",
+          "source": {
+            "url": "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov",
+            "title": "Seaway set to go global with high-speed Oleg Strashnov – Offshore",
+            "publishedDate": "2011-04-02",
+            "quote": "single lifts of 5,000 metric tons"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Vessel dimensions",
+          "value": "183 m overall length and 47 m breadth.",
+          "source": {
+            "url": "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov",
+            "title": "Seaway set to go global with high-speed Oleg Strashnov – Offshore",
+            "publishedDate": "2011-04-02",
+            "quote": "overall length of 183 m"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Delivery documented",
+          "value": "Delivery had occurred by the 2 April 2011 report; no exact delivery day inferred from the reporting date.",
+          "source": {
+            "url": "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov",
+            "title": "Seaway set to go global with high-speed Oleg Strashnov – Offshore",
+            "publishedDate": "2011-04-02",
+            "quote": "vessel was eventually delivered nearly a year behind schedule"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "New vessel delivery documented",
+          "date": "2011-04-02",
+          "source": {
+            "url": "https://www.offshore-mag.com/vessels/article/16755183/seaway-set-to-go-global-with-high-speed-oleg-strashnov",
+            "title": "Seaway set to go global with high-speed Oleg Strashnov – Offshore",
+            "publishedDate": "2011-04-02",
+            "quote": "vessel was eventually delivered nearly a year behind schedule"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "edda-freya-subsea-vessel",
+    "pinIds": {
+      "local": 883,
+      "production": 883
+    },
+    "title": "Edda Freya Launches as a Hybrid-Powered Subsea Construction Vessel",
+    "sourceUrl": "https://www.youtube.com/watch?v=9__NP8uBMdA",
+    "profile": {
+      "sector": "Shipbuilding: subsea construction vessel",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Working deck area",
+          "value": "2,300 sq m; deck area rather than enclosed GFA.",
+          "source": {
+            "url": "https://www.deepoceangroup.com/vessels/edda-freya",
+            "title": "Edda Freya – DeepOcean",
+            "publishedDate": null,
+            "quote": "2300m2 of deck space"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Main offshore crane rating",
+          "value": "400 tonnes single fall / 600 tonnes double fall, per the operator.",
+          "source": {
+            "url": "https://www.deepoceangroup.com/vessels/edda-freya",
+            "title": "Edda Freya – DeepOcean",
+            "publishedDate": null,
+            "quote": "400 T AHC offshore crane that can lift 600 T in double-fall mode"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Propulsion configuration",
+          "value": "Diesel-electric hybrid with a battery system; no invented efficiency score.",
+          "source": {
+            "url": "https://www.deepoceangroup.com/vessels/edda-freya",
+            "title": "Edda Freya – DeepOcean",
+            "publishedDate": null,
+            "quote": "diesel-electric hybrid propulsion system"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Shipyard delivery",
+          "value": "20 April 2016; delivery distinguished from launch and commissioning tests.",
+          "source": {
+            "url": "https://batomtaler.skipsrevyen.no/ms-edda-freya/m/s-edda-freya/1099434",
+            "title": "M/S «Edda Freya» – Skipsrevyen",
+            "publishedDate": null,
+            "quote": "20. april 2016 som verftets byggenummer 373"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Delivered by Kleven to Østensjø",
+          "date": "2016-04-20",
+          "source": {
+            "url": "https://batomtaler.skipsrevyen.no/ms-edda-freya/m/s-edda-freya/1099434",
+            "title": "M/S «Edda Freya» – Skipsrevyen",
+            "publishedDate": null,
+            "quote": "ble levert fra Kleven Verft AS til Østensjø Rederi AS 20. april 2016"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "new-suez-canal-2015-expansion",
+    "pinIds": {
+      "local": 6088,
+      "production": 6088
+    },
+    "title": "Sisi Opens the New Suez Canal and Its 72 km of New Waterways",
+    "sourceUrl": "https://edition.cnn.com/2015/08/06/world/new-suez-canal-opens/index.html",
+    "profile": {
+      "sector": "Shipping: parallel channel and existing-channel widening",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Project waterway scope",
+          "value": "72 km total: 35 km new parallel channel plus 37 km deepened existing bypasses; not 72 km of entirely new excavation.",
+          "source": {
+            "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/NewSuezCanal.aspx",
+            "title": "New Suez Canal – Suez Canal Authority",
+            "publishedDate": null,
+            "quote": "overall length of the project to 72km"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Permissible vessel draught",
+          "value": "Up to 66 ft for the parallel waterway; a vessel draught provision, not water depth or current traffic.",
+          "source": {
+            "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/NewSuezCanal.aspx",
+            "title": "New Suez Canal – Suez Canal Authority",
+            "publishedDate": null,
+            "quote": "vessels with up to 66 ft. draught"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Inauguration",
+          "value": "6 August 2015; subsequent extensions are excluded.",
+          "source": {
+            "url": "https://edition.cnn.com/2015/08/06/world/new-suez-canal-opens/index.html",
+            "title": "Egypt inaugurates Suez Canal expansion – CNN",
+            "publishedDate": "2015-08-06",
+            "quote": "formal inauguration of the new shipping route on August 6"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First consortium dredger employed",
+          "date": "2014-11-05",
+          "source": {
+            "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/NewSuezCanal.aspx",
+            "title": "New Suez Canal – Suez Canal Authority",
+            "publishedDate": null,
+            "quote": "Nov. 5th,2014"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Expanded canal inaugurated",
+          "date": "2015-08-06",
+          "source": {
+            "url": "https://edition.cnn.com/2015/08/06/world/new-suez-canal-opens/index.html",
+            "title": "Egypt inaugurates Suez Canal expansion – CNN",
+            "publishedDate": "2015-08-06",
+            "quote": "formal inauguration of the new shipping route on August 6"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "sany-lingang-excavator-factory",
+    "pinIds": {
+      "local": 891,
+      "production": 891
+    },
+    "title": "Sany Opens Its Lingang Excavator Factory Near Shanghai",
+    "sourceUrl": "https://www.youtube.com/watch?v=M2SE6mqVpLU",
+    "profile": {
+      "sector": "Manufacturing: excavator assembly plant",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published historical build cost",
+          "value": "USD 818.5 million as reported by the trade publication; not an independently converted CNY estimate.",
+          "source": {
+            "url": "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai",
+            "title": "Sany Opens “World’s Largest Excavator Factory” Near Shanghai – Rental Equipment Register",
+            "publishedDate": "2012-08-24",
+            "quote": "cost $818.5 million to build"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published line-rate claim",
+          "value": "An excavator every five minutes; manufacturer claim reported at opening, not independently measured annual output.",
+          "source": {
+            "url": "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai",
+            "title": "Sany Opens “World’s Largest Excavator Factory” Near Shanghai – Rental Equipment Register",
+            "publishedDate": "2012-08-24",
+            "quote": "capable of producing an excavator every five minutes"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Excavator manufacturing program",
+          "value": "Primarily 20- to 30-ton excavators, with computerized production management and automated component transport.",
+          "source": {
+            "url": "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai",
+            "title": "Sany Opens “World’s Largest Excavator Factory” Near Shanghai – Rental Equipment Register",
+            "publishedDate": "2012-08-24",
+            "quote": "excavators in the 20-ton to 30-ton size range"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening reported",
+          "value": "24 August 2012; dated report rather than an independently established ceremony day.",
+          "source": {
+            "url": "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai",
+            "title": "Sany Opens “World’s Largest Excavator Factory” Near Shanghai – Rental Equipment Register",
+            "publishedDate": "2012-08-24",
+            "quote": "Sany has opened"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Factory opening reported",
+          "date": "2012-08-24",
+          "source": {
+            "url": "https://www.rermag.com/news-analysis/international-news/article/20935890/sany-opens-worlds-largest-excavator-factory-near-shanghai",
+            "title": "Sany Opens “World’s Largest Excavator Factory” Near Shanghai – Rental Equipment Register",
+            "publishedDate": "2012-08-24",
+            "quote": "Sany has opened"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "ge-vernova-sesto-san-giovanni-expansion",
+    "pinIds": {
+      "local": 15744,
+      "production": 15744
+    },
+    "title": "GE Vernova Plans Approximately US$30 Million Italy Electrification-Factory Expansion",
+    "sourceUrl": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+    "profile": {
+      "sector": "Manufacturing: transformer bushing factory expansion",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced expansion investment",
+          "value": "Approximately USD 30 million for this facility, not worldwide capital spending.",
+          "source": {
+            "url": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+            "title": "GE Vernova expands manufacturing capacity in Italy to support growing global electrification demand",
+            "publishedDate": "2026-03-03",
+            "quote": "approximately $30 million investment"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Expected new manufacturing jobs",
+          "value": "Approximately 50 new Lombardy jobs; planned, not current measured staffing.",
+          "source": {
+            "url": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+            "title": "GE Vernova expands manufacturing capacity in Italy to support growing global electrification demand",
+            "publishedDate": "2026-03-03",
+            "quote": "approximately 50 new jobs in Lombardy"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Planned bushing technology",
+          "value": "Additional RIP and RIS dry-type bushing lines up to 245 kV.",
+          "source": {
+            "url": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+            "title": "GE Vernova expands manufacturing capacity in Italy to support growing global electrification demand",
+            "publishedDate": "2026-03-03",
+            "quote": "covering voltage levels up to 245 kV"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Expansion announcement",
+          "value": "3 March 2026; physical start and completion dates are unverified.",
+          "source": {
+            "url": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+            "title": "GE Vernova expands manufacturing capacity in Italy to support growing global electrification demand",
+            "publishedDate": "2026-03-03",
+            "quote": "March 3, 2026"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expansion investment announced",
+          "date": "2026-03-03",
+          "source": {
+            "url": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+            "title": "GE Vernova expands manufacturing capacity in Italy to support growing global electrification demand",
+            "publishedDate": "2026-03-03",
+            "quote": "today announced approximately $30 million investment"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "vistula-spit-shipping-channel",
+    "pinIds": {
+      "local": 591,
+      "production": 591
+    },
+    "title": "Vistula Spit Canal Opens, Bypassing Russian Waters",
+    "sourceUrl": "https://www.youtube.com/watch?v=ibdSCPhfxBo",
+    "profile": {
+      "sector": "Shipping: new peninsula navigation channel",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Channel and breakwater scope",
+          "value": "1.3 km navigation channel, two breakwaters and two rotating bridges; wider Elbląg waterway stages excluded.",
+          "source": {
+            "url": "https://www.besix.com/en/news/besix-in-poland-official-opening-of-the-vistula-spit-shipping-channel",
+            "title": "BESIX in Poland: Official opening of the Vistula Spit shipping channel",
+            "publishedDate": "2022-09-19",
+            "quote": "navigation channel is 1.3 kilometres long"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published vessel envelope",
+          "value": "Up to 4.5 m draught, 100 m length and 20 m width; barges up to 180 m separately.",
+          "source": {
+            "url": "https://www.besix.com/en/news/besix-in-poland-official-opening-of-the-vistula-spit-shipping-channel",
+            "title": "BESIX in Poland: Official opening of the Vistula Spit shipping channel",
+            "publishedDate": "2022-09-19",
+            "quote": "draught of up to 4.5 metres"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Official opening",
+          "value": "17 September 2022, explicitly confirmed by the contractor.",
+          "source": {
+            "url": "https://www.besix.com/en/news/besix-in-poland-official-opening-of-the-vistula-spit-shipping-channel",
+            "title": "BESIX in Poland: Official opening of the Vistula Spit shipping channel",
+            "publishedDate": "2022-09-19",
+            "quote": "On 17 September 2022"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Navigation channel officially opened",
+          "date": "2022-09-17",
+          "source": {
+            "url": "https://www.besix.com/en/news/besix-in-poland-official-opening-of-the-vistula-spit-shipping-channel",
+            "title": "BESIX in Poland: Official opening of the Vistula Spit shipping channel",
+            "publishedDate": "2022-09-19",
+            "quote": "was officially opened, marking the end of the project"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "mumbai-coastal-road-initial-southbound-opening",
+    "pinIds": {
+      "local": 686,
+      "production": 686
+    },
+    "title": "Mumbai Coastal Road Phase One Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=5qBNG8fY4AQ",
+    "profile": {
+      "sector": "Roads: initial southbound coastal road segment",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Initially inaugurated road scope",
+          "value": "9.5 km southbound Worli–Marine Drive arm; distinguish the entire 10.58 km southern road.",
+          "source": {
+            "url": "https://www.autocarindia.com/industry-amp/mumbai-coastal-road-project-phase-1-inaugurated-today-430933",
+            "title": "Mumbai Coastal Road Project Phase 1 inaugurated today – Autocar India",
+            "publishedDate": "2024-03-11",
+            "quote": "stretches 9.5km"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published tunnel speed limit",
+          "value": "60 km/h in the 2.07 km tunnel section; a traffic limit rather than road throughput.",
+          "source": {
+            "url": "https://www.autocarindia.com/industry-amp/mumbai-coastal-road-project-phase-1-inaugurated-today-430933",
+            "title": "Mumbai Coastal Road Project Phase 1 inaugurated today – Autocar India",
+            "publishedDate": "2024-03-11",
+            "quote": "Speed limit in the 2.07km tunnel section of the MCRP is 60kph"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Initial arm inaugurated",
+          "value": "11 March 2024; article forecasts public traffic the following morning, without asserting whole-project completion.",
+          "source": {
+            "url": "https://www.autocarindia.com/industry-amp/mumbai-coastal-road-project-phase-1-inaugurated-today-430933",
+            "title": "Mumbai Coastal Road Project Phase 1 inaugurated today – Autocar India",
+            "publishedDate": "2024-03-11",
+            "quote": "has been inaugurated today"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Initial southbound segment inaugurated",
+          "date": "2024-03-11",
+          "source": {
+            "url": "https://www.autocarindia.com/industry-amp/mumbai-coastal-road-project-phase-1-inaugurated-today-430933",
+            "title": "Mumbai Coastal Road Project Phase 1 inaugurated today – Autocar India",
+            "publishedDate": "2024-03-11",
+            "quote": "has been inaugurated today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "egypt-new-capital-stadium",
+    "pinIds": {
+      "local": 546,
+      "production": 546
+    },
+    "title": "New Administrative Capital Stadium Opens in Egypt",
+    "sourceUrl": "https://www.youtube.com/watch?v=3dK-oTGccmk",
+    "profile": {
+      "sector": "Sports: stadium construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Stadium-only construction cost",
+          "value": "EGP 900 million; distinguish EGP 2.28 billion for the wider sports complex.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/egy/egypt_stadium",
+            "title": "Egypt Stadium – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "stadium was 900 million Egyptian pounds"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Stadium seating capacity",
+          "value": "93,940 seats as published by the stadium database.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/egy/egypt_stadium",
+            "title": "Egypt Stadium – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "Capacity 93 940"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Stadium configuration",
+          "value": "Hybrid-turf pitch, running track and three levels of stands; other Olympic-city venues excluded.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/egy/egypt_stadium",
+            "title": "Egypt Stadium – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "features a pitch with hybrid turf and an athletics track"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "First match",
+          "value": "22 March 2024, Egypt–New Zealand.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/egy/egypt_stadium",
+            "title": "Egypt Stadium – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "first match took place at the facility on March 22, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First stadium match",
+          "date": "2024-03-22",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/egy/egypt_stadium",
+            "title": "Egypt Stadium – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "first match took place at the facility on March 22, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "makkah-royal-clock-tower",
+    "pinIds": {
+      "local": 549,
+      "production": 549
+    },
+    "title": "Makkah Royal Clock Tower Completes",
+    "sourceUrl": "https://www.youtube.com/watch?v=2gwrSaNSl00",
+    "profile": {
+      "sector": "Hospitality: hotel and monumental clock tower",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Tower dimensions",
+          "value": "601 m and 120 floors for the clock tower; podium and adjacent towers are separate components.",
+          "source": {
+            "url": "https://tridion.kone.com/en/references/makkah-clock-tower.aspx",
+            "title": "Makkah Clock Tower – KONE Corporation",
+            "publishedDate": null,
+            "quote": "Height: 601 m"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Clock-tower vertical transport",
+          "value": "89 MiniSpace elevators, plus five MonoSpace special elevators; adjacent-tower and podium counts excluded.",
+          "source": {
+            "url": "https://tridion.kone.com/en/references/makkah-clock-tower.aspx",
+            "title": "Makkah Clock Tower – KONE Corporation",
+            "publishedDate": null,
+            "quote": "89 KONE MiniSpace™ elevators"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Published completion year",
+          "value": "2012 per KONE; SL Rasch also identifies the project year as 2012.",
+          "source": {
+            "url": "https://tridion.kone.com/en/references/makkah-clock-tower.aspx",
+            "title": "Makkah Clock Tower – KONE Corporation",
+            "publishedDate": null,
+            "quote": "Year of completion: 2012"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Tower completion",
+          "date": "2012",
+          "source": {
+            "url": "https://tridion.kone.com/en/references/makkah-clock-tower.aspx",
+            "title": "Makkah Clock Tower – KONE Corporation",
+            "publishedDate": null,
+            "quote": "Year of completion: 2012"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "albvorland-tunnel-project",
+    "pinIds": {
+      "local": 894,
+      "production": 894
+    },
+    "title": "TBM Wanda Completes Drilling of the Albvorland Tunnel",
+    "sourceUrl": "https://www.youtube.com/watch?v=rQAoy3Ax6FA",
+    "profile": {
+      "sector": "Rail: twin-bore high-speed tunnel",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Twin-bore tunnel scope",
+          "value": "Approximately 8 km route length; contractor reference gives two 8.2 km bores, not a 16.4 km route.",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/milestone-reached-at-major-albvorland-tunnel-project/",
+            "title": "Milestone reached at major Albvorland Tunnel project – Implenia",
+            "publishedDate": "2019-10-29",
+            "quote": "8-kilometre Albvorland Tunnel"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Railway design speed",
+          "value": "250 km/h for the high-speed infrastructure; design speed, not a claim of a train’s speed at breakthrough.",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/milestone-reached-at-major-albvorland-tunnel-project/",
+            "title": "Milestone reached at major Albvorland Tunnel project – Implenia",
+            "publishedDate": "2019-10-29",
+            "quote": "designed for speeds of 250 km/h"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Contractor construction completion",
+          "value": "August 2021 explicitly listed as Fertigstellung; the October 2019 drilling breakthrough was earlier.",
+          "source": {
+            "url": "https://implenia.com/referenzen/detail/ref/albvorlandtunnel/",
+            "title": "Albvorlandtunnel – Implenia project reference",
+            "publishedDate": null,
+            "quote": "Fertigstellung August 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "WANDA southern bore breakthrough",
+          "date": "2019-10-29",
+          "source": {
+            "url": "https://implenia.com/en/media/news-article/milestone-reached-at-major-albvorland-tunnel-project/",
+            "title": "Milestone reached at major Albvorland Tunnel project – Implenia",
+            "publishedDate": "2019-10-29",
+            "quote": "Today’s breakthrough in the southern tube"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Contractor construction completion",
+          "date": "August 2021",
+          "source": {
+            "url": "https://implenia.com/referenzen/detail/ref/albvorlandtunnel/",
+            "title": "Albvorlandtunnel – Implenia project reference",
+            "publishedDate": null,
+            "quote": "Fertigstellung August 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "millennium-tower-perimeter-pile-upgrade",
+    "pinIds": {
+      "local": 677,
+      "production": 677
+    },
+    "title": "San Francisco's Millennium Tower Fix Declared a Success",
+    "sourceUrl": "https://www.youtube.com/watch?v=q56dRLI0X7Y",
+    "profile": {
+      "sector": "Building remediation: foundation underpinning",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published retrofit scope",
+          "value": "USD 100 million effort, distinct from original tower construction or condominium sales.",
+          "source": {
+            "url": "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/",
+            "title": "San Francisco’s infamous leaning tower has been fixed – The San Francisco Standard",
+            "publishedDate": "2023-06-21",
+            "quote": "$100 million construction effort"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Foundation remediation",
+          "value": "18 new concrete piles transfer part of the building load to bedrock; former 52-pile proposal was superseded.",
+          "source": {
+            "url": "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/",
+            "title": "San Francisco’s infamous leaning tower has been fixed – The San Francisco Standard",
+            "publishedDate": "2023-06-21",
+            "quote": "drive 18 concrete piles into bedrock"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Structural work substantially complete",
+          "value": "June 2023, reported 21 June; remaining nonstructural reinstatement was separate.",
+          "source": {
+            "url": "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/",
+            "title": "San Francisco’s infamous leaning tower has been fixed – The San Francisco Standard",
+            "publishedDate": "2023-06-21",
+            "quote": "has been substantially completed"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Structural foundation upgrade reported substantially complete",
+          "date": "2023-06-21",
+          "source": {
+            "url": "https://sfstandard.com/2023/06/21/san-franciscos-infamous-leaning-tower-has-been-fixed/",
+            "title": "San Francisco’s infamous leaning tower has been fixed – The San Francisco Standard",
+            "publishedDate": "2023-06-21",
+            "quote": "has been substantially completed"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "frankfurt-airport-terminal3",
+    "pinIds": {
+      "local": 803,
+      "production": 803
+    },
+    "title": "Construction Begins on Frankfurt Airport's €4 Billion Terminal 3",
+    "sourceUrl": "https://www.youtube.com/watch?v=hWnvS7LkfHg",
+    "profile": {
+      "sector": "Aviation: new passenger terminal",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Terminal investment",
+          "value": "About EUR 4 billion; published native currency.",
+          "source": {
+            "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/terminal-3.html",
+            "title": "Terminal 3 – Fraport press kit",
+            "publishedDate": null,
+            "quote": "about four billion euros"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "siteArea",
+          "label": "Terminal footprint",
+          "value": "176,000 sq m footprint, not total enclosed floor area.",
+          "source": {
+            "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/terminal-3.html",
+            "title": "Terminal 3 – Fraport press kit",
+            "publishedDate": null,
+            "quote": "footprint of 176,000 square meters"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Initial three-pier capacity",
+          "value": "Up to 19 million passengers annually; optional Pier K and 25-million total are excluded.",
+          "source": {
+            "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/terminal-3.html",
+            "title": "Terminal 3 – Fraport press kit",
+            "publishedDate": null,
+            "quote": "capacity for up to 19 million passengers a year"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening and first flight",
+          "value": "Ceremony 22 April 2026; first handled flight 23 April 2026.",
+          "source": {
+            "url": "https://www.fraport.com/en/business-areas/operations/airside-and-terminal-operations/terminal-3.html",
+            "title": "Terminal 3 – Fraport",
+            "publishedDate": null,
+            "quote": "First flight at Terminal 3 on April 23, 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original terminal groundbreaking",
+          "date": "2015-10-05",
+          "source": {
+            "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/terminal-3.html",
+            "title": "Terminal 3 – Fraport press kit",
+            "publishedDate": null,
+            "quote": "October 5, 2015"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Terminal opening ceremony",
+          "date": "2026-04-22",
+          "source": {
+            "url": "https://www.fraport.com/en/business-areas/operations/airside-and-terminal-operations/terminal-3.html",
+            "title": "Terminal 3 – Fraport",
+            "publishedDate": null,
+            "quote": "Terminal 3 Opening Ceremony on April 22, 2026"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "First handled flight",
+          "date": "2026-04-23",
+          "source": {
+            "url": "https://www.fraport.com/en/business-areas/operations/airside-and-terminal-operations/terminal-3.html",
+            "title": "Terminal 3 – Fraport",
+            "publishedDate": null,
+            "quote": "First flight at Terminal 3 on April 23, 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "meta-aiken-data-center",
+    "pinIds": {
+      "local": 7307,
+      "production": 7307
+    },
+    "title": "Meta data centre — Aiken County, South Carolina — under construction",
+    "sourceUrl": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+    "profile": {
+      "sector": "Digital infrastructure: AI data center",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published investment",
+          "value": "More than USD 800 million as reported in the owner’s fact sheet.",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+            "title": "Meta Aiken Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "$800M+"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Construction and operations jobs",
+          "value": "More than 1,200 at peak construction and approximately 100 operational jobs after completion; distinct populations, not additive.",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+            "title": "Meta Aiken Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "Skilled trade workers on site at peak construction 1,200+"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facility area",
+          "value": "715,000 sq ft.",
+          "source": {
+            "url": "https://governor.sc.gov/news/2024-08/meta-selects-aiken-county-first-south-carolina-data-center",
+            "title": "Meta selects Aiken County for first South Carolina data center",
+            "publishedDate": "2024-08-29",
+            "quote": "715,000-square-foot data center"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Published opening forecast",
+          "value": "Spring 2027 in the August 2024 state announcement; not verified opening.",
+          "source": {
+            "url": "https://governor.sc.gov/news/2024-08/meta-selects-aiken-county-first-south-carolina-data-center",
+            "title": "Meta selects Aiken County for first South Carolina data center",
+            "publishedDate": "2024-08-29",
+            "quote": "operational in spring 2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Project announcement",
+          "date": "2024-08-29",
+          "source": {
+            "url": "https://governor.sc.gov/news/2024-08/meta-selects-aiken-county-first-south-carolina-data-center",
+            "title": "Meta selects Aiken County for first South Carolina data center",
+            "publishedDate": "2024-08-29",
+            "quote": "today announced it is establishing"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Opening forecast",
+          "date": "Spring 2027",
+          "source": {
+            "url": "https://governor.sc.gov/news/2024-08/meta-selects-aiken-county-first-south-carolina-data-center",
+            "title": "Meta selects Aiken County for first South Carolina data center",
+            "publishedDate": "2024-08-29",
+            "quote": "operational in spring 2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "meta-jeffersonville-data-center",
+    "pinIds": {
+      "local": 7295,
+      "production": 7295
+    },
+    "title": "Meta data centre — Jeffersonville, Indiana — under construction",
+    "sourceUrl": "https://datacenters.atmeta.com/asset/jeffersonville-data-center/",
+    "profile": {
+      "sector": "Digital infrastructure: data center campus",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Owner-reported investment",
+          "value": "More than USD 800 million.",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/jeffersonville-data-center/",
+            "title": "Meta Jeffersonville Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "$800M+"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Construction and operational roles",
+          "value": "1,350 skilled trades at peak construction; approximately 100 operational jobs once complete. Owner’s newer fact sheet supersedes the earlier 1,250 forecast.",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/jeffersonville-data-center/",
+            "title": "Meta Jeffersonville Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "at peak construction 1,350"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facility area",
+          "value": "Nearly 700,000 sq ft as described by the Indiana Economic Development Corporation.",
+          "source": {
+            "url": "https://www.iedc.in.gov/events/news/details/2024/01/25/gov.-holcomb-announces-meta-to-build-an-800m-data-center-campus-in-indiana",
+            "title": "Gov. Holcomb announces Meta to build an $800M Data Center Campus in Indiana",
+            "publishedDate": "2024-01-25",
+            "quote": "nearly 700,000-square-foot facility"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Groundbreaking year and opening forecast",
+          "value": "Ground broken in 2024; original forecast for operation in 2026 remains unverified.",
+          "source": {
+            "url": "https://www.iedc.in.gov/events/news/details/2024/01/25/gov.-holcomb-announces-meta-to-build-an-800m-data-center-campus-in-indiana",
+            "title": "Gov. Holcomb announces Meta to build an $800M Data Center Campus in Indiana",
+            "publishedDate": "2024-01-25",
+            "quote": "expects the data center to be operational in 2026"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking year",
+          "date": "2024",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/jeffersonville-data-center/",
+            "title": "Meta Jeffersonville Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "Broke ground on the Jeffersonville Data Center 2024"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Original opening forecast",
+          "date": "2026",
+          "source": {
+            "url": "https://www.iedc.in.gov/events/news/details/2024/01/25/gov.-holcomb-announces-meta-to-build-an-800m-data-center-campus-in-indiana",
+            "title": "Gov. Holcomb announces Meta to build an $800M Data Center Campus in Indiana",
+            "publishedDate": "2024-01-25",
+            "quote": "operational in 2026"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "meta-rosemount-data-center",
+    "pinIds": {
+      "local": 7298,
+      "production": 7298
+    },
+    "title": "Meta data centre — Rosemount, Minnesota — under construction",
+    "sourceUrl": "https://datacenters.atmeta.com/asset/rosemount-data-center-info-sheet/",
+    "profile": {
+      "sector": "Digital infrastructure: data center campus",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Owner-reported investment",
+          "value": "More than USD 800 million.",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/rosemount-data-center-info-sheet/",
+            "title": "Meta Rosemount Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "$800M+"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Construction and operational roles",
+          "value": "1,000 skilled trades at peak construction; approximately 100 operational jobs once complete. Not an observed current staffing count.",
+          "source": {
+            "url": "https://datacenters.atmeta.com/asset/rosemount-data-center-info-sheet/",
+            "title": "Meta Rosemount Data Center – fact sheet",
+            "publishedDate": null,
+            "quote": "at peak construction 1,000"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facility area",
+          "value": "715,000 sq ft.",
+          "source": {
+            "url": "https://tcbmag.com/meta-picks-rosemount-for-800m-data-center/",
+            "title": "Meta Picks Rosemount for $800M Data Center – Twin Cities Business",
+            "publishedDate": "2024-03-14",
+            "quote": "715,000-square-foot center"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Historical completion forecast",
+          "value": "2026 as forecast in March 2024; no opening inferred from the forecast year.",
+          "source": {
+            "url": "https://tcbmag.com/meta-picks-rosemount-for-800m-data-center/",
+            "title": "Meta Picks Rosemount for $800M Data Center – Twin Cities Business",
+            "publishedDate": "2024-03-14",
+            "quote": "expected to be completed by 2026"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "New data center plans reported",
+          "date": "2024-03-14",
+          "source": {
+            "url": "https://tcbmag.com/meta-picks-rosemount-for-800m-data-center/",
+            "title": "Meta Picks Rosemount for $800M Data Center – Twin Cities Business",
+            "publishedDate": "2024-03-14",
+            "quote": "Meta Picks Rosemount for $800M Data Center"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Historical completion forecast",
+          "date": "2026",
+          "source": {
+            "url": "https://tcbmag.com/meta-picks-rosemount-for-800m-data-center/",
+            "title": "Meta Picks Rosemount for $800M Data Center – Twin Cities Business",
+            "publishedDate": "2024-03-14",
+            "quote": "expected to be completed by 2026"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "equinix-lagos-lg3-phase1",
+    "pinIds": {
+      "local": 7374,
+      "production": 7374
+    },
+    "title": "Equinix LG3 data centre — Lagos — under construction",
+    "sourceUrl": "https://newsroom.equinix.com/2025-11-10-Equinix-Announces-Plans-for-New-22-Million-Data-Center-in-Lagos,-Nigeria",
+    "profile": {
+      "sector": "Digital infrastructure: retail data center first phase",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "LG3 first-phase capex",
+          "value": "USD 22 million; not the wider approximately USD 100 million Africa investment program.",
+          "source": {
+            "url": "https://newsroom.equinix.com/2025-11-10-Equinix-Announces-Plans-for-New-22-Million-Data-Center-in-Lagos,-Nigeria",
+            "title": "Equinix Announces Plans for New $22 Million Data Center in Lagos, Nigeria",
+            "publishedDate": "2025-11-10",
+            "quote": "$22 Million investment in LG3"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "First-phase sellable cabinets",
+          "value": "225 sellable cabinets in the year-end 2025 construction table; not whole-region cabinet totals.",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "LG3 phase 1 Lagos Q1 2026 225 22"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Latest published opening target",
+          "value": "Q2 2026 on the expansion timeline, later than Q1 2026 in the original release. Neither target establishes actual opening.",
+          "source": {
+            "url": "https://www.equinix.com/data-centers/expansions",
+            "title": "Expanding Global Digital Infrastructure – Equinix",
+            "publishedDate": null,
+            "quote": "New Data Center Lagos LG3, Nigeria Q2 2026"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-phase construction documented at year-end",
+          "date": "2025-12-31",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "LG3 phase 1 Lagos Q1 2026 225 22"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Updated opening target",
+          "date": "Q2 2026",
+          "source": {
+            "url": "https://www.equinix.com/data-centers/expansions",
+            "title": "Expanding Global Digital Infrastructure – Equinix",
+            "publishedDate": null,
+            "quote": "New Data Center Lagos LG3, Nigeria Q2 2026"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "equinix-bangkok-bk1-phase1",
+    "pinIds": {
+      "local": 7376,
+      "production": 7376
+    },
+    "title": "Equinix BK1 data centre — Bang Na, Bangkok — under construction",
+    "sourceUrl": "https://newsroom.equinix.com/2024-10-27-Equinix-Intends-to-Invest-Approximately-500-Million-to-Bring-Future-Proof-Digital-Infrastructure-to-Thailand",
+    "profile": {
+      "sector": "Digital infrastructure: retail data center first phase",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "First-phase sellable cabinets",
+          "value": "1,175 cabinets; the two-building 3,375-cabinet Thailand announcement is excluded.",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "BK1 phase 1 Bangkok Q3 2027 1,175 110"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "investment",
+          "label": "Published first-phase capex",
+          "value": "Approximately USD 110 million in the filing; limited to phase 1, not the decade-long Thailand program or whole BK1 buildout.",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "BK1 phase 1 Bangkok Q3 2027 1,175 110"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Target opening",
+          "value": "Q3 2027; explicitly a target in the year-end 2025 under-construction schedule.",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "BK1 phase 1 Bangkok Q3 2027 1,175 110"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-phase construction documented at year-end",
+          "date": "2025-12-31",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "BK1 phase 1 Bangkok Q3 2027 1,175 110"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "First-phase target opening",
+          "date": "Q3 2027",
+          "source": {
+            "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+            "title": "Equinix 2025 Form 10-K, significant IBX construction projects",
+            "publishedDate": null,
+            "quote": "BK1 phase 1 Bangkok Q3 2027 1,175 110"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "meta-sturgeon-county-alberta",
+    "pinIds": {
+      "local": 7246,
+      "production": 7246
+    },
+    "title": "Meta Sturgeon County data centre — Alberta — under construction",
+    "sourceUrl": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+    "profile": {
+      "sector": "Digital infrastructure: AI data center campus",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced campus investment",
+          "value": "More than CAD 13 billion; native published currency.",
+          "source": {
+            "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+            "title": "Breaking Ground on Meta’s First Data Center in Canada",
+            "publishedDate": "2026-07-08",
+            "quote": "investment of more than CAD $13 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned campus power scale",
+          "value": "1 GW as announced; not a measurement of current IT load or electrical generation.",
+          "source": {
+            "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+            "title": "Breaking Ground on Meta’s First Data Center in Canada",
+            "publishedDate": "2026-07-08",
+            "quote": "new 1GW data center in Sturgeon County"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Planned construction and operations workforce",
+          "value": "Approximately 3,000 at peak construction and more than 300 operational jobs; distinct job categories.",
+          "source": {
+            "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+            "title": "Breaking Ground on Meta’s First Data Center in Canada",
+            "publishedDate": "2026-07-08",
+            "quote": "approximately 3,000 construction workers"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Groundbreaking announcement",
+          "value": "8 July 2026; no verified opening date is published in this source.",
+          "source": {
+            "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+            "title": "Breaking Ground on Meta’s First Data Center in Canada",
+            "publishedDate": "2026-07-08",
+            "quote": "We’re breaking ground on a new 1GW data center"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus groundbreaking announced",
+          "date": "2026-07-08",
+          "source": {
+            "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+            "title": "Breaking Ground on Meta’s First Data Center in Canada",
+            "publishedDate": "2026-07-08",
+            "quote": "We’re breaking ground on a new 1GW data center"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "lg-parana-home-appliance-factory",
+    "pinIds": {
+      "local": 15657,
+      "production": 15657
+    },
+    "title": "LG Electronics Reports More Than US$200 Million Investment in Brazil Appliance Factory",
+    "sourceUrl": "https://www.lg.com/global/newsroom/news/corporate/lg-electronics-accelerates-growth-in-key-strategic-markets/",
+    "profile": {
+      "sector": "Manufacturing: refrigerator production facility",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published factory investment",
+          "value": "Approximately USD 310 million (also published as BRL 1.5 billion by LG); no independent FX conversion.",
+          "source": {
+            "url": "https://www.lg.com/global/newsroom/news/home-appliance-solution/lg-electronics-expands-latin-american-manufacturing-with-new-smart-factory-in-brazil/",
+            "title": "LG Electronics Expands Latin American Manufacturing With New Smart Factory in Brazil",
+            "publishedDate": "2026-08-17",
+            "quote": "investment of approximately USD 310 million (BRL 1.5 billion)"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "siteArea",
+          "label": "Factory site extent",
+          "value": "Approximately 770,000 sq m site; not indoor floor space.",
+          "source": {
+            "url": "https://www.lg.com/global/newsroom/news/home-appliance-solution/lg-electronics-expands-latin-american-manufacturing-with-new-smart-factory-in-brazil/",
+            "title": "LG Electronics Expands Latin American Manufacturing With New Smart Factory in Brazil",
+            "publishedDate": "2026-08-17",
+            "quote": "area of approximately 770,000 square meters"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published annual production rating",
+          "value": "Approximately 600,000 refrigerators annually, equivalent to one every 14 seconds; design rating, not independently measured yearly output.",
+          "source": {
+            "url": "https://www.lg.com/global/newsroom/news/home-appliance-solution/lg-electronics-expands-latin-american-manufacturing-with-new-smart-factory-in-brazil/",
+            "title": "LG Electronics Expands Latin American Manufacturing With New Smart Factory in Brazil",
+            "publishedDate": "2026-08-17",
+            "quote": "annual production capacity of approximately 600,000 refrigerators"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Factory opening reported",
+          "value": "17 August 2026; report date distinguished from the earlier local ceremony.",
+          "source": {
+            "url": "https://www.lg.com/global/newsroom/news/home-appliance-solution/lg-electronics-expands-latin-american-manufacturing-with-new-smart-factory-in-brazil/",
+            "title": "LG Electronics Expands Latin American Manufacturing With New Smart Factory in Brazil",
+            "publishedDate": "2026-08-17",
+            "quote": "has opened a new plant in Paraná, Brazil"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Factory opening confirmed in global release",
+          "date": "2026-08-17",
+          "source": {
+            "url": "https://www.lg.com/global/newsroom/news/home-appliance-solution/lg-electronics-expands-latin-american-manufacturing-with-new-smart-factory-in-brazil/",
+            "title": "LG Electronics Expands Latin American Manufacturing With New Smart Factory in Brazil",
+            "publishedDate": "2026-08-17",
+            "quote": "has opened a new plant in Paraná, Brazil"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
   }
 ]

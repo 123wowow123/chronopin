@@ -395,8 +395,6 @@ are their additional keywards in Datacenter & Infrastructure Telemetry that can 
 
 
 
-are there other things that can use geojson
-
 
 check to see if anything can be improved and increase organic visits
 https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Achronopin.com
@@ -465,13 +463,6 @@ https://hub.tslombard.com/the-perkini-report
 
 How can Chronopin improve organic search growth. Use my broswer to check if needed
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com
-
-
-Add prod translations for all pins without translation or outdated translation. Add in the pin wiki that translations was done with this model for tracking
-do not add any notes in pin content that:
-Translations completed using Gemini 3.8 Flash.
-this is to be added only to the pin wiki
-
 
 
 are all landing pages translated besides the pins?

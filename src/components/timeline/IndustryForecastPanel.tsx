@@ -20,6 +20,7 @@ const STROKES = ['stroke-accent', 'stroke-success', 'stroke-muted', 'stroke-dang
 const FILLS = ['fill-accent', 'fill-success', 'fill-muted', 'fill-danger'];
 const DOTS = ['bg-accent', 'bg-success', 'bg-muted', 'bg-danger'];
 const TICKS = 3;
+const PROJECTED_SHOWN = 3;
 
 // A year ("2027") sits mid-year; a day is itself.
 const at = (x: string) => (/^\d{4}$/.test(x) ? Date.UTC(Number(x), 6, 1) : Date.parse(`${x}T00:00:00Z`));
@@ -135,6 +136,9 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
   const t = useT();
   const latest = forecast.lines.map((l) => ({ label: l.label, p: l.points.at(-1) })).filter((l): l is { label: string; p: { x: string; value: number } } => !!l.p);
   const projected = forecast.projection?.points ?? [];
+  // A long projection starts collapsed to its first few years.
+  const [expanded, setExpanded] = useState(large);
+  const shown = expanded ? projected : projected.slice(0, PROJECTED_SHOWN);
   return (
     <>
       <Chart forecast={forecast} large={large} />
@@ -145,11 +149,18 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
             {label}: <span className="font-semibold text-ink">{formatForecastValue(forecast, p.value)}</span> <span className="text-subtle">({p.x.slice(0, 7)} · {t('pin.industry.reported')})</span>
           </li>
         ))}
-        {projected.map((p) => (
+        {shown.map((p) => (
           <li key={p.x}>
             {forecast.projection!.label} {p.x}: <span className="font-semibold text-ink">{formatForecastValue(forecast, p.value)}</span> <span className="text-subtle">({t('pin.industry.projected')})</span>
           </li>
         ))}
+        {projected.length > PROJECTED_SHOWN ? (
+          <li className="w-full">
+            <button type="button" onClick={() => setExpanded(!expanded)} className="text-accent hover:underline">
+              {expanded ? t('common.showLess') : `${t('common.showMore')} (${projected.length - PROJECTED_SHOWN})`}
+            </button>
+          </li>
+        ) : null}
         {forecast.earlier.map((e) => (
           <li key={e.label} className="w-full text-subtle">
             <span className="me-1 inline-block w-4 border-t-2 border-dotted border-subtle align-middle" aria-hidden />

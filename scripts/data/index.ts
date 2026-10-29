@@ -4,7 +4,8 @@
 //   npm run create:data     scripts/backup/*.json -> an empty, migrated database
 
 import '../env';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
+import { basename, dirname, join } from 'node:path';
 import { gunzipSync, gzipSync } from 'node:zlib';
 import { parseArgs } from 'node:util';
 import Holidays from 'date-holidays';
@@ -66,6 +67,8 @@ const { values: flags } = parseArgs({
     candidatefile: { type: 'string', default: './scripts/backup/seedCandidates.json' },
     competitorfile: { type: 'string', default: './scripts/backup/seedCompetitors.json' },
     seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
+    // The translations are a series of parts (seedTranslations.001.json.gz, ...): all of them as one
+    // string passes V8's string limit. The path names the series, so the legacy single file still loads.
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json.gz' },
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
     productpicturefile: { type: 'string', default: './scripts/backup/seedProductPictures.json' },
@@ -115,6 +118,30 @@ const readJson = (file: string) =>
 const writeJson = (file: string, data: unknown) => {
   const json = JSON.stringify(data, null, 2);
   writeFileSync(file, file.endsWith('.gz') ? gzipSync(json, { level: 9 }) : json);
+};
+
+// Rows per part of a split seed file, small enough that one part stringifies.
+const PART_ROWS = 20000;
+
+// The parts of a split seed file, in order: seedTranslations.json.gz -> seedTranslations.001.json.gz, ...
+const partFiles = (file: string) => {
+  const stem = basename(file).replace(/\.json(\.gz)?$/, '');
+  const ext = file.endsWith('.gz') ? '.json.gz' : '.json';
+  const dir = dirname(file);
+  return readdirSync(dir)
+    .filter((name) => name.startsWith(`${stem}.`) && name.endsWith(ext) && /^\d+$/.test(name.slice(stem.length + 1, name.length - ext.length)))
+    .sort()
+    .map((name) => join(dir, name));
+};
+const writeJsonParts = (file: string, rows: unknown[]) => {
+  const stem = file.replace(/\.json(\.gz)?$/, '');
+  const ext = file.endsWith('.gz') ? '.json.gz' : '.json';
+  for (const old of partFiles(file)) unlinkSync(old);
+  // A legacy single file would be restored a second time beside the parts.
+  if (existsSync(file)) unlinkSync(file);
+  for (let i = 0, part = 1; i < rows.length || part === 1; i += PART_ROWS, part++) {
+    writeJson(`${stem}.${String(part).padStart(3, '0')}${ext}`, rows.slice(i, i + PART_ROWS));
+  }
 };
 
 async function saveDB() {
@@ -297,7 +324,7 @@ async function saveDB() {
 
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
-  writeJson(flags.translationfile, (await PinTranslation.getAll()).filter((t) => keptPinIds.has(t.pinId)));
+  writeJsonParts(flags.translationfile, (await PinTranslation.getAll()).filter((t) => keptPinIds.has(t.pinId)));
 
   // How each company pin reads as news (0068): each costs a Claude call to make again.
   console.log('Backup Pin Sentiments');
@@ -637,8 +664,11 @@ async function seedDB() {
 
   // Gzipped since the seventh language took the plain file near GitHub's 100 MB
   // limit; an older checkout's plain seedTranslations.json still loads.
-  const translationFile = [flags.translationfile, flags.translationfile.replace(/\.gz$/, '')].find((file) => existsSync(file));
-  if (translationFile) {
+  const translationFiles = partFiles(flags.translationfile);
+  if (!translationFiles.length) {
+    translationFiles.push(...[flags.translationfile, flags.translationfile.replace(/\.gz$/, '')].filter((file) => existsSync(file)).slice(0, 1));
+  }
+  for (const translationFile of translationFiles) {
     try {
       await PinTranslation.restore(readJson(translationFile));
     } catch (error) {

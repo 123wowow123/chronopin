@@ -39,4 +39,5 @@
 *.rtf  diff=astextplain
 *.RTF  diff=astextplain
 scripts/backup/seedTranslations.json.gz filter=lfs diff=lfs merge=lfs -text
+scripts/backup/seedTranslations.*.json.gz filter=lfs diff=lfs merge=lfs -text
 scripts/backup/seedPins.json filter=lfs diff=lfs merge=lfs -text

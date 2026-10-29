@@ -69,7 +69,7 @@ blocked bulk reads from prod).
    profile language picker leaves it out and hreflang does not list it. Turn
    it on after step 3 so readers do not see English pins under an Arabic page.
 4. **Back up** the new rows: `npm run backup:data` (translations are kept in
-   `scripts/backup/seedTranslations.json.gz`).
+   `scripts/backup/seedTranslations.001.json.gz`, `.002`, ... - split so each part stringifies).
 5. **Have a native speaker read** `src/lib/i18n/messages/ar.ts`, the
    specialty-day names, and a sample of translated pins. All of it was written
    by a model and has not been reviewed by a person.
