@@ -2264,6 +2264,11 @@ const en = {
     valued: 'Valued at {value}',
     acquired: 'Acquired {year}',
     trips: 'Recent trips',
+    district: {
+      title: 'Congressional seat',
+      about: 'The area {name} represents, drawn from U.S. Census Bureau boundaries ({vintage}).',
+      mapOf: 'Map of {label}',
+    },
     campaign: {
       title: 'Campaign finance',
       about: 'What the campaign raised and spent each election cycle, where the money came from, the PACs that gave most, and the other candidates in the same race with their totals. Figures are the Federal Election Commission\'s, through the date shown; a cycle\'s vote share appears once the FEC has the result.',

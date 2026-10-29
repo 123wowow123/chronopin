@@ -2254,6 +2254,11 @@ const ja: Messages = {
     valued: '評価額{value}',
     acquired: '{year}年に取得',
     trips: '最近の訪問',
+    district: {
+      title: '議会の選挙区',
+      about: '{name}が代表する地域。米国国勢調査局の境界データ（{vintage}）に基づいて描画。',
+      mapOf: '{label}の地図',
+    },
     campaign: {
       title: '選挙資金',
       about: '各選挙サイクルで陣営が集めた額と使った額、資金の出どころ、最も多く寄付したPAC、同じ選挙区の他の候補者の合計額です。数字は連邦選挙委員会(FEC)のもので、表示の日付までのものです。得票率はFECが結果を公表すると表示されます。',

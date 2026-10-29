@@ -2254,6 +2254,11 @@ const zh: Messages = {
     valued: '估值 {value}',
     acquired: '{year} 年购入',
     trips: '近期出行',
+    district: {
+      title: '国会议席选区',
+      about: '{name}所代表的区域，依据美国人口普查局的边界数据绘制（{vintage}）。',
+      mapOf: '{label}地图',
+    },
     campaign: {
       title: '竞选资金',
       about: '每个选举周期竞选团队筹集和花费的金额、资金来源、捐款最多的PAC，以及同一选区其他候选人的合计数据。数据来自联邦选举委员会(FEC)，截至所示日期；FEC公布结果后会显示得票率。',

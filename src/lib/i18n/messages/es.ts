@@ -2260,6 +2260,11 @@ const es: Messages = {
     valued: 'Valorada en {value}',
     acquired: 'Adquirida en {year}',
     trips: 'Viajes recientes',
+    district: {
+      title: 'Escaño en el Congreso',
+      about: 'El territorio que representa {name}, trazado con los límites de la Oficina del Censo de EE. UU. ({vintage}).',
+      mapOf: 'Mapa de {label}',
+    },
     campaign: {
       title: 'Financiación de campaña',
       about: 'Lo que la campaña recaudó y gastó en cada ciclo electoral, de dónde vino el dinero, los PAC que más dieron y los demás candidatos de la misma contienda con sus totales. Las cifras son de la Comisión Federal Electoral, hasta la fecha indicada; el porcentaje de voto aparece cuando la FEC tiene el resultado.',

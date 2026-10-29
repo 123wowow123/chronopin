@@ -2263,6 +2263,11 @@ const vi: Messages = {
     valued: 'Định giá {value}',
     acquired: 'Mua năm {year}',
     trips: 'Các chuyến đi gần đây',
+    district: {
+      title: 'Ghế trong Quốc hội',
+      about: 'Khu vực mà {name} đại diện, vẽ theo ranh giới của Cục Điều tra Dân số Hoa Kỳ ({vintage}).',
+      mapOf: 'Bản đồ {label}',
+    },
     campaign: {
       title: 'Tài chính chiến dịch',
       about: 'Chiến dịch đã huy động và chi bao nhiêu trong mỗi chu kỳ bầu cử, tiền đến từ đâu, các PAC đóng góp nhiều nhất và những ứng viên khác trong cùng cuộc đua với tổng số của họ. Số liệu của Ủy ban Bầu cử Liên bang (FEC) đến ngày hiển thị; tỷ lệ phiếu hiện ra khi FEC có kết quả.',

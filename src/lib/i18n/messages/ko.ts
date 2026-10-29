@@ -2255,6 +2255,11 @@ const ko: Messages = {
     valued: '평가액 {value}',
     acquired: '{year}년 취득',
     trips: '최근 방문',
+    district: {
+      title: '의회 선거구',
+      about: '{name}이(가) 대표하는 지역으로, 미국 인구조사국 경계 자료({vintage})를 바탕으로 그렸습니다.',
+      mapOf: '{label} 지도',
+    },
     campaign: {
       title: '선거 자금',
       about: '선거 주기마다 캠프가 모금하고 지출한 금액, 자금의 출처, 가장 많이 기부한 PAC, 같은 선거구의 다른 후보자들의 합계입니다. 수치는 연방선거관리위원회(FEC) 자료이며 표시된 날짜까지입니다. 득표율은 FEC가 결과를 확정하면 표시됩니다.',

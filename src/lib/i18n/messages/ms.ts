@@ -2264,6 +2264,11 @@ const ms: Messages = {
     valued: 'Bernilai {value}',
     acquired: 'Diperoleh pada {year}',
     trips: 'Lawatan terkini',
+    district: {
+      title: 'Kerusi dalam Kongres',
+      about: 'Kawasan yang diwakili {name}, dilukis berdasarkan sempadan Biro Banci AS ({vintage}).',
+      mapOf: 'Peta {label}',
+    },
     campaign: {
       title: 'Pembiayaan kempen',
       about: 'Apa yang dikutip dan dibelanjakan kempen dalam setiap kitaran pilihan raya, dari mana wang datang, PAC yang paling banyak menderma, dan calon lain dalam pertandingan yang sama beserta jumlah mereka. Angka daripada Suruhanjaya Pilihan Raya Persekutuan (FEC) hingga tarikh ditunjukkan; peratusan undi muncul apabila FEC mempunyai keputusan.',

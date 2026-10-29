@@ -2260,6 +2260,11 @@ const de: Messages = {
     valued: 'Bewertet mit {value}',
     acquired: 'Erworben {year}',
     trips: 'Aktuelle Reisen',
+    district: {
+      title: 'Sitz im Kongress',
+      about: 'Das Gebiet, das {name} vertritt, gezeichnet nach den Grenzen des U.S. Census Bureau ({vintage}).',
+      mapOf: 'Karte von {label}',
+    },
     campaign: {
       title: 'Wahlkampffinanzierung',
       about: 'Was der Wahlkampf in jedem Wahlzyklus eingenommen und ausgegeben hat, woher das Geld kam, welche PACs am meisten gaben und die anderen Kandidaten im selben Rennen mit ihren Summen. Die Zahlen stammen von der Federal Election Commission bis zum angegebenen Datum; der Stimmenanteil erscheint, sobald die FEC das Ergebnis hat.',

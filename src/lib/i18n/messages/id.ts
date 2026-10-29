@@ -2264,6 +2264,11 @@ const id: Messages = {
     valued: 'Bernilai {value}',
     acquired: 'Diperoleh {year}',
     trips: 'Perjalanan terbaru',
+    district: {
+      title: 'Kursi di Kongres',
+      about: 'Wilayah yang diwakili {name}, digambar berdasarkan batas dari Biro Sensus AS ({vintage}).',
+      mapOf: 'Peta {label}',
+    },
     campaign: {
       title: 'Dana kampanye',
       about: 'Berapa yang dikumpulkan dan dibelanjakan kampanye di setiap siklus pemilu, dari mana uangnya berasal, PAC yang paling banyak menyumbang, dan kandidat lain dalam persaingan yang sama beserta totalnya. Angka dari Komisi Pemilihan Federal (FEC) hingga tanggal yang ditampilkan; persentase suara muncul setelah FEC memiliki hasilnya.',

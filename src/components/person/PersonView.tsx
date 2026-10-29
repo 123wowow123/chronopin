@@ -46,6 +46,8 @@ import { PremiumTrades } from '@/components/person/PremiumTrades';
 import type { TradeRow, TradeSummary } from '@/lib/trades';
 import { CampaignSection } from '@/components/person/CampaignSection';
 import type { CampaignCycle } from '@/lib/campaigns';
+import type { PersonDistrictJson } from '@/lib/personDistrict';
+import { DistrictSection } from '@/components/person/DistrictSection';
 import { HoldingsSection } from '@/components/person/HoldingsSection';
 import type { HoldingsSnapshot } from '@/lib/holdings';
 
@@ -64,6 +66,7 @@ export function PersonView({
   holdings = [],
   committees = [],
   campaigns,
+  district,
   premiumMoves = 0,
   timeZone,
   video,
@@ -76,6 +79,7 @@ export function PersonView({
   holdings?: HoldingsSnapshot[];
   committees?: Seat[];
   campaigns: CampaignCycle[];
+  district: PersonDistrictJson | null;
   // Tracked premium portfolio moves (0223); the section shows only when there are some.
   premiumMoves?: number;
   timeZone: string;
@@ -142,6 +146,7 @@ export function PersonView({
     premiumMoves ? { id: 'premium-trades', label: 'Portfolio moves' } : null,
     holdings.some(p => p.scope !== 'personal') ? { id: 'related-holdings', label: t('person.holdings.relatedTitle') } : null,
     committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
+    district ? { id: 'district', label: t('person.district.title') } : null,
     campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
     contributions.length ? { id: 'laws', label: lawsHeading } : null,
     meter ? { id: 'record', label: t('person.matters') } : null,
@@ -327,6 +332,8 @@ export function PersonView({
         {holdings.some(p => p.scope !== 'personal') ? <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="related" /> : null}
 
         {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
+
+        {district ? <DistrictSection district={district} name={profile.name} t={t} /> : null}
 
         {campaigns.length ? <CampaignSection campaigns={campaigns} name={profile.name} t={t} /> : null}
 

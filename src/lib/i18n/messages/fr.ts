@@ -2260,6 +2260,11 @@ const fr: Messages = {
     valued: 'Estimé à {value}',
     acquired: 'Acquis en {year}',
     trips: 'Déplacements récents',
+    district: {
+      title: 'Siège au Congrès',
+      about: 'Le territoire que représente {name}, tracé d’après les limites du Bureau du recensement des États-Unis ({vintage}).',
+      mapOf: 'Carte de {label}',
+    },
     campaign: {
       title: 'Financement de campagne',
       about: 'Ce que la campagne a levé et dépensé à chaque cycle électoral, d\'où venait l\'argent, les PAC qui ont le plus donné et les autres candidats de la même course avec leurs totaux. Les chiffres viennent de la Federal Election Commission, jusqu\'à la date indiquée ; la part des voix apparaît quand la FEC a le résultat.',

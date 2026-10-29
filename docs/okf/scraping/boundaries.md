@@ -88,3 +88,9 @@ The [fifth large run](boundaries-large5-run-2026-10-25.md) resolves Angola with 
 The [sixth large review](boundaries-large6-run-2026-10-25.md) reviews 80 additional candidates and new source leads. No verified layers were available to add; coverage remains 74 pins and 10,245 default features, with five unresolved country gaps.
 
 The [seventh review](boundaries-large7-run-2026-10-25.md) finds no new production candidates or importable geometry, but extracts IEC’s 53-constituency Gambia membership roster with source anomalies preserved. All 74 saved maps remain verified; geometry coverage is unchanged.
+
+## Member-of-Congress seats on person pages (2026-10-29)
+
+- `PersonDistrict` (migration 0231) holds one GeoJSON outline per sitting member: a House district from [TIGERweb's 119th Congressional Districts layer](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/4) (matched by GEOID, state FIPS + district, `00` at-large) or, for a senator, the state from the States layer. The person page shows it as a "Congressional seat" section (`DistrictSection`, `DistrictMap`), strings in all 16 locales.
+- `npx tsx scripts/people/districts.ts` builds local rows from `Person.office` (`seatOf` in src/lib/personDistrict.ts); `--prod` sends them to `/api/admin/db/PersonDistrict` matched by Person slug (deploy migration 0231 first). 528 seats built locally.
+- Skipped on purpose: delegates (DC, territories), House leaders whose title names no district (Johnson, Jeffries, Scalise, Clark, Emmer), "Former" officeholders. Senate leaders use `Person.jurisdiction`. After the 120th Congress is seated (Jan 2027) switch the layer to 0 and rerun.

@@ -2251,6 +2251,11 @@ const it: Messages = {
     valued: 'Valutata {value}',
     acquired: 'Acquisita nel {year}',
     trips: 'Viaggi recenti',
+    district: {
+      title: 'Seggio al Congresso',
+      about: 'L\'area rappresentata da {name}, disegnata con i confini dell\'Ufficio del censimento degli Stati Uniti ({vintage}).',
+      mapOf: 'Mappa di {label}',
+    },
     campaign: {
       title: 'Finanziamento della campagna',
       about: 'Quanto la campagna ha raccolto e speso in ogni ciclo elettorale, da dove veniva il denaro, i PAC che hanno dato di più e gli altri candidati della stessa corsa con i loro totali. Le cifre sono della Federal Election Commission, fino alla data indicata; la quota di voti compare quando la FEC ha il risultato.',
