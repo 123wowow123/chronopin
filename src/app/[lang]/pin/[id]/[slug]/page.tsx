@@ -353,7 +353,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
         <div data-pin-main-end className="min-w-0 lg:col-start-1 lg:row-start-2 lg:-mt-4 [&>:first-child]:mt-0">
           <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={pinDateRanges(pin, timeZone)} timeZone={timeZone} />
           <PinSuggest pinId={pin.id} />
-          {/* Up to two rows of ads in the space the taller side column leaves under the left one. */}
+          {/* Up to four rows of ads in the space the taller side column leaves under the left one. */}
           {ads['pin-strip'] ? <AdFill pinId={pin.id} className="mt-6" /> : null}
         </div>
       </div>

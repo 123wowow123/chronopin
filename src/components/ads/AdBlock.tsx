@@ -457,7 +457,7 @@ export function AdRow({ slot, pinId, count, className = '' }: { slot: 'timeline-
 export function AdFill({ pinId, className = '' }: { pinId: number; className?: string }) {
   const slot = 'pin-side';
   const t = useT();
-  const { ref, ads } = useAds(slot, pinId, 4);
+  const { ref, ads } = useAds(slot, pinId, 8);
   const text = useAdText();
   const boxRef = useRef<HTMLElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
@@ -480,10 +480,13 @@ export function AdFill({ pinId, className = '' }: { pinId: number; className?: s
       }
       // The bottom of the side column's last block, not its grid cell, which
       // stretches to hold whatever the left column grows to.
-      const content = side.lastElementChild as HTMLElement | null;
+      // The right column's ad box may be hidden (AdColumn), so its bottom is
+      // then no limit: the last block still showing is.
+      const shown = [...side.children].filter((c) => (c as HTMLElement).offsetParent !== null);
+      const content = shown[shown.length - 1] as HTMLElement | undefined;
       if (!content) return;
       const limit = content.getBoundingClientRect().bottom;
-      const rows = Math.min(2, Math.ceil(items.length / 2));
+      const rows = Math.min(4, Math.ceil(items.length / 2));
       for (let row = rows; row >= 1; row--) {
         for (let i = 0; i < items.length; i++) items[i].style.display = i < row * 2 ? '' : 'none';
         if (box.getBoundingClientRect().bottom <= limit) return;
@@ -503,7 +506,7 @@ export function AdFill({ pinId, className = '' }: { pinId: number; className?: s
   if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
   if (!ads.length) return null;
   return (
-    <aside ref={boxRef} aria-label={t('ads.sponsored')} className={className}>
+    <aside ref={boxRef} data-ad-fill aria-label={t('ads.sponsored')} className={className}>
       <div className="mb-1.5 flex items-baseline gap-2">
         <SponsoredLabel />
       </div>
@@ -549,13 +552,22 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
       if (!wide.matches) return;
       // The bottom of the left column's last block, not the grid row, which
       // stretches to hold this column.
-      const content = end.lastElementChild as HTMLElement | null;
+      // The left column's own ad fill is left out: it grows to fill the gap
+      // this column's hiding leaves, and would flip this back on.
+      const blocks = [...end.children].filter((c) => !(c as HTMLElement).hasAttribute('data-ad-fill'));
+      const content = blocks[blocks.length - 1] as HTMLElement | undefined;
       if (!content) return;
       const limit = content.getBoundingClientRect().bottom;
+      // The left column is clearly shorter than this one without its ads: hide
+      // them and let the left column's fill carry the page's ads, to balance it.
+      const above = box?.previousElementSibling as HTMLElement | null;
+      if (box && above && limit + 100 < above.getBoundingClientRect().bottom) {
+        box.style.display = 'none';
+        return;
+      }
       for (let i = items.length - 1; i >= 2 && list.getBoundingClientRect().bottom > limit; i--) items[i].style.display = 'none';
-      // The left column's own fill (AdFill) hides when it has no room, so this
-      // column keeps its first two ads even when they stretch the page: a pin
-      // page always shows ads on one side.
+      // Otherwise this column keeps its first two ads even when they stretch
+      // the page, as the left column's fill has no room then.
     };
     fit();
     const observer = new ResizeObserver(fit);

@@ -478,25 +478,12 @@ are all landing pages translated besides the pins?
 
 
 
-- pin thorium reactor constructions
-
 - can we pin any long tail pins that can improve google search organic growth
 
 
-
-
-
-
-The second pass added scores to only 4 pins, all pushed to production without failures:
-
-Dragon Quest III HD-2D: OpenCritic 85.
-Dragon Quest: The Adventure of Dai: OpenCritic 58.
-Tomb Raider II: Metacritic 85.
-Tomb Raider: Chronicles: Metacritic 49.
-The rest don't have scores in the sources the backfill reads (Steam, Wikidata, OpenCritic). That is mostly pre-2010 and Japan-only games. After both passes, about 107 of the 239 pins show a review score. About 130 show none, including some that do have a Metacritic or OpenCritic score online.
-
-The only way to get more would be adding scores by hand from Metacritic or OpenCritic pages. Metacritic blocks scripts, so that means reading them in Chrome. I haven't started that.
-
-
-
 build span chart display for construction pins with a timeline and show
+
+
+earthquakes should have running thread per year.
+use main thread for each year and have sub thread to link all pins in the year.
+https://www.chronopin.com/pin/20607/m6-4-earthquake-strikes-southeast-of-easter-island-on-october-29
