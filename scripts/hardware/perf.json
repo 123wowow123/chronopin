@@ -4681,110 +4681,7 @@
   },
   {
     "sourceUrl": "https://www.businessinsider.com/google-gemini-4-argon-ai-model-public-release-cost-2026-10",
-    "charts": [
-      {
-        "title": "DeepSWE v1.1",
-        "unit": "%",
-        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-        "bars": [
-          {
-            "label": "Claude Fable 5.1",
-            "value": 67.4
-          },
-          {
-            "label": "GPT-6 Astra",
-            "value": 74.1
-          },
-          {
-            "label": "Claude Opus 5.5",
-            "value": 74.2
-          },
-          {
-            "label": "Gemini 4 Argon",
-            "value": 77.9,
-            "highlight": true
-          }
-        ],
-        "note": "Published comparison; consult the cited source for evaluation settings.",
-        "i18n": {
-          "es": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Comparación publicada; consulte los ajustes de evaluación en la fuente citada."
-          },
-          "fr": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Comparaison publiée ; voir les paramètres d’évaluation dans la source citée."
-          },
-          "de": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Veröffentlichter Vergleich; die Evaluierungseinstellungen stehen in der Quelle."
-          },
-          "it": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Confronto pubblicato; consultare le impostazioni di valutazione nella fonte citata."
-          },
-          "pt": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Comparação publicada; consulte as configurações de avaliação na fonte citada."
-          },
-          "ru": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Опубликованное сравнение; параметры оценки указаны в источнике."
-          },
-          "ja": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "公表された比較。評価条件は引用元をご確認ください。"
-          },
-          "zh": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "已公布的比较；评估设置请参阅引用来源。"
-          },
-          "ko": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "공개된 비교입니다. 평가 설정은 인용 출처를 확인하세요."
-          },
-          "hi": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "प्रकाशित तुलना; मूल्यांकन की सेटिंग के लिए उद्धृत स्रोत देखें।"
-          },
-          "ar": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "مقارنة منشورة؛ راجع إعدادات التقييم في المصدر المذكور."
-          },
-          "th": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "การเปรียบเทียบที่เผยแพร่ โปรดดูการตั้งค่าการประเมินในแหล่งอ้างอิง"
-          },
-          "ms": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Perbandingan diterbitkan; lihat tetapan penilaian dalam sumber yang dipetik."
-          },
-          "vi": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "So sánh đã công bố; xem thiết lập đánh giá trong nguồn trích dẫn."
-          },
-          "id": {
-            "title": "DeepSWE v1.1",
-            "unit": "%",
-            "note": "Perbandingan yang dipublikasikan; lihat pengaturan evaluasi di sumber yang dikutip."
-          }
-        }
-      }
-    ],
+    "charts": [],
     "tables": [
       {
         "title": "Gemini 4 Argon — Specs as launched",
@@ -4802,7 +4699,7 @@
             "2026-10-13"
           ],
           [
-            "Max output (tokens)",
+            "Unified input + output limit (tokens)",
             "1,000,000"
           ],
           [
@@ -4841,7 +4738,7 @@
                 "2026-10-13"
               ],
               [
-                "Salida máxima (tokens)",
+                "Límite conjunto de entrada y salida (tokens)",
                 "1,000,000"
               ],
               [
@@ -4879,7 +4776,7 @@
                 "2026-10-13"
               ],
               [
-                "Sortie maximale (jetons)",
+                "Limite cumulée entrée et sortie (tokens)",
                 "1,000,000"
               ],
               [
@@ -4917,7 +4814,7 @@
                 "2026-10-13"
               ],
               [
-                "Maximale Ausgabe (Tokens)",
+                "Gemeinsames Eingabe- und Ausgabelimit (Tokens)",
                 "1,000,000"
               ],
               [
@@ -4955,7 +4852,7 @@
                 "2026-10-13"
               ],
               [
-                "Output massimo (token)",
+                "Limite complessivo di input e output (token)",
                 "1,000,000"
               ],
               [
@@ -4993,7 +4890,7 @@
                 "2026-10-13"
               ],
               [
-                "Saída máxima (tokens)",
+                "Limite conjunto de entrada e saída (tokens)",
                 "1,000,000"
               ],
               [
@@ -5031,7 +4928,7 @@
                 "2026-10-13"
               ],
               [
-                "Максимальный вывод (токенов)",
+                "Общий лимит ввода и вывода (токены)",
                 "1,000,000"
               ],
               [
@@ -5069,7 +4966,7 @@
                 "2026-10-13"
               ],
               [
-                "最大出力 (トークン)",
+                "入力と出力を合わせた上限（トークン）",
                 "1,000,000"
               ],
               [
@@ -5107,7 +5004,7 @@
                 "2026-10-13"
               ],
               [
-                "最大输出 (词元)",
+                "输入与输出合计上限（词元）",
                 "1,000,000"
               ],
               [
@@ -5145,7 +5042,7 @@
                 "2026-10-13"
               ],
               [
-                "최대 출력 (토큰)",
+                "입력·출력 합산 한도(토큰)",
                 "1,000,000"
               ],
               [
@@ -5183,7 +5080,7 @@
                 "2026-10-13"
               ],
               [
-                "अधिकतम आउटपुट (टोकन)",
+                "इनपुट और आउटपुट की संयुक्त सीमा (टोकन)",
                 "1,000,000"
               ],
               [
@@ -5221,7 +5118,7 @@
                 "2026-10-13"
               ],
               [
-                "الحد الأقصى للإخراج (رمز)",
+                "الحد الإجمالي للإدخال والإخراج (رموز)",
                 "1,000,000"
               ],
               [
@@ -5259,7 +5156,7 @@
                 "2026-10-13"
               ],
               [
-                "เอาต์พุตสูงสุด (โทเคน)",
+                "ขีดจำกัดอินพุตและเอาต์พุตรวม (โทเค็น)",
                 "1,000,000"
               ],
               [
@@ -5297,7 +5194,7 @@
                 "2026-10-13"
               ],
               [
-                "Output maksimum (token)",
+                "Had gabungan input dan output (token)",
                 "1,000,000"
               ],
               [
@@ -5335,7 +5232,7 @@
                 "2026-10-13"
               ],
               [
-                "Đầu ra tối đa (token)",
+                "Giới hạn tổng đầu vào và đầu ra (token)",
                 "1,000,000"
               ],
               [
@@ -5373,7 +5270,7 @@
                 "2026-10-13"
               ],
               [
-                "Output maksimum (token)",
+                "Batas gabungan input dan output (token)",
                 "1,000,000"
               ],
               [

@@ -1,0 +1,1229 @@
+[
+  {
+    "slug": "wb-brent-crude-price",
+    "industry": "Energy",
+    "title": "Brent crude oil price, World Bank outlook",
+    "tags": [
+      "Energy",
+      "Economy",
+      "Marine"
+    ],
+    "prefix": "$",
+    "suffix": "/bbl",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 91
+        },
+        {
+          "x": "2027",
+          "value": 79
+        },
+        {
+          "x": "2028",
+          "value": 70
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Crude oil, Brent $/bbl 80.7 69.0 86.0 70.0"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Crude oil, Brent ($/bbl), annual nominal: 2019 64; 2020 42.3; 2021 70.4; 2022 99.8; 2023 82.6; 2024 80.7; 2025 69"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Crude oil, Brent 6 $/bbl 80.7 69.0 91.0 79.0 70.0 31.9 -13.2 -11.4 86.0 70.0"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/bbl); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. Historical Brent is Dated Brent; forecasts are front-month futures.",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 86
+          },
+          {
+            "x": "2027",
+            "value": 70
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 64
+          },
+          {
+            "x": "2020",
+            "value": 42.3
+          },
+          {
+            "x": "2021",
+            "value": 70.4
+          },
+          {
+            "x": "2022",
+            "value": 99.8
+          },
+          {
+            "x": "2023",
+            "value": 82.6
+          },
+          {
+            "x": "2024",
+            "value": 80.7
+          },
+          {
+            "x": "2025",
+            "value": 69
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-europe-natural-gas-price",
+    "industry": "Energy",
+    "title": "European natural gas price, World Bank outlook",
+    "tags": [
+      "Energy",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/mmbtu",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 19
+        },
+        {
+          "x": "2027",
+          "value": 17.5
+        },
+        {
+          "x": "2028",
+          "value": 12.5
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Natural gas, Europe $/mmbtu 11.0 12.0 15.0 12.0"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Natural gas, Europe ($/mmbtu), annual nominal: 2019 4.8; 2020 3.24; 2021 16.12; 2022 40.34; 2023 13.11; 2024 10.96; 2025 11.96"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Natural gas, Europe $/mmbtu 11.0 12.0 19.0 17.5 12.5 58.3 -7.9 -28.6 15.0 12.0"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mmbtu); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 15
+          },
+          {
+            "x": "2027",
+            "value": 12
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 4.8
+          },
+          {
+            "x": "2020",
+            "value": 3.24
+          },
+          {
+            "x": "2021",
+            "value": 16.12
+          },
+          {
+            "x": "2022",
+            "value": 40.34
+          },
+          {
+            "x": "2023",
+            "value": 13.11
+          },
+          {
+            "x": "2024",
+            "value": 10.96
+          },
+          {
+            "x": "2025",
+            "value": 11.96
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-gold-price",
+    "industry": "Mining",
+    "title": "Gold price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Finance",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/oz",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 4600
+        },
+        {
+          "x": "2027",
+          "value": 4250
+        },
+        {
+          "x": "2028",
+          "value": 4000
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Gold $/toz 2,388 3,442 4,700 4,300"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Gold ($/troy oz), annual nominal: 2019 1392; 2020 1770; 2021 1800; 2022 1801; 2023 1943; 2024 2388; 2025 3442"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Gold $/toz 2388 3442 4600 4250 4000 33.6 -7.6 -5.9 4700 4300"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/troy oz); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 4700
+          },
+          {
+            "x": "2027",
+            "value": 4300
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 1392
+          },
+          {
+            "x": "2020",
+            "value": 1770
+          },
+          {
+            "x": "2021",
+            "value": 1800
+          },
+          {
+            "x": "2022",
+            "value": 1801
+          },
+          {
+            "x": "2023",
+            "value": 1943
+          },
+          {
+            "x": "2024",
+            "value": 2388
+          },
+          {
+            "x": "2025",
+            "value": 3442
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-copper-price",
+    "industry": "Mining",
+    "title": "Copper price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Electronics",
+      "Construction",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 13200
+        },
+        {
+          "x": "2027",
+          "value": 13000
+        },
+        {
+          "x": "2028",
+          "value": 12500
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Copper $/mt 9,142 9,947 12,000 11,000"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Copper ($/mt), annual nominal: 2019 6010; 2020 6174; 2021 9317; 2022 8822; 2023 8490; 2024 9142; 2025 9947"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Copper $/mt 9142 9947 13200 13000 12500 32.7 -1.5 -3.8 12000 11000"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 12000
+          },
+          {
+            "x": "2027",
+            "value": 11000
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 6010
+          },
+          {
+            "x": "2020",
+            "value": 6174
+          },
+          {
+            "x": "2021",
+            "value": 9317
+          },
+          {
+            "x": "2022",
+            "value": 8822
+          },
+          {
+            "x": "2023",
+            "value": 8490
+          },
+          {
+            "x": "2024",
+            "value": 9142
+          },
+          {
+            "x": "2025",
+            "value": 9947
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-cocoa-price",
+    "industry": "Food",
+    "title": "Cocoa price, World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "$",
+    "suffix": "/kg",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 4.9
+        },
+        {
+          "x": "2027",
+          "value": 5.4
+        },
+        {
+          "x": "2028",
+          "value": 5.35
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Cocoa $/kg 7.33 7.80 3.80 4.20"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Cocoa ($/kg), annual nominal: 2019 2.34; 2020 2.37; 2021 2.43; 2022 2.39; 2023 3.28; 2024 7.33; 2025 7.8"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Cocoa $/kg 7.33 7.80 4.90 5.40 5.35 -37.2 10.2 -0.9 3.80 4.20"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/kg); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 3.8
+          },
+          {
+            "x": "2027",
+            "value": 4.2
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 2.34
+          },
+          {
+            "x": "2020",
+            "value": 2.37
+          },
+          {
+            "x": "2021",
+            "value": 2.43
+          },
+          {
+            "x": "2022",
+            "value": 2.39
+          },
+          {
+            "x": "2023",
+            "value": 3.28
+          },
+          {
+            "x": "2024",
+            "value": 7.33
+          },
+          {
+            "x": "2025",
+            "value": 7.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-arabica-coffee-price",
+    "industry": "Food",
+    "title": "Arabica coffee price, World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "$",
+    "suffix": "/kg",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 7.35
+        },
+        {
+          "x": "2027",
+          "value": 7.2
+        },
+        {
+          "x": "2028",
+          "value": 7
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Coffee, Arabica $/kg 5.62 8.47 7.25 7.00"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Coffee, Arabica ($/kg), annual nominal: 2019 2.88; 2020 3.32; 2021 4.51; 2022 5.63; 2023 4.54; 2024 5.62; 2025 8.47"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Coffee, Arabica $/kg 5.62 8.47 7.35 7.20 7.00 -13.2 -2.0 -2.8 7.25 7.00"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/kg); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 7.25
+          },
+          {
+            "x": "2027",
+            "value": 7
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 2.88
+          },
+          {
+            "x": "2020",
+            "value": 3.32
+          },
+          {
+            "x": "2021",
+            "value": 4.51
+          },
+          {
+            "x": "2022",
+            "value": 5.63
+          },
+          {
+            "x": "2023",
+            "value": 4.54
+          },
+          {
+            "x": "2024",
+            "value": 5.62
+          },
+          {
+            "x": "2025",
+            "value": 8.47
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-urea-fertilizer-price",
+    "industry": "Food",
+    "title": "Urea fertilizer price, World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Energy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 510
+        },
+        {
+          "x": "2027",
+          "value": 429
+        },
+        {
+          "x": "2028",
+          "value": 368
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Urea, E. Europe $/mt 338 423 675 500"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Urea ($/mt), annual nominal: 2019 245.3; 2020 229.1; 2021 483.2; 2022 700; 2023 358; 2024 338.3; 2025 422.7"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Urea, E. Europe $/mt 338 423 510 429 368 20.6 -15.9 -14.2 675 500"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Urea is the Eastern Europe benchmark. Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 675
+          },
+          {
+            "x": "2027",
+            "value": 500
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 245.3
+          },
+          {
+            "x": "2020",
+            "value": 229.1
+          },
+          {
+            "x": "2021",
+            "value": 483.2
+          },
+          {
+            "x": "2022",
+            "value": 700
+          },
+          {
+            "x": "2023",
+            "value": 358
+          },
+          {
+            "x": "2024",
+            "value": 338.3
+          },
+          {
+            "x": "2025",
+            "value": 422.7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-aluminum-price",
+    "industry": "Mining",
+    "title": "Aluminum price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Manufacturing",
+      "Automotive",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 3250
+        },
+        {
+          "x": "2027",
+          "value": 3100
+        },
+        {
+          "x": "2028",
+          "value": 3000
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Aluminum $/mt 2,419 2,632 3,200 3,000"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Aluminum ($/mt), annual nominal: 2019 1794; 2020 1704; 2021 2473; 2022 2705; 2023 2256; 2024 2419; 2025 2632"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Aluminum $/mt 2419 2632 3250 3100 3000 23.5 -4.6 -3.2 3200 3000"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 3200
+          },
+          {
+            "x": "2027",
+            "value": 3000
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 1794
+          },
+          {
+            "x": "2020",
+            "value": 1704
+          },
+          {
+            "x": "2021",
+            "value": 2473
+          },
+          {
+            "x": "2022",
+            "value": 2705
+          },
+          {
+            "x": "2023",
+            "value": 2256
+          },
+          {
+            "x": "2024",
+            "value": 2419
+          },
+          {
+            "x": "2025",
+            "value": 2632
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-silver-price",
+    "industry": "Mining",
+    "title": "Silver price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Electronics",
+      "Finance",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/oz",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 70
+        },
+        {
+          "x": "2027",
+          "value": 62
+        },
+        {
+          "x": "2028",
+          "value": 58
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Silver $/toz 28.3 39.8 70.0 65.0"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Silver ($/troy oz), annual nominal: 2019 16.2; 2020 20.5; 2021 25.2; 2022 21.8; 2023 23.4; 2024 28.3; 2025 39.8"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Silver $/toz 28.3 39.8 70.0 62.0 58.0 75.9 -11.4 -6.5 70.0 65.0"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/troy oz); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 70
+          },
+          {
+            "x": "2027",
+            "value": 65
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 16.2
+          },
+          {
+            "x": "2020",
+            "value": 20.5
+          },
+          {
+            "x": "2021",
+            "value": 25.2
+          },
+          {
+            "x": "2022",
+            "value": 21.8
+          },
+          {
+            "x": "2023",
+            "value": 23.4
+          },
+          {
+            "x": "2024",
+            "value": 28.3
+          },
+          {
+            "x": "2025",
+            "value": 39.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-nickel-price",
+    "industry": "Mining",
+    "title": "Nickel price, World Bank outlook",
+    "tags": [
+      "Mining",
+      "Automotive",
+      "Manufacturing",
+      "Economy"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 17200
+        },
+        {
+          "x": "2027",
+          "value": 17250
+        },
+        {
+          "x": "2028",
+          "value": 17500
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Nickel $/mt 16,814 15,162 17,000 17,500"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Nickel ($/mt), annual nominal: 2019 13914; 2020 13787; 2021 18465; 2022 25834; 2023 21521; 2024 16814; 2025 15162"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Nickel $/mt 16814 15162 17200 17250 17500 13.4 0.3 1.4 17000 17500"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 17000
+          },
+          {
+            "x": "2027",
+            "value": 17500
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 13914
+          },
+          {
+            "x": "2020",
+            "value": 13787
+          },
+          {
+            "x": "2021",
+            "value": 18465
+          },
+          {
+            "x": "2022",
+            "value": 25834
+          },
+          {
+            "x": "2023",
+            "value": 21521
+          },
+          {
+            "x": "2024",
+            "value": 16814
+          },
+          {
+            "x": "2025",
+            "value": 15162
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-rice-price",
+    "industry": "Food",
+    "title": "Rice price (Thailand 5%), World Bank outlook",
+    "tags": [
+      "Food",
+      "Economy",
+      "Retail"
+    ],
+    "prefix": "$",
+    "suffix": "/t",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 448
+        },
+        {
+          "x": "2027",
+          "value": 500
+        },
+        {
+          "x": "2028",
+          "value": 468
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Rice, Thailand, 5% $/mt 588 408 401 413"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Rice, Thai 5% ($/mt), annual nominal: 2019 418; 2020 496.8; 2021 458.3; 2022 436.8; 2023 553.7; 2024 588.4; 2025 407.8"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Rice, Thailand, 5% $/mt 588 408 448 500 468 9.8 11.6 -6.4 401 413"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mt); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Benchmark is Thai 5% broken white rice. Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 401
+          },
+          {
+            "x": "2027",
+            "value": 413
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 418
+          },
+          {
+            "x": "2020",
+            "value": 496.8
+          },
+          {
+            "x": "2021",
+            "value": 458.3
+          },
+          {
+            "x": "2022",
+            "value": 436.8
+          },
+          {
+            "x": "2023",
+            "value": 553.7
+          },
+          {
+            "x": "2024",
+            "value": 588.4
+          },
+          {
+            "x": "2025",
+            "value": 407.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wb-us-natural-gas-price",
+    "industry": "Energy",
+    "title": "US natural gas price, World Bank outlook",
+    "tags": [
+      "Energy",
+      "Economy",
+      "Construction"
+    ],
+    "prefix": "$",
+    "suffix": "/mmbtu",
+    "live": [],
+    "projection": {
+      "label": "World Bank CMO October 2026 forecast",
+      "points": [
+        {
+          "x": "2026",
+          "value": 3.5
+        },
+        {
+          "x": "2027",
+          "value": 3.7
+        },
+        {
+          "x": "2028",
+          "value": 3.9
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+        "date": "2026-04-28",
+        "label": "World Bank Commodity Markets Outlook, April 2026 (forecast table)",
+        "quote": "Commodity Unit 2024 2025 2026f 2027f ... Natural gas, U.S. $/mmbtu 2.2 3.5 3.8 4.0"
+      },
+      {
+        "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+        "date": "2026-09-02",
+        "label": "World Bank Commodity Price Data (Pink Sheet), annual nominal prices",
+        "quote": "Natural gas, US ($/mmbtu), annual nominal: 2019 2.57; 2020 2.01; 2021 3.85; 2022 6.37; 2023 2.54; 2024 2.19; 2025 3.53"
+      },
+      {
+        "label": "World Bank CMO October 2026, Table 1",
+        "url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Forecasts.pdf",
+        "date": "2026-10-28",
+        "quote": "Natural gas, United States $/mmbtu 2.2 3.5 3.5 3.7 3.9 0.0 5.7 5.4 3.8 4.0"
+      }
+    ],
+    "note": "Nominal US dollars, annual average ($/mmbtu); 2019-2025 are World Bank reported annual averages, 2026-2027 are the World Bank's April 2026 forecasts (estimates, not outcomes). Forecasts rest on assumptions about the Middle East conflict and may be revised in the October 2026 update. October 2026 edition supersedes April; annual forecasts in the published native unit. ",
+    "earlier": [
+      {
+        "label": "World Bank CMO April 2026 forecast",
+        "points": [
+          {
+            "x": "2026",
+            "value": 3.8
+          },
+          {
+            "x": "2027",
+            "value": 4
+          }
+        ],
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "history": [
+      {
+        "label": "World Bank reported",
+        "points": [
+          {
+            "x": "2019",
+            "value": 2.57
+          },
+          {
+            "x": "2020",
+            "value": 2.01
+          },
+          {
+            "x": "2021",
+            "value": 3.85
+          },
+          {
+            "x": "2022",
+            "value": 6.37
+          },
+          {
+            "x": "2023",
+            "value": 2.54
+          },
+          {
+            "x": "2024",
+            "value": 2.19
+          },
+          {
+            "x": "2025",
+            "value": 3.53
+          }
+        ]
+      }
+    ]
+  }
+]

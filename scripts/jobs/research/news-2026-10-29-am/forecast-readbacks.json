@@ -1,0 +1,146 @@
+[
+  {
+    "local": true,
+    "slug": "wb-brent-crude-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-europe-natural-gas-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-gold-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-copper-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-cocoa-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-arabica-coffee-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-urea-fertilizer-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-aluminum-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-silver-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-nickel-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-rice-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": true,
+    "slug": "wb-us-natural-gas-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-brent-crude-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-europe-natural-gas-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-gold-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-copper-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-cocoa-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-arabica-coffee-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-urea-fertilizer-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-aluminum-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-silver-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-nickel-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-rice-price",
+    "status": 200,
+    "verified": true
+  },
+  {
+    "local": false,
+    "slug": "wb-us-natural-gas-price",
+    "status": 200,
+    "verified": true
+  }
+]

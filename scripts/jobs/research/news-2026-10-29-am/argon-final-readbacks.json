@@ -1,0 +1,1250 @@
+[
+  {
+    "local": true,
+    "saved": {
+      "status": 200,
+      "data": {
+        "charts": [],
+        "tables": [
+          {
+            "i18n": {
+              "ar": {
+                "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير.",
+                "rows": [
+                  [
+                    "المطور",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "الإصدار",
+                    "2026-10-13"
+                  ],
+                  [
+                    "الحد الإجمالي للإدخال والإخراج (رموز)",
+                    "1,000,000"
+                  ],
+                  [
+                    "تمهيدي input USD / 1M رمز",
+                    "2.00"
+                  ],
+                  [
+                    "تمهيدي output USD / 1M رمز",
+                    "10.00"
+                  ],
+                  [
+                    "قياسي input USD / 1M رمز",
+                    "4.00"
+                  ],
+                  [
+                    "قياسي output USD / 1M رمز",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — مواصفات الإطلاق",
+                "columns": [
+                  "المقياس",
+                  "القيمة"
+                ]
+              },
+              "de": {
+                "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten.",
+                "rows": [
+                  [
+                    "Anbieter",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Veröffentlichung",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Gemeinsames Eingabe- und Ausgabelimit (Tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "Einführungs- input USD / 1M Tokens",
+                    "2.00"
+                  ],
+                  [
+                    "Einführungs- output USD / 1M Tokens",
+                    "10.00"
+                  ],
+                  [
+                    "Standard- input USD / 1M Tokens",
+                    "4.00"
+                  ],
+                  [
+                    "Standard- output USD / 1M Tokens",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spezifikationen zum Start",
+                "columns": [
+                  "Merkmal",
+                  "Wert"
+                ]
+              },
+              "es": {
+                "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios.",
+                "rows": [
+                  [
+                    "Proveedor",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lanzamiento",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Límite conjunto de entrada y salida (tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "introductoria input USD / 1M tokens",
+                    "2.00"
+                  ],
+                  [
+                    "introductoria output USD / 1M tokens",
+                    "10.00"
+                  ],
+                  [
+                    "estándar input USD / 1M tokens",
+                    "4.00"
+                  ],
+                  [
+                    "estándar output USD / 1M tokens",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Especificaciones de lanzamiento",
+                "columns": [
+                  "Medida",
+                  "Valor"
+                ]
+              },
+              "fr": {
+                "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent.",
+                "rows": [
+                  [
+                    "Fournisseur",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lancement",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Limite cumulée entrée et sortie (tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "de lancement input USD / 1M jetons",
+                    "2.00"
+                  ],
+                  [
+                    "de lancement output USD / 1M jetons",
+                    "10.00"
+                  ],
+                  [
+                    "standard input USD / 1M jetons",
+                    "4.00"
+                  ],
+                  [
+                    "standard output USD / 1M jetons",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spécifications au lancement",
+                "columns": [
+                  "Mesure",
+                  "Valeur"
+                ]
+              },
+              "hi": {
+                "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।",
+                "rows": [
+                  [
+                    "प्रदाता",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "रिलीज़",
+                    "2026-10-13"
+                  ],
+                  [
+                    "इनपुट और आउटपुट की संयुक्त सीमा (टोकन)",
+                    "1,000,000"
+                  ],
+                  [
+                    "प्रारंभिक input USD / 1M टोकन",
+                    "2.00"
+                  ],
+                  [
+                    "प्रारंभिक output USD / 1M टोकन",
+                    "10.00"
+                  ],
+                  [
+                    "मानक input USD / 1M टोकन",
+                    "4.00"
+                  ],
+                  [
+                    "मानक output USD / 1M टोकन",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — लॉन्च के समय विनिर्देश",
+                "columns": [
+                  "माप",
+                  "मान"
+                ]
+              },
+              "id": {
+                "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku.",
+                "rows": [
+                  [
+                    "Pengembang",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Rilis",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Batas gabungan input dan output (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "perkenalan input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "perkenalan output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "standar input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "standar output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spesifikasi saat peluncuran",
+                "columns": [
+                  "Ukuran",
+                  "Nilai"
+                ]
+              },
+              "it": {
+                "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie.",
+                "rows": [
+                  [
+                    "Fornitore",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lancio",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Limite complessivo di input e output (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "introduttivo input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "introduttivo output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "standard input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "standard output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Specifiche al lancio",
+                "columns": [
+                  "Misura",
+                  "Valore"
+                ]
+              },
+              "ja": {
+                "note": "未公表の数値は省略。料金条件が適用されます。",
+                "rows": [
+                  [
+                    "開発元",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "公開日",
+                    "2026-10-13"
+                  ],
+                  [
+                    "入力と出力を合わせた上限（トークン）",
+                    "1,000,000"
+                  ],
+                  [
+                    "導入時 input USD / 1M トークン",
+                    "2.00"
+                  ],
+                  [
+                    "導入時 output USD / 1M トークン",
+                    "10.00"
+                  ],
+                  [
+                    "通常 input USD / 1M トークン",
+                    "4.00"
+                  ],
+                  [
+                    "通常 output USD / 1M トークン",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — 公開時の仕様",
+                "columns": [
+                  "項目",
+                  "値"
+                ]
+              },
+              "ko": {
+                "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다.",
+                "rows": [
+                  [
+                    "개발사",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "출시일",
+                    "2026-10-13"
+                  ],
+                  [
+                    "입력·출력 합산 한도(토큰)",
+                    "1,000,000"
+                  ],
+                  [
+                    "출시 특가 input USD / 1M 토큰",
+                    "2.00"
+                  ],
+                  [
+                    "출시 특가 output USD / 1M 토큰",
+                    "10.00"
+                  ],
+                  [
+                    "표준 input USD / 1M 토큰",
+                    "4.00"
+                  ],
+                  [
+                    "표준 output USD / 1M 토큰",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — 출시 당시 사양",
+                "columns": [
+                  "항목",
+                  "값"
+                ]
+              },
+              "ms": {
+                "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai.",
+                "rows": [
+                  [
+                    "Pembangun",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Pelancaran",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Had gabungan input dan output (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "pengenalan input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "pengenalan output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "standard input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "standard output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spesifikasi semasa pelancaran",
+                "columns": [
+                  "Ukuran",
+                  "Nilai"
+                ]
+              },
+              "pt": {
+                "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços.",
+                "rows": [
+                  [
+                    "Fornecedor",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lançamento",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Limite conjunto de entrada e saída (tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "introdutória input USD / 1M tokens",
+                    "2.00"
+                  ],
+                  [
+                    "introdutória output USD / 1M tokens",
+                    "10.00"
+                  ],
+                  [
+                    "padrão input USD / 1M tokens",
+                    "4.00"
+                  ],
+                  [
+                    "padrão output USD / 1M tokens",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Especificações no lançamento",
+                "columns": [
+                  "Medida",
+                  "Valor"
+                ]
+              },
+              "ru": {
+                "note": "Неопубликованные данные опущены. Действуют условия тарификации.",
+                "rows": [
+                  [
+                    "Разработчик",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Выпуск",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Общий лимит ввода и вывода (токены)",
+                    "1,000,000"
+                  ],
+                  [
+                    "вводный input USD / 1M токенов",
+                    "2.00"
+                  ],
+                  [
+                    "вводный output USD / 1M токенов",
+                    "10.00"
+                  ],
+                  [
+                    "стандартный input USD / 1M токенов",
+                    "4.00"
+                  ],
+                  [
+                    "стандартный output USD / 1M токенов",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Характеристики при запуске",
+                "columns": [
+                  "Параметр",
+                  "Значение"
+                ]
+              },
+              "th": {
+                "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา",
+                "rows": [
+                  [
+                    "ผู้พัฒนา",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "วันเปิดตัว",
+                    "2026-10-13"
+                  ],
+                  [
+                    "ขีดจำกัดอินพุตและเอาต์พุตรวม (โทเค็น)",
+                    "1,000,000"
+                  ],
+                  [
+                    "ช่วงเปิดตัว input USD / 1M โทเคน",
+                    "2.00"
+                  ],
+                  [
+                    "ช่วงเปิดตัว output USD / 1M โทเคน",
+                    "10.00"
+                  ],
+                  [
+                    "มาตรฐาน input USD / 1M โทเคน",
+                    "4.00"
+                  ],
+                  [
+                    "มาตรฐาน output USD / 1M โทเคน",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — ข้อมูลจำเพาะเมื่อเปิดตัว",
+                "columns": [
+                  "รายการ",
+                  "ค่า"
+                ]
+              },
+              "vi": {
+                "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá.",
+                "rows": [
+                  [
+                    "Nhà phát triển",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Ngày phát hành",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Giới hạn tổng đầu vào và đầu ra (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "ưu đãi ra mắt input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "ưu đãi ra mắt output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "tiêu chuẩn input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "tiêu chuẩn output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Thông số khi ra mắt",
+                "columns": [
+                  "Chỉ số",
+                  "Giá trị"
+                ]
+              },
+              "zh": {
+                "note": "未公布的数据已省略。价格条件适用。",
+                "rows": [
+                  [
+                    "开发商",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "发布日期",
+                    "2026-10-13"
+                  ],
+                  [
+                    "输入与输出合计上限（词元）",
+                    "1,000,000"
+                  ],
+                  [
+                    "优惠期 input USD / 1M 词元",
+                    "2.00"
+                  ],
+                  [
+                    "优惠期 output USD / 1M 词元",
+                    "10.00"
+                  ],
+                  [
+                    "标准 input USD / 1M 词元",
+                    "4.00"
+                  ],
+                  [
+                    "标准 output USD / 1M 词元",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — 发布时规格",
+                "columns": [
+                  "指标",
+                  "数值"
+                ]
+              }
+            },
+            "note": "Unpublished figures are omitted. Pricing conditions apply.",
+            "rows": [
+              [
+                "Provider",
+                "Google DeepMind"
+              ],
+              [
+                "Release",
+                "2026-10-13"
+              ],
+              [
+                "Unified input + output limit (tokens)",
+                "1,000,000"
+              ],
+              [
+                "Intro input USD / 1M tokens",
+                "2.00"
+              ],
+              [
+                "Intro output USD / 1M tokens",
+                "10.00"
+              ],
+              [
+                "Standard input USD / 1M tokens",
+                "4.00"
+              ],
+              [
+                "Standard output USD / 1M tokens",
+                "20.00"
+              ]
+            ],
+            "title": "Gemini 4 Argon — Specs as launched",
+            "columns": [
+              "Measure",
+              "Value"
+            ],
+            "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+          }
+        ],
+        "checkedAt": "2026-10-29T16:02:34.649Z"
+      }
+    },
+    "verified": true
+  },
+  {
+    "local": false,
+    "saved": {
+      "status": 200,
+      "data": {
+        "charts": [],
+        "tables": [
+          {
+            "i18n": {
+              "ar": {
+                "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير.",
+                "rows": [
+                  [
+                    "المطور",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "الإصدار",
+                    "2026-10-13"
+                  ],
+                  [
+                    "الحد الإجمالي للإدخال والإخراج (رموز)",
+                    "1,000,000"
+                  ],
+                  [
+                    "تمهيدي input USD / 1M رمز",
+                    "2.00"
+                  ],
+                  [
+                    "تمهيدي output USD / 1M رمز",
+                    "10.00"
+                  ],
+                  [
+                    "قياسي input USD / 1M رمز",
+                    "4.00"
+                  ],
+                  [
+                    "قياسي output USD / 1M رمز",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — مواصفات الإطلاق",
+                "columns": [
+                  "المقياس",
+                  "القيمة"
+                ]
+              },
+              "de": {
+                "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten.",
+                "rows": [
+                  [
+                    "Anbieter",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Veröffentlichung",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Gemeinsames Eingabe- und Ausgabelimit (Tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "Einführungs- input USD / 1M Tokens",
+                    "2.00"
+                  ],
+                  [
+                    "Einführungs- output USD / 1M Tokens",
+                    "10.00"
+                  ],
+                  [
+                    "Standard- input USD / 1M Tokens",
+                    "4.00"
+                  ],
+                  [
+                    "Standard- output USD / 1M Tokens",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spezifikationen zum Start",
+                "columns": [
+                  "Merkmal",
+                  "Wert"
+                ]
+              },
+              "es": {
+                "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios.",
+                "rows": [
+                  [
+                    "Proveedor",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lanzamiento",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Límite conjunto de entrada y salida (tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "introductoria input USD / 1M tokens",
+                    "2.00"
+                  ],
+                  [
+                    "introductoria output USD / 1M tokens",
+                    "10.00"
+                  ],
+                  [
+                    "estándar input USD / 1M tokens",
+                    "4.00"
+                  ],
+                  [
+                    "estándar output USD / 1M tokens",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Especificaciones de lanzamiento",
+                "columns": [
+                  "Medida",
+                  "Valor"
+                ]
+              },
+              "fr": {
+                "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent.",
+                "rows": [
+                  [
+                    "Fournisseur",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lancement",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Limite cumulée entrée et sortie (tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "de lancement input USD / 1M jetons",
+                    "2.00"
+                  ],
+                  [
+                    "de lancement output USD / 1M jetons",
+                    "10.00"
+                  ],
+                  [
+                    "standard input USD / 1M jetons",
+                    "4.00"
+                  ],
+                  [
+                    "standard output USD / 1M jetons",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spécifications au lancement",
+                "columns": [
+                  "Mesure",
+                  "Valeur"
+                ]
+              },
+              "hi": {
+                "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।",
+                "rows": [
+                  [
+                    "प्रदाता",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "रिलीज़",
+                    "2026-10-13"
+                  ],
+                  [
+                    "इनपुट और आउटपुट की संयुक्त सीमा (टोकन)",
+                    "1,000,000"
+                  ],
+                  [
+                    "प्रारंभिक input USD / 1M टोकन",
+                    "2.00"
+                  ],
+                  [
+                    "प्रारंभिक output USD / 1M टोकन",
+                    "10.00"
+                  ],
+                  [
+                    "मानक input USD / 1M टोकन",
+                    "4.00"
+                  ],
+                  [
+                    "मानक output USD / 1M टोकन",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — लॉन्च के समय विनिर्देश",
+                "columns": [
+                  "माप",
+                  "मान"
+                ]
+              },
+              "id": {
+                "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku.",
+                "rows": [
+                  [
+                    "Pengembang",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Rilis",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Batas gabungan input dan output (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "perkenalan input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "perkenalan output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "standar input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "standar output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spesifikasi saat peluncuran",
+                "columns": [
+                  "Ukuran",
+                  "Nilai"
+                ]
+              },
+              "it": {
+                "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie.",
+                "rows": [
+                  [
+                    "Fornitore",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lancio",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Limite complessivo di input e output (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "introduttivo input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "introduttivo output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "standard input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "standard output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Specifiche al lancio",
+                "columns": [
+                  "Misura",
+                  "Valore"
+                ]
+              },
+              "ja": {
+                "note": "未公表の数値は省略。料金条件が適用されます。",
+                "rows": [
+                  [
+                    "開発元",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "公開日",
+                    "2026-10-13"
+                  ],
+                  [
+                    "入力と出力を合わせた上限（トークン）",
+                    "1,000,000"
+                  ],
+                  [
+                    "導入時 input USD / 1M トークン",
+                    "2.00"
+                  ],
+                  [
+                    "導入時 output USD / 1M トークン",
+                    "10.00"
+                  ],
+                  [
+                    "通常 input USD / 1M トークン",
+                    "4.00"
+                  ],
+                  [
+                    "通常 output USD / 1M トークン",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — 公開時の仕様",
+                "columns": [
+                  "項目",
+                  "値"
+                ]
+              },
+              "ko": {
+                "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다.",
+                "rows": [
+                  [
+                    "개발사",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "출시일",
+                    "2026-10-13"
+                  ],
+                  [
+                    "입력·출력 합산 한도(토큰)",
+                    "1,000,000"
+                  ],
+                  [
+                    "출시 특가 input USD / 1M 토큰",
+                    "2.00"
+                  ],
+                  [
+                    "출시 특가 output USD / 1M 토큰",
+                    "10.00"
+                  ],
+                  [
+                    "표준 input USD / 1M 토큰",
+                    "4.00"
+                  ],
+                  [
+                    "표준 output USD / 1M 토큰",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — 출시 당시 사양",
+                "columns": [
+                  "항목",
+                  "값"
+                ]
+              },
+              "ms": {
+                "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai.",
+                "rows": [
+                  [
+                    "Pembangun",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Pelancaran",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Had gabungan input dan output (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "pengenalan input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "pengenalan output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "standard input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "standard output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Spesifikasi semasa pelancaran",
+                "columns": [
+                  "Ukuran",
+                  "Nilai"
+                ]
+              },
+              "pt": {
+                "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços.",
+                "rows": [
+                  [
+                    "Fornecedor",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Lançamento",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Limite conjunto de entrada e saída (tokens)",
+                    "1,000,000"
+                  ],
+                  [
+                    "introdutória input USD / 1M tokens",
+                    "2.00"
+                  ],
+                  [
+                    "introdutória output USD / 1M tokens",
+                    "10.00"
+                  ],
+                  [
+                    "padrão input USD / 1M tokens",
+                    "4.00"
+                  ],
+                  [
+                    "padrão output USD / 1M tokens",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Especificações no lançamento",
+                "columns": [
+                  "Medida",
+                  "Valor"
+                ]
+              },
+              "ru": {
+                "note": "Неопубликованные данные опущены. Действуют условия тарификации.",
+                "rows": [
+                  [
+                    "Разработчик",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Выпуск",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Общий лимит ввода и вывода (токены)",
+                    "1,000,000"
+                  ],
+                  [
+                    "вводный input USD / 1M токенов",
+                    "2.00"
+                  ],
+                  [
+                    "вводный output USD / 1M токенов",
+                    "10.00"
+                  ],
+                  [
+                    "стандартный input USD / 1M токенов",
+                    "4.00"
+                  ],
+                  [
+                    "стандартный output USD / 1M токенов",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Характеристики при запуске",
+                "columns": [
+                  "Параметр",
+                  "Значение"
+                ]
+              },
+              "th": {
+                "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา",
+                "rows": [
+                  [
+                    "ผู้พัฒนา",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "วันเปิดตัว",
+                    "2026-10-13"
+                  ],
+                  [
+                    "ขีดจำกัดอินพุตและเอาต์พุตรวม (โทเค็น)",
+                    "1,000,000"
+                  ],
+                  [
+                    "ช่วงเปิดตัว input USD / 1M โทเคน",
+                    "2.00"
+                  ],
+                  [
+                    "ช่วงเปิดตัว output USD / 1M โทเคน",
+                    "10.00"
+                  ],
+                  [
+                    "มาตรฐาน input USD / 1M โทเคน",
+                    "4.00"
+                  ],
+                  [
+                    "มาตรฐาน output USD / 1M โทเคน",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — ข้อมูลจำเพาะเมื่อเปิดตัว",
+                "columns": [
+                  "รายการ",
+                  "ค่า"
+                ]
+              },
+              "vi": {
+                "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá.",
+                "rows": [
+                  [
+                    "Nhà phát triển",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "Ngày phát hành",
+                    "2026-10-13"
+                  ],
+                  [
+                    "Giới hạn tổng đầu vào và đầu ra (token)",
+                    "1,000,000"
+                  ],
+                  [
+                    "ưu đãi ra mắt input USD / 1M token",
+                    "2.00"
+                  ],
+                  [
+                    "ưu đãi ra mắt output USD / 1M token",
+                    "10.00"
+                  ],
+                  [
+                    "tiêu chuẩn input USD / 1M token",
+                    "4.00"
+                  ],
+                  [
+                    "tiêu chuẩn output USD / 1M token",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — Thông số khi ra mắt",
+                "columns": [
+                  "Chỉ số",
+                  "Giá trị"
+                ]
+              },
+              "zh": {
+                "note": "未公布的数据已省略。价格条件适用。",
+                "rows": [
+                  [
+                    "开发商",
+                    "Google DeepMind"
+                  ],
+                  [
+                    "发布日期",
+                    "2026-10-13"
+                  ],
+                  [
+                    "输入与输出合计上限（词元）",
+                    "1,000,000"
+                  ],
+                  [
+                    "优惠期 input USD / 1M 词元",
+                    "2.00"
+                  ],
+                  [
+                    "优惠期 output USD / 1M 词元",
+                    "10.00"
+                  ],
+                  [
+                    "标准 input USD / 1M 词元",
+                    "4.00"
+                  ],
+                  [
+                    "标准 output USD / 1M 词元",
+                    "20.00"
+                  ]
+                ],
+                "title": "Gemini 4 Argon — 发布时规格",
+                "columns": [
+                  "指标",
+                  "数值"
+                ]
+              }
+            },
+            "note": "Unpublished figures are omitted. Pricing conditions apply.",
+            "rows": [
+              [
+                "Provider",
+                "Google DeepMind"
+              ],
+              [
+                "Release",
+                "2026-10-13"
+              ],
+              [
+                "Unified input + output limit (tokens)",
+                "1,000,000"
+              ],
+              [
+                "Intro input USD / 1M tokens",
+                "2.00"
+              ],
+              [
+                "Intro output USD / 1M tokens",
+                "10.00"
+              ],
+              [
+                "Standard input USD / 1M tokens",
+                "4.00"
+              ],
+              [
+                "Standard output USD / 1M tokens",
+                "20.00"
+              ]
+            ],
+            "title": "Gemini 4 Argon — Specs as launched",
+            "columns": [
+              "Measure",
+              "Value"
+            ],
+            "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+          }
+        ],
+        "checkedAt": "2026-10-29T16:02:35.466Z"
+      }
+    },
+    "verified": true
+  }
+]

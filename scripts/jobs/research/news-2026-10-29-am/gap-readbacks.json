@@ -1,0 +1,154 @@
+[
+  {
+    "local": true,
+    "pinId": 5978,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 160,
+          "pinId": 5978,
+          "reason": "2026-10-29 AM: opened GM June 10 2025 primary announcement (https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html). $4bn is a three-plant program, not per-plant cost. Remaining work beyond this bounded run: identify existing canonical Orion/Fairfax/Spring Hill pins, split/thread each own milestone, research plant-specific profiles and verify both environments. Never divide $4bn into invented allocations.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-29T16:03:19.515Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": true,
+    "pinId": 1871,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 151,
+          "pinId": 1871,
+          "reason": "2026-10-29 AM competitor research: Diablo V is dated 2029; no opened source establishes its own contemporary 2029 rival products. Avoid projecting today’s market three years forward; await exact-release segment comparison.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-28T14:04:47.370Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": true,
+    "pinId": 20292,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 161,
+          "pinId": 20292,
+          "reason": "2026-10-29 AM competitor queue: Kingdom Hearts IV future late-2027 pin needs opened exact-product comparisons supporting 2–5 contemporary rivals; announcement evidence alone does not establish them.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-29T16:03:19.673Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": true,
+    "pinId": 20258,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 162,
+          "pinId": 20258,
+          "reason": "2026-10-29 AM competitor queue: FFVII Revelation future release needs exact-product comparison evidence and canonical competitor pin matching; not completed within this run.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-29T16:03:19.781Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": false,
+    "pinId": 5978,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 160,
+          "pinId": 5978,
+          "reason": "2026-10-29 AM: opened GM June 10 2025 primary announcement (https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html). $4bn is a three-plant program, not per-plant cost. Remaining work beyond this bounded run: identify existing canonical Orion/Fairfax/Spring Hill pins, split/thread each own milestone, research plant-specific profiles and verify both environments. Never divide $4bn into invented allocations.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-29T16:03:33.121Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": false,
+    "pinId": 1871,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 151,
+          "pinId": 1871,
+          "reason": "2026-10-29 AM competitor research: Diablo V is dated 2029; no opened source establishes its own contemporary 2029 rival products. Avoid projecting today’s market three years forward; await exact-release segment comparison.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-28T14:04:47.370Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": false,
+    "pinId": 20292,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 161,
+          "pinId": 20292,
+          "reason": "2026-10-29 AM competitor queue: Kingdom Hearts IV future late-2027 pin needs opened exact-product comparisons supporting 2–5 contemporary rivals; announcement evidence alone does not establish them.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-29T16:04:03.719Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  },
+  {
+    "local": false,
+    "pinId": 20258,
+    "status": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 162,
+          "pinId": 20258,
+          "reason": "2026-10-29 AM competitor queue: FFVII Revelation future release needs exact-product comparison evidence and canonical competitor pin matching; not completed within this run.",
+          "markedBy": null,
+          "jobRunId": null,
+          "resolution": null,
+          "utcCreatedDateTime": "2026-10-29T16:04:06.392Z",
+          "utcResolvedDateTime": null
+        }
+      ]
+    }
+  }
+]

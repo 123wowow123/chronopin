@@ -1,0 +1,2978 @@
+[
+  {
+    "pinId": 20089,
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+    "charts": [
+      {
+        "title": "AA-Omniscience — hallucination",
+        "unit": "%",
+        "higherIsBetter": false,
+        "sourceUrl": "https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier",
+        "bars": [
+          {
+            "label": "GPT-5.6 Terra",
+            "value": 88
+          },
+          {
+            "label": "GPT-6.1 Terra",
+            "value": 38,
+            "highlight": true
+          }
+        ],
+        "note": "Published comparison; consult the cited source for evaluation settings.",
+        "i18n": {
+          "es": {
+            "title": "AA-Omniscience — alucinación",
+            "unit": "%",
+            "note": "Comparación publicada; consulte los ajustes de evaluación en la fuente citada."
+          },
+          "fr": {
+            "title": "AA-Omniscience — hallucination",
+            "unit": "%",
+            "note": "Comparaison publiée ; voir les paramètres d’évaluation dans la source citée."
+          },
+          "de": {
+            "title": "AA-Omniscience — Halluzination",
+            "unit": "%",
+            "note": "Veröffentlichter Vergleich; die Evaluierungseinstellungen stehen in der Quelle."
+          },
+          "it": {
+            "title": "AA-Omniscience — allucinazione",
+            "unit": "%",
+            "note": "Confronto pubblicato; consultare le impostazioni di valutazione nella fonte citata."
+          },
+          "pt": {
+            "title": "AA-Omniscience — alucinação",
+            "unit": "%",
+            "note": "Comparação publicada; consulte as configurações de avaliação na fonte citada."
+          },
+          "ru": {
+            "title": "AA-Omniscience — галлюцинации",
+            "unit": "%",
+            "note": "Опубликованное сравнение; параметры оценки указаны в источнике."
+          },
+          "ja": {
+            "title": "AA-Omniscience — ハルシネーション",
+            "unit": "%",
+            "note": "公表された比較。評価条件は引用元をご確認ください。"
+          },
+          "zh": {
+            "title": "AA-Omniscience — 幻觉",
+            "unit": "%",
+            "note": "已公布的比较；评估设置请参阅引用来源。"
+          },
+          "ko": {
+            "title": "AA-Omniscience — 환각",
+            "unit": "%",
+            "note": "공개된 비교입니다. 평가 설정은 인용 출처를 확인하세요."
+          },
+          "hi": {
+            "title": "AA-Omniscience — मतिभ्रम",
+            "unit": "%",
+            "note": "प्रकाशित तुलना; मूल्यांकन की सेटिंग के लिए उद्धृत स्रोत देखें।"
+          },
+          "ar": {
+            "title": "AA-Omniscience — هلوسة",
+            "unit": "%",
+            "note": "مقارنة منشورة؛ راجع إعدادات التقييم في المصدر المذكور."
+          },
+          "th": {
+            "title": "AA-Omniscience — การหลอน",
+            "unit": "%",
+            "note": "การเปรียบเทียบที่เผยแพร่ โปรดดูการตั้งค่าการประเมินในแหล่งอ้างอิง"
+          },
+          "ms": {
+            "title": "AA-Omniscience — halusinasi",
+            "unit": "%",
+            "note": "Perbandingan diterbitkan; lihat tetapan penilaian dalam sumber yang dipetik."
+          },
+          "vi": {
+            "title": "AA-Omniscience — ảo giác",
+            "unit": "%",
+            "note": "So sánh đã công bố; xem thiết lập đánh giá trong nguồn trích dẫn."
+          },
+          "id": {
+            "title": "AA-Omniscience — halusinasi",
+            "unit": "%",
+            "note": "Perbandingan yang dipublikasikan; lihat pengaturan evaluasi di sumber yang dikutip."
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "GPT-6.1 Terra — Specs as launched",
+        "columns": [
+          "Measure",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Provider",
+            "OpenAI"
+          ],
+          [
+            "Release",
+            "2026-10-26"
+          ],
+          [
+            "Context (tokens)",
+            "1,050,000"
+          ],
+          [
+            "Max output (tokens)",
+            "128,000"
+          ],
+          [
+            "Input USD / 1M tokens",
+            "1.00"
+          ],
+          [
+            "Output USD / 1M tokens",
+            "5.00"
+          ],
+          [
+            "Cached input USD / 1M tokens",
+            "0.05"
+          ]
+        ],
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+        "note": "Unpublished figures are omitted. Pricing conditions apply.",
+        "i18n": {
+          "es": {
+            "title": "GPT-6.1 Terra — Especificaciones de lanzamiento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Proveedor",
+                "OpenAI"
+              ],
+              [
+                "Lanzamiento",
+                "2026-10-26"
+              ],
+              [
+                "Contexto (tokens)",
+                "1,050,000"
+              ],
+              [
+                "Salida máxima (tokens)",
+                "128,000"
+              ],
+              [
+                "Entrada USD / 1M tokens",
+                "1.00"
+              ],
+              [
+                "Salida USD / 1M tokens",
+                "5.00"
+              ],
+              [
+                "Entrada en caché USD / 1M tokens",
+                "0.05"
+              ]
+            ],
+            "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios."
+          },
+          "fr": {
+            "title": "GPT-6.1 Terra — Spécifications au lancement",
+            "columns": [
+              "Mesure",
+              "Valeur"
+            ],
+            "rows": [
+              [
+                "Fournisseur",
+                "OpenAI"
+              ],
+              [
+                "Lancement",
+                "2026-10-26"
+              ],
+              [
+                "Contexte (jetons)",
+                "1,050,000"
+              ],
+              [
+                "Sortie maximale (jetons)",
+                "128,000"
+              ],
+              [
+                "Entrée USD / 1M jetons",
+                "1.00"
+              ],
+              [
+                "Sortie USD / 1M jetons",
+                "5.00"
+              ],
+              [
+                "Entrée en cache USD / 1M jetons",
+                "0.05"
+              ]
+            ],
+            "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent."
+          },
+          "de": {
+            "title": "GPT-6.1 Terra — Spezifikationen zum Start",
+            "columns": [
+              "Merkmal",
+              "Wert"
+            ],
+            "rows": [
+              [
+                "Anbieter",
+                "OpenAI"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-10-26"
+              ],
+              [
+                "Kontext (Tokens)",
+                "1,050,000"
+              ],
+              [
+                "Maximale Ausgabe (Tokens)",
+                "128,000"
+              ],
+              [
+                "Eingabe USD / 1M Tokens",
+                "1.00"
+              ],
+              [
+                "Ausgabe USD / 1M Tokens",
+                "5.00"
+              ],
+              [
+                "Cache-Eingabe USD / 1M Tokens",
+                "0.05"
+              ]
+            ],
+            "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten."
+          },
+          "it": {
+            "title": "GPT-6.1 Terra — Specifiche al lancio",
+            "columns": [
+              "Misura",
+              "Valore"
+            ],
+            "rows": [
+              [
+                "Fornitore",
+                "OpenAI"
+              ],
+              [
+                "Lancio",
+                "2026-10-26"
+              ],
+              [
+                "Contesto (token)",
+                "1,050,000"
+              ],
+              [
+                "Output massimo (token)",
+                "128,000"
+              ],
+              [
+                "Input USD / 1M token",
+                "1.00"
+              ],
+              [
+                "Output USD / 1M token",
+                "5.00"
+              ],
+              [
+                "Input in cache USD / 1M token",
+                "0.05"
+              ]
+            ],
+            "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie."
+          },
+          "pt": {
+            "title": "GPT-6.1 Terra — Especificações no lançamento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Fornecedor",
+                "OpenAI"
+              ],
+              [
+                "Lançamento",
+                "2026-10-26"
+              ],
+              [
+                "Contexto (tokens)",
+                "1,050,000"
+              ],
+              [
+                "Saída máxima (tokens)",
+                "128,000"
+              ],
+              [
+                "Entrada USD / 1M tokens",
+                "1.00"
+              ],
+              [
+                "Saída USD / 1M tokens",
+                "5.00"
+              ],
+              [
+                "Entrada em cache USD / 1M tokens",
+                "0.05"
+              ]
+            ],
+            "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços."
+          },
+          "ru": {
+            "title": "GPT-6.1 Terra — Характеристики при запуске",
+            "columns": [
+              "Параметр",
+              "Значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "OpenAI"
+              ],
+              [
+                "Выпуск",
+                "2026-10-26"
+              ],
+              [
+                "Контекст (токенов)",
+                "1,050,000"
+              ],
+              [
+                "Максимальный вывод (токенов)",
+                "128,000"
+              ],
+              [
+                "Ввод USD / 1M токенов",
+                "1.00"
+              ],
+              [
+                "Вывод USD / 1M токенов",
+                "5.00"
+              ],
+              [
+                "Кэшированный ввод USD / 1M токенов",
+                "0.05"
+              ]
+            ],
+            "note": "Неопубликованные данные опущены. Действуют условия тарификации."
+          },
+          "ja": {
+            "title": "GPT-6.1 Terra — 公開時の仕様",
+            "columns": [
+              "項目",
+              "値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "OpenAI"
+              ],
+              [
+                "公開日",
+                "2026-10-26"
+              ],
+              [
+                "コンテキスト (トークン)",
+                "1,050,000"
+              ],
+              [
+                "最大出力 (トークン)",
+                "128,000"
+              ],
+              [
+                "入力 USD / 1M トークン",
+                "1.00"
+              ],
+              [
+                "出力 USD / 1M トークン",
+                "5.00"
+              ],
+              [
+                "キャッシュ入力 USD / 1M トークン",
+                "0.05"
+              ]
+            ],
+            "note": "未公表の数値は省略。料金条件が適用されます。"
+          },
+          "zh": {
+            "title": "GPT-6.1 Terra — 发布时规格",
+            "columns": [
+              "指标",
+              "数值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "OpenAI"
+              ],
+              [
+                "发布日期",
+                "2026-10-26"
+              ],
+              [
+                "上下文 (词元)",
+                "1,050,000"
+              ],
+              [
+                "最大输出 (词元)",
+                "128,000"
+              ],
+              [
+                "输入 USD / 1M 词元",
+                "1.00"
+              ],
+              [
+                "输出 USD / 1M 词元",
+                "5.00"
+              ],
+              [
+                "缓存输入 USD / 1M 词元",
+                "0.05"
+              ]
+            ],
+            "note": "未公布的数据已省略。价格条件适用。"
+          },
+          "ko": {
+            "title": "GPT-6.1 Terra — 출시 당시 사양",
+            "columns": [
+              "항목",
+              "값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "OpenAI"
+              ],
+              [
+                "출시일",
+                "2026-10-26"
+              ],
+              [
+                "컨텍스트 (토큰)",
+                "1,050,000"
+              ],
+              [
+                "최대 출력 (토큰)",
+                "128,000"
+              ],
+              [
+                "입력 USD / 1M 토큰",
+                "1.00"
+              ],
+              [
+                "출력 USD / 1M 토큰",
+                "5.00"
+              ],
+              [
+                "캐시 입력 USD / 1M 토큰",
+                "0.05"
+              ]
+            ],
+            "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다."
+          },
+          "hi": {
+            "title": "GPT-6.1 Terra — लॉन्च के समय विनिर्देश",
+            "columns": [
+              "माप",
+              "मान"
+            ],
+            "rows": [
+              [
+                "प्रदाता",
+                "OpenAI"
+              ],
+              [
+                "रिलीज़",
+                "2026-10-26"
+              ],
+              [
+                "कॉन्टेक्स्ट (टोकन)",
+                "1,050,000"
+              ],
+              [
+                "अधिकतम आउटपुट (टोकन)",
+                "128,000"
+              ],
+              [
+                "इनपुट USD / 1M टोकन",
+                "1.00"
+              ],
+              [
+                "आउटपुट USD / 1M टोकन",
+                "5.00"
+              ],
+              [
+                "कैश इनपुट USD / 1M टोकन",
+                "0.05"
+              ]
+            ],
+            "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।"
+          },
+          "ar": {
+            "title": "GPT-6.1 Terra — مواصفات الإطلاق",
+            "columns": [
+              "المقياس",
+              "القيمة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "OpenAI"
+              ],
+              [
+                "الإصدار",
+                "2026-10-26"
+              ],
+              [
+                "السياق (رمز)",
+                "1,050,000"
+              ],
+              [
+                "الحد الأقصى للإخراج (رمز)",
+                "128,000"
+              ],
+              [
+                "الإدخال USD / 1M رمز",
+                "1.00"
+              ],
+              [
+                "الإخراج USD / 1M رمز",
+                "5.00"
+              ],
+              [
+                "الإدخال المخزن مؤقتًا USD / 1M رمز",
+                "0.05"
+              ]
+            ],
+            "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير."
+          },
+          "th": {
+            "title": "GPT-6.1 Terra — ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่า"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "OpenAI"
+              ],
+              [
+                "วันเปิดตัว",
+                "2026-10-26"
+              ],
+              [
+                "บริบท (โทเคน)",
+                "1,050,000"
+              ],
+              [
+                "เอาต์พุตสูงสุด (โทเคน)",
+                "128,000"
+              ],
+              [
+                "อินพุต USD / 1M โทเคน",
+                "1.00"
+              ],
+              [
+                "เอาต์พุต USD / 1M โทเคน",
+                "5.00"
+              ],
+              [
+                "อินพุตที่แคช USD / 1M โทเคน",
+                "0.05"
+              ]
+            ],
+            "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา"
+          },
+          "ms": {
+            "title": "GPT-6.1 Terra — Spesifikasi semasa pelancaran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "OpenAI"
+              ],
+              [
+                "Pelancaran",
+                "2026-10-26"
+              ],
+              [
+                "Konteks (token)",
+                "1,050,000"
+              ],
+              [
+                "Output maksimum (token)",
+                "128,000"
+              ],
+              [
+                "Input USD / 1M token",
+                "1.00"
+              ],
+              [
+                "Output USD / 1M token",
+                "5.00"
+              ],
+              [
+                "Input cache USD / 1M token",
+                "0.05"
+              ]
+            ],
+            "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai."
+          },
+          "vi": {
+            "title": "GPT-6.1 Terra — Thông số khi ra mắt",
+            "columns": [
+              "Chỉ số",
+              "Giá trị"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "OpenAI"
+              ],
+              [
+                "Ngày phát hành",
+                "2026-10-26"
+              ],
+              [
+                "Ngữ cảnh (token)",
+                "1,050,000"
+              ],
+              [
+                "Đầu ra tối đa (token)",
+                "128,000"
+              ],
+              [
+                "Đầu vào USD / 1M token",
+                "1.00"
+              ],
+              [
+                "Đầu ra USD / 1M token",
+                "5.00"
+              ],
+              [
+                "Đầu vào lưu đệm USD / 1M token",
+                "0.05"
+              ]
+            ],
+            "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá."
+          },
+          "id": {
+            "title": "GPT-6.1 Terra — Spesifikasi saat peluncuran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "OpenAI"
+              ],
+              [
+                "Rilis",
+                "2026-10-26"
+              ],
+              [
+                "Konteks (token)",
+                "1,050,000"
+              ],
+              [
+                "Output maksimum (token)",
+                "128,000"
+              ],
+              [
+                "Input USD / 1M token",
+                "1.00"
+              ],
+              [
+                "Output USD / 1M token",
+                "5.00"
+              ],
+              [
+                "Input cache USD / 1M token",
+                "0.05"
+              ]
+            ],
+            "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 19805,
+    "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "charts": [
+      {
+        "title": "Kimi Code Bench 3.0 Long-horizon",
+        "unit": "%",
+        "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+        "bars": [
+          {
+            "label": "Kimi K3",
+            "value": 55.95
+          },
+          {
+            "label": "Kimi K3.1 Pro",
+            "value": 61.2,
+            "highlight": true
+          }
+        ],
+        "note": "Published comparison; consult the cited source for evaluation settings.",
+        "i18n": {
+          "es": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Comparación publicada; consulte los ajustes de evaluación en la fuente citada."
+          },
+          "fr": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Comparaison publiée ; voir les paramètres d’évaluation dans la source citée."
+          },
+          "de": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Veröffentlichter Vergleich; die Evaluierungseinstellungen stehen in der Quelle."
+          },
+          "it": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Confronto pubblicato; consultare le impostazioni di valutazione nella fonte citata."
+          },
+          "pt": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Comparação publicada; consulte as configurações de avaliação na fonte citada."
+          },
+          "ru": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Опубликованное сравнение; параметры оценки указаны в источнике."
+          },
+          "ja": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "公表された比較。評価条件は引用元をご確認ください。"
+          },
+          "zh": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "已公布的比较；评估设置请参阅引用来源。"
+          },
+          "ko": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "공개된 비교입니다. 평가 설정은 인용 출처를 확인하세요."
+          },
+          "hi": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "प्रकाशित तुलना; मूल्यांकन की सेटिंग के लिए उद्धृत स्रोत देखें।"
+          },
+          "ar": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "مقارنة منشورة؛ راجع إعدادات التقييم في المصدر المذكور."
+          },
+          "th": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "การเปรียบเทียบที่เผยแพร่ โปรดดูการตั้งค่าการประเมินในแหล่งอ้างอิง"
+          },
+          "ms": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Perbandingan diterbitkan; lihat tetapan penilaian dalam sumber yang dipetik."
+          },
+          "vi": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "So sánh đã công bố; xem thiết lập đánh giá trong nguồn trích dẫn."
+          },
+          "id": {
+            "title": "Kimi Code Bench 3.0 Long-horizon",
+            "unit": "%",
+            "note": "Perbandingan yang dipublikasikan; lihat pengaturan evaluasi di sumber yang dikutip."
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Kimi K3.1 Pro — Specs as launched",
+        "columns": [
+          "Measure",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Provider",
+            "Moonshot AI"
+          ],
+          [
+            "Release",
+            "2026-10-23"
+          ],
+          [
+            "Context (tokens)",
+            "1,000,000"
+          ],
+          [
+            "Weights (planned)",
+            "2026-11-04"
+          ]
+        ],
+        "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+        "note": "Unpublished figures are omitted. Pricing conditions apply.",
+        "i18n": {
+          "es": {
+            "title": "Kimi K3.1 Pro — Especificaciones de lanzamiento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Proveedor",
+                "Moonshot AI"
+              ],
+              [
+                "Lanzamiento",
+                "2026-10-23"
+              ],
+              [
+                "Contexto (tokens)",
+                "1,000,000"
+              ],
+              [
+                "Pesos (previstos)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios."
+          },
+          "fr": {
+            "title": "Kimi K3.1 Pro — Spécifications au lancement",
+            "columns": [
+              "Mesure",
+              "Valeur"
+            ],
+            "rows": [
+              [
+                "Fournisseur",
+                "Moonshot AI"
+              ],
+              [
+                "Lancement",
+                "2026-10-23"
+              ],
+              [
+                "Contexte (jetons)",
+                "1,000,000"
+              ],
+              [
+                "Poids (prévus)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent."
+          },
+          "de": {
+            "title": "Kimi K3.1 Pro — Spezifikationen zum Start",
+            "columns": [
+              "Merkmal",
+              "Wert"
+            ],
+            "rows": [
+              [
+                "Anbieter",
+                "Moonshot AI"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-10-23"
+              ],
+              [
+                "Kontext (Tokens)",
+                "1,000,000"
+              ],
+              [
+                "Gewichte (geplant)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten."
+          },
+          "it": {
+            "title": "Kimi K3.1 Pro — Specifiche al lancio",
+            "columns": [
+              "Misura",
+              "Valore"
+            ],
+            "rows": [
+              [
+                "Fornitore",
+                "Moonshot AI"
+              ],
+              [
+                "Lancio",
+                "2026-10-23"
+              ],
+              [
+                "Contesto (token)",
+                "1,000,000"
+              ],
+              [
+                "Pesi (previsti)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie."
+          },
+          "pt": {
+            "title": "Kimi K3.1 Pro — Especificações no lançamento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Fornecedor",
+                "Moonshot AI"
+              ],
+              [
+                "Lançamento",
+                "2026-10-23"
+              ],
+              [
+                "Contexto (tokens)",
+                "1,000,000"
+              ],
+              [
+                "Pesos (previstos)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços."
+          },
+          "ru": {
+            "title": "Kimi K3.1 Pro — Характеристики при запуске",
+            "columns": [
+              "Параметр",
+              "Значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Moonshot AI"
+              ],
+              [
+                "Выпуск",
+                "2026-10-23"
+              ],
+              [
+                "Контекст (токенов)",
+                "1,000,000"
+              ],
+              [
+                "Веса (план)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Неопубликованные данные опущены. Действуют условия тарификации."
+          },
+          "ja": {
+            "title": "Kimi K3.1 Pro — 公開時の仕様",
+            "columns": [
+              "項目",
+              "値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Moonshot AI"
+              ],
+              [
+                "公開日",
+                "2026-10-23"
+              ],
+              [
+                "コンテキスト (トークン)",
+                "1,000,000"
+              ],
+              [
+                "重み（予定）",
+                "2026-11-04"
+              ]
+            ],
+            "note": "未公表の数値は省略。料金条件が適用されます。"
+          },
+          "zh": {
+            "title": "Kimi K3.1 Pro — 发布时规格",
+            "columns": [
+              "指标",
+              "数值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Moonshot AI"
+              ],
+              [
+                "发布日期",
+                "2026-10-23"
+              ],
+              [
+                "上下文 (词元)",
+                "1,000,000"
+              ],
+              [
+                "权重（计划）",
+                "2026-11-04"
+              ]
+            ],
+            "note": "未公布的数据已省略。价格条件适用。"
+          },
+          "ko": {
+            "title": "Kimi K3.1 Pro — 출시 당시 사양",
+            "columns": [
+              "항목",
+              "값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Moonshot AI"
+              ],
+              [
+                "출시일",
+                "2026-10-23"
+              ],
+              [
+                "컨텍스트 (토큰)",
+                "1,000,000"
+              ],
+              [
+                "가중치 (예정)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다."
+          },
+          "hi": {
+            "title": "Kimi K3.1 Pro — लॉन्च के समय विनिर्देश",
+            "columns": [
+              "माप",
+              "मान"
+            ],
+            "rows": [
+              [
+                "प्रदाता",
+                "Moonshot AI"
+              ],
+              [
+                "रिलीज़",
+                "2026-10-23"
+              ],
+              [
+                "कॉन्टेक्स्ट (टोकन)",
+                "1,000,000"
+              ],
+              [
+                "वेट्स (नियोजित)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।"
+          },
+          "ar": {
+            "title": "Kimi K3.1 Pro — مواصفات الإطلاق",
+            "columns": [
+              "المقياس",
+              "القيمة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Moonshot AI"
+              ],
+              [
+                "الإصدار",
+                "2026-10-23"
+              ],
+              [
+                "السياق (رمز)",
+                "1,000,000"
+              ],
+              [
+                "الأوزان (مخطط لها)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير."
+          },
+          "th": {
+            "title": "Kimi K3.1 Pro — ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่า"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Moonshot AI"
+              ],
+              [
+                "วันเปิดตัว",
+                "2026-10-23"
+              ],
+              [
+                "บริบท (โทเคน)",
+                "1,000,000"
+              ],
+              [
+                "น้ำหนักโมเดล (ตามแผน)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา"
+          },
+          "ms": {
+            "title": "Kimi K3.1 Pro — Spesifikasi semasa pelancaran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Moonshot AI"
+              ],
+              [
+                "Pelancaran",
+                "2026-10-23"
+              ],
+              [
+                "Konteks (token)",
+                "1,000,000"
+              ],
+              [
+                "Wajaran (dirancang)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai."
+          },
+          "vi": {
+            "title": "Kimi K3.1 Pro — Thông số khi ra mắt",
+            "columns": [
+              "Chỉ số",
+              "Giá trị"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Moonshot AI"
+              ],
+              [
+                "Ngày phát hành",
+                "2026-10-23"
+              ],
+              [
+                "Ngữ cảnh (token)",
+                "1,000,000"
+              ],
+              [
+                "Trọng số (dự kiến)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá."
+          },
+          "id": {
+            "title": "Kimi K3.1 Pro — Spesifikasi saat peluncuran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Moonshot AI"
+              ],
+              [
+                "Rilis",
+                "2026-10-23"
+              ],
+              [
+                "Konteks (token)",
+                "1,000,000"
+              ],
+              [
+                "Bobot (direncanakan)",
+                "2026-11-04"
+              ]
+            ],
+            "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 15308,
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Gemini 4 Argon — Specs as launched",
+        "columns": [
+          "Measure",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Provider",
+            "Google DeepMind"
+          ],
+          [
+            "Release",
+            "2026-10-13"
+          ],
+          [
+            "Unified input + output limit (tokens)",
+            "1,000,000"
+          ],
+          [
+            "Intro input USD / 1M tokens",
+            "2.00"
+          ],
+          [
+            "Intro output USD / 1M tokens",
+            "10.00"
+          ],
+          [
+            "Standard input USD / 1M tokens",
+            "4.00"
+          ],
+          [
+            "Standard output USD / 1M tokens",
+            "20.00"
+          ]
+        ],
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "note": "Unpublished figures are omitted. Pricing conditions apply.",
+        "i18n": {
+          "es": {
+            "title": "Gemini 4 Argon — Especificaciones de lanzamiento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Proveedor",
+                "Google DeepMind"
+              ],
+              [
+                "Lanzamiento",
+                "2026-10-13"
+              ],
+              [
+                "Límite conjunto de entrada y salida (tokens)",
+                "1,000,000"
+              ],
+              [
+                "introductoria input USD / 1M tokens",
+                "2.00"
+              ],
+              [
+                "introductoria output USD / 1M tokens",
+                "10.00"
+              ],
+              [
+                "estándar input USD / 1M tokens",
+                "4.00"
+              ],
+              [
+                "estándar output USD / 1M tokens",
+                "20.00"
+              ]
+            ],
+            "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios."
+          },
+          "fr": {
+            "title": "Gemini 4 Argon — Spécifications au lancement",
+            "columns": [
+              "Mesure",
+              "Valeur"
+            ],
+            "rows": [
+              [
+                "Fournisseur",
+                "Google DeepMind"
+              ],
+              [
+                "Lancement",
+                "2026-10-13"
+              ],
+              [
+                "Limite cumulée entrée et sortie (tokens)",
+                "1,000,000"
+              ],
+              [
+                "de lancement input USD / 1M jetons",
+                "2.00"
+              ],
+              [
+                "de lancement output USD / 1M jetons",
+                "10.00"
+              ],
+              [
+                "standard input USD / 1M jetons",
+                "4.00"
+              ],
+              [
+                "standard output USD / 1M jetons",
+                "20.00"
+              ]
+            ],
+            "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent."
+          },
+          "de": {
+            "title": "Gemini 4 Argon — Spezifikationen zum Start",
+            "columns": [
+              "Merkmal",
+              "Wert"
+            ],
+            "rows": [
+              [
+                "Anbieter",
+                "Google DeepMind"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-10-13"
+              ],
+              [
+                "Gemeinsames Eingabe- und Ausgabelimit (Tokens)",
+                "1,000,000"
+              ],
+              [
+                "Einführungs- input USD / 1M Tokens",
+                "2.00"
+              ],
+              [
+                "Einführungs- output USD / 1M Tokens",
+                "10.00"
+              ],
+              [
+                "Standard- input USD / 1M Tokens",
+                "4.00"
+              ],
+              [
+                "Standard- output USD / 1M Tokens",
+                "20.00"
+              ]
+            ],
+            "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten."
+          },
+          "it": {
+            "title": "Gemini 4 Argon — Specifiche al lancio",
+            "columns": [
+              "Misura",
+              "Valore"
+            ],
+            "rows": [
+              [
+                "Fornitore",
+                "Google DeepMind"
+              ],
+              [
+                "Lancio",
+                "2026-10-13"
+              ],
+              [
+                "Limite complessivo di input e output (token)",
+                "1,000,000"
+              ],
+              [
+                "introduttivo input USD / 1M token",
+                "2.00"
+              ],
+              [
+                "introduttivo output USD / 1M token",
+                "10.00"
+              ],
+              [
+                "standard input USD / 1M token",
+                "4.00"
+              ],
+              [
+                "standard output USD / 1M token",
+                "20.00"
+              ]
+            ],
+            "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie."
+          },
+          "pt": {
+            "title": "Gemini 4 Argon — Especificações no lançamento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Fornecedor",
+                "Google DeepMind"
+              ],
+              [
+                "Lançamento",
+                "2026-10-13"
+              ],
+              [
+                "Limite conjunto de entrada e saída (tokens)",
+                "1,000,000"
+              ],
+              [
+                "introdutória input USD / 1M tokens",
+                "2.00"
+              ],
+              [
+                "introdutória output USD / 1M tokens",
+                "10.00"
+              ],
+              [
+                "padrão input USD / 1M tokens",
+                "4.00"
+              ],
+              [
+                "padrão output USD / 1M tokens",
+                "20.00"
+              ]
+            ],
+            "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços."
+          },
+          "ru": {
+            "title": "Gemini 4 Argon — Характеристики при запуске",
+            "columns": [
+              "Параметр",
+              "Значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Google DeepMind"
+              ],
+              [
+                "Выпуск",
+                "2026-10-13"
+              ],
+              [
+                "Общий лимит ввода и вывода (токены)",
+                "1,000,000"
+              ],
+              [
+                "вводный input USD / 1M токенов",
+                "2.00"
+              ],
+              [
+                "вводный output USD / 1M токенов",
+                "10.00"
+              ],
+              [
+                "стандартный input USD / 1M токенов",
+                "4.00"
+              ],
+              [
+                "стандартный output USD / 1M токенов",
+                "20.00"
+              ]
+            ],
+            "note": "Неопубликованные данные опущены. Действуют условия тарификации."
+          },
+          "ja": {
+            "title": "Gemini 4 Argon — 公開時の仕様",
+            "columns": [
+              "項目",
+              "値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Google DeepMind"
+              ],
+              [
+                "公開日",
+                "2026-10-13"
+              ],
+              [
+                "入力と出力を合わせた上限（トークン）",
+                "1,000,000"
+              ],
+              [
+                "導入時 input USD / 1M トークン",
+                "2.00"
+              ],
+              [
+                "導入時 output USD / 1M トークン",
+                "10.00"
+              ],
+              [
+                "通常 input USD / 1M トークン",
+                "4.00"
+              ],
+              [
+                "通常 output USD / 1M トークン",
+                "20.00"
+              ]
+            ],
+            "note": "未公表の数値は省略。料金条件が適用されます。"
+          },
+          "zh": {
+            "title": "Gemini 4 Argon — 发布时规格",
+            "columns": [
+              "指标",
+              "数值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Google DeepMind"
+              ],
+              [
+                "发布日期",
+                "2026-10-13"
+              ],
+              [
+                "输入与输出合计上限（词元）",
+                "1,000,000"
+              ],
+              [
+                "优惠期 input USD / 1M 词元",
+                "2.00"
+              ],
+              [
+                "优惠期 output USD / 1M 词元",
+                "10.00"
+              ],
+              [
+                "标准 input USD / 1M 词元",
+                "4.00"
+              ],
+              [
+                "标准 output USD / 1M 词元",
+                "20.00"
+              ]
+            ],
+            "note": "未公布的数据已省略。价格条件适用。"
+          },
+          "ko": {
+            "title": "Gemini 4 Argon — 출시 당시 사양",
+            "columns": [
+              "항목",
+              "값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Google DeepMind"
+              ],
+              [
+                "출시일",
+                "2026-10-13"
+              ],
+              [
+                "입력·출력 합산 한도(토큰)",
+                "1,000,000"
+              ],
+              [
+                "출시 특가 input USD / 1M 토큰",
+                "2.00"
+              ],
+              [
+                "출시 특가 output USD / 1M 토큰",
+                "10.00"
+              ],
+              [
+                "표준 input USD / 1M 토큰",
+                "4.00"
+              ],
+              [
+                "표준 output USD / 1M 토큰",
+                "20.00"
+              ]
+            ],
+            "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다."
+          },
+          "hi": {
+            "title": "Gemini 4 Argon — लॉन्च के समय विनिर्देश",
+            "columns": [
+              "माप",
+              "मान"
+            ],
+            "rows": [
+              [
+                "प्रदाता",
+                "Google DeepMind"
+              ],
+              [
+                "रिलीज़",
+                "2026-10-13"
+              ],
+              [
+                "इनपुट और आउटपुट की संयुक्त सीमा (टोकन)",
+                "1,000,000"
+              ],
+              [
+                "प्रारंभिक input USD / 1M टोकन",
+                "2.00"
+              ],
+              [
+                "प्रारंभिक output USD / 1M टोकन",
+                "10.00"
+              ],
+              [
+                "मानक input USD / 1M टोकन",
+                "4.00"
+              ],
+              [
+                "मानक output USD / 1M टोकन",
+                "20.00"
+              ]
+            ],
+            "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।"
+          },
+          "ar": {
+            "title": "Gemini 4 Argon — مواصفات الإطلاق",
+            "columns": [
+              "المقياس",
+              "القيمة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Google DeepMind"
+              ],
+              [
+                "الإصدار",
+                "2026-10-13"
+              ],
+              [
+                "الحد الإجمالي للإدخال والإخراج (رموز)",
+                "1,000,000"
+              ],
+              [
+                "تمهيدي input USD / 1M رمز",
+                "2.00"
+              ],
+              [
+                "تمهيدي output USD / 1M رمز",
+                "10.00"
+              ],
+              [
+                "قياسي input USD / 1M رمز",
+                "4.00"
+              ],
+              [
+                "قياسي output USD / 1M رمز",
+                "20.00"
+              ]
+            ],
+            "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير."
+          },
+          "th": {
+            "title": "Gemini 4 Argon — ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่า"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Google DeepMind"
+              ],
+              [
+                "วันเปิดตัว",
+                "2026-10-13"
+              ],
+              [
+                "ขีดจำกัดอินพุตและเอาต์พุตรวม (โทเค็น)",
+                "1,000,000"
+              ],
+              [
+                "ช่วงเปิดตัว input USD / 1M โทเคน",
+                "2.00"
+              ],
+              [
+                "ช่วงเปิดตัว output USD / 1M โทเคน",
+                "10.00"
+              ],
+              [
+                "มาตรฐาน input USD / 1M โทเคน",
+                "4.00"
+              ],
+              [
+                "มาตรฐาน output USD / 1M โทเคน",
+                "20.00"
+              ]
+            ],
+            "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา"
+          },
+          "ms": {
+            "title": "Gemini 4 Argon — Spesifikasi semasa pelancaran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Google DeepMind"
+              ],
+              [
+                "Pelancaran",
+                "2026-10-13"
+              ],
+              [
+                "Had gabungan input dan output (token)",
+                "1,000,000"
+              ],
+              [
+                "pengenalan input USD / 1M token",
+                "2.00"
+              ],
+              [
+                "pengenalan output USD / 1M token",
+                "10.00"
+              ],
+              [
+                "standard input USD / 1M token",
+                "4.00"
+              ],
+              [
+                "standard output USD / 1M token",
+                "20.00"
+              ]
+            ],
+            "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai."
+          },
+          "vi": {
+            "title": "Gemini 4 Argon — Thông số khi ra mắt",
+            "columns": [
+              "Chỉ số",
+              "Giá trị"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Google DeepMind"
+              ],
+              [
+                "Ngày phát hành",
+                "2026-10-13"
+              ],
+              [
+                "Giới hạn tổng đầu vào và đầu ra (token)",
+                "1,000,000"
+              ],
+              [
+                "ưu đãi ra mắt input USD / 1M token",
+                "2.00"
+              ],
+              [
+                "ưu đãi ra mắt output USD / 1M token",
+                "10.00"
+              ],
+              [
+                "tiêu chuẩn input USD / 1M token",
+                "4.00"
+              ],
+              [
+                "tiêu chuẩn output USD / 1M token",
+                "20.00"
+              ]
+            ],
+            "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá."
+          },
+          "id": {
+            "title": "Gemini 4 Argon — Spesifikasi saat peluncuran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Google DeepMind"
+              ],
+              [
+                "Rilis",
+                "2026-10-13"
+              ],
+              [
+                "Batas gabungan input dan output (token)",
+                "1,000,000"
+              ],
+              [
+                "perkenalan input USD / 1M token",
+                "2.00"
+              ],
+              [
+                "perkenalan output USD / 1M token",
+                "10.00"
+              ],
+              [
+                "standar input USD / 1M token",
+                "4.00"
+              ],
+              [
+                "standar output USD / 1M token",
+                "20.00"
+              ]
+            ],
+            "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 15273,
+    "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
+    "charts": [
+      {
+        "title": "ProgramBench",
+        "unit": "%",
+        "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
+        "bars": [
+          {
+            "label": "Claude Fable 5.1 (max)",
+            "value": 55.5
+          },
+          {
+            "label": "GPT-6 Astra (max)",
+            "value": 52.5
+          },
+          {
+            "label": "Claude Opus 5.5 (max)",
+            "value": 70.5
+          },
+          {
+            "label": "Muse Wonder (max)",
+            "value": 50,
+            "highlight": true
+          },
+          {
+            "label": "Muse Wonder Full (max)",
+            "value": 59,
+            "highlight": true
+          }
+        ],
+        "note": "Published comparison; consult the cited source for evaluation settings.",
+        "i18n": {
+          "es": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Comparación publicada; consulte los ajustes de evaluación en la fuente citada."
+          },
+          "fr": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Comparaison publiée ; voir les paramètres d’évaluation dans la source citée."
+          },
+          "de": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Veröffentlichter Vergleich; die Evaluierungseinstellungen stehen in der Quelle."
+          },
+          "it": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Confronto pubblicato; consultare le impostazioni di valutazione nella fonte citata."
+          },
+          "pt": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Comparação publicada; consulte as configurações de avaliação na fonte citada."
+          },
+          "ru": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Опубликованное сравнение; параметры оценки указаны в источнике."
+          },
+          "ja": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "公表された比較。評価条件は引用元をご確認ください。"
+          },
+          "zh": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "已公布的比较；评估设置请参阅引用来源。"
+          },
+          "ko": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "공개된 비교입니다. 평가 설정은 인용 출처를 확인하세요."
+          },
+          "hi": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "प्रकाशित तुलना; मूल्यांकन की सेटिंग के लिए उद्धृत स्रोत देखें।"
+          },
+          "ar": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "مقارنة منشورة؛ راجع إعدادات التقييم في المصدر المذكور."
+          },
+          "th": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "การเปรียบเทียบที่เผยแพร่ โปรดดูการตั้งค่าการประเมินในแหล่งอ้างอิง"
+          },
+          "ms": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Perbandingan diterbitkan; lihat tetapan penilaian dalam sumber yang dipetik."
+          },
+          "vi": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "So sánh đã công bố; xem thiết lập đánh giá trong nguồn trích dẫn."
+          },
+          "id": {
+            "title": "ProgramBench",
+            "unit": "%",
+            "note": "Perbandingan yang dipublikasikan; lihat pengaturan evaluasi di sumber yang dikutip."
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Muse Wonder / Muse Wonder Full — Specs as launched",
+        "columns": [
+          "Measure",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Provider",
+            "Meta"
+          ],
+          [
+            "Release",
+            "2026-10-12"
+          ],
+          [
+            "Context (tokens)",
+            "1,000,000"
+          ]
+        ],
+        "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
+        "note": "Unpublished figures are omitted. Pricing conditions apply.",
+        "i18n": {
+          "es": {
+            "title": "Muse Wonder / Muse Wonder Full — Especificaciones de lanzamiento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Proveedor",
+                "Meta"
+              ],
+              [
+                "Lanzamiento",
+                "2026-10-12"
+              ],
+              [
+                "Contexto (tokens)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios."
+          },
+          "fr": {
+            "title": "Muse Wonder / Muse Wonder Full — Spécifications au lancement",
+            "columns": [
+              "Mesure",
+              "Valeur"
+            ],
+            "rows": [
+              [
+                "Fournisseur",
+                "Meta"
+              ],
+              [
+                "Lancement",
+                "2026-10-12"
+              ],
+              [
+                "Contexte (jetons)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent."
+          },
+          "de": {
+            "title": "Muse Wonder / Muse Wonder Full — Spezifikationen zum Start",
+            "columns": [
+              "Merkmal",
+              "Wert"
+            ],
+            "rows": [
+              [
+                "Anbieter",
+                "Meta"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-10-12"
+              ],
+              [
+                "Kontext (Tokens)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten."
+          },
+          "it": {
+            "title": "Muse Wonder / Muse Wonder Full — Specifiche al lancio",
+            "columns": [
+              "Misura",
+              "Valore"
+            ],
+            "rows": [
+              [
+                "Fornitore",
+                "Meta"
+              ],
+              [
+                "Lancio",
+                "2026-10-12"
+              ],
+              [
+                "Contesto (token)",
+                "1,000,000"
+              ]
+            ],
+            "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie."
+          },
+          "pt": {
+            "title": "Muse Wonder / Muse Wonder Full — Especificações no lançamento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Fornecedor",
+                "Meta"
+              ],
+              [
+                "Lançamento",
+                "2026-10-12"
+              ],
+              [
+                "Contexto (tokens)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços."
+          },
+          "ru": {
+            "title": "Muse Wonder / Muse Wonder Full — Характеристики при запуске",
+            "columns": [
+              "Параметр",
+              "Значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Meta"
+              ],
+              [
+                "Выпуск",
+                "2026-10-12"
+              ],
+              [
+                "Контекст (токенов)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Неопубликованные данные опущены. Действуют условия тарификации."
+          },
+          "ja": {
+            "title": "Muse Wonder / Muse Wonder Full — 公開時の仕様",
+            "columns": [
+              "項目",
+              "値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Meta"
+              ],
+              [
+                "公開日",
+                "2026-10-12"
+              ],
+              [
+                "コンテキスト (トークン)",
+                "1,000,000"
+              ]
+            ],
+            "note": "未公表の数値は省略。料金条件が適用されます。"
+          },
+          "zh": {
+            "title": "Muse Wonder / Muse Wonder Full — 发布时规格",
+            "columns": [
+              "指标",
+              "数值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Meta"
+              ],
+              [
+                "发布日期",
+                "2026-10-12"
+              ],
+              [
+                "上下文 (词元)",
+                "1,000,000"
+              ]
+            ],
+            "note": "未公布的数据已省略。价格条件适用。"
+          },
+          "ko": {
+            "title": "Muse Wonder / Muse Wonder Full — 출시 당시 사양",
+            "columns": [
+              "항목",
+              "값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Meta"
+              ],
+              [
+                "출시일",
+                "2026-10-12"
+              ],
+              [
+                "컨텍스트 (토큰)",
+                "1,000,000"
+              ]
+            ],
+            "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다."
+          },
+          "hi": {
+            "title": "Muse Wonder / Muse Wonder Full — लॉन्च के समय विनिर्देश",
+            "columns": [
+              "माप",
+              "मान"
+            ],
+            "rows": [
+              [
+                "प्रदाता",
+                "Meta"
+              ],
+              [
+                "रिलीज़",
+                "2026-10-12"
+              ],
+              [
+                "कॉन्टेक्स्ट (टोकन)",
+                "1,000,000"
+              ]
+            ],
+            "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।"
+          },
+          "ar": {
+            "title": "Muse Wonder / Muse Wonder Full — مواصفات الإطلاق",
+            "columns": [
+              "المقياس",
+              "القيمة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Meta"
+              ],
+              [
+                "الإصدار",
+                "2026-10-12"
+              ],
+              [
+                "السياق (رمز)",
+                "1,000,000"
+              ]
+            ],
+            "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير."
+          },
+          "th": {
+            "title": "Muse Wonder / Muse Wonder Full — ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่า"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Meta"
+              ],
+              [
+                "วันเปิดตัว",
+                "2026-10-12"
+              ],
+              [
+                "บริบท (โทเคน)",
+                "1,000,000"
+              ]
+            ],
+            "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา"
+          },
+          "ms": {
+            "title": "Muse Wonder / Muse Wonder Full — Spesifikasi semasa pelancaran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Meta"
+              ],
+              [
+                "Pelancaran",
+                "2026-10-12"
+              ],
+              [
+                "Konteks (token)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai."
+          },
+          "vi": {
+            "title": "Muse Wonder / Muse Wonder Full — Thông số khi ra mắt",
+            "columns": [
+              "Chỉ số",
+              "Giá trị"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Meta"
+              ],
+              [
+                "Ngày phát hành",
+                "2026-10-12"
+              ],
+              [
+                "Ngữ cảnh (token)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá."
+          },
+          "id": {
+            "title": "Muse Wonder / Muse Wonder Full — Spesifikasi saat peluncuran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Meta"
+              ],
+              [
+                "Rilis",
+                "2026-10-12"
+              ],
+              [
+                "Konteks (token)",
+                "1,000,000"
+              ]
+            ],
+            "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 4815,
+    "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+    "charts": [
+      {
+        "title": "Terminal-Bench 4.0",
+        "unit": "%",
+        "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+        "bars": [
+          {
+            "label": "Claude Haiku 4.5",
+            "value": 0
+          },
+          {
+            "label": "GPT-6 Luna",
+            "value": 16.4
+          },
+          {
+            "label": "Claude Haiku 5.5",
+            "value": 39.2,
+            "highlight": true
+          }
+        ],
+        "note": "Published comparison; consult the cited source for evaluation settings.",
+        "i18n": {
+          "es": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Comparación publicada; consulte los ajustes de evaluación en la fuente citada."
+          },
+          "fr": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Comparaison publiée ; voir les paramètres d’évaluation dans la source citée."
+          },
+          "de": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Veröffentlichter Vergleich; die Evaluierungseinstellungen stehen in der Quelle."
+          },
+          "it": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Confronto pubblicato; consultare le impostazioni di valutazione nella fonte citata."
+          },
+          "pt": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Comparação publicada; consulte as configurações de avaliação na fonte citada."
+          },
+          "ru": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Опубликованное сравнение; параметры оценки указаны в источнике."
+          },
+          "ja": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "公表された比較。評価条件は引用元をご確認ください。"
+          },
+          "zh": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "已公布的比较；评估设置请参阅引用来源。"
+          },
+          "ko": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "공개된 비교입니다. 평가 설정은 인용 출처를 확인하세요."
+          },
+          "hi": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "प्रकाशित तुलना; मूल्यांकन की सेटिंग के लिए उद्धृत स्रोत देखें।"
+          },
+          "ar": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "مقارنة منشورة؛ راجع إعدادات التقييم في المصدر المذكور."
+          },
+          "th": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "การเปรียบเทียบที่เผยแพร่ โปรดดูการตั้งค่าการประเมินในแหล่งอ้างอิง"
+          },
+          "ms": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Perbandingan diterbitkan; lihat tetapan penilaian dalam sumber yang dipetik."
+          },
+          "vi": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "So sánh đã công bố; xem thiết lập đánh giá trong nguồn trích dẫn."
+          },
+          "id": {
+            "title": "Terminal-Bench 4.0",
+            "unit": "%",
+            "note": "Perbandingan yang dipublikasikan; lihat pengaturan evaluasi di sumber yang dikutip."
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Claude Haiku 5.5 — Specs as launched",
+        "columns": [
+          "Measure",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Provider",
+            "Anthropic"
+          ],
+          [
+            "Release",
+            "2026-10-07"
+          ],
+          [
+            "Input USD / 1M tokens (≤100K)",
+            "0.10"
+          ],
+          [
+            "Output USD / 1M tokens (≤100K)",
+            "0.50"
+          ],
+          [
+            "Input USD / 1M tokens (>100K)",
+            "0.50"
+          ],
+          [
+            "Output USD / 1M tokens (>100K)",
+            "2.50"
+          ]
+        ],
+        "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+        "note": "Unpublished figures are omitted. Pricing conditions apply.",
+        "i18n": {
+          "es": {
+            "title": "Claude Haiku 5.5 — Especificaciones de lanzamiento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Proveedor",
+                "Anthropic"
+              ],
+              [
+                "Lanzamiento",
+                "2026-10-07"
+              ],
+              [
+                "Entrada USD / 1M tokens (≤100K)",
+                "0.10"
+              ],
+              [
+                "Salida USD / 1M tokens (≤100K)",
+                "0.50"
+              ],
+              [
+                "Entrada USD / 1M tokens (>100K)",
+                "0.50"
+              ],
+              [
+                "Salida USD / 1M tokens (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Las cifras no publicadas se omiten. Se aplican las condiciones de precios."
+          },
+          "fr": {
+            "title": "Claude Haiku 5.5 — Spécifications au lancement",
+            "columns": [
+              "Mesure",
+              "Valeur"
+            ],
+            "rows": [
+              [
+                "Fournisseur",
+                "Anthropic"
+              ],
+              [
+                "Lancement",
+                "2026-10-07"
+              ],
+              [
+                "Entrée USD / 1M jetons (≤100K)",
+                "0.10"
+              ],
+              [
+                "Sortie USD / 1M jetons (≤100K)",
+                "0.50"
+              ],
+              [
+                "Entrée USD / 1M jetons (>100K)",
+                "0.50"
+              ],
+              [
+                "Sortie USD / 1M jetons (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Les chiffres non publiés sont omis. Les conditions tarifaires s’appliquent."
+          },
+          "de": {
+            "title": "Claude Haiku 5.5 — Spezifikationen zum Start",
+            "columns": [
+              "Merkmal",
+              "Wert"
+            ],
+            "rows": [
+              [
+                "Anbieter",
+                "Anthropic"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-10-07"
+              ],
+              [
+                "Eingabe USD / 1M Tokens (≤100K)",
+                "0.10"
+              ],
+              [
+                "Ausgabe USD / 1M Tokens (≤100K)",
+                "0.50"
+              ],
+              [
+                "Eingabe USD / 1M Tokens (>100K)",
+                "0.50"
+              ],
+              [
+                "Ausgabe USD / 1M Tokens (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Unveröffentlichte Werte fehlen. Preisbedingungen gelten."
+          },
+          "it": {
+            "title": "Claude Haiku 5.5 — Specifiche al lancio",
+            "columns": [
+              "Misura",
+              "Valore"
+            ],
+            "rows": [
+              [
+                "Fornitore",
+                "Anthropic"
+              ],
+              [
+                "Lancio",
+                "2026-10-07"
+              ],
+              [
+                "Input USD / 1M token (≤100K)",
+                "0.10"
+              ],
+              [
+                "Output USD / 1M token (≤100K)",
+                "0.50"
+              ],
+              [
+                "Input USD / 1M token (>100K)",
+                "0.50"
+              ],
+              [
+                "Output USD / 1M token (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "I dati non pubblicati sono omessi. Si applicano le condizioni tariffarie."
+          },
+          "pt": {
+            "title": "Claude Haiku 5.5 — Especificações no lançamento",
+            "columns": [
+              "Medida",
+              "Valor"
+            ],
+            "rows": [
+              [
+                "Fornecedor",
+                "Anthropic"
+              ],
+              [
+                "Lançamento",
+                "2026-10-07"
+              ],
+              [
+                "Entrada USD / 1M tokens (≤100K)",
+                "0.10"
+              ],
+              [
+                "Saída USD / 1M tokens (≤100K)",
+                "0.50"
+              ],
+              [
+                "Entrada USD / 1M tokens (>100K)",
+                "0.50"
+              ],
+              [
+                "Saída USD / 1M tokens (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Dados não publicados foram omitidos. Aplicam-se as condições de preços."
+          },
+          "ru": {
+            "title": "Claude Haiku 5.5 — Характеристики при запуске",
+            "columns": [
+              "Параметр",
+              "Значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Anthropic"
+              ],
+              [
+                "Выпуск",
+                "2026-10-07"
+              ],
+              [
+                "Ввод USD / 1M токенов (≤100K)",
+                "0.10"
+              ],
+              [
+                "Вывод USD / 1M токенов (≤100K)",
+                "0.50"
+              ],
+              [
+                "Ввод USD / 1M токенов (>100K)",
+                "0.50"
+              ],
+              [
+                "Вывод USD / 1M токенов (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Неопубликованные данные опущены. Действуют условия тарификации."
+          },
+          "ja": {
+            "title": "Claude Haiku 5.5 — 公開時の仕様",
+            "columns": [
+              "項目",
+              "値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Anthropic"
+              ],
+              [
+                "公開日",
+                "2026-10-07"
+              ],
+              [
+                "入力 USD / 1M トークン (≤100K)",
+                "0.10"
+              ],
+              [
+                "出力 USD / 1M トークン (≤100K)",
+                "0.50"
+              ],
+              [
+                "入力 USD / 1M トークン (>100K)",
+                "0.50"
+              ],
+              [
+                "出力 USD / 1M トークン (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "未公表の数値は省略。料金条件が適用されます。"
+          },
+          "zh": {
+            "title": "Claude Haiku 5.5 — 发布时规格",
+            "columns": [
+              "指标",
+              "数值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Anthropic"
+              ],
+              [
+                "发布日期",
+                "2026-10-07"
+              ],
+              [
+                "输入 USD / 1M 词元 (≤100K)",
+                "0.10"
+              ],
+              [
+                "输出 USD / 1M 词元 (≤100K)",
+                "0.50"
+              ],
+              [
+                "输入 USD / 1M 词元 (>100K)",
+                "0.50"
+              ],
+              [
+                "输出 USD / 1M 词元 (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "未公布的数据已省略。价格条件适用。"
+          },
+          "ko": {
+            "title": "Claude Haiku 5.5 — 출시 당시 사양",
+            "columns": [
+              "항목",
+              "값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Anthropic"
+              ],
+              [
+                "출시일",
+                "2026-10-07"
+              ],
+              [
+                "입력 USD / 1M 토큰 (≤100K)",
+                "0.10"
+              ],
+              [
+                "출력 USD / 1M 토큰 (≤100K)",
+                "0.50"
+              ],
+              [
+                "입력 USD / 1M 토큰 (>100K)",
+                "0.50"
+              ],
+              [
+                "출력 USD / 1M 토큰 (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "미공개 수치는 생략했습니다. 요금 조건이 적용됩니다."
+          },
+          "hi": {
+            "title": "Claude Haiku 5.5 — लॉन्च के समय विनिर्देश",
+            "columns": [
+              "माप",
+              "मान"
+            ],
+            "rows": [
+              [
+                "प्रदाता",
+                "Anthropic"
+              ],
+              [
+                "रिलीज़",
+                "2026-10-07"
+              ],
+              [
+                "इनपुट USD / 1M टोकन (≤100K)",
+                "0.10"
+              ],
+              [
+                "आउटपुट USD / 1M टोकन (≤100K)",
+                "0.50"
+              ],
+              [
+                "इनपुट USD / 1M टोकन (>100K)",
+                "0.50"
+              ],
+              [
+                "आउटपुट USD / 1M टोकन (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "अप्रकाशित आँकड़े छोड़े गए हैं। मूल्य संबंधी शर्तें लागू हैं।"
+          },
+          "ar": {
+            "title": "Claude Haiku 5.5 — مواصفات الإطلاق",
+            "columns": [
+              "المقياس",
+              "القيمة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Anthropic"
+              ],
+              [
+                "الإصدار",
+                "2026-10-07"
+              ],
+              [
+                "الإدخال USD / 1M رمز (≤100K)",
+                "0.10"
+              ],
+              [
+                "الإخراج USD / 1M رمز (≤100K)",
+                "0.50"
+              ],
+              [
+                "الإدخال USD / 1M رمز (>100K)",
+                "0.50"
+              ],
+              [
+                "الإخراج USD / 1M رمز (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "حُذفت الأرقام غير المنشورة. تسري شروط التسعير."
+          },
+          "th": {
+            "title": "Claude Haiku 5.5 — ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่า"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Anthropic"
+              ],
+              [
+                "วันเปิดตัว",
+                "2026-10-07"
+              ],
+              [
+                "อินพุต USD / 1M โทเคน (≤100K)",
+                "0.10"
+              ],
+              [
+                "เอาต์พุต USD / 1M โทเคน (≤100K)",
+                "0.50"
+              ],
+              [
+                "อินพุต USD / 1M โทเคน (>100K)",
+                "0.50"
+              ],
+              [
+                "เอาต์พุต USD / 1M โทเคน (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "ละเว้นตัวเลขที่ยังไม่เผยแพร่ เป็นไปตามเงื่อนไขราคา"
+          },
+          "ms": {
+            "title": "Claude Haiku 5.5 — Spesifikasi semasa pelancaran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Anthropic"
+              ],
+              [
+                "Pelancaran",
+                "2026-10-07"
+              ],
+              [
+                "Input USD / 1M token (≤100K)",
+                "0.10"
+              ],
+              [
+                "Output USD / 1M token (≤100K)",
+                "0.50"
+              ],
+              [
+                "Input USD / 1M token (>100K)",
+                "0.50"
+              ],
+              [
+                "Output USD / 1M token (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Angka yang tidak diterbitkan ditinggalkan. Syarat harga terpakai."
+          },
+          "vi": {
+            "title": "Claude Haiku 5.5 — Thông số khi ra mắt",
+            "columns": [
+              "Chỉ số",
+              "Giá trị"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Anthropic"
+              ],
+              [
+                "Ngày phát hành",
+                "2026-10-07"
+              ],
+              [
+                "Đầu vào USD / 1M token (≤100K)",
+                "0.10"
+              ],
+              [
+                "Đầu ra USD / 1M token (≤100K)",
+                "0.50"
+              ],
+              [
+                "Đầu vào USD / 1M token (>100K)",
+                "0.50"
+              ],
+              [
+                "Đầu ra USD / 1M token (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Bỏ qua số liệu chưa công bố. Áp dụng điều kiện giá."
+          },
+          "id": {
+            "title": "Claude Haiku 5.5 — Spesifikasi saat peluncuran",
+            "columns": [
+              "Ukuran",
+              "Nilai"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Anthropic"
+              ],
+              [
+                "Rilis",
+                "2026-10-07"
+              ],
+              [
+                "Input USD / 1M token (≤100K)",
+                "0.10"
+              ],
+              [
+                "Output USD / 1M token (≤100K)",
+                "0.50"
+              ],
+              [
+                "Input USD / 1M token (>100K)",
+                "0.50"
+              ],
+              [
+                "Output USD / 1M token (>100K)",
+                "2.50"
+              ]
+            ],
+            "note": "Angka yang belum dipublikasikan dihilangkan. Ketentuan harga berlaku."
+          }
+        }
+      }
+    ]
+  }
+]

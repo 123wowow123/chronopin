@@ -1,0 +1,558 @@
+{
+  "ads": [
+    {
+      "id": 194,
+      "holiday": "valentines-day",
+      "asin": "B00FGINOZ4",
+      "url": "https://www.amazon.com/dp/B00FGINOZ4",
+      "title": "Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce",
+      "brand": "Philadelphia Candies",
+      "price": 15,
+      "rating": 4.5,
+      "reviewCount": 1447,
+      "image": "https://m.media-amazon.com/images/I/71U7FnvGazL._AC_SL300_.jpg",
+      "tier": "value",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-29T15:49:08.627Z",
+      "utcCreatedDateTime": "2026-10-29T15:49:08.627Z",
+      "urgency": null
+    },
+    {
+      "id": 195,
+      "holiday": "valentines-day",
+      "asin": "B097TR45D4",
+      "url": "https://www.amazon.com/dp/B097TR45D4",
+      "title": "Gourmet Valentines Chocolate Truffles Gift Box Collection, 15 Assorted Belgian Chocolate Candy Gifts for Her and Him with 7 Delectable Flavors, Kosher, By Astor Chocolate",
+      "brand": "ASTOR",
+      "price": 19.99,
+      "rating": 4.2,
+      "reviewCount": 988,
+      "image": "https://m.media-amazon.com/images/I/81wgijh00NL._AC_SL300_.jpg",
+      "tier": "value",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-29T15:49:21.796Z",
+      "utcCreatedDateTime": "2026-10-29T15:49:21.796Z",
+      "urgency": null
+    },
+    {
+      "id": 196,
+      "holiday": "valentines-day",
+      "asin": "B01AO47KWW",
+      "url": "https://www.amazon.com/dp/B01AO47KWW",
+      "title": "A Gift Inside 9 Chocolate Covered Strawberries Gift Box - Fresh Chocolate Dipped Strawberries with Milk & White Chocolate - Gourmet Chocolate Covered Strawberry Gift for Birthday, Mother's Day, Valentine's Day, & Anniversary",
+      "brand": "A Gift Inside",
+      "price": 34.95,
+      "rating": 4.4,
+      "reviewCount": 2409,
+      "image": "https://m.media-amazon.com/images/I/81iEOEN74XL._AC_SL300_.jpg",
+      "tier": "mid",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-29T15:49:30.616Z",
+      "utcCreatedDateTime": "2026-10-29T15:49:30.616Z",
+      "urgency": null
+    },
+    {
+      "id": 197,
+      "holiday": "valentines-day",
+      "asin": "B08Q7Z3KND",
+      "url": "https://www.amazon.com/dp/B08Q7Z3KND",
+      "title": "HollyHOME Big Teddy Bear Stuffed Animal Valentines Large Bear Plush with Red Heart for Girlfriend and Kids Valentines 36 inch Tan",
+      "brand": "HollyHOME",
+      "price": 32.99,
+      "rating": 4.6,
+      "reviewCount": 922,
+      "image": "https://m.media-amazon.com/images/I/71WYToDm2lL._AC_SL300_.jpg",
+      "tier": "mid",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-29T15:50:01.932Z",
+      "utcCreatedDateTime": "2026-10-29T15:50:01.932Z",
+      "urgency": "left:5"
+    }
+  ],
+  "translations": [
+    {
+      "holidayAdId": 194,
+      "locale": "es",
+      "title": "Philadelphia Candies: galletas OREO cubiertas de chocolate con leche para San Valentín, 8 oz",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "fr",
+      "title": "Philadelphia Candies : biscuits OREO enrobés de chocolat au lait pour la Saint-Valentin, 8 oz",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "de",
+      "title": "Philadelphia Candies: OREO-Kekse mit Milchschokolade zum Valentinstag, 8 oz",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "it",
+      "title": "Philadelphia Candies: biscotti OREO ricoperti di cioccolato al latte per San Valentino, 8 oz",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "pt",
+      "title": "Philadelphia Candies: biscoitos OREO cobertos de chocolate ao leite para o Dia dos Namorados, 8 oz",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "ru",
+      "title": "Philadelphia Candies: печенье OREO в молочном шоколаде ко Дню святого Валентина, 8 унций",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "ja",
+      "title": "Philadelphia Candies バレンタイン用ミルクチョコレートがけOREOクッキー 8オンス",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "zh",
+      "title": "Philadelphia Candies 情人节牛奶巧克力裹层OREO饼干，8盎司",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "ko",
+      "title": "Philadelphia Candies 밸런타인데이 밀크초콜릿 코팅 OREO 쿠키 8온스",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "hi",
+      "title": "Philadelphia Candies: वैलेंटाइन डे के लिए मिल्क चॉकलेट से ढकी OREO कुकीज़, 8 औंस",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "ar",
+      "title": "Philadelphia Candies: بسكويت OREO مغطى بشوكولاتة الحليب لعيد الحب، 8 أونصات",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "th",
+      "title": "Philadelphia Candies คุกกี้ OREO เคลือบช็อกโกแลตนมสำหรับวันวาเลนไทน์ 8 ออนซ์",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "ms",
+      "title": "Philadelphia Candies: biskut OREO bersalut coklat susu untuk Hari Valentine, 8 auns",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "vi",
+      "title": "Philadelphia Candies: bánh quy OREO phủ sô-cô-la sữa cho Lễ Tình nhân, 8 ounce",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 194,
+      "locale": "id",
+      "title": "Philadelphia Candies: biskuit OREO berlapis cokelat susu untuk Hari Valentine, 8 ons AS",
+      "sourceHash": "59d4adff61f04d0def2e7793e3287cb45747b6bb",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "es",
+      "title": "Astor: caja de 15 trufas belgas surtidas, 7 sabores, kosher, para San Valentín",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "fr",
+      "title": "Astor : coffret de 15 truffes belges assorties, 7 saveurs, casher, pour la Saint-Valentin",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "de",
+      "title": "Astor: Geschenkbox mit 15 belgischen Trüffeln, 7 Sorten, koscher, zum Valentinstag",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "it",
+      "title": "Astor: confezione di 15 tartufi belgi assortiti, 7 gusti, kosher, per San Valentino",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "pt",
+      "title": "Astor: caixa de 15 trufas belgas sortidas, 7 sabores, kosher, para o Dia dos Namorados",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "ru",
+      "title": "Astor: подарочная коробка из 15 бельгийских трюфелей, 7 вкусов, кошерные, ко Дню святого Валентина",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "ja",
+      "title": "Astor バレンタイン用ベルギーチョコトリュフ15個詰め合わせ・7種の味・コーシャ対応",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "zh",
+      "title": "Astor 情人节比利时松露巧克力礼盒，15颗、7种口味，符合犹太洁食标准",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "ko",
+      "title": "Astor 밸런타인데이 벨기에 트러플 초콜릿 15개 선물 세트, 7가지 맛, 코셔",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "hi",
+      "title": "Astor: वैलेंटाइन डे के लिए 15 बेल्जियन ट्रफल चॉकलेट का उपहार बॉक्स, 7 स्वाद, कोशर",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "ar",
+      "title": "Astor: علبة هدايا تضم 15 قطعة ترافل بلجيكية متنوعة، 7 نكهات، كوشير، لعيد الحب",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "th",
+      "title": "Astor กล่องของขวัญทรัฟเฟิลช็อกโกแลตเบลเยียมคละรส 15 ชิ้น 7 รสชาติ โคเชอร์ สำหรับวันวาเลนไทน์",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "ms",
+      "title": "Astor: kotak hadiah 15 trufel Belgium pelbagai rasa, 7 perisa, kosher, untuk Hari Valentine",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "vi",
+      "title": "Astor: hộp quà 15 viên sô-cô-la truffle Bỉ, 7 hương vị, kosher, cho Lễ Tình nhân",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 195,
+      "locale": "id",
+      "title": "Astor: kotak hadiah 15 cokelat truffle Belgia, 7 rasa, kosher, untuk Hari Valentine",
+      "sourceHash": "7398b9b00e5c3f37cd39353e137e0595ef9fe192",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "es",
+      "title": "A Gift Inside: caja de 9 fresas frescas cubiertas de chocolate con leche y blanco",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "fr",
+      "title": "A Gift Inside : coffret de 9 fraises fraîches enrobées de chocolat au lait et blanc",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "de",
+      "title": "A Gift Inside: Geschenkbox mit 9 frischen Erdbeeren in Milch- und weißer Schokolade",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "it",
+      "title": "A Gift Inside: confezione di 9 fragole fresche ricoperte di cioccolato al latte e bianco",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "pt",
+      "title": "A Gift Inside: caixa de 9 morangos frescos cobertos de chocolate ao leite e branco",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "ru",
+      "title": "A Gift Inside: подарочная коробка из 9 свежих ягод клубники в молочном и белом шоколаде",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "ja",
+      "title": "A Gift Inside 新鮮なイチゴ9個入り・ミルク＆ホワイトチョコレートがけギフトボックス",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "zh",
+      "title": "A Gift Inside 新鲜草莓礼盒，9颗，裹牛奶及白巧克力",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "ko",
+      "title": "A Gift Inside 밀크·화이트초콜릿을 입힌 신선한 딸기 9개 선물 상자",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "hi",
+      "title": "A Gift Inside: मिल्क और व्हाइट चॉकलेट से ढकी 9 ताज़ी स्ट्रॉबेरी का उपहार बॉक्स",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "ar",
+      "title": "A Gift Inside: علبة هدايا تضم 9 حبات فراولة طازجة مغطاة بشوكولاتة الحليب والشوكولاتة البيضاء",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "th",
+      "title": "A Gift Inside กล่องของขวัญสตรอว์เบอร์รีสด 9 ลูก เคลือบช็อกโกแลตนมและไวท์ช็อกโกแลต",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "ms",
+      "title": "A Gift Inside: kotak hadiah 9 strawberi segar bersalut coklat susu dan putih",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "vi",
+      "title": "A Gift Inside: hộp quà 9 quả dâu tây tươi phủ sô-cô-la sữa và trắng",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 196,
+      "locale": "id",
+      "title": "A Gift Inside: kotak hadiah 9 stroberi segar berlapis cokelat susu dan putih",
+      "sourceHash": "1cb96a2b9263facbbc6ff358ee05b8b028f73537",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "es",
+      "title": "HollyHOME: oso de peluche marrón claro de 36 pulgadas con corazón rojo para San Valentín",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "fr",
+      "title": "HollyHOME : ours en peluche beige de 36 pouces avec cœur rouge pour la Saint-Valentin",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "de",
+      "title": "HollyHOME: hellbrauner Teddybär, 36 Zoll, mit rotem Herz zum Valentinstag",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "it",
+      "title": "HollyHOME: orso di peluche marrone chiaro da 36 pollici con cuore rosso per San Valentino",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "pt",
+      "title": "HollyHOME: urso de pelúcia castanho-claro de 36 polegadas com coração vermelho para o Dia dos Namorados",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "ru",
+      "title": "HollyHOME: светло-коричневый плюшевый мишка высотой 36 дюймов с красным сердцем ко Дню святого Валентина",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "ja",
+      "title": "HollyHOME バレンタイン用・赤いハート付き薄茶色のクマのぬいぐるみ・36インチ",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "zh",
+      "title": "HollyHOME 情人节浅棕色泰迪熊毛绒玩具，36英寸，配红色爱心",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "ko",
+      "title": "HollyHOME 밸런타인데이 빨간 하트가 달린 연갈색 곰 인형, 36인치",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "hi",
+      "title": "HollyHOME: वैलेंटाइन डे के लिए लाल दिल वाला हल्का भूरा टेडी बियर, 36 इंच",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "ar",
+      "title": "HollyHOME: دب محشو بني فاتح بطول 36 بوصة مع قلب أحمر لعيد الحب",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "th",
+      "title": "HollyHOME ตุ๊กตาหมีสีน้ำตาลอ่อนขนาด 36 นิ้ว พร้อมหัวใจสีแดง สำหรับวันวาเลนไทน์",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "ms",
+      "title": "HollyHOME: beruang mainan coklat muda 36 inci dengan hati merah untuk Hari Valentine",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "vi",
+      "title": "HollyHOME: gấu bông nâu nhạt 36 inch với trái tim đỏ cho Lễ Tình nhân",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    },
+    {
+      "holidayAdId": 197,
+      "locale": "id",
+      "title": "HollyHOME: boneka beruang cokelat muda 36 inci dengan hati merah untuk Hari Valentine",
+      "sourceHash": "86f0a63d8b4dac14e6f835ffcffffb3092087295",
+      "utcCreatedDateTime": "2026-10-29T15:59:06.940Z",
+      "utcUpdatedDateTime": "2026-10-29T15:59:06.940Z"
+    }
+  ]
+}

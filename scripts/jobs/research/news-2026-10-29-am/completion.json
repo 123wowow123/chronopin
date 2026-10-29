@@ -1,0 +1,40 @@
+{
+  "local": {
+    "pendingSentiment": 0,
+    "amazon": {
+      "id": 20612,
+      "author": 326,
+      "media": 3
+    }
+  },
+  "prod": {
+    "pendingSentiment": 0,
+    "amazon": {
+      "id": 20612,
+      "author": 326,
+      "media": 3
+    },
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/90037b0d-b727-4133-871d-a52c271cb65f.jpeg",
+        "ok": true
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/1386c448-3178-4d66-873b-ea9d485ab404.jpeg",
+        "ok": true
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/87e1153d-ceb5-4224-a513-f2d3cd3905be.jpeg",
+        "ok": true
+      }
+    ],
+    "run": [
+      {
+        "id": 33,
+        "status": "ok",
+        "reportSaved": true,
+        "finished": "2026-10-29T16:12:04.748Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "local": {
+    "ads": 4,
+    "currentTitles": 60,
+    "openResolvedMarks": 0,
+    "pendingSentiment": [],
+    "run": [
+      {
+        "id": 33,
+        "slot": "manual:2026-10-29T15:22:02.704Z",
+        "jobId": "news",
+        "status": "running",
+        "actions": 35
+      }
+    ]
+  },
+  "prod": {
+    "ads": 4,
+    "currentTitles": 60,
+    "openResolvedMarks": 0,
+    "pendingSentiment": [],
+    "run": []
+  }
+}
