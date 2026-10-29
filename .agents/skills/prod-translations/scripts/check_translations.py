@@ -44,7 +44,9 @@ def ensure_admin_token() -> str:
                 req = urllib.request.Request(BASE + '/api/users/me', headers={'Authorization': 'Bearer ' + token})
                 with urllib.request.urlopen(req, timeout=15) as resp:
                     if resp.status == 200:
-                        return token
+                        body = json.load(resp)
+                        if isinstance(body, dict) and body.get('role') == 'admin':
+                            return token
             except Exception:
                 pass
 

@@ -25,10 +25,13 @@ import os
 import pathlib
 import re
 import subprocess
+import sys
 import time
 import urllib.parse
 import urllib.request
 from typing import Dict, List, Optional, Set, Tuple
+
+sys.stdout.reconfigure(line_buffering=True)
 
 CACHE_DIR = pathlib.Path('.scrape/translations-cache')
 CACHE_DIR.mkdir(exist_ok=True, parents=True)
@@ -59,7 +62,9 @@ def ensure_admin_token() -> str:
                 req = urllib.request.Request(BASE + '/api/users/me', headers={'Authorization': 'Bearer ' + token})
                 with urllib.request.urlopen(req, timeout=15) as resp:
                     if resp.status == 200:
-                        return token
+                        body = json.load(resp)
+                        if isinstance(body, dict) and body.get('role') == 'admin':
+                            return token
             except Exception:
                 pass
 
@@ -276,7 +281,77 @@ WHERE ps."pinId" = pps."pinId"
     print(f"Recording translation tracking in SourceWiki for {len(ids)} pin(s)...")
     run_prod_sql(sql)
 
+def _extract_mkewbc_text(inner: list, locale: str) -> Optional[str]:
+    try:
+        entry = inner[1][0][0]
+        segs = entry[5] if len(entry) > 5 else None
+        if isinstance(segs, list) and segs:
+            sep = '' if locale in ('ja', 'zh', 'th') else ' '
+            val = sep.join(
+                seg[0].strip()
+                for seg in segs
+                if isinstance(seg, list) and seg and isinstance(seg[0], str) and seg[0].strip()
+            )
+            if val.strip():
+                return val.strip()
+        if isinstance(entry[0], str) and entry[0].strip():
+            return entry[0].strip()
+    except Exception:
+        pass
+    return None
+
+def _call_batchexecute(texts: List[str], locale: str) -> Dict[str, str]:
+    """
+    Uses Google Translate's web RPC endpoint (batchexecute / MkEWBc) which packs multiple
+    independent translation RPCs into a single HTTP POST request without text delimiters.
+    """
+    if not texts:
+        return {}
+    rpc_calls = [
+        ['MkEWBc', json.dumps([[t, 'en', locale, True], [None]]), None, str(i)]
+        for i, t in enumerate(texts)
+    ]
+    body = urllib.parse.urlencode({'f.req': json.dumps([rpc_calls])}).encode('utf-8')
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(
+                'https://translate.google.com/_/TranslateWebserverUi/data/batchexecute',
+                data=body,
+                headers={
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+                },
+            )
+            with urllib.request.urlopen(req, timeout=25) as r:
+                raw = r.read().decode('utf-8')
+            out: Dict[str, str] = {}
+            for line in raw.splitlines():
+                if 'wrb.fr' in line and 'MkEWBc' in line:
+                    for item in json.loads(line):
+                        if (
+                            isinstance(item, list)
+                            and len(item) >= 7
+                            and item[0] == 'wrb.fr'
+                            and item[1] == 'MkEWBc'
+                            and item[2]
+                        ):
+                            idx = int(item[6])
+                            if 0 <= idx < len(texts):
+                                tr = _extract_mkewbc_text(json.loads(item[2]), locale)
+                                if tr:
+                                    out[texts[idx]] = tr
+            if out:
+                time.sleep(0.15)
+                return out
+        except Exception:
+            time.sleep(0.8 * (attempt + 1))
+    return {}
+
 def _raw_translate_single(text: str, locale: str) -> Optional[str]:
+    res = _call_batchexecute([text], locale)
+    if text in res and res[text].strip():
+        return res[text].strip()
+
     endpoints = [
         (
             'https://translate.googleapis.com/translate_a/single',
@@ -287,7 +362,7 @@ def _raw_translate_single(text: str, locale: str) -> Optional[str]:
             {'client': 'dict-chrome-ex', 'sl': 'en', 'tl': locale, 'q': text},
         ),
     ]
-    for attempt in range(5):
+    for attempt in range(3):
         for url, params in endpoints:
             try:
                 body = urllib.parse.urlencode(params).encode('utf-8')
@@ -300,14 +375,14 @@ def _raw_translate_single(text: str, locale: str) -> Optional[str]:
                     },
                 )
                 with urllib.request.urlopen(req, timeout=15) as r:
-                    res = json.load(r)
-                    if isinstance(res, list):
-                        if res and isinstance(res[0], list) and res[0] and isinstance(res[0][0], list):
-                            val = ''.join(s[0] for s in res[0] if s and s[0])
+                    res_json = json.load(r)
+                    if isinstance(res_json, list):
+                        if res_json and isinstance(res_json[0], list) and res_json[0] and isinstance(res_json[0][0], list):
+                            val = ''.join(s[0] for s in res_json[0] if s and s[0])
                             if val.strip():
                                 return val.strip()
-                        elif res and isinstance(res[0], str) and res[0].strip():
-                            return res[0].strip()
+                        elif res_json and isinstance(res_json[0], str) and res_json[0].strip():
+                            return res_json[0].strip()
             except Exception:
                 pass
         time.sleep(0.5 * (attempt + 1))
@@ -321,14 +396,14 @@ def call_single(text: str, locale: str) -> Optional[str]:
     Returns None if all attempts fail so untranslated/truncated text is never cached or pushed.
     """
     val = _raw_translate_single(text, locale)
-    if val is not None and whole_translation(text, val):
+    if val is not None and whole_translation(text, val, is_fragment=True):
         return val
 
     # Fallback for NMT mid-sentence truncation on comma-separated clauses
     if ', ' in text:
         alt_text = text.replace(', ', '; ', 1)
         val_alt = _raw_translate_single(alt_text, locale)
-        if val_alt is not None and whole_translation(text, val_alt):
+        if val_alt is not None and whole_translation(text, val_alt, is_fragment=True):
             return val_alt
 
         clauses = [c.strip() for c in text.split(', ') if c.strip()]
@@ -340,15 +415,15 @@ def call_single(text: str, locale: str) -> Optional[str]:
             translated_clauses.append(tc)
         if len(translated_clauses) == len(clauses):
             joined = ', '.join(translated_clauses)
-            if whole_translation(text, joined):
+            if whole_translation(text, joined, is_fragment=True):
                 return joined
 
-    return val if (val is not None and whole_translation(text, val)) else None
+    return val if (val is not None and whole_translation(text, val, is_fragment=True)) else None
 
 def call_batch(texts: List[str], locale: str) -> Dict[str, str]:
     """
-    Translates a batch of strings via HTTP POST. Falls back to call_single on delimiter mismatch
-    or if any item fails whole_translation completeness.
+    Translates a batch of strings via multi-RPC batchexecute POST. Falls back to call_single
+    for any item that failed or did not pass whole_translation completeness.
     Omits any string that failed to translate so failures are never cached.
     """
     if not texts:
@@ -357,40 +432,12 @@ def call_batch(texts: List[str], locale: str) -> Dict[str, str]:
         res = call_single(texts[0], locale)
         return {texts[0]: res} if res is not None else {}
 
-    q = ''.join(f'⟦{i}⟧\n{t}\n' for i, t in enumerate(texts)) + f'⟦{len(texts)}⟧'
-    body = urllib.parse.urlencode({
-        'client': 'dict-chrome-ex',
-        'sl': 'en',
-        'tl': locale,
-        'dt': 't',
-        'q': q,
-    }).encode('utf-8')
-
-    batch_out: Optional[Dict[str, str]] = None
-    for attempt in range(3):
-        try:
-            req = urllib.request.Request(
-                'https://translate.googleapis.com/translate_a/single',
-                data=body,
-                headers={
-                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-                },
-            )
-            with urllib.request.urlopen(req, timeout=25) as r:
-                res = json.load(r)
-                full = ''.join(s[0] for s in res[0] if s and s[0])
-                parts = [p.strip() for p in re.split(r'⟦\d+⟧', full) if p.strip()]
-                if len(parts) == len(texts):
-                    batch_out = {texts[i]: parts[i] for i in range(len(texts))}
-                break
-        except Exception:
-            time.sleep(0.8 * (attempt + 1))
+    batch_out = _call_batchexecute(texts, locale)
 
     out: Dict[str, str] = {}
     for t in texts:
-        cand = batch_out.get(t) if batch_out else None
-        if cand is not None and whole_translation(t, cand):
+        cand = batch_out.get(t)
+        if cand is not None and whole_translation(t, cand, is_fragment=True):
             out[t] = cand
         else:
             val = call_single(t, locale)
@@ -403,13 +450,16 @@ def has_words(value: Optional[str]) -> bool:
         return False
     return any(c.isalnum() for c in value)
 
-def whole_translation(english: Optional[str], translated: Optional[str]) -> bool:
+def whole_translation(english: Optional[str], translated: Optional[str], is_fragment: bool = False) -> bool:
     """
     Python equivalent of wholeTranslation() in src/server/model/pinTranslation.ts.
+    When is_fragment=True, allows 1-3 char fragments like 'x' -> '×' that translate to symbols.
     """
     if not english or not has_words(english[:200]):
         return True
-    if not translated or not has_words(translated[:200]):
+    if not translated or not translated.strip():
+        return False
+    if not (is_fragment and len(english.strip()) <= 3) and not has_words(translated[:200]):
         return False
     if translated.count('<li>') != english.count('<li>'):
         return False
@@ -437,9 +487,19 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
         except Exception:
             pass
 
-    missing = [t for t in locale_texts if t not in cache or not whole_translation(t, cache.get(t))]
-    batch_size = 20
-    batches = [missing[i:i + batch_size] for i in range(0, len(missing), batch_size)]
+    missing = [t for t in locale_texts if t not in cache or not whole_translation(t, cache.get(t), is_fragment=True)]
+    batches: List[List[str]] = []
+    cur_batch: List[str] = []
+    cur_chars = 0
+    for t in missing:
+        if cur_batch and (len(cur_batch) >= 25 or cur_chars + len(t) > 4500):
+            batches.append(cur_batch)
+            cur_batch = []
+            cur_chars = 0
+        cur_batch.append(t)
+        cur_chars += len(t)
+    if cur_batch:
+        batches.append(cur_batch)
 
     for idx, b in enumerate(batches, 1):
         res = call_batch(b, locale)
