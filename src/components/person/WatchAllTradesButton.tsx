@@ -66,7 +66,7 @@ export function WatchAllTradesButton() {
       ref={buttonRef}
       type="button"
       onClick={toggle}
-      disabled={busy || (isLoggedIn && !status)}
+      disabled={busy || sessionStatus !== 'ready' || (isLoggedIn && !status)}
       aria-pressed={watching}
       title={watching ? t('person.trades.unwatchAllHint') : t('person.trades.watchAllHint')}
       className={`group btn rounded-full px-4 py-1.5 ${watching ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'}`}

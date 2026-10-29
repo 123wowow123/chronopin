@@ -125,6 +125,7 @@ export function LikeButton({
       ref={buttonRef}
       type="button"
       onClick={toggle}
+      disabled={busy || status !== 'ready'}
       aria-pressed={liked}
       aria-label={`${liked ? t('like.stop') : t('like.start')} (${t('like.count', { count: count ?? 0 })})`}
       title={liked ? t('like.stop') : t('like.start')}

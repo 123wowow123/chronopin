@@ -6,6 +6,7 @@ import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { enableAlerts } from '@/lib/client/browserAlerts';
 import { useSession } from '@/lib/client/session';
+import { savePendingAction, usePendingAction } from '@/lib/client/pendingAction';
 import { authHrefHere } from '@/lib/client/returnSpot';
 import { setWatched } from '@/lib/client/watched';
 import { useT } from '@/lib/client/i18n';
@@ -38,15 +39,15 @@ export function ThreadWatchButton({ pinId }: { pinId: number }) {
     };
   }, [isLoggedIn, pinId]);
 
-  async function toggle() {
-    if (!isLoggedIn) {
-      if (status === 'ready') router.push(authHrefHere());
-      return;
-    }
-    if (busy) return;
-    const next = !watching;
-    // Asked before anything is awaited, so the browser counts it as the click's.
-    if (next) void enableAlerts();
+  // Resume with an explicit watch, even if the viewer lookup already says
+  // this thread is watched. Replaying a toggle could undo the original intent.
+  const buttonRef = usePendingAction<HTMLButtonElement>(
+    { kind: 'watchThread', id: pinId },
+    isLoggedIn,
+    () => watch(true),
+  );
+
+  async function watch(next: boolean) {
     acted.current = true;
     setBusy(true);
     setWatching(next);
@@ -64,11 +65,27 @@ export function ThreadWatchButton({ pinId }: { pinId: number }) {
     }
   }
 
+  function toggle() {
+    if (!isLoggedIn) {
+      if (status === 'ready') {
+        savePendingAction({ kind: 'watchThread', id: pinId });
+        router.push(authHrefHere());
+      }
+      return;
+    }
+    if (busy) return;
+    // Asked during the click; login replay does not have a browser gesture.
+    if (!watching) void enableAlerts();
+    void watch(!watching);
+  }
+
   const label = watching ? t('watch.stopThread') : t('watch.startThread');
   return (
     <button
+      ref={buttonRef}
       type="button"
       onClick={toggle}
+      disabled={busy || status !== 'ready'}
       aria-pressed={watching}
       aria-label={label}
       title={label}

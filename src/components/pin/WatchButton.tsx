@@ -135,6 +135,7 @@ export function WatchButton({
       ref={buttonRef}
       type="button"
       onClick={toggle}
+      disabled={busy || status !== 'ready'}
       aria-pressed={watching}
       aria-label={`${watching ? t('watch.stop') : t('watch.start')} (${t('watch.count', { count })})`}
       title={watching ? t('watch.stop') : t('watch.start')}

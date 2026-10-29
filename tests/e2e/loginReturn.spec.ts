@@ -131,6 +131,34 @@ test.describe.serial('leaving a page to sign in or out', () => {
     expect(page.url()).not.toBe(landed);
   });
 
+  test('a thread watch clicked signed out is registered on return after logging in', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('[role="listitem"][id^="pin-"] h2 a').first().click();
+    await page.waitForURL(/\/pin\/\d+\//);
+    const pinUrl = page.url();
+    const pinId = new URL(pinUrl).pathname.match(/\/pin\/(\d+)\//)![1];
+    const endpoint = `/api/pins/${pinId}/thread-watch`;
+    await page.getByRole('button', { name: 'Watch this thread', exact: true }).click();
+
+    await expect(page).toHaveURL(/\/login\?redirect=/);
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+
+    await expect(page).toHaveURL(pinUrl);
+    const watched = page.getByRole('button', { name: 'Stop watching this thread', exact: true });
+    await expect(watched).toHaveAttribute('aria-pressed', 'true');
+    await expectInView(page, watched);
+    await expect.poll(async () => (await (await page.request.get(endpoint)).json()).watching).toBe(true);
+
+    // A full reload must keep the saved watch, without replaying the click.
+    await page.reload();
+    await expect(watched).toHaveAttribute('aria-pressed', 'true');
+    await watched.click();
+    await expect(page.getByRole('button', { name: 'Watch this thread', exact: true })).toHaveAttribute('aria-pressed', 'false');
+    await expect.poll(async () => (await (await page.request.get(endpoint)).json()).watching).toBe(false);
+  });
+
   test('a watch clicked signed out happens, on the card it was clicked on, after logging in', async ({ page }) => {
     // A pin page, and a card well down its "More like this": logging in
     // reloads the page at the top, which used to leave both the click and the
