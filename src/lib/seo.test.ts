@@ -143,7 +143,7 @@ describe('entityJsonLd', () => {
   ];
 
   it('marks a product with its quoted reviews by outlet, and no aggregate rating', () => {
-    const node = entityJsonLd(pin({ company: 'Kia', price: 40000, priceCurrency: 'USD' }), 'en', { carPerf: { reviews } }) as Record<string, any>;
+    const node = entityJsonLd(pin({ company: 'Kia', price: 40000, priceCurrency: 'USD' }), 'en', { carPerf: { reviews } }) as Record<string, unknown> & { brand: { name: string }; review: { author: { name: string } }[] };
     expect(node['@type']).toBe('Product');
     expect(node.brand.name).toBe('Kia');
     expect(node.offers).toMatchObject({ price: 40000, priceCurrency: 'USD' });
@@ -154,18 +154,18 @@ describe('entityJsonLd', () => {
 
   it('marks a restaurant guide pin with a place as a Restaurant, and nothing without a rubric', () => {
     const tags = [{ name: 'Restaurant', kind: 'topic', source: 'user' }] as PinJson['tags'];
-    const node = entityJsonLd(pin({ ...place, tags }), 'en', { dining: { reviews } }) as Record<string, any>;
+    const node = entityJsonLd(pin({ ...place, tags }), 'en', { dining: { reviews } }) as Record<string, unknown>;
     expect(node['@type']).toBe('Restaurant');
     expect(node.address).toBe(place.address);
     expect(entityJsonLd(pin({ ...place }), 'en', {})).toBeUndefined();
   });
 
   it('marks a hotel with a place, an AI model as software, an aircraft as a product', () => {
-    expect((entityJsonLd(pin({ ...place }), 'en', { hotel: { reviews } }) as Record<string, any>)['@type']).toBe('Hotel');
-    const model = entityJsonLd(pin({ company: 'Anthropic' }), 'en', { llmPerf: { reviews } }) as Record<string, any>;
+    expect((entityJsonLd(pin({ ...place }), 'en', { hotel: { reviews } }) as Record<string, unknown>)['@type']).toBe('Hotel');
+    const model = entityJsonLd(pin({ company: 'Anthropic' }), 'en', { llmPerf: { reviews } }) as Record<string, unknown>;
     expect(model['@type']).toBe('SoftwareApplication');
     expect(model.review).toHaveLength(1);
-    expect((entityJsonLd(pin({}), 'en', { aircraftPerf: { reviews } }) as Record<string, any>)['@type']).toBe('Product');
+    expect((entityJsonLd(pin({}), 'en', { aircraftPerf: { reviews } }) as Record<string, unknown>)['@type']).toBe('Product');
     expect(entityJsonLd(pin({}), 'en', { hotel: { reviews } })).toBeUndefined();
   });
 });

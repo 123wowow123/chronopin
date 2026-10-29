@@ -151,6 +151,7 @@ function StatsStrip({ label, stats, t }: { label: string; stats: MapStat[]; t: R
   const [expanded, setExpanded] = useState(false);
   // Squeezed strips swap the median label for its symbol rather than clip it.
   const [compact, setCompact] = useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
   useLayoutEffect(() => { setCompact(false); }, [stats, expanded]);
   useLayoutEffect(() => {
     const el = ref.current;

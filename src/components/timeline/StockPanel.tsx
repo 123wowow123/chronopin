@@ -30,6 +30,7 @@ export function StockPanel({ symbol }: { symbol: string }) {
 
   useEffect(() => {
     let cancelled = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
     setStock(null);
     api
       .get<Stock>(`/api/stocks/${encodeURIComponent(symbol)}`)
@@ -43,6 +44,7 @@ export function StockPanel({ symbol }: { symbol: string }) {
   const days = RANGES.find((r) => r.key === range)!.days;
   const points = useMemo(() => {
     if (!stock) return [];
+    // eslint-disable-next-line react-hooks/purity -- wall-clock window is intentionally evaluated when the data changes
     const since = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10);
     return stock.closes.filter((c) => c.day >= since);
   }, [stock, days]);

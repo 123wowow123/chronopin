@@ -63,7 +63,7 @@ describe('shopLinks for a vehicle', () => {
   it('offers no marketplace searches for a car, but keeps a stored maker page', () => {
     const car = { productName: 'Xiaomi SU7 Ultra', categories: ['Automotive'], tags: [] };
     expect(shopLinks({ ...car, merchants: [] })).toEqual([]);
-    const links = shopLinks({ ...car, merchants: [{ label: 'Xiaomi', url: 'https://www.mi.com/global/' } as any] });
+    const links = shopLinks({ ...car, merchants: [{ label: 'Xiaomi', url: 'https://www.mi.com/global/' } as never] });
     expect(links.map((l) => l.store)).toEqual(['Xiaomi']);
     // A scale-model kit is not a car.
     expect(shopLinks({ productName: 'Tamiya 1/10 The Falcon', categories: ['Automotive'], tags: [], merchants: [] }).length).toBeGreaterThan(0);
@@ -164,7 +164,7 @@ describe('AI model plan link', () => {
   });
 
   it('sends a Grok model pin to the Grok subscribe page', () => {
-    const links = shopLinks({ company: 'SpaceXAI', categories: ['AI'], tags: [{ name: 'AI Models' } as any] });
+    const links = shopLinks({ company: 'SpaceXAI', categories: ['AI'], tags: [{ name: 'AI Models' } as never] });
     expect(links.map((l) => [l.store, l.url])).toEqual([['Grok', 'https://grok.com/#subscribe']]);
   });
 });

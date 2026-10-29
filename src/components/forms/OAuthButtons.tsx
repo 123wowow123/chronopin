@@ -28,6 +28,7 @@ export function OAuthButtons({
   const [problem, setProblem] = useState<'failed' | 'unavailable' | null>(null);
   useEffect(() => {
     const value = new URLSearchParams(window.location.search).get('oauth');
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
     setProblem(value === 'failed' || value === 'unavailable' ? value : null);
   }, []);
   const notice = problem ? (

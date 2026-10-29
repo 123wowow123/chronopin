@@ -40,6 +40,7 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
     // Dev preview: ?country=GB shows the row as a viewer there sees it.
     const preview = process.env.NODE_ENV !== 'production' ? new URLSearchParams(window.location.search).get('country') : null;
     if (preview && /^[a-z]{2}$/i.test(preview)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
       setCountry(preview.toUpperCase());
       return;
     }

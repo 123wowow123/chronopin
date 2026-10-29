@@ -65,8 +65,11 @@ export function PinReviewSentiment({
 
   const points = useMemo(() => [...given].sort((a, b) => a.at - b.at), [given]);
   const running = useMemo(() => {
-    let sum = 0;
-    return points.map((p, i) => ({ at: p.at, value: (sum += p.value) / (i + 1) }));
+    return points.reduce<{ at: number; value: number; sum: number }[]>((rows, p, i) => {
+      const sum = (rows[i - 1]?.sum ?? 0) + p.value;
+      rows.push({ at: p.at, value: sum / (i + 1), sum });
+      return rows;
+    }, []).map(({ at, value }) => ({ at, value }));
   }, [points]);
   if (!points.length) return null;
 

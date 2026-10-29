@@ -137,10 +137,15 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
   const playbackModeRef = useRef<PlaybackMode>('preview');
   const volumeRef = useRef(volume);
   const isMutedRef = useRef(isMuted);
+  // eslint-disable-next-line react-hooks/refs -- latest-value ref, read by long-lived handlers
   currentTrackRef.current = currentTrack;
+  // eslint-disable-next-line react-hooks/refs -- latest-value ref, read by long-lived handlers
   playlistRef.current = playlist;
+  // eslint-disable-next-line react-hooks/refs -- latest-value ref, read by long-lived handlers
   playbackModeRef.current = playbackMode;
+  // eslint-disable-next-line react-hooks/refs -- latest-value ref, read by long-lived handlers
   volumeRef.current = volume;
+  // eslint-disable-next-line react-hooks/refs -- latest-value ref, read by long-lived handlers
   isMutedRef.current = isMuted;
 
   const setContinuePlaying = useCallback((val: boolean | ((prev: boolean) => boolean)) => {

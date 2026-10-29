@@ -148,6 +148,7 @@ export function TagCloud({
   // What the cloud has picked while it is open but not yet searched: the search
   // runs when it closes (SearchBox holds it), and the picks read from here meanwhile.
   const [pending, setPending] = useState<string | null>(null);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
   useEffect(() => setPending(null), [query, expanded]);
   useEffect(() => {
     const held = (event: Event) => setPending(String((event as CustomEvent).detail?.q ?? ''));
@@ -496,6 +497,7 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
     return () => window.removeEventListener(DRAG_QUERY_EVENT, on);
   }, []);
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
     setRecent(recentQueries());
     setPinned(pinnedQueries());
     // Everyone's names are shared, so every viewer's row shows them.
@@ -837,6 +839,7 @@ function TagCloudView({
   useEffect(() => {
     if (!mapView) return;
     let cancelled = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state after mount (keeps SSR and hydration identical)
     setPlacesFailed(false);
     placesFor(placesUrl(countsUrl)).then(
       (next) => !cancelled && setPlaceData(next),
@@ -865,6 +868,7 @@ function TagCloudView({
 
   // One layer for as long as the cloud is open, whatever onClose is by then, so it keeps its place under layers opened after it.
   const closing = useRef(onClose);
+  // eslint-disable-next-line react-hooks/refs -- latest-value ref, read by long-lived handlers
   closing.current = onClose;
   useEffect(() => {
     const escape = () => closing.current();
