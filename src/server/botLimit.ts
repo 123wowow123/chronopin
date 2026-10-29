@@ -192,6 +192,30 @@ export function mismatchRetryAfter(now = Date.now(), shed = shedding(now)): numb
   return Math.ceil((1 - bucket.tokens) / MISMATCH_PER_SECOND);
 }
 
+// Searches with a query and no Referer (2026-10-29: 79% of 308K search requests
+// in ten hours, 45,000 addresses at ~3 each, 88% asking for Chinese, 29% of all
+// handler time): nobody clicked a tag or a search box on the site to get here,
+// and Google's own visitors arrive with its Referer. They share one bucket
+// while the server sheds load, after the gate and the per-cookie budget have
+// let them through, so a person who pastes a search link is only held when the
+// server is overloaded. Burst 30, refill 2/s.
+export const BARE_SEARCH_BURST = 30;
+export const BARE_SEARCH_PER_SECOND = 2;
+
+// Null when the request may go on (always, while the server is healthy), else
+// the seconds to wait.
+export function bareSearchRetryAfter(now = Date.now(), shed = shedding(now)): number | null {
+  if (!shed) return null;
+  const g = globalThis as unknown as { __chronopinBareSearch?: Bucket };
+  const bucket = (g.__chronopinBareSearch ??= { tokens: BARE_SEARCH_BURST, at: now });
+  refill(bucket, now, BARE_SEARCH_BURST, BARE_SEARCH_PER_SECOND);
+  if (bucket.tokens >= 1) {
+    bucket.tokens -= 1;
+    return null;
+  }
+  return Math.ceil((1 - bucket.tokens) / BARE_SEARCH_PER_SECOND);
+}
+
 // A pin-page budget per client id (the signed cookie the cookie gate issues),
 // on top of the per-address one: a scraper spreads over thousands of addresses
 // but each of its clients still reads pins, and a person opening a few pins

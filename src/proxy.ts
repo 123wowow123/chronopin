@@ -10,7 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
-import { botRetryAfter, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, searchRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { bareSearchRetryAfter, botRetryAfter, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, searchRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -210,6 +210,11 @@ export async function proxy(request: NextRequest) {
       const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
       const wait = searchRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1);
       if (wait != null) return signInForMore(request, wait);
+      // No Referer: one shared bucket while the server sheds load.
+      if (!request.headers.get('referer')) {
+        const bare = bareSearchRetryAfter();
+        if (bare != null) return tooManyRequests(request, bare, true);
+      }
     }
   }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {

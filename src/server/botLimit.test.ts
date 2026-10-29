@@ -177,6 +177,24 @@ describe('searchRetryAfter', () => {
   });
 });
 
+import { bareSearchRetryAfter, BARE_SEARCH_BURST, BARE_SEARCH_PER_SECOND } from './botLimit';
+describe('searches with no Referer', () => {
+  beforeEach(() => {
+    delete (globalThis as unknown as { __chronopinBareSearch?: unknown }).__chronopinBareSearch;
+  });
+  it('never limits them while the server is healthy', () => {
+    const now = 20_000_000;
+    for (let i = 0; i < BARE_SEARCH_BURST * 5; i++) expect(bareSearchRetryAfter(now, false)).toBeNull();
+  });
+  it('shares one bucket while shedding, then refills', () => {
+    const now = 21_000_000;
+    for (let i = 0; i < BARE_SEARCH_BURST; i++) expect(bareSearchRetryAfter(now, true)).toBeNull();
+    expect(bareSearchRetryAfter(now, true)).toBeGreaterThan(0);
+    expect(bareSearchRetryAfter(now + 2_000 / BARE_SEARCH_PER_SECOND, true)).toBeNull();
+    expect(bareSearchRetryAfter(now, false)).toBeNull();
+  });
+});
+
 import { localeMismatch, mismatchRetryAfter, MISMATCH_BURST } from './botLimit';
 describe('locale mismatch cohort', () => {
   it('flags a Chinese browser on another language, not on Chinese or English paths', () => {

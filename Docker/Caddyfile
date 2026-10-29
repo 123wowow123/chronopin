@@ -72,7 +72,7 @@ www.chronopin.com {
 	# is down or not started.
 	@regional {
 		method GET
-		path_regexp ^/api/(weather|place|cultural-days|pins/[0-9]+/weather)$
+		path_regexp ^/api/(weather|place|cultural-days|pins/[0-9]+/weather|pins/place-counts)$
 	}
 	handle @regional {
 		reverse_proxy edgecache:80 app:9000 app-next:9000 {

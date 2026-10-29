@@ -19975,5 +19975,2730 @@
         }
       ]
     }
+  },
+  {
+    "key": "cielo-sunnydale",
+    "pinIds": {
+      "local": 7041,
+      "production": 7041
+    },
+    "title": "Cielo at Sunnydale — San Francisco affordable housing",
+    "sourceUrl": "https://www.mercyhousing.org/california/cielo/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned housing count",
+          "value": "89 apartments; the combined 184-home Luca/Cielo total is excluded.",
+          "source": {
+            "url": "https://www.mercyhousing.org/california/cielo/",
+            "title": "Cielo – Mercy Housing",
+            "publishedDate": null,
+            "quote": "comprised of 89 residential units"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Housing and parking program",
+          "value": "One- through four-bedroom homes with 60 non-stacked parking spaces.",
+          "source": {
+            "url": "https://www.mercyhousing.org/california/cielo/",
+            "title": "Cielo – Mercy Housing",
+            "publishedDate": null,
+            "quote": "89 residential units with 60 non-stacked parking spaces"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction completion target",
+          "value": "Spring 2027; application timing is separate.",
+          "source": {
+            "url": "https://www.mercyhousing.org/california/cielo/",
+            "title": "Cielo – Mercy Housing",
+            "publishedDate": null,
+            "quote": "Construction to end Spring 2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction start celebrated",
+          "date": "2025-11-18",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening; Luca and Cielo construction starts",
+            "publishedDate": "2025-11-18",
+            "quote": "start of construction of two new buildings, Luca and Cielo"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Construction completion target",
+          "date": "Spring 2027",
+          "source": {
+            "url": "https://www.mercyhousing.org/california/cielo/",
+            "title": "Cielo – Mercy Housing",
+            "publishedDate": null,
+            "quote": "Construction to end Spring 2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "mary-ellen-mccormack-building-a",
+    "pinIds": {
+      "local": 7048,
+      "production": 7048
+    },
+    "title": "Mary Ellen McCormack Building A — Boston affordable housing",
+    "sourceUrl": "https://www.bostonhousing.org/en/News/WinnCompanies-and-Boston-Housing-Authority-Secure.aspx",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Building A apartment count",
+          "value": "94 apartments for existing low-income residents; wider 3,300-unit master plan excluded.",
+          "source": {
+            "url": "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "title": "Mary Ellen McCormack Building A construction starts – WinnCompanies",
+            "publishedDate": "2025-06-30",
+            "quote": "will provide 94 modern apartments"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Building A structure area",
+          "value": "112,000 sq ft; not the whole redevelopment.",
+          "source": {
+            "url": "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "title": "Mary Ellen McCormack Building A construction starts – WinnCompanies",
+            "publishedDate": "2025-06-30",
+            "quote": "112,000-square-foot structure"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Occupancy target",
+          "value": "Fall 2026, as forecast at the June 2025 construction ceremony; not proof of present occupancy.",
+          "source": {
+            "url": "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "title": "Mary Ellen McCormack Building A construction starts – WinnCompanies",
+            "publishedDate": "2025-06-30",
+            "quote": "ready for occupancy in the fall of 2026"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking with poured foundations observed",
+          "date": "2025-06-30",
+          "source": {
+            "url": "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "title": "Mary Ellen McCormack Building A construction starts – WinnCompanies",
+            "publishedDate": "2025-06-30",
+            "quote": "newly poured footings and foundations"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Occupancy target",
+          "date": "Fall 2026",
+          "source": {
+            "url": "https://winncompanies.com/uploads/company_documents/documents/original/689/Press-Release_Federal-State-and-City-Leaders-Mark-the-Start-of-Construction-to-Redevelop-Mary-Ellen-McCormack-Public-Housing-Complex.pdf",
+            "title": "Mary Ellen McCormack Building A construction starts – WinnCompanies",
+            "publishedDate": "2025-06-30",
+            "quote": "ready for occupancy in the fall of 2026"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "legacy-herndon-square-phase2",
+    "pinIds": {
+      "local": 7055,
+      "production": 7055
+    },
+    "title": "Legacy at Herndon Square — Atlanta affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/georgia/legacy-at-herndon-square/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Phase II housing count",
+          "value": "201 homes, including affordable, market-rate and manager units; other phases excluded.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/georgia/legacy-at-herndon-square/",
+            "title": "Legacy at Herndon Square – Pennrose",
+            "publishedDate": null,
+            "quote": "201-unit family, mixed-income rental community"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Residential and resident-service program",
+          "value": "One- to three-bedroom homes with wellness clinic, fitness and learning facilities.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/georgia/legacy-at-herndon-square/",
+            "title": "Legacy at Herndon Square – Pennrose",
+            "publishedDate": null,
+            "quote": "wellness clinic, fitness center, computer business and learning center"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction completion",
+          "value": "Spring 2026; grand opening reported 28 August 2026.",
+          "source": {
+            "url": "https://www.atlantahousing.org/atlanta-housing-and-partners-celebrate-the-grand-opening-of-legacy-at-herndon-square-phase-ii-of-former-herndon-homes-redevelopment/",
+            "title": "Legacy at Herndon Square Phase II grand opening – Atlanta Housing",
+            "publishedDate": "2026-08-28",
+            "quote": "Construction began in spring 2024 and was completed in spring 2026."
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction begins",
+          "date": "Spring 2024",
+          "source": {
+            "url": "https://www.atlantahousing.org/atlanta-housing-and-partners-celebrate-the-grand-opening-of-legacy-at-herndon-square-phase-ii-of-former-herndon-homes-redevelopment/",
+            "title": "Legacy at Herndon Square Phase II grand opening – Atlanta Housing",
+            "publishedDate": "2026-08-28",
+            "quote": "Construction began in spring 2024"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Construction completed",
+          "date": "Spring 2026",
+          "source": {
+            "url": "https://www.atlantahousing.org/atlanta-housing-and-partners-celebrate-the-grand-opening-of-legacy-at-herndon-square-phase-ii-of-former-herndon-homes-redevelopment/",
+            "title": "Legacy at Herndon Square Phase II grand opening – Atlanta Housing",
+            "publishedDate": "2026-08-28",
+            "quote": "was completed in spring 2026"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Grand opening reported",
+          "date": "2026-08-28",
+          "source": {
+            "url": "https://www.atlantahousing.org/atlanta-housing-and-partners-celebrate-the-grand-opening-of-legacy-at-herndon-square-phase-ii-of-former-herndon-homes-redevelopment/",
+            "title": "Legacy at Herndon Square Phase II grand opening – Atlanta Housing",
+            "publishedDate": "2026-08-28",
+            "quote": "celebrated the grand opening of Legacy at Herndon Square"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "phare-orleans",
+    "pinIds": {
+      "local": 7124,
+      "production": 7124
+    },
+    "title": "Phare — Orleans affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/phare/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "62 apartments across the adaptive-reuse building, addition and townhomes.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/massachusetts/phare/",
+            "title": "Phare – Pennrose",
+            "publishedDate": null,
+            "quote": "neighborhood of 62 apartments"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Adaptive reuse and townhome program",
+          "value": "52 apartments in the renovated former bank building and addition, plus 10 townhomes in two buildings.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/massachusetts/phare/",
+            "title": "Phare – Pennrose",
+            "publishedDate": null,
+            "quote": "52 apartments within the renovated building and new addition, along with 10 townhomes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion confirmed by town",
+          "value": "Early 2025; the annual report explicitly identifies calendar year 2025.",
+          "source": {
+            "url": "https://www.town.orleans.ma.us/ArchiveCenter/ViewFile/Item/452",
+            "title": "Town of Orleans 2025 Annual Report, printed page 5",
+            "publishedDate": null,
+            "quote": "was completed early"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Development completed",
+          "date": "Early 2025",
+          "source": {
+            "url": "https://www.town.orleans.ma.us/ArchiveCenter/ViewFile/Item/452",
+            "title": "Town of Orleans 2025 Annual Report, printed page 5",
+            "publishedDate": null,
+            "quote": "The 62 -unit Phare development by Pennrose"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "600-seventh-san-francisco",
+    "pinIds": {
+      "local": 7062,
+      "production": 7062
+    },
+    "title": "600 Seventh — San Francisco affordable housing",
+    "sourceUrl": "https://www.mercyhousing.org/california/600-seventh/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Resident housing program",
+          "value": "220 resident homes; property page lists 221 total units. Counts are distinguished rather than combined.",
+          "source": {
+            "url": "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+            "title": "600 Seventh Street Opens in San Francisco",
+            "publishedDate": "2025-12-03",
+            "quote": "offers 220 modern apartment homes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Ground-floor retail component",
+          "value": "Around 4,000 sq ft of retail; not total residential floor area.",
+          "source": {
+            "url": "https://www.mercyhousing.org/california/600-seventh/",
+            "title": "600 Seventh – Mercy Housing",
+            "publishedDate": null,
+            "quote": "Around 4,000 square feet of ground floor retail"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening celebration reported",
+          "value": "3 December 2025; report date, not an inferred first move-in date.",
+          "source": {
+            "url": "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+            "title": "600 Seventh Street Opens in San Francisco",
+            "publishedDate": "2025-12-03",
+            "quote": "celebrate the opening of 600 Seventh"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Opening celebration reported",
+          "date": "2025-12-03",
+          "source": {
+            "url": "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+            "title": "600 Seventh Street Opens in San Francisco",
+            "publishedDate": "2025-12-03",
+            "quote": "celebrate the opening of 600 Seventh"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "chrysalis-denver-housing",
+    "pinIds": {
+      "local": 7076,
+      "production": 7076
+    },
+    "title": "Chrysalis Apartments — Denver affordable housing",
+    "sourceUrl": "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned replacement housing",
+          "value": "70 homes replace 15 existing units; replacement and final counts are not additive.",
+          "source": {
+            "url": "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+            "title": "Pinkard breaks ground on Chrysalis",
+            "publishedDate": "2025-11-21",
+            "quote": "replacing 15 units with 70"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Energy-ready affordable housing",
+          "value": "Designed to U.S. Department of Energy Zero Energy Ready standards.",
+          "source": {
+            "url": "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+            "title": "Pinkard breaks ground on Chrysalis",
+            "publishedDate": "2025-11-21",
+            "quote": "Zero Energy Ready standards"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Published construction duration",
+          "value": "Fourteen months expected at the November 2025 groundbreaking; no completion inferred.",
+          "source": {
+            "url": "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+            "title": "Pinkard breaks ground on Chrysalis",
+            "publishedDate": "2025-11-21",
+            "quote": "Construction is expected to take fourteen months"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking celebrated",
+          "date": "2025-11-21",
+          "source": {
+            "url": "https://www.pinkardbuilds.com/newsroom/pinkard-construction-breaks-ground-on-chrysalis-affordable-housing-project-in-denver",
+            "title": "Pinkard breaks ground on Chrysalis",
+            "publishedDate": "2025-11-21",
+            "quote": "today celebrated the groundbreaking of Chrysalis"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "nia-sunnydale",
+    "pinIds": {
+      "local": 7074,
+      "production": 7074
+    },
+    "title": "Nia Apartments — San Francisco affordable housing",
+    "sourceUrl": "https://www.mercyhousing.org/california/nia/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "90 apartments; Amani’s 80 homes are a separate building.",
+          "source": {
+            "url": "https://www.mercyhousing.org/california/nia/",
+            "title": "Nia Apartments – Mercy Housing",
+            "publishedDate": null,
+            "quote": "90 total apartments"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Neighborhood commercial component",
+          "value": "Seven retail spaces intended for experienced tenants and local entrepreneurs; source’s retail frontage is not treated as floor area.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "includes seven spaces that will be subleased"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Grand opening reported",
+          "value": "18 November 2025, jointly celebrated with Amani.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "celebrate the grand opening of Amani and Nia"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening celebrated",
+          "date": "2025-11-18",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "celebrate the grand opening of Amani and Nia"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "amani-sunnydale",
+    "pinIds": {
+      "local": 7042,
+      "production": 7042
+    },
+    "title": "Amani Apartments — San Francisco affordable housing",
+    "sourceUrl": "https://www.mercyhousing.org/california/amani-apartments/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "80 apartments; the combined 170-home opening total includes Nia.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "Amani, which consists of 80 apartments"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Retail and neighborhood-service area",
+          "value": "21,000 sq ft of retail and services; not whole-building area.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "21,000 square feet of retail"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Grand opening reported",
+          "value": "18 November 2025, jointly celebrated with Nia.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "celebrate the grand opening of Amani and Nia"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening celebrated",
+          "date": "2025-11-18",
+          "source": {
+            "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+            "title": "Amani and Nia grand opening – Mercy Housing",
+            "publishedDate": "2025-11-18",
+            "quote": "celebrate the grand opening of Amani and Nia"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "doverbrook-easton",
+    "pinIds": {
+      "local": 7208,
+      "production": 7208
+    },
+    "title": "Doverbrook — Easton affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/maryland/doverbrook/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "New housing count",
+          "value": "64 new homes replace the former 50-unit community.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+            "title": "Doverbrook Apartments Grand Opening – Pennrose",
+            "publishedDate": "2025-11-07",
+            "quote": "bringing 64 brand-new affordable homes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Redevelopment scope",
+          "value": "Energy-efficient mixed-income affordable housing replacing the 40-year-old Dover Street public housing community.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+            "title": "Doverbrook Apartments Grand Opening – Pennrose",
+            "publishedDate": "2025-11-07",
+            "quote": "energy-efficient, mixed-income community replaces the 40-year-old, 50-unit public housing community"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Grand opening",
+          "value": "7 November 2025.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+            "title": "Doverbrook Apartments Grand Opening – Pennrose",
+            "publishedDate": "2025-11-07",
+            "quote": "today celebrated the grand opening of Doverbrook Apartments"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening celebrated",
+          "date": "2025-11-07",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/",
+            "title": "Doverbrook Apartments Grand Opening – Pennrose",
+            "publishedDate": "2025-11-07",
+            "quote": "today celebrated the grand opening of Doverbrook Apartments"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "bridgeside-estates-phase1",
+    "pinIds": {
+      "local": 7138,
+      "production": 7138
+    },
+    "title": "Bridgeside Estates — Allentown affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "First-phase apartment count",
+          "value": "50 one- through four-bedroom apartments; future phase excluded.",
+          "source": {
+            "url": "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "title": "Bridgeside Estates Grand Opening – Harkins",
+            "publishedDate": "2024-12-19",
+            "quote": "first phase providing 50"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "First-phase homes and amenity area",
+          "value": "70,603 sq ft of affordable homes and community amenities.",
+          "source": {
+            "url": "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "title": "Bridgeside Estates Grand Opening – Harkins",
+            "publishedDate": "2024-12-19",
+            "quote": "70,603 sf of affordable homes and community amenities"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening ceremony",
+          "value": "19 December 2024.",
+          "source": {
+            "url": "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "title": "Bridgeside Estates Grand Opening – Harkins",
+            "publishedDate": "2024-12-19",
+            "quote": "On December 19th"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening ribbon cutting",
+          "date": "2024-12-19",
+          "source": {
+            "url": "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/",
+            "title": "Bridgeside Estates Grand Opening – Harkins",
+            "publishedDate": "2024-12-19",
+            "quote": "ribbon cutting ceremony in Allentown"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "henderson-place-redevelopment",
+    "pinIds": {
+      "local": 7081,
+      "production": 7081
+    },
+    "title": "Henderson Place — Atlanta affordable housing",
+    "sourceUrl": "https://hendersonplace.liveinhope.org/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed replacement housing",
+          "value": "76 new homes replace 58 existing apartments; no verified completion claim.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "title": "New Homes in Atlanta’s Old Fourth Ward – Mercy Housing",
+            "publishedDate": "2024-03-20",
+            "quote": "will be replaced with 76 newly constructed"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Proposed mixed-use program",
+          "value": "Energy-efficient apartment homes with a grocery store or other retail component.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "title": "New Homes in Atlanta’s Old Fourth Ward – Mercy Housing",
+            "publishedDate": "2024-03-20",
+            "quote": "will also include a grocery store or other retail"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Historical construction forecast",
+          "value": "March 2024 start and early 2025 completion were forecasts. Later physical-start or opening evidence remains a research gap.",
+          "source": {
+            "url": "https://www.mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "title": "New Homes in Atlanta’s Old Fourth Ward – Mercy Housing",
+            "publishedDate": "2024-03-20",
+            "quote": "Construction is set to begin this month and is expected to conclude in early 2025."
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Redevelopment plans published",
+          "date": "2024-03-20",
+          "source": {
+            "url": "https://www.mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "title": "New Homes in Atlanta’s Old Fourth Ward – Mercy Housing",
+            "publishedDate": "2024-03-20",
+            "quote": "Construction is set to begin this month"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Historical completion target; unverified",
+          "date": "Early 2025",
+          "source": {
+            "url": "https://www.mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/",
+            "title": "New Homes in Atlanta’s Old Fourth Ward – Mercy Housing",
+            "publishedDate": "2024-03-20",
+            "quote": "expected to conclude in early 2025"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "aries-bitter-lake",
+    "pinIds": {
+      "local": 7087,
+      "production": 7087
+    },
+    "title": "The Aries at Bitter Lake — Seattle affordable housing",
+    "sourceUrl": "https://www.bellwetherhousing.org/properties/the-aries-at-bitter-lake",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Affordable housing count",
+          "value": "200 apartments in North Seattle.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html",
+            "title": "Bellwether announces The Aries opening",
+            "publishedDate": "2024-01-23",
+            "quote": "bringing 200 affordable apartments"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Affordable housing near services",
+          "value": "Housing serving families near transit, schools and employment; no invented building area or final cost.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html",
+            "title": "Bellwether announces The Aries opening",
+            "publishedDate": "2024-01-23",
+            "quote": "live near transit, great schools"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening announced",
+          "value": "23 January 2024; actual opening release supersedes earlier forecasts.",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html",
+            "title": "Bellwether announces The Aries opening",
+            "publishedDate": "2024-01-23",
+            "quote": "announce the opening of The Aries at Bitter Lake"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening reported",
+          "date": "2024-01-23",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/new-bellwether-housing-project-brings-200-affordable-apartments-to-seattles-bitter-lake-neighborhood-302042627.html",
+            "title": "Bellwether announces The Aries opening",
+            "publishedDate": "2024-01-23",
+            "quote": "grand opening of The Aries earlier today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "vista-ballona",
+    "pinIds": {
+      "local": 7084,
+      "production": 7084
+    },
+    "title": "Vista Ballona — Los Angeles affordable housing",
+    "sourceUrl": "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "50 homes, including 12 reserved for people with developmental disabilities.",
+          "source": {
+            "url": "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+            "title": "Vista Ballona – Community Corporation project sheet",
+            "publishedDate": null,
+            "quote": "50-unit affordable housing development"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Completed building program",
+          "value": "All-electric LEED platinum one-, two- and three-bedroom housing, community rooms and rooftop gardens.",
+          "source": {
+            "url": "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+            "title": "Vista Ballona – Community Corporation project sheet",
+            "publishedDate": null,
+            "quote": "The all-electric, LEED platinum complex"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Built year",
+          "value": "2022; no exact opening day inferred.",
+          "source": {
+            "url": "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+            "title": "Vista Ballona – Community Corporation project sheet",
+            "publishedDate": null,
+            "quote": "Built in 2022"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Complex built",
+          "date": "2022",
+          "source": {
+            "url": "https://communitycorp.org/wp-content/uploads/2024/04/VistaBallona.pdf",
+            "title": "Vista Ballona – Community Corporation project sheet",
+            "publishedDate": null,
+            "quote": "Built in 2022"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "west-point-village-georgia",
+    "pinIds": {
+      "local": 7131,
+      "production": 7131
+    },
+    "title": "West Point Village — West Point affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/georgia/west-point-village/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "First-phase housing",
+          "value": "72 apartments; later redevelopment phases excluded.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/georgia/west-point-village/",
+            "title": "West Point Village – Pennrose",
+            "publishedDate": null,
+            "quote": "72-unit"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Residential building program",
+          "value": "Three three-story garden-style buildings, with one- to three-bedroom homes.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/georgia/west-point-village/",
+            "title": "West Point Village – Pennrose",
+            "publishedDate": null,
+            "quote": "three, three-story, garden-style residential buildings"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening confirmed",
+          "value": "2023; reported by Georgia Trend in March 2024.",
+          "source": {
+            "url": "https://www.georgiatrend.com/2024/03/31/lagrange-troup-county-unified-community/",
+            "title": "LaGrange / Troup County: Unified Community – Georgia Trend",
+            "publishedDate": "2024-03-31",
+            "quote": "opened in 2023"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Phase I groundbreaking reported",
+          "date": "2022-11-01",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2022/groundbreaking-of-west-point-village-redevelopment/",
+            "title": "West Point Village groundbreaking – Pennrose",
+            "publishedDate": "2022-11-01",
+            "quote": "Construction begins on phase 1"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Community opened",
+          "date": "2023",
+          "source": {
+            "url": "https://www.georgiatrend.com/2024/03/31/lagrange-troup-county-unified-community/",
+            "title": "LaGrange / Troup County: Unified Community – Georgia Trend",
+            "publishedDate": "2024-03-31",
+            "quote": "opened in 2023"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "rose-apartments-venice",
+    "pinIds": {
+      "local": 7060,
+      "production": 7060
+    },
+    "title": "Rose Apartments (Venice) — Los Angeles affordable housing",
+    "sourceUrl": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "35 units as reported by HACLA.",
+          "source": {
+            "url": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+            "title": "Rose Apartments Venice grand opening – HACLA",
+            "publishedDate": "2022-05-19",
+            "quote": "contains 35 units"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Permanent supportive housing",
+          "value": "HHH-funded housing with on-site supportive services.",
+          "source": {
+            "url": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+            "title": "Rose Apartments Venice grand opening – HACLA",
+            "publishedDate": "2022-05-19",
+            "quote": "HHH-funded permanent supportive housing complex"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Grand opening",
+          "value": "19 May 2022.",
+          "source": {
+            "url": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+            "title": "Rose Apartments Venice grand opening – HACLA",
+            "publishedDate": "2022-05-19",
+            "quote": "On Thursday, May 19, 2022"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening and ribbon cutting",
+          "date": "2022-05-19",
+          "source": {
+            "url": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+            "title": "Rose Apartments Venice grand opening – HACLA",
+            "publishedDate": "2022-05-19",
+            "quote": "celebrate the grand opening and ribbon cutting"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "village-nauset-green",
+    "pinIds": {
+      "local": 7198,
+      "production": 7198
+    },
+    "title": "Village at Nauset Green — Eastham affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/village-at-nauset-green/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "65 rental homes.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+            "title": "First residents at Village at Nauset Green – Pennrose",
+            "publishedDate": "2020-01-21",
+            "quote": "65-unit high-quality rental community"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Village-style community amenities",
+          "value": "Community building, landscaped grounds, playground and picnic area.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+            "title": "First residents at Village at Nauset Green – Pennrose",
+            "publishedDate": "2020-01-21",
+            "quote": "a new community building, professionally landscaped grounds, playground and picnic area"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Initial resident occupancy reported",
+          "value": "21 January 2020; first residents had begun moving in.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+            "title": "First residents at Village at Nauset Green – Pennrose",
+            "publishedDate": "2020-01-21",
+            "quote": "first residents have begun moving into Village at Nauset Green"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First residents welcomed",
+          "date": "2020-01-21",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/",
+            "title": "First residents at Village at Nauset Green – Pennrose",
+            "publishedDate": "2020-01-21",
+            "quote": "first residents have begun moving into Village at Nauset Green"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "aston-heights-newark",
+    "pinIds": {
+      "local": 7134,
+      "production": 7134
+    },
+    "title": "Aston Heights — Newark affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "154 apartments and townhomes.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+            "title": "Aston Heights – Pennrose",
+            "publishedDate": null,
+            "quote": "154 thoughtfully designed apartment homes and townhomes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Neighborhood retail component",
+          "value": "Approximately 7,000 sq ft; not total residential floor area.",
+          "source": {
+            "url": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+            "title": "Aston Heights – Pennrose",
+            "publishedDate": null,
+            "quote": "approximately 7,000 square feet of neighborhood retail"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completed building reported",
+          "value": "Newly constructed property documented 18 May 2021; this is a reporting milestone, not an inferred completion date.",
+          "source": {
+            "url": "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+            "title": "Permanent financing for newly constructed Aston Heights – REBusinessOnline",
+            "publishedDate": "2021-05-18",
+            "quote": "newly constructed mixed-income property"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Newly constructed property documented",
+          "date": "2021-05-18",
+          "source": {
+            "url": "https://rebusinessonline.com/bellwether-provides-7-9m-agency-perm-loan-for-newark-mixed-income-property/",
+            "title": "Permanent financing for newly constructed Aston Heights – REBusinessOnline",
+            "publishedDate": "2021-05-18",
+            "quote": "newly constructed mixed-income property"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "square-merritt-mill",
+    "pinIds": {
+      "local": 7126,
+      "production": 7126
+    },
+    "title": "Square at Merritt Mill — Salisbury affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/maryland/square-at-merritt-mill/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "75 new apartments; subset allocations are not additive.",
+          "source": {
+            "url": "https://planning.maryland.gov/Documents/Our-Engagement/MPCA/workshop-notes/2020-02-21-Regional-Combined-Housing-Presentations.pdf",
+            "title": "Maryland Planning regional housing presentation, PDF page 16",
+            "publishedDate": "2020-02-21",
+            "quote": "75 new apartments"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Community clubhouse",
+          "value": "2,700 sq ft; not total residential floor area.",
+          "source": {
+            "url": "https://planning.maryland.gov/Documents/Our-Engagement/MPCA/workshop-notes/2020-02-21-Regional-Combined-Housing-Presentations.pdf",
+            "title": "Maryland Planning regional housing presentation, PDF page 16",
+            "publishedDate": "2020-02-21",
+            "quote": "2,700sf Clubhouse"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion confirmed",
+          "value": "2019, explicitly confirmed by the state-hosted housing presentation.",
+          "source": {
+            "url": "https://planning.maryland.gov/Documents/Our-Engagement/MPCA/workshop-notes/2020-02-21-Regional-Combined-Housing-Presentations.pdf",
+            "title": "Maryland Planning regional housing presentation, PDF page 16",
+            "publishedDate": "2020-02-21",
+            "quote": "Completed 2019"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking celebrated",
+          "date": "2018-12-14",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2018/2018-pennrose-and-wicomico-county-housing-authority-celebrate-square-at-merritt-mill-groundbreaking/",
+            "title": "Square at Merritt Mill groundbreaking – Pennrose",
+            "publishedDate": "2018-12-14",
+            "quote": "groundbreaking of Square at Merritt Mill"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Project completed",
+          "date": "2019",
+          "source": {
+            "url": "https://planning.maryland.gov/Documents/Our-Engagement/MPCA/workshop-notes/2020-02-21-Regional-Combined-Housing-Presentations.pdf",
+            "title": "Maryland Planning regional housing presentation, PDF page 16",
+            "publishedDate": "2020-02-21",
+            "quote": "Completed 2019"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "residences-hayes-deanwood",
+    "pinIds": {
+      "local": 7115,
+      "production": 7115
+    },
+    "title": "Residences at Hayes — Washington DC affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/residences-at-hayes/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published project funding scope",
+          "value": "USD 34.9 million project total; individual financing components are subsets.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "title": "Residences at Hayes ribbon cutting – Pennrose",
+            "publishedDate": "2018-09-19",
+            "quote": "$34.9 million project"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Housing count",
+          "value": "150 affordable homes, including 50 replacement units.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "title": "Residences at Hayes ribbon cutting – Pennrose",
+            "publishedDate": "2018-09-19",
+            "quote": "150 units of quality affordable housing"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Ribbon cutting",
+          "value": "19 September 2018.",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "title": "Residences at Hayes ribbon cutting – Pennrose",
+            "publishedDate": "2018-09-19",
+            "quote": "celebrate the ribbon cutting at Residences at Hayes"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Community ribbon cutting",
+          "date": "2018-09-19",
+          "source": {
+            "url": "https://www.pennrose.com/news-views/news/2018/2018-residences-at-hayes-affordable-housing-community-celebrates-ribbon-cutting/",
+            "title": "Residences at Hayes ribbon cutting – Pennrose",
+            "publishedDate": "2018-09-19",
+            "quote": "celebrate the ribbon cutting at Residences at Hayes"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "oaks-park-pointe-phase1",
+    "pinIds": {
+      "local": 7175,
+      "production": 7175
+    },
+    "title": "Oaks at Park Pointe — Griffin affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-at-park-pointe/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Oaks first-phase housing",
+          "value": "84 family homes; Iris and Terraces phases excluded.",
+          "source": {
+            "url": "https://www.pennrose.com/portfolio/meriwether-homes-redevelopment/",
+            "title": "Meriwether Homes Redevelopment – Pennrose portfolio",
+            "publishedDate": null,
+            "quote": "the 84-unit complex"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "First-phase building program",
+          "value": "15 two-story townhouse-style buildings and an on-site leasing/community center.",
+          "source": {
+            "url": "https://www.pennrose.com/portfolio/meriwether-homes-redevelopment/",
+            "title": "Meriwether Homes Redevelopment – Pennrose portfolio",
+            "publishedDate": null,
+            "quote": "15 two-story townhouse-style apartment buildings"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "First-phase completion",
+          "value": "December 2015; whole-redevelopment Phase III date is separate.",
+          "source": {
+            "url": "https://www.pennrose.com/portfolio/meriwether-homes-redevelopment/",
+            "title": "Meriwether Homes Redevelopment – Pennrose portfolio",
+            "publishedDate": null,
+            "quote": "Completed in December 2015"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Oaks first phase completed",
+          "date": "December 2015",
+          "source": {
+            "url": "https://www.pennrose.com/portfolio/meriwether-homes-redevelopment/",
+            "title": "Meriwether Homes Redevelopment – Pennrose portfolio",
+            "publishedDate": null,
+            "quote": "Completed in December 2015"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "saint-lukes-manor-housing-phases",
+    "pinIds": {
+      "local": 7106,
+      "production": 7106
+    },
+    "title": "Saint Luke’s Manor — Cleveland affordable housing",
+    "sourceUrl": "https://www.pennrose.com/apartments/ohio/saint-lukes-manor/",
+    "profile": {
+      "sector": "Housing: residential construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Residential phases I and II",
+          "value": "137 senior apartments in the completed central and west wings; later school phase excluded.",
+          "source": {
+            "url": "https://www.huduser.gov/portal/casestudies/study_06132013_1.html",
+            "title": "Cleveland: Preservation Anchors Sustainable Community Development – HUD USER",
+            "publishedDate": null,
+            "quote": "137 new one- and two-bedroom apartments"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Adaptive reuse program",
+          "value": "Hospital converted to senior apartments with fitness, computer and supportive-service spaces.",
+          "source": {
+            "url": "https://www.huduser.gov/portal/casestudies/study_06132013_1.html",
+            "title": "Cleveland: Preservation Anchors Sustainable Community Development – HUD USER",
+            "publishedDate": null,
+            "quote": "a fitness center, a computer room, and additional space for supportive services"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Redevelopment partnership established",
+          "value": "2011, per HUD case study; residential wings explicitly completed, while the third-phase school remained separate.",
+          "source": {
+            "url": "https://www.huduser.gov/portal/casestudies/study_06132013_1.html",
+            "title": "Cleveland: Preservation Anchors Sustainable Community Development – HUD USER",
+            "publishedDate": null,
+            "quote": "In 2011, after several unsuccessful attempts"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Housing redevelopment partnership established",
+          "date": "2011",
+          "source": {
+            "url": "https://www.huduser.gov/portal/casestudies/study_06132013_1.html",
+            "title": "Cleveland: Preservation Anchors Sustainable Community Development – HUD USER",
+            "publishedDate": null,
+            "quote": "In 2011, after several unsuccessful attempts"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "google-canelones-uruguay",
+    "pinIds": {
+      "local": 7315,
+      "production": 7315
+    },
+    "title": "Google data centre — Parque de las Ciencias, Nicolich, Canelones — under construction",
+    "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-latin-america/a-new-data-center-in-latin-america/",
+    "profile": {
+      "sector": "Digital infrastructure: data center construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced data center investment",
+          "value": "More than USD 850 million; an investment announcement, not final outturn.",
+          "source": {
+            "url": "https://blog.google/company-news/inside-google/around-the-globe/google-latin-america/a-new-data-center-in-latin-america/",
+            "title": "A new data center in Latin America – Google",
+            "publishedDate": "2024-08-29",
+            "quote": "investing more than $850 million USD in the new data center"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Data center location and scope",
+          "value": "Google’s second Latin American data center, in Canelones, Uruguay; regional training and cable projects excluded.",
+          "source": {
+            "url": "https://blog.google/company-news/inside-google/around-the-globe/google-latin-america/a-new-data-center-in-latin-america/",
+            "title": "A new data center in Latin America – Google",
+            "publishedDate": "2024-08-29",
+            "quote": "second data center in Latin America, this time in Canelones, Uruguay"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction start announcement",
+          "value": "29 August 2024; no opening date or operating IT capacity is established by this source.",
+          "source": {
+            "url": "https://blog.google/company-news/inside-google/around-the-globe/google-latin-america/a-new-data-center-in-latin-america/",
+            "title": "A new data center in Latin America – Google",
+            "publishedDate": "2024-08-29",
+            "quote": "We’re starting the construction of our second data center in Latin America."
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction start announced",
+          "date": "2024-08-29",
+          "source": {
+            "url": "https://blog.google/company-news/inside-google/around-the-globe/google-latin-america/a-new-data-center-in-latin-america/",
+            "title": "A new data center in Latin America – Google",
+            "publishedDate": "2024-08-29",
+            "quote": "We’re starting the construction of our second data center in Latin America."
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "six-flags-qiddiya-city",
+    "pinIds": {
+      "local": 2296,
+      "production": 2296
+    },
+    "title": "Six Flags Qiddiya City Opens Three Years Behind Its First Date",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Six_Flags_Qiddiya_City",
+    "profile": {
+      "sector": "Leisure: theme park construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Attraction program",
+          "value": "28 attractions; not a visitor-throughput capacity.",
+          "source": {
+            "url": "https://www.atkinsrealis.com/en/projects/qiddiya",
+            "title": "Six Flags Qiddiya City – AtkinsRéalis",
+            "publishedDate": null,
+            "quote": "featuring 28 attractions"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Theme park development scope",
+          "value": "320,000 sq m across six themed lands; park site extent, not indoor gross floor area.",
+          "source": {
+            "url": "https://www.atkinsrealis.com/en/projects/qiddiya",
+            "title": "Six Flags Qiddiya City – AtkinsRéalis",
+            "publishedDate": null,
+            "quote": "320,000 m² across six immersive themed lands"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Park opening",
+          "value": "31 December 2025.",
+          "source": {
+            "url": "https://www.atkinsrealis.com/en/projects/qiddiya",
+            "title": "Six Flags Qiddiya City – AtkinsRéalis",
+            "publishedDate": null,
+            "quote": "Opened on 31 December 2025"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Theme park opened",
+          "date": "2025-12-31",
+          "source": {
+            "url": "https://www.atkinsrealis.com/en/projects/qiddiya",
+            "title": "Six Flags Qiddiya City – AtkinsRéalis",
+            "publishedDate": null,
+            "quote": "Opened on 31 December 2025"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "hassyan-desalination-iwp",
+    "pinIds": {
+      "local": 4919,
+      "production": 4919
+    },
+    "title": "Dubai's Hassyan Seawater Desalination Plant Completes All Phases",
+    "sourceUrl": "https://www.mediaoffice.ae/en/news/2026/january/02-01/saeed-al-tayer-inspects-progress-on-the-first-phase",
+    "profile": {
+      "sector": "Water infrastructure: seawater desalination",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published desalination investment",
+          "value": "AED 3.377 billion, native published currency; no FX conversion.",
+          "source": {
+            "url": "https://www.mediaoffice.ae/en/news/2026/january/02-01/saeed-al-tayer-inspects-progress-on-the-first-phase",
+            "title": "DEWA inspection of Hassyan desalination construction – Dubai Media Office",
+            "publishedDate": "2026-01-02",
+            "quote": "AED 3 billion and 377 million"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned water production",
+          "value": "180 million imperial gallons per day, using seawater reverse osmosis; not US gallons or electrical generation.",
+          "source": {
+            "url": "https://acwapower.com/en/what-we-do/projects/hassyan-iwp/",
+            "title": "Hassyan IWP – ACWA Power",
+            "publishedDate": null,
+            "quote": "180 Million Imperial Gallons per Day"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Dated first-phase construction report",
+          "value": "About 90% complete on 2 January 2026; historical progress report, not a new measurement.",
+          "source": {
+            "url": "https://www.mediaoffice.ae/en/news/2026/january/02-01/saeed-al-tayer-inspects-progress-on-the-first-phase",
+            "title": "DEWA inspection of Hassyan desalination construction – Dubai Media Office",
+            "publishedDate": "2026-01-02",
+            "quote": "completion rate of about 90%"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Commercial operations target",
+          "value": "15 February 2027 per ACWA; owner targets all phases in Q1 2027. No operation inferred.",
+          "source": {
+            "url": "https://acwapower.com/en/what-we-do/projects/hassyan-iwp/",
+            "title": "Hassyan IWP – ACWA Power",
+            "publishedDate": null,
+            "quote": "Commercial operations date 15 February 2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-phase progress inspection",
+          "date": "2026-01-02",
+          "source": {
+            "url": "https://www.mediaoffice.ae/en/news/2026/january/02-01/saeed-al-tayer-inspects-progress-on-the-first-phase",
+            "title": "DEWA inspection of Hassyan desalination construction – Dubai Media Office",
+            "publishedDate": "2026-01-02",
+            "quote": "completion rate of about 90%"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Commercial operations target",
+          "date": "2027-02-15",
+          "source": {
+            "url": "https://acwapower.com/en/what-we-do/projects/hassyan-iwp/",
+            "title": "Hassyan IWP – ACWA Power",
+            "publishedDate": null,
+            "quote": "Commercial operations date 15 February 2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "huajiang-grand-canyon-bridge",
+    "pinIds": {
+      "local": 461,
+      "production": 461
+    },
+    "title": "Huajiang Canyon Bridge Opens as World's Highest",
+    "sourceUrl": "https://www.youtube.com/watch?v=79xontgRjyU",
+    "profile": {
+      "sector": "Roads: suspension bridge construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Suspension crossing dimensions",
+          "value": "2,890 m long, with 1,420 m main span and deck 625 m above the Beipan River.",
+          "source": {
+            "url": "https://english.www.gov.cn/english.www.gov.cn/news/202509/29/content_WS68d9e5dbc6d00ca5f9a0684b.html",
+            "title": "Huajiang Grand Canyon Bridge opens – Xinhua / State Council",
+            "publishedDate": "2025-09-29",
+            "quote": "2,890-meter-long structure"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Reported canyon journey time",
+          "value": "Two minutes versus two hours previously; reported journey time, not vehicles/hour.",
+          "source": {
+            "url": "https://english.www.gov.cn/english.www.gov.cn/news/202509/29/content_WS68d9e5dbc6d00ca5f9a0684b.html",
+            "title": "Huajiang Grand Canyon Bridge opens – Xinhua / State Council",
+            "publishedDate": "2025-09-29",
+            "quote": "from two hours to just two minutes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Traffic opening",
+          "value": "28 September 2025, the Sunday identified by the report and opening-day photographs.",
+          "source": {
+            "url": "https://english.www.gov.cn/english.www.gov.cn/news/202509/29/content_WS68d9e5dbc6d00ca5f9a0684b.html",
+            "title": "Huajiang Grand Canyon Bridge opens – Xinhua / State Council",
+            "publishedDate": "2025-09-29",
+            "quote": "opened to traffic Sunday morning"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Bridge opens to traffic",
+          "date": "2025-09-28",
+          "source": {
+            "url": "https://english.www.gov.cn/english.www.gov.cn/news/202509/29/content_WS68d9e5dbc6d00ca5f9a0684b.html",
+            "title": "Huajiang Grand Canyon Bridge opens – Xinhua / State Council",
+            "publishedDate": "2025-09-29",
+            "quote": "opened to traffic Sunday morning"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
   }
 ]
