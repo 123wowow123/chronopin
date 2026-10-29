@@ -4,6 +4,7 @@ import { GUIDE_PAGE_SIZE, type GuideItem, type GuidePage, type GuideQuery, type 
 import { arrangeRestaurantOfferSections, scheduleRestaurantOffers, type OfferSchedule, type RestaurantOffer } from '@/lib/restaurantOffers';
 import { sortRestaurants } from '@/lib/restaurantSort';
 import { RESTAURANT_REGIONS, openingGroup } from '@/lib/restaurants';
+import type { RestaurantSpecialVenue } from '../model/restaurantSpecialVenue';
 import { TAGS } from './cache';
 import { restaurantGuideDetails } from './restaurantGuideDetails';
 import { regionalRestaurantOffers } from './restaurantOffers';
@@ -33,12 +34,12 @@ async function guideBase(regionSlug: string) {
 // The four list sizes alone, for the sitemap. guideBase also assembles every
 // card's menus and visit details (restaurantGuideDetails), which a count never
 // reads: across ~100 regions that made /sitemap-restaurants.xml a 75 s build.
-export async function guideCounts(regionSlug: string, now: Date): Promise<Record<GuideView, number> | null> {
+export async function guideCounts(regionSlug: string, now: Date, venues?: RestaurantSpecialVenue[]): Promise<Record<GuideView, number> | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
   if (!region) return null;
   const [data, tops] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
   const today = dayKeyIn(now, region.timeZone);
-  const offers = await regionalRestaurantOffers(data.restaurants, tops, today, region.slug);
+  const offers = await regionalRestaurantOffers(data.restaurants, tops, today, region.slug, venues);
   const sections = arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, region.timeZone));
   const groups = data.restaurants.map((restaurant) => openingGroup(restaurant, today));
   return {

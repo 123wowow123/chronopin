@@ -9,8 +9,9 @@ import { hasKidsMenu } from './restaurantGuideDetails';
 
 type SpecialVenue = RestaurantMenuProfile & { regionSlug: string; neighborhood: string; address: string; websiteUrl: string };
 
-export async function regionalRestaurantOffers(restaurants: Restaurant[], topRestaurants: TopRestaurant[], today: string, regionSlug?: string): Promise<RestaurantOffer[]> {
-  const records = await listSpecialVenues();
+export async function regionalRestaurantOffers(restaurants: Restaurant[], topRestaurants: TopRestaurant[], today: string, regionSlug?: string, loaded?: RestaurantSpecialVenue[]): Promise<RestaurantOffer[]> {
+  // `loaded`: a caller walking every region reads the table (~7 MB of profiles) once, not once per region.
+  const records = loaded ?? await listSpecialVenues();
   const supplementalSources = records.filter((record) => record.enabled && (!regionSlug || record.regionSlug === regionSlug)).map((record) => record.profile.pinSourceUrl).filter(Boolean);
   const pinsBySource = await Pin.findBySourceUrls(supplementalSources);
   return buildRestaurantOffers(restaurants, topRestaurants, today, regionSlug, records, pinsBySource);

@@ -2,6 +2,7 @@ import { cacheLife, cacheTag } from 'next/cache';
 import { connection } from 'next/server';
 import { absoluteUrl } from '@/lib/seo';
 import { GUIDE_PAGE_SIZE, GUIDE_VIEWS, guideListPath } from '@/lib/restaurantGuide';
+import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 import { TAGS } from '@/server/services/cache';
 import { guideCounts } from '@/server/services/restaurantGuidePage';
 import { restaurantGuideRegionSlugs } from '@/server/services/restaurants';
@@ -17,8 +18,9 @@ async function guidePaths(): Promise<string[]> {
   cacheTag(TAGS.sitemap);
   const now = new Date();
   const paths: string[] = [];
+  const venues = await listSpecialVenues();
   for (const slug of await restaurantGuideRegionSlugs()) {
-    const counts = await guideCounts(slug, now);
+    const counts = await guideCounts(slug, now, venues);
     if (!counts) continue;
     // The default view's first page is the bare city URL, already in /sitemap.xml with the regions.
     for (const view of GUIDE_VIEWS.filter((v) => v !== 'discounts' && counts[v] > 0)) {
