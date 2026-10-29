@@ -12,10 +12,13 @@ import type { FactoryProfile } from '@/lib/pinFactory';
 
 export type FactoryGap = { pinId: number; title: string; start: string; status: string | null; price: number | null; priceCurrency: string | null; author: string | null; sourceUrl: string | null };
 
-// Manufacturing/Factory pins without a profile, newest first. A pin counts when
-// it carries a construction status tag (Proposed, In Progress, Completed) or a
-// construction price; closures, sales and layoffs usually have neither and the
-// task skips the few that slip through (with a learning saying why).
+// Construction pins without a profile, newest first. A Manufacturing/Factory pin
+// counts when it carries a construction status tag (Proposed, In Progress,
+// Completed) or a construction price. Since 2026-10-29 (owner: every
+// construction pin gets the timeline panel) any other pin counts too when it
+// carries both a status tag and a construction price: pipelines, plants, dams,
+// data centres and the like. Closures, sales, restart milestones and other
+// non-builds slip through; the task skips them (with a learning saying why).
 export async function factoryGaps(limit = 5, skip: number[] = []): Promise<{ gaps: FactoryGap[]; remaining: number }> {
   const rows = await db.query<{ id: number; title: string; start: Date; status: string | null; price: number | null; priceCurrency: string | null; author: string | null; sourceUrl: string | null }>(
     `SELECT p."id", p."title", p."utcStartDateTime" AS "start", p."price", p."priceCurrency", p."sourceUrl", u."userName" AS "author",
@@ -24,8 +27,11 @@ export async function factoryGaps(limit = 5, skip: number[] = []): Promise<{ gap
      WHERE p."utcDeletedDateTime" IS NULL
        AND NOT EXISTS (SELECT 1 FROM "PinFactory" f WHERE f."pinId" = p."id")
        AND NOT EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Predicted')
-       AND EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Manufacturing', 'Factory'))
-       AND (p."price" IS NOT NULL OR EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Proposed', 'In Progress', 'Completed')))
+       AND (
+         (EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Manufacturing', 'Factory'))
+           AND (p."price" IS NOT NULL OR EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Proposed', 'In Progress', 'Completed'))))
+         OR (p."price" IS NOT NULL AND EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Proposed', 'In Progress', 'Completed')))
+       )
      ORDER BY p."utcStartDateTime" DESC`,
   );
   const gaps = rows

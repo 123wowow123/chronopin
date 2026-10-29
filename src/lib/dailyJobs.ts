@@ -119,8 +119,8 @@ export const TASKS = {
   },
   factoryProfiles: {
     group: 'upkeep',
-    label: 'Factory buildout on plant pins',
-    summary: 'For each plant, factory or fab pin with no buildout profile, research its sourced metrics (investment, jobs, floor area, capacity) and dated project timeline from pages opened in the run and save them.',
+    label: 'Buildout timeline on construction pins',
+    summary: 'For each plant, factory, fab or other construction pin (priced, with a status tag) with no buildout profile, research its sourced metrics (investment, jobs, floor area, capacity) and dated project timeline from pages opened in the run and save them.',
   },
 
   trends: {
