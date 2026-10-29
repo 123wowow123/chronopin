@@ -153,6 +153,18 @@ The source-wiki step also reads nothing while the API has no key or turned
 a call away for credit, rate limit or outage (10 minutes,
 [wiki.ts](../../../src/server/extract/wiki.ts)).
 
+**Estimated map locations.** A mapped pin whose coordinates are only a city,
+neighbourhood, intersection or existing-campus anchor must say so. Prefix
+its address with `Estimated: ` and explain what the marker represents in
+`longFormSummary`; never call it the verified new building or entrance.
+The prefix renders as a searchable Estimated pill (`place:Estimated`).
+Migration 0230 also adds this prefix automatically on insert and on address,
+summary or coordinate edits when the address explicitly says approximate or
+estimated, or the details explicitly describe an approximate map position.
+It covers normal pin saves, admin table APIs and imports, preserves the
+address/explanation, and does not label pins without map coordinates.
+An estimated date, price or job count alone is not location evidence.
+
 **Pull before a run; skip the post-run sync.** Local ids match prod's only
 after `npm run db:pull-prod`; pull before a run so ids and the already-pinned
 tests agree. Owner, 2026-10-06: do not sync the production database back to

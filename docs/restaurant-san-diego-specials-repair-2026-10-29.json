@@ -4704,5 +4704,161 @@
       "reason": "Operator announced closure during December 2026; exact final service date remains unpublished in the opened report. Confirm before showing future specials; do not invent an offer expiry.",
       "sourceUrl": "https://thecoastnews.com/after-36-years-pacifica-del-mar-to-close-in-december/"
     }
+  ],
+  "contentUpdates": [
+    {
+      "pinSourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+      "name": "Sidecar Bar",
+      "checkedAt": "2026-10-29",
+      "sourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+      "quote": "$4 bottled & canned beer $5 well drinks $2 off all drafts",
+      "evidence": "A direct HTTPS download on October 29, 2026 lists October 29 through November 4 explicitly; web-search cached rendering still showed October 16–22, so the opened live operator response is retained in the ignored research folder.",
+      "profile": {
+        "name": "Sidecar Bar",
+        "menus": [
+          {
+            "url": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+            "note": "The operator’s live dated calendar was opened October 29, 2026 and explicitly lists service dates October 29 through November 4, 2026. Prices, Wednesday conditions and service windows match the saved menu; future weeks require a fresh reading.",
+            "items": [
+              {
+                "name": "Bottled & canned beer",
+                "price": 4,
+                "category": "Drinks"
+              },
+              {
+                "name": "Well drinks",
+                "price": 5,
+                "category": "Drinks"
+              },
+              {
+                "name": "Draft beer",
+                "note": "$2 off all drafts",
+                "category": "Drinks",
+                "priceLabel": "$2 off"
+              },
+              {
+                "name": "Well mules",
+                "note": "Any well spirit, fresh lime, Fever Tree ginger beer, Angostura; Wednesday 3 PM-2 AM",
+                "price": 8,
+                "category": "Wednesday"
+              },
+              {
+                "name": "Wing Wednesday: four wings",
+                "note": "The Shed Kitchen, Wednesday 3-10 PM",
+                "price": 5,
+                "category": "Wednesday"
+              }
+            ],
+            "label": "Happy hour & specials",
+            "coverage": "published"
+          }
+        ],
+        "photo": {
+          "alt": "Bartender pouring a drink from a mixing glass into a rocks glass over a large ice cube",
+          "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/sidecar-bar-bay-park-801fb881dc626929.webp",
+          "credit": "Photo via Sidecar Bar",
+          "checkedAt": "2026-10-11",
+          "sourceUrl": "https://sidecarbarsd.com/",
+          "originalUrl": "https://static.spotapps.co/website_images/ab_websites/28864_website_v1/redesign/drinks_right.jpg"
+        },
+        "review": {
+          "count": 167,
+          "score": 4.5,
+          "provider": "Yelp",
+          "checkedAt": "2026-10-11",
+          "sourceUrl": "https://www.yelp.com/search?find_desc=Happy+Hour&find_loc=Midway+District%2C+San+Diego%2C+CA&sortby=rating"
+        },
+        "address": "1310 Morena Boulevard, San Diego, CA 92110",
+        "location": {
+          "latitude": 32.7732334,
+          "checkedAt": "2026-10-11",
+          "longitude": -117.2036103,
+          "sourceUrl": "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=1310%20Morena%20Boulevard%2C%20San%20Diego%2C%20CA%2092110"
+        },
+        "specials": [
+          {
+            "kind": "other",
+            "title": "Happy hour",
+            "schedule": "Mon, Tue, Wed, Thu 15:00–19:00 (local time); Fri 12:00–19:00 (local time); Sun, Sat 12:00–15:00 (local time)",
+            "menuLabel": "Happy hour & specials",
+            "sourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+            "validFrom": "2026-10-29",
+            "conditions": [
+              "Schedule verified for October 29–November 4, 2026 only"
+            ],
+            "discounted": true,
+            "description": "$4 bottled & canned beer, $5 well drinks, $2 off drafts. Weekday 3-7 PM, Friday from noon, weekend noon-3 PM.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "19:00",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "start": "15:00"
+                },
+                {
+                  "end": "19:00",
+                  "days": [
+                    5
+                  ],
+                  "start": "12:00"
+                },
+                {
+                  "end": "15:00",
+                  "days": [
+                    0,
+                    6
+                  ],
+                  "start": "12:00"
+                }
+              ]
+            },
+            "validThrough": "2026-11-04"
+          },
+          {
+            "kind": "other",
+            "title": "Wednesday specials",
+            "schedule": "Wed 15:00–22:00 (local time)",
+            "menuLabel": "Happy hour & specials",
+            "sourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+            "validFrom": "2026-10-29",
+            "conditions": [
+              "Mules continue until 2 AM; wings until 10 PM"
+            ],
+            "discounted": true,
+            "description": "$8 well mules (3 PM-2 AM) and four wings for $5 from The Shed Kitchen (3-10 PM).",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "22:00",
+                  "days": [
+                    3
+                  ],
+                  "start": "15:00"
+                }
+              ]
+            },
+            "validThrough": "2026-11-04"
+          }
+        ],
+        "checkedAt": "2026-10-29",
+        "websiteUrl": "https://sidecarbarsd.com/",
+        "neighborhood": "Bay Park",
+        "pinSourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials"
+      }
+    }
+  ],
+  "offerAvailabilityGaps": [
+    {
+      "name": "Taste of the Himalayas Hillcrest",
+      "pinSourceUrl": "https://tohhillcrest.com/",
+      "reason": "The branch explicitly excludes holidays from the weekday lunch special, but a verified branch holiday calendar is missing. Preserve the exception and keep scheduling hidden until its excluded dates are sourced."
+    }
   ]
 }

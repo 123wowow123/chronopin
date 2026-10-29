@@ -2,7 +2,7 @@ import type { NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { HttpError, json, publicOrigin, route } from '@/server/http';
 import AdFreeSubscription from '@/server/model/adFreeSubscription';
-import { AD_FREE_PRICE_CENTS, stripeConfigured, stripeRequest } from '@/server/stripe';
+import { CHECKOUT_PRICES, checkoutCurrency, stripeConfigured, stripeRequest } from '@/server/stripe';
 
 // Start the $1 a month ad-free plan: a Stripe Checkout session in subscription
 // mode, answered with the page to send the signed-in user to. The price is
@@ -17,6 +17,7 @@ export const POST = route(async (request: NextRequest) => {
   if (current.active) throw new HttpError(409, 'Ads are already off for this account.');
 
   const origin = publicOrigin(request);
+  const currency = await checkoutCurrency(request);
   const customer = await AdFreeSubscription.customerId(user.id);
   const session = await stripeRequest<{ url: string }>('POST', '/checkout/sessions', {
     mode: 'subscription',
@@ -26,8 +27,8 @@ export const POST = route(async (request: NextRequest) => {
       {
         quantity: 1,
         price_data: {
-          currency: 'usd',
-          unit_amount: AD_FREE_PRICE_CENTS,
+          currency,
+          unit_amount: CHECKOUT_PRICES[currency].adFree,
           recurring: { interval: 'month' },
           product_data: { name: 'Chronopin ad-free', description: 'No ads on Chronopin while the plan is active.' },
         },

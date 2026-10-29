@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { api } from '@/lib/client/api';
-import { useT } from '@/lib/client/i18n';
+import { useLocale, useT } from '@/lib/client/i18n';
 
 // The $1 a month plan that turns every ad off (src/server/model/adFreeSubscription.ts).
 // Buying and managing both happen on Stripe's own pages: the API answers with
@@ -27,12 +27,13 @@ export function AdFreeSetting({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const t = useT();
+  const chinese = useLocale() === 'zh';
 
-  async function go(path: '/api/billing/checkout' | '/api/billing/portal') {
+  async function go(path: '/api/billing/checkout' | '/api/billing/portal', currency?: 'cny') {
     setBusy(true);
     setError('');
     try {
-      const { url } = await api.post<{ url: string }>(path, {});
+      const { url } = await api.post<{ url: string }>(path, currency ? { currency } : {});
       window.location.assign(url);
     } catch {
       setError(t('profile.adFreeError'));
@@ -53,6 +54,11 @@ export function AdFreeSetting({
       {!active && !justPaid ? (
         <button type="button" disabled={busy} onClick={() => void go('/api/billing/checkout')} className="btn btn-primary">
           {endedOn ? t('profile.adFreeResubscribe') : t('profile.adFreeSubscribe')}
+        </button>
+      ) : null}
+      {!active && !justPaid && chinese ? (
+        <button type="button" disabled={busy} onClick={() => void go('/api/billing/checkout', 'cny')} className="btn btn-secondary">
+          {t('profile.adFreeSubscribeCny')}
         </button>
       ) : null}
       {canManage ? (

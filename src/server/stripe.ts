@@ -16,6 +16,21 @@ const TOLERANCE_SECONDS = 300;
 export const AD_FREE_PRICE_CENTS = 100;
 export const PREMIUM_PRICE_CENTS = 2000;
 
+// Chinese users can pay the same plans in yuan, a fixed price each (about the
+// dollar price, rounded) so nobody is billed a moving exchange rate. Amounts are
+// in fen. Stripe takes cards in CNY; WeChat Pay is not enabled on this account
+// (Stripe closed that review as denied on 2026-10-29), so card is the method.
+export type CheckoutCurrency = 'usd' | 'cny';
+export const CHECKOUT_PRICES: Record<CheckoutCurrency, { adFree: number; premium: number }> = {
+  usd: { adFree: AD_FREE_PRICE_CENTS, premium: PREMIUM_PRICE_CENTS },
+  cny: { adFree: 700, premium: 14000 },
+};
+
+export async function checkoutCurrency(request: Request): Promise<CheckoutCurrency> {
+  const body = await request.json().catch(() => null);
+  return body?.currency === 'cny' ? 'cny' : 'usd';
+}
+
 export function stripeConfigured(): boolean {
   return !!config.stripe.secretKey;
 }

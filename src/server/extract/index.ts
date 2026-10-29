@@ -99,7 +99,7 @@ export const SCHEMA = {
     placeLabel: {
       type: ['string', 'null'],
       description:
-        'Human-readable place this is about, e.g. "Detroit, Michigan" or "Jeddah, Saudi Arabia". Null when the page is not about a place.',
+        'Human-readable place this is about, e.g. "Detroit, Michigan" or "Jeddah, Saudi Arabia". Prefix with "Estimated: " when coordinates are an approximate locality/campus anchor rather than a verified site. Null when the page is not about a place.',
     },
     latitude: {
       type: ['number', 'null'],

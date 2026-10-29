@@ -4,21 +4,22 @@ import { useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
 import { authHrefHere } from '@/lib/client/returnSpot';
-import { useT } from '@/lib/client/i18n';
+import { useLocale, useT } from '@/lib/client/i18n';
 
 // Buy or manage the premium plan. Signed-out visitors go to sign in first;
 // paying and managing happen on Stripe's pages.
 export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { active: boolean; endsOn: string | null; cancelling: boolean; paid: boolean; configured: boolean }) {
   const t = useT();
+  const chinese = useLocale() === 'zh';
   const { status, user } = useSession();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
 
-  async function go(path: string) {
+  async function go(path: string, currency?: 'cny') {
     setBusy(true);
     setError('');
     try {
-      const { url } = await api.post<{ url: string }>(path, {});
+      const { url } = await api.post<{ url: string }>(path, currency ? { currency } : {});
       window.location.assign(url);
     } catch {
       setError(t('premium.checkoutError'));
@@ -51,6 +52,11 @@ export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { 
           {configured ? t('premium.go') : t('premium.soon')}
         </button>
       )}
+      {!signedOut && chinese ? (
+        <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/premium/checkout', 'cny')}>
+          {t('premium.goCny')}
+        </button>
+      ) : null}
       {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}
     </div>
   );
