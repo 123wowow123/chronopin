@@ -7,9 +7,10 @@
 #   npm run deploy:faiss -- <sha>   roll another commit's image (a rollback)
 #
 # Never builds on the VM. The container restarts (searches fail for a few
-# seconds), and a new model's index starts empty: this script then fills it
-# from the live pins (`search:index:db`, upserts), during which searches in
-# other languages find little. Run it at a quiet hour.
+# seconds). The index persists on the faiss-data volume, so it is refilled
+# from the live pins (`search:index:db`) only when a space comes up empty, as
+# after a model change; searches in other languages then find little until it
+# finishes. Run it at a quiet hour.
 set -eu
 
 HOST=azureuser@20.109.175.187
@@ -36,7 +37,10 @@ echo 'FAISS_IMAGE=$IMAGE' >> Docker/.env.new && mv Docker/.env.new Docker/.env
 $C pull faiss
 $C up -d --no-build faiss
 n=0; until $C exec -T faiss python -c \"import urllib.request;urllib.request.urlopen('http://localhost:5050/health')\" 2>/dev/null; do n=\$((n+1)); [ \$n -ge 60 ] && { echo 'faiss never answered'; exit 1; }; sleep 3; done
-$C --profile tools run --rm tools npm run search:index:db
-$C exec -T faiss python -c \"import urllib.request;print(urllib.request.urlopen('http://localhost:5050/health').read())\"
+h=\$($C exec -T faiss python -c \"import urllib.request;print(urllib.request.urlopen('http://localhost:5050/health').read().decode())\")
+echo \"\$h\"
+# The index lives on the faiss-data volume and survives a restart; reindex only
+# when a space is empty (a new model gets a new, empty index file).
+case \"\$h\" in *'\"count\": 0'*|*'\"count\":0'*) $C --profile tools run --rm tools npm run search:index:db;; *) echo 'Index intact; not reindexing.';; esac
 docker image prune -f >/dev/null"
 echo "Rolled faiss to $rev."

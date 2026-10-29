@@ -24,10 +24,10 @@ services:
       retries: 10
 
   faiss:
-    build: ./faiss
     # FAISS_IMAGE (Docker/.env, written by scripts/deploy-faiss.sh) names the
-    # image CI built; without it, the one built on the VM.
-    image: ${FAISS_IMAGE:-chronopin-faiss:latest}
+    # image CI built. No fallback: nothing builds faiss on the VM, and an
+    # unset name made `deploy` try to recreate faiss from a missing image.
+    image: ${FAISS_IMAGE:?run npm run deploy:faiss once to set FAISS_IMAGE}
     volumes:
       - faiss-data:/data
     # "Too many open files" on accept() stalled every search on 2026-10-12.

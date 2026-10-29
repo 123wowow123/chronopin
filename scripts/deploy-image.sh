@@ -77,7 +77,7 @@ ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
 # Images referenced by containers are preserved; volumes are never pruned.
 docker image prune -af >/dev/null
 df -h / | tail -1
-printf 'APP_IMAGE=%s\nTOOLS_IMAGE=%s\n' '$APP_IMAGE' '$TOOLS_IMAGE' > Docker/.env
+{ grep '^FAISS_IMAGE=' Docker/.env 2>/dev/null || true; printf 'APP_IMAGE=%s\nTOOLS_IMAGE=%s\n' '$APP_IMAGE' '$TOOLS_IMAGE'; } > Docker/.env.new && mv Docker/.env.new Docker/.env
 C='$C'
 \$C pull app
 \$C --profile static run --rm --no-deps static-sync
