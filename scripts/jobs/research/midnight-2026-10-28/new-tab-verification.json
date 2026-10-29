@@ -1,0 +1,23 @@
+[
+  {
+    "city": "miami",
+    "status": 200,
+    "nativeLink": true,
+    "menuPresent": true,
+    "unpublishedPriceLabel": true
+  },
+  {
+    "city": "san-francisco",
+    "status": 200,
+    "nativeLink": true,
+    "menuPresent": true,
+    "unpublishedPriceLabel": true
+  },
+  {
+    "city": "seattle",
+    "status": 200,
+    "nativeLink": true,
+    "menuPresent": true,
+    "unpublishedPriceLabel": true
+  }
+]

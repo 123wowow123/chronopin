@@ -27,6 +27,7 @@ import { gameInfoForPin } from '../model/pinGameInfo';
 import { tasteForPin } from '../model/pinTaste';
 import { carPerfForPin } from '../model/pinCarPerf';
 import { gasCarPerfForPin } from '../model/pinGasCarPerf';
+import { gamePerfForPin } from '../model/pinGamePerf';
 import { aircraftPerfForPin } from '../model/pinAircraftPerf';
 import { videoPerfForPin } from '../model/pinVideoPerf';
 import { llmPerfForPin } from '../model/pinLlmPerf';
@@ -36,6 +37,7 @@ import { criticReviewsForPin } from '../model/pinCriticReview';
 import type { PinTasteJson } from '@/lib/pinTaste';
 import type { PinCarPerfJson } from '@/lib/pinCarPerf';
 import type { PinGasCarPerfJson } from '@/lib/pinGasCarPerf';
+import type { PinGamePerfJson } from '@/lib/pinGamePerf';
 import type { PinAircraftPerfJson } from '@/lib/pinAircraftPerf';
 import type { PinVideoPerfJson } from '@/lib/pinVideoPerf';
 import type { PinLlmPerfJson } from '@/lib/pinLlmPerf';
@@ -340,6 +342,14 @@ export async function pinCarPerf(id: number): Promise<PinCarPerfJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return carPerfForPin(id);
+}
+
+// A video game pin's rubric (relative to its release year), or null when it has none.
+export async function pinGamePerf(id: number): Promise<PinGamePerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return gamePerfForPin(id);
 }
 
 // A gasoline car pin's performance rubric, or null when it has none.

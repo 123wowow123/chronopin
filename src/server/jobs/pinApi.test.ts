@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as db from '../db';
-import { sponsoredTranslationRequest, apiBase, prodBase, pushEventInfo, pushSentiment, scrapeUrl, updatePin } from './pinApi';
+import { sponsoredTranslationRequest, apiBase, prodBase, pushEventInfo, pushModelPerf, pushSentiment, scrapeUrl, updatePin } from './pinApi';
 import { sentimentHash } from '../model/pinSentiment';
 import { productionWrite } from './productionWrites';
 
@@ -145,4 +145,52 @@ describe('routine maintenance across authors', () => {
     }));
     await expect(updatePin(5, { company: null })).rejects.toThrow(/author changed/);
   });
+});
+
+describe('model enrichment production replay', () => {
+  it('matches a non-curator pin by sourceUrl, preserves its author and verifies graphs', async () => {
+    process.env.JOBS_PROD_BASE = 'https://prod.example';
+    process.env.JOBS_PROD_SESSION_SECRET = 'prod-secret';
+    vi.mocked(db.query).mockResolvedValueOnce([{ sourceUrl: 'https://maker.example/carbon' }]).mockResolvedValueOnce([{ id: 1 }]);
+    const body = { charts: [{ title: 'Benchmark', unit: '%', bars: [{ label: 'Old', value: 50 }, { label: 'New', value: 60 }] }], tables: [] };
+    const calls: { method: string; url: string }[] = [];
+    vi.stubGlobal('fetch', async (url: string, init: any) => {
+      calls.push({ method: init.method, url });
+      const result = url.includes('/api/admin/db/Pin?') ? { rows: [{ id: 900 }] }
+        : url.endsWith('/performance') ? { ...body, checkedAt: '2026-10-28' }
+          : { id: 900, title: 'Carbon', user: { id: 55, userName: '@Owner' } };
+      return new Response(JSON.stringify(result));
+    });
+    expect(await pushModelPerf(10, 'performance', body)).toBe(true);
+    expect(calls.filter(c => c.method === 'PUT')).toEqual([{ method: 'PUT', url: 'https://prod.example/api/pins/900/performance' }]);
+    expect(calls.some(c => c.url.includes('/api/pins/10/'))).toBe(false);
+    expect(calls.filter(c => c.url.endsWith('/performance') && c.method === 'GET')).toHaveLength(2);
+  });
+
+  it('refuses ambiguous identity without writing and detects a failed saved readback', async () => {
+    process.env.JOBS_PROD_BASE = 'https://prod.example';
+    process.env.JOBS_PROD_SESSION_SECRET = 'prod-secret';
+    vi.mocked(db.query).mockImplementation(async (sql) => String(sql).includes('sourceUrl') ? [{ sourceUrl: 'https://maker.example/carbon' }] as never : [{ id: 1 }] as never);
+    const fetcher = vi.fn(async (_url: string, _init: any) => new Response(JSON.stringify({ rows: [{ id: 900 }, { id: 901 }] })));
+    vi.stubGlobal('fetch', fetcher);
+    await expect(pushModelPerf(10, 'performance', { charts: [], tables: [] })).rejects.toThrow(/ambiguous/);
+    expect(fetcher.mock.calls.every(([, init]) => init.method === 'GET')).toBe(true);
+    fetcher.mockImplementation(async (url: string) => new Response(JSON.stringify(url.includes('/api/admin/db/Pin?') ? { rows: [{ id: 900 }] } : url.endsWith('/performance') ? { charts: [], tables: [] } : { user: { userName: '@Owner' } })));
+    await expect(pushModelPerf(10, 'performance', { charts: [{ title: 'Missing graph' }], tables: [] })).rejects.toThrow(/readback verification failed/);
+  });
+});
+
+it('keeps production-only benchmark charts when replaying a table-only edit', async () => {
+  process.env.JOBS_PROD_BASE = 'https://prod.example';
+  process.env.JOBS_PROD_SESSION_SECRET = 'prod-secret';
+  vi.mocked(db.query).mockResolvedValueOnce([{ sourceUrl: 'https://maker.example/model' }]).mockResolvedValueOnce([{ id: 1 }]);
+  const chart = { title: 'Production benchmark', bars: [{ label: 'Model', value: 60 }] };
+  let saved: any = { charts: [chart], tables: [] };
+  vi.stubGlobal('fetch', async (url: string, init: any) => {
+    if (init.method === 'PUT') saved = JSON.parse(init.body);
+    return new Response(JSON.stringify(url.includes('/api/admin/db/Pin?') ? { rows: [{ id: 900 }] } : url.endsWith('/performance') ? saved : { user: { userName: '@Owner' } }));
+  });
+  const tables = [{ title: 'New specs' }];
+  expect(await pushModelPerf(10, 'performance', { tables })).toBe(true);
+  expect(saved).toEqual({ charts: [chart], tables });
 });

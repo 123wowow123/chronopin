@@ -1,0 +1,65 @@
+[
+  {
+    "pinId": 17839,
+    "sourceUrl": "https://www.renaissancefest.com/",
+    "patch": {
+      "title": "Minnesota Renaissance Festival 2026: August 22–October 4 Weekends",
+      "description": "The 2026 Shakopee festival ran weekends August 22–October 4, plus Labor Day and October 2, with jousting, themed weekends and an artisan marketplace.",
+      "utcStartDateTime": "2026-08-22T00:00:00.000Z",
+      "utcEndDateTime": "2026-10-05T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Confirmed: Discover Shakopee states “weekends August 22-October 4, 2026 (plus Labor Day and Friday, October 2)”; Bloomington tourism corroborates the same dates. This corrects the stored 2026 event, not the distinct August21–October3,2027 edition now on the operator homepage. End is exclusive.",
+      "longFormSummary": "<ul><li>The 2026 festival occupied weekends from August 22 through October 4, with extra openings on Labor Day and Friday October 2. This pin records that historical season; its old August-to-October placeholder and reasoning about an unannounced 2027 season described different years.<cite data-ref=\"https://discovershakopee.org/2026-minnesota-renaissance-festival-preview/\"></cite></li><li>The programme moved from Once Upon a Time on August 22–23 through Highland Fling, Woofstock, Bold North Adventure, Wine, Chocolate &amp; Romance and Art Affair to Oktoberfest on October 3–4. Shakopee tourism describes more than 250 artisans alongside stage entertainment and jousting.<cite data-ref=\"https://discovershakopee.org/2026-minnesota-renaissance-festival-preview/\"></cite></li><li>The operator’s retained opening-weekend page confirms August 22–23 and explicitly labels its admission offers 2026. Its fairy-house competition and children’s activities belong to that weekend rather than the whole season.<cite data-ref=\"https://renaissancefest.com/onceuponatime/\"></cite></li><li>Bloomington’s tourism calendar independently retains the August 22–October 4,2026 span and identifies Shakopee as the venue area. The current operator homepage and season-pass checkout have advanced to 2027, so their newer prices must not be read as 2026 ticket inventory.<cite data-ref=\"https://www.bloomingtonmn.org/things-to-do/events/minnesota-renaissance-festival/\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://discovershakopee.org/2026-minnesota-renaissance-festival-preview/",
+          "title": "2026 Minnesota Renaissance Festival Preview",
+          "confidence": 100,
+          "startDate": "2026-08-22",
+          "endDate": "2026-10-04",
+          "reasoning": "Explicit historical2026 dates and extra days."
+        },
+        {
+          "url": "https://renaissancefest.com/onceuponatime/",
+          "title": "Once Upon A Time",
+          "confidence": 95,
+          "startDate": "2026-08-22",
+          "reasoning": "Retained operator2026 opening weekend."
+        },
+        {
+          "url": "https://www.bloomingtonmn.org/things-to-do/events/minnesota-renaissance-festival/",
+          "title": "Minnesota Renaissance Festival",
+          "confidence": 95,
+          "startDate": "2026-08-22",
+          "endDate": "2026-10-04",
+          "reasoning": "Tourism calendar confirms2026 span."
+        }
+      ]
+    },
+    "note": "Recovered historical2026 festival dates from edition-specific tourism and operator sources; removed mixed-year date reasoning."
+  },
+  {
+    "pinId": 17486,
+    "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
+    "patch": {
+      "title": "San Antonio Missions 2027 Home Games: April 2–September 5",
+      "description": "Missions home games run April 2–September 5,2027. Times remain TBA.",
+      "utcStartDateTime": "2027-04-02T00:00:00.000Z",
+      "utcEndDateTime": "2027-09-06T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Scheduled: the official2027 printable calendar marks blue as HOME. April2–4 versus AMA and August31–September5 versus NWA are blue; September7–12 at CC are ROAD. Final home date September5; exclusive end September6. Dates subject to change.",
+      "longFormSummary": "<ul><li>The team’s printable2027 schedule labels April2–4 against Amarillo as home games. The final blue home block is August31–September5 against Northwest Arkansas.<cite data-ref=\"https://img.mlbstatic.com/milb-images/image/upload/milb/f96l6mapytpno6u98ona.pdf\"></cite></li><li>The legend distinguishes blue HOME, cream ROAD and grey OFF cells. September7–12 at Corpus Christi are road fixtures; September12 therefore cannot be the home-season end. This span covers intermittent home series, not games every day.<cite data-ref=\"https://img.mlbstatic.com/milb-images/image/upload/milb/f96l6mapytpno6u98ona.pdf\"></cite></li><li>Game times remain unpublished in the announcement; the calendar warns that dates are subject to change.<cite data-ref=\"https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://img.mlbstatic.com/milb-images/image/upload/milb/f96l6mapytpno6u98ona.pdf",
+          "title": "San Antonio Missions 2027 Schedule",
+          "confidence": 100,
+          "startDate": "2027-04-02",
+          "endDate": "2027-09-05",
+          "reasoning": "Visually inspected official calendar and HOME/ROAD legend; September5 final blue home cell."
+        }
+      ]
+    },
+    "note": "Visually verified official printable2027 schedule; corrected home opener/finale and exclusive end."
+  }
+]

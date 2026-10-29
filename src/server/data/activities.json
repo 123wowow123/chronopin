@@ -3797,15 +3797,15 @@
   ],
   "startMonth": 4,
   "endMonth": 9,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-04-02",
+  "endDate": "2027-09-05",
   "category": "sports",
-  "description": "Double-A baseball spring through September, with the 2027 season still planned at the current stadium.",
+  "description": "Missions home fixtures run April 2–September 5, 2027; exact game times remain TBA.",
   "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
   "costNote": "Paid - ticketed",
-  "dateConfidence": "estimated",
-  "dateReasoning": "The team released a 2027 schedule ending September 12; opening day not stated.",
-  "checkedAt": "2026-10-18"
+  "dateConfidence": "scheduled",
+  "dateReasoning": "The official 2027 printable calendar marks April 2–4 and August 31–September 5 as HOME; September 7–12 at Corpus Christi is ROAD. Final home date September 5.",
+  "checkedAt": "2026-10-28"
  },
  {
   "citySlug": "nashville",
@@ -7496,22 +7496,22 @@
   ],
   "startMonth": 4,
   "endMonth": 4,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-04-09",
+  "endDate": "2027-04-11",
   "category": "festival",
-  "description": "Free Japanese culture festival.",
+  "description": "Free general admission at Seattle Center, April 9–11, 2027, 11am–5pm daily; food, art and parking are separate.",
   "sourceUrl": "https://seattlecenter.com/events/event-calendar/seattle-cherry-blossom-and-japanese-cultural-festival-x46962",
   "costNote": "Free",
-  "dateConfidence": "estimated",
-  "dateReasoning": "2026 was Apr 10-12; 2027 not seen.",
-  "checkedAt": "2026-10-18",
+  "dateConfidence": "scheduled",
+  "dateReasoning": "The organiser’s Plan Your Visit page publishes April 9–11, 2027, 11am–5pm daily. An isolated 2026 typo appears in the FAQ; its heading, banner and the Plan page agree on 2027.",
+  "checkedAt": "2026-10-28",
   "tripDays": [
    1,
    2
   ],
   "tripDestinationKey": "armory-food-event-hall-seattle-center",
   "tripPlan": {
-   "day": "Choose a published daytime program and another session or attraction from the organizer’s schedule; buy admission for the date you plan to visit.",
+   "day": "Choose a published daytime programme from the organiser’s 2027 schedule. General admission is free; food, artwork and parking are separate.",
    "overnight": "Day 1: attend selected festival programs. Day 2: choose different programs on a second consecutive published event day. Verify both dates and admission; this does not imply a two-day ticket."
   }
  },
@@ -14435,15 +14435,15 @@
   ],
   "startMonth": 8,
   "endMonth": 10,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-08-22",
+  "endDate": "2026-10-04",
   "category": "festival",
-  "description": "A themed marketplace village with jousting, costumed performers, crafts and food each weekend of the late-summer season.",
+  "description": "The historical 2026 season ran weekends August 22–October 4, plus Labor Day and October 2.",
   "sourceUrl": "https://www.renaissancefest.com/",
   "costNote": "Paid - ticket price on separate page, not read",
-  "dateConfidence": "estimated",
-  "dateReasoning": "2027 dates not found on any source I could open (renaissancefest.com returns 403 to scripted fetches). The 2026 season ran Aug 22 - Oct 4 on weekends plus Labor Day, so the 2027 season is expected to be roughly late August to early October.",
-  "checkedAt": "2026-10-18"
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Historical 2026 season: Shakopee and Bloomington tourism give August 22–October 4 weekends, plus Labor Day and October 2. The current operator homepage advertises the separate 2027 edition.",
+  "checkedAt": "2026-10-28"
  },
  {
   "citySlug": "minneapolis",

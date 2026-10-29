@@ -1,0 +1,536 @@
+[
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/42",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Shinka",
+          "menus": [
+            {
+              "label": "Verified branch menu examples",
+              "url": "https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Published branch-specific examples; item prices not published in the opened source. Current availability may change.",
+              "items": [
+                {
+                  "name": "Chawanmushi",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Taste of California",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Shinka",
+          "slug": "shinka",
+          "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-francisco/openings/shinka-98d0f0f469b91c70.webp",
+          "address": "334 Battery St, San Francisco, CA 94111",
+          "cuisine": "Japanese",
+          "checkedAt": "2026-10-28",
+          "imageNote": null,
+          "priceRange": "",
+          "regionSlug": "san-francisco",
+          "websiteUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+          "description": "Opened October 9: Fumio Yonezawa’s Japanese-French restaurant at The Jay.",
+          "imageCredit": "Photo: Omakase Restaurant Group / The San Francisco Standard",
+          "recognition": "",
+          "neighborhood": "Financial District",
+          "imageSourceUrl": "https://assets.sfstandard.com/image/994911177489/image_jg4a984a0t22d49559if8r3m02/-S3840x2548-FPNG",
+          "day": "2026-10-09",
+          "openingConfirmed": true
+        },
+        "details": {
+          "name": "Shinka",
+          "phone": null,
+          "checkedAt": "2026-10-28",
+          "websiteUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+          "openingHours": [],
+          "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+          "additionalSources": [
+            {
+              "url": "https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco",
+              "label": "Verified exact branch opening and dishes"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6693-true.json"
+  },
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/334",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Mastro's Ocean Club",
+          "menus": [
+            {
+              "label": "Verified branch menu examples",
+              "url": "https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Published branch-specific examples; item prices not published in the opened source. Current availability may change.",
+              "items": [
+                {
+                  "name": "Jerk-spiced grouper with mango butter sauce",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pecan pie",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Mastro's Ocean Club",
+          "slug": "mastros-ocean-club-atlanta",
+          "image": null,
+          "address": "190 Marietta St NW, Atlanta, GA 30303",
+          "cuisine": "Steak / Seafood",
+          "checkedAt": "2026-10-28",
+          "imageNote": null,
+          "priceRange": "",
+          "regionSlug": "atlanta",
+          "websiteUrl": "https://www.mastrosrestaurants.com/",
+          "description": "Scheduled November 6 opening at The CTR, with steaks, seafood and live lounge music.",
+          "imageCredit": "",
+          "recognition": "",
+          "neighborhood": "Downtown",
+          "imageSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta",
+          "day": "2026-11-06",
+          "openingConfirmed": false
+        },
+        "details": {
+          "name": "Mastro's Ocean Club",
+          "phone": null,
+          "checkedAt": "2026-10-28",
+          "hoursNote": "Not yet open; the operator lists only a Georgia location as coming soon.",
+          "websiteUrl": "https://www.mastrosrestaurants.com/",
+          "openingHours": [],
+          "pinSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta",
+          "detailsSourceUrl": "https://www.mastrosrestaurants.com/locations/",
+          "additionalSources": [
+            {
+              "url": "https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/",
+              "label": "Verified exact branch opening and dishes"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6972-true.json"
+  },
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/117",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Cairo",
+          "menus": [
+            {
+              "label": "Verified branch menu examples",
+              "url": "https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Published branch-specific examples; item prices not published in the opened source. Current availability may change.",
+              "items": [
+                {
+                  "name": "Hawawshi",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Feteer",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Molokhia",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Cairo",
+          "slug": "cairo-seattle",
+          "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/seattle/openings/cairo-seattle-cb5452f4c7713d0c.webp",
+          "address": "5465 Leary Ave NW, Seattle, WA 98107",
+          "cuisine": "Egyptian",
+          "checkedAt": "2026-10-28",
+          "imageNote": "Exterior · before opening",
+          "priceRange": "",
+          "regionSlug": "seattle",
+          "websiteUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026",
+          "description": "Opened October 3: Egyptian cooking from Om Eldonia, with hawawshi and oven-baked feteer.",
+          "imageCredit": "Photo: Geri Silver via My Ballard",
+          "recognition": "",
+          "neighborhood": "Ballard",
+          "imageSourceUrl": "https://www.myballard.com/2026/08/21/new-egyptian-restaurant-cairo-coming-to-ballard/",
+          "day": "2026-10-03",
+          "openingConfirmed": true
+        },
+        "details": {
+          "name": "Cairo",
+          "phone": null,
+          "checkedAt": "2026-10-28",
+          "websiteUrl": null,
+          "openingHours": [],
+          "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle",
+          "additionalSources": [
+            {
+              "url": "https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/",
+              "label": "Verified exact branch opening and dishes"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6768-true.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/42",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Shinka",
+          "menus": [
+            {
+              "label": "Verified branch menu examples",
+              "url": "https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Published branch-specific examples; item prices not published in the opened source. Current availability may change.",
+              "items": [
+                {
+                  "name": "Chawanmushi",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Taste of California",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Shinka",
+          "slug": "shinka",
+          "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-francisco/openings/shinka-98d0f0f469b91c70.webp",
+          "address": "334 Battery St, San Francisco, CA 94111",
+          "cuisine": "Japanese",
+          "checkedAt": "2026-10-28",
+          "imageNote": null,
+          "priceRange": "",
+          "regionSlug": "san-francisco",
+          "websiteUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+          "description": "Opened October 9: Fumio Yonezawa’s Japanese-French restaurant at The Jay.",
+          "imageCredit": "Photo: Omakase Restaurant Group / The San Francisco Standard",
+          "recognition": "",
+          "neighborhood": "Financial District",
+          "imageSourceUrl": "https://assets.sfstandard.com/image/994911177489/image_jg4a984a0t22d49559if8r3m02/-S3840x2548-FPNG",
+          "day": "2026-10-09",
+          "openingConfirmed": true
+        },
+        "details": {
+          "name": "Shinka",
+          "phone": null,
+          "checkedAt": "2026-10-28",
+          "websiteUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+          "openingHours": [],
+          "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+          "additionalSources": [
+            {
+              "url": "https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco",
+              "label": "Verified exact branch opening and dishes"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6693-false.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/334",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Mastro's Ocean Club",
+          "menus": [
+            {
+              "label": "Verified branch menu examples",
+              "url": "https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Published branch-specific examples; item prices not published in the opened source. Current availability may change.",
+              "items": [
+                {
+                  "name": "Jerk-spiced grouper with mango butter sauce",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pecan pie",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Mastro's Ocean Club",
+          "slug": "mastros-ocean-club-atlanta",
+          "image": null,
+          "address": "190 Marietta St NW, Atlanta, GA 30303",
+          "cuisine": "Steak / Seafood",
+          "checkedAt": "2026-10-28",
+          "imageNote": null,
+          "priceRange": "",
+          "regionSlug": "atlanta",
+          "websiteUrl": "https://www.mastrosrestaurants.com/",
+          "description": "Scheduled November 6 opening at The CTR, with steaks, seafood and live lounge music.",
+          "imageCredit": "",
+          "recognition": "",
+          "neighborhood": "Downtown",
+          "imageSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta",
+          "day": "2026-11-06",
+          "openingConfirmed": false
+        },
+        "details": {
+          "name": "Mastro's Ocean Club",
+          "phone": null,
+          "checkedAt": "2026-10-28",
+          "hoursNote": "Not yet open; the operator lists only a Georgia location as coming soon.",
+          "websiteUrl": "https://www.mastrosrestaurants.com/",
+          "openingHours": [],
+          "pinSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta",
+          "detailsSourceUrl": "https://www.mastrosrestaurants.com/locations/",
+          "additionalSources": [
+            {
+              "url": "https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/",
+              "label": "Verified exact branch opening and dishes"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6972-false.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/117",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Cairo",
+          "menus": [
+            {
+              "label": "Verified branch menu examples",
+              "url": "https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Published branch-specific examples; item prices not published in the opened source. Current availability may change.",
+              "items": [
+                {
+                  "name": "Hawawshi",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Feteer",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Molokhia",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Cairo",
+          "slug": "cairo-seattle",
+          "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/seattle/openings/cairo-seattle-cb5452f4c7713d0c.webp",
+          "address": "5465 Leary Ave NW, Seattle, WA 98107",
+          "cuisine": "Egyptian",
+          "checkedAt": "2026-10-28",
+          "imageNote": "Exterior · before opening",
+          "priceRange": "",
+          "regionSlug": "seattle",
+          "websiteUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026",
+          "description": "Opened October 3: Egyptian cooking from Om Eldonia, with hawawshi and oven-baked feteer.",
+          "imageCredit": "Photo: Geri Silver via My Ballard",
+          "recognition": "",
+          "neighborhood": "Ballard",
+          "imageSourceUrl": "https://www.myballard.com/2026/08/21/new-egyptian-restaurant-cairo-coming-to-ballard/",
+          "day": "2026-10-03",
+          "openingConfirmed": true
+        },
+        "details": {
+          "name": "Cairo",
+          "phone": null,
+          "checkedAt": "2026-10-28",
+          "websiteUrl": null,
+          "openingHours": [],
+          "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle",
+          "additionalSources": [
+            {
+              "url": "https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/",
+              "label": "Verified exact branch opening and dishes"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6768-false.json"
+  },
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/pins/17610/event-info",
+    "body": {
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "label": "General festival admission",
+          "price": 0,
+          "note": "Food, artwork and parking are separate purchases."
+        }
+      ],
+      "itinerary": [],
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://seattlecherryblossomfestival.org/plan-your-visit/faq/",
+      "checkedAt": "2026-10-19T14:26:18.492Z"
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/event-saved-17610-true.json"
+  },
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/pins/20449/event-info",
+    "body": {
+      "performers": [],
+      "ticketUrl": "https://www.buchmesse.de/en/visit/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "tiers": [],
+      "itinerary": [],
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://www.buchmesse.de/en/visit/tickets"
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/event-saved-20449-true.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/pins/17610/event-info",
+    "body": {
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "label": "General festival admission",
+          "price": 0,
+          "note": "Food, artwork and parking are separate purchases."
+        }
+      ],
+      "itinerary": [],
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://seattlecherryblossomfestival.org/plan-your-visit/faq/",
+      "checkedAt": "2026-10-19T14:26:18.492Z"
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/event-saved-17610-false.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/pins/20449/event-info",
+    "body": {
+      "performers": [],
+      "ticketUrl": "https://www.buchmesse.de/en/visit/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "tiers": [],
+      "itinerary": [],
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://www.buchmesse.de/en/visit/tickets"
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/event-saved-20449-false.json"
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "pinId": 6693,
+    "sourceUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+    "patch": {
+      "title": "Shinka Opens in San Francisco’s Financial District on October 9, 2026",
+      "description": "Chef Fumio Yonezawa opened Shinka at The Jay on October 9, 2026, pairing Japanese flavours with French technique and Bay Area produce.",
+      "utcStartDateTime": "2026-10-09T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Confirmed: Eater’s October 9 opening report states Shinka “debuts on Friday, October 9”; OpenTable’s October 8 feature independently gives the same day. The current operator publishes service hours and reservations, superseding the older hotel coming-soon page.",
+      "longFormSummary": "<ul><li>Shinka opened October 9, 2026 in the former Prelude space at The Jay. Eater’s opening-day report and OpenTable’s preview agree on the date, replacing the previous month-end estimate.<cite data-ref=\"https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco\"></cite><cite data-ref=\"https://www.opentable.com/blog/shinka-san-francisco/\"></cite></li><li>Chef Fumio Yonezawa’s background includes Jean-Georges in New York and Tokyo and his No Code restaurants. His San Francisco kitchen combines Japanese flavours and French methods with locally available ingredients, rather than importing the exact menu of another branch.<cite data-ref=\"https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco\"></cite></li><li>The opening tasting menu relies on house-made dashi and fermentation, including koji and bonito flakes. Eater reported an additional à la carte option from October 12; guests should check the live menu for the current selection.<cite data-ref=\"https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco\"></cite></li><li>The room includes dining, bar and private spaces. OpenTable described a separate bar selection and a sake, whisky and wine programme. The operator’s current page lists Tuesday–Thursday 4:30–9pm and Friday–Saturday 5–10pm; its own hours take priority over older third-party listings.<cite data-ref=\"https://www.opentable.com/blog/shinka-san-francisco/\"></cite><cite data-ref=\"https://www.shinkasf.com/\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://sf.eater.com/restaurant-news/213788/shinka-opening-fumio-yonezawa-san-francisco",
+          "title": "New San Francisco Restaurant Shinka Blends Japanese Flavors With French Technique",
+          "confidence": 100,
+          "publishedDate": "2026-10-09",
+          "startDate": "2026-10-09",
+          "reasoning": "Opening-day report of exact branch."
+        },
+        {
+          "url": "https://www.opentable.com/blog/shinka-san-francisco/",
+          "title": "Shinka in San Francisco marks Fumio Yonezawa’s Bay Area debut",
+          "confidence": 95,
+          "publishedDate": "2026-10-08",
+          "startDate": "2026-10-09",
+          "reasoning": "Reservation platform preview confirms exact date."
+        },
+        {
+          "url": "https://www.shinkasf.com/",
+          "title": "Shinka",
+          "confidence": 95,
+          "reasoning": "Official operating hours, location and reservations read with local browser."
+        }
+      ]
+    },
+    "note": "Corrected Shinka to verified October 9 opening; enriched thin summary from exact-branch sources."
+  },
+  {
+    "pinId": 6972,
+    "sourceUrl": "https://www.mastrosrestaurants.com/locations/#atlanta",
+    "patch": {
+      "title": "Mastro’s Ocean Club Opens in Downtown Atlanta on November 6, 2026",
+      "description": "Mastro’s first Georgia restaurant is scheduled to open November 6 at The CTR, the former CNN Center, with 275 seats and nightly live music.",
+      "utcStartDateTime": "2026-11-06T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Scheduled: Atlanta Magazine’s October 27 interview explicitly says “opening Downtown November 6”. The operator still labels Georgia Coming Soon. This supersedes November 1 as a month placeholder and does not claim the future opening already occurred.",
+      "longFormSummary": "<ul><li>Mastro’s first Georgia location is scheduled to open November 6, 2026 at The CTR in downtown Atlanta. The specific date comes from Atlanta Magazine’s interview with management, replacing the earlier November planning marker.<cite data-ref=\"https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/\"></cite></li><li>The announced dining room has 275 seats, private dining space and views toward Centennial Olympic Park. Live acoustic piano or guitar is planned for the lounge during much of service, making music part of the restaurant format.<cite data-ref=\"https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/\"></cite></li><li>Chef Richard Lee’s kitchen plans steaks, seafood towers and raw-bar dishes. The Atlanta-specific menu additions described by management are jerk-spiced grouper with mango butter sauce and pecan pie. These are announced items; the article does not publish their individual prices.<cite data-ref=\"https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/\"></cite></li><li>The restaurant belongs to the Mastro’s national steakhouse and Ocean Club network. Its operator’s locations page continues to mark Georgia as coming soon, consistent with a future opening rather than current service. No critic rating or opening discount is inferred from the announcement.<cite data-ref=\"https://www.mastrosrestaurants.com/locations/\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://www.atlantamagazine.com/dining-news/mastros-ocean-club-opens-november-6-at-the-ctr-in-downtown-atlanta/",
+          "title": "Mastro’s Ocean Club opens November 6 at The CTR in Downtown Atlanta",
+          "confidence": 100,
+          "publishedDate": "2026-10-27",
+          "startDate": "2026-11-06",
+          "reasoning": "Management interview explicitly dates this branch opening."
+        }
+      ]
+    },
+    "note": "Corrected Mastro’s November placeholder to scheduled November 6 from management interview."
+  },
+  {
+    "pinId": 6768,
+    "sourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle",
+    "patch": {
+      "title": "Cairo Opens in Ballard on October 3, 2026",
+      "description": "Cairo brought Om Eldonia’s Egyptian cooking to Ballard on October 3, 2026, with hawawshi, feteer and molokhia at the former Strega Pizzeria site.",
+      "utcStartDateTime": "2026-10-03T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Confirmed: My Ballard’s October 2 report gives Saturday, October 3 at 5pm and quotes the operator’s opening announcement. The current official site now publishes reservations and regular Tuesday–Sunday service at the same branch, supporting that it is operating.",
+      "addReferences": [
+        {
+          "url": "https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/",
+          "title": "Egyptian restaurant Cairo opens Oct. 3 in Ballard",
+          "confidence": 100,
+          "publishedDate": "2026-10-02",
+          "startDate": "2026-10-03",
+          "reasoning": "Exact branch opening announcement and operator quote."
+        },
+        {
+          "url": "https://www.eatcairo.com/",
+          "title": "Cairo — From Egypt to Ballard",
+          "confidence": 95,
+          "reasoning": "Current official operating site, hours and reservations read through local browser."
+        }
+      ],
+      "longFormSummary": "<ul><li>Cairo’s Ballard opening was announced for October 3, 2026 at 5pm. The local report quotes the owners and identifies the former Strega Pizzeria space; the restaurant now advertises regular service and reservations.<cite data-ref=\"https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/\"></cite><cite data-ref=\"https://www.eatcairo.com/\"></cite></li><li>The business comes from Om Eldonia, an Egyptian catering operation. Its new restaurant serves hawawshi, a meat-filled bread, feteer baked in a baladi oven, and molokhia. Catering dishes mentioned in background reporting are not automatically assigned to the restaurant’s current menu.<cite data-ref=\"https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/\"></cite></li><li>The operator’s current Ballard site lists Monday closed and Tuesday–Sunday 11am–9pm, with a reservations link and an after-dinner programme. Those hours describe ongoing service rather than just the first night.<cite data-ref=\"https://www.eatcairo.com/\"></cite></li><li>A free hawawshi for the first 100 opening-night guests and a named performance belonged to October 3. They are historical launch details, not an ongoing restaurant special available to a visitor now.<cite data-ref=\"https://www.myballard.com/2026/10/02/egyptian-restaurant-cairo-opens-oct-3-in-ballard/\"></cite></li></ul>"
+    },
+    "note": "Corrected Cairo to October 3 opening; verified current operator service; historical giveaway not promoted as active."
+  }
+]

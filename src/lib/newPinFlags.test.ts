@@ -5,6 +5,10 @@ const long = 'x'.repeat(1000);
 const refs = [{ url: 'https://a.test' }, { url: 'https://b.test' }] as never;
 
 describe('newPinFlags', () => {
+  it('asks newly created AI model pins for graphs and media during the same run', () => {
+    const tags = [{ name: 'AI Models', kind: 'topic', source: 'user' }] as never;
+    expect(newPinFlags({ description: long, sourceUrl: 'https://s.test', references: refs, categories: ['AI'], tags })).toContainEqual(expect.stringMatching(/complete model enrichment in this run.*spec graphs\/tables.*credited official media/));
+  });
   it('is empty for a full pin with no rubric kind', () => {
     expect(newPinFlags({ description: long, sourceUrl: 'https://s.test', references: refs, categories: ['Elections'] })).toEqual([]);
   });

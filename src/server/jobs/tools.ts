@@ -55,7 +55,7 @@ import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
-import { modelRubricGaps } from './modelRubrics';
+import { modelPerformanceUpdate, modelRubricGaps } from './modelRubrics';
 import { competitorGaps } from './productCompetitors';
 import { buildFactoryProfile, factoryEvidenceProblem, factoryGaps } from './factoryProfiles';
 import { saveFactory } from '../model/pinFactory';
@@ -70,7 +70,6 @@ import type { ReviewTable } from '@/lib/pinReviews';
 import { llmPerfProblem, saveLlmPerf } from '../model/pinLlmPerf';
 import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
 import { savePerf } from '../model/pinPerf';
-import { perfProblem } from '@/lib/pinPerf';
 import { predictedPins } from './threadPredicted';
 import { syncProductLifecycle } from './productLifecycle';
 import { trendCandidates } from './trends';
@@ -603,7 +602,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'model_rubric_gaps',
     description:
-      "AI model release pins that lack their rubric (language models: PinLlmPerf; AI video models: PinVideoPerf) or, for video models, their spec tables, newest first, each with its `kind` ('llm' or 'video'), what it `needs`, and its author. Research each by the rules in daily-jobs.md#modelrubrics and strategy.md ('Language model rubric', 'Video model rubric'), then save with save_model_rubric and save_model_tables. At most `limit` (default 5, at most 10) per call; `remaining` is how many more wait.",
+      "AI language/video model release or announcement pins missing their rubric, sourced spec graphs/tables, or a picture, including pins with an existing rubric, newest first. Each has kind, needs and author. Follow daily-jobs.md#modelrubrics: save_model_rubric, save_model_tables (charts and tables), check_image and update_pin (addMedia type 1, source/credit). Research official launch galleries and benchmark graphics. Never borrow sibling specs or invent graph values; record specific missing evidence. At most limit (default 5, max 10); remaining counts additional gaps.",
     input_schema: obj({ limit: num('At most this many pins, default 5, at most 10'), skip: { type: 'array', items: { type: 'number' }, description: 'Pin ids already judged not scoreable this run (a pin that is not a model release, an announcement whose release pin carries the rubric)' } }),
     run: async (input, ctx) => {
       const result = await modelRubricGaps(int(input.limit, 5, 1, 10), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
@@ -638,16 +637,19 @@ export const TOOLS: JobTool[] = [
         if (typeof checked === 'string') throw new Error(checked);
         reviewCount = checked.reviews?.length ?? 0;
         saved = await saveLlmPerf(pinId, checked.scores, checked);
+        Object.assign(body, checked.scores, { basis: checked.basis, sourceUrl: checked.sourceUrl, reviews: checked.reviews });
       } else {
         const checked = videoPerfProblem(body);
         if (typeof checked === 'string') throw new Error(checked);
         reviewCount = checked.reviews?.length ?? 0;
         saved = await saveVideoPerf(pinId, checked.scores, checked);
+        Object.assign(body, checked.scores, { basis: checked.basis, sourceUrl: checked.sourceUrl, reviews: checked.reviews });
       }
       if (!saved) throw new Error('This pin has a rubric set by hand; it is kept.');
       expirePinPage(pinId);
-      const pushed = await pushModelPerf(pinId, kind === 'llm' ? 'llm-performance' : 'video-performance', body).catch((err) => {
+      const pushed = await pushModelPerf(pinId, kind === 'llm' ? 'llm-performance' : 'video-performance', body).catch(async (err) => {
         log.warn(`pin ${pinId}'s rubric did not reach production:`, (err as Error).message);
+        await PinRevisit.mark(pinId, `Model rubric production API/save verification failed: ${(err as Error).message}`, { jobRunId: ctx.runId });
         return false;
       });
       await act(ctx, { tool: 'save_model_rubric', detail: `Pin ${pinId}: ${kind} rubric with ${reviewCount} review(s)${pushed ? '; prod saved' : ''}` });
@@ -657,21 +659,23 @@ export const TOOLS: JobTool[] = [
   {
     name: 'save_model_tables',
     description:
-      "Saves a model pin's spec tables (what the maker published: resolution, clip length, audio, inputs, access, API price...), each { title, columns (2-8), rows (each one cell per column), note, sourceUrl } from a page opened this run; only published figures, none estimated. Replaces the pin's tables; send every table it should have. Saved here, and on production when the run writes there.",
-    input_schema: obj({ pinId: num('Pin id'), tables: { type: 'array', items: { type: 'object' } } }, ['pinId', 'tables']),
+      "Saves sourced spec graphs and tables for BOTH language and video models. charts: [{title, unit, bars:[{label,value,highlight?}], note, sourceUrl, i18n?}]; tables: [{title,columns,rows,note,sourceUrl,i18n?}]. Only published figures from opened HTTPS sources; compare like-for-like benchmark versions/settings, predecessor first and this model highlighted last. Translate text for all supported locales. Each supplied collection replaces itself; omitted charts/tables are preserved. Saved here and on production when configured; preserve author and verify readbacks.",
+    input_schema: obj({ pinId: num('Pin id'), charts: { type: 'array', items: { type: 'object' } }, tables: { type: 'array', items: { type: 'object' } } }, ['pinId']),
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
-      const body = { tables: input.tables };
-      const parsed = perfProblem(body);
-      if (typeof parsed === 'string') throw new Error(parsed);
+      const parsed = await modelPerformanceUpdate(pinId, input);
+      // Let production retain its own omitted collection, which may differ
+      // from this database's saved graphs or tables.
+      const body = { ...(input.charts === undefined ? {} : { charts: parsed.charts }), ...(input.tables === undefined ? {} : { tables: parsed.tables }) };
       await savePerf(pinId, parsed.charts, parsed.tables);
       expirePinPage(pinId);
-      const pushed = await pushModelPerf(pinId, 'performance', body).catch((err) => {
+      const pushed = await pushModelPerf(pinId, 'performance', body).catch(async (err) => {
         log.warn(`pin ${pinId}'s tables did not reach production:`, (err as Error).message);
+        await PinRevisit.mark(pinId, `Model graphs/tables production API/save verification failed: ${(err as Error).message}`, { jobRunId: ctx.runId });
         return false;
       });
-      await act(ctx, { tool: 'save_model_tables', detail: `Pin ${pinId}: ${parsed.tables.length} spec table(s)${pushed ? '; prod saved' : ''}` });
-      return { pinId, tables: parsed.tables.length, production: pushed };
+      await act(ctx, { tool: 'save_model_tables', detail: `Pin ${pinId}: ${parsed.charts.length} graph(s), ${parsed.tables.length} spec table(s)${pushed ? '; prod saved' : ''}` });
+      return { pinId, charts: parsed.charts.length, tables: parsed.tables.length, production: pushed };
     },
   },
   // --- Performers and tickets (the eventInfo task) -------------------------

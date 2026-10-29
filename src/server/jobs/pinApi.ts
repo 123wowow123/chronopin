@@ -172,14 +172,35 @@ export async function pushSentiment(pinId: number, sentiment: number, product: s
 }
 
 
-// A model pin's rubric or spec tables, replayed to production through their
-// own endpoints as the pin's author (the modelRubrics task saves locally
-// first). Nothing happens unless the run writes to production.
+// Replay enrichment by source identity, since production ids can differ.
+// Admin maintenance preserves ownership, including non-curator authors.
 export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' | 'video-performance' | 'performance' | 'competitors' | 'factory', body: Record<string, unknown> | unknown[]): Promise<boolean> {
   if (!prodBase()) return false;
-  const pin = await getPin(pinId);
-  if (!isCurator(pin.user?.userName)) return false;
-  await call('PUT', `/api/pins/${pinId}/${endpoint}`, { token: await tokenFor(pin.user!.userName), body });
+  const [local] = await db.query<{ sourceUrl: string | null }>(`SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
+  if (!local?.sourceUrl) throw new Error(`Pin ${pinId}: missing sourceUrl for production enrichment`);
+  const token = await adminToken('model and product enrichment');
+  const found = await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(local.sourceUrl)}&utcDeletedDateTime.null=true&limit=2`, { token });
+  if (found.rows.length !== 1) throw new Error(`Pin ${pinId}: production sourceUrl is missing or ambiguous`);
+  const id = found.rows[0].id;
+  const before = await getPin(id);
+  const path = `/api/pins/${id}/${endpoint}`;
+  let payload = body;
+  if (endpoint === 'performance' && !Array.isArray(body)) {
+    const current = await call<{ charts: unknown[]; tables: unknown[] } | null>('GET', path, { token });
+    payload = { charts: current?.charts ?? [], tables: current?.tables ?? [], ...body };
+  }
+  await call('PUT', path, { token, body: payload });
+  const saved = await call<Record<string, unknown> | unknown[]>('GET', path, { token });
+  // Responses may add timestamps, review sentiments and linked pin objects.
+  const contains = (actual: unknown, expected: unknown): boolean => {
+    if (Array.isArray(expected)) return Array.isArray(actual) && actual.length === expected.length && expected.every((item, i) => contains(actual[i], item));
+    if (expected && typeof expected === 'object') return !!actual && typeof actual === 'object' && Object.entries(expected).every(([key, value]) => contains((actual as Record<string, unknown>)[key], value));
+    return actual === expected;
+  };
+  // Competitor GET returns nested linked pins rather than competitorPinId.
+  if (endpoint !== 'competitors' && !contains(saved, payload)) throw new Error(`Pin ${id}: ${endpoint} readback verification failed`);
+  const after = await getPin(id);
+  if (after.user?.userName !== before.user?.userName) throw new Error(`Pin ${id}: author changed during enrichment`);
   return true;
 }
 

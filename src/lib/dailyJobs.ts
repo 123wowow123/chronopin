@@ -185,8 +185,8 @@ export const TASKS = {
   },
   modelRubrics: {
     group: 'scores',
-    label: 'Rubrics, reviews and spec tables for AI models',
-    summary: 'For each new AI language-model or video-model release pin, research its published specs and independent reviews, then save its six-axis rubric (and, for video models, its spec tables).',
+    label: 'Rubrics, spec graphs and media for AI models',
+    summary: 'For every AI language/video model release or announcement, including existing pins missing panels or pictures, research launch specs, comparable benchmarks, independent reviews and official galleries. Save its six-axis rubric, sourced spec graphs/tables and credited relevant media; verify readbacks and queue only specific evidence gaps.',
   },
   horoscopes: {
     group: 'scores',

@@ -1,0 +1,419 @@
+{
+  "livePins": 13639,
+  "futurePins": 2953,
+  "categories": [
+    {
+      "name": "Disaster",
+      "total": 82,
+      "future": 0,
+      "next90": 0,
+      "next365": 0
+    },
+    {
+      "name": "Futurism",
+      "total": 3,
+      "future": 1,
+      "next90": 0,
+      "next365": 0
+    },
+    {
+      "name": "Demographics",
+      "total": 6,
+      "future": 2,
+      "next90": 1,
+      "next365": 1
+    },
+    {
+      "name": "Mining",
+      "total": 16,
+      "future": 3,
+      "next90": 1,
+      "next365": 1
+    },
+    {
+      "name": "Literature",
+      "total": 7,
+      "future": 2,
+      "next90": 0,
+      "next365": 2
+    },
+    {
+      "name": "Manga",
+      "total": 10,
+      "future": 2,
+      "next90": 2,
+      "next365": 2
+    },
+    {
+      "name": "Weather",
+      "total": 30,
+      "future": 3,
+      "next90": 0,
+      "next365": 2
+    },
+    {
+      "name": "Robotics",
+      "total": 45,
+      "future": 4,
+      "next90": 2,
+      "next365": 2
+    },
+    {
+      "name": "Comics",
+      "total": 14,
+      "future": 3,
+      "next90": 1,
+      "next365": 3
+    },
+    {
+      "name": "Crypto",
+      "total": 14,
+      "future": 3,
+      "next90": 3,
+      "next365": 3
+    },
+    {
+      "name": "Crime",
+      "total": 85,
+      "future": 3,
+      "next90": 2,
+      "next365": 3
+    },
+    {
+      "name": "Justice",
+      "total": 64,
+      "future": 4,
+      "next90": 2,
+      "next365": 4
+    },
+    {
+      "name": "Cybersecurity",
+      "total": 53,
+      "future": 5,
+      "next90": 1,
+      "next365": 4
+    },
+    {
+      "name": "Religion",
+      "total": 6,
+      "future": 5,
+      "next90": 2,
+      "next365": 5
+    },
+    {
+      "name": "Education",
+      "total": 26,
+      "future": 7,
+      "next90": 5,
+      "next365": 6
+    },
+    {
+      "name": "Semiconductors",
+      "total": 149,
+      "future": 16,
+      "next90": 6,
+      "next365": 9
+    },
+    {
+      "name": "Astronomy",
+      "total": 61,
+      "future": 52,
+      "next90": 6,
+      "next365": 9
+    },
+    {
+      "name": "Tabletop",
+      "total": 19,
+      "future": 10,
+      "next90": 7,
+      "next365": 10
+    },
+    {
+      "name": "Electronics",
+      "total": 132,
+      "future": 10,
+      "next90": 7,
+      "next365": 10
+    },
+    {
+      "name": "Audio",
+      "total": 73,
+      "future": 11,
+      "next90": 8,
+      "next365": 10
+    },
+    {
+      "name": "Labour",
+      "total": 165,
+      "future": 13,
+      "next90": 8,
+      "next365": 10
+    },
+    {
+      "name": "Defense",
+      "total": 142,
+      "future": 15,
+      "next90": 7,
+      "next365": 10
+    },
+    {
+      "name": "Space",
+      "total": 61,
+      "future": 21,
+      "next90": 8,
+      "next365": 11
+    },
+    {
+      "name": "Telecom",
+      "total": 89,
+      "future": 15,
+      "next90": 3,
+      "next365": 12
+    },
+    {
+      "name": "Law",
+      "total": 276,
+      "future": 16,
+      "next90": 9,
+      "next365": 13
+    },
+    {
+      "name": "Science",
+      "total": 103,
+      "future": 20,
+      "next90": 10,
+      "next365": 13
+    },
+    {
+      "name": "Aerospace",
+      "total": 325,
+      "future": 20,
+      "next90": 6,
+      "next365": 16
+    },
+    {
+      "name": "Software",
+      "total": 193,
+      "future": 23,
+      "next90": 15,
+      "next365": 23
+    },
+    {
+      "name": "Retail",
+      "total": 268,
+      "future": 28,
+      "next90": 21,
+      "next365": 27
+    },
+    {
+      "name": "Economy",
+      "total": 288,
+      "future": 30,
+      "next90": 16,
+      "next365": 28
+    },
+    {
+      "name": "Marine",
+      "total": 143,
+      "future": 33,
+      "next90": 15,
+      "next365": 29
+    },
+    {
+      "name": "Architecture",
+      "total": 277,
+      "future": 67,
+      "next90": 12,
+      "next365": 30
+    },
+    {
+      "name": "Geopolitics",
+      "total": 171,
+      "future": 37,
+      "next90": 16,
+      "next365": 31
+    },
+    {
+      "name": "Elections",
+      "total": 78,
+      "future": 37,
+      "next90": 20,
+      "next365": 32
+    },
+    {
+      "name": "Gaming",
+      "total": 485,
+      "future": 39,
+      "next90": 16,
+      "next365": 32
+    },
+    {
+      "name": "Anime",
+      "total": 1020,
+      "future": 40,
+      "next90": 19,
+      "next365": 33
+    },
+    {
+      "name": "Property",
+      "total": 324,
+      "future": 74,
+      "next90": 15,
+      "next365": 37
+    },
+    {
+      "name": "Climate",
+      "total": 157,
+      "future": 97,
+      "next90": 26,
+      "next365": 40
+    },
+    {
+      "name": "Policy",
+      "total": 302,
+      "future": 52,
+      "next90": 28,
+      "next365": 44
+    },
+    {
+      "name": "Health",
+      "total": 301,
+      "future": 69,
+      "next90": 26,
+      "next365": 44
+    },
+    {
+      "name": "Fashion",
+      "total": 515,
+      "future": 48,
+      "next90": 37,
+      "next365": 46
+    },
+    {
+      "name": "Transport",
+      "total": 572,
+      "future": 140,
+      "next90": 29,
+      "next365": 47
+    },
+    {
+      "name": "Movie",
+      "total": 445,
+      "future": 54,
+      "next90": 26,
+      "next365": 49
+    },
+    {
+      "name": "Art",
+      "total": 155,
+      "future": 53,
+      "next90": 17,
+      "next365": 53
+    },
+    {
+      "name": "Music",
+      "total": 902,
+      "future": 53,
+      "next90": 19,
+      "next365": 53
+    },
+    {
+      "name": "Award",
+      "total": 330,
+      "future": 54,
+      "next90": 40,
+      "next365": 54
+    },
+    {
+      "name": "TV",
+      "total": 356,
+      "future": 61,
+      "next90": 42,
+      "next365": 61
+    },
+    {
+      "name": "Automotive",
+      "total": 645,
+      "future": 68,
+      "next90": 34,
+      "next365": 63
+    },
+    {
+      "name": "Business",
+      "total": 1275,
+      "future": 78,
+      "next90": 54,
+      "next365": 72
+    },
+    {
+      "name": "AI",
+      "total": 760,
+      "future": 122,
+      "next90": 39,
+      "next365": 74
+    },
+    {
+      "name": "Finance",
+      "total": 613,
+      "future": 94,
+      "next90": 60,
+      "next365": 88
+    },
+    {
+      "name": "Computing",
+      "total": 576,
+      "future": 248,
+      "next90": 45,
+      "next365": 97
+    },
+    {
+      "name": "Conference",
+      "total": 195,
+      "future": 116,
+      "next90": 48,
+      "next365": 114
+    },
+    {
+      "name": "Festival",
+      "total": 180,
+      "future": 116,
+      "next90": 37,
+      "next365": 116
+    },
+    {
+      "name": "Sports",
+      "total": 605,
+      "future": 216,
+      "next90": 68,
+      "next365": 193
+    },
+    {
+      "name": "Food",
+      "total": 2705,
+      "future": 247,
+      "next90": 206,
+      "next365": 241
+    },
+    {
+      "name": "Travel",
+      "total": 784,
+      "future": 327,
+      "next90": 134,
+      "next365": 322
+    },
+    {
+      "name": "Energy",
+      "total": 2028,
+      "future": 1150,
+      "next90": 271,
+      "next365": 586
+    },
+    {
+      "name": "Infrastructure",
+      "total": 2142,
+      "future": 1288,
+      "next90": 281,
+      "next365": 632
+    }
+  ]
+}

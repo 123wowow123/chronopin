@@ -1,0 +1,48 @@
+[
+  {
+    "pinId": 6753,
+    "sourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#flaky",
+    "patch": {
+      "title": "Flaky Opens a Bureka Window in South Beach in October 2026",
+      "description": "Flaky is operating at The Fifth Hotel in South of Fifth by October 23, 2026. Its exact first service day remains unverified.",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: the opening was announced for October2026; Boca Raton Observer’s October23 report describes the new operating venue but does not give its first day. October31 is a month-precision marker, not a verified upcoming opening day. Aggregator snippets disagree on earlyOctober versus October23.",
+      "addReferences": [
+        {
+          "url": "https://bocaratonobserver.com/api/amp/food-and-drink/bites/feeling-flaky/",
+          "title": "Feeling Flaky",
+          "confidence": 95,
+          "publishedDate": "2026-10-23",
+          "reasoning": "Operating venue byOctober23; does not establish exact firstservice day."
+        }
+      ]
+    },
+    "note": "Corrected Flaky operating status without pretending publication date is branch opening; exact day queued."
+  },
+  {
+    "pinId": 6774,
+    "sourceUrl": "https://www.whatsopening.com/fl/jacksonville/restaurants#happy-medium-cafe",
+    "patch": {
+      "title": "Happy Medium Books Café Plans Its Riverside Relocation",
+      "description": "The established bookstore-café plans a move from 2724 to 2756 Park Street. An October 2026 reopening target is reported; the exact new-branch opening day remains unverified.",
+      "dateConfidenceReasoning": "Estimated: September reports describe a relocation of a bookstore-café established in2023, with reopening at2756ParkStreet expected inearlyOctober2026. The October31 timestamp is a month marker. October23 reporting separately describes Mixed Fillings’ forthcoming café partnership, not proof of the relocated store’s first service day.",
+      "addReferences": [
+        {
+          "url": "https://hoodline.com/2026/09/riverside-s-happy-medium-books-cafe-doubles-down-50-yards-away-on-park-street/",
+          "title": "Riverside’s Happy Medium Books Café Doubles Down 50 Yards Away on Park Street",
+          "confidence": 85,
+          "publishedDate": "2026-09-09",
+          "reasoning": "Reports relocation rather than a first-ever brand opening; target not actual day."
+        },
+        {
+          "url": "https://whatnow.com/jacksonville/restaurants/mixed-fillings-pie-shop-to-open-new-cafe-in-jacksonvilles-riverside/",
+          "title": "Mixed Fillings Pie Shop to Open New Café in Jacksonville’s Riverside",
+          "confidence": 90,
+          "publishedDate": "2026-10-23",
+          "reasoning": "New café partnership at2756ParkStreet; not a verified branch opening day."
+        }
+      ]
+    },
+    "note": "Corrected first-opening versus relocation scope; exact branch reopening retained as research gap."
+  }
+]

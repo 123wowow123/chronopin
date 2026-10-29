@@ -1,0 +1,75 @@
+[
+  {
+    "pinId": 6752,
+    "sourceUrl": "https://www.instagram.com/anakomiami/",
+    "patch": {
+      "title": "Anako Opens in Miami’s Little River on October 22, 2026",
+      "description": "Chefs Leicel Ros and Nancy Dominguez opened Anako in Little River on October22,2026, expanding their Sili pop-up into a Filipino restaurant with a separate walk-in bar.",
+      "utcStartDateTime": "2026-10-22T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Confirmed: Resy’s October14 preview explicitly says “opening in Little River on October 22”; The Infatuation’s October23 firsthand review describes the operating restaurant, and the October27 opening roundup reports October22. This replaces the October31 month marker.",
+      "longFormSummary": "<ul><li>Anako opened on October22,2026 in Little River. The exact day in Resy’s pre-opening interview is consistent with the operating restaurant reviewed by The Infatuation the next day, superseding the earlier October month-end estimate.<cite data-ref=\"https://blog.resy.com/2026/10/anako-miami/\"></cite><cite data-ref=\"https://www.theinfatuation.com/miami/reviews/anako-miami\"></cite></li><li>Leicel Ros and Nancy Dominguez previously ran Sili at 1-800-Lucky. Their sit-down restaurant focuses on Filipino cooking, with Southeast Asian influences and family recipes; the name comes from the Tagalog expression for my child.<cite data-ref=\"https://blog.resy.com/2026/10/anako-miami/\"></cite></li><li>Published dishes include pork-and-shrimp lumpia, kinilaw, oxtail kare-kare and banana fritters with sesame caramel. The opening review also describes grilled octopus with roasted eggplant and pan de sal. These are verified menu examples; no price is published in these sources.<cite data-ref=\"https://blog.resy.com/2026/10/anako-miami/\"></cite><cite data-ref=\"https://www.theinfatuation.com/miami/reviews/anako-miami\"></cite></li><li>The front dining room has an open kitchen; a separate back bar accepts walk-ins. Resy reported that some dining-room seats would also be held for walk-ins, so a reservation is not the sole route to a visit. The October23 critic left the restaurant unrated pending further visits; that review is not a published numerical score.<cite data-ref=\"https://blog.resy.com/2026/10/anako-miami/\"></cite><cite data-ref=\"https://www.theinfatuation.com/miami/reviews/anako-miami\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://blog.resy.com/2026/10/anako-miami/",
+          "title": "Anako Melds Modern Filipino Cooking with Lots of Southeast Asian Flair",
+          "confidence": 100,
+          "publishedDate": "2026-10-14",
+          "startDate": "2026-10-22",
+          "reasoning": "Explicit October22 date and chef interview."
+        },
+        {
+          "url": "https://www.theinfatuation.com/miami/reviews/anako-miami",
+          "title": "Anako",
+          "confidence": 95,
+          "publishedDate": "2026-10-23",
+          "reasoning": "Firsthand review of operating exact branch."
+        }
+      ],
+      "addMedia": [
+        {
+          "type": 1,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/anako.webp",
+          "authorName": "Ryan Pfeffer / The Infatuation",
+          "authorUrl": "https://www.theinfatuation.com/miami/reviews/anako-miami"
+        }
+      ]
+    },
+    "note": "Replaced month placeholder with verified October22 opening; enriched summary and references without inventing rating."
+  },
+  {
+    "pinId": 6987,
+    "sourceUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+    "patch": {
+      "title": "The Corner Store Opens at The Cosmopolitan on November 9, 2026",
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Scheduled: MGM’s October2 release says “opens at The Cosmopolitan of Las Vegas on November 9”; the exact operator location page repeats “Opening on November 9”. Future opening is scheduled, not already confirmed as occurred.",
+      "longFormSummary": "<ul><li>The Corner Store’s Las Vegas debut is scheduled for November9,2026 at The Cosmopolitan. MGM opened reservations in October and the branch’s own location page now repeats the date. The venue is on the third floor of the resort.<cite data-ref=\"https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9\"></cite><cite data-ref=\"https://thecornerstoresoho.com/location/las-vegas/\"></cite></li><li>This is the first expansion of the SoHo restaurant from Eugene Remm, Tilman Fertitta and Catch Hospitality Group. Observer’s reporting places the New York debut in September2024 and describes the goal of retaining a relatively intimate American-grill format in a larger Las Vegas room.<cite data-ref=\"https://observer.com/2025/12/the-corner-store-restaurant-las-vegas-opening-catch-hospitality/\"></cite></li><li>The Las Vegas announcement names lobster-and-caviar rolls, five-cheese pizza rolls, a Caesar salad and a Wagyu French dip. It also specifies a branch-only Butcher’s Counter. These are announced dishes rather than independently reviewed meals, and published item prices were not found.<cite data-ref=\"https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9\"></cite></li><li>Planned dinner service starts at5pm nightly, closing at10pm Sunday–Thursday and late Friday–Saturday. Creative martinis are part of the concept, but an advertised cocktail programme does not establish a happy-hour discount.<cite data-ref=\"https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+          "title": "The Cosmopolitan of Las Vegas to Unveil The Corner Store November 9",
+          "confidence": 100,
+          "publishedDate": "2026-10-02",
+          "startDate": "2026-11-09",
+          "reasoning": "Current exact opening, branch-specific menu and planned hours."
+        },
+        {
+          "url": "https://observer.com/2025/12/the-corner-store-restaurant-las-vegas-opening-catch-hospitality/",
+          "title": "The Corner Store Is Taking Its Caviar-Topped Lobster Rolls and Martini Service to Las Vegas",
+          "confidence": 90,
+          "reasoning": "Independent interview on first expansion and format."
+        }
+      ],
+      "addMedia": [
+        {
+          "type": 1,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/corner.webp",
+          "authorName": "Nick Johnson / The Cosmopolitan of Las Vegas, via MGM Resorts",
+          "authorUrl": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9"
+        }
+      ]
+    },
+    "note": "Expanded thin opening pin with branch-specific sources; corrected future opening confidence to scheduled."
+  }
+]

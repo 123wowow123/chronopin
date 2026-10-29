@@ -5,6 +5,7 @@ describe('rubricKind', () => {
   it('sends a text model release to the language-model rubric', () => {
     expect(rubricKind('Grok 4.7 Released')).toBe('llm');
     expect(rubricKind('Claude Opus 5.5 Released')).toBe('llm');
+    expect(rubricKind('Google Announces Gemini 4 Carbon with Cybersecurity Focus')).toBe('llm');
   });
   it('sends a video model release to the video rubric', () => {
     expect(rubricKind('Seedance 2.5 Released')).toBe('video');

@@ -1,0 +1,346 @@
+[
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/101",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Anako",
+          "menus": [
+            {
+              "label": "Verified opening-menu examples",
+              "url": "https://blog.resy.com/2026/10/anako-miami/",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Branch-specific dishes from the chef interview and opening review. Item prices were not published.",
+              "items": [
+                {
+                  "name": "Pork-and-shrimp lumpia",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Kinilaw crudo",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Oxtail kare-kare",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Banana fritters with sesame caramel",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://www.instagram.com/anakomiami/"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Anako",
+          "slug": "anako",
+          "image": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/anako.webp",
+          "address": "8222 NE 2nd Ave, Miami, FL 33138",
+          "cuisine": "Filipino",
+          "checkedAt": "2026-10-28",
+          "imageNote": "Grilled octopus at Anako, identified in The Infatuation’s branch-specific October23 review.",
+          "priceRange": "$$$$",
+          "regionSlug": "miami",
+          "websiteUrl": "https://www.instagram.com/anakomiami/",
+          "description": "Opened October22: modern Filipino cooking from Leicel Ros and Nancy Dominguez, with a walk-in back bar.",
+          "imageCredit": "Ryan Pfeffer / The Infatuation",
+          "recognition": "",
+          "neighborhood": "Little River",
+          "imageSourceUrl": "https://www.theinfatuation.com/miami/reviews/anako-miami",
+          "openingConfirmed": true,
+          "day": "2026-10-22"
+        },
+        "details": {
+          "name": "Anako",
+          "phone": "(786) 309-5252",
+          "checkedAt": "2026-10-28",
+          "websiteUrl": "https://anakomiami.com/",
+          "openingHours": [],
+          "pinSourceUrl": "https://www.instagram.com/anakomiami/",
+          "detailsSourceUrl": "https://www.theinfatuation.com/miami/reviews/anako-miami",
+          "additionalSources": [
+            {
+              "url": "https://blog.resy.com/2026/10/anako-miami/",
+              "label": "Opening date, dishes and reservation policy"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.instagram.com/anakomiami/"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6752-true.json"
+  },
+  {
+    "local": true,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/345",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "The Corner Store",
+          "menus": [
+            {
+              "label": "Announced Las Vegas dishes",
+              "url": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Announced menu for the November9 opening; prices not published. No special discount is claimed.",
+              "items": [
+                {
+                  "name": "Lobster & Caviar Rolls",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Five Cheese Pizza Rolls",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "The Corner Store Caesar",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Wagyu French Dip",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://thecornerstoresoho.com/location/las-vegas/"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "The Corner Store",
+          "slug": "the-corner-store-las-vegas",
+          "image": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/corner.webp",
+          "address": "3708 Las Vegas Blvd S, Las Vegas, NV 89109",
+          "cuisine": "American",
+          "checkedAt": "2026-10-28",
+          "imageNote": "Food and cocktails supplied with the Las Vegas opening announcement; individual dishes are not inferred from the photograph.",
+          "priceRange": "",
+          "regionSlug": "las-vegas",
+          "websiteUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+          "description": "Opening November9 at The Cosmopolitan: American classics, a branch-specific steak counter and martinis.",
+          "imageCredit": "Nick Johnson / The Cosmopolitan of Las Vegas, via MGM Resorts",
+          "recognition": "",
+          "neighborhood": "Cosmopolitan (Strip)",
+          "imageSourceUrl": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+          "openingConfirmed": false,
+          "day": "2026-11-09"
+        },
+        "details": {
+          "name": "The Corner Store",
+          "phone": "(702) 675-9828",
+          "checkedAt": "2026-10-28",
+          "hoursNote": "Planned hours and the reservations number come from the October 2, 2026 Cosmopolitan press release; the restaurant opens November 9, 2026.",
+          "websiteUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+          "openingHours": [
+            {
+              "days": "Sunday–Thursday",
+              "hours": "5:00–10:00 PM"
+            },
+            {
+              "days": "Friday–Saturday",
+              "hours": "5:00 PM–late"
+            }
+          ],
+          "pinSourceUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+          "detailsSourceUrl": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+          "additionalSources": [
+            {
+              "url": "https://www.casino.org/vitalvegas/?p=48526",
+              "label": "Opening reporting"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://thecornerstoresoho.com/location/las-vegas/"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6987-true.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/101",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "Anako",
+          "menus": [
+            {
+              "label": "Verified opening-menu examples",
+              "url": "https://blog.resy.com/2026/10/anako-miami/",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Branch-specific dishes from the chef interview and opening review. Item prices were not published.",
+              "items": [
+                {
+                  "name": "Pork-and-shrimp lumpia",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Kinilaw crudo",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Oxtail kare-kare",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Banana fritters with sesame caramel",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://www.instagram.com/anakomiami/"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "Anako",
+          "slug": "anako",
+          "image": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/anako.webp",
+          "address": "8222 NE 2nd Ave, Miami, FL 33138",
+          "cuisine": "Filipino",
+          "checkedAt": "2026-10-28",
+          "imageNote": "Grilled octopus at Anako, identified in The Infatuation’s branch-specific October23 review.",
+          "priceRange": "$$$$",
+          "regionSlug": "miami",
+          "websiteUrl": "https://www.instagram.com/anakomiami/",
+          "description": "Opened October22: modern Filipino cooking from Leicel Ros and Nancy Dominguez, with a walk-in back bar.",
+          "imageCredit": "Ryan Pfeffer / The Infatuation",
+          "recognition": "",
+          "neighborhood": "Little River",
+          "imageSourceUrl": "https://www.theinfatuation.com/miami/reviews/anako-miami",
+          "openingConfirmed": true,
+          "day": "2026-10-22"
+        },
+        "details": {
+          "name": "Anako",
+          "phone": "(786) 309-5252",
+          "checkedAt": "2026-10-28",
+          "websiteUrl": "https://anakomiami.com/",
+          "openingHours": [],
+          "pinSourceUrl": "https://www.instagram.com/anakomiami/",
+          "detailsSourceUrl": "https://www.theinfatuation.com/miami/reviews/anako-miami",
+          "additionalSources": [
+            {
+              "url": "https://blog.resy.com/2026/10/anako-miami/",
+              "label": "Opening date, dishes and reservation policy"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.instagram.com/anakomiami/"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6752-false.json"
+  },
+  {
+    "local": false,
+    "method": "PUT",
+    "path": "/api/admin/restaurant-content/345",
+    "body": {
+      "revision": 1,
+      "profile": {
+        "menu": {
+          "name": "The Corner Store",
+          "menus": [
+            {
+              "label": "Announced Las Vegas dishes",
+              "url": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+              "currency": "USD",
+              "coverage": "sample",
+              "note": "Announced menu for the November9 opening; prices not published. No special discount is claimed.",
+              "items": [
+                {
+                  "name": "Lobster & Caviar Rolls",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Five Cheese Pizza Rolls",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "The Corner Store Caesar",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Wagyu French Dip",
+                  "priceLabel": "Price not published"
+                }
+              ]
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-28",
+          "pinSourceUrl": "https://thecornerstoresoho.com/location/las-vegas/"
+        },
+        "tile": {
+          "kind": "opening",
+          "name": "The Corner Store",
+          "slug": "the-corner-store-las-vegas",
+          "image": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/corner.webp",
+          "address": "3708 Las Vegas Blvd S, Las Vegas, NV 89109",
+          "cuisine": "American",
+          "checkedAt": "2026-10-28",
+          "imageNote": "Food and cocktails supplied with the Las Vegas opening announcement; individual dishes are not inferred from the photograph.",
+          "priceRange": "",
+          "regionSlug": "las-vegas",
+          "websiteUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+          "description": "Opening November9 at The Cosmopolitan: American classics, a branch-specific steak counter and martinis.",
+          "imageCredit": "Nick Johnson / The Cosmopolitan of Las Vegas, via MGM Resorts",
+          "recognition": "",
+          "neighborhood": "Cosmopolitan (Strip)",
+          "imageSourceUrl": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+          "openingConfirmed": false,
+          "day": "2026-11-09"
+        },
+        "details": {
+          "name": "The Corner Store",
+          "phone": "(702) 675-9828",
+          "checkedAt": "2026-10-28",
+          "hoursNote": "Planned hours and the reservations number come from the October 2, 2026 Cosmopolitan press release; the restaurant opens November 9, 2026.",
+          "websiteUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+          "openingHours": [
+            {
+              "days": "Sunday–Thursday",
+              "hours": "5:00–10:00 PM"
+            },
+            {
+              "days": "Friday–Saturday",
+              "hours": "5:00 PM–late"
+            }
+          ],
+          "pinSourceUrl": "https://thecornerstoresoho.com/location/las-vegas/",
+          "detailsSourceUrl": "https://investors.mgmresorts.com/2026-10-02-The-Cosmopolitan-of-Las-Vegas-to-Unveil-The-Corner-Store-November-9",
+          "additionalSources": [
+            {
+              "url": "https://www.casino.org/vitalvegas/?p=48526",
+              "label": "Opening reporting"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://thecornerstoresoho.com/location/las-vegas/"
+      },
+      "enabled": true
+    },
+    "out": "/Users/ianflynn/chronopin/.tmp/midnight-2026-10-28/content-saved-6987-false.json"
+  }
+]

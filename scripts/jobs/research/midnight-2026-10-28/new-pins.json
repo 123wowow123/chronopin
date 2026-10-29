@@ -1,0 +1,129 @@
+[
+  {
+    "key": "frankfurt-2027",
+    "userName": "@RetailDesk",
+    "pin": {
+      "title": "Frankfurt Book Fair 2027 Opens October 6 With Chile as Guest of Honour",
+      "description": "The Frankfurt Book Fair runs October6–10,2027 with Chile as Guest of Honour. Its Earthly Stars programme connects Chilean literature, translation and international publishing rights.",
+      "sourceUrl": "https://www.buchmesse.de/en/press/press-releases/2026-10-12-czechia-guest-honour-hands-over-guestscroll-chile-guest-honour",
+      "utcStartDateTime": "2027-10-06T00:00:00.000Z",
+      "utcEndDateTime": "2027-10-11T00:00:00.000Z",
+      "allDay": true,
+      "allDayStated": true,
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Scheduled: the fair’s October12,2026 release explicitly gives “6–10 October 2027”; Chile’s Ministry independently confirms those dates. End is exclusive. The2026 GuestScroll ceremony is preparation, not this pin’s date.",
+      "latitude": 50.11139,
+      "longitude": 8.64833,
+      "company": "Frankfurter Buchmesse",
+      "categories": [
+        "Literature",
+        "Conference",
+        "Business"
+      ],
+      "tags": [
+        "Frankfurt Book Fair",
+        "Chile",
+        "Guest of Honour",
+        "Publishing",
+        "Translation"
+      ],
+      "price": null,
+      "priceCurrency": null,
+      "parentId": null,
+      "productName": "",
+      "references": [
+        {
+          "url": "https://frankfurt2027.cultura.gob.cl/noticia/chile-inicia-su-camino-como-pais-invitado-de-honor-en-la-feria-del-libro-de-frankfurt-2027-con-foco-en-gabriela-mistral/",
+          "title": "Chile inicia su camino como País Invitado de Honor en la Feria del Libro de Frankfurt 2027 con foco en Gabriela Mistral",
+          "confidence": 100,
+          "startDate": "2027-10-06",
+          "endDate": "2027-10-10",
+          "reasoning": "Ministry confirms exact dates and Chilean programme."
+        },
+        {
+          "url": "https://publishingperspectives.com/2025/10/nicolas-leyton-on-frankfurts-2027-guest-of-honor-chile/",
+          "title": "Nicolás Leyton on Frankfurt’s 2027 Guest of Honor Chile",
+          "confidence": 90,
+          "publishedDate": "2025-10-28",
+          "reasoning": "Independent publishing-industry interview on translation and rights opportunities."
+        },
+        {
+          "url": "https://www.buchmesse.de/en/visit/tickets",
+          "title": "Your entrance ticket to Frankfurter Buchmesse",
+          "confidence": 100,
+          "reasoning": "2027 tickets planned for summer2027; no current price."
+        }
+      ],
+      "longFormSummary": "<ul><li>The2027 Frankfurt Book Fair is scheduled for October6–10 at Messe Frankfurt. Chile follows Czechia as Guest of Honour; the October2026 GuestScroll handover starts the preparation year rather than the2027 fair itself.<cite data-ref=\"https://www.buchmesse.de/en/press/press-releases/2026-10-12-czechia-guest-honour-hands-over-guestscroll-chile-guest-honour\"></cite></li><li>Chile’s presentation uses the Earthly Stars concept to connect diverse literary voices with the country’s relationship to the sky. The organiser identifies translation, rights trading and international publishing networks as central goals, with at least160 supported translations targeted by October2027.<cite data-ref=\"https://www.buchmesse.de/en/press/press-releases/2026-10-12-czechia-guest-honour-hands-over-guestscroll-chile-guest-honour\"></cite></li><li>The Chilean ministry’s account places Gabriela Mistral at the centre of the handover and describes a preparation programme linking authors, readers and overseas markets. Its work extends beyond a single exhibition pavilion into literary and cultural exchanges.<cite data-ref=\"https://frankfurt2027.cultura.gob.cl/noticia/chile-inicia-su-camino-como-pais-invitado-de-honor-en-la-feria-del-libro-de-frankfurt-2027-con-foco-en-gabriela-mistral/\"></cite></li><li>In an earlier independent interview, programme head Nicolás Leyton framed the invitation as an opportunity for Chilean publishing to develop international rights relationships and adapt to technologies including ebooks, audiobooks and print on demand. This supplies industry context beyond the announced dates.<cite data-ref=\"https://publishingperspectives.com/2025/10/nicolas-leyton-on-frankfurts-2027-guest-of-honor-chile/\"></cite></li><li>The official visitor ticket page says2027 tickets will be purchasable in summer2027. Admission prices and detailed public-access sessions are not yet published there; prior-edition ticket prices are not carried forward.<cite data-ref=\"https://www.buchmesse.de/en/visit/tickets\"></cite></li></ul>",
+      "media": [
+        {
+          "type": 1,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/frankfurt-2027.webp",
+          "authorName": "Chile Ministry of Cultures, Arts and Heritage / Proyecto Frankfurt2027",
+          "authorUrl": "https://frankfurt2027.cultura.gob.cl/noticia/chile-inicia-su-camino-como-pais-invitado-de-honor-en-la-feria-del-libro-de-frankfurt-2027-con-foco-en-gabriela-mistral/"
+        }
+      ]
+    }
+  },
+  {
+    "key": "allstate-q3-call",
+    "userName": "@MarketDesk",
+    "pin": {
+      "title": "Allstate Holds Its Q3 2026 Earnings Call on November 5",
+      "description": "Allstate’s third-quarter2026 earnings call starts at9am Eastern on November5. The company schedules its results filing after4:15pm Eastern on November4, one day before the call.",
+      "sourceUrl": "https://www.allstatenewsroom.com/news/allstate-to-hold-q3-2026-earnings-call-nov-5-2026/",
+      "utcStartDateTime": "2026-11-05T14:00:00.000Z",
+      "allDay": false,
+      "allDayStated": false,
+      "dateConfidence": "scheduled",
+      "dateConfidenceReasoning": "Scheduled: Allstate’s October5 announcement states “Thursday, Nov. 5, 2026, at 9 a.m. ET”. This is14:00UTC after daylight saving ends. November4 results publication is a separate milestone, not the call start.",
+      "company": "Allstate",
+      "categories": [
+        "Finance",
+        "Business"
+      ],
+      "tags": [
+        "Allstate",
+        "Earnings",
+        "Q3 2026"
+      ],
+      "stocks": [
+        {
+          "symbol": "ALL",
+          "name": "Allstate",
+          "relation": "company",
+          "note": "provides property and casualty insurance and protection products"
+        }
+      ],
+      "price": null,
+      "priceCurrency": null,
+      "parentId": null,
+      "productName": "",
+      "references": [
+        {
+          "url": "https://www.marketbeat.com/earnings/reports/2026-11-4-the-allstate-co-stock/",
+          "title": "Allstate Q3 2026 Earnings Date & Estimates",
+          "confidence": 90,
+          "startDate": "2026-11-05",
+          "reasoning": "Independent calendar corroborates9amET call; analyst forecasts remain estimates."
+        },
+        {
+          "url": "https://6ix.com/event/allstate-corporation-the-all-q3-2026-earnings-call",
+          "title": "Allstate (NYSE:ALL) Q3 2026 Earnings Call",
+          "confidence": 90,
+          "startDate": "2026-11-05",
+          "reasoning": "Independent event listing also specifies9amET November5."
+        }
+      ],
+      "longFormSummary": "<ul><li>Allstate schedules its Q3 financial-results call for November5,2026 at9am Eastern. The company directs investors to its investor-relations site for the webcast and subsequent replay. This pin tracks the discussion, rather than an unannounced future earnings outcome.<cite data-ref=\"https://www.allstatenewsroom.com/news/allstate-to-hold-q3-2026-earnings-call-nov-5-2026/\"></cite></li><li>The results are due in a Form8-K after4:15pm Eastern on November4. The filing, release and investor supplement should therefore precede management’s call; a reader checking overnight results should use that earlier publication milestone.<cite data-ref=\"https://www.allstatenewsroom.com/news/allstate-to-hold-q3-2026-earnings-call-nov-5-2026/\"></cite></li><li>MarketBeat independently lists the November5 call and a November4 after-market report. Its page labels the report date estimated from historical schedules, so the company’s explicit announcement supplies the date evidence. The site’s earnings forecasts are analyst expectations, not realised Q3 figures.<cite data-ref=\"https://www.marketbeat.com/earnings/reports/2026-11-4-the-allstate-co-stock/\"></cite></li><li>The6ix event listing corroborates9amET on November5 and plans subsequent replay/transcript coverage. As of the October28 research check, that is advance coverage of a scheduled call, not a transcript already available to quote.<cite data-ref=\"https://6ix.com/event/allstate-corporation-the-all-q3-2026-earnings-call\"></cite></li><li>Allstate’s business spans auto, home, device and identity protection through several distribution channels. That operating scope makes the quarter’s reported financial statements and management commentary the relevant follow-up sources once released.<cite data-ref=\"https://www.allstatenewsroom.com/news/allstate-to-hold-q3-2026-earnings-call-nov-5-2026/\"></cite></li></ul>",
+      "media": [
+        {
+          "type": 1,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/jobs/midnight-2026-10-28/allstate-q3-call.webp",
+          "authorName": "Allstate Newsroom",
+          "authorUrl": "https://www.allstatenewsroom.com/news/allstate-to-hold-q3-2026-earnings-call-nov-5-2026/"
+        }
+      ]
+    }
+  }
+]

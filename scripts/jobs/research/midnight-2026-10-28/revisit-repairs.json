@@ -1,0 +1,59 @@
+[
+  {
+    "pinId": 17610,
+    "sourceUrl": "https://seattlecenter.com/events/event-calendar/seattle-cherry-blossom-and-japanese-cultural-festival-x46962",
+    "patch": {
+      "title": "Seattle Cherry Blossom & Japanese Cultural Festival Runs April 9–11, 2027",
+      "description": "Seattle’s Japanese cultural festival is scheduled for April 9–11, 2027, with daily hours of 11am–5pm at Seattle Center and free general admission.",
+      "utcStartDateTime": "2027-04-09T00:00:00.000Z",
+      "utcEndDateTime": "2027-04-12T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "allDay": true,
+      "allDayStated": true,
+      "dateConfidenceReasoning": "Scheduled: the organiser’s Plan Your Visit page explicitly says “Friday, April 9 and Sunday, April 11, 2027” and 11am–5pm daily. This supersedes the April month placeholder. The FAQ’s isolated2026 end-year typo conflicts with its own2027 heading/banner; the unambiguous Plan page is the date source. End is exclusive.",
+      "longFormSummary": "<ul><li>The organiser schedules the 52nd Seattle Cherry Blossom &amp; Japanese Cultural Festival for April 9–11, 2027, 11am–5pm each day. This is the published2027 event window, replacing an estimate borrowed from the2026 edition.<cite data-ref=\"https://seattlecherryblossomfestival.org/plan-your-visit/\"></cite></li><li>The festival is based at Seattle Center. Its FAQ identifies the Armory, Fisher Pavilion and Exhibition Hall as the main festival spaces; the three-day listing on matsuri.guide agrees on dates, hours and location.<cite data-ref=\"https://seattlecherryblossomfestival.org/plan-your-visit/faq/\"></cite><cite data-ref=\"https://matsuri.guide/e/seattle-cherry-blossom-and-japanese-cultural\"></cite></li><li>General admission is free. The organiser distinguishes entry from purchases such as food and artwork, and nearby parking has separate variable charges. Free admission therefore does not imply that every activity or visit expense is included.<cite data-ref=\"https://seattlecherryblossomfestival.org/plan-your-visit/faq/\"></cite></li><li>The organiser says the2027 programme will be updated closer to the festival. The date announcement does not verify an older edition’s performers or individual sessions. Visitors should return to the organiser’s schedule for the final programme.<cite data-ref=\"https://seattlecherryblossomfestival.org/plan-your-visit/\"></cite></li></ul>",
+      "addReferences": [
+        {
+          "url": "https://seattlecherryblossomfestival.org/plan-your-visit/",
+          "title": "Plan Your Visit — Seattle Cherry Blossom & Japanese Cultural Festival",
+          "confidence": 100,
+          "startDate": "2027-04-09",
+          "endDate": "2027-04-11",
+          "reasoning": "Exact2027 dates and daily hours."
+        },
+        {
+          "url": "https://seattlecherryblossomfestival.org/plan-your-visit/faq/",
+          "title": "FAQ — Seattle Cherry Blossom & Japanese Cultural Festival",
+          "confidence": 90,
+          "reasoning": "Free entry and main venues. Isolated2026 date typo not used for event year."
+        },
+        {
+          "url": "https://matsuri.guide/e/seattle-cherry-blossom-and-japanese-cultural",
+          "title": "Seattle Cherry Blossom & Japanese Cultural Festival",
+          "confidence": 90,
+          "startDate": "2027-04-09",
+          "endDate": "2027-04-11",
+          "reasoning": "Corroborates2027 dates and hours from organiser."
+        }
+      ]
+    },
+    "note": "Firmed Seattle festival from month estimate to published April9–11,2027; reconciled FAQ typo without borrowing2026 programme."
+  },
+  {
+    "pinId": 2487,
+    "sourceUrl": "https://www.wtatennis.com/tournament/560/us-open",
+    "patch": {
+      "sourceUrl": "https://www.wtatennis.com/tournaments/905/us-open/2027",
+      "dateConfidenceReasoning": "Estimated: WTA’s current2027 tournament page confirms August29–September12,2027. September11 remains a projected women’s-final day; this WTA overview does not publish a session-specific final start time or2027 ticket price.",
+      "addReferences": [
+        {
+          "url": "https://www.wtatennis.com/tournaments/905/us-open/2027",
+          "title": "US Open 2027 Overview | WTA Official",
+          "confidence": 95,
+          "reasoning": "Replaces dead tournament560 path with current9052027 page. Confirms tournament window, not exact final session."
+        }
+      ]
+    },
+    "note": "Repaired dead WTA source URL; exact final-session evidence remains a specific open gap."
+  }
+]
