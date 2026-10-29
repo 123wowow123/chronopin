@@ -114,13 +114,13 @@ describe('next restaurant specials', () => {
     expect(after.upcoming[0].id).toBe(venue.id);
     expect(after.upcoming[0].startsAt).toBe('2026-10-08T23:00:00.000Z');
   });
-  it('caps and deduplicates upcoming restaurants independently of the active section', () => {
+  it('retains all distinct upcoming restaurants independently of the active section', () => {
     const current = offer('Available');
     const later = Array.from({ length: 105 }, (_, index) => ({ ...offer(`Later ${index}`), special: { ...happyHour, availability: { windows: [{ days: [3], start: '18:00', end: '20:00' }] } } }));
     const sections = restaurantOfferSections([current, ...later, ...later], new Date('2026-10-07T23:30:00Z'), zone, { sort: 'rating' });
     expect(sections.available).toHaveLength(1);
-    expect(sections.upcoming).toHaveLength(100);
-    expect(new Set(sections.upcoming.map((item) => item.restaurantHref)).size).toBe(100);
+    expect(sections.upcoming).toHaveLength(later.length);
+    expect(new Set(sections.upcoming.map((item) => item.restaurantHref)).size).toBe(later.length);
   });
   it('includes unrated and less-reviewed specials and ranks starts before ratings', () => {
     const earlier = { ...offer('Earlier', 4.6), special: { ...happyHour, availability: { windows: [{ days: [1, 2, 3, 4, 5], start: '15:30', end: '17:30' }] } } };
@@ -185,12 +185,12 @@ describe('next restaurant specials', () => {
     expect(deduplicateRestaurantOffers([original, updated, detailed, branch, dated]).map((item) => item.id)).toEqual(['menu', 'branch', 'dated']);
     expect(deduplicateRestaurantOffers([detailed, updated, original])[0].id).toBe('menu');
   });
-  it('shows up to one hundred distinct restaurants with the earliest specials first', () => {
+  it('shows every distinct restaurant with the earliest specials first', () => {
     const venues = Array.from({ length: 105 }, (_, index) => offer(`Venue ${String(index).padStart(3, '0')}`));
     const shown = restaurantOffersToShow([...venues, ...venues], new Date('2026-10-07T20:00:00Z'), zone);
-    expect(shown.offers).toHaveLength(100);
-    expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(100);
-    expect(shown.offers.map((item) => item.name)).toEqual(venues.slice(0, 100).map((item) => item.name));
+    expect(shown.offers).toHaveLength(venues.length);
+    expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(venues.length);
+    expect(shown.offers.map((item) => item.name)).toEqual(venues.map((item) => item.name));
   });
   it.each(['2026-10-07T20:00:00Z', '2026-10-07T23:30:00Z'])('sorts current and upcoming specials by rating or distance at %s', (time) => {
     const origin = { latitude: 32.7, longitude: -117.1 };
@@ -203,14 +203,14 @@ describe('next restaurant specials', () => {
     expect(restaurantOffersToShow(venues, new Date(time), zone, { sort: 'distance', origin }).offers.map((item) => item.name)).toEqual(['Nearby', 'Highest', 'Unknown distance', 'Invalid coordinates']);
     expect(restaurantOffersToShow(venues, new Date(time), zone, { sort: 'distance' }).offers.map((item) => item.name)).toEqual(['Highest', 'Unknown distance', 'Invalid coordinates', 'Nearby']);
   });
-  it('applies sorting before the one hundred-venue cap while keeping each venue’s earliest special', () => {
+  it('sorts all restaurants while keeping each venue’s earliest special', () => {
     const venues = Array.from({ length: 101 }, (_, index) => ({ ...offer(`Venue ${index}`, index === 100 ? 5 : 4.5), location: { latitude: 32.7 + (100 - index) / 100, longitude: -117.1 } }));
     const later = { ...venues[100], id: 'later', special: { ...happyHour, availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
     for (const sort of ['rating', 'distance'] as const) {
       const shown = restaurantOffersToShow([later, ...venues], new Date('2026-10-07T20:00:00Z'), zone, { sort, origin: venues[100].location });
-      expect(shown.offers).toHaveLength(100);
+      expect(shown.offers).toHaveLength(venues.length);
       expect(shown.offers[0].id).toBe('Venue 100');
-      expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(100);
+      expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(venues.length);
     }
   });
 });

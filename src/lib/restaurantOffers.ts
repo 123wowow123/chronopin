@@ -102,8 +102,6 @@ export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZ
   return null;
 }
 
-export const NEXT_SPECIALS_LIMIT = 100;
-
 export type ScheduledRestaurantOffer = RestaurantOffer & { end: string; startsAt?: string; offers?: ScheduledRestaurantOffer[] };
 export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch' | 'starts';
 export function restaurantOfferDistance(offer: RestaurantOffer, origin?: Place): number | undefined {
@@ -187,12 +185,12 @@ export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?
     const card = { ...offers[0], offers };
     (card.startsAt ? unique : available).push(card);
   }
-  // Choose each venue's earliest offer before applying the selected sort and cap.
+  // Choose each venue's earliest offer before applying the selected sort.
   // 'starts' is the soonest start first (the section was already built in that
   // order, ties by rating); only upcoming offers have a start to sort by.
   if (!options || options.sort === 'starts') unique.sort((a, b) => a.startsAt!.localeCompare(b.startsAt!) || byReview(a, b));
   else if (options) unique.sort(bySelectedSort);
-  return { available: available.sort(bySelectedSort), upcoming: unique.slice(0, NEXT_SPECIALS_LIMIT) };
+  return { available: available.sort(bySelectedSort), upcoming: unique };
 }
 
 export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] } {
