@@ -14345,5 +14345,2796 @@
         }
       ]
     }
+  },
+  {
+    "key": "thessaloniki-metro-base-line",
+    "pinIds": {
+      "local": 522,
+      "production": 522
+    },
+    "title": "Thessaloniki Metro Line 1 Opens After Decades of Delay",
+    "sourceUrl": "https://www.youtube.com/watch?v=J4nW28DUeLs",
+    "profile": {
+      "sector": "Rail: metro base line",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Base-line alignment",
+          "value": "9.6 km metro base line, excluding the Kalamaria extension.",
+          "source": {
+            "url": "https://www.emetro.gr/?lang=en&page_id=4210",
+            "title": "Project progress – Thessaloniki",
+            "publishedDate": null,
+            "quote": "9.6 km long"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Base-line station program",
+          "value": "13 stations and 18 driverless trains.",
+          "source": {
+            "url": "https://www.emetro.gr/?lang=en&page_id=4210",
+            "title": "Project progress – Thessaloniki",
+            "publishedDate": null,
+            "quote": "13 modern stations"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Revenue service begins",
+          "value": "30 November 2024.",
+          "source": {
+            "url": "https://www.emetro.gr/?lang=en&page_id=4210",
+            "title": "Project progress – Thessaloniki",
+            "publishedDate": null,
+            "quote": "revenue service on November 30th 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Base line enters revenue service",
+          "date": "2024-11-30",
+          "source": {
+            "url": "https://www.emetro.gr/?lang=en&page_id=4210",
+            "title": "Project progress – Thessaloniki",
+            "publishedDate": null,
+            "quote": "November 30th 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "intuit-dome-inglewood",
+    "pinIds": {
+      "local": 575,
+      "production": 575
+    },
+    "title": "Intuit Dome, the Clippers' New Arena, Opens in Inglewood",
+    "sourceUrl": "https://www.youtube.com/watch?v=S5cU5fdB1yI",
+    "profile": {
+      "sector": "Sports: basketball and entertainment arena",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published seating count",
+          "value": "17,927 seats in the current venue media kit, rather than the rounded 18,000 figure.",
+          "source": {
+            "url": "https://intuitdome.com/press",
+            "title": "Intuit Dome Media Kit",
+            "publishedDate": null,
+            "quote": "17,927"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Basketball facilities",
+          "value": "Five full-sized basketball courts on the arena campus.",
+          "source": {
+            "url": "https://intuitdome.com/press",
+            "title": "Intuit Dome Media Kit",
+            "publishedDate": null,
+            "quote": "5 – Full-sized Basketball Courts"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Grand opening",
+          "value": "15 August 2024.",
+          "source": {
+            "url": "https://intuitdome.com/press",
+            "title": "Intuit Dome Media Kit",
+            "publishedDate": null,
+            "quote": "Opened on August 15, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand opening",
+          "date": "2024-08-15",
+          "source": {
+            "url": "https://intuitdome.com/press",
+            "title": "Intuit Dome Media Kit",
+            "publishedDate": null,
+            "quote": "Opened on August 15, 2024"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "First regular-season Clippers home game",
+          "date": "2024-10-23",
+          "source": {
+            "url": "https://intuitdome.com/press",
+            "title": "Intuit Dome Media Kit",
+            "publishedDate": null,
+            "quote": "October 23, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "portland-main-terminal-reconstruction",
+    "pinIds": {
+      "local": 526,
+      "production": 526
+    },
+    "title": "Portland International Airport Opens New Main Terminal",
+    "sourceUrl": "https://www.youtube.com/watch?v=MRAkjoUdN_I",
+    "profile": {
+      "sector": "Aviation: main-terminal reconstruction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Main terminal program cost",
+          "value": "USD 2.15 billion for the completed main-terminal reconstruction.",
+          "source": {
+            "url": "https://www.flypdx.com/Newsroom/we-made-it-pdx-our-journey-to-create-the-local-est-airport-yet-is-complete",
+            "title": "We Made It, PDX! Our Journey to Create the Local-est Airport Yet is Complete",
+            "publishedDate": "2026-06-30",
+            "quote": "$2.15 billion-dollar effort"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Published terminal project area",
+          "value": "1,000,000 sq ft, as published by the architect.",
+          "source": {
+            "url": "https://www.zgf.com/work/5683-port-of-portland-pdx-airport-main-terminal-expansion",
+            "title": "The New PDX: ZGF Modernizes and Evolves America’s Favorite Airport",
+            "publishedDate": null,
+            "quote": "Square Feet 1,000,000"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Whole project completion",
+          "value": "30 June 2026; distinct from the first opening in August 2024.",
+          "source": {
+            "url": "https://www.flypdx.com/Newsroom/we-made-it-pdx-our-journey-to-create-the-local-est-airport-yet-is-complete",
+            "title": "We Made It, PDX! Our Journey to Create the Local-est Airport Yet is Complete",
+            "publishedDate": "2026-06-30",
+            "quote": "celebrates the completion"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-phase opening",
+          "date": "August 2024",
+          "source": {
+            "url": "https://www.zgf.com/work/5683-port-of-portland-pdx-airport-main-terminal-expansion",
+            "title": "The New PDX: ZGF Modernizes and Evolves America’s Favorite Airport",
+            "publishedDate": null,
+            "quote": "Phase 1 opening in August 2024"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Whole main-terminal reconstruction completion celebrated",
+          "date": "2026-06-30",
+          "source": {
+            "url": "https://www.flypdx.com/Newsroom/we-made-it-pdx-our-journey-to-create-the-local-est-airport-yet-is-complete",
+            "title": "We Made It, PDX! Our Journey to Create the Local-est Airport Yet is Complete",
+            "publishedDate": "2026-06-30",
+            "quote": "celebrates the completion"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "ferrero-bloomington-chocolate-processing",
+    "pinIds": {
+      "local": 3474,
+      "production": 3474
+    },
+    "title": "Ferrero Opens Its First North American Chocolate Factory in Bloomington",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/ferrero-opens-its-first-ever-chocolate-factory-in-north-america-302138522.html",
+    "profile": {
+      "sector": "Manufacturing: chocolate processing facility",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Chocolate plant expansion area",
+          "value": "70,000 sq ft; the separate Kinder Bueno facility is excluded.",
+          "source": {
+            "url": "https://www.ferrero.com/us/en/news-stories/news/ferrero-opens-its-first-ever-chocolate-factory-in-north-america",
+            "title": "Ferrero opens its first ever chocolate factory in North America",
+            "publishedDate": "2024-05-07",
+            "quote": "70,000 square foot expansion"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Chocolate processing output",
+          "value": "Chocolate for Kinder, Ferrero Rocher, Butterfinger and CRUNCH; not a claim this facility is the separate Kinder Bueno production line.",
+          "source": {
+            "url": "https://www.ferrero.com/us/en/news-stories/news/ferrero-opens-its-first-ever-chocolate-factory-in-north-america",
+            "title": "Ferrero opens its first ever chocolate factory in North America",
+            "publishedDate": "2024-05-07",
+            "quote": "Kinder, Ferrero Rocher, Butterfinger, and CRUNCH"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Plant opening celebrated",
+          "value": "7 May 2024.",
+          "source": {
+            "url": "https://www.ferrero.com/us/en/news-stories/news/ferrero-opens-its-first-ever-chocolate-factory-in-north-america",
+            "title": "Ferrero opens its first ever chocolate factory in North America",
+            "publishedDate": "2024-05-07",
+            "quote": "celebrated the opening of its first chocolate processing facility"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Chocolate processing facility opening celebration",
+          "date": "2024-05-07",
+          "source": {
+            "url": "https://www.ferrero.com/us/en/news-stories/news/ferrero-opens-its-first-ever-chocolate-factory-in-north-america",
+            "title": "Ferrero opens its first ever chocolate factory in North America",
+            "publishedDate": "2024-05-07",
+            "quote": "celebrated the opening of its first chocolate processing facility"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "brightline-west-high-speed-rail",
+    "pinIds": {
+      "local": 596,
+      "production": 596
+    },
+    "title": "Brightline West Breaks Ground on US High-Speed Rail",
+    "sourceUrl": "https://www.youtube.com/watch?v=GEFjL5KEE3c",
+    "profile": {
+      "sector": "Rail: electric intercity high-speed line",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Rail corridor scope",
+          "value": "218-mile system from Las Vegas to Southern California, principally in the I-15 corridor.",
+          "source": {
+            "url": "https://www.brightlinewest.com/media/press-releases/2024/brightline-west-breaks-ground-on-americas-first-high-speed-rail-project-connecting-las-vegas-to-southern-california",
+            "title": "Making history: Brightline West breaks ground on new rail.",
+            "publishedDate": "2024-04-22",
+            "quote": "218-mile system"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Train design speed",
+          "value": "Up to 200 mph; planned capability rather than achieved passenger service.",
+          "source": {
+            "url": "https://www.brightlinewest.com/media/press-releases/2024/brightline-west-breaks-ground-on-americas-first-high-speed-rail-project-connecting-las-vegas-to-southern-california",
+            "title": "Making history: Brightline West breaks ground on new rail.",
+            "publishedDate": "2024-04-22",
+            "quote": "speeds of 200 miles per hour"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Groundbreaking",
+          "value": "22 April 2024. No elapsed older opening target is treated as an actual opening.",
+          "source": {
+            "url": "https://www.brightlinewest.com/media/press-releases/2024/brightline-west-breaks-ground-on-americas-first-high-speed-rail-project-connecting-las-vegas-to-southern-california",
+            "title": "Making history: Brightline West breaks ground on new rail.",
+            "publishedDate": "2024-04-22",
+            "quote": "April 22, 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Project groundbreaking",
+          "date": "2024-04-22",
+          "source": {
+            "url": "https://www.brightlinewest.com/media/press-releases/2024/brightline-west-breaks-ground-on-americas-first-high-speed-rail-project-connecting-las-vegas-to-southern-california",
+            "title": "Making history: Brightline West breaks ground on new rail.",
+            "publishedDate": "2024-04-22",
+            "quote": "officially broke ground"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "sandoy-undersea-tunnel",
+    "pinIds": {
+      "local": 582,
+      "production": 582
+    },
+    "title": "Faroe Islands Open the Sandoy Undersea Tunnel",
+    "sourceUrl": "https://www.youtube.com/watch?v=EruSZNI4th4",
+    "profile": {
+      "sector": "Roads: subsea island connection",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Tunnel alignment",
+          "value": "10.8 km subsea connection between Streymoy and Sandoy.",
+          "source": {
+            "url": "https://www.government.fo/en/news/news/the-sandoy-tunnel-is-now-open",
+            "title": "The Sandoy Tunnel is now open",
+            "publishedDate": "2023-12-21",
+            "quote": "10.8 kilometres"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Regional network reach",
+          "value": "Opening improves connectivity to over 90% of the Faroe Islands’ population; a network reach figure, not traffic throughput.",
+          "source": {
+            "url": "https://www.government.fo/en/news/news/the-sandoy-tunnel-is-now-open",
+            "title": "The Sandoy Tunnel is now open",
+            "publishedDate": "2023-12-21",
+            "quote": "improved connectivity to over 90% of the population"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Tunnel opening",
+          "value": "21 December 2023.",
+          "source": {
+            "url": "https://www.government.fo/en/news/news/the-sandoy-tunnel-is-now-open",
+            "title": "The Sandoy Tunnel is now open",
+            "publishedDate": "2023-12-21",
+            "quote": "21.12.2023"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Tunnel opens to connect Streymoy and Sandoy",
+          "date": "2023-12-21",
+          "source": {
+            "url": "https://www.government.fo/en/news/news/the-sandoy-tunnel-is-now-open",
+            "title": "The Sandoy Tunnel is now open",
+            "publishedDate": "2023-12-21",
+            "quote": "Sandoy Tunnel is now open"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "abu-dhabi-terminal-a",
+    "pinIds": {
+      "local": 766,
+      "production": 766
+    },
+    "title": "Abu Dhabi's Midfield Terminal Opens as Zayed International Airport",
+    "sourceUrl": "https://www.youtube.com/watch?v=4-eMiqVJbXs",
+    "profile": {
+      "sector": "Aviation: Midfield Terminal / Terminal A",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Annual passenger design",
+          "value": "Up to 45 million passengers annually; design capacity rather than actual annual traffic.",
+          "source": {
+            "url": "https://www.kpf.com/news/kpf-celebrates-renaming-abu-dhabi-zayed-international-airport",
+            "title": "KPF Celebrates the Official Re-Naming of Abu Dhabi International to Zayed International Airport, Terminal A",
+            "publishedDate": "2024-02-12",
+            "quote": "45 million passengers annually"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Terminal layout",
+          "value": "X-shaped terminal with four piers inspired by desert, sea, city and oasis.",
+          "source": {
+            "url": "https://www.kpf.com/news/kpf-celebrates-renaming-abu-dhabi-zayed-international-airport",
+            "title": "KPF Celebrates the Official Re-Naming of Abu Dhabi International to Zayed International Airport, Terminal A",
+            "publishedDate": "2024-02-12",
+            "quote": "each of the four piers"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opening and naming milestones",
+          "value": "Opening was scheduled for November 2023; architect explicitly celebrates the opened terminal in February 2024.",
+          "source": {
+            "url": "https://www.kpf.com/news/kpf-celebrates-renaming-abu-dhabi-zayed-international-airport",
+            "title": "KPF Celebrates the Official Re-Naming of Abu Dhabi International to Zayed International Airport, Terminal A",
+            "publishedDate": "2024-02-12",
+            "quote": "delighted to see the opening of Terminal A"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Published operational opening target",
+          "date": "November 2023",
+          "source": {
+            "url": "https://www.kpf.com/news/opening-announced-for-abu-dhabi-international-airport-terminal-a",
+            "title": "Opening Announced for Abu Dhabi International Airport Terminal A",
+            "publishedDate": "2023-08-31",
+            "quote": "scheduled to open in November 2023"
+          },
+          "basis": "planned"
+        },
+        {
+          "label": "Opened-terminal naming celebration reported",
+          "date": "2024-02-12",
+          "source": {
+            "url": "https://www.kpf.com/news/kpf-celebrates-renaming-abu-dhabi-zayed-international-airport",
+            "title": "KPF Celebrates the Official Re-Naming of Abu Dhabi International to Zayed International Airport, Terminal A",
+            "publishedDate": "2024-02-12",
+            "quote": "delighted to see the opening of Terminal A"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "red-sea-airport-initial-operation",
+    "pinIds": {
+      "local": 667,
+      "production": 667
+    },
+    "title": "Red Sea International Airport Opens in Saudi Arabia",
+    "sourceUrl": "https://www.youtube.com/watch?v=q0b6TkhZnfQ",
+    "profile": {
+      "sector": "Aviation: initial airport operating phase",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Initial operating service",
+          "value": "SAUDIA domestic connection between Riyadh and Red Sea International Airport.",
+          "source": {
+            "url": "https://www.redseaglobal.com/en/media-center/news/ready-for-take-off-red-sea-global-celebrates-first-flight-to-new-airport/",
+            "title": "Ready for take-off: Red Sea Global celebrates first flight to new airport",
+            "publishedDate": "2023-09-21",
+            "quote": "first flight to its"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Initial scheduled frequency",
+          "value": "Twice weekly, on Thursdays and Saturdays at launch; not a claim this remains the full current timetable.",
+          "source": {
+            "url": "https://www.redseaglobal.com/en/media-center/news/ready-for-take-off-red-sea-global-celebrates-first-flight-to-new-airport/",
+            "title": "Ready for take-off: Red Sea Global celebrates first flight to new airport",
+            "publishedDate": "2023-09-21",
+            "quote": "new twice-weekly service"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "First flight arrives",
+          "value": "21 September 2023; later international service and terminal phases are separate.",
+          "source": {
+            "url": "https://www.redseaglobal.com/en/media-center/news/ready-for-take-off-red-sea-global-celebrates-first-flight-to-new-airport/",
+            "title": "Ready for take-off: Red Sea Global celebrates first flight to new airport",
+            "publishedDate": "2023-09-21",
+            "quote": "21 September 2023"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First commercial flight arrives",
+          "date": "2023-09-21",
+          "source": {
+            "url": "https://www.redseaglobal.com/en/media-center/news/ready-for-take-off-red-sea-global-celebrates-first-flight-to-new-airport/",
+            "title": "Ready for take-off: Red Sea Global celebrates first flight to new airport",
+            "publishedDate": "2023-09-21",
+            "quote": "touched down on the new runway earlier today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "taipei-performing-arts-center",
+    "pinIds": {
+      "local": 624,
+      "production": 624
+    },
+    "title": "Taipei Performing Arts Center Officially Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=7iZJmzffB7w",
+    "profile": {
+      "sector": "Culture: multi-theatre performing arts center",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Cultural center area",
+          "value": "59,000 sq m.",
+          "source": {
+            "url": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/",
+            "title": "OMA’s Taipei Performing Arts Center completes in Taiwan",
+            "publishedDate": "2022-05-13",
+            "quote": "59,000-square-metre cultural landmark"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Auditorium seating",
+          "value": "1,500-seat Grand Theater, 800-seat Globe Playhouse and 800-seat Blue Box.",
+          "source": {
+            "url": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/",
+            "title": "OMA’s Taipei Performing Arts Center completes in Taiwan",
+            "publishedDate": "2022-05-13",
+            "quote": "1,500-seat Grand Theater and the 800-seat Blue Box"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Building completion",
+          "value": "Completed in 2022 per the architect; formal opening reported 7 August 2022.",
+          "source": {
+            "url": "https://www.oma.com/projects/taipei-performing-arts-center",
+            "title": "Taipei Performing Arts Center",
+            "publishedDate": null,
+            "quote": "Year 2022 Status Completed"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Building completion reported",
+          "date": "2022-05-13",
+          "source": {
+            "url": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/",
+            "title": "OMA’s Taipei Performing Arts Center completes in Taiwan",
+            "publishedDate": "2022-05-13",
+            "quote": "has completed ahead of the official opening"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Architect reports opening",
+          "date": "2022-08-07",
+          "source": {
+            "url": "https://www.oma.com/news/taipei-performing-arts-center-by-oma-rem-koolhaas-and-david-gianotten-opens",
+            "title": "Taipei Performing Arts Center by OMA / Rem Koolhaas and David Gianotten Opens",
+            "publishedDate": "2022-08-07",
+            "quote": "Opens August 07, 2022"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "1915-canakkale-bridge",
+    "pinIds": {
+      "local": 666,
+      "production": 666
+    },
+    "title": "1915 Çanakkale Bridge Opens as World's Longest Suspension Bridge",
+    "sourceUrl": "https://www.youtube.com/watch?v=BzrdNIsGVc0",
+    "profile": {
+      "sector": "Roads: Dardanelles suspension bridge",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Bridge main span",
+          "value": "2,023 m main span; not whole motorway length.",
+          "source": {
+            "url": "https://irfofficial.org/2022/04/27/turkey-inaugurates-landmark-1915-canakkale-bridge/",
+            "title": "Turkey inaugurates landmark 1915 Çanakkale Bridge",
+            "publishedDate": "2022-04-27",
+            "quote": "2,023"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Published strait crossing time",
+          "value": "Six minutes, per the operator; a journey-time figure rather than vehicles/hour.",
+          "source": {
+            "url": "https://www.1915canakkale.com/en-us/corporate/ceos-message",
+            "title": "CEO’s Message – 1915Çanakkale",
+            "publishedDate": null,
+            "quote": "six minutes"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Operational opening",
+          "value": "18 March 2022.",
+          "source": {
+            "url": "https://www.1915canakkale.com/en-us/corporate/ceos-message",
+            "title": "CEO’s Message – 1915Çanakkale",
+            "publishedDate": null,
+            "quote": "became operational"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Bridge becomes operational",
+          "date": "2022-03-18",
+          "source": {
+            "url": "https://www.1915canakkale.com/en-us/corporate/ceos-message",
+            "title": "CEO’s Message – 1915Çanakkale",
+            "publishedDate": null,
+            "quote": "became operational"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "edinburgh-royal-hospital-children",
+    "pinIds": {
+      "local": 746,
+      "production": 746
+    },
+    "title": "Edinburgh's Royal Hospital for Children and Young People Finally Opens",
+    "sourceUrl": "https://www.youtube.com/watch?v=ONyvDc9VhkI",
+    "profile": {
+      "sector": "Healthcare: children and young people’s hospital",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Clinical integration",
+          "value": "Children’s hospital physically linked to the Royal Infirmary of Edinburgh, colocating pediatric and specialist services.",
+          "source": {
+            "url": "https://edinburghbioquarter.com/hrh-the-princess-royal-to-officially-open-the-royal-hospital-for-children-and-young-people-and-department-of-clinical-neurosciences/",
+            "title": "HRH The Princess Royal officially opens the Royal Hospital for Children and Young People and Department of Clinical Neurosciences",
+            "publishedDate": null,
+            "quote": "physically connected to the Royal Infirmary of Edinburgh"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Original children’s hospital bed program",
+          "value": "154 beds in the children’s hospital design, excluding 67 neurosciences and 12 child/adolescent mental health beds in the wider project.",
+          "source": {
+            "url": "https://buildingbetterhealthcare.com/work-begins-on-150m-royal-hospital-for-sick-children-edinburgh-107001",
+            "title": "Work begins on £150m Royal Hospital for Sick Children, Edinburgh",
+            "publishedDate": null,
+            "quote": "154 beds will be in the Royal Hospital for Sick Children"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Services fully transferred",
+          "value": "All services in the shared new building had transferred by March 2021; later royal opening ceremony is separate.",
+          "source": {
+            "url": "https://edinburghbioquarter.com/hrh-the-princess-royal-to-officially-open-the-royal-hospital-for-children-and-young-people-and-department-of-clinical-neurosciences/",
+            "title": "HRH The Princess Royal officially opens the Royal Hospital for Children and Young People and Department of Clinical Neurosciences",
+            "publishedDate": null,
+            "quote": "all services transferred to the new space by March 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "All services transferred to new building",
+          "date": "March 2021",
+          "source": {
+            "url": "https://edinburghbioquarter.com/hrh-the-princess-royal-to-officially-open-the-royal-hospital-for-children-and-young-people-and-department-of-clinical-neurosciences/",
+            "title": "HRH The Princess Royal officially opens the Royal Hospital for Children and Young People and Department of Clinical Neurosciences",
+            "publishedDate": null,
+            "quote": "all services transferred to the new space by March 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "central-park-tower-new-york",
+    "pinIds": {
+      "local": 703,
+      "production": 703
+    },
+    "title": "Central Park Tower Welcomes Its First Residents",
+    "sourceUrl": "https://www.youtube.com/watch?v=t5jI2oMyO0Y",
+    "profile": {
+      "sector": "Housing: residential tower and retail podium",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Residential program",
+          "value": "179 residences, as stated by the developer.",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/central-park-tower-worlds-tallest-residential-building-commences-closings-2021-02-25",
+            "title": "Central Park Tower, World’s Tallest Residential Building, Commences Closings",
+            "publishedDate": "2021-02-25",
+            "quote": "179 two-to-eight-bedroom residences"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Residential amenity club",
+          "value": "Approximately 50,000 sq ft for Central Park Club; not the whole tower’s floor area.",
+          "source": {
+            "url": "https://smithgill.com/work/central_park_tower/",
+            "title": "Central Park Tower – Adrian Smith + Gordon Gill Architecture",
+            "publishedDate": null,
+            "quote": "approximately 50,000 square feet"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Tower completion",
+          "value": "2021, explicitly stated by the architect; February 2021 closings are a distinct milestone.",
+          "source": {
+            "url": "https://smithgill.com/work/central_park_tower/",
+            "title": "Central Park Tower – Adrian Smith + Gordon Gill Architecture",
+            "publishedDate": null,
+            "quote": "Completed in 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Residential closings commence",
+          "date": "2021-02-25",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/central-park-tower-worlds-tallest-residential-building-commences-closings-2021-02-25",
+            "title": "Central Park Tower, World’s Tallest Residential Building, Commences Closings",
+            "publishedDate": "2021-02-25",
+            "quote": "has commenced closings"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Tower completion",
+          "date": "2021",
+          "source": {
+            "url": "https://smithgill.com/work/central_park_tower/",
+            "title": "Central Park Tower – Adrian Smith + Gordon Gill Architecture",
+            "publishedDate": null,
+            "quote": "Completed in 2021"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "crown-sydney-hotel-opening",
+    "pinIds": {
+      "local": 697,
+      "production": 697
+    },
+    "title": "Crown Sydney Opens at Barangaroo",
+    "sourceUrl": "https://www.youtube.com/watch?v=4lnncgMCLKA",
+    "profile": {
+      "sector": "Hospitality: hotel and mixed-use tower",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Hotel accommodation",
+          "value": "349 hotel rooms and waterfront villas; excludes a claim the casino opened at the same time.",
+          "source": {
+            "url": "https://www.crownsydney.com.au/llm-info",
+            "title": "Crown Sydney LLM Information Page",
+            "publishedDate": null,
+            "quote": "349 luxury rooms"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Opened facilities",
+          "value": "Hotel rooms, restaurants and bars opened initially; casino opening was delayed by licensing at that point.",
+          "source": {
+            "url": "https://www.businesstraveller.com/business-travel/crown-sydney-hotel-opens-in-citys-tallest-building/",
+            "title": "Crown Sydney hotel opens in city’s tallest building",
+            "publishedDate": "2020-12-29",
+            "quote": "Hotel rooms have opened alongside"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Hotel opening",
+          "value": "December 2020, confirmed by the operator; exact day not inferred from this source.",
+          "source": {
+            "url": "https://www.crownsydney.com.au/llm-info",
+            "title": "Crown Sydney LLM Information Page",
+            "publishedDate": null,
+            "quote": "opened in December 2020"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel opens",
+          "date": "December 2020",
+          "source": {
+            "url": "https://www.crownsydney.com.au/llm-info",
+            "title": "Crown Sydney LLM Information Page",
+            "publishedDate": null,
+            "quote": "opened in December 2020"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "sofi-stadium-inglewood",
+    "pinIds": {
+      "local": 701,
+      "production": 701
+    },
+    "title": "SoFi Stadium Opens in Inglewood With a Ribbon-Cutting",
+    "sourceUrl": "https://www.youtube.com/watch?v=1cfNn9cp5FA",
+    "profile": {
+      "sector": "Sports: indoor-outdoor NFL stadium",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Stadium floor area",
+          "value": "3.1 million sq ft.",
+          "source": {
+            "url": "https://www.chargers.com/news/sofi-stadium-numbers",
+            "title": "SoFi Stadium By the Numbers",
+            "publishedDate": "2020-09-15",
+            "quote": "3.1 Million The square footage of SoFi Stadium"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Stadium seating",
+          "value": "70,000, expandable to 100,000; no claim of 100,000 fixed seats.",
+          "source": {
+            "url": "https://www.chargers.com/news/sofi-stadium-numbers",
+            "title": "SoFi Stadium By the Numbers",
+            "publishedDate": "2020-09-15",
+            "quote": "70,000 The seating capacity"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Opened",
+          "value": "September 2020, per Los Angeles Tourism.",
+          "source": {
+            "url": "https://www.discoverlosangeles.com/things-to-do/sofi-stadium-the-story-of-an-la-icon",
+            "title": "SoFi Stadium: The Story of an LA Icon",
+            "publishedDate": "2026-04-06",
+            "quote": "Opened in September 2020"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Stadium opening",
+          "date": "September 2020",
+          "source": {
+            "url": "https://www.discoverlosangeles.com/things-to-do/sofi-stadium-the-story-of-an-la-icon",
+            "title": "SoFi Stadium: The Story of an LA Icon",
+            "publishedDate": "2026-04-06",
+            "quote": "Opened in September 2020"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "allegiant-stadium-las-vegas",
+    "pinIds": {
+      "local": 711,
+      "production": 711
+    },
+    "title": "Las Vegas' $1.9BN Mega Stadium",
+    "sourceUrl": "https://www.youtube.com/watch?v=jUjmWFYEigw",
+    "profile": {
+      "sector": "Sports: NFL stadium construction",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published substantial-completion project figure",
+          "value": "USD 1.97 billion in the Raiders’ July 2020 release; not an audited final outturn.",
+          "source": {
+            "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+            "publishedDate": "2020-07-31",
+            "quote": "$1.97 billion facility"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "floorArea",
+          "label": "Stadium area",
+          "value": "1.8 million sq ft.",
+          "source": {
+            "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+            "publishedDate": "2020-07-31",
+            "quote": "1.8 million-square-foot stadium"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Seating",
+          "value": "65,000 seats.",
+          "source": {
+            "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+            "publishedDate": "2020-07-31",
+            "quote": "65,000 seats"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction substantial completion",
+          "value": "30 July 2020; certificate of occupancy reported the next day, distinct from first public attendance.",
+          "source": {
+            "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+            "publishedDate": "2020-07-31",
+            "quote": "on July 30"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Facility substantial completion",
+          "date": "2020-07-30",
+          "source": {
+            "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+            "publishedDate": "2020-07-31",
+            "quote": "on July 30"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Certificate of occupancy announced",
+          "date": "2020-07-31",
+          "source": {
+            "url": "https://www.raiders.com/news/construction-of-allegiant-stadium-achieves-certificate-of-occupancy",
+            "title": "Construction of Allegiant Stadium achieves Certificate of Occupancy",
+            "publishedDate": "2020-07-31",
+            "quote": "received a Certificate of Occupancy"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "jewel-changi-airport",
+    "pinIds": {
+      "local": 539,
+      "production": 539
+    },
+    "title": "Jewel Changi Airport Opens in Singapore",
+    "sourceUrl": "https://www.youtube.com/watch?v=QfO4MMFXD-w",
+    "profile": {
+      "sector": "Aviation: mixed-use airport visitor complex",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Complex floor area",
+          "value": "135,700 sq m; not terminal-wide airport area.",
+          "source": {
+            "url": "https://www.mynewsdesk.com/sg/changiairport/pressreleases/jewel-changi-airport-marks-six-months-of-operations-with-a-grand-opening-celebration-2933423",
+            "title": "Jewel Changi Airport marks six months of operations with a grand opening celebration",
+            "publishedDate": "2019-10-18",
+            "quote": "135,700 sqm complex"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Attraction and service program",
+          "value": "Play attractions, retail, dining, airport and accommodation facilities.",
+          "source": {
+            "url": "https://www.mynewsdesk.com/sg/changiairport/pressreleases/jewel-changi-airport-marks-six-months-of-operations-with-a-grand-opening-celebration-2933423",
+            "title": "Jewel Changi Airport marks six months of operations with a grand opening celebration",
+            "publishedDate": "2019-10-18",
+            "quote": "play attractions, unique shopping and dining concepts"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Public opening and formal ceremony",
+          "value": "Public access began April 2019; formal grand opening 18 October 2019.",
+          "source": {
+            "url": "https://www.mynewsdesk.com/sg/changiairport/pressreleases/jewel-changi-airport-marks-six-months-of-operations-with-a-grand-opening-celebration-2933423",
+            "title": "Jewel Changi Airport marks six months of operations with a grand opening celebration",
+            "publishedDate": "2019-10-18",
+            "quote": "six months after it welcomed the public in April 2019"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Public opening",
+          "date": "April 2019",
+          "source": {
+            "url": "https://www.mynewsdesk.com/sg/changiairport/pressreleases/jewel-changi-airport-marks-six-months-of-operations-with-a-grand-opening-celebration-2933423",
+            "title": "Jewel Changi Airport marks six months of operations with a grand opening celebration",
+            "publishedDate": "2019-10-18",
+            "quote": "welcomed the public in April 2019"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Formal grand opening",
+          "date": "2019-10-18",
+          "source": {
+            "url": "https://www.mynewsdesk.com/sg/changiairport/pressreleases/jewel-changi-airport-marks-six-months-of-operations-with-a-grand-opening-celebration-2933423",
+            "title": "Jewel Changi Airport marks six months of operations with a grand opening celebration",
+            "publishedDate": "2019-10-18",
+            "quote": "officially opened today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "mjostarnet-brumunddal",
+    "pinIds": {
+      "local": 800,
+      "production": 800
+    },
+    "title": "Mjøstårnet Becomes the World's Tallest Timber Tower in Brumunddal",
+    "sourceUrl": "https://www.youtube.com/watch?v=8lSZW_a54nA",
+    "profile": {
+      "sector": "Mixed use: timber high-rise",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Tower floor area",
+          "value": "Around 11,300 sq m, excluding the adjacent approximately 4,700 sq m swimming hall.",
+          "source": {
+            "url": "https://www.moelven.com/mjostarnet/",
+            "title": "Mjøstårnet",
+            "publishedDate": null,
+            "quote": "around 11,300 square meters"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Building uses",
+          "value": "Hotel, apartments, offices, restaurant and common areas in the timber tower.",
+          "source": {
+            "url": "https://www.moelven.com/mjostarnet/",
+            "title": "Mjøstårnet",
+            "publishedDate": null,
+            "quote": "hotel, apartments, offices, a restaurant"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completed and opened",
+          "value": "March 2019; month precision retained.",
+          "source": {
+            "url": "https://www.moelven.com/mjostarnet/",
+            "title": "Mjøstårnet",
+            "publishedDate": null,
+            "quote": "opened in March 2019"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundwork starts",
+          "date": "April 2017",
+          "source": {
+            "url": "https://www.moelven.com/mjostarnet/qa-about-mjostarnet/",
+            "title": "Q&A about Mjøstårnet",
+            "publishedDate": null,
+            "quote": "Groundwork started in April 2017"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Tower opens",
+          "date": "March 2019",
+          "source": {
+            "url": "https://www.moelven.com/mjostarnet/",
+            "title": "Mjøstårnet",
+            "publishedDate": null,
+            "quote": "opened in March 2019"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "hong-kong-zhuhai-macao-crossing",
+    "pinIds": {
+      "local": 728,
+      "production": 728
+    },
+    "title": "Hong Kong-Zhuhai-Macau Bridge Opens as the World's Longest Sea Crossing",
+    "sourceUrl": "https://www.youtube.com/watch?v=dStITCgn73w",
+    "profile": {
+      "sector": "Roads: cross-boundary bridge and tunnel system",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Whole crossing length",
+          "value": "55 km, including link roads, main crossing and port components; not a 55 km uninterrupted bridge span.",
+          "source": {
+            "url": "https://www.info.gov.hk/gia/general/201912/17/P2019121700753.htm",
+            "title": "Government Statement in respect of the jurisdiction of the Eastern Artificial Island of the Hong Kong-Zhuhai-Macao Bridge",
+            "publishedDate": "2019-12-17",
+            "quote": "55km-HZMB"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Main crossing design standard",
+          "value": "Six-lane expressway; 100 km/h design speed in the construction announcement.",
+          "source": {
+            "url": "https://www.info.gov.hk/gia/general/200912/15/P200912150216.htm",
+            "title": "Construction starts for Hong Kong-Zhuhai-Macao Bridge main bridge",
+            "publishedDate": "2009-12-15",
+            "quote": "six-lane expressway standard"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Operation begins",
+          "value": "24 October 2018, distinct from the previous day’s ceremony.",
+          "source": {
+            "url": "https://www.info.gov.hk/gia/general/201912/17/P2019121700753.htm",
+            "title": "Government Statement in respect of the jurisdiction of the Eastern Artificial Island of the Hong Kong-Zhuhai-Macao Bridge",
+            "publishedDate": "2019-12-17",
+            "quote": "commenced operation on October 24, 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Main bridge construction ceremony",
+          "date": "2009-12-15",
+          "source": {
+            "url": "https://www.info.gov.hk/gia/general/200912/15/P200912150216.htm",
+            "title": "Construction starts for Hong Kong-Zhuhai-Macao Bridge main bridge",
+            "publishedDate": "2009-12-15",
+            "quote": "construction commencement ceremony"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Crossing begins operation",
+          "date": "2018-10-24",
+          "source": {
+            "url": "https://www.info.gov.hk/gia/general/201912/17/P2019121700753.htm",
+            "title": "Government Statement in respect of the jurisdiction of the Eastern Artificial Island of the Hong Kong-Zhuhai-Macao Bridge",
+            "publishedDate": "2019-12-17",
+            "quote": "commenced operation on October 24, 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "london-bridge-station-redevelopment",
+    "pinIds": {
+      "local": 936,
+      "production": 936
+    },
+    "title": "Network Rail Completes the London Bridge Station Redevelopment",
+    "sourceUrl": "https://www.youtube.com/watch?v=N1GG-BPrIeQ",
+    "profile": {
+      "sector": "Rail: station and track redevelopment",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Station redevelopment investment",
+          "value": "GBP 1 billion, not the entire Thameslink Programme.",
+          "source": {
+            "url": "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-bridge-station/",
+            "title": "The history of London Bridge station",
+            "publishedDate": null,
+            "quote": "£1bn redevelopment"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Delivered station improvements",
+          "value": "Unified concourse, new Tooley Street and St Thomas Street entrances, step-free platforms and reconfigured track.",
+          "source": {
+            "url": "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-bridge-station/",
+            "title": "The history of London Bridge station",
+            "publishedDate": null,
+            "quote": "new entrances on Tooley Street and St Thomas Street"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Redevelopment completed",
+          "value": "2018, after work began in 2013; formal royal reopening on 9 May 2018.",
+          "source": {
+            "url": "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-bridge-station/",
+            "title": "The history of London Bridge station",
+            "publishedDate": null,
+            "quote": "completed in 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Station redevelopment begins",
+          "date": "2013",
+          "source": {
+            "url": "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-bridge-station/",
+            "title": "The history of London Bridge station",
+            "publishedDate": null,
+            "quote": "Since 2013"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Formal station reopening",
+          "date": "2018-05-09",
+          "source": {
+            "url": "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-bridge-station/",
+            "title": "The history of London Bridge station",
+            "publishedDate": null,
+            "quote": "Wednesday 9 May 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "salesforce-tower-san-francisco",
+    "pinIds": {
+      "local": 734,
+      "production": 734
+    },
+    "title": "Salesforce Tower Opens as San Francisco's Tallest Building",
+    "sourceUrl": "https://www.youtube.com/watch?v=r4ZTHUmcW-A",
+    "profile": {
+      "sector": "Offices: commercial high-rise",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Published tower floor area",
+          "value": "1,400,000 sq ft / 130,064 sq m, as stated by the architect.",
+          "source": {
+            "url": "https://pcparch.com/work/salesforce-tower",
+            "title": "Salesforce Tower – Pelli Clarke & Partners",
+            "publishedDate": null,
+            "quote": "1,400,000 sq. ft. / 130,064 sq. m."
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Office tower structure",
+          "value": "1,070 ft / 326 m tall commercial tower; transit-center park is a separate facility connected at level five.",
+          "source": {
+            "url": "https://pcparch.com/work/salesforce-tower",
+            "title": "Salesforce Tower – Pelli Clarke & Partners",
+            "publishedDate": null,
+            "quote": "1,070 ft. / 326 m."
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion",
+          "value": "2018, per the architect.",
+          "source": {
+            "url": "https://pcparch.com/work/salesforce-tower",
+            "title": "Salesforce Tower – Pelli Clarke & Partners",
+            "publishedDate": null,
+            "quote": "Completion: 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Tower completion",
+          "date": "2018",
+          "source": {
+            "url": "https://pcparch.com/work/salesforce-tower",
+            "title": "Salesforce Tower – Pelli Clarke & Partners",
+            "publishedDate": null,
+            "quote": "Completion: 2018"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "second-avenue-subway-phase1",
+    "pinIds": {
+      "local": 659,
+      "production": 659
+    },
+    "title": "Second Avenue Subway Phase One Opens as World's Priciest Subway",
+    "sourceUrl": "https://www.youtube.com/watch?v=8Y4Rkz-3Uj8",
+    "profile": {
+      "sector": "Rail: subway first phase",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Phase-one route",
+          "value": "Q-line extension from existing East 63rd Street station to three new stations at East 72nd, 86th and 96th Streets.",
+          "source": {
+            "url": "https://www.skanska.com/us/en/media/press-releases/2017/skanska-usa-celebrates-grand-opening-of-second-avenue-subway",
+            "title": "Skanska USA Celebrates Grand Opening of Second Avenue Subway",
+            "publishedDate": null,
+            "quote": "three new stations at East 72nd Street, East 86th Street and East 96th Street"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Forecast daily ridership at opening",
+          "value": "200,000 daily riders forecast; not a measured present-day count.",
+          "source": {
+            "url": "https://www.skanska.com/us/en/media/press-releases/2017/skanska-usa-celebrates-grand-opening-of-second-avenue-subway",
+            "title": "Skanska USA Celebrates Grand Opening of Second Avenue Subway",
+            "publishedDate": null,
+            "quote": "anticipated 200,000 daily riders"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Public passenger opening",
+          "value": "1 January 2017 at noon.",
+          "source": {
+            "url": "https://www.skanska.com/us/en/media/press-releases/2017/skanska-usa-celebrates-grand-opening-of-second-avenue-subway",
+            "title": "Skanska USA Celebrates Grand Opening of Second Avenue Subway",
+            "publishedDate": null,
+            "quote": "January 1st, 2017, at 12:00 p.m."
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Inaugural official trip",
+          "date": "2016-12-31",
+          "source": {
+            "url": "https://www.skanska.com/us/en/media/press-releases/2017/skanska-usa-celebrates-grand-opening-of-second-avenue-subway",
+            "title": "Skanska USA Celebrates Grand Opening of Second Avenue Subway",
+            "publishedDate": null,
+            "quote": "December 31, 2016"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Public opening",
+          "date": "2017-01-01",
+          "source": {
+            "url": "https://www.skanska.com/us/en/media/press-releases/2017/skanska-usa-celebrates-grand-opening-of-second-avenue-subway",
+            "title": "Skanska USA Celebrates Grand Opening of Second Avenue Subway",
+            "publishedDate": null,
+            "quote": "January 1st, 2017"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "panama-canal-expansion",
+    "pinIds": {
+      "local": 760,
+      "production": 760
+    },
+    "title": "Expanded Panama Canal Opens to Neopanamax Ships",
+    "sourceUrl": "https://www.youtube.com/watch?v=B48CkD8b1QA",
+    "profile": {
+      "sector": "Shipping: canal locks expansion",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Expansion works",
+          "value": "New Atlantic and Pacific locks plus more than 150 million cubic meters excavated; distinct from the original canal.",
+          "source": {
+            "url": "https://pancanal.com/en/inaugural-transit-of-the-expanded-panama-canal-begins/",
+            "title": "Inaugural Transit of the Expanded Panama Canal Begins",
+            "publishedDate": "2016-06-26",
+            "quote": "more than 150 million cubic meters"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Cargo capacity design change",
+          "value": "Second traffic lane doubling cargo capacity, as stated by the canal authority; not a measured annual throughput.",
+          "source": {
+            "url": "https://pancanal.com/en/inaugural-transit-of-the-expanded-panama-canal-begins/",
+            "title": "Inaugural Transit of the Expanded Panama Canal Begins",
+            "publishedDate": "2016-06-26",
+            "quote": "doubling the cargo capacity"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Inaugural expanded-lock transit",
+          "value": "26 June 2016, COSCO Shipping Panama.",
+          "source": {
+            "url": "https://pancanal.com/en/inaugural-transit-of-the-expanded-panama-canal-begins/",
+            "title": "Inaugural Transit of the Expanded Panama Canal Begins",
+            "publishedDate": "2016-06-26",
+            "quote": "June 26, 2016"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Inaugural expansion transit begins",
+          "date": "2016-06-26",
+          "source": {
+            "url": "https://pancanal.com/en/inaugural-transit-of-the-expanded-panama-canal-begins/",
+            "title": "Inaugural Transit of the Expanded Panama Canal Begins",
+            "publishedDate": "2016-06-26",
+            "quote": "inaugural transit of the Panama Canal Expansion began"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "432-park-avenue",
+    "pinIds": {
+      "local": 496,
+      "production": 496
+    },
+    "title": "432 Park Avenue Opens on Manhattan's Billionaires' Row",
+    "sourceUrl": "https://www.youtube.com/watch?v=01KX_JXHH2M",
+    "profile": {
+      "sector": "Housing: residential high-rise",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Gross floor area",
+          "value": "65,497 sq m / 705,003 sq ft, as published by the museum.",
+          "source": {
+            "url": "https://skyscraper.org/supertall/building/432-park-avenue/",
+            "title": "432 Park Avenue – The Skyscraper Museum",
+            "publishedDate": null,
+            "quote": "65,497m 2 / 705,003ft 2"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "products",
+          "label": "Tower structure",
+          "value": "85 floors, 425.7 m / 1,397 ft tower.",
+          "source": {
+            "url": "https://skyscraper.org/supertall/building/432-park-avenue/",
+            "title": "432 Park Avenue – The Skyscraper Museum",
+            "publishedDate": null,
+            "quote": "Floors: 85"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction period",
+          "value": "2011–2015, with completion explicitly recorded as 2015.",
+          "source": {
+            "url": "https://skyscraper.org/supertall/building/432-park-avenue/",
+            "title": "432 Park Avenue – The Skyscraper Museum",
+            "publishedDate": null,
+            "quote": "Year of Completion: 2015"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction starts",
+          "date": "2011",
+          "source": {
+            "url": "https://skyscraper.org/supertall/building/432-park-avenue/",
+            "title": "432 Park Avenue – The Skyscraper Museum",
+            "publishedDate": null,
+            "quote": "Year Construction Started: 2011"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Tower completion",
+          "date": "2015",
+          "source": {
+            "url": "https://skyscraper.org/supertall/building/432-park-avenue/",
+            "title": "432 Park Avenue – The Skyscraper Museum",
+            "publishedDate": null,
+            "quote": "Year of Completion: 2015"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "singapore-sports-hub",
+    "pinIds": {
+      "local": 934,
+      "production": 934
+    },
+    "title": "Dragages Singapore Completes the Singapore Sports Hub",
+    "sourceUrl": "https://www.youtube.com/watch?v=WJ6U1jtRiCI",
+    "profile": {
+      "sector": "Sports: multi-venue sports complex",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Complex gross floor area",
+          "value": "274,853 sq m, per the design-and-build contractor.",
+          "source": {
+            "url": "https://dragages.com.sg/projects-post/singapore-sports-hub/",
+            "title": "Singapore Sports Hub – Dragages Singapore",
+            "publishedDate": null,
+            "quote": "274,853 sqm"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "National Stadium seating",
+          "value": "55,000 seats; this is the stadium within the wider Sports Hub.",
+          "source": {
+            "url": "https://dragages.com.sg/projects-post/singapore-sports-hub/",
+            "title": "Singapore Sports Hub – Dragages Singapore",
+            "publishedDate": null,
+            "quote": "55,000-seat new National Stadium"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction completion",
+          "value": "2014; contractor lists project period 2010–2014.",
+          "source": {
+            "url": "https://dragages.com.sg/projects-post/singapore-sports-hub/",
+            "title": "Singapore Sports Hub – Dragages Singapore",
+            "publishedDate": null,
+            "quote": "completed in 2014"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction period begins",
+          "date": "2010",
+          "source": {
+            "url": "https://dragages.com.sg/projects-post/singapore-sports-hub/",
+            "title": "Singapore Sports Hub – Dragages Singapore",
+            "publishedDate": null,
+            "quote": "2010 – 2014"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Complex completed",
+          "date": "2014",
+          "source": {
+            "url": "https://dragages.com.sg/projects-post/singapore-sports-hub/",
+            "title": "Singapore Sports Hub – Dragages Singapore",
+            "publishedDate": null,
+            "quote": "completed in 2014"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "wembley-stadium-rebuild",
+    "pinIds": {
+      "local": 961,
+      "production": 961
+    },
+    "title": "The Football Association Reopens Wembley Stadium With Its First Match",
+    "sourceUrl": "https://www.youtube.com/watch?v=MQgyA8EROrs",
+    "profile": {
+      "sector": "Sports: rebuilt national stadium",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published stadium construction cost",
+          "value": "GBP 798 million; historical published figure, not a newly audited project account.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/eng/wembley_national_stadium",
+            "title": "Wembley Stadium connected by EE – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "£ 798 million"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Seated capacity",
+          "value": "90,000 seats in the rebuilt stadium, excluding the old stadium’s historical capacities.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/eng/wembley_national_stadium",
+            "title": "Wembley Stadium connected by EE – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "Capacity 90 000"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Rebuilt stadium inauguration",
+          "value": "March 2007. Test events, first match and formal FA Cup opening are distinct.",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/eng/wembley_national_stadium",
+            "title": "Wembley Stadium connected by EE – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "Inauguration 03/2007"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "New stadium construction starts",
+          "date": "2003",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/eng/wembley_national_stadium",
+            "title": "Wembley Stadium connected by EE – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "Construction 2003–2007"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Rebuilt stadium inauguration",
+          "date": "March 2007",
+          "source": {
+            "url": "https://stadiumdb.com/stadiums/eng/wembley_national_stadium",
+            "title": "Wembley Stadium connected by EE – StadiumDB.com",
+            "publishedDate": null,
+            "quote": "Inauguration 03/2007"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
   }
 ]

@@ -167,14 +167,14 @@ export function TasteRadar({
           const [x, y] = point(i, R);
           return <line key={axis.key} x1={CX} y1={CY} x2={x} y2={y} className="stroke-raised-2" strokeWidth={1} />;
         })}
-        <polygon points={fmt(axes.flatMap((_, i) => (scoreOf(i) == null ? [] : [point(i, radiusOf(i))])))} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
+        <polygon points={fmt(axes.map((_, i) => point(i, radiusOf(i))))} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
         {/* The whole spoke is a hover target, drawn under the vertices: a score
             of 0 puts a vertex on the centre, where several share one point and
             the last drawn would win, so each axis stays reachable along its
             spoke and by its label. */}
         {axes.map((axis, i) => {
           const [x, y] = point(i, LABEL_R - 6);
-          const [hx, hy] = point(i, R);
+          const [hx, hy] = point(i, radiusOf(i));
           return (
             <g key={axis.key} className="cursor-default" {...bind(i)}>
               <line x1={CX} y1={CY} x2={hx} y2={hy} stroke="#f59e0b" strokeWidth={2.5} strokeLinecap="round" className={`pointer-events-none transition-opacity ${active === i ? 'opacity-70' : 'opacity-0'}`} />

@@ -477,10 +477,6 @@ this is to be added only to the pin wiki
 are all landing pages translated besides the pins?
 
 
-
-- can we pin any long tail pins that can improve google search organic growth
-
-
 build span chart display for construction pins with a timeline and show
 
 
