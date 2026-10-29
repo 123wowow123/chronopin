@@ -89,13 +89,14 @@ For each active pin (`utcDeletedDateTime IS NULL`) and each of the 15 locales:
 
 ## Critical Edge Cases & Formatting Rules
 
-### 1. HTML Tag and Citation Preservation
+### 1. HTML Tag, Whitespace, and Citation Preservation
 - The translated string must have the exact same list of HTML tags as the source string (`re.findall(r'<[^>]*>', src) == re.findall(r'<[^>]*>', tr)`).
+- Preserve leading and trailing whitespace (`leading_ws` / `trailing_ws`) on text nodes between HTML tags so inline elements (`<strong>`, `<em>`, `<a>`, `<cite>`) never lose surrounding spaces.
 - All `<cite data-ref="...">` attributes must match the source verbatim. Do not translate URLs or citation IDs.
 
-### 2. Pseudo HTML Tags & Song Titles
-- Expressions like `<3` (heart emoji or song title e.g. Olivia Rodrigo *U + Me = <3*) can be misinterpreted by regex or browsers as HTML tags (`<3, ...>`).
-- Always escape `<` immediately preceding digits or spaces as `&lt;` before validating or storing.
+### 2. Escaping Literal `<` and `>` Inside Text Nodes
+- Because HTML tags are split out via `re.split(r'(<[^>]*>)', src)` before translation, any `<` or `>` appearing inside a translated text node (such as `<3` in song titles like Olivia Rodrigo *U + Me = <3*, or `< 5%` / `> 100`) is literal text, not an HTML tag.
+- Always escape `<` as `&lt;` and `>` as `&gt;` on translated text fragments before rejoining with the HTML tag tokens.
 
 ### 3. Thai (`th`) Buddhist Era Year Normalization
 - Translation engines (e.g. Google Translate) automatically convert 4-digit Gregorian years (e.g., 2026) to the Thai Buddhist Era (`2569`, which is year + 543) and prepend `พ.ศ.`.

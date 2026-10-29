@@ -65,11 +65,11 @@ WHERE pt."pinId" = ap.id
   AND pt.locale = lt.locale
   AND pt."longFormSummary" LIKE ('%' || lt.tail);
 
--- 5. Ensure Source and PinSource exist for pins 17903 and 17909
+-- 5. Ensure Source and PinSource exist for pins 17903 and 17909 (keep unbuilt sources as pending / wikiVersion 0)
 INSERT INTO "Source" ("urlKey", "url", "kind", "status", "generatedBy", "wikiVersion")
 VALUES 
-  ('centralmarketlancaster.com', 'https://centralmarketlancaster.com/', 'web', 'ready', 'gemini-3.8-flash/translations', 1),
-  ('azstateparks.com/lost-dutchman', 'https://azstateparks.com/lost-dutchman', 'web', 'ready', 'gemini-3.8-flash/translations', 1)
+  ('centralmarketlancaster.com', 'https://centralmarketlancaster.com/', 'web', 'pending', 'gemini-3.8-flash/translations', 0),
+  ('azstateparks.com/lost-dutchman', 'https://azstateparks.com/lost-dutchman', 'web', 'pending', 'gemini-3.8-flash/translations', 0)
 ON CONFLICT ("urlKey") DO NOTHING;
 
 INSERT INTO "PinSource" ("pinId", "sourceId", "role", "summarizedWikiVersion")
@@ -88,7 +88,8 @@ SELECT DISTINCT ON (ps."pinId")
   ps."pinId",
   ps."sourceId",
   p.title AS pin_title,
-  s.title AS source_title
+  s.title AS source_title,
+  p."longFormSummary"
 FROM affected_pins ap
 JOIN "Pin" p ON p.id = ap.id
 JOIN "PinSource" ps ON ps."pinId" = ap.id AND ps."utcRemovedDateTime" IS NULL
@@ -141,21 +142,21 @@ WHERE NOT EXISTS (
   SELECT 1 FROM "SourceWiki" sw WHERE sw."sourceId" = pps."sourceId"
 );
 
--- Ensure Source and PinSource keep summary in sync so summaryStale remains false
+-- Record generatedBy without marking unbuilt sources as 'ready' or bumping wikiVersion from 0
 UPDATE "Source" s
-SET "status" = 'ready',
-    "wikiVersion" = GREATEST(s."wikiVersion", 1),
-    "generatedBy" = COALESCE(s."generatedBy", 'gemini-3.8-flash/translations')
+SET "generatedBy" = COALESCE(s."generatedBy", 'gemini-3.8-flash/translations')
 FROM (SELECT DISTINCT "sourceId" FROM pin_primary_source) pps
 WHERE s.id = pps."sourceId";
 
 UPDATE "PinSource" ps
-SET "summarizedWikiVersion" = s."wikiVersion"
+SET "summarizedWikiVersion" = GREATEST(s."wikiVersion", 1)
 FROM "Source" s
 JOIN pin_primary_source pps ON pps."sourceId" = s.id
 WHERE ps."pinId" = pps."pinId"
   AND ps."sourceId" = pps."sourceId"
-  AND (ps."summarizedWikiVersion" IS NULL OR ps."summarizedWikiVersion" < s."wikiVersion");
+  AND pps."longFormSummary" IS NOT NULL
+  AND btrim(pps."longFormSummary") != ''
+  AND (ps."summarizedWikiVersion" IS NULL OR ps."summarizedWikiVersion" < GREATEST(s."wikiVersion", 1));
 
 -- Verification counts to output:
 SELECT count(*) AS remaining_pin_content_tracking FROM "Pin" WHERE "longFormSummary" ILIKE '%Translations completed using Gemini 3.8 Flash%';

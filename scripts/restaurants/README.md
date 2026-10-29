@@ -13,6 +13,8 @@ Every city landing page supports the four San Diego sections: Coming soon,
 Just opened, Top restaurants, and Specials. Keep Specials visible when active or
 upcoming offers exist, including outside service hours and without review scores.
 Upcoming cards show the next local start time; expired offers are excluded.
+There is no restaurant-count cap. Sort and deduplicate the full eligible list,
+then paginate it in 25-card pages, including results beyond the first 100.
 Hide tabs with no eligible content and fall back to a populated view
 for links to empty tabs. Research every section thoroughly using operator
 announcements, local reporting and branch-specific promotions before accepting
@@ -21,6 +23,20 @@ discounts, ratings or dishes to fill a tab. Document sources checked and remaini
 coverage gaps. This applies to Japan and all future regional guides. For China city guides, aim
 for at least 35 distinct restaurants in each of the four tabs. Count venues,
 not repeated offers; preserve eligibility and record any remaining shortages.
+
+`npx tsx scripts/restaurants/auditProductionGuides.ts` performs a read-only sweep
+of every supported production city, all four views, both Specials sections and
+every result page. It uses the existing admin credentials from the environment
+and writes ignored snapshots/findings under `.scrape/restaurant-global-sweep-2026-10-29`.
+`GUIDE_AUDIT_URL` and `GUIDE_AUDIT_OUTPUT` override the origin and output directory.
+It reports missing native pin joins, snapshot dates used in restaurant timelines,
+truncation, duplicate cards, external detail links and missing card photos.
+Transport failures are retried and cause a nonzero exit status.
+
+The legacy `seedSpecialPins.ts` command is discovery-only unless every branch
+already has a pin. It must never seed a restaurant's opening from `checkedAt`.
+Use `repairSpecialPins.ts` with reviewed branch-opening evidence and the admin
+APIs to create missing pins.
 
 The European collection covers London, Paris, Amsterdam, Berlin, Madrid,
 Barcelona, Lisbon, Rome, Copenhagen and Vienna, with three established editorial

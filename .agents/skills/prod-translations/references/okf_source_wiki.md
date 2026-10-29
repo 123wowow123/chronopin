@@ -65,7 +65,7 @@ ON CONFLICT DO NOTHING;
 ```
 
 ### 2. Pin with a Source but No Root SourceWiki
-If the source has no root `SourceWiki` yet, create the root page:
+If the source has no root `SourceWiki` yet, create a root `SourceWiki` page so `GET /api/pins/:id/sources` displays it:
 ```sql
 INSERT INTO "SourceWiki" ("sourceId", "parentId", "position", "type", "title", "summary", "body", "tags")
 VALUES (
@@ -82,16 +82,16 @@ ON CONFLICT ("sourceId") WHERE "parentId" IS NULL DO NOTHING;
 ```
 
 ### 3. Pin with No Source Record
-If a pin has a `sourceUrl` but no `PinSource` row yet (rare edge case):
-1. Insert `Source` with `urlKey = sourceKey(sourceUrl)` and `wikiVersion = 1`.
-2. Insert `PinSource` linking the `pinId` and `sourceId` with `role = 'source'`.
-3. Insert the root `SourceWiki` as described in step 2.
+If a pin has a `sourceUrl` but no `PinSource` row yet:
+1. Compute `urlKey` matching `src/lib/citations.ts` (`host` lowercased without `www.`, `pathname` without trailing `/`, plus `search` query, without `#hash`).
+2. Insert `Source` with `status = 'pending'` and `wikiVersion = 0`.
+3. Insert `PinSource` linking `pinId` and `sourceId` with `role = 'source'`, and `summarizedWikiVersion = 1` if the pin already has a `longFormSummary`.
+4. Insert the root `SourceWiki` as described in step 2.
 
-### 4. Preventing Stale Summary Triggers
-When adding or updating wikis, ensure `Source` and `PinSource` stay synchronized:
-```sql
-UPDATE "Source" SET "status" = 'ready', "wikiVersion" = GREATEST("wikiVersion", 1) WHERE id = sourceId;
-UPDATE "PinSource" SET "summarizedWikiVersion" = s."wikiVersion" FROM "Source" s WHERE "PinSource"."sourceId" = s.id AND "PinSource"."pinId" = pinId;
-```
-This ensures `PinSource.summaryStale(pinId)` remains `false`, preventing background jobs from mistakenly re-generating the pin's summary.
-
+### 4. Preserving `Source.status` and Avoiding False `okf:lint` Warnings
+- **Do NOT** set `Source.status = 'ready'` or `Source.wikiVersion = 1` on a pending source whose article wiki has not been built yet (`utcBuiltDateTime IS NULL`).
+- `Source.wikis()` loads `SourceWiki` rows regardless of `Source.status` or `Source.wikiVersion`, so the admin UI (`GET /api/pins/:id/sources`) immediately displays the translation tracking entry.
+- Keeping `status = 'pending'` and `wikiVersion = 0` on unbuilt sources ensures:
+  1. `Source.needingWiki` still knows the link's article wiki is pending.
+  2. `okf:lint` (`lintQuality`) does not emit false `thin` warnings (for sources with `textLength > 3000`) or false `bare` summary warnings (for pins without a `longFormSummary`).
+  3. `PinSource.summaryStale` remains `false`.

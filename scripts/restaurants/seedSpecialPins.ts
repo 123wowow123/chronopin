@@ -5,14 +5,14 @@ import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 import Pin from '@/server/model/pin';
 
 export async function seedSpecialPins(options: { dryRun?: boolean; regionSlug?: string } = {}) {
-  const { dryRun = false, regionSlug } = options;
+  const { dryRun = true, regionSlug } = options;
   const venues = await listSpecialVenues(regionSlug, false);
   const existingPins = await Pin.findBySourceUrls(venues.map((v) => v.profile.pinSourceUrl));
   const missing = venues.filter((v) => !existingPins.has(v.profile.pinSourceUrl));
 
   console.log(`Found ${venues.length} venues, ${existingPins.size} with pins, ${missing.length} missing pins.`);
   if (dryRun) {
-    console.log(`[dry-run] Would create ${missing.length} pins.`);
+    console.log(`[dry-run] ${missing.length} branches need reviewed opening evidence before pin creation.`);
     return { created: missing.length, dryRun: true };
   }
 

@@ -1,0 +1,1318 @@
+{
+  "entries": [
+    {
+      "pin": {
+        "userName": "@FoodDesk",
+        "title": "Ahi — auckland restaurant guide",
+        "productName": "Ahi",
+        "description": "Seasonal New Zealand cooking overlooking the harbour at Commercial Bay.",
+        "sourceUrl": "https://ahirestaurant.co.nz/",
+        "address": "Level 2, Commercial Bay, corner Queen and Quay Streets, Auckland 1010, New Zealand",
+        "company": "Ahi",
+        "utcStartDateTime": "2020-08-31T00:00:00Z",
+        "allDay": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporary September 9, 2020 reporting explicitly dates Ahi’s first service at Commercial Bay to August 31, 2020. Opened the full HTTPS article directly.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "auckland",
+          "Commercial Bay"
+        ],
+        "references": [
+          {
+            "url": "https://concreteplayground.com/auckland/food-drink/ben-baylys-contemporary-new-zealand-restaurant-has-opened-in-commercial-bay/",
+            "title": "Ben Bayly’s Contemporary New Zealand Restaurant Has Opened in Commercial Bay",
+            "confidence": 90,
+            "reasoning": "Contemporary September 9, 2020 reporting explicitly dates Ahi’s first service at Commercial Bay to August 31, 2020. Opened the full HTTPS article directly. Source excerpt: “opened its doors for the first time on 31 August”"
+          },
+          {
+            "url": "https://ahirestaurant.co.nz/",
+            "title": "Ahi operator website",
+            "confidence": 90,
+            "reasoning": "Current branch identity and address."
+          }
+        ],
+        "longFormSummary": "<p>Seasonal New Zealand cooking overlooking the harbour at Commercial Bay.</p><p>Contemporary September 9, 2020 reporting explicitly dates Ahi’s first service at Commercial Bay to August 31, 2020. Opened the full HTTPS article directly. Source excerpt: “opened its doors for the first time on 31 August”<cite data-ref=\"https://concreteplayground.com/auckland/food-drink/ben-baylys-contemporary-new-zealand-restaurant-has-opened-in-commercial-bay/\"></cite></p>",
+        "sourceWikis": [
+          {
+            "url": "https://concreteplayground.com/auckland/food-drink/ben-baylys-contemporary-new-zealand-restaurant-has-opened-in-commercial-bay/",
+            "title": "Ben Bayly’s Contemporary New Zealand Restaurant Has Opened in Commercial Bay",
+            "text": "Contemporary September 9, 2020 reporting explicitly dates Ahi’s first service at Commercial Bay to August 31, 2020. Opened the full HTTPS article directly. Source excerpt: “opened its doors for the first time on 31 August”",
+            "generatedBy": "codex/session",
+            "wiki": {
+              "title": "Ben Bayly’s Contemporary New Zealand Restaurant Has Opened in Commercial Bay",
+              "summary": "Contemporary September 9, 2020 reporting explicitly dates Ahi’s first service at Commercial Bay to August 31, 2020. Opened the full HTTPS article directly.",
+              "body": "Contemporary September 9, 2020 reporting explicitly dates Ahi’s first service at Commercial Bay to August 31, 2020. Opened the full HTTPS article directly. Source excerpt: “opened its doors for the first time on 31 August”",
+              "tags": [
+                "Restaurant"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Ahi",
+            "menus": [
+              {
+                "url": "https://ahirestaurant.co.nz/menu-ahi/",
+                "note": "Seasonal menu. Food Story is four snacks and four courses per person; pairing is additional.",
+                "items": [
+                  {
+                    "name": "Paraoa — sourdough",
+                    "price": 7
+                  },
+                  {
+                    "name": "Tio — Te Matuku oyster",
+                    "price": 9
+                  },
+                  {
+                    "name": "Koura rangi — poached scampi",
+                    "priceLabel": "Price on application"
+                  },
+                  {
+                    "name": "Mapari tartare tart",
+                    "price": 20
+                  },
+                  {
+                    "name": "Pāua fritter",
+                    "price": 20
+                  },
+                  {
+                    "name": "Tuna hūhunu — smoked eel",
+                    "price": 16
+                  },
+                  {
+                    "name": "Hāmana — salmon",
+                    "price": 34
+                  },
+                  {
+                    "name": "Wheke — octopus",
+                    "price": 36
+                  },
+                  {
+                    "name": "Kamokamo terrine",
+                    "price": 34
+                  },
+                  {
+                    "name": "Koura — crayfish 500g",
+                    "price": 139
+                  },
+                  {
+                    "name": "Ika — steamed fish",
+                    "price": 46
+                  },
+                  {
+                    "name": "Hīpi — Matangi lamb",
+                    "price": 46
+                  },
+                  {
+                    "name": "Rakiraki — wood-fired duck",
+                    "price": 55
+                  },
+                  {
+                    "name": "Kau — backyard BBQ 500g",
+                    "price": 180
+                  },
+                  {
+                    "name": "Hua whenua — greens",
+                    "price": 15
+                  },
+                  {
+                    "name": "Riwai — crispy Agria potatoes",
+                    "price": 15
+                  },
+                  {
+                    "name": "Huamata — salad",
+                    "price": 15
+                  },
+                  {
+                    "name": "A New Zealand Food Story",
+                    "price": 195
+                  },
+                  {
+                    "name": "Aotearoa beverage pairing",
+                    "price": 150
+                  }
+                ],
+                "label": "Dinner menu",
+                "coverage": "published",
+                "currency": "NZD",
+                "documentUrl": "https://ahirestaurant.co.nz/wp-content/uploads/2026/06/Ahi-Dinner-Menu.pdf"
+              },
+              {
+                "url": "https://ahirestaurant.co.nz/menu-ahi/",
+                "note": "Desserts from the operator’s current linked PDF.",
+                "items": [
+                  {
+                    "name": "Burnt bush honey tart",
+                    "price": 26
+                  },
+                  {
+                    "name": "Banana Louise cake",
+                    "price": 26
+                  },
+                  {
+                    "name": "Paināporo — barbecued pineapple",
+                    "price": 26
+                  }
+                ],
+                "label": "Desserts",
+                "coverage": "published",
+                "currency": "NZD",
+                "documentUrl": "https://ahirestaurant.co.nz/wp-content/uploads/2026/06/Ahi-Dessert-Menu.pdf"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-09",
+            "pinSourceUrl": "https://ahirestaurant.co.nz/"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Ahi",
+            "slug": "ahi",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/auckland/top/ahi-4dac8445cf459e68.webp",
+            "address": "Level 2, Commercial Bay, corner Queen and Quay Streets, Auckland 1010, New Zealand",
+            "cuisine": "New Zealand",
+            "checkedAt": "2026-10-09",
+            "imageNote": "Operator photograph of harvested tomatoes; not a dining-room photograph.",
+            "priceRange": "",
+            "regionSlug": "auckland",
+            "websiteUrl": "https://ahirestaurant.co.nz/",
+            "description": "Seasonal New Zealand cooking overlooking the harbour at Commercial Bay.",
+            "imageCredit": "Photo: Ahi",
+            "recognition": "Chronopin selection",
+            "neighborhood": "Commercial Bay",
+            "imageSourceUrl": "https://ahirestaurant.co.nz/wp-content/uploads/2026/02/BIG-November-143.jpg"
+          },
+          "details": {
+            "name": "Ahi",
+            "phone": null,
+            "checkedAt": "2026-10-09",
+            "hoursNote": "Confirm service hours with the restaurant; no complete hours verified.",
+            "websiteUrl": "https://ahirestaurant.co.nz/",
+            "openingHours": [],
+            "pinSourceUrl": "https://ahirestaurant.co.nz/",
+            "detailsSourceUrl": "https://ahirestaurant.co.nz/"
+          },
+          "pinSourceUrl": "https://ahirestaurant.co.nz/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/auckland/top/ahi-4dac8445cf459e68.webp",
+          "credit": "Photo: Ahi",
+          "note": "Operator photograph of harvested tomatoes; not a dining-room photograph.",
+          "sourcePage": "https://ahirestaurant.co.nz/wp-content/uploads/2026/02/BIG-November-143.jpg"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "@FoodDesk",
+        "title": "Boulcott Street Bistro — wellington restaurant guide",
+        "productName": "Boulcott Street Bistro",
+        "description": "An established bistro in a historic central Wellington cottage.",
+        "sourceUrl": "https://boulcottstreetbistro.co.nz/",
+        "address": "99 Boulcott Street, Wellington, New Zealand",
+        "company": "Boulcott Street Bistro",
+        "utcStartDateTime": "1991-12-31T00:00:00Z",
+        "allDay": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The operator dates this 99 Boulcott Street restaurant to 1991. December 31 is an estimated year anchor, not the building’s construction date or a confirmed first-service day.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "wellington",
+          "Wellington Central"
+        ],
+        "references": [
+          {
+            "url": "https://boulcottstreetbistro.co.nz/about/",
+            "title": "About — Boulcott Street Bistro",
+            "confidence": 90,
+            "reasoning": "The operator dates this 99 Boulcott Street restaurant to 1991. December 31 is an estimated year anchor, not the building’s construction date or a confirmed first-service day. Source excerpt: “Boulcott Street Bistro opened in 1991”"
+          },
+          {
+            "url": "https://boulcottstreetbistro.co.nz/",
+            "title": "Boulcott Street Bistro operator website",
+            "confidence": 90,
+            "reasoning": "Current branch identity and address."
+          }
+        ],
+        "longFormSummary": "<p>An established bistro in a historic central Wellington cottage.</p><p>The operator dates this 99 Boulcott Street restaurant to 1991. December 31 is an estimated year anchor, not the building’s construction date or a confirmed first-service day. Source excerpt: “Boulcott Street Bistro opened in 1991”<cite data-ref=\"https://boulcottstreetbistro.co.nz/about/\"></cite></p>",
+        "sourceWikis": [
+          {
+            "url": "https://boulcottstreetbistro.co.nz/about/",
+            "title": "About — Boulcott Street Bistro",
+            "text": "The operator dates this 99 Boulcott Street restaurant to 1991. December 31 is an estimated year anchor, not the building’s construction date or a confirmed first-service day. Source excerpt: “Boulcott Street Bistro opened in 1991”",
+            "generatedBy": "codex/session",
+            "wiki": {
+              "title": "About — Boulcott Street Bistro",
+              "summary": "The operator dates this 99 Boulcott Street restaurant to 1991. December 31 is an estimated year anchor, not the building’s construction date or a confirmed first-service day.",
+              "body": "The operator dates this 99 Boulcott Street restaurant to 1991. December 31 is an estimated year anchor, not the building’s construction date or a confirmed first-service day. Source excerpt: “Boulcott Street Bistro opened in 1991”",
+              "tags": [
+                "Restaurant"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Boulcott Street Bistro",
+            "menus": [
+              {
+                "url": "https://boulcottstreetbistro.co.nz/menu/",
+                "note": "September 2026 food menu. T-bone is lunch only. Credit card and PayWave surcharge 2%.",
+                "items": [
+                  {
+                    "name": "Natural oyster — each",
+                    "price": 7
+                  },
+                  {
+                    "name": "Battered oyster — each, minimum six",
+                    "price": 8
+                  },
+                  {
+                    "name": "Tuna tartare — small",
+                    "price": 17
+                  },
+                  {
+                    "name": "Tuna tartare — large",
+                    "price": 28
+                  },
+                  {
+                    "name": "Pork and green peppercorn terrine",
+                    "price": 25
+                  },
+                  {
+                    "name": "Yuzu-cured kingfish crudo",
+                    "price": 27
+                  },
+                  {
+                    "name": "Provençal crumbed lamb tongue",
+                    "price": 24
+                  },
+                  {
+                    "name": "French onion soup",
+                    "price": 19
+                  },
+                  {
+                    "name": "Porcini and Portobello tortellini",
+                    "price": 24
+                  },
+                  {
+                    "name": "Crumbed calamari",
+                    "price": 23
+                  },
+                  {
+                    "name": "Lunch T-bone — 300g",
+                    "price": 25
+                  },
+                  {
+                    "name": "Aged fillet of beef",
+                    "price": 54
+                  },
+                  {
+                    "name": "Roasted carrot rose",
+                    "price": 42
+                  },
+                  {
+                    "name": "Chargrilled Toulouse sausage",
+                    "price": 48
+                  },
+                  {
+                    "name": "Pan-fried market fish",
+                    "price": 48
+                  },
+                  {
+                    "name": "Seared lamb rump",
+                    "price": 48
+                  },
+                  {
+                    "name": "Duck confit",
+                    "price": 49
+                  },
+                  {
+                    "name": "Sautéed green beans",
+                    "price": 12
+                  },
+                  {
+                    "name": "Cauliflower gratin",
+                    "price": 14
+                  },
+                  {
+                    "name": "Baby cos",
+                    "price": 11
+                  },
+                  {
+                    "name": "Hand-cut fries — small",
+                    "price": 8
+                  },
+                  {
+                    "name": "Hand-cut fries — large",
+                    "price": 12
+                  },
+                  {
+                    "name": "Confit garlic mash",
+                    "price": 12
+                  },
+                  {
+                    "name": "Roasted baby carrots",
+                    "price": 12
+                  },
+                  {
+                    "name": "Chopped cos salad",
+                    "price": 14
+                  },
+                  {
+                    "name": "Crème brûlée",
+                    "price": 19
+                  },
+                  {
+                    "name": "Ricotta beignet",
+                    "price": 18
+                  },
+                  {
+                    "name": "Meyer lemon tart",
+                    "price": 17
+                  },
+                  {
+                    "name": "Whittaker’s dark chocolate cremeux",
+                    "price": 18
+                  },
+                  {
+                    "name": "Artisan cheese — single",
+                    "price": 16
+                  },
+                  {
+                    "name": "Artisan cheese — triple",
+                    "price": 38
+                  }
+                ],
+                "label": "Bistro menu",
+                "coverage": "published",
+                "currency": "NZD",
+                "documentUrl": "https://boulcottstreetbistro.co.nz/wp-content/uploads/2026/09/BSB-Menu-September-2026-1.pdf"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-09",
+            "pinSourceUrl": "https://boulcottstreetbistro.co.nz/"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Boulcott Street Bistro",
+            "slug": "boulcott-street-bistro",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wellington/top/boulcott-street-bistro-419056668e8457b0.webp",
+            "address": "99 Boulcott Street, Wellington, New Zealand",
+            "cuisine": "European",
+            "checkedAt": "2026-10-09",
+            "imageNote": "Operator exterior photograph published in 2016; historical venue image.",
+            "priceRange": "",
+            "regionSlug": "wellington",
+            "websiteUrl": "https://boulcottstreetbistro.co.nz/",
+            "description": "An established bistro in a historic central Wellington cottage.",
+            "imageCredit": "Photo: Boulcott Street Bistro",
+            "recognition": "Chronopin selection",
+            "neighborhood": "Wellington Central",
+            "imageSourceUrl": "https://boulcottstreetbistro.co.nz/wp-content/uploads/2016/07/Boulcott-st-bistro-night-wellington-restaurant25-years.jpg"
+          },
+          "details": {
+            "name": "Boulcott Street Bistro",
+            "phone": "+64-4-4994199",
+            "checkedAt": "2026-10-09",
+            "hoursNote": "Closing times are not published; confirm holiday service.",
+            "websiteUrl": "https://boulcottstreetbistro.co.nz/",
+            "openingHours": [
+              {
+                "days": "Monday–Friday lunch",
+                "hours": "From 12:00"
+              },
+              {
+                "days": "Monday–Saturday dinner",
+                "hours": "From 17:30"
+              }
+            ],
+            "pinSourceUrl": "https://boulcottstreetbistro.co.nz/",
+            "detailsSourceUrl": "https://boulcottstreetbistro.co.nz/"
+          },
+          "pinSourceUrl": "https://boulcottstreetbistro.co.nz/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wellington/top/boulcott-street-bistro-419056668e8457b0.webp",
+          "credit": "Photo: Boulcott Street Bistro",
+          "note": "Operator exterior photograph published in 2016; historical venue image.",
+          "sourcePage": "https://boulcottstreetbistro.co.nz/wp-content/uploads/2016/07/Boulcott-st-bistro-night-wellington-restaurant25-years.jpg"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "@FoodDesk",
+        "title": "Twenty Seven Steps — christchurch restaurant guide",
+        "productName": "Twenty Seven Steps",
+        "description": "Seasonal European cooking upstairs on historic New Regent Street.",
+        "sourceUrl": "https://twentysevensteps.co.nz/twentyseven",
+        "address": "16 New Regent Street, Christchurch 8011, New Zealand",
+        "company": "Twenty Seven Steps",
+        "utcStartDateTime": "2015-08-31T00:00:00Z",
+        "allDay": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The operator explicitly dates Twenty Seven Steps in Christchurch to August 2015, separately from its founders’ earlier Little Bistro in Akaroa. August 31 is an estimated month anchor.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "christchurch",
+          "Christchurch Central"
+        ],
+        "references": [
+          {
+            "url": "https://twentysevensteps.co.nz/twentyseven",
+            "title": "Twenty Seven Steps — 16–22 New Regent Street",
+            "confidence": 90,
+            "reasoning": "The operator explicitly dates Twenty Seven Steps in Christchurch to August 2015, separately from its founders’ earlier Little Bistro in Akaroa. August 31 is an estimated month anchor. Source excerpt: “opening Twenty Seven Steps in August 2015”"
+          },
+          {
+            "url": "https://twentysevensteps.co.nz/twentyseven",
+            "title": "Twenty Seven Steps operator website",
+            "confidence": 90,
+            "reasoning": "Current branch identity and address."
+          }
+        ],
+        "longFormSummary": "<p>Seasonal European cooking upstairs on historic New Regent Street.</p><p>The operator explicitly dates Twenty Seven Steps in Christchurch to August 2015, separately from its founders’ earlier Little Bistro in Akaroa. August 31 is an estimated month anchor. Source excerpt: “opening Twenty Seven Steps in August 2015”<cite data-ref=\"https://twentysevensteps.co.nz/twentyseven\"></cite></p>",
+        "sourceWikis": [
+          {
+            "url": "https://twentysevensteps.co.nz/twentyseven",
+            "title": "Twenty Seven Steps — 16–22 New Regent Street",
+            "text": "The operator explicitly dates Twenty Seven Steps in Christchurch to August 2015, separately from its founders’ earlier Little Bistro in Akaroa. August 31 is an estimated month anchor. Source excerpt: “opening Twenty Seven Steps in August 2015”",
+            "generatedBy": "codex/session",
+            "wiki": {
+              "title": "Twenty Seven Steps — 16–22 New Regent Street",
+              "summary": "The operator explicitly dates Twenty Seven Steps in Christchurch to August 2015, separately from its founders’ earlier Little Bistro in Akaroa. August 31 is an estimated month anchor.",
+              "body": "The operator explicitly dates Twenty Seven Steps in Christchurch to August 2015, separately from its founders’ earlier Little Bistro in Akaroa. August 31 is an estimated month anchor. Source excerpt: “opening Twenty Seven Steps in August 2015”",
+              "tags": [
+                "Restaurant"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Twenty Seven Steps",
+            "menus": [
+              {
+                "url": "https://twentysevensteps.co.nz/twentyseven",
+                "note": "Prices and dishes from the current operator menu. PayWave/Mastercard/Visa surcharge 1.5%; Amex 2.2%.",
+                "items": [
+                  {
+                    "name": "House bread",
+                    "price": 9.5
+                  },
+                  {
+                    "name": "Olives",
+                    "price": 14.5
+                  },
+                  {
+                    "name": "Soup",
+                    "price": 18
+                  },
+                  {
+                    "name": "Slow-braised beef cheek",
+                    "price": 27.5
+                  },
+                  {
+                    "name": "Sardine escabeche",
+                    "price": 22.5
+                  },
+                  {
+                    "name": "Pork belly",
+                    "price": 26.5
+                  },
+                  {
+                    "name": "Roast baby beets",
+                    "price": 23.5
+                  },
+                  {
+                    "name": "Charred, pickled and puréed cauliflower",
+                    "price": 18.5
+                  },
+                  {
+                    "name": "Canterbury aged beef fillet — 200g",
+                    "price": 63.5
+                  },
+                  {
+                    "name": "Spring risotto — starter",
+                    "price": 21.5
+                  },
+                  {
+                    "name": "Spring risotto — main",
+                    "price": 39.5
+                  },
+                  {
+                    "name": "Fresh fish of the night",
+                    "priceLabel": "Price on application"
+                  },
+                  {
+                    "name": "Celeriac steak",
+                    "price": 42.5
+                  },
+                  {
+                    "name": "Mountain River venison",
+                    "price": 54.5
+                  },
+                  {
+                    "name": "Canterbury lamb rack",
+                    "price": 59.5
+                  },
+                  {
+                    "name": "Dark chocolate tart",
+                    "price": 18.5
+                  },
+                  {
+                    "name": "Sticky date pudding",
+                    "price": 17.5
+                  },
+                  {
+                    "name": "Brown sugar meringue roulade",
+                    "price": 18
+                  },
+                  {
+                    "name": "Vanilla poached pear",
+                    "price": 18.5
+                  },
+                  {
+                    "name": "Affogato",
+                    "priceLabel": "Price on application"
+                  },
+                  {
+                    "name": "Cheese board",
+                    "priceLabel": "Price on application"
+                  }
+                ],
+                "label": "Seasonal menu",
+                "coverage": "published",
+                "currency": "NZD"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-09",
+            "pinSourceUrl": "https://twentysevensteps.co.nz/twentyseven"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Twenty Seven Steps",
+            "slug": "twenty-seven-steps",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/christchurch/top/twenty-seven-steps-03f6c2d3cb0a0d2a.webp",
+            "address": "16 New Regent Street, Christchurch 8011, New Zealand",
+            "cuisine": "European",
+            "checkedAt": "2026-10-09",
+            "imageNote": "Official restaurant photograph.",
+            "priceRange": "",
+            "regionSlug": "christchurch",
+            "websiteUrl": "https://twentysevensteps.co.nz/twentyseven",
+            "description": "Seasonal European cooking upstairs on historic New Regent Street.",
+            "imageCredit": "Photo: Twenty Seven Steps",
+            "recognition": "Chronopin selection",
+            "neighborhood": "Christchurch Central",
+            "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/686dcae34f51c94ebcd1b7d6/a317d68c-6f67-4f5c-9cef-3c2359ed97e8/27Steps_night_finals_print+%2817+of+34%29.JPG"
+          },
+          "details": {
+            "name": "Twenty Seven Steps",
+            "phone": "+64-3-3662727",
+            "checkedAt": "2026-10-09",
+            "hoursNote": "Closed public holidays and Christmas Eve; closing time not published.",
+            "websiteUrl": "https://twentysevensteps.co.nz/twentyseven",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "From 17:00"
+              }
+            ],
+            "pinSourceUrl": "https://twentysevensteps.co.nz/twentyseven",
+            "detailsSourceUrl": "https://twentysevensteps.co.nz/twentyseven"
+          },
+          "pinSourceUrl": "https://twentysevensteps.co.nz/twentyseven"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/christchurch/top/twenty-seven-steps-03f6c2d3cb0a0d2a.webp",
+          "credit": "Photo: Twenty Seven Steps",
+          "note": "Official restaurant photograph.",
+          "sourcePage": "https://images.squarespace-cdn.com/content/v1/686dcae34f51c94ebcd1b7d6/a317d68c-6f67-4f5c-9cef-3c2359ed97e8/27Steps_night_finals_print+%2817+of+34%29.JPG"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "@FoodDesk",
+        "title": "Alcalde — guadalajara restaurant guide",
+        "productName": "Alcalde",
+        "description": "Contemporary Mexican cooking with a seasonal tasting experience.",
+        "sourceUrl": "https://alcalde.com.mx/",
+        "address": "Avenida México 2903, Vallarta Norte, Guadalajara 44690, Jalisco, Mexico",
+        "company": "Alcalde",
+        "utcStartDateTime": "2013-12-31T00:00:00Z",
+        "allDay": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The operator dates Alcalde at Avenida México 2903 to 2013. December 31 is an estimated year anchor. Independent accounts differ on January 13 versus January 16, so no exact January day is asserted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "guadalajara",
+          "Vallarta Norte"
+        ],
+        "references": [
+          {
+            "url": "https://alcalde.com.mx/",
+            "title": "Restaurante Alcalde",
+            "confidence": 90,
+            "reasoning": "The operator dates Alcalde at Avenida México 2903 to 2013. December 31 is an estimated year anchor. Independent accounts differ on January 13 versus January 16, so no exact January day is asserted. Source excerpt: “Alcalde nace en el año 2013”"
+          },
+          {
+            "url": "https://alcalde.com.mx/",
+            "title": "Alcalde operator website",
+            "confidence": 90,
+            "reasoning": "Current branch identity and address."
+          }
+        ],
+        "longFormSummary": "<p>Contemporary Mexican cooking with a seasonal tasting experience.</p><p>The operator dates Alcalde at Avenida México 2903 to 2013. December 31 is an estimated year anchor. Independent accounts differ on January 13 versus January 16, so no exact January day is asserted. Source excerpt: “Alcalde nace en el año 2013”<cite data-ref=\"https://alcalde.com.mx/\"></cite></p>",
+        "sourceWikis": [
+          {
+            "url": "https://alcalde.com.mx/",
+            "title": "Restaurante Alcalde",
+            "text": "The operator dates Alcalde at Avenida México 2903 to 2013. December 31 is an estimated year anchor. Independent accounts differ on January 13 versus January 16, so no exact January day is asserted. Source excerpt: “Alcalde nace en el año 2013”",
+            "generatedBy": "codex/session",
+            "wiki": {
+              "title": "Restaurante Alcalde",
+              "summary": "The operator dates Alcalde at Avenida México 2903 to 2013. December 31 is an estimated year anchor. Independent accounts differ on January 13 versus January 16, so no exact January day is asserted.",
+              "body": "The operator dates Alcalde at Avenida México 2903 to 2013. December 31 is an estimated year anchor. Independent accounts differ on January 13 versus January 16, so no exact January day is asserted. Source excerpt: “Alcalde nace en el año 2013”",
+              "tags": [
+                "Restaurant"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Alcalde",
+            "menus": [
+              {
+                "url": "https://www.opentable.com.mx/r/alcalde-guadalajara",
+                "note": "Current branch reservation experience. Individual courses vary and are not published. Operator menu PDFs return 404; the January 2024 à la carte listing is too old to present as current.",
+                "items": [
+                  {
+                    "name": "Ten-course tasting menu — per person",
+                    "price": 3150
+                  }
+                ],
+                "label": "Ten-course tasting experience",
+                "coverage": "sample",
+                "currency": "MXN"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-09",
+            "pinSourceUrl": "https://alcalde.com.mx/"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Alcalde",
+            "slug": "alcalde",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guadalajara/top/alcalde-97c4bc8daf758124.webp",
+            "address": "Avenida México 2903, Vallarta Norte, Guadalajara 44690, Jalisco, Mexico",
+            "cuisine": "Mexican",
+            "checkedAt": "2026-10-09",
+            "imageNote": "Official restaurant photograph.",
+            "priceRange": "",
+            "regionSlug": "guadalajara",
+            "websiteUrl": "https://alcalde.com.mx/",
+            "description": "Contemporary Mexican cooking with a seasonal tasting experience.",
+            "imageCredit": "Photo: Alcalde",
+            "recognition": "Chronopin selection",
+            "neighborhood": "Vallarta Norte",
+            "imageSourceUrl": "https://alcalde.com.mx/images/ALC_2107_0100-min.png"
+          },
+          "details": {
+            "name": "Alcalde",
+            "phone": "+52-33-36157400",
+            "checkedAt": "2026-10-09",
+            "hoursNote": "18:00–19:00 drinks only. Tasting-menu service 14:00–16:30 and 19:00–22:00; Sunday closed.",
+            "websiteUrl": "https://alcalde.com.mx/",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "13:30–23:00"
+              }
+            ],
+            "pinSourceUrl": "https://alcalde.com.mx/",
+            "detailsSourceUrl": "https://alcalde.com.mx/"
+          },
+          "pinSourceUrl": "https://alcalde.com.mx/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guadalajara/top/alcalde-97c4bc8daf758124.webp",
+          "credit": "Photo: Alcalde",
+          "note": "Official restaurant photograph.",
+          "sourcePage": "https://alcalde.com.mx/images/ALC_2107_0100-min.png"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "@FoodDesk",
+        "title": "Pangea — monterrey restaurant guide",
+        "productName": "Pangea",
+        "description": "Contemporary cooking in Parque Arboleda, in the Monterrey metropolitan area.",
+        "sourceUrl": "https://restaurantepangea.com/",
+        "address": "Parque Arboleda, Avenida Roble 660, Local I-101, Valle del Campestre, San Pedro Garza García, Nuevo León, Mexico",
+        "company": "Pangea",
+        "utcStartDateTime": "2018-01-11T00:00:00Z",
+        "allDay": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The post-opening report explicitly dates Pangea’s current Arboleda location to January 11, 2018. This is the current branch relocation, not the original Bosques del Valle founding.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "monterrey",
+          "San Pedro Garza García"
+        ],
+        "references": [
+          {
+            "url": "https://foodandwineespanol.com/actualidad/el-nuevo-pangea/",
+            "title": "El nuevo Pangea — Food & Wine en Español",
+            "confidence": 90,
+            "reasoning": "The post-opening report explicitly dates Pangea’s current Arboleda location to January 11, 2018. This is the current branch relocation, not the original Bosques del Valle founding. Source excerpt: “cuya apertura se realizó el 11 de enero de 2018 en Arboleda”"
+          },
+          {
+            "url": "https://restaurantepangea.com/",
+            "title": "Pangea operator website",
+            "confidence": 90,
+            "reasoning": "Current branch identity and address."
+          }
+        ],
+        "longFormSummary": "<p>Contemporary cooking in Parque Arboleda, in the Monterrey metropolitan area.</p><p>The post-opening report explicitly dates Pangea’s current Arboleda location to January 11, 2018. This is the current branch relocation, not the original Bosques del Valle founding. Source excerpt: “cuya apertura se realizó el 11 de enero de 2018 en Arboleda”<cite data-ref=\"https://foodandwineespanol.com/actualidad/el-nuevo-pangea/\"></cite></p>",
+        "sourceWikis": [
+          {
+            "url": "https://foodandwineespanol.com/actualidad/el-nuevo-pangea/",
+            "title": "El nuevo Pangea — Food & Wine en Español",
+            "text": "The post-opening report explicitly dates Pangea’s current Arboleda location to January 11, 2018. This is the current branch relocation, not the original Bosques del Valle founding. Source excerpt: “cuya apertura se realizó el 11 de enero de 2018 en Arboleda”",
+            "generatedBy": "codex/session",
+            "wiki": {
+              "title": "El nuevo Pangea — Food & Wine en Español",
+              "summary": "The post-opening report explicitly dates Pangea’s current Arboleda location to January 11, 2018. This is the current branch relocation, not the original Bosques del Valle founding.",
+              "body": "The post-opening report explicitly dates Pangea’s current Arboleda location to January 11, 2018. This is the current branch relocation, not the original Bosques del Valle founding. Source excerpt: “cuya apertura se realizó el 11 de enero de 2018 en Arboleda”",
+              "tags": [
+                "Restaurant"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Pangea",
+            "menus": [
+              {
+                "url": "https://restaurantepangea.com/menu-restaurante-pangea/",
+                "note": "À la carte food selection; separate set menus are not reproduced. Includes 16% VAT.",
+                "items": [
+                  {
+                    "name": "Tomato tower",
+                    "price": 285
+                  },
+                  {
+                    "name": "Octopus and shrimp aguachile",
+                    "price": 435
+                  },
+                  {
+                    "name": "Bluefin tuna tartare",
+                    "price": 435
+                  },
+                  {
+                    "name": "Kampachi tataki",
+                    "price": 485
+                  },
+                  {
+                    "name": "Ensenada mussels",
+                    "price": 385
+                  },
+                  {
+                    "name": "Crab gratin",
+                    "price": 565
+                  },
+                  {
+                    "name": "Angus fillet tartare",
+                    "price": 395
+                  },
+                  {
+                    "name": "Foie gras terrine",
+                    "price": 795
+                  },
+                  {
+                    "name": "Green bean, asparagus and artichoke salad",
+                    "price": 285
+                  },
+                  {
+                    "name": "Beetroot and burrata",
+                    "price": 295
+                  },
+                  {
+                    "name": "Camembert soup",
+                    "price": 375
+                  },
+                  {
+                    "name": "Crispy Brie salad",
+                    "price": 325
+                  },
+                  {
+                    "name": "Fig salad",
+                    "price": 345
+                  },
+                  {
+                    "name": "Sweet corn soup",
+                    "price": 295
+                  },
+                  {
+                    "name": "Spaghetti with scampi",
+                    "price": 425
+                  },
+                  {
+                    "name": "Bucatini",
+                    "price": 425
+                  },
+                  {
+                    "name": "Zarandeado fish",
+                    "price": 785
+                  },
+                  {
+                    "name": "Roasted sweet potato",
+                    "price": 395
+                  },
+                  {
+                    "name": "Grilled prawns",
+                    "price": 655
+                  },
+                  {
+                    "name": "Confit pork",
+                    "price": 545
+                  },
+                  {
+                    "name": "Octopus",
+                    "price": 495
+                  },
+                  {
+                    "name": "Braised cabrito",
+                    "price": 595
+                  },
+                  {
+                    "name": "Fish rice",
+                    "price": 645
+                  },
+                  {
+                    "name": "Angus fillet",
+                    "price": 745
+                  },
+                  {
+                    "name": "Glazed salmon",
+                    "price": 585
+                  },
+                  {
+                    "name": "Angus ribeye",
+                    "price": 1115
+                  },
+                  {
+                    "name": "Roast chicken",
+                    "price": 395
+                  },
+                  {
+                    "name": "Rossini fillet",
+                    "price": 1175
+                  },
+                  {
+                    "name": "Duck breast",
+                    "price": 695
+                  },
+                  {
+                    "name": "SRF American Wagyu New York",
+                    "price": 1895
+                  }
+                ],
+                "label": "À la carte",
+                "coverage": "sample",
+                "currency": "MXN",
+                "documentUrl": "https://drive.google.com/file/d/1d1fZu-hMRWTcHkiAMozmSdOSlx_OIb6S/view"
+              },
+              {
+                "url": "https://restaurantepangea.com/menu-restaurante-pangea/",
+                "note": "Food items from the linked dessert menu. Includes 16% VAT.",
+                "items": [
+                  {
+                    "name": "Chocolate financier",
+                    "price": 295
+                  },
+                  {
+                    "name": "Apple millefeuille",
+                    "price": 265
+                  },
+                  {
+                    "name": "Corn chiffon",
+                    "price": 295
+                  },
+                  {
+                    "name": "Raspberry and lychee pavlova",
+                    "price": 265
+                  },
+                  {
+                    "name": "Warm chocolate cake",
+                    "price": 295
+                  },
+                  {
+                    "name": "Sticky fig cake",
+                    "price": 265
+                  },
+                  {
+                    "name": "Mamey mostachón",
+                    "price": 295
+                  },
+                  {
+                    "name": "Ice creams and sorbets — three choices",
+                    "price": 245
+                  },
+                  {
+                    "name": "Seasonal mango",
+                    "price": 285
+                  }
+                ],
+                "label": "Desserts",
+                "coverage": "published",
+                "currency": "MXN",
+                "documentUrl": "https://drive.google.com/file/d/1_wix1Bl2_2yzmRiMnAQEHaIraaQvF_E5/view"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-09",
+            "pinSourceUrl": "https://restaurantepangea.com/"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Pangea",
+            "slug": "pangea",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/monterrey/top/pangea-71099ef0cd43a84f.webp",
+            "address": "Parque Arboleda, Avenida Roble 660, Local I-101, Valle del Campestre, San Pedro Garza García, Nuevo León, Mexico",
+            "cuisine": "Contemporary",
+            "checkedAt": "2026-10-09",
+            "imageNote": "Official restaurant photograph.",
+            "priceRange": "",
+            "regionSlug": "monterrey",
+            "websiteUrl": "https://restaurantepangea.com/",
+            "description": "Contemporary cooking in Parque Arboleda, in the Monterrey metropolitan area.",
+            "imageCredit": "Photo: Pangea",
+            "recognition": "Chronopin selection",
+            "neighborhood": "San Pedro Garza García",
+            "imageSourceUrl": "https://restaurantepangea.com/wp-content/uploads/2023/11/EspacioComedor10-scaled.jpg"
+          },
+          "details": {
+            "name": "Pangea",
+            "phone": "+52-81-81146601",
+            "checkedAt": "2026-10-09",
+            "hoursNote": "",
+            "websiteUrl": "https://restaurantepangea.com/",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "13:00–00:00"
+              },
+              {
+                "days": "Sunday",
+                "hours": "13:00–18:00"
+              }
+            ],
+            "pinSourceUrl": "https://restaurantepangea.com/",
+            "detailsSourceUrl": "https://restaurantepangea.com/"
+          },
+          "pinSourceUrl": "https://restaurantepangea.com/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/monterrey/top/pangea-71099ef0cd43a84f.webp",
+          "credit": "Photo: Pangea",
+          "note": "Official restaurant photograph.",
+          "sourcePage": "https://restaurantepangea.com/wp-content/uploads/2023/11/EspacioComedor10-scaled.jpg"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "@FoodDesk",
+        "title": "Rosetta — mexico-city restaurant guide",
+        "productName": "Rosetta",
+        "description": "Seasonal cooking in a Roma Norte townhouse, with an evolving menu.",
+        "sourceUrl": "https://rosetta.com.mx/",
+        "address": "Colima 166, Roma Norte, Mexico City, Mexico",
+        "company": "Rosetta",
+        "utcStartDateTime": "2010-12-31T00:00:00Z",
+        "allDay": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The 2014 report explicitly dates Rosetta to 2010 and identifies Colima 166. December 31 is an estimated year anchor, not a research date or opening of a separate bakery.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "mexico-city",
+          "Roma Norte"
+        ],
+        "references": [
+          {
+            "url": "https://www.gastroactitud.com/pista/elena-reygadas-mejor-cocinera-de-latinoamerica-2014/",
+            "title": "Elena Reygadas, mejor cocinera de Latinoamérica 2014",
+            "confidence": 90,
+            "reasoning": "The 2014 report explicitly dates Rosetta to 2010 and identifies Colima 166. December 31 is an estimated year anchor, not a research date or opening of a separate bakery. Source excerpt: “En 2010, tras volver a México,  abrió Rosetta”"
+          },
+          {
+            "url": "https://rosetta.com.mx/",
+            "title": "Rosetta operator website",
+            "confidence": 90,
+            "reasoning": "Current branch identity and address."
+          }
+        ],
+        "longFormSummary": "<p>Seasonal cooking in a Roma Norte townhouse, with an evolving menu.</p><p>The 2014 report explicitly dates Rosetta to 2010 and identifies Colima 166. December 31 is an estimated year anchor, not a research date or opening of a separate bakery. Source excerpt: “En 2010, tras volver a México,  abrió Rosetta”<cite data-ref=\"https://www.gastroactitud.com/pista/elena-reygadas-mejor-cocinera-de-latinoamerica-2014/\"></cite></p>",
+        "sourceWikis": [
+          {
+            "url": "https://www.gastroactitud.com/pista/elena-reygadas-mejor-cocinera-de-latinoamerica-2014/",
+            "title": "Elena Reygadas, mejor cocinera de Latinoamérica 2014",
+            "text": "The 2014 report explicitly dates Rosetta to 2010 and identifies Colima 166. December 31 is an estimated year anchor, not a research date or opening of a separate bakery. Source excerpt: “En 2010, tras volver a México,  abrió Rosetta”",
+            "generatedBy": "codex/session",
+            "wiki": {
+              "title": "Elena Reygadas, mejor cocinera de Latinoamérica 2014",
+              "summary": "The 2014 report explicitly dates Rosetta to 2010 and identifies Colima 166. December 31 is an estimated year anchor, not a research date or opening of a separate bakery.",
+              "body": "The 2014 report explicitly dates Rosetta to 2010 and identifies Colima 166. December 31 is an estimated year anchor, not a research date or opening of a separate bakery. Source excerpt: “En 2010, tras volver a México,  abrió Rosetta”",
+              "tags": [
+                "Restaurant"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Rosetta",
+            "menus": [
+              {
+                "url": "https://rosetta.com.mx/menu",
+                "note": "All named dishes from the current Spanish operator menu. Prices are not published; confirm dishes and prices directly.",
+                "items": [
+                  {
+                    "name": "Sardinas encurtidas, pesto de hierbas y cebolla morada",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Callo margarita y leche de tigre de maíz cacahuazintle",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Ensalada de peras, queso pecorino y hoja de aguacate",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Endivias, nogada y granada",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tomatillos, nopales, piloncillo, queso de Ocosingo y chile meco",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Ensalada de ejotes, habas, papa y parmesano",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pan de maíz y ceniza con mantequilla de hormigas chicatanas",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Mole blanco y zanahorias fermentadas",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tacos de col rizada, pipián de pistaches y romeritos",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tamal de elote y huitlacoche con crema ahumada",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Minestrone de verduras",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chileatole de maíz tierno, epazote y aguacate",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Gnocchi de papa, broccolini, flor de nabo y anchoas",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Orecchiette de trigo sarraceno con frijoles ahumados",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Risotto con esquites y queso cotija",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pansotti de papa y parmesano con hongos duraznillo",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tagliolini de chile cascabel, escamoles y caldo de camarón",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tagliatelle, morillas y paté de higaditos de pollo",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tagliatelle con salchicha italiana y chile de árbol",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Ravioles de short rib, zanahoria y chile serrano",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tamal de camote, salsa macha y suero de leche",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Alcachofa de Jerusalén, romesco rojo, col de Bruselas y verdolagas",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Huachinango, puré de piña y xoconostle",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Robalo en costra de sal, verdolagas y salicornia",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Filete de cordero, puré de berenjena y pimientos encurtidos",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cabeza de lomo de cerdo, entomatado de hormigas chicatanas y verdolagas",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nicuatole de tamarindo, piloncillo y chile meco",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Peras, flor de saúco y estragón",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hierbas frescas, helado de romero y aceite de oliva",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Gelatina de miel Tsitsilché, durazno y helado de mantequilla avellanada",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hoja santa y cacao criollo blanco",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pastel tres leches de mamey y pixtle",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Seasonal menu",
+                "coverage": "published",
+                "currency": "MXN"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-09",
+            "pinSourceUrl": "https://rosetta.com.mx/"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Rosetta",
+            "slug": "rosetta",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/mexico-city/top/rosetta-9030eefe32fa42f5.webp",
+            "address": "Colima 166, Roma Norte, Mexico City, Mexico",
+            "cuisine": "Contemporary",
+            "checkedAt": "2026-10-09",
+            "imageNote": "Official restaurant photograph.",
+            "priceRange": "",
+            "regionSlug": "mexico-city",
+            "websiteUrl": "https://rosetta.com.mx/",
+            "description": "Seasonal cooking in a Roma Norte townhouse, with an evolving menu.",
+            "imageCredit": "Photo: Rosetta",
+            "recognition": "Chronopin selection",
+            "neighborhood": "Roma Norte",
+            "imageSourceUrl": "https://rosetta.com.mx/wp-content/uploads/2025/06/rosetta_home_01.webp"
+          },
+          "details": {
+            "name": "Rosetta",
+            "phone": "+52-55-55337804",
+            "checkedAt": "2026-10-09",
+            "hoursNote": "No complete service hours verified on the operator contact page.",
+            "websiteUrl": "https://rosetta.com.mx/",
+            "openingHours": [],
+            "pinSourceUrl": "https://rosetta.com.mx/",
+            "detailsSourceUrl": "https://rosetta.com.mx/"
+          },
+          "pinSourceUrl": "https://rosetta.com.mx/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/mexico-city/top/rosetta-9030eefe32fa42f5.webp",
+          "credit": "Photo: Rosetta",
+          "note": "Official restaurant photograph.",
+          "sourcePage": "https://rosetta.com.mx/wp-content/uploads/2025/06/rosetta_home_01.webp"
+        }
+      ]
+    }
+  ],
+  "checkedAt": "2026-10-29"
+}

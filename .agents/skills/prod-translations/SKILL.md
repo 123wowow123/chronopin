@@ -35,6 +35,7 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 | **Sync All Due Pins** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py` |
 | **Sync with Batch Limit** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --limit 50` |
 | **Sync Specific Pin** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
+| **Sync Specific Locale** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --locale de` |
 | **Preview Due Pins** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --dry-run` |
 | **Audit Content for Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py` |
 | **Clean Accidental Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py --apply` |
@@ -60,7 +61,7 @@ Run the translation health check to inspect how many pins require translation up
 ```bash
 python3 .agents/skills/prod-translations/scripts/check_translations.py
 ```
-This inspects the production PostgreSQL database via `scripts/prod-sql.sh`, counts active pins, validates hashes, and reports any leaks.
+This queries both the production PostgreSQL database (`scripts/prod-sql.sh`) and `GET /api/admin/translations` to count active pins, break down rows by state (`current`, `outdated`, `incomplete`, `missing`), and verify zero content leaks across all 15 localized tracking strings.
 
 ### Step 2: Execute Sync
 Run the automated synchronization script:
@@ -68,13 +69,13 @@ Run the automated synchronization script:
 python3 .agents/skills/prod-translations/scripts/sync_translations.py
 ```
 The script automatically:
-1. Identifies pins with missing or outdated translations.
-2. Extracts English text fragments while preserving HTML structure and `<cite data-ref="...">` citations.
-3. Records model tracking metadata into the backing `SourceWiki` records (and never pin content).
-4. Translates across all 15 locales with caching in `.scrape/translations-cache/`.
+1. Queries `GET /api/admin/translations` to identify pins with `missing`, `outdated`, or `incomplete` translations, and translates only the due locales and edited fields (`changed`).
+2. Extracts English text fragments while preserving HTML structure, inline tag surrounding whitespace (`<strong>`, `<em>`, `<a>`, `<cite>`), and `<cite data-ref="...">` citations.
+3. Records model tracking metadata into the backing `SourceWiki` records (and never pin content) without marking unbuilt sources as `ready` or bumping `wikiVersion` from `0`.
+4. Translates via HTTP `POST` across due locales with caching in `.scrape/translations-cache/`, never falling back to untranslated English on failure.
 5. Fixes Thai Buddhist era years back to the Gregorian calendar (`+543` offset fix).
-6. Handles pseudo-tag escaping (e.g., song title `<3` escaped to `&lt;3`).
-7. Pushes translations in batches of 150 to `POST /api/admin/translations` using the authenticated admin token (refreshed automatically via `/auth/local`).
+6. Escapes literal `<` and `>` inside text nodes (`&lt;` / `&gt;`) and validates `wholeTranslation` completeness before queueing.
+7. Pushes translations in batches of 150 to `POST /api/admin/translations` using the authenticated admin token (refreshed automatically via `/auth/local` from `.env.local`).
 
 ### Step 3: Verification & Read-Back
 1. **Database Check:**
@@ -98,13 +99,15 @@ The script automatically:
    Verify admin sources view (`GET /api/pins/:id/sources`):
    ```bash
    python3 -c "
-   import urllib.request, json
-   token = open('.scrape/admin.token').read().strip()
+   import sys, urllib.request, json
+   sys.path.insert(0, '.agents/skills/prod-translations/scripts')
+   from check_translations import ensure_admin_token
+   token = ensure_admin_token()
    req = urllib.request.Request('https://www.chronopin.com/api/pins/15860/sources', headers={'Authorization': f'Bearer {token}'})
    data = json.loads(urllib.request.urlopen(req).read())
    for s in data.get('sources', []):
        if s.get('wiki'):
-           print('Wiki summary:', s['wiki'].get('summary'))
+           print('Wiki summary:', s['wiki'].get('summary'), '| summaryStale:', s.get('summaryStale'))
    "
    ```
 

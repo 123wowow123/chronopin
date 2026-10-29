@@ -49,6 +49,17 @@ export default function TermsPage() {
         Listings are offers between readers. {OPERATOR} is not a party to any sale, does not handle payment and does not guarantee any item, buyer or seller. Deal with each other carefully and lawfully.
       </P>
 
+      <H2>Paid plans, cancellation and refunds</H2>
+      <P>
+        Some features, such as the ad-free plan and Premium, are paid. Prices are shown before you pay. Payments are processed by Stripe, and {OPERATOR} does not see or store your full card or wallet details.
+      </P>
+      <UL>
+        <li><strong>Renewal and cancellation:</strong> paid plans renew each billing period until you cancel. You can cancel at any time from your account&rsquo;s billing page or by emailing {mail}. Cancelling stops the next renewal; you keep the plan until the end of the period you have paid for.</li>
+        <li><strong>Refunds:</strong> if you were charged by mistake, charged twice, or you ask within 7 days of a first charge or a renewal and have not used the paid features, email {mail} and we will refund that charge in full. Otherwise payments are non-refundable and we do not refund part of a billing period, except where the law of your country requires it.</li>
+        <li><strong>How refunds are paid:</strong> refunds go back to the original payment method, usually within 5&ndash;10 business days of approval, depending on your bank or wallet.</li>
+        <li><strong>Price changes:</strong> if we change a price, we will tell you before your next renewal, and you can cancel before it takes effect.</li>
+      </UL>
+
       <H2>Ads, shopping and other sites</H2>
       <P>
         The site shows ads and links to shops, ticket sellers, prediction markets and other sites. Some of these links earn {OPERATOR} a commission. We do not control those sites and are not responsible for their content, products or terms.
