@@ -497,3 +497,6 @@ The rest don't have scores in the sources the backfill reads (Steam, Wikidata, O
 
 The only way to get more would be adding scores by hand from Metacritic or OpenCritic pages. Metacritic blocks scripts, so that means reading them in Chrome. I haven't started that.
 
+
+
+build span chart display for construction pins with a timeline and show

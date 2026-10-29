@@ -48,7 +48,7 @@ export async function personPage(slug: string, locale: Locale = DEFAULT_LOCALE):
   cacheTag(TAGS.people, TAGS.timeline);
   const id = await Person.idBySlug(slug);
   if (id == null) return null;
-  const [profile, pinIds, trades, tradeSummary, committees, campaigns] = await Promise.all([PersonWiki.compiled(id), Person.pinIds(id, PINS), PersonTrade.list(id, TRADES_SHOWN), PersonTrade.summary(id), PersonCommittee.forPerson(id), PersonCampaign.forPerson(id)]);
+  const [profile, pinIds, trades, tradeSummary, committees, campaigns] = await Promise.all([PersonWiki.compiled(id), Person.pinIds(id, PINS), PersonTrade.preview(id, TRADES_SHOWN), PersonTrade.summary(id), PersonCommittee.forPerson(id), PersonCampaign.forPerson(id)]);
   if (!profile) return null;
   const holdings = await PersonHoldings.forPerson(id, profile.name);
   const loaded = pinIds.length ? toJson<PinJson[]>((await Pins.queryByIds(pinIds)).pins) : [];

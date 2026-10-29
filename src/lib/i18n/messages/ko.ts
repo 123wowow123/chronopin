@@ -2325,6 +2325,7 @@ const ko: Messages = {
       volume: '신고 금액',
       volumeAbout: '각 범위의 하한과 상한의 합계',
       topTickers: '가장 많이 거래된 종목',
+      latest: '거래가 있었던 최근 5일',
       period: '{from}~{to} 거래',
       recent: '최근 2개월',
       date: '거래일',

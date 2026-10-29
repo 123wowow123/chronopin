@@ -2330,6 +2330,7 @@ const fr: Messages = {
       volume: 'Valeur déclarée',
       volumeAbout: 'Somme des bornes basse et haute de chaque fourchette',
       topTickers: 'Les plus échangées',
+      latest: '5 derniers jours avec des transactions',
       period: 'Opérations du {from} au {to}',
       recent: '2 derniers mois',
       date: 'Opération',

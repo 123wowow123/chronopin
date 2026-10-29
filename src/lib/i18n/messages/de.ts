@@ -2330,6 +2330,7 @@ const de: Messages = {
       volume: 'Gemeldeter Wert',
       volumeAbout: 'Summe der unteren und oberen Grenzen aller Spannen',
       topTickers: 'Am häufigsten gehandelt',
+      latest: 'Letzte 5 Tage mit Transaktionen',
       period: 'Geschäfte vom {from} bis {to}',
       recent: 'Letzte 2 Monate',
       date: 'Gehandelt',

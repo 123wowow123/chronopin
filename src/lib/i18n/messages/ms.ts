@@ -2334,6 +2334,7 @@ const ms: Messages = {
       volume: 'Nilai dilaporkan',
       volumeAbout: 'Jumlah hujung bawah dan atas bagi setiap julat',
       topTickers: 'Paling banyak didagangkan',
+      latest: '5 hari terakhir dengan urus niaga',
       period: 'Dagangan dari {from} hingga {to}',
       recent: '2 bulan lepas',
       date: 'Didagangkan',

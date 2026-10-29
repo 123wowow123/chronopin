@@ -2330,6 +2330,7 @@ const es: Messages = {
       volume: 'Valor declarado',
       volumeAbout: 'Suma de los extremos bajo y alto de cada rango',
       topTickers: 'Más negociadas',
+      latest: 'Últimos 5 días con operaciones',
       period: 'Operaciones del {from} al {to}',
       recent: 'Últimos 2 meses',
       date: 'Operada',

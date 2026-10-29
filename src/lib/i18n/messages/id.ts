@@ -2334,6 +2334,7 @@ const id: Messages = {
       volume: 'Nilai yang dilaporkan',
       volumeAbout: 'Jumlah batas bawah dan atas dari setiap rentang',
       topTickers: 'Paling banyak diperdagangkan',
+      latest: '5 hari terakhir dengan transaksi',
       period: 'Transaksi dari {from} sampai {to}',
       recent: '2 bulan terakhir',
       date: 'Tanggal transaksi',

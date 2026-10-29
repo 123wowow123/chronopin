@@ -2702,6 +2702,7 @@ const ar: Messages = {
       volume: 'القيمة المُعلنة',
       volumeAbout: 'مجموع الحدّين الأدنى والأعلى لكل نطاق',
       topTickers: 'الأكثر تداولًا',
+      latest: 'آخر 5 أيام شهدت معاملات',
       period: 'صفقات من {from} إلى {to}',
       recent: 'آخر شهرين',
       date: 'تاريخ الصفقة',

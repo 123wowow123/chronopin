@@ -2333,6 +2333,7 @@ const vi: Messages = {
       volume: 'Giá trị khai báo',
       volumeAbout: 'Tổng cận dưới và cận trên của mọi khoảng',
       topTickers: 'Giao dịch nhiều nhất',
+      latest: '5 ngày gần nhất có giao dịch',
       period: 'Giao dịch từ {from} đến {to}',
       recent: '2 tháng qua',
       date: 'Ngày giao dịch',

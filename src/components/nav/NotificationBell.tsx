@@ -394,18 +394,32 @@ function TradeDay({ items, day, renderRow, expanded, wide, onNavigate }: { items
   const open = expanded ?? openState;
   const listId = useId();
   const sum = (pick: (n: Notification) => number | null) => items.reduce((total, n) => total + (pick(n) ?? 0), 0);
-  // Tickers ranked by how many people traded them, then by total dollar value.
-  const tickers = (pick: (n: Notification) => Record<string, number> | null) => {
+  // Include tickers even when their disclosed dollar value is unavailable.
+  // Rank by how many people traded them, then by total dollar value.
+  const tickers = (side: 'Buy' | 'Sell') => {
     const stats = new Map<string, { people: Set<string>; value: number }>();
     for (const n of items) {
-      for (const [ticker, value] of Object.entries(pick(n) ?? {})) {
+      const values = n[`trade${side}Values`] ?? {};
+      for (const ticker of new Set([...(n[`trade${side}Tickers`] ?? []), ...Object.keys(values)])) {
         const s = stats.get(ticker) ?? { people: new Set<string>(), value: 0 };
         s.people.add(n.personName ?? String(n.id));
-        s.value += value;
+        s.value += values[ticker] ?? 0;
         stats.set(ticker, s);
       }
     }
     return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value).map(([ticker, s]) => [ticker, s.people.size] as const);
+  };
+  // Bonds, funds and private holdings count as trades too, but have no ticker.
+  const assets = (side: 'Buy' | 'Sell') => {
+    const stats = new Map<string, Set<string>>();
+    for (const n of items) {
+      for (const asset of n[`trade${side}Assets`] ?? []) {
+        const people = stats.get(asset) ?? new Set<string>();
+        people.add(n.personName ?? String(n.id));
+        stats.set(asset, people);
+      }
+    }
+    return [...stats].sort((a, b) => b[1].size - a[1].size || a[0].localeCompare(b[0])).map(([asset, people]) => [asset, people.size] as const);
   };
   // Tickers a filing trades inside a sector one of the member's committees oversees.
   const conflicts = new Map<string, Set<string>>();
@@ -417,8 +431,8 @@ function TradeDay({ items, day, renderRow, expanded, wide, onNavigate }: { items
     }
   }
   const tiles = [
-    ['tradeBuys', sum((n) => n.tradeBuys), tickers((n) => n.tradeBuyValues), 'text-success-soft ring-success/40'],
-    ['tradeSells', sum((n) => n.tradeSells), tickers((n) => n.tradeSellValues), 'text-danger-soft ring-danger/40'],
+    ['tradeBuys', sum((n) => n.tradeBuys), tickers('Buy'), 'text-success-soft ring-success/40', assets('Buy')],
+    ['tradeSells', sum((n) => n.tradeSells), tickers('Sell'), 'text-danger-soft ring-danger/40', assets('Sell')],
   ] as const;
   return (
     <div className="text-sm">
@@ -438,16 +452,17 @@ function TradeDay({ items, day, renderRow, expanded, wide, onNavigate }: { items
           </button>
         )}
         <span className="grid grid-cols-2 gap-2">
-          {tiles.map(([key, count, all, tone]) => {
+          {tiles.map(([key, count, all, tone, allAssets]) => {
             // Collapsed: only tickers more than one person traded.
             const list = open ? all : all.filter(([, people]) => people > 1);
+            const assetList = open ? allAssets : allAssets.filter(([, people]) => people > 1);
             return (
             <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
               <span className={`flex items-baseline justify-between gap-2 font-medium ${wide ? 'text-sm' : 'text-xs'}`}>
                 <span className={wide ? 'relative -top-0.5' : undefined}>{t(`notifications.${key}`)}</span>
                 <span className={`font-semibold tabular-nums ${wide ? 'text-lg' : 'text-base'}`}>{count}</span>
               </span>
-              {list.length ? (
+              {list.length || assetList.length ? (
                 <span className={`mt-0.5 grid grid-cols-1 text-muted ${wide ? 'gap-x-6 gap-y-0.5 text-sm sm:grid-cols-2' : 'text-[11px]'}`}>
                   {list.map(([ticker, people]) => (
                     <span key={ticker} className="flex min-w-0 items-baseline gap-1.5">
@@ -460,6 +475,12 @@ function TradeDay({ items, day, renderRow, expanded, wide, onNavigate }: { items
                           <span className="sr-only">{t('notifications.conflict')}</span>
                         </span>
                       ) : null}
+                    </span>
+                  ))}
+                  {assetList.map(([asset, people]) => (
+                    <span key={`asset:${asset}`} className="flex min-w-0 items-baseline gap-1.5">
+                      <span className="w-4 shrink-0 text-end tabular-nums">{people}</span>
+                      <span className="min-w-0 break-words font-medium text-ink">{asset}</span>
                     </span>
                   ))}
                 </span>
@@ -607,16 +628,17 @@ function NotificationItems({
                           <span className="mt-1.5 grid grid-cols-2 gap-2">
                             {(
                               [
-                                ['tradeBuys', n.tradeBuys, n.tradeBuyTickers, 'text-success-soft ring-success/40'],
-                                ['tradeSells', n.tradeSells, n.tradeSellTickers, 'text-danger-soft ring-danger/40'],
+                                ['tradeBuys', n.tradeBuys, n.tradeBuyTickers, 'text-success-soft ring-success/40', n.tradeBuyAssets],
+                                ['tradeSells', n.tradeSells, n.tradeSellTickers, 'text-danger-soft ring-danger/40', n.tradeSellAssets],
                               ] as const
-                            ).map(([key, count, tickers, tone]) => (
+                            ).map(([key, count, tickers, tone, assets]) => (
                               <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
                                 <span className={`flex items-center justify-between gap-2 leading-none font-medium ${wide ? 'text-sm' : 'text-xs'}`}>
                                   <span className={wide ? 'relative -top-0.5' : undefined}>{t(`notifications.${key}`)}</span>
                                   <span className={`font-semibold leading-none tabular-nums ${wide ? 'text-lg' : 'text-base'}`}>{count ?? 0}</span>
                                 </span>
                                 {tickers?.length ? <span className={`truncate text-muted ${wide ? 'text-xs' : 'text-[11px]'}`}>{tickers.slice(0, 4).join(', ')}</span> : null}
+                                {assets?.length ? <span className={`min-w-0 break-words text-muted ${wide ? 'text-xs' : 'text-[11px]'}`}>{assets.join(', ')}</span> : null}
                               </span>
                             ))}
                           </span>

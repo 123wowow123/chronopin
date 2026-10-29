@@ -2341,6 +2341,7 @@ const hi: Messages = {
       volume: 'घोषित मूल्य',
       volumeAbout: 'हर सीमा के निचले और ऊपरी सिरों का योग',
       topTickers: 'सबसे अधिक कारोबार',
+      latest: 'लेनदेन वाले पिछले 5 दिन',
       period: '{from} से {to} तक के लेन-देन',
       recent: 'पिछले 2 महीने',
       date: 'लेन-देन',

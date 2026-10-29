@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
@@ -21,6 +21,8 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
   const [rows, setRows] = useState(initial);
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const tableId = useId();
+  const canExpand = Math.max(total, rows.length) > PREVIEW;
   const shown = expanded ? rows : rows.slice(0, PREVIEW);
   const intl = INTL_LOCALES[t.locale];
   const day = (iso: string) => dateFormat(intl, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
@@ -42,7 +44,21 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
 
   return (
     <>
-      <div className="floating overflow-x-auto">
+      {canExpand ? (
+        <div className="mb-2 flex justify-end">
+          <button
+            type="button"
+            aria-expanded={expanded}
+            aria-controls={tableId}
+            onClick={() => setExpanded((value) => !value)}
+            className="inline-flex items-center gap-1.5 rounded-full bg-field px-4 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised"
+          >
+            {expanded ? t('common.showLess') : t('person.trades.showMore', { count: total })}
+            <Icon name="chevron" className={`size-4 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+          </button>
+        </div>
+      ) : null}
+      <div id={tableId} className="floating overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-start text-xs text-subtle">
@@ -93,9 +109,9 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
           </tbody>
         </table>
       </div>
-      {!expanded && total > PREVIEW ? (
+      {!expanded && canExpand ? (
         <div className="mt-3 flex justify-center">
-          <button type="button" onClick={() => setExpanded(true)} className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised">
+          <button type="button" aria-expanded={false} aria-controls={tableId} onClick={() => setExpanded(true)} className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised">
             {t('person.trades.showMore', { count: total })}
           </button>
         </div>
@@ -113,7 +129,7 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
             </button>
           ) : null}
           {expanded ? (
-            <button type="button" onClick={() => setExpanded(false)} className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised">
+            <button type="button" aria-expanded={true} aria-controls={tableId} onClick={() => setExpanded(false)} className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised">
               {t('common.showLess')}
             </button>
           ) : null}

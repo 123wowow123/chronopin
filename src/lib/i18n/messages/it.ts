@@ -2321,6 +2321,7 @@ const it: Messages = {
       volume: 'Valore dichiarato',
       volumeAbout: 'Somma degli estremi inferiore e superiore di ogni intervallo',
       topTickers: 'Più negoziati',
+      latest: 'Ultimi 5 giorni con operazioni',
       period: 'Operazioni dal {from} al {to}',
       recent: 'Ultimi 2 mesi',
       date: 'Operazione',

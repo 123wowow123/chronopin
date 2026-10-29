@@ -2335,6 +2335,7 @@ const en = {
       volume: 'Reported value',
       volumeAbout: 'Sum of the low and high ends of every range',
       topTickers: 'Most traded',
+      latest: 'Last 5 days with trades',
       period: 'Trades from {from} to {to}',
       recent: 'Last 2 months',
       date: 'Traded',

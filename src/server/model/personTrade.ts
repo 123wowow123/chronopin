@@ -32,6 +32,15 @@ export default class PersonTrade {
     return db.query<TradeRow>(`SELECT ${COLUMNS} FROM "PersonTrade" WHERE "personId" = $1 ORDER BY "txDate" DESC, "id" DESC LIMIT $2 OFFSET $3`, [personId, limit, offset]);
   }
 
+  // Keep the initial table page and every trade on the latest five active days.
+  // This is a contiguous newest-first prefix, so table pagination still uses its length.
+  static preview(personId: number, limit = 25) {
+    return db.query<TradeRow>(`SELECT ${COLUMNS} FROM "PersonTrade" WHERE "personId" = $1 AND (
+      "txDate" IN (SELECT DISTINCT "txDate" FROM "PersonTrade" WHERE "personId" = $1 ORDER BY "txDate" DESC LIMIT 5)
+      OR "id" IN (SELECT "id" FROM "PersonTrade" WHERE "personId" = $1 ORDER BY "txDate" DESC, "id" DESC LIMIT $2)
+    ) ORDER BY "txDate" DESC, "id" DESC`, [personId, limit]);
+  }
+
   static async count(personId: number): Promise<number> {
     const [row] = await db.query<{ n: number }>(`SELECT count(*)::int AS "n" FROM "PersonTrade" WHERE "personId" = $1`, [personId]);
     return row.n;
