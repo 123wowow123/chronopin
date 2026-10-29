@@ -5,8 +5,9 @@ import { shedding } from './botLimit';
 // cache (2026-10-26: 64% of Postgres's active samples, 99% of a core on the
 // 2-vCPU VM). An uncached count runs only while the server is not shedding load,
 // and at most TAG_COUNT_SLOTS at once; a request that cannot get a slot within
-// TAG_COUNT_WAIT_MS gets TagCountBusy and the page shows no cloud. Callers throw
-// it out of their 'use cache' function so the empty answer is never cached.
+// TAG_COUNT_WAIT_MS gets TagCountBusy and the page shows no cloud. A caller
+// inside 'use cache' catches it there (cachedTagCounts) and keeps the empty
+// answer for seconds only; thrown out of the cache it loses its class.
 export const TAG_COUNT_SLOTS = 2;
 export const TAG_COUNT_WAIT_MS = 3_000;
 

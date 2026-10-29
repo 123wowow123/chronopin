@@ -569,21 +569,28 @@ export async function searchPageTagCounts(
   const zone = zoneFor(counted, timeZone);
   return onlyWatched && userId
     ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
-    : cachedTagCounts(counted, created, zone, limit).catch((error) => {
-        // An uncached count turned away (tagCountGate): no cloud for now.
-        if (error instanceof TagCountBusy) return [];
-        throw error;
-      });
+    : cachedTagCounts(counted, created, zone, limit);
 }
 const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
 
 // Kept for hours, as timelineTagCounts is.
 async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number): Promise<TagCount[]> {
   'use cache';
-  cacheLife('hours');
   cacheTag(TAGS.timeline);
-  // Thrown, not returned empty, when busy, so the answer is not cached.
-  return withTagCountSlot(() => searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) }));
+  try {
+    const counts = await withTagCountSlot(() => searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) }));
+    cacheLife('hours');
+    return counts;
+  } catch (error) {
+    // An uncached count turned away (tagCountGate): no cloud for now. Caught
+    // here, not by the caller: an error thrown out of a 'use cache' function
+    // is rebuilt on the way out, so `instanceof TagCountBusy` no longer
+    // matched and the route answered 500 (the 2026-10-28 deploy warm-up). The
+    // empty answer is kept for seconds only, so the cloud returns once the load drops.
+    if (!(error instanceof TagCountBusy)) throw error;
+    cacheLife('seconds');
+    return [];
+  }
 }
 
 export async function pinComments(id: number) {

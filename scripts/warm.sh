@@ -18,8 +18,17 @@ until curl -fsS -o /dev/null -m 10 "$BASE/"; do
   sleep 5
 done
 
+# Retries a non-200 a few times: right after a restart the server may still be
+# shedding load, and a busy answer is not cached, so asking again fills it.
 hit() {
-  code=$(curl -s -o /dev/null -m 120 -w '%{http_code} %{time_total}s' "$BASE$1")
+  n=0
+  while :; do
+    code=$(curl -s -o /dev/null -m 120 -w '%{http_code} %{time_total}s' "$BASE$1")
+    case "$code" in 200*) break ;; esac
+    n=$((n + 1))
+    [ "$n" -ge 4 ] && break
+    sleep $((n * 5))
+  done
   echo "$code $1"
   sleep 0.5
 }
