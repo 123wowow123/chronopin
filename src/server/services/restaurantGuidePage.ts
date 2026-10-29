@@ -30,6 +30,25 @@ async function guideBase(regionSlug: string) {
   };
 }
 
+// The four list sizes alone, for the sitemap. guideBase also assembles every
+// card's menus and visit details (restaurantGuideDetails), which a count never
+// reads: across ~100 regions that made /sitemap-restaurants.xml a 75 s build.
+export async function guideCounts(regionSlug: string, now: Date): Promise<Record<GuideView, number> | null> {
+  const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
+  if (!region) return null;
+  const [data, tops] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
+  const today = dayKeyIn(now, region.timeZone);
+  const offers = await regionalRestaurantOffers(data.restaurants, tops, today, region.slug);
+  const sections = arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, region.timeZone));
+  const groups = data.restaurants.map((restaurant) => openingGroup(restaurant, today));
+  return {
+    upcoming: groups.filter((group) => group === 'upcoming').length,
+    new: groups.filter((group) => group === 'new').length,
+    top: tops.length,
+    discounts: sections.available.length + sections.upcoming.length,
+  };
+}
+
 // The schedule of one region's offers for one minute. The page asks for it
 // three times (counts, available, next) and the API once per scroll.
 const schedules = new Map<string, OfferSchedule>();

@@ -3,7 +3,7 @@ import { connection } from 'next/server';
 import { absoluteUrl } from '@/lib/seo';
 import { GUIDE_PAGE_SIZE, GUIDE_VIEWS, guideListPath } from '@/lib/restaurantGuide';
 import { TAGS } from '@/server/services/cache';
-import { guideSummary } from '@/server/services/restaurantGuidePage';
+import { guideCounts } from '@/server/services/restaurantGuidePage';
 import { restaurantGuideRegionSlugs } from '@/server/services/restaurants';
 
 // Each city guide's lists, and their later pages, are crawlable URLs
@@ -18,12 +18,12 @@ async function guidePaths(): Promise<string[]> {
   const now = new Date();
   const paths: string[] = [];
   for (const slug of await restaurantGuideRegionSlugs()) {
-    const summary = await guideSummary(slug, now);
-    if (!summary) continue;
+    const counts = await guideCounts(slug, now);
+    if (!counts) continue;
     // The default view's first page is the bare city URL, already in /sitemap.xml with the regions.
-    for (const view of GUIDE_VIEWS.filter((v) => v !== 'discounts' && summary.counts[v] > 0)) {
-      for (let page = 1; page <= Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE); page++) {
-        const path = guideListPath(slug, summary.counts, view, page);
+    for (const view of GUIDE_VIEWS.filter((v) => v !== 'discounts' && counts[v] > 0)) {
+      for (let page = 1; page <= Math.ceil(counts[view] / GUIDE_PAGE_SIZE); page++) {
+        const path = guideListPath(slug, counts, view, page);
         if (page > 1 || path.includes('?')) paths.push(path);
       }
     }
