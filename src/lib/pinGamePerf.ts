@@ -40,5 +40,10 @@ export const isGamePerfScore = (value: unknown): value is number =>
 export const isGamePerfYear = (value: unknown): value is number =>
   typeof value === 'number' && Number.isInteger(value) && value >= GAME_PERF_YEAR_MIN && value <= GAME_PERF_YEAR_MAX;
 
+// A radar with fewer scored axes than this is a sliver, not a shape: the row is
+// kept (the API accepts one score) but the pin page hides the panel until more
+// axes are scored.
+export const GAME_PERF_MIN_AXES = 3;
+
 export const hasGamePerf = (perf: Partial<Record<GamePerfAxis, unknown>> | null | undefined): boolean =>
-  !!perf && GAME_PERF_KEYS.every((key) => perf[key] === null || isGamePerfScore(perf[key])) && GAME_PERF_KEYS.some((key) => perf[key] !== null);
+  !!perf && GAME_PERF_KEYS.every((key) => perf[key] === null || isGamePerfScore(perf[key])) && GAME_PERF_KEYS.filter((key) => perf[key] !== null).length >= GAME_PERF_MIN_AXES;

@@ -1445,6 +1445,650 @@
         "openedAt": "2026-10-29",
         "verificationMethod": "web-open"
       }
+    },
+    {
+      "specialSourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-vista/",
+      "name": "Oggi's Sports Brewhouse & Pizza - Vista",
+      "opening": {
+        "day": "2014-10-21",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The October 21, 2014 branch announcement states that the Vista restaurant at 425 S. Melrose Drive opened today. This is not Oggi’s original 1991 Del Mar restaurant.",
+        "sourceUrl": "https://patch.com/california/oceanside-camppendleton/oggis-sports-brewhouse-pizza-opens-today-vista",
+        "sourceTitle": "Oggi's Sports | Brewhouse | Pizza Opens Today in Vista | Oceanside, CA Patch",
+        "quote": "opened its 18th location today at 425 S. Melrose Drive in Vista.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://myfarmerstable.com/locations/happy-hour-lamesa/",
+      "name": "Farmer's Table La Mesa",
+      "opening": {
+        "day": "2017-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening year. The final day of the supported year is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://www.sandiegoville.com/2023/05/farmers-table-restaurant-ends-run-in.html",
+        "sourceTitle": "SanDiegoVille: Farmer's Table Restaurant Ends Run In San Diego's Bay Park Neighborhood",
+        "quote": "opened the original Farmer's Table in La Mesa Village in 2017",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.ilfornaio.com/coronado-menus/",
+      "name": "Il Fornaio - Coronado",
+      "opening": {
+        "day": "1999-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening year. The final day of the supported year is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://thecoronadonews.com/2025/12/construction-is-starting-at-the-vacant-lot-next-to-il-fornaio/",
+        "sourceTitle": "Construction has started at the vacant lot next to Il Fornaio – The Coronado News",
+        "quote": "Il Fornaio, which opened in 1999",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://sammyspizza.com/Location-Details/client/imperial-beach-25",
+      "name": "Sammy's Woodfired Pizza - Imperial Beach",
+      "opening": {
+        "day": "2025-05-23",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The June 2, 2025 report explicitly dates Sammy’s and Roppongi at Imperial Beach’s Pier South Resort to May 23, 2025. This pin covers the Sammy’s branch, not the original La Jolla restaurant.",
+        "sourceUrl": "https://thecoronadonews.com/2025/06/two-new-restaurants-open-in-imperial-beach/",
+        "sourceTitle": "Two new restaurants open in Imperial Beach – The Coronado News",
+        "quote": "opened in Imperial Beach at Pier South Resort on May 23",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://thesearchbareastlake.com/page/happy-hour",
+      "name": "The Search Bar & Restaurant - EastLake",
+      "opening": {
+        "day": "2021-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The owner account dates this Eastlake restaurant’s soft launch to just before the 2021 Super Bowl. Only the year is used; December 31 is an estimated year anchor, not the article’s January 2022 publication or an invented grand-opening day.",
+        "sourceUrl": "https://www.chulavistatoday.com/local-news/the-search-bar-is-determined-to-transform-eastlakes-entertainment-landscape/",
+        "sourceTitle": "The Search Bar is determined to transform Eastlake's entertainment landscape - Chula Vista Today",
+        "quote": "Just before the 2021 Super Bowl, The Search Bar opened its doors",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://tajimaramen.com/tajima-college-heights/",
+      "name": "Tajima Ramen - College Heights",
+      "opening": {
+        "day": "2020-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The April 13, 2020 opening report dates this new College Area branch to the beginning of the March 2020 dine-in shutdown. Only the opening year is retained; December 31 is an estimated year anchor, not the report publication date.",
+        "sourceUrl": "https://sandiego.eater.com/2020/4/13/21219106/tajima-ramen-opens-college-area-corner-chicken-east-village",
+        "sourceTitle": "Tajima Ramen Opens Sixth Location During Shutdown | Eater San Diego",
+        "quote": "newest location in the College Area made its debut",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://tajimaramen.com/tajima-east-village/",
+      "name": "Tajima Ramen - East Village",
+      "opening": {
+        "day": "2016-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The Tajima anniversary interview explicitly dates its East Village branch to 2016. December 31 is an estimated year anchor; the brand’s 2001 Convoy takeover is not this branch’s opening.",
+        "sourceUrl": "https://thesandiegosun.com/391490929135147-2/",
+        "sourceTitle": "Tajima Ramen Turns 20!",
+        "quote": "East Village (2016)",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://tajimaramen.com/tajima-mercury/",
+      "name": "Tajima Ramen - Mercury",
+      "opening": {
+        "day": "2006-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "In this firsthand account, Tajima’s owner explicitly dates his second location on Mercury Street to 2006. This is more specific than a later retrospective’s approximate six-years-later wording. December 31 is an estimated year anchor.",
+        "sourceUrl": "https://sdvoyager.com/interview/exploring-life-business-with-sam-morikizono-of-tajima/",
+        "sourceTitle": "Meet Sam Morikizono – SDVoyager – San Diego",
+        "quote": "2nd location in 2006 at the Kearny Mesa area on Mercury Street.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.bjsrestaurants.com/locations/ca/mission-valley",
+      "name": "BJ's Restaurant & Brewhouse - Mission Valley",
+      "opening": {
+        "day": "2013-11-18",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The opened branch-specific source supports the restaurant’s opening day. ",
+        "sourceUrl": "https://getfilings.com/sec-filings/131120/BJs-RESTAURANTS-INC_8-K/newsrelease.htm",
+        "sourceTitle": "BJs RESTAURANTS INC - FORM 8-K - EX-99 - PRESS RELEASE - November 19, 2013",
+        "quote": "Mission Valley, California, on Monday, November 18, 2013.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.bjsrestaurants.com/locations/ca/carlsbad",
+      "name": "BJ's Restaurant & Brewhouse - Carlsbad",
+      "opening": {
+        "day": "2009-10-26",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The opened branch-specific source supports the restaurant’s opening day. ",
+        "sourceUrl": "https://www.restaurantnewsresource.com/article41927.html",
+        "sourceTitle": "BJ's Restaurants, Inc. Opens in Carlsbad, California - Restaurant News Resource",
+        "quote": "in Carlsbad, California, on October 26, 2009.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.bjsrestaurants.com/locations/ca/escondido",
+      "name": "BJ's Restaurant & Brewhouse - Escondido",
+      "opening": {
+        "day": "2010-03-29",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The opened branch-specific source supports the restaurant’s opening day. ",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2010/03/30/417405/12013/en/BJ-s-Restaurants-Inc-Opens-in-Escondido-California.html",
+        "sourceTitle": "BJ's Restaurants, Inc. Opens in Escondido, California",
+        "quote": "in Escondido, CA on March 29, 2010.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.bjsrestaurants.com/locations/ca/la-jolla",
+      "name": "BJ's Restaurant & Brewhouse - La Jolla",
+      "opening": {
+        "day": "2016-10-03",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The company’s October 4, 2016 release confirms the new full-size restaurant on Villa La Jolla Drive opened October 3, 2016. The brand’s earlier small-format La Jolla restaurant in 1980 is a different site.",
+        "sourceUrl": "https://investors.bjsrestaurants.com/news/news-details/2016/BJs-Restaurants-Opens-in-La-Jolla-California/default.aspx",
+        "sourceTitle": "BJ’s Restaurants, Inc. - BJ’s Restaurants Opens in La Jolla, California",
+        "quote": "opened on Monday, October 3, 2016",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.eddiev.com/locations/ca/san-diego/san-diego/8514",
+      "name": "Eddie V's Prime Seafood - San Diego",
+      "opening": {
+        "day": "2014-03-06",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The March 7, 2014 report states that the downtown Headquarters branch debuted last night, March 6, 2014, separately from the earlier La Jolla location.",
+        "sourceUrl": "https://sandiego.eater.com/2014/3/7/6267311/eddie-vs-lands-prime-seaport-spot-for-steak-seafood",
+        "sourceTitle": "Eddie V’s Lands Prime Seaport Spot for Steak & Seafood | Eater San Diego",
+        "quote": "last night, the Darden-owned Eddie V’s debuted their second San Diego location",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://barellapb.com/best-happy-hour-san-diego/",
+      "name": "bar Ella",
+      "opening": {
+        "day": "2023-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening year. The final day of the supported year is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://www.sandiegoreader.com/places/bar-ella/",
+        "sourceTitle": "Bar Ella | San Diego Reader",
+        "quote": "Opened in 2023 in the locale formerly occupied by Bub's Dive Bar.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://pezzidelmiocuore.com/menus",
+      "name": "Pezzi Del Mio Cuore",
+      "opening": {
+        "day": "2025-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The February 7, 2025 first-look report confirms this new Point Loma restaurant opened that week. Only the opening year is used; December 31 is an estimated year anchor, not the article publication date.",
+        "sourceUrl": "https://sandiegomagazine.com/food-drink/pezzi-del-mio-cuore-italian-restaurant-point-loma/",
+        "sourceTitle": "Family-Owned Pezzi Del Mio Cuore Opens in Point Loma | San Diego Magazine",
+        "quote": "The concept opened this week in Point Loma",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://workingclasssd.com/",
+      "name": "Working Class",
+      "opening": {
+        "day": "2018-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The February 6, 2018 opening report identifies Working Class as the new North Park eatery replacing Ritual Tavern at this address. Only its opening year is retained; December 31 is an estimated year anchor.",
+        "sourceUrl": "https://sandiego.eater.com/2018/2/6/16979292/working-class-beer-bar-restaurant-north-park",
+        "sourceTitle": "Stroll Inside North Park’s New Neighborhood Hangout | Eater San Diego",
+        "quote": "A new casual bar and eatery, friendly to both kids and dogs, is just settling in on 30th Street.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://frenchyshideout.com/",
+      "name": "Frenchy's Hideout",
+      "opening": {
+        "day": "2025-03-21",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The opened branch-specific source supports the restaurant’s opening day. ",
+        "sourceUrl": "https://timesofsandiego.com/life/2025/07/08/simpson-brings-a-taste-of-france-to-hillcrest/",
+        "sourceTitle": "Michael Simpson brings a taste of France to Hillcrest with Frenchy's Hideout",
+        "quote": "We opened officially on March 21, 2025.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://tavolanostrapizzeria.com/",
+      "name": "Tavola Nostra Pizzeria e Cucina",
+      "opening": {
+        "day": "2020-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The operator’s August 15, 2023 third-anniversary account establishes a 2020 opening in Hillcrest. December 31 is an estimated year anchor; the exact first-service day is not published in this account.",
+        "sourceUrl": "https://tavolanostrapizzeria.com/news/three-years-of-culinary-delights-celebrate-with-tavola-nostra-in-hillcrest/",
+        "sourceTitle": "Three Years of Culinary Delights: Celebrate with Tavola Nostra in Hillcrest! - Tavola Nostra Pizzeria E Cucina | Hillcrest Italian Restaurant & Pizza",
+        "quote": "Three Years, Infinite Memories",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://southpark.piaceremiosd.com/",
+      "name": "Piacere Mio - South Park",
+      "opening": {
+        "day": "2013-03-31",
+        "precision": "month",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening month. The final day of the supported month is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://sdvoyager.com/interview/meet-stefano-poletti-piacere-mio-ristorante-italiano-south-park/",
+        "sourceTitle": "Meet Stefano Poletti of Piacere Mio – Ristorante Italiano in South Park – SDVoyager – San Diego",
+        "quote": "Piacere Mio was initially opened in March 2013.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://bockbar.com/",
+      "name": "Bock (Kurz Kitchen)",
+      "opening": {
+        "day": "2025-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The March 2025 opening report confirms Bock’s debut in the former Hamilton’s space at 1521 30th Street. Only 2025 is retained; December 31 is an estimated year anchor, not Hamilton’s earlier opening or the new kitchen’s first-service day.",
+        "sourceUrl": "https://www.sandiegoville.com/2025/03/bock-german-pub-opens-in-san-diegos.html",
+        "sourceTitle": "SanDiegoVille: Bock German Pub Opens In San Diego’s South Park, Reviving Former Hamilton’s Tavern Space",
+        "quote": "has finally opened its doors in San Diego’s South Park neighborhood",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://keyandcleaver.com/",
+      "name": "Key and Cleaver",
+      "opening": {
+        "day": "2023-04-30",
+        "precision": "month",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening month. The final day of the supported month is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://patch.com/california/san-diego/amp/32803849/a-community-reeling-from-months-of-disruptive-construction-asks-was-it-worth-it",
+        "sourceTitle": "A Community Reeling From Months Of Disruptive Construction Asks: Was It Worth It? | San Diego, CA Patch",
+        "quote": "But after opening in April 2023",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.freddyschophouse.com/",
+      "name": "Freddy's Chophouse",
+      "opening": {
+        "day": "2024-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The June 9, 2024 opening report describes the new Freddy’s Chophouse replacing Santa Gula at 554 Fourth Avenue. December 31 is an estimated 2024 year anchor; the owners’ 2008 Las Hadas founding is not this restaurant’s opening.",
+        "sourceUrl": "https://www.sandiegoville.com/2024/06/las-hadas-restaurant-owners-opens.html?m=0",
+        "sourceTitle": "SanDiegoVille: Las Hadas Restaurant Owners Opens Affordable Steakhouse Concept Freddy's Chophouse In San Diego's Gaslamp Quarter",
+        "quote": "Freddy's Chophouse",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://fogodechao.com/location/san-diego/",
+      "name": "Fogo de Chão - San Diego",
+      "opening": {
+        "day": "2013-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The 2013 grand-opening account confirms the new Fogo de Chão restaurant in the Gaslamp Quarter. Only its opening year is retained; December 31 is an estimated year anchor, not an event listing or menu-check date.",
+        "sourceUrl": "https://sandiegomagazine.com/things-to-do/fogo-de-chao-grand-opening/",
+        "sourceTitle": "Fogo de Chão Grand Opening - San Diego Magazine",
+        "quote": "recently opened its 20th U.S. location in the heart of San Diego’s Gaslamp Quarter.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://havana1920.com/happy-hour/",
+      "name": "Havana 1920",
+      "opening": {
+        "day": "2017-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The branch-specific dining account explicitly dates Havana 1920’s Gaslamp debut to late 2017. December 31 is an estimated year anchor, not a verified exact opening day.",
+        "sourceUrl": "https://www.stewardshipreport.com/article/havana-1920-driving-cuban-cuisine-cravings-in-downtown-san-diego",
+        "sourceTitle": "Havana 1920 Driving Cuban Cuisine Cravings in Downtown San Diego — The Stewardship Report",
+        "quote": "opened its downtown doors in late 2017",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "http://coronadondcafe.com/",
+      "name": "Night & Day Cafe",
+      "opening": {
+        "day": "1954-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The operator dates the move to the current 847 Orange Avenue premises and the Night and Day name to 1954. The earlier D and D Cafe began two doors away in 1927; that is not this location’s opening. December 31 is an estimated year anchor.",
+        "sourceUrl": "https://www.coronadondcafe.com/",
+        "sourceTitle": "Best Cafe in Tent City, Coronado, CA | Night and Day Cafe",
+        "quote": "In 1954, Paul Zeller bought the Cafe, moved it to its current location 847 Orange Ave.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "http://mcpspub.com/",
+      "name": "McP's Irish Pub",
+      "opening": {
+        "day": "1982-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening year. The final day of the supported year is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://patch.com/california/coronado/mcp-s-hits-the-big-3-0-hosts-all-day-celebration",
+        "sourceTitle": "McP's Hits the Big 3-0, Hosts All-Day Celebration | Coronado, CA Patch",
+        "quote": "opened the bar and grill in 1982",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.karlstrauss.com/location/4s-ranch/menu",
+      "name": "Karl Strauss Brewing Company - 4S Ranch",
+      "opening": {
+        "day": "2012-07-31",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The opened branch-specific source supports the restaurant’s opening day. ",
+        "sourceUrl": "https://www.sandiegoville.com/2012/08/karl-strauss-opens-7th-brewery.html",
+        "sourceTitle": "SanDiegoVille: Karl Strauss Opens 7th Brewery Restaurant in 4S Ranch",
+        "quote": "Opening date : July 31, 2012",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.sbiccadelmar.com/",
+      "name": "Sbicca Del Mar",
+      "opening": {
+        "day": "1998-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The July 20, 2023 ownership report explicitly dates the same Sbicca restaurant at 215 15th Street to summer 1998. December 31 is an estimated year anchor; the later ownership transfer is not used as its opening.",
+        "sourceUrl": "https://www.sandiegoville.com/2023/07/sbicca-restaurant-transferring-to-new.html",
+        "sourceTitle": "SanDiegoVille: Sbicca Restaurant Transferring To New Ownership In San Diego's North County City Of Del Mar",
+        "quote": "Sbicca restaurant opened in the heart of San Diego",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://thepromiscuousfork.com/menu.html",
+      "name": "The Promiscuous Fork",
+      "opening": {
+        "day": "2012-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The 2013 expansion report explicitly dates the original La Jolla eatery near Windansea to 2012, separately from the future Pacific Beach branch. December 31 is an estimated year anchor.",
+        "sourceUrl": "https://sandiego.eater.com/2013/10/9/6354861/the-promiscuous-fork-to-get-cozy-with-pacific-beach",
+        "sourceTitle": "The Promiscuous Fork to Get Cozy With Pacific Beach | Eater San Diego",
+        "quote": "in 2012, they opened a small 25-seat eatery in La Jolla",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://beesidebalcony.com/",
+      "name": "Beeside Balcony - Del Mar",
+      "opening": {
+        "day": "2020-01-31",
+        "precision": "month",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening month. The final day of the supported month is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://sdvoyager.com/interview/inspiring-conversations-with-christophe-cevasco-of-beeside-balcony/",
+        "sourceTitle": "Inspiring Conversations with Christophe Cevasco of Beeside Balcony – SDVoyager – San Diego",
+        "quote": "I opened Beeside Balcony in Del Mar in January of 2020",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.draftrepublicsanmarcos.com/menu/",
+      "name": "Draft Republic San Marcos",
+      "opening": {
+        "day": "2022-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The March 23, 2022 report confirms the San Marcos Draft Republic at the former Urge site opened the preceding weekend. December 31 is an estimated year anchor; the original Urge 2017 opening is a different business.",
+        "sourceUrl": "https://www.sandiegoville.com/2022/03/cohn-restaurant-group-unveils-draft-republic-brewing-company-san-marcos-san-diego.html",
+        "sourceTitle": "SanDiegoVille: Cohn Restaurant Group Unveils Draft Republic Brewing Company In San Marcos",
+        "quote": "This weekend, Draft Republic opened in San Marcos",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://surakbbqsd.com/menus/",
+      "name": "Sura Korean BBQ - Chula Vista",
+      "opening": {
+        "day": "2024-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The August 8, 2024 opening account confirms the new Sura at 1960 Optima Street. Only its opening year is retained; December 31 is an estimated year anchor.",
+        "sourceUrl": "https://www.chulavistatoday.com/business-listing/restaurants/all-you-can-eat-korean-bbq-is-now-open-in-otay-ranch/",
+        "sourceTitle": "All-you-can-eat Korean BBQ is now open in Otay Ranch! - Chula Vista Today",
+        "quote": "Sura has opened its doors in the Otay Ranch area at 1960 Optima Street.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.casanorisushi.com/menu-2a",
+      "name": "Casa Nori Sushi Bar & Grill",
+      "opening": {
+        "day": "2020-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The January 30, 2020 branch-specific opening report identifies Casa Nori at 1730 E. Palomar Street as newly open. Only 2020 is used; December 31 is an estimated year anchor, not the article publication date.",
+        "sourceUrl": "https://hoodline.com/2020/01/asian-fusion-and-sushi-spot-casa-nori-opens-in-otay-ranch/",
+        "sourceTitle": "Asian-fusion and sushi spot Casa Nori opens in Otay Ranch",
+        "quote": "A new restaurant has you covered.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "http://www.bayhilltavernsd.com/",
+      "name": "Bay Hill Tavern",
+      "opening": {
+        "day": "2019-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The opened branch-specific source supports the restaurant’s opening year. The final day of the supported year is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://bayhilltavernsd.com/",
+        "sourceTitle": "Bay Hill Tavern – Best American Restaurant in San Diego",
+        "quote": "Established in 2019",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://romanellasd.com/happy-hour",
+      "name": "Romanella Cucina Romana",
+      "opening": {
+        "day": "2025-10-31",
+        "precision": "month",
+        "dateConfidence": "estimated",
+        "reason": "The October 2025 opening account confirms Romanella’s grand opening in early October at the former La Pastaia on Clairemont Drive. October 31 is an estimated month anchor; the predecessor restaurant’s opening is not used.",
+        "sourceUrl": "https://www.sandiegoville.com/2025/10/romanella-cucina-romana-brings-flavors.html?m=0",
+        "sourceTitle": "SanDiegoVille: Romanella Cucina Romana Brings The Flavors And Spirit Of Rome To San Diego's Bay Park",
+        "quote": "The grand opening celebration in early October",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://miguels-cocina.com/locations/coronado/",
+      "name": "Miguel's Cocina - Coronado",
+      "opening": {
+        "day": "1982-06-30",
+        "precision": "month",
+        "dateConfidence": "estimated",
+        "reason": "The branch-specific restaurant history dates the first Miguel’s, in the El Cordova Hotel courtyard in Coronado, to June 1982. June 30 is an estimated month anchor, distinct from the Brigantine family’s 1969 founding.",
+        "sourceUrl": "https://classicsandiego.com/mexican/",
+        "sourceTitle": "Classic San Diego Mexican Restaurants",
+        "quote": "courtyard of El Cordova Hotel since June 1982",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://choosethypoison.com/san-diego-alchemy-choose-thy-poison-elixir-hour",
+      "name": "Alchemy - Choose Thy Poison",
+      "opening": {
+        "day": "2024-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The November 2024 opening report identifies the new Alchemy below the Coronado Bridge at 1932 Kearney Avenue. Only the opening year is retained; December 31 is an estimated year anchor.",
+        "sourceUrl": "https://www.sandiegoville.com/2024/11/alchemy-choose-thy-poison-bar.html",
+        "sourceTitle": "SanDiegoVille: Alchemy Choose Thy Poison Bar & Restaurants Opens In San Diego's Logan Heights",
+        "quote": "The restaurant has officially opened for lunch",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://surfsidefishhouse.com/",
+      "name": "SurfSide Fish House - Scripps Ranch",
+      "opening": {
+        "day": "2024-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The June 2024 opening report confirms the new Surfside Fish House in Scripps Ranch Marketplace, separately from the company’s older Del Mar Seasurf restaurant. Only the opening year is retained; December 31 is an estimated year anchor.",
+        "sourceUrl": "https://www.sandiegoville.com/2024/06/surfside-fish-house-brings-fresh.html",
+        "sourceTitle": "SanDiegoVille: Surfside Fish House Brings Fresh Seafood To San Diego's North County",
+        "quote": "Surfside Fish House has now opened",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.buckboardsbbq.com/",
+      "name": "Buckboard's BBQ & Brew",
+      "opening": {
+        "day": "2019-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The trade-press account explicitly dates the El Cajon restaurant to 2019, separately from the catering company founded in 1986. December 31 is an estimated year anchor.",
+        "sourceUrl": "https://cfe-news.com/across-the-country-demand-for-outdoorfood-no-matter-the-style-remains-hot-hot-hot/",
+        "sourceTitle": "Still Smokin' - CFE News",
+        "quote": "Buckboard’s BBQ & Brew opened up in 2019.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://eatatcoral.com/",
+      "name": "Coral Del Mar",
+      "opening": {
+        "day": "2025-04-30",
+        "precision": "month",
+        "dateConfidence": "estimated",
+        "reason": "The local account says the owners took over in mid-February 2025, renamed the restaurant Coral and opened two months later in April. April 30 is an estimated month anchor, not the predecessor’s founding or the 2026 article date.",
+        "sourceUrl": "https://delmarsandpiper.org/2026-02-011/",
+        "sourceTitle": "A Del Mar Love Story – The Sandpiper",
+        "quote": "renamed the restaurant Coral, and opened two months later in April.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.eatcocinadebarrio.com/menu-north-park",
+      "name": "Cocina de Barrio - North Park",
+      "opening": {
+        "day": "2024-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The December 2024 opening report confirms the North Park branch soft opening in the former Saiko Sushi at 2884 University Avenue. Only the opening year is retained; December 31 is an estimated year anchor. Other Cocina branches have separate dates.",
+        "sourceUrl": "https://www.sandiegoville.com/2024/12/cocina-de-barrio-opens-in-former-saiko.html",
+        "sourceTitle": "SanDiegoVille: Cocina De Barrio Opens In Former Saiko Sushi Space In San Diego's North Park",
+        "quote": "The latest outpost has soft opened",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.eatcocinadebarrio.com/menu-point-loma",
+      "name": "Cocina de Barrio - Point Loma",
+      "opening": {
+        "day": "2022-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The branch-specific retrospective dates the second Cocina de Barrio, replacing Swami’s on West Point Loma Boulevard, to 2022. December 31 is an estimated year anchor; the later North Park and Encinitas openings are separate.",
+        "sourceUrl": "https://www.sandiegoville.com/2024/09/cocina-de-barrio-opening-in-former.html",
+        "sourceTitle": "SanDiegoVille: Cocina De Barrio Opening In Former Saiko Sushi Space In San Diego's North Park",
+        "quote": "A second Cocina de Barrio opened in 2022",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://romescomexmed.com/page/happy-hour",
+      "name": "Romesco Mexiterranean Bistro",
+      "opening": {
+        "day": "2006-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The retrospective explicitly dates the Peña/Plascencia family’s Romesco in Bonita to 2006, separately from the 2022 Taco Machin opening. December 31 is an estimated year anchor.",
+        "sourceUrl": "https://www.sandiegoville.com/2022/08/romesco-mexiterranean-bistro-owners-open-taco-machin-.html",
+        "sourceTitle": "SanDiegoVille: Romesco Mexiterranean Bistro Owners Open Fast-Casual Taco Machin In San Diego's South County",
+        "quote": "opened Romesco Mexiterranean Bistro in a shopping plaza",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.pradobalboa.com/",
+      "name": "The Prado at Balboa Park",
+      "opening": {
+        "day": "2000-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The branch-specific venue account explicitly dates The Prado restaurant to 2000, separately from the House of Hospitality’s earlier construction and renovation. December 31 is an estimated year anchor.",
+        "sourceUrl": "https://ahleparty.wordpress.com/2011/06/30/the-prado-at-balboa-park/",
+        "sourceTitle": "The Prado at Balboa Park | At Your Side Planning",
+        "quote": "The Prado opened in 2000.",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.opentable.com/restaurant/profile/1231666",
+      "name": "Bronze Bird",
+      "opening": {
+        "day": "2022-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "Visit California’s Summer 2022 opening bulletin reports the official opening of Bronze Bird at The Westin San Diego Gaslamp Quarter following its renovation. Only the opening year is retained; December 31 is an estimated year anchor, not the hotel’s own opening date.",
+        "sourceUrl": "https://media.visitcalifornia.com/-/media/industry-site/pdfs/publications/whats-new-in-ca/whats-new-in-californiasummer-2022.pdf",
+        "sourceTitle": "Visit California — What’s New in California, Summer 2022, page 8",
+        "quote": "The official opening of Bronze Bird Food Wine & Spirits",
+        "openedAt": "2026-10-29"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.opentable.com/restaurant/profile/1322278",
+      "name": "The Farmer and The Seahorse - La Jolla",
+      "opening": {
+        "day": "2015-12-31",
+        "precision": "year",
+        "dateConfidence": "estimated",
+        "reason": "The opened business profile dates this single-site Farmer & The Seahorse restaurant at 10996 Torreyana Road to 2015. December 31 is an estimated year anchor; the exact first-service day is not published. Subsequent operator changes are not used as its opening.",
+        "sourceUrl": "https://www.allbiz.com/business/farmer-the-seahorse-858-260-5400",
+        "sourceTitle": "Farmer & The Seahorse | (858) 260-5400 | San Diego",
+        "quote": "Founded: 2015",
+        "openedAt": "2026-10-29"
+      }
     }
   ],
   "mediaMigrations": [
@@ -1485,19 +2129,6 @@
   ],
   "pendingOpeningResearch": [
     {
-      "name": "The Prado at Balboa Park",
-      "pinSourceUrl": "https://www.pradobalboa.com/",
-      "address": "1549 El Prado, Suite 12, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.pradobalboa.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Origen",
       "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1427722",
       "address": "3831 Park Blvd, San Diego, CA 92103-3609",
@@ -1506,25 +2137,9 @@
       "nextStep": "Verify the 3831 Park Boulevard branch with the operator and independent local closure/opening coverage; distinguish a permanently closed venue from a closed-now hours label."
     },
     {
-      "name": "Bronze Bird",
-      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1231666",
-      "address": "910 Broadway Circle, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Solare Ristorante Lounge",
       "pinSourceUrl": "https://www.opentable.com/restaurant/profile/43288",
       "address": "2820 Roosevelt Road, San Diego, CA 92106",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "The Farmer and The Seahorse - La Jolla",
-      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1322278",
-      "address": "10996 Torreyana Rd ste 240, San Diego, CA 92121-1159",
       "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
       "checkedSources": [],
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
@@ -1840,31 +2455,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Oggi's Sports Brewhouse & Pizza - Vista",
-      "pinSourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-vista/",
-      "address": "425 S. Melrose Drive, Vista, CA 92084",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.oggis.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.oggis.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-vista/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.oggis.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Oggi's Sports Brewhouse & Pizza - Encinitas",
       "pinSourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-encinitas/",
       "address": "305 Encinitas Blvd, Encinitas, CA 92024",
@@ -2046,31 +2636,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Farmer's Table La Mesa",
-      "pinSourceUrl": "https://myfarmerstable.com/locations/happy-hour-lamesa/",
-      "address": "8141 La Mesa Blvd, La Mesa, CA 91942",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://myfarmerstable.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://myfarmerstable.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://myfarmerstable.com/locations/happy-hour-lamesa/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://myfarmerstable.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Peohe's",
       "pinSourceUrl": "https://www.peohes.com/menu/happy-hour-chpe/",
       "address": "1201 1st St, Coronado, CA 92118",
@@ -2132,35 +2697,6 @@
         },
         {
           "url": "https://www.acquaefarinasd.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Il Fornaio - Coronado",
-      "pinSourceUrl": "https://www.ilfornaio.com/coronado-menus/",
-      "address": "1333 1st St, Coronado, CA 92118",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.ilfornaio.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.ilfornaio.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.ilfornaio.com/catering/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.ilfornaio.com/coronado-menus/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.ilfornaio.com/about/",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -2269,40 +2805,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Sammy's Woodfired Pizza - Imperial Beach",
-      "pinSourceUrl": "https://sammyspizza.com/Location-Details/client/imperial-beach-25",
-      "address": "800 Seacoast Dr, Imperial Beach, CA 91932",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://sammyspizza.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://sammyspizza.com/Location-Details/client/imperial-beach-25",
-          "result": "404 Client Error: Not Found for url: https://sammyspizza.com/Location-Details/client/imperial-beach-25"
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "The Search Bar & Restaurant - EastLake",
-      "pinSourceUrl": "https://thesearchbareastlake.com/page/happy-hour",
-      "address": "881 District Pl Ste 100, Chula Vista, CA 91914",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://thesearchbareastlake.com",
-          "result": "403 Client Error: Forbidden for url: https://thesearchbareastlake.com/"
-        },
-        {
-          "url": "https://thesearchbareastlake.com/page/happy-hour",
-          "result": "403 Client Error: Forbidden for url: https://thesearchbareastlake.com/page/happy-hour"
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Kalaveras - Chula Vista",
       "pinSourceUrl": "https://kalaveras.com/chula-vista/",
       "address": "340 3rd Ave, Chula Vista, CA 91910",
@@ -2337,23 +2839,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Tajima Ramen - College Heights",
-      "pinSourceUrl": "https://tajimaramen.com/tajima-college-heights/",
-      "address": "6061 El Cajon Blvd #2, San Diego, CA 92115",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://tajimaramen.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://tajimaramen.com/tajima-college-heights/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Tajima Ramen - Crown Point",
       "pinSourceUrl": "https://tajimaramen.com/tajima-crown-point/",
       "address": "3782 Ingraham St, San Diego, CA 92109",
@@ -2365,40 +2850,6 @@
         },
         {
           "url": "https://tajimaramen.com/tajima-crown-point/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Tajima Ramen - East Village",
-      "pinSourceUrl": "https://tajimaramen.com/tajima-east-village/",
-      "address": "901 E St, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://tajimaramen.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://tajimaramen.com/tajima-east-village/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Tajima Ramen - Mercury",
-      "pinSourceUrl": "https://tajimaramen.com/tajima-mercury/",
-      "address": "4411 Mercury St Ste 110, San Diego, CA 92111",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://tajimaramen.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://tajimaramen.com/tajima-mercury/",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -2422,40 +2873,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "BJ's Restaurant & Brewhouse - Mission Valley",
-      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/mission-valley",
-      "address": "1370 Frazee Rd, San Diego, CA 92108",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.bjsrestaurants.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.bjsrestaurants.com/locations/ca/mission-valley",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "BJ's Restaurant & Brewhouse - Carlsbad",
-      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/carlsbad",
-      "address": "5613 Paseo Del Norte, Carlsbad, CA 92008",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.bjsrestaurants.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.bjsrestaurants.com/locations/ca/carlsbad",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "BJ's Restaurant & Brewhouse - Chula Vista",
       "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/chula-vista",
       "address": "555 Broadway Ste 1019, Chula Vista, CA 91910",
@@ -2467,40 +2884,6 @@
         },
         {
           "url": "https://www.bjsrestaurants.com/locations/ca/chula-vista",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "BJ's Restaurant & Brewhouse - Escondido",
-      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/escondido",
-      "address": "204 E Via Rancho Pkwy, Escondido, CA 92025",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.bjsrestaurants.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.bjsrestaurants.com/locations/ca/escondido",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "BJ's Restaurant & Brewhouse - La Jolla",
-      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/la-jolla",
-      "address": "8785 Villa La Jolla Dr, San Diego, CA 92037",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.bjsrestaurants.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.bjsrestaurants.com/locations/ca/la-jolla",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -2526,27 +2909,6 @@
         },
         {
           "url": "https://www.seasons52.com/locations/ca/san-diego/san-diego-utc/4529",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Eddie V's Prime Seafood - San Diego",
-      "pinSourceUrl": "https://www.eddiev.com/locations/ca/san-diego/san-diego/8514",
-      "address": "789 W Harbor Dr Ste 158, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.eddiev.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.eddiev.com/about-us",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.eddiev.com/locations/ca/san-diego/san-diego/8514",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -2603,39 +2965,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "bar Ella",
-      "pinSourceUrl": "https://barellapb.com/best-happy-hour-san-diego/",
-      "address": "1030 Garnet Avenue, San Diego, CA 92109",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://barellapb.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://barellapb.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://barellapb.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://barellapb.com/best-happy-hour-san-diego/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://barellapb.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://barellapb.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "The 3rd Corner (Ocean Beach)",
       "pinSourceUrl": "https://www.the3rdcorner.com/specials",
       "address": "2265 Bacon Street, San Diego, CA 92107",
@@ -2676,31 +3005,6 @@
         },
         {
           "url": "https://johnnymananas.com/our-story",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Pezzi Del Mio Cuore",
-      "pinSourceUrl": "https://pezzidelmiocuore.com/menus",
-      "address": "3944 West Point Loma Boulevard, Suite G, San Diego, CA 92110",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://pezzidelmiocuore.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://pezzidelmiocuore.com/about",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://pezzidelmiocuore.com/menus",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://pezzidelmiocuore.com/about",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -2787,27 +3091,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Working Class",
-      "pinSourceUrl": "https://workingclasssd.com/",
-      "address": "4095 30th Street, San Diego, CA 92104",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://workingclasssd.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://workingclasssd.com/san-diego-north-park-working-class-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://workingclasssd.com/san-diego-north-park-working-class-food-menu",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Sono North Park",
       "pinSourceUrl": "https://sononorthpark.com/",
       "address": "2835 University Avenue, San Diego, CA 92104",
@@ -2838,23 +3121,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Frenchy's Hideout",
-      "pinSourceUrl": "https://frenchyshideout.com/",
-      "address": "142 W University Ave, Suite C, San Diego, CA 92103",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://frenchyshideout.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://frenchyshideout.com/about",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Pretzels & Pints",
       "pinSourceUrl": "https://pretzelsandpints.com/",
       "address": "3812 Ray Street, San Diego, CA 92104",
@@ -2866,40 +3132,6 @@
         },
         {
           "url": "https://pretzelsandpints.com/san-diego-north-park-pretzels-and-pints-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Tavola Nostra Pizzeria e Cucina",
-      "pinSourceUrl": "https://tavolanostrapizzeria.com/",
-      "address": "1040 University Ave, Suite B101, San Diego, CA 92103",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://tavolanostrapizzeria.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://tavolanostrapizzeria.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Piacere Mio - South Park",
-      "pinSourceUrl": "https://southpark.piaceremiosd.com/",
-      "address": "1947 Fern Street, San Diego, CA 92102",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://southpark.piaceremiosd.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://southpark.piaceremiosd.com/san-diego-piacere-mio-about",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -2966,23 +3198,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Bock (Kurz Kitchen)",
-      "pinSourceUrl": "https://bockbar.com/",
-      "address": "1521 30th Street, San Diego, CA 92102",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.bockbar.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.bockbar.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Old Town Mexican Cafe",
       "pinSourceUrl": "https://oldtownmexcafe.com/",
       "address": "2489 San Diego Ave, San Diego, CA 92110",
@@ -2990,61 +3205,6 @@
       "checkedSources": [
         {
           "url": "https://oldtownmexcafe.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Key and Cleaver",
-      "pinSourceUrl": "https://keyandcleaver.com/",
-      "address": "4727 University Ave, San Diego, CA 92105",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.keyandcleaver.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Freddy's Chophouse",
-      "pinSourceUrl": "https://www.freddyschophouse.com/",
-      "address": "554 Fourth Avenue, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://freddyschophouse.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://freddyschophouse.com/san-diego-freddy-s-chophouse-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Fogo de Chão - San Diego",
-      "pinSourceUrl": "https://fogodechao.com/location/san-diego/",
-      "address": "668 Sixth Avenue, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://fogodechao.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://fogodechao.com/traditions/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://fogodechao.com/location/san-diego/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://fogodechao.com/traditions/",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -3101,31 +3261,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Havana 1920",
-      "pinSourceUrl": "https://havana1920.com/happy-hour/",
-      "address": "548 Fifth Avenue, San Diego, CA 92101",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://havana1920.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://havana1920.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://havana1920.com/happy-hour/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://havana1920.com/about/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Vincenzo Cucina and Lounge",
       "pinSourceUrl": "https://vincenzosd.com/",
       "address": "550 W Date Street, San Diego, CA 92101",
@@ -3140,14 +3275,6 @@
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Night & Day Cafe",
-      "pinSourceUrl": "http://coronadondcafe.com/",
-      "address": "847 Orange Avenue, Coronado, CA 92118",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [],
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
@@ -3176,14 +3303,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "McP's Irish Pub",
-      "pinSourceUrl": "http://mcpspub.com/",
-      "address": "1107 Orange Avenue, Coronado, CA 92118",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "formoosa",
       "pinSourceUrl": "https://www.formoosa.com/",
       "address": "4646 Convoy St, San Diego, CA 92111",
@@ -3205,35 +3324,6 @@
         {
           "url": "https://www.thehillspub.com/",
           "result": "429 Client Error: Too Many Requests for url: https://www.thehillspub.com/"
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Karl Strauss Brewing Company - 4S Ranch",
-      "pinSourceUrl": "https://www.karlstrauss.com/location/4s-ranch/menu",
-      "address": "10448 Reserve Dr, San Diego, CA 92127",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.karlstrauss.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.karlstrauss.com/about",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.karlstrauss.com/location/4s-ranch/menu",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.karlstrauss.com/about",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.karlstrauss.com/location/4s-ranch/about",
-          "result": "Opened; branch opening date not yet established from this page."
         }
       ],
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
@@ -3299,23 +3389,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Sbicca Del Mar",
-      "pinSourceUrl": "https://www.sbiccadelmar.com/",
-      "address": "215 15th St, Del Mar, CA 92014",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.sbiccadelmar.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.sbiccadelmar.com/del-mar-del-mar-sbicca-del-mar-restaurant-with-ocean-views-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Jose's Courtroom",
       "pinSourceUrl": "https://joses.com/",
       "address": "1037 Prospect St, La Jolla, CA 92037",
@@ -3353,31 +3426,6 @@
         },
         {
           "url": "https://www.pacificcatch.com/location/la-jolla/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "The Promiscuous Fork",
-      "pinSourceUrl": "https://thepromiscuousfork.com/menu.html",
-      "address": "6984 La Jolla Blvd, La Jolla, CA 92037",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://thepromiscuousfork.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://thepromiscuousfork.com/about.html",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://thepromiscuousfork.com/menu.html",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://thepromiscuousfork.com/about.html",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -3454,27 +3502,6 @@
         },
         {
           "url": "https://jakesdelmar.com/menus/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Beeside Balcony - Del Mar",
-      "pinSourceUrl": "https://beesidebalcony.com/",
-      "address": "1201 Camino Del Mar #200, Del Mar, CA 92014",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://beesidebalcony.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://beesidebalcony.com/del-mar-olde-del-mar-beeside-balcony-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://beesidebalcony.com/del-mar-olde-del-mar-beeside-balcony-about#about_s2",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -3627,23 +3654,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Draft Republic San Marcos",
-      "pinSourceUrl": "https://www.draftrepublicsanmarcos.com/menu/",
-      "address": "255 Redel Rd, San Marcos, CA 92078",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.draftrepublicsanmarcos.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.draftrepublicsanmarcos.com/menu/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Amalfi Cucina Italiana - San Marcos",
       "pinSourceUrl": "https://www.amalficucinaitaliana.com/cucina-san-marcos",
       "address": "1035 La Bonita Dr, San Marcos, CA 92078",
@@ -3703,35 +3713,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Sura Korean BBQ - Chula Vista",
-      "pinSourceUrl": "https://surakbbqsd.com/menus/",
-      "address": "1960 Optima St, Chula Vista, CA 91915",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://surakbbqsd.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://surakbbqsd.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://surakbbqsd.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://surakbbqsd.com/menus/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://surakbbqsd.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Smoke & Glory BBQ - Chula Vista",
       "pinSourceUrl": "https://smokeandglorybbq.com/happy-hour-menu/",
       "address": "330 F St Suite C, Chula Vista, CA 91910",
@@ -3768,23 +3749,6 @@
         },
         {
           "url": "https://www.pizzospizzeria.com/locations/millenia-otay-ranch/menu/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Casa Nori Sushi Bar & Grill",
-      "pinSourceUrl": "https://www.casanorisushi.com/menu-2a",
-      "address": "1730 E Palomar St, Chula Vista, CA 91913",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.casanorisushi.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.casanorisushi.com/menu-2a",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -3833,14 +3797,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Bay Hill Tavern",
-      "pinSourceUrl": "http://www.bayhilltavernsd.com/",
-      "address": "3010 Clairemont Dr, San Diego, CA 92117",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Kimball Bar & Eatery",
       "pinSourceUrl": "https://www.kimballsd.com/menus",
       "address": "740 Bay Marina Dr, National City, CA 91950",
@@ -3852,23 +3808,6 @@
         },
         {
           "url": "https://www.kimballsd.com/menus",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Romanella Cucina Romana",
-      "pinSourceUrl": "https://romanellasd.com/happy-hour",
-      "address": "3055 Clairemont Dr, San Diego, CA 92117",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.romanellasd.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.romanellasd.com/happy-hour",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -3908,52 +3847,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Miguel's Cocina - Coronado",
-      "pinSourceUrl": "https://miguels-cocina.com/locations/coronado/",
-      "address": "1351 Orange Ave, Coronado, CA 92118",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://miguels-cocina.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://miguels-cocina.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://miguels-cocina.com/locations/coronado/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://miguels-cocina.com/about-us/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Alchemy - Choose Thy Poison",
-      "pinSourceUrl": "https://choosethypoison.com/san-diego-alchemy-choose-thy-poison-elixir-hour",
-      "address": "1932 Kearney Ave #100, San Diego, CA 92113",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://choosethypoison.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://choosethypoison.com/san-diego-alchemy-choose-thy-poison-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://choosethypoison.com/san-diego-alchemy-choose-thy-poison-elixir-hour",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Saki Sushi & Grill",
       "pinSourceUrl": "https://sakisushiandgrill.com/full-menu/",
       "address": "2424 Hoover Ave Ste F, National City, CA 91950",
@@ -3965,23 +3858,6 @@
         },
         {
           "url": "https://sakisushiandgrill.com/full-menu/",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "SurfSide Fish House - Scripps Ranch",
-      "pinSourceUrl": "https://surfsidefishhouse.com/",
-      "address": "10585 Scripps Poway Pkwy Ste D, San Diego, CA 92131",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://surfsidefishhouse.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://surfsidefishhouse.com/about-us/",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -4012,23 +3888,6 @@
       "checkedSources": [
         {
           "url": "https://downtowncafe-ec.com/index.html",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Buckboard's BBQ & Brew",
-      "pinSourceUrl": "https://www.buckboardsbbq.com/",
-      "address": "975 Greenfield Dr, El Cajon, CA 92021",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.buckboardsbbq.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://www.buckboardsbbq.com/el-cajon-buckboard-s-barbecue-and-brew-about",
           "result": "Opened; branch opening date not yet established from this page."
         }
       ],
@@ -4348,23 +4207,6 @@
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
     },
     {
-      "name": "Coral Del Mar",
-      "pinSourceUrl": "https://eatatcoral.com/",
-      "address": "1247 Camino Del Mar, Del Mar, CA 92014",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://eatatcoral.com/",
-          "result": "Opened; branch opening date not yet established from this page."
-        },
-        {
-          "url": "https://eatatcoral.com/del-mar-del-mar-coral-del-mar-about",
-          "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
       "name": "Poseidon on the Beach",
       "pinSourceUrl": "https://www.poseidonrestaurant.com/menus?location=del-mar",
       "address": "1670 Coast Blvd, Del Mar, CA 92014",
@@ -4407,40 +4249,6 @@
         {
           "url": "https://www.eatcocinadebarrio.com/menu-hillcrest",
           "result": "403 Client Error: Forbidden for url: https://www.eatcocinadebarrio.com/menu-hillcrest"
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Cocina de Barrio - North Park",
-      "pinSourceUrl": "https://www.eatcocinadebarrio.com/menu-north-park",
-      "address": "2884 University Ave, San Diego, CA 92104",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.eatcocinadebarrio.com/",
-          "result": "403 Client Error: Forbidden for url: https://www.eatcocinadebarrio.com/"
-        },
-        {
-          "url": "https://www.eatcocinadebarrio.com/menu-north-park",
-          "result": "403 Client Error: Forbidden for url: https://www.eatcocinadebarrio.com/menu-north-park"
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Cocina de Barrio - Point Loma",
-      "pinSourceUrl": "https://www.eatcocinadebarrio.com/menu-point-loma",
-      "address": "3924 W Point Loma Blvd, San Diego, CA 92110",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://www.eatcocinadebarrio.com/",
-          "result": "403 Client Error: Forbidden for url: https://www.eatcocinadebarrio.com/"
-        },
-        {
-          "url": "https://www.eatcocinadebarrio.com/menu-point-loma",
-          "result": "403 Client Error: Forbidden for url: https://www.eatcocinadebarrio.com/menu-point-loma"
         }
       ],
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
@@ -4534,23 +4342,6 @@
         {
           "url": "https://dellussopizza.com/story",
           "result": "Opened; branch opening date not yet established from this page."
-        }
-      ],
-      "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
-    },
-    {
-      "name": "Romesco Mexiterranean Bistro",
-      "pinSourceUrl": "https://romescomexmed.com/page/happy-hour",
-      "address": "4346 Bonita Rd, Bonita, CA 91902",
-      "reason": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding.",
-      "checkedSources": [
-        {
-          "url": "https://romescomexmed.com/",
-          "result": "403 Client Error: Forbidden for url: https://romescomexmed.com/"
-        },
-        {
-          "url": "https://romescomexmed.com/page/happy-hour",
-          "result": "403 Client Error: Forbidden for url: https://romescomexmed.com/page/happy-hour"
         }
       ],
       "nextStep": "Find and open branch-specific opening coverage or an operator history; reconcile the current address before publishing."
