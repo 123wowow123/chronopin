@@ -113,6 +113,15 @@ export async function syncAllRecords({ apply = true, limit = 200 } = {}): Promis
   return total;
 }
 
+// An open market as it stands now, for recording the odds a pin cites it with;
+// 'closed' once it has settled (its earlier odds are unknown), null when not found.
+export async function liveRecord(ref: MarketRef): Promise<{ source: string; question: string; outcomes: OutcomeOdds[]; volume: number | null; closeTime: string | null } | 'closed' | null> {
+  const odds = await oddsFor(ref);
+  if (!odds || !odds.outcomes.length) return null;
+  if (odds.closed) return 'closed';
+  return { source: odds.source, question: odds.title, outcomes: outcomesOf(odds), volume: odds.volume ?? null, closeTime: odds.closeTime ?? null };
+}
+
 export type Backfill = { pins: number; markets: number; recorded: number; noHistory: number; open: number };
 
 export type HistoricalRecord = {
