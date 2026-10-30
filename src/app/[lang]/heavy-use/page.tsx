@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // The page a visitor is shown when they ask for pages faster than the request
 // limit allows (src/proxy.ts rewrites to it with a 429), and where the
 // "Heavy user" ad tile points. Reachable by anyone, never indexed.
-export default async function HeavyUse({ searchParams }: { searchParams: Promise<{ limited?: string; paid?: string }> }) {
+export default async function HeavyUse({ searchParams }: { searchParams: Promise<{ limited?: string; paid?: string; region?: string }> }) {
   const [query, user, t] = await Promise.all([searchParams, getUser(), getT()]);
   const plan = user ? await soft(HeavyUserPlan.status(user.id), null, 'heavy plan status') : null;
   const limited = query.limited === '1';
@@ -38,7 +38,7 @@ export default async function HeavyUse({ searchParams }: { searchParams: Promise
           {limited ? t('heavy.headingLimited') : t('heavy.heading')}
         </h1>
         <p className="relative mx-auto mt-4 max-w-xl text-lg text-muted">{limited ? t('heavy.introLimited') : t('heavy.intro')}</p>
-        {limited && !user ? (
+        {limited && !user && query.region !== '1' ? (
           <p className="relative mx-auto mt-4 max-w-xl rounded-lg bg-accent/10 px-3 py-2 text-sm ring-1 ring-accent/20 ring-inset">
             {t.rich('account.higherLimits', {
               login: (chunks) => (

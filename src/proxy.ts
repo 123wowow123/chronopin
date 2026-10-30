@@ -128,16 +128,21 @@ async function gated(request: NextRequest, action: 'issue' | 'strip' | 'blocked'
 // plan (a rewrite, so the address stays) when a browser asked for a page, else
 // plain text. Both are 429 with Retry-After. A heavy user over their light
 // limit just waits.
-function tooManyRequests(request: NextRequest, wait: number, light: boolean): NextResponse {
+function tooManyRequests(request: NextRequest, wait: number, light: boolean, region = false): NextResponse {
   const headers = { 'Retry-After': String(wait) };
   const wantsPage = request.method === 'GET' && (request.headers.get('accept') ?? '').includes('text/html') && !request.headers.has('rsc');
   if (!wantsPage || light) {
     return new NextResponse('Too many requests - please slow down.', { status: 429, headers: { ...headers, 'Content-Type': 'text/plain; charset=utf-8' } });
   }
   const cookie = request.cookies.get(LOCALE_COOKIE)?.value;
-  const locale = cookie && isLocale(cookie) ? cookie : DEFAULT_LOCALE;
+  // A Chinese region limit (botLimit.chinaRetryAfter) shows the plans in Chinese
+  // to a browser that asks for it, and not the sign-in hint: signing in does
+  // not lift it, a paid plan does.
+  const chinese = region && /^zh\b/i.test(request.headers.get('accept-language')?.trim() ?? '');
+  const locale = cookie && isLocale(cookie) ? cookie : chinese ? 'zh' : DEFAULT_LOCALE;
   const url = new URL(`/${locale}/heavy-use`, request.url);
   url.searchParams.set('limited', '1');
+  if (region) url.searchParams.set('region', '1');
   return NextResponse.rewrite(url, { status: 429, headers });
 }
 
@@ -221,7 +226,7 @@ export async function proxy(request: NextRequest) {
   }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
     const address = request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? '';
-    // Visitors from Chinese address ranges: 100 different addresses a minute
+    // Visitors from Chinese address ranges: 80 different addresses a minute
     // between them (botLimit.chinaRetryAfter). Signed-in users with a paid plan
     // (ad-free, heavy-use or Premium) pass.
     if (address && (await isChineseAddress(address))) {
@@ -229,7 +234,7 @@ export async function proxy(request: NextRequest) {
         ? (await AdFreeSubscription.isActive(session.id).catch(() => false)) || (await PremiumSubscription.status(session.id).then((s) => s.active).catch(() => false))
         : false;
       const china = paid ? null : chinaRetryAfter(address);
-      if (china != null) return tooManyRequests(request, china, false);
+      if (china != null) return tooManyRequests(request, china, false, true);
     }
     const key = session ? `u:${session.id}` : `ip:${address}`;
     const light = session ? await HeavyUserPlan.isActive(session.id).catch(() => false) : false;
