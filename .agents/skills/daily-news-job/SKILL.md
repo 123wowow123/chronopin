@@ -34,6 +34,8 @@ Job pins and edits must reach production (www.chronopin.com), not only local.
 6. Read each saved change back (local and prod), confirm the pending queues drained, **then** resolve review marks.
 7. Run the per-run tasks the doc lists (factoryProfiles, modelRubrics, productCompetitors, predictionMarkets,
    Brent/WTI) and update the run note in `docs/okf/scraping/` (for example `news-YYYY-MM-DD-pm.md`).
+   **Every note starts with OKF frontmatter** (`type: Log`, `title`, `description`, `tags`, `generated`; copy the
+   header of the previous run note) or `npx vitest run src/lib/okfLint.test.ts` fails. Run that test before finishing.
 
 ## What to queue
 

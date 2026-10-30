@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Factory/buildout profiles — second 100-pin batch, 2026-10-29"
+description: "Applied 100 new profiles to production and the same 100 locally. All 200 final API readbacks matched the submitted profiles exactly. Original authors,…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Factory/buildout profiles — second 100-pin batch, 2026-10-29
 
 Applied 100 new profiles to production and the same 100 locally. All 200 final API readbacks matched the submitted profiles exactly. Original authors, narrative text, media, dates, prices, source URLs, thread parents and unrelated manual tags were preserved. Added research references remain alongside existing references.
