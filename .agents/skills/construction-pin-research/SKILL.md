@@ -48,4 +48,21 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   that plant's own milestone, each with its own profile.
 - Radar scores stay null unless a peer cohort or named capability is published.
 
+## 5. Large profile rounds: identity and source precision
+- Research a raw gap candidate before counting it as a missing eligible project. Skip repeated milestones when
+  the same physical scope already has a project profile; record the profiled pin and the specific overlap.
+- EIA generator rows must match plant identity, state/county, technology and the pin’s exact component/phase.
+  Keep separate unit operation months separate. For non-adjacent worksheet rows, quote each literal row
+  separately rather than joining them into a supposed continuous quotation. A generator inventory rating is
+  preliminary nameplate capacity, not a utility commitment, annual output or an independent construction budget.
+- An Epoch AI campus’s modeled IT power, compute equivalents and inferred operational dates are research
+  estimates. Do not treat modelled compute-plus-building capital costs as construction prices. Keep its dated
+  physical observations separate from inferred operation and distinguish completed buildings from ongoing
+  campus expansion. Duplicate campus aliases do not create new project counts.
+- For housing, match the named site/phase and city/address to the operator or a unique HUD LIHTC `HUD_ID`.
+  Phase numerals matter; do not merge similarly named phases or add their units without source evidence.
+  HUD `YR_PIS` is the tax-credit project’s placed-in-service year, not necessarily original building construction
+  or a new rehabilitation opening. Values such as `8888`/`9999` are unknown, never dates. Preserve year precision,
+  and do not infer vacancy, present eligibility or an exact ceremony day from a placed-in-service record.
+
 Docs: `docs/okf/scraping/daily-jobs.md#factoryprofiles`, `docs/okf/api/factory-capability.md`.
