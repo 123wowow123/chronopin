@@ -14,6 +14,7 @@ export function AdFreeSetting({
   endsOn,
   endedOn,
   canManage,
+  prepaid,
   justPaid,
 }: {
   active: boolean;
@@ -22,6 +23,8 @@ export function AdFreeSetting({
   // The day a cancelled plan's paid period ran out, once it has: ads are back.
   endedOn: string | null;
   canManage: boolean;
+  // The plan is a month paid once with WeChat Pay: another month can be added.
+  prepaid: boolean;
   justPaid: boolean;
 }) {
   const [busy, setBusy] = useState(false);
@@ -29,11 +32,11 @@ export function AdFreeSetting({
   const t = useT();
   const chinese = useLocale() === 'zh';
 
-  async function go(path: '/api/billing/checkout' | '/api/billing/portal', currency?: 'cny') {
+  async function go(path: '/api/billing/checkout' | '/api/billing/portal', currency?: 'cny' | 'wechat') {
     setBusy(true);
     setError('');
     try {
-      const { url } = await api.post<{ url: string }>(path, currency ? { currency } : {});
+      const { url } = await api.post<{ url: string }>(path, currency === 'wechat' ? { method: 'wechat' } : currency ? { currency } : {});
       window.location.assign(url);
     } catch {
       setError(t('profile.adFreeError'));
@@ -60,6 +63,14 @@ export function AdFreeSetting({
         <button type="button" disabled={busy} onClick={() => void go('/api/billing/checkout', 'cny')} className="btn btn-secondary">
           {t('profile.adFreeSubscribeCny')}
         </button>
+      ) : null}
+      {chinese && ((!active && !justPaid) || prepaid) ? (
+        <>
+          <button type="button" disabled={busy} onClick={() => void go('/api/billing/checkout', 'wechat')} className="btn btn-secondary">
+            {t('profile.adFreeSubscribeWechat')}
+          </button>
+          <p className="text-sm text-subtle">{t('premium.wechatNote')}</p>
+        </>
       ) : null}
       {canManage ? (
         <button type="button" disabled={busy} onClick={() => void go('/api/billing/portal')} className="btn btn-secondary">

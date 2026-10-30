@@ -1,6 +1,6 @@
 import { createHmac } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
-import { formEncode, verifyStripeSignature } from './stripe';
+import { CHECKOUT_PRICES, checkoutChoice, cnyFen, formEncode, verifyStripeSignature } from './stripe';
 
 const secret = 'whsec_test';
 const body = '{"id":"evt_1"}';
@@ -26,5 +26,19 @@ describe('formEncode', () => {
   it('writes nested objects and arrays in Stripe bracket syntax', () => {
     const text = formEncode({ mode: 'subscription', line_items: [{ quantity: 1, price_data: { currency: 'usd' } }], skip: undefined }).toString();
     expect(decodeURIComponent(text)).toBe('mode=subscription&line_items[0][quantity]=1&line_items[0][price_data][currency]=usd');
+  });
+});
+
+describe('WeChat Pay choice', () => {
+  const ask = (body: unknown) => checkoutChoice(new Request('http://x', { method: 'POST', body: JSON.stringify(body) }));
+  it('is always yuan', async () => {
+    expect(await ask({ method: 'wechat' })).toEqual({ currency: 'cny', wechat: true });
+    expect(await ask({ currency: 'cny' })).toEqual({ currency: 'cny', wechat: false });
+    expect(await ask({})).toEqual({ currency: 'usd', wechat: false });
+  });
+  it('prices other plans at seven yuan to the dollar, like the plans', () => {
+    expect(cnyFen(300)).toBe(CHECKOUT_PRICES.cny.adFree);
+    expect(cnyFen(2000)).toBe(CHECKOUT_PRICES.cny.premium);
+    expect(cnyFen(2100)).toBe(CHECKOUT_PRICES.cny.bundle);
   });
 });

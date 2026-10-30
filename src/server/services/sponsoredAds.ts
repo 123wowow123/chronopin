@@ -9,7 +9,7 @@ import { HttpError } from '../http';
 import { squareImage } from '../image';
 import Ad from '../model/ad';
 import SponsoredAd, { type SponsoredRow } from '../model/sponsoredAd';
-import { stripeConfigured, stripeRequest } from '../stripe';
+import { cnyFen, stripeConfigured, stripeRequest } from '../stripe';
 import log from '../util/log';
 import * as db from '../db';
 import { notifyReviewNeeded } from './sponsoredReview';
@@ -67,24 +67,27 @@ export async function storeImage(adId: number, userId: number, file: File, asAdm
   return blobUrl(name)!;
 }
 
-export async function startCheckout(ad: SponsoredRow, origin: string, email: string | null): Promise<string> {
+// wechat: pay once in yuan with WeChat Pay. A monthly ad bought this way is one
+// month of its impressions with no renewal (WeChat Pay cannot subscribe).
+export async function startCheckout(ad: SponsoredRow, origin: string, email: string | null, wechat = false): Promise<string> {
   if (!stripeConfigured()) throw new HttpError(503, 'Payments are not set up yet.');
   if (ad.status !== 'draft') throw new HttpError(409, 'This ad is already paid for.');
   const problem = creativeProblem(ad);
   if (problem) throw new HttpError(422, problem, { message: problem });
-  const monthly = ad.plan === 'monthly';
-  const pkg = monthly ? MONTHLY_PLAN : packageFor(ad.impressionsBought);
+  const monthly = ad.plan === 'monthly' && !wechat;
+  const pkg = ad.plan === 'monthly' ? MONTHLY_PLAN : packageFor(ad.impressionsBought);
   if (!pkg) throw new HttpError(422, 'Choose a package.');
   const session = await stripeRequest<{ id: string; url: string }>('POST', '/checkout/sessions', {
     mode: monthly ? 'subscription' : 'payment',
     client_reference_id: String(ad.userId),
+    ...(wechat ? { payment_method_types: ['wechat_pay'], payment_method_options: { wechat_pay: { client: 'web' } } } : {}),
     ...(email ? { customer_email: email } : {}),
     line_items: [
       {
         quantity: 1,
         price_data: {
-          currency: 'usd',
-          unit_amount: pkg.priceCents,
+          currency: wechat ? 'cny' : 'usd',
+          unit_amount: wechat ? cnyFen(pkg.priceCents) : pkg.priceCents,
           ...(monthly ? { recurring: { interval: 'month' } } : {}),
           product_data: {
             name: monthly

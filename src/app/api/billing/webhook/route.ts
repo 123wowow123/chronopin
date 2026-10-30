@@ -1,6 +1,8 @@
 import config from '@/server/config';
 import { HttpError, json, route } from '@/server/http';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
+import PrepaidPlan from '@/server/model/prepaidPlan';
+import { confirmPrepaidPayment } from '@/server/services/prepaidPlans';
 import { fetchSubscription, recordBundleSubscription, recordHeavySubscription, recordPremiumSubscription, recordSubscription } from '@/server/services/billing';
 import { adSubscriptionChanged, confirmAdPayment, confirmAdSubscription, renewAdSubscription } from '@/server/services/sponsoredAds';
 import { verifyStripeSignature } from '@/server/stripe';
@@ -38,9 +40,19 @@ export const POST = route(async (request: Request) => {
       Number.isInteger(userId) && userId > 0
     ) {
       // $5 once: 30 days more, counted once per session.
-      await HeavyUserPlan.addMonth(userId, typeof object.customer === 'string' ? object.customer : null, String(object.id));
+      const counted = await HeavyUserPlan.addMonth(userId, typeof object.customer === 'string' ? object.customer : null, String(object.id));
+      // A WeChat Pay month also gets the "ends in 3 days" email (PrepaidPlan carries the reminder only).
+      if (counted && (object.metadata as Record<string, string>).heavyMethod === 'wechat') await PrepaidPlan.add(userId, 'heavy', String(object.id));
     } else if (event.type.startsWith('customer.subscription.') && object.id) {
       await recordHeavySubscription(await fetchSubscription(String(object.id)));
+    }
+    return json({ received: true });
+  }
+
+  // One month of a plan paid with WeChat Pay marks its session with prepaidUserId.
+  if ((object.metadata as Record<string, string> | null | undefined)?.prepaidUserId) {
+    if ((event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') && object.mode === 'payment' && object.payment_status === 'paid') {
+      await confirmPrepaidPayment(object);
     }
     return json({ received: true });
   }

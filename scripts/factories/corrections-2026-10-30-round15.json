@@ -1,0 +1,148 @@
+{
+  "researchedAt": "2026-10-30",
+  "pinContentCorrections": [
+    {
+      "id": 18820,
+      "patch": {
+        "description": "Kearsarge Grissom Solar Project is a 4 MW solar photovoltaic generation facility in Sullivan County, NH. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in September 2026. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Kearsarge Grissom, plant 70051, generator GRISS, in Sullivan County, NH, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 4 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in September 2026. The map/timeline marker uses 2026-09-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Kearsarge Grissom LLC. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in September 2026. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18685,
+      "patch": {
+        "description": "Point Beach Solar Energy Center is a 100 MW solar photovoltaic generation facility in Manitowoc County, WI. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in September 2021. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Point Beach Solar, plant 64431, generator PBS, in Manitowoc County, WI, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 100 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in September 2021. The map/timeline marker uses 2021-09-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Point Beach Solar. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2021-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in September 2021. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18669,
+      "patch": {
+        "description": "Darien Solar Energy Center is a 250 MW solar photovoltaic generation facility in Rock County, WI. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in March 2025. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Darien Solar, plant 64534, generator 1, in Rock County, WI, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 250 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in March 2025. The map/timeline marker uses 2025-03-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Wisconsin Electric Power Co. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2025-03-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in March 2025. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18632,
+      "patch": {
+        "description": "CPV Backbone Solar Project is a 175 MW solar photovoltaic generation facility in Garrett County, MD. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in December 2025. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists CPV Backbone Solar, plant 67022, generator BB1, in Garrett County, MD, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 175 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in December 2025. The map/timeline marker uses 2025-12-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is CPV Backbone Solar, LLC. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2025-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in December 2025. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18452,
+      "patch": {
+        "description": "Bailey Mill Solar Facility is a 74.9 MW solar photovoltaic generation facility in Jefferson County, FL. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in September 2026. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Bailey Mill Solar, plant 68052, generator PV1, in Jefferson County, FL, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 74.9 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in September 2026. The map/timeline marker uses 2026-09-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Duke Energy Florida, LLC. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in September 2026. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18439,
+      "patch": {
+        "description": "Highland Solar South is a 74.9 MW solar photovoltaic generation facility in Highlands County, FL. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in September 2026. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Highland Solar South, plant 64346, generator 9999, in Highlands County, FL, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 74.9 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in September 2026. The map/timeline marker uses 2026-09-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Placid Solar, LLC. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in September 2026. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18701,
+      "patch": {
+        "description": "Azalea Springs Solar Project is a 180 MW solar photovoltaic generation facility in Angelina County, TX. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in November 2025. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Azalea Springs Solar Park, plant 68470, generator AZ1, in Angelina County, TX, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published electrical nameplate capacity is 180 MW. This rating is capacity, not measured annual electricity generation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in November 2025. The map/timeline marker uses 2025-11-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Azalea Springs Solar Park LLC. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2025-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in November 2025. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record.",
+        "title": "Azalea Springs Solar Project: 180 MW Nameplate Solar in Angelina County, Texas, Operating Since November 2025"
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 18284,
+      "patch": {
+        "description": "Faraday Energy Storage is a 150 MW battery storage facility in Utah County, UT. EIA’s September 2026 preliminary generator inventory reports it operating, with initial operation in September 2026. The operation record gives month-only precision; no exact commissioning day is established.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary generator inventory lists Faraday Energy Storage, plant 69424, generator FBS1, in Utah County, UT, as (OP) Operating.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The published storage power is 150 MW. This is battery power, not stored energy; no four-hour duration or MWh rating is inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA records initial operation in September 2026. The map/timeline marker uses 2026-09-01 to represent that month; it is not a verified opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory’s reporting entity is Lydian Energy. This identifies the survey entity and does not establish every ownership or financing interest.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish project-specific construction cost, construction start, jobs, floor area or annual energy output.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 generator inventory records initial operation in September 2026. The first day is a month-only display marker; the actual commissioning day is unpublished. The former future forecast has been superseded by the operating inventory record."
+      },
+      "reason": "Replace contradicted future-operation forecast and unsupported claims with the opened generator inventory’s identity, capacity, operating stage and reported operation month."
+    },
+    {
+      "id": 216,
+      "patch": {
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The Australian Prime Minister’s official opening speech is dated 25 October 2026 and marks the airport’s opening. This verifies the opening date rather than relying on the earlier schedule.",
+        "longFormSummary": "<h3>Opening verified — October 30, 2026</h3><p>The Australian Government held the official opening of Western Sydney International Airport on October 25, 2026. Its opening speech confirms the airport’s 3.7 km runway and AUD 5.3 billion government investment.<cite data-ref=\"https://www.pm.gov.au/media/opening-western-sydney-international-airport\"></cite></p><h3>Earlier announcement and project evidence</h3><ul><li>Western Sydney International (Nancy-Bird Walton) Airport, WSI, at Luddenham and Badgerys Creek, is opening for passengers on 25 October 2026, after cargo flights began on 27 July 2026<cite data-ref=\"https://en.wikipedia.org/wiki/Western_Sydney_Airport\"></cite><cite data-ref=\"https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026\"></cite><cite data-ref=\"https://www.infrastructure.gov.au/department/media/news/western-sydney-airport-set-open\"></cite></li><li>It is a full-service, curfew-free airport for up to 10 million passengers a year with a single 3.7 km runway, after 15 years of planning, seven of construction and a year of testing<cite data-ref=\"https://en.wikipedia.org/wiki/Western_Sydney_Airport\"></cite><cite data-ref=\"https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026\"></cite></li><li>Jetstar operates the first commercial flight (A320 to the Gold Coast, 11am 25 October), with Melbourne and Brisbane routes; Air New Zealand to Auckland from 26 October; Singapore Airlines daily from 23 November 2026; QantasLink from 28 March 2027<cite data-ref=\"https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026\"></cite><cite data-ref=\"https://www.infrastructure.gov.au/department/media/news/western-sydney-airport-set-open\"></cite></li><li>From 1 November 2026 WSI is intended to take overnight freight movements under the Sydney Airport Curfew Act 1995<cite data-ref=\"https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026\"></cite><cite data-ref=\"https://www.infrastructure.gov.au/department/media/news/western-sydney-airport-set-open\"></cite></li><li>The project created over 12,800 jobs and is part of nearly $18 billion of Western Sydney investment; terminal completed 11 June 2025 and the first jet landed 28 October 2025<cite data-ref=\"https://en.wikipedia.org/wiki/Western_Sydney_Airport\"></cite><cite data-ref=\"https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026\"></cite><cite data-ref=\"https://www.infrastructure.gov.au/department/media/news/western-sydney-airport-set-open\"></cite></li></ul>"
+      },
+      "reason": "Verify the realized airport opening instead of leaving it classified as a future scheduled event."
+    },
+    {
+      "id": 270,
+      "patch": {
+        "utcStartDateTime": "2028-03-15T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Bogotá’s September 24, 2026 city update targets construction completion in September 2027, testing afterward and commercial operation in March 2028, citing March 15, 2028 for integrated passenger transfers. March 15 is a stated target, not an achieved opening; the former June marker is superseded."
+      },
+      "reason": "Align the native timeline marker with the recent city target already described in the sourced profile and existing article."
+    },
+    {
+      "id": 4940,
+      "patch": {
+        "description": "Freebird DC01 is the filed 548,950 sq ft, four-data-hall first building at SB Energy’s Milam County data center in Burlington, Texas. Its TDLR filing estimates USD 470 million and lists October 15, 2026 as a completion target. That target is unconfirmed; the developer currently reports Phase 1 construction and expects first operations in 2027.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "October 15, 2026 is retained as the original TDLR-filed building completion target, not an achieved handover. The developer currently says Phase 1 is in construction and first operations are expected in 2027; no DC01-specific actual completion day is published.",
+        "longFormSummary": "<h3>Current stage checked — October 30, 2026</h3><p>The developer’s current project FAQ states: <q>Phase 1 of the project is in construction. First operations are expected in 2027.</q> The October 15, 2026 TDLR target remains unconfirmed and must not be read as completed construction. Campus-level power or workforce figures are not attributed to this individual DC01 building.<cite data-ref=\"https://milamdc.com/faqs/\"></cite></p><h3>Original Phase 1 filing and earlier research</h3><ul><li>A Texas Department of Licensing and Regulation filing (TABS2026017746, registered 15 April 2026) for Freebird Data Center Phase 1 (DC01) gives a start date of 20 October 2025 and a completion date of 15 October 2026<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746\"></cite><cite data-ref=\"https://www.zabalist.com/projects/TABS2026017746\"></cite><cite data-ref=\"https://www.lowvoltagenation.com/posts/openai-stargate-freebird-milam-county-ai-data-center\"></cite></li><li>The project is new construction on County Road 133 in Burlington, Milam County, Texas, with an estimated cost of $470 million, privately funded on private land<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746\"></cite><cite data-ref=\"https://www.zabalist.com/projects/TABS2026017746\"></cite></li><li>The scope is a single-story 548,950 sq ft data center with four data halls, supporting infrastructure, a loading dock and administrative offices<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746\"></cite><cite data-ref=\"https://www.datacenterdynamics.com/en/news/openai-stargates-milam-texas-freebird-data-center-to-span-548950-sq-ft-in-first-phase/\"></cite><cite data-ref=\"https://www.zabalist.com/projects/TABS2026017746\"></cite></li><li>The owner of record is Milam County Data Center LLC, the tenant contact is Kaylen Bushell of OpenAI, and the design firm is Corgan Architects<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746\"></cite><cite data-ref=\"https://www.datacenterdynamics.com/en/news/openai-stargates-milam-texas-freebird-data-center-to-span-548950-sq-ft-in-first-phase/\"></cite><cite data-ref=\"https://www.lowvoltagenation.com/posts/openai-stargate-freebird-milam-county-ai-data-center\"></cite></li><li>The site is a 1.2 GW facility that SB Energy, a SoftBank subsidiary, is building and operating, led by Zoheir Taheri, with OpenAI also an investor in SB Energy<cite data-ref=\"https://www.datacenterdynamics.com/en/news/openai-stargates-milam-texas-freebird-data-center-to-span-548950-sq-ft-in-first-phase/\"></cite><cite data-ref=\"https://www.lowvoltagenation.com/posts/openai-stargate-freebird-milam-county-ai-data-center\"></cite><cite data-ref=\"https://www.datacentermap.com/usa/texas/cameron/stargate-milam-county/\"></cite></li><li>The data center is expected to grow larger in later phases<cite data-ref=\"https://www.datacenterdynamics.com/en/news/openai-stargates-milam-texas-freebird-data-center-to-span-548950-sq-ft-in-first-phase/\"></cite></li><li>The dates are proposed schedule dates and do not confirm construction progress; the filing's status is 'Project Registered', with plan review pending<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746\"></cite><cite data-ref=\"https://www.zabalist.com/projects/TABS2026017746\"></cite></li><li>The filing does not name the general contractor or other trade contractors<cite data-ref=\"https://www.lowvoltagenation.com/posts/openai-stargate-freebird-milam-county-ai-data-center\"></cite></li><li>Datacentermap lists the site as under construction<cite data-ref=\"https://www.datacentermap.com/usa/texas/cameron/stargate-milam-county/\"></cite></li></ul>"
+      },
+      "reason": "Distinguish the original filed completion target from current developer evidence; no completion inferred from an elapsed date."
+    }
+  ],
+  "powerScopeRepairs": [
+    {
+      "pinId": 4940,
+      "action": "remove incorrectly scoped usage power record",
+      "oldMegawatts": 1200,
+      "reason": "The DC01 Phase 1 filing specifies building area, halls and cost, but no building-specific MW. 1.2 GW is a whole-campus figure, not demonstrated DC01 usage. Retain no power row for the single-building pin.",
+      "sources": [
+        "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+        "https://milamdc.com/faqs/"
+      ]
+    },
+    {
+      "pinId": 16597,
+      "action": "refresh contradictory legacy power note",
+      "reason": "Legacy hand note describes the scope as proposed while also saying EIA lists the plant operating. September 2026 OP entry supports an explicit operating note with published operation month."
+    }
+  ]
+}

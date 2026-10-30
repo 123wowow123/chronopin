@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
-import { useT } from '@/lib/client/i18n';
+import { useLocale, useT } from '@/lib/client/i18n';
 import { useSession } from '@/lib/client/session';
 
 type Plan = 'month' | 'subscription';
@@ -28,6 +28,7 @@ export function HeavyPlans({
   configured: boolean;
 }) {
   const t = useT();
+  const chinese = useLocale() === 'zh';
   const { status, user } = useSession();
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState('');
@@ -91,6 +92,16 @@ export function HeavyPlans({
               {t('heavy.addMonth')}
             </button>
           ) : null}
+          {chinese && (plan === 'month' || cancelling) ? (
+            <button
+              type="button"
+              className="btn btn-secondary"
+              disabled={busy !== null || !configured}
+              onClick={() => void go('/api/billing/heavy/checkout', { plan: 'month', method: 'wechat' }, 'wechat')}
+            >
+              {t('heavy.buyMonthWechat')}
+            </button>
+          ) : null}
           {plan === 'subscription' ? (
             <button type="button" className="btn btn-secondary" disabled={busy !== null} onClick={() => void go('/api/billing/heavy/portal', {}, 'portal')}>
               {t('heavy.manage')}
@@ -150,6 +161,19 @@ export function HeavyPlans({
                 {busy === o.plan ? t('heavy.opening') : configured ? o.buy : t('heavy.comingSoon')}
               </button>
             )}
+            {!signedOut && chinese ? (
+              <>
+                <button
+                  type="button"
+                  className="btn btn-secondary mt-2"
+                  disabled={busy !== null || !configured || status !== 'ready'}
+                  onClick={() => void go('/api/billing/heavy/checkout', o.plan === 'month' ? { plan: 'month', method: 'wechat' } : { plan: 'subscription', currency: 'cny' }, `${o.plan}-cny`)}
+                >
+                  {o.plan === 'month' ? t('heavy.buyMonthWechat') : t('heavy.buySubCny')}
+                </button>
+                {o.plan === 'month' ? <p className="mt-2 text-xs text-subtle">{t('premium.wechatNote')}</p> : null}
+              </>
+            ) : null}
           </li>
         ))}
       </ul>

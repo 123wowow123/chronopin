@@ -13,6 +13,7 @@ export function PremiumPlan({
   adFreeActive,
   endsOn,
   cancelling,
+  canManage,
   paid,
   bundlePaid,
   configured,
@@ -22,6 +23,8 @@ export function PremiumPlan({
   adFreeActive: boolean;
   endsOn: string | null;
   cancelling: boolean;
+  // There is a Stripe customer to manage; a month paid with WeChat Pay has none.
+  canManage: boolean;
   paid: boolean;
   bundlePaid: boolean;
   configured: boolean;
@@ -32,11 +35,11 @@ export function PremiumPlan({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
 
-  async function go(path: '/api/premium/checkout' | '/api/premium/portal' | '/api/bundle/checkout', currency?: 'cny') {
+  async function go(path: '/api/premium/checkout' | '/api/premium/portal' | '/api/bundle/checkout', currency?: 'cny' | 'wechat') {
     setBusy(true);
     setError('');
     try {
-      const { url } = await api.post<{ url: string }>(path, currency ? { currency } : {});
+      const { url } = await api.post<{ url: string }>(path, currency === 'wechat' ? { method: 'wechat' } : currency ? { currency } : {});
       window.location.assign(url);
     } catch {
       setError(t('premium.checkoutError'));
@@ -49,10 +52,18 @@ export function PremiumPlan({
       <div className="surface mx-auto max-w-xl space-y-3 p-6 text-center" role="status">
         <p className="text-lg font-semibold">{user?.role === 'admin' && !active ? t('premium.onAdmin') : t('premium.on')}</p>
         {endsOn ? <p className="text-muted">{cancelling ? t('premium.ends', { date: endsOn }) : t('premium.renews', { date: endsOn })}</p> : null}
-        {active ? (
+        {active && canManage ? (
           <button type="button" className="btn btn-secondary" disabled={busy} onClick={() => void go('/api/premium/portal')}>
             {t('premium.manage')}
           </button>
+        ) : null}
+        {active && !canManage && chinese ? (
+          <>
+            <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/premium/checkout', 'wechat')}>
+              {t('premium.addMonthWechat')}
+            </button>
+            <p className="text-sm text-muted">{t('premium.wechatNote')}</p>
+          </>
         ) : null}
         {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}
       </div>
@@ -74,6 +85,14 @@ export function PremiumPlan({
           {t('premium.goCny')}
         </button>
       ) : null}
+      {!signedOut && chinese ? (
+        <>
+          <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/premium/checkout', 'wechat')}>
+            {t('premium.goWechat')}
+          </button>
+          <p className="text-sm text-muted">{t('premium.wechatNote')}</p>
+        </>
+      ) : null}
       {!signedOut ? (
         <div className="space-y-2 border-t border-line pt-4">
           <p className="text-sm text-muted">{t('premium.bundleSave')}</p>
@@ -87,6 +106,11 @@ export function PremiumPlan({
               {chinese ? (
                 <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/bundle/checkout', 'cny')}>
                   {t('premium.bundleGoCny')}
+                </button>
+              ) : null}
+              {chinese ? (
+                <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/bundle/checkout', 'wechat')}>
+                  {t('premium.bundleGoWechat')}
                 </button>
               ) : null}
             </>

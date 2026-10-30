@@ -11,6 +11,8 @@ import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/h
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
 import { bareSearchRetryAfter, botRetryAfter, chinaRetryAfter, isChineseAddress, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, searchRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import AdFreeSubscription from '@/server/model/adFreeSubscription';
+import PremiumSubscription from '@/server/model/premiumSubscription';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -219,10 +221,14 @@ export async function proxy(request: NextRequest) {
   }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
     const address = request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? '';
-    // Signed-out visitors from Chinese address ranges: 120 different addresses a
-    // minute between them (botLimit.chinaRetryAfter).
-    if (!session && address && (await isChineseAddress(address))) {
-      const china = chinaRetryAfter(address);
+    // Visitors from Chinese address ranges: 120 different addresses a minute
+    // between them (botLimit.chinaRetryAfter). Signed-in users with a paid plan
+    // (ad-free, heavy-use or Premium) pass.
+    if (address && (await isChineseAddress(address))) {
+      const paid = session
+        ? (await AdFreeSubscription.isActive(session.id).catch(() => false)) || (await PremiumSubscription.status(session.id).then((s) => s.active).catch(() => false))
+        : false;
+      const china = paid ? null : chinaRetryAfter(address);
       if (china != null) return tooManyRequests(request, china, false);
     }
     const key = session ? `u:${session.id}` : `ip:${address}`;

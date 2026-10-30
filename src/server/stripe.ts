@@ -20,17 +20,29 @@ export const BUNDLE_PRICE_CENTS = 2100;
 
 // Chinese users can pay the same plans in yuan, a fixed price each (about the
 // dollar price, rounded) so nobody is billed a moving exchange rate. Amounts are
-// in fen. Stripe takes cards in CNY; WeChat Pay is not enabled on this account
-// (Stripe closed that review as denied on 2026-10-29), so card is the method.
+// in fen. Stripe takes cards in CNY. WeChat Pay was approved on 2026-10-30 (the
+// first review was denied on 2026-10-29), but it cannot fund a subscription, so
+// the recurring plans below stay card-only.
 export type CheckoutCurrency = 'usd' | 'cny';
 export const CHECKOUT_PRICES: Record<CheckoutCurrency, { adFree: number; premium: number; bundle: number }> = {
   usd: { adFree: AD_FREE_PRICE_CENTS, premium: PREMIUM_PRICE_CENTS, bundle: BUNDLE_PRICE_CENTS },
   cny: { adFree: 2100, premium: 14000, bundle: 14700 },
 };
 
+// Any other dollar price in yuan: the plans above are all seven yuan to the
+// dollar (300 -> 2100, 2000 -> 14000), so heavy-user and ad prices follow it.
+export const cnyFen = (usdCents: number) => usdCents * 7;
+
 export async function checkoutCurrency(request: Request): Promise<CheckoutCurrency> {
+  return (await checkoutChoice(request)).currency;
+}
+
+// What the buyer picked: the currency, and whether to pay one month with
+// WeChat Pay (always yuan, never renewing) instead of subscribing.
+export async function checkoutChoice(request: Request): Promise<{ currency: CheckoutCurrency; wechat: boolean }> {
   const body = await request.json().catch(() => null);
-  return body?.currency === 'cny' ? 'cny' : 'usd';
+  const wechat = body?.method === 'wechat';
+  return { currency: wechat || body?.currency === 'cny' ? 'cny' : 'usd', wechat };
 }
 
 export function stripeConfigured(): boolean {

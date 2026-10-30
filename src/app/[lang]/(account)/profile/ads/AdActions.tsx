@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import { useRouter } from '@/lib/client/navigation';
 import { api } from '@/lib/client/api';
+import { useLocale } from '@/lib/client/i18n';
 import type { SponsoredStatus } from '@/lib/sponsoredAds';
 
 // What can be done with one ad: pay for or change one that is not paid yet,
 // pause and resume a live one.
 export function AdActions({ id, status, dailyLimit, monthly = false }: { id: number; status: SponsoredStatus; dailyLimit: number | null; monthly?: boolean }) {
   const router = useRouter();
+  const chinese = useLocale() === 'zh';
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [limit, setLimit] = useState(dailyLimit == null ? '' : String(dailyLimit));
@@ -44,6 +46,14 @@ export function AdActions({ id, status, dailyLimit, monthly = false }: { id: num
           })}>
             {monthly ? 'Subscribe and submit' : 'Pay and submit'}
           </button>
+          {chinese ? (
+            <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => run(async () => {
+              const { url } = await api.post<{ url: string }>(`/api/advertise/ads/${id}/checkout`, { method: 'wechat' });
+              window.location.assign(url);
+            })}>
+              {monthly ? '微信支付一个月并提交' : '微信支付并提交'}
+            </button>
+          ) : null}
           <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => router.push(`/profile/ads?edit=${id}`)}>
             Edit
           </button>

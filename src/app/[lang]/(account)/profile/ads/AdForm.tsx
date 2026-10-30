@@ -5,6 +5,7 @@ import { AdPreview } from '@/components/ads/AdBlock';
 import { SampleReport } from './SampleReport';
 import { useRouter } from '@/lib/client/navigation';
 import { api, ApiError } from '@/lib/client/api';
+import { useLocale } from '@/lib/client/i18n';
 import {
   BODY_MAX,
   creativeProblem,
@@ -20,6 +21,9 @@ import {
   TITLE_MAX,
 } from '@/lib/sponsoredAds';
 
+// Yuan at seven to the dollar, as the server charges (src/server/stripe.ts cnyFen).
+const cnyFen = (usdCents: number) => usdCents * 7;
+
 type Initial = { id: number; title: string; body: string; url: string; impressions: number; imageUrl: string | null; plan?: 'one_time' | 'monthly'; autoTranslate?: boolean };
 
 // Write the ad, pick a package and pay. The ad is saved as a draft first
@@ -29,6 +33,7 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
   // ?plan= from a pricing card: 'monthly', 'custom' or a package's impressions.
   const chosen = initial ? null : preselect;
   const router = useRouter();
+  const chinese = useLocale() === 'zh';
   const fileRef = useRef<HTMLInputElement>(null);
   const [title, setTitle] = useState(initial?.title ?? '');
   const [body, setBody] = useState(initial?.body ?? '');
@@ -61,7 +66,7 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
   // replaces it with their own ad, drawn live.
   const untouched = !title.trim() && !body.trim() && (!url.trim() || url.trim() === 'https://') && !preview;
 
-  async function save(payNow: boolean) {
+  async function save(payNow: boolean, method?: 'wechat') {
     const problem = creativeProblem({ title, body, url });
     if (problem) return setError(problem);
     if (!priced) return setError(`Custom ads start at ${CUSTOM_MIN.toLocaleString('en-US')} impressions, in steps of ${CUSTOM_STEP.toLocaleString('en-US')}.`);
@@ -76,7 +81,7 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
         await api.put(`/api/advertise/ads/${saved.id}/image`, form);
       }
       if (payNow) {
-        const { url: checkout } = await api.post<{ url: string }>(`/api/advertise/ads/${saved.id}/checkout`, {});
+        const { url: checkout } = await api.post<{ url: string }>(`/api/advertise/ads/${saved.id}/checkout`, method ? { method } : {});
         window.location.assign(checkout);
         return;
       }
@@ -257,6 +262,11 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
           <button type="submit" disabled={busy} className="btn btn-primary">
             {busy ? 'Working…' : priced ? (monthly ? `Subscribe for ${dollars(price)} a month and submit` : `Pay ${dollars(price)} and submit`) : 'Choose a size'}
           </button>
+          {chinese && priced ? (
+            <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => void save(true, 'wechat')}>
+              {`微信支付 ¥${(cnyFen(price) / 100).toFixed(cnyFen(price) % 100 ? 2 : 0)}${monthly ? '（一个月，不自动续订）' : ''}并提交`}
+            </button>
+          ) : null}
           <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => void save(false)}>
             Save for later
           </button>

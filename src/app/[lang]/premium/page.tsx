@@ -55,6 +55,7 @@ export default async function PremiumPage({ searchParams }: { searchParams: Prom
         active={plan?.active ?? false}
         endsOn={plan?.currentPeriodEnd ? plan.currentPeriodEnd.slice(0, 10) : null}
         cancelling={plan?.cancelAtPeriodEnd ?? false}
+        canManage={plan?.hasCustomer ?? false}
         paid={query.paid === '1' || query.paid === 'bundle'}
         bundlePaid={query.paid === 'bundle'}
         configured={stripeConfigured()}

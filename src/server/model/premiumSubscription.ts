@@ -1,4 +1,5 @@
 import * as db from '../db';
+import PrepaidPlan from './prepaidPlan';
 
 // The $20 a month premium plan (0223): one row per user who has subscribed,
 // kept in step with the Stripe subscription by the webhook. Same shape and
@@ -19,11 +20,15 @@ export default class PremiumSubscription {
       `SELECT "status", "currentPeriodEnd", "cancelAtPeriodEnd" FROM "PremiumSubscription" WHERE "userId" = $1`,
       [userId],
     );
-    if (!row) return { active: false, status: null, currentPeriodEnd: null, cancelAtPeriodEnd: false, hasCustomer: false };
-    const end = row.currentPeriodEnd ? new Date(row.currentPeriodEnd) : null;
+    // A month paid once with WeChat Pay (0235) keeps the plan on with no Stripe subscription behind it.
+    const prepaid = await PrepaidPlan.paidThrough(userId, ['premium', 'bundle']);
+    const end = row?.currentPeriodEnd ? new Date(row.currentPeriodEnd) : null;
     const paidThrough = end != null && end.getTime() > Date.now();
+    const subscribed = !!row && (ACTIVE.has(row.status) || (row.status === 'canceled' && paidThrough));
+    if (prepaid && !subscribed) return { active: true, status: 'prepaid', currentPeriodEnd: prepaid.toISOString(), cancelAtPeriodEnd: true, hasCustomer: !!row };
+    if (!row) return { active: false, status: null, currentPeriodEnd: null, cancelAtPeriodEnd: false, hasCustomer: false };
     return {
-      active: ACTIVE.has(row.status) || (row.status === 'canceled' && paidThrough),
+      active: subscribed,
       status: row.status,
       currentPeriodEnd: end ? end.toISOString() : null,
       cancelAtPeriodEnd: row.cancelAtPeriodEnd,
@@ -50,7 +55,8 @@ export default class PremiumSubscription {
   static async activeUserIds(): Promise<number[]> {
     const rows = await db.query<{ userId: number }>(
       `SELECT "userId" FROM "PremiumSubscription"
-       WHERE "status" IN ('active', 'trialing', 'past_due') OR ("status" = 'canceled' AND "currentPeriodEnd" > now())`,
+       WHERE "status" IN ('active', 'trialing', 'past_due') OR ("status" = 'canceled' AND "currentPeriodEnd" > now())
+       UNION SELECT "userId" FROM "PrepaidPlan" WHERE "plan" IN ('premium', 'bundle') AND "utcEndDateTime" > now()`,
     );
     return rows.map((r) => Number(r.userId));
   }

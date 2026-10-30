@@ -1,0 +1,74 @@
+[
+  {
+    "id": 18820,
+    "megawatts": 4,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "4 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2026-09. Scope: GRISS. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18685,
+    "megawatts": 100,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "100 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2021-09. Scope: PBS. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18669,
+    "megawatts": 250,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "250 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2025-03. Scope: 1. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18632,
+    "megawatts": 175,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "175 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2025-12. Scope: BB1. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18452,
+    "megawatts": 74.9,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "74.9 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2026-09. Scope: PV1. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18439,
+    "megawatts": 74.9,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "74.9 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2026-09. Scope: 9999. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 16597,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "200 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2025-08. Scope: GIBBY. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18701,
+    "megawatts": 180,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "180 MW electrical generation nameplate reported operating in September 2026. Reported operation month 2025-11. Scope: AZ1. Annual output is not reported by this inventory; no annual energy inferred."
+  },
+  {
+    "id": 18284,
+    "megawatts": 150,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "150 MW battery charge/discharge power reported operating in September 2026. Reported operation month 2026-09. Scope: FBS1. Annual output is not reported by this inventory; no annual energy inferred. MW is storage power; no four-hour duration or MWh inferred."
+  }
+]

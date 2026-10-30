@@ -2,7 +2,9 @@ import type { NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { HttpError, json, publicOrigin, route } from '@/server/http';
 import PremiumSubscription from '@/server/model/premiumSubscription';
-import { CHECKOUT_PRICES, checkoutCurrency, stripeConfigured, stripeRequest } from '@/server/stripe';
+import PrepaidPlan from '@/server/model/prepaidPlan';
+import { startWechatCheckout } from '@/server/services/prepaidPlans';
+import { CHECKOUT_PRICES, checkoutChoice, stripeConfigured, stripeRequest } from '@/server/stripe';
 
 // Start the $20 a month premium plan: a Stripe Checkout session, as the
 // ad-free plan's. premiumUserId rides in the subscription's metadata so the
@@ -10,9 +12,15 @@ import { CHECKOUT_PRICES, checkoutCurrency, stripeConfigured, stripeRequest } fr
 export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
   if (!stripeConfigured()) throw new HttpError(503, 'Payments are not set up yet.');
-  if ((await PremiumSubscription.status(user.id)).active) throw new HttpError(409, 'Premium is already on for this account.');
+  const active = (await PremiumSubscription.status(user.id)).active;
+  const { currency, wechat } = await checkoutChoice(request);
   const origin = publicOrigin(request);
-  const currency = await checkoutCurrency(request);
+  // One month paid with WeChat Pay (no renewal): another month may be bought while one is running.
+  if (wechat) {
+    if (active && !(await PrepaidPlan.paidThrough(user.id, ['premium', 'bundle']))) throw new HttpError(409, 'Premium is already on for this account.');
+    return json({ url: await startWechatCheckout(user, 'premium', origin, '/premium?paid=1') });
+  }
+  if (active) throw new HttpError(409, 'Premium is already on for this account.');
   const customer = await PremiumSubscription.customerId(user.id);
   const session = await stripeRequest<{ url: string }>('POST', '/checkout/sessions', {
     mode: 'subscription',

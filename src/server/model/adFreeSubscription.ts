@@ -1,5 +1,6 @@
 import * as db from '../db';
 import HeavyUserPlan from './heavyUserPlan';
+import PrepaidPlan from './prepaidPlan';
 
 // The $1 a month ad-free plan (0177): one row per user who has subscribed,
 // kept in step with the Stripe subscription by the webhook. Static queries, as
@@ -22,11 +23,15 @@ export default class AdFreeSubscription {
       `SELECT "status", "currentPeriodEnd", "cancelAtPeriodEnd" FROM "AdFreeSubscription" WHERE "userId" = $1`,
       [userId],
     );
-    if (!row) return { active: false, status: null, currentPeriodEnd: null, cancelAtPeriodEnd: false, hasCustomer: false };
-    const end = row.currentPeriodEnd ? new Date(row.currentPeriodEnd) : null;
+    // A month paid once with WeChat Pay (0235) keeps the plan on with no Stripe subscription behind it.
+    const prepaid = await PrepaidPlan.paidThrough(userId, ['adfree', 'bundle']);
+    const end = row?.currentPeriodEnd ? new Date(row.currentPeriodEnd) : null;
     const paidThrough = end != null && end.getTime() > Date.now();
+    const subscribed = !!row && (ACTIVE.has(row.status) || (row.status === 'canceled' && paidThrough));
+    if (prepaid && !subscribed) return { active: true, status: 'prepaid', currentPeriodEnd: prepaid.toISOString(), cancelAtPeriodEnd: true, hasCustomer: !!row };
+    if (!row) return { active: false, status: null, currentPeriodEnd: null, cancelAtPeriodEnd: false, hasCustomer: false };
     return {
-      active: ACTIVE.has(row.status) || (row.status === 'canceled' && paidThrough),
+      active: subscribed,
       status: row.status,
       currentPeriodEnd: end ? end.toISOString() : null,
       cancelAtPeriodEnd: row.cancelAtPeriodEnd,

@@ -81585,5 +81585,1873 @@
         }
       ]
     }
+  },
+  {
+    "key": "batch1030-round15-18820",
+    "pinIds": {
+      "local": 18820,
+      "production": 18820
+    },
+    "title": "Kearsarge Grissom Solar Project: 4 MWac Solar in Sullivan County, New Hampshire",
+    "sourceUrl": "https://www.claremontnh.com/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "4 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Kearsarge Grissom, Operating sheet, rows 28237",
+            "publishedDate": "2026-10-23",
+            "quote": "Kearsarge Grissom Map Map NH Sullivan ISNE IPP Non-CHP GRISS 4 4 4 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 70051; selected generator IDs GRISS. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Kearsarge Grissom, Operating sheet, rows 28237",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Kearsarge Grissom, Operating sheet, rows 28237",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2026-09. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Kearsarge Grissom, Operating sheet, rows 28237",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2026-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Kearsarge Grissom, Operating sheet, rows 28237",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18685",
+    "pinIds": {
+      "local": 18685,
+      "production": 18685
+    },
+    "title": "Point Beach Solar Energy Center: 100 MWac Solar in Manitowoc County, Wisconsin",
+    "sourceUrl": "https://dfi.wi.gov/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "100 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Point Beach Solar, Operating sheet, rows 22835",
+            "publishedDate": "2026-10-23",
+            "quote": "Point Beach Solar Map Map WI Manitowoc MISO IPP Non-CHP PBS 100 100 100 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 64431; selected generator IDs PBS. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Point Beach Solar, Operating sheet, rows 22835",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Point Beach Solar, Operating sheet, rows 22835",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2021-09. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Point Beach Solar, Operating sheet, rows 22835",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2021"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2021-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Point Beach Solar, Operating sheet, rows 22835",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2021"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18669",
+    "pinIds": {
+      "local": 18669,
+      "production": 18669
+    },
+    "title": "Darien Solar Energy Center: 250 MWac Solar in Walworth County, Wisconsin",
+    "sourceUrl": "https://dhs.wisconsin.gov/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "250 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Darien Solar, Operating sheet, rows 22960",
+            "publishedDate": "2026-10-23",
+            "quote": "Darien Solar Map Map WI Rock MISO Electric Utility 1 250 250 250 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 64534; selected generator IDs 1. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Darien Solar, Operating sheet, rows 22960",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Darien Solar, Operating sheet, rows 22960",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2025-03. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Darien Solar, Operating sheet, rows 22960",
+            "publishedDate": "2026-10-23",
+            "quote": "3 2025"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2025-03",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Darien Solar, Operating sheet, rows 22960",
+            "publishedDate": "2026-10-23",
+            "quote": "3 2025"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18632",
+    "pinIds": {
+      "local": 18632,
+      "production": 18632
+    },
+    "title": "CPV Backbone Solar Project: 175 MWac Solar in Garrett County, Maryland",
+    "sourceUrl": "https://dat.maryland.gov/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "175 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — CPV Backbone Solar, Operating sheet, rows 25843",
+            "publishedDate": "2026-10-23",
+            "quote": "CPV Backbone Solar Map Map MD Garrett PJM IPP Non-CHP BB1 175 161.1 161.1 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 67022; selected generator IDs BB1. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — CPV Backbone Solar, Operating sheet, rows 25843",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — CPV Backbone Solar, Operating sheet, rows 25843",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2025-12. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — CPV Backbone Solar, Operating sheet, rows 25843",
+            "publishedDate": "2026-10-23",
+            "quote": "12 2025"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2025-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — CPV Backbone Solar, Operating sheet, rows 25843",
+            "publishedDate": "2026-10-23",
+            "quote": "12 2025"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18452",
+    "pinIds": {
+      "local": 18452,
+      "production": 18452
+    },
+    "title": "Bailey Mill Solar Facility: 75 MW Clean Energy in Jefferson County, Florida",
+    "sourceUrl": "https://floridadep.gov/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "74.9 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Bailey Mill Solar, Operating sheet, rows 26829",
+            "publishedDate": "2026-10-23",
+            "quote": "Bailey Mill Solar Map Map FL Jefferson FPC Electric Utility PV1 74.9 74.9 74.9 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 68052; selected generator IDs PV1. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Bailey Mill Solar, Operating sheet, rows 26829",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Bailey Mill Solar, Operating sheet, rows 26829",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2026-09. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Bailey Mill Solar, Operating sheet, rows 26829",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2026-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Bailey Mill Solar, Operating sheet, rows 26829",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18439",
+    "pinIds": {
+      "local": 18439,
+      "production": 18439
+    },
+    "title": "Highland Solar South: 75 MW Clean Energy in Highlands County, Florida",
+    "sourceUrl": "https://www.highlandsfl.gov/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "74.9 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Highland Solar South, Operating sheet, rows 22739",
+            "publishedDate": "2026-10-23",
+            "quote": "Highland Solar South Map Map FL Highlands FPC IPP Non-CHP 9999 74.9 74.9 74.9 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 64346; selected generator IDs 9999. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Highland Solar South, Operating sheet, rows 22739",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Highland Solar South, Operating sheet, rows 22739",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2026-09. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Highland Solar South, Operating sheet, rows 22739",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2026-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Highland Solar South, Operating sheet, rows 22739",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-16597",
+    "pinIds": {
+      "local": 16597,
+      "production": 16597
+    },
+    "title": "Gibson Solar: 200 MW Operating Since August 2025, per EIA",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "200 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Gibson Solar, Operating sheet, rows 27045",
+            "publishedDate": "2026-10-23",
+            "quote": "Gibson Solar Map Map IN Gibson MISO Electric Utility GIBBY 200 200 200 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 68455; selected generator IDs GIBBY. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Gibson Solar, Operating sheet, rows 27045",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Gibson Solar, Operating sheet, rows 27045",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2025-08. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Gibson Solar, Operating sheet, rows 27045",
+            "publishedDate": "2026-10-23",
+            "quote": "8 2025"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2025-08",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Gibson Solar, Operating sheet, rows 27045",
+            "publishedDate": "2026-10-23",
+            "quote": "8 2025"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18701",
+    "pinIds": {
+      "local": 18701,
+      "production": 18701
+    },
+    "title": "Azalea Springs Solar Project: 180 MW Nameplate Solar in Angelina County, Texas, Operating Since November 2025",
+    "sourceUrl": "https://angelinacounty.net/",
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "180 MW electrical generation nameplate reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Azalea Springs Solar Park, Operating sheet, rows 27061",
+            "publishedDate": "2026-10-23",
+            "quote": "Azalea Springs Solar Park Map Map TX Angelina ERCO IPP Non-CHP AZ1 180 180 180 Solar Photovoltaic SUN PV"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Solar Photovoltaic. Plant 68470; selected generator IDs AZ1. Scope is the named solar generating component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Azalea Springs Solar Park, Operating sheet, rows 27061",
+            "publishedDate": "2026-10-23",
+            "quote": "Solar Photovoltaic"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Azalea Springs Solar Park, Operating sheet, rows 27061",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2025-11. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Azalea Springs Solar Park, Operating sheet, rows 27061",
+            "publishedDate": "2026-10-23",
+            "quote": "11 2025"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2025-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Azalea Springs Solar Park, Operating sheet, rows 27061",
+            "publishedDate": "2026-10-23",
+            "quote": "11 2025"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-18284",
+    "pinIds": {
+      "local": 18284,
+      "production": 18284
+    },
+    "title": "Faraday Energy Storage: 150 MW BESS in Utah County, Utah",
+    "sourceUrl": "https://www.excelsiorcapital.com/",
+    "profile": {
+      "sector": "Energy: battery storage",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published electrical capacity",
+          "value": "150 MW battery charge/discharge power reported operating in September 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Faraday Energy Storage, Operating sheet, rows 27851",
+            "publishedDate": "2026-10-23",
+            "quote": "Faraday Energy Storage Map Map UT Utah PACE IPP Non-CHP FBS1 150 150 150 Batteries MWH BA"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator technology and scope",
+          "value": "Technology: Batteries. Plant 69424; selected generator IDs FBS1. Scope is the named battery component, not unrelated units at the site.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Faraday Energy Storage, Operating sheet, rows 27851",
+            "publishedDate": "2026-10-23",
+            "quote": "Batteries"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported project stage",
+          "value": "EIA reports (OP) Operating. A planned operation date is not evidence of commercial service.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Faraday Energy Storage, Operating sheet, rows 27851",
+            "publishedDate": "2026-10-23",
+            "quote": "(OP) Operating"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported operation month",
+          "value": "Reported operation 2026-09. Inventory month precision does not establish a specific day.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Faraday Energy Storage, Operating sheet, rows 27851",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Reported commercial-operation month",
+          "date": "2026-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA September 2026 preliminary generator inventory — Faraday Energy Storage, Operating sheet, rows 27851",
+            "publishedDate": "2026-10-23",
+            "quote": "9 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-216",
+    "pinIds": {
+      "local": 216,
+      "production": 216
+    },
+    "title": "Western Sydney International Airport Opens",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Western_Sydney_Airport",
+    "profile": {
+      "sector": "Transport infrastructure: Western Sydney International Airport",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable project cohort and capacity percentile is published in the opened sources; project size is retained as a factual card only.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The opened transport and building sources do not document an eligible manufacturing automation process or scored benchmark.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The sources describe project design and facilities, but do not establish a capability ranking against a named sector baseline.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project efficiency measure with a comparable peer cohort is provided in the opened sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified manufacturing bottleneck relief or critical supply-chain dependency measure is documented in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Project job totals do not establish credential pathways, completion rates or workforce-programme outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Government airport investment",
+          "value": "AUD 5.3 billion government investment in the airport; excludes the wider road and rail programme.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pm.gov.au/media/opening-western-sydney-international-airport",
+            "title": "Opening of Western Sydney International Airport | Prime Minister of Australia",
+            "publishedDate": "2026-10-25",
+            "quote": "Powered by $5.3 billion in Government investment"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Initial passenger capacity",
+          "value": "Design capacity of up to 10 million passengers annually; not achieved annual passenger throughput.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026",
+            "title": "It’s official – Western Sydney to open to passengers on 25 October and freight on 26 July 2026 | Prime Minister of Australia",
+            "publishedDate": "2026-06-10",
+            "quote": "the new airport will serve up to 10 million passengers annually"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Project jobs",
+          "value": "More than 12,800 project jobs created, around half filled by local workers; cumulative project jobs, not permanent operating headcount.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026",
+            "title": "It’s official – Western Sydney to open to passengers on 25 October and freight on 26 July 2026 | Prime Minister of Australia",
+            "publishedDate": "2026-06-10",
+            "quote": "The entire WSI project has created over 12,800 jobs, with around half of those jobs going to local workers."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operating stage",
+          "value": "Official opening held on 25 October 2026; this profile covers the initial airport, not future expansion phases.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pm.gov.au/media/opening-western-sydney-international-airport",
+            "title": "Opening of Western Sydney International Airport | Prime Minister of Australia",
+            "publishedDate": "2026-10-25",
+            "quote": "Opening of Western Sydney International Airport"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Airport opening",
+          "value": "Official opening: 25 October 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pm.gov.au/media/opening-western-sydney-international-airport",
+            "title": "Opening of Western Sydney International Airport | Prime Minister of Australia",
+            "publishedDate": "2026-10-25",
+            "quote": "Sunday 25 October 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Official airport opening",
+          "date": "2026-10-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pm.gov.au/media/opening-western-sydney-international-airport",
+            "title": "Opening of Western Sydney International Airport | Prime Minister of Australia",
+            "publishedDate": "2026-10-25",
+            "quote": "Sunday 25 October 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-270",
+    "pinIds": {
+      "local": 270,
+      "production": 270
+    },
+    "title": "Bogota Metro Line 1 Opens",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bogot%C3%A1_Metro",
+    "profile": {
+      "sector": "Transport infrastructure: Bogotá Metro Line 1",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable project cohort and capacity percentile is published in the opened sources; project size is retained as a factual card only.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The opened transport and building sources do not document an eligible manufacturing automation process or scored benchmark.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The sources describe project design and facilities, but do not establish a capability ranking against a named sector baseline.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project efficiency measure with a comparable peer cohort is provided in the opened sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified manufacturing bottleneck relief or critical supply-chain dependency measure is documented in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Project job totals do not establish credential pathways, completion rates or workforce-programme outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Line and rolling-stock scope",
+          "value": "Planned 24 km elevated metro, 16 stations, one depot and 30 trains. This is the Line 1 scope.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.eib.org/en/projects/all/20220741",
+            "title": "BOGOTA SUSTAINABLE TRANSPORT FL - METRO LINE 1",
+            "publishedDate": null,
+            "quote": "The project includes a 24 km long elevated metro with 16 stations, a depot, and the supply of 30 trains."
+          }
+        },
+        {
+          "key": "products",
+          "label": "Transport system",
+          "value": "Automated urban metro line with electrical, control, telecoms, ticketing and fare-collection systems.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.eib.org/en/projects/all/20220741",
+            "title": "BOGOTA SUSTAINABLE TRANSPORT FL - METRO LINE 1",
+            "publishedDate": null,
+            "quote": "Additionally, it encompasses electrical installations, control systems, telecommunications, ticketing, and fare collection systems."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Construction progress",
+          "value": "City reported 82.33% progress as of 31 August 2026. Construction and systems integration remain underway.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bogota.gov.co/mi-ciudad/movilidad/2026-10/metro-cables-y-nuevas-vias-para-futuro-de-bogota-y-cundinamarca-2026",
+            "title": "Metro, cables y nuevas vías para futuro de Bogotá y Cundinamarca 2026 | Bogota.gov.co",
+            "publishedDate": "2026-09-24",
+            "quote": "registra un avance del 82,33 % al 31 de agosto"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Construction and service targets",
+          "value": "City targets construction completion in September 2027, followed by tests; commercial service target March 2028, with 15 March cited for fare integration. These remain targets.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bogota.gov.co/mi-ciudad/movilidad/2026-10/metro-cables-y-nuevas-vias-para-futuro-de-bogota-y-cundinamarca-2026",
+            "title": "Metro, cables y nuevas vías para futuro de Bogotá y Cundinamarca 2026 | Bogota.gov.co",
+            "publishedDate": "2026-09-24",
+            "quote": "La meta es culminar la etapa de construcción en septiembre de 2027, realizar posteriormente las pruebas correspondientes y comenzar la operación comercial en marzo de 2028."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Viaduct construction phase initiated",
+          "date": "2023-07-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bogota.gov.co/en/international/bogota-metro-advances-built-and-will-be-finished-2028-mayor-said",
+            "title": "Bogotá Metro advances, construction set to complete in 2028: Mayor Claudia López | Bogota.gov.co",
+            "publishedDate": "2023-07-25",
+            "quote": "signed the agreement to start the construction phase of the viaduct"
+          }
+        },
+        {
+          "label": "Construction completion target",
+          "date": "2027-09",
+          "basis": "planned",
+          "source": {
+            "url": "https://bogota.gov.co/mi-ciudad/movilidad/2026-10/metro-cables-y-nuevas-vias-para-futuro-de-bogota-y-cundinamarca-2026",
+            "title": "Metro, cables y nuevas vías para futuro de Bogotá y Cundinamarca 2026 | Bogota.gov.co",
+            "publishedDate": "2026-09-24",
+            "quote": "culminar la etapa de construcción en septiembre de 2027"
+          }
+        },
+        {
+          "label": "Commercial operation / fare-integration target",
+          "date": "2028-03-15",
+          "basis": "planned",
+          "source": {
+            "url": "https://bogota.gov.co/mi-ciudad/movilidad/2026-10/metro-cables-y-nuevas-vias-para-futuro-de-bogota-y-cundinamarca-2026",
+            "title": "Metro, cables y nuevas vías para futuro de Bogotá y Cundinamarca 2026 | Bogota.gov.co",
+            "publishedDate": "2026-09-24",
+            "quote": "el 15 de marzo del 2028 un ciudadano pueda bajarse de TransMilenio"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-2170",
+    "pinIds": {
+      "local": 2170,
+      "production": 2170
+    },
+    "title": "O'Hare's Satellite Concourse 1 Is Due to Finish",
+    "sourceUrl": "https://simpleflying.com/chicago-ohare-global-terminal-modernization-project/",
+    "profile": {
+      "sector": "Transport infrastructure: O’Hare Concourse D",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable project cohort and capacity percentile is published in the opened sources; project size is retained as a factual card only.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The opened transport and building sources do not document an eligible manufacturing automation process or scored benchmark.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The sources describe project design and facilities, but do not establish a capability ranking against a named sector baseline.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project efficiency measure with a comparable peer cohort is provided in the opened sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified manufacturing bottleneck relief or critical supply-chain dependency measure is documented in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Project job totals do not establish credential pathways, completion rates or workforce-programme outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published construction investment",
+          "value": "USD 1.3 billion investment at the August 2025 groundbreaking; historical published estimate, not a new whole-airport budget.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "a transformative $1.3 billion investment"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Concourse floor area",
+          "value": "Planned 590,000 sq ft for Concourse D.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "590,000-square-foot Concourse D"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Gate configuration",
+          "value": "Planned 19 narrow-body gates; 18 can reconfigure into nine wide-body gates. These configurations are alternatives, not additive.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "18 of those gates into nine larger gates that can accommodate wide-body planes."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Construction stage",
+          "value": "City held the Concourse D construction kickoff on 18 August 2025; the profile covers this concourse, not the overall ORDNext programme.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "to kick off construction on The New Concourse D"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Concourse completion target",
+          "value": "Late 2028 remains the published completion target; no exact opening day established.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "is scheduled for completion in late 2028."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction groundbreaking",
+          "date": "2025-08-18",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "August 18, 2025"
+          }
+        },
+        {
+          "label": "Concourse completion target",
+          "date": "Late 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/august/Concourse-D-Groundbreaking.html",
+            "title": "City of Chicago :: Mayor Brandon Johnson Breaks Ground On The New Concourse D, A $1.3 Billion Investment In The Next Generation Of Travel At O’Hare",
+            "publishedDate": "2025-08-18",
+            "quote": "is scheduled for completion in late 2028."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-2192",
+    "pinIds": {
+      "local": 2192,
+      "production": 2192
+    },
+    "title": "Metro's D Line Subway Extension Opens Its First Three Stations",
+    "sourceUrl": "https://www.metro.net/projects/westside/",
+    "profile": {
+      "sector": "Transport infrastructure: LA Metro D Line Extension Section 1",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable project cohort and capacity percentile is published in the opened sources; project size is retained as a factual card only.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The opened transport and building sources do not document an eligible manufacturing automation process or scored benchmark.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The sources describe project design and facilities, but do not establish a capability ranking against a named sector baseline.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project efficiency measure with a comparable peer cohort is provided in the opened sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified manufacturing bottleneck relief or critical supply-chain dependency measure is documented in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Project job totals do not establish credential pathways, completion rates or workforce-programme outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "New station scope",
+          "value": "Three operating underground stations: Wilshire/La Brea, Wilshire/Fairfax and Wilshire/La Cienega. Sections 2 and 3 are outside this completed scope.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.metro.net/projects/westside/",
+            "title": "D Line Subway Extension - LA Metro",
+            "publishedDate": null,
+            "quote": "bringing three new underground stations"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Passenger transport service",
+          "value": "Subway extension from Koreatown to the Wilshire/La Cienega area.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.metro.net/projects/westside/",
+            "title": "D Line Subway Extension - LA Metro",
+            "publishedDate": null,
+            "quote": "Section 1 extends the subway from Koreatown to the Wilshire/La Cienega area"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operating stage",
+          "value": "Section 1 is open. Ongoing work on Sections 2 and 3 does not change this section’s completed status.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.metro.net/projects/westside/",
+            "title": "D Line Subway Extension - LA Metro",
+            "publishedDate": null,
+            "quote": "Section 1 is now open"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Opening date",
+          "value": "Opened on 8 May 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.metro.net/projects/westside/",
+            "title": "D Line Subway Extension - LA Metro",
+            "publishedDate": null,
+            "quote": "Section 1 Opened May 8, 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Section 1 passenger opening",
+          "date": "2026-05-08",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.metro.net/projects/westside/",
+            "title": "D Line Subway Extension - LA Metro",
+            "publishedDate": null,
+            "quote": "Section 1 Opened May 8, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-4940",
+    "pinIds": {
+      "local": 4940,
+      "production": 4940
+    },
+    "title": "Stargate Milam County 'Freebird' Phase 1 Data Center Due for Completion",
+    "sourceUrl": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+    "profile": {
+      "sector": "Digital infrastructure: Freebird DC01, Milam County Phase 1",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable project cohort and capacity percentile is published in the opened sources; project size is retained as a factual card only.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The opened transport and building sources do not document an eligible manufacturing automation process or scored benchmark.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The sources describe project design and facilities, but do not establish a capability ranking against a named sector baseline.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project efficiency measure with a comparable peer cohort is provided in the opened sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified manufacturing bottleneck relief or critical supply-chain dependency measure is documented in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Project job totals do not establish credential pathways, completion rates or workforce-programme outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Filed Phase 1 cost",
+          "value": "USD 470 million estimated cost in TABS2026017746; specific to the DC01 Phase 1 filing, not the full campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+            "title": "TDLR TABS — FREEBIRD DATA CENTER PHASE 1",
+            "publishedDate": null,
+            "quote": "Estimated Cost: $470,000,000"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Filed building area",
+          "value": "Single-story 548,950 sq ft data center.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+            "title": "TDLR TABS — FREEBIRD DATA CENTER PHASE 1",
+            "publishedDate": null,
+            "quote": "New construction of a single-story 548,950sf data center comprising 4 data halls, supporting infrastructure, a loading dock and administrative office areas."
+          }
+        },
+        {
+          "key": "products",
+          "label": "Filed building scope",
+          "value": "Four data halls with infrastructure, loading dock and administrative areas; campus MW figures are not assigned to this one building.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+            "title": "TDLR TABS — FREEBIRD DATA CENTER PHASE 1",
+            "publishedDate": null,
+            "quote": "New construction of a single-story 548,950sf data center comprising 4 data halls, supporting infrastructure, a loading dock and administrative office areas."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Current physical stage",
+          "value": "Developer says Phase 1 is in construction. The expired TDLR completion date does not establish actual completion.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://milamdc.com/faqs/",
+            "title": "Frequently Asked Questions — Milam Data Center",
+            "publishedDate": null,
+            "quote": "Phase 1 of the project is in construction."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed schedule and current forecast",
+          "value": "TDLR lists 20 October 2025–15 October 2026 as the filed construction window. Developer now expects first operations in 2027; no confirmed DC01 commissioning day.",
+          "basis": "planned",
+          "source": {
+            "url": "https://milamdc.com/faqs/",
+            "title": "Frequently Asked Questions — Milam Data Center",
+            "publishedDate": null,
+            "quote": "First operations are expected in 2027."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Filed start date, not independently verified groundbreaking",
+          "date": "2025-10-20",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+            "title": "TDLR TABS — FREEBIRD DATA CENTER PHASE 1",
+            "publishedDate": null,
+            "quote": "Start Date: 10/20/2025"
+          }
+        },
+        {
+          "label": "TDLR registration",
+          "date": "2026-04-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+            "title": "TDLR TABS — FREEBIRD DATA CENTER PHASE 1",
+            "publishedDate": null,
+            "quote": "Registration Date: 4/15/2026"
+          }
+        },
+        {
+          "label": "Original filed completion target, completion unconfirmed",
+          "date": "2026-10-15",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746",
+            "title": "TDLR TABS — FREEBIRD DATA CENTER PHASE 1",
+            "publishedDate": null,
+            "quote": "Completion Date: 10/15/2026"
+          }
+        },
+        {
+          "label": "Developer first-operations forecast",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://milamdc.com/faqs/",
+            "title": "Frequently Asked Questions — Milam Data Center",
+            "publishedDate": null,
+            "quote": "First operations are expected in 2027."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "batch1030-round15-2163",
+    "pinIds": {
+      "local": 2163,
+      "production": 2163
+    },
+    "title": "San Diego Airport's Terminal 1 Reaches Its Final 30 Gates",
+    "sourceUrl": "https://www.san.org/terminal-projects/",
+    "profile": {
+      "sector": "Transport infrastructure: San Diego New Terminal 1 final 30-gate buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable project cohort and capacity percentile is published in the opened sources; project size is retained as a factual card only.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The opened transport and building sources do not document an eligible manufacturing automation process or scored benchmark.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The sources describe project design and facilities, but do not establish a capability ranking against a named sector baseline.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project efficiency measure with a comparable peer cohort is provided in the opened sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified manufacturing bottleneck relief or critical supply-chain dependency measure is documented in the opened sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Project job totals do not establish credential pathways, completion rates or workforce-programme outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Final terminal gate scope",
+          "value": "Final planned terminal has 30 gates: 19 in the first phase and 11 additional gates in Phase 1B. This profile is for the final buildout, distinct from the first-phase opening pin.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.san.org/terminal-projects/",
+            "title": "Terminal Projects - SAN Airport",
+            "publishedDate": null,
+            "quote": "30 New Gates: The terminal will feature 30 gates, with 19 opening in 2025 and the remaining 11 by 2028, replacing the outdated 1967 facility."
+          }
+        },
+        {
+          "key": "products",
+          "label": "Phase 1B passenger facilities",
+          "value": "Eleven additional gates, new lounges, a children’s play area and additional food and shopping.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.san.org/news-articles/one-year-of-more-room-more-local-flavor-and-more-to-come/",
+            "title": "One Year of More Room, More Local Flavor, and More to Come - SAN Airport",
+            "publishedDate": "2026-09-11",
+            "quote": "Travelers will also have new lounges, a children’s play area, and more places to grab a bite or do a little shopping."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Final phase construction",
+          "value": "Airport says Phase 1B is now underway. First-phase operation does not complete the final 30-gate terminal.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.san.org/news-articles/one-year-of-more-room-more-local-flavor-and-more-to-come/",
+            "title": "One Year of More Room, More Local Flavor, and More to Come - SAN Airport",
+            "publishedDate": "2026-09-11",
+            "quote": "Phase 1B is now underway"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Remaining phase completion",
+          "value": "Phase 1B completion forecast in 2028, retaining year-only source precision.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.san.org/news-articles/one-year-of-more-room-more-local-flavor-and-more-to-come/",
+            "title": "One Year of More Room, More Local Flavor, and More to Come - SAN Airport",
+            "publishedDate": "2026-09-11",
+            "quote": "Phase 1B is now underway and will add 11 more gates to Terminal 1 when it’s completed in 2028."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First 19 gates opened, separate from final buildout",
+          "date": "2025",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.san.org/terminal-projects/",
+            "title": "Terminal Projects - SAN Airport",
+            "publishedDate": null,
+            "quote": "19 opening in 2025"
+          }
+        },
+        {
+          "label": "Final 11-gate phase completion target",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.san.org/news-articles/one-year-of-more-room-more-local-flavor-and-more-to-come/",
+            "title": "One Year of More Room, More Local Flavor, and More to Come - SAN Airport",
+            "publishedDate": "2026-09-11",
+            "quote": "Phase 1B is now underway and will add 11 more gates to Terminal 1 when it’s completed in 2028."
+          }
+        }
+      ]
+    }
   }
 ]

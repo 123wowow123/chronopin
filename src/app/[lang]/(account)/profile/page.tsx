@@ -39,6 +39,7 @@ export default async function ProfilePage({ searchParams }: { searchParams: Prom
             endsOn={plan.active && plan.cancelAtPeriodEnd && plan.currentPeriodEnd ? plan.currentPeriodEnd.slice(0, 10) : null}
             endedOn={!plan.active && plan.status === 'canceled' && plan.currentPeriodEnd ? plan.currentPeriodEnd.slice(0, 10) : null}
             canManage={plan.hasCustomer && stripeConfigured()}
+            prepaid={plan.status === 'prepaid'}
             justPaid={query.adfree === 'thanks'}
           />
         ) : null}
