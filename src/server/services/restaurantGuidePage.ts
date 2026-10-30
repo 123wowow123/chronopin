@@ -8,7 +8,7 @@ import type { RestaurantSpecialVenue } from '../model/restaurantSpecialVenue';
 import { TAGS } from './cache';
 import { restaurantGuideDetails } from './restaurantGuideDetails';
 import { regionalRestaurantOffers } from './restaurantOffers';
-import { regionalRestaurants, regionalTopRestaurants } from './restaurants';
+import { regionalOpeningDays, regionalRestaurants, regionalTopRestaurants } from './restaurants';
 
 // Everything one region's guide is built from, kept for a few minutes so a
 // reader paging through a list does not rebuild it for every 25 cards.
@@ -37,16 +37,17 @@ async function guideBase(regionSlug: string) {
 export async function guideCounts(regionSlug: string, now: Date, venues?: RestaurantSpecialVenue[], withDiscounts = true): Promise<Record<GuideView, number> | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
   if (!region) return null;
-  const [data, tops] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
+  const [openings, tops] = await Promise.all([regionalOpeningDays(region.name), regionalTopRestaurants(region.slug)]);
   const today = dayKeyIn(now, region.timeZone);
   // Building the offers is the costly part; `withDiscounts: false` (the sitemap, which never lists the discounts view) leaves it at 0.
   let discounts = 0;
   if (withDiscounts) {
-    const offers = await regionalRestaurantOffers(data.restaurants, tops, today, region.slug, venues);
+    const { restaurants } = await regionalRestaurants(region.name);
+    const offers = await regionalRestaurantOffers(restaurants, tops, today, region.slug, venues);
     const sections = arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, region.timeZone));
     discounts = sections.available.length + sections.upcoming.length;
   }
-  const groups = data.restaurants.map((restaurant) => openingGroup(restaurant, today));
+  const groups = openings.map((opening) => openingGroup(opening, today));
   return {
     upcoming: groups.filter((group) => group === 'upcoming').length,
     new: groups.filter((group) => group === 'new').length,

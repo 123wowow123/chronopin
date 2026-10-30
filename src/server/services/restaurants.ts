@@ -14,13 +14,22 @@ import { TAGS } from './cache';
 
 const CUISINES = new Set(['Mexican', 'Mediterranean', 'Cafe', 'Sandwiches', 'Japanese', 'Chinese', 'Italian', 'Greek', 'Spanish', 'Hawaiian', 'American', 'European', 'Brazilian', 'French', 'Californian', 'Afro-Asian', 'Asian', 'Vegetarian', 'Seafood', 'Oaxacan']);
 
+// Every region's guide reads the whole content table (profiles carry the menus);
+// loaded once per cache window, not once per region (~100x in the restaurant sitemap).
+async function allRestaurantContent() {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.restaurantContent);
+  return listRestaurantContent({ includeDisabled: true });
+}
+
 export async function restaurantGuideRegionSlugs(): Promise<string[]> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   cacheTag(TAGS.restaurantContent);
   // Match the guide's live opening query without hydrating every city's pins and media.
-  const records = await listRestaurantContent({ includeDisabled: true });
+  const records = await allRestaurantContent();
   const catalog = records.filter((record) => record.enabled && record.profile.tile?.kind === 'top').map((record) => ({ ...record.profile.tile!, sourceUrl: record.profile.pinSourceUrl }));
   const [openings, pins, specialVenues] = await Promise.all([
     db.query<{ city: string; day: string; dateConfidence: string | null; sourceUrl: string | null }>(
@@ -108,22 +117,53 @@ export function restaurantOf(pin: PinJson, city: string, tile?: RestaurantTile):
   };
 }
 
+// The live pins one region's guide lists: its city's Restaurant Opening pins in
+// Food, plus the catalog's opening records for it. $1 city, $2 opening sources.
+const REGIONAL_OPENINGS = `"p"."utcDeletedDateTime" IS NULL
+       AND ((EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = $1::citext)
+       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Restaurant Opening')
+       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')) OR "p"."sourceUrl" = ANY($2::text[]))`;
+
+// Whether a record keeps its pin in this region's guide.
+function listedInRegion(record: Awaited<ReturnType<typeof allRestaurantContent>>[number] | undefined, regionSlug: string | undefined): boolean {
+  return !record || (record.enabled && (!record.profile.tile || (record.profile.tile.kind === 'opening' && record.profile.tile.regionSlug === regionSlug)));
+}
+
+// Each opening's day and confirmation, as regionalRestaurants would report them,
+// without hydrating the pins (tags, media): all the guide counts and the
+// restaurant sitemap need.
+export async function regionalOpeningDays(city: string): Promise<{ day: string; confirmed: boolean }[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  cacheTag(TAGS.restaurantContent);
+  const region = RESTAURANT_REGIONS.find((r) => r.name === city);
+  const records = await allRestaurantContent();
+  const tiles = new Map(records.map((record) => [restaurantSourceKey(record.profile.pinSourceUrl), record]));
+  const openingSources = records.filter((record) => record.enabled && record.profile.tile?.kind === 'opening' && record.profile.tile.regionSlug === region?.slug).map((record) => record.profile.pinSourceUrl);
+  const rows = await db.query<{ day: string; dateConfidence: string | null; sourceUrl: string | null }>(
+    `SELECT to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day", "p"."dateConfidence", "p"."sourceUrl"
+     FROM "Pin" AS "p" WHERE "p"."utcStartDateTime" IS NOT NULL AND ${REGIONAL_OPENINGS}`, [city, openingSources],
+  );
+  return rows.flatMap((row) => {
+    const record = tiles.get(restaurantSourceKey(row.sourceUrl ?? ''));
+    if (!listedInRegion(record, region?.slug)) return [];
+    const tile = record?.profile.tile;
+    return [{ day: row.day, confirmed: row.dateConfidence === 'confirmed' || (tile?.openingConfirmed === true && tile.day === row.day) }];
+  });
+}
+
 export async function regionalRestaurants(city: string): Promise<{ restaurants: Restaurant[]; previewSnapshot: boolean }> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   cacheTag(TAGS.restaurantContent);
   const region = RESTAURANT_REGIONS.find((r) => r.name === city);
-  const records = await listRestaurantContent({ includeDisabled: true });
+  const records = await allRestaurantContent();
   const tiles = new Map(records.map((record) => [restaurantSourceKey(record.profile.pinSourceUrl), record]));
   const openingSources = records.filter((record) => record.enabled && record.profile.tile?.kind === 'opening' && record.profile.tile.regionSlug === region?.slug).map((record) => record.profile.pinSourceUrl);
   const rows = await db.query<{ id: number }>(
-    `SELECT "p"."id" FROM "Pin" AS "p"
-     WHERE "p"."utcDeletedDateTime" IS NULL
-       AND ((EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = $1::citext)
-       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Restaurant Opening')
-       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')) OR "p"."sourceUrl" = ANY($2::text[]))
-     ORDER BY "p"."utcStartDateTime", "p"."id"`, [city, openingSources],
+    `SELECT "p"."id" FROM "Pin" AS "p" WHERE ${REGIONAL_OPENINGS} ORDER BY "p"."utcStartDateTime", "p"."id"`, [city, openingSources],
   );
   let pins = rows.length ? toJson<PinJson[]>((await Pins.queryByIds(rows.map((row) => row.id))).pins) : [];
   const previewSnapshot = process.env.NODE_ENV === 'development' && !pins.length && city === 'San Diego';
@@ -133,8 +173,5 @@ export async function regionalRestaurants(city: string): Promise<{ restaurants: 
     const { default: snapshot } = await import('@/server/data/sanDiegoRestaurants.preview.json');
     pins = snapshot.map((pin) => ({ ...pin, media: pin.media.map((medium) => ({ ...medium, thumbName: `https://chronopin.blob.core.windows.net/thumb/${medium.thumbName}` })) })) as unknown as PinJson[];
   }
-  return { restaurants: pins.filter((pin) => {
-    const record = tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''));
-    return !record || (record.enabled && (!record.profile.tile || (record.profile.tile.kind === 'opening' && record.profile.tile.regionSlug === region?.slug)));
-  }).map((pin) => restaurantOf(pin, city, tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''))?.profile.tile)).filter((r): r is Restaurant => !!r), previewSnapshot };
+  return { restaurants: pins.filter((pin) => listedInRegion(tiles.get(restaurantSourceKey(pin.sourceUrl ?? '')), region?.slug)).map((pin) => restaurantOf(pin, city, tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''))?.profile.tile)).filter((r): r is Restaurant => !!r), previewSnapshot };
 }

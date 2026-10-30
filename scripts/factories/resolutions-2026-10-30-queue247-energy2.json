@@ -1,0 +1,1320 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 17163,
+      "patch": {
+        "title": "Elk Solar Center: 400 MW Solar Interconnection Request GEN-2024-125",
+        "description": "GEN-2024-125 is a 400 MW photovoltaic generation interconnection request in Elk, KS. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-06-30; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-125 is a 400 MW photovoltaic generation interconnection request in Elk, KS. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-06-30; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Neosho Ridge - Caney River 345 kV Line. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2028-06-30 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2028-06-30T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "CleanEnergy",
+          "ElkCounty",
+          "Engie",
+          "Kansas",
+          "RenewableEnergy",
+          "Solar",
+          "SPP",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-125",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 400,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-125: 400 MW requested photovoltaic generation. Queue status: DISIS STAGE. Requested date: 2028-06-30. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-125",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-125",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "03 CENTRAL",
+          "Nearest Town or County": "Elk",
+          "State": "KS",
+          "TO at POI": "WERE",
+          "In-Service Date (proposed)": "5/1/2028",
+          "Commercial Operation Date": "6/30/2028",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "400",
+          "MAX Summer MW": "400",
+          "MAX Winter MW": "400",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "400",
+          "Requested Network Resource Deliverability (MW)": "400",
+          "Nameplate Capacity": "410.43",
+          "Generation Type": "Solar",
+          "Fuel Type": "Photovoltaic",
+          "Substation or Line": "Neosho Ridge - Caney River 345 kV Line",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "No",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 420000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 17347,
+      "patch": {
+        "title": "Bossier Parish Energy Storage Center: 199 MW Battery Interconnection Request GEN-2024-177",
+        "description": "GEN-2024-177 is a 199 MW battery storage interconnection request in Bossier Parish, LA. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2029-01-15; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-177 is a 199 MW battery storage interconnection request in Bossier Parish, LA. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2029-01-15; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Red Point 138 kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2029-01-15 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2029-01-15T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "BossierParish",
+          "CleanEnergy",
+          "EnergyStorage",
+          "Louisiana",
+          "MISO",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-177",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 199,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-177: 199 MW requested battery storage. Queue status: DISIS STAGE. Requested date: 2029-01-15. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-177",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-177",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "04 SOUTHEAST",
+          "Nearest Town or County": "Bossier Parish",
+          "State": "LA",
+          "TO at POI": "AEP",
+          "In-Service Date (proposed)": "10/15/2028",
+          "Commercial Operation Date": "1/15/2029",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "199",
+          "MAX Summer MW": "199",
+          "MAX Winter MW": "199",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "199",
+          "Requested Network Resource Deliverability (MW)": "199",
+          "Nameplate Capacity": "207.555",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "Battery",
+          "Substation or Line": "Red Point 138 kV Substation",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "Yes",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 210000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18063,
+      "patch": {
+        "title": "Douglas Energy Storage Center: 250 MW Battery Interconnection Request GEN-2024-372",
+        "description": "GEN-2024-372 is a 250 MW battery storage interconnection request in Douglas, NE. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-03-01; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-372 is a 250 MW battery storage interconnection request in Douglas, NE. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-03-01; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is S1247 161 kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2028-03-01 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2028-03-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "345kV",
+          "BESS",
+          "DouglasCounty",
+          "EnergyStorage",
+          "Nebraska",
+          "OPPD",
+          "SPP",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-372",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 250,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-372: 250 MW requested battery storage. Queue status: DISIS STAGE. Requested date: 2028-03-01. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-372",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-372",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "02 NEBRASKA",
+          "Nearest Town or County": "Douglas",
+          "State": "NE",
+          "TO at POI": "OPPD",
+          "In-Service Date (proposed)": "12/1/2027",
+          "Commercial Operation Date": "3/1/2028",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "250",
+          "MAX Summer MW": "250",
+          "MAX Winter MW": "250",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "250",
+          "Requested Network Resource Deliverability (MW)": "250",
+          "Nameplate Capacity": "259",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "Battery",
+          "Substation or Line": "S1247 161 kV Substation",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "Yes",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 260000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18065,
+      "patch": {
+        "title": "Washington Energy Storage Complex: 200 MW Battery Interconnection Request GEN-2018-025",
+        "description": "GEN-2018-025 is a 200 MW battery storage interconnection request in Washington, NE. The grid operator lists its queue status as IA FULLY EXECUTED/ON SCHEDULE. The requested in-service date is 2030-10-01; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2018-025 is a 200 MW battery storage interconnection request in Washington, NE. The grid operator lists its queue status as IA FULLY EXECUTED/ON SCHEDULE. The requested in-service date is 2030-10-01; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Fort Calhoun 345kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2030-10-01 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2030-10-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "345kV",
+          "BESS",
+          "EnergyStorage",
+          "Eolian",
+          "Nebraska",
+          "SPP",
+          "WashingtonCounty",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2018-025",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2018-025: 200 MW requested battery storage. Queue status: IA FULLY EXECUTED/ON SCHEDULE. Requested date: 2030-10-01. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2018-025",
+        "record": {
+          "Generation Interconnection Number": "GEN-2018-025",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2018-001",
+          "Cluster Group": "02 NEBRASKA",
+          "Nearest Town or County": "Washington",
+          "State": "NE",
+          "TO at POI": "OPPD",
+          "In-Service Date (proposed)": "10/15/2023",
+          "Commercial Operation Date": "10/1/2030",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "200",
+          "MAX Summer MW": "200",
+          "MAX Winter MW": "200",
+          "Service Type": "ER",
+          "Requested Maximum Injection Capability (MW)": "0",
+          "Requested Network Resource Deliverability (MW)": "0",
+          "Nameplate Capacity": "0",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "",
+          "Substation or Line": "Fort Calhoun 345kV Substation",
+          "Request Received": "5/29/2018",
+          "Date Withdrawn": "",
+          "Status": "IA FULLY EXECUTED/ON SCHEDULE",
+          "JTIQ Participant": "N/A",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 210000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18087,
+      "patch": {
+        "title": "Eddy Energy Storage Facility: 115 MW Battery Interconnection Request GEN-2024-295",
+        "description": "GEN-2024-295 is a 115 MW battery storage interconnection request in Eddy, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2030-06-10; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-295 is a 115 MW battery storage interconnection request in Eddy, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2030-06-10; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is S Loving 115 kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2030-06-10 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2030-06-10T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "BESS",
+          "EddyCounty",
+          "EnergyStorage",
+          "NewMexico",
+          "PermianBasin",
+          "SPP",
+          "XcelEnergy",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-295",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 115,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-295: 115 MW requested battery storage. Queue status: DISIS STAGE. Requested date: 2030-06-10. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-295",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-295",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "05 SOUTHWEST",
+          "Nearest Town or County": "Eddy",
+          "State": "NM",
+          "TO at POI": "SPS",
+          "In-Service Date (proposed)": "12/10/2029",
+          "Commercial Operation Date": "6/10/2030",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "115",
+          "MAX Summer MW": "115",
+          "MAX Winter MW": "115",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "115",
+          "Requested Network Resource Deliverability (MW)": "115",
+          "Nameplate Capacity": "118.82",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "Battery",
+          "Substation or Line": "S Loving 115 kV Substation",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "No",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 130000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18106,
+      "patch": {
+        "title": "Chaves Energy Storage Facility: 75 MW Battery Interconnection Request GEN-2024-310",
+        "description": "GEN-2024-310 is a 75 MW battery storage interconnection request in Chaves, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2030-12-31; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-310 is a 75 MW battery storage interconnection request in Chaves, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2030-12-31; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Eddy - Chaves 230 kV line. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2030-12-31 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "BESS",
+          "ChavesCounty",
+          "EnergyStorage",
+          "NewMexico",
+          "NextEraEnergy",
+          "SPP",
+          "XcelEnergy",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-310",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 75,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-310: 75 MW requested battery storage. Queue status: DISIS STAGE. Requested date: 2030-12-31. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-310",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-310",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "05 SOUTHWEST",
+          "Nearest Town or County": "Chaves",
+          "State": "NM",
+          "TO at POI": "SPS",
+          "In-Service Date (proposed)": "9/1/2030",
+          "Commercial Operation Date": "12/31/2030",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "75",
+          "MAX Summer MW": "75",
+          "MAX Winter MW": "75",
+          "Service Type": "ER",
+          "Requested Maximum Injection Capability (MW)": "75",
+          "Requested Network Resource Deliverability (MW)": "0",
+          "Nameplate Capacity": "79.425",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "Battery",
+          "Substation or Line": "Eddy - Chaves 230 kV line",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "No",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 90000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18116,
+      "patch": {
+        "title": "Chaves Solar Energy Center: 225 MW Solar Interconnection Request GEN-2024-311",
+        "description": "GEN-2024-311 is a 225 MW photovoltaic generation interconnection request in Chaves, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2030-12-31; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-311 is a 225 MW photovoltaic generation interconnection request in Chaves, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2030-12-31; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Eddy - Chaves 230 kV line. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2030-12-31 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "230kV",
+          "ChavesCounty",
+          "NewMexico",
+          "NextEraEnergy",
+          "Solar",
+          "SPP",
+          "XcelEnergy",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-311",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 225,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-311: 225 MW requested photovoltaic generation. Queue status: DISIS STAGE. Requested date: 2030-12-31. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-311",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-311",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "05 SOUTHWEST",
+          "Nearest Town or County": "Chaves",
+          "State": "NM",
+          "TO at POI": "SPS",
+          "In-Service Date (proposed)": "9/1/2030",
+          "Commercial Operation Date": "12/31/2030",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "225",
+          "MAX Summer MW": "225",
+          "MAX Winter MW": "225",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "225",
+          "Requested Network Resource Deliverability (MW)": "225",
+          "Nameplate Capacity": "229.95",
+          "Generation Type": "Solar",
+          "Fuel Type": "Photovoltaic",
+          "Substation or Line": "Eddy - Chaves 230 kV line",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "No",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 275000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18118,
+      "patch": {
+        "title": "Roosevelt Solar Energy Center: 300 MW Solar Interconnection Request GEN-2024-159",
+        "description": "GEN-2024-159 is a 300 MW photovoltaic generation interconnection request in Roosevelt, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2029-12-31; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-159 is a 300 MW photovoltaic generation interconnection request in Roosevelt, NM. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2029-12-31; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Oasis to San Juan Mesa Wind Project 230 kV. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2029-12-31 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2029-12-31T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "345kV",
+          "NewMexico",
+          "RooseveltCounty",
+          "Solar",
+          "SPP",
+          "XcelEnergy",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-159",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 300,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-159: 300 MW requested photovoltaic generation. Queue status: DISIS STAGE. Requested date: 2029-12-31. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-159",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-159",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "05 SOUTHWEST",
+          "Nearest Town or County": "Roosevelt",
+          "State": "NM",
+          "TO at POI": "SPS",
+          "In-Service Date (proposed)": "6/30/2029",
+          "Commercial Operation Date": "12/31/2029",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "300",
+          "MAX Summer MW": "300",
+          "MAX Winter MW": "300",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "300",
+          "Requested Network Resource Deliverability (MW)": "300",
+          "Nameplate Capacity": "304.02",
+          "Generation Type": "Solar",
+          "Fuel Type": "Photovoltaic",
+          "Substation or Line": "Oasis to San Juan Mesa Wind Project 230 kV",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "No",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 360000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18145,
+      "patch": {
+        "title": "Lea Solar Energy Center: 110 MW Solar Interconnection Request GEN-2016-121",
+        "description": "GEN-2016-121 is a 110 MW photovoltaic generation interconnection request in Lea, NM. The grid operator lists its queue status as IA FULLY EXECUTED/ON SCHEDULE. The requested in-service date is 2026-12-31; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2016-121 is a 110 MW photovoltaic generation interconnection request in Lea, NM. The grid operator lists its queue status as IA FULLY EXECUTED/ON SCHEDULE. The requested in-service date is 2026-12-31; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Roadrunner 115kV. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2026-12-31 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "230kV",
+          "Invenergy",
+          "LeaCounty",
+          "NewMexico",
+          "Solar",
+          "SPP",
+          "XcelEnergy",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2016-121",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 110,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2016-121: 110 MW requested photovoltaic generation. Queue status: IA FULLY EXECUTED/ON SCHEDULE. Requested date: 2026-12-31. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2016-121",
+        "record": {
+          "Generation Interconnection Number": "GEN-2016-121",
+          "IFS Queue Number": "IFS-2016-002-26",
+          "Current Cluster": "DISIS-2016-002-1",
+          "Cluster Group": "05 SOUTHWEST",
+          "Nearest Town or County": "Lea",
+          "State": "NM",
+          "TO at POI": "SPS",
+          "In-Service Date (proposed)": "10/1/2022",
+          "Commercial Operation Date": "12/31/2026",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "110",
+          "MAX Summer MW": "110",
+          "MAX Winter MW": "110",
+          "Service Type": "ER",
+          "Requested Maximum Injection Capability (MW)": "0",
+          "Requested Network Resource Deliverability (MW)": "0",
+          "Nameplate Capacity": "0",
+          "Generation Type": "Solar",
+          "Fuel Type": "",
+          "Substation or Line": "Roadrunner 115kV",
+          "Request Received": "11/22/2016",
+          "Date Withdrawn": "",
+          "Status": "IA FULLY EXECUTED/ON SCHEDULE",
+          "JTIQ Participant": "N/A",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": "View"
+        },
+        "oldPrice": 145000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18162,
+      "patch": {
+        "title": "Ward Energy Storage Facility: 200 MW Battery Interconnection Request GEN-2024-327",
+        "description": "GEN-2024-327 is a 200 MW battery storage interconnection request in Ward, ND. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-01-01; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-327 is a 200 MW battery storage interconnection request in Ward, ND. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-01-01; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Berthold 115 kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2028-01-01 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "EnergyStorage",
+          "MISO",
+          "NorthDakota",
+          "SPP",
+          "WardCounty",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-327",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-327: 200 MW requested battery storage. Queue status: DISIS STAGE. Requested date: 2028-01-01. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-327",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-327",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "01 NORTH",
+          "Nearest Town or County": "Ward",
+          "State": "ND",
+          "TO at POI": "CPEC",
+          "In-Service Date (proposed)": "7/1/2027",
+          "Commercial Operation Date": "1/1/2028",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "200",
+          "MAX Summer MW": "200",
+          "MAX Winter MW": "200",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "200",
+          "Requested Network Resource Deliverability (MW)": "200",
+          "Nameplate Capacity": "206.48",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "Battery",
+          "Substation or Line": "Berthold 115 kV Substation",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "Yes",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 220000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18177,
+      "patch": {
+        "title": "Burke Energy Storage Center: 170 MW Battery Interconnection Request GEN-2023-SR4",
+        "description": "GEN-2023-SR4 is a 170 MW battery storage interconnection request in Burke, ND. The grid operator lists its queue status as IA FULLY EXECUTED/ON SCHEDULE. The requested in-service date is 2026-12-18; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2023-SR4 is a 170 MW battery storage interconnection request in Burke, ND. The grid operator lists its queue status as IA FULLY EXECUTED/ON SCHEDULE. The requested in-service date is 2026-12-18; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Tande 345 kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2026-12-18 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2026-12-18T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "BurkeCounty",
+          "EnergyStorage",
+          "NextEraEnergy",
+          "NorthDakota",
+          "SPP",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2023-SR4",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 170,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2023-SR4: 170 MW requested battery storage. Queue status: IA FULLY EXECUTED/ON SCHEDULE. Requested date: 2026-12-18. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2023-SR4",
+        "record": {
+          "Generation Interconnection Number": "GEN-2023-SR4",
+          "IFS Queue Number": "",
+          "Current Cluster": "Surplus",
+          "Cluster Group": "01 NORTH",
+          "Nearest Town or County": "Burke",
+          "State": "ND",
+          "TO at POI": "BEPC",
+          "In-Service Date (proposed)": "",
+          "Commercial Operation Date": "12/18/2026",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "170",
+          "MAX Summer MW": "170",
+          "MAX Winter MW": "170",
+          "Service Type": "ER",
+          "Requested Maximum Injection Capability (MW)": "0",
+          "Requested Network Resource Deliverability (MW)": "0",
+          "Nameplate Capacity": "0",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "",
+          "Substation or Line": "Tande 345 kV Substation",
+          "Request Received": "12/15/2022",
+          "Date Withdrawn": "",
+          "Status": "IA FULLY EXECUTED/ON SCHEDULE",
+          "JTIQ Participant": "N/A",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 190000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18180,
+      "patch": {
+        "title": "Williams Energy Storage Facility: 200 MW Battery Interconnection Request GEN-2024-329",
+        "description": "GEN-2024-329 is a 200 MW battery storage interconnection request in Williams, ND. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-01-01; this is a planning date.",
+        "longFormSummary": "<ul><li>GEN-2024-329 is a 200 MW battery storage interconnection request in Williams, ND. The grid operator lists its queue status as DISIS STAGE. The requested in-service date is 2028-01-01; this is a planning date.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The point of interconnection is Pleasant Valley 115 kV Substation. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>The transmission owner and queue identifiers do not establish developer ownership or an exact parcel. The commercial-operation date is a queue forecast, not verified construction progress.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2028-01-01 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "345kV",
+          "BasinElectric",
+          "BESS",
+          "EnergyStorage",
+          "NorthDakota",
+          "SPP",
+          "WilliamsCounty",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://opsportal.spp.org/Studies/GIActive",
+          "title": "SPP active generation queue — GEN-2024-329",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "GEN-2024-329: 200 MW requested battery storage. Queue status: DISIS STAGE. Requested date: 2028-01-01. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "GEN-2024-329",
+        "record": {
+          "Generation Interconnection Number": "GEN-2024-329",
+          "IFS Queue Number": "",
+          "Current Cluster": "DISIS-2024-001",
+          "Cluster Group": "01 NORTH",
+          "Nearest Town or County": "Williams",
+          "State": "ND",
+          "TO at POI": "MWEC",
+          "In-Service Date (proposed)": "7/1/2027",
+          "Commercial Operation Date": "1/1/2028",
+          "Cessation Date": "",
+          "Original Generator Commercial Op. Date": "",
+          "Capacity (MW)": "200",
+          "MAX Summer MW": "200",
+          "MAX Winter MW": "200",
+          "Service Type": "ER/NR",
+          "Requested Maximum Injection Capability (MW)": "200",
+          "Requested Network Resource Deliverability (MW)": "200",
+          "Nameplate Capacity": "204.01",
+          "Generation Type": "Battery/Storage",
+          "Fuel Type": "Battery",
+          "Substation or Line": "Pleasant Valley 115 kV Substation",
+          "Request Received": "3/1/2025",
+          "Date Withdrawn": "",
+          "Status": "DISIS STAGE",
+          "JTIQ Participant": "Yes",
+          "JTIQ Commitment": "",
+          "Cause of Delay": "",
+          "Associated Studies": "",
+          "Facility Report": "",
+          "Executed GIA": ""
+        },
+        "oldPrice": 220000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 17348,
+      "patch": {
+        "title": "Cato Transmission Energy Storage Facility: 130 MW Battery Interconnection Request S1112",
+        "description": "S1112 is a 130 MW battery storage interconnection request in Pike, IN. The grid operator lists its queue status as Active. The requested in-service date is 2027-04-01; this is a planning date.",
+        "longFormSummary": "<ul><li>S1112 is a 130 MW battery storage interconnection request in Pike, IN. The grid operator lists its queue status as Active. The requested in-service date is 2027-04-01; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is Cato 138/69kV (facilities above 100kV). Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>S1112 is the active 130 MW storage application. The separate older 130 MW application J3327 at Cato is withdrawn; the two are not summed or treated as the same application.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2027-04-01 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "138kV",
+          "BESS",
+          "CleanEnergy",
+          "EnergyStorage",
+          "Indiana",
+          "MISO",
+          "PikeCounty",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — S1112",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 130,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "S1112: 130 MW requested battery storage. Queue status: Active. Requested date: 2027-04-01. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "S1112",
+        "record": {
+          "id": 3513061,
+          "projectNumber": "S1112",
+          "queueDate": "2025-08-11T04:00:00+00:00",
+          "inService": "2027-09-30T04:00:00+00:00",
+          "negInService": "2027-04-01T04:00:00+00:00",
+          "transmissionOwner": "SOUTHERN INDIANA GAS & ELECTRIC COMPANY D/B/A CENTERPOINT ENERGY INDIANA SOUTH",
+          "county": "Pike",
+          "state": "IN",
+          "studyCycle": "",
+          "studyGroup": "",
+          "studyPhase": "",
+          "svcType": "SIS",
+          "poiName": "Cato 138/69kV (facilities above 100kV)",
+          "summerNetMW": 130,
+          "winterNetMW": 130,
+          "dp1ErisMw": 0,
+          "dp1NrisMw": 0,
+          "dp2ErisMw": 0,
+          "dp2NrisMw": 0,
+          "fuelType": "Battery Storage",
+          "facilityType": "Battery Storage",
+          "applicationStatus": "Active",
+          "sisPhase1": "",
+          "postGIAStatus": ""
+        },
+        "oldPrice": 150000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 18072,
+      "patch": {
+        "title": "Stoddard to Morley Solar Center: 225 MW Solar Interconnection Request J1034",
+        "description": "J1034 is a 225 MW photovoltaic generation interconnection request in Stoddard County, MO. The grid operator lists its queue status as Done. The requested in-service date is 2024-06-01; this is a planning date.",
+        "longFormSummary": "<ul><li>J1034 is a 225 MW photovoltaic generation interconnection request in Stoddard County, MO. The grid operator lists its queue status as Done. The requested in-service date is 2024-06-01; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is Stoddard - Morley 161kV Line Tap. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The primary queue lists 225 MW for J1034, correcting the earlier unsupported 200 MW figure. Done is an interconnection-processing status and does not prove commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2024-06-01 is the interconnection record’s requested in-service date, not a verified opening or commercial-operation day.",
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "utcStartDateTime": "2024-06-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "tags": [
+          "161kV",
+          "AECI",
+          "MISO",
+          "Missouri",
+          "RenewableEnergy",
+          "Solar",
+          "StoddardCounty",
+          "Proposed"
+        ]
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J1034",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 225,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "J1034: 225 MW requested photovoltaic generation. Queue status: Done. Requested date: 2024-06-01. Not current measured generation; No annual energy or battery MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "queueId": "J1034",
+        "record": {
+          "id": 3510375,
+          "projectNumber": "J1034",
+          "queueDate": "2018-03-12T04:00:00+00:00",
+          "doneDate": "2021-10-12T04:00:00+00:00",
+          "inService": "2021-10-31T04:00:00+00:00",
+          "giaToExec": "2021-10-13T04:00:00+00:00",
+          "negInService": "2024-06-01T04:00:00+00:00",
+          "transmissionOwner": "Ameren Missouri",
+          "county": "Stoddard County",
+          "state": "MO",
+          "studyCycle": "DPP-2018-APR",
+          "studyGroup": "Central",
+          "studyPhase": "GIA",
+          "svcType": "NRIS",
+          "poiName": "Stoddard - Morley 161kV Line Tap",
+          "summerNetMW": 225,
+          "winterNetMW": 225,
+          "dp1ErisMw": 225,
+          "dp1NrisMw": 225,
+          "dp2ErisMw": 225,
+          "dp2NrisMw": 225,
+          "fuelType": "Solar",
+          "facilityType": "Photovoltaic",
+          "applicationStatus": "Done",
+          "sisPhase1": "",
+          "postGIAStatus": "Under Construction"
+        },
+        "oldPrice": 220000000,
+        "costFinding": "No construction budget in cited primary record; earlier unsupported exact budget removed."
+      }
+    },
+    {
+      "id": 17098,
+      "patch": {
+        "title": "Cedar Island Solar LLC: 800 MW Solar in Sherman County, OR",
+        "description": "EIA’s September 2026 preliminary inventory lists 800 MW of photovoltaic nameplate capacity at Cedar Island Solar LLC in Sherman County, OR. Reported planned operation month: 2031-12.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary inventory lists 800 MW of photovoltaic nameplate capacity at Cedar Island Solar LLC in Sherman County, OR. Reported planned operation month: 2031-12.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory identifies plant 66011 and generator PV1. No independently published construction budget is supplied by this inventory.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>EIA places this facility in Sherman County, correcting the earlier Lake County attribution. December 2031 is a preliminary planned month with regulatory approvals pending, not an opening announcement.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "company": "Cedar Island Solar LLC",
+        "companyWikiUrl": null,
+        "tags": [
+          "BPA",
+          "Cedar Island Solar",
+          "Cleanview",
+          "EFSC",
+          "Enlight",
+          "Lake County",
+          "Oregon",
+          "Planned",
+          "Solar",
+          "Proposed"
+        ],
+        "utcStartDateTime": "2031-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2031-12 is the preliminary planned operation month in EIA’s September 2026 survey. Day 01 is a month-precision anchor, not an announced opening day.",
+        "delayReasoning": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+          "title": "EIA September 2026 preliminary generator inventory",
+          "publishedDate": "2026-10-23",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 800,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "EIA’s September 2026 preliminary inventory lists 800 MW of photovoltaic nameplate capacity at Cedar Island Solar LLC in Sherman County, OR. Reported planned operation month: 2031-12."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "plantId": 66011,
+        "rows": [
+          [
+            "Planned",
+            2346
+          ]
+        ],
+        "oldPrice": 820000000,
+        "costFinding": "No exact-scope budget published by primary inventory."
+      }
+    },
+    {
+      "id": 17144,
+      "patch": {
+        "title": "McGrau Ford Battery Storage Facility: 530 MW Battery Storage in Cherokee County, GA",
+        "description": "EIA’s September 2026 preliminary inventory lists 530 MW of battery power at McGrau Ford Battery Storage Facility in Cherokee County, GA. Reported operating month: 2026-08.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary inventory lists 530 MW of battery power at McGrau Ford Battery Storage Facility in Cherokee County, GA. Reported operating month: 2026-08.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory identifies plant 68512 and generator 1, 2. No independently published construction budget is supplied by this inventory.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Units 1 and 2 each have 265 MW of battery power, for 530 MW total. They separately report 530 MWh and 1,060 MWh; neither a generic four-hour duration nor a single-unit budget is assumed.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "company": "Georgia Power Co",
+        "companyWikiUrl": null,
+        "tags": [
+          "BESS",
+          "CherokeeCounty",
+          "CleanEnergy",
+          "EnergyStorage",
+          "Georgia",
+          "GeorgiaPower",
+          "Substation",
+          "Completed"
+        ],
+        "utcStartDateTime": "2026-08-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "2026-08 is the reported operating month in EIA’s September 2026 survey. Day 01 is a month-precision anchor, not an announced opening day.",
+        "delayReasoning": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+          "title": "EIA September 2026 preliminary generator inventory",
+          "publishedDate": "2026-10-23",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 530,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "EIA’s September 2026 preliminary inventory lists 530 MW of battery power at McGrau Ford Battery Storage Facility in Cherokee County, GA. Reported operating month: 2026-08."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "plantId": 68512,
+        "rows": [
+          [
+            "Operating",
+            27091
+          ],
+          [
+            "Operating",
+            27092
+          ]
+        ],
+        "oldPrice": 280000000,
+        "costFinding": "No exact-scope budget published by primary inventory."
+      }
+    },
+    {
+      "id": 18107,
+      "patch": {
+        "title": "Foxtail Flats Solar, LLC: 80 MW Battery Storage in San Juan County, NM",
+        "description": "EIA’s September 2026 preliminary inventory lists 80 MW of battery power at Foxtail Flats Solar, LLC in San Juan County, NM. Reported planned operation month: 2027-05.",
+        "longFormSummary": "<ul><li>EIA’s September 2026 preliminary inventory lists 80 MW of battery power at Foxtail Flats Solar, LLC in San Juan County, NM. Reported planned operation month: 2027-05.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The inventory identifies plant 69967 and generator FTB. No independently published construction budget is supplied by this inventory.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The 80 MW battery component is distinct from the separately reported 170 MW photovoltaic component at the same hybrid plant. Battery MWh is not published in the cited planned-generator row.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "company": "Foxtail Flats Solar, LLC",
+        "companyWikiUrl": null,
+        "tags": [
+          "BESS",
+          "DESRI",
+          "EnergyStorage",
+          "NavajoNation",
+          "NewMexico",
+          "PNM",
+          "SanJuanCounty",
+          "In Progress"
+        ],
+        "utcStartDateTime": "2027-05-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "2027-05 is the preliminary planned operation month in EIA’s September 2026 survey. Day 01 is a month-precision anchor, not an announced opening day.",
+        "delayReasoning": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+          "title": "EIA September 2026 preliminary generator inventory",
+          "publishedDate": "2026-10-23",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 80,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "EIA’s September 2026 preliminary inventory lists 80 MW of battery power at Foxtail Flats Solar, LLC in San Juan County, NM. Reported planned operation month: 2027-05."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "plantId": 69967,
+        "rows": [
+          [
+            "Planned",
+            809
+          ]
+        ],
+        "oldPrice": 95000000,
+        "costFinding": "No exact-scope budget published by primary inventory."
+      }
+    }
+  ]
+}
