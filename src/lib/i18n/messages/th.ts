@@ -2020,7 +2020,7 @@ const th: Messages = {
   },
   calendar: {
     subscribe: 'ติดตามปฏิทิน',
-    subscribeThread: 'ติดตามเธรดนี้ในปฏิทิน',
+    subscribeThread: 'ติดตามปฏิทิน',
     google: 'เพิ่มใน Google ปฏิทิน',
     googleHint: 'เปิด Google ปฏิทินและเพิ่มฟีด',
     copy: 'คัดลอก URL ฟีด',

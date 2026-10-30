@@ -2024,8 +2024,8 @@ const ko: Messages = {
     contactCorrections: "핀의 날짜나 내용을 고치려면 핀을 열고 '{suggest}'를 사용하세요. 큐레이터에게 바로 전달되며 핀의 출처와 대조해 확인합니다.",
   },
   calendar: {
-    subscribe: '구독',
-    subscribeThread: '이 스레드 구독',
+    subscribe: '캘린더 구독',
+    subscribeThread: '캘린더 구독',
     google: 'Google 캘린더에 추가',
     googleHint: 'Google 캘린더를 열고 피드를 추가합니다',
     copy: '피드 URL 복사',

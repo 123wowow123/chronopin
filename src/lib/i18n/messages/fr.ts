@@ -2029,8 +2029,8 @@ const fr: Messages = {
     contactCorrections: "Pour corriger une date ou un détail d'un pin, ouvrez le pin et utilisez « {suggest} » : la demande va directement aux curateurs et est vérifiée par rapport aux sources du pin.",
   },
   calendar: {
-    subscribe: 'S\'abonner',
-    subscribeThread: 'S\'abonner à ce fil',
+    subscribe: 'S\'abonner au calendrier',
+    subscribeThread: 'S\'abonner au calendrier',
     google: 'Ajouter à Google Agenda',
     googleHint: 'Ouvre Google Agenda et ajoute le flux',
     copy: 'Copier l\'URL du flux',

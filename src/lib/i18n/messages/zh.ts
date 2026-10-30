@@ -2023,8 +2023,8 @@ const zh: Messages = {
     contactCorrections: '如需更正 Pin 上的日期或细节，请打开该 Pin 并使用“{suggest}”：它会直接送达编辑，并与 Pin 的来源进行核对。',
   },
   calendar: {
-    subscribe: '订阅',
-    subscribeThread: '订阅此主题串',
+    subscribe: '订阅日历',
+    subscribeThread: '订阅日历',
     google: '添加到 Google 日历',
     googleHint: '打开 Google 日历并添加该订阅',
     copy: '复制订阅链接',

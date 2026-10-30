@@ -2032,8 +2032,8 @@ const vi: Messages = {
     contactCorrections: 'Để sửa ngày hoặc chi tiết của một ghim, hãy mở ghim và dùng “{suggest}”: yêu cầu được gửi thẳng tới biên tập viên và đối chiếu với nguồn của ghim.',
   },
   calendar: {
-    subscribe: 'Đăng ký',
-    subscribeThread: 'Đăng ký chuỗi này',
+    subscribe: 'Đăng ký lịch',
+    subscribeThread: 'Đăng ký lịch',
     google: 'Thêm vào Google Calendar',
     googleHint: 'Mở Google Calendar và thêm nguồn cấp',
     copy: 'Sao chép URL nguồn cấp',

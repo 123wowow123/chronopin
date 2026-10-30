@@ -2394,8 +2394,8 @@ const ar: Messages = {
     contactCorrections: 'لتصحيح موعد أو تفصيل في دبوس، افتح الدبوس واستخدم «{suggest}»: يصل مباشرة إلى المحرّرين ويُقارن بمصادر الدبوس.',
   },
   calendar: {
-    subscribe: 'اشتراك',
-    subscribeThread: 'الاشتراك في هذا الموضوع',
+    subscribe: 'الاشتراك في التقويم',
+    subscribeThread: 'الاشتراك في التقويم',
     google: 'إضافة إلى تقويم Google',
     googleHint: 'يفتح تقويم Google ويضيف الخلاصة',
     copy: 'نسخ رابط الخلاصة',

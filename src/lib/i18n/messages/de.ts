@@ -2029,8 +2029,8 @@ const de: Messages = {
     contactCorrections: 'Um ein Datum oder ein Detail eines Pins zu korrigieren, öffne den Pin und nutze „{suggest}“: Das geht direkt an die Kuratoren und wird mit den Quellen des Pins abgeglichen.',
   },
   calendar: {
-    subscribe: 'Abonnieren',
-    subscribeThread: 'Diesen Thread abonnieren',
+    subscribe: 'Kalender abonnieren',
+    subscribeThread: 'Kalender abonnieren',
     google: 'Zu Google Kalender hinzufügen',
     googleHint: 'Öffnet Google Kalender und fügt den Feed hinzu',
     copy: 'Feed-URL kopieren',

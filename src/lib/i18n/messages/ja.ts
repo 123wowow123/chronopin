@@ -2023,8 +2023,8 @@ const ja: Messages = {
     contactCorrections: 'ピンの日付や内容を直すには、ピンを開いて「{suggest}」を使ってください。担当者に直接届き、ピンの出典と照合されます。',
   },
   calendar: {
-    subscribe: '購読',
-    subscribeThread: 'このスレッドを購読',
+    subscribe: 'カレンダーを購読',
+    subscribeThread: 'カレンダーを購読',
     google: 'Googleカレンダーに追加',
     googleHint: 'Googleカレンダーを開いてフィードを追加します',
     copy: 'フィードのURLをコピー',

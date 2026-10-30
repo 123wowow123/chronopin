@@ -2033,8 +2033,8 @@ const id: Messages = {
     contactCorrections: 'Untuk memperbaiki tanggal atau detail pada pin, buka pin tersebut dan gunakan "{suggest}": langsung sampai ke kurator dan dicek dengan sumber pin.',
   },
   calendar: {
-    subscribe: 'Berlangganan',
-    subscribeThread: 'Berlangganan thread ini',
+    subscribe: 'Berlangganan kalender',
+    subscribeThread: 'Berlangganan kalender',
     google: 'Tambahkan ke Google Calendar',
     googleHint: 'Membuka Google Calendar dan menambahkan feed',
     copy: 'Salin URL feed',

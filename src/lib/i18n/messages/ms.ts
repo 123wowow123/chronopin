@@ -2033,8 +2033,8 @@ const ms: Messages = {
     contactCorrections: 'Untuk membetulkan tarikh atau butiran pada pin, buka pin itu dan gunakan "{suggest}": ia terus sampai kepada kurator dan disemak dengan sumber pin.',
   },
   calendar: {
-    subscribe: 'Langgan',
-    subscribeThread: 'Langgan thread ini',
+    subscribe: 'Langgan kalendar',
+    subscribeThread: 'Langgan kalendar',
     google: 'Tambah ke Google Calendar',
     googleHint: 'Membuka Google Calendar dan menambah suapan',
     copy: 'Salin URL suapan',

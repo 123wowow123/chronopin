@@ -2020,8 +2020,8 @@ const it: Messages = {
     contactCorrections: 'Per correggere una data o un dettaglio di un pin, apri il pin e usa «{suggest}»: arriva direttamente ai curatori e viene verificata con le fonti del pin.',
   },
   calendar: {
-    subscribe: 'Iscriviti',
-    subscribeThread: 'Iscriviti a questo thread',
+    subscribe: 'Iscriviti al calendario',
+    subscribeThread: 'Iscriviti al calendario',
     google: 'Aggiungi a Google Calendar',
     googleHint: 'Apre Google Calendar e aggiunge il feed',
     copy: 'Copia l\'URL del feed',

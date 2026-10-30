@@ -2033,8 +2033,8 @@ const en = {
     contactCorrections: "To fix a date or a detail on a pin, open the pin and use “{suggest}”: it goes straight to the curators and is checked against the pin's sources.",
   },
   calendar: {
-    subscribe: 'Subscribe',
-    subscribeThread: 'Subscribe to this thread',
+    subscribe: 'Subscribe to calendar',
+    subscribeThread: 'Subscribe to calendar',
     google: 'Add to Google Calendar',
     googleHint: 'Opens Google Calendar and adds the feed',
     copy: 'Copy feed URL',

@@ -2029,8 +2029,8 @@ const es: Messages = {
     contactCorrections: 'Para corregir una fecha o un detalle de un pin, abre el pin y usa «{suggest}»: llega directamente a los curadores y se contrasta con las fuentes del pin.',
   },
   calendar: {
-    subscribe: 'Suscribirse',
-    subscribeThread: 'Suscribirse a este hilo',
+    subscribe: 'Suscribirse al calendario',
+    subscribeThread: 'Suscribirse al calendario',
     google: 'Añadir a Google Calendar',
     googleHint: 'Abre Google Calendar y añade el calendario',
     copy: 'Copiar URL del calendario',
