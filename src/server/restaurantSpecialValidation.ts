@@ -47,7 +47,8 @@ export function parseSpecialVenue(value: unknown): SpecialVenueInput {
       for (const page of menu.pages) { object(page); check(assetUrl(page.src) && Number.isFinite(page.width) && page.width > 0 && Number.isFinite(page.height) && page.height > 0 && (page.label === undefined || text(page.label)), 'Invalid menu page'); }
     }
     list(menu.items, 1000);
-    for (const item of menu.items) { object(item); check(text(item.name) && item.name.trim(), 'Invalid menu item'); optionalStrings(item, ['category', 'note', 'priceLabel']); check(item.price === undefined || (Number.isFinite(item.price) && item.price >= 0), 'Invalid menu price'); }
+    for (const item of menu.items) { object(item); check(text(item.name) && item.name.trim(), 'Invalid menu item'); optionalStrings(item, ['category', 'note', 'priceLabel']); check(item.price === undefined || (Number.isFinite(item.price) && item.price >= 0), 'Invalid menu price');
+      if (item.image !== undefined) { const img = item.image; object(img); check(assetUrl(img.src) && text(img.caption) && img.caption.trim() && text(img.credit) && img.credit.trim() && url(img.sourceUrl), 'Invalid menu item image: needs src, caption, credit and sourceUrl'); } }
   }
   list(p.specials, 50);
   for (const special of p.specials) {

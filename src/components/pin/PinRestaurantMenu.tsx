@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { restaurantMenuAmount, restaurantMenuCategories, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
 import { RestaurantMenuTabs } from './RestaurantMenuTabs';
+import { FoodPhotoStrip, MenuDishPhoto } from './MenuDishPhoto';
 import styles from './RestaurantMenu.module.css';
 import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 
@@ -21,7 +22,7 @@ function MenuContent({ menu }: { menu: RestaurantMenu }) {
         <dl>{items.map((item, index) => (
           <div key={`${item.name}-${index}`} className={styles.item}>
             <dt className={styles.dish}>
-              <span className={styles.dishLine}><span className={styles.dishName}>{item.name}</span><span className={styles.leader} aria-hidden="true" /></span>
+              <span className={styles.dishLine}>{item.image ? <MenuDishPhoto name={item.name} image={item.image} /> : null}<span className={styles.dishName}>{item.name}</span><span className={styles.leader} aria-hidden="true" /></span>
               {item.note ? <span className={styles.dishNote}>{item.note}</span> : null}
             </dt>
             <dd className={styles.price}>{item.price != null ? amount(item.price) : item.priceLabel || 'Price not published'}</dd>
@@ -76,6 +77,7 @@ export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: strin
   const lunch = specials.filter((special) => special.kind === 'lunch');
   const other = specials.filter((special) => special.kind === 'other');
   const checked = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${profile.checkedAt}T00:00:00Z`));
+  const dishPhotos = [...new Map(menus.flatMap((menu) => menu.items).flatMap((item) => item.image ? [item.image] : []).map((image) => [image.src, image])).values()];
   const tabs = menus.map((menu) => ({ label: menu.label, content: <MenuContent menu={menu} /> }));
   if (lunch.length) tabs.push({ label: 'Lunch specials', content: <div>
     <h3 className={styles.menuTitle}>Lunch specials</h3>
@@ -94,6 +96,7 @@ export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: strin
       </div>
       <div className={styles.body}>
         {rescrapeCandidate ? <p role="status" className={styles.update}>Update due. Showing the last verified menu and specials; check the restaurant’s links for the latest details.</p> : null}
+        {dishPhotos.length ? <FoodPhotoStrip images={dishPhotos} /> : null}
         <RestaurantMenuTabs tabs={tabs} />
         <p className={styles.footer}>Prices use each menu’s currency. Times are local to the restaurant. Confirm availability before visiting.</p>
       </div>

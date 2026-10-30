@@ -60,8 +60,12 @@ export type RestaurantMenu = {
   coverage?: 'published' | 'sample' | 'link';
   documentUrl?: string;
   pages?: { src: string; width: number; height: number; label?: string }[];
-  items: { name: string; category?: string; price?: number; priceLabel?: string; note?: string }[];
+  items: RestaurantMenuItem[];
 };
+
+// A photo of the dish itself (Azure blob), shown as a thumbnail that opens large with its caption.
+export type RestaurantDishImage = { src: string; caption: string; credit: string; sourceUrl: string; width?: number; height?: number };
+export type RestaurantMenuItem = { name: string; category?: string; price?: number; priceLabel?: string; note?: string; image?: RestaurantDishImage };
 
 // A menu's section tabs in display order: the categories as the menu lists them, except
 // that Food (when there is one) comes first, so it opens selected ahead of Drinks.

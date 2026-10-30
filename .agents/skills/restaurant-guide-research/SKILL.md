@@ -53,6 +53,16 @@ Check official galleries, linked photo pages and restaurant sites. Store in Azur
 photographer/operator, keep captions accurate, distinguish the venue's own photos from collaborations or other
 branches, don't infer dish names from unlabelled photos.
 
+## Dish photos
+Try to find a photo for every menu item. Each item may carry `image: { src, caption, credit, sourceUrl }` (Azure
+blob `src`; optional `width`/`height`), saved through the same restaurant-content / restaurant-specials APIs
+(validated; all four fields are required). On the pin a photo shows as a thumbnail beside the dish; clicking it
+opens the photo large with its caption and credit, and every restaurant pin with dish photos also gets a captioned
+"Food photos" strip above the menu. Only use a photo that really shows that dish at that restaurant (official
+site, the venue's own social/press kit, Yelp/Tripadvisor/Google photos of that branch); never infer a dish from an
+unlabelled photo or use another branch's or a stock image, and leave the item without one rather than guess. The
+caption names the dish as the restaurant does. Upload with `npx tsx scripts/restaurants/uploadDishPhotos.ts restaurant-dishes/<slug> <files>` (WebP, public-blob check, prints `src`/`width`/`height`). Yelp's branch photo gallery (`/biz_photos/<slug>?tab=food&start=N`, reader-captioned) is a usable source when the restaurant's own site has no dish photos; credit it as a Yelp reviewer photo and link the photo's `?select=` page. Record items left without a photo in the guide notes.
+
 ## Saving
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then
