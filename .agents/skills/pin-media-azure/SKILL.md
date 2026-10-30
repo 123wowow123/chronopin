@@ -12,7 +12,11 @@ description: >-
   source URLs, credits and metadata in the repo. UI icons and logos may stay in Git.
 - Use ignored temp files while sourcing/uploading. **Verify the public blob downloads** (plain curl) before
   removing a local file or switching a live pin reference.
-- Credit the source page, photographer or operator, and keep captions accurate.
+- Credit the source page, photographer or operator, and keep captions accurate. `Medium` stores attribution in
+  `authorName` / `authorUrl`; `credit` / `creditUrl` are ignored by the native model. New-image thumbnail
+  processing may clear attribution during `addThumb()`: verify the native readback, and when necessary patch
+  only those two fields through the authenticated audited `/api/admin/db/Medium?id=...` API. Read them back
+  on the pin, then round-trip the pin through its native API to refresh its page and feed.
 - Never skip a picture over unclear licensing: credit and store it. Don't restrict to Wikimedia Commons; try the
   brand newsroom or press kit first.
 - Aim for three media per scraped pin. No picture twice (CDN size suffixes + difference hash dedupe).

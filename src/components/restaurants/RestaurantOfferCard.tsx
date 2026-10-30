@@ -66,7 +66,7 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
         {offer.special.conditions?.length ? <ul className={styles.offerConditions}>{offer.special.conditions.map((condition) => <li key={condition}>{condition}</li>)}</ul> : null}
         {offer.menu?.note && <p className={styles.offerSchedule}>{offer.menu.note}</p>}
         <p className={styles.topAddress}>{card.address}</p>
-        <div className={styles.topLinks}><Anchor href={offer.special.sourceUrl} target="_blank" rel="noopener noreferrer">{upcoming ? 'View upcoming offer' : 'View offer at restaurant'} ↗</Anchor><Link href={card.restaurantHref}>Restaurant details ↗</Link></div>
+        <div className={styles.topLinks}><Anchor href={offer.special.sourceUrl} target="_blank" rel="noopener noreferrer">{upcoming ? 'View upcoming offer' : 'View offer at restaurant'} ↗</Anchor></div>
         <p className={styles.offerSchedule}>Menu checked {offer.checkedAt}</p>
       </div>
     </div>

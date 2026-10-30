@@ -1264,5 +1264,28 @@
       "reason": "Re:Build company funding across its manufacturing platform, without independently dated named plant projects.",
       "profileAdded": false
     }
-  ]
+  ],
+  "followup": {
+    "checkedAt": "2026-10-30",
+    "pinsUpdated": [
+      20641,
+      20642,
+      20643,
+      20644,
+      20645,
+      20646,
+      20647,
+      20648,
+      6426,
+      18097,
+      19026
+    ],
+    "profilesAdded": 2,
+    "resolvedEvidencePinIds": [
+      6426
+    ],
+    "remainingEvidenceHolds": 13,
+    "remainingSupplementalChildHolds": 8,
+    "replay": "scripts/factories/resolutions-2026-10-30-final68-followup.json"
+  }
 }

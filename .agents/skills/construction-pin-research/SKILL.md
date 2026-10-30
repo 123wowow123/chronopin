@@ -29,7 +29,10 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   per-unit benchmark (low, high, midpoint), the low and high totals, the figure used for the price, and what is
   excluded, each as its own cited line in the summary and spelled out in the metric value.
   A published budget always replaces the estimate. Land prices and permit figures are not construction cost. Use a
-  local-market row when the source has one; if no benchmark covers the type and region, leave `price` null.
+  local-market row when the source has one. A national row for the exact building type may stand in when there is
+  no regional row, but the metric and summary must say it is national and may understate the cost (Brucker: mass
+  timber, 2026-10-30). If no benchmark covers the type, or the project has no sourced quantity or design (NAVWAR,
+  Millennium Mission Valley), leave `price` null and say why.
 - Record the source in references or wiki. The extraction prompt `src/server/extract/systemPrompt.ts` carries the same rule.
 
 ## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`, `Withdrawn`
@@ -114,3 +117,9 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   (and the rendering's source page) to `references`.
 - Ongoing: the 06:00/18:00 news job's `review_research_gaps` `construction` list refreshes excerpts and sentiment as a
   project nears completion or local news appears (`docs/okf/scraping/daily-jobs.md#sentiment`).
+- **Map (every development pin):** a pin needs `latitude`/`longitude` or it shows no map; an `address` alone is not
+  geocoded on create. Geocode the street address (ArcGIS `findAddressCandidates`, score 100, or Photon), sanity-check
+  the point against the neighborhood, and save it with the pin: include both fields in the create body, or
+  whole-pin PUT them on (GET, set `latitude`/`longitude`, PUT, diff the readback), locally and on prod. If the
+  coverage gives no street address, use the named site's published coordinates and say so in the summary; never
+  use a city centroid.

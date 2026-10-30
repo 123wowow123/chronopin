@@ -118790,100 +118790,122 @@
     "title": "Amazon Resilient Technology Park: Third Louisiana Campus Announced",
     "sourceUrl": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
     "profile": {
-      "sector": "Infrastructure: data centers",
-      "status": "announced",
-      "assessmentDate": "2026-10-30",
-      "rubricYear": 2026,
-      "source": "session",
       "axes": {
         "scale": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
-          "sources": []
-        },
-        "automation": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
-          "sources": []
+          "sources": [],
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile."
         },
         "technical": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
-          "sources": []
-        },
-        "efficiency": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
-          "sources": []
-        },
-        "supplyChain": {
-          "score": null,
-          "basis": "unknown",
-          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
-          "sources": []
+          "sources": [],
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark."
         },
         "workforce": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
-          "sources": []
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief."
         }
       },
+      "sector": "Infrastructure: data centers",
+      "source": "session",
+      "status": "announced",
       "metrics": [
         {
           "key": "investment",
+          "basis": "planned",
           "label": "Additional campus investment",
           "value": "USD 6 billion planned",
-          "basis": "planned",
           "source": {
             "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
-            "title": "Project owner / public authority project evidence",
             "quote": "additional $6 billion",
+            "title": "Project owner / public authority project evidence",
             "publishedDate": null
           }
         },
         {
           "key": "employment",
+          "basis": "planned",
           "label": "Additional direct jobs",
           "value": "210 expected jobs",
-          "basis": "planned",
           "source": {
             "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
-            "title": "Project owner / public authority project evidence",
             "quote": "210 direct new jobs",
+            "title": "Project owner / public authority project evidence",
             "publishedDate": null
           }
         },
         {
           "key": "products",
+          "basis": "planned",
           "label": "Project type",
           "value": "Cloud-computing and AI data center",
-          "basis": "planned",
           "source": {
             "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
-            "title": "Project owner / public authority project evidence",
             "quote": "cloud computing and artificial intelligence",
+            "title": "Project owner / public authority project evidence",
             "publishedDate": null
           }
         }
       ],
       "milestones": [
         {
-          "label": "Third campus and investment announced",
           "date": "2026-08-18",
           "basis": "demonstrated",
+          "label": "Third campus and investment announced",
           "source": {
             "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
-            "title": "Project owner / public authority project evidence",
             "quote": "August 18, 2026",
+            "title": "Project owner / public authority project evidence",
             "publishedDate": null
           }
+        },
+        {
+          "label": "Reported first-building completion target",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ksla.com/2026/08/18/shreveport-leaders-call-6-billion-amazon-investment-milestone/",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "The first building is expected to be completed by next year."
+          }
+        },
+        {
+          "label": "Reported full-project buildout",
+          "date": "3–5 years from August 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ksla.com/2026/08/18/shreveport-leaders-call-6-billion-amazon-investment-milestone/",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "The full project is expected to be completed within the next three to five years."
+          }
         }
-      ]
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-30"
     }
   },
   {
@@ -118997,10 +119019,126 @@
       "local": 20648,
       "production": 20648
     },
-    "title": "ERCOR Triboro: Nine Data Centers Proposed in Olyphant",
+    "title": "ERCOR Triboro: Seven Data Centers Proposed in Olyphant",
     "sourceUrl": null,
     "profile": {
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief."
+        }
+      },
       "sector": "Infrastructure: data centers",
+      "source": "session",
+      "status": "announced",
+      "metrics": [
+        {
+          "key": "siteArea",
+          "basis": "planned",
+          "label": "Reported property scope",
+          "value": "Nearly 471 acres in the June 26 report; earlier transaction reported as 500 acres",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+            "title": "June 26 ERCOR site scope",
+            "publishedDate": "2026-06-26",
+            "quote": "nearly 471 acres"
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Proposed campus layout",
+          "value": "Seven two-story data centers and a substation; June 26 revised layout",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+            "title": "June 26 revised ERCOR project layout",
+            "publishedDate": "2026-06-26",
+            "quote": "seven buildings"
+          }
+        },
+        {
+          "key": "stage",
+          "basis": "planned",
+          "label": "Reported planning status",
+          "value": "Separate pending proposal; zoning settlement is not project approval",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "quote": "applied to change its land use",
+            "title": "Project owner / public authority project evidence",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-06-10",
+          "basis": "demonstrated",
+          "label": "Separate proposal reported; not construction approval",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "quote": "June 10, 2026",
+            "title": "Project owner / public authority project evidence",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Seven-building layout and hearing lawsuit reported; final outcome unverified",
+          "date": "2026-06-26",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+            "title": "June 26 ERCOR lawsuit report",
+            "publishedDate": "2026-06-26",
+            "quote": "June 26, 2026"
+          }
+        }
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-30"
+    }
+  },
+  {
+    "key": "final68-followup-6426",
+    "pinIds": {
+      "local": 6426,
+      "production": 6426
+    },
+    "title": "SpaceX Starbase Louisiana: USD 100 Billion Spaceport Announced",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Aerospace: spaceport construction",
       "status": "announced",
       "assessmentDate": "2026-10-30",
       "rubricYear": 2026,
@@ -119009,88 +119147,237 @@
         "scale": {
           "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
           "sources": []
         },
         "automation": {
           "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
           "sources": []
         },
         "technical": {
           "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
           "sources": []
         },
         "efficiency": {
           "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
           "sources": []
         },
         "supplyChain": {
           "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
           "sources": []
         },
         "workforce": {
           "score": null,
           "basis": "unknown",
-          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
           "sources": []
         }
       },
       "metrics": [
         {
-          "key": "siteArea",
-          "label": "Reported property scope",
-          "value": "500-acre property; about 100 acres proposed for data centers",
+          "key": "investment",
+          "label": "Announced planned investment",
+          "value": "USD 100 billion",
           "basis": "planned",
           "source": {
-            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
-            "title": "Project owner / public authority project evidence",
-            "quote": "500 acres",
-            "publishedDate": null
+            "url": "https://www.opportunitylouisiana.gov/news/spacex-launches-new-era-of-commercial-spaceflight-with-100-billion-louisiana-campus",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "$100 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected direct jobs",
+          "value": "3,000 over ten years",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/spacex-launches-new-era-of-commercial-spaceflight-with-100-billion-louisiana-campus",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "3,000 direct new jobs"
           }
         },
         {
           "key": "products",
-          "label": "Proposed campus layout",
-          "value": "9 data centers",
+          "label": "Planned launch layout",
+          "value": "Five complexes; two pads per complex (ten pads)",
           "basis": "planned",
           "source": {
-            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
-            "title": "Project owner / public authority project evidence",
-            "quote": "nine data centers",
-            "publishedDate": null
-          }
-        },
-        {
-          "key": "stage",
-          "label": "Reported planning status",
-          "value": "Separate pending proposal; zoning settlement is not project approval",
-          "basis": "planned",
-          "source": {
-            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
-            "title": "Project owner / public authority project evidence",
-            "quote": "applied to change its land use",
-            "publishedDate": null
+            "url": "https://www.opportunitylouisiana.gov/news/spacex-launches-new-era-of-commercial-spaceflight-with-100-billion-louisiana-campus",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "five launch complexes"
           }
         }
       ],
       "milestones": [
         {
-          "label": "Separate proposal reported; not construction approval",
-          "date": "2026-06-10",
+          "label": "State project announcement",
+          "date": "2026-08-25",
           "basis": "demonstrated",
           "source": {
-            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
-            "title": "Project owner / public authority project evidence",
-            "quote": "June 10, 2026",
-            "publishedDate": null
+            "url": "https://www.opportunitylouisiana.gov/news/spacex-launches-new-era-of-commercial-spaceflight-with-100-billion-louisiana-campus",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "August 25, 2026"
+          }
+        },
+        {
+          "label": "Expected construction start",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/spacex-launches-new-era-of-commercial-spaceflight-with-100-billion-louisiana-campus",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "2027"
+          }
+        },
+        {
+          "label": "First-launch target; not full completion",
+          "date": "As early as 2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/spacex-launches-new-era-of-commercial-spaceflight-with-100-billion-louisiana-campus",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "2029"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-followup-18097",
+    "pinIds": {
+      "local": 18097,
+      "production": 18097
+    },
+    "title": "Yellow Pine Solar III: 100 MW Solar and 225 MW Storage Filing",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: solar and battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored project capability supports a radar value.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Filed solar and storage scope",
+          "value": "100 MWac solar; 225 MW battery power; duration unpublished",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "100 MW"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Filed facility land",
+          "value": "1,008.94 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "1,008.94"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed commercial operation target",
+          "value": "Q2 2027, planned",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "Q2 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Filed anticipated construction start",
+          "date": "Q2 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "Q2 2026"
+          }
+        },
+        {
+          "label": "Tax-abatement hearing and approval",
+          "date": "2026-06-03",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/hearing-minutes-yellow-pine-solar-iii-llc.pdf",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "June 3, 2026"
+          }
+        },
+        {
+          "label": "Filed commercial operation target",
+          "date": "Q2 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+            "title": "Opened project-specific primary evidence",
+            "publishedDate": null,
+            "quote": "Q2 2027"
           }
         }
       ]
