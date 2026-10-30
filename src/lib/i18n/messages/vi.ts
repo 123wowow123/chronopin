@@ -851,6 +851,7 @@ const vi: Messages = {
     },
     siteKey: {
       wildfire: 'Chu vi cháy rừng',
+      flood: 'Vùng ngập lụt',
       district: 'Ranh giới khu vực bầu cử',
       site: 'Ranh giới khu đất',
       building: 'Tòa nhà',

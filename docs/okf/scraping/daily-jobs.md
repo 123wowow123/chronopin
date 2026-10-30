@@ -486,7 +486,12 @@ is not on sale and not PreOrder either - leave availability empty. A price is
 a ticket price the page quotes for this edition, never a past year's, a
 resale price, or a kids' ticket sold only with an adult one. A ticketUrl must
 be copied from the links given; the tool drops any other. A row someone set
-by hand is kept. First pass (2026-09-26): 75 of 151 upcoming event pins had
+by hand is kept. After researching it, advance only its `checkedAt` through
+the admin API when the tool leaves it unchanged. Compare all 40 native
+event-info readbacks between local and production: an empty refresh can
+preserve local session fields while replaying empty fields to production.
+Restore the retained fields through the native event-info API and verify;
+never use this check to replace a hand reading. First pass (2026-09-26): 75 of 151 upcoming event pins had
 anything to read - blank beats guessed.
 
 ### products

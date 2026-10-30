@@ -847,6 +847,7 @@ const de: Messages = {
     },
     siteKey: {
       wildfire: 'Waldbrandumriss',
+      flood: 'Überflutete Fläche',
       district: 'Wahlkreisgrenze',
       site: 'Grundstücksgrenze',
       building: 'Gebäude',

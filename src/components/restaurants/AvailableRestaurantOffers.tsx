@@ -8,15 +8,15 @@ import { PagedCardGrid, useGuidePages } from './PagedCardGrid';
 import { RestaurantOfferCard } from './RestaurantOfferCard';
 import styles from './RestaurantGuide.module.css';
 
-type Props = { regionSlug: string; neighborhood: string; initialPages: Record<string, GuidePage<ScheduledRestaurantOffer>>; timeZone: string; city: string };
+type Props = { regionSlug: string; neighborhood: string; initialPages: Record<string, GuidePage<ScheduledRestaurantOffer>>; timeZone: string; city: string; guide?: { name: string; latitude: number; longitude: number } };
 
 export function AvailableRestaurantOffers(props: Props) {
   return <><RestaurantOfferSection {...props} upcoming={false} /><RestaurantOfferSection {...props} upcoming /></>;
 }
 
-function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZone, city, upcoming }: Props & { upcoming: boolean }) {
+function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZone, city, guide, upcoming }: Props & { upcoming: boolean }) {
   const pathname = usePathname();
-  const sortState = useRestaurantSort('Specials', upcoming ? 'starts' : 'rating');
+  const sortState = useRestaurantSort('Specials', upcoming ? 'starts' : 'rating', guide);
   const { sort, origin } = sortState;
   const pages = useGuidePages<ScheduledRestaurantOffer>({ region: regionSlug, view: 'discounts', section: upcoming ? 'next' : 'available', neighborhood, sort, origin }, initialPages);
   const sectionId = upcoming ? 'next-specials' : 'available-now';

@@ -852,6 +852,7 @@ const en = {
     },
     siteKey: {
       wildfire: 'Wildfire perimeter',
+      flood: 'Flood extent',
       district: 'Election district boundary',
       site: 'Site boundary',
       building: 'Buildings',

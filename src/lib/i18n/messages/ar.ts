@@ -921,6 +921,7 @@ const ar: Messages = {
     },
     siteKey: {
       wildfire: 'محيط حريق الغابات',
+      flood: 'نطاق الفيضان',
       district: 'حدود الدائرة الانتخابية',
       site: 'حدود الموقع',
       building: 'المباني',

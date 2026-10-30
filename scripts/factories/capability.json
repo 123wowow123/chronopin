@@ -29253,5 +29253,3200 @@
         }
       ]
     }
+  },
+  {
+    "key": "lyon-turin-base-tunnel-news34",
+    "pinIds": {
+      "local": 634,
+      "production": 634
+    },
+    "title": "Lyon-Turin Base Tunnel Targeted for 2033 Completion",
+    "sourceUrl": "https://www.youtube.com/watch?v=kc29axOAzRs",
+    "profile": {
+      "sector": "Cross-border railway: Lyon–Turin / Mont-Cenis twin-tube base tunnel",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No cited comparable cohort of five railway tunnels establishes a scale percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Tunnel-boring equipment is described, but no validated automation scoring comparison is published.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The tunnel construction methods are documented; a defensible rubric score for this rail project is not established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No cited cohort of five comparable tunnels establishes a process-efficiency percentile.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified supply-chain integration score is established.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Construction headcounts do not establish a scored workforce training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Tunnel length",
+          "value": "Planned: two parallel rail tubes, each 57.5 km; not 115 km of route length.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "avec ses 57,5 km, sera le plus long tunnel ferroviaire du monde. La date d'achèvement est prévue en 2033."
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Construction workforce",
+          "value": "Demonstrated in July 2026: more than 3,000 site workers. Peak direct and indirect estimates are separate.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "Emploi de plus de 3 000 personnes sur les chantiers."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Active construction sites",
+          "value": "Demonstrated in July 2026: 11 above- and below-ground sites, including four base-tunnel excavation sites.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "Ouverture de 11 chantiers pour des travaux à ciel ouvert et souterrains, dont 4 chantiers pour"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Completion target",
+          "value": "Planned: completion in 2033; no completed opening or operation asserted.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "avec ses 57,5 km, sera le plus long tunnel ferroviaire du monde. La date d'achèvement est prévue en 2033."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Preparatory activities began",
+          "date": "2001",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "en 2001, les activités"
+          }
+        },
+        {
+          "label": "TELT established",
+          "date": "2015-02-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "TELT a été créé le 23 février 2015 sur la base d'un accord international entre la France et l'Italie signé en janvier"
+          }
+        },
+        {
+          "label": "Published construction progress",
+          "date": "2026-07",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "Excavation d’un total de plus de 49,2 km, dont presque 21,6 km du tunnel de base en tant que tel, sur"
+          }
+        },
+        {
+          "label": "Target completion",
+          "date": "2033",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+            "title": "TELT dossier de presse, août 2026",
+            "publishedDate": "2026-08-05",
+            "quote": "avec ses 57,5 km, sera le plus long tunnel ferroviaire du monde. La date d'achèvement est prévue en 2033."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "ferrara-orangeburg",
+    "pinIds": {
+      "local": 3509,
+      "production": 3509
+    },
+    "title": "Ferrara's Orangeburg Candy Plant Starts First Production Lines",
+    "sourceUrl": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+    "profile": {
+      "sector": "Manufacturing: sugar confectionery",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced plant investment",
+          "value": "USD 675 million for the new Orangeburg facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "$675 million"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facility area",
+          "value": "750,000 sq ft including production, packaging, warehousing and offices.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "750,000 square feet"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Projected employment",
+          "value": "More than 1,000 manufacturing and corporate positions over the next decade, not a current headcount.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "more than 1,000"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "First production target",
+          "value": "First lines in Q1 2029; full facility opening later in 2029.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "first quarter of 2029"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking announced",
+          "date": "2026-04-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "officially broken ground"
+          }
+        },
+        {
+          "label": "First lines expected to operate",
+          "date": "First quarter of 2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "first quarter of 2029"
+          }
+        },
+        {
+          "label": "Full facility opening expected",
+          "date": "Later in 2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ferrara.com/us/en/ferrara-candy-company-breaks-ground-new-manufacturing-facility-orangeburg-south-carolina",
+            "title": "Ferrara Candy Company Breaks Ground on New Manufacturing Facility in Orangeburg, South Carolina | Ferrara",
+            "publishedDate": "2026-04-23",
+            "quote": "full facility opening later that year"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "steel-river-energy-center",
+    "pinIds": {
+      "local": 15885,
+      "production": 15885
+    },
+    "title": "Cypress Creek Steel River Energy Center: 2.5 GWdc Solar and 2.9 GWh Battery in Mississippi County, Arkansas, 4.5B USD, Google Offtake, Fully Operational by 2029",
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/steel-river-arkansas/",
+    "profile": {
+      "sector": "Energy: solar generation and battery storage",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned full-project solar and storage",
+          "value": "2.5 GWdc solar plus 2.9 GWh battery storage across three phases; DC nameplate is not AC export or annual generation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/steel-river-arkansas/",
+            "title": "Google to partner with Steel River Energy Center in Arkansas",
+            "publishedDate": "2026-07-14",
+            "quote": "2.5 GWdc"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected construction jobs",
+          "value": "Approximately 700 local construction jobs; not permanent operating employment.",
+          "basis": "planned",
+          "source": {
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/steel-river-arkansas/",
+            "title": "Google to partner with Steel River Energy Center in Arkansas",
+            "publishedDate": "2026-07-14",
+            "quote": "approximately 700 local jobs"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Full operation forecast",
+          "value": "2029 for the entire three-phase project.",
+          "basis": "planned",
+          "source": {
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/steel-river-arkansas/",
+            "title": "Google to partner with Steel River Energy Center in Arkansas",
+            "publishedDate": "2026-07-14",
+            "quote": "fully operational in 2029"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking reported",
+          "date": "2026-07-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/steel-river-arkansas/",
+            "title": "Google to partner with Steel River Energy Center in Arkansas",
+            "publishedDate": "2026-07-14",
+            "quote": "We have broken ground"
+          }
+        },
+        {
+          "label": "Full project operation forecast",
+          "date": "2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/steel-river-arkansas/",
+            "title": "Google to partner with Steel River Energy Center in Arkansas",
+            "publishedDate": "2026-07-14",
+            "quote": "fully operational in 2029"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "ports-pike-technology-campus",
+    "pinIds": {
+      "local": 16001,
+      "production": 16001
+    },
+    "title": "SB Energy PORTS-Pike Technology Campus Data Center: 4,250-8,000 MW IT (DOE Cites 10,000 MW), 33.3B USD Tied to Gas Power, Planned for 2028 in Pike County, Ohio",
+    "sourceUrl": "https://www.energy.gov/em/articles/partnership-ensures-affordable-energy-powers-ai-future-portsmouth-site",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Initial phase land",
+          "value": "189 acres at the Portsmouth Site; not the area of all later phases.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.gov/em/articles/partnership-ensures-affordable-energy-powers-ai-future-portsmouth-site",
+            "title": "Partnership Ensures Affordable Energy, Powers AI Future at Portsmouth Site | Department of Energy",
+            "publishedDate": "2026-03-24",
+            "quote": "189 acres"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected regional employment",
+          "value": "10,000 construction jobs and more than 2,000 permanent positions projected for the region.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.gov/em/articles/partnership-ensures-affordable-energy-powers-ai-future-portsmouth-site",
+            "title": "Partnership Ensures Affordable Energy, Powers AI Future at Portsmouth Site | Department of Energy",
+            "publishedDate": "2026-03-24",
+            "quote": "10,000 construction jobs and more than 2,000 permanent positions"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Campus project scope",
+          "value": "AI data centre campus on former uranium enrichment land. DOE separately describes supporting generation; it is not verified IT demand.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.energy.gov/em/articles/partnership-ensures-affordable-energy-powers-ai-future-portsmouth-site",
+            "title": "Partnership Ensures Affordable Energy, Powers AI Future at Portsmouth Site | Department of Energy",
+            "publishedDate": "2026-03-24",
+            "quote": "artificial intelligence (AI) data center"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "DOE reports ceremonial groundbreaking",
+          "date": "2026-03-20",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.energy.gov/em/articles/partnership-ensures-affordable-energy-powers-ai-future-portsmouth-site",
+            "title": "Partnership Ensures Affordable Energy, Powers AI Future at Portsmouth Site | Department of Energy",
+            "publishedDate": "2026-03-24",
+            "quote": "break ground at the Portsmouth Site on March 20"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "nscale-monarch-compute-campus",
+    "pinIds": {
+      "local": 15831,
+      "production": 15831
+    },
+    "title": "Nscale Monarch Compute Campus: 1,350 MW Phase 1 (Cleanview 720 MW Buildings, 8 GW Plus Planned) in Mason County, West Virginia, 20B USD, Delivery Targeted for Early 2028",
+    "sourceUrl": "https://www.nscale.com/ai-infrastructure/monarch",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Planned campus capital",
+          "value": "More than USD 20 billion planned, not money already spent.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nscale.com/ai-infrastructure/monarch",
+            "title": "Monarch Compute Campus West Virginia | AI Infrastructure Development",
+            "publishedDate": null,
+            "quote": "more than $20 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Campus footprint",
+          "value": "More than 2,250 acres in Mason County.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nscale.com/ai-infrastructure/monarch",
+            "title": "Monarch Compute Campus West Virginia | AI Infrastructure Development",
+            "publishedDate": null,
+            "quote": "2,250+ acres"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Phase 1 design capacity",
+          "value": "1.35 GW AI computing capacity in Phase 1; the 8 GW-plus expansion path is separate and conditional.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nscale.com/ai-infrastructure/monarch",
+            "title": "Monarch Compute Campus West Virginia | AI Infrastructure Development",
+            "publishedDate": null,
+            "quote": "1.35GW"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Phase 1 delivery forecast",
+          "value": "Early 2028; an operator target, not verified operation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nscale.com/ai-infrastructure/monarch",
+            "title": "Monarch Compute Campus West Virginia | AI Infrastructure Development",
+            "publishedDate": null,
+            "quote": "early 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Phase 1 target delivery",
+          "date": "Early 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nscale.com/ai-infrastructure/monarch",
+            "title": "Monarch Compute Campus West Virginia | AI Infrastructure Development",
+            "publishedDate": null,
+            "quote": "early 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "pointone-cyrusone-lee-phase-one",
+    "pinIds": {
+      "local": 16482,
+      "production": 16482
+    },
+    "title": "PointOne / CyrusOne Lee County Phase One: 90 MW IT, $900M, Early 2028",
+    "sourceUrl": "https://www.pointonecorp.com/leecounty",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Phase One investment",
+          "value": "USD 900 million for Phase One only.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pointonecorp.com/leecounty",
+            "title": "Lee County, N.C.",
+            "publishedDate": null,
+            "quote": "$900 million"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Phase One IT design load",
+          "value": "90 MW IT in one data centre building for CyrusOne.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pointonecorp.com/leecounty",
+            "title": "Lee County, N.C.",
+            "publishedDate": null,
+            "quote": "90MW IT load"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Phase One schedule",
+          "value": "Construction forecast for fall 2026, operation early 2028. A forecast is not observed physical start.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pointonecorp.com/leecounty",
+            "title": "Lee County, N.C.",
+            "publishedDate": null,
+            "quote": "fall 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Phase One construction forecast",
+          "date": "Fall 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pointonecorp.com/leecounty",
+            "title": "Lee County, N.C.",
+            "publishedDate": null,
+            "quote": "fall 2026"
+          }
+        },
+        {
+          "label": "Phase One operation forecast",
+          "date": "Early 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pointonecorp.com/leecounty",
+            "title": "Lee County, N.C.",
+            "publishedDate": null,
+            "quote": "early 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "aligned-project-phoenix-shippingport",
+    "pinIds": {
+      "local": 15650,
+      "production": 15650
+    },
+    "title": "Aligned Project Phoenix: 2,000 MW Data Center Campus at Shippingport, Pennsylvania, 10B USD Investment",
+    "sourceUrl": "https://www.intelligentcio.com/north-america/?p=54396",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Regional investment estimate",
+          "value": "USD 10 billion estimated regional economic investment; not a disclosed individual-building budget.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+            "title": "Project Phoenix Data Center Campus Breaks Ground | Aligned",
+            "publishedDate": "2026-09-10",
+            "quote": "$10B"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Announced campus capacity",
+          "value": "2 GW campus design; supporting onsite gas generation is a distinct project scope.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+            "title": "Project Phoenix Data Center Campus Breaks Ground | Aligned",
+            "publishedDate": "2026-09-10",
+            "quote": "2 GW"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected campus workforce",
+          "value": "About 3,000 construction jobs and 640 full-time operating careers, both forecasts.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+            "title": "Project Phoenix Data Center Campus Breaks Ground | Aligned",
+            "publishedDate": "2026-09-10",
+            "quote": "3,000 construction jobs"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking announced",
+          "date": "2026-09-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+            "title": "Project Phoenix Data Center Campus Breaks Ground | Aligned",
+            "publishedDate": "2026-09-10",
+            "quote": "September 10, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "tract-pole-canyon-technology-park",
+    "pinIds": {
+      "local": 15857,
+      "production": 15857
+    },
+    "title": "Tract Pole Canyon Technology Park: 7B USD, 400-1,700 MW Data Center Park in Utah, Planned for 2028",
+    "sourceUrl": "https://edcutah.org/recent-news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-utah",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Planned development footprint on acquired land",
+          "value": "More than 668 acres acquired in Eagle Mountain; land ownership does not establish completed data centres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://edcutah.org/recent-news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-utah",
+            "title": "Tract announces acquisition of 668 acres in Eagle Mountain, Utah",
+            "publishedDate": "2024-01-18",
+            "quote": "668 acres"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Planned power infrastructure",
+          "value": "More than 400 MW through new transmission infrastructure. This is the reported initial utility plan, not 1.7 GW delivered IT load.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ksl.com/article/50855355/colorado-based-company-acquires-land-for-another-data-center-in-eagle-mountain-",
+            "title": "Colorado-based company acquires land for another data center in Eagle Mountain  | KSL.com",
+            "publishedDate": "2024-01-24",
+            "quote": "more than 400 megawatts"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Power infrastructure target",
+          "value": "2028 in the reported utility plan.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ksl.com/article/50855355/colorado-based-company-acquires-land-for-another-data-center-in-eagle-mountain-",
+            "title": "Colorado-based company acquires land for another data center in Eagle Mountain  | KSL.com",
+            "publishedDate": "2024-01-24",
+            "quote": "by 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Land acquisition announced",
+          "date": "2024-01-18",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://edcutah.org/recent-news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-utah",
+            "title": "Tract announces acquisition of 668 acres in Eagle Mountain, Utah",
+            "publishedDate": "2024-01-18",
+            "quote": "January 18, 2024"
+          }
+        },
+        {
+          "label": "New transmission power target",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ksl.com/article/50855355/colorado-based-company-acquires-land-for-another-data-center-in-eagle-mountain-",
+            "title": "Colorado-based company acquires land for another data center in Eagle Mountain  | KSL.com",
+            "publishedDate": "2024-01-24",
+            "quote": "by 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "enbridge-cowboy-phase-one",
+    "pinIds": {
+      "local": 15893,
+      "production": 15893
+    },
+    "title": "Enbridge Cowboy Project Phase 1: 365 MW Solar and 200 MW / 1,600 MWh Battery for Meta Near Cheyenne, Wyoming, 1.2B USD, Online End of 2027",
+    "sourceUrl": "https://www.enbridge.com/stories/2026/may/enbridge-meta-expand-partnership-cowboy-project-solar-plus-battery-storage",
+    "profile": {
+      "sector": "Energy: solar generation and battery storage",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Phase One expected investment",
+          "value": "USD 1.2 billion expected for the cited first-phase project.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.enbridge.com/stories/2026/may/enbridge-meta-expand-partnership-cowboy-project-solar-plus-battery-storage",
+            "title": "Enbridge and Meta expand partnership with Cowboy Project - Enbridge Inc.",
+            "publishedDate": "2026-05-19",
+            "quote": "US$1.2 billion"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Phase One generation and storage",
+          "value": "365 MW solar generation plus 200 MW / 1,600 MWh battery storage; storage and generation are distinct quantities.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.enbridge.com/stories/2026/may/enbridge-meta-expand-partnership-cowboy-project-solar-plus-battery-storage",
+            "title": "Enbridge and Meta expand partnership with Cowboy Project - Enbridge Inc.",
+            "publishedDate": "2026-05-19",
+            "quote": "365 megawatts (MW)"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Service target",
+          "value": "End of 2027 for this project; not already operating.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.enbridge.com/stories/2026/may/enbridge-meta-expand-partnership-cowboy-project-solar-plus-battery-storage",
+            "title": "Enbridge and Meta expand partnership with Cowboy Project - Enbridge Inc.",
+            "publishedDate": "2026-05-19",
+            "quote": "end of 2027"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operator-reported current stage",
+          "value": "The current Cowboy Solar I & II and BESS project page explicitly reports construction, not operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.enbridge.com/Projects-and-Infrastructure/Public-Awareness/Cowboy-Solar-and-BESS-Project",
+            "title": "Cowboy Solar I & II and BESS Project - Enbridge Inc.",
+            "publishedDate": null,
+            "quote": "Status : Under construction"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Meta partnership update published",
+          "date": "2026-05-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.enbridge.com/stories/2026/may/enbridge-meta-expand-partnership-cowboy-project-solar-plus-battery-storage",
+            "title": "Enbridge and Meta expand partnership with Cowboy Project - Enbridge Inc.",
+            "publishedDate": "2026-05-19",
+            "quote": "May 19, 2026"
+          }
+        },
+        {
+          "label": "Expected entry into service",
+          "date": "End of 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.enbridge.com/stories/2026/may/enbridge-meta-expand-partnership-cowboy-project-solar-plus-battery-storage",
+            "title": "Enbridge and Meta expand partnership with Cowboy Project - Enbridge Inc.",
+            "publishedDate": "2026-05-19",
+            "quote": "end of 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "cyrusone-yorkville-campus",
+    "pinIds": {
+      "local": 15809,
+      "production": 15809
+    },
+    "title": "CyrusOne Yorkville Technology Campus: 600 MW, 1B+ USD, Under Construction in Kendall County, Illinois",
+    "sourceUrl": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Expected campus investment",
+          "value": "More than USD 1 billion at full buildout, across phases.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "more than $1 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected construction workforce",
+          "value": "Hundreds of union construction jobs, with separate permanent full-time positions not quantified here.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "hundreds of union construction jobs"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Current campus schedule",
+          "value": "First building expected late 2027; full operations beginning 2028 remain forecasts.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "late 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Water and sanitary improvements began",
+          "date": "2025",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "improvements beginning in 2025"
+          }
+        },
+        {
+          "label": "Site work began",
+          "date": "Early 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "site work beginning in early 2026"
+          }
+        },
+        {
+          "label": "First building expected complete",
+          "date": "Late 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "late 2027"
+          }
+        },
+        {
+          "label": "Full operations forecast",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.cyrusone.com/data-centers/north-america/yorkville-technology-campus",
+            "title": "CyrusOne Yorkville Technology Campus",
+            "publishedDate": null,
+            "quote": "full operations beginning in 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "avaio-leo-little-rock",
+    "pinIds": {
+      "local": 16434,
+      "production": 16434
+    },
+    "title": "AVAIO Leo: 296-Acre Power Campus; Current Grid-Energization Target Q4 2027",
+    "sourceUrl": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Current project footprint",
+          "value": "296 acres on the current project page; distinct from the older broader 760-acre announcement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+            "title": "Little Rock, Arkansas Campus | AVAIO Digital",
+            "publishedDate": null,
+            "quote": "296 acres"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Published planned grid capacity",
+          "value": "570 MW total grid power shown on the current page; not IT load or measured consumption.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+            "title": "Little Rock, Arkansas Campus | AVAIO Digital",
+            "publishedDate": null,
+            "quote": "570 MW"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Grid energization target",
+          "value": "Q4 2027 for initial contracted grid capacity. This supersedes the older June 2027 target for this profile.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+            "title": "Little Rock, Arkansas Campus | AVAIO Digital",
+            "publishedDate": null,
+            "quote": "Q4 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking reported, exact date unspecified",
+          "date": "Date not announced",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+            "title": "Little Rock, Arkansas Campus | AVAIO Digital",
+            "publishedDate": null,
+            "quote": "AVAIO has broken ground"
+          }
+        },
+        {
+          "label": "Initial grid capacity energization target",
+          "date": "Q4 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+            "title": "Little Rock, Arkansas Campus | AVAIO Digital",
+            "publishedDate": null,
+            "quote": "Q4 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "carlyle-fort-bliss-conditional-campus",
+    "pinIds": {
+      "local": 15798,
+      "production": 15798
+    },
+    "title": "Carlyle Fort Bliss Data Center: 2,500-3,000 MW Army Enhanced-Use-Lease Campus on 1,384 Acres Near El Paso, Texas, About 2B USD, Lease Not Final",
+    "sourceUrl": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Selected Fort Bliss project land",
+          "value": "Approximately 1,384 acres; the separate Dugway project is excluded.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "title": "DVIDS - News - Army reaches conditional agreement with private industry for hyperscaled data centers",
+            "publishedDate": "2026-03-26",
+            "quote": "1,384 acres"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Project scope",
+          "value": "Commercial hyperscale data centre project under an Army conditional agreement with Carlyle; not an operating facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "title": "DVIDS - News - Army reaches conditional agreement with private industry for hyperscaled data centers",
+            "publishedDate": "2026-03-26",
+            "quote": "hyperscaled data centers"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Initial operating capability forecast",
+          "value": "US fiscal year 2027 for Fort Bliss, not a confirmed commercial opening date.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "title": "DVIDS - News - Army reaches conditional agreement with private industry for hyperscaled data centers",
+            "publishedDate": "2026-03-26",
+            "quote": "Fiscal Year 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Conditional developer selection announced",
+          "date": "2026-03-26",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "title": "DVIDS - News - Army reaches conditional agreement with private industry for hyperscaled data centers",
+            "publishedDate": "2026-03-26",
+            "quote": "03.26.2026"
+          }
+        },
+        {
+          "label": "Fort Bliss initial operating capability forecast",
+          "date": "Fiscal Year 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.dvidshub.net/news/561371/army-reaches-conditional-agreement-with-private-industry-hyperscaled-data-centers",
+            "title": "DVIDS - News - Army reaches conditional agreement with private industry for hyperscaled data centers",
+            "publishedDate": "2026-03-26",
+            "quote": "Fiscal Year 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "arevon-avocet-energy-storage",
+    "pinIds": {
+      "local": 15691,
+      "production": 15691
+    },
+    "title": "Arevon Avocet Energy Storage: 200 MW / 800 MWh Battery in Carson, California, Planned for 2027",
+    "sourceUrl": "https://arevonenergy.com/?p=4119",
+    "profile": {
+      "sector": "Energy storage: standalone battery system",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Proposed storage site",
+          "value": "6.96 acres at 23320 Alameda Street, Carson.",
+          "basis": "planned",
+          "source": {
+            "url": "https://ceqanet.lci.ca.gov/2024040695",
+            "title": "Avocet Energy Storage System Project",
+            "publishedDate": "2024-04-16",
+            "quote": "6.96-acre site"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Proposed battery power",
+          "value": "Approximately 200 MW in the environmental filing; no generation is attributed to the batteries.",
+          "basis": "planned",
+          "source": {
+            "url": "https://ceqanet.lci.ca.gov/2024040695",
+            "title": "Avocet Energy Storage System Project",
+            "publishedDate": "2024-04-16",
+            "quote": "200-megawatt"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Filed equipment scope",
+          "value": "Lithium-ion batteries or similar technology, with inverters and grid interconnection to SCE Hinson Substation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://ceqanet.lci.ca.gov/2024040695",
+            "title": "Avocet Energy Storage System Project",
+            "publishedDate": "2024-04-16",
+            "quote": "lithium-ion batteries"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Environmental document received",
+          "date": "2024-04-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ceqanet.lci.ca.gov/2024040695",
+            "title": "Avocet Energy Storage System Project",
+            "publishedDate": "2024-04-16",
+            "quote": "4/16/2024"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "creekstone-delta-gigasite",
+    "pinIds": {
+      "local": 15812,
+      "production": 15812
+    },
+    "title": "Creekstone Delta Gigasite: 4,706-10,000 MW AI Data Center Campus in Millard County, Utah, Data Center Deliveries Planned From 2027",
+    "sourceUrl": "https://www.utahbusiness.com/press-releases/2026/04/22/creekstone-energy-secures-largest-solar-lease-utah-millard-county-delta/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Data centre campus area",
+          "value": "More than 1,100 acres; separate 13,000-acre solar lease is not counted as the data centre footprint.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.utahbusiness.com/press-releases/2026/04/22/creekstone-energy-secures-largest-solar-lease-utah-millard-county-delta/",
+            "title": "Creekstone Energy secures largest solar lease in Utah’s history – Utah Business",
+            "publishedDate": "2026-04-22",
+            "quote": "more than 1,100 acres"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Master-plan capacity",
+          "value": "More than 10 GW total campus capacity in the announcement; the release separately describes more than 1 GW IT load across phases.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.utahbusiness.com/press-releases/2026/04/22/creekstone-energy-secures-largest-solar-lease-utah-millard-county-delta/",
+            "title": "Creekstone Energy secures largest solar lease in Utah’s history – Utah Business",
+            "publishedDate": "2026-04-22",
+            "quote": "more than 10 gigawatts"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Initial deliveries forecast",
+          "value": "From 2027; not established commercial operation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.utahbusiness.com/press-releases/2026/04/22/creekstone-energy-secures-largest-solar-lease-utah-millard-county-delta/",
+            "title": "Creekstone Energy secures largest solar lease in Utah’s history – Utah Business",
+            "publishedDate": "2026-04-22",
+            "quote": "deliveries beginning in 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Solar lease and zoning update announced",
+          "date": "2026-04-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.utahbusiness.com/press-releases/2026/04/22/creekstone-energy-secures-largest-solar-lease-utah-millard-county-delta/",
+            "title": "Creekstone Energy secures largest solar lease in Utah’s history – Utah Business",
+            "publishedDate": "2026-04-22",
+            "quote": "April 22, 2026"
+          }
+        },
+        {
+          "label": "Initial infrastructure deliveries forecast",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.utahbusiness.com/press-releases/2026/04/22/creekstone-energy-secures-largest-solar-lease-utah-millard-county-delta/",
+            "title": "Creekstone Energy secures largest solar lease in Utah’s history – Utah Business",
+            "publishedDate": "2026-04-22",
+            "quote": "deliveries beginning in 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "cleanarc-va1-caroline-campus",
+    "pinIds": {
+      "local": 15800,
+      "production": 15800
+    },
+    "title": "CleanArc VA1 Campus: 900 MW (Nearly 1 GW per Governor), Three-Building Data Center Campus in Caroline County, Virginia, 8.8B USD Total, First 300 MW Targeted for 2027",
+    "sourceUrl": "https://digital-release.wric.com/?p=2586301",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Whole campus investment estimate",
+          "value": "USD 8.8 billion across three data centre buildings; approximately USD 2.93 billion each in county reporting.",
+          "basis": "planned",
+          "source": {
+            "url": "https://digital-release.wric.com/?p=2586301",
+            "title": "CleanArc Data Centers breaks ground on $3 billion data center campus in Caroline | WRIC ABC 8News",
+            "publishedDate": "2025-11-20",
+            "quote": "$8.8 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected new jobs",
+          "value": "50 new jobs associated with the announced first data centre; not campus-wide construction jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://digital-release.wric.com/?p=2586301",
+            "title": "CleanArc Data Centers breaks ground on $3 billion data center campus in Caroline | WRIC ABC 8News",
+            "publishedDate": "2025-11-20",
+            "quote": "50 new jobs"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Campus scope",
+          "value": "Three data centre buildings, with first-building groundbreaking reported.",
+          "basis": "planned",
+          "source": {
+            "url": "https://digital-release.wric.com/?p=2586301",
+            "title": "CleanArc Data Centers breaks ground on $3 billion data center campus in Caroline | WRIC ABC 8News",
+            "publishedDate": "2025-11-20",
+            "quote": "three data center buildings"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-building groundbreaking reported",
+          "date": "2025-11-20",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://digital-release.wric.com/?p=2586301",
+            "title": "CleanArc Data Centers breaks ground on $3 billion data center campus in Caroline | WRIC ABC 8News",
+            "publishedDate": "2025-11-20",
+            "quote": "Nov 20, 2025"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "avaio-hercules-appomattox",
+    "pinIds": {
+      "local": 15980,
+      "production": 15980
+    },
+    "title": "AVAIO Digital Appomattox Campus (Project Hercules): 3B USD, 300 MW, Planned in Appomattox County, Virginia",
+    "sourceUrl": "https://cardinalnews.org/2024/12/11/appomatox-county-strikes-deal-for-data-center/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced development investment",
+          "value": "USD 3 billion including construction, data systems and power in the original county announcement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cardinalnews.org/2024/12/11/appomatox-county-strikes-deal-for-data-center/",
+            "title": "Appomattox County strikes deal for data center - Cardinal News",
+            "publishedDate": "2024-12-11",
+            "quote": "$3 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected operating jobs",
+          "value": "200–250 jobs at opening in the county estimate; not a current staffing total.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cardinalnews.org/2024/12/11/appomatox-county-strikes-deal-for-data-center/",
+            "title": "Appomattox County strikes deal for data center - Cardinal News",
+            "publishedDate": "2024-12-11",
+            "quote": "between 200 and 250"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Updated initial-building schedule",
+          "value": "Initial building and partial on-site substation construction planned for 2027–2028 in the March 2026 meeting report.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.wdbj7.com/2026/03/24/board-answers-questions-future-data-center/",
+            "title": "Appomattox County answers questions for future data center",
+            "publishedDate": "2026-03-24",
+            "quote": "2027 through 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "County development agreement reported",
+          "date": "2024-12-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://cardinalnews.org/2024/12/11/appomatox-county-strikes-deal-for-data-center/",
+            "title": "Appomattox County strikes deal for data center - Cardinal News",
+            "publishedDate": "2024-12-11",
+            "quote": "a developer announced Tuesday"
+          }
+        },
+        {
+          "label": "Initial building and partial substation construction forecast",
+          "date": "2027–2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.wdbj7.com/2026/03/24/board-answers-questions-future-data-center/",
+            "title": "Appomattox County answers questions for future data center",
+            "publishedDate": "2026-03-24",
+            "quote": "2027 through 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "alpha-digital-campus-reeves",
+    "pinIds": {
+      "local": 15645,
+      "production": 15645
+    },
+    "title": "Alpha Digital Campus: 2,000 MW Data Center and Power Campus in Reeves County, Texas, 49.7B USD Estimated",
+    "sourceUrl": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Lease-option site",
+          "value": "Up to approximately 3,400 acres under an option agreement; not a completed campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+            "title": "LandBridge Announces Agreement with PowerBridge for the Development of a 2 GW Powered Data Center Campus | Nasdaq",
+            "publishedDate": "2026-04-02",
+            "quote": "~3,400 acres"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Initial co-located generation plan",
+          "value": "Up to 2 GW initial power generation planned for the powered campus. This is not 2 GW of operating IT capacity.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+            "title": "LandBridge Announces Agreement with PowerBridge for the Development of a 2 GW Powered Data Center Campus | Nasdaq",
+            "publishedDate": "2026-04-02",
+            "quote": "2 GW of initial co-located power generation"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Power delivery targets",
+          "value": "First power anticipated in 2027; large-scale generation in 2028, subject to regulatory and commercial processes.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+            "title": "LandBridge Announces Agreement with PowerBridge for the Development of a 2 GW Powered Data Center Campus | Nasdaq",
+            "publishedDate": "2026-04-02",
+            "quote": "anticipated in 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Lease development agreement announced",
+          "date": "2026-04-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+            "title": "LandBridge Announces Agreement with PowerBridge for the Development of a 2 GW Powered Data Center Campus | Nasdaq",
+            "publishedDate": "2026-04-02",
+            "quote": "Apr 2, 2026"
+          }
+        },
+        {
+          "label": "First power forecast",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+            "title": "LandBridge Announces Agreement with PowerBridge for the Development of a 2 GW Powered Data Center Campus | Nasdaq",
+            "publishedDate": "2026-04-02",
+            "quote": "anticipated in 2027"
+          }
+        },
+        {
+          "label": "Large-scale power generation forecast",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nasdaq.com/press-release/landbridge-announces-agreement-powerbridge-development-2-gw-powered-data-center",
+            "title": "LandBridge Announces Agreement with PowerBridge for the Development of a 2 GW Powered Data Center Campus | Nasdaq",
+            "publishedDate": "2026-04-02",
+            "quote": "following in 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "aligned-project-caprock-abernathy",
+    "pinIds": {
+      "local": 15680,
+      "production": 15680
+    },
+    "title": "Aligned Project Caprock: 540 MW, Six-Building Data Center Campus at Abernathy, Texas, 5B USD",
+    "sourceUrl": "https://www.datacenterdynamics.com/en/news/aligned-breaks-ground-on-540mw-data-center-campus-in-texas",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Campus design capacity",
+          "value": "540 MW announced for the campus, not actual operating load.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Texas Data Center Campus in Hale County: Project Caprock",
+            "publishedDate": "2026-04-09",
+            "quote": "540 MW"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Campus land",
+          "value": "313 acres in Hale County.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Texas Data Center Campus in Hale County: Project Caprock",
+            "publishedDate": "2026-04-09",
+            "quote": "313-acre"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facilities area",
+          "value": "1.65 million sq ft across six facilities.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Texas Data Center Campus in Hale County: Project Caprock",
+            "publishedDate": "2026-04-09",
+            "quote": "1.65M square feet"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "First-building service forecast",
+          "value": "Q1 2027 for LBB-01; not completion of all six facilities.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Texas Data Center Campus in Hale County: Project Caprock",
+            "publishedDate": "2026-04-09",
+            "quote": "Q1 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking announced",
+          "date": "2026-04-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Texas Data Center Campus in Hale County: Project Caprock",
+            "publishedDate": "2026-04-09",
+            "quote": "April 9, 2026"
+          }
+        },
+        {
+          "label": "Inaugural building expected in service",
+          "date": "Q1 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+            "title": "Texas Data Center Campus in Hale County: Project Caprock",
+            "publishedDate": "2026-04-09",
+            "quote": "Q1 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "prime-phoenix-avondale-campus",
+    "pinIds": {
+      "local": 16331,
+      "production": 16331
+    },
+    "title": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3B+ Investment",
+    "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Prime announced campus investment",
+          "value": "More than USD 3 billion by Prime; customer hardware investment is separate.",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+            "publishedDate": "2026-05-21",
+            "quote": "more than $3 billion"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Full campus critical IT capacity",
+          "value": "240 MW across five data centres, not 250 MW substation capacity or 144 MW first-phase IT.",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+            "publishedDate": "2026-05-21",
+            "quote": "240MW IT"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Full campus footprint",
+          "value": "66.5 acres planned at full buildout.",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+            "publishedDate": "2026-05-21",
+            "quote": "66.5 acres"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Full campus building area",
+          "value": "1.3 million sq ft planned at full buildout.",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+            "publishedDate": "2026-05-21",
+            "quote": "1.3 million square feet"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First three buildings broke ground",
+          "date": "2026-05-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+            "publishedDate": "2026-05-21",
+            "quote": "May 21, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "childersburg-industrial-park-campus",
+    "pinIds": {
+      "local": 16012,
+      "production": 16012
+    },
+    "title": "Childersburg Industrial Park Data Center: 500 MW, 6B USD, Land Surplus Approved for Western Hospitality Partners in Talladega County, Alabama",
+    "sourceUrl": "https://www.sylacauganews.com/local/childersburg-city-council-moves-forward-with-major-data-center-development/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Land-surplus resolution scope",
+          "value": "1,337.10 acres in the Industrial Park; a land transaction is not construction completion.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sylacauganews.com/local/childersburg-city-council-moves-forward-with-major-data-center-development/",
+            "title": "Childersburg City Council moves forward with major data center development - Sylacauga News",
+            "publishedDate": "2026-10-07",
+            "quote": "1,337.10 acres"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected project workforce",
+          "value": "Approximately 1,000 construction workers and more than 300 permanent employees once operational.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sylacauganews.com/local/childersburg-city-council-moves-forward-with-major-data-center-development/",
+            "title": "Childersburg City Council moves forward with major data center development - Sylacauga News",
+            "publishedDate": "2026-10-07",
+            "quote": "approximately 1,000 people"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed facility and buffer scope",
+          "value": "The actual data centre is planned to occupy less than ten percent of the property, with the remainder buffering nearby properties.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sylacauganews.com/local/childersburg-city-council-moves-forward-with-major-data-center-development/",
+            "title": "Childersburg City Council moves forward with major data center development - Sylacauga News",
+            "publishedDate": "2026-10-07",
+            "quote": "Less than ten percent of the property"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Land-surplus action reported",
+          "date": "2026-10-07",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.sylacauganews.com/local/childersburg-city-council-moves-forward-with-major-data-center-development/",
+            "title": "Childersburg City Council moves forward with major data center development - Sylacauga News",
+            "publishedDate": "2026-10-07",
+            "quote": "Resolution 2025-26"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "aligned-dfw03-mansfield",
+    "pinIds": {
+      "local": 15795,
+      "production": 15795
+    },
+    "title": "Aligned DFW-03 Data Center: 86.4 MW (72 MW IT) in Mansfield, Texas, 120.5M USD Building Cost Filed, Initial Capacity Targeted Q4 2025",
+    "sourceUrl": "https://rebusinessonline.com/aligned-data-centers-to-develop-27-acre-campus-in-mansfield-texas/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Campus site",
+          "value": "27 acres at the Mansfield campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.connectcre.com/stories/aligned-to-open-mansfield-data-center/",
+            "title": "Aligned to Open Mansfield Data Center - Connect CRE",
+            "publishedDate": "2025-02-20",
+            "quote": "27-acre site"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facility area",
+          "value": "429,600 sq ft at 3801 Britton Road.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.connectcre.com/stories/aligned-to-open-mansfield-data-center/",
+            "title": "Aligned to Open Mansfield Data Center - Connect CRE",
+            "publishedDate": "2025-02-20",
+            "quote": "429,600 square feet"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Originally announced initial-capacity target",
+          "value": "Q4 2025; an elapsed forecast does not establish that capacity is operating.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.connectcre.com/stories/aligned-to-open-mansfield-data-center/",
+            "title": "Aligned to Open Mansfield Data Center - Connect CRE",
+            "publishedDate": "2025-02-20",
+            "quote": "Q4’25"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking reported; year not stated in report",
+          "date": "September 30 (year not stated)",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://dallasinnovates.com/aligned-data-centers-expands-dfw-footprint-as-it-races-to-serve-ai-cloud-workloads/",
+            "title": "Aligned Data Centers Expands DFW Footprint as It Races to Serve AI/Cloud Workloads » Dallas Innovates",
+            "publishedDate": "2025-02-25",
+            "quote": "groundbreaking ceremony for the Mansfield project on September 30"
+          }
+        },
+        {
+          "label": "Original initial-capacity forecast",
+          "date": "Q4 2025",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.connectcre.com/stories/aligned-to-open-mansfield-data-center/",
+            "title": "Aligned to Open Mansfield Data Center - Connect CRE",
+            "publishedDate": "2025-02-20",
+            "quote": "Q4’25"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "aligned-dfw04-plano-lambda",
+    "pinIds": {
+      "local": 15734,
+      "production": 15734
+    },
+    "title": "Aligned DFW-04: 86 MW (Cleanview) AI Data Center for Lambda in Plano, Texas, 700M USD",
+    "sourceUrl": "https://rebusinessonline.com/aligned-partners-with-lambda-on-700m-data-center-project-in-plano/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported project investment",
+          "value": "USD 700 million, attributed by the report to the Dallas Morning News; not the operator portfolio total.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rebusinessonline.com/aligned-partners-with-lambda-on-700m-data-center-project-in-plano/",
+            "title": "Aligned Partners With Lambda on $700M Data Center Project in Plano - REBusinessOnline",
+            "publishedDate": "2025-05-08",
+            "quote": "$700 million"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned facility area",
+          "value": "425,000 sq ft for DFW-04.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rebusinessonline.com/aligned-partners-with-lambda-on-700m-data-center-project-in-plano/",
+            "title": "Aligned Partners With Lambda on $700M Data Center Project in Plano - REBusinessOnline",
+            "publishedDate": "2025-05-08",
+            "quote": "425,000 square feet"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Announced availability target",
+          "value": "2026; no verified opening is inferred from this forecast.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rebusinessonline.com/aligned-partners-with-lambda-on-700m-data-center-project-in-plano/",
+            "title": "Aligned Partners With Lambda on $700M Data Center Project in Plano - REBusinessOnline",
+            "publishedDate": "2025-05-08",
+            "quote": "available in 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Lambda partnership reported while under construction",
+          "date": "2025-05-08",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://rebusinessonline.com/aligned-partners-with-lambda-on-700m-data-center-project-in-plano/",
+            "title": "Aligned Partners With Lambda on $700M Data Center Project in Plano - REBusinessOnline",
+            "publishedDate": "2025-05-08",
+            "quote": "May 8, 2025"
+          }
+        },
+        {
+          "label": "Announced availability forecast",
+          "date": "2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://rebusinessonline.com/aligned-partners-with-lambda-on-700m-data-center-project-in-plano/",
+            "title": "Aligned Partners With Lambda on $700M Data Center Project in Plano - REBusinessOnline",
+            "publishedDate": "2025-05-08",
+            "quote": "available in 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "ryan-southwest-crossing-data-park",
+    "pinIds": {
+      "local": 16011,
+      "production": 16011
+    },
+    "title": "Ryan Companies Southwest Crossing Data Park: 687.5M USD, 400 MW, Approved by Eloy Council for Arizona's Pinal County",
+    "sourceUrl": "https://azbex.com/planning-development/ryan-companies-2msf-industrial-plan-pivots-to-687m-data-center/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Study construction-cost estimate",
+          "value": "USD 687.5 million in the economic study based on potential buildout of up to 1.25 million sq ft; distinguish from the 855,000-sq-ft initial plan.",
+          "basis": "planned",
+          "source": {
+            "url": "https://azbex.com/planning-development/ryan-companies-2msf-industrial-plan-pivots-to-687m-data-center/",
+            "title": "Ryan Companies 2MSF Industrial Plan Pivots to $687M Data Center - AZBEX",
+            "publishedDate": "2025-01-21",
+            "quote": "$687.5M"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Planned campus capacity",
+          "value": "400 MW design capacity; not energized IT load.",
+          "basis": "planned",
+          "source": {
+            "url": "https://azbex.com/planning-development/ryan-companies-2msf-industrial-plan-pivots-to-687m-data-center/",
+            "title": "Ryan Companies 2MSF Industrial Plan Pivots to $687M Data Center - AZBEX",
+            "publishedDate": "2025-01-21",
+            "quote": "400-megawatt"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Proposed building area",
+          "value": "More than 855,000 sq ft across three buildings in the described plan.",
+          "basis": "planned",
+          "source": {
+            "url": "https://azbex.com/planning-development/ryan-companies-2msf-industrial-plan-pivots-to-687m-data-center/",
+            "title": "Ryan Companies 2MSF Industrial Plan Pivots to $687M Data Center - AZBEX",
+            "publishedDate": "2025-01-21",
+            "quote": "855KSF"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Revised data-park plan reported",
+          "date": "2025-01-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://azbex.com/planning-development/ryan-companies-2msf-industrial-plan-pivots-to-687m-data-center/",
+            "title": "Ryan Companies 2MSF Industrial Plan Pivots to $687M Data Center - AZBEX",
+            "publishedDate": "2025-01-21",
+            "quote": "January 21, 2025"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "tract-buckeye-tech-corridor",
+    "pinIds": {
+      "local": 15852,
+      "production": 15852
+    },
+    "title": "Tract Buckeye Tech Corridor: 20B USD, 1,800 MW Data Center Park in Arizona, Approved 2024",
+    "sourceUrl": "https://www.abc15.com/news/business/20-billion-data-center-campus-gets-green-light-in-buckeye",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Planned development footprint on acquired land",
+          "value": "2,069 acres acquired for the master-planned technology park.",
+          "basis": "planned",
+          "source": {
+            "url": "https://inbusinessphx.com/commercial-real-estate/date-center-master-planner-closes-on-2069-acres-in-buckeye-among-the-largest-data-tech-parks-in-u-s",
+            "title": "Data Center Master Planner Closes on 2,069 acres in Buckeye, among the Largest Data Tech Parks in U.S. - Greater Phoenix In Business Magazine",
+            "publishedDate": "2024-08-29",
+            "quote": "2,069-acre"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Potential full-buildout floor area",
+          "value": "Up to 20 million sq ft across as many as 40 data centres; unbuilt master-plan ceiling.",
+          "basis": "planned",
+          "source": {
+            "url": "https://inbusinessphx.com/commercial-real-estate/date-center-master-planner-closes-on-2069-acres-in-buckeye-among-the-largest-data-tech-parks-in-u-s",
+            "title": "Data Center Master Planner Closes on 2,069 acres in Buckeye, among the Largest Data Tech Parks in U.S. - Greater Phoenix In Business Magazine",
+            "publishedDate": "2024-08-29",
+            "quote": "20 million square feet"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Potential future power infrastructure",
+          "value": "Up to 1.8 GW in utility planning, not connected or consumed IT power.",
+          "basis": "planned",
+          "source": {
+            "url": "https://inbusinessphx.com/commercial-real-estate/date-center-master-planner-closes-on-2069-acres-in-buckeye-among-the-largest-data-tech-parks-in-u-s",
+            "title": "Data Center Master Planner Closes on 2,069 acres in Buckeye, among the Largest Data Tech Parks in U.S. - Greater Phoenix In Business Magazine",
+            "publishedDate": "2024-08-29",
+            "quote": "up to 1.8GW"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Land acquisition announced",
+          "date": "2024-08-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://inbusinessphx.com/commercial-real-estate/date-center-master-planner-closes-on-2069-acres-in-buckeye-among-the-largest-data-tech-parks-in-u-s",
+            "title": "Data Center Master Planner Closes on 2,069 acres in Buckeye, among the Largest Data Tech Parks in U.S. - Greater Phoenix In Business Magazine",
+            "publishedDate": "2024-08-29",
+            "quote": "August 29 2024"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "hecate-otter-creek-solar",
+    "pinIds": {
+      "local": 16486,
+      "production": 16486
+    },
+    "title": "Hecate Otter Creek Solar: 1 GW / $1B Coffey County Proposal",
+    "sourceUrl": "https://www.ottercreeksolarfarm.com/",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Planned private infrastructure investment",
+          "value": "USD 1 billion privately funded infrastructure improvement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ottercreeksolarfarm.com/",
+            "title": "Home | Hecate Otter Creek Solar",
+            "publishedDate": null,
+            "quote": "$1 billion"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Proposed photovoltaic generation",
+          "value": "1 GW proposed solar generation; no annual output figure or AC/DC distinction is disclosed on this page.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ottercreeksolarfarm.com/",
+            "title": "Home | Hecate Otter Creek Solar",
+            "publishedDate": null,
+            "quote": "1 gigawatt (GW)"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposed site acreage",
+          "value": "Approximately 8,500 acres; the panel-covered area is expected to be smaller.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ottercreeksolarfarm.com/",
+            "title": "Home | Hecate Otter Creek Solar",
+            "publishedDate": null,
+            "quote": "8,500 acres"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Community informational open house held",
+          "date": "2024-05-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ottercreeksolarfarm.com/",
+            "title": "Home | Hecate Otter Creek Solar",
+            "publishedDate": null,
+            "quote": "May 9, 2024"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "eneus-rgv-cameron-campus",
+    "pinIds": {
+      "local": 15815,
+      "production": 15815
+    },
+    "title": "Eneus Energy RGV Data Center: 14B USD, 1,000-2,000 MW, Planned in Cameron County, Texas",
+    "sourceUrl": "https://www.datacenterdynamics.com/en/news/2gw-data-center-could-be-developed-in-cameron-county-texas/",
+    "profile": {
+      "sector": "Data centres: proposed RGV campus",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this project.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored process capability against a documented sector baseline was established for this project.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Developer-commissioned investment estimate",
+          "value": "USD 14 billion developer claim based on its commissioned study; not committed expenditure or verified outturn.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/2gw-data-center-could-be-developed-in-cameron-county-texas/",
+            "title": "2GW data center could be developed in Cameron County, Texas - DCD",
+            "publishedDate": "2026-02-05",
+            "quote": "$14 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposed campus area",
+          "value": "1,785 acres near Valley International Airport; not developed land.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/2gw-data-center-could-be-developed-in-cameron-county-texas/",
+            "title": "2GW data center could be developed in Cameron County, Texas - DCD",
+            "publishedDate": "2026-02-05",
+            "quote": "1,785 acres"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Planned data-hall scope",
+          "value": "16 data halls in the reported developer plan. Utility interconnection and future IT capacity are not treated as equivalent.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/2gw-data-center-could-be-developed-in-cameron-county-texas/",
+            "title": "2GW data center could be developed in Cameron County, Texas - DCD",
+            "publishedDate": "2026-02-05",
+            "quote": "16 data halls"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Latest opened permitting account",
+          "value": "May 2026 reporting describes county pre-permitting discussions and no construction/development permit applications. The city moratorium does not establish cancellation of the county proposal.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.govtech.com/artificial-intelligence/south-texas-city-sets-moratorium-amid-data-center-interest",
+            "title": "South Texas City Sets Moratorium Amid Data Center Interest",
+            "publishedDate": "2026-05-22",
+            "quote": "no permit applications"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Developer campus proposal reported",
+          "date": "2026-02-05",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/2gw-data-center-could-be-developed-in-cameron-county-texas/",
+            "title": "2GW data center could be developed in Cameron County, Texas - DCD",
+            "publishedDate": "2026-02-05",
+            "quote": "February 05, 2026"
+          }
+        },
+        {
+          "label": "Pre-permitting and city moratorium reported",
+          "date": "2026-05-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.govtech.com/artificial-intelligence/south-texas-city-sets-moratorium-amid-data-center-interest",
+            "title": "South Texas City Sets Moratorium Amid Data Center Interest",
+            "publishedDate": "2026-05-22",
+            "quote": "May 22, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "curtiss-wright-round-rock-2026",
+    "pinIds": {
+      "local": 20629,
+      "production": 20629
+    },
+    "title": "Curtiss-Wright Announces $30M Round Rock Nuclear-Sensor Expansion",
+    "sourceUrl": "https://curtisswright.com/news/press-releases/news-release-details/2026/Curtiss-Wright-Announces-30-Million-Capital-Investment-to-Expand-Its-Operations-in-Round-Rock-Texas",
+    "profile": {
+      "sector": "Nuclear and industrial pressure/temperature sensor manufacturing — Round Rock expansion",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No linked automated process or automation coverage is published.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Proposed engineering/testing space does not establish scored or qualified expansion capability.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified supply-chain integration evidence is published for the expansion.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Expansion investment",
+          "value": "Planned: USD 30 million for the Round Rock expansion; not company-wide capital spending.",
+          "basis": "planned",
+          "source": {
+            "url": "https://curtisswright.com/news/press-releases/news-release-details/2026/Curtiss-Wright-Announces-30-Million-Capital-Investment-to-Expand-Its-Operations-in-Round-Rock-Texas",
+            "title": "Curtiss-Wright Announces $30M Round Rock Nuclear-Sensor Expansion",
+            "publishedDate": "2026-10-29",
+            "quote": "today announced a $30 million capital investment to expand operations at its Round Rock, Texas facility"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Manufacturing scope",
+          "value": "Planned: more pressure and temperature sensor manufacturing capacity, with space for radiation-monitoring development.",
+          "basis": "planned",
+          "source": {
+            "url": "https://curtisswright.com/news/press-releases/news-release-details/2026/Curtiss-Wright-Announces-30-Million-Capital-Investment-to-Expand-Its-Operations-in-Round-Rock-Texas",
+            "title": "Curtiss-Wright Announces $30M Round Rock Nuclear-Sensor Expansion",
+            "publishedDate": "2026-10-29",
+            "quote": "pressure and temperature sensor product lines"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected hiring",
+          "value": "Planned: increased Round Rock headcount; number of new positions not disclosed.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.citybiz.co/article/926557/curtiss-wright-announces-30-million-expansion-of-round-rock-texas-manufacturing-facility/",
+            "title": "Curtiss-Wright Announces $30 Million Expansion of Round Rock, Texas Manufacturing Facility",
+            "publishedDate": "2026-10-29",
+            "quote": "although the company did not disclose the number of anticipated new positions or a construction completion timeline."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Construction timetable",
+          "value": "Start and completion dates not announced; no opening date inferred.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.citybiz.co/article/926557/curtiss-wright-announces-30-million-expansion-of-round-rock-texas-manufacturing-facility/",
+            "title": "Curtiss-Wright Announces $30 Million Expansion of Round Rock, Texas Manufacturing Facility",
+            "publishedDate": "2026-10-29",
+            "quote": "although the company did not disclose the number of anticipated new positions or a construction completion timeline."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expansion investment announced",
+          "date": "2026-10-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://curtisswright.com/news/press-releases/news-release-details/2026/Curtiss-Wright-Announces-30-Million-Capital-Investment-to-Expand-Its-Operations-in-Round-Rock-Texas",
+            "title": "Curtiss-Wright Announces $30M Round Rock Nuclear-Sensor Expansion",
+            "publishedDate": "2026-10-29",
+            "quote": "today announced a $30 million capital investment to expand operations at its Round Rock, Texas facility"
+          }
+        },
+        {
+          "label": "Physical construction start",
+          "date": "Date not announced",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.citybiz.co/article/926557/curtiss-wright-announces-30-million-expansion-of-round-rock-texas-manufacturing-facility/",
+            "title": "Curtiss-Wright Announces $30 Million Expansion of Round Rock, Texas Manufacturing Facility",
+            "publishedDate": "2026-10-29",
+            "quote": "although the company did not disclose the number of anticipated new positions or a construction completion timeline."
+          }
+        },
+        {
+          "label": "Expansion completion",
+          "date": "Date not announced",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.citybiz.co/article/926557/curtiss-wright-announces-30-million-expansion-of-round-rock-texas-manufacturing-facility/",
+            "title": "Curtiss-Wright Announces $30 Million Expansion of Round Rock, Texas Manufacturing Facility",
+            "publishedDate": "2026-10-29",
+            "quote": "although the company did not disclose the number of anticipated new positions or a construction completion timeline."
+          }
+        }
+      ]
+    }
   }
 ]

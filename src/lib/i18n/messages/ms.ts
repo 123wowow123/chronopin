@@ -852,6 +852,7 @@ const ms: Messages = {
     },
     siteKey: {
       wildfire: 'Perimeter kebakaran hutan',
+      flood: 'Kawasan banjir',
       district: 'Sempadan kawasan pilihan raya',
       site: 'Sempadan tapak',
       building: 'Bangunan',

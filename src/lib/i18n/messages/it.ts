@@ -845,6 +845,7 @@ const it: Messages = {
     },
     siteKey: {
       wildfire: 'Perimetro dell’incendio boschivo',
+      flood: 'Area allagata',
       district: 'Confine del collegio elettorale',
       site: 'Confine del sito',
       building: 'Edifici',

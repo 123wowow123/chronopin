@@ -844,6 +844,7 @@ const th: Messages = {
     },
     siteKey: {
       wildfire: 'ขอบเขตไฟป่า',
+      flood: 'พื้นที่น้ำท่วม',
       district: 'แนวเขตเลือกตั้ง',
       site: 'ขอบเขตพื้นที่',
       building: 'อาคาร',

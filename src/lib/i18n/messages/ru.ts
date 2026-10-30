@@ -856,6 +856,7 @@ const ru: Messages = {
     },
     siteKey: {
       wildfire: 'Периметр лесного пожара',
+      flood: 'Зона затопления',
       district: 'Граница избирательного округа',
       site: 'Граница участка',
       building: 'Здания',

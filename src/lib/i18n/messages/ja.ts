@@ -847,6 +847,7 @@ const ja: Messages = {
     },
     siteKey: {
       wildfire: '山火事の延焼範囲',
+      flood: '浸水範囲',
       district: '選挙区の境界',
       site: '敷地境界',
       building: '建物',

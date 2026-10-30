@@ -848,6 +848,7 @@ const zh: Messages = {
     },
     siteKey: {
       wildfire: '野火边界',
+      flood: '洪水淹没范围',
       district: '选区边界',
       site: '场地边界',
       building: '建筑',

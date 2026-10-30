@@ -27,7 +27,7 @@ Job pins and edits must reach production (www.chronopin.com), not only local.
 
 1. Work the revisit queue first. For each item, research from opened pages (not search snippets).
 2. Before scoring a pin, **verify its current text hash**; a stale hash means the text changed since review.
-3. When a fresh reading supplies no event details, **preserve** existing event details.
+3. When a fresh reading supplies no event details, **preserve** existing event details. Compare local and production native event-info readbacks after replay; empty refreshes may diverge. After researching a hand reading, advance only `checkedAt` if the tool leaves it due.
 4. Do not score unrelated text for a company (a resort mention is not data-center sentiment).
 5. Save through the real API so live feed, search and duplicate checks fire. Never PUT a partial body: GET
    omits null fields and PUT writes every column, so round-trip the whole pin.

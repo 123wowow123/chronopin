@@ -30,7 +30,7 @@ type Props = {
   // The first page of the view the guide opens on, by guideKey; the rest is fetched.
   initialPages: Record<string, GuidePage<GuideItem>>;
   availableRegionSlugs: string[];
-  region: { name: string; state: string; slug: string; country: string };
+  region: { name: string; state: string; slug: string; country: string; latitude: number; longitude: number };
   today: string;
   previewSnapshot: boolean;
   timeZone: string;
@@ -56,9 +56,9 @@ const serverHash = () => '';
 
 export function RestaurantGuide({ summary, initialView, initialPages, availableRegionSlugs, region, today, previewSnapshot, timeZone }: Props) {
   const pathname = usePathname();
-  const recentSort = useRestaurantSort('Restaurants');
-  const topSort = useRestaurantSort('Restaurants');
-  const upcomingSort = useRestaurantSort('Restaurants', 'opening-date');
+  const recentSort = useRestaurantSort('Restaurants', 'rating', region);
+  const topSort = useRestaurantSort('Restaurants', 'rating', region);
+  const upcomingSort = useRestaurantSort('Restaurants', 'opening-date', region);
   const hash = useSyncExternalStore(subscribeToHash, currentHash, serverHash);
   const queryView = useQueryParam('view');
   const [selectedNeighborhood, setNeighborhood] = useState('all');
@@ -175,7 +175,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onMouseDown={(event) => { event.currentTarget.dataset.mouse = ''; }} onKeyDown={(event) => { delete event.currentTarget.dataset.mouse; }} onBlur={(event) => { delete event.currentTarget.dataset.mouse; }} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
             </div>
           </div>
-          {discounts ? <AvailableRestaurantOffers key={region.slug} regionSlug={region.slug} neighborhood={neighborhood} initialPages={initialPages as Record<string, GuidePage<ScheduledRestaurantOffer>>} timeZone={timeZone} city={region.name} /> : <>
+          {discounts ? <AvailableRestaurantOffers key={region.slug} regionSlug={region.slug} neighborhood={neighborhood} initialPages={initialPages as Record<string, GuidePage<ScheduledRestaurantOffer>>} timeZone={timeZone} city={region.name} guide={region} /> : <>
           {pages.ready && <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>}
           {pages.ready && !shown ? <div className={styles.empty}><h3>{neighborhood !== 'all' ? (top ? 'No top restaurants match those filters.' : 'No openings match those filters.') : top ? 'No top restaurant selections yet.' : status === 'new' ? 'No confirmed openings in the last 90 days yet.' : 'No upcoming openings announced yet.'}</h3><p>{neighborhood !== 'all' ? 'Try another neighborhood.' : 'Check back for newly sourced restaurants in this region.'}</p>{neighborhood !== 'all' && <button type="button" onClick={reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection pageHref={(page) => guidePageHref(pathname, 'top', page, '#top-restaurants')} pages={pages as GuidePages<TopRestaurant>} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : status === 'upcoming'
             ? <OpeningSection pageHref={(page) => guidePageHref(pathname, 'upcoming', page, '#upcoming')} id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." pages={pages as GuidePages<Restaurant>} group="upcoming" today={today} href={href} sortState={upcomingSort} mapHref={`/map?${selectedMapParams}`} />

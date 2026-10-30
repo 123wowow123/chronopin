@@ -850,6 +850,7 @@ const hi: Messages = {
     },
     siteKey: {
       wildfire: 'जंगल की आग की परिधि',
+      flood: 'बाढ़ प्रभावित क्षेत्र',
       district: 'निर्वाचन क्षेत्र की सीमा',
       site: 'साइट की सीमा',
       building: 'इमारतें',

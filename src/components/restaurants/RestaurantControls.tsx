@@ -7,9 +7,12 @@ import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
 import type { RestaurantSort } from '@/lib/restaurantSort';
 import styles from './RestaurantGuide.module.css';
 
-export function useRestaurantSort(label: string, defaultSort: 'rating' | 'opening-date' | 'starts' = 'rating') {
+// `guide`: the city whose guide this is. A time-zone reading only names the zone's biggest city
+// (every Pacific-time viewer is "in Los Angeles"), so on a city guide it measures from that city instead.
+export function useRestaurantSort(label: string, defaultSort: 'rating' | 'opening-date' | 'starts' = 'rating', guide?: { name: string; latitude: number; longitude: number }) {
   const [sort, setSort] = useState<RestaurantSort>(defaultSort);
-  const [origin, setOrigin] = useState<ViewerPlace>();
+  const [place, setOrigin] = useState<ViewerPlace>();
+  const origin = place?.source === 'timeZone' && guide ? { latitude: guide.latitude, longitude: guide.longitude, name: guide.name, source: 'timeZone' as const } : place;
   const [locating, setLocating] = useState(false);
   const [locationError, setLocationError] = useState('');
   const request = useRef(0);

@@ -847,6 +847,7 @@ const ko: Messages = {
     },
     siteKey: {
       wildfire: '산불 경계',
+      flood: '침수 범위',
       district: '선거구 경계',
       site: '부지 경계',
       building: '건물',

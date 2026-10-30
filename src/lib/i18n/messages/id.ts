@@ -852,6 +852,7 @@ const id: Messages = {
     },
     siteKey: {
       wildfire: 'Perimeter kebakaran hutan',
+      flood: 'Area banjir',
       district: 'Batas daerah pemilihan',
       site: 'Batas lokasi',
       building: 'Gedung',

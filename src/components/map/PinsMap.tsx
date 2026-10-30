@@ -63,6 +63,21 @@ function locationMarker(map: L.Map, point: L.LatLngTuple, label: string) {
   }).bindTooltip(label, { direction: 'top' }).addTo(map);
 }
 
+// A track that crosses the antimeridian jumps from +179 to -179; each point is
+// moved a whole turn so it lies within 180 degrees of the one before, and the
+// line runs on past the edge instead of back across the map.
+function unwrapLongitudes(points: [number, number][]): [number, number][] {
+  let shift = 0;
+  return points.map(([lat, lng], i) => {
+    if (i > 0) {
+      const prev = points[i - 1][1] + shift;
+      while (lng + shift - prev > 180) shift -= 360;
+      while (lng + shift - prev < -180) shift += 360;
+    }
+    return [lat, lng + shift];
+  });
+}
+
 type ResultView = { bounds: L.LatLngBounds | null; fitting: boolean };
 
 function fitResultView(map: L.Map, view: ResultView) {
@@ -905,6 +920,40 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     syncCopies(map, layer, markersRef.current, picks);
     publishMapStats(markersRef.current, picks, setCount, setStats, numberLocale);
   }, [categoryKey, numberLocale]);
+
+  // Filtered to Disaster, the map also draws what those pins carry: storm
+  // tracks and flood or wildfire extents (/api/pins/hazards), under the markers.
+  const hazards = categoryKey.split('|').includes('disaster');
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !hazards) return;
+    const abort = new AbortController();
+    const group = L.layerGroup().addTo(map);
+    const now = new Date();
+    const range = new URLSearchParams();
+    const fromDate = past ? offsetDate(now, past, -1) : null;
+    const toDate = future ? offsetDate(now, future, 1) : null;
+    if (fromDate) range.set('from', fromDate.toISOString());
+    if (toDate) range.set('to', toDate.toISOString());
+    fetch(`/api/pins/hazards?${range.toString()}`, { signal: abort.signal })
+      .then((res) => (res.ok ? (res.json() as Promise<{ shapes: { pinId: number; title: string; kind: 'track' | 'flood' | 'wildfire'; points?: [number, number][]; geometry?: unknown }[] }>) : null))
+      .then((body) => {
+        for (const shape of body?.shapes ?? []) {
+          const layer =
+            shape.kind === 'track' && shape.points
+              ? L.polyline(unwrapLongitudes(shape.points), { color: '#e11d48', weight: 2.5, opacity: 0.8, interactive: false })
+              : shape.geometry
+                ? L.geoJSON(shape.geometry as never, { style: { color: shape.kind === 'flood' ? '#0284c7' : '#dc2626', weight: 1.5, fillOpacity: shape.kind === 'flood' ? 0.3 : 0.18 }, interactive: false })
+                : null;
+          layer?.addTo(group);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      abort.abort();
+      group.remove();
+    };
+  }, [hazards, past, future]);
 
   // "1,240 km from Los Angeles" clicked on a pin: the line it measured, from
   // where the viewer's browser puts them to the pin, once that pin is plotted.

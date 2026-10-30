@@ -2,7 +2,7 @@
 // and its parts, a course, pipeline, power line, wildfire perimeter or election
 // district boundary, drawn on the pin page's map.
 
-export const SITE_KINDS = ['site', 'wildfire', 'district', 'building', 'cooling', 'generator', 'substation', 'power', 'pipeline', 'powerline', 'route'] as const;
+export const SITE_KINDS = ['site', 'wildfire', 'flood', 'district', 'building', 'cooling', 'generator', 'substation', 'power', 'pipeline', 'powerline', 'route'] as const;
 export type SiteKind = (typeof SITE_KINDS)[number];
 
 // What a route feature may say about its course: a circuit's length, altitude
@@ -41,6 +41,7 @@ export type PinSiteShapeJson = {
 export const SITE_STYLE: Record<SiteKind, { color: string; fill: number; dash?: string }> = {
   site: { color: '#2563eb', fill: 0.06, dash: '6 4' },
   wildfire: { color: '#dc2626', fill: 0.18 },
+  flood: { color: '#0284c7', fill: 0.3 },
   district: { color: '#0f766e', fill: 0.08, dash: '5 3' },
   building: { color: '#7c3aed', fill: 0.45 },
   cooling: { color: '#0891b2', fill: 0.45 },
@@ -216,7 +217,7 @@ function dedupeCredits(features: SiteFeature[]): SiteFeature[] {
   const seen = new Set<string>();
   return features.map((feature) => {
     const { kind } = feature.properties;
-    if (kind !== 'wildfire' && kind !== 'district') return feature;
+    if (kind !== 'wildfire' && kind !== 'flood' && kind !== 'district') return feature;
     const credit = JSON.stringify(feature.properties);
     if (!seen.has(credit)) { seen.add(credit); return feature; }
     return { ...feature, properties: { kind } };

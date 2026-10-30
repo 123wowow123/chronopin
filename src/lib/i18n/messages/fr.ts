@@ -847,6 +847,7 @@ const fr: Messages = {
     },
     siteKey: {
       wildfire: 'Périmètre de l’incendie de forêt',
+      flood: 'Zone inondée',
       district: 'Limite de la circonscription électorale',
       site: 'Limite du site',
       building: 'Bâtiments',

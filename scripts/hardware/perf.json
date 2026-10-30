@@ -6416,5 +6416,2059 @@
         }
       }
     ]
+  },
+  {
+    "sourceUrl": "https://mistral.ai/news/mistral-large-4",
+    "tables": [
+      {
+        "title": "Specifications at launch",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "Mistral AI"
+          ],
+          [
+            "Preview release",
+            "2026-10-06"
+          ],
+          [
+            "Context",
+            "1M tokens"
+          ],
+          [
+            "Parameters (total / active)",
+            "1.05T / 52B"
+          ],
+          [
+            "Inputs / output",
+            "Text and images / text"
+          ],
+          [
+            "Access at launch",
+            "Mistral API public preview; weights promised for late October"
+          ],
+          [
+            "Pricing",
+            "Launch list price not verified; current prices omitted."
+          ]
+        ],
+        "note": "Launch list price not verified; current prices omitted.",
+        "sourceUrl": "https://docs.mistral.ai/models/model-cards/mistral-large-4-0",
+        "i18n": {
+          "es": {
+            "title": "Especificaciones de lanzamiento",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Mistral AI"
+              ],
+              [
+                "Lanzamiento preliminar",
+                "2026-10-06"
+              ],
+              [
+                "Contexto",
+                "1M tokens"
+              ],
+              [
+                "Parámetros (totales / activos)",
+                "1.05T / 52B"
+              ],
+              [
+                "Entradas / salida",
+                "Texto e imágenes / texto"
+              ],
+              [
+                "Acceso inicial",
+                "Vista previa pública de la API de Mistral; pesos previstos para finales de octubre"
+              ],
+              [
+                "Precios",
+                "Precio de lanzamiento no verificado; se omiten los precios actuales."
+              ]
+            ],
+            "note": "Precio de lanzamiento no verificado; se omiten los precios actuales."
+          },
+          "fr": {
+            "title": "Spécifications au lancement",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "Mistral AI"
+              ],
+              [
+                "Sortie en préversion",
+                "2026-10-06"
+              ],
+              [
+                "Contexte",
+                "1M tokens"
+              ],
+              [
+                "Paramètres (total / actifs)",
+                "1.05T / 52B"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte et images / texte"
+              ],
+              [
+                "Accès au lancement",
+                "Préversion publique de l’API Mistral ; poids annoncés pour fin octobre"
+              ],
+              [
+                "Tarification",
+                "Prix de lancement non vérifié ; prix actuels omis."
+              ]
+            ],
+            "note": "Prix de lancement non vérifié ; prix actuels omis."
+          },
+          "de": {
+            "title": "Spezifikationen zum Start",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "Mistral AI"
+              ],
+              [
+                "Vorschau veröffentlicht",
+                "2026-10-06"
+              ],
+              [
+                "Kontext",
+                "1M tokens"
+              ],
+              [
+                "Parameter (gesamt / aktiv)",
+                "1.05T / 52B"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text und Bilder / Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Öffentliche Mistral-API-Vorschau; Gewichte für Ende Oktober angekündigt"
+              ],
+              [
+                "Preise",
+                "Startpreis nicht bestätigt; aktuelle Preise ausgelassen."
+              ]
+            ],
+            "note": "Startpreis nicht bestätigt; aktuelle Preise ausgelassen."
+          },
+          "ja": {
+            "title": "公開時の仕様",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Mistral AI"
+              ],
+              [
+                "プレビュー公開",
+                "2026-10-06"
+              ],
+              [
+                "コンテキスト",
+                "1M tokens"
+              ],
+              [
+                "パラメータ（総数／有効）",
+                "1.05T / 52B"
+              ],
+              [
+                "入力／出力",
+                "テキスト・画像／テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Mistral APIの公開プレビュー。重みは10月末に公開予定"
+              ],
+              [
+                "料金",
+                "公開時の定価は未確認。現在の料金は省略。"
+              ]
+            ],
+            "note": "公開時の定価は未確認。現在の料金は省略。"
+          },
+          "zh": {
+            "title": "发布时规格",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Mistral AI"
+              ],
+              [
+                "预览版发布",
+                "2026-10-06"
+              ],
+              [
+                "上下文",
+                "1M tokens"
+              ],
+              [
+                "参数（总数／激活）",
+                "1.05T / 52B"
+              ],
+              [
+                "输入／输出",
+                "文本和图像／文本"
+              ],
+              [
+                "发布时访问方式",
+                "Mistral API公开预览；承诺于十月底发布权重"
+              ],
+              [
+                "价格",
+                "发布时标价未核实；不列当前价格。"
+              ]
+            ],
+            "note": "发布时标价未核实；不列当前价格。"
+          },
+          "ko": {
+            "title": "출시 당시 사양",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Mistral AI"
+              ],
+              [
+                "미리보기 출시",
+                "2026-10-06"
+              ],
+              [
+                "컨텍스트",
+                "1M tokens"
+              ],
+              [
+                "매개변수 (전체 / 활성)",
+                "1.05T / 52B"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 및 이미지 / 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Mistral API 공개 미리보기; 가중치는 10월 말 공개 예정"
+              ],
+              [
+                "가격",
+                "출시 정가는 미확인; 현재 가격은 생략."
+              ]
+            ],
+            "note": "출시 정가는 미확인; 현재 가격은 생략."
+          },
+          "hi": {
+            "title": "लॉन्च के समय विनिर्देश",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "Mistral AI"
+              ],
+              [
+                "पूर्वावलोकन जारी",
+                "2026-10-06"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1M tokens"
+              ],
+              [
+                "पैरामीटर (कुल / सक्रिय)",
+                "1.05T / 52B"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "टेक्स्ट और चित्र / टेक्स्ट"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Mistral API का सार्वजनिक पूर्वावलोकन; वेट अक्टूबर के अंत में देने का वादा"
+              ],
+              [
+                "कीमत",
+                "लॉन्च सूची मूल्य सत्यापित नहीं; मौजूदा कीमतें छोड़ी गई हैं।"
+              ]
+            ],
+            "note": "लॉन्च सूची मूल्य सत्यापित नहीं; मौजूदा कीमतें छोड़ी गई हैं।"
+          },
+          "ar": {
+            "title": "المواصفات عند الإطلاق",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Mistral AI"
+              ],
+              [
+                "إصدار المعاينة",
+                "2026-10-06"
+              ],
+              [
+                "السياق",
+                "1M tokens"
+              ],
+              [
+                "المعاملات (الإجمالية / النشطة)",
+                "1.05T / 52B"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص وصور / نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "معاينة عامة عبر واجهة Mistral؛ الأوزان موعودة بنهاية أكتوبر"
+              ],
+              [
+                "التسعير",
+                "سعر الإطلاق غير متحقق؛ أُغفلت الأسعار الحالية."
+              ]
+            ],
+            "note": "سعر الإطلاق غير متحقق؛ أُغفلت الأسعار الحالية."
+          },
+          "th": {
+            "title": "ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Mistral AI"
+              ],
+              [
+                "เปิดตัวรุ่นทดลอง",
+                "2026-10-06"
+              ],
+              [
+                "บริบท",
+                "1M tokens"
+              ],
+              [
+                "พารามิเตอร์ (ทั้งหมด / ที่ใช้งาน)",
+                "1.05T / 52B"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความและภาพ / ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "รุ่นทดลองสาธารณะผ่าน Mistral API; สัญญาว่าจะเผยแพร่น้ำหนักปลายเดือนตุลาคม"
+              ],
+              [
+                "ราคา",
+                "ยังไม่ยืนยันราคาป้ายเมื่อเปิดตัว; ไม่แสดงราคาปัจจุบัน"
+              ]
+            ],
+            "note": "ยังไม่ยืนยันราคาป้ายเมื่อเปิดตัว; ไม่แสดงราคาปัจจุบัน"
+          },
+          "it": {
+            "title": "Specifiche al lancio",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "Mistral AI"
+              ],
+              [
+                "Uscita in anteprima",
+                "2026-10-06"
+              ],
+              [
+                "Contesto",
+                "1M tokens"
+              ],
+              [
+                "Parametri (totali / attivi)",
+                "1.05T / 52B"
+              ],
+              [
+                "Input / output",
+                "Testo e immagini / testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Anteprima pubblica dell’API Mistral; pesi promessi per fine ottobre"
+              ],
+              [
+                "Prezzi",
+                "Prezzo di listino al lancio non verificato; prezzi attuali omessi."
+              ]
+            ],
+            "note": "Prezzo di listino al lancio non verificato; prezzi attuali omessi."
+          },
+          "ru": {
+            "title": "Характеристики при запуске",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Mistral AI"
+              ],
+              [
+                "Выход превью",
+                "2026-10-06"
+              ],
+              [
+                "Контекст",
+                "1M tokens"
+              ],
+              [
+                "Параметры (всего / активных)",
+                "1.05T / 52B"
+              ],
+              [
+                "Вход / выход",
+                "Текст и изображения / текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Публичное превью API Mistral; веса обещаны к концу октября"
+              ],
+              [
+                "Цена",
+                "Цена запуска не подтверждена; текущие цены опущены."
+              ]
+            ],
+            "note": "Цена запуска не подтверждена; текущие цены опущены."
+          },
+          "pt": {
+            "title": "Especificações no lançamento",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Mistral AI"
+              ],
+              [
+                "Lançamento da prévia",
+                "2026-10-06"
+              ],
+              [
+                "Contexto",
+                "1M tokens"
+              ],
+              [
+                "Parâmetros (total / ativos)",
+                "1.05T / 52B"
+              ],
+              [
+                "Entradas / saída",
+                "Texto e imagens / texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Prévia pública da API Mistral; pesos prometidos para o fim de outubro"
+              ],
+              [
+                "Preços",
+                "Preço de tabela no lançamento não verificado; preços atuais omitidos."
+              ]
+            ],
+            "note": "Preço de tabela no lançamento não verificado; preços atuais omitidos."
+          },
+          "ms": {
+            "title": "Spesifikasi semasa pelancaran",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Mistral AI"
+              ],
+              [
+                "Pelancaran pratonton",
+                "2026-10-06"
+              ],
+              [
+                "Konteks",
+                "1M tokens"
+              ],
+              [
+                "Parameter (jumlah / aktif)",
+                "1.05T / 52B"
+              ],
+              [
+                "Input / output",
+                "Teks dan imej / teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Pratonton awam API Mistral; pemberat dijanjikan pada akhir Oktober"
+              ],
+              [
+                "Harga",
+                "Harga senarai pelancaran belum disahkan; harga semasa tidak disertakan."
+              ]
+            ],
+            "note": "Harga senarai pelancaran belum disahkan; harga semasa tidak disertakan."
+          },
+          "vi": {
+            "title": "Thông số khi ra mắt",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Mistral AI"
+              ],
+              [
+                "Ra mắt bản xem trước",
+                "2026-10-06"
+              ],
+              [
+                "Ngữ cảnh",
+                "1M tokens"
+              ],
+              [
+                "Tham số (tổng / hoạt động)",
+                "1.05T / 52B"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản và hình ảnh / văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Bản xem trước công khai qua API Mistral; hứa phát hành trọng số cuối tháng 10"
+              ],
+              [
+                "Giá",
+                "Chưa xác minh giá niêm yết khi ra mắt; bỏ qua giá hiện tại."
+              ]
+            ],
+            "note": "Chưa xác minh giá niêm yết khi ra mắt; bỏ qua giá hiện tại."
+          },
+          "id": {
+            "title": "Spesifikasi saat peluncuran",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Mistral AI"
+              ],
+              [
+                "Rilis pratinjau",
+                "2026-10-06"
+              ],
+              [
+                "Konteks",
+                "1M tokens"
+              ],
+              [
+                "Parameter (total / aktif)",
+                "1.05T / 52B"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks dan gambar / teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Pratinjau publik API Mistral; bobot dijanjikan akhir Oktober"
+              ],
+              [
+                "Harga",
+                "Harga peluncuran belum terverifikasi; harga saat ini dihilangkan."
+              ]
+            ],
+            "note": "Harga peluncuran belum terverifikasi; harga saat ini dihilangkan."
+          }
+        }
+      }
+    ],
+    "charts": [
+      {
+        "title": "Blind human coding evaluation",
+        "unit": "Score (1–5)",
+        "note": "Mistral / Surge AI evaluation with hidden model identities; not a cross-benchmark average.",
+        "sourceUrl": "https://mistral.ai/news/mistral-large-4",
+        "higherIsBetter": true,
+        "bars": [
+          {
+            "label": "Claude Opus 5",
+            "value": 4.22
+          },
+          {
+            "label": "GLM-5.2",
+            "value": 3.4
+          },
+          {
+            "label": "Kimi K3",
+            "value": 3.59
+          },
+          {
+            "label": "GLM-5.3",
+            "value": 3.6
+          },
+          {
+            "label": "Mistral Large 4 Preview",
+            "value": 3.74,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "es": {
+            "title": "Evaluación humana ciega de programación",
+            "unit": "Puntuación (1–5)",
+            "note": "Evaluación de Mistral / Surge AI con identidades ocultas; no es un promedio de pruebas."
+          },
+          "fr": {
+            "title": "Évaluation humaine du code à l’aveugle",
+            "unit": "Note (1–5)",
+            "note": "Évaluation Mistral / Surge AI avec modèles anonymisés ; pas une moyenne de tests."
+          },
+          "de": {
+            "title": "Verblindete menschliche Codebewertung",
+            "unit": "Wertung (1–5)",
+            "note": "Mistral-/Surge-AI-Bewertung mit verborgenen Modellnamen; kein Benchmark-Mittelwert."
+          },
+          "ja": {
+            "title": "モデル名を伏せた人によるコード評価",
+            "unit": "評価（1～5）",
+            "note": "Mistral／Surge AIによる匿名評価。異なるベンチマークの平均ではない。"
+          },
+          "zh": {
+            "title": "匿名人工代码评测",
+            "unit": "评分（1–5）",
+            "note": "Mistral／Surge AI隐藏模型身份的评测；并非多项基准的平均值。"
+          },
+          "ko": {
+            "title": "익명 인간 코딩 평가",
+            "unit": "점수 (1–5)",
+            "note": "모델 이름을 숨긴 Mistral / Surge AI 평가; 벤치마크 평균이 아님."
+          },
+          "hi": {
+            "title": "पहचान छिपाकर मानव कोड मूल्यांकन",
+            "unit": "स्कोर (1–5)",
+            "note": "मॉडल की पहचान छिपाकर Mistral / Surge AI मूल्यांकन; बेंचमार्क औसत नहीं।"
+          },
+          "ar": {
+            "title": "تقييم بشري معمى للبرمجة",
+            "unit": "الدرجة (1–5)",
+            "note": "تقييم Mistral / Surge AI مع إخفاء هوية النماذج؛ ليس متوسط اختبارات."
+          },
+          "th": {
+            "title": "การประเมินโค้ดโดยมนุษย์แบบปกปิดชื่อ",
+            "unit": "คะแนน (1–5)",
+            "note": "การประเมินโดย Mistral / Surge AI ที่ปกปิดชื่อโมเดล; ไม่ใช่ค่าเฉลี่ยหลายเบนช์มาร์ก"
+          },
+          "it": {
+            "title": "Valutazione umana del codice in cieco",
+            "unit": "Punteggio (1–5)",
+            "note": "Valutazione Mistral / Surge AI con identità nascoste; non una media di benchmark."
+          },
+          "ru": {
+            "title": "Слепая оценка кода людьми",
+            "unit": "Оценка (1–5)",
+            "note": "Оценка Mistral / Surge AI со скрытыми именами моделей; не среднее разных тестов."
+          },
+          "pt": {
+            "title": "Avaliação humana cega de código",
+            "unit": "Pontuação (1–5)",
+            "note": "Avaliação Mistral / Surge AI com identidades ocultas; não é uma média de benchmarks."
+          },
+          "ms": {
+            "title": "Penilaian kod manusia secara buta",
+            "unit": "Skor (1–5)",
+            "note": "Penilaian Mistral / Surge AI dengan identiti model disembunyikan; bukan purata penanda aras."
+          },
+          "vi": {
+            "title": "Đánh giá mã ẩn danh bởi con người",
+            "unit": "Điểm (1–5)",
+            "note": "Đánh giá Mistral / Surge AI giấu danh tính mô hình; không phải trung bình các chuẩn."
+          },
+          "id": {
+            "title": "Evaluasi kode manusia tersamar",
+            "unit": "Skor (1–5)",
+            "note": "Evaluasi Mistral / Surge AI dengan identitas model disembunyikan; bukan rata-rata tolok ukur."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+    "charts": [
+      {
+        "title": "GDPval-AA v2.1",
+        "unit": "Elo",
+        "higherIsBetter": true,
+        "bars": [
+          {
+            "label": "Claude Sonnet 5",
+            "value": 1449
+          },
+          {
+            "label": "Claude Sonnet 5.5",
+            "value": 1844,
+            "highlight": true
+          }
+        ],
+        "note": "Artificial Analysis scores reported at launch; the Sonnet 5.5 pre-release deployment had a structured-output bug that was later fixed.",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+        "i18n": {
+          "es": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Puntuaciones de Artificial Analysis al lanzamiento; la versión preliminar de Sonnet 5.5 tenía un fallo de salida estructurada, corregido después."
+          },
+          "fr": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Scores Artificial Analysis au lancement ; le déploiement préliminaire de Sonnet 5.5 avait un bug de sortie structurée, corrigé depuis."
+          },
+          "de": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Artificial-Analysis-Werte zum Start; die Vorabversion von Sonnet 5.5 hatte einen später behobenen Fehler bei strukturierten Ausgaben."
+          },
+          "ja": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "公開時に発表されたArtificial Analysisの評価。Sonnet 5.5の公開前環境には構造化出力の不具合があり、その後修正された。"
+          },
+          "zh": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "发布时报告的Artificial Analysis评分；Sonnet 5.5预发布部署存在结构化输出错误，后来已修复。"
+          },
+          "ko": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "출시 시 보고된 Artificial Analysis 점수. Sonnet 5.5 사전 배포에는 이후 수정된 구조화 출력 버그가 있었다."
+          },
+          "hi": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "लॉन्च पर रिपोर्ट किए गए Artificial Analysis स्कोर; Sonnet 5.5 के पूर्व-रिलीज़ संस्करण में संरचित आउटपुट की त्रुटि थी, जिसे बाद में ठीक किया गया।"
+          },
+          "ar": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "درجات Artificial Analysis المعلنة عند الإطلاق؛ كان نشر Sonnet 5.5 التجريبي يتضمن خطأ في المخرجات المنظمة أُصلح لاحقًا."
+          },
+          "th": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "คะแนน Artificial Analysis ที่รายงานเมื่อเปิดตัว; ระบบ Sonnet 5.5 ก่อนเผยแพร่มีข้อผิดพลาดด้านเอาต์พุตแบบมีโครงสร้างซึ่งแก้ไขภายหลัง"
+          },
+          "it": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Punteggi Artificial Analysis al lancio; la versione preliminare di Sonnet 5.5 aveva un bug negli output strutturati, poi corretto."
+          },
+          "ru": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Оценки Artificial Analysis при запуске; в предварительном развёртывании Sonnet 5.5 была ошибка структурированного вывода, позднее исправленная."
+          },
+          "pt": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Pontuações da Artificial Analysis no lançamento; a implantação preliminar do Sonnet 5.5 tinha um erro de saída estruturada, corrigido depois."
+          },
+          "ms": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Skor Artificial Analysis semasa pelancaran; penggunaan prapelancaran Sonnet 5.5 mempunyai pepijat output berstruktur yang kemudian diperbaiki."
+          },
+          "vi": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Điểm Artificial Analysis được báo cáo khi ra mắt; bản triển khai trước phát hành Sonnet 5.5 có lỗi đầu ra có cấu trúc, sau đó đã sửa."
+          },
+          "id": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Skor Artificial Analysis saat peluncuran; penerapan prarilis Sonnet 5.5 memiliki bug keluaran terstruktur yang kemudian diperbaiki."
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Specifications at launch",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "Anthropic"
+          ],
+          [
+            "Release",
+            "2026-09-28"
+          ],
+          [
+            "Context",
+            "1M tokens"
+          ],
+          [
+            "Maximum output",
+            "128K tokens; Batch API beta: 300K tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text and images / text"
+          ],
+          [
+            "Access at launch",
+            "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+          ],
+          [
+            "API price (input / output)",
+            "USD 2 / 10 per 1M tokens"
+          ]
+        ],
+        "note": "Artificial Analysis scores reported at launch; the Sonnet 5.5 pre-release deployment had a structured-output bug that was later fixed.",
+        "sourceUrl": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+        "i18n": {
+          "es": {
+            "title": "Especificaciones de lanzamiento",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Anthropic"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-28"
+              ],
+              [
+                "Contexto",
+                "1M tokens"
+              ],
+              [
+                "Salida máxima",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto e imágenes / texto"
+              ],
+              [
+                "Acceso inicial",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Precio API (entrada / salida)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Puntuaciones de Artificial Analysis al lanzamiento; la versión preliminar de Sonnet 5.5 tenía un fallo de salida estructurada, corregido después."
+          },
+          "fr": {
+            "title": "Spécifications au lancement",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "Anthropic"
+              ],
+              [
+                "Sortie",
+                "2026-09-28"
+              ],
+              [
+                "Contexte",
+                "1M tokens"
+              ],
+              [
+                "Sortie maximale",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte et images / texte"
+              ],
+              [
+                "Accès au lancement",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Prix API (entrée / sortie)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Scores Artificial Analysis au lancement ; le déploiement préliminaire de Sonnet 5.5 avait un bug de sortie structurée, corrigé depuis."
+          },
+          "de": {
+            "title": "Spezifikationen zum Start",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "Anthropic"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-28"
+              ],
+              [
+                "Kontext",
+                "1M tokens"
+              ],
+              [
+                "Maximale Ausgabe",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text und Bilder / Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API-Preis (Eingabe / Ausgabe)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Artificial-Analysis-Werte zum Start; die Vorabversion von Sonnet 5.5 hatte einen später behobenen Fehler bei strukturierten Ausgaben."
+          },
+          "ja": {
+            "title": "公開時の仕様",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Anthropic"
+              ],
+              [
+                "公開日",
+                "2026-09-28"
+              ],
+              [
+                "コンテキスト",
+                "1M tokens"
+              ],
+              [
+                "最大出力",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト・画像／テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API料金（入力／出力）",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "公開時に発表されたArtificial Analysisの評価。Sonnet 5.5の公開前環境には構造化出力の不具合があり、その後修正された。"
+          },
+          "zh": {
+            "title": "发布时规格",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Anthropic"
+              ],
+              [
+                "发布日期",
+                "2026-09-28"
+              ],
+              [
+                "上下文",
+                "1M tokens"
+              ],
+              [
+                "最大输出",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "输入／输出",
+                "文本和图像／文本"
+              ],
+              [
+                "发布时访问方式",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API价格（输入／输出）",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "发布时报告的Artificial Analysis评分；Sonnet 5.5预发布部署存在结构化输出错误，后来已修复。"
+          },
+          "ko": {
+            "title": "출시 당시 사양",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Anthropic"
+              ],
+              [
+                "출시일",
+                "2026-09-28"
+              ],
+              [
+                "컨텍스트",
+                "1M tokens"
+              ],
+              [
+                "최대 출력",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 및 이미지 / 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API 가격 (입력 / 출력)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "출시 시 보고된 Artificial Analysis 점수. Sonnet 5.5 사전 배포에는 이후 수정된 구조화 출력 버그가 있었다."
+          },
+          "hi": {
+            "title": "लॉन्च के समय विनिर्देश",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "Anthropic"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-28"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1M tokens"
+              ],
+              [
+                "अधिकतम आउटपुट",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "टेक्स्ट और चित्र / टेक्स्ट"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API कीमत (इनपुट / आउटपुट)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "लॉन्च पर रिपोर्ट किए गए Artificial Analysis स्कोर; Sonnet 5.5 के पूर्व-रिलीज़ संस्करण में संरचित आउटपुट की त्रुटि थी, जिसे बाद में ठीक किया गया।"
+          },
+          "ar": {
+            "title": "المواصفات عند الإطلاق",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Anthropic"
+              ],
+              [
+                "الإصدار",
+                "2026-09-28"
+              ],
+              [
+                "السياق",
+                "1M tokens"
+              ],
+              [
+                "الحد الأقصى للمخرجات",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص وصور / نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "سعر API (مدخلات / مخرجات)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "درجات Artificial Analysis المعلنة عند الإطلاق؛ كان نشر Sonnet 5.5 التجريبي يتضمن خطأ في المخرجات المنظمة أُصلح لاحقًا."
+          },
+          "th": {
+            "title": "ข้อมูลจำเพาะเมื่อเปิดตัว",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Anthropic"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-28"
+              ],
+              [
+                "บริบท",
+                "1M tokens"
+              ],
+              [
+                "เอาต์พุตสูงสุด",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความและภาพ / ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "ราคา API (อินพุต / เอาต์พุต)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "คะแนน Artificial Analysis ที่รายงานเมื่อเปิดตัว; ระบบ Sonnet 5.5 ก่อนเผยแพร่มีข้อผิดพลาดด้านเอาต์พุตแบบมีโครงสร้างซึ่งแก้ไขภายหลัง"
+          },
+          "it": {
+            "title": "Specifiche al lancio",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "Anthropic"
+              ],
+              [
+                "Rilascio",
+                "2026-09-28"
+              ],
+              [
+                "Contesto",
+                "1M tokens"
+              ],
+              [
+                "Output massimo",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Input / output",
+                "Testo e immagini / testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Prezzo API (input / output)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Punteggi Artificial Analysis al lancio; la versione preliminare di Sonnet 5.5 aveva un bug negli output strutturati, poi corretto."
+          },
+          "ru": {
+            "title": "Характеристики при запуске",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Anthropic"
+              ],
+              [
+                "Выпуск",
+                "2026-09-28"
+              ],
+              [
+                "Контекст",
+                "1M tokens"
+              ],
+              [
+                "Максимальный вывод",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст и изображения / текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Цена API (ввод / вывод)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Оценки Artificial Analysis при запуске; в предварительном развёртывании Sonnet 5.5 была ошибка структурированного вывода, позднее исправленная."
+          },
+          "pt": {
+            "title": "Especificações no lançamento",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Anthropic"
+              ],
+              [
+                "Lançamento",
+                "2026-09-28"
+              ],
+              [
+                "Contexto",
+                "1M tokens"
+              ],
+              [
+                "Saída máxima",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto e imagens / texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Preço API (entrada / saída)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Pontuações da Artificial Analysis no lançamento; a implantação preliminar do Sonnet 5.5 tinha um erro de saída estruturada, corrigido depois."
+          },
+          "ms": {
+            "title": "Spesifikasi semasa pelancaran",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Anthropic"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-28"
+              ],
+              [
+                "Konteks",
+                "1M tokens"
+              ],
+              [
+                "Output maksimum",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Input / output",
+                "Teks dan imej / teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Harga API (input / output)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Skor Artificial Analysis semasa pelancaran; penggunaan prapelancaran Sonnet 5.5 mempunyai pepijat output berstruktur yang kemudian diperbaiki."
+          },
+          "vi": {
+            "title": "Thông số khi ra mắt",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Anthropic"
+              ],
+              [
+                "Phát hành",
+                "2026-09-28"
+              ],
+              [
+                "Ngữ cảnh",
+                "1M tokens"
+              ],
+              [
+                "Đầu ra tối đa",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản và hình ảnh / văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Giá API (đầu vào / đầu ra)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Điểm Artificial Analysis được báo cáo khi ra mắt; bản triển khai trước phát hành Sonnet 5.5 có lỗi đầu ra có cấu trúc, sau đó đã sửa."
+          },
+          "id": {
+            "title": "Spesifikasi saat peluncuran",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Anthropic"
+              ],
+              [
+                "Rilis",
+                "2026-09-28"
+              ],
+              [
+                "Konteks",
+                "1M tokens"
+              ],
+              [
+                "Keluaran maksimum",
+                "128K tokens; Batch API beta: 300K tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks dan gambar / teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Harga API (masukan / keluaran)",
+                "USD 2 / 10 per 1M tokens"
+              ]
+            ],
+            "note": "Skor Artificial Analysis saat peluncuran; penerapan prarilis Sonnet 5.5 memiliki bug keluaran terstruktur yang kemudian diperbaiki."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+    "tables": [
+      {
+        "title": "GPT-6.1 Sol",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "OpenAI"
+          ],
+          [
+            "Release",
+            "2026-09-29"
+          ],
+          [
+            "Context",
+            "1,050,000 tokens"
+          ],
+          [
+            "Maximum output",
+            "128,000 tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text and images / text"
+          ],
+          [
+            "Access at launch",
+            "Responses API; Chat Completions API"
+          ],
+          [
+            "API price (input / output)",
+            "USD 2 / 10 · 1M tokens"
+          ]
+        ],
+        "note": "Standard launch prices: prompts ≤272K input tokens, USD per 1M tokens. API limits are from the current model card; no comparable launch benchmark graph was established from these API docs.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "i18n": {
+          "es": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "OpenAI"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-29"
+              ],
+              [
+                "Contexto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Salida máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto e imágenes / texto"
+              ],
+              [
+                "Acceso inicial",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Precio API (entrada / salida)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Precios estándar de lanzamiento: solicitudes de ≤272K tokens de entrada, USD por 1M tokens. Límites de API de la ficha actual; estas fuentes no establecen un gráfico de pruebas comparable al lanzamiento."
+          },
+          "fr": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "OpenAI"
+              ],
+              [
+                "Sortie",
+                "2026-09-29"
+              ],
+              [
+                "Contexte",
+                "1,050,000 tokens"
+              ],
+              [
+                "Sortie maximale",
+                "128,000 tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte et images / texte"
+              ],
+              [
+                "Accès au lancement",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Prix API (entrée / sortie)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Tarifs standard au lancement : requêtes ≤272K tokens en entrée, USD par 1M tokens. Limites API de la fiche actuelle ; ces documents ne permettent pas de graphique de tests comparable au lancement."
+          },
+          "de": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "OpenAI"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-29"
+              ],
+              [
+                "Kontext",
+                "1,050,000 tokens"
+              ],
+              [
+                "Maximale Ausgabe",
+                "128,000 tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text und Bilder / Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API-Preis (Eingabe / Ausgabe)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Standardpreise zum Start: Anfragen mit ≤272K Eingabetokens, USD je 1M Tokens. API-Grenzen laut aktueller Modellkarte; kein vergleichbarer Start-Benchmark aus diesen API-Dokumenten belegt."
+          },
+          "ja": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "OpenAI"
+              ],
+              [
+                "公開日",
+                "2026-09-29"
+              ],
+              [
+                "コンテキスト",
+                "1,050,000 tokens"
+              ],
+              [
+                "最大出力",
+                "128,000 tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト・画像／テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API料金（入力／出力）",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "公開時の標準料金：入力が272Kトークン以下、100万トークン当たりUSD。API上限は現在のモデルカードによる。このAPI文書からは公開時の比較可能なベンチマークグラフを確認できなかった。"
+          },
+          "zh": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "OpenAI"
+              ],
+              [
+                "发布日期",
+                "2026-09-29"
+              ],
+              [
+                "上下文",
+                "1,050,000 tokens"
+              ],
+              [
+                "最大输出",
+                "128,000 tokens"
+              ],
+              [
+                "输入／输出",
+                "文本和图像／文本"
+              ],
+              [
+                "发布时访问方式",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API价格（输入／输出）",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "发布时标准价格：输入不超过272K词元，每百万词元以USD计价。API限制来自当前模型卡；这些API文档未提供可比的发布时基准图。"
+          },
+          "ko": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "OpenAI"
+              ],
+              [
+                "출시일",
+                "2026-09-29"
+              ],
+              [
+                "컨텍스트",
+                "1,050,000 tokens"
+              ],
+              [
+                "최대 출력",
+                "128,000 tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 및 이미지 / 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API 가격 (입력 / 출력)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "출시 당시 표준 가격: 입력 ≤272K 토큰, 100만 토큰당 USD. API 한도는 현재 모델 카드 기준이며, 이 API 문서에서 비교 가능한 출시 벤치마크 그래프는 확인되지 않았다."
+          },
+          "hi": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "OpenAI"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-29"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1,050,000 tokens"
+              ],
+              [
+                "अधिकतम आउटपुट",
+                "128,000 tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "टेक्स्ट और चित्र / टेक्स्ट"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API कीमत (इनपुट / आउटपुट)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "मानक लॉन्च कीमतें: ≤272K इनपुट टोकन वाले अनुरोध, प्रति 1M टोकन USD। API सीमाएँ वर्तमान मॉडल कार्ड से हैं; इन API दस्तावेज़ों से तुलनीय लॉन्च बेंचमार्क ग्राफ़ स्थापित नहीं हुआ।"
+          },
+          "ar": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "OpenAI"
+              ],
+              [
+                "الإصدار",
+                "2026-09-29"
+              ],
+              [
+                "السياق",
+                "1,050,000 tokens"
+              ],
+              [
+                "الحد الأقصى للمخرجات",
+                "128,000 tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص وصور / نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "سعر API (مدخلات / مخرجات)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "أسعار الإطلاق القياسية: طلبات بمدخلات ≤272K رمزًا، بالدولار لكل مليون رمز. حدود API من بطاقة النموذج الحالية؛ لم تثبت هذه الوثائق رسمًا مرجعيًا مقارنًا عند الإطلاق."
+          },
+          "th": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "OpenAI"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-29"
+              ],
+              [
+                "บริบท",
+                "1,050,000 tokens"
+              ],
+              [
+                "เอาต์พุตสูงสุด",
+                "128,000 tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความและภาพ / ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "ราคา API (อินพุต / เอาต์พุต)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "ราคาเปิดตัวมาตรฐาน: คำขออินพุต ≤272K โทเคน, USD ต่อ 1M โทเคน ขีดจำกัด API จากการ์ดโมเดลปัจจุบัน; เอกสาร API เหล่านี้ไม่ยืนยันกราฟเบนช์มาร์กเปิดตัวที่เปรียบเทียบกันได้"
+          },
+          "it": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "OpenAI"
+              ],
+              [
+                "Rilascio",
+                "2026-09-29"
+              ],
+              [
+                "Contesto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Output massimo",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Testo e immagini / testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Prezzo API (input / output)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Prezzi standard al lancio: richieste con input ≤272K token, USD per 1M token. Limiti API dalla scheda attuale; questi documenti non stabiliscono un grafico di benchmark comparabile al lancio."
+          },
+          "ru": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "OpenAI"
+              ],
+              [
+                "Выпуск",
+                "2026-09-29"
+              ],
+              [
+                "Контекст",
+                "1,050,000 tokens"
+              ],
+              [
+                "Максимальный вывод",
+                "128,000 tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст и изображения / текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Цена API (ввод / вывод)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Стандартные цены запуска: запросы с входом ≤272K токенов, USD за 1M токенов. Лимиты API взяты из текущей карточки; сопоставимый график тестов при запуске этими документами не подтверждён."
+          },
+          "pt": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "OpenAI"
+              ],
+              [
+                "Lançamento",
+                "2026-09-29"
+              ],
+              [
+                "Contexto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Saída máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto e imagens / texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Preço API (entrada / saída)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Preços padrão no lançamento: solicitações com entrada ≤272K tokens, USD por 1M tokens. Limites API da ficha atual; estes documentos não estabelecem um gráfico de benchmark comparável no lançamento."
+          },
+          "ms": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "OpenAI"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-29"
+              ],
+              [
+                "Konteks",
+                "1,050,000 tokens"
+              ],
+              [
+                "Output maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Teks dan imej / teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Harga API (input / output)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Harga pelancaran standard: permintaan input ≤272K token, USD bagi 1M token. Had API daripada kad model semasa; dokumen ini tidak mengesahkan graf penanda aras pelancaran yang setanding."
+          },
+          "vi": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "OpenAI"
+              ],
+              [
+                "Phát hành",
+                "2026-09-29"
+              ],
+              [
+                "Ngữ cảnh",
+                "1,050,000 tokens"
+              ],
+              [
+                "Đầu ra tối đa",
+                "128,000 tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản và hình ảnh / văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Giá API (đầu vào / đầu ra)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Giá tiêu chuẩn khi ra mắt: yêu cầu đầu vào ≤272K token, USD trên 1M token. Giới hạn API từ thẻ mô hình hiện tại; tài liệu API này chưa xác lập biểu đồ chuẩn ra mắt có thể so sánh."
+          },
+          "id": {
+            "title": "GPT-6.1 Sol",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "OpenAI"
+              ],
+              [
+                "Rilis",
+                "2026-09-29"
+              ],
+              [
+                "Konteks",
+                "1,050,000 tokens"
+              ],
+              [
+                "Keluaran maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks dan gambar / teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Harga API (masukan / keluaran)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Harga standar peluncuran: permintaan masukan ≤272K token, USD per 1M token. Batas API dari kartu model saat ini; dokumen ini tidak menetapkan grafik tolok ukur peluncuran yang sebanding."
+          }
+        }
+      }
+    ]
   }
 ]

@@ -1,0 +1,457 @@
+{
+  "local": {
+    "pendingSentiment": 0
+  },
+  "prod": {
+    "pendingSentiment": 0
+  },
+  "productionRunId": 34,
+  "localRunId": 34,
+  "status": "ok",
+  "translations": {
+    "active_pins": 13820,
+    "total_translation_rows": 207300,
+    "orphaned_translation_rows": 2355,
+    "expected_translation_rows": 207300,
+    "current_rows": 207300,
+    "outdated_rows": 0,
+    "incomplete_rows": 0,
+    "missing_rows": 0,
+    "due_pins_count": 0,
+    "pins_with_content_tracking": 0,
+    "translations_with_content_tracking": 0,
+    "percent_current": 100.0
+  },
+  "events": [
+    {
+      "id": 4900,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:02:08.428Z",
+      "verified": true
+    },
+    {
+      "id": 4905,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:02:08.428Z",
+      "verified": true
+    },
+    {
+      "id": 5499,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:02:08.428Z",
+      "verified": true
+    },
+    {
+      "id": 5518,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:49:30.350Z",
+      "verified": true
+    },
+    {
+      "id": 5118,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:49:30.350Z",
+      "verified": true
+    },
+    {
+      "id": 4670,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:46:57.786Z",
+      "verified": true
+    },
+    {
+      "id": 4984,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:46:57.786Z",
+      "verified": true
+    },
+    {
+      "id": 3550,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:00:30.046Z",
+      "verified": true
+    },
+    {
+      "id": 5493,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:00:30.046Z",
+      "verified": true
+    },
+    {
+      "id": 5439,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:00:30.046Z",
+      "verified": true
+    },
+    {
+      "id": 3517,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:58:43.971Z",
+      "verified": true
+    },
+    {
+      "id": 3169,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:58:43.971Z",
+      "verified": true
+    },
+    {
+      "id": 4928,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:58:43.971Z",
+      "verified": true
+    },
+    {
+      "id": 17878,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:00.460Z",
+      "verified": true
+    },
+    {
+      "id": 17594,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:03.079Z",
+      "verified": true
+    },
+    {
+      "id": 17421,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:05.700Z",
+      "verified": true
+    },
+    {
+      "id": 17511,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:08.328Z",
+      "verified": true
+    },
+    {
+      "id": 2879,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:56:37.330Z",
+      "verified": true
+    },
+    {
+      "id": 5202,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:56:37.330Z",
+      "verified": true
+    },
+    {
+      "id": 3546,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:56:37.330Z",
+      "verified": true
+    },
+    {
+      "id": 17525,
+      "source": "hand",
+      "preservedFieldsReplayed": [
+        "ticketUrl",
+        "availability",
+        "onSaleDate",
+        "source"
+      ],
+      "checkedAt": "2026-10-30T01:08:30.099Z",
+      "verified": true
+    },
+    {
+      "id": 4883,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:22.111Z",
+      "verified": true
+    },
+    {
+      "id": 6077,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-21T15:36:48.785Z",
+      "verified": true
+    },
+    {
+      "id": 2544,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:45:31.916Z",
+      "verified": true
+    },
+    {
+      "id": 5108,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:55:05.484Z",
+      "verified": true
+    },
+    {
+      "id": 4868,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:55:05.484Z",
+      "verified": true
+    },
+    {
+      "id": 4890,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:53:53.455Z",
+      "verified": true
+    },
+    {
+      "id": 4891,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:53:53.455Z",
+      "verified": true
+    },
+    {
+      "id": 17732,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:11.383Z",
+      "verified": true
+    },
+    {
+      "id": 17837,
+      "source": "hand",
+      "preservedFieldsReplayed": [
+        "source"
+      ],
+      "checkedAt": "2026-10-30T01:08:33.059Z",
+      "verified": true
+    },
+    {
+      "id": 17514,
+      "source": "session",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-20T14:32:16.415Z",
+      "verified": true
+    },
+    {
+      "id": 4985,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:53:03.885Z",
+      "verified": true
+    },
+    {
+      "id": 4022,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:53:03.885Z",
+      "verified": true
+    },
+    {
+      "id": 6556,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:04:14.829Z",
+      "verified": true
+    },
+    {
+      "id": 4892,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:04:14.829Z",
+      "verified": true
+    },
+    {
+      "id": 4990,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T01:04:14.829Z",
+      "verified": true
+    },
+    {
+      "id": 6637,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:51:15.972Z",
+      "verified": true
+    },
+    {
+      "id": 4991,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:51:15.972Z",
+      "verified": true
+    },
+    {
+      "id": 2545,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:46:00.698Z",
+      "verified": true
+    },
+    {
+      "id": 4866,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "checkedAt": "2026-10-30T00:46:03.434Z",
+      "verified": true
+    }
+  ],
+  "models": [
+    {
+      "id": 4814,
+      "author": 438,
+      "tables": 1,
+      "charts": 1,
+      "media": [
+        {
+          "id": 10499,
+          "url": "https://chronopin.blob.core.windows.net/thumb/4ab0aeb3-102d-45d3-a5a0-03f1afdd1d98.jpeg",
+          "status": 200
+        },
+        {
+          "id": 10500,
+          "url": "https://chronopin.blob.core.windows.net/thumb/9dcae20c-4167-4977-a73e-589daf0480f4.jpeg",
+          "status": 200
+        },
+        {
+          "id": 10501,
+          "url": "https://chronopin.blob.core.windows.net/thumb/c19e1117-992b-4ea4-8a99-50072198c011.jpeg",
+          "status": 200
+        }
+      ],
+      "reviewKeys": {}
+    },
+    {
+      "id": 6424,
+      "author": 438,
+      "tables": 1,
+      "charts": 0,
+      "media": [
+        {
+          "id": 15515,
+          "url": "https://chronopin.blob.core.windows.net/thumb/1c6f5385-6c0b-4145-ab07-b50d9f596cb0.png",
+          "status": 200
+        }
+      ],
+      "reviewKeys": {}
+    },
+    {
+      "id": 15150,
+      "author": 438,
+      "tables": 1,
+      "charts": 1,
+      "media": [
+        {
+          "id": 21272,
+          "url": "https://chronopin.blob.core.windows.net/thumb/3d69a625-de77-4072-b0e7-616248665c21.jpeg",
+          "status": 200
+        },
+        {
+          "id": 21273,
+          "url": "https://chronopin.blob.core.windows.net/thumb/0c3f536f-eb47-4c28-a712-e7859a3deb44.jpeg",
+          "status": 200
+        },
+        {
+          "id": 21274,
+          "url": "https://chronopin.blob.core.windows.net/thumb/4dc570f3-348a-49b5-b9f1-17acda373446.jpeg",
+          "status": 200
+        },
+        {
+          "id": 21275,
+          "url": "https://chronopin.blob.core.windows.net/thumb/407d6eb4-9a8b-43df-93f9-8c5b32d23534.jpeg",
+          "status": 200
+        }
+      ],
+      "reviewKeys": {}
+    }
+  ],
+  "publicPages": [
+    {
+      "pinId": 20629,
+      "url": "https://www.chronopin.com/pin/20629/pin",
+      "status": 200,
+      "bytes": 288950
+    },
+    {
+      "pinId": 15150,
+      "url": "https://www.chronopin.com/pin/15150/pin",
+      "status": 200,
+      "bytes": 343086
+    },
+    {
+      "pinId": 4814,
+      "url": "https://www.chronopin.com/pin/4814/pin",
+      "status": 200,
+      "bytes": 446840
+    },
+    {
+      "pinId": 6424,
+      "url": "https://www.chronopin.com/pin/6424/pin",
+      "status": 200,
+      "bytes": 577831
+    },
+    {
+      "pinId": 634,
+      "url": "https://www.chronopin.com/pin/634/pin",
+      "status": 200,
+      "bytes": 276761
+    }
+  ],
+  "specificGapReadbacks": [
+    {
+      "local": true,
+      "pinId": 18091,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 17354,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 2626,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 634,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 18091,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 17354,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 2626,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 634,
+      "verified": true
+    }
+  ]
+}

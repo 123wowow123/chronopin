@@ -104,7 +104,7 @@ export default function PinMap({
         const features = layer.features.filter((f) => f.properties.kind === kind);
         if (!features.length) continue;
         L.geoJSON({ type: 'FeatureCollection', features: mapFeaturesNear(features, longitude) } as never, {
-          style: () => ({ color: layer.version === 'before' ? '#b45309' : style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: layer.version === 'before' ? 0 : style.fill, dashArray: layer.version === 'before' ? '7 4' : layer.version === 'after' ? undefined : style.dash }),
+          style: () => ({ color: layer.version === 'before' ? '#b45309' : style.color, weight: kind === 'site' || kind === 'wildfire' || kind === 'flood' || kind === 'district' ? 2 : kind === 'route' || kind === 'pipeline' || kind === 'powerline' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: layer.version === 'before' ? 0 : style.fill, dashArray: layer.version === 'before' ? '7 4' : layer.version === 'after' ? undefined : style.dash }),
           interactive: false,
         }).addTo(site);
       }
