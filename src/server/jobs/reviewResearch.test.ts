@@ -1,7 +1,7 @@
 import { afterEach, expect, it, vi } from 'vitest';
 import * as db from '../db';
 import { adminDbRequest, prodBase, reviewResearchRequest } from './pinApi';
-import { mergeResearchedReviews, saveResearchedReviews } from './reviewResearch';
+import { completionYear, mergeResearchedReviews, saveResearchedReviews } from './reviewResearch';
 
 vi.mock('../db', () => ({ query: vi.fn() }));
 vi.mock('./pinApi', () => ({ adminDbRequest: vi.fn(), prodBase: vi.fn(), reviewResearchRequest: vi.fn() }));
@@ -50,4 +50,10 @@ it('does not claim success if production fails read-back verification', async ()
     .mockResolvedValueOnce({}).mockResolvedValueOnce({ reviews: [review] })
     .mockResolvedValueOnce({}).mockResolvedValueOnce({ reviews: [] });
   await expect(saveResearchedReviews('PinCriticReview', 10, [review], 'Verified exact film')).rejects.toThrow(/verification/);
+});
+
+it('reads the stated completion year from the profile milestones', () => {
+  expect(completionYear([{ label: 'Groundbreaking', date: '2025-11-19' }, { label: 'Estimated completion (delivery)', date: 'Early 2028' }])).toBe(2028);
+  expect(completionYear([{ label: 'Groundbreaking', date: '2025-11-19' }])).toBeNull();
+  expect(completionYear(null)).toBeNull();
 });

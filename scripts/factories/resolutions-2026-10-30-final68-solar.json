@@ -1,0 +1,114 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 18423,
+      "patch": {
+        "title": "Deep Lake Solar: 150 MW Siting Application in Nicholas and Clay Counties",
+        "description": "West Virginia’s regulator records Deep Lake Energy Center’s application for a 150 MW solar generating facility on approximately 1,521 acres in Nicholas and Clay counties.",
+        "longFormSummary": "<ul><li>The regulator’s June 2024 order establishes the application and land scope. It does not establish construction commencement, commercial operation or the former USD 386 million budget.<cite data-ref=\"https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Cleanview",
+          "Craigsville",
+          "NicholasCounty",
+          "PJM",
+          "Savion",
+          "Shell",
+          "Solar",
+          "WestVirginia",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2024-03-25. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-03-25T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Nicholas and Clay counties, West Virginia, United States",
+        "parentId": 18351
+      },
+      "addReferences": [
+        {
+          "url": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 150,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+        "note": "Applied-for solar generating capacity, not verified operating output."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Deep Lake Solar Project: 150 MW Clean Energy on Reclaimed Coal Mine in Nicholas County, West Virginia",
+        "oldPrice": 386000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18394,
+      "patch": {
+        "title": "Tallgrass Solar, Ellis County: 175 MW Proposed Interconnection Capacity",
+        "description": "Ellis County’s Tallgrass Solar application specifies 175 MWac at the point of interconnection and a proposed investment of approximately USD 275 million or more.",
+        "longFormSummary": "<ul><li>The permitting layout is marked for development and not for construction or bidding. The county documents identify Tallgrass Development LLC and ibV Energy Partners; they do not prove a completed plant or establish an exact opening day.<cite data-ref=\"https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01062026-720\"></cite></li></ul>",
+        "price": 275000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Cleanview",
+          "EllisCounty",
+          "Hays",
+          "ibVEnergy",
+          "Kansas",
+          "Solar",
+          "SPP",
+          "Tallgrass",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-01-13. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-01-13T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Southwest of Hays, Ellis County, Kansas, United States",
+        "latitude": 38.820351,
+        "longitude": -99.447543
+      },
+      "addReferences": [
+        {
+          "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01062026-720",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01132026-721",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 175,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01062026-720",
+        "note": "Proposed AC power at point of interconnection, not 198 MWac inverter rating or 210.50 MWdc array rating."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Ellis Solar Project: 175 MW Solar Facility in Ellis County, Kansas",
+        "oldPrice": 275000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    }
+  ]
+}

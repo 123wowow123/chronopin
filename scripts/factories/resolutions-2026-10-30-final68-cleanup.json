@@ -1,0 +1,870 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 5834,
+      "patch": {
+        "tags": [
+          "AbbVie",
+          "Apogee",
+          "Biotech",
+          "Closing",
+          "Deal",
+          "Immunology",
+          "Zumilokibart"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-reviewed",
+      "research": {
+        "oldTitle": "AbbVie Completes US$10.9 Billion Acquisition of Apogee",
+        "oldPrice": 10900000000,
+        "reason": "AbbVie acquisition of Apogee; acquisition consideration, not a physical construction phase."
+      }
+    },
+    {
+      "id": 5957,
+      "patch": {
+        "tags": [
+          "Acquisition",
+          "Calpine",
+          "Constellation",
+          "Geothermal",
+          "Megadeal",
+          "Nuclear",
+          "Powerplant"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-reviewed",
+      "research": {
+        "oldTitle": "Constellation Completes Its Calpine Acquisition, Creating a 55 GW Power Producer",
+        "oldPrice": 26600000000,
+        "reason": "Constellation acquisition of Calpine; transaction and portfolio capacity, not one plant build."
+      }
+    },
+    {
+      "id": 5890,
+      "patch": {
+        "tags": [
+          "Aluminum",
+          "Apollo",
+          "Budweiser",
+          "Buyback",
+          "Cans",
+          "Manufacturing",
+          "Packaging",
+          "Stake"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-reviewed",
+      "research": {
+        "oldTitle": "AB InBev Moves to Buy Back Its US Can Plants From Apollo for About US$3 Billion",
+        "oldPrice": 3000000000,
+        "reason": "Repurchase of can plants from Apollo; ownership transfer, not plant construction."
+      }
+    },
+    {
+      "id": 18250,
+      "patch": {
+        "tags": [
+          "Desalination",
+          "Egypt",
+          "Elsewedy",
+          "Matrouh",
+          "O&M",
+          "Private Sector",
+          "Sinai",
+          "Water"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-reviewed",
+      "research": {
+        "oldTitle": "Egypt Signs EGP 4.6bn Deals to Run 11 Seawater Desalination Plants",
+        "oldPrice": 4600000000,
+        "reason": "Operating and maintenance contracts for 11 existing desalination plants, not construction capex."
+      }
+    },
+    {
+      "id": 18259,
+      "patch": {
+        "tags": [
+          "Big Load",
+          "Bitcoin",
+          "Bitdeer",
+          "Crypto Mining",
+          "ERCOT",
+          "Milam County",
+          "Operating",
+          "Texas"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-reviewed",
+      "research": {
+        "oldTitle": "Bitdeer Rockdale Bitcoin Mining Campus: 563 MW Interconnected, 742 MW Planned, 200 More Acres Bought for 100M USD in Milam County, Texas",
+        "oldPrice": 100000000,
+        "reason": "Rockdale land purchase: USD100M is acquisition consideration, not the 742MW expansion construction budget."
+      }
+    },
+    {
+      "id": 20121,
+      "patch": {
+        "tags": [
+          "Funding",
+          "Job Creation",
+          "Manufacturing"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-reviewed",
+      "research": {
+        "oldTitle": "Re:Build Announces $2.1 Billion to Expand US Manufacturing",
+        "oldPrice": 2100000000,
+        "reason": "Re:Build company funding across its manufacturing platform, without independently dated named plant projects."
+      }
+    },
+    {
+      "id": 17091,
+      "patch": {
+        "title": "Aurora Energy Storage Center: Project Details Unconfirmed",
+        "description": "Aurora Energy Storage Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Aurora Energy Storage Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "Aurora Storage",
+          "Battery Storage",
+          "Calpine",
+          "Cleanview",
+          "ComEd",
+          "Illinois",
+          "Lake County",
+          "PJM"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Aurora Energy Storage Center: 1.2B USD, 1,206 MW BESS in Lake County, Illinois",
+        "oldPrice": 1200000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      },
+      "power": null
+    },
+    {
+      "id": 17324,
+      "patch": {
+        "title": "Newberry Clean Energy Storage Complex: Project Details Unconfirmed",
+        "description": "Newberry Clean Energy Storage Complex remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Newberry Clean Energy Storage Complex remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "AlachuaCounty",
+          "BESS",
+          "CleanEnergy",
+          "DukeEnergy",
+          "EnergyStorage",
+          "Florida",
+          "GridResilience"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Newberry Clean Energy Storage Complex: 210M USD, 200 MW BESS in Alachua County, Florida",
+        "oldPrice": 210000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      },
+      "power": null
+    },
+    {
+      "id": 17325,
+      "patch": {
+        "title": "Sardis to Clarksdale Clean Energy Storage Center: Project Details Unconfirmed",
+        "description": "Sardis to Clarksdale Clean Energy Storage Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Sardis to Clarksdale Clean Energy Storage Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "BESS",
+          "CleanEnergy",
+          "EnergyStorage",
+          "Entergy",
+          "MISO",
+          "Mississippi",
+          "PanolaCounty"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Sardis to Clarksdale Clean Energy Storage Center: 210M USD, 200 MW BESS in Panola County, Mississippi",
+        "oldPrice": 210000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      },
+      "power": null
+    },
+    {
+      "id": 17326,
+      "patch": {
+        "title": "Snow Hill Clean Energy Storage Facility: Project Details Unconfirmed",
+        "description": "Snow Hill Clean Energy Storage Facility remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Snow Hill Clean Energy Storage Facility remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "BESS",
+          "CleanEnergy",
+          "DukeEnergy",
+          "EnergyStorage",
+          "GreeneCounty",
+          "NorthCarolina",
+          "SolarIntegration"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Snow Hill Clean Energy Storage Facility: 210M USD, 200 MW BESS in Greene County, North Carolina",
+        "oldPrice": 210000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      },
+      "power": null
+    },
+    {
+      "id": 17344,
+      "patch": {
+        "title": "Killdeer Clean Solar Facility: Project Details Unconfirmed",
+        "description": "Killdeer Clean Solar Facility remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Killdeer Clean Solar Facility remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "CerroGordoCounty",
+          "CleanEnergy",
+          "Iowa",
+          "MISO",
+          "RenewableEnergy",
+          "Solar",
+          "SolarPower"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Killdeer Clean Solar Facility: 230M USD, 210 MWac Solar Plant in Cerro Gordo County, Iowa",
+        "oldPrice": 230000000,
+        "reason": "MISO J2553 and J2811 are competing county/capacity matches. Neither establishes the claimed Killdeer / Alliant identity; no arbitrary applicant was selected."
+      },
+      "power": null
+    },
+    {
+      "id": 17350,
+      "patch": {
+        "title": "Byron Clean Energy Storage Center: Project Details Unconfirmed",
+        "description": "Byron Clean Energy Storage Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Byron Clean Energy Storage Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "161kV",
+          "BESS",
+          "EnergyStorage",
+          "Minnesota",
+          "MISO",
+          "OlmstedCounty",
+          "WindIntegration"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Byron Clean Energy Storage Center: 210M USD, 200 MW BESS in Olmsted County, Minnesota",
+        "oldPrice": 210000000,
+        "reason": "MISO J1898 and J2840 are competing Olmsted storage matches. No unique link to the claimed Byron / Xcel identity is established."
+      },
+      "power": null
+    },
+    {
+      "id": 18096,
+      "patch": {
+        "title": "Monte Cristo Solar 2 Energy Project: Project Details Unconfirmed",
+        "description": "Monte Cristo Solar 2 Energy Project remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Monte Cristo Solar 2 Energy Project remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "525kV",
+          "BLM",
+          "EsmeraldaCounty",
+          "GreenlinkWest",
+          "Nevada",
+          "NVEnergy",
+          "Solar"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Monte Cristo Solar 2 Energy Project: 680M USD, 523 MW Solar Farm in Esmeralda County, Nevada",
+        "oldPrice": 680000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      },
+      "power": null
+    },
+    {
+      "id": 18097,
+      "patch": {
+        "title": "Yellow Pine Solar III Energy Center: Project Details Unconfirmed",
+        "description": "Yellow Pine Solar III Energy Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>Yellow Pine Solar III Energy Center remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "230kV",
+          "CAISO",
+          "ClarkCounty",
+          "GridLiance",
+          "Nevada",
+          "NextEraEnergy",
+          "Solar"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Yellow Pine Solar III Energy Center: 135M USD, 100 MW Solar Farm in Clark County, Nevada",
+        "oldPrice": 135000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      },
+      "power": null
+    },
+    {
+      "id": 18179,
+      "patch": {
+        "title": "South Heart Clean Energy Storage Facility: Project Details Unconfirmed",
+        "description": "South Heart Clean Energy Storage Facility remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.",
+        "longFormSummary": "<p>South Heart Clean Energy Storage Facility remains an unconfirmed project identity. Its previously reported developer, capacity, investment, construction stage and operating schedule are not substantiated by the cited project material.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "EnergyStorage",
+          "NextEraEnergy",
+          "NorthDakota",
+          "SPP",
+          "StarkCounty"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "South Heart Clean Energy Storage Facility: 170M USD, 150 MW BESS in Stark County, North Dakota",
+        "oldPrice": 170000000,
+        "reason": "SPP SR6 and SR7 are competing Stark County storage matches. No unique operator mapping or project budget is established."
+      },
+      "power": null
+    },
+    {
+      "id": 6426,
+      "patch": {
+        "title": "Unconfirmed Report of a SpaceX Louisiana Launch Complex",
+        "description": "The reported SpaceX Louisiana launch complex has not been corroborated by a matching SpaceX, state-government or regulatory project announcement. The claimed investment, site size, launch pads, jobs and schedule remain unconfirmed.",
+        "longFormSummary": "<p>The reported SpaceX Louisiana launch complex has not been corroborated by a matching SpaceX, state-government or regulatory project announcement. The claimed investment, site size, launch pads, jobs and schedule remain unconfirmed.</p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "Starbase Louisiana",
+          "Starship"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "sourceUrl": null
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "SpaceX Unveils $100 Billion Starbase Louisiana Launch Site",
+        "oldPrice": 100000000000,
+        "reason": "Opened cited media URLs did not substantiate the claimed August 25 announcement; a primary SpaceX/Louisiana/FAA project record is required."
+      },
+      "power": null
+    },
+    {
+      "id": 16313,
+      "patch": {
+        "title": "Augusta Township Voters Reject Data-Center Rezoning",
+        "description": "Augusta Township voters rejected the data-center rezoning in the August 4, 2026 primary. This is a zoning referendum, not a completed construction project.",
+        "longFormSummary": "<p>Augusta Township voters rejected the data-center rezoning in the August 4, 2026 primary. This is a zoning referendum, not a completed construction project.<cite data-ref=\"https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp\"></cite></p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Denied",
+          "Michigan",
+          "Referendum",
+          "Thor Equities"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-08-04T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "non-construction-decision-repaired",
+      "research": {
+        "oldTitle": "Augusta Township Data Center Rezoning Rejected by Voters on August 4, 2026",
+        "oldPrice": 1000000000,
+        "reason": "A zoning rejection does not establish voluntary withdrawal; no Withdrawn tag assigned."
+      },
+      "power": null
+    },
+    {
+      "id": 3244,
+      "patch": {
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "CEQA",
+          "Kroenke",
+          "Midway Rising",
+          "Pechanga Arena",
+          "San Diego",
+          "SB 344",
+          "Todd Gloria"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "non-construction-deadline-reviewed",
+      "research": {
+        "oldTitle": "Deadline for a Midway Rising Deal on the Sports Arena Site",
+        "oldPrice": 4200000000,
+        "reason": "Negotiation deadline for the multi-component Midway Rising programme; no event-specific construction budget or physical milestone."
+      }
+    },
+    {
+      "id": 18986,
+      "patch": {
+        "title": "Hollenback Data-Center Rezoning Request Heads to Court",
+        "description": "A Hollenback Township rezoning request to allow data centers was deemed denied at a public hearing and headed to Luzerne County Court of Common Pleas, according to a March 2, 2026 report.",
+        "longFormSummary": "<p>A Hollenback Township rezoning request to allow data centers was deemed denied at a public hearing and headed to Luzerne County Court of Common Pleas, according to a March 2, 2026 report.<cite data-ref=\"https://www.standardspeaker.com/2026/03/02/hollenback-twp-data-center-rezoning-request-heads-to-court/\"></cite></p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-03-02T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.standardspeaker.com/2026/03/02/hollenback-twp-data-center-rezoning-request-heads-to-court/",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "identity-collision-repaired",
+      "research": {
+        "oldTitle": "Hollenback Township Data Center Development Zoning Application: 960 MW 460-Acre Data Center Campus in Luzerne County",
+        "oldPrice": 650000000,
+        "reason": "Removed unrelated Iron City/Karthaus gas-generation text and unsubstantiated 960MW/460acre/USD650M campus claims. This is the Hollenback rezoning case."
+      },
+      "power": null
+    },
+    {
+      "id": 19008,
+      "patch": {
+        "title": "Olyphant Triboro Plans: DeNaples Proposal Withdrawn, ERCOR Proposal Separate",
+        "description": "A June 10, 2026 report says Triboro Commerce Park withdrew its seven-building plan. A separate ERCOR Triboro proposal sought nine data centers on a 500-acre property.",
+        "longFormSummary": "<p>Olyphant’s engineer confirmed withdrawal of Triboro Commerce Park’s seven-building plan. ERCOR Triboro, a Sansone Group company, separately proposed nine data centers, occupying about 100 acres of its 500-acre property. The zoning settlement did not approve a campus.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-06-10T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "programme-split-parent-repaired",
+      "research": {
+        "oldTitle": "Project Triboro: 1,500 MW 900-Acre Data Center Campus in Lackawanna County",
+        "oldPrice": 14250000000,
+        "reason": "Only DeNaples plans withdrawn; ERCOR remains a separate proposal. Create distinct profiles and do not assign Withdrawn to the combined parent."
+      },
+      "power": null
+    },
+    {
+      "id": 18964,
+      "patch": {
+        "title": "Project Gold: Proposed Data Centers in Clifton and Covington Townships",
+        "description": "Project Gold is a proposed data-center development associated with 1778 Rich Pike / NE Edge in Clifton and Covington townships, Lackawanna County, Pennsylvania. Project-specific capacity, acreage and construction cost require filing-level confirmation.",
+        "longFormSummary": "<p>Project Gold is a proposed data-center development associated with 1778 Rich Pike / NE Edge in Clifton and Covington townships, Lackawanna County, Pennsylvania. Project-specific capacity, acreage and construction cost require filing-level confirmation.<cite data-ref=\"https://trackdatacenters.com/usa/pennsylvania#project-gold\"></cite></p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Hyperscale",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Proposed"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "No verified project-specific construction or operation day is established.",
+        "delayReasoning": null,
+        "address": "Clifton and Covington townships, Lackawanna County, Pennsylvania, United States",
+        "latitude": 41.24,
+        "longitude": -75.58,
+        "sourceUrl": null
+      },
+      "addReferences": [
+        {
+          "url": "https://trackdatacenters.com/usa/pennsylvania#project-gold",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "location-and-scope-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Project Gold: 1,500 MW Hyperscale Data Center Campus on 1,260 Acres in Luzerne County, PA",
+        "oldPrice": 6000000000,
+        "reason": "Corrected Luzerne County collision; conflicting tracker power/land figures withheld pending developer/township filing."
+      },
+      "power": null
+    },
+    {
+      "id": 19026,
+      "patch": {
+        "title": "Stonebridge Powder Mills: 16-Building Campus Proposal in Lawrence County",
+        "description": "Stonebridge Associates proposed a 16-building campus on the 569-acre Powder Mills site across North Beaver and Mahoning townships. A July 2026 report attributed an investment of more than USD 15 billion to the developer.",
+        "longFormSummary": "<p>Stonebridge Associates proposed a 16-building campus on the 569-acre Powder Mills site across North Beaver and Mahoning townships. A July 2026 report attributed an investment of more than USD 15 billion to the developer.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/data-center-campus-proposed-at-former-dynamite-factory-site-in-lawrence-county-pennsylvania/\"></cite></p><p>The reported proposal does not establish IT-load capacity, construction commencement or final municipal approval. The current approval and appeal position requires a dated municipal or court decision.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/data-center-campus-proposed-at-former-dynamite-factory-site-in-lawrence-county-pennsylvania/\"></cite></p>",
+        "price": 15000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-07-15T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/data-center-campus-proposed-at-former-dynamite-factory-site-in-lawrence-county-pennsylvania/"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/data-center-campus-proposed-at-former-dynamite-factory-site-in-lawrence-county-pennsylvania/",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "source-identity-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Stonebridge Lawrence Data Center: 569-Acre Data Center Campus in Lawrence County",
+        "oldPrice": 15000000000,
+        "reason": "Replaced unrelated Stonebridge Infrastructure homepage; preserve reported developer budget while reopening current approval evidence."
+      },
+      "power": null
+    },
+    {
+      "id": 18351,
+      "patch": {
+        "title": "Nicholas County and Deep Lake: Coal-to-Solar Demonstration Plan",
+        "description": "DOE’s April 2024 briefing outlined a 250 MWac coal-to-solar demonstration across Nicholas County and Deep Lake sites, with a USD 557 million total project budget and up to USD 129 million federal cost share.",
+        "longFormSummary": "<p>DOE’s April 2024 briefing outlined a 250 MWac coal-to-solar demonstration across Nicholas County and Deep Lake sites, with a USD 557 million total project budget and up to USD 129 million federal cost share.<cite data-ref=\"https://www.energy.gov/sites/default/files/2024-05/CEML%20Community%20Briefing%20Deck%20-%20WV%20Nicholas%20County.pdf\"></cite></p><p>The presentation separates solar from a future 75 MWac battery project. Its Q4 2026–Q3 2028 construction window was a plan, not proof that construction began. Individual site budgets are not allocated here.<cite data-ref=\"https://www.energy.gov/sites/default/files/2024-05/CEML%20Community%20Briefing%20Deck%20-%20WV%20Nicholas%20County.pdf\"></cite></p>",
+        "price": 557000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "Cleanview",
+          "NicholasCounty",
+          "PJM",
+          "Savion",
+          "Shell",
+          "Solar",
+          "USDOE",
+          "WestVirginia",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-04-30T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "sourceUrl": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.energy.gov/sites/default/files/2024-05/CEML%20Community%20Briefing%20Deck%20-%20WV%20Nicholas%20County.pdf",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "programme-scope-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Nicholas County Solar Project: 250 MW Solar & Storage on Reclaimed Mine Land in West Virginia",
+        "oldPrice": 129000000,
+        "reason": "USD129M federal share is not total capex; own-site capacity/current funding/physical stage require follow-up. Deep Lake separately supported by PSC24-0311."
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.energy.gov/sites/default/files/2024-05/CEML%20Community%20Briefing%20Deck%20-%20WV%20Nicholas%20County.pdf",
+        "note": "Aggregate solar target of two-site historical demonstration plan; separate future battery rating is excluded."
+      }
+    },
+    {
+      "id": 14072,
+      "patch": {
+        "title": "Lower Yarlung Zangbo Five-Station Hydropower Programme Begins Construction",
+        "description": "China announced construction of the lower Yarlung Zangbo hydropower programme on July 19, 2025. The official report describes five cascade stations and an estimated CNY 1.2 trillion total investment.",
+        "longFormSummary": "<p>China announced construction of the lower Yarlung Zangbo hydropower programme on July 19, 2025. The official report describes five cascade stations and an estimated CNY 1.2 trillion total investment.<cite data-ref=\"https://english.www.gov.cn/news/202507/19/content_WS687b6a8ac6d0868f4e8f4486.html\"></cite></p><p>The groundbreaking took place at Mainling. The source does not publish individual station capacity, cost allocations or separate operation dates.<cite data-ref=\"https://english.www.gov.cn/news/202507/19/content_WS687b6a8ac6d0868f4e8f4486.html\"></cite></p>",
+        "price": 1200000000000,
+        "priceCurrency": "CNY",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "China",
+          "Electric Generation Projects",
+          "Hydropower",
+          "Operator researched",
+          "Published project costs",
+          "Under construction",
+          "In Progress"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2025-07-19T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "sourceUrl": null
+      },
+      "addReferences": [
+        {
+          "url": "https://english.www.gov.cn/news/202507/19/content_WS687b6a8ac6d0868f4e8f4486.html",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "programme-reviewed-component-evidence-gap",
+      "research": {
+        "oldTitle": "Lower Yarlung Zangbo five-station hydropower complex — under construction",
+        "oldPrice": 1200000000000,
+        "reason": "Programme has five stations; only Mainling is named in opened primary source. No invented plant allocations or 60GW primary claim."
+      },
+      "power": null
+    },
+    {
+      "id": 15796,
+      "patch": {
+        "title": "Amazon Pecos County: Three Filed Data-Center Buildings Total USD 900 Million",
+        "description": "Amazon Data Services filed three Pecos County data-center buildings at 6000 TX-18, each estimated at USD 300 million and 189,060 square feet. The filings list planned work from August 1 to December 1, 2026.",
+        "longFormSummary": "<p>Amazon Data Services filed three Pecos County data-center buildings at 6000 TX-18, each estimated at USD 300 million and 189,060 square feet. The filings list planned work from August 1 to December 1, 2026.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></p><p>TDLR’s “Review Complete” refers to accessibility review, not completed construction. The filings do not establish an IT-load rating or prove their scheduled construction dates were achieved.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></p>",
+        "price": 900000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "Amazon",
+          "AWS",
+          "Cleanview",
+          "Data Centers",
+          "Developers",
+          "Fort Stockton",
+          "Natural Gas",
+          "Pacifico Energy",
+          "Pecos County",
+          "Planned",
+          "Texas",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-08-04T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "sourceUrl": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "programme-split-parent-repaired",
+      "research": {
+        "oldTitle": "Amazon GW Ranch Campus: 4,000-7,650 MW Gas-Powered Data Center Campus Near Fort Stockton, Texas, 900M USD Filed for First Three Buildings",
+        "oldPrice": 900000000,
+        "reason": "Three separate filed building budgets and timelines; generation-plant permit is not campus IT capacity."
+      },
+      "power": null
+    },
+    {
+      "id": 14053,
+      "patch": {
+        "title": "Al Shuaibah 1 and 2: Two Operating Solar Plants",
+        "description": "Al Shuaibah 1 and 2 are separate solar plants in Makkah Province. ACWA’s 2025 prospectus reports full-project commercial certification for plant 1 in November 2024 and 2,060 MW full operation for plant 2 in February 2025.",
+        "longFormSummary": "<p>Al Shuaibah 1 and 2 are separate solar plants in Makkah Province. ACWA’s 2025 prospectus reports full-project commercial certification for plant 1 in November 2024 and 2,060 MW full operation for plant 2 in February 2025.<cite data-ref=\"https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf\"></cite></p><p>The prospectus states SAR 8.3 billion combined investment. No plant-specific share is assigned from that combined budget.<cite data-ref=\"https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf\"></cite></p>",
+        "price": 8300000000,
+        "priceCurrency": "SAR",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "Electric Generation Projects",
+          "Operational",
+          "Operator researched",
+          "Published project costs",
+          "Saudi Arabia",
+          "Solar",
+          "Completed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The prospectus states February 2025 for plant 2 full operation. February 1 is a month anchor, not an exact commissioning day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2025-02-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "sourceUrl": null,
+        "address": "Al Shuaibah, Makkah Province, Saudi Arabia"
+      },
+      "addReferences": [
+        {
+          "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "programme-split-parent-repaired",
+      "research": {
+        "oldTitle": "Al Shuaibah 1 and 2 solar complex — operational",
+        "oldPrice": 2370000000,
+        "reason": "Replaced erroneous Qassim address and inconsistent plant CODs; budget retained at published combined scope in source currency."
+      },
+      "power": {
+        "megawatts": 2660,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+        "note": "Combined 600 MW and 2,060 MW operating solar capacity. Separate plant profiles must not duplicate the combined budget."
+      }
+    }
+  ],
+  "note": "Final desired state. Programme parent repairs precede created-2026-10-30-final68.json. Triboro and finishing files repeat final corrective writes from the recorded session."
+}

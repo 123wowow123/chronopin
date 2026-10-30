@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { useT } from '@/lib/client/i18n';
 import Anchor from '@/components/ui/Anchor';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import type { PinReview } from '@/lib/pinReviews';
 import { PinReviewSentiment, type ReviewSentimentPoint } from './PinReviewSentiment';
 import { hostOf } from './reviewHost';
 
-// Reviews shown at first, and added each time the list is scrolled to its end.
+// Reviews shown at first, and added each time "Show more" is pressed.
 const PAGE = 5;
 
 // The independent reviews under a radar (PinTaste.reviews, PinCarPerf.reviews):
@@ -16,16 +17,15 @@ const PAGE = 5;
 // when there are none. Under them, attached to the same card, the "Sentiment
 // over time" graph of the reviews that are dated and scored: clicking a dot
 // selects its review, loading more of the list if it is not shown yet and
-// scrolling it into view. A long list scrolls inside its own box and loads
-// more as the end comes near.
+// scrolling it into view. A long list shows five and a "Show more" button adds
+// five at a time.
 // `bare` drops the rule and gap above it, for a list that stands in a card of its own.
 export function ReviewList({ reviews, heading, locale, bare = false }: { reviews: PinReview[]; heading: string; locale: string; bare?: boolean }) {
   const dates = new Intl.DateTimeFormat(INTL_LOCALES[locale as Locale] ?? 'en', { dateStyle: 'medium', timeZone: 'UTC' });
   const [shown, setShown] = useState(PAGE);
   const [selected, setSelected] = useState<string | null>(null);
+  const t = useT();
   const boxRef = useRef<HTMLUListElement>(null);
-  const endRef = useRef<HTMLLIElement>(null);
-  const scrolls = reviews.length > PAGE;
 
   const points = useMemo<ReviewSentimentPoint[]>(
     () =>
@@ -34,15 +34,6 @@ export function ReviewList({ reviews, heading, locale, bare = false }: { reviews
       ),
     [reviews],
   );
-
-  // More of the list as its end scrolls into view.
-  useEffect(() => {
-    const end = endRef.current;
-    if (!end || !boxRef.current) return;
-    const observer = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && setShown((n) => n + PAGE), { root: boxRef.current, rootMargin: '40px' });
-    observer.observe(end);
-    return () => observer.disconnect();
-  }, [shown, reviews.length]);
 
   // The selected review in view, once it is on the page.
   useEffect(() => {
@@ -64,7 +55,7 @@ export function ReviewList({ reviews, heading, locale, bare = false }: { reviews
   return (
     <div className={bare ? '' : 'mt-2 border-t border-line pt-2'}>
       <h3 className="mb-1 text-xs font-semibold text-muted">{heading}</h3>
-      <ul ref={boxRef} className={`grid gap-1.5 text-xs ${scrolls ? 'max-h-80 overflow-y-auto overscroll-contain pe-1' : ''}`}>
+      <ul ref={boxRef} className="grid gap-1.5 text-xs">
         {visible.map((review) => (
           <li
             key={review.url}
@@ -83,8 +74,12 @@ export function ReviewList({ reviews, heading, locale, bare = false }: { reviews
             {review.quote ? <q className="mt-0.5 block text-muted">{review.quote}</q> : null}
           </li>
         ))}
-        {scrolls && shown < reviews.length ? <li ref={endRef} aria-hidden className="h-px" /> : null}
       </ul>
+      {shown < reviews.length ? (
+        <button type="button" onClick={() => setShown((n) => n + PAGE)} className="mt-1.5 text-xs font-medium text-accent hover:underline">
+          {t('common.showMore')}
+        </button>
+      ) : null}
       {points.length ? <PinReviewSentiment points={points} selected={selected} onSelect={select} embedded className="mt-2 border-t border-line pt-2" /> : null}
     </div>
   );

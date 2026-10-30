@@ -1,0 +1,264 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 18967,
+      "patch": {
+        "title": "Wildcat Ridge, Archbald: Conditional-Use Application Denied October 21, 2026",
+        "description": "Archbald Borough Council denied Cornell Realty Management’s Wildcat Ridge conditional-use application on October 21, 2026.",
+        "longFormSummary": "<ul><li>The decision concerns an unbuilt campus off Wildcat Road in Archbald, Lackawanna County. It allows an appeal within 30 days. Denial does not establish voluntary withdrawal.<cite data-ref=\"https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Diesel Generators",
+          "Pennsylvania",
+          "PJM Interconnection"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-10-21. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-10-21T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Wildcat Road, Archbald Borough, Lackawanna County, Pennsylvania, United States",
+        "latitude": 41.503,
+        "longitude": -75.584
+      },
+      "addReferences": [
+        {
+          "url": "https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Wildcat Ridge AI Data Center: 1,600 MW Campus with 588 Backup Generators in Lancaster County, PA",
+        "oldPrice": 6500000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 132,
+      "patch": {
+        "title": "Dubai Dynamic Tower: Historical Rotating Skyscraper Proposal",
+        "description": "The Dynamic Tower concept proposed an 80-story, 420-metre rotating skyscraper in Dubai. Its historical 2020 target does not establish completion.",
+        "longFormSummary": "<ul><li>The published concept described independently rotating floors. A valid whole-project construction budget and current physical construction stage are not established by this historical report.<cite data-ref=\"https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2016-02-03. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2016-02-03T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Dubai to Add the World's First Rotating Skyscraper to Its Skyline by 2020",
+        "oldPrice": 30000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 503,
+      "patch": {
+        "title": "Ryugyong Hotel Exterior Completed in 2011; Hotel Opening Not Established",
+        "description": "Pyongyang’s Ryugyong Hotel exterior was completed in 2011. This milestone describes the exterior rather than completion or opening of the hotel.",
+        "longFormSummary": "<ul><li>Koryo Tours distinguishes completed exterior work from an unfinished interior. Business Today reported Orascom’s exterior investment; it is not a whole-hotel construction cost.<cite data-ref=\"https://businesstoday.in/magazine/travel/story/north-korea-tallest-hotel-ryugyong-hotel-35427-2012-11-28\"></cite></li></ul>",
+        "price": 180000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Completed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2011. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2011-12-31T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://businesstoday.in/magazine/travel/story/north-korea-tallest-hotel-ryugyong-hotel-35427-2012-11-28",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://koryogroup.com/blog/the-rocky-history-of-the-ryugyong-hotel",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Ryugyong Hotel's Exterior Finally Completed After 24 Years",
+        "oldPrice": 180000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 15863,
+      "patch": {
+        "title": "Janesville Ends Viridian GM/JATCO Site Negotiations After LOI Expires",
+        "description": "Janesville allowed Viridian’s letter of intent to expire on June 22, 2026. The city subsequently said there were no active proposals or negotiations for the GM/JATCO sites.",
+        "longFormSummary": "<ul><li>The lapsed negotiation concerns Viridian’s specific concept and the proposed property sale. It does not determine every future redevelopment option for the former GM/JATCO property.<cite data-ref=\"https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "General Motors",
+          "Janesville",
+          "MISO",
+          "Rock County",
+          "Viridian Acquisitions",
+          "Wisconsin"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-06-22. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-06-22T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Viridian Janesville GM Plant Data Center: 800 MW Hyperscale Campus on 240-250 Acres in Janesville, Wisconsin, Over 8B USD Proposed, Letter of Intent Lapsed in June 2026",
+        "oldPrice": 8000000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 16350,
+      "patch": {
+        "title": "West Gardner Solar: Historical Proposal for Up to 320 MW and 128 MW Storage",
+        "description": "NextEra’s West Gardner proposal was reported in June 2022 as up to 320 MW of solar generation with a separate 128 MW storage facility.",
+        "longFormSummary": "<ul><li>The reported investment covered 35 years. The historical schedule is not evidence that construction subsequently began or the plant opened.<cite data-ref=\"https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Battery",
+          "Cleanview",
+          "Evergy",
+          "Johnson County",
+          "Kansas",
+          "NextEra Energy Resources",
+          "Planned",
+          "Solar",
+          "SPP",
+          "Storage",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2022-06-07. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2022-06-07T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 320,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+        "note": "Historical proposed solar capacity; separate 128 MW battery rating must not be added to generation."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "NextEra West Gardner: Up to 217 MW Solar, 128 MW Storage; $320M Investment",
+        "oldPrice": 320000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18254,
+      "patch": {
+        "title": "Century Aluminum Mt. Holly Celebrates USD 50 Million Production Restart",
+        "description": "Century celebrated restored full production at Mt. Holly on July 27, 2026, following an approximately USD 50 million restart of idle capacity.",
+        "longFormSummary": "<ul><li>The restart adds aluminum production capacity. Santee Cooper’s power-service agreement runs through 2031; its contract rating is not a verified measure of the smelter’s actual load.<cite data-ref=\"https://newsroom.santeecooper.com/news/Santee-Cooper-Century-Sign-Agreement-to-Power-Additional-Potline-Create-Jobs-in-Mt.-Holly/\"></cite></li></ul>",
+        "price": 50000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Aluminum",
+          "Big Load",
+          "Century Aluminum",
+          "Operating",
+          "Restart",
+          "Santee Cooper",
+          "Smelter",
+          "South Carolina",
+          "Completed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-07-27. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-07-27T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://scdailygazette.com/2026/07/27/sc-aluminum-smelter-back-to-full-production-after-a-decade-of-lower-capacity/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://newsroom.santeecooper.com/news/Santee-Cooper-Century-Sign-Agreement-to-Power-Additional-Potline-Create-Jobs-in-Mt.-Holly/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Century Aluminum Mt. Holly Smelter Back at Full Production: 295 MW Santee Cooper Contract Plus More Power to 2031, 50,000 t Restart, South Carolina",
+        "oldPrice": 50000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    }
+  ]
+}

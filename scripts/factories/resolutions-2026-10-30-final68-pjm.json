@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 18075,
+      "patch": {
+        "title": "Hudson Energy Storage Facility: 200 MW PJM Storage Request AF1-245",
+        "description": "PJM’s 2024-04-12 study identifies request AF1-245 as a proposed 200 MW battery-storage facility in Hudson County, New Jersey. The study does not establish commercial operation.",
+        "longFormSummary": "<ul><li>The primary study supports request AF1-245, its location and power rating. It does not establish the former construction budget, a four-hour storage duration or a current opening target. Interconnection upgrade costs are not the full battery-project budget.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "EnergyStorage",
+          "HudsonCounty",
+          "NewJersey",
+          "PJM",
+          "REVRenewables",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2024-04-12. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-04-12T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Hudson County, New Jersey, United States"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+        "note": "Proposed battery maximum facility output in MW; no verified MWh duration or commercial-operation day."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Hudson Clean Energy Storage Facility: 220M USD, 200 MW BESS in Hudson County, New Jersey",
+        "oldPrice": 220000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18076,
+      "patch": {
+        "title": "Lamberton Road Battery: 170 MW PJM Storage Request AF1-237",
+        "description": "PJM’s 2024-04-08 study identifies request AF1-237 as a proposed 170 MW battery-storage facility in Hamilton Township, Mercer County, New Jersey. The study does not establish commercial operation.",
+        "longFormSummary": "<ul><li>The primary study supports request AF1-237, its location and power rating. It does not establish the former construction budget, a four-hour storage duration or a current opening target. Interconnection upgrade costs are not the full battery-project budget.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "EnergyStorage",
+          "MercerCounty",
+          "NewJersey",
+          "PJM",
+          "REVRenewables",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2024-04-08. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-04-08T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Hamilton Township, Mercer County, New Jersey, United States"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 170,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+        "note": "Proposed battery maximum facility output in MW; no verified MWh duration or commercial-operation day."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Lamberton Road Clean Energy Storage Center: 190M USD, 170 MW BESS in Mercer County, New Jersey",
+        "oldPrice": 190000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18077,
+      "patch": {
+        "title": "Two Rivers Storage: 150 MW PJM Storage Request AF2-415",
+        "description": "PJM’s 2024-05-13 study identifies request AF2-415 as a proposed 150 MW battery-storage facility in Hudson County, New Jersey. The study does not establish commercial operation.",
+        "longFormSummary": "<ul><li>The primary study supports request AF2-415, its location and power rating. It does not establish the former construction budget, a four-hour storage duration or a current opening target. Interconnection upgrade costs are not the full battery-project budget.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "230kV",
+          "BESS",
+          "EnergyStorage",
+          "HudsonCounty",
+          "JupiterPower",
+          "NewJersey",
+          "PJM",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2024-05-13. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-05-13T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Hudson County, New Jersey, United States"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 150,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+        "note": "Proposed battery maximum facility output in MW; no verified MWh duration or commercial-operation day."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Two Rivers Clean Energy Storage Center: 170M USD, 150 MW BESS in Hudson County, New Jersey",
+        "oldPrice": 170000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "pinIds": {
+        "local": 20641,
+        "production": 20641
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": null,
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20642,
+        "production": 20642
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": null,
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20643,
+        "production": 20643
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": null,
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20644,
+        "production": 20644
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": {
+        "megawatts": 600,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+        "note": "Full-plant operating solar generating capacity."
+      },
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20645,
+        "production": 20645
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": {
+        "megawatts": 2060,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+        "note": "Full-plant operating solar generating capacity."
+      },
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20646,
+        "production": 20646
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": null,
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20647,
+        "production": 20647
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": null,
+      "outcome": "new-threaded-plant-profile"
+    },
+    {
+      "pinIds": {
+        "local": 20648,
+        "production": 20648
+      },
+      "patch": {},
+      "addReferences": [],
+      "power": null,
+      "outcome": "new-threaded-plant-profile"
+    }
+  ]
+}

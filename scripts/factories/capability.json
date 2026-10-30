@@ -3775,7 +3775,7 @@
   {
     "key": "gm-orion",
     "pinIds": {
-      "local": 20121,
+      "local": 20123,
       "production": 20123
     },
     "title": "GM's Orion Assembly Is Due to Start Gas Full-Size SUVs and Pickups in Early 2027",
@@ -3904,7 +3904,7 @@
   {
     "key": "gm-fairfax",
     "pinIds": {
-      "local": 20122,
+      "local": 20124,
       "production": 20124
     },
     "title": "GM's Fairfax Plant Is Slated for Gas Chevrolet Equinox Production From Mid-2027",
@@ -4044,7 +4044,7 @@
   {
     "key": "gm-springhill",
     "pinIds": {
-      "local": 20123,
+      "local": 20125,
       "production": 20125
     },
     "title": "GM Plans to Add Gas Chevrolet Blazer Production at Spring Hill in 2027",
@@ -115940,6 +115940,3157 @@
             "title": "MISO interconnection queue — J3049",
             "publishedDate": null,
             "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-16412",
+    "pinIds": {
+      "local": 16412,
+      "production": 16412
+    },
+    "title": "Prime Avondale PHX01: 240 MW IT Campus Begins Construction",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Campus critical IT capacity",
+          "value": "240 MW planned",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "240MW IT",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Full campus site",
+          "value": "66.5 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "66.5 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Prime campus investment",
+          "value": "More than USD 3 billion",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "more than $3 billion",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Campus configuration",
+          "value": "Five hyperscale data centers",
+          "basis": "planned",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "five hyperscale data centers",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First three buildings break ground",
+          "date": "2026-05-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "May 21, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-2960",
+    "pinIds": {
+      "local": 2960,
+      "production": 2960
+    },
+    "title": "ESMC Dresden Fab Tops Out; Tool Installation Planned for Late 2027",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Semiconductors: wafer fabrication",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Total investment",
+          "value": "More than EUR 10 billion",
+          "basis": "planned",
+          "source": {
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "10 billion euros",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Planned monthly output",
+          "value": "40,000 300 mm wafers",
+          "basis": "planned",
+          "source": {
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "40,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned direct employment",
+          "value": "Around 2,000 jobs",
+          "basis": "planned",
+          "source": {
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Process technologies",
+          "value": "28/22 nm CMOS and 16/12 nm FinFET",
+          "basis": "planned",
+          "source": {
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "28/22",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking and land preparation",
+          "date": "2024-08-20",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "August 20, 2024",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Fab topping-out",
+          "date": "2026-09-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://de.linkedin.com/company/esmc-dresden",
+            "title": "Project owner / public authority project evidence",
+            "quote": "On September 14",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Cleanroom installation and first tools: late 2027 target",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://de.linkedin.com/company/esmc-dresden",
+            "title": "Project owner / public authority project evidence",
+            "quote": "first tools in late 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18961",
+    "pinIds": {
+      "local": 18961,
+      "production": 18961
+    },
+    "title": "PowerHouse PAX-1: Carlisle Campus Plans Up to 1.35 GW Utility Power",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Maximum utility power",
+          "value": "Up to 1.35 GW",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/pax-1",
+            "title": "Project owner / public authority project evidence",
+            "quote": "1.35 GW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Developable floor area",
+          "value": "4.2 million square feet",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/pax-1",
+            "title": "Project owner / public authority project evidence",
+            "quote": "4.2M",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Campus buildings",
+          "value": "Up to 18 two-story buildings",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/pax-1",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Up to 18",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "First-phase delivery",
+          "value": "Q2 2027 target",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/pax-1",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Q2 2027",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-phase delivery target; not verified operation",
+          "date": "2027-04",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/pax-1",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Q2 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18968",
+    "pinIds": {
+      "local": 18968,
+      "production": 18968
+    },
+    "title": "Project Hummingbird: Proposed 910 MW Power Island at Former Robena Mine",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: natural-gas power generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed power generation",
+          "value": "910 MW",
+          "basis": "planned",
+          "source": {
+            "url": "https://greenecountypa.gov/resources/55298",
+            "title": "Project owner / public authority project evidence",
+            "quote": "910-megawatt",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Secured site",
+          "value": "Over 1,700 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://greenecountypa.gov/resources/55298",
+            "title": "Project owner / public authority project evidence",
+            "quote": "over 1,700 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Energy supply",
+          "value": "Behind-the-meter natural-gas generation",
+          "basis": "planned",
+          "source": {
+            "url": "https://greenecountypa.gov/resources/55298",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Greene County natural gas",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Project presented to Greene County Planning Commission",
+          "date": "2025-11-03",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://greenecountypa.gov/resources/55298",
+            "title": "Project owner / public authority project evidence",
+            "quote": "November 3rd, 2025",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Turbine completion target: late 2028 or early 2029",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://greenecountypa.gov/resources/55298",
+            "title": "Project owner / public authority project evidence",
+            "quote": "late 2028 or early 2029",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-456",
+    "pinIds": {
+      "local": 456,
+      "production": 456
+    },
+    "title": "Long Thanh Airport Prepares for December 2026 Commercial Operations",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Transport: airport construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Initial proposed flight schedule",
+          "value": "Approximately 366 flights per week",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026",
+            "title": "Project owner / public authority project evidence",
+            "quote": "366 flights per week",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Component 3 work remaining",
+          "value": "Terminal, roads, cargo terminal and car park",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Cargo Terminal No. 1",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Component 3 completion by contract value",
+          "value": "Approximately 86% as of October 9, 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026",
+            "title": "Project owner / public authority project evidence",
+            "quote": "86%",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Component 3 construction progress observation",
+          "date": "2026-10-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026",
+            "title": "Project owner / public authority project evidence",
+            "quote": "October 9, 2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Commercial operations target",
+          "date": "2026-12",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026",
+            "title": "Project owner / public authority project evidence",
+            "quote": "December 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-3395",
+    "pinIds": {
+      "local": 3395,
+      "production": 3395
+    },
+    "title": "LA Metro D Line Section 3: Westwood Opening Targeted for Fall 2027",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Transport: urban rail",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Section 3 route length",
+          "value": "2.56 miles",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2.56 miles",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "New stations",
+          "value": "Westwood/UCLA and Westwood/VA Hospital",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Westwood/UCLA",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Original Section 3 budget",
+          "value": "USD 3.6 billion; historical budget",
+          "basis": "planned",
+          "source": {
+            "url": "https://libraryarchives.metro.net/DPGTL/StatusReports/2024-12-westside-purple-line-extension-section-3.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$3.6 billion",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Forecast opening",
+          "value": "Fall 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Fall 2027",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Section 3 construction period begins",
+          "date": "2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2019–2027",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Section 3 forecast operations: fall 2027",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Fall 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-14052",
+    "pinIds": {
+      "local": 14052,
+      "production": 14052
+    },
+    "title": "Al Kahfah Solar: 1,425 MW Commercial Plant Under Dispatch Limitations",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: solar photovoltaic generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Certified project capacity",
+          "value": "1,425 MW",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+            "title": "Project owner / public authority project evidence",
+            "quote": "1,425 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported investment",
+          "value": "SAR 3.9 billion",
+          "basis": "planned",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "ACWA Power 2025 rights prospectus, table 6-7: SAR billions",
+            "quote": "3.9",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Partial dispatch permitted",
+          "value": "February 11, 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+            "title": "Project owner / public authority project evidence",
+            "quote": "11 February 2026",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Commercial operation certificate",
+          "date": "2025-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+            "title": "Project owner / public authority project evidence",
+            "quote": "November 2025",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Dispatch limitation begins",
+          "date": "2025-12-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12 December 2025",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Partial dispatch permitted",
+          "date": "2026-02-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+            "title": "Project owner / public authority project evidence",
+            "quote": "11 February 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-19007",
+    "pinIds": {
+      "local": 19007,
+      "production": 19007
+    },
+    "title": "South Annville Data Center Proposal Withdrawn on May 12, 2026",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported proposal value",
+          "value": "USD 1.7 billion; unbuilt proposal",
+          "basis": "planned",
+          "source": {
+            "url": "https://lebtown.com/2026/05/13/south-annville-twp-data-center-project-scrapped-after-grass-roots-opposition/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$1.7 billion",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposal site",
+          "value": "About 99 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://lebtown.com/2026/05/13/south-annville-twp-data-center-project-scrapped-after-grass-roots-opposition/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "about 99 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Concept layout",
+          "value": "Five buildings, about 150,000 square feet each",
+          "basis": "planned",
+          "source": {
+            "url": "https://lebtown.com/2026/05/13/south-annville-twp-data-center-project-scrapped-after-grass-roots-opposition/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "five buildings",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Rezoning petition withdrawn; developer ceases pursuit",
+          "date": "2026-05-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://lebtown.com/2026/05/13/south-annville-twp-data-center-project-scrapped-after-grass-roots-opposition/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "hereby withdraws its request",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18967",
+    "pinIds": {
+      "local": 18967,
+      "production": 18967
+    },
+    "title": "Wildcat Ridge, Archbald: Conditional-Use Application Denied October 21, 2026",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Application site",
+          "value": "574.2 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550",
+            "title": "Project owner / public authority project evidence",
+            "quote": "574.2 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Application floor area",
+          "value": "5,665,520 square feet",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550",
+            "title": "Project owner / public authority project evidence",
+            "quote": "5,665,520 square foot",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed buildings",
+          "value": "14 two-story data centers",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550",
+            "title": "Project owner / public authority project evidence",
+            "quote": "14 two-story buildings",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Application received",
+          "date": "2025-12-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550",
+            "title": "Project owner / public authority project evidence",
+            "quote": "December 15, 2025",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Conditional-use application denied",
+          "date": "2026-10-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.archbaldpa.gov/Documents/Departments/Zoning and Code Enforcement/Conditional Use Applications/Wildcat Ridge/CORR - Wildcat Ridge - Letter to Parties Regarding Council Decision(10.22.26)_Redacted.pdf?t=202610281133550",
+            "title": "Project owner / public authority project evidence",
+            "quote": "October 21, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-132",
+    "pinIds": {
+      "local": 132,
+      "production": 132
+    },
+    "title": "Dubai Dynamic Tower: Historical Rotating Skyscraper Proposal",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Buildings: skyscraper proposal",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed height",
+          "value": "420 metres",
+          "basis": "planned",
+          "source": {
+            "url": "https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back",
+            "title": "Project owner / public authority project evidence",
+            "quote": "420m",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Concept design",
+          "value": "80 rotating stories",
+          "basis": "planned",
+          "source": {
+            "url": "https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back",
+            "title": "Project owner / public authority project evidence",
+            "quote": "80-storey",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Historical target",
+          "value": "2020, as reported in February 2016; not verified completion",
+          "basis": "planned",
+          "source": {
+            "url": "https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back",
+            "title": "Project owner / public authority project evidence",
+            "quote": "by 2020",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Proposal revival reported",
+          "date": "2016-02-03",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Feb 3, '16",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Historical completion target; no achieved milestone established",
+          "date": "2020",
+          "basis": "planned",
+          "source": {
+            "url": "https://archinect.com/news/article/147271957/taking-your-pad-for-a-spin-dubai-s-rotating-tower-proposal-is-back",
+            "title": "Project owner / public authority project evidence",
+            "quote": "by 2020",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-503",
+    "pinIds": {
+      "local": 503,
+      "production": 503
+    },
+    "title": "Ryugyong Hotel Exterior Completed in 2011; Hotel Opening Not Established",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Buildings: hotel exterior completion",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported exterior investment",
+          "value": "USD 180 million reported in 2012",
+          "basis": "planned",
+          "source": {
+            "url": "https://businesstoday.in/magazine/travel/story/north-korea-tallest-hotel-ryugyong-hotel-35427-2012-11-28",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$180 million",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Scope delivered",
+          "value": "Exterior cladding, with interior still unfinished in the cited account",
+          "basis": "planned",
+          "source": {
+            "url": "https://koryogroup.com/blog/the-rocky-history-of-the-ryugyong-hotel",
+            "title": "Project owner / public authority project evidence",
+            "quote": "outer exterior",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Exterior completion",
+          "value": "2011",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://koryogroup.com/blog/the-rocky-history-of-the-ryugyong-hotel",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2011: Construction ceases",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Cladding work resumes",
+          "date": "2008",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://koryogroup.com/blog/the-rocky-history-of-the-ryugyong-hotel",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2008: Construction restarts",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Exterior completed; hotel interior remains separate",
+          "date": "2011",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://koryogroup.com/blog/the-rocky-history-of-the-ryugyong-hotel",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2011: Construction ceases",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-15863",
+    "pinIds": {
+      "local": 15863,
+      "production": 15863
+    },
+    "title": "Janesville Ends Viridian GM/JATCO Site Negotiations After LOI Expires",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Former concept power scale",
+          "value": "800 MW reported proposal; not installed IT capacity",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "800-megawatt",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Former concept site",
+          "value": "240 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "240-acre",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Land-sale negotiations",
+          "value": "City not proceeding with a purchase and sales agreement",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "no negotiations or active proposals",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Council allows letter of intent to expire",
+          "date": "2026-06-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "June 22",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-16350",
+    "pinIds": {
+      "local": 16350,
+      "production": 16350
+    },
+    "title": "West Gardner Solar: Historical Proposal for Up to 320 MW and 128 MW Storage",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: proposed solar and storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed solar generation",
+          "value": "Up to 320 MW",
+          "basis": "planned",
+          "source": {
+            "url": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "320 megawatts",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed storage power",
+          "value": "128 MW; energy duration not published here",
+          "basis": "planned",
+          "source": {
+            "url": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "128 megawatts",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported lifetime investment",
+          "value": "USD 320 million over 35 years; not a construction-only budget",
+          "basis": "planned",
+          "source": {
+            "url": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "35-year period",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Proposal figures reported",
+          "date": "2022-06-07",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "June 7, 2022",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Historical proposed construction start; achievement unverified",
+          "date": "2024",
+          "basis": "planned",
+          "source": {
+            "url": "https://kansasreflector.com/2022/06/07/johnson-county-commission-amends-regulations-guiding-solar-farm-developments/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "construction in 2024",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18254",
+    "pinIds": {
+      "local": 18254,
+      "production": 18254
+    },
+    "title": "Century Aluminum Mt. Holly Celebrates USD 50 Million Production Restart",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Manufacturing: primary aluminum",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Restart investment",
+          "value": "About USD 50 million",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://scdailygazette.com/2026/07/27/sc-aluminum-smelter-back-to-full-production-after-a-decade-of-lower-capacity/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$50 million",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Added annual production",
+          "value": "About 50,000 metric tonnes per year",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://scdailygazette.com/2026/07/27/sc-aluminum-smelter-back-to-full-production-after-a-decade-of-lower-capacity/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "50,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Jobs restored",
+          "value": "150 jobs",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://scdailygazette.com/2026/07/27/sc-aluminum-smelter-back-to-full-production-after-a-decade-of-lower-capacity/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "150 jobs",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Additional-power agreement announced",
+          "date": "2025-10-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newsroom.santeecooper.com/news/Santee-Cooper-Century-Sign-Agreement-to-Power-Additional-Potline-Create-Jobs-in-Mt.-Holly/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "October 6, 2025",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Full-production restart celebrated",
+          "date": "2026-07-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://scdailygazette.com/2026/07/27/sc-aluminum-smelter-back-to-full-production-after-a-decade-of-lower-capacity/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "July 27, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18423",
+    "pinIds": {
+      "local": 18423,
+      "production": 18423
+    },
+    "title": "Deep Lake Solar: 150 MW Siting Application in Nicholas and Clay Counties",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: solar generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Application generating capacity",
+          "value": "150 MW",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+            "title": "Project owner / public authority project evidence",
+            "quote": "150-megawatt",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Application leased/purchased land",
+          "value": "Approximately 1,521 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+            "title": "Project owner / public authority project evidence",
+            "quote": "1,521 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Regulatory stage evidenced",
+          "value": "Solar siting application, case 24-0311-E-SCS-PW",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+            "title": "Project owner / public authority project evidence",
+            "quote": "24-0311-E-SCS-PW",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Solar siting application filed",
+          "date": "2024-03-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+            "title": "Project owner / public authority project evidence",
+            "quote": "March 25, 2024",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Commission sets procedural schedule",
+          "date": "2024-06-24",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.psc.state.wv.us/scripts/orders/ViewDocument.cfm?CaseActivityID=624367&Source=Docket",
+            "title": "Project owner / public authority project evidence",
+            "quote": "June 2024",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18394",
+    "pinIds": {
+      "local": 18394,
+      "production": 18394
+    },
+    "title": "Tallgrass Solar, Ellis County: 175 MW Proposed Interconnection Capacity",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: solar generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed AC power at interconnection",
+          "value": "175 MWac; separate inverter rating 198 MWac",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01062026-720",
+            "title": "Project owner / public authority project evidence",
+            "quote": "175 MWac",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Application parcel area",
+          "value": "Approximately 1,829.2 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01132026-721",
+            "title": "Project owner / public authority project evidence",
+            "quote": "1,829.2 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Applicant capital investment",
+          "value": "Approximately USD 275 million or more",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01132026-721",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$275+ million",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Solar array design",
+          "value": "210.50 MWdc; 334,125 modules",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01062026-720",
+            "title": "Project owner / public authority project evidence",
+            "quote": "334,125",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Layout design dated",
+          "date": "2025-11-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01062026-720",
+            "title": "Project owner / public authority project evidence",
+            "quote": "11/12/25",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Application discussed in county agenda packet",
+          "date": "2026-01-13",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ellisco.net/AgendaCenter/ViewFile/Agenda/_01132026-721",
+            "title": "Project owner / public authority project evidence",
+            "quote": "TALLGRASS SOLAR FARM REVIEW",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18075",
+    "pinIds": {
+      "local": 18075,
+      "production": 18075
+    },
+    "title": "Hudson Energy Storage Facility: 200 MW PJM Storage Request AF1-245",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed maximum facility output",
+          "value": "200 MW",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "200.0 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Interconnection and project identity",
+          "value": "Hudson 230 kV; Baywell Energy, LLC",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Baywell Energy, LLC",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Stage evidenced",
+          "value": "Interconnection study; construction and operation unverified",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "proposed",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Study publication",
+          "value": "2024-04-12",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2024-04-12",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Interconnection study published; not a commissioning date",
+          "date": "2024-04-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af1245_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2024-04-12",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18076",
+    "pinIds": {
+      "local": 18076,
+      "production": 18076
+    },
+    "title": "Lamberton Road Battery: 170 MW PJM Storage Request AF1-237",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed maximum facility output",
+          "value": "170 MW",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "170 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Interconnection and project identity",
+          "value": "Mercer 230 kV; Hamilton Township",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Hamilton Township",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Stage evidenced",
+          "value": "Interconnection study; construction and operation unverified",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "proposed",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Study publication",
+          "value": "2024-04-08",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "April 8, 2024",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Interconnection study published; not a commissioning date",
+          "date": "2024-04-08",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af1237_fac.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "April 8, 2024",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-20261030-18077",
+    "pinIds": {
+      "local": 18077,
+      "production": 18077
+    },
+    "title": "Two Rivers Storage: 150 MW PJM Storage Request AF2-415",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed maximum facility output",
+          "value": "150 MW",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "150.0 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Interconnection and project identity",
+          "value": "Bergen 138 kV; Juno Power Management LLC",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Juno Power Management LLC",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Stage evidenced",
+          "value": "Interconnection study; construction and operation unverified",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "proposed",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Study publication",
+          "value": "2024-05-13",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2024-05-13",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Interconnection study published; not a commissioning date",
+          "date": "2024-05-13",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2415_imp.html",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2024-05-13",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-pecos-building-a",
+    "pinIds": {
+      "local": 20641,
+      "production": 20641
+    },
+    "title": "Amazon Pecos County Building A: USD 300 Million Accessibility Filing",
+    "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Filed estimated construction cost",
+          "value": "USD 300 million",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$300,000,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Filed floor area",
+          "value": "189,060 square feet",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Project owner / public authority project evidence",
+            "quote": "189,060",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed construction window",
+          "value": "August 1–December 1, 2026; scheduled only",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/1/2026",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Filed scheduled construction start",
+          "date": "2026-08-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Project owner / public authority project evidence",
+            "quote": "8/1/2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Accessibility registration",
+          "date": "2026-08-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Project owner / public authority project evidence",
+            "quote": "8/4/2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Filed scheduled completion",
+          "date": "2026-12-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/1/2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-pecos-building-b",
+    "pinIds": {
+      "local": 20642,
+      "production": 20642
+    },
+    "title": "Amazon Pecos County Building B: USD 300 Million Accessibility Filing",
+    "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Filed estimated construction cost",
+          "value": "USD 300 million",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$300,000,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Filed floor area",
+          "value": "189,060 square feet",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Project owner / public authority project evidence",
+            "quote": "189,060",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed construction window",
+          "value": "August 1–December 1, 2026; scheduled only",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/1/2026",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Filed scheduled construction start",
+          "date": "2026-08-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Project owner / public authority project evidence",
+            "quote": "8/1/2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Accessibility registration",
+          "date": "2026-08-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Project owner / public authority project evidence",
+            "quote": "8/4/2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Filed scheduled completion",
+          "date": "2026-12-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/1/2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-pecos-building-c",
+    "pinIds": {
+      "local": 20643,
+      "production": 20643
+    },
+    "title": "Amazon Pecos County Building C: USD 300 Million Accessibility Filing",
+    "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Filed estimated construction cost",
+          "value": "USD 300 million",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Project owner / public authority project evidence",
+            "quote": "$300,000,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Filed floor area",
+          "value": "189,060 square feet",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Project owner / public authority project evidence",
+            "quote": "189,060",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed construction window",
+          "value": "August 1–December 1, 2026; scheduled only",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/1/2026",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Filed scheduled construction start",
+          "date": "2026-08-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Project owner / public authority project evidence",
+            "quote": "8/1/2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Accessibility registration",
+          "date": "2026-08-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Project owner / public authority project evidence",
+            "quote": "8/4/2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Filed scheduled completion",
+          "date": "2026-12-01",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/1/2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-shuaibah-1",
+    "pinIds": {
+      "local": 20644,
+      "production": 20644
+    },
+    "title": "Al Shuaibah 1: 600 MW Solar Plant in Commercial Operation",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: solar generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Plant capacity",
+          "value": "600 MW",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "600 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Technology",
+          "value": "Solar photovoltaic",
+          "basis": "planned",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Solar Photovoltaic",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Commercial operation",
+          "value": "2024-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "November 2024G",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Full-plant commercial operation",
+          "date": "2024-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "November 2024G",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-shuaibah-2",
+    "pinIds": {
+      "local": 20645,
+      "production": 20645
+    },
+    "title": "Al Shuaibah 2: 2,060 MW Solar Plant in Commercial Operation",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: solar generation",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Plant capacity",
+          "value": "2,060 MW",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "2,060 megawatts",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Technology",
+          "value": "Solar photovoltaic",
+          "basis": "planned",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "photovoltaic",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Commercial operation",
+          "value": "2025-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "February 2025G",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Full-plant commercial operation",
+          "date": "2025-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "February 2025G",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-amazon-resilient-shreveport",
+    "pinIds": {
+      "local": 20646,
+      "production": 20646
+    },
+    "title": "Amazon Resilient Technology Park: Third Louisiana Campus Announced",
+    "sourceUrl": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Additional campus investment",
+          "value": "USD 6 billion planned",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+            "title": "Project owner / public authority project evidence",
+            "quote": "additional $6 billion",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Additional direct jobs",
+          "value": "210 expected jobs",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+            "title": "Project owner / public authority project evidence",
+            "quote": "210 direct new jobs",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Project type",
+          "value": "Cloud-computing and AI data center",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+            "title": "Project owner / public authority project evidence",
+            "quote": "cloud computing and artificial intelligence",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Third campus and investment announced",
+          "date": "2026-08-18",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+            "title": "Project owner / public authority project evidence",
+            "quote": "August 18, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-triboro-commerce-withdrawn",
+    "pinIds": {
+      "local": 20647,
+      "production": 20647
+    },
+    "title": "Triboro Commerce Park: Seven-Building Proposal Withdrawn",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Reported property scope",
+          "value": "Over 400 acres",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "over 400 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed campus layout",
+          "value": "7 data centers",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "seven data centers",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported planning status",
+          "value": "Withdrawn plans",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "withdrew those plans",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Withdrawal reported; actual withdrawal day unpublished",
+          "date": "2026-06-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "June 10, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-triboro-ercor-proposed",
+    "pinIds": {
+      "local": 20648,
+      "production": 20648
+    },
+    "title": "ERCOR Triboro: Nine Data Centers Proposed in Olyphant",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Reported property scope",
+          "value": "500-acre property; about 100 acres proposed for data centers",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "500 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed campus layout",
+          "value": "9 data centers",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "nine data centers",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported planning status",
+          "value": "Separate pending proposal; zoning settlement is not project approval",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "applied to change its land use",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Separate proposal reported; not construction approval",
+          "date": "2026-06-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "June 10, 2026",
+            "publishedDate": null
           }
         }
       ]

@@ -1,0 +1,373 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 16412,
+      "patch": {
+        "title": "Prime Avondale PHX01: 240 MW IT Campus Begins Construction",
+        "description": "Prime broke ground on the first three buildings of its five-building Avondale campus on May 21, 2026.",
+        "longFormSummary": "<ul><li>Initial construction covers 144 MW of critical IT capacity. The full campus plan totals 240 MW across five buildings; the 250 MW substation is a separate electrical rating.<cite data-ref=\"https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/\"></cite></li></ul>",
+        "price": 3000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Arizona",
+          "Cleanview",
+          "Data Centers",
+          "Prime Data Centers",
+          "Signed Tenant",
+          "Under Construction",
+          "In Progress"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-05-21. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-05-21T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 240,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+        "note": "Planned full-campus critical IT load, not current operating load or generation."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3 B+ Investment",
+        "oldPrice": 3000000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 2960,
+      "patch": {
+        "title": "ESMC Dresden Fab Tops Out; Tool Installation Planned for Late 2027",
+        "description": "ESMC marked its Dresden fab topping-out on September 14, 2026. Cleanroom installation and first tools remain planned for late 2027.",
+        "longFormSummary": "<ul><li>The Dresden facility is being built for automotive and industrial semiconductor customers. Capacity and employment figures are full-operation plans.<cite data-ref=\"https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf\"></cite></li></ul>",
+        "price": 10000000000,
+        "priceCurrency": "EUR",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Bosch",
+          "Dresden",
+          "ESMC",
+          "Fab",
+          "Germany",
+          "Infineon",
+          "NXP",
+          "Thread",
+          "TSMC",
+          "In Progress"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-09-14. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-09-14T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://pr.tsmc.com/system/files/newspdf/attachment/b3cb4f762915cc33e1b8414502708517ebe10079/ESMC%20Groundbreaking_Press%20Release_%28E%29_FINAL.1_wmn.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://de.linkedin.com/company/esmc-dresden",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "TSMC's Dresden Fab (ESMC) Tops Out",
+        "oldPrice": 10000000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18961,
+      "patch": {
+        "title": "PowerHouse PAX-1: Carlisle Campus Plans Up to 1.35 GW Utility Power",
+        "description": "PowerHouse lists PAX-1 in Carlisle, Cumberland County, with a 693-acre site and first-phase delivery targeted for Q2 2027.",
+        "longFormSummary": "<ul><li>The operator specifies 693 acres, up to 18 two-story buildings and 4.2 million square feet. Maximum utility power is not a published IT-load rating.<cite data-ref=\"https://www.powerhousedata.com/data-center/pax-1\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Hyperscale",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The operator states Q2 2027 for phase-one delivery. April 1 is a quarter anchor, not an announced opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Carlisle, Cumberland County, Pennsylvania, United States",
+        "latitude": 40.2015,
+        "longitude": -77.1889
+      },
+      "addReferences": [
+        {
+          "url": "https://www.powerhousedata.com/data-center/pax-1",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "PAX Pennsylvania Digital I: 1,350 MW Hyperscale Campus across 1,288 Acres in Lackawanna County, PA",
+        "oldPrice": 5500000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18968,
+      "patch": {
+        "title": "Project Hummingbird: Proposed 910 MW Power Island at Former Robena Mine",
+        "description": "Greene County planning minutes describe a proposed 910 MW natural-gas power island at the former Robena mine to attract data-center developers.",
+        "longFormSummary": "<ul><li>The developer presented a power-generation project, not a verified 910 MW IT-load campus. Reported water use was 8\u20139 million gallons daily. Target dates in the minutes do not establish work achieved.<cite data-ref=\"https://greenecountypa.gov/resources/55298\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "Susquehanna River",
+          "Water Usage",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2025-11-03. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2025-11-03T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Former Robena Mine, Monongahela Township, Greene County, Pennsylvania, United States",
+        "latitude": 39.803,
+        "longitude": -79.978
+      },
+      "addReferences": [
+        {
+          "url": "https://greenecountypa.gov/resources/55298",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 910,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://greenecountypa.gov/resources/55298",
+        "note": "Proposed behind-the-meter natural-gas power island; capacity is not data-center IT demand."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Project Hummingbird: 910 MW Data Center Campus Drawing 18 MGD Water in Luzerne County, PA",
+        "oldPrice": 4200000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 456,
+      "patch": {
+        "title": "Long Thanh Airport Prepares for December 2026 Commercial Operations",
+        "description": "ACV reports that Long Thanh is completing construction and operational-readiness work, with commercial operations targeted for December 2026.",
+        "longFormSummary": "<ul><li>Construction acceptance is expected in November, followed by regulatory requirements in early December. Flight schedules remain subject to readiness and approval.<cite data-ref=\"https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "In Progress"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-12. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.aci-asiapac.aero/media-centre/news/acv-accelerates-preparations-for-long-thanh-international-airport-s-commercial-operations-in-late-2026",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Long Thanh International Airport Holds Its Technical Opening",
+        "oldPrice": 16000000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 3395,
+      "patch": {
+        "title": "LA Metro D Line Section 3: Westwood Opening Targeted for Fall 2027",
+        "description": "Metro forecasts fall 2027 operations for Section 3 of the D Line extension, serving Westwood/UCLA and Westwood/VA Hospital.",
+        "longFormSummary": "<ul><li>Section 3 has its own route and stations. The USD 3.6 billion figure is the original budget reported in December 2024, rather than the full extension\u2019s budget or a newly verified final cost.<cite data-ref=\"https://libraryarchives.metro.net/DPGTL/StatusReports/2024-12-westside-purple-line-extension-section-3.pdf\"></cite></li></ul>",
+        "price": 3600000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "D Line",
+          "LA Metro",
+          "Los Angeles",
+          "Olympics",
+          "Subway",
+          "Thread",
+          "UCLA",
+          "Westwood",
+          "In Progress"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Metro forecasts fall 2027. The year-end anchor preserves the forecast year and is not an exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://libraryarchives.metro.net/DPGTL/StatusReports/2024-12-westside-purple-line-extension-section-3.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Metro's D Line Subway Reaches Westwood and the VA Campus",
+        "oldPrice": 3600000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 14052,
+      "patch": {
+        "title": "Al Kahfah Solar: 1,425 MW Commercial Plant Under Dispatch Limitations",
+        "description": "ACWA reports commercial certification in November 2025 for Al Kahfah, followed by dispatch limitations and partial dispatch from February 11, 2026.",
+        "longFormSummary": "<ul><li>Commercial certification does not imply unrestricted dispatch. ACWA disputes the grid-operator limitations and reports technical assessments toward restoration.<cite data-ref=\"https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en\"></cite></li></ul>",
+        "price": 3900000000,
+        "priceCurrency": "SAR",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Electric Generation Projects",
+          "Operational",
+          "Operator researched",
+          "Published project costs",
+          "Saudi Arabia",
+          "Solar",
+          "Completed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2025-11. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2025-11-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://www.acwapower.com/media/342496/acwa_power_eng_ar24.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+          "title": "ACWA Power 2025 rights prospectus: SAR billions table 6-7",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 1425,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=67&anId=94190&cs=2082&locale=en",
+        "note": "Certified project capacity; dispatch has been limited. Not a claim of continuous full output."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Al Kahfah PV \u2014 operational",
+        "oldPrice": 1063000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 19007,
+      "patch": {
+        "title": "South Annville Data Center Proposal Withdrawn on May 12, 2026",
+        "description": "The developer withdrew its South Annville rezoning petition on May 12, 2026 and said it would no longer pursue the data-center development.",
+        "longFormSummary": "<ul><li>The 1235 Martina Drive Owner LLC proposal remained conceptual. The reported budget and building layout describe the withdrawn proposal, not construction delivered.<cite data-ref=\"https://lebtown.com/2026/05/13/south-annville-twp-data-center-project-scrapped-after-grass-roots-opposition/\"></cite></li></ul>",
+        "price": 1700000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Withdrawn"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-05-12. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-05-12T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://lebtown.com/2026/05/13/south-annville-twp-data-center-project-scrapped-after-grass-roots-opposition/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "South Annville Township Data Center: 99-Acre Data Center Campus in Lebanon County",
+        "oldPrice": 1700000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    }
+  ]
+}

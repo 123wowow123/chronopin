@@ -1,0 +1,1268 @@
+{
+  "checkedAt": "2026-10-30T18:48:15.846450+00:00",
+  "scope": "Exact remaining 68 candidates from original priced247 manifest",
+  "reviewed": 68,
+  "originalPinsRepaired": 45,
+  "newChildPins": 8,
+  "distinctPinsWritten": 53,
+  "profilesAdded": 27,
+  "duplicateMilestonesCovered": 21,
+  "profileEvidenceGaps": 14,
+  "records": [
+    {
+      "pinId": 132,
+      "originalTitle": "Dubai to Add the World's First Rotating Skyscraper to Its Skyline by 2020",
+      "sourceUrl": "http://interestingengineering.com/dubai-add-worlds-first-rotating-skyscraper-skyline-2020/",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 134,
+      "originalTitle": "Jeddah tower: World's Tallest Building- 1Km+",
+      "sourceUrl": "http://themegaworld.com/jeddah-tower-construction-update-2017/",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 448,
+        "production": 448
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 219,
+      "originalTitle": "Jeddah Tower Completion",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 448,
+        "production": 448
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 222,
+      "originalTitle": "Rogun Dam Reaches Full Height",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rogun_Dam",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 2623,
+        "production": 2623
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 456,
+      "originalTitle": "Long Thanh International Airport Holds Its Technical Opening",
+      "sourceUrl": "https://www.youtube.com/watch?v=yaxo-wpp-hc",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 503,
+      "originalTitle": "Ryugyong Hotel's Exterior Finally Completed After 24 Years",
+      "sourceUrl": "https://www.youtube.com/watch?v=kJPK1rb5GRs",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 540,
+      "originalTitle": "Bogotá Metro Line 1 Targets 2028 Opening",
+      "sourceUrl": "https://www.youtube.com/watch?v=wCi6-u0cOBY",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 270,
+        "production": 270
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 2212,
+      "originalTitle": "The Athletics' Las Vegas Ballpark Opens on the Tropicana Site",
+      "sourceUrl": "https://ballparkexperience.athletics.com/",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 3347,
+        "production": 3347
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 2634,
+      "originalTitle": "Grand Ethiopian Renaissance Dam Inaugurated",
+      "sourceUrl": "https://www.youtube.com/watch?v=a_-BrHqQwXI",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 279,
+        "production": 279
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 2875,
+      "originalTitle": "Amazon Raises Louisiana Data Center Plan to $18 Billion",
+      "sourceUrl": "https://www.aboutamazon.com/news/company-news/amazon-data-center-louisiana-new-jobs",
+      "outcome": "programme-third-campus-split",
+      "children": [
+        20646
+      ],
+      "reason": "New Resilient Technology Park campus has a separately stated USD6B investment and 210 direct jobs. The two earlier campuses remain on the programme until individually sourced site milestones are established; no invented allocation."
+    },
+    {
+      "pinId": 5834,
+      "originalTitle": "AbbVie Completes US$10.9 Billion Acquisition of Apogee",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001551152/000110465926104940/tm2624674d1_ex99-1.htm",
+      "outcome": "non-construction-reviewed",
+      "changedFields": [
+        "tags"
+      ],
+      "reason": "AbbVie acquisition of Apogee; acquisition consideration, not a physical construction phase.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 5958,
+      "originalTitle": "DOE Closes a US$1 Billion Loan to Restart Constellation's Crane Nuclear Plant",
+      "sourceUrl": "https://www.energy.gov/articles/energy-Department-closes-loan-restart-nuclear-power-plant-pennsylvania",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 2628,
+        "production": 2628
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19700,
+      "originalTitle": "Microsoft Deal Launches Three Mile Island Unit 1 Restart Plan",
+      "sourceUrl": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 2628,
+        "production": 2628
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19701,
+      "originalTitle": "Constellation Reports Crane Restart Interconnection and Fuel-License Milestones",
+      "sourceUrl": "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-second-quarter-2026-results",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 2628,
+        "production": 2628
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19734,
+      "originalTitle": "Onagawa Unit 2 Begins Its Post-Fukushima Reactor Restart",
+      "sourceUrl": "https://www.genanshin.jp/english/report/restart_operations/onagawa_2.html",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19741,
+        "production": 19741
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19737,
+      "originalTitle": "Onagawa Unit 2 Reconnects to the Grid",
+      "sourceUrl": "https://www.tohoku-epco.co.jp/english/press/__icsFiles/afieldfile/2024/11/15/1245885.pdf",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19741,
+        "production": 19741
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19743,
+      "originalTitle": "Shimane Unit 2 Restarts Its Reactor After Nearly 13 Years",
+      "sourceUrl": "https://www.world-nuclear-news.org/articles/shimane-2-restarts-after-13-years-being-offline",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19749,
+        "production": 19749
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19746,
+      "originalTitle": "Shimane Unit 2 Resumes Grid Generation",
+      "sourceUrl": "https://www.energia.co.jp/e/ir/info/pdf/ir6-71.pdf",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19749,
+        "production": 19749
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19747,
+      "originalTitle": "Bruce Power Agrees to Refurbish and Restart Units 1 and 2",
+      "sourceUrl": "https://www.brucepower.com/about-us/history/",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19755,
+        "production": 19755
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 19759,
+      "originalTitle": "Embalse Achieves Criticality After Three-Year Refurbishment",
+      "sourceUrl": "https://lmdiario.com.ar/contenido/122989/vuelve-a-funcionar-la-central-nuclear-de-embalse",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19762,
+        "production": 19762
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 5957,
+      "originalTitle": "Constellation Completes Its Calpine Acquisition, Creating a 55 GW Power Producer",
+      "sourceUrl": "https://www.constellationenergy.com/news/2026/01/constellation-completes-calpine-transaction-powering-americas-clean-energy-future.html",
+      "outcome": "non-construction-reviewed",
+      "changedFields": [
+        "tags"
+      ],
+      "reason": "Constellation acquisition of Calpine; transaction and portfolio capacity, not one plant build.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 6114,
+      "originalTitle": "Last Concrete Poured on Three Gorges Dam's Main Wall",
+      "sourceUrl": "https://www.ourchinastory.com/en/14777/Main-construction-of-China%27s-Three-Gorges-Dam-completed",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 6112,
+        "production": 6112
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 6426,
+      "originalTitle": "SpaceX Unveils $100 Billion Starbase Louisiana Launch Site",
+      "sourceUrl": "https://www.youtube.com/watch?v=do091f5I9gs",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "Opened cited media URLs did not substantiate the claimed August 25 announcement; a primary SpaceX/Louisiana/FAA project record is required.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 14052,
+      "originalTitle": "Al Kahfah PV — operational",
+      "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000830898",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 14053,
+      "originalTitle": "Al Shuaibah 1 and 2 solar complex — operational",
+      "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000809136",
+      "outcome": "programme-split-parent-repaired",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "sourceUrl",
+        "address"
+      ],
+      "reason": "Replaced erroneous Qassim address and inconsistent plant CODs; budget retained at published combined scope in source currency.",
+      "children": [
+        20644,
+        20645
+      ],
+      "profileAdded": false
+    },
+    {
+      "pinId": 14072,
+      "originalTitle": "Lower Yarlung Zangbo five-station hydropower complex — under construction",
+      "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000601028",
+      "outcome": "programme-reviewed-component-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "sourceUrl"
+      ],
+      "reason": "Programme has five stations; only Mainling is named in opened primary source. No invented plant allocations or 60GW primary claim.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 15796,
+      "originalTitle": "Amazon GW Ranch Campus: 4,000-7,650 MW Gas-Powered Data Center Campus Near Fort Stockton, Texas, 900M USD Filed for First Three Buildings",
+      "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+      "outcome": "programme-split-parent-repaired",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "sourceUrl"
+      ],
+      "reason": "Three separate filed building budgets and timelines; generation-plant permit is not campus IT capacity.",
+      "children": [
+        20641,
+        20642,
+        20643
+      ],
+      "profileAdded": false
+    },
+    {
+      "pinId": 15863,
+      "originalTitle": "Viridian Janesville GM Plant Data Center: 800 MW Hyperscale Campus on 240-250 Acres in Janesville, Wisconsin, Over 8B USD Proposed, Letter of Intent Lapsed in June 2026",
+      "sourceUrl": "https://www.gazettextra.com/news/city-of-janesville-city-not-proceeding-with-a-purchase-agreement-for-viridian-data-center/article_18e152f2-caf9-4ced-aa0e-3665eb78446d.html",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 16313,
+      "originalTitle": "Augusta Township Data Center Rezoning Rejected by Voters on August 4, 2026",
+      "sourceUrl": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+      "outcome": "non-construction-decision-repaired",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "A zoning rejection does not establish voluntary withdrawal; no Withdrawn tag assigned.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 16350,
+      "originalTitle": "NextEra West Gardner: Up to 217 MW Solar, 128 MW Storage; $320M Investment",
+      "sourceUrl": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 17091,
+      "originalTitle": "Aurora Energy Storage Center: 1.2B USD, 1,206 MW BESS in Lake County, Illinois",
+      "sourceUrl": "https://www.calpine.com/projects/aurora-energy-storage-center",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 17324,
+      "originalTitle": "Newberry Clean Energy Storage Complex: 210M USD, 200 MW BESS in Alachua County, Florida",
+      "sourceUrl": "https://www.duke-energy.com/our-company/about-us/clean-energy/newberry-storage",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 17325,
+      "originalTitle": "Sardis to Clarksdale Clean Energy Storage Center: 210M USD, 200 MW BESS in Panola County, Mississippi",
+      "sourceUrl": "https://www.entergy-mississippi.com/energy-storage/sardis-clarksdale/",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 17326,
+      "originalTitle": "Snow Hill Clean Energy Storage Facility: 210M USD, 200 MW BESS in Greene County, North Carolina",
+      "sourceUrl": "https://www.duke-energy.com/our-company/about-us/clean-energy/snow-hill-storage",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 17333,
+      "originalTitle": "Hope Hull Clean Solar Center: 120M USD, 80 MWac Solar Facility in Montgomery County, Alabama",
+      "sourceUrl": "https://www.siliconranch.com/projects/hope-hull-solar/",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 18465,
+        "production": 18465
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 17344,
+      "originalTitle": "Killdeer Clean Solar Facility: 230M USD, 210 MWac Solar Plant in Cerro Gordo County, Iowa",
+      "sourceUrl": "https://www.alliantenergy.com/cleanenergy/killdeer-solar/",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "MISO J2553 and J2811 are competing county/capacity matches. Neither establishes the claimed Killdeer / Alliant identity; no arbitrary applicant was selected.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 17350,
+      "originalTitle": "Byron Clean Energy Storage Center: 210M USD, 200 MW BESS in Olmsted County, Minnesota",
+      "sourceUrl": "https://www.xcelenergy.com/clean-energy/byron-storage/",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "MISO J1898 and J2840 are competing Olmsted storage matches. No unique link to the claimed Byron / Xcel identity is established.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18075,
+      "originalTitle": "Hudson Clean Energy Storage Facility: 220M USD, 200 MW BESS in Hudson County, New Jersey",
+      "sourceUrl": "https://revrenewables.com/projects/hudson-energy-storage/",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18076,
+      "originalTitle": "Lamberton Road Clean Energy Storage Center: 190M USD, 170 MW BESS in Mercer County, New Jersey",
+      "sourceUrl": "https://revrenewables.com/projects/lamberton-road-battery/",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18077,
+      "originalTitle": "Two Rivers Clean Energy Storage Center: 170M USD, 150 MW BESS in Hudson County, New Jersey",
+      "sourceUrl": "https://jupiterpower.io/projects/two-rivers-storage/",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18096,
+      "originalTitle": "Monte Cristo Solar 2 Energy Project: 680M USD, 523 MW Solar Farm in Esmeralda County, Nevada",
+      "sourceUrl": "https://www.blm.gov/programs/energy-and-minerals/renewable-energy/active-renewable-projects#monte-cristo-solar-2-nv",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18097,
+      "originalTitle": "Yellow Pine Solar III Energy Center: 135M USD, 100 MW Solar Farm in Clark County, Nevada",
+      "sourceUrl": "https://www.nexteraenergyresources.com/what-we-do/solar.html#yellow-pine-3-clark-nv",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18179,
+      "originalTitle": "South Heart Clean Energy Storage Facility: 170M USD, 150 MW BESS in Stark County, North Dakota",
+      "sourceUrl": "https://www.nexteraenergyresources.com/SouthHeartBESS-150MW-ND",
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "sourceUrl"
+      ],
+      "reason": "SPP SR6 and SR7 are competing Stark County storage matches. No unique operator mapping or project budget is established.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18237,
+      "originalTitle": "Casablanca Desalination Plant, Africa's Largest, Slips to February 2027",
+      "sourceUrl": "https://en.le360.ma/economy/casablancas-mega-desalination-plant-connected-to-national-power-grid_KP2CJQXOTFG4TGEBDQ6PPMZH5Y/",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 18241,
+        "production": 18241
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 18250,
+      "originalTitle": "Egypt Signs EGP 4.6bn Deals to Run 11 Seawater Desalination Plants",
+      "sourceUrl": "https://www.dailynewsegypt.com/2026/10/18/egypt-signs-egp-4-6bn-contracts-to-operate-maintain-11-desalination-plants/",
+      "outcome": "non-construction-reviewed",
+      "changedFields": [
+        "tags"
+      ],
+      "reason": "Operating and maintenance contracts for 11 existing desalination plants, not construction capex.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18254,
+      "originalTitle": "Century Aluminum Mt. Holly Smelter Back at Full Production: 295 MW Santee Cooper Contract Plus More Power to 2031, 50,000 t Restart, South Carolina",
+      "sourceUrl": "https://www.alcircle.com/news/century-aluminum-begins-expanded-production-at-mt-holly-smelter-118101",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18259,
+      "originalTitle": "Bitdeer Rockdale Bitcoin Mining Campus: 563 MW Interconnected, 742 MW Planned, 200 More Acres Bought for 100M USD in Milam County, Texas",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390026096425/ea030402101ex99-1.htm",
+      "outcome": "non-construction-reviewed",
+      "changedFields": [
+        "tags"
+      ],
+      "reason": "Rockdale land purchase: USD100M is acquisition consideration, not the 742MW expansion construction budget.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18351,
+      "originalTitle": "Nicholas County Solar Project: 250 MW Solar & Storage on Reclaimed Mine Land in West Virginia",
+      "sourceUrl": "https://savionenergy.com/portfolio/nicholas-county-solar-project/",
+      "outcome": "programme-scope-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "sourceUrl"
+      ],
+      "reason": "USD129M federal share is not total capex; own-site capacity/current funding/physical stage require follow-up. Deep Lake separately supported by PSC24-0311.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18394,
+      "originalTitle": "Ellis Solar Project: 175 MW Solar Facility in Ellis County, Kansas",
+      "sourceUrl": "https://krsl.com/community/ellis-county-commission-approves-solar-project-agreements",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address",
+        "latitude",
+        "longitude"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 2960,
+      "originalTitle": "TSMC's Dresden Fab (ESMC) Tops Out",
+      "sourceUrl": "https://focustaiwan.tw/business/202609150007",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 3244,
+      "originalTitle": "Deadline for a Midway Rising Deal on the Sports Arena Site",
+      "sourceUrl": "https://www.kpbs.org/news/politics/2026/08/31/california-lawmakers-greenlight-a-new-san-diego-sports-arena-bypassing-environmental-hurdles",
+      "outcome": "non-construction-deadline-reviewed",
+      "changedFields": [
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags"
+      ],
+      "reason": "Negotiation deadline for the multi-component Midway Rising programme; no event-specific construction budget or physical milestone.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 3395,
+      "originalTitle": "Metro's D Line Subway Reaches Westwood and the VA Campus",
+      "sourceUrl": "https://www.metro.net/documents/2025/11/d-line-subway-extension-2025.pdf",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 3406,
+      "originalTitle": "OpenAI, Oracle and Related Digital Announce a Stargate Campus in Michigan",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/openai-oracle-and-related-digital-announce-stargate-data-center-site-in-michigan-302600302.html",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19170,
+        "production": 19170
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 3415,
+      "originalTitle": "Blackstone and PIMCO Back the $16 Billion Stargate Campus in Saline Township",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/related-digital-announces-financing-for-16-billion-oracle-data-center-project-in-saline-township-michigan-302753421.html",
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 19170,
+        "production": 19170
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 16412,
+      "originalTitle": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3 B+ Investment",
+      "sourceUrl": null,
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18423,
+      "originalTitle": "Deep Lake Solar Project: 150 MW Clean Energy on Reclaimed Coal Mine in Nicholas County, West Virginia",
+      "sourceUrl": "https://www.savionenergy.com/",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address",
+        "parentId"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18961,
+      "originalTitle": "PAX Pennsylvania Digital I: 1,350 MW Hyperscale Campus across 1,288 Acres in Lackawanna County, PA",
+      "sourceUrl": "https://trackdatacenters.com/usa/pennsylvania#pax-pennsylvania-digital-i",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address",
+        "latitude",
+        "longitude"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18964,
+      "originalTitle": "Project Gold: 1,500 MW Hyperscale Data Center Campus on 1,260 Acres in Luzerne County, PA",
+      "sourceUrl": "https://trackdatacenters.com/usa/pennsylvania#project-gold",
+      "outcome": "location-and-scope-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "address",
+        "latitude",
+        "longitude",
+        "sourceUrl"
+      ],
+      "reason": "Corrected Luzerne County collision; conflicting tracker power/land figures withheld pending developer/township filing.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 18967,
+      "originalTitle": "Wildcat Ridge AI Data Center: 1,600 MW Campus with 588 Backup Generators in Lancaster County, PA",
+      "sourceUrl": "https://trackdatacenters.com/usa/pennsylvania#wildcat-ridge-ai-data-center",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address",
+        "latitude",
+        "longitude"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18968,
+      "originalTitle": "Project Hummingbird: 910 MW Data Center Campus Drawing 18 MGD Water in Luzerne County, PA",
+      "sourceUrl": "https://trackdatacenters.com/usa/pennsylvania#project-hummingbird",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "address",
+        "latitude",
+        "longitude"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 18986,
+      "originalTitle": "Hollenback Township Data Center Development Zoning Application: 960 MW 460-Acre Data Center Campus in Luzerne County",
+      "sourceUrl": "https://www.standardspeaker.com/2026/03/02/hollenback-twp-data-center-rezoning-request-heads-to-court/",
+      "outcome": "identity-collision-repaired",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Removed unrelated Iron City/Karthaus gas-generation text and unsubstantiated 960MW/460acre/USD650M campus claims. This is the Hollenback rezoning case.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 19007,
+      "originalTitle": "South Annville Township Data Center: 99-Acre Data Center Campus in Lebanon County",
+      "sourceUrl": "https://www.wgal.com/article/ai-data-center-plans-withdrawn-south-annville-township/71298129",
+      "outcome": "profile-and-factual-repair",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "sourceUrl",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Verified campus or component only; unsupported building-specific allocation removed.",
+      "profileAdded": true
+    },
+    {
+      "pinId": 19008,
+      "originalTitle": "Project Triboro: 1,500 MW 900-Acre Data Center Campus in Lackawanna County",
+      "sourceUrl": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+      "outcome": "programme-split-parent-repaired",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime"
+      ],
+      "reason": "Only DeNaples plans withdrawn; ERCOR remains a separate proposal. Create distinct profiles and do not assign Withdrawn to the combined parent.",
+      "children": [
+        20647,
+        20648
+      ],
+      "profileAdded": false
+    },
+    {
+      "pinId": 19026,
+      "originalTitle": "Stonebridge Lawrence Data Center: 569-Acre Data Center Campus in Lawrence County",
+      "sourceUrl": "https://www.stonebridgeinfrastructure.com/",
+      "outcome": "source-identity-repaired-evidence-gap",
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "price",
+        "priceCurrency",
+        "priceLowerBound",
+        "priceUpperBound",
+        "tags",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "delayReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "sourceUrl"
+      ],
+      "reason": "Replaced unrelated Stonebridge Infrastructure homepage; preserve reported developer budget while reopening current approval evidence.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 5890,
+      "originalTitle": "AB InBev Moves to Buy Back Its US Can Plants From Apollo for About US$3 Billion",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1668717/000119312526004373/d64742dex991.htm",
+      "outcome": "non-construction-reviewed",
+      "changedFields": [
+        "tags"
+      ],
+      "reason": "Repurchase of can plants from Apollo; ownership transfer, not plant construction.",
+      "profileAdded": false
+    },
+    {
+      "pinId": 5978,
+      "originalTitle": "GM to Invest US$4 Billion in Three US Assembly Plants",
+      "sourceUrl": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/jun/0611-plants.html",
+      "outcome": "programme-already-split-verified",
+      "children": [
+        20123,
+        20124,
+        20125
+      ],
+      "reason": "Orion, Fairfax and Spring Hill are independently profiled and threaded to 5978 in both environments; repaired stale catalog local mappings."
+    },
+    {
+      "pinId": 16384,
+      "originalTitle": "Meta Aiken: $800M+ Campus; Spring 2027 Target and Closed-Loop Cooling",
+      "sourceUrl": null,
+      "outcome": "canonical-profile-verified",
+      "canonicalPinIds": {
+        "local": 7307,
+        "production": 7307
+      },
+      "reason": "Repeated project milestone; canonical scope and profile read back in both environments. Do not duplicate the physical project profile."
+    },
+    {
+      "pinId": 20121,
+      "originalTitle": "Re:Build Announces $2.1 Billion to Expand US Manufacturing",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/10/27/3389070/0/en/re-build-announces-2-1-billion-to-accelerate-america-s-reindustrialization.html",
+      "outcome": "non-construction-reviewed",
+      "changedFields": [
+        "tags"
+      ],
+      "reason": "Re:Build company funding across its manufacturing platform, without independently dated named plant projects.",
+      "profileAdded": false
+    }
+  ]
+}

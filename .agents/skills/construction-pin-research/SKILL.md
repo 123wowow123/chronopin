@@ -67,3 +67,36 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   and do not infer vacancy, present eligibility or an exact ceremony day from a placed-in-service record.
 
 Docs: `docs/okf/scraping/daily-jobs.md#factoryprofiles`, `docs/okf/api/factory-capability.md`.
+
+## 6. Reaction excerpts, media and timeline (every development pin)
+Owner instruction (2026-10-30): every development/construction pin gets a project timeline, 3+ media, **top
+reaction excerpts** and a full `longFormSummary`. Excerpts are **not** posted to the comment panel (that is for readers); they are stored like
+reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod), 3-5 entries
+`{url, title, publishedDate, quote (<= 300 chars), sentiment -1..1}`, one distinct URL each, `source: "session"`.
+- Each is a real, attributed public reaction (city or agency spokesperson, owner, neighbors, opponents' appeal,
+  local columnists) quoted verbatim from a page you opened. Cover support, opposition and official process where
+  the coverage has them. Give every excerpt its real `publishedDate` (page JSON-LD `datePublished` or
+  `article:published_time`) and a `sentiment`: the pin's "Sentiment over time" graph and its overall (aggregate)
+  tone badge plot only dated, scored reviews. Sentiment is an editorial estimate of the quote's tone toward the project; say so in `basis`.
+- Label paraphrased reactions as reported, name AI-assisted outlets in the title, and never invent a quote or
+  commenter; if none exists, record a research gap.
+- Media: 3+ pictures from the coverage (outlet og:image or article photos); skip off-subject stock photos.
+  **The main image is the project's official rendering** from the developer or a project directory (e.g. BuildSD
+  `buildsd.org/projects/<slug>`, the developer's site, the city or CEQA file, the architect). View it first to
+  confirm it shows this project, and credit the source. Site and "before" photos follow it.
+- The main image is the pin's lowest media id (the readback order is by id, not by the order you send). To make a
+  later-found rendering the main image, PUT media with only the rendering, then PUT again with the rendering
+  first and the rest after it. Round-trip the whole pin (GET, change `media`, PUT) locally first and diff the
+  readback, then on prod.
+- Timeline: `PinFactory.milestones` (section 4) with verbatim quotes; leave out dates you could not read yourself.
+  Always include the **estimated completion** milestone (`basis: "planned"`, published precision such as
+  `Early 2028`, source quoting the developer's or trade press's stated delivery target). Only when no delivery
+  target is published, say so as a research gap; never infer one.
+- Pin content: besides a 3-4 sentence `description`, write a `longFormSummary` (HTML, `<h3>` sections, each bullet
+  ending in `<cite data-ref="URL"></cite>` for an opened source): the site and what stood there before, what is
+  being built (units, floors, area, affordable share, preserved features), approval and opposition, construction
+  and timeline (start, estimated completion), and cost (or the statement that none is published and what the
+  only published figure, such as land price, is). Every claim comes from a page you read; add each cited URL
+  (and the rendering's source page) to `references`.
+- Ongoing: the 06:00/18:00 news job's `review_research_gaps` `construction` list refreshes excerpts and sentiment as a
+  project nears completion or local news appears (`docs/okf/scraping/daily-jobs.md#sentiment`).

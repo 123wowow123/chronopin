@@ -1068,8 +1068,16 @@ from an unrelated company should leave the company queue without a score.
 `review_research_gaps`. Research a bounded batch of the returned exact products,
 works and restaurant branches: aim for three independent reviews, up to six
 (up to eight for `PinCriticReview`; taste needs at least one). The category
-queue is a list of leads: awards, tours, finances and construction are not
-reviewable products. Skip them and pass checked ids in `skip` so they do not
+queue is a list of leads: awards, tours and finances are not reviewable
+products. **Development pins are the exception (owner, 2026-10-30):** the
+`construction` list holds In Progress / Completed pins with a buildout profile
+and fewer than three critic reviews, nearest their stated completion year
+first. When a project is nearing completion, or has general local news, research
+reaction excerpts (city or agency spokesperson, owner, neighbors, opponents,
+local columnists) from opened pages: verbatim quote of at most 300 characters,
+real `publishedDate`, a sentiment score, saved with `save_researched_reviews`
+as `PinCriticReview` (never the comment panel). Record a research gap when no
+public reaction exists. Skip and pass checked ids in `skip` so they do not
 starve the queue. Open HTTPS sources, retain exact titles and verbatim extracts
 of at most 300 characters, and score each with `reviewRubric`. Save with
 `save_researched_reviews`, which preserves the author and axes, merges existing

@@ -1,0 +1,1365 @@
+{
+  "checkedAt": "2026-10-30T18:48:15.846450+00:00",
+  "createdPins": [
+    {
+      "key": "final68-pecos-building-a",
+      "parentId": 15796,
+      "body": {
+        "title": "Amazon Pecos County Building A: USD 300 Million Accessibility Filing",
+        "description": "Amazon filed Building A at 6000 TX-18 on August 4, 2026. The filing estimates USD 300 million and 189,060 square feet.",
+        "longFormSummary": "<ul><li>Accessibility review is complete. This does not establish completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul>",
+        "price": 300000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+        "tags": [
+          "Amazon",
+          "AWS",
+          "Cleanview",
+          "Data Centers",
+          "Developers",
+          "Fort Stockton",
+          "Natural Gas",
+          "Pacifico Energy",
+          "Pecos County",
+          "Planned",
+          "Texas",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-08-04. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-08-04T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "6000 TX-18, Fort Stockton, Pecos County, Texas 79735, United States",
+        "parentId": 15796,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Energy",
+          "Infrastructure",
+          "Computing"
+        ],
+        "references": [
+          {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [
+          {
+            "thumbName": "2767df36-09cd-44f9-a1c9-5a65dfe47fcf.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 563,
+            "originalUrl": "https://static.wixstatic.com/media/cc8d89_c049f268c94d4505b49a05623f75afe3~mv2.jpg",
+            "originalWidth": 1920,
+            "originalHeight": 1080,
+            "type": "1"
+          },
+          {
+            "thumbName": "487f741d-9a23-4526-b1b0-a9687a69f560.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 563,
+            "originalUrl": "https://static.wixstatic.com/media/69cbbc_46ad039ac49243f38b15da5f460fba75~mv2.jpg",
+            "originalWidth": 3500,
+            "originalHeight": 1969,
+            "type": "1"
+          }
+        ],
+        "userName": "@EnergyDesk"
+      },
+      "profile": {
+        "sector": "Infrastructure: data centers",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "investment",
+            "label": "Filed estimated construction cost",
+            "value": "USD 300 million",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+              "title": "Project owner / public authority project evidence",
+              "quote": "$300,000,000",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "floorArea",
+            "label": "Filed floor area",
+            "value": "189,060 square feet",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+              "title": "Project owner / public authority project evidence",
+              "quote": "189,060",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Filed construction window",
+            "value": "August 1–December 1, 2026; scheduled only",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+              "title": "Project owner / public authority project evidence",
+              "quote": "12/1/2026",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Filed scheduled construction start",
+            "date": "2026-08-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+              "title": "Project owner / public authority project evidence",
+              "quote": "8/1/2026",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Accessibility registration",
+            "date": "2026-08-04",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+              "title": "Project owner / public authority project evidence",
+              "quote": "8/4/2026",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Filed scheduled completion",
+            "date": "2026-12-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+              "title": "Project owner / public authority project evidence",
+              "quote": "12/1/2026",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": null,
+      "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954",
+      "pinIds": {
+        "local": 20641,
+        "production": 20641
+      }
+    },
+    {
+      "key": "final68-pecos-building-b",
+      "parentId": 15796,
+      "body": {
+        "title": "Amazon Pecos County Building B: USD 300 Million Accessibility Filing",
+        "description": "Amazon filed Building B at 6000 TX-18 on August 4, 2026. The filing estimates USD 300 million and 189,060 square feet.",
+        "longFormSummary": "<ul><li>Accessibility review is complete. This does not establish completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul>",
+        "price": 300000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+        "tags": [
+          "Amazon",
+          "AWS",
+          "Cleanview",
+          "Data Centers",
+          "Developers",
+          "Fort Stockton",
+          "Natural Gas",
+          "Pacifico Energy",
+          "Pecos County",
+          "Planned",
+          "Texas",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-08-04. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-08-04T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "6000 TX-18, Fort Stockton, Pecos County, Texas 79735, United States",
+        "parentId": 15796,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Energy",
+          "Infrastructure",
+          "Computing"
+        ],
+        "references": [
+          {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [
+          {
+            "thumbName": "2767df36-09cd-44f9-a1c9-5a65dfe47fcf.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 563,
+            "originalUrl": "https://static.wixstatic.com/media/cc8d89_c049f268c94d4505b49a05623f75afe3~mv2.jpg",
+            "originalWidth": 1920,
+            "originalHeight": 1080,
+            "type": "1"
+          },
+          {
+            "thumbName": "487f741d-9a23-4526-b1b0-a9687a69f560.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 563,
+            "originalUrl": "https://static.wixstatic.com/media/69cbbc_46ad039ac49243f38b15da5f460fba75~mv2.jpg",
+            "originalWidth": 3500,
+            "originalHeight": 1969,
+            "type": "1"
+          }
+        ],
+        "userName": "@EnergyDesk"
+      },
+      "profile": {
+        "sector": "Infrastructure: data centers",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "investment",
+            "label": "Filed estimated construction cost",
+            "value": "USD 300 million",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+              "title": "Project owner / public authority project evidence",
+              "quote": "$300,000,000",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "floorArea",
+            "label": "Filed floor area",
+            "value": "189,060 square feet",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+              "title": "Project owner / public authority project evidence",
+              "quote": "189,060",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Filed construction window",
+            "value": "August 1–December 1, 2026; scheduled only",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+              "title": "Project owner / public authority project evidence",
+              "quote": "12/1/2026",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Filed scheduled construction start",
+            "date": "2026-08-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+              "title": "Project owner / public authority project evidence",
+              "quote": "8/1/2026",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Accessibility registration",
+            "date": "2026-08-04",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+              "title": "Project owner / public authority project evidence",
+              "quote": "8/4/2026",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Filed scheduled completion",
+            "date": "2026-12-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+              "title": "Project owner / public authority project evidence",
+              "quote": "12/1/2026",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": null,
+      "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955",
+      "pinIds": {
+        "local": 20642,
+        "production": 20642
+      }
+    },
+    {
+      "key": "final68-pecos-building-c",
+      "parentId": 15796,
+      "body": {
+        "title": "Amazon Pecos County Building C: USD 300 Million Accessibility Filing",
+        "description": "Amazon filed Building C at 6000 TX-18 on August 4, 2026. The filing estimates USD 300 million and 189,060 square feet.",
+        "longFormSummary": "<ul><li>Accessibility review is complete. This does not establish completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul>",
+        "price": 300000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+        "tags": [
+          "Amazon",
+          "AWS",
+          "Cleanview",
+          "Data Centers",
+          "Developers",
+          "Fort Stockton",
+          "Natural Gas",
+          "Pacifico Energy",
+          "Pecos County",
+          "Planned",
+          "Texas",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-08-04. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-08-04T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "6000 TX-18, Fort Stockton, Pecos County, Texas 79735, United States",
+        "parentId": 15796,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Energy",
+          "Infrastructure",
+          "Computing"
+        ],
+        "references": [
+          {
+            "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [
+          {
+            "thumbName": "2767df36-09cd-44f9-a1c9-5a65dfe47fcf.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 563,
+            "originalUrl": "https://static.wixstatic.com/media/cc8d89_c049f268c94d4505b49a05623f75afe3~mv2.jpg",
+            "originalWidth": 1920,
+            "originalHeight": 1080,
+            "type": "1"
+          },
+          {
+            "thumbName": "487f741d-9a23-4526-b1b0-a9687a69f560.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 563,
+            "originalUrl": "https://static.wixstatic.com/media/69cbbc_46ad039ac49243f38b15da5f460fba75~mv2.jpg",
+            "originalWidth": 3500,
+            "originalHeight": 1969,
+            "type": "1"
+          }
+        ],
+        "userName": "@EnergyDesk"
+      },
+      "profile": {
+        "sector": "Infrastructure: data centers",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "investment",
+            "label": "Filed estimated construction cost",
+            "value": "USD 300 million",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+              "title": "Project owner / public authority project evidence",
+              "quote": "$300,000,000",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "floorArea",
+            "label": "Filed floor area",
+            "value": "189,060 square feet",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+              "title": "Project owner / public authority project evidence",
+              "quote": "189,060",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Filed construction window",
+            "value": "August 1–December 1, 2026; scheduled only",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+              "title": "Project owner / public authority project evidence",
+              "quote": "12/1/2026",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Filed scheduled construction start",
+            "date": "2026-08-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+              "title": "Project owner / public authority project evidence",
+              "quote": "8/1/2026",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Accessibility registration",
+            "date": "2026-08-04",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+              "title": "Project owner / public authority project evidence",
+              "quote": "8/4/2026",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Filed scheduled completion",
+            "date": "2026-12-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+              "title": "Project owner / public authority project evidence",
+              "quote": "12/1/2026",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": null,
+      "sourceUrl": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959",
+      "pinIds": {
+        "local": 20643,
+        "production": 20643
+      }
+    },
+    {
+      "key": "final68-shuaibah-1",
+      "parentId": 14053,
+      "body": {
+        "title": "Al Shuaibah 1: 600 MW Solar Plant in Commercial Operation",
+        "description": "ACWA reports Al Shuaibah 1 commercial operation in November 2024.",
+        "longFormSummary": "<ul><li>The combined programme budget is retained on the parent; no per-plant allocation is published.<cite data-ref=\"https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Electric Generation Projects",
+          "Operational",
+          "Operator researched",
+          "Published project costs",
+          "Saudi Arabia",
+          "Solar",
+          "Completed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2024-11. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Al Shuaibah, Makkah Province, Saudi Arabia",
+        "latitude": 20.7825,
+        "longitude": 39.5786,
+        "parentId": 14053,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Energy",
+          "Infrastructure"
+        ],
+        "references": [
+          {
+            "url": "https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          },
+          {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [
+          {
+            "thumbName": "20ef8e71-ed5c-47b8-9836-cc2e71eddee8.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 605,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000809136-media-1-984876269aef739363f1.webp",
+            "originalWidth": 1800,
+            "originalHeight": 1089,
+            "type": "1"
+          }
+        ],
+        "userName": "@EnergyDesk"
+      },
+      "profile": {
+        "sector": "Energy: solar generation",
+        "status": "production",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Plant capacity",
+            "value": "600 MW",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "600 MW",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "products",
+            "label": "Technology",
+            "value": "Solar photovoltaic",
+            "basis": "planned",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "Solar Photovoltaic",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Commercial operation",
+            "value": "2024-11",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "November 2024G",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Full-plant commercial operation",
+            "date": "2024-11",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "November 2024G",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 600,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+        "note": "Full-plant operating solar generating capacity."
+      },
+      "sourceUrl": null,
+      "pinIds": {
+        "local": 20644,
+        "production": 20644
+      }
+    },
+    {
+      "key": "final68-shuaibah-2",
+      "parentId": 14053,
+      "body": {
+        "title": "Al Shuaibah 2: 2,060 MW Solar Plant in Commercial Operation",
+        "description": "ACWA reports Al Shuaibah 2 commercial operation in February 2025.",
+        "longFormSummary": "<ul><li>The combined programme budget is retained on the parent; no per-plant allocation is published.<cite data-ref=\"https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Electric Generation Projects",
+          "Operational",
+          "Operator researched",
+          "Published project costs",
+          "Saudi Arabia",
+          "Solar",
+          "Completed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2025-02. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2025-02-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Al Shuaibah, Makkah Province, Saudi Arabia",
+        "latitude": 20.7825,
+        "longitude": 39.5786,
+        "parentId": 14053,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Energy",
+          "Infrastructure"
+        ],
+        "references": [
+          {
+            "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [
+          {
+            "thumbName": "20ef8e71-ed5c-47b8-9836-cc2e71eddee8.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 605,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000809136-media-1-984876269aef739363f1.webp",
+            "originalWidth": 1800,
+            "originalHeight": 1089,
+            "type": "1"
+          }
+        ],
+        "userName": "@EnergyDesk"
+      },
+      "profile": {
+        "sector": "Energy: solar generation",
+        "status": "production",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Plant capacity",
+            "value": "2,060 MW",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "2,060 megawatts",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "products",
+            "label": "Technology",
+            "value": "Solar photovoltaic",
+            "basis": "planned",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "photovoltaic",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Commercial operation",
+            "value": "2025-02",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "February 2025G",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Full-plant commercial operation",
+            "date": "2025-02",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+              "title": "Project owner / public authority project evidence",
+              "quote": "February 2025G",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 2060,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf",
+        "note": "Full-plant operating solar generating capacity."
+      },
+      "sourceUrl": null,
+      "pinIds": {
+        "local": 20645,
+        "production": 20645
+      }
+    },
+    {
+      "key": "final68-amazon-resilient-shreveport",
+      "parentId": 2875,
+      "body": {
+        "title": "Amazon Resilient Technology Park: Third Louisiana Campus Announced",
+        "description": "Amazon announced its third northwest Louisiana campus at Resilient Technology Park in Shreveport on August 18, 2026, adding USD 6 billion of planned investment.",
+        "longFormSummary": "<ul><li>The new campus is part of an USD 18 billion three-campus programme. Its opening date and IT-load capacity are not specified in this announcement.<cite data-ref=\"https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus\"></cite></li></ul>",
+        "price": 6000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+        "tags": [
+          "AWS",
+          "Caddo Parish",
+          "Data Center",
+          "Jobs",
+          "Resilient Technology Park",
+          "Shreveport",
+          "STACK Infrastructure",
+          "SWEPCO",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-08-18. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-08-18T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Resilient Technology Park, Resilient Way, Flournoy, Shreveport, Caddo Parish, Louisiana 71119, United States",
+        "latitude": 32.453429,
+        "longitude": -93.9076855,
+        "parentId": 2875,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Computing",
+          "Infrastructure"
+        ],
+        "references": [
+          {
+            "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [],
+        "userName": "@BuildDesk"
+      },
+      "profile": {
+        "sector": "Infrastructure: data centers",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "investment",
+            "label": "Additional campus investment",
+            "value": "USD 6 billion planned",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+              "title": "Project owner / public authority project evidence",
+              "quote": "additional $6 billion",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "employment",
+            "label": "Additional direct jobs",
+            "value": "210 expected jobs",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+              "title": "Project owner / public authority project evidence",
+              "quote": "210 direct new jobs",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "products",
+            "label": "Project type",
+            "value": "Cloud-computing and AI data center",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+              "title": "Project owner / public authority project evidence",
+              "quote": "cloud computing and artificial intelligence",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Third campus and investment announced",
+            "date": "2026-08-18",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+              "title": "Project owner / public authority project evidence",
+              "quote": "August 18, 2026",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": null,
+      "sourceUrl": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+      "pinIds": {
+        "local": 20646,
+        "production": 20646
+      }
+    },
+    {
+      "key": "final68-triboro-commerce-withdrawn",
+      "parentId": 19008,
+      "body": {
+        "title": "Triboro Commerce Park: Seven-Building Proposal Withdrawn",
+        "description": "Olyphant’s engineer confirmed that Triboro Commerce Park had withdrawn its seven-building plans, according to the June 10, 2026 report.",
+        "longFormSummary": "<ul><li>The two developers’ proposals are separate. No combined campus power rating or construction budget is established.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Withdrawn"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "June 10, 2026 is the dated report observation. The underlying withdrawal day is unpublished.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-06-10T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Olyphant, Lackawanna County, Pennsylvania, United States",
+        "parentId": 19008,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Infrastructure",
+          "AI",
+          "Energy"
+        ],
+        "references": [
+          {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [],
+        "userName": "@DataCenterDesk"
+      },
+      "profile": {
+        "sector": "Infrastructure: data centers",
+        "status": "offline",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "siteArea",
+            "label": "Reported property scope",
+            "value": "Over 400 acres",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "over 400 acres",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "products",
+            "label": "Proposed campus layout",
+            "value": "7 data centers",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "seven data centers",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported planning status",
+            "value": "Withdrawn plans",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "withdrew those plans",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Withdrawal reported; actual withdrawal day unpublished",
+            "date": "2026-06-10",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "June 10, 2026",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": null,
+      "sourceUrl": null,
+      "pinIds": {
+        "local": 20647,
+        "production": 20647
+      }
+    },
+    {
+      "key": "final68-triboro-ercor-proposed",
+      "parentId": 19008,
+      "body": {
+        "title": "ERCOR Triboro: Nine Data Centers Proposed in Olyphant",
+        "description": "ERCOR Triboro, a Sansone Group company, proposed nine data centers on a 500-acre property, with about 100 acres occupied by the data centers.",
+        "longFormSummary": "<ul><li>The two developers’ proposals are separate. No combined campus power rating or construction budget is established.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "June 10, 2026 is the report observation, not a construction start or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-06-10T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Olyphant, Lackawanna County, Pennsylvania, United States",
+        "parentId": 19008,
+        "allDay": true,
+        "rootThread": false,
+        "categories": [
+          "Infrastructure",
+          "AI",
+          "Energy"
+        ],
+        "references": [
+          {
+            "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+            "title": "Opened project owner / authority project evidence",
+            "confidence": 95
+          }
+        ],
+        "media": [],
+        "userName": "@DataCenterDesk"
+      },
+      "profile": {
+        "sector": "Infrastructure: data centers",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "siteArea",
+            "label": "Reported property scope",
+            "value": "500-acre property; about 100 acres proposed for data centers",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "500 acres",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "products",
+            "label": "Proposed campus layout",
+            "value": "9 data centers",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "nine data centers",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported planning status",
+            "value": "Separate pending proposal; zoning settlement is not project approval",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "applied to change its land use",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Separate proposal reported; not construction approval",
+            "date": "2026-06-10",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "title": "Project owner / public authority project evidence",
+              "quote": "June 10, 2026",
+              "publishedDate": null
+            }
+          }
+        ]
+      },
+      "power": null,
+      "sourceUrl": null,
+      "pinIds": {
+        "local": 20648,
+        "production": 20648
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 17091,
+      "patch": {
+        "tags": [
+          "Aurora Storage",
+          "Battery Storage",
+          "Calpine",
+          "Cleanview",
+          "ComEd",
+          "Illinois",
+          "Lake County",
+          "PJM"
+        ]
+      },
+      "addReferences": [],
+      "outcome": "unsupported-claims-repaired-evidence-gap",
+      "research": {
+        "oldTitle": "Aurora Energy Storage Center: 1.2B USD, 1,206 MW BESS in Lake County, Illinois",
+        "oldPrice": 1200000000,
+        "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope."
+      }
+    }
+  ]
+}

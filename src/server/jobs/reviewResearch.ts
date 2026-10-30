@@ -42,7 +42,41 @@ export async function reviewResearchGaps(limit = 5, skip: number[] = []) {
        AND NOT EXISTS (SELECT 1 FROM "PinCriticReview" c WHERE c."pinId" = p."id")
      ORDER BY p."utcStartDateTime" DESC, p."id" LIMIT $2`, [skip, limit + 1],
   );
-  return { reviewRubric: REVIEW_SENTIMENT_PROMPT, rubric: rubric.slice(0, limit), critics: critics.slice(0, limit), moreRubrics: rubric.length > limit, moreCritics: critics.length > limit };
+  const construction = await constructionReviewGaps(limit, skip);
+  return { reviewRubric: REVIEW_SENTIMENT_PROMPT, rubric: rubric.slice(0, limit), critics: critics.slice(0, limit), construction, moreRubrics: rubric.length > limit, moreCritics: critics.length > limit };
+}
+
+// The year of a project's stated completion ("Early 2028", "2031", "Q3 2027"), from the
+// profile milestone labelled completion, delivery or opening; null when there is none.
+export function completionYear(milestones: { label?: string; date?: string }[] | null): number | null {
+  for (const m of milestones ?? []) {
+    if (!/complet|deliver|open/i.test(m.label ?? '')) continue;
+    const year = /\b(20\d\d)\b/.exec(m.date ?? '');
+    if (year) return Number(year[1]);
+  }
+  return null;
+}
+
+// Development pins (tagged In Progress or Completed, with a buildout profile) that are nearing
+// completion (stated completion near the current year, before or after) or have fewer than three
+// critic reviews: leads for reaction excerpts from local news, saved to PinCriticReview.
+// Nearest the current year first; a project with no stated year follows.
+// Years from now to a project's stated completion; a project with no stated year comes last.
+const distance = (completion: number | null, year: number) => (completion == null ? 999 : Math.abs(completion - year));
+
+export async function constructionReviewGaps(limit: number, skip: number[]) {
+  const rows = await db.query<{ pinId: number; title: string; sourceUrl: string | null; milestones: { label?: string; date?: string }[] | null; reviews: number }>(
+    `SELECT p."id" AS "pinId", p."title", p."sourceUrl", f."profile"->'milestones' AS "milestones", COALESCE(jsonb_array_length(c."reviews"), 0) AS "reviews"
+     FROM "Pin" p JOIN "PinFactory" f ON f."pinId" = p."id" LEFT JOIN "PinCriticReview" c ON c."pinId" = p."id"
+     WHERE p."utcDeletedDateTime" IS NULL AND NOT (p."id" = ANY($1::int[])) AND COALESCE(c."source", '') <> 'hand'
+       AND COALESCE(jsonb_array_length(c."reviews"), 0) < 3
+       AND EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('In Progress', 'Completed'))`, [skip],
+  );
+  const year = new Date().getFullYear();
+  return rows
+    .map(({ milestones, ...row }) => ({ ...row, completionYear: completionYear(milestones) }))
+    .sort((a, b) => distance(a.completionYear, year) - distance(b.completionYear, year) || a.pinId - b.pinId)
+    .slice(0, limit);
 }
 
 // Both sides are read, merged and verified through native APIs; no rubric

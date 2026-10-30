@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 19008,
+      "patch": {
+        "title": "Olyphant Triboro Plans: DeNaples Proposal Withdrawn, ERCOR Proposal Separate",
+        "description": "A June 10, 2026 report says Triboro Commerce Park withdrew its seven-building plan. A separate ERCOR Triboro proposal sought nine data centers on a 500-acre property.",
+        "longFormSummary": "<p>Olyphant’s engineer confirmed withdrawal of Triboro Commerce Park’s seven-building plan. ERCOR Triboro, a Sansone Group company, separately proposed nine data centers, occupying about 100 acres of its 500-acre property. The zoning settlement did not approve a campus.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></p>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "tags": [
+          "AI Data Centers",
+          "Data Centers",
+          "Pennsylvania",
+          "PJM Interconnection",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The date is the cited report or decision milestone, not a verified construction completion or opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-06-10T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+          "title": "Project evidence reviewed 2026-10-30",
+          "confidence": 90
+        }
+      ],
+      "outcome": "programme-split-parent-repaired",
+      "research": {
+        "oldTitle": "Project Triboro: 1,500 MW 900-Acre Data Center Campus in Lackawanna County",
+        "oldPrice": 14250000000,
+        "reason": "Only DeNaples plans withdrawn; ERCOR remains a separate proposal. Create distinct profiles and do not assign Withdrawn to the combined parent."
+      },
+      "power": null
+    }
+  ]
+}

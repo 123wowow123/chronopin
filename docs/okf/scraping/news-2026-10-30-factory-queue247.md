@@ -8,6 +8,10 @@ generated: { by: process:factory-profile-research, at: 2026-10-30T18:00:00Z }
 
 # Original 247-candidate queue batch closeout
 
+## Follow-up: exact remaining 68 reviewed
+
+The [final-68 review](news-2026-10-30-factory-final68.md) supersedes the remaining count below: all 68 were reviewed, 45 original pins were repaired, eight child pins were added, and 27 profiles were saved in both environments. Fourteen project evidence holds remain explicit. The figures below describe the earlier batch snapshot.
+
 The exact original queue was frozen before writes. **179 distinct original entries were repaired in production and locally.** The raw priced gap scan fell from **247 to 68 in both environments**. This is a batch closeout, not a claim that every original candidate now has a verified project profile.
 
 - **111 new sourced buildout profiles**, all with at least three distinct metric categories and a project timeline. These include five withdrawn interconnection requests with sourced disposition timelines. The replay catalog contains **977 profiles**.

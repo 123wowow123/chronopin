@@ -485,4 +485,4 @@ https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the?utm_sourc
 restaurant pins should hve food image with captions of what they are on pin
 
 
-the restaurant landing page pins should have reviews on their menu items tiles sh
+the restaurant landing page pins should have reviews on their menu items tiles shown as a icon
