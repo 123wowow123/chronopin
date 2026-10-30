@@ -227,7 +227,7 @@ describe('Chinese address limit', () => {
     expect(await isChineseAddress('2400:3200::1')).toBe(true);
     expect(await isChineseAddress('2001:4860:4860::8888')).toBe(false);
   });
-  it('admits 120 addresses a minute, keeps those, refuses new ones, then resets', () => {
+  it('admits 100 addresses a minute, keeps those, refuses new ones, then resets', () => {
     for (let i = 0; i < CHINA_VISITORS_PER_MINUTE; i++) expect(chinaRetryAfter(`1.0.0.${i}`, 1_000)).toBeNull();
     expect(chinaRetryAfter('1.0.0.0', 2_000)).toBeNull();
     expect(chinaRetryAfter('1.0.1.0', 2_000)).toBe(59);

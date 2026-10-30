@@ -221,7 +221,7 @@ export async function proxy(request: NextRequest) {
   }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
     const address = request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? '';
-    // Visitors from Chinese address ranges: 120 different addresses a minute
+    // Visitors from Chinese address ranges: 100 different addresses a minute
     // between them (botLimit.chinaRetryAfter). Signed-in users with a paid plan
     // (ad-free, heavy-use or Premium) pass.
     if (address && (await isChineseAddress(address))) {
