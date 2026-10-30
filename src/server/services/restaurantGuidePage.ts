@@ -8,7 +8,7 @@ import type { RestaurantSpecialVenue } from '../model/restaurantSpecialVenue';
 import { TAGS } from './cache';
 import { restaurantGuideDetails } from './restaurantGuideDetails';
 import { regionalRestaurantOffers } from './restaurantOffers';
-import { regionalOpeningDays, regionalRestaurants, regionalTopRestaurants } from './restaurants';
+import { allRegionalGuideCounts, regionalOpeningDays, regionalRestaurants, regionalTopRestaurants } from './restaurants';
 
 // Everything one region's guide is built from, kept for a few minutes so a
 // reader paging through a list does not rebuild it for every 25 cards.
@@ -29,6 +29,17 @@ async function guideBase(regionSlug: string) {
     upcoming: active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day)),
     recent: active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day)),
   };
+}
+
+// Every region's list sizes (discounts left at 0) from a handful of queries in
+// all instead of ~100 per-region rounds: what /sitemap-restaurants.xml needs.
+export async function allGuideCounts(now: Date): Promise<Record<string, Record<GuideView, number>>> {
+  const all = await allRegionalGuideCounts();
+  return Object.fromEntries(RESTAURANT_REGIONS.filter((region) => all[region.slug]).map((region) => {
+    const today = dayKeyIn(now, region.timeZone);
+    const groups = all[region.slug].openings.map((opening) => openingGroup(opening, today));
+    return [region.slug, { upcoming: groups.filter((g) => g === 'upcoming').length, new: groups.filter((g) => g === 'new').length, top: all[region.slug].tops, discounts: 0 }];
+  }));
 }
 
 // The four list sizes alone, for the sitemap. guideBase also assembles every

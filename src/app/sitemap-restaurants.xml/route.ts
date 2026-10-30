@@ -3,7 +3,7 @@ import { connection } from 'next/server';
 import { absoluteUrl } from '@/lib/seo';
 import { GUIDE_PAGE_SIZE, GUIDE_VIEWS, guideListPath } from '@/lib/restaurantGuide';
 import { TAGS } from '@/server/services/cache';
-import { guideCounts } from '@/server/services/restaurantGuidePage';
+import { allGuideCounts } from '@/server/services/restaurantGuidePage';
 import { restaurantGuideRegionSlugs } from '@/server/services/restaurants';
 
 // Each city guide's lists, and their later pages, are crawlable URLs
@@ -15,10 +15,10 @@ async function guidePaths(): Promise<string[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.sitemap);
-  const now = new Date();
+  const [slugs, allCounts] = await Promise.all([restaurantGuideRegionSlugs(), allGuideCounts(new Date())]);
   const paths: string[] = [];
-  for (const slug of await restaurantGuideRegionSlugs()) {
-    const counts = await guideCounts(slug, now, undefined, false);
+  for (const slug of slugs) {
+    const counts = allCounts[slug];
     if (!counts) continue;
     // Discounts are not counted (never listed here); they only decide the default view when the other three are empty, which then lists nothing.
     // The default view's first page is the bare city URL, already in /sitemap.xml with the regions.

@@ -153,6 +153,53 @@ export async function regionalOpeningDays(city: string): Promise<{ day: string; 
   });
 }
 
+// Every region's opening days and top-restaurant count from three queries in
+// all, for /sitemap-restaurants.xml: asking per region repeated the content read,
+// a full-table sourceUrl scan and an opening query ~100 times on the 2-vCPU VM
+// (50 s cold, 2026-10-30). Same rules as regionalOpeningDays / regionalTopRestaurants.
+export async function allRegionalGuideCounts(): Promise<Record<string, { openings: { day: string; confirmed: boolean }[]; tops: number }>> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  cacheTag(TAGS.restaurantContent);
+  const records = await allRestaurantContent();
+  const tiles = new Map(records.map((record) => [restaurantSourceKey(record.profile.pinSourceUrl), record]));
+  const topRecords = records.filter((record) => record.enabled && record.profile.tile?.kind === 'top');
+  const sourcesByRegion = new Map<string, string[]>();
+  for (const record of records) {
+    const tile = record.profile.tile;
+    if (record.enabled && tile?.kind === 'opening') sourcesByRegion.set(tile.regionSlug, [...(sourcesByRegion.get(tile.regionSlug) ?? []), record.profile.pinSourceUrl]);
+  }
+  const names = RESTAURANT_REGIONS.map((region) => region.name);
+  const [pins, rows] = await Promise.all([
+    Pin.findBySourceUrls(topRecords.map((record) => record.profile.pinSourceUrl)),
+    db.query<{ id: number; city: string | null; day: string; dateConfidence: string | null; sourceUrl: string | null }>(
+      `SELECT "p"."id", "city"."name" AS "city", to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day", "p"."dateConfidence", "p"."sourceUrl"
+       FROM "Pin" AS "p" LEFT JOIN "PinTag" AS "city" ON "city"."pinId" = "p"."id" AND "city"."name" = ANY($1::citext[])
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Restaurant Opening')
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
+       WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcStartDateTime" IS NOT NULL
+         AND ("city"."name" IS NOT NULL OR "p"."sourceUrl" = ANY($2::text[]))`,
+      [names, [...sourcesByRegion.values()].flat()],
+    ),
+  ]);
+  const result: Record<string, { openings: { day: string; confirmed: boolean }[]; tops: number }> = {};
+  for (const region of RESTAURANT_REGIONS) {
+    const sources = new Set((sourcesByRegion.get(region.slug) ?? []).map(restaurantSourceKey));
+    // A pin tagged with two cities, or matched by city and by source, is one opening.
+    const seen = new Set<number>();
+    const openings = rows.filter((row) => ((row.city?.toLowerCase() === region.name.toLowerCase()) || sources.has(restaurantSourceKey(row.sourceUrl ?? ''))) && !seen.has(row.id) && seen.add(row.id)).flatMap((row) => {
+      const record = tiles.get(restaurantSourceKey(row.sourceUrl ?? ''));
+      if (!listedInRegion(record, region.slug)) return [];
+      const tile = record?.profile.tile;
+      return [{ day: row.day, confirmed: row.dateConfidence === 'confirmed' || (tile?.openingConfirmed === true && tile.day === row.day) }];
+    });
+    const tops = topRecords.filter((record) => record.profile.tile!.regionSlug === region.slug && pins.has(record.profile.pinSourceUrl)).length;
+    result[region.slug] = { openings, tops };
+  }
+  return result;
+}
+
 export async function regionalRestaurants(city: string): Promise<{ restaurants: Restaurant[]; previewSnapshot: boolean }> {
   'use cache';
   cacheLife('minutes');
