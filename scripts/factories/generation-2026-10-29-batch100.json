@@ -1,0 +1,431 @@
+[
+  {
+    "pinIds": {
+      "local": 15894,
+      "production": 15894
+    },
+    "title": "Dutchman Solar and Storage: 499 MW in Converse County, Wyoming, 500M USD, Delayed to 2029 Without a Buyer",
+    "megawatts": 499,
+    "kind": "generation",
+    "note": "Status: announced. Proposed 499 MW solar, with separately described battery storage. No battery energy rating inferred.  Requested construction start moved to Q4 2027; lack of a secured buyer is a reported dependency.",
+    "sourceUrl": "https://www.glenrockind.com/article/570,dutchman-solar-farm-start-date-pushed-back-due-to-lack-of-secured-buyer"
+  },
+  {
+    "pinIds": {
+      "local": 18393,
+      "production": 18393
+    },
+    "title": "Eagle Creek Solar Park: 120 MW Solar Center in Saginaw County, Michigan",
+    "megawatts": 120,
+    "kind": "generation",
+    "note": "Status: announced. 120 MW planned solar generation; generic installed-capacity page label does not prove commissioning.",
+    "sourceUrl": "https://www.edpr.com/north-america/eagle-creek-solar-park"
+  },
+  {
+    "pinIds": {
+      "local": 18350,
+      "production": 18350
+    },
+    "title": "New Frontiers Solar Park: 100 MW Solar Facility in Breckinridge County, Kentucky",
+    "megawatts": 100,
+    "kind": "generation",
+    "note": "Status: announced. 100 MW solar design; no completed operation inferred from a capacity label.",
+    "sourceUrl": "https://www.edpr.com/north-america/new-frontiers-solar-park"
+  },
+  {
+    "pinIds": {
+      "local": 18208,
+      "production": 18208
+    },
+    "title": "Vinton Solar Energy Center: 125 MW Solar Farm in Vinton County, Ohio",
+    "megawatts": 125,
+    "kind": "generation",
+    "note": "Status: announced. 125 MW solar generation design; no annual MWh inferred.",
+    "sourceUrl": "https://vintonsolarenergycenter.invenergy.com/"
+  },
+  {
+    "pinIds": {
+      "local": 18589,
+      "production": 18589
+    },
+    "title": "Show Me State Solar: 250 MW; Nearly $500M Venture, October 2026 Target",
+    "megawatts": 250,
+    "kind": "generation",
+    "note": "Status: construction. 250 MWac solar generation design.  Commercial operation forecast in 2026.",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/desri-and-ranger-power-announce-close-of-financing-and-start-of-construction-for-250mwac-show-me-state-solar-project-in-missouri-302372407.html"
+  },
+  {
+    "pinIds": {
+      "local": 18314,
+      "production": 18314
+    },
+    "title": "Kitt Solar and Energy Storage Project: 100 MWac Solar Farm in Pinal County, Arizona",
+    "megawatts": 100,
+    "kind": "generation",
+    "note": "Status: construction. 100 MWac solar and separate 400 MWh battery storage.  Expected construction completion late 2026, not achieved operation.",
+    "sourceUrl": "https://kittsolar.com/"
+  },
+  {
+    "pinIds": {
+      "local": 18292,
+      "production": 18292
+    },
+    "title": "Crimson Orchard Solar and Storage Center: 304M USD Financing, 100 MWac Solar and 100 MW BESS in Elmore County, Idaho",
+    "megawatts": 120,
+    "kind": "generation",
+    "note": "Status: construction. 120 MW solar power and 400 MWh storage; storage power not inferred from energy.  Commercial operation expected first half of 2027.",
+    "sourceUrl": "https://www.clenera.com/news/enlight-and-clenera-secure-304-million-in-project-financing-for-the-crimson-orchard-project-in-idaho"
+  },
+  {
+    "pinIds": {
+      "local": 7690,
+      "production": 7690
+    },
+    "title": "Mill Creek 5 — estimated target 2027",
+    "megawatts": 645,
+    "kind": "generation",
+    "note": "Status: construction. 645 MW natural-gas combined-cycle electrical nameplate; not the whole Mill Creek station.  Expected completion 2027, not commercial operation already achieved.",
+    "sourceUrl": "https://lge-ku.com/mc5"
+  },
+  {
+    "pinIds": {
+      "local": 7688,
+      "production": 7688
+    },
+    "title": "Empire Wind 1 — estimated target 2027",
+    "megawatts": 810,
+    "kind": "generation",
+    "note": "Status: construction. 810 MW contracted offshore wind capacity for Empire Wind 1 alone.  Expected commercial operation 2027.",
+    "sourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1"
+  },
+  {
+    "pinIds": {
+      "local": 14051,
+      "production": 14051
+    },
+    "title": "Globeleq Menengai geothermal plant — under construction",
+    "megawatts": 35,
+    "kind": "generation",
+    "note": "Status: construction. 35 MW geothermal generation for this plant, excluding other Menengai developers.  Original 2025 operation forecast remains unverified; no completion inferred.",
+    "sourceUrl": "https://globeleq.com/globeleqs-35mw-menengai-geothermal-power-project-in-kenya-reaches-financial-close/"
+  },
+  {
+    "pinIds": {
+      "local": 14050,
+      "production": 14050
+    },
+    "title": "Obelisk solar and battery project — operational",
+    "megawatts": 1125,
+    "kind": "generation",
+    "note": "Status: production. 1,125 MW combined solar phases (561 + 564 MW) and separate 100 MW / 200 MWh BESS. Expected >3,000 GWh/year solar energy; not measured output. Second phase reached commercial operation as reported August 12, 2026.",
+    "sourceUrl": "https://www.scatec.com/en/commercial-operations-reached-for-the-final-phase-of-the-obelisk-project-in-egypt/"
+  },
+  {
+    "pinIds": {
+      "local": 14058,
+      "production": 14058
+    },
+    "title": "Aldoga solar farm — operational",
+    "megawatts": 480,
+    "kind": "generation",
+    "note": "Status: production. 480 MWp photovoltaic DC nameplate; not AC output.  Commercial operation started October 1, 2025 per operator timeline.",
+    "sourceUrl": "https://community.acciona.com.au/aldoga"
+  },
+  {
+    "pinIds": {
+      "local": 14057,
+      "production": 14057
+    },
+    "title": "Horizonte wind farm — original 816 MW — operational",
+    "megawatts": 816,
+    "kind": "generation",
+    "note": "Status: production. 816 MW original wind project; 2,450 GWh/year published expected production is not measured annual generation. Expected 2,450 GWh/year original-project output; not measured. Full commercial operation reported for Q3 2025 in the October results release.",
+    "sourceUrl": "https://www.colbun.cl/en/corporate/press-room/news-and-press-releases/detail/2025/03/21/colbun-inaugura-el-parque-eolico-horizonte-la-mayor-central-de-generacion-de-energia-de-chile"
+  },
+  {
+    "pinIds": {
+      "local": 5502,
+      "production": 5502
+    },
+    "title": "Baltic Power — partly operational / under construction",
+    "megawatts": 1140,
+    "kind": "generation",
+    "note": "Status: commissioning. 76 turbines rated 15 MW each at full buildout, separate from installed/commissioned count. Expected full-farm annual output approximately 4 TWh. Commercial operation targeted second half of 2026; first power does not prove whole-project completion. 1,140 MW = 76 × 15 MW, not commissioned count.",
+    "sourceUrl": "https://northlandpower.com/northlands-baltic-power-reaches-first-power-delivering-first-offshore-wind-electricity-to-polands-grid/"
+  },
+  {
+    "pinIds": {
+      "local": 7671,
+      "production": 7671
+    },
+    "title": "Chokecherry and Sierra Madre — under construction",
+    "megawatts": 3550,
+    "kind": "generation",
+    "note": "Status: construction. Approximately 3,550 MW overall operator description; by-numbers panel rounds to about 3,500 MW.",
+    "sourceUrl": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml"
+  },
+  {
+    "pinIds": {
+      "local": 2650,
+      "production": 2650
+    },
+    "title": "Statoil Commissions Hywind Scotland, the World's First Floating Wind Farm",
+    "megawatts": 30,
+    "kind": "generation",
+    "note": "Status: production. 30 MW floating offshore wind farm, distinct from later Hywind projects.  Commissioned October 2017.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hywind_Scotland"
+  },
+  {
+    "pinIds": {
+      "local": 6111,
+      "production": 6111
+    },
+    "title": "Itaipu Dam Starts Generating Power on the Brazil-Paraguay Border",
+    "megawatts": 14000,
+    "kind": "generation",
+    "note": "Status: production. 14,000 MW installed hydroelectric capacity. Operator reports 83,800 GWh annual output in 2023. First operations 1984; last two units added 2007.",
+    "sourceUrl": "https://www.itaipu.energy/"
+  },
+  {
+    "pinIds": {
+      "local": 6109,
+      "production": 6109
+    },
+    "title": "Lady Bird Johnson Dedicates Glen Canyon Dam on the Colorado",
+    "megawatts": 1320,
+    "kind": "generation",
+    "note": "Status: production. 1,320 MW installed hydroelectric nameplate, not average output.  Dam completed 1963; later dedication and power commissioning are separate milestones.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Glen_Canyon_Dam"
+  },
+  {
+    "pinIds": {
+      "local": 738,
+      "production": 738
+    },
+    "title": "Hoover Dam Dedicated by President Roosevelt",
+    "megawatts": 2078.8,
+    "kind": "generation",
+    "note": "Status: production. 2,078.8 MW installed nameplate in cited plant inventory.  Opening 1936; turbine commissioning continued afterward.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hoover_Dam"
+  },
+  {
+    "pinIds": {
+      "local": 15701,
+      "production": 15701
+    },
+    "title": "Prairie State Solar: 99 MW Solar Farm in Perry County, Illinois, Operating Since July 2021",
+    "megawatts": 99,
+    "kind": "generation",
+    "note": "Status: production. 99 MW solar farm; expected annual output up to 230,000 MWh, not measured production. Expected annual output up to 230,000 MWh. Commercial operations began July 19, 2021.",
+    "sourceUrl": "https://www.wvpa.com/wvpa-continues-evolving-portfolio-toward-decarbonization-goals/"
+  },
+  {
+    "pinIds": {
+      "local": 14070,
+      "production": 14070
+    },
+    "title": "Dieppe–Le Tréport offshore wind farm — under construction",
+    "megawatts": 500,
+    "kind": "generation",
+    "note": "Status: construction. Approximately 500 MW offshore wind farm.  Construction initiated April 2023; completion forecast H2 2026 is not demonstrated. 500 MW is rounded in this source.",
+    "sourceUrl": "https://www.sumitomocorp.com/en/jp/news/release/2023/group/16610"
+  },
+  {
+    "pinIds": {
+      "local": 15713,
+      "production": 15713
+    },
+    "title": "Abercrombie Solar: 295 MW Otter Tail Power Solar Farm in Richland County, North Dakota, 450M USD, Under Construction for 2028",
+    "megawatts": 291.5,
+    "kind": "generation",
+    "note": "Status: construction. 291.5 MW solar facility under commission order; not the rounded 295 MW title.  Utility expects commercial operation 2028; old regulatory desired date is not actual operation.",
+    "sourceUrl": "https://www.psc.nd.gov/webdocs/case/25-0221/014-010.pdf"
+  },
+  {
+    "pinIds": {
+      "local": 15699,
+      "production": 15699
+    },
+    "title": "Swift Current Iron Pine Solar: 545M USD, 288-325 MW Solar Farm in Pine County, Minnesota, Targeted for End of 2027",
+    "megawatts": 325,
+    "kind": "generation",
+    "note": "Status: announced. Permitted proposal up to 325 MW AC photovoltaic generation.",
+    "sourceUrl": "https://puc.eip.mn.gov/web/project/15441"
+  },
+  {
+    "pinIds": {
+      "local": 15891,
+      "production": 15891
+    },
+    "title": "RWE Bluestem Solar Farm: 400 MW Solar and 100 MW Battery in LaPorte County, Indiana, 500M USD, Zoning Approved 2024",
+    "megawatts": 400,
+    "kind": "generation",
+    "note": "Status: announced. Two phases: 275 MW + 125 MW solar, plus 100 MW battery power; battery MWh not published here.",
+    "sourceUrl": "https://nwindianabusiness.com/community/energy-environment/la-porte-zoning-board-approves-500m-solar-farm/65585/"
+  },
+  {
+    "pinIds": {
+      "local": 18325,
+      "production": 18325
+    },
+    "title": "Black Prairie Solar Park: 200 MWac Solar Farm in White County, Indiana",
+    "megawatts": 200,
+    "kind": "generation",
+    "note": "Status: announced. 200 MW solar project; capacity label alone is not operational evidence.",
+    "sourceUrl": "https://www.edp.com/en/north-america/north-america/projects/black-prairie-solar"
+  },
+  {
+    "pinIds": {
+      "local": 15870,
+      "production": 15870
+    },
+    "title": "AES Rt 5 Solar: 5 MW Community Solar Farm in Le Roy, Genesee County, New York, 11.01M USD",
+    "megawatts": 5,
+    "kind": "generation",
+    "note": "Status: announced. 5 MW community solar project.",
+    "sourceUrl": "https://www.gcedc.com/news/article/current/2022/12/02/100056/gcedc-board-advances-500-mw-of-solar-projects-in-genesee-county"
+  },
+  {
+    "pinIds": {
+      "local": 14067,
+      "production": 14067
+    },
+    "title": "Magnolia Power Generating Station — operational",
+    "megawatts": 700,
+    "kind": "generation",
+    "note": "Status: production. 700 MW power supply at completed Magnolia plant.  Completion December 2025 according to developer case study.",
+    "sourceUrl": "https://kindle-energy.com/case-studies/magnolia"
+  },
+  {
+    "pinIds": {
+      "local": 14062,
+      "production": 14062
+    },
+    "title": "Sofia offshore wind farm — under construction / commissioning",
+    "megawatts": 1400,
+    "kind": "generation",
+    "note": "Status: commissioning. 1.4 GW offshore wind nameplate; installation completed but whole-farm operation not established.",
+    "sourceUrl": "https://www.rwe.com/en/press/rwe-ag/2026-06-11-rwe-completes-installation-of-all-turbines-at-sofia-offshore-wind-farm/"
+  },
+  {
+    "pinIds": {
+      "local": 279,
+      "production": 279
+    },
+    "title": "Grand Ethiopian Renaissance Dam Inaugurated",
+    "megawatts": 5150,
+    "kind": "generation",
+    "note": "Status: production. 5.15 GW installed hydroelectric nameplate, not annual energy. Expected annual output 15,700 GWh; not measured. Official opening September 9, 2025.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Grand_Ethiopian_Renaissance_Dam"
+  },
+  {
+    "pinIds": {
+      "local": 14064,
+      "production": 14064
+    },
+    "title": "Mohmand multipurpose dam and hydropower project — estimated target 2028",
+    "megawatts": 800,
+    "kind": "generation",
+    "note": "Status: construction. 800 MW new hydroelectric capacity.",
+    "sourceUrl": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project"
+  },
+  {
+    "pinIds": {
+      "local": 7685,
+      "production": 7685
+    },
+    "title": "Vicksburg Advanced Power Station — estimated target 2028",
+    "megawatts": 754,
+    "kind": "generation",
+    "note": "Status: announced. 754 MW combined-cycle combustion turbine facility.  Construction completion forecast August 2028.",
+    "sourceUrl": "https://www.entergymississippi.com/generation/vicksburg"
+  },
+  {
+    "pinIds": {
+      "local": 14044,
+      "production": 14044
+    },
+    "title": "Delta Blues Advanced Power Station — estimated target 2028",
+    "megawatts": 754,
+    "kind": "generation",
+    "note": "Status: construction. 754 MW advanced combined-cycle station.  Expected online 2028.",
+    "sourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction"
+  },
+  {
+    "pinIds": {
+      "local": 14046,
+      "production": 14046
+    },
+    "title": "Johnsonville aeroderivative units 21–30 — operational",
+    "megawatts": 500,
+    "kind": "generation",
+    "note": "Status: production. More than 500 MW new aeroderivative turbine fleet, excluding older station generators.  Construction began 2022; bringing fleet online reported April 15, 2025. Source says more than 500 MW; 500 is a rounded lower fleet rating.",
+    "sourceUrl": "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set"
+  },
+  {
+    "pinIds": {
+      "local": 14048,
+      "production": 14048
+    },
+    "title": "Kingston combined-cycle replacement plant — estimated target 2027",
+    "megawatts": 750,
+    "kind": "generation",
+    "note": "Status: construction. 750 MW combined-cycle replacement plant; separate 800 MW aeros, storage and solar are excluded from this unit capacity.",
+    "sourceUrl": "https://3bmedianews.com/site-construction-begins-at-new-kingston-energy-complex/"
+  },
+  {
+    "pinIds": {
+      "local": 14047,
+      "production": 14047
+    },
+    "title": "Cumberland combined-cycle replacement plant — under construction / commissioning",
+    "megawatts": 1450,
+    "kind": "generation",
+    "note": "Status: construction. 1,450 MW new station, excluding retiring 2,500 MW coal plant.  Expected online late 2026.",
+    "sourceUrl": "https://clarksvillenow.com/local/tva-on-track-building-new-cumberland-natural-gas-power-plant-southeast-of-clarksville-photos/"
+  },
+  {
+    "pinIds": {
+      "local": 8312,
+      "production": 8312
+    },
+    "title": "SunZia Wind and Transmission — operational",
+    "megawatts": 3650,
+    "kind": "generation",
+    "note": "Status: production. Approximately 3,650 MW wind generation, distinct from transmission line rating.  Fully operational announced June 18, 2026.",
+    "sourceUrl": "https://patternenergy.com/sunzia-comes-online/"
+  },
+  {
+    "pinIds": {
+      "local": 16320,
+      "production": 16320
+    },
+    "title": "Excelsior Energy Center: 280 MW Solar, 20 MW Storage Approval; November 2026 Target",
+    "megawatts": 280,
+    "kind": "generation",
+    "note": "Status: announced. 280 MW solar generation approval; storage scope kept separate.",
+    "sourceUrl": "https://dps.ny.gov/system/files/documents/2023/07/dps-2022-2023-annual-report-7.13.23.pdf"
+  },
+  {
+    "pinIds": {
+      "local": 8483,
+      "production": 8483
+    },
+    "title": "Legend Power Station — estimated target 2028",
+    "megawatts": 754,
+    "kind": "generation",
+    "note": "Planned 754 MW electrical generation in Entergy Texas February 2026 investor presentation (project row). Construction groundbreaking confirmed by operator; in-service target 2028. Not operating generation. Legend is combined cycle.",
+    "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1"
+  },
+  {
+    "pinIds": {
+      "local": 8615,
+      "production": 8615
+    },
+    "title": "Lone Star Power Station — estimated target 2028",
+    "megawatts": 453,
+    "kind": "generation",
+    "note": "Planned 453 MW electrical generation in Entergy Texas February 2026 investor presentation (project row). Construction groundbreaking confirmed by operator; in-service target 2028. Not operating generation. Lone Star is simple-cycle combustion turbine.",
+    "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1"
+  }
+]
