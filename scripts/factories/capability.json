@@ -32448,5 +32448,2914 @@
         }
       ]
     }
+  },
+  {
+    "key": "rwe-elliot-battery-storage",
+    "pinIds": {
+      "local": 15867,
+      "production": 15867
+    },
+    "title": "RWE Elliot Battery Storage: 200 MW BESS, 200M USD, Approved by Vanderburgh County, Indiana, to Run by November 2031",
+    "sourceUrl": "https://www.14news.com/2026/09/29/vanderburgh-county-commissioners-approve-200-million-battery-storage-facility/",
+    "profile": {
+      "sector": "Energy storage: battery system",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Planned project investment",
+          "value": "Approximately USD 200 million, not expenditure already incurred.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.14news.com/2026/09/29/vanderburgh-county-commissioners-approve-200-million-battery-storage-facility/",
+            "title": "Vanderburgh County Commissioners approve $200 million battery storage facility",
+            "publishedDate": "2026-09-29",
+            "quote": "$200 million"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Battery design power",
+          "value": "200 MW battery energy storage system; no generation or unreported MWh is assigned.",
+          "basis": "planned",
+          "source": {
+            "url": "https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/elliot-bess/",
+            "title": "Elliot BESS | RWE In The Americas",
+            "publishedDate": null,
+            "quote": "200 megawatt (MW)"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Contractual development deadlines",
+          "value": "Groundbreaking required by end-2029; operation expected no later than November 2031.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.14news.com/2026/09/29/vanderburgh-county-commissioners-approve-200-million-battery-storage-facility/",
+            "title": "Vanderburgh County Commissioners approve $200 million battery storage facility",
+            "publishedDate": "2026-09-29",
+            "quote": "November 2031"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "County agreements approved, as reported",
+          "date": "September 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.14news.com/2026/09/29/vanderburgh-county-commissioners-approve-200-million-battery-storage-facility/",
+            "title": "Vanderburgh County Commissioners approve $200 million battery storage facility",
+            "publishedDate": "2026-09-29",
+            "quote": "approved a series of agreements"
+          }
+        },
+        {
+          "label": "Groundbreaking deadline",
+          "date": "End of 2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.14news.com/2026/09/29/vanderburgh-county-commissioners-approve-200-million-battery-storage-facility/",
+            "title": "Vanderburgh County Commissioners approve $200 million battery storage facility",
+            "publishedDate": "2026-09-29",
+            "quote": "end of 2029"
+          }
+        },
+        {
+          "label": "Latest expected operation",
+          "date": "November 2031",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.14news.com/2026/09/29/vanderburgh-county-commissioners-approve-200-million-battery-storage-facility/",
+            "title": "Vanderburgh County Commissioners approve $200 million battery storage facility",
+            "publishedDate": "2026-09-29",
+            "quote": "November 2031"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "oak-run-solar-storage",
+    "pinIds": {
+      "local": 15881,
+      "production": 15881
+    },
+    "title": "Oak Run Solar: 1 Billion USD, 800 MW Solar and 300 MW Battery in Madison County, Ohio, Permit Reapproved in September 2026",
+    "sourceUrl": "https://canarymedia.com/articles/solar/ohio-biggest-solar-project-gets-permit",
+    "profile": {
+      "sector": "Energy: photovoltaic solar and battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Permitted solar and battery plan",
+          "value": "800 MW solar plus 300 MW battery storage; MW is power, not annual energy or battery duration.",
+          "basis": "planned",
+          "source": {
+            "url": "https://canarymedia.com/articles/solar/ohio-biggest-solar-project-gets-permit",
+            "title": "Ohio’s biggest solar project finally gets permit after… | Canary Media",
+            "publishedDate": "2026-09-21",
+            "quote": "800 megawatts of solar with 300 MW of battery storage"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Earlier project estimate",
+          "value": "USD 1 billion estimated build cost in the earlier agrivoltaic approval report; not actual expenditure.",
+          "basis": "planned",
+          "source": {
+            "url": "https://agri-pulse.com/articles/20953-biggest-agrivoltaic-farm-in-us-approved-in-ohio",
+            "title": "Biggest agrivoltaic farm in US approved in Ohio | Agri-Pulse Communications, Inc.",
+            "publishedDate": null,
+            "quote": "$1 billion"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Agrivoltaic scope",
+          "value": "Solar generation with sheep grazing and crop production. Agricultural use is a project feature, not a capability score.",
+          "basis": "planned",
+          "source": {
+            "url": "https://canarymedia.com/articles/solar/ohio-biggest-solar-project-gets-permit",
+            "title": "Ohio’s biggest solar project finally gets permit after… | Canary Media",
+            "publishedDate": "2026-09-21",
+            "quote": "agrivoltaics component"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original permit approval",
+          "date": "March 2024",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://canarymedia.com/articles/solar/ohio-biggest-solar-project-gets-permit",
+            "title": "Ohio’s biggest solar project finally gets permit after… | Canary Media",
+            "publishedDate": "2026-09-21",
+            "quote": "March 2024"
+          }
+        },
+        {
+          "label": "Permit reapproved after remand, as reported",
+          "date": "September 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://canarymedia.com/articles/solar/ohio-biggest-solar-project-gets-permit",
+            "title": "Ohio’s biggest solar project finally gets permit after… | Canary Media",
+            "publishedDate": "2026-09-21",
+            "quote": "approved a permit"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "clenera-blackwater-solar",
+    "pinIds": {
+      "local": 15874,
+      "production": 15874
+    },
+    "title": "Clenera Blackwater Solar: 500-800 MW Solar Farm in Sussex County, Virginia, About 1.1B USD, Approved After 2024 Denial, Targeted for 2030",
+    "sourceUrl": "https://www.blackwater-solar.com/",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Dated proposed generation scope",
+          "value": "500 MW in WHRO’s August 2025 proposal account. The operator FAQ separately describes 600 MWac transmission potential; final permitted nameplate needs reconciliation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.whro.org/environment/2025-08-14/somethings-gotta-give-virginia-is-struggling-to-balance-energy-needs-with-local-tensions-over-solar-development",
+            "title": "'Something’s gotta give:' Virginia is struggling to balance energy needs with local tensions over solar development",
+            "publishedDate": "2025-08-14",
+            "quote": "500 megawatts of electricity"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected project employment",
+          "value": "More than 200 construction workers and an estimated seven daily on-site operating employees, per the developer FAQ.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.blackwater-solar.com/faqs",
+            "title": "FAQs — Blackwater Solar",
+            "publishedDate": null,
+            "quote": "over 200 people during construction"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Planned solar module design",
+          "value": "Tier I UL-rated modules using monocrystalline silicon; no battery storage is included in the developer’s revised project.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.blackwater-solar.com/faqs",
+            "title": "FAQs — Blackwater Solar",
+            "publishedDate": null,
+            "quote": "monocrystalline silicon wafers"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "County lists approved project pending plan submission",
+          "date": "2026-10-08",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://sussexcountyva.gov/news/busy-time-for-sussex-county-for-economic-community-development/",
+            "title": "Busy Time for Sussex County For Economic, Community Development - SUSSEX COUNTY, VIRGINIA",
+            "publishedDate": "2026-10-08",
+            "quote": "Blackwater Solar Utility Pending Plan submittal"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "aligned-project-star-coal-city",
+    "pinIds": {
+      "local": 15670,
+      "production": 15670
+    },
+    "title": "Aligned Project Star: 864 MW Data Center Campus in Coal City, Illinois, 15.1B USD Total Investment",
+    "sourceUrl": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Modelled whole-project investment",
+          "value": "USD 15.1 billion including USD 7.4 billion-plus developer buildings and USD 7.7 billion projected tenant equipment; not building-only cost.",
+          "basis": "planned",
+          "source": {
+            "url": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+            "title": "Project Star Data Center Campus — Economic & Fiscal Contribution to Coal City and Grundy County, Illinois",
+            "publishedDate": "2026-07-23",
+            "quote": "$15.1 billion"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Modelled gross floor area",
+          "value": "3.2 million gross sq ft. The report interprets five building footprints while its red note says ADC designates nine buildings; no synthetic building count is substituted.",
+          "basis": "planned",
+          "source": {
+            "url": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+            "title": "Project Star Data Center Campus — Economic & Fiscal Contribution to Coal City and Grundy County, Illinois",
+            "publishedDate": "2026-07-23",
+            "quote": "3.2 million gross square feet"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Modelled construction period",
+          "value": "2027–2033 in the economic model; not a verified start or delivery commitment.",
+          "basis": "planned",
+          "source": {
+            "url": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+            "title": "Project Star Data Center Campus — Economic & Fiscal Contribution to Coal City and Grundy County, Illinois",
+            "publishedDate": "2026-07-23",
+            "quote": "from 2027 to 2033"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Economic contribution report issued",
+          "date": "2026-07-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+            "title": "Project Star Data Center Campus — Economic & Fiscal Contribution to Coal City and Grundy County, Illinois",
+            "publishedDate": "2026-07-23",
+            "quote": "JULY 23, 2026"
+          }
+        },
+        {
+          "label": "Modelled construction begins",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+            "title": "Project Star Data Center Campus — Economic & Fiscal Contribution to Coal City and Grundy County, Illinois",
+            "publishedDate": "2026-07-23",
+            "quote": "from 2027 to 2033"
+          }
+        },
+        {
+          "label": "Modelled construction ends",
+          "date": "2033",
+          "basis": "planned",
+          "source": {
+            "url": "https://storage.googleapis.com/data-center-source-files/campuses/617__aligned-project-star-coal-city/2026-07-23_economic-development_mangum-economics-fiscal-economic-contribution-repo.pdf",
+            "title": "Project Star Data Center Campus — Economic & Fiscal Contribution to Coal City and Grundy County, Illinois",
+            "publishedDate": "2026-07-23",
+            "quote": "from 2027 to 2033"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "vista-sands-solar",
+    "pinIds": {
+      "local": 15889,
+      "production": 15889
+    },
+    "title": "Vista Sands Solar: 1,200-1,315.6 MW Solar and 300 MW Battery in Portage County, Wisconsin, Nearly 2 Billion USD, Targeted for 2028",
+    "sourceUrl": "https://psc.wi.gov/Pages/CommissionActions/CasePages/VistaSandsSolarProject.aspx",
+    "profile": {
+      "sector": "Energy: photovoltaic solar and battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Regulatory and operator capacity scopes",
+          "value": "PSC application describes 1,315.6 MWac solar plus 300 MW battery storage. Operator project page presents 1.2 GW solar; these scopes are retained separately, not averaged.",
+          "basis": "planned",
+          "source": {
+            "url": "https://psc.wi.gov/Pages/CommissionActions/CasePages/VistaSandsSolarProject.aspx",
+            "title": "PSC\r\n            \r\n            \r\n            Vista Sands Solar Project",
+            "publishedDate": null,
+            "quote": "1,315.6 MWAC"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Expected capital investment",
+          "value": "Nearly USD 2 billion in the operator project account.",
+          "basis": "planned",
+          "source": {
+            "url": "https://doral-llc.com/projects/vista-sands-solar/",
+            "title": "Vista Sands Solar |",
+            "publishedDate": null,
+            "quote": "nearly $2 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected project jobs",
+          "value": "Approximately 500 construction jobs and about 50 permanent jobs, not current employment.",
+          "basis": "planned",
+          "source": {
+            "url": "https://doral-llc.com/projects/vista-sands-solar/",
+            "title": "Vista Sands Solar |",
+            "publishedDate": null,
+            "quote": "approximately 500 jobs"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "PSC approval reported by operator",
+          "date": "2024-12-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://doral-llc.com/projects/vista-sands-solar/",
+            "title": "Vista Sands Solar |",
+            "publishedDate": null,
+            "quote": "December 12, 2024"
+          }
+        },
+        {
+          "label": "Operator’s construction-start forecast",
+          "date": "2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://doral-llc.com/projects/vista-sands-solar/",
+            "title": "Vista Sands Solar |",
+            "publishedDate": null,
+            "quote": "construction in 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "jupiter-trimount-energy-storage",
+    "pinIds": {
+      "local": 15660,
+      "production": 15660
+    },
+    "title": "Jupiter Power Trimount: 700 MW / 2,800 MWh Battery at the Former Exxon Terminal in Everett, Massachusetts, 500M+ USD",
+    "sourceUrl": "https://hoodline.com/2026/03/state-signs-off-on-giant-everett-battery-farm-at-old-exxon-yard/",
+    "profile": {
+      "sector": "Energy storage: battery system",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned battery capacity",
+          "value": "Approximately 700 MW / 2,800 MWh battery storage; not generation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://hoodline.com/2026/03/state-signs-off-on-giant-everett-battery-farm-at-old-exxon-yard/",
+            "title": "Everett Approved For 700 MW Trimount Battery Farm",
+            "publishedDate": "2026-03-02",
+            "quote": "700 MW / 2,800 MWh"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposed project and storage footprints",
+          "value": "About 20.75 acres for the project, with Trimount itself occupying roughly 16.5 acres; not the whole former terminal.",
+          "basis": "planned",
+          "source": {
+            "url": "https://hoodline.com/2026/03/state-signs-off-on-giant-everett-battery-farm-at-old-exxon-yard/",
+            "title": "Everett Approved For 700 MW Trimount Battery Farm",
+            "publishedDate": "2026-03-02",
+            "quote": "20.75 acres"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Planned storage and connection equipment",
+          "value": "Lithium-ion batteries in about 816 enclosures, with two substations and underground grid connections.",
+          "basis": "planned",
+          "source": {
+            "url": "https://hoodline.com/2026/03/state-signs-off-on-giant-everett-battery-farm-at-old-exxon-yard/",
+            "title": "Everett Approved For 700 MW Trimount Battery Farm",
+            "publishedDate": "2026-03-02",
+            "quote": "816 above ground enclosures"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "State regulatory clearance reported",
+          "date": "2026-03-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://hoodline.com/2026/03/state-signs-off-on-giant-everett-battery-farm-at-old-exxon-yard/",
+            "title": "Everett Approved For 700 MW Trimount Battery Farm",
+            "publishedDate": "2026-03-02",
+            "quote": "regulators cleared construction"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "edpr-alabama-solar-park",
+    "pinIds": {
+      "local": 15720,
+      "production": 15720
+    },
+    "title": "Alabama Solar Park: 130 MW Solar Project in Genesee County, New York, 117M USD, Planned for 2028",
+    "sourceUrl": "https://edp.com/en/north-america/north-america/projects/alabama-solar-park",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned solar generation",
+          "value": "130 MW photovoltaic project in Genesee County, New York; not a plant in Alabama state.",
+          "basis": "planned",
+          "source": {
+            "url": "https://edp.com/en/north-america/north-america/projects/alabama-solar-park",
+            "title": "Alabama Solar Park",
+            "publishedDate": null,
+            "quote": "130-megawatts"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Expected capital investment",
+          "value": "More than USD 117 million for the project.",
+          "basis": "planned",
+          "source": {
+            "url": "https://edp.com/en/north-america/north-america/projects/alabama-solar-park",
+            "title": "Alabama Solar Park",
+            "publishedDate": null,
+            "quote": "$117+ million"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Agreed land and solar footprint",
+          "value": "2,000 acres under land agreements; approximately 550 acres intended for solar infrastructure.",
+          "basis": "planned",
+          "source": {
+            "url": "https://edp.com/en/north-america/north-america/projects/alabama-solar-park",
+            "title": "Alabama Solar Park",
+            "publishedDate": null,
+            "quote": "approximately 550 acres"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected construction and operating jobs",
+          "value": "More than 250 construction jobs and four permanent jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://edp.com/en/north-america/north-america/projects/alabama-solar-park",
+            "title": "Alabama Solar Park",
+            "publishedDate": null,
+            "quote": "250+ construction jobs"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Article VIII application filed, as operator reports",
+          "date": "August 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://edp.com/en/north-america/north-america/projects/alabama-solar-park",
+            "title": "Alabama Solar Park",
+            "publishedDate": null,
+            "quote": "August 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "antelope-data-center-iron-county",
+    "pinIds": {
+      "local": 15979,
+      "production": 15979
+    },
+    "title": "Antelope Data Center: 68.21B USD, 420-1,500 MW, First Phase Planned for 2028 in Iron County, Utah",
+    "sourceUrl": "https://ironcountytoday.com/2026/06/08/after-months-of-debate-antelope-data-center-moves-forward-in-southern-utah/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Proposed energy and data centre site",
+          "value": "640 acres for the combined campus, not a finished footprint.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.abc4.com/news/southern-utah/iron-county-approves-data-center/amp/",
+            "title": "Iron County approves 640-acre Antelope Data Center",
+            "publishedDate": null,
+            "quote": "640-acre"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "County-reported capital estimate",
+          "value": "USD 68.21 billion county-reported estimate for the combined development; not spending already incurred or a phase-only budget.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.abc4.com/news/southern-utah/iron-county-approves-data-center/amp/",
+            "title": "Iron County approves 640-acre Antelope Data Center",
+            "publishedDate": null,
+            "quote": "$68.21 billion"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "County’s expected direct jobs",
+          "value": "672 direct on-site jobs; distinguish from 1,800 total regional FTEs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.abc4.com/news/southern-utah/iron-county-approves-data-center/amp/",
+            "title": "Iron County approves 640-acre Antelope Data Center",
+            "publishedDate": null,
+            "quote": "672 direct on-site jobs"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Conditional-use approval reported",
+          "date": "2026-06-08",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ironcountytoday.com/2026/06/08/after-months-of-debate-antelope-data-center-moves-forward-in-southern-utah/",
+            "title": "After months of debate, Antelope Data Center moves forward in southern Utah - Iron County Today",
+            "publishedDate": "2026-06-08",
+            "quote": "signed off on a conditional use permit"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "iren-project-emerald-oklahoma",
+    "pinIds": {
+      "local": 15827,
+      "production": 15827
+    },
+    "title": "IREN Project Emerald: 1,200-1,600 MW AI Data Center Campus on 2,000 Acres Near Kiowa, Oklahoma, 50B USD in Two Phases, Tax Districts Tabled in June 2026, Power From 2028",
+    "sourceUrl": "https://nondoc.com/2026/05/14/pittsburg-county-committee-endorses-deal-tied-to-2000-acre-50-billion-data-center-site/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned campus power",
+          "value": "1.6 GW campus announcement; the 4.5 GW-plus figure belongs to IREN’s wider secured portfolio.",
+          "basis": "planned",
+          "source": {
+            "url": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus",
+            "title": "IREN Announces 1.6GW Data Center Campus in Oklahoma  | IREN",
+            "publishedDate": "2026-02-05",
+            "quote": "1.6GW data center campus"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Announced site",
+          "value": "Approximately 2,000 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus",
+            "title": "IREN Announces 1.6GW Data Center Campus in Oklahoma  | IREN",
+            "publishedDate": "2026-02-05",
+            "quote": "2,000 acres"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Power ramp forecast",
+          "value": "Power scheduled to ramp from 2028; not an operational campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus",
+            "title": "IREN Announces 1.6GW Data Center Campus in Oklahoma  | IREN",
+            "publishedDate": "2026-02-05",
+            "quote": "power scheduled to ramp from 2028"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Oklahoma campus announced",
+          "date": "2026-02-05",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus",
+            "title": "IREN Announces 1.6GW Data Center Campus in Oklahoma  | IREN",
+            "publishedDate": "2026-02-05",
+            "quote": "2/5/2026"
+          }
+        },
+        {
+          "label": "Power ramp forecast",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus",
+            "title": "IREN Announces 1.6GW Data Center Campus in Oklahoma  | IREN",
+            "publishedDate": "2026-02-05",
+            "quote": "power scheduled to ramp from 2028"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "zenith-volts-roswell-campus",
+    "pinIds": {
+      "local": 15866,
+      "production": 15866
+    },
+    "title": "Zenith Volts Roswell Data Center: 1,250-1,300 MW Off-Grid Campus 20 Miles South of Roswell, New Mexico, 11.7B USD, Targeted for November 2027",
+    "sourceUrl": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Announced campus land",
+          "value": "300 acres, with additional land described as expandable.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+            "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+            "publishedDate": "2025-09-25",
+            "quote": "300-acre"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Developer-announced power capacity",
+          "value": "1.25 GW or more power capacity; not measured IT demand or commercial generation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+            "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+            "publishedDate": "2025-09-25",
+            "quote": "1.25 gigawatts (GW)"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected full-time jobs",
+          "value": "140 high-tech full-time jobs in the company announcement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+            "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+            "publishedDate": "2025-09-25",
+            "quote": "140 full-time"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Developer operation target",
+          "value": "November 2027; county approval alone does not establish physical start.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+            "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+            "publishedDate": "2025-09-25",
+            "quote": "November 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "County approval announced by developer",
+          "date": "2025-09-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+            "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+            "publishedDate": "2025-09-25",
+            "quote": "county approval"
+          }
+        },
+        {
+          "label": "Target operation",
+          "date": "November 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.newswire.ca/news-releases/zenith-volts-corp-secures-county-approval-for-scalable-data-center-20-miles-south-of-roswell-nm-targeting-operation-by-november-2027-822035978.html",
+            "title": "Zenith Volts Corp. Secures County Approval for Scalable Data Center 20 Miles South of Roswell, NM, Targeting Operation by November 2027",
+            "publishedDate": "2025-09-25",
+            "quote": "November 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "ranger-beavertail-solar",
+    "pinIds": {
+      "local": 15872,
+      "production": 15872
+    },
+    "title": "Ranger Power Beavertail Solar: 650M USD, 400 MW Solar Project Under Construction in Henry County, Missouri, Due 2027",
+    "sourceUrl": "https://beavertailsolar.com/",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned generation capacity",
+          "value": "400 MW photovoltaic generation, not current delivered output.",
+          "basis": "planned",
+          "source": {
+            "url": "https://beavertailsolar.com/",
+            "title": "Beavertail Solar - Beavertail Solar",
+            "publishedDate": null,
+            "quote": "400 MW"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Current developer project investment",
+          "value": "USD 650 million in the developer’s project page; distinct from the earlier over-USD-500-million announcement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://beavertailsolar.com/",
+            "title": "Beavertail Solar - Beavertail Solar",
+            "publishedDate": null,
+            "quote": "$650 million"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected construction jobs",
+          "value": "Hundreds of construction jobs in the start-of-work announcement, not a present headcount.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mykdkd.com/2024/08/22/construction-begins-on-the-beavertail-solar-project-in-missouri/",
+            "title": "Construction Begins on the Beavertail Solar Project in Missouri | |",
+            "publishedDate": "2024-08-22",
+            "quote": "hundreds of jobs during construction"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction start announced",
+          "date": "2024-08-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.mykdkd.com/2024/08/22/construction-begins-on-the-beavertail-solar-project-in-missouri/",
+            "title": "Construction Begins on the Beavertail Solar Project in Missouri | |",
+            "publishedDate": "2024-08-22",
+            "quote": "has commenced construction"
+          }
+        },
+        {
+          "label": "Operation forecast",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mykdkd.com/2024/08/22/construction-begins-on-the-beavertail-solar-project-in-missouri/",
+            "title": "Construction Begins on the Beavertail Solar Project in Missouri | |",
+            "publishedDate": "2024-08-22",
+            "quote": "operational in 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "nv-energy-sierra-solar",
+    "pinIds": {
+      "local": 15884,
+      "production": 15884
+    },
+    "title": "NV Energy Sierra Solar: 1.5B USD, 400 MW Solar With 1,600 MWh Battery in Churchill County, Nevada, Due April 2027",
+    "sourceUrl": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+    "profile": {
+      "sector": "Energy: photovoltaic solar and battery storage",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Design solar and battery scope",
+          "value": "400 MW solar with 1,600 MWh battery storage; completed battery works do not complete the whole solar project.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+            "title": "NV Energy’s $1.5 billion solar facility in Churchill County on target | Serving Northern Nevada",
+            "publishedDate": "2026-06-16",
+            "quote": "400-megawatt"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported project budget",
+          "value": "USD 1.5 billion for the cited facility.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+            "title": "NV Energy’s $1.5 billion solar facility in Churchill County on target | Serving Northern Nevada",
+            "publishedDate": "2026-06-16",
+            "quote": "$1.5 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Reported project area",
+          "value": "6,787 acres on both sides of Sagehen Creek Road.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+            "title": "NV Energy’s $1.5 billion solar facility in Churchill County on target | Serving Northern Nevada",
+            "publishedDate": "2026-06-16",
+            "quote": "6,787 acres"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Scheduled completion",
+          "value": "April 2027, with possible early completion discussed; neither is an achieved opening.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+            "title": "NV Energy’s $1.5 billion solar facility in Churchill County on target | Serving Northern Nevada",
+            "publishedDate": "2026-06-16",
+            "quote": "April 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Solar construction and battery completion reported",
+          "date": "2026-06-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+            "title": "NV Energy’s $1.5 billion solar facility in Churchill County on target | Serving Northern Nevada",
+            "publishedDate": "2026-06-16",
+            "quote": "under construction"
+          }
+        },
+        {
+          "label": "Scheduled whole-facility completion",
+          "date": "April 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.nnbw.com/news/2026/jun/16/nv-energys-15-billion-solar-facility-in-churchill-county-on-target/",
+            "title": "NV Energy’s $1.5 billion solar facility in Churchill County on target | Serving Northern Nevada",
+            "publishedDate": "2026-06-16",
+            "quote": "April 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "engie-swenson-ranch-solar",
+    "pinIds": {
+      "local": 15888,
+      "production": 15888
+    },
+    "title": "Swenson Ranch Solar: 900M USD, 600 MW Solar for Meta in Stonewall County, Texas, Planned for 2027",
+    "sourceUrl": "https://www.solarpowerworldonline.com/2025/10/new-600-mw-texas-solar-project-will-power-meta-data-centers/",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned solar generation",
+          "value": "600 MW for Swenson Ranch alone; the broader four-project PPA portfolio is 1.3 GW.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.engieresources.com/market-insight/engie-and-meta-expand-partnership/",
+            "title": "ENGIE & Meta Expand Partnership - ENGIE Resources",
+            "publishedDate": "2025-11-13",
+            "quote": "600 MW"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Planned project investment",
+          "value": "USD 900 million, not completed expenditure.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.engieresources.com/market-insight/engie-and-meta-expand-partnership/",
+            "title": "ENGIE & Meta Expand Partnership - ENGIE Resources",
+            "publishedDate": "2025-11-13",
+            "quote": "$900 million"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected construction workforce",
+          "value": "More than 350 skilled construction workers, not operating staffing.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.engieresources.com/market-insight/engie-and-meta-expand-partnership/",
+            "title": "ENGIE & Meta Expand Partnership - ENGIE Resources",
+            "publishedDate": "2025-11-13",
+            "quote": "over 350 skilled workers"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Reported online target",
+          "value": "2027 in the project report.",
+          "basis": "planned",
+          "source": {
+            "url": "https://electrek.co/2025/10/27/900m-texas-solar-mega-farm-will-power-meta-data-centers/",
+            "title": "A $900M Texas solar mega-farm will power Meta's data centers | Electrek",
+            "publishedDate": "2025-10-27",
+            "quote": "online in 2027"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expanded Meta partnership announced, as reported",
+          "date": "October 2025",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://electrek.co/2025/10/27/900m-texas-solar-mega-farm-will-power-meta-data-centers/",
+            "title": "A $900M Texas solar mega-farm will power Meta's data centers | Electrek",
+            "publishedDate": "2025-10-27",
+            "quote": "Oct 27 2025"
+          }
+        },
+        {
+          "label": "Project online target",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://electrek.co/2025/10/27/900m-texas-solar-mega-farm-will-power-meta-data-centers/",
+            "title": "A $900M Texas solar mega-farm will power Meta's data centers | Electrek",
+            "publishedDate": "2025-10-27",
+            "quote": "online in 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "invenergy-tip-top-solar",
+    "pinIds": {
+      "local": 16319,
+      "production": 16319
+    },
+    "title": "Invenergy Tip Top Solar: 110 MW, $200M Investment, Target End-2026",
+    "sourceUrl": "https://tiptopsolar.invenergy.com/",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Generation design capacity",
+          "value": "110 MW solar generation; not a generation total in MWh.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tiptopsolar.invenergy.com/",
+            "title": "Tip Top Solar Energy Center",
+            "publishedDate": null,
+            "quote": "110 megawatts"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Project capital investment",
+          "value": "USD 200 million on the operator’s project page.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tiptopsolar.invenergy.com/",
+            "title": "Tip Top Solar Energy Center",
+            "publishedDate": null,
+            "quote": "$ 200 M"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected project employment",
+          "value": "200 peak construction jobs and three full-time operating jobs.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tiptopsolar.invenergy.com/",
+            "title": "Tip Top Solar Energy Center",
+            "publishedDate": null,
+            "quote": "200 jobs supported during peak construction"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Commercial-operation target",
+          "value": "End of 2026; operator explicitly says active construction today.",
+          "basis": "planned",
+          "source": {
+            "url": "https://tiptopsolar.invenergy.com/",
+            "title": "Tip Top Solar Energy Center",
+            "publishedDate": null,
+            "quote": "end of 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Expected commercial operation",
+          "date": "End of 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://tiptopsolar.invenergy.com/",
+            "title": "Tip Top Solar Energy Center",
+            "publishedDate": null,
+            "quote": "end of 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "greenbacker-cider-solar",
+    "pinIds": {
+      "local": 15878,
+      "production": 15878
+    },
+    "title": "Greenbacker Cider Solar Farm: 500 MWac (674 MWdc) in Genesee County, New York, 950M USD, Under Construction for Late 2026",
+    "sourceUrl": "https://cidersolarfarm.com/schedule",
+    "profile": {
+      "sector": "Energy: photovoltaic solar generation",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Solar design and annual-output forecast",
+          "value": "500 MW solar on the project schedule. Separate expected annual generation is about one million MWh per year, per the major-construction announcement; not observed output.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cidersolarfarm.com/schedule",
+            "title": "Hecate Energy - Cider Solar - Schedule",
+            "publishedDate": null,
+            "quote": "500-megawatt (MW)"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Aggregate project financing",
+          "value": "USD 950 million financing for acquisition, construction and operation; not a construction-only cost.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.bicmagazine.com/projects-expansions/renewable-sustainability-h2-esg/construction-begins-on-new-yorks-largest-solar-energy-project",
+            "title": "Construction begins on New York’s largest solar energy project - BIC Magazine",
+            "publishedDate": "2025-05-14",
+            "quote": "$950 million in aggregate financing"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Project land",
+          "value": "Approximately 2,500 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cidersolarfarm.com/schedule",
+            "title": "Hecate Energy - Cider Solar - Schedule",
+            "publishedDate": null,
+            "quote": "2,500 acres"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Operation target in construction announcement",
+          "value": "Late 2026 remains a forecast.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.bicmagazine.com/projects-expansions/renewable-sustainability-h2-esg/construction-begins-on-new-yorks-largest-solar-energy-project",
+            "title": "Construction begins on New York’s largest solar energy project - BIC Magazine",
+            "publishedDate": "2025-05-14",
+            "quote": "late 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Early construction began, as later reported",
+          "date": "Late 2024",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.bicmagazine.com/projects-expansions/renewable-sustainability-h2-esg/construction-begins-on-new-yorks-largest-solar-energy-project",
+            "title": "Construction begins on New York’s largest solar energy project - BIC Magazine",
+            "publishedDate": "2025-05-14",
+            "quote": "late 2024"
+          }
+        },
+        {
+          "label": "Major construction announced",
+          "date": "2025-05-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.bicmagazine.com/projects-expansions/renewable-sustainability-h2-esg/construction-begins-on-new-yorks-largest-solar-energy-project",
+            "title": "Construction begins on New York’s largest solar energy project - BIC Magazine",
+            "publishedDate": "2025-05-14",
+            "quote": "major construction activities"
+          }
+        },
+        {
+          "label": "Expected completion",
+          "date": "Late 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.bicmagazine.com/projects-expansions/renewable-sustainability-h2-esg/construction-begins-on-new-yorks-largest-solar-energy-project",
+            "title": "Construction begins on New York’s largest solar energy project - BIC Magazine",
+            "publishedDate": "2025-05-14",
+            "quote": "late 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "oppidan-temple-five-mw",
+    "pinIds": {
+      "local": 15771,
+      "production": 15771
+    },
+    "title": "Oppidan 5MW Temple Data Center: 5 MW, 31M USD, 61,554 sq ft in Bell County, Texas, Registered for October 2026",
+    "sourceUrl": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015318",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Filed power design",
+          "value": "5 MW in the reported filing; no operating load is asserted.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/oppidan-files-for-5mw-data-center-in-temple-texas/",
+            "title": "Oppidan files for 5MW data center in Temple, Texas - DCD",
+            "publishedDate": "2025-04-07",
+            "quote": "5MW"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Filed project estimate",
+          "value": "USD 31 million in the filing report.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/oppidan-files-for-5mw-data-center-in-temple-texas/",
+            "title": "Oppidan files for 5MW data center in Temple, Texas - DCD",
+            "publishedDate": "2025-04-07",
+            "quote": "$31 million"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Reported filed building area",
+          "value": "Approximately 61,500 sq ft in the report, retaining its published rounding.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/oppidan-files-for-5mw-data-center-in-temple-texas/",
+            "title": "Oppidan files for 5MW data center in Temple, Texas - DCD",
+            "publishedDate": "2025-04-07",
+            "quote": "61,500 sq ft"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed project schedule",
+          "value": "July 2025–October 2026 in the reported filing; elapsed dates are not opening evidence.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/oppidan-files-for-5mw-data-center-in-temple-texas/",
+            "title": "Oppidan files for 5MW data center in Temple, Texas - DCD",
+            "publishedDate": "2025-04-07",
+            "quote": "July 2025 to October 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Development filing reported",
+          "date": "2025-04-07",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/oppidan-files-for-5mw-data-center-in-temple-texas/",
+            "title": "Oppidan files for 5MW data center in Temple, Texas - DCD",
+            "publishedDate": "2025-04-07",
+            "quote": "April 07, 2025"
+          }
+        },
+        {
+          "label": "Filed completion forecast",
+          "date": "October 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/oppidan-files-for-5mw-data-center-in-temple-texas/",
+            "title": "Oppidan files for 5MW data center in Temple, Texas - DCD",
+            "publishedDate": "2025-04-07",
+            "quote": "October 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "cloudburst-san-marcos-gigacenter",
+    "pinIds": {
+      "local": 15824,
+      "production": 15824
+    },
+    "title": "CloudBurst San Marcos Gigacenter: 1,200 MW Gas-Powered Data Center Campus in Hays and Guadalupe Counties, Texas, 14.5B USD, First 50 MW Due Q4 2026",
+    "sourceUrl": "https://baxtel.com/news/706-acre-data-center-development-approved-near-san-antonio-texas",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported planned campus investment",
+          "value": "USD 14.5 billion for the campus plan; not its initial 50 MW phase budget.",
+          "basis": "planned",
+          "source": {
+            "url": "https://baxtel.com/news/706-acre-data-center-development-approved-near-san-antonio-texas",
+            "title": "706-Acre Data Center Development Approved Near San Antonio, Texas",
+            "publishedDate": "2026-05-07",
+            "quote": "$14.5 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Approved development area",
+          "value": "706 acres in the development report.",
+          "basis": "planned",
+          "source": {
+            "url": "https://baxtel.com/news/706-acre-data-center-development-approved-near-san-antonio-texas",
+            "title": "706-Acre Data Center Development Approved Near San Antonio, Texas",
+            "publishedDate": "2026-05-07",
+            "quote": "706-acre"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned campus floor area",
+          "value": "Around 3 million sq ft across 10–12 buildings.",
+          "basis": "planned",
+          "source": {
+            "url": "https://baxtel.com/news/706-acre-data-center-development-approved-near-san-antonio-texas",
+            "title": "706-Acre Data Center Development Approved Near San Antonio, Texas",
+            "publishedDate": "2026-05-07",
+            "quote": "3 million square feet"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "First capacity target",
+          "value": "Initial 50 MW expected online in Q4 2026; not full 1.2 GW campus completion.",
+          "basis": "planned",
+          "source": {
+            "url": "https://w.media/cloudburst-breaks-ground-on-1-2-gw-ai-data-center-in-texas/",
+            "title": "CloudBurst breaks ground on 1.2 GW AI data center in Texas – w.media",
+            "publishedDate": "2025-11-19",
+            "quote": "Q4 2026"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Initial campus groundbreaking reported",
+          "date": "2025-11-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://w.media/cloudburst-breaks-ground-on-1-2-gw-ai-data-center-in-texas/",
+            "title": "CloudBurst breaks ground on 1.2 GW AI data center in Texas – w.media",
+            "publishedDate": "2025-11-19",
+            "quote": "has broken ground"
+          }
+        },
+        {
+          "label": "Initial 50 MW online forecast",
+          "date": "Q4 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://w.media/cloudburst-breaks-ground-on-1-2-gw-ai-data-center-in-texas/",
+            "title": "CloudBurst breaks ground on 1.2 GW AI data center in Texas – w.media",
+            "publishedDate": "2025-11-19",
+            "quote": "Q4 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "aws-amazon-attalia-initial-campus",
+    "pinIds": {
+      "local": 15981,
+      "production": 15981
+    },
+    "title": "AWS Wallula Gap (Amazon Attalia) Data Center Campus: 4.8B USD, Up to 1,200 MW (Tracker Estimate), Planned in Walla Walla County, Washington",
+    "sourceUrl": "https://washingtonstatestandard.com/2026/10/06/amazons-walla-walla-data-center-plan-sparks-tension-between-protesters-local-officials/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Current permit-application parcel",
+          "value": "134 acres in the September application-completeness report; not the larger 554-acre land transaction.",
+          "basis": "planned",
+          "source": {
+            "url": "https://elkhornmediagroup.com/?p=219724",
+            "title": "Amazon’s proposed data center application deemed complete by Walla Walla County - Elkhorn Media Group",
+            "publishedDate": "2026-09-01",
+            "quote": "134-acre parcel"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Proposed data centre buildings",
+          "value": "Three buildings of 220,000 sq ft each (660,000 sq ft combined), excluding ancillary security/water facilities.",
+          "basis": "planned",
+          "source": {
+            "url": "https://elkhornmediagroup.com/?p=219724",
+            "title": "Amazon’s proposed data center application deemed complete by Walla Walla County - Elkhorn Media Group",
+            "publishedDate": "2026-09-01",
+            "quote": "three 220,000-square-foot"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Application scope",
+          "value": "Data centres, security building, industrial water facility and infrastructure for a future substation. Application completeness is not permission to build.",
+          "basis": "planned",
+          "source": {
+            "url": "https://elkhornmediagroup.com/?p=219724",
+            "title": "Amazon’s proposed data center application deemed complete by Walla Walla County - Elkhorn Media Group",
+            "publishedDate": "2026-09-01",
+            "quote": "a security building, an industrial water facility"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Application completeness determination reported",
+          "date": "2026-09-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://elkhornmediagroup.com/?p=219724",
+            "title": "Amazon’s proposed data center application deemed complete by Walla Walla County - Elkhorn Media Group",
+            "publishedDate": "2026-09-01",
+            "quote": "September 1st, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "cloverleaf-project-red-clay",
+    "pinIds": {
+      "local": 15838,
+      "production": 15838
+    },
+    "title": "Project Red Clay Data Center: 1-1.5B USD, 1,500 MW, Planned in Lowndes County, Alabama",
+    "sourceUrl": "https://www.wbhm.org/local-news/2026-06-11/on-the-historic-route-from-selma-to-montgomery-an-ai-cloud-looms",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Proposed campus land",
+          "value": "Around 800 acres at Highway 80 and Route 21.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.wbhm.org/local-news/2026-06-11/on-the-historic-route-from-selma-to-montgomery-an-ai-cloud-looms",
+            "title": "On the historic route from Selma to Montgomery, an AI cloud looms",
+            "publishedDate": "2026-06-11",
+            "quote": "around 800 acres"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Proposed building programme",
+          "value": "Four 720,000-sq-ft data centres, plus a 100,000-sq-ft warehouse and 30,000-sq-ft office; about 3.01 million sq ft total.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.wbhm.org/local-news/2026-06-11/on-the-historic-route-from-selma-to-montgomery-an-ai-cloud-looms",
+            "title": "On the historic route from Selma to Montgomery, an AI cloud looms",
+            "publishedDate": "2026-06-11",
+            "quote": "four 720,000-square-foot buildings"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Requested utility energy capacity",
+          "value": "1,500 MW requested from Alabama Power; not granted, connected or measured IT consumption. Expected demand was still being finalized.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.wbhm.org/local-news/2026-06-11/on-the-historic-route-from-selma-to-montgomery-an-ai-cloud-looms",
+            "title": "On the historic route from Selma to Montgomery, an AI cloud looms",
+            "publishedDate": "2026-06-11",
+            "quote": "requested 1,500 megawatts"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus plans and community open house reported",
+          "date": "2026-06-11",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.wbhm.org/local-news/2026-06-11/on-the-historic-route-from-selma-to-montgomery-an-ai-cloud-looms",
+            "title": "On the historic route from Selma to Montgomery, an AI cloud looms",
+            "publishedDate": "2026-06-11",
+            "quote": "June 11, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "nebo-north-mona-campus",
+    "pinIds": {
+      "local": 15845,
+      "production": 15845
+    },
+    "title": "Nebo North (Project Nebo) Data Center: 750 MW Campus Near Mona, Utah, 10B USD, Conditional Use Permit Approved April 2026",
+    "sourceUrl": "https://www.sltrib.com/news/2026/09/14/utahns-left-in-dark-10b-data/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Expected full-campus cost",
+          "value": "USD 10 billion expected at full buildout in reported meeting minutes.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sltrib.com/news/2026/09/14/utahns-left-in-dark-10b-data/",
+            "title": "Utahns left 'in the dark' on $10B data center planned across street, neighbors say",
+            "publishedDate": "2026-09-14",
+            "quote": "$10 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposed campus site",
+          "value": "About 361 acres; adjacent solar generation is a separate scope.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sltrib.com/news/2026/09/14/utahns-left-in-dark-10b-data/",
+            "title": "Utahns left 'in the dark' on $10B data center planned across street, neighbors say",
+            "publishedDate": "2026-09-14",
+            "quote": "361 acres"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Proposed facility area",
+          "value": "Up to ten approximately 300,000-sq-ft buildings, about 3 million sq ft combined.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sltrib.com/news/2026/09/14/utahns-left-in-dark-10b-data/",
+            "title": "Utahns left 'in the dark' on $10B data center planned across street, neighbors say",
+            "publishedDate": "2026-09-14",
+            "quote": "3 million square feet"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Conditional-use application submitted, as later reported",
+          "date": "February 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.sltrib.com/news/2026/09/14/utahns-left-in-dark-10b-data/",
+            "title": "Utahns left 'in the dark' on $10B data center planned across street, neighbors say",
+            "publishedDate": "2026-09-14",
+            "quote": "first submitted in February"
+          }
+        },
+        {
+          "label": "Public proposal and opposition reported",
+          "date": "2026-09-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.sltrib.com/news/2026/09/14/utahns-left-in-dark-10b-data/",
+            "title": "Utahns left 'in the dark' on $10B data center planned across street, neighbors say",
+            "publishedDate": "2026-09-14",
+            "quote": "Sep. 14, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "prologis-project-sail-coweta",
+    "pinIds": {
+      "local": 15839,
+      "production": 15839
+    },
+    "title": "Prologis Project Sail: Roughly 900 MW, Nine-Building Data Center Campus on 829 Acres Near Newnan, Georgia, 17B USD Investment Cited, Rezoning Approved April 2026",
+    "sourceUrl": "https://thecitizen.com/?p=244260",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Proposed campus area",
+          "value": "Approximately 829 acres, with only about 20 percent slated for development.",
+          "basis": "planned",
+          "source": {
+            "url": "https://thecitizen.com/?p=244260",
+            "title": "Coweta Commissioners Approve Project Sail Data Center in 3–2 Vote | The Citizen",
+            "publishedDate": "2026-04-10",
+            "quote": "829 acres"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Proposed building area",
+          "value": "More than 4 million sq ft in the approved rezoning report.",
+          "basis": "planned",
+          "source": {
+            "url": "https://thecitizen.com/?p=244260",
+            "title": "Coweta Commissioners Approve Project Sail Data Center in 3–2 Vote | The Citizen",
+            "publishedDate": "2026-04-10",
+            "quote": "4 million square feet"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed building scope",
+          "value": "Nine data centre buildings, with the remaining site largely buffer and green space.",
+          "basis": "planned",
+          "source": {
+            "url": "https://thecitizen.com/?p=244260",
+            "title": "Coweta Commissioners Approve Project Sail Data Center in 3–2 Vote | The Citizen",
+            "publishedDate": "2026-04-10",
+            "quote": "nine data center buildings"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Rezoning approval reported",
+          "date": "2026-04-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://thecitizen.com/?p=244260",
+            "title": "Coweta Commissioners Approve Project Sail Data Center in 3–2 Vote | The Citizen",
+            "publishedDate": "2026-04-10",
+            "quote": "April 10, 2026"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "prologis-shelbyville-campus",
+    "pinIds": {
+      "local": 15840,
+      "production": 15840
+    },
+    "title": "Prologis Shelbyville Data Center: Up to 900 MW (Cleanview Estimate), 11-13 Buildings on 429 Acres in Shelby County, Indiana, Up to 2B USD, Council Approved April 2026",
+    "sourceUrl": "https://fox59.com/news/shelbyville-city-council-advances-data-center-plan/amp/",
+    "profile": {
+      "sector": "Data centres: project buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Potential campus investment",
+          "value": "Up to USD 2 billion according to city officials; not a committed final budget.",
+          "basis": "planned",
+          "source": {
+            "url": "https://fox59.com/news/shelbyville-city-council-advances-data-center-plan/amp/",
+            "title": "Shelbyville City Council advances data center plan",
+            "publishedDate": null,
+            "quote": "up to $2 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Referenced development land",
+          "value": "429 acres near I-74 and State Road 44.",
+          "basis": "planned",
+          "source": {
+            "url": "https://fox59.com/news/shelbyville-city-council-advances-data-center-plan/amp/",
+            "title": "Shelbyville City Council advances data center plan",
+            "publishedDate": null,
+            "quote": "429 acres"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Developer employment projection",
+          "value": "Up to 450 full-time jobs; not current staffing.",
+          "basis": "planned",
+          "source": {
+            "url": "https://fox59.com/news/shelbyville-city-council-advances-data-center-plan/amp/",
+            "title": "Shelbyville City Council advances data center plan",
+            "publishedDate": null,
+            "quote": "up to 450 full-time jobs"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus construction start remains subject to separate permits",
+          "date": "Date not announced",
+          "basis": "planned",
+          "source": {
+            "url": "https://fox59.com/news/shelbyville-city-council-advances-data-center-plan/amp/",
+            "title": "Shelbyville City Council advances data center plan",
+            "publishedDate": null,
+            "quote": "before construction on the site can begin"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "redstone-csp-south-africa",
+    "pinIds": {
+      "local": 14054,
+      "production": 14054
+    },
+    "title": "Redstone concentrated solar power — operational",
+    "sourceUrl": "https://www.acwapower.com/en/what-we-do/projects/redstone-csp-ipp/",
+    "profile": {
+      "sector": "Energy: concentrated solar power with thermal storage",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Operator-published project cost",
+          "value": "USD 876 million for Redstone.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/redstone-csp-ipp/",
+            "title": "Acwa | Redstone CSP IPP",
+            "publishedDate": null,
+            "quote": "US$ 876 million"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Plant nameplate and design annual output",
+          "value": "100 MW electrical nameplate. NDB’s earlier design forecast was 491 GWh per year; annual energy is a forecast, not measured output.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ndb.int/wp-content/uploads/2024/09/PPE-South-Africa-Renewable-Energy-Sector-Development-Project.pdf",
+            "title": "Renewable Energy Sector Development Project — Project Performance Evaluation",
+            "publishedDate": null,
+            "quote": "Redstone 491 GWh/annum"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Solar-thermal storage design",
+          "value": "Molten-salt tower CSP with 12 hours of full-load storage.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/redstone-csp-ipp/",
+            "title": "Acwa | Redstone CSP IPP",
+            "publishedDate": null,
+            "quote": "12 hours of full-load energy storage"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Achieved commercial-operation month",
+          "value": "May 2025, explicitly confirmed by the later NDB evaluation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ndb.int/wp-content/uploads/2025/12/IEO-NDB-TE-South-Africa-Energy-Sector-ANNEXES.pdf",
+            "title": "NDB Energy Sector Thematic Evaluation — South Africa — Annexes",
+            "publishedDate": null,
+            "quote": "Redstone achieved its commercial operation date in May 2025."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Commercial operation achieved",
+          "date": "May 2025",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ndb.int/wp-content/uploads/2025/12/IEO-NDB-TE-South-Africa-Energy-Sector-ANNEXES.pdf",
+            "title": "NDB Energy Sector Thematic Evaluation — South Africa — Annexes",
+            "publishedDate": null,
+            "quote": "Redstone achieved its commercial operation date in May 2025."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "acwa-bash-wind-uzbekistan",
+    "pinIds": {
+      "local": 14060,
+      "production": 14060
+    },
+    "title": "Bash wind farm — operational",
+    "sourceUrl": "https://www.acwapower.com/en/what-we-do/projects/bash-wind-ipp/",
+    "profile": {
+      "sector": "Energy: onshore wind generation",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Operator-published plant cost",
+          "value": "USD 690 million for Bash alone.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/bash-wind-ipp/",
+            "title": "Acwa | Bash Wind IPP",
+            "publishedDate": null,
+            "quote": "US$ 690 million"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Operating plant electrical capacity",
+          "value": "500 MW for Bash, separate from the other 500 MW at Dzhankeldy.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/bash-wind-ipp/",
+            "title": "Acwa | Bash Wind IPP",
+            "publishedDate": null,
+            "quote": "500 MW"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Installed wind generation",
+          "value": "79 wind turbines at the Bash plant; combined-project annual generation is not allocated to this plant.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ceecgroup.com/en/news/bash-wind-farm-of-bukhara-wind-power-project-in-uzbekistan-launched-into-commercial-operation/1/176",
+            "title": "Bash Wind Farm of Bukhara Wind Power Project in Uzbekistan Launched into Commercial Operation | China Energy  International Group",
+            "publishedDate": "2025-03-23",
+            "quote": "all 79 wind turbines"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Contractor reports full commercial operation",
+          "date": "2025-03-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ceecgroup.com/en/news/bash-wind-farm-of-bukhara-wind-power-project-in-uzbekistan-launched-into-commercial-operation/1/176",
+            "title": "Bash Wind Farm of Bukhara Wind Power Project in Uzbekistan Launched into Commercial Operation | China Energy  International Group",
+            "publishedDate": "2025-03-23",
+            "quote": "full commercial operation"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "acwa-dzhankeldy-wind-uzbekistan",
+    "pinIds": {
+      "local": 14061,
+      "production": 14061
+    },
+    "title": "Dzhankeldy wind farm — operational",
+    "sourceUrl": "https://www.acwapower.com/en/what-we-do/projects/dzhankeldy-wind-ipp/",
+    "profile": {
+      "sector": "Energy: onshore wind generation",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No floor area, capacity increment or five-facility cohort establishes scale.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No project-specific sourced automation process supporting a capability score was established.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Production-flow improvements are intended; no comparable measured efficiency cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "An expected headcount increase is not a published scored training or capability programme.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Operator-published plant cost",
+          "value": "USD 658 million for Dzhankeldy alone.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/dzhankeldy-wind-ipp/",
+            "title": "Acwa | Dzhankeldy Wind IPP",
+            "publishedDate": null,
+            "quote": "US$ 658 million"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Operating plant electrical capacity",
+          "value": "500 MW for Dzhankeldy, separate from Bash; the 1 GW headline is the combined programme.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/dzhankeldy-wind-ipp/",
+            "title": "Acwa | Dzhankeldy Wind IPP",
+            "publishedDate": null,
+            "quote": "500 MW"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Installed generation technology",
+          "value": "Onshore wind power; the two-plant annual forecast is not treated as this plant’s measured output.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.acwapower.com/en/what-we-do/projects/dzhankeldy-wind-ipp/",
+            "title": "Acwa | Dzhankeldy Wind IPP",
+            "publishedDate": null,
+            "quote": "Onshore Wind"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Contractor reports both plants in full commercial operation",
+          "date": "2025-04-03",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ceecgroup.com/en/news/central-asia-s-largest-wind-power-project-1-gw-bukhara-wind-power-project-launched-into-operation/1/178",
+            "title": "Central Asia’s Largest Wind Power Project - 1 GW Bukhara Wind Power Project - Launched into Operation | China Energy  International Group",
+            "publishedDate": "2025-04-03",
+            "quote": "full commercial operation"
+          }
+        }
+      ]
+    }
   }
 ]
