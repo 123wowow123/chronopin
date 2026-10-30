@@ -25590,5 +25590,3668 @@
         }
       ]
     }
+  },
+  {
+    "key": "prometheus-evanston-initial-campus",
+    "pinIds": {
+      "local": 16345,
+      "production": 16345
+    },
+    "title": "Prometheus Evanston: 1.25 GW Initial Campus Plan; Conditional Use Permit Approved",
+    "sourceUrl": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+    "profile": {
+      "sector": "Digital infrastructure: planned hyperscale campus",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Initial campus power scale",
+          "value": "1.25 GW initially; later path to 5 GW is separate and not current operating load.",
+          "source": {
+            "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners",
+            "publishedDate": "2026-06-17",
+            "quote": "1.25 GW of initial capacity"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "siteArea",
+          "label": "Permitted campus site",
+          "value": "506 acres, per the June 2026 permit announcement; older site boundaries differ.",
+          "source": {
+            "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners",
+            "publishedDate": "2026-06-17",
+            "quote": "506-acre site"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Planned buildout duration",
+          "value": "48–60 months, with construction anticipated within six months of final permitting; no opening inferred.",
+          "source": {
+            "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners",
+            "publishedDate": "2026-06-17",
+            "quote": "built out in phases over 48 to 60 months"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Conditional use approval announced",
+          "date": "2026-06-17",
+          "source": {
+            "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners",
+            "publishedDate": "2026-06-17",
+            "quote": "yesterday received unanimous Conditional Use Permit approval"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Expected construction duration",
+          "date": "48 to 60 months",
+          "source": {
+            "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners",
+            "publishedDate": "2026-06-17",
+            "quote": "48 to 60 months"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "cielo-cherokee-county-campus",
+    "pinIds": {
+      "local": 15985,
+      "production": 15985
+    },
+    "title": "Cielo Cherokee County Campus: US$2.1 Billion and Up to 300 MW",
+    "sourceUrl": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+    "profile": {
+      "sector": "Digital infrastructure: planned data center campus",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Planned campus investment",
+          "value": "Approximately USD 2.1 billion, excluding unrelated Cielo projects.",
+          "source": {
+            "url": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+            "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project",
+            "publishedDate": "2025-06-24",
+            "quote": "approximately $2.1 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned building program",
+          "value": "Four facilities, each approximately 400,000 sq ft; per-building figure retained.",
+          "source": {
+            "url": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+            "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project",
+            "publishedDate": "2025-06-24",
+            "quote": "four facilities, each approximately 400,000 square feet"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Expected new jobs",
+          "value": "30 new jobs; a forecast rather than observed staffing.",
+          "source": {
+            "url": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+            "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project",
+            "publishedDate": "2025-06-24",
+            "quote": "expected to create 30 new jobs"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Initial operations forecast",
+          "value": "Year-end 2028 per the 2025 announcement; not an independently verified opening.",
+          "source": {
+            "url": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+            "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project",
+            "publishedDate": "2025-06-24",
+            "quote": "online by year-end 2028"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus development announced",
+          "date": "2025-06-24",
+          "source": {
+            "url": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+            "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project",
+            "publishedDate": "2025-06-24",
+            "quote": "plans to invest approximately $2.1 billion"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Initial operations target",
+          "date": "Year-end 2028",
+          "source": {
+            "url": "https://www.governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+            "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project",
+            "publishedDate": "2025-06-24",
+            "quote": "year-end 2028"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "openai-project-camellia-effingham",
+    "pinIds": {
+      "local": 15833,
+      "production": 15833
+    },
+    "title": "OpenAI Project Camellia: Four-Building Georgia Campus Estimated Above US$30 Billion",
+    "sourceUrl": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+    "profile": {
+      "sector": "Digital infrastructure: planned AI campus",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Contracted power development scale",
+          "value": "3.2 GW, delivered in phases; not current IT load or generation.",
+          "source": {
+            "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "title": "Building AI infrastructure with the Effingham County community",
+            "publishedDate": "2026-07-22",
+            "quote": "3.2 gigawatts of power"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "siteArea",
+          "label": "Reported campus extent",
+          "value": "Four buildings across 1,400 acres, per W.Media; not one-building area.",
+          "source": {
+            "url": "https://w.media/openai-plans-to-build-its-own-3-2-gw-data-center-campus-in-georgia/",
+            "title": "OpenAI plans to build its own 3.2 GW data center campus in Georgia – W.Media",
+            "publishedDate": "2026-07-23",
+            "quote": "four buildings across 1,400 acres"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Planned cooling system",
+          "value": "Closed-loop recirculating water system; no output-normalized efficiency score inferred.",
+          "source": {
+            "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "title": "Building AI infrastructure with the Effingham County community",
+            "publishedDate": "2026-07-22",
+            "quote": "closed-loop water system"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Power delivery phases",
+          "value": "2028–2032; power delivery schedule, not proof that every building opens in 2028.",
+          "source": {
+            "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "title": "Building AI infrastructure with the Effingham County community",
+            "publishedDate": "2026-07-22",
+            "quote": "between 2028 and 2032"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Project development announcement",
+          "date": "2026-07-22",
+          "source": {
+            "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "title": "Building AI infrastructure with the Effingham County community",
+            "publishedDate": "2026-07-22",
+            "quote": "a long-term datacenter project"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Phased power delivery target",
+          "date": "2028–2032",
+          "source": {
+            "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+            "title": "Building AI infrastructure with the Effingham County community",
+            "publishedDate": "2026-07-22",
+            "quote": "between 2028 and 2032"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "google-new-florence-project-spade",
+    "pinIds": {
+      "local": 15818,
+      "production": 15818
+    },
+    "title": "Google Project Spade Data Center: 1,200 MW, 15B USD, Under Construction in Montgomery County, Missouri",
+    "sourceUrl": "https://www.kbia.org/missouri-news-network/2026-05-21/missouri-governor-and-google-announce-15-billion-data-center-in-montgomery-county",
+    "profile": {
+      "sector": "Digital infrastructure: data center campus",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced infrastructure investment",
+          "value": "USD 15 billion as announced for the Montgomery County data center development; not a final outturn.",
+          "source": {
+            "url": "https://www.kbia.org/missouri-news-network/2026-05-21/missouri-governor-and-google-announce-15-billion-data-center-in-montgomery-county",
+            "title": "Missouri governor and Google announce $15 billion data center in Montgomery County – KBIA",
+            "publishedDate": "2026-05-21",
+            "quote": "invest $15 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "siteArea",
+          "label": "Reported campus extent",
+          "value": "About 900 acres; third-party megawatt estimates are omitted.",
+          "source": {
+            "url": "https://abc17news.com/?p=1618150",
+            "title": "Kehoe, Google tout $15 billion investment to accompany data center – ABC17NEWS",
+            "publishedDate": "2026-05-20",
+            "quote": "about 900 acres"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Planned cooling approach",
+          "value": "Air-cooled facility, according to the quoted Google public-affairs manager; no invented annual water-use metric.",
+          "source": {
+            "url": "https://abc17news.com/?p=1618150",
+            "title": "Kehoe, Google tout $15 billion investment to accompany data center – ABC17NEWS",
+            "publishedDate": "2026-05-20",
+            "quote": "This is an air cooled facility"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Data center development reported",
+          "value": "May 2026; KBIA explicitly describes Google’s project as under construction.",
+          "source": {
+            "url": "https://www.kbia.org/missouri-news-network/2026-05-21/missouri-governor-and-google-announce-15-billion-data-center-in-montgomery-county",
+            "title": "Missouri governor and Google announce $15 billion data center in Montgomery County – KBIA",
+            "publishedDate": "2026-05-21",
+            "quote": "second data center under construction"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Google development announcement reported",
+          "date": "2026-05-20",
+          "source": {
+            "url": "https://abc17news.com/?p=1618150",
+            "title": "Kehoe, Google tout $15 billion investment to accompany data center – ABC17NEWS",
+            "publishedDate": "2026-05-20",
+            "quote": "Google unveiled a data center project Wednesday"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "microsoft-mount-pleasant-second-facility",
+    "pinIds": {
+      "local": 16013,
+      "production": 16013
+    },
+    "title": "Microsoft Fairwater Mount Pleasant Second Datacenter (MKE04): 4B USD, 338 MW (Cleanview figure), Under Construction for 2028",
+    "sourceUrl": "https://fox6now.com/news/microsoft-wisconsin-next-infrastructure-investment-announced",
+    "profile": {
+      "sector": "Digital infrastructure: second Mount Pleasant data center",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Second-facility investment commitment",
+          "value": "Additional USD 4 billion; excludes the first facility and broader Wisconsin spending.",
+          "source": {
+            "url": "https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/",
+            "title": "Made in Wisconsin: The world’s most powerful AI datacenter",
+            "publishedDate": "2025-09-18",
+            "quote": "an additional $4 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Physical construction documented",
+          "value": "Foundation installation, steel erection and underground utilities underway at the second facility in June 2026.",
+          "source": {
+            "url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/",
+            "title": "Microsoft completes construction on first datacenter facility in Mount Pleasant, Wisconsin",
+            "publishedDate": "2026-06-23",
+            "quote": "foundation installation, steel erection and underground utility placement"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Second-facility completion target",
+          "value": "2028; the first facility’s June 2026 completion does not complete this second facility.",
+          "source": {
+            "url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/",
+            "title": "Microsoft completes construction on first datacenter facility in Mount Pleasant, Wisconsin",
+            "publishedDate": "2026-06-23",
+            "quote": "scheduled to be completed in 2028"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Second-facility investment announced",
+          "date": "2025-09-18",
+          "source": {
+            "url": "https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/",
+            "title": "Made in Wisconsin: The world’s most powerful AI datacenter",
+            "publishedDate": "2025-09-18",
+            "quote": "our second datacenter"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Second-facility construction confirmed",
+          "date": "2026-06-23",
+          "source": {
+            "url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/",
+            "title": "Microsoft completes construction on first datacenter facility in Mount Pleasant, Wisconsin",
+            "publishedDate": "2026-06-23",
+            "quote": "second facility"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Completion target",
+          "date": "2028",
+          "source": {
+            "url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/",
+            "title": "Microsoft completes construction on first datacenter facility in Mount Pleasant, Wisconsin",
+            "publishedDate": "2026-06-23",
+            "quote": "completed in 2028"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "microsoft-la-porte-data-center",
+    "pinIds": {
+      "local": 19223,
+      "production": 19223
+    },
+    "title": "Microsoft La Porte Data Center Site Works",
+    "sourceUrl": "https://trackdatacenters.com/usa/indiana#microsoft-la-porte",
+    "profile": {
+      "sector": "Digital infrastructure: data center site development",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced investment",
+          "value": "USD 1 billion; initial project announcement, not final spend.",
+          "source": {
+            "url": "https://www.iedc.in.gov/events/news/details/2024/06/04/gov-holcomb-announces-plans-for-new-1b-microsoft-data-center-in-northwest-indiana",
+            "title": "Gov. Holcomb Announces Plans for New $1B Microsoft Data Center in Northwest Indiana",
+            "publishedDate": "2024-06-04",
+            "quote": "invest $1 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Announced facility area",
+          "value": "245,000 sq ft on a 489-acre site; building area and land are distinct.",
+          "source": {
+            "url": "https://www.iedc.in.gov/events/news/details/2024/06/04/gov-holcomb-announces-plans-for-new-1b-microsoft-data-center-in-northwest-indiana",
+            "title": "Gov. Holcomb Announces Plans for New $1B Microsoft Data Center in Northwest Indiana",
+            "publishedDate": "2024-06-04",
+            "quote": "245,000-square-foot data center"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Current site preparation",
+          "value": "Grading and shaping the northern site; future vertical construction is not yet claimed complete.",
+          "source": {
+            "url": "https://local.microsoft.com/blog/la-porte-public-meeting-recap/",
+            "title": "La Porte datacenter construction updates – Microsoft Local",
+            "publishedDate": null,
+            "quote": "prepare the site for future vertical building construction"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Dated construction update",
+          "value": "July 2026; no unverified opening date assigned.",
+          "source": {
+            "url": "https://local.microsoft.com/blog/la-porte-public-meeting-recap/",
+            "title": "La Porte datacenter construction updates – Microsoft Local",
+            "publishedDate": null,
+            "quote": "Construction update—July 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Data center investment announced",
+          "date": "2024-06-04",
+          "source": {
+            "url": "https://www.iedc.in.gov/events/news/details/2024/06/04/gov-holcomb-announces-plans-for-new-1b-microsoft-data-center-in-northwest-indiana",
+            "title": "Gov. Holcomb Announces Plans for New $1B Microsoft Data Center in Northwest Indiana",
+            "publishedDate": "2024-06-04",
+            "quote": "announced that Microsoft will invest"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Grading work reported",
+          "date": "July 2026",
+          "source": {
+            "url": "https://local.microsoft.com/blog/la-porte-public-meeting-recap/",
+            "title": "La Porte datacenter construction updates – Microsoft Local",
+            "publishedDate": null,
+            "quote": "Construction update—July 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "stargate-the-barn-saline-township",
+    "pinIds": {
+      "local": 3444,
+      "production": 3444
+    },
+    "title": "Altman, Oracle and Whitmer Celebrate Construction of Michigan's Stargate Campus",
+    "sourceUrl": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+    "profile": {
+      "sector": "Digital infrastructure: Michigan AI data center campus",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Construction site extent",
+          "value": "250 acres at Saline Township; not the whole region’s data center land.",
+          "source": {
+            "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+            "title": "Oracle, Related Digital, Blackstone, OpenAI, Walbridge and Governor Whitmer Celebrate Construction of Stargate Campus in Saline Township",
+            "publishedDate": "2026-06-01",
+            "quote": "250-acre site"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "employment",
+          "label": "Documented construction labor",
+          "value": "More than 300,000 union trade hours logged by the June release; hours, not jobs or current headcount.",
+          "source": {
+            "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+            "title": "Oracle, Related Digital, Blackstone, OpenAI, Walbridge and Governor Whitmer Celebrate Construction of Stargate Campus in Saline Township",
+            "publishedDate": "2026-06-01",
+            "quote": "over 300,000 union trade hours"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Construction celebration",
+          "value": "1 June 2026, while physical work was underway; not an opening ceremony.",
+          "source": {
+            "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+            "title": "Oracle, Related Digital, Blackstone, OpenAI, Walbridge and Governor Whitmer Celebrate Construction of Stargate Campus in Saline Township",
+            "publishedDate": "2026-06-01",
+            "quote": "today celebrated construction of The Barn"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction milestone celebrated",
+          "date": "2026-06-01",
+          "source": {
+            "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/",
+            "title": "Oracle, Related Digital, Blackstone, OpenAI, Walbridge and Governor Whitmer Celebrate Construction of Stargate Campus in Saline Township",
+            "publishedDate": "2026-06-01",
+            "quote": "today celebrated construction of The Barn"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "stargate-lighthouse-port-washington",
+    "pinIds": {
+      "local": 3391,
+      "production": 3391
+    },
+    "title": "OpenAI, Oracle and Vantage Announce the Lighthouse Stargate Campus in Wisconsin",
+    "sourceUrl": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+    "profile": {
+      "sector": "Digital infrastructure: AI data center campus",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "siteArea",
+          "label": "Campus development footprint",
+          "value": "Four buildings on 500 acres of a 672-acre property; remaining land preserved as natural space.",
+          "source": {
+            "url": "https://www.oracle.com/data-centers/port-washington/",
+            "title": "Port Washington Data Centers – Oracle",
+            "publishedDate": null,
+            "quote": "four buildings on 500 of its 672 acres"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Projected construction and operations roles",
+          "value": "More than 4,000 construction jobs over three years and 1,000 ongoing operations roles; distinct populations.",
+          "source": {
+            "url": "https://www.oracle.com/news/announcement/blog/a-responsible-path-forward-for-project-lighthouse-2026-09-16/",
+            "title": "A Responsible Path Forward for Project Lighthouse",
+            "publishedDate": "2026-09-16",
+            "quote": "more than 4,000 skilled construction jobs"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Planned cooling configuration",
+          "value": "Closed-loop non-evaporative liquid cooling; no normalized efficiency score inferred.",
+          "source": {
+            "url": "https://www.oracle.com/data-centers/port-washington/",
+            "title": "Port Washington Data Centers – Oracle",
+            "publishedDate": null,
+            "quote": "closed-loop, non-evaporative liquid cooling system"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Construction confirmed",
+          "value": "TMJ4 describes the USD 15 billion campus as under construction; opening and full power delivery remain unverified.",
+          "source": {
+            "url": "https://www.tmj4.com/news/local-news/in-your-community/ozaukee-county/residents-weigh-benefits-and-concerns-as-project-lighthouse-data-center-ads-hit-local-media",
+            "title": "Residents weigh benefits and concerns as Project Lighthouse data center ads hit local media – TMJ4",
+            "publishedDate": null,
+            "quote": "under-construction $15 billion Project Lighthouse"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Current grid and project plan update",
+          "date": "2026-09-16",
+          "source": {
+            "url": "https://www.oracle.com/news/announcement/blog/a-responsible-path-forward-for-project-lighthouse-2026-09-16/",
+            "title": "A Responsible Path Forward for Project Lighthouse",
+            "publishedDate": "2026-09-16",
+            "quote": "Our commitment to completing Project Lighthouse remains unchanged."
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "edgecore-shannon-hill-louisa-campus",
+    "pinIds": {
+      "local": 15814,
+      "production": 15814
+    },
+    "title": "EdgeCore Shannon Hill Campus: 1,100 MW, 3.9 Million Sq Ft Data Center in Louisa County, Virginia, 17B USD",
+    "sourceUrl": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+    "profile": {
+      "sector": "Digital infrastructure: planned hyperscale campus",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Planned campus investment",
+          "value": "USD 17 billion-plus as announced; not the separate land purchase price.",
+          "source": {
+            "url": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+            "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus",
+            "publishedDate": "2025-06-25",
+            "quote": "$17 billion investment"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "siteArea",
+          "label": "Campus site extent",
+          "value": "697 acres in Shannon Hill Regional Business Park.",
+          "source": {
+            "url": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+            "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus",
+            "publishedDate": "2025-06-25",
+            "quote": "purchase of 697 acres"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Planned campus building area",
+          "value": "3.9 million sq ft across the campus; no per-building assignment.",
+          "source": {
+            "url": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+            "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus",
+            "publishedDate": "2025-06-25",
+            "quote": "3.9 million square foot"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned campus power scale",
+          "value": "Over 1.1 GW; not measured active IT load.",
+          "source": {
+            "url": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+            "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus",
+            "publishedDate": "2025-06-25",
+            "quote": "over 1.1 gigawatts of power"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Land purchase and development announcement",
+          "date": "2025-06-25",
+          "source": {
+            "url": "https://edgecore.com/new-louisa-county-virginia-data-center-campus/",
+            "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus",
+            "publishedDate": "2025-06-25",
+            "quote": "announced the purchase of 697 acres"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "apple-waukee-iowa-data-center",
+    "pinIds": {
+      "local": 135,
+      "production": 135
+    },
+    "title": "Apple Confirms Plans to Build Data Center in Iowa, Contribute Up to $100M to Community Projects",
+    "sourceUrl": "https://www.macrumors.com/2017/08/24/apple-confirms-iowa-data-center/",
+    "profile": {
+      "sector": "Digital infrastructure: data center development",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Original announced investment",
+          "value": "USD 1.3 billion; announced development budget, not verified final spend. Separate community fund excluded.",
+          "source": {
+            "url": "https://www.apple.com/newsroom/2017/08/apples-next-us-data-center-will-be-built-in-iowa/",
+            "title": "Apple’s next US data center will be built in Iowa",
+            "publishedDate": "2017-08-24",
+            "quote": "investment of $1.3 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Original planned facility area",
+          "value": "400,000 sq ft as announced in 2017; not a surveyed 2026 floor-area measurement.",
+          "source": {
+            "url": "https://www.apple.com/newsroom/2017/08/apples-next-us-data-center-will-be-built-in-iowa/",
+            "title": "Apple’s next US data center will be built in Iowa",
+            "publishedDate": "2017-08-24",
+            "quote": "400,000-square-foot"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Audited operating cooling system",
+          "value": "Closed-loop cooling using air-cooled chillers; later campus expansion remains distinct.",
+          "source": {
+            "url": "https://a4ws.org/wp-content/uploads/2025/07/AWS-000815-Apple-Waukee-Data-Centre-Certification-Report-2025-07-14.pdf",
+            "title": "Apple Waukee Data Centre – Alliance for Water Stewardship certification report, pages 6 and 19",
+            "publishedDate": "2025-07-14",
+            "quote": "closed-loop cooling system that uses air-cooled chillers"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Operations begin",
+          "value": "August 2024, explicitly recorded by the independent 2025 on-site audit.",
+          "source": {
+            "url": "https://a4ws.org/wp-content/uploads/2025/07/AWS-000815-Apple-Waukee-Data-Centre-Certification-Report-2025-07-14.pdf",
+            "title": "Apple Waukee Data Centre – Alliance for Water Stewardship certification report, pages 6 and 19",
+            "publishedDate": "2025-07-14",
+            "quote": "began operations in August 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original investment announced",
+          "date": "2017-08-24",
+          "source": {
+            "url": "https://www.apple.com/newsroom/2017/08/apples-next-us-data-center-will-be-built-in-iowa/",
+            "title": "Apple’s next US data center will be built in Iowa",
+            "publishedDate": "2017-08-24",
+            "quote": "announced plans to build"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Data center begins operation",
+          "date": "August 2024",
+          "source": {
+            "url": "https://a4ws.org/wp-content/uploads/2025/07/AWS-000815-Apple-Waukee-Data-Centre-Certification-Report-2025-07-14.pdf",
+            "title": "Apple Waukee Data Centre – Alliance for Water Stewardship certification report, pages 6 and 19",
+            "publishedDate": "2025-07-14",
+            "quote": "began operations in August 2024"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "mbta-north-station-draw-one-replacement",
+    "pinIds": {
+      "local": 3352,
+      "production": 3352
+    },
+    "title": "North Station's New Six-Track Draw One Bridge Due to Be Finished",
+    "sourceUrl": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+    "profile": {
+      "sector": "Rail: replacement movable river bridge",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published project budget",
+          "value": "USD 1.286 billion, per MBTA.",
+          "source": {
+            "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+            "title": "North Station Draw One Bridge Replacement – MBTA",
+            "publishedDate": null,
+            "quote": "Budget: $1.286 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Replacement bridge tracks",
+          "value": "Six tracks across the Charles River, replacing four; not six new tracks added to four.",
+          "source": {
+            "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+            "title": "North Station Draw One Bridge Replacement – MBTA",
+            "publishedDate": null,
+            "quote": "provide six new tracks across the river"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Anticipated project completion",
+          "value": "Fall 2032; construction notice to proceed was 4 May 2026.",
+          "source": {
+            "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+            "title": "North Station Draw One Bridge Replacement – MBTA",
+            "publishedDate": null,
+            "quote": "Anticipated project completion : Fall 2032"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction notice to proceed",
+          "date": "2026-05-04",
+          "source": {
+            "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+            "title": "North Station Draw One Bridge Replacement – MBTA",
+            "publishedDate": null,
+            "quote": "May 4, 2026"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Groundbreaking ceremony",
+          "date": "2026-09-04",
+          "source": {
+            "url": "https://www.mbta.com/news/2026-09-04/governor-healey-breaks-ground-north-station-draw-one-bridge-replacement",
+            "title": "Governor Healey Breaks Ground on North Station Draw One Bridge Replacement",
+            "publishedDate": "2026-09-04",
+            "quote": "today joined"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Completion target",
+          "date": "Fall 2032",
+          "source": {
+            "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+            "title": "North Station Draw One Bridge Replacement – MBTA",
+            "publishedDate": null,
+            "quote": "Fall 2032"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "atlanta-concourse-d-widening",
+    "pinIds": {
+      "local": 2229,
+      "production": 2229
+    },
+    "title": "Hartsfield-Jackson's Widened Concourse D Is Due to Be Finished",
+    "sourceUrl": "https://airportindustry-news.com/atl-begins-next-phase-of-concourse-d-widening-project/",
+    "profile": {
+      "sector": "Aviation: concourse widening and modernization",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Published project estimate",
+          "value": "USD 1.4 billion for Concourse D, not all ATLNext work.",
+          "source": {
+            "url": "https://informedinfrastructure.com/99797/expanding-concourse-d-at-hartsfield-jackson-atlanta-international-airport/",
+            "title": "Expanding Concourse D at Hartsfield-Jackson Atlanta International Airport – Informed Infrastructure",
+            "publishedDate": "2025-03-25",
+            "quote": "$1.4 billion project"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned aircraft gate configuration",
+          "value": "34 Group III aircraft positions, eight fewer positions as aircraft size increases; not a claim of added gate count.",
+          "source": {
+            "url": "https://airportindustry-news.com/atl-begins-next-phase-of-concourse-d-widening-project/",
+            "title": "ATL Begins Next Phase of Concourse D Widening Project",
+            "publishedDate": "2025-01-20",
+            "quote": "accommodate 34 Group III aircraft"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Widened concourse scope",
+          "value": "Footprint width increases from 60 to 99 ft and length by 288 ft.",
+          "source": {
+            "url": "https://informedinfrastructure.com/99797/expanding-concourse-d-at-hartsfield-jackson-atlanta-international-airport/",
+            "title": "Expanding Concourse D at Hartsfield-Jackson Atlanta International Airport – Informed Infrastructure",
+            "publishedDate": "2025-03-25",
+            "quote": "from 60 to 99 feet and extending its length by 288 feet"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Whole concourse completion target",
+          "value": "Summer 2029; earlier module and gate openings are partial milestones.",
+          "source": {
+            "url": "https://airportindustry-news.com/atl-begins-next-phase-of-concourse-d-widening-project/",
+            "title": "ATL Begins Next Phase of Concourse D Widening Project",
+            "publishedDate": "2025-01-20",
+            "quote": "completion in the summer of 2029"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First five modules attached",
+          "date": "2024-09-04",
+          "source": {
+            "url": "https://airportindustry-news.com/atl-begins-next-phase-of-concourse-d-widening-project/",
+            "title": "ATL Begins Next Phase of Concourse D Widening Project",
+            "publishedDate": "2025-01-20",
+            "quote": "Phase 1 of the project concluded on September 4, 2024"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Next module-installation phase underway",
+          "date": "2025-01-20",
+          "source": {
+            "url": "https://airportindustry-news.com/atl-begins-next-phase-of-concourse-d-widening-project/",
+            "title": "ATL Begins Next Phase of Concourse D Widening Project",
+            "publishedDate": "2025-01-20",
+            "quote": "has commenced Phase 2"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Whole project completion target",
+          "date": "Summer 2029",
+          "source": {
+            "url": "https://airportindustry-news.com/atl-begins-next-phase-of-concourse-d-widening-project/",
+            "title": "ATL Begins Next Phase of Concourse D Widening Project",
+            "publishedDate": "2025-01-20",
+            "quote": "summer of 2029"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "hillingdon-hospital-redevelopment",
+    "pinIds": {
+      "local": 2290,
+      "production": 2290
+    },
+    "title": "Construction Starts on the New Hillingdon Hospital",
+    "sourceUrl": "https://modgov.hillingdon.gov.uk/documents/s64085/250619%20-%2006%20-%20Hillingdon%20Hospital%20Redevelopment%20Update.pdf",
+    "profile": {
+      "sector": "Healthcare: planned replacement hospital",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Updated planned inpatient beds",
+          "value": "538 overnight beds, all single rooms with en-suite bathrooms; older design counts are superseded.",
+          "source": {
+            "url": "https://thh.nhs.uk/news-events/share-your-views-on-the-updated-plans-for-the-new-hillingdon-hospital-3417",
+            "title": "Share your views on the updated plans for the new Hillingdon Hospital",
+            "publishedDate": null,
+            "quote": "538 overnight beds"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Planned clinical facilities",
+          "value": "Expanded theatres, imaging and outpatient services, plus a new birthing suite.",
+          "source": {
+            "url": "https://thh.nhs.uk/news-events/share-your-views-on-the-updated-plans-for-the-new-hillingdon-hospital-3417",
+            "title": "Share your views on the updated plans for the new Hillingdon Hospital",
+            "publishedDate": null,
+            "quote": "expanded theatres, imaging and outpatient services"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Current preparatory and construction target",
+          "value": "2028 onwards per the trust FAQ; contract award does not alone establish physical hospital construction.",
+          "source": {
+            "url": "https://thh.nhs.uk/frequently-asked-questions-",
+            "title": "Frequently asked questions – The Hillingdon Hospitals NHS Foundation Trust",
+            "publishedDate": null,
+            "quote": "Preparatory works and construction starts 2028 onwards"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Redevelopment contract signed",
+          "date": "2026-07-30",
+          "source": {
+            "url": "https://www.laingorourke.com/company/news/2026/laing-o-rourke-signs-contract-to-deliver-hillingdon-hospital-redevelopment/",
+            "title": "Laing O’Rourke signs contract to deliver Hillingdon Hospital redevelopment",
+            "publishedDate": "2026-07-30",
+            "quote": "has signed the contract"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Preparatory works and construction target",
+          "date": "2028 onwards",
+          "source": {
+            "url": "https://thh.nhs.uk/frequently-asked-questions-",
+            "title": "Frequently asked questions – The Hillingdon Hospitals NHS Foundation Trust",
+            "publishedDate": null,
+            "quote": "construction starts 2028 onwards"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "ocean-beach-climate-adaptation",
+    "pinIds": {
+      "local": 3340,
+      "production": 3340
+    },
+    "title": "Ocean Beach Adaptation Targets Late 2029 Major-Construction Start",
+    "sourceUrl": "https://thefrisc.com/ocean-beach-plan-to-replace-an-eroding-stretch-of-great-highway-is-delayed-again/",
+    "profile": {
+      "sector": "Coastal protection: seawall and shoreline adaptation",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Planned protection works",
+          "value": "Buried seawall protects wastewater and recycled-water infrastructure, alongside beach access and habitat work.",
+          "source": {
+            "url": "https://www.sfpuc.gov/construction-contracts/construction-projects/oceanbeach",
+            "title": "Ocean Beach Climate Change Adaptation Project – SFPUC",
+            "publishedDate": null,
+            "quote": "constructing a buried seawall"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Published project phase",
+          "value": "Design; preceding traffic and safety work does not establish construction of the seawall itself.",
+          "source": {
+            "url": "https://www.sfpuc.gov/construction-contracts/construction-projects/oceanbeach",
+            "title": "Ocean Beach Climate Change Adaptation Project – SFPUC",
+            "publishedDate": null,
+            "quote": "Project Phase: Design"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Updated major construction target",
+          "value": "Late 2029, lasting approximately four years; latest detailed update takes precedence over older 2027 summary widget.",
+          "source": {
+            "url": "https://www.sfpuc.gov/construction-contracts/construction-projects/oceanbeach",
+            "title": "Ocean Beach Climate Change Adaptation Project – SFPUC",
+            "publishedDate": null,
+            "quote": "begin in late 2029 and last for approximately four years"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Major adaptation construction target",
+          "date": "Late 2029",
+          "source": {
+            "url": "https://www.sfpuc.gov/construction-contracts/construction-projects/oceanbeach",
+            "title": "Ocean Beach Climate Change Adaptation Project – SFPUC",
+            "publishedDate": null,
+            "quote": "late 2029"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "boston-white-stadium-rebuild",
+    "pinIds": {
+      "local": 2199,
+      "production": 2199
+    },
+    "title": "White Stadium Reopens in Franklin Park After Its Rebuild",
+    "sourceUrl": "https://en.wikipedia.org/wiki/White_Stadium",
+    "profile": {
+      "sector": "Sports: stadium reconstruction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported combined rebuild estimate",
+          "value": "USD 325 million in WBUR’s April 2026 report; distinguish the city’s USD 135 million public share.",
+          "source": {
+            "url": "https://www.wbur.org/news/2026/04/14/white-stadium-construction-timeline-photos",
+            "title": "White Stadium construction is entering a new phase. Here’s a look – WBUR",
+            "publishedDate": "2026-04-14",
+            "quote": "$325 million project"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned stadium seats",
+          "value": "10,000 seats for Boston Public Schools athletics and Boston Legacy FC.",
+          "source": {
+            "url": "https://www.wbur.org/news/2026/04/14/white-stadium-construction-timeline-photos",
+            "title": "White Stadium construction is entering a new phase. Here’s a look – WBUR",
+            "publishedDate": "2026-04-14",
+            "quote": "10,000-seat stadium"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Sports and community facilities",
+          "value": "Natural-grass field, eight-lane track and public restrooms, with new school athletics facilities.",
+          "source": {
+            "url": "https://www.wbur.org/news/2026/04/14/white-stadium-construction-timeline-photos",
+            "title": "White Stadium construction is entering a new phase. Here’s a look – WBUR",
+            "publishedDate": "2026-04-14",
+            "quote": "natural grass field, an eight-lane track and public restrooms"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Published opening aim",
+          "value": "2027 generally; report distinguishes a more specific late-summer aspiration from the mayor’s broader aim.",
+          "source": {
+            "url": "https://www.wbur.org/news/2026/04/14/white-stadium-construction-timeline-photos",
+            "title": "White Stadium construction is entering a new phase. Here’s a look – WBUR",
+            "publishedDate": "2026-04-14",
+            "quote": "aiming for 2027 generally"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Vertical construction phase reported underway",
+          "date": "2026-04-14",
+          "source": {
+            "url": "https://www.wbur.org/news/2026/04/14/white-stadium-construction-timeline-photos",
+            "title": "White Stadium construction is entering a new phase. Here’s a look – WBUR",
+            "publishedDate": "2026-04-14",
+            "quote": "crews began the so-called “vertical construction” phase last week"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Opening aim",
+          "date": "2027",
+          "source": {
+            "url": "https://www.wbur.org/news/2026/04/14/white-stadium-construction-timeline-photos",
+            "title": "White Stadium construction is entering a new phase. Here’s a look – WBUR",
+            "publishedDate": "2026-04-14",
+            "quote": "aiming for 2027 generally"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "the-becker-riverwalk-affordable-housing",
+    "pinIds": {
+      "local": 7021,
+      "production": 7021
+    },
+    "title": "The Becker Opens Affordable Homes at Riverwalk",
+    "sourceUrl": "https://riverwalksd.com/construction-update-q2-2026/",
+    "profile": {
+      "sector": "Housing: affordable apartment construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Becker development funding",
+          "value": "USD 140 million, excluding the wider Riverwalk development.",
+          "source": {
+            "url": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+            "title": "Wakeland Housing Breaks Ground on $140 Million Project at Riverwalk San Diego",
+            "publishedDate": "2025-08-01",
+            "quote": "$140 million development"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Affordable housing count",
+          "value": "190 homes reserved for households earning 60% AMI or less; wider Riverwalk housing excluded.",
+          "source": {
+            "url": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+            "title": "Wakeland Housing Breaks Ground on $140 Million Project at Riverwalk San Diego",
+            "publishedDate": "2025-08-01",
+            "quote": "190 units at The Becker"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Transit-oriented housing scope",
+          "value": "First residential component within Riverwalk, adjacent to the San Diego River Trail and future transit stop.",
+          "source": {
+            "url": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+            "title": "Wakeland Housing Breaks Ground on $140 Million Project at Riverwalk San Diego",
+            "publishedDate": "2025-08-01",
+            "quote": "first residential component within the mixed-use Riverwalk San Diego project"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion forecast",
+          "value": "Mid-2027; no first move-in date is verified.",
+          "source": {
+            "url": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+            "title": "Wakeland Housing Breaks Ground on $140 Million Project at Riverwalk San Diego",
+            "publishedDate": "2025-08-01",
+            "quote": "Completion of The Becker is slated for mid-2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction start reported",
+          "date": "2025-08-01",
+          "source": {
+            "url": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+            "title": "Wakeland Housing Breaks Ground on $140 Million Project at Riverwalk San Diego",
+            "publishedDate": "2025-08-01",
+            "quote": "has started construction of The Becker"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Completion target",
+          "date": "Mid-2027",
+          "source": {
+            "url": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+            "title": "Wakeland Housing Breaks Ground on $140 Million Project at Riverwalk San Diego",
+            "publishedDate": "2025-08-01",
+            "quote": "mid-2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "jfk-new-terminal-one-first-opening",
+    "pinIds": {
+      "local": 3595,
+      "production": 3595
+    },
+    "title": "JFK's $9.5 Billion New Terminal One Opens Its First Phase",
+    "sourceUrl": "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+    "profile": {
+      "sector": "Aviation: new international terminal development",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Whole New Terminal One investment",
+          "value": "USD 9.5 billion for the complete terminal development; not a separately priced 14-gate opening phase.",
+          "source": {
+            "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "title": "JFK Terminal 1: New Terminal One Construction & Updates",
+            "publishedDate": null,
+            "quote": "$9.5 billion New Terminal One"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "First-phase opening program",
+          "value": "14 new gates in the initial arrivals/departures phase; 23 gates is the eventual terminal total.",
+          "source": {
+            "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "title": "JFK Terminal 1: New Terminal One Construction & Updates",
+            "publishedDate": null,
+            "quote": "first set of 14 new gates"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "floorArea",
+          "label": "Whole-terminal footprint",
+          "value": "2.6 million sq ft at full buildout, not the initial phase alone.",
+          "source": {
+            "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "title": "JFK Terminal 1: New Terminal One Construction & Updates",
+            "publishedDate": null,
+            "quote": "footprint of 2.6 million square feet"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Updated first-phase opening forecast",
+          "value": "2027 per the current terminal site; earlier 2026 targets do not establish opening.",
+          "source": {
+            "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "title": "JFK Terminal 1: New Terminal One Construction & Updates",
+            "publishedDate": null,
+            "quote": "expected to open in 2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First-phase opening target",
+          "date": "2027",
+          "source": {
+            "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/jfk/planned-projects/terminal-1.html",
+            "title": "JFK Terminal 1: New Terminal One Construction & Updates",
+            "publishedDate": null,
+            "quote": "expected to open in 2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "stad-ship-tunnel",
+    "pinIds": {
+      "local": 680,
+      "production": 680
+    },
+    "title": "Stad Ship Tunnel Construction Pushed to Early 2027",
+    "sourceUrl": "https://www.youtube.com/watch?v=Sfv0-WWxYNk",
+    "profile": {
+      "sector": "Shipping: planned full-scale ship tunnel",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Approved cost framework",
+          "value": "NOK 8.588 billion including VAT, adopted June 2026; not the narrower main construction contract.",
+          "source": {
+            "url": "https://www.kystverket.no/skipstunnel",
+            "title": "Stad skipstunnel – Kystverket",
+            "publishedDate": null,
+            "quote": "8,588 milliarder kroner (inkl. mva.)"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Tunnel geometry",
+          "value": "1,700 m bore, about 2,200 m including entrances; 50 m overall height and 36 m width.",
+          "source": {
+            "url": "https://www.kystverket.no/skipstunnel",
+            "title": "Stad skipstunnel – Kystverket",
+            "publishedDate": null,
+            "quote": "1700 meter for selve tunnelløpet"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Navigable height",
+          "value": "33 m sailing clearance, distinct from total excavation height.",
+          "source": {
+            "url": "https://www.kystverket.no/skipstunnel",
+            "title": "Stad skipstunnel – Kystverket",
+            "publishedDate": null,
+            "quote": "Seilingshøyde: 33 meter"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Tunnel construction target",
+          "value": "January 2027; preparatory contracts and demolition announcements do not establish tunnel operation.",
+          "source": {
+            "url": "https://www.kystverket.no/skipstunnel",
+            "title": "Stad skipstunnel – Kystverket",
+            "publishedDate": null,
+            "quote": "Byggestart er januar 2027"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Updated cost framework adopted",
+          "date": "June 2026",
+          "source": {
+            "url": "https://www.kystverket.no/skipstunnel",
+            "title": "Stad skipstunnel – Kystverket",
+            "publishedDate": null,
+            "quote": "Vedtatt kostnadsramme (juni 2026)"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Tunnel construction target",
+          "date": "January 2027",
+          "source": {
+            "url": "https://www.kystverket.no/skipstunnel",
+            "title": "Stad skipstunnel – Kystverket",
+            "publishedDate": null,
+            "quote": "Byggestart er januar 2027"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "aramco-stadium-al-khobar",
+    "pinIds": {
+      "local": 3026,
+      "production": 3026
+    },
+    "title": "Aramco Stadium Opens in Al Khobar",
+    "sourceUrl": "https://www.aramcostadium.com/en",
+    "profile": {
+      "sector": "Sports: stadium construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported stadium construction estimate",
+          "value": "Approximately USD 1 billion as published by CBNME; not surrounding mixed-use development.",
+          "source": {
+            "url": "https://www.cbnme.com/news/aramco-stadium-nears-completion-as-al-khobars-skyline-takes-shape/",
+            "title": "Aramco Stadium Nears Completion As Al Khobar’s Skyline Takes Shape – CBNME",
+            "publishedDate": "2026-07-21",
+            "quote": "$1 billion venue"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned spectator capacity",
+          "value": "47,000 seats.",
+          "source": {
+            "url": "https://www.cbnme.com/news/aramco-stadium-nears-completion-as-al-khobars-skyline-takes-shape/",
+            "title": "Aramco Stadium Nears Completion As Al Khobar’s Skyline Takes Shape – CBNME",
+            "publishedDate": "2026-07-21",
+            "quote": "47,000-seat venue"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Dated construction workforce",
+          "value": "More than 11,000 workers on site at the July 2026 report; historical construction headcount, not permanent stadium jobs.",
+          "source": {
+            "url": "https://www.cbnme.com/news/aramco-stadium-nears-completion-as-al-khobars-skyline-takes-shape/",
+            "title": "Aramco Stadium Nears Completion As Al Khobar’s Skyline Takes Shape – CBNME",
+            "publishedDate": "2026-07-21",
+            "quote": "More than 11,000 workers are currently on site"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Completion forecast",
+          "value": "2026 in the July report; no opening inferred from ticket listings or the forecast.",
+          "source": {
+            "url": "https://www.cbnme.com/news/aramco-stadium-nears-completion-as-al-khobars-skyline-takes-shape/",
+            "title": "Aramco Stadium Nears Completion As Al Khobar’s Skyline Takes Shape – CBNME",
+            "publishedDate": "2026-07-21",
+            "quote": "on track for a 2026 completion"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Active stadium construction documented",
+          "date": "2026-07-21",
+          "source": {
+            "url": "https://www.cbnme.com/news/aramco-stadium-nears-completion-as-al-khobars-skyline-takes-shape/",
+            "title": "Aramco Stadium Nears Completion As Al Khobar’s Skyline Takes Shape – CBNME",
+            "publishedDate": "2026-07-21",
+            "quote": "Construction on the new Aramco Stadium"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Completion forecast",
+          "date": "2026",
+          "source": {
+            "url": "https://www.cbnme.com/news/aramco-stadium-nears-completion-as-al-khobars-skyline-takes-shape/",
+            "title": "Aramco Stadium Nears Completion As Al Khobar’s Skyline Takes Shape – CBNME",
+            "publishedDate": "2026-07-21",
+            "quote": "2026 completion"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "xiamen-xiangan-airport-initial-development",
+    "pinIds": {
+      "local": 6666,
+      "production": 6666
+    },
+    "title": "Xiamen Xiang'an International Airport Opens, Replacing Gaoqi",
+    "sourceUrl": "https://regional.chinadaily.com.cn/XMFTZ/2026-06/29/c_1193595.htm",
+    "profile": {
+      "sector": "Aviation: new airport and cargo development",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Southern cargo area design",
+          "value": "750,000 tonnes annually; not whole-airport passenger capacity.",
+          "source": {
+            "url": "https://regional.chinadaily.com.cn/XMFTZ/2026-06/29/c_1193595.htm",
+            "title": "Xiamen Xiang’an southern cargo area to open with 750,000 t annual capacity",
+            "publishedDate": "2026-06-29",
+            "quote": "750,000 t annual capacity"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "New cargo logistics facilities",
+          "value": "Cargo stations, express-parcel logistics and a built automated high-bay warehouse; warehouse area is not terminal GFA.",
+          "source": {
+            "url": "https://regional.chinadaily.com.cn/XMFTZ/2026-06/29/c_1193595.htm",
+            "title": "Xiamen Xiang’an southern cargo area to open with 750,000 t annual capacity",
+            "publishedDate": "2026-06-29",
+            "quote": "automated high bay warehouse has been built"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "Airport opening forecast",
+          "value": "By end-2026, alongside cargo area opening; the exact 25 December date is not verified by this source.",
+          "source": {
+            "url": "https://regional.chinadaily.com.cn/XMFTZ/2026-06/29/c_1193595.htm",
+            "title": "Xiamen Xiang’an southern cargo area to open with 750,000 t annual capacity",
+            "publishedDate": "2026-06-29",
+            "quote": "will officially begin operations by the end of this year"
+          },
+          "basis": "planned"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Built warehouse documented during airport development",
+          "date": "2026-06-29",
+          "source": {
+            "url": "https://regional.chinadaily.com.cn/XMFTZ/2026-06/29/c_1193595.htm",
+            "title": "Xiamen Xiang’an southern cargo area to open with 750,000 t annual capacity",
+            "publishedDate": "2026-06-29",
+            "quote": "automated high bay warehouse has been built"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Airport opening target",
+          "date": "End of 2026",
+          "source": {
+            "url": "https://regional.chinadaily.com.cn/XMFTZ/2026-06/29/c_1193595.htm",
+            "title": "Xiamen Xiang’an southern cargo area to open with 750,000 t annual capacity",
+            "publishedDate": "2026-06-29",
+            "quote": "by the end of this year"
+          },
+          "basis": "planned"
+        }
+      ]
+    }
+  },
+  {
+    "key": "western-sydney-international-airport",
+    "pinIds": {
+      "local": 541,
+      "production": 541
+    },
+    "title": "Western Sydney Airport Opens to Passengers",
+    "sourceUrl": "https://www.youtube.com/watch?v=_l73_Ctm21I",
+    "profile": {
+      "sector": "Aviation: new airport initial operating stage",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Initial runway and terminal",
+          "value": "3.7 km runway, taxiways, integrated terminal and cargo precinct; later master-plan expansion excluded.",
+          "source": {
+            "url": "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/about-western-sydney-international-nancy-bird-walton-airport",
+            "title": "About Western Sydney International (Nancy-Bird Walton) Airport – Australian Government",
+            "publishedDate": null,
+            "quote": "3.7 kilometre runway"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Initial passenger design capacity",
+          "value": "Up to 10 million passengers annually; not observed opening-year traffic.",
+          "source": {
+            "url": "https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026",
+            "title": "It’s official – Western Sydney to open to passengers on 25 October and freight on 26 July 2026",
+            "publishedDate": "2026-06-10",
+            "quote": "up to 10 million passengers annually"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Passenger operations begin",
+          "value": "25 October 2026, explicitly confirmed by the government after opening.",
+          "source": {
+            "url": "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/about-western-sydney-international-nancy-bird-walton-airport",
+            "title": "About Western Sydney International (Nancy-Bird Walton) Airport – Australian Government",
+            "publishedDate": null,
+            "quote": "commenced passenger operations on 25 October 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction starts",
+          "date": "2018-09-24",
+          "source": {
+            "url": "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/about-western-sydney-international-nancy-bird-walton-airport",
+            "title": "About Western Sydney International (Nancy-Bird Walton) Airport – Australian Government",
+            "publishedDate": null,
+            "quote": "commenced on 24 September 2018"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Runway and terminal construction complete",
+          "date": "June 2025",
+          "source": {
+            "url": "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/about-western-sydney-international-nancy-bird-walton-airport",
+            "title": "About Western Sydney International (Nancy-Bird Walton) Airport – Australian Government",
+            "publishedDate": null,
+            "quote": "completed in June 2025"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Passenger operation begins",
+          "date": "2026-10-25",
+          "source": {
+            "url": "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/about-western-sydney-international-nancy-bird-walton-airport",
+            "title": "About Western Sydney International (Nancy-Bird Walton) Airport – Australian Government",
+            "publishedDate": null,
+            "quote": "commenced passenger operations on 25 October 2026"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "navi-mumbai-airport-initial-operation",
+    "pinIds": {
+      "local": 472,
+      "production": 472
+    },
+    "title": "Navi Mumbai International Airport Opens on a Reclaimed Swamp",
+    "sourceUrl": "https://www.youtube.com/watch?v=zoqKwqM7wkQ",
+    "profile": {
+      "sector": "Aviation: new airport initial operating stage",
+      "status": "production",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Initial-phase passenger capacity",
+          "value": "20 million passengers annually; later 90-million full buildout is excluded.",
+          "source": {
+            "url": "https://www.adani.com/newsroom/media-releases/chairman-gautam-adani-welcomes-first-passengers-as-navi-mumbai-international-airport-takes-flight",
+            "title": "Chairman Gautam Adani Welcomes First Passengers as Navi Mumbai International Airport Takes Flight",
+            "publishedDate": "2025-12-25",
+            "quote": "initial phase, NMIA will have the capacity to manage 20 MPPA"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Initial cargo program",
+          "value": "0.5 million metric tonnes annually in the initial phase; not eventual 3.2-million-tonne full buildout.",
+          "source": {
+            "url": "https://www.adani.com/newsroom/media-releases/chairman-gautam-adani-welcomes-first-passengers-as-navi-mumbai-international-airport-takes-flight",
+            "title": "Chairman Gautam Adani Welcomes First Passengers as Navi Mumbai International Airport Takes Flight",
+            "publishedDate": "2025-12-25",
+            "quote": "0.5 million metric tonnes of cargo annually"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "Commercial operations start",
+          "value": "25 December 2025; earlier inauguration and trials are distinct.",
+          "source": {
+            "url": "https://www.adani.com/newsroom/media-releases/chairman-gautam-adani-welcomes-first-passengers-as-navi-mumbai-international-airport-takes-flight",
+            "title": "Chairman Gautam Adani Welcomes First Passengers as Navi Mumbai International Airport Takes Flight",
+            "publishedDate": "2025-12-25",
+            "quote": "commenced commercial operations today"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Commercial operations begin",
+          "date": "2025-12-25",
+          "source": {
+            "url": "https://www.adani.com/newsroom/media-releases/chairman-gautam-adani-welcomes-first-passengers-as-navi-mumbai-international-airport-takes-flight",
+            "title": "Chairman Gautam Adani Welcomes First Passengers as Navi Mumbai International Airport Takes Flight",
+            "publishedDate": "2025-12-25",
+            "quote": "commenced commercial operations today"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "midtown-bus-terminal-replacement",
+    "pinIds": {
+      "local": 2219,
+      "production": 2219
+    },
+    "title": "Construction Starts on the Port Authority Bus Terminal Replacement",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Port_Authority_Bus_Terminal",
+    "profile": {
+      "sector": "Transit: phased bus terminal reconstruction",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Planned main terminal",
+          "value": "2.1 million sq ft main terminal; separate staging/storage building excluded from that figure.",
+          "source": {
+            "url": "https://portauthoritybuilds.com/redevelopment/us/en/mbt/news/port-authoritys-transformational-project-to-replace-midtown-bus-terminal-with-world-class-facility-receives-full-approval-from-both-federal-government-and-city-of-new-york-following-separate-reviews.html",
+            "title": "Port Authority’s Transformational Project to Replace Midtown Bus Terminal with World-Class Facility Receives Full Approval",
+            "publishedDate": "2024-12-04",
+            "quote": "2.1 million square-foot main terminal"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Expected union construction jobs",
+          "value": "Approximately 6,000 construction jobs across the replacement project; not operating staffing.",
+          "source": {
+            "url": "https://portauthoritybuilds.com/redevelopment/us/en/mbt/news/port-authoritys-transformational-project-to-replace-midtown-bus-terminal-with-world-class-facility-receives-full-approval-from-both-federal-government-and-city-of-new-york-following-separate-reviews.html",
+            "title": "Port Authority’s Transformational Project to Replace Midtown Bus Terminal with World-Class Facility Receives Full Approval",
+            "publishedDate": "2024-12-04",
+            "quote": "approximately 6,000 good-paying union construction jobs"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Phased temporary terminal works",
+          "value": "900,000 sq ft interim facility transitions into bus staging/storage in later phases.",
+          "source": {
+            "url": "https://www.turnerconstruction.com/insights/stv-turner-selected-for-first-phase-of-transformative-midtown-bus-terminal-replacement",
+            "title": "STV-Turner Selected for First Phase of Transformative Midtown Bus Terminal Replacement",
+            "publishedDate": "2026-05-18",
+            "quote": "900,000-square-foot interim facility"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "First-phase delivery team appointed",
+          "value": "18 May 2026 construction-management announcement; not asserted as the first day of physical work.",
+          "source": {
+            "url": "https://www.turnerconstruction.com/insights/stv-turner-selected-for-first-phase-of-transformative-midtown-bus-terminal-replacement",
+            "title": "STV-Turner Selected for First Phase of Transformative Midtown Bus Terminal Replacement",
+            "publishedDate": "2026-05-18",
+            "quote": "provide construction management (CM) services for Phase 1"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Federal and city approvals secured",
+          "date": "2024-12-04",
+          "source": {
+            "url": "https://portauthoritybuilds.com/redevelopment/us/en/mbt/news/port-authoritys-transformational-project-to-replace-midtown-bus-terminal-with-world-class-facility-receives-full-approval-from-both-federal-government-and-city-of-new-york-following-separate-reviews.html",
+            "title": "Port Authority’s Transformational Project to Replace Midtown Bus Terminal with World-Class Facility Receives Full Approval",
+            "publishedDate": "2024-12-04",
+            "quote": "Record of Decision Issued Today"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "First-phase construction-management appointment reported",
+          "date": "2026-05-18",
+          "source": {
+            "url": "https://www.turnerconstruction.com/insights/stv-turner-selected-for-first-phase-of-transformative-midtown-bus-terminal-replacement",
+            "title": "STV-Turner Selected for First Phase of Transformative Midtown Bus Terminal Replacement",
+            "publishedDate": "2026-05-18",
+            "quote": "provide construction management (CM) services for Phase 1"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "mose-venice-mobile-barriers",
+    "pinIds": {
+      "local": 930,
+      "production": 930
+    },
+    "title": "Consorzio Venezia Nuova Installs the Last of MOSE's 78 Flood Gates",
+    "sourceUrl": "https://www.youtube.com/watch?v=4xnsKL8B9JA",
+    "profile": {
+      "sector": "Coastal protection: movable lagoon barriers",
+      "status": "commissioning",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "products",
+          "label": "Movable barrier arrangement",
+          "value": "Four arrays at three inlets: 19 Malamocco, 18 Chioggia, 21 Treporti and 20 San Nicolò gates (78 total).",
+          "source": {
+            "url": "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "title": "Integrated system for the protection of Venice and its lagoon against flooding – AdriAdapt",
+            "publishedDate": "2022-01-27",
+            "quote": "respectively formed by 21 and 20 mobile gates"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "capacity",
+          "label": "Planned safeguarding threshold",
+          "value": "Activation at +110 cm tide threshold at full operation; not the maximum flood height the structures can resist.",
+          "source": {
+            "url": "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "title": "Integrated system for the protection of Venice and its lagoon against flooding – AdriAdapt",
+            "publishedDate": "2022-01-27",
+            "quote": "+110 cm threshold"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "stage",
+          "label": "Emergency operation before finalization",
+          "value": "The 2022 assessment explicitly describes effective test-phase use while some service-system works remained unfinished. No later whole-program completion is inferred.",
+          "source": {
+            "url": "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "title": "Integrated system for the protection of Venice and its lagoon against flooding – AdriAdapt",
+            "publishedDate": "2022-01-27",
+            "quote": "utilized, even if still in a test phase"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "timeline",
+          "label": "First successful protective operation",
+          "value": "3 October 2020; operation is distinguished from final project acceptance.",
+          "source": {
+            "url": "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "title": "Integrated system for the protection of Venice and its lagoon against flooding – AdriAdapt",
+            "publishedDate": "2022-01-27",
+            "quote": "3 rd of October 2020"
+          },
+          "basis": "demonstrated"
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First successful protective operation",
+          "date": "2020-10-03",
+          "source": {
+            "url": "https://adriadapt.eu/case-studies/integrated-system-for-the-protection-of-venice-and-its-lagoon-against-flooding/",
+            "title": "Integrated system for the protection of Venice and its lagoon against flooding – AdriAdapt",
+            "publishedDate": "2022-01-27",
+            "quote": "3 rd of October 2020"
+          },
+          "basis": "demonstrated"
+        }
+      ]
+    }
+  },
+  {
+    "key": "egypt-first-high-speed-rail-line-contract",
+    "pinIds": {
+      "local": 660,
+      "production": 660
+    },
+    "title": "Egypt Signs $4.5BN Contract for Its First High-Speed Rail Line",
+    "sourceUrl": "https://www.youtube.com/watch?v=9j14OPec4Lc",
+    "profile": {
+      "sector": "Rail: first high-speed intercity rail system",
+      "status": "construction",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing automation capability assessment applies to this infrastructure buildout.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored manufacturing process capability or comparable sector baseline was established.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No manufacturing supply-chain bottleneck relief assessment was established for this project.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Total first-line consortium contract",
+          "value": "Approximately USD 4.5 billion, of which Siemens’ share is around USD 3 billion; shares are not additive.",
+          "source": {
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn",
+            "title": "Siemens Mobility Signs Historic Contract for Turnkey Rail System in Egypt worth USD 3 bn",
+            "publishedDate": "2021-09-01",
+            "quote": "total contract value is approximately USD 4.5 billion"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "products",
+          "label": "Initial contracted railway scope",
+          "value": "660 km first line from the planned 1,800 km system, including passenger and freight rail; later lines excluded.",
+          "source": {
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn",
+            "title": "Siemens Mobility Signs Historic Contract for Turnkey Rail System in Egypt worth USD 3 bn",
+            "publishedDate": "2021-09-01",
+            "quote": "initial 660 km out of the 1800 km rail network"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "employment",
+          "label": "Expected local project jobs",
+          "value": "More than 15,000 local jobs to complete the project; announced construction/deployment roles, not a verified current headcount.",
+          "source": {
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn",
+            "title": "Siemens Mobility Signs Historic Contract for Turnkey Rail System in Egypt worth USD 3 bn",
+            "publishedDate": "2021-09-01",
+            "quote": "more than 15,000 local jobs"
+          },
+          "basis": "planned"
+        },
+        {
+          "key": "timeline",
+          "label": "First-line contract signed",
+          "value": "1 September 2021; financial closing, physical construction and opening are separate milestones.",
+          "source": {
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn",
+            "title": "Siemens Mobility Signs Historic Contract for Turnkey Rail System in Egypt worth USD 3 bn",
+            "publishedDate": "2021-09-01",
+            "quote": "01 September 2021"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "key": "stage",
+          "label": "Construction supervision documented",
+          "value": "SYSTRA reports supervising construction of the network, including this first 660 km Green Line. Dynamic-test targets do not establish passenger operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.systra.com/en/projects/high-speed-line-egypt/",
+            "title": "Electric Express Train high-speed rail network – Egypt – SYSTRA",
+            "publishedDate": null,
+            "quote": "overseeing the construction of the network’s three lines"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Initial 660 km turnkey contract signed",
+          "date": "2021-09-01",
+          "source": {
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-mobility-signs-historic-contract-turnkey-rail-system-egypt-worth-usd-3-bn",
+            "title": "Siemens Mobility Signs Historic Contract for Turnkey Rail System in Egypt worth USD 3 bn",
+            "publishedDate": "2021-09-01",
+            "quote": "contract signed today covers the initial 660 km"
+          },
+          "basis": "demonstrated"
+        },
+        {
+          "label": "Green Line construction-supervision contract signed",
+          "date": "November 2021",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.systra.com/en/projects/high-speed-line-egypt/",
+            "title": "Electric Express Train high-speed rail network – Egypt – SYSTRA",
+            "publishedDate": null,
+            "quote": "In November 2021, SYSTRA signed a contract"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "brookfield-paducah-campus",
+    "pinIds": {
+      "local": 15834,
+      "production": 15834
+    },
+    "title": "Brookfield Paducah AI Data Center Campus: 100B USD, 1,800 MW, Planned for 2032 in Kentucky",
+    "sourceUrl": "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/",
+    "profile": {
+      "sector": "Data centres: campus buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this campus.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established for this campus.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this campus.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported planned investment",
+          "value": "USD 100 billion announced for the campus; not expenditure already incurred.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/",
+            "title": "Brookfield to develop gigawatt-scale data center campus at DOE's Kentucky nuclear enrichment plant",
+            "publishedDate": "2026-07-29",
+            "quote": "$100 billion"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Planned campus power and compute",
+          "value": "Up to 1.8 GW utility capacity and over 1.2 GW compute capacity at full buildout; distinct from dedicated generation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/",
+            "title": "Brookfield to develop gigawatt-scale data center campus at DOE's Kentucky nuclear enrichment plant",
+            "publishedDate": "2026-07-29",
+            "quote": "1.8GW of utility capacity and more than 1.2GW of compute capacity"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Full-buildout target",
+          "value": "2032; forecast, not a verified opening.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/",
+            "title": "Brookfield to develop gigawatt-scale data center campus at DOE's Kentucky nuclear enrichment plant",
+            "publishedDate": "2026-07-29",
+            "quote": "by 2032"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus partnership announced",
+          "date": "July 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/",
+            "title": "Brookfield to develop gigawatt-scale data center campus at DOE's Kentucky nuclear enrichment plant",
+            "publishedDate": "2026-07-29",
+            "quote": "announced a partnership this week"
+          }
+        },
+        {
+          "label": "Full campus capacity target",
+          "date": "2032",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/",
+            "title": "Brookfield to develop gigawatt-scale data center campus at DOE's Kentucky nuclear enrichment plant",
+            "publishedDate": "2026-07-29",
+            "quote": "by 2032"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "project-arrowhead-irwin-campus",
+    "pinIds": {
+      "local": 15836,
+      "production": 15836
+    },
+    "title": "Project Arrowhead Data Center: 1,250 MW, 4.22 Million Sq Ft Campus in Irwin County, Georgia, 6B USD, Phase 1 Targeted for 2030",
+    "sourceUrl": "https://wwals.net/2026/04/11/project-arrowhead-datacenter-dri-application-irwin-county-ga-2026-04-10/",
+    "profile": {
+      "sector": "Data centres: campus buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this campus.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established for this campus.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this campus.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Proposed campus floor area",
+          "value": "4,220,000 sq ft in the filed proposal; not completed space.",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4689",
+            "title": "DRI #4689: Project Arrowhead — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "4,220,000 SF"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposed campus land",
+          "value": "Approximately 1,066 acres across five properties.",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4689",
+            "title": "DRI #4689: Project Arrowhead — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "Approximately 1066 acres"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed completion targets",
+          "value": "Phase target 2030; overall project target 2034. These are application estimates.",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4689",
+            "title": "DRI #4689: Project Arrowhead — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "This phase: 2030"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Initial regional-review application submitted",
+          "date": "2026-04-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/AppSummary.aspx?driid=4689",
+            "title": "DRI #4689: Application Details",
+            "publishedDate": null,
+            "quote": "Initial DRI Information Form Submitted: 4/10/2026"
+          }
+        },
+        {
+          "label": "Current phase estimated complete",
+          "date": "2030",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4689",
+            "title": "DRI #4689: Project Arrowhead — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "This phase: 2030"
+          }
+        },
+        {
+          "label": "Overall campus estimated complete",
+          "date": "2034",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4689",
+            "title": "DRI #4689: Project Arrowhead — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "Overall project: 2034"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "acs-fort-worth-campus",
+    "pinIds": {
+      "local": 15646,
+      "production": 15646
+    },
+    "title": "ACS Fort Worth Data Center Campus: 350 MW in Five Buildings on 107 Acres, 2.1B USD Investment",
+    "sourceUrl": "https://insider.govtech.com/texas/news/fort-worth-city-council-to-consider-2-1b-data-center-project",
+    "profile": {
+      "sector": "Data centres: campus buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this campus.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established for this campus.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this campus.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Announced campus capital investment",
+          "value": "More than USD 2.1 billion for the five-building campus; not a phase-specific construction filing.",
+          "basis": "planned",
+          "source": {
+            "url": "https://insider.govtech.com/texas/news/fort-worth-city-council-to-consider-2-1b-data-center-project",
+            "title": "Fort Worth City Council to Consider $2.1B Data Center Project",
+            "publishedDate": "2025-04-03",
+            "quote": "more than $2.1 billion capital investment"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Campus site",
+          "value": "107 acres in northwest Fort Worth.",
+          "basis": "planned",
+          "source": {
+            "url": "https://insider.govtech.com/texas/news/fort-worth-city-council-to-consider-2-1b-data-center-project",
+            "title": "Fort Worth City Council to Consider $2.1B Data Center Project",
+            "publishedDate": "2025-04-03",
+            "quote": "107-acre property"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Projected permanent jobs",
+          "value": "37 full-time jobs targeted by end-2034; not current staffing.",
+          "basis": "planned",
+          "source": {
+            "url": "https://insider.govtech.com/texas/news/fort-worth-city-council-to-consider-2-1b-data-center-project",
+            "title": "Fort Worth City Council to Consider $2.1B Data Center Project",
+            "publishedDate": "2025-04-03",
+            "quote": "37 full-time jobs"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus incentive proposal reported",
+          "date": "2025-04-03",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://insider.govtech.com/texas/news/fort-worth-city-council-to-consider-2-1b-data-center-project",
+            "title": "Fort Worth City Council to Consider $2.1B Data Center Project",
+            "publishedDate": "2025-04-03",
+            "quote": "April 03, 2025"
+          }
+        },
+        {
+          "label": "Announced employment target",
+          "date": "2034",
+          "basis": "planned",
+          "source": {
+            "url": "https://insider.govtech.com/texas/news/fort-worth-city-council-to-consider-2-1b-data-center-project",
+            "title": "Fort Worth City Council to Consider $2.1B Data Center Project",
+            "publishedDate": "2025-04-03",
+            "quote": "by the end of 2034"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "75-south-spalding-campus",
+    "pinIds": {
+      "local": 15671,
+      "production": 15671
+    },
+    "title": "75 South Data Center Campus: 450 MW (Estimated) in Seven Buildings in Spalding County, Georgia, 13.7B USD Estimated",
+    "sourceUrl": "https://www.datacenterdynamics.com/en/news/hillwood-affiliate-files-to-develop-22-million-sq-ft-data-center-campus-outside-atlanta-georgia/",
+    "profile": {
+      "sector": "Data centres: campus buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this campus.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established for this campus.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this campus.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "floorArea",
+          "label": "Filed campus floor area",
+          "value": "2,240,000 sq ft proposed across the campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4607",
+            "title": "DRI #4607: 75 South Data Center Campus — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "2,240,000 square feet"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed building scope",
+          "value": "Seven two-story data centre buildings; no building-specific opening milestones established.",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4607",
+            "title": "DRI #4607: 75 South Data Center Campus — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "7, two-story buildings"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Filed campus completion target",
+          "value": "2030 for both this phase and the overall campus; not a confirmed opening.",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4607",
+            "title": "DRI #4607: 75 South Data Center Campus — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "This phase: 2030"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Initial regional-review application submitted",
+          "date": "2026-01-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/AppSummary.aspx?driid=4607",
+            "title": "DRI #4607: Application Details",
+            "publishedDate": null,
+            "quote": "Initial DRI Information Form Submitted: 1/27/2026"
+          }
+        },
+        {
+          "label": "Phase completion target",
+          "date": "2030",
+          "basis": "planned",
+          "source": {
+            "url": "https://apps.dca.ga.gov/DRI/InitialForm.aspx?driid=4607",
+            "title": "DRI #4607: 75 South Data Center Campus — Initial DRI Information",
+            "publishedDate": null,
+            "quote": "This phase: 2030"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "carrollton-industrial-campus",
+    "pinIds": {
+      "local": 16002,
+      "production": 16002
+    },
+    "title": "Carrollton Industrial Campus: 638-800 MW Data Center by Poe Companies and PowerHouse, 9.6B USD, Planned for 2030 in Carroll County, Kentucky",
+    "sourceUrl": "https://www.datacenterdynamics.com/en/news/powerhouse-and-poe-target-another-550-acre-data-center-campus-outside-louisville-kentucky/",
+    "profile": {
+      "sector": "Data centres: campus buildout",
+      "status": "announced",
+      "assessmentDate": "2026-10-29",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable cohort of at least five projects with a consistent output measure was established.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced installed or designed automation process supporting a capability score was established for this campus.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No scored technical capability against a documented sector baseline was established for this campus.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five projects was established.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced bottleneck-relief capability assessment was established for this campus.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented credential pathway or training outcomes supporting a workforce score were established.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Proposed campus investment",
+          "value": "USD 9.6 billion in the project-specific economic analysis.",
+          "basis": "planned",
+          "source": {
+            "url": "https://carrolltonindustrialcampus.com/poe-companies-publishes-full-economic-impact-analysis-for-carrollton-industrial-campus/",
+            "title": "Poe Companies Publishes Full Economic Impact Analysis for Carrollton Industrial Campus",
+            "publishedDate": "2026-09-18",
+            "quote": "$9.6 billion"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Optioned site and development footprint",
+          "value": "Approximately 550 acres under purchase options; development concentrated on roughly 300 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://carrolltonindustrialcampus.com/poe-companies-publishes-full-economic-impact-analysis-for-carrollton-industrial-campus/",
+            "title": "Poe Companies Publishes Full Economic Impact Analysis for Carrollton Industrial Campus",
+            "publishedDate": "2026-09-18",
+            "quote": "approximately 550 acres"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Forecast full-buildout capacity",
+          "value": "Up to 800 MW by 2031 in the economic study; not measured IT load or delivered capacity.",
+          "basis": "planned",
+          "source": {
+            "url": "https://carrolltonindustrialcampus.com/poe-companies-publishes-full-economic-impact-analysis-for-carrollton-industrial-campus/",
+            "title": "Poe Companies Publishes Full Economic Impact Analysis for Carrollton Industrial Campus",
+            "publishedDate": "2026-09-18",
+            "quote": "up to 800 megawatts by 2031"
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Initial capacity target",
+          "value": "150 MW operating by 2029 is a forecast in the economic study.",
+          "basis": "planned",
+          "source": {
+            "url": "https://carrolltonindustrialcampus.com/poe-companies-publishes-full-economic-impact-analysis-for-carrollton-industrial-campus/",
+            "title": "Poe Companies Publishes Full Economic Impact Analysis for Carrollton Industrial Campus",
+            "publishedDate": "2026-09-18",
+            "quote": "150 megawatts of capacity operating by 2029"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Initial operating capacity forecast",
+          "date": "2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://carrolltonindustrialcampus.com/poe-companies-publishes-full-economic-impact-analysis-for-carrollton-industrial-campus/",
+            "title": "Poe Companies Publishes Full Economic Impact Analysis for Carrollton Industrial Campus",
+            "publishedDate": "2026-09-18",
+            "quote": "by 2029"
+          }
+        },
+        {
+          "label": "Full buildout forecast",
+          "date": "2031",
+          "basis": "planned",
+          "source": {
+            "url": "https://carrolltonindustrialcampus.com/poe-companies-publishes-full-economic-impact-analysis-for-carrollton-industrial-campus/",
+            "title": "Poe Companies Publishes Full Economic Impact Analysis for Carrollton Industrial Campus",
+            "publishedDate": "2026-09-18",
+            "quote": "by 2031"
+          }
+        }
+      ]
+    }
   }
 ]

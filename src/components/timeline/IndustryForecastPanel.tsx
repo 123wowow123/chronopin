@@ -20,7 +20,7 @@ const STROKES = ['stroke-accent', 'stroke-success', 'stroke-muted', 'stroke-dang
 const FILLS = ['fill-accent', 'fill-success', 'fill-muted', 'fill-danger'];
 const DOTS = ['bg-accent', 'bg-success', 'bg-muted', 'bg-danger'];
 const TICKS = 3;
-const PROJECTED_SHOWN = 3;
+const PROJECTED_SHOWN = 1;
 
 // A year ("2027") sits mid-year; a day is itself.
 const at = (x: string) => (/^\d{4}$/.test(x) ? Date.UTC(Number(x), 6, 1) : Date.parse(`${x}T00:00:00Z`));
@@ -102,6 +102,7 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
             <g key={line.label}>
               <path d={d} className={toneOf(lines, i).stroke} fill="none" strokeWidth={kind === 'earlier' ? 1.5 : 2} strokeDasharray={kind === 'earlier' ? '1 4' : kind === 'projection' ? '7 4' : kind === 'snapshot' ? '3 3' : undefined} strokeLinejoin="round" strokeLinecap="round" />
               {kind === 'projection' || kind === 'earlier' || line.points.length < 6 ? line.points.map((p) => <circle key={p.x} cx={x(at(p.x))} cy={y(p.value)} r={kind === 'earlier' ? 2.5 : 3.5} className={toneOf(lines, i).fill} />) : null}
+              {!(kind === 'projection' || kind === 'earlier' || line.points.length < 6) && line.points.length ? (() => { const p = line.points[line.points.length - 1]; return <circle cx={x(at(p.x))} cy={y(p.value)} r={3.5} className={toneOf(lines, i).fill} />; })() : null}
             </g>
           );
         })}
