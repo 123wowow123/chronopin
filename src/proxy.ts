@@ -128,6 +128,11 @@ async function gated(request: NextRequest, action: 'issue' | 'strip' | 'blocked'
 // plan (a rewrite, so the address stays) when a browser asked for a page, else
 // plain text. Both are 429 with Retry-After. A heavy user over their light
 // limit just waits.
+// A paid plan: ad-free (which includes the heavy-use plan and the bundle) or Premium.
+async function isPaidUser(userId: number): Promise<boolean> {
+  return (await AdFreeSubscription.isActive(userId).catch(() => false)) || (await PremiumSubscription.status(userId).then((s) => s.active).catch(() => false));
+}
+
 function tooManyRequests(request: NextRequest, wait: number, light: boolean, region = false): NextResponse {
   const headers = { 'Retry-After': String(wait) };
   const wantsPage = request.method === 'GET' && (request.headers.get('accept') ?? '').includes('text/html') && !request.headers.has('rsc');
@@ -172,6 +177,20 @@ export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
   // The home page copy being made (renderHome): not counted, limited or gated.
   if (request.headers.get(FILL_HEADER) === fillSecret()) return routed(request);
+
+  // Route handlers are let through untouched, except that Chinese address
+  // ranges share the visitor limit on their reads (botLimit.chinaRetryAfter):
+  // the weather, map, live and tag calls of a page load are most of what the
+  // server spends on them. Payment, sign-in, account and admin calls stay open.
+  if (pathname.startsWith('/api/')) {
+    if (request.method !== 'GET' || /^\/api\/(?:billing|bundle|premium|users|admin|advertise|auth|digest|push|scrape|ebay)(?:\/|$)/.test(pathname)) return NextResponse.next();
+    const address = request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? '';
+    if (!address || !(await isChineseAddress(address))) return NextResponse.next();
+    const session = await sessionOf(request.cookies.get(TOKEN_COOKIE)?.value);
+    if (session?.admin || (session && (await isPaidUser(session.id)))) return NextResponse.next();
+    const wait = chinaRetryAfter(address);
+    return wait == null ? NextResponse.next() : tooManyRequests(request, wait, true, true);
+  }
 
   // Crawlers are counted here, on the page request itself: they rarely run
   // the script that counts a view. Browsers pass straight through it.
@@ -230,9 +249,7 @@ export async function proxy(request: NextRequest) {
     // between them (botLimit.chinaRetryAfter). Signed-in users with a paid plan
     // (ad-free, heavy-use or Premium) pass.
     if (address && (await isChineseAddress(address))) {
-      const paid = session
-        ? (await AdFreeSubscription.isActive(session.id).catch(() => false)) || (await PremiumSubscription.status(session.id).then((s) => s.active).catch(() => false))
-        : false;
+      const paid = session ? await isPaidUser(session.id) : false;
       const china = paid ? null : chinaRetryAfter(address);
       if (china != null) return tooManyRequests(request, china, false, true);
     }
@@ -368,7 +385,7 @@ export const config = {
   // Everything but route handlers, build assets and the files in public/.
   // robots.txt and sitemap.xml are let in for the bot count and nothing else.
   matcher: [
-    '/((?!api/|_next/|auth/|logout|og/|embed/|upload/|pin-not-found|sw\\.js|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|ads/|platforms/|restaurant-images/|privacy\\.html|termsofservice\\.html).*)',
+    '/((?!_next/|auth/|logout|og/|embed/|upload/|pin-not-found|sw\\.js|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|ads/|platforms/|restaurant-images/|privacy\\.html|termsofservice\\.html).*)',
   ],
 };
 

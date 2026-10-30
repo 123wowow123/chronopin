@@ -113550,5 +113550,997 @@
         }
       ]
     }
+  },
+  {
+    "key": "queue247-20261030-17119",
+    "pinIds": {
+      "local": 17119,
+      "production": 17119
+    },
+    "title": "Compass Shawnee CU-26-203: Proposed 400 MW, Ten-Building Campus",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned critical load",
+          "value": "400 MW at full campus buildout; not a 51 MW building commitment.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "At full build-out, the campus will total approximately 400 MW of critical load.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Proposed campus site",
+          "value": "Approximately 607.6 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "approximately 607.6 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Planned onsite staffing",
+          "value": "Approximately 30 full-time personnel per building, estimated 300 across ten buildings.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "an estimated 300 personnel in total throughout the 10-building campus",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Campus development scope",
+          "value": "Ten single-story data center buildings with supporting infrastructure.",
+          "basis": "planned",
+          "source": {
+            "url": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "ten single-story data center buildings developed in phases",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Application completeness",
+          "value": "September 9, 2026: completeness determination, not merits approval.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.snco.gov/ludev/data_center.php",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Update: Wednesday, September 9, 2026",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "County deems application complete",
+          "date": "2026-09-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.snco.gov/ludev/data_center.php",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Update: Wednesday, September 9, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17146",
+    "pinIds": {
+      "local": 17146,
+      "production": 17146
+    },
+    "title": "Project Bluestem: Proposed Cloverleaf Data Center Campus",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "employment",
+          "label": "Planned operating jobs",
+          "value": "Over 50 jobs in the initial operational phase; over 200 at full buildout.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bluestemdatacenter.com/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "over 50 full-time jobs with over 200 full-time jobs at full build out",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed cooling design",
+          "value": "Closed-loop cooling with a one-time fill; a design commitment, not measured water consumption.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bluestemdatacenter.com/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Project Bluestem commits to using a closed-loop cooling system requiring a one-time fill",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Phase I construction duration",
+          "value": "More than two years after a construction start; no verified building-specific COD.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bluestemdatacenter.com/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "During the 2+ year construction period for Phase I",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Data center planning status",
+          "value": "Rezoning application remains active; generation application withdrawal is a separate scope.",
+          "basis": "planned",
+          "source": {
+            "url": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "The data center rezoning application for Project Bluestem remains active",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Separate generation application withdrawn; data center remains active",
+          "date": "2026-09-28",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "September 28, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17161",
+    "pinIds": {
+      "local": 17161,
+      "production": 17161
+    },
+    "title": "TeraWulf Muskie Data Campus: Proposed Phased AI/HPC Buildout",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned campus capacity",
+          "value": "Approximately 1,000 MW planned campus scale; no supported 250 MW allocation to each of seven buildings.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.muskiedatacampus.com/project-overview",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Phase II is expected to bring the total campus capacity to ~1,000 MW in 2030",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Campus land",
+          "value": "Approximately 285 acres across two adjacent parcels.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.muskiedatacampus.com/project-overview",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Located on approximately 285 acres across two adjacent parcels in Eastern Kentucky",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "First-phase scope",
+          "value": "Approximately 500 MW across two AI/HPC buildings.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.muskiedatacampus.com/project-overview",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Phase I is expected to deliver ~500 MW of AI/HPC data center capacity across two buildings",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Developer schedule",
+          "value": "Construction expected in 2027; initial operations targeted for late 2028.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.muskiedatacampus.com/project-overview",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Construction is expected to commence in 2027 following planning and permitting activities, with initial operations targeted for late 2028",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Developer construction target",
+          "date": "2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.muskiedatacampus.com/project-overview",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Construction is expected to commence in 2027",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Initial operations target",
+          "date": "Late 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.muskiedatacampus.com/project-overview",
+            "title": "Project owner / public authority project evidence",
+            "quote": "initial operations targeted for late 2028",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Amended power agreement signed",
+          "date": "2026-10-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "The amended agreement, signed October 1, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18111",
+    "pinIds": {
+      "local": 18111,
+      "production": 18111
+    },
+    "title": "Rowan Percheron: Planned 300 MW, 275-Acre Campus",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned campus power",
+          "value": "300 MW campus capacity; no 84 MW per-building rating is published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Percheron is a 300 MW hyperscale campus",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Campus site",
+          "value": "275 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "275AC",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Development scope",
+          "value": "Phased hyperscale data center campus in Oregon’s Columbia River Gorge.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Percheron is a 300 MW hyperscale campus in Oregon’s Columbia River Gorge",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Phased buildout target",
+          "value": "2030 completion target; no verified building-specific COD.",
+          "basis": "planned",
+          "source": {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "phased buildout targets completion by 2030",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Land closing",
+          "date": "2024",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "land closed in 2024",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Phased buildout completion target",
+          "date": "2030",
+          "basis": "planned",
+          "source": {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "phased buildout targets completion by 2030",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18092",
+    "pinIds": {
+      "local": 18092,
+      "production": 18092
+    },
+    "title": "PowerHouse Charlotte: 380 MW Utility-Power Campus Buildout",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Maximum utility power",
+          "value": "380 MW maximum utility power; not critical IT load or a 75 MW building allocation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Max Utility Power: 380 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Site area",
+          "value": "122 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Acreage: 122 Acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Developable floor space",
+          "value": "1.5 million square feet across the campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Developable SF: 1.5M SF",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Delivery target",
+          "value": "Q2 2027 operator delivery target; not a specific opening day.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Delivery: Q2 2027",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Operator delivery target",
+          "date": "Q2 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Delivery: Q2 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18163",
+    "pinIds": {
+      "local": 18163,
+      "production": 18163
+    },
+    "title": "QTS York County: Nine-Building, $8 Billion Campus Buildout",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Campus investment",
+          "value": "US$8 billion for the entire campus, not a US$450 million DC1 allocation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://q.com/data-centers/york/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "This transformative project marks a QTS investment of $8 billion",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "First-phase area",
+          "value": "Approximately 109 acres for four first-phase buildings; not the entire ultimate campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://q.com/data-centers/york/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "four data center buildings across approximately 109 acres",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Development scope",
+          "value": "Nine buildings in the first three development phases.",
+          "basis": "planned",
+          "source": {
+            "url": "https://q.com/data-centers/york/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "five additional buildings to the project",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Next phase target",
+          "value": "Second-phase building construction expected in early 2027; later phases undated.",
+          "basis": "planned",
+          "source": {
+            "url": "https://q.com/data-centers/york/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "plans to commence the second phase of building construction in early 2027",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Current physical scope",
+          "value": "No buildings completed or operational; construction continues.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://q.com/data-centers/york/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "None of the buildings are completed or operational yet.",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Second-phase construction target",
+          "date": "Early 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://q.com/data-centers/york/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "plans to commence the second phase of building construction in early 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18079",
+    "pinIds": {
+      "local": 18079,
+      "production": 18079
+    },
+    "title": "Polaris Forge 1 Building 2: 150 MW Ready for Service",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "production",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Building critical IT load",
+          "value": "150 MW delivered in two 75 MW phases.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Building 2 (150 MW) was delivered in two 75 MW phases",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Delivered building scope",
+          "value": "HPC hosting building at Polaris Forge 1; campus totals are a separate scope.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "bringing live capacity at the campus to 250 MW",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Second-phase ready-for-service date",
+          "value": "October 1, 2026.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "On October 1, 2026, the Company achieved Ready for Service",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First 75 MW ready for service",
+          "date": "2026-07-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Ready for Service on July 1, 2026",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Second 75 MW ready for service",
+          "date": "2026-10-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "On October 1, 2026, the Company achieved Ready for Service",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18080",
+    "pinIds": {
+      "local": 18080,
+      "production": 18080
+    },
+    "title": "Polaris Forge 1 Building 3: 150 MW HPC Building Under Construction",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Infrastructure: data centers",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned critical IT load",
+          "value": "150 MW third HPC building.",
+          "basis": "planned",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "the third HPC building (150 MW) at Polaris Forge 1",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Building function",
+          "value": "HPC hosting building at the Ellendale campus.",
+          "basis": "planned",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "the third HPC building (150 MW) at Polaris Forge 1",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Reported construction stage",
+          "value": "Under construction as of the October 2026 owner results.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "The third HPC building at Polaris Forge 1 (150 MW), along with Polaris Forge 2, Polaris Forge 3, Delta Forge 1, and Delta Forge 2, are in various stages of construction.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Readiness context",
+          "value": "The third building remains in construction after Building 2’s October 1, 2026 delivery; no separate firm opening day is published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "On October 1, 2026, the Company achieved Ready for Service",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Owner reports construction in October 2026 results",
+          "date": "2026-10",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Project owner / public authority project evidence",
+            "quote": "The third HPC building at Polaris Forge 1 (150 MW), along with Polaris Forge 2, Polaris Forge 3, Delta Forge 1, and Delta Forge 2, are in various stages of construction.",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
   }
 ]

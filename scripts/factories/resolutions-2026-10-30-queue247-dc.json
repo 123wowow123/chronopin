@@ -1,0 +1,390 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 17119,
+      "patch": {
+        "title": "Compass Shawnee CU-26-203: Proposed 400 MW, Ten-Building Campus",
+        "description": "Compass’s revised Shawnee County application proposes ten buildings with 400 MW of critical load on approximately 607.6 acres. The county’s September 9, 2026 completeness finding was not project approval.",
+        "longFormSummary": "<ul><li>The county deemed the application complete on September 9, 2026, without deciding its merits or scheduling a public hearing.<cite data-ref=\"https://www.snco.gov/ludev/data_center.php\"></cite></li><li>The revised application proposes approximately 607.6 acres, ten buildings, 400 MW critical load and an estimated 300 full-time personnel. Separate Building 2 budgets and delivery dates are not published.<cite data-ref=\"https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "CompassDatacenters",
+          "DataCenter",
+          "Evergy",
+          "Hyperscale",
+          "Kansas",
+          "ShawneeCounty",
+          "Topeka",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-09-09. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-09-09T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://www.snco.gov/ludev/data_center.php",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 400,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+        "note": "Proposed final campus critical IT load, not a single-building rating. Actual total utility demand is a different quantity."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Compass Datacenters MCI-A Topeka Campus Building 2: 350M USD, 51 MW Computing Facility in Shawnee County, Kansas",
+        "oldPrice": 350000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 17146,
+      "patch": {
+        "title": "Project Bluestem: Proposed Cloverleaf Data Center Campus",
+        "description": "Cloverleaf’s proposed Leavenworth County data center remains in rezoning review. Its separate initial power-generation application was withdrawn September 28, 2026 while alternative generation locations were evaluated.",
+        "longFormSummary": "<ul><li>The data center rezoning application remains active, while the initial generation-facility application was withdrawn for evaluation of other locations.<cite data-ref=\"https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/\"></cite></li><li>The developer describes a multi-billion-dollar taxable investment without a precise dollar budget. No supported $1.6 billion / 240 MW per-building allocation or fixed building opening day is published.<cite data-ref=\"https://bluestemdatacenter.com/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Cloverleaf",
+          "DataCenter",
+          "Evergy",
+          "Hyperscale",
+          "Kansas",
+          "LeavenworthCounty",
+          "ProjectBluestem",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-09-28. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-09-28T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://bluestemdatacenter.com/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Cloverleaf Infrastructure Project Bluestem Campus Building 1: 1.6B USD, 240 MW Facility in Leavenworth County, Kansas",
+        "oldPrice": 1600000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 17161,
+      "patch": {
+        "title": "TeraWulf Muskie Data Campus: Proposed Phased AI/HPC Buildout",
+        "description": "Muskie is an approximately 285-acre EastPark data campus planned for a phased buildout exceeding 1 GW. The developer targets construction in 2027 and initial operations in late 2028; the October power agreement requires regulatory approval.",
+        "longFormSummary": "<ul><li>The developer plans approximately 285 acres and an initial two-building, 500 MW phase, followed by additional campus expansion. Seven separate $1.6 billion building budgets are not published.<cite data-ref=\"https://www.muskiedatacampus.com/project-overview\"></cite></li><li>Kentucky Power’s amended agreement would ramp from 100 MW in October 2028 to 1,000 MW in October 2029, subject to approvals and construction. Utility service dates and the developer’s later phased-buildout targets describe different milestones.<cite data-ref=\"https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AICompute",
+          "BoydCounty",
+          "DataCenter",
+          "Hyperscale",
+          "Kentucky",
+          "MuskieCampus",
+          "TeraWulf",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2028. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Estimated: EastPark Industrial Park, Boyd and Greenup Counties, Kentucky; campus context, not a surveyed building location"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.muskiedatacampus.com/project-overview",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 1000,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+        "note": "Proposed amended campus electricity service agreement, pending KPSC approval. Not operating IT load or seven separately committed 250 MW buildings."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "TeraWulf Muskie Hyperscale Campus Building 1: 1.6B USD, 250 MW Data Center in Boyd County, Kentucky",
+        "oldPrice": 1600000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18111,
+      "patch": {
+        "title": "Rowan Percheron: Planned 300 MW, 275-Acre Campus",
+        "description": "Rowan’s Percheron project is a 300 MW campus on approximately 275 acres near Boardman, Oregon. The developer reports land closing in 2024 and targets phased buildout completion by 2030.",
+        "longFormSummary": "<ul><li>Rowan publishes 300 MW, 275 acres, a 2024 land closing and a 2030 phased-buildout target. These are campus figures and do not establish separate $650 million / 84 MW buildings.<cite data-ref=\"https://rowan.com/portfolio/percheron/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "Boardman",
+          "DataCenter",
+          "Hyperscale",
+          "MorrowCounty",
+          "Oregon",
+          "ProjectPercheron",
+          "RowanDigital",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2030. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://rowan.com/portfolio/percheron/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 300,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://rowan.com/portfolio/percheron/",
+        "note": "Planned campus capacity; not separately published IT load per building or operating demand."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Rowan Percheron Data Center Campus Building 1: 650M USD, 84 MW Facility in Morrow County, Oregon",
+        "oldPrice": 650000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18092,
+      "patch": {
+        "title": "PowerHouse Charlotte: 380 MW Utility-Power Campus Buildout",
+        "description": "PowerHouse’s Charlotte campus has 122 acres, 1.5 million developable square feet, up to four two-story buildings and 380 MW maximum utility power. The current operator target is Q2 2027 delivery; site grading is reported underway.",
+        "longFormSummary": "<ul><li>The operator lists 380 MW maximum utility power, 122 acres and 1.5 million developable square feet. No $550 million budget or 75 MW IT rating for Building 2 is published.<cite data-ref=\"https://www.powerhousedata.com/data-center/powerhouse-charlotte\"></cite></li><li>The development partner reports site grading underway. Its page retains an older five-building / 315 MW-plus configuration; the operator’s current four-building / 380 MW page is used for design scope.<cite data-ref=\"https://www.americanrepartners.com/properties/powerhouse-charlotte\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AIInfrastructure",
+          "Charlotte",
+          "DataCenter",
+          "Hyperscale",
+          "MecklenburgCounty",
+          "NorthCarolina",
+          "PowerHouse",
+          "In Progress"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "The cited project materials do not establish a separate commercial-operation day.",
+        "delayReasoning": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 380,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+        "note": "Maximum campus utility power; distinct from critical IT load. No per-building allocation inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "PowerHouse Charlotte Data Center Campus Building 2: 550M USD, 75 MW Facility in Mecklenburg County, North Carolina",
+        "oldPrice": 550000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18163,
+      "patch": {
+        "title": "QTS York County: Nine-Building, $8 Billion Campus Buildout",
+        "description": "QTS is developing a nine-building campus in York County, South Carolina. The operator publishes an $8 billion project investment and four first-phase buildings across approximately 109 acres; no buildings are yet operational.",
+        "longFormSummary": "<ul><li>QTS publishes an $8 billion campus investment and four first-phase buildings across approximately 109 acres, followed by five additional buildings. Separate DC1/DC5/DC8/DC9 budgets and IT loads are not published.<cite data-ref=\"https://q.com/data-centers/york/\"></cite></li><li>The operator says no buildings are completed or operational. Its body estimates 100 permanent QTS roles while a summary card says 200; that workforce discrepancy is not converted into a firm metric.<cite data-ref=\"https://q.com/data-centers/york/\"></cite></li></ul>",
+        "price": 8000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AIInfrastructure",
+          "Blackstone",
+          "DataCenter",
+          "Hyperscale",
+          "QTS",
+          "SouthCarolina",
+          "YorkCounty",
+          "In Progress"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "The cited project materials do not establish a separate commercial-operation day.",
+        "delayReasoning": null
+      },
+      "addReferences": [
+        {
+          "url": "https://q.com/data-centers/york/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": null,
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "QTS York County DC1 Hyperscale Data Center: 450M USD, 67 MW Facility in York County, South Carolina",
+        "oldPrice": 450000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18079,
+      "patch": {
+        "title": "Polaris Forge 1 Building 2: 150 MW Ready for Service",
+        "description": "Applied Digital delivered Building 2 in two 75 MW tranches, on July 1 and October 1, 2026. The building totals 150 MW of critical IT load, bringing the campus to 250 MW operational across two buildings.",
+        "longFormSummary": "<ul><li>The owner reports 150 MW critical IT load in Building 2, delivered in two tranches. The earlier 210 MW figure and $1.3 billion building budget are unsupported.<cite data-ref=\"https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AICompute",
+          "AppliedDigital",
+          "CoreWeave",
+          "DataCenter",
+          "DickeyCounty",
+          "NorthDakota",
+          "PolarisForge",
+          "Completed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-10-01. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 150,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+        "note": "Delivered Building 2 critical IT load, 75 MW in July and another 75 MW on October 1, 2026. Distinct from 250 MW campus total."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Applied Digital Polaris Forge 1 Building 2: 1.3B USD, 210 MW Data Center in Dickey County, North Dakota",
+        "oldPrice": 1300000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18080,
+      "patch": {
+        "title": "Polaris Forge 1 Building 3: 150 MW HPC Building Under Construction",
+        "description": "Applied Digital’s October 2026 results identify its third Polaris Forge 1 HPC building as 150 MW and under construction. Financing proceeds of $1.59 billion also repay a bridge loan and are not an independent building construction budget.",
+        "longFormSummary": "<ul><li>The third building is 150 MW and remains under construction. A $1.59 billion financing transaction also repays a $300 million bridge facility, so the proceeds are not substituted for a construction budget.<cite data-ref=\"https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "AICompute",
+          "AppliedDigital",
+          "DataCenter",
+          "DickeyCounty",
+          "Hyperscale",
+          "NorthDakota",
+          "PolarisForge",
+          "In Progress"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-10. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 150,
+        "kind": "usage",
+        "source": "hand",
+        "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+        "note": "Planned Building 3 critical IT load; owner reports construction, not operation. No campus capacity sum used as a building rating."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Applied Digital Polaris Forge 1 Building 3: 1.3B USD, 210 MW Data Center in Dickey County, North Dakota",
+        "oldPrice": 1300000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    }
+  ]
+}
