@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -738,6 +738,30 @@ every significant quake has a ShakeMap: open the quake's `properties.detail` URL
 and attach `products.shakemap[0].contents` `download/intensity.jpg`, `pga.jpg` and
 `pgv.jpg` (their `url`s) as the pin's media, credited to USGS (a US-government
 work); the app makes the thumbs. A quake with no ShakeMap yet gets a pin without media.
+
+### stormTracks
+
+Added 2026-10-30 (owner: the 6am/6pm job should keep the storm pins current).
+
+**Call `storm_tracks` once** (no arguments; `days` defaults to 30). It reads NASA
+EONET's severe-storm events (`https://eonet.gsfc.nasa.gov/api/v3/events?category=severeStorms`,
+JTWC and NOAA NHC positions and winds every six hours) and does the whole task
+([src/server/jobs/stormTracks.ts](../../../src/server/jobs/stormTracks.ts)):
+- A storm that reached 64 knots and has no pin becomes a confirmed `Disaster` pin
+  as @QuakeDesk: title `<storm> peaks at <n> knots`, start = its first dated
+  position, the track as a flight path, three NASA Worldview true-colour pictures
+  (first day, peak-wind day, latest day), `sourceUrl` = its EONET event record.
+- A pinned storm whose track grew or ended gets the track, end date, peak, text
+  and pictures brought up to date (a stale last-day picture is swapped for the
+  new one; only the NASA frames are ever removed).
+- Floods, wildfires and weaker storms are not pinned (too thin).
+**Then** the tool returns `translationsDue` (every created and updated pin id): their
+text changed, so list them in the run note and refresh their translations the way
+the prod-translations skill does (`sync_translations.py`); the news run itself
+cannot translate them.
+**Traps.** EONET lists a storm a day or two before JTWC names it; a track can be
+re-sorted by the agencies, so a changed length is the only trigger. By hand, `npx tsx scripts/events/storms.ts` posts only
+new storms (admin token); updating existing ones is this task's job.
 
 ### predictionMarkets
 

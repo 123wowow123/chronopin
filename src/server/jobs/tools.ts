@@ -73,6 +73,8 @@ import { savePerf } from '../model/pinPerf';
 import { predictedPins } from './threadPredicted';
 import { syncProductLifecycle } from './productLifecycle';
 import { trendCandidates } from './trends';
+import { syncStorms } from './stormTracks';
+import { jobStormTransport } from './stormTransport';
 
 export type JobContext = {
   runId: number;
@@ -819,6 +821,18 @@ export const TOOLS: JobTool[] = [
       const stocked = await HolidayAd.fill();
       for (const a of stocked.added) await act(ctx, { tool: 'holiday_ads_check', detail: `${a.holiday} ${a.tier}: ${a.title.slice(0, 90)} ($${a.price}, ${a.rating} stars / ${a.reviews} reviews)` });
       return { ...checked, ...stocked, coverage: await HolidayAd.coverage() };
+    },
+  },
+  {
+    name: 'storm_tracks',
+    description:
+      "The stormTracks task's only call. Reads NASA EONET's severe-storm events from the last 30 days (positions and winds from JTWC and NOAA NHC every six hours) and keeps the storm pins current as @QuakeDesk: a storm that reached 64 knots with no pin yet becomes a confirmed Disaster pin (title, description, first position, track and three NASA satellite pictures); a pinned storm whose track grew or ended gets its track, end date, peak, description and pictures brought up to date. Returns created, updated (with the new track length and whether it ended) and unchanged. Writes to production when the run does. The saved text changes for updated pins, so every created and updated pin needs its translations refreshed afterwards.",
+    input_schema: obj({ days: num('Days of storms to read, default 30, at most 60'), dry: { type: 'boolean', description: 'Report what would change without saving' } }),
+    run: async (input, ctx) => {
+      const result = await syncStorms(jobStormTransport, { days: int(input.days, 30, 1, 60), dry: input.dry === true });
+      for (const c of result.created) await act(ctx, { tool: 'storm_tracks', pinId: c.id || undefined, title: c.title, detail: 'storm pin created' });
+      for (const u of result.updated) await act(ctx, { tool: 'storm_tracks', pinId: u.id, title: u.title, detail: `track now ${u.points} points${u.ended ? ', storm ended' : ''}` });
+      return { ...result, translationsDue: [...result.created, ...result.updated].map((p) => p.id).filter(Boolean) };
     },
   },
   {

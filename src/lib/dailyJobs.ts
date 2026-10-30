@@ -143,6 +143,11 @@ export const TASKS = {
     label: 'Earthquakes',
     summary: "Pin the significant earthquakes (M5.5 and up) USGS has recorded since the last run, as @QuakeDesk, and skip any already pinned.",
   },
+  stormTracks: {
+    group: 'discover',
+    label: 'Storm tracks',
+    summary: "Pin tropical cyclones that reached 64 knots (NASA EONET) as @QuakeDesk and bring the pinned active storms' track, end date, peak and satellite pictures up to date.",
+  },
   thinCategories: {
     group: 'discover',
     label: 'Thin categories',
@@ -285,7 +290,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'sentiment'],
+      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'breakingNews', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -335,7 +340,7 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

@@ -316,3 +316,20 @@ export async function pushReviewSentiment(table: ReviewTable, pinId: number, sco
   await call('PATCH', `/api/admin/db/${table}?pinId=${pinId}`, { token, base, body: { reviews } });
   return true;
 }
+
+// A storm pin's track (PinFlightPath): a pin update leaves the path alone, so
+// the storm_tracks task writes it itself, as admin on production through the
+// admin table API (an upsert on the pin's one row), or into the local table.
+export async function saveFlightPathRow(pinId: number, path: { label: string; sourceUrl: string; estimated: boolean; points: [number, number][] }): Promise<void> {
+  const base = prodBase();
+  if (!base) {
+    const { saveFlightPath } = await import('../services/pinFlightPath');
+    await saveFlightPath(pinId, path);
+    return;
+  }
+  // The table's key is its own id, so the pin's row is patched by pinId, or inserted when it has none yet.
+  const token = await adminToken('storm tracks');
+  const row = { label: path.label, sourceUrl: path.sourceUrl, estimated: path.estimated, points: path.points };
+  const patched = await call<{ rows?: unknown[] }>('PATCH', `/api/admin/db/PinFlightPath?pinId=${pinId}`, { token, base, body: row });
+  if (!patched.rows?.length) await call('POST', '/api/admin/db/PinFlightPath', { token, base, body: [{ pinId, ...row }] });
+}
