@@ -18,7 +18,7 @@ import { DRAG_QUERY_EVENT, queryLabel, queryNamedBy, saveQueryName, takeName, us
 import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { CLOUD_QUERY_EVENT, HELD_QUERY_EVENT, isTagCloudOpen, TAG_CLOUD_EVENT } from '@/lib/client/tagCloudOpen';
 import { ADD_TERM_EVENT, DRAG_TERM_EVENT } from '@/components/timeline/WordCloud';
-import { isStoredSiteTag, reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
+import { isStoredSiteTag, reservedName, reservedTag, RESERVED_TAGS, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, parseSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
@@ -261,7 +261,16 @@ export function SearchBox() {
       .then((tags) => {
         if (stale) return;
         const have = new Set(parseSearchQuery(wholeKey).tags.map((name) => name.toLowerCase()));
-        setRelated({ key: wholeKey, tags: tags.filter((tag) => (tag.kind !== 'reserved' || isStoredSiteTag(tag.name)) && tag.count > 0 && !have.has(tag.name.toLowerCase())).sort((a, b) => b.count - a.count).slice(0, 10) });
+        const fresh = tags.filter((tag) => tag.count > 0 && !have.has(tag.name.toLowerCase()));
+        // The site's own filters close the row, in their own order, and all
+        // that apply are offered; the tags are the most shared first.
+        const own = fresh.flatMap((tag) => {
+          const filter = tag.kind === 'reserved' ? reservedTag(tag.name) : undefined;
+          // Not the preset size floors (100+ MW, Cost $1B+): those are ready-made queries, not what comes with this one.
+          return filter && filter.min === undefined && !hasTerm(wholeKey, filter.field, filter.value) ? [{ tag, at: RESERVED_TAGS.indexOf(filter) }] : [];
+        });
+        const plain = fresh.filter((tag) => tag.kind !== 'reserved').sort((a, b) => b.count - a.count).slice(0, 10);
+        setRelated({ key: wholeKey, tags: [...plain, ...own.sort((a, b) => a.at - b.at).map(({ tag }) => tag)] });
       })
       .catch(() => !stale && setRelated({ key: wholeKey, tags: [] }));
     return () => {
@@ -1244,12 +1253,15 @@ export function SearchBox() {
                     className={`inline-flex shrink-0 items-center rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
                       isStoredSiteTag(tag.name)
                         ? 'border-dashed border-construction/50 bg-construction/10 text-construction hover:border-construction hover:bg-construction/20'
+                        : tag.kind === 'reserved'
+                        ? 'border-dashed border-tags/50 bg-tags/10 text-tags hover:border-tags hover:bg-tags/20'
                         : 'border-line bg-field text-muted hover:bg-raised hover:text-ink'
                     }`}
                     // Keeps the box focused, so more can be picked.
                     onMouseDown={(event) => {
                       event.preventDefault();
-                      addTerm.current(term('tag', tag.name));
+                      const filter = tag.kind === 'reserved' ? reservedTag(tag.name) : undefined;
+                      addTerm.current(filter ? term(filter.field, filter.value) : term('tag', tag.name));
                     }}
                   >
                     {tagLabel(t, tag)}

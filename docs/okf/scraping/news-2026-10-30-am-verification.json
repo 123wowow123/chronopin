@@ -1,0 +1,561 @@
+{
+  "local": {
+    "pendingSentiment": 0,
+    "profilesVerified": [
+      17151,
+      20637
+    ],
+    "mlsLivePredictionRecordVerified": true
+  },
+  "production": {
+    "pendingSentiment": 0,
+    "profilesVerified": [
+      17151,
+      20637
+    ],
+    "mlsLivePredictionRecordVerified": true
+  },
+  "localRunId": 35,
+  "productionRunId": 35,
+  "slot": "manual:2026-10-30T13:26:50.557Z",
+  "status": "ok",
+  "finished": "2026-10-30T14:05:24.830178+00:00",
+  "newPins": [
+    20636,
+    20637,
+    20638,
+    20639
+  ],
+  "pinTranslationRowsSaved": 135,
+  "tests": {
+    "okfLint": "9/9 passed",
+    "whitespace": "passed",
+    "catalogJSON": "passed"
+  },
+  "translations": {
+    "active_pins": 13830,
+    "total_translation_rows": 207450,
+    "orphaned_translation_rows": 2355,
+    "expected_translation_rows": 207450,
+    "current_rows": 207450,
+    "outdated_rows": 0,
+    "incomplete_rows": 0,
+    "missing_rows": 0,
+    "due_pins_count": 0,
+    "pins_with_content_tracking": 0,
+    "translations_with_content_tracking": 0,
+    "percent_current": 100.0
+  },
+  "events": [
+    {
+      "id": 2953,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3662,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2860,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3303,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4697,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3327,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5128,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3331,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3522,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3529,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2108,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4894,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4870,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4989,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6639,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4872,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4338,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4895,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3336,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2481,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2480,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4896,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6559,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6564,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4873,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4874,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5204,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4899,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5029,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4615,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3533,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2494,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2495,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3631,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4901,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2580,
+      "source": "claude",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3234,
+      "source": "claude",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2274,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5034,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2496,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    }
+  ],
+  "models": [
+    {
+      "pinId": 2694,
+      "author": 438,
+      "tables": 1,
+      "charts": 1,
+      "reviewCount": 4,
+      "media": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/9785e5e5-f9ec-41ca-9fbd-940b4cb4eeab.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/533862bb-be60-4137-ab8a-d7399e5204fb.jpeg",
+          "status": 200
+        }
+      ],
+      "verified": true
+    },
+    {
+      "pinId": 4813,
+      "author": 438,
+      "tables": 2,
+      "charts": 1,
+      "reviewCount": 3,
+      "media": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/8c31bb27-beb8-4996-a918-ccbf35129637.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/a013596d-2b3d-4d66-a24a-98ada691f4e4.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/dbfb0e3e-3cef-42cd-b2b8-be2554f96127.jpeg",
+          "status": 200
+        }
+      ],
+      "verified": true
+    },
+    {
+      "pinId": 4804,
+      "author": 438,
+      "tables": 2,
+      "charts": 0,
+      "reviewCount": 3,
+      "media": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/e08ecad8-8ae9-4abb-8982-b02e34b260a3.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/e6356010-5754-4e09-9f64-677b9a70c941.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/a7eb864a-5881-44e5-abf8-e21da6468005.png",
+          "status": 200
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "publicPages": [
+    {
+      "pinId": 2694,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/2694/claude-opus-5-5-released"
+    },
+    {
+      "pinId": 4813,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/4813/mimo-v2-6-pro-and-mimo-v2-6-flash-released"
+    },
+    {
+      "pinId": 4804,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/4804/gpt-6-sol-and-gpt-6-luna-released"
+    },
+    {
+      "pinId": 20626,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/20626/hurricane-vance-peaks-at-100-knots"
+    },
+    {
+      "pinId": 20627,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/20627/super-typhoon-in-fa-peaks-at-130-knots"
+    },
+    {
+      "pinId": 20636,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/20636/disney-schedules-159-glendale-job-cuts-for-december-29"
+    },
+    {
+      "pinId": 20637,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/20637/hwasung-announces-5m-florence-components-plant-and-32-jobs"
+    },
+    {
+      "pinId": 20638,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/20638/binance-suffers-a-6-3-billion-crypto-theft-on-october-29"
+    },
+    {
+      "pinId": 20639,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/20639/mls-cup-2026-nashville-leads-the-winner-market-ahead-of-december-18"
+    },
+    {
+      "pinId": 17151,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/17151/proposed-hoodini-solar-and-storage-project-in-dateland"
+    },
+    {
+      "pinId": 3234,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/3234/gaylord-pacific-resort-opens-on-the-chula-vista-bayfront"
+    },
+    {
+      "pinId": 16017,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/16017/brent-crude-oil-price-october-2026"
+    }
+  ],
+  "specificGaps": [
+    {
+      "local": true,
+      "pinId": 18091,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 17354,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 18090,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 17340,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 17151,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 6564,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 5444,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 18091,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 17354,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 18090,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 17340,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 17151,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 6564,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 5444,
+      "verified": true
+    }
+  ],
+  "trades": {
+    "filingsReplayed": 39,
+    "productionAdded": 9,
+    "missingPeople": [],
+    "taylorRows": 6,
+    "datesComparedAsCalendarDates": true,
+    "verified": true
+  },
+  "newAdTranslations": [
+    {
+      "local": false,
+      "ads": 4,
+      "translations": 60,
+      "verified": true
+    },
+    {
+      "local": true,
+      "ads": 4,
+      "translations": 60,
+      "verified": true
+    }
+  ],
+  "hoodini": [
+    {
+      "local": false,
+      "pinId": 17151,
+      "author": 408,
+      "company": "Eolus",
+      "unverifiedCostAndMapRemoved": true,
+      "mediaUnlinked": 3,
+      "power": {
+        "megawatts": 450,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.eolus.com/en/projects/hoodini/",
+        "note": "Proposed 450 MW photovoltaic generation as stated by Eolus; AC/net/gross basis unspecified. Separate 450 MW storage is not added to generation. Annual generation unpublished.",
+        "checkedAt": "2026-10-30T13:59:35.841Z"
+      },
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 17151,
+      "author": 408,
+      "company": "Eolus",
+      "unverifiedCostAndMapRemoved": true,
+      "mediaUnlinked": 3,
+      "power": {
+        "megawatts": 450,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.eolus.com/en/projects/hoodini/",
+        "note": "Proposed 450 MW photovoltaic generation as stated by Eolus; AC/net/gross basis unspecified. Separate 450 MW storage is not added to generation. Annual generation unpublished.",
+        "checkedAt": "2026-10-30T13:59:47.535Z"
+      },
+      "verified": true
+    }
+  ],
+  "storms": [
+    {
+      "pinId": 20626,
+      "points": 34,
+      "media": 3,
+      "localAndProductionVerified": true
+    },
+    {
+      "pinId": 20627,
+      "points": 27,
+      "media": 3,
+      "localAndProductionVerified": true
+    }
+  ]
+}

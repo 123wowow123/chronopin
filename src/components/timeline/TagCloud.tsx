@@ -373,6 +373,8 @@ function ReservedFilters({
     label: tagLabel(t, { name: filter.name, kind: 'reserved' }),
     count: counts.find((c) => c.name.toLowerCase() === filter.name.toLowerCase())?.count ?? 0,
   }))
+    // The preset size floors (100+ MW, Cost $1B+) are ready-made queries, not tags: left out unless picked, which is how they are unpicked.
+    .filter((filter) => filter.min === undefined || on(filter.name))
     .filter((filter) => showAll || filter.count > 0 || on(filter.name))
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
