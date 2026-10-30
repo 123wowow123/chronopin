@@ -10,6 +10,7 @@ import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from 
 import { parseAmazonTags } from '@/lib/ads';
 import { DEFAULT_ADSENSE_SLOTS, parseAdsenseSlots, type AdsenseSlotsSetting } from '@/lib/adsense';
 import { DEFAULT_HIDE_THIN_PINS, parseHideThinPins, type HideThinPinsSetting } from '@/lib/searchQuality';
+import { DEFAULT_WEEKLY_DIGEST, parseWeeklyDigest, type WeeklyDigestSetting } from '@/lib/weeklyDigest';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
@@ -26,6 +27,7 @@ const SITE_VERIFICATION = 'siteVerification';
 const AMAZON_TAGS = 'amazonTags';
 const ADSENSE_SLOTS = 'adsenseSlots';
 const HIDE_THIN_PINS = 'hideThinPins';
+const WEEKLY_DIGEST = 'weeklyDigest';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -182,3 +184,13 @@ export function setHideThinPins(setting: HideThinPinsSetting, userId: number | n
   return write(HIDE_THIN_PINS, setting, userId);
 }
 
+
+// Whether the weekly "my timeline" email goes out (src/lib/weeklyDigest.ts).
+export async function getWeeklyDigest(): Promise<WeeklyDigestSetting> {
+  const parsed = parseWeeklyDigest(await read(WEEKLY_DIGEST));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_WEEKLY_DIGEST;
+}
+
+export function setWeeklyDigest(setting: WeeklyDigestSetting, userId: number | null) {
+  return write(WEEKLY_DIGEST, setting, userId);
+}

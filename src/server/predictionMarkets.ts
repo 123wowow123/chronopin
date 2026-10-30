@@ -364,6 +364,31 @@ async function readHistory(history: string): Promise<[number, number][]> {
   return [];
 }
 
+// An outcome's chance at a past moment (unix seconds): the last price within
+// three days before it, or null when the market had none then (or the exchange
+// keeps no such history, as for Polymarket US). Used to score markets that
+// settled before they were recorded. Rejects when the exchange cannot be reached.
+export async function priceAt(history: string, at: number): Promise<number | null> {
+  const start = at - 3 * 86_400;
+  const [source, ...id] = history.split(':');
+  let points: [number, number][] = [];
+  if (source === 'kalshi') {
+    const [series, ticker, side] = id;
+    const { candlesticks = [] } = await getJson(
+      `${KALSHI_API}/series/${encodeURIComponent(series)}/markets/${encodeURIComponent(ticker)}/candlesticks?start_ts=${start}&end_ts=${at}&period_interval=60`,
+    );
+    points = (candlesticks as Json[]).flatMap((candle) => {
+      const chance = candleChance(candle);
+      return chance === undefined ? [] : [[Number(candle.end_period_ts), side === 'no' ? 1 - chance : chance] as [number, number]];
+    });
+  } else if (source === 'polymarket') {
+    const { history: rows = [] } = await getJson(`${POLYMARKET_CLOB}/prices-history?market=${encodeURIComponent(id[0])}&startTs=${start}&endTs=${at}&fidelity=60`);
+    points = (rows as Json[]).flatMap((point) => (num(point.p) === undefined ? [] : [[Number(point.t), num(point.p)!] as [number, number]]));
+  }
+  const last = points.filter(([t]) => t <= at).sort((a, b) => a[0] - b[0]).pop();
+  return last ? last[1] : null;
+}
+
 // The past week of a market's leading outcome, or null when it has no history.
 // Rejects when the exchange cannot be reached.
 export async function trendFor(ref: MarketRef): Promise<MarketTrend | null> {

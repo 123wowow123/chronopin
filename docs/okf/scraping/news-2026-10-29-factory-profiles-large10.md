@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Large factory-profile batch 10 — 2026-10-29"
+description: "Owner requested another large batch and then said go while it was running. Added 25 new buildout profiles on production, mirrored all 25 locally, and…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Large factory-profile batch 10 — 2026-10-29
 
 Owner requested another large batch and then said “go” while it was running. Added **25 new buildout profiles on production**, mirrored all 25 locally, and verified all **50 exact profile readbacks**. No deployment, build, restart or schema change occurred. Scheduled job limits were unchanged.

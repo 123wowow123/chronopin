@@ -414,7 +414,8 @@ text, or citing nothing but its own source:
 on, and every thin page counts against the whole
 site. Filling one out puts it back in the index on its own, with no other
 step.
-**Reads** `thin_pins`: curators' pins first, then pins both short and
+**Reads** `thin_pins`: curators' pins first, then the most opened in the
+last 30 days (`views`, owner 2026-10-29), then pins both short and
 single-sourced, then upcoming before past, then the shortest text. Pins
 changed in the last 14 days or already marked for revisiting are not
 listed. Work a batch of about 20 a run; ask again passing the ids you looked
@@ -796,6 +797,18 @@ events and create **predicted pins** out of them:
   - **Create predicted pins:** Every month, create pins for upcoming Brent and WTI price forecasts, tagged `Predicted` (plus `Energy`, `Economy`, `Commodities`, `Oil Price`, `Brent` or `WTI`), set `dateConfidence: 'estimated'` dated to the month's settlement date (e.g. 5:00 PM EDT / 21:00 UTC on the final trading day of the month), authored under `@EnergyDesk` (or `@EconDesk`), quoting the contract strike distribution and traded volume.
   - **Make into a thread:** Each monthly Brent pin must be attached via `parentId` to the previous month's Brent pin; each monthly WTI pin must be attached to the previous month's WTI pin, forming continuous monthly commodity forecast series.
   - **After price realization:** Once the month concludes and the contract settles (`status: finalized` on Kalshi or official exchange index / EIA spot release), update the pin to `dateConfidence: 'confirmed'`, update the title with the final realized value (e.g. `Brent Crude Oil Settlement — September 2026: $97.92/bbl`), and add reasoning explaining the final realized value and why the prediction market forecast was missed or on point against actual market drivers (OPEC+ quota compliance, geopolitical risk premia around Hormuz, commercial/SPR inventory changes, and global refinery demand).
+- **Track record (2026-10-29, `/predictions`):** call `prediction_accuracy` with `apply: true` once after
+  creating pins. It records, per Predicted pin and market, the odds the market gave when first seen (table
+  `PredictionRecord`, 0233, never rewritten) and marks closed markets settled (`resolved`, or `void` when no
+  outcome settled at 99%+). Saves and edits of a Predicted pin record its markets too (events.ts), and an
+  hourly in-process timer settles the rest (`PREDICTION_RECORDS=1` forces it on in dev). A market already
+  closed when first seen is skipped: its earlier odds are unknown. The page scores each outcome as a binary
+  forecast (a plain yes/no market counts once, by its leading side): favorite hit rate, Brier score and a
+  calibration table. Code: `src/lib/predictionAccuracy.ts`, `src/server/services/predictionRecords.ts`.
+  **Historical backfill:** `prediction_accuracy` with `historical: true` (one-off, minutes) scores markets that
+  settled before they were recorded on their price 7 days before closing, from the exchange's price history
+  (`basis = 'historical'`, 0234; Polymarket US keeps none). The page scores and labels the two bases separately; never
+  merge them. Local backfill 2026-10-29: 114 markets, favorites 74%, Brier 0.072. Prod needs 0233/0234 and the backfill.
 - **Curator desk and sources:**
   - Where the market points to an underlying dated event in the world (an election,
     a central-bank rate decision, an AI model release, an orbital flight test, a

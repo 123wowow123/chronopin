@@ -18,11 +18,13 @@ export async function SiteFooter() {
   const [t, year] = await Promise.all([getT(), currentYear()]);
   const links = [
     { href: '/forecasts', label: t('nav.forecasts') },
+    { href: '/predictions', label: t('nav.predictions') },
     { href: LEGAL_PATHS.about, label: t('about.title') },
     { href: LEGAL_PATHS.privacy, label: t('legal.privacyTitle') },
     { href: LEGAL_PATHS.terms, label: t('legal.termsTitle') },
     { href: LEGAL_PATHS.contact, label: t('legal.contactTitle') },
     { href: LEGAL_PATHS.searchGuide, label: t('legal.searchTitle') },
+    { href: LEGAL_PATHS.embed, label: t('legal.embedTitle') },
   ];
   return (
     // data-site-footer: a page that fills the window (the map) hides it, globals.css.

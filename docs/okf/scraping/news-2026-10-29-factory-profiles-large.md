@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Large construction buildout batch — 2026-10-29"
+description: "Owner explicitly requested a large batch on production after the earlier five-profile batch. This manual batch expanded the scope to 25 additional profiles;…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Large construction buildout batch — 2026-10-29
 
 Owner explicitly requested a large batch on production after the earlier five-profile batch. This manual batch expanded the scope to 25 additional profiles; it does not change the normal daily-job limit or schedule.

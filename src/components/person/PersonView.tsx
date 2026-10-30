@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { CalendarSubscribe } from '@/components/pin/CalendarSubscribe';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
@@ -225,7 +226,8 @@ export function PersonView({
               {age != null ? <span className={PILL}>{t(profile.deathDate ? 'person.ageAtDeath' : 'person.ageValue', { age })}</span> : null}
             </div>
             {profile.description ? <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink/90">{profile.description}</p> : null}
-            <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+            <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+              <CalendarSubscribe kind="person" slug={topicSlug(profile.name)} />
               <Link href={`/search?q=${encodeURIComponent(term('tag', profile.name))}`} prefetch={false}>
                 {t('person.moreInSearch', { name: profile.name })}
               </Link>

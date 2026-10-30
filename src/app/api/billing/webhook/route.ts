@@ -1,7 +1,7 @@
 import config from '@/server/config';
 import { HttpError, json, route } from '@/server/http';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
-import { fetchSubscription, recordHeavySubscription, recordPremiumSubscription, recordSubscription } from '@/server/services/billing';
+import { fetchSubscription, recordBundleSubscription, recordHeavySubscription, recordPremiumSubscription, recordSubscription } from '@/server/services/billing';
 import { adSubscriptionChanged, confirmAdPayment, confirmAdSubscription, renewAdSubscription } from '@/server/services/sponsoredAds';
 import { verifyStripeSignature } from '@/server/stripe';
 import log from '@/server/util/log';
@@ -41,6 +41,16 @@ export const POST = route(async (request: Request) => {
       await HeavyUserPlan.addMonth(userId, typeof object.customer === 'string' ? object.customer : null, String(object.id));
     } else if (event.type.startsWith('customer.subscription.') && object.id) {
       await recordHeavySubscription(await fetchSubscription(String(object.id)));
+    }
+    return json({ received: true });
+  }
+
+  // The ad-free + premium bundle marks its sessions and subscriptions with bundleUserId.
+  if ((object.metadata as Record<string, string> | null | undefined)?.bundleUserId) {
+    if (event.type === 'checkout.session.completed' && object.mode === 'subscription' && object.subscription) {
+      await recordBundleSubscription(await fetchSubscription(String(object.subscription)));
+    } else if (event.type.startsWith('customer.subscription.') && object.id) {
+      await recordBundleSubscription(await fetchSubscription(String(object.id)));
     }
     return json({ received: true });
   }

@@ -459,6 +459,7 @@ export async function lowConfidencePins({ below, limit = 30, skipDays = 25, excl
     author: string | null;
     editable: boolean;
     lastChanged: Date;
+    views: number;
     total: number;
   }>(
     `
@@ -486,12 +487,14 @@ export async function lowConfidencePins({ below, limit = 30, skipDays = 25, excl
 // The thin pins (src/lib/searchQuality.ts: under THIN_TEXT_CHARS of summary
 // text, or nothing cited but their own source), which say noindex while the
 // admin's switch is on, for the thinPins task to fill out. Curators' pins come
-// first (only those can be updated), then those both short and single-sourced,
-// then upcoming before past, then the shortest text. Left out: pins changed in
+// first (only those can be updated), then the most opened in the last
+// `viewDays` (owner, 2026-10-29: readers and crawlers find those first), then
+// those both short and single-sourced, then upcoming before past, then the
+// shortest text. Left out: pins changed in
 // the last `skipDays` (a pin the run could not fill waits its turn behind the
 // rest) and pins already marked for revisiting. `exclude` is the pins this run
 // has already looked at and left as they were. `waiting` is how many are left.
-export async function thinPins({ limit = 20, skipDays = 14, exclude = [] }: { limit?: number; skipDays?: number; exclude?: number[] }) {
+export async function thinPins({ limit = 20, skipDays = 14, exclude = [], viewDays = 30 }: { limit?: number; skipDays?: number; exclude?: number[]; viewDays?: number }) {
   const curators = Object.keys(CURATORS).map((h) => h.replace(/^@/, '').toLowerCase());
   const rows = await db.query<{
     id: number;
@@ -503,6 +506,7 @@ export async function thinPins({ limit = 20, skipDays = 14, exclude = [] }: { li
     author: string | null;
     editable: boolean;
     lastChanged: Date;
+    views: number;
     total: number;
   }>(
     `
@@ -511,18 +515,20 @@ export async function thinPins({ limit = 20, skipDays = 14, exclude = [] }: { li
         ${textLengthSql('"p"')}::int AS "textLength", ${sourceCountSql('"p"')}::int AS "sources",
         "u"."userName"::text AS "author",
         COALESCE(lower(ltrim("u"."userName"::text, '@')) = ANY($1::text[]), false) AS "editable",
-        COALESCE("p"."utcUpdatedDateTime", "p"."utcCreatedDateTime") AS "lastChanged"
+        COALESCE("p"."utcUpdatedDateTime", "p"."utcCreatedDateTime") AS "lastChanged",
+        COALESCE("v"."views", 0)::int AS "views"
       FROM "Pin" AS "p" LEFT JOIN "User" AS "u" ON "u"."id" = "p"."userId"
+      LEFT JOIN (SELECT "pinId", count(*) AS "views" FROM "PinView" WHERE "day" > current_date - $7::int GROUP BY "pinId") AS "v" ON "v"."pinId" = "p"."id"
       WHERE "p"."utcDeletedDateTime" IS NULL AND NOT "p"."id" = ANY($4::int[])
         AND COALESCE("p"."utcUpdatedDateTime", "p"."utcCreatedDateTime") < now() - make_interval(days => $2)
         AND NOT EXISTS (SELECT 1 FROM "PinRevisit" AS "v" WHERE "v"."pinId" = "p"."id" AND "v"."utcResolvedDateTime" IS NULL)
     )
     SELECT *, count(*) OVER ()::int AS "total" FROM "s"
     WHERE "textLength" < $5 OR "sources" < $6
-    ORDER BY "editable" DESC, ("textLength" < $5 AND "sources" < $6) DESC,
+    ORDER BY "editable" DESC, "views" DESC, ("textLength" < $5 AND "sources" < $6) DESC,
       ("utcStartDateTime" >= now()) DESC NULLS LAST, "textLength", "lastChanged"
     LIMIT $3`,
-    [curators, skipDays, limit, exclude, THIN_TEXT_CHARS, MIN_SOURCES],
+    [curators, skipDays, limit, exclude, THIN_TEXT_CHARS, MIN_SOURCES, viewDays],
   );
   return {
     needs: { textChars: THIN_TEXT_CHARS, sources: MIN_SOURCES },

@@ -227,9 +227,9 @@ certificates at once instead of waiting out its back-off. (The old
 Mail (Microsoft 365 MX/SPF at the root, Resend's `send`, `rsend`,
 `resend._domainkey` and `_dmarc` records) is unrelated to the web records.
 
-## Stripe (the $1 a month ad-free plan)
+## Stripe (the $3 a month ad-free plan)
 
-Signed-in users can pay $1 a month to turn every ad off (Profile).
+Signed-in users can pay $3 a month to turn every ad off (Profile).
 Checkout and the customer portal are Stripe's own pages; the app keeps one
 `AdFreeSubscription` row per user (0177), written only by the webhook. Needs two
 values in `Docker/env.prod.list` (the button is hidden until the key is set):
@@ -244,3 +244,14 @@ values in `Docker/env.prod.list` (the button is hidden until the key is set):
 In the Stripe dashboard also save the Customer portal settings (Settings > Billing >
 Customer portal) so cancelling works. No product is created by hand: the price is
 sent inline with each checkout.
+
+### Plans sharing this setup
+
+The $20 Premium plan (`/api/premium/checkout`, `PremiumSubscription` 0223) and the
+$21 **ad-free + Premium bundle** (`/api/bundle/checkout`, ¥147 in CNY) use the same
+two keys and the same webhook endpoint; no extra Stripe setup. The bundle is one
+subscription whose metadata carries `bundleUserId`; the webhook writes it to both
+`AdFreeSubscription` and `PremiumSubscription`, so ads go off and Premium turns on
+together, and either plan's portal manages it. Checkout refuses a user who already has
+either plan (cancel it in the portal first). The free-vs-paid table on `/premium` is
+`PlanComparison.tsx`; prices live in `src/server/stripe.ts` (`CHECKOUT_PRICES`).

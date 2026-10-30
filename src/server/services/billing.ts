@@ -81,3 +81,23 @@ export async function recordPremiumSubscription(subscription: StripeSubscription
   });
   return true;
 }
+
+// The ad-free + premium bundle: one Stripe subscription that switches both
+// plans on, so it is written to both tables (same customer and subscription
+// id in each). Found from bundleUserId in its metadata or the customer saved
+// earlier. False when it is nobody's.
+export async function recordBundleSubscription(subscription: StripeSubscription): Promise<boolean> {
+  const customerId = typeof subscription.customer === 'string' ? subscription.customer : subscription.customer.id;
+  const fromMetadata = Number(subscription.metadata?.bundleUserId);
+  const userId = Number.isInteger(fromMetadata) && fromMetadata > 0 ? fromMetadata : await PremiumSubscription.userIdForCustomer(customerId);
+  if (!userId) return false;
+  const fields = {
+    customerId,
+    subscriptionId: subscription.id,
+    status: subscription.status,
+    currentPeriodEnd: periodEnd(subscription),
+    cancelAtPeriodEnd: subscription.cancel_at_period_end === true || typeof subscription.cancel_at === 'number',
+  };
+  await Promise.all([AdFreeSubscription.save(userId, fields), PremiumSubscription.save(userId, fields)]);
+  return true;
+}

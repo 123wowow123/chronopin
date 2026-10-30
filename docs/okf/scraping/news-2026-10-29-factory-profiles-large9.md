@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Large factory-profile batch 9 — 2026-10-29"
+description: "Owner requested a large batch following the earlier five-profile production run. Added 25 new buildout profiles through authenticated admin APIs, production…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Large factory-profile batch 9 — 2026-10-29
 
 Owner requested a large batch following the earlier five-profile production run. Added **25 new buildout profiles** through authenticated admin APIs, production first, and mirrored all 25 locally. No application deployment, build, restart or schema change occurred. Scheduled task limits were not changed.

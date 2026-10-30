@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Factory profiles production run — 2026-10-29"
+description: "Ran the factoryProfiles task by hand for its standard five-profile batch. Added five sourced buildout profiles through authenticated production admin APIs,…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Factory profiles production run — 2026-10-29
 
 Ran the factoryProfiles task by hand for its standard five-profile batch. Added five sourced buildout profiles through authenticated production admin APIs, then mirrored locally. This was content maintenance; no deployment, build, restart or schema change.

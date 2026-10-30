@@ -1,6 +1,7 @@
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
+import { CalendarSubscribe } from '@/components/pin/CalendarSubscribe';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { siteName } from '@/lib/appConfig';
@@ -14,7 +15,7 @@ import { term } from '@/lib/searchTerms';
 import { pinPath, topicJsonLd } from '@/lib/seo';
 import { pinDayKey, pinTense } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
-import { companyPath, tagPath } from '@/lib/topics';
+import { companyPath, tagPath, topicSlug } from '@/lib/topics';
 import type { PinJson } from '@/lib/types';
 import type { CompanyTopicPage, TopicPage } from '@/server/services/topics';
 
@@ -93,7 +94,8 @@ export function TopicView({
           ) : null}
         </p>
         {company?.description ? <p className="mt-3 text-[15px] leading-relaxed text-ink/90">{company.description}</p> : null}
-        <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+        <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+          <CalendarSubscribe kind={kind} slug={topicSlug(page.name)} />
           <Link href={`/search?q=${encodeURIComponent(term(kind, page.name))}`} prefetch={false}>
             {t('topic.moreInSearch', { name: label })}
           </Link>

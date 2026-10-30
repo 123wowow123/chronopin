@@ -28,6 +28,7 @@ import { dayKeyIn } from '@/lib/format';
 import PinAd from '../model/pinAd';
 import ProductAd from '../model/productAd';
 import { stockMovieMerchandise } from '../movieMerchandise';
+import { backfillHistoricalRecords, syncAllRecords } from '../services/predictionRecords';
 import Products from '../model/products';
 import { timelineMinConfidence } from '../services/timeline';
 import { PRODUCT_SHELVES, SHELF_SIZE } from '@/lib/products';
@@ -195,6 +196,21 @@ export const TOOLS: JobTool[] = [
     },
   },
   {
+    name: 'prediction_accuracy',
+    description:
+      "Updates the track record shown on /predictions: records the odds each Predicted pin's Kalshi/Polymarket markets gave (once, when first seen) and marks the markets that have closed as settled. Run once in predictionMarkets after creating pins. Set apply: true to write; otherwise reports what it would do. Set historical: true instead to score markets that settled before they were recorded, on their price 7 days before closing (a one-off backfill, slow: reads price history).",
+    input_schema: obj({ apply: { type: 'boolean' }, historical: { type: 'boolean' } }),
+    run: async (input, ctx) => {
+      if (input.historical) return backfillHistoricalRecords({ apply: !!input.apply });
+      const result = await syncAllRecords({ apply: !!input.apply });
+      await act(ctx, {
+        tool: 'prediction_accuracy',
+        detail: `${result.pins} predicted pin(s) read: recorded ${result.recorded}, settled ${result.settled}, void ${result.voided}, already closed ${result.skipped}`,
+      });
+      return result;
+    },
+  },
+  {
     name: 'predicted_pins',
     description:
       "Predicted pins (market-predicted events and pins tagged 'Predicted'): unthreaded pins first, curators' pins (editable) first, each with its current parentId, company, author, and candidate earlier pins/threads to join if available. Also rethreads duplicate pins marked as same event so that duplicate pins do not appear on threads (detaches duplicate pins with parentId: null, and re-parents child pins to the canonical pin). For each pin, check candidate pins (or run find_pins) for an earlier event in its story, series or franchise (the previous flight, the previous election, the earlier model release, the earlier tournament). If an earlier pin is available, attach the pin to the parent pin with update_pin ({ parentId }), or mark it for revisiting with mark_revisit if by a non-curator.",
@@ -249,16 +265,18 @@ export const TOOLS: JobTool[] = [
   {
     name: 'thin_pins',
     description:
-      "Thin pins, which ask search engines not to index them: under `needs.textChars` characters of summary text (`short`) or citing nothing but their own source (`oneSource`). Curators' pins (editable) first, then pins that are both, then upcoming ones, then the shortest text, with the text length, cited-page count, source and author. Pins changed in the last `skipDays` (default 14) or already marked for revisiting are left out, so a pin you update or mark drops off; pass the ids you checked and left alone as `exclude` when you ask for the next batch. `waiting` is how many are left in all.",
+      "Thin pins, which ask search engines not to index them: under `needs.textChars` characters of summary text (`short`) or citing nothing but their own source (`oneSource`). Curators' pins (editable) first, then the most opened in the last `viewDays` (`views`), then pins that are both, then upcoming ones, then the shortest text, with the text length, cited-page count, source and author. Pins changed in the last `skipDays` (default 14) or already marked for revisiting are left out, so a pin you update or mark drops off; pass the ids you checked and left alone as `exclude` when you ask for the next batch. `waiting` is how many are left in all.",
     input_schema: obj({
       limit: num('At most this many, default 20, at most 100'),
       skipDays: num('Leave out pins changed this recently, default 14'),
+      viewDays: num('Count views over this many days, default 30'),
       exclude: { type: 'array', items: { type: 'integer' }, description: 'Pin ids already checked this run' },
     }),
     run: (input) =>
       signals.thinPins({
         limit: int(input.limit, 20, 1, 100),
         skipDays: int(input.skipDays, 14, 0, 365),
+        viewDays: int(input.viewDays, 30, 1, 365),
         exclude: Array.isArray(input.exclude) ? input.exclude.map((id: unknown) => int(id, 0, 0, 2 ** 31 - 1)).filter(Boolean) : [],
       }),
   },

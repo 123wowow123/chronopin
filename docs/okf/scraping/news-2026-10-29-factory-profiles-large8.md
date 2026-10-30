@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Large construction buildout batch 8 — 2026-10-29"
+description: "Owner requested another large factory-profile batch on production. Added 25 buildout profiles through authenticated admin APIs, production-first, and…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Large construction buildout batch 8 — 2026-10-29
 
 Owner requested another large factory-profile batch on production. Added **25 buildout profiles** through authenticated admin APIs, production-first, and mirrored locally. Scheduled job limits are unchanged.

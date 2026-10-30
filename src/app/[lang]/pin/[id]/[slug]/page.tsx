@@ -91,6 +91,7 @@ import { ViewCount } from '@/components/pin/ViewCount';
 import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadList } from '@/components/pin/ThreadList';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
+import { CalendarSubscribe } from '@/components/pin/CalendarSubscribe';
 import { ThreadWatchButton } from '@/components/pin/ThreadWatchButton';
 import { LikeButton } from '@/components/pin/LikeButton';
 import { WatchButton } from '@/components/pin/WatchButton';
@@ -977,6 +978,7 @@ async function Thread({ pin }: { pin: PinJson }) {
             {t('pin.thread')}
           </h2>
           <ThreadWatchButton pinId={pin.id} />
+          <CalendarSubscribe kind="thread" slug={String(pin.id)} thread />
         </div>
         <Link href={`/respond/${pin.id}`} className="text-sm" prefetch={false}>
           {t('pin.respond')}

@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { HttpError, json, noContent, readJson, route } from '@/server/http';
 import { nameForPoint } from '@/server/geocode';
+import Digest from '@/server/model/digest';
 import { loadUser } from '@/server/services/users';
 import { invalidateTimeline } from '@/server/services/cache';
 import { isValidSpan } from '@/server/util/createdFilter';
@@ -68,6 +69,12 @@ export const PUT = route(async (request: NextRequest) => {
     user.remindBeforeStart = body.remindBeforeStart;
   }
 
+  // The weekly "my timeline" email (0232) is its own table, not a User column.
+  const digestChanged = 'weeklyDigest' in body;
+  if (digestChanged && typeof body.weeklyDigest !== 'boolean') {
+    throw new HttpError(400, '', { message: 'weeklyDigest must be true or false' });
+  }
+
   // The default location (0066). null clears it, and stops the device from
   // setting it again straight away - clearing it is saying not to keep one.
   // A point from the device is named here, by the geocoder; a point picked
@@ -108,6 +115,7 @@ export const PUT = route(async (request: NextRequest) => {
   }
 
   await user.patchWithoutPassword();
+  if (digestChanged) await Digest.setSubscribed(signedIn.id, body.weeklyDigest);
   if (spanChanged) {
     invalidateTimeline();
   }

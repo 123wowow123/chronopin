@@ -209,6 +209,16 @@ if (!g.__chronopinPinListeners) {
   pinEvents.on('save', syncMarketVolume);
   pinEvents.on('update', unlessLight(syncMarketVolume));
 
+  // The odds a Predicted pin's markets gave when it first cited them, for the
+  // track record at /predictions (services/predictionRecords.ts).
+  const syncPredictionRecords = (pin: Row) => {
+    import('./services/predictionRecords')
+      .then(({ syncPinRecords }) => syncPinRecords(Number(pin.id)))
+      .catch((err) => log.warn(`prediction record failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncPredictionRecords);
+  pinEvents.on('update', unlessLight(syncPredictionRecords));
+
   // A film, show or game's review score from Kalshi's markets on it
   // (services/pinScoreMarket.ts); a pin posted by API without a scrape gets
   // it here, and an edit refreshes a forecast.

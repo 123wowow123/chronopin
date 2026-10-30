@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Construction buildout batch — 2026-10-29"
+description: "Owner-requested manual factoryProfiles batch, completed on production and mirrored locally. This covers only the construction profile task, not a full news…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Construction buildout batch — 2026-10-29
 
 Owner-requested manual `factoryProfiles` batch, completed on production and mirrored locally. This covers only the construction profile task, not a full news run. The scheduled 18:00 America/Los_Angeles news job was not changed.

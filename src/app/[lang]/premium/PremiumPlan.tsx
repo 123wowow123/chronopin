@@ -8,14 +8,31 @@ import { useLocale, useT } from '@/lib/client/i18n';
 
 // Buy or manage the premium plan. Signed-out visitors go to sign in first;
 // paying and managing happen on Stripe's pages.
-export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { active: boolean; endsOn: string | null; cancelling: boolean; paid: boolean; configured: boolean }) {
+export function PremiumPlan({
+  active,
+  adFreeActive,
+  endsOn,
+  cancelling,
+  paid,
+  bundlePaid,
+  configured,
+}: {
+  active: boolean;
+  // The $1 ad-free plan is on, so the bundle would charge for it twice.
+  adFreeActive: boolean;
+  endsOn: string | null;
+  cancelling: boolean;
+  paid: boolean;
+  bundlePaid: boolean;
+  configured: boolean;
+}) {
   const t = useT();
   const chinese = useLocale() === 'zh';
   const { status, user } = useSession();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
 
-  async function go(path: string, currency?: 'cny') {
+  async function go(path: '/api/premium/checkout' | '/api/premium/portal' | '/api/bundle/checkout', currency?: 'cny') {
     setBusy(true);
     setError('');
     try {
@@ -43,10 +60,10 @@ export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { 
   }
   const signedOut = status === 'ready' && !user;
   return (
-    <div className="mx-auto max-w-xl space-y-3 text-center">
-      {paid ? <p className="surface p-4 text-success" role="status">{t('premium.thanks')}</p> : null}
+    <div className={`mx-auto max-w-xl space-y-3 text-center ${signedOut ? '' : 'surface rounded-2xl p-6'}`}>
+      {paid ? <p className="surface p-4 text-success" role="status">{t(bundlePaid ? 'premium.bundleThanks' : 'premium.thanks')}</p> : null}
       {signedOut ? (
-        <a className="btn btn-primary" href={authHrefHere('/login')}>{t('premium.signIn')}</a>
+        <a className="btn btn-primary px-8 py-3 text-base shadow-md" href={authHrefHere('/login')}>{t('premium.signIn')}</a>
       ) : (
         <button type="button" className="btn btn-primary" disabled={busy || !configured} onClick={() => void go('/api/premium/checkout')}>
           {configured ? t('premium.go') : t('premium.soon')}
@@ -56,6 +73,25 @@ export function PremiumPlan({ active, endsOn, cancelling, paid, configured }: { 
         <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/premium/checkout', 'cny')}>
           {t('premium.goCny')}
         </button>
+      ) : null}
+      {!signedOut ? (
+        <div className="space-y-2 border-t border-line pt-4">
+          <p className="text-sm text-muted">{t('premium.bundleSave')}</p>
+          {adFreeActive ? (
+            <p className="text-sm text-warning">{t('premium.bundleHave')}</p>
+          ) : (
+            <>
+              <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/bundle/checkout')}>
+                {t('premium.bundleGo')}
+              </button>
+              {chinese ? (
+                <button type="button" className="btn btn-secondary" disabled={busy || !configured} onClick={() => void go('/api/bundle/checkout', 'cny')}>
+                  {t('premium.bundleGoCny')}
+                </button>
+              ) : null}
+            </>
+          )}
+        </div>
       ) : null}
       {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}
     </div>

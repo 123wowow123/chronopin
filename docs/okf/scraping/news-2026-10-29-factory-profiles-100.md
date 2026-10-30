@@ -1,3 +1,10 @@
+---
+type: Log
+title: "Factory profile batch of 100 — 2026-10-29"
+description: "Owner requested do 100. Added 100 new production buildout profiles, mirrored all 100 locally, and verified 200 final exact profile readbacks. The replay…"
+tags: [scraping, factory-profiles]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-29T18:00:00Z }
+---
 # Factory profile batch of 100 — 2026-10-29
 
 Owner requested “do 100”. Added **100 new production buildout profiles**, mirrored all 100 locally, and verified **200 final exact profile readbacks**. The replay catalog now contains **399 profiles**. No deployment, production build, restart, schema change or scheduled-job-limit change was performed.

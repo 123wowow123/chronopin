@@ -28,6 +28,11 @@ and must reach production.
   why the prediction hit or missed against the drivers (OPEC+ quota compliance, Hormuz/geopolitical risk premia,
   commercial and SPR inventories, global refinery demand).
 
+## Track record (/predictions)
+After creating pins, call `prediction_accuracy` (`apply: true`): it records each market's odds once and settles closed
+ones; the page shows hit rate, Brier score and calibration. Never edit `PredictionRecord.outcomes` by hand: the page
+is only trustworthy while the recorded odds are the ones the pin was written with.
+
 ## Checks
 Citations `[n]` must be within the reference count; no reference repeats the sourceUrl; scan for eaten `$`
 amounts; company stock lines must match the company ticker note exactly. Live odds panels use Kalshi/Polymarket

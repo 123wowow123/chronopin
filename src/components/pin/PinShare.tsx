@@ -126,7 +126,7 @@ function targets(t: ReturnType<typeof useT>): Target[] {
 // Puts `text` on the clipboard. navigator.clipboard (and the share sheet)
 // only exist on https or localhost, so a page opened over plain http - the
 // dev server from a phone on the LAN - copies through a hidden textarea.
-async function copyText(text: string): Promise<boolean> {
+export async function copyText(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text);
     return true;

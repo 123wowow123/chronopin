@@ -50,21 +50,21 @@ function linkOrigin(request: NextRequest): string {
   return process.env.NODE_ENV === 'production' ? siteUrl : publicOrigin(request);
 }
 
-const escapeHtml = (text: string) =>
+export const escapeHtml = (text: string) =>
   text.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
-const LOGO_CID = 'chronopin-logo';
-const FONT = "'IBM Plex Sans','Noto Sans',-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";
+export const LOGO_CID = 'chronopin-logo';
+export const FONT = "'IBM Plex Sans','Noto Sans',-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";
 
 // The site's own light and dark tokens (globals.css). Mail apps that honour
 // prefers-color-scheme (Apple Mail, iOS, Outlook.com) get the dark set from
 // the <style> block; the color-scheme meta tells them the email has its own
 // dark look, so they do not invert it themselves - inverting is what turned
 // the button's white text dark. Clients that drop <style> keep the light set.
-const LIGHT = { page: '#f3f5f8', card: '#ffffff', line: '#dce0e6', field: '#f3f5f8', ink: '#15181d', muted: '#3d444e', subtle: '#5a616b', link: '#1d62c2', accent: '#2c6bc6' };
-const DARK = { page: '#0f1115', card: '#181b21', line: '#272b33', field: '#0c0e12', ink: '#e7e9ec', muted: '#b4b9c0', subtle: '#8f959d', link: '#7cb3f2', accent: '#3374d0' };
+export const LIGHT = { page: '#f3f5f8', card: '#ffffff', line: '#dce0e6', field: '#f3f5f8', ink: '#15181d', muted: '#3d444e', subtle: '#5a616b', link: '#1d62c2', accent: '#2c6bc6' };
+export const DARK = { page: '#0f1115', card: '#181b21', line: '#272b33', field: '#0c0e12', ink: '#e7e9ec', muted: '#b4b9c0', subtle: '#8f959d', link: '#7cb3f2', accent: '#3374d0' };
 
-const DARK_STYLE = `:root{color-scheme:light dark;supported-color-schemes:light dark}
+export const DARK_STYLE = `:root{color-scheme:light dark;supported-color-schemes:light dark}
 @media (prefers-color-scheme:dark){
 .cp-page{background:${DARK.page}!important}
 .cp-card{background:${DARK.card}!important;border-color:${DARK.line}!important}

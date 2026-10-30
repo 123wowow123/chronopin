@@ -8,7 +8,7 @@ import log from './util/log';
 
 // An inline attachment is shown where the HTML says <img src="cid:{contentId}">.
 export type EmailAttachment = { filename: string; contentBase64: string; contentId: string };
-export type Email = { to: string; subject: string; text: string; html: string; attachments?: EmailAttachment[] };
+export type Email = { to: string; subject: string; text: string; html: string; attachments?: EmailAttachment[]; headers?: Record<string, string> };
 
 const RESEND_URL = 'https://api.resend.com/emails';
 const TIMEOUT_MS = 10000;
@@ -28,6 +28,7 @@ export async function sendEmail(email: Email): Promise<void> {
       subject: email.subject,
       text: email.text,
       html: email.html,
+      headers: email.headers,
       attachments: email.attachments?.map((a) => ({ filename: a.filename, content: a.contentBase64, content_id: a.contentId })),
     }),
     signal: AbortSignal.timeout(TIMEOUT_MS),

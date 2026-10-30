@@ -9,7 +9,9 @@ import PersonTrade from '@/server/model/personTrade';
 import { StockAlertsList } from '../StockAlertsList';
 import { FollowingList } from '../FollowingList';
 import { ProfileTabs } from '../ProfileTabs';
+import Digest from '@/server/model/digest';
 import { WatchAlertsSetting } from '../WatchAlertsSetting';
+import { WeeklyDigestSetting } from '../WeeklyDigestSetting';
 import { getT } from '@/lib/i18n/server';
 
 // Reads the session, so it blocks per request (see ../../layout.tsx). The
@@ -21,17 +23,18 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // How you are notified, a tab of the profile: the browser alerts and reminders
-// for watched pins, the people you follow, and the companies and stock trades
+// for watched pins, the weekly email, the people you follow, and the companies and stock trades
 // you follow (unfollow them all here).
 export default async function ProfileNotificationsPage() {
   const user = await requireViewer('/profile/notifications');
-  const [following, companies, people, all, threads, watchedPins, t] = await Promise.all([
+  const [following, companies, people, all, threads, watchedPins, digest, t] = await Promise.all([
     Follow.listFollowing(user.id),
     CompanyFollow.listFor(user.id),
     PersonTrade.listWatchedBy(user.id),
     PersonTrade.statusAll(user.id),
     ThreadWatch.listFor(user.id),
     Favorite.listPinsFor(user.id),
+    Digest.isSubscribed(user.id),
     getT(),
   ]);
   // Watching a thread watches each pin in it; those pins are listed once, as the thread.
@@ -41,8 +44,9 @@ export default async function ProfileNotificationsPage() {
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/notifications" />
       <h1 className="sr-only">{t('notifications.title')}</h1>
-      <div className="mb-8">
+      <div className="mb-8 space-y-4">
         <WatchAlertsSetting userId={user.id} initialRemind={user.remindBeforeStart === true} />
+        <WeeklyDigestSetting userId={user.id} initial={digest} />
       </div>
       <h2 className="mb-1 text-lg font-semibold text-ink">{t('profile.followingUsers')}</h2>
       <p className="mb-4 text-sm text-subtle">

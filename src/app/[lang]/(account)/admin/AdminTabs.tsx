@@ -20,6 +20,7 @@ const GROUPS = [
     { href: '/admin/landing', label: 'Landing' },
     { href: '/admin/search', label: 'Search' },
     { href: '/admin/users', label: 'Users' },
+    { href: '/admin/digest', label: 'Digest' },
     { href: '/admin/pins', label: 'Pins' },
     { href: '/admin/comments', label: 'Comments' },
     { href: '/admin/listings', label: 'Listings' },

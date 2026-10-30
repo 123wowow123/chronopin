@@ -8,3 +8,6 @@
 * [Pin OKF bundle](pin-okf.md) - GET a pin and its links as an OKF bundle (admin)
 * [Scraping API](scraping-api.md) - Design of a job-based scraping API with a pluggable LLM driver (not built yet)
 * [Named searches](saved-searches.md) - Shared names for searches (pin lists especially), shown in everyone's popular searches with who named them; signed-in users name, anyone reads
+* [Embed widget](embed-widget.md) - Public countdown/thread widget for any pin, one snippet for blogs, with a backlink to the pin page (/embed guide)
+* [Calendar feeds](calendar-feeds.md) - Public .ics feeds for a tag, company, person or thread, to subscribe to in Google Calendar
+* [Weekly digest email](weekly-digest.md) - Monday "my timeline" email of watched pins and followed companies/people, opt-in, admin switch and /admin/digest dashboard
