@@ -1,0 +1,1271 @@
+{
+  "researchedAt": "2026-10-30",
+  "pinContentCorrections": [
+    {
+      "id": 18821,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Clark Solar-Longwood, plant 69933, in Clark County, WI, with 2.5 MW electrical generation nameplate. It reports operating status and initial operation in 2026-09.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69933, Clark Solar-Longwood, Clark County, WI. Selected generator IDs: CLARK.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 2.5 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-09. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: OneEnergy, Inc.. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-09. The first day of September 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts.",
+        "title": "Clark Solar-Longwood: 2.5 MW electrical generation nameplate in Clark County, WI"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18794,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Spooner, plant 69939, in Washburn County, WI, with 2.3 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-10; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69939, Spooner, Washburn County, WI. Selected generator IDs: SPOON.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 2.3 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-10. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: OneEnergy, Inc.. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-10. The first day of October 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Spooner: 2.3 MW electrical generation nameplate in Washburn County, WI"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18772,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Teeple Creek, plant 69940, in Allamakee County, IA, with 2.5 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-11; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69940, Teeple Creek, Allamakee County, IA. Selected generator IDs: TEEPL.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 2.5 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-11. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: OneEnergy, Inc.. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-11. The first day of November 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Teeple Creek: 2.5 MW electrical generation nameplate in Allamakee County, IA"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18770,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Mondovi, plant 69937, in Buffalo County, WI, with 3 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-10; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69937, Mondovi, Buffalo County, WI. Selected generator IDs: MNDVI.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 3 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-10. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: OneEnergy, Inc.. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-10. The first day of October 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Mondovi: 3 MW electrical generation nameplate in Buffalo County, WI"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18759,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies San Juan Solar I, plant 66574, in San Juan County, NM, with 200 MW electrical generation nameplate. It reports operating status and initial operation in 2024-11.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 66574, San Juan Solar I, San Juan County, NM. Selected generator IDs: SANS.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 200 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2024-11. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: San Juan Solar I, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2024-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2024-11. The first day of November 2024 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18693,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Gage Solar, plant 68292, in McCracken County, KY, with 200 MW electrical generation nameplate. The listed stage is (L) Regulatory approvals pending. Not under construction. Operation is forecast for 2029-06; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68292, Gage Solar, McCracken County, KY. Selected generator IDs: GGSO.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 200 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (L) Regulatory approvals pending. Not under construction. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2029-06. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: GGSO, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2029-06. The first day of June 2029 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18691,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Abercrombie Solar, plant 68339, in Richland County, ND, with 295.1 MW electrical generation nameplate. The listed stage is (L) Regulatory approvals pending. Not under construction. Operation is forecast for 2028-08; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68339, Abercrombie Solar, Richland County, ND. Selected generator IDs: 1.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 295.1 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (L) Regulatory approvals pending. Not under construction. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2028-08. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Otter Tail Power Co. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2028-08-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2028-08. The first day of August 2028 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18681,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Dutchman Solar generation and BESS, plant 68317, in Converse County, WY, with 499 MW electrical generation nameplate. The listed stage is (L) Regulatory approvals pending. Not under construction. Operation is forecast for 2029-06; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68317, Dutchman Solar generation and BESS, Converse County, WY. Selected generator IDs: DUTC1.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 499 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (L) Regulatory approvals pending. Not under construction. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2029-06. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: DUTC bn, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2029-06. The first day of June 2029 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18613,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Ross Solar, plant 62296, in Darlington County, SC, with 74.9 MW electrical generation nameplate. The listed stage is (T) Regulatory approvals received. Not under construction. Operation is forecast for 2027-11; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 62296, Ross Solar, Darlington County, SC. Selected generator IDs: 68.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 74.9 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (T) Regulatory approvals received. Not under construction. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-11. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Ross Solar. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-11. The first day of November 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18595,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Orchard BESS, plant 69665, in Fort Bend County, TX, with 10 MW battery power. The listed stage is (TS) Construction complete, but not yet in commercial operation. Operation is forecast for 2026-11; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69665, Orchard BESS, Fort Bend County, TX. Selected generator IDs: ORCH.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 10 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (TS) Construction complete, but not yet in commercial operation. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-11. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: IEP Tejas Verde, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-11. The first day of November 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18586,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies PIKE Solar, plant 70108, in Fayette County, IL, with 18 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-11; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 70108, PIKE Solar, Fayette County, IL. Selected generator IDs: PIKE.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 18 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-11. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Pike Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-11. The first day of November 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18578,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Ringe, plant 69938, in Olmsted County, MN, with 2.5 MW electrical generation nameplate. It reports operating status and initial operation in 2026-09.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69938, Ringe, Olmsted County, MN. Selected generator IDs: RINGE.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 2.5 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-09. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: OneEnergy, Inc.. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-09. The first day of September 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts.",
+        "title": "Ringe: 2.5 MW electrical generation nameplate in Olmsted County, MN"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18569,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Jamaica Community Energy, LLC, plant 70328, in Kings County, NY, with 4.9 MW battery power. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2027-02; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 70328, Jamaica Community Energy, LLC, Kings County, NY. Selected generator IDs: ND013.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 4.9 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-02. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: NineDot Holdings, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-02-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-02. The first day of February 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18566,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Vienna, plant 69218, in Oneida County, NY, with 5 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2026-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69218, Vienna, Oneida County, NY. Selected generator IDs: 11247.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 5 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Generate Capital. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-12. The first day of December 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18432,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Gunnar Reliability Project, plant 69277, in Hidalgo County, TX, with 150 MW battery power. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2026-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69277, Gunnar Reliability Project, Hidalgo County, TX. Selected generator IDs: GR001.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 150 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Gunnar Reliability Project LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-12. The first day of December 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Gunnar Reliability Project: 150 MW battery power in Hidalgo County, TX"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18427,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Murch Solar, LLC, plant 70089, in Van Buren County, MI, with 85 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2027-01; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 70089, Murch Solar, LLC, Van Buren County, MI. Selected generator IDs: MURCH.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 85 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-01. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Murch Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-01. The first day of January 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Murch Solar, LLC: 85 MW electrical generation nameplate in Van Buren County, MI"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18408,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Greer Solar Plant, plant 68515, in Washington County, MS, with 200 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2026-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68515, Greer Solar Plant, Washington County, MS. Selected generator IDs: GREER.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 200 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Greer Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-12. The first day of December 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Greer Solar Plant: 200 MW electrical generation nameplate in Washington County, MS"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18405,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Cherrywood Solar I, plant 67444, in Caroline County, MD, with 145 MW electrical generation nameplate. It reports operating status and initial operation in 2026-06.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 67444, Cherrywood Solar I, Caroline County, MD. Selected generator IDs: 6794.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 145 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-06. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Cherrywood Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-06-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-06. The first day of June 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18376,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Morgnec Solar, plant 66843, in Kent County, MD, with 55.8 MW electrical generation nameplate. It reports operating status and initial operation in 2026-08.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 66843, Morgnec Solar, Kent County, MD. Selected generator IDs: MORG1.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 55.8 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-08. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Urban Grid Solar. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-08-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-08. The first day of August 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18372,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Broadleaf Solar, plant 68490, in Hartford County, CT, with 200 MW electrical generation nameplate. The listed stage is (L) Regulatory approvals pending. Not under construction. Operation is forecast for 2028-04; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68490, Broadleaf Solar, Hartford County, CT. Selected generator IDs: BLS.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 200 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (L) Regulatory approvals pending. Not under construction. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2028-04. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Broadleaf Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2028-04-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2028-04. The first day of April 2028 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Broadleaf Solar: 200 MW electrical generation nameplate in Hartford County, CT"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18364,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies MC Solar, plant 68930, in Mercer County, PA, with 50 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2027-01; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68930, MC Solar, Mercer County, PA. Selected generator IDs: ENX36.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 50 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-01. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: MC Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-01. The first day of January 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18349,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Beavertail Solar, plant 68917, in Henry County, MO, with 400 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2027-04; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68917, Beavertail Solar, Henry County, MO. Selected generator IDs: BS.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 400 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-04. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Beavertail Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-04. The first day of April 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18347,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Grayson, plant 377, in Los Angeles County, CA, with 75 MW battery power. It reports operating status and initial operation in 2026-08.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 377, Grayson, Los Angeles County, CA. Selected generator IDs: 10.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 75 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-08. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: City of Glendale - (CA). This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-08-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-08. The first day of August 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18316,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Pleasant Prairie Solar Energy LLC, plant 69477, in Franklin County, OH, with 200 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69477, Pleasant Prairie Solar Energy LLC, Franklin County, OH. Selected generator IDs: PLSNT.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 200 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Invenergy Services LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-12. The first day of December 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Pleasant Prairie Solar Energy LLC: 200 MW electrical generation nameplate in Franklin County, OH"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18313,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Crossvine Solar, plant 66441, in Dubois County, IN, with 100 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2027-03; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 66441, Crossvine Solar, Dubois County, IN. Selected generator IDs: INCV1.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 100 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-03. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Crossvine Solar 1 LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-03-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-03. The first day of March 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Crossvine Solar: 100 MW electrical generation nameplate in Dubois County, IN"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18297,
+      "patch": {
+        "description": "Nolin Hills is an approved wind-and-solar proposal in Umatilla County, Oregon. Oregon’s regulator describes a preliminary 260 MW solar component within the approximately 600 MW combined generating plan; EIA’s September 2026 inventory separately lists 300 MW proposed solar nameplate. These scopes differ and do not establish operating capacity.",
+        "longFormSummary": "<p>Oregon’s regulator describes the approved facility as approximately 600 MW, preliminarily 340 MW wind and 260 MW solar. In July 2026 it received a request to extend the construction-commencement deadline to July 2029. That is a requested extension, not an achieved start. The preliminary EIA entry below separately lists 300 MW solar and a December 2027 operating forecast; the source-scope and schedule conflict remains unresolved.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/nhw.aspx\"></cite></p><ul><li>Identity: EIA plant 60070, Nolin Hills, Umatilla County, OR. Selected generator IDs: GEN2.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 300 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (P) Planned for installation, but regulatory approvals not initiated. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Nolin Hills Wind, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-12. The first day of December 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories. Oregon’s regulator reports a request to extend the construction-start deadline to July 2029, which conflicts with the EIA operation forecast. The native marker is retained only as that preliminary EIA forecast, not a reliable opening commitment.",
+        "title": "Nolin Hills Solar: 260 MW Approved-Plan Component; EIA Lists 300 MW Proposed Nameplate"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation.",
+      "addReferences": [
+        {
+          "url": "https://www.oregon.gov/energy/facilities/Pages/nhw.aspx",
+          "title": "Nolin Hills Wind Power Project — Oregon Department of Energy",
+          "confidence": 95,
+          "reasoning": "Opened official siting record distinguishes preliminary approved 260 MW solar scope from the EIA 300 MW proposal and identifies the construction-deadline-extension request."
+        }
+      ]
+    },
+    {
+      "id": 15934,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Asheville BESS, plant 69429, in Buncombe County, NC, with 17.3 MW battery power. It reports operating status and initial operation in 2026-09.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69429, Asheville BESS, Buncombe County, NC. Selected generator IDs: AVLB1.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 17.3 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-09. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Duke Energy Progress - (NC). This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-09. The first day of September 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15759,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Alina Energy LLC, plant 67250, in Wilson County, TX, with 200 MW electrical generation nameplate. The listed stage is (P) Planned for installation, but regulatory approvals not initiated. Operation is forecast for 2028-06; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 67250, Alina Energy LLC, Wilson County, TX. Selected generator IDs: ALIPV.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 200 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (P) Planned for installation, but regulatory approvals not initiated. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2028-06. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Alina Energy LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2028-06. The first day of June 2028 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15758,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Albemarle Beach Solar, plant 64169, in Washington County, NC, with 130.2 MW electrical generation nameplate. It reports operating status and initial operation in 2020-12.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 64169, Albemarle Beach Solar, Washington County, NC. Selected generator IDs: BEACH.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 130.2 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2020-12. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Albemarle Beach Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2020-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2020-12. The first day of December 2020 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15726,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies American Kings Solar, LLC, plant 60777, in Kings County, CA, with 128 MW electrical generation nameplate. It reports operating status and initial operation in 2020-12.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 60777, American Kings Solar, LLC, Kings County, CA. Selected generator IDs: GEN01.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 128 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2020-12. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: MN8 Energy LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>A developer or earlier report may state a different design/DC capacity. The EIA figure here is the inventory’s nameplate rating; it does not convert or validate an independently stated DC figure.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2020-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2020-12. The first day of December 2020 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15724,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Alligator Creek Solar, plant 70084, in Wheeler County, GA, with 80 MW electrical generation nameplate. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 70084, Alligator Creek Solar, Wheeler County, GA. Selected generator IDs: AC.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 80 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Alligator Creek Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>A developer or earlier report may state a different design/DC capacity. The EIA figure here is the inventory’s nameplate rating; it does not convert or validate an independently stated DC figure.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-12. The first day of December 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15723,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Alfred Oaks Solar, LLC, plant 66675, in Allegany County, NY, with 115.2 MW electrical generation nameplate. The listed stage is (P) Planned for installation, but regulatory approvals not initiated. Operation is forecast for 2029-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 66675, Alfred Oaks Solar, LLC, Allegany County, NY. Selected generator IDs: ALOAK.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 115.2 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (P) Planned for installation, but regulatory approvals not initiated. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2029-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Alfred Oaks Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2029-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2029-12. The first day of December 2029 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15722,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Alberta Solar, plant 68070, in Brunswick County, VA, with 3 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2026-10; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68070, Alberta Solar, Brunswick County, VA. Selected generator IDs: ALBER.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 3 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-10. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Dominion Renewable Energy. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-10. The first day of October 2026 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15718,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies AEUG Fleming Solar, LLC, plant 64658, in Fleming County, KY, with 188.5 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2028-05; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 64658, AEUG Fleming Solar, LLC, Fleming County, KY. Selected generator IDs: AFS.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 188.5 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2028-05. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Acciona Energy USA Global, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>A developer or earlier report may state a different design/DC capacity. The EIA figure here is the inventory’s nameplate rating; it does not convert or validate an independently stated DC figure.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2028-05-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2028-05. The first day of May 2028 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15717,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Accalia Point Solar, LLC, plant 66673, in Cameron County, TX, with 190.5 MW electrical generation nameplate. The listed stage is (P) Planned for installation, but regulatory approvals not initiated. Operation is forecast for 2028-05; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 66673, Accalia Point Solar, LLC, Cameron County, TX. Selected generator IDs: 66666.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 190.5 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (P) Planned for installation, but regulatory approvals not initiated. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2028-05. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Accalia Point Solar, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>A developer or earlier report may state a different design/DC capacity. The EIA figure here is the inventory’s nameplate rating; it does not convert or validate an independently stated DC figure.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2028-05-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2028-05. The first day of May 2028 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15702,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies ATLAS Solar VI, LLC, plant 69238, in La Paz County, AZ, with 100 MW electrical generation nameplate. It reports operating status and initial operation in 2026-09.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69238, ATLAS Solar VI, LLC, La Paz County, AZ. Selected generator IDs: ATL6.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 100 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (OP) Operating. The inventory reports commercial operation; the recorded operation month does not establish an exact commissioning day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported initial operating month(s): 2026-09. The native date uses the first day of the reported operating month as an estimated month marker.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: ATLAS Solar VI, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records initial operation 2026-09. The first day of September 2026 is an estimated month-only display marker, not an exact opening day. The operating record supersedes earlier future forecasts."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15697,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Armadillo Solar Center, plant 64349, in Navarro County, TX, with 175 MW electrical generation nameplate. The listed stage is (U) Under construction, less than or equal to 50 percent complete. Operation is forecast for 2027-04; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 64349, Armadillo Solar Center, Navarro County, TX. Selected generator IDs: 6666.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 175 MW electrical generation nameplate. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (U) Under construction, less than or equal to 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-04. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: AES Clean Energy. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>A developer or earlier report may state a different design/DC capacity. The EIA figure here is the inventory’s nameplate rating; it does not convert or validate an independently stated DC figure.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-04. The first day of April 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15690,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Atlas VIII, plant 68323, in La Paz County, AZ, with 382.4 MW battery power. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2026-12 / 2027-01; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 68323, Atlas VIII, La Paz County, AZ. Selected generator IDs: ALT8A, ALT8B.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 382.4 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2026-12 / 2027-01. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Atlas VIII LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Atlas VIII’s two battery blocks are separately listed: ALT8A at 210 MW with a December 2026 forecast and ALT8B at 172.4 MW with a January 2027 forecast. They total 382.4 MW power; different operation months are retained. The previously cited financing package is not a published construction budget.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2026-12 / 2027-01. The first day of January 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18494,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Rosamond South II, plant 69648, in Kern County, CA, with 92 MW battery power. The listed stage is (V) Under construction, more than 50 percent complete. Operation is forecast for 2027-03; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 69648, Rosamond South II, Kern County, CA. Selected generator IDs: RSBA.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 92 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (V) Under construction, more than 50 percent complete. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-03. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Golden Fields Solar VI, LLC. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>This profile selects the RSBA 92 MW battery generator only. The separate 48 MW BSBA2 row at the same EIA plant is excluded from this phase’s rating and dates.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2027-03-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-03. The first day of March 2027 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories."
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 18806,
+      "patch": {
+        "description": "EIA’s September 2026 preliminary inventory identifies Black Walnut Solar, LLC, plant 66363, in Jones County, NC, with 80 MW electrical generation nameplate with separate 32 MW battery power. The listed stage is (L) Regulatory approvals pending. Not under construction; (P) Planned for installation, but regulatory approvals not initiated. Operation is forecast for 2027-11 / 2028-12; this is a preliminary survey estimate, not an achieved opening or capacity commitment.",
+        "longFormSummary": "<ul><li>Identity: EIA plant 66363, Black Walnut Solar, LLC, Jones County, NC. Selected generator IDs: GEN1, GEN1B.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Published scope: 80 MW electrical generation nameplate with separate 32 MW battery power. Ratings are nameplate electrical capacity or battery power, not measured annual energy. Other technologies or generators at the site are not silently included.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>September 2026 survey stage: (L) Regulatory approvals pending. Not under construction; (P) Planned for installation, but regulatory approvals not initiated. A planned operation month is a forecast, and does not establish completed construction or commercial operation.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reported operation forecast month(s): 2027-11 / 2028-12. The native date uses the first day of the final listed forecast month as an estimated month marker, not an announced opening day.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Reporting entity: Cypress Creek Renewables. This identifies the survey respondent, and does not independently establish every ownership, financing or EPC relationship.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>The cited inventory does not establish a project-specific construction budget, construction start, permanent job count, building area or annual energy output. Battery duration and stored MWh are not inferred.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "utcStartDateTime": "2028-12-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA’s September 2026 preliminary inventory records a forecast operation month 2027-11 / 2028-12. The first day of December 2028 is an estimated month-only display marker, not an exact opening day. The forecast does not prove physical completion and can change in later monthly inventories.",
+        "title": "Black Walnut Solar: 80 MW Solar and Separate 32 MW Battery Proposal in Jones County, North Carolina"
+      },
+      "reason": "Replace contradicted or unsupported legacy capacity/forecast narrative with the freshly opened, identity-matched EIA source. Preserve month precision and explicitly distinguish preliminary plans from achieved operation."
+    },
+    {
+      "id": 15672,
+      "patch": {
+        "price": 7340000000,
+        "priceCurrency": "EUR",
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "reason": "CATL’s August 12, 2022 announcement publishes EUR 7.34 billion for the Debrecen project; the profile is on the project-announcement pin rather than its later trial-production milestone."
+    },
+    {
+      "id": 7152,
+      "patch": {
+        "price": 20900000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null
+      },
+      "reason": "New Jersey HMFA’s July 15, 2016 release publishes approximately USD 20.9 million total development cost for the described 70-home final phase. Tax-credit proceeds and modeled economic output are not construction cost."
+    }
+  ],
+  "profileSourceRefinements": [
+    {
+      "id": 15690,
+      "before": {
+        "sector": "Energy: battery storage",
+        "status": "construction",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Published electrical capacity",
+            "value": "ALT8A: 210 MW battery power. Together with the separately quoted companion unit, total is 382.4 MW; generator commissioning months differ.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "Atlas VIII Map Map AZ La Paz CISO IPP Non-CHP ALT8A 210 210 210 Batteries MWH BA"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Generator technology and scope",
+            "value": "Batteries; companion generator ALT8B: 172.4 MW battery power. Same EIA plant 68323; not stored energy or an assumed four-hour duration.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "Atlas VIII Map Map AZ La Paz CISO IPP Non-CHP ALT8B 172.4 172.4 172.4 Batteries MWH BA"
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported project stage",
+            "value": "EIA reports (V) Under construction, more than 50 percent complete. A planned operation date is not evidence of commercial service.",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "(V) Under construction, more than 50 percent complete"
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Reported operation month",
+            "value": "Planned operation 2026-12 / 2027-01; preliminary survey estimate, not a capacity commitment or achieved milestone.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2026 (V) Under construction, more than 50 percent complete"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Reported operation forecast",
+            "date": "2026-12 / 2027-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2026 (V) Under construction, more than 50 percent complete"
+            }
+          }
+        ]
+      },
+      "profile": {
+        "sector": "Energy: battery storage",
+        "status": "construction",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Published electrical capacity",
+            "value": "ALT8A: 210 MW battery power. Together with the separately quoted companion unit, total is 382.4 MW; generator commissioning months differ.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "Atlas VIII Map Map AZ La Paz CISO IPP Non-CHP ALT8A 210 210 210 Batteries MWH BA"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Generator technology and scope",
+            "value": "Batteries; companion generator ALT8B: 172.4 MW battery power. Same EIA plant 68323; not stored energy or an assumed four-hour duration.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "Atlas VIII Map Map AZ La Paz CISO IPP Non-CHP ALT8B 172.4 172.4 172.4 Batteries MWH BA"
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported project stage",
+            "value": "EIA reports (V) Under construction, more than 50 percent complete. A planned operation date is not evidence of commercial service.",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Atlas VIII, Planned sheet, rows 393, 564",
+              "publishedDate": "2026-10-23",
+              "quote": "(V) Under construction, more than 50 percent complete"
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Reported operation month",
+            "value": "Generator ALT8A operation forecast (not confirmed commercial service): 2026-12; Generator ALT8B operation forecast (not confirmed commercial service): 2027-01. Separate components retain their own month-only forecasts.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 inventory — Atlas VIII, Planned row 564, generator ALT8B",
+              "publishedDate": "2026-10-23",
+              "quote": "1 2027 (V) Under construction, more than 50 percent complete"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Generator ALT8A operation forecast (not confirmed commercial service)",
+            "date": "2026-12",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 inventory — Atlas VIII, Planned row 393, generator ALT8A",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2026 (V) Under construction, more than 50 percent complete"
+            }
+          },
+          {
+            "label": "Generator ALT8B operation forecast (not confirmed commercial service)",
+            "date": "2027-01",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 inventory — Atlas VIII, Planned row 564, generator ALT8B",
+              "publishedDate": "2026-10-23",
+              "quote": "1 2027 (V) Under construction, more than 50 percent complete"
+            }
+          }
+        ]
+      },
+      "reason": "Separate generator-level forecasts are supported by separate literal date/status cell quotations; a combined window is not presented as a single commissioning event."
+    },
+    {
+      "id": 18806,
+      "before": {
+        "sector": "Energy: photovoltaic generation",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Published electrical capacity",
+            "value": "80 MW electrical generation nameplate in September 2026 preliminary planned inventory; not operating output.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "Black Walnut Solar, LLC Map Map NC Jones DUK IPP Non-CHP GEN1 80 80 80 Solar Photovoltaic SUN PV"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Generator technology and scope",
+            "value": "Photovoltaic generation with separate 32 MW battery power; battery generator IDs GEN1B. No battery MWh inferred.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "Black Walnut Solar, LLC Map Map NC Jones DUK IPP Non-CHP GEN1B 32 32 32 Batteries MWH BA"
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported project stage",
+            "value": "EIA reports (L) Regulatory approvals pending. Not under construction; (P) Planned for installation, but regulatory approvals not initiated. A planned operation date is not evidence of commercial service.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "(L) Regulatory approvals pending. Not under construction"
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Reported operation month",
+            "value": "Planned operation 2027-11 / 2028-12; preliminary survey estimate, not a capacity commitment or achieved milestone.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "11 2027 (L) Regulatory approvals pending. Not under construction"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Reported operation forecast",
+            "date": "2027-11 / 2028-12",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "11 2027 (L) Regulatory approvals pending. Not under construction"
+            }
+          }
+        ]
+      },
+      "profile": {
+        "sector": "Energy: photovoltaic generation",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Published electrical capacity",
+            "value": "80 MW electrical generation nameplate in September 2026 preliminary planned inventory; not operating output.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "Black Walnut Solar, LLC Map Map NC Jones DUK IPP Non-CHP GEN1 80 80 80 Solar Photovoltaic SUN PV"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Generator technology and scope",
+            "value": "Photovoltaic generation with separate 32 MW battery power; battery generator IDs GEN1B. No battery MWh inferred.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "Black Walnut Solar, LLC Map Map NC Jones DUK IPP Non-CHP GEN1B 32 32 32 Batteries MWH BA"
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported project stage",
+            "value": "EIA reports (L) Regulatory approvals pending. Not under construction; (P) Planned for installation, but regulatory approvals not initiated. A planned operation date is not evidence of commercial service.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Black Walnut Solar, LLC, Planned sheet, rows 1102, 1776",
+              "publishedDate": "2026-10-23",
+              "quote": "(L) Regulatory approvals pending. Not under construction"
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Reported operation month",
+            "value": "Generator GEN1 operation forecast (not confirmed commercial service): 2027-11; Generator GEN1B operation forecast (not confirmed commercial service): 2028-12. Separate components retain their own month-only forecasts.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 inventory — Black Walnut Solar, LLC, Planned row 1776, generator GEN1B",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2028 (P) Planned for installation, but regulatory approvals not initiated"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Generator GEN1 operation forecast (not confirmed commercial service)",
+            "date": "2027-11",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 inventory — Black Walnut Solar, LLC, Planned row 1102, generator GEN1",
+              "publishedDate": "2026-10-23",
+              "quote": "11 2027 (L) Regulatory approvals pending. Not under construction"
+            }
+          },
+          {
+            "label": "Generator GEN1B operation forecast (not confirmed commercial service)",
+            "date": "2028-12",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 inventory — Black Walnut Solar, LLC, Planned row 1776, generator GEN1B",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2028 (P) Planned for installation, but regulatory approvals not initiated"
+            }
+          }
+        ]
+      },
+      "reason": "Separate generator-level forecasts are supported by separate literal date/status cell quotations; a combined window is not presented as a single commissioning event."
+    },
+    {
+      "id": 18297,
+      "before": {
+        "sector": "Energy: photovoltaic generation",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Published electrical capacity",
+            "value": "300 MW electrical generation nameplate in September 2026 preliminary planned inventory; not operating output.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "Nolin Hills Map Map OR Umatilla BPAT IPP Non-CHP GEN2 300 300 300 Solar Photovoltaic SUN PV"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Generator technology and scope",
+            "value": "Technology: Solar Photovoltaic. Plant 60070; selected generator IDs GEN2. Scope is the named solar generating component, not unrelated units at the site.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "Solar Photovoltaic"
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported project stage",
+            "value": "EIA reports (P) Planned for installation, but regulatory approvals not initiated. A planned operation date is not evidence of commercial service.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "(P) Planned for installation, but regulatory approvals not initiated"
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Reported operation month",
+            "value": "Planned operation 2027-12; preliminary survey estimate, not a capacity commitment or achieved milestone.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2027 (P) Planned for installation, but regulatory approvals not initiated"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Reported operation forecast",
+            "date": "2027-12",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2027 (P) Planned for installation, but regulatory approvals not initiated"
+            }
+          }
+        ]
+      },
+      "profile": {
+        "sector": "Energy: photovoltaic generation",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory gives capacity but no comparable facility cohort with output percentiles.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not establish a project-specific automated production process.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "Generator technology is identified, but no manufacturing capability above a scored sector baseline is documented.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No project resource-efficiency measure with a consistently normalized peer cohort is published in the cited inventory.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "The generator inventory does not quantify manufacturing bottleneck relief or critical supply dependencies.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No documented credential pathway or measured workforce training outcome is supplied by the generator inventory.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "capacity",
+            "label": "Published electrical capacity",
+            "value": "Oregon’s approved-plan description preliminarily assigns 260 MW to solar and 340 MW to wind. EIA separately proposes 300 MW solar nameplate. Scope conflict remains unresolved; the figures are not additive and do not establish operation.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.oregon.gov/energy/facilities/Pages/nhw.aspx",
+              "title": "Nolin Hills Wind Power Project — Oregon Department of Energy",
+              "publishedDate": null,
+              "quote": "preliminarily 340 MW from wind and 260 MW from solar"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Generator technology and scope",
+            "value": "Technology: Solar Photovoltaic. Plant 60070; selected generator IDs GEN2. Scope is the named solar generating component, not unrelated units at the site.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "Solar Photovoltaic"
+            }
+          },
+          {
+            "key": "stage",
+            "label": "Reported project stage",
+            "value": "EIA reports (P) Planned for installation, but regulatory approvals not initiated. A planned operation date is not evidence of commercial service.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "(P) Planned for installation, but regulatory approvals not initiated"
+            }
+          },
+          {
+            "key": "timeline",
+            "label": "Reported operation month",
+            "value": "July 17, 2026: regulator receives request to extend start deadline to July 2029. EIA’s separate December 2027 operating forecast conflicts with that timing; neither establishes a reliable commissioning commitment.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2027 (P) Planned for installation, but regulatory approvals not initiated"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Regulator receives request to extend construction-start deadline; not approval or start",
+            "date": "2026-07-17",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.oregon.gov/energy/facilities/Pages/nhw.aspx",
+              "title": "Nolin Hills Wind Power Project — Oregon Department of Energy",
+              "publishedDate": null,
+              "quote": "On July 17, 2026, the Department received preliminary Request for Amendment 1"
+            }
+          },
+          {
+            "label": "Conflicting EIA operation forecast; requested start-deadline extension remains unresolved",
+            "date": "2027-12",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+              "title": "EIA September 2026 preliminary generator inventory — Nolin Hills, Planned sheet, rows 1181",
+              "publishedDate": "2026-10-23",
+              "quote": "12 2027 (P) Planned for installation, but regulatory approvals not initiated"
+            }
+          }
+        ]
+      },
+      "reason": "Retain regulator-approved scope and the conflicting preliminary EIA proposal, rather than silently replacing one with the other."
+    }
+  ],
+  "duplicateScopesSkipped": [
+    {
+      "pinId": 18977,
+      "alreadyProfiledPin": 16013,
+      "reason": "Overlapping campus already has a sourced project or phase profile; do not add a second profile for the repeated scope."
+    },
+    {
+      "pinId": 19061,
+      "alreadyProfiledPin": 4940,
+      "reason": "Overlapping campus already has a sourced project or phase profile; do not add a second profile for the repeated scope."
+    },
+    {
+      "pinId": 19163,
+      "alreadyProfiledPin": 18979,
+      "reason": "Overlapping campus already has a sourced project or phase profile; do not add a second profile for the repeated scope."
+    },
+    {
+      "pinId": 19173,
+      "alreadyProfiledPin": 3391,
+      "reason": "Overlapping campus already has a sourced project or phase profile; do not add a second profile for the repeated scope."
+    },
+    {
+      "pinId": 19175,
+      "alreadyProfiledPin": 16309,
+      "reason": "Overlapping campus already has a sourced project or phase profile; do not add a second profile for the repeated scope."
+    },
+    {
+      "pinId": 19177,
+      "alreadyProfiledPin": 7307,
+      "reason": "Overlapping campus already has a sourced project or phase profile; do not add a second profile for the repeated scope."
+    }
+  ],
+  "physicalStageConflictsSkipped": [
+    {
+      "pinId": 18396,
+      "reason": "September EIA says regulatory approvals received, not under construction; BrightNight’s May financial close describes moving into construction and its current site names an onsite construction manager. Need an explicit dated physical-start reading before replacing the existing In Progress tag.",
+      "sources": [
+        "https://brightnightpower.com/frontier/",
+        "https://brightnightpower.com/about-us/news-insights/brightnight-announces-financial-close-for-frontier-a-120-mw-solar-project-delivering-clean-power-to-kentucky/"
+      ]
+    },
+    {
+      "pinId": 18352,
+      "reason": "EIA capacity/phase and physical status conflict with old article claims; October 2026 stormwater plan concerns broader 589-acre scope. Need matched current operator/regulator physical-construction and AC-capacity evidence before profiling.",
+      "sources": [
+        "https://observerwv.news/posts/rippon-solar-project-expands-stormwater-construction-application",
+        "https://us.qcells.com/epc/services/utility-projects/"
+      ]
+    }
+  ]
+}
