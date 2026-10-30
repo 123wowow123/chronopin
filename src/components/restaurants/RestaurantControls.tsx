@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { Icon } from '@/components/ui/Icon';
-import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
+import { askViewerPlace, viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
 import type { RestaurantSort } from '@/lib/restaurantSort';
 import styles from './RestaurantGuide.module.css';
 
@@ -19,6 +19,8 @@ export function useRestaurantSort(label: string, defaultSort: 'rating' | 'openin
   useEffect(() => {
     const pending = request; const id = pending.current;
     void viewerPlace().then((place) => { if (place && id === pending.current) setOrigin(place); }).catch(() => {});
+    // Where permission is undecided, ask so tiles can show the real distance.
+    void askViewerPlace().then((place) => { if (place && id === pending.current) setOrigin(place); }).catch(() => {});
     return () => { pending.current++; };
   }, []);
   const selectSort = (value: RestaurantSort) => {

@@ -56,7 +56,9 @@ import PinUpdate from '../model/pinUpdate';
 import PinView from '../model/pinView';
 import UserWiki from '../model/userWiki';
 import { compareDuplicateRank } from '@/lib/duplicates';
-import type { PinUpdateJson } from '@/lib/pinUpdates';
+import type { PinChange, PinUpdateJson } from '@/lib/pinUpdates';
+import { diffWithContext, wordDiff } from '@/lib/textDiff';
+import { plainText } from '@/lib/format';
 import { safeHtml } from '@/lib/sanitize';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { SliderTypingSetting } from '@/lib/sliderTyping';
@@ -445,10 +447,23 @@ export async function pinUpdates(id: number): Promise<PinUpdateJson[]> {
   const updates = await PinUpdate.forPin(id);
   return updates.map((update) => ({
     ...update,
-    changes: update.changes.map((change) =>
-      change.field === 'description' || change.field === 'longFormSummary' ? { ...change, before: change.before && safeHtml(change.before), after: null } : change,
-    ),
+    changes: update.changes.map(updateChange),
   }));
+}
+
+// A change as the pane gets it. The text fields carry the word diff of what
+// they said then and now instead of the whole of both; a rewrite with nothing
+// to compare (no earlier text) keeps its sanitized before.
+function updateChange(change: PinChange): PinChange {
+  if (change.field !== 'title' && change.field !== 'description' && change.field !== 'longFormSummary') return change;
+  const long = change.field !== 'title';
+  const was = plainText(change.before);
+  const now = plainText(change.after);
+  if (was && now) {
+    const diff = diffWithContext(wordDiff(was, now));
+    return long ? { ...change, before: null, after: null, diff } : { ...change, diff };
+  }
+  return long ? { ...change, before: change.before && safeHtml(change.before), after: null } : change;
 }
 
 // Pins like this one, by what they share with it: tags, then company, then the

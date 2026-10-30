@@ -1,0 +1,187 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 17101,
+      "patch": {
+        "title": "Smalling: 600 MW Solar Interconnection Request J2519 — Withdrawn",
+        "tags": [
+          "Cleanview",
+          "Entergy",
+          "Louisiana",
+          "MISO",
+          "Planned",
+          "Richland Parish",
+          "Smalling Solar",
+          "Solar",
+          "Withdrawn"
+        ],
+        "longFormSummary": "<ul><li>J2519 is a 600 MW photovoltaic generation interconnection request in Richland, LA. The grid operator lists its queue status as Withdrawn. The requested in-service date is 2026-10-31; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is Smalling. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul><p>The MISO queue was checked on October 30, 2026 and records this request as withdrawn. The actual withdrawal date is not published; the timeline milestone records the date checked.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></p>"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2519",
+          "confidence": 95
+        }
+      ],
+      "outcome": "withdrawn-tag-and-timeline",
+      "research": {
+        "queueId": "J2519",
+        "source": {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2519",
+          "publishedDate": null,
+          "quote": "\"applicationStatus\":\"Withdrawn\""
+        },
+        "observationDate": "2026-10-30",
+        "withdrawalDate": null
+      }
+    },
+    {
+      "id": 17132,
+      "patch": {
+        "title": "Xenia: 200 MW Battery Interconnection Request J2379 — Withdrawn",
+        "tags": [
+          "BESS",
+          "ClayCounty",
+          "CleanEnergy",
+          "EnergyStorage",
+          "Illinois",
+          "MISO",
+          "VesperEnergy",
+          "Withdrawn"
+        ],
+        "longFormSummary": "<ul><li>J2379 is a 200 MW battery storage interconnection request in Clay, IL. The grid operator lists its queue status as Withdrawn. The requested in-service date is 2026-11-01; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is Xenia. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul><p>The MISO queue was checked on October 30, 2026 and records this request as withdrawn. The actual withdrawal date is not published; the timeline milestone records the date checked.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></p>"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2379",
+          "confidence": 95
+        }
+      ],
+      "outcome": "withdrawn-tag-and-timeline",
+      "research": {
+        "queueId": "J2379",
+        "source": {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2379",
+          "publishedDate": null,
+          "quote": "\"applicationStatus\":\"Withdrawn\""
+        },
+        "observationDate": "2026-10-30",
+        "withdrawalDate": null
+      }
+    },
+    {
+      "id": 17162,
+      "patch": {
+        "title": "Batesville to Moon Lake: 450 MW Solar Interconnection Request J2966 — Withdrawn",
+        "tags": [
+          "CleanEnergy",
+          "MISO",
+          "Mississippi",
+          "QuitmanCounty",
+          "RenewableEnergy",
+          "Solar",
+          "Transmission",
+          "Withdrawn"
+        ],
+        "longFormSummary": "<ul><li>J2966 is a 450 MW photovoltaic generation interconnection request in Quitman, MS. The grid operator lists its queue status as Withdrawn. The requested in-service date is 2025-10-15; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is Batesville to Moon Lake ss 230kV Line. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul><p>The MISO queue was checked on October 30, 2026 and records this request as withdrawn. The actual withdrawal date is not published; the timeline milestone records the date checked.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></p>"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2966",
+          "confidence": 95
+        }
+      ],
+      "outcome": "withdrawn-tag-and-timeline",
+      "research": {
+        "queueId": "J2966",
+        "source": {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2966",
+          "publishedDate": null,
+          "quote": "\"applicationStatus\":\"Withdrawn\""
+        },
+        "observationDate": "2026-10-30",
+        "withdrawalDate": null
+      }
+    },
+    {
+      "id": 17301,
+      "patch": {
+        "title": "Gibson to Merom Energy Storage Project: 200 MW Battery Interconnection Request J2472 — Withdrawn",
+        "tags": [
+          "BESS",
+          "CleanEnergy",
+          "EnergyStorage",
+          "Indiana",
+          "MISO",
+          "SullivanCounty",
+          "Transmission",
+          "Withdrawn"
+        ],
+        "longFormSummary": "<ul><li>J2472 is a 200 MW battery storage interconnection request in Sullivan, IN. The grid operator lists its queue status as Withdrawn. The requested in-service date is 2027-05-07; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is Gibson Sta - Merom (HED) 345.0kV. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul><p>The MISO queue was checked on October 30, 2026 and records this request as withdrawn. The actual withdrawal date is not published; the timeline milestone records the date checked.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></p>"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2472",
+          "confidence": 95
+        }
+      ],
+      "outcome": "withdrawn-tag-and-timeline",
+      "research": {
+        "queueId": "J2472",
+        "source": {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J2472",
+          "publishedDate": null,
+          "quote": "\"applicationStatus\":\"Withdrawn\""
+        },
+        "observationDate": "2026-10-30",
+        "withdrawalDate": null
+      }
+    },
+    {
+      "id": 17357,
+      "patch": {
+        "title": "Lakeover to McAdams: 188 MW Solar Interconnection Request J3049 — Withdrawn",
+        "tags": [
+          "500kV",
+          "CleanEnergy",
+          "Entergy",
+          "MadisonCounty",
+          "Mississippi",
+          "RenewableEnergy",
+          "Solar",
+          "Withdrawn"
+        ],
+        "longFormSummary": "<ul><li>J3049 is a 188 MW photovoltaic generation interconnection request in Madison, MS. The grid operator lists its queue status as Withdrawn. The requested in-service date is 2024-12-01; this is a planning date.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>The point of interconnection is LAKEOVER EHV - MCADAMS EHV 500.0kV. Queue processing status does not establish physical construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>No exact-scope construction budget is published in the cited grid record. Battery power is distinct from stored energy; no four-hour duration or battery MWh is inferred.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul><p>The MISO queue was checked on October 30, 2026 and records this request as withdrawn. The actual withdrawal date is not published; the timeline milestone records the date checked.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></p>"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J3049",
+          "confidence": 95
+        }
+      ],
+      "outcome": "withdrawn-tag-and-timeline",
+      "research": {
+        "queueId": "J3049",
+        "source": {
+          "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+          "title": "MISO interconnection queue — J3049",
+          "publishedDate": null,
+          "quote": "\"applicationStatus\":\"Withdrawn\""
+        },
+        "observationDate": "2026-10-30",
+        "withdrawalDate": null
+      }
+    }
+  ]
+}

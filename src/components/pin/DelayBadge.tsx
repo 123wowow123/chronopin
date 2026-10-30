@@ -61,7 +61,7 @@ export function DelayReasoning({ pin }: { pin: Pick<PinJson, 'originalStartDate'
   }
   return (
     <span className="basis-full text-xs leading-relaxed text-subtle italic">
-      {t('delay.reasoning', { span: delay.label, date: formatDayKey(delay.from, t.locale) })}
+      {t('delay.reasoning', { span: delay.label, from: formatDayKey(delay.from, t.locale), to: formatDayKey(delay.to, t.locale) })}
       {pin.delayReasoning ? ` ${pin.delayReasoning}` : ''}
     </span>
   );

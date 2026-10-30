@@ -1,0 +1,361 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Exact original 247-candidate priced queue",
+  "edits": [
+    {
+      "id": 17117,
+      "patch": {
+        "title": "Naugatuck Avenue: Connecticut Selects 200 MW Jupiter Power Storage Proposal",
+        "description": "Connecticut selected Jupiter Power’s 200 MW Naugatuck Avenue battery project in its December 2024 solicitation. Selection begins contract negotiations; it does not establish construction, a $240 million budget or an opening date.",
+        "longFormSummary": "<ul><li>DEEP identifies Jupiter Power as developer and 200 MW as selected storage capacity, correcting the former Key Capture attribution and unverified $240 million budget.<cite data-ref=\"https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections\"></cite></li><li>The next procurement step is contract negotiation; the selection does not prove construction or commercial operation.<cite data-ref=\"https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "BESS",
+          "CleanEnergy",
+          "Connecticut",
+          "EnergyStorage",
+          "ISONE",
+          "KeyCaptureEnergy",
+          "NewHavenCounty",
+          "Proposed"
+        ],
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The cited project source establishes 2024-12-20. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2024-12-20T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "company": "Jupiter Power",
+        "companyWikiUrl": null
+      },
+      "addReferences": [
+        {
+          "url": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+        "note": "DEEP-selected 200 MW storage proposal. Not current generation, MWh, or evidence of construction. Developer: Jupiter Power."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Naugatuck Avenue Clean Energy Storage Center: 240M USD, 205 MW BESS in New Haven County, Connecticut",
+        "oldPrice": 240000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 17296,
+      "patch": {
+        "title": "Steward Creek Solar Phase 2: Proposed 600 MWac, 2030 Operation Target",
+        "description": "Steward Creek’s second solar phase is proposed at 600 MWac across approximately 3,493 acres. TerraForm’s February 2026 announcement targets Phase 2 construction in 2028 and commercial operation in 2030.",
+        "longFormSummary": "<ul><li>The federal consultation appendix identifies a 600 MWac second phase and approximately 3,493 acres. The earlier $620 million phase budget is not supported by the reviewed filings.<cite data-ref=\"https://www.leecountyil.com/DocumentCenter/View/4520/Appendix-L---IPaC\"></cite></li><li>TerraForm’s February 2026 announcement differentiates Phase 1 and Phase 2 schedules; the full 1.56 GW figure is DC project scale and is not assigned to Phase 2.<cite data-ref=\"https://www.terraform.com/news-press/terraform-power-announces-acquisition-of-1-56-gw-solar-project-from-hexagon-energy-in-lee-county-illinois/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "CleanEnergy",
+          "HexagonEnergy",
+          "Illinois",
+          "LeeCounty",
+          "PJM",
+          "RenewableEnergy",
+          "Solar",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2030. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "company": "Steward Creek Solar, LLC / TerraForm Power",
+        "companyWikiUrl": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.leecountyil.com/DocumentCenter/View/4520/Appendix-L---IPaC",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://www.terraform.com/news-press/terraform-power-announces-acquisition-of-1-56-gw-solar-project-from-hexagon-energy-in-lee-county-illinois/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 600,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.leecountyil.com/DocumentCenter/View/4520/Appendix-L---IPaC",
+        "note": "Proposed Phase 2 photovoltaic capacity, 600 MWac. Not combined two-phase DC capacity or current generation."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Steward Creek Clean Solar Center Phase 2: 620M USD, 600 MWac Solar Facility in Lee County, Illinois",
+        "oldPrice": 620000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18186,
+      "patch": {
+        "title": "Pitt Solar: 80 MWac Photovoltaic Project with Published Operation Targets",
+        "description": "SunEnergy1 identifies Pitt Solar at 80 MWac with fixed-tilt photovoltaic equipment and interconnection to Virginia Electric Power Company in PJM. Its operation target is July 2028.",
+        "longFormSummary": "<ul><li>SunEnergy1 identifies Pitt Solar at 80 MWac with fixed-tilt photovoltaic equipment and interconnection to Virginia Electric Power Company in PJM. Its operation target is July 2028.<cite data-ref=\"https://www.sunenergy1.com/project/pitt/\"></cite></li><li>The current EPC project page does not publish the earlier exact construction budget. Future targets are not proof of completed construction or commercial operation.<cite data-ref=\"https://www.sunenergy1.com/project/pitt/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "DukeEnergy",
+          "NorthCarolina",
+          "PittCounty",
+          "RenewableEnergy",
+          "Solar",
+          "SunEnergy1",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2028-07. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2028-07-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.sunenergy1.com/project/pitt/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 80,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.sunenergy1.com/project/pitt/",
+        "note": "80 MWac solar project capacity; future EPC schedule, not current operating generation. No annual output inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Pitt Clean Solar Energy Center: 110M USD, 80 MW Solar Farm in Pitt County, North Carolina",
+        "oldPrice": 110000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18185,
+      "patch": {
+        "title": "Cherry Solar: 180 MWac Photovoltaic Project with Published Operation Targets",
+        "description": "SunEnergy1 identifies Cherry Solar at 180 MWac with fixed-tilt photovoltaic equipment and interconnection to Virginia Electric Power Company in PJM. It publishes two phase targets: November 2026 and March 2027.",
+        "longFormSummary": "<ul><li>SunEnergy1 identifies Cherry Solar at 180 MWac with fixed-tilt photovoltaic equipment and interconnection to Virginia Electric Power Company in PJM. It publishes two phase targets: November 2026 and March 2027.<cite data-ref=\"https://www.sunenergy1.com/project/cherry-solar/\"></cite></li><li>The current EPC project page does not publish the earlier exact construction budget. Future targets are not proof of completed construction or commercial operation.<cite data-ref=\"https://www.sunenergy1.com/project/cherry-solar/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "DominionEnergy",
+          "NorthamptonCounty",
+          "NorthCarolina",
+          "PJM",
+          "RenewableEnergy",
+          "Solar",
+          "SunEnergy1",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2026-11. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "address": "Estimated: Gaston, Northampton County, North Carolina; city context, exact project parcel unverified"
+      },
+      "addReferences": [
+        {
+          "url": "https://www.sunenergy1.com/project/cherry-solar/",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 180,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.sunenergy1.com/project/cherry-solar/",
+        "note": "180 MWac solar project capacity; future EPC schedule, not current operating generation. No annual output inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Cherry Clean Solar Energy Center: 225M USD, 180 MW Solar Farm in Northampton County, North Carolina",
+        "oldPrice": 225000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 18042,
+      "patch": {
+        "title": "Okolona Solar: Proposed Up to 145 MW in Chickasaw County",
+        "description": "NextEra describes Okolona Solar as a proposed up-to-145 MW project in Chickasaw County, Mississippi, targeting operations as early as August 2028 subject to permits and approvals.",
+        "longFormSummary": "<ul><li>The operator’s proposed 145 MW project is in Chickasaw County. A conflicting preliminary EIA row naming Henderson County is not substituted for the operator’s site identity.<cite data-ref=\"https://www.project.nexteraenergyresources.com/okolona-solar\"></cite></li><li>August 2028 is the operator’s earliest target, pending permits. Its web page prints $50 million project investment and $230 million tax revenue; the earlier $165 million budget is removed pending confirmation of those inconsistent economic labels.<cite data-ref=\"https://www.project.nexteraenergyresources.com/okolona-solar/community-benefits\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "161kV",
+          "ChickasawCounty",
+          "Mississippi",
+          "NextEra",
+          "RenewableEnergy",
+          "Solar",
+          "TVA",
+          "Proposed"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2028-08. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2028-08-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.project.nexteraenergyresources.com/okolona-solar",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        },
+        {
+          "url": "https://www.project.nexteraenergyresources.com/okolona-solar/community-benefits",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 145,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.project.nexteraenergyresources.com/okolona-solar",
+        "note": "Proposed operator capacity up to 145 MW in Chickasaw County, Mississippi. Preliminary EIA geography conflict retained in research, not adopted."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Okolona Clean Solar Center: 165M USD, 145 MWac Solar Facility in Chickasaw County, Mississippi",
+        "oldPrice": 165000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed.",
+        "costGap": "Confirm operator economic labels ($50M project investment, $230M tax revenue) against project filing before assigning a construction budget."
+      }
+    },
+    {
+      "id": 18187,
+      "patch": {
+        "title": "Shawboro East Ridge Solar: Proposed 150 MWac Amended Permit Scope",
+        "description": "Shawboro East Ridge Solar’s amended Currituck County use-permit application proposes a 150 MWac ground-mounted photovoltaic facility across approximately 897.06 acres. The filing does not establish the former $190 million budget or a commercial-opening day.",
+        "longFormSummary": "<ul><li>The amended application identifies a maximum 150 MW AC facility, approximately 897.06 acres, and a site east of Route 34 and north and south of East Ridge Road.<cite data-ref=\"https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf\"></cite></li><li>The requested December 31, 2026 permit-validity date is a permitting milestone. It does not establish operation or a construction budget.<cite data-ref=\"https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "CurrituckCounty",
+          "DominionEnergy",
+          "NorthCarolina",
+          "PJM",
+          "RenewableEnergy",
+          "Solar",
+          "SunEnergy1",
+          "Proposed"
+        ],
+        "dateConfidence": "unknown",
+        "dateConfidenceReasoning": "The cited project materials do not establish a separate commercial-operation day.",
+        "delayReasoning": null,
+        "address": "East of Route 34 and north and south of East Ridge Road, Shawboro, Currituck County, North Carolina",
+        "latitude": 36.414558,
+        "longitude": -76.074657
+      },
+      "addReferences": [
+        {
+          "url": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 150,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+        "note": "Proposed 150 MW AC generation in amended CUP PB22-24 application. Permit-validity date is not COD; no annual output inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Shawboro Clean Solar Energy Center: 190M USD, 150 MW Solar Farm in Currituck County, North Carolina",
+        "oldPrice": 190000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed."
+      }
+    },
+    {
+      "id": 17314,
+      "patch": {
+        "title": "Hashknife Energy Center II: 200 MW Battery Component Under Construction",
+        "description": "EIA’s September 2026 inventory identifies Hashknife Energy Center II’s HK2ST battery generator in Navajo County, Arizona at 200 MW and more than 50 percent construction complete. Its preliminary operation target is March 2027.",
+        "longFormSummary": "<ul><li>The fresh September workbook matches plant 69779, generator HK2ST, Navajo County, Arizona and 200 MW battery power. It reports construction more than 50 percent complete.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>March 2027 is a planned month. The inventory does not publish the earlier $210 million budget, a four-hour duration or 800 MWh.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "sourceUrl": null,
+        "tags": [
+          "APS",
+          "Arizona",
+          "BESS",
+          "CleanEnergy",
+          "EnergyStorage",
+          "NavajoCounty",
+          "SolarIntegration",
+          "In Progress"
+        ],
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The cited project source establishes 2027-03. Preserve the stated precision; a year, month or quarter anchor is not an announced exact opening day.",
+        "delayReasoning": null,
+        "utcStartDateTime": "2027-03-01T00:00:00.000Z",
+        "utcEndDateTime": null
+      },
+      "addReferences": [
+        {
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+          "title": "Opened project owner / authority project evidence",
+          "confidence": 95
+        }
+      ],
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "source": "hand",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "EIA plant 69779, HK2ST, 200 MW battery power, Navajo County AZ. Preliminary >50% construction complete and March 2027 planned operation; no MWh inferred."
+      },
+      "outcome": "profile-and-factual-repair",
+      "research": {
+        "oldTitle": "Hashknife Clean Energy Storage Facility: 210M USD, 200 MW BESS in Navajo County, Arizona",
+        "oldPrice": 210000000,
+        "scope": "Verified campus or component only; unsupported building-specific allocation removed.",
+        "sheet": "Planned",
+        "row": 686,
+        "plantId": 69779
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@ Owner instructions (2026-10-13, 2026-10-28): apply routine, researched daily-job
 
 ## Construction and energy projects
 
-Pins about something built carry a sourced `price`/`priceCurrency` (no FX conversion, null when unpublished), one status tag (`Proposed` / `In Progress` / `Completed`, never inferred from an elapsed date), `PinPower` generation fields for power plants, and a `PinFactory` buildout profile (multi-plant pins are split into threaded per-plant pins). Details: `.agents/skills/construction-pin-research/`; the extraction prompt in `src/server/extract/systemPrompt.ts` carries the cost rule.
+Pins about something built carry a sourced `price`/`priceCurrency` (no FX conversion, null when unpublished), one status tag (`Proposed` / `In Progress` / `Completed` / `Withdrawn`, never inferred from an elapsed date), `PinPower` generation fields for power plants, and a `PinFactory` buildout profile (multi-plant pins are split into threaded per-plant pins). Details: `.agents/skills/construction-pin-research/`; the extraction prompt in `src/server/extract/systemPrompt.ts` carries the cost rule.
 
 ## Pin rubrics, reviews and competitors
 

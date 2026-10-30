@@ -3,6 +3,7 @@
 // says what it moved and what brought it.
 
 import { urlKey } from './citations';
+import type { DiffSegment } from './textDiff';
 
 export const PIN_UPDATE_KINDS = ['reference', 'duplicate', 'edit', 'summary'] as const;
 export type PinUpdateKind = (typeof PIN_UPDATE_KINDS)[number];
@@ -12,7 +13,9 @@ export type PinUpdateKind = (typeof PIN_UPDATE_KINDS)[number];
 export const TRACKED_FIELDS = ['title', 'description', 'start', 'end', 'address', 'price', 'longFormSummary'] as const;
 export type TrackedField = (typeof TRACKED_FIELDS)[number];
 
-export type PinChange = { field: TrackedField; before: string | null; after: string | null; allDay?: boolean };
+// diff: for the text fields, the words the change removed and added (set when
+// the pane is built, from before and after; textDiff.ts).
+export type PinChange = { field: TrackedField; before: string | null; after: string | null; allDay?: boolean; diff?: DiffSegment[] };
 
 export type PinUpdateReference = {
   url: string;

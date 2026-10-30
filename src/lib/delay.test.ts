@@ -35,6 +35,7 @@ describe('pinDelay', () => {
   it('measures from the original day to the start as a UTC day', () => {
     expect(pinDelay({ originalStartDate: '2029-12-31', utcStartDateTime: '2033-12-31T00:00:00.000Z' })).toEqual({
       from: '2029-12-31',
+      to: '2033-12-31',
       days: 1461,
       label: '4 years',
       search: '>=4years',

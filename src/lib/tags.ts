@@ -41,7 +41,7 @@ export const MAX_TAGS = 20;
 
 // Reviewed site statuses are stored as topic rows; unlike derived filters,
 // they must survive normal create/edit saves and backfills.
-export const CONSTRUCTION_STATUS_TAGS = ['Proposed', 'In Progress', 'Completed'] as const;
+export const CONSTRUCTION_STATUS_TAGS = ['Proposed', 'In Progress', 'Completed', 'Withdrawn'] as const;
 export const isStoredSiteTag = (name: string): boolean => CONSTRUCTION_STATUS_TAGS.some((status) => status.toLowerCase() === name.toLowerCase());
 
 // Words that make a name an award: any body, ceremony or prize.

@@ -99,6 +99,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: { card: 'summary_large_image', images: images.map((i) => i.url) },
     robots: { index: true, follow: true },
+    // The installed app's title and, on iPhone, its home-screen icon (the manifest is src/app/manifest.ts).
+    appleWebApp: { capable: true, title: siteName, statusBarStyle: 'default' },
+    icons: { apple: '/apple-touch-icon.png' },
     other: {
       'google-adsense-account': 'ca-pub-4845333369058390',
       // Admin-configurable (src/lib/siteVerification.ts): only shown when

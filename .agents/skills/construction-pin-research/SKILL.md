@@ -18,12 +18,13 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
 - Collapses, demolitions, rescues, approvals with no budget, and anything with no published cost stay **null**.
 - Record the source in references or wiki. The extraction prompt `src/server/extract/systemPrompt.ts` carries the same rule.
 
-## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`
+## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`, `Withdrawn`
 - Plans/approvals before verified physical work: Proposed.
 - Construction, refurbishment, testing or commissioning underway: In Progress.
 - Explicitly finished, opened or commercially operating scope: Completed.
 - An announcement, loan or approval does not complete construction. A first coil, criticality or grid test does
   not alone prove completion. **Never infer completion from an elapsed target date.**
+- Owner instruction (2026-10-30): a verified withdrawn project or interconnection request carries `Withdrawn` and a sourced withdrawal milestone on its project timeline. If the withdrawal date is unpublished, show the dated source observation explicitly; never invent the withdrawal day. A withdrawn queue request does not establish cancellation of every project at the site.
 - Exclude non-construction accidents, closures, sales and monitored storage. For cancelled/halted/unsupported
   status, document it rather than forcing a tag.
 - EIA-860M is preliminary: check the pin's existing operator/regulator references for commissioning evidence

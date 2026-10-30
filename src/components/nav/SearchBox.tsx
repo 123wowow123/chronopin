@@ -1,5 +1,7 @@
 'use client';
 
+import { SavedSearchesMenu } from '@/components/search/SavedSearchesMenu';
+import { SearchAlertButton } from '@/components/search/SearchAlertButton';
 import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
@@ -465,11 +467,14 @@ export function SearchBox() {
     submit(joinSearchQuery([...all.slice(0, at), ...toItems(dropped), ...all.slice(at)]));
   };
   addTerm.current = (dropped, x = Infinity) => insertTerm(dropped, x);
+  // Like addTerm: the listener below is bound once, so it reaches the current render's markDrop through a ref.
+  const dropMarker = useRef(markDrop);
+  dropMarker.current = markDrop;
   useEffect(() => {
     const on = (event: Event) => { const { term: dropped, x } = (event as CustomEvent).detail || {}; if (dropped) addTerm.current(String(dropped), x); };
     const over = (event: Event) => {
       const d = (event as CustomEvent).detail;
-      markDrop(d ? d.x : null, d?.y);
+      dropMarker.current(d ? d.x : null, d?.y);
     };
     window.addEventListener(ADD_TERM_EVENT, on);
     window.addEventListener(DRAG_TERM_EVENT, over);
@@ -1087,7 +1092,8 @@ export function SearchBox() {
           if (anchor) beginDrag(anchor, all, moving ? all.length : editAt + drafted);
         }}
       >
-        <Icon name="search" className="ms-3 size-4 shrink-0 text-subtle transition-transform duration-300 ease-out group-hover/search:-rotate-12 group-hover/search:scale-110 motion-reduce:transition-none motion-reduce:group-hover/search:transform-none" />
+        {/* A search that can be saved wears the star in the magnifier's place. */}
+        <SearchAlertButton query={pathname === '/search' && urlChoice !== WATCHED ? urlQuery : ''} fallback={<SavedSearchesMenu icon={<Icon name="search" className="ms-3 size-4 shrink-0 text-subtle transition-transform duration-300 ease-out group-hover/search:-rotate-12 group-hover/search:scale-110 motion-reduce:transition-none motion-reduce:group-hover/search:transform-none" />} />} />
         <div
           ref={rowRef}
           // gap-1.5: room for the caret to stand between two items without

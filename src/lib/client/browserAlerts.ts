@@ -125,7 +125,8 @@ export async function showLiveAlert(alert: Alert): Promise<void> {
   const reg = await registration();
   const options: NotificationOptions & { image?: string } = {
     body: alert.body,
-    icon: '/favicon.ico',
+    icon: '/icons/icon-192.png',
+    badge: '/icons/badge-96.png',
     image: alert.image ?? undefined,
     tag: alert.tag,
     data: { url: alert.url },

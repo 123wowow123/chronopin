@@ -42,6 +42,7 @@ async function llmsText(): Promise<string> {
     `- [Timeline](${absoluteUrl('/')}): every pin by date, centred on today`,
     `- [Map](${absoluteUrl('/map')}): pins with a place, on a world map`,
     `- [Tags](${absoluteUrl('/tags')}): a page per subject (/tag/anime), with its upcoming dates and the next one first`,
+    `- [On this day](${absoluteUrl('/on-this-day')}): a page per calendar day (/on-this-day/10-30) with the pins from earlier years, newest year first`,
     `- [Products](${absoluteUrl('/products')}): product pins by shelf, each with a short note on why it is good`,
     `- [Cars](${absoluteUrl('/cars')}): the best new cars ranked on one published rubric, each with the figures behind its score`,
     `- [Forecasts](${absoluteUrl('/forecasts')}): industry forecast panels, live series and cited projections side by side, each with its sources`,

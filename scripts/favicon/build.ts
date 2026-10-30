@@ -1,12 +1,13 @@
 // Renders the header logo into src/app/favicon.ico (16/32/48px PNG frames),
 // which the App Router serves automatically, into public/apple-touch-icon.png
 // (what an iPhone shows for a saved or shared link), and into the PNG the
-// account emails carry inline (src/server/emailLogo.ts: mail clients show no SVG). It
+// account emails carry inline (src/server/emailLogo.ts: mail clients show no SVG),
+// and into public/icons/ (the installed app's icons and the notification badge, src/app/manifest.ts). It
 // renders the LogoMark component itself, so neither can drift from the logo;
 // rerun after changing it.
 //
 //   npm run favicon:build
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -77,3 +78,26 @@ writeFileSync(
     `export const EMAIL_LOGO_PNG_BASE64 =\n  '${emailLogo.toString('base64')}';\n`,
 );
 console.log(`Wrote the ${EMAIL_LOGO_SIZE}px email logo to src/server/emailLogo.ts`);
+
+// The installed app (src/app/manifest.ts). Android crops a "maskable" icon to
+// whatever shape the launcher uses, keeping only the central 80% circle, so
+// that one carries the logo smaller; the plain ones fill more of the tile.
+const ICONS = resolve(APP, '../../public/icons');
+mkdirSync(ICONS, { recursive: true });
+const PAGE = '#111111';
+async function tile(size: number, logoShare: number, source = svg, background: string | { r: number; g: number; b: number; alpha: number } = PAGE) {
+  const logoSize = Math.round(size * logoShare);
+  const logo = await sharp(Buffer.from(source), { density: ((72 * logoSize) / 31.2) * 4 }).resize(logoSize, logoSize).png().toBuffer();
+  return sharp({ create: { width: size, height: size, channels: 4, background } })
+    .composite([{ input: logo, gravity: 'centre' }])
+    .png()
+    .toBuffer();
+}
+writeFileSync(resolve(ICONS, 'icon-192.png'), await tile(192, 0.72));
+writeFileSync(resolve(ICONS, 'icon-512.png'), await tile(512, 0.72));
+writeFileSync(resolve(ICONS, 'icon-maskable-512.png'), await tile(512, 0.5));
+// The Android status bar draws a badge as a mask of its alpha channel, so it is
+// the logo's silhouette on nothing.
+const silhouette = svg.replace(/fill="#[0-9a-f]{6}"/gi, 'fill="#ffffff"');
+writeFileSync(resolve(ICONS, 'badge-96.png'), await tile(96, 0.9, silhouette, { r: 0, g: 0, b: 0, alpha: 0 }));
+console.log('Wrote icon-192/512, icon-maskable-512 and badge-96 to public/icons/');

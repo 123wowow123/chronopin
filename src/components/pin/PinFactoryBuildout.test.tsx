@@ -44,6 +44,21 @@ describe('factual factory buildout display', () => {
     p.metrics[0].value = '  ';
     expect(hasFactoryBuildout(p)).toBe(false);
   });
+  it('shows a sourced withdrawal observation without claiming a completed buildout', () => {
+    const p = profile();
+    p.status = 'offline';
+    p.milestones = [{
+      label: 'Withdrawal recorded in MISO queue (date checked; withdrawal day unpublished)',
+      date: '2026-10-30',
+      basis: 'demonstrated',
+      source: { url: 'https://www.misoenergy.org/api/giqueue/getprojects', title: 'MISO queue', publishedDate: null, quote: '"applicationStatus":"Withdrawn"' },
+    }];
+    const html = render(p);
+    expect(html).toContain('Withdrawal recorded in MISO queue');
+    expect(html).toContain('withdrawal day unpublished');
+    expect(html).toContain('2026-10-30');
+    expect(html).not.toContain('aria-current="step"');
+  });
   it('renders sourced target precision and highlights only the reported stage', () => {
     const html = render(profile());
     expect(html.match(/aria-current="step"/g)).toHaveLength(1);

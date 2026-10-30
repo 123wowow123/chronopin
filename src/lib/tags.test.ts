@@ -95,14 +95,14 @@ describe('tagKind', () => {
 
 describe('reserved filters', () => {
   it('places stored construction statuses directly after Thread and keeps them searchable as tags', () => {
-    expect(RESERVED_TAGS.slice(0, 4).map((r) => r.name)).toEqual(['Thread', ...CONSTRUCTION_STATUS_TAGS]);
+    expect(RESERVED_TAGS.slice(0, 1 + CONSTRUCTION_STATUS_TAGS.length).map((r) => r.name)).toEqual(['Thread', ...CONSTRUCTION_STATUS_TAGS]);
     for (const name of CONSTRUCTION_STATUS_TAGS) {
       expect(isStoredSiteTag(name.toLowerCase())).toBe(true);
       expect(reservedTag(name)).toMatchObject({ field: 'tag', value: name, stored: true });
       expect(tagKind(name)).toBe('topic');
     }
-    expect(reservedPicked({ tags: ['Completed', 'thread', 'In Progress', 'Proposed'], confidences: [], confidenceBands: [] }))
-      .toEqual(['Thread', 'Proposed', 'In Progress', 'Completed']);
+    expect(reservedPicked({ tags: ['Completed', 'thread', 'In Progress', 'Proposed', 'withdrawn'], confidences: [], confidenceBands: [] }))
+      .toEqual(['Thread', 'Proposed', 'In Progress', 'Completed', 'Withdrawn']);
     expect(reservedSuggestions('in pro').map((r) => r.name)).toContain('In Progress');
   });
 

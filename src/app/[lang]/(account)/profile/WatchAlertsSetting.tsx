@@ -5,6 +5,7 @@ import { api } from '@/lib/client/api';
 import { alertPermission, enableAlerts, type AlertPermission } from '@/lib/client/browserAlerts';
 import { refreshSession } from '@/lib/client/session';
 import { useT } from '@/lib/client/i18n';
+import { promptInstall, useInstallState } from '@/lib/client/install';
 
 // Permission changes only through the browser's own settings, which tell the
 // page nothing; a reload reads it again.
@@ -24,6 +25,7 @@ export function WatchAlertsSetting({ userId, initialRemind }: { userId: number; 
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const install = useInstallState();
   const t = useT();
 
   async function turnOn() {
@@ -53,6 +55,18 @@ export function WatchAlertsSetting({ userId, initialRemind }: { userId: number; 
         <span className="field-label block">{t('profile.alertsLabel')}</span>
         <span className="block text-sm text-subtle">{t('profile.alertsHint')}</span>
       </div>
+      {install === 'prompt' ? (
+        <div className="space-y-2">
+          <p className="text-sm text-subtle">{t('profile.installHint')}</p>
+          <button type="button" onClick={() => void promptInstall()} className="btn btn-secondary">
+            {t('profile.installButton')}
+          </button>
+        </div>
+      ) : install === 'installed' ? (
+        <p className="text-sm text-success">{t('profile.installed')}</p>
+      ) : install === 'ios' && permission !== 'granted' ? (
+        <p className="text-sm text-subtle">{t('profile.installIos')}</p>
+      ) : null}
       {permission === 'granted' ? (
         <p className="text-sm text-success">{t('profile.alertsOn')}</p>
       ) : permission === 'default' ? (
@@ -61,7 +75,7 @@ export function WatchAlertsSetting({ userId, initialRemind }: { userId: number; 
         </button>
       ) : permission === 'denied' ? (
         <p className="text-sm text-warning">{t('profile.alertsBlocked')}</p>
-      ) : permission === 'unsupported' ? (
+      ) : permission === 'unsupported' && install !== 'ios' ? (
         <p className="text-sm text-subtle">{t('profile.alertsUnsupported')}</p>
       ) : null}
       <label className="flex items-start gap-3">

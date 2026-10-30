@@ -10,7 +10,7 @@ import { useImpression } from '@/lib/client/impressions';
 import { stackDuplicates, type PinStack } from '@/lib/duplicates';
 import { formatDayKey, lunarDate, monthDayOf, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
 import { useOnThisDay } from '@/lib/client/onThisDay';
-import type { OnThisDay } from '@/lib/onThisDay';
+import { onThisDayPath, type OnThisDay } from '@/lib/onThisDay';
 import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
 import { timelineDayCandidates } from '@/lib/restaurantTimeline';
@@ -105,9 +105,17 @@ const tagHeight = (lines: number) => 26 + 14 * lines;
 // marker is allowed) instead of cutting off, in the same type as the rest; a
 // long name (`lines`, from tagLines) may take up to five.
 // With an `href` the chip is that search link, opened in a new tab.
-function Tag({ variant, children, title, className = '', wrap = false, lines = 2, href, holiday }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; lines?: TagLines; href?: string; holiday?: number | 's' }) {
+function Tag({ variant, children, title, className = '', wrap = false, lines = 2, href, to, holiday }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; lines?: TagLines; href?: string; to?: string; holiday?: number | 's' }) {
   const chip = `${tagBase} tag-${variant} ${className}`;
   const label = <span className={`block truncate ${wrap ? `${LINE_CLAMP[lines]} lg:whitespace-normal lg:text-balance` : ''}`}>{children}</span>;
+  // `to` is a page of the site, opened in place (the date tag's On this day page).
+  if (to) {
+    return (
+      <Link href={to} prefetch={false} className={`${chip} hover:no-underline`} title={title}>
+        {label}
+      </Link>
+    );
+  }
   return href ? (
     <Anchor href={href} target="_blank" rel="noopener nofollow" className={chip} title={title} data-tradition={holiday}>
       {label}
@@ -287,7 +295,7 @@ export function TimeBlock({
         </RailMarker>
 
         <div ref={tagRowRef} className={`${tagRow} max-lg:top-2 lg:top-[26px]`}>
-          <Tag variant={isToday ? 'today' : 'date'} className={`${leadTag} tag-link`}>
+          <Tag variant={isToday ? 'today' : 'date'} to={onThisDayPath(monthDayOf(bag.day))} title={t('onThisDay.hub')} className={`${leadTag} tag-link`}>
             <time dateTime={bag.day}>{formatDayKey(bag.day, locale)}</time>
           </Tag>
           <Tag variant={isToday ? 'today' : 'countdown'} title={timespan(todayKey, bag.day, 'd', locale)} className={leadTag}>

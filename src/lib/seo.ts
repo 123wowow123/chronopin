@@ -44,11 +44,8 @@ export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE, offer
   const links = languageAlternates(pinPath(pin), locale, offered);
   const path = links.canonical;
   const description = pinDescription(pin);
-  // The pin's own image, or a generated share card when it has none.
-  const image = pinImage(pin);
-  const images = image
-    ? [{ url: image.url, width: image.width, height: image.height, alt: pin.title }]
-    : [{ url: `/og/pin/${pin.id}`, width: 1200, height: 630, alt: pin.title }];
+  // Every pin's generated share card: its pictures, countdown and map.
+  const images = [{ url: `/og/pin/${pin.id}`, width: 1200, height: 630, alt: pin.title }];
 
   return {
     title: pin.title,

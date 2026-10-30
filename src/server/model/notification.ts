@@ -2,6 +2,7 @@ import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import { emitNotificationsChanged } from '../events';
 import { ALERT_SOON_MINUTES } from '@/lib/alerts';
+import type { MoveInfo } from '@/lib/moveAlerts';
 import { blockedBetween } from './blockSql';
 import { CONFLICTS } from './personTrade';
 
@@ -43,6 +44,12 @@ const types = {
   // A person you watch filed new stock trades (PersonTradeWatch). The actor is
   // the watcher: there is no author, and nobody can be blocked from a filing.
   trade: 'trade',
+  // A market or stock the reader set a Premium alert on moved past its size
+  // (MoveAlert). The actor is the reader. `move` says what moved.
+  move: 'move',
+  // A new pin matches a search the reader saved (SearchAlert). The actor is
+  // the pin's author.
+  search: 'search',
 } as const;
 
 // How late an alert may still go out, for a server that was down or busy
@@ -59,6 +66,7 @@ const groupKey = (zone: string) => `
           CASE n."type"
             WHEN 'pin' THEN concat('pin:', n."actorId")
             WHEN 'company' THEN concat('company:', n."companyId")
+            WHEN 'search' THEN concat('search:', n."searchAlertId")
             WHEN 'today' THEN concat('watch:', n."userId", ':', n."pinId")
             WHEN 'soon' THEN concat('watch:', n."userId", ':', n."pinId")
             WHEN 'start' THEN concat('watch:', n."userId", ':', n."pinId")
@@ -96,10 +104,12 @@ const VISIBLE_FROM = `
       LEFT JOIN "Comment" c ON c."id" = n."commentId"
       LEFT JOIN "Company" co ON co."id" = n."companyId"
       LEFT JOIN "Person" pe ON pe."id" = n."personId"
+      LEFT JOIN "SearchAlert" ss ON ss."id" = n."searchAlertId"
       WHERE (n."pinId" IS NULL OR (p."id" IS NOT NULL AND p."utcDeletedDateTime" IS NULL))
         AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))
         AND (n."companyId" IS NULL OR co."id" IS NOT NULL)
         AND (n."personId" IS NULL OR pe."id" IS NOT NULL)
+        AND (n."searchAlertId" IS NULL OR (ss."id" IS NOT NULL AND ss."utcDeletedDateTime" IS NULL))
         AND NOT ${blockedBetween('n."userId"', 'n."actorId"')}
         AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = n."userId" AND cb."companyId" = COALESCE(n."companyId", p."companyId"))`;
 
@@ -165,6 +175,12 @@ export type NotificationItem = {
   tradeSellOtherValue: number | null;
   // Tickers in this filing that sit in a sector one of the member's committees oversees.
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
+  // 'move' rows: what moved past the reader's Premium alert.
+  move: MoveInfo | null;
+  // 'search' rows: the saved search the pin matched, as the reader named it, and its query.
+  searchAlertId: number | null;
+  searchName: string | null;
+  searchQuery: string | null;
   utcCreatedDateTime: Date;
   read: boolean;
   // How many notifications this entry stands for (1 unless it is a batch),
@@ -427,6 +443,29 @@ export default class Notification {
     ).then((rows) => announce(query, rows));
   }
 
+  // One 'move' for the reader whose Premium alert fired. The reader is the
+  // actor (see types.move); the pin is the one the alert was set on.
+  static createMove({ userId, pinId, move }: { userId: number; pinId: number | null; move: MoveInfo }, query: QueryFn = db.query) {
+    return query(
+      `INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "move") VALUES ($1, $1, 'move', $2, $3) RETURNING "userId"`,
+      [userId, pinId, JSON.stringify(move)],
+    ).then((rows) => announce(query, rows));
+  }
+
+  // One 'search' per saved search a new pin matched. The pin's author is the
+  // actor (so a reader who blocked them hears nothing), and nobody is told of
+  // a pin they wrote themselves. A pin matched again is told about once - the
+  // unique index leaves one row per search and pin.
+  static createForSearch({ userId, searchAlertId, pinId, authorId }: { userId: number; searchAlertId: number; pinId: number; authorId: number }, query: QueryFn = db.query) {
+    if (userId === authorId) return Promise.resolve([]);
+    return query(
+      `INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "searchAlertId") VALUES ($1, $2, 'search', $3, $4)
+       ON CONFLICT ("userId", "searchAlertId", "pinId") WHERE "type" = 'search' DO NOTHING
+       RETURNING "userId"`,
+      [userId, authorId, pinId, searchAlertId],
+    ).then((rows) => announce(query, rows));
+  }
+
   // Soft-deletes what an undone action had sent, read or not.
   static retract(
     { userId, actorId, type }: { userId: number; actorId: number; type: string },
@@ -460,7 +499,8 @@ export default class Notification {
                p."utcStartDateTime" AS "pinStart",
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
-               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling", n."personId",
+               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling", n."personId", n."move",
+               n."searchAlertId", COALESCE(NULLIF(btrim(ss."label"), ''), ss."query") AS "searchName", ss."query" AS "searchQuery",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
                ${groupKey('$2')} AS "groupKey",
@@ -506,7 +546,8 @@ export default class Notification {
         LIMIT $3
       )
       SELECT e."id", e."type", e."pinId", e."pinTitle", e."commentId", e."commentText", e."companyId",
-             e."companyName", e."companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling",
+             e."companyName", e."companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", e."move",
+             e."searchAlertId", e."searchName", e."searchQuery",
                ${TRADE_COLUMNS},
              e."utcCreatedDateTime", e."read", e."actor",
              e."followingBack", e."groupCount", e."groupDay",
@@ -539,7 +580,8 @@ export default class Notification {
       )
       SELECT (row_number() OVER ())::int AS "id", 'trade' AS "type", NULL::int AS "pinId", NULL::text AS "pinTitle",
              NULL::int AS "commentId", NULL::text AS "commentText", NULL::int AS "companyId",
-             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling",
+             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", NULL::jsonb AS "move",
+             NULL::int AS "searchAlertId", NULL::text AS "searchName", NULL::text AS "searchQuery",
              ${TRADE_COLUMNS},
              e."utcCreatedDateTime", true AS "read",
              json_build_object('id', 0, 'userName', '', 'firstName', NULL, 'lastName', NULL, 'pictureUrl', NULL) AS "actor",

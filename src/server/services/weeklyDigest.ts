@@ -8,6 +8,7 @@ import { EMAIL_LOGO_PNG_BASE64 } from '../emailLogo';
 import { DARK_STYLE, escapeHtml, FONT, LIGHT, LOGO_CID } from '../emailVerification';
 import { getWeeklyDigest } from '../model/appSetting';
 import Digest, { type DigestPin, type DigestReason, type DigestRecipient } from '../model/digest';
+import SearchAlert from '../model/searchAlert';
 import log from '../util/log';
 
 // The weekly "my timeline" email: every Monday, the pins starting in the next
@@ -66,12 +67,22 @@ type DigestEmailOptions = {
   sendId: number | null;
   origin: string;
   unsubscribeUrl: string;
+  // New pins matching the reader's saved searches over the past week (SearchAlert.digestMatches).
+  matches?: SearchMatches[];
 };
 
-export function digestEmail(user: Pick<DigestRecipient, 'email' | 'firstName' | 'userName'>, pins: DigestPin[], { sendId, origin, unsubscribeUrl }: DigestEmailOptions): Email {
+type SearchMatches = Awaited<ReturnType<typeof SearchAlert.digestMatches>>[number];
+
+// The week the matches cover: the digest runs weekly.
+const MATCH_DAYS = 7;
+const matchesSince = (now: Date) => new Date(now.getTime() - MATCH_DAYS * 24 * 60 * 60 * 1000);
+
+export function digestEmail(user: Pick<DigestRecipient, 'email' | 'firstName' | 'userName'>, pins: DigestPin[], { sendId, origin, unsubscribeUrl, matches = [] }: DigestEmailOptions): Email {
   const name = user.firstName || user.userName?.replace(/^@/, '') || '';
   const hello = name ? `Hello ${name},` : 'Hello,';
-  const lead = `Here is what is coming up in the next ${DIGEST_DAYS_AHEAD} days on the timeline you follow.`;
+  const lead = pins.length
+    ? `Here is what is coming up in the next ${DIGEST_DAYS_AHEAD} days on the timeline you follow.`
+    : 'Here are the new pins that match the searches you saved.';
   const link = (path: string) => (sendId ? `${origin}/api/digest/${sendId}/click?to=${encodeURIComponent(path)}` : `${origin}${path}`);
   const manage = `${origin}/profile/notifications`;
   const e = escapeHtml;
@@ -92,6 +103,22 @@ export function digestEmail(user: Pick<DigestRecipient, 'email' | 'firstName' | 
 <a class="cp-link" href="${e(link(pinPath(p)))}" style="font-size:16px;line-height:1.4;font-weight:600;color:${c.link};text-decoration:none">${e(p.title)}</a>
 </td></tr>`;
       }),
+    );
+  }
+
+  if (matches.length) {
+    const heading = 'New matches for your saved searches';
+    const searchPath = (query: string) => `/search?q=${encodeURIComponent(query)}`;
+    textParts.push(heading.toUpperCase(), ...matches.map((m) => `- ${m.name}: ${m.total} new\n  ${m.pins.map((p) => p.title).join('; ')}\n  ${link(searchPath(m.query))}`), '');
+    htmlParts.push(
+      `<tr><td style="padding:24px 40px 4px;font-family:${FONT}"><h2 class="cp-ink" style="margin:0;font-size:17px;line-height:1.3;font-weight:700;color:${c.ink}">${e(heading)}</h2></td></tr>`,
+      ...matches.map(
+        (m) => `<tr><td style="padding:10px 40px 0;font-family:${FONT}">
+<a class="cp-link" href="${e(link(searchPath(m.query)))}" style="font-size:16px;line-height:1.4;font-weight:600;color:${c.link};text-decoration:none">${e(m.name)}</a>
+<span class="cp-subtle" style="font-size:13px;color:${c.subtle}"> · ${m.total} new</span>
+<div class="cp-subtle" style="font-size:13px;line-height:1.4;color:${c.subtle}">${m.pins.map((p) => e(p.title)).join(' · ')}</div>
+</td></tr>`,
+      ),
     );
   }
 
@@ -132,7 +159,11 @@ ${sendId ? `<img src="${e(origin)}/api/digest/${sendId}/open" width="1" height="
 </body></html>`;
   return {
     to: user.email,
-    subject: pins.length === 1 ? `Coming up: ${pins[0].title}` : `Your week ahead: ${pins.length} pins coming up`,
+    subject: !pins.length
+      ? `New matches for your saved searches: ${matches.reduce((n, m) => n + m.total, 0)} new pins`
+      : pins.length === 1
+        ? `Coming up: ${pins[0].title}`
+        : `Your week ahead: ${pins.length} pins coming up`,
     text,
     html,
     attachments: [{ filename: 'chronopin.png', contentBase64: EMAIL_LOGO_PNG_BASE64, contentId: LOGO_CID }],
@@ -153,13 +184,13 @@ async function sendOne(user: DigestRecipient, week: string, now: Date): Promise<
   const sendId = await Digest.claim(user.id, week);
   if (!sendId) return false;
   try {
-    const pins = await Digest.upcoming(user.id, now);
-    if (!pins.length) {
+    const [pins, matches] = await Promise.all([Digest.upcoming(user.id, now), SearchAlert.digestMatches(user.id, matchesSince(now))]);
+    if (!pins.length && !matches.length) {
       await Digest.finish(sendId, { status: 'skipped' });
       return false;
     }
-    await sendEmail(digestEmail(user, pins, { sendId, origin: digestOrigin(), unsubscribeUrl: await unsubscribeUrlFor(user.id) }));
-    await Digest.finish(sendId, { status: 'sent', counts: countByReason(pins), pinCount: pins.length });
+    await sendEmail(digestEmail(user, pins, { sendId, origin: digestOrigin(), unsubscribeUrl: await unsubscribeUrlFor(user.id), matches }));
+    await Digest.finish(sendId, { status: 'sent', counts: countByReason(pins), pinCount: pins.length + matches.reduce((n, m) => n + m.pins.length, 0) });
     return true;
   } catch (err) {
     log.warn(`[digest] user ${user.id}:`, (err as Error).message);
@@ -197,10 +228,10 @@ export async function checkWeeklyDigest(now = new Date()): Promise<number> {
 // The admin's "send me one now": the signed-in admin's own digest, to their own
 // address, ignoring the schedule and the switch. Not counted anywhere.
 export async function sendTestDigest(user: DigestRecipient, now = new Date()): Promise<{ pins: number }> {
-  const pins = await Digest.upcoming(user.id, now);
-  if (!pins.length) return { pins: 0 };
-  await sendEmail(digestEmail(user, pins, { sendId: null, origin: digestOrigin(), unsubscribeUrl: await unsubscribeUrlFor(user.id) }));
-  return { pins: pins.length };
+  const [pins, matches] = await Promise.all([Digest.upcoming(user.id, now), SearchAlert.digestMatches(user.id, matchesSince(now))]);
+  if (!pins.length && !matches.length) return { pins: 0 };
+  await sendEmail(digestEmail(user, pins, { sendId: null, origin: digestOrigin(), unsubscribeUrl: await unsubscribeUrlFor(user.id), matches }));
+  return { pins: pins.length + matches.reduce((n, m) => n + m.pins.length, 0) };
 }
 
 export function startWeeklyDigest() {

@@ -114542,5 +114542,1407 @@
         }
       ]
     }
+  },
+  {
+    "key": "queue247-20261030-17117",
+    "pinIds": {
+      "local": 17117,
+      "production": 17117
+    },
+    "title": "Naugatuck Avenue: Connecticut Selects 200 MW Jupiter Power Storage Proposal",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: battery storage",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Selected storage power",
+          "value": "200 MW selected capacity; distinct from an interconnection request rating.",
+          "basis": "planned",
+          "source": {
+            "url": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Naugatuck Avenue – 200 MW developed by Jupiter Power and located in Connecticut.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Storage procurement scope",
+          "value": "Grid-scale battery storage selected through Connecticut’s 2024 solicitation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+            "title": "Project owner / public authority project evidence",
+            "quote": "The awarded storage project, Connecticut’s first grid-scale storage selection",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "State selection announcement",
+          "value": "December 20, 2024; not a commercial-operation day.",
+          "basis": "planned",
+          "source": {
+            "url": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/20/2024",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Development stage",
+          "value": "Selected projects proceed to long-term contract negotiations.",
+          "basis": "planned",
+          "source": {
+            "url": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+            "title": "Project owner / public authority project evidence",
+            "quote": "the selected solar and storage projects are negotiating long-term contracts",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Connecticut announces project selection",
+          "date": "2024-12-20",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://portal.ct.gov/deep/news-releases/news-releases---2024/connecticut-announces-clean-energy-selections",
+            "title": "Project owner / public authority project evidence",
+            "quote": "12/20/2024",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17296",
+    "pinIds": {
+      "local": 17296,
+      "production": 17296
+    },
+    "title": "Steward Creek Solar Phase 2: Proposed 600 MWac, 2030 Operation Target",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Phase 2 solar capacity",
+          "value": "600 MWac; separate from phase 1 and the combined 1.56 GWdc announcement.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.leecountyil.com/DocumentCenter/View/4520/Appendix-L---IPaC",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Steward Creek Solar Phase 2 is a proposed 600 MWac Commercial Solar",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Phase 2 site",
+          "value": "Approximately 3,493 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.leecountyil.com/DocumentCenter/View/4520/Appendix-L---IPaC",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Phase Two is to be constructed on approximately 3,493 acres.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Phase development scope",
+          "value": "Commercial photovoltaic facility expanding an earlier permitted 600 MWac first phase.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.leecountyil.com/DocumentCenter/View/4520/Appendix-L---IPaC",
+            "title": "Project owner / public authority project evidence",
+            "quote": "previously permitted 600MWac Steward Creek Solar Project",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Phase 2 development targets",
+          "value": "Construction in 2028; commercial operation in 2030.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.terraform.com/news-press/terraform-power-announces-acquisition-of-1-56-gw-solar-project-from-hexagon-energy-in-lee-county-illinois/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Phase 2 commencing construction in 2028 and achieving commercial operation in 2030.",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Phase 2 construction target",
+          "date": "2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.terraform.com/news-press/terraform-power-announces-acquisition-of-1-56-gw-solar-project-from-hexagon-energy-in-lee-county-illinois/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Phase 2 commencing construction in 2028",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Phase 2 commercial-operation target",
+          "date": "2030",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.terraform.com/news-press/terraform-power-announces-acquisition-of-1-56-gw-solar-project-from-hexagon-energy-in-lee-county-illinois/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "achieving commercial operation in 2030.",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18186",
+    "pinIds": {
+      "local": 18186,
+      "production": 18186
+    },
+    "title": "Pitt Solar: 80 MWac Photovoltaic Project with Published Operation Targets",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published AC solar capacity",
+          "value": "80 MWac photovoltaic capacity.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/pitt/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "80 MWac",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Equipment and EPC scope",
+          "value": "Fixed-tilt solar; Astronergy modules, Sungrow inverters and OMCO racking; SunEnergy1 EPC.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/pitt/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "SunEnergy1 serves as EPC provider, with Astronergy modules, Sungrow inverters, and OMCO racking.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Published operation targets",
+          "value": "July 2028.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/pitt/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "commercial operation date of July 2028",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First reported operation target",
+          "date": "2028-07",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/pitt/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "commercial operation date of July 2028",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18185",
+    "pinIds": {
+      "local": 18185,
+      "production": 18185
+    },
+    "title": "Cherry Solar: 180 MWac Photovoltaic Project with Published Operation Targets",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Published AC solar capacity",
+          "value": "180 MWac photovoltaic capacity.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/cherry-solar/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "180 MWac",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Equipment and EPC scope",
+          "value": "Fixed-tilt solar; Astronergy modules, Sungrow inverters and OMCO racking; SunEnergy1 EPC.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/cherry-solar/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "SunEnergy1 serves as EPC provider, with Astronergy modules, Sungrow inverters, and OMCO racking.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Published operation targets",
+          "value": "November 2026 and March 2027 for separate phases; no allocation of total MW between phases inferred.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/cherry-solar/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "commercial operation dates in November 2026 and March 2027",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First reported operation target",
+          "date": "2026-11",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/cherry-solar/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "commercial operation dates in November 2026 and March 2027",
+            "publishedDate": null
+          }
+        },
+        {
+          "label": "Second-phase operation target",
+          "date": "2027-03",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.sunenergy1.com/project/cherry-solar/",
+            "title": "Project owner / public authority project evidence",
+            "quote": "commercial operation dates in November 2026 and March 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18042",
+    "pinIds": {
+      "local": 18042,
+      "production": 18042
+    },
+    "title": "Okolona Solar: Proposed Up to 145 MW in Chickasaw County",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed generating power",
+          "value": "Up to 145 MW solar generation.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.project.nexteraenergyresources.com/okolona-solar",
+            "title": "Project owner / public authority project evidence",
+            "quote": "planned capacity of up to 145 megawatts of energy",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generation and ownership scope",
+          "value": "Solar project developed through an affiliate of NextEra Energy Resources.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.project.nexteraenergyresources.com/okolona-solar",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Okolona Solar is a subsidiary of NextEra Energy Resources, LLC",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Earliest operation target",
+          "value": "August 2028, subject to permits and approvals.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.project.nexteraenergyresources.com/okolona-solar/community-benefits",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Targeted to begin operations as early as August 2028",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Expected construction workforce",
+          "value": "200 construction jobs, an estimate.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.project.nexteraenergyresources.com/okolona-solar",
+            "title": "Project owner / public authority project evidence",
+            "quote": "200 Construction Jobs",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Earliest operation target",
+          "date": "2028-08",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.project.nexteraenergyresources.com/okolona-solar/community-benefits",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Targeted to begin operations as early as August 2028",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-18187",
+    "pinIds": {
+      "local": 18187,
+      "production": 18187
+    },
+    "title": "Shawboro East Ridge Solar: Proposed 150 MWac Amended Permit Scope",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: photovoltaic generation",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Proposed generation capacity",
+          "value": "150 MW AC.",
+          "basis": "planned",
+          "source": {
+            "url": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "maximum generation capacity of 150 MW (AC)",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Amended project area",
+          "value": "Approximately 897.06 acres; earlier approved area 997.32 acres.",
+          "basis": "planned",
+          "source": {
+            "url": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Amended approximate project area 897.06 ac.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Proposed solar design",
+          "value": "Ground-mounted photovoltaic panels on driven-pile racking.",
+          "basis": "planned",
+          "source": {
+            "url": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "The Project will be a ground-mounted solar photovoltaic facility.",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Requested permit validity",
+          "value": "Applicant seeks a minimum expiration date of December 31, 2026. This is not an opening target.",
+          "basis": "planned",
+          "source": {
+            "url": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "minimum expiration date of Dec 31st, 2026",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Requested minimum permit-validity date",
+          "date": "2026-12-31",
+          "basis": "planned",
+          "source": {
+            "url": "https://currituckcountync.gov/wp-content/uploads/shawboro-east-ridge-solar-sup-approvalsandforms-25dec10.pdf",
+            "title": "Project owner / public authority project evidence",
+            "quote": "minimum expiration date of Dec 31st, 2026",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17314",
+    "pinIds": {
+      "local": 17314,
+      "production": 17314
+    },
+    "title": "Hashknife Energy Center II: 200 MW Battery Component Under Construction",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: battery storage",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish documented operational automation capabilities.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The cited project materials do not publish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Battery component power",
+          "value": "200 MW battery power for generator HK2ST at plant 69779.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "Project owner / public authority project evidence",
+            "quote": "HK2ST 200 200 200 Batteries",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Generator component",
+          "value": "Battery component of Hashknife Energy Center II; not the separate 275 MW first project.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "Project owner / public authority project evidence",
+            "quote": "Hashknife Energy Center II LLC",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Preliminary construction stage",
+          "value": "(V) Under construction, more than 50 percent complete",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "Project owner / public authority project evidence",
+            "quote": "(V) Under construction, more than 50 percent complete",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Planned operation month",
+          "value": "2027-03; preliminary survey estimate, not an opening day.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "Project owner / public authority project evidence",
+            "quote": "3 2027",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Preliminary operation forecast",
+          "date": "2027-03",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "Project owner / public authority project evidence",
+            "quote": "3 2027",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17101",
+    "pinIds": {
+      "local": 17101,
+      "production": 17101
+    },
+    "title": "Smalling: 600 MW Solar Interconnection Request J2519 — Withdrawn",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: withdrawn interconnection request",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced peer capacity cohort or percentile is provided for this interconnection request.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record does not document automated plant operations.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record identifies technology without a named capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No measured resource efficiency or comparable normalized peer cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified critical supply-chain contribution is documented for the proposed facility.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No verified project workforce training or credential outcome is published.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Interconnection disposition",
+          "value": "Withdrawn request; this does not establish site-wide project cancellation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2519",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Former requested capacity",
+          "value": "600.0 MW former requested power; not current generation or battery operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2519",
+            "publishedDate": null,
+            "quote": "\"summerNetMW\":600.0"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Request technology",
+          "value": "Solar; point of interconnection Smalling.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2519",
+            "publishedDate": null,
+            "quote": "\"fuelType\":\"Solar\""
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Withdrawal status checked",
+          "value": "2026-10-30: withdrawal recorded in the opened queue. The actual withdrawal day is not published.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2519",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Withdrawal recorded in MISO queue (date checked; withdrawal day unpublished)",
+          "date": "2026-10-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2519",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17132",
+    "pinIds": {
+      "local": 17132,
+      "production": 17132
+    },
+    "title": "Xenia: 200 MW Battery Interconnection Request J2379 — Withdrawn",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: withdrawn interconnection request",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced peer capacity cohort or percentile is provided for this interconnection request.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record does not document automated plant operations.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record identifies technology without a named capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No measured resource efficiency or comparable normalized peer cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified critical supply-chain contribution is documented for the proposed facility.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No verified project workforce training or credential outcome is published.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Interconnection disposition",
+          "value": "Withdrawn request; this does not establish site-wide project cancellation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2379",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Former requested capacity",
+          "value": "200.0 MW former requested power; not current generation or battery operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2379",
+            "publishedDate": null,
+            "quote": "\"summerNetMW\":200.0"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Request technology",
+          "value": "Battery Storage; point of interconnection Xenia.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2379",
+            "publishedDate": null,
+            "quote": "\"fuelType\":\"Battery Storage\""
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Withdrawal status checked",
+          "value": "2026-10-30: withdrawal recorded in the opened queue. The actual withdrawal day is not published.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2379",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Withdrawal recorded in MISO queue (date checked; withdrawal day unpublished)",
+          "date": "2026-10-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2379",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17162",
+    "pinIds": {
+      "local": 17162,
+      "production": 17162
+    },
+    "title": "Batesville to Moon Lake: 450 MW Solar Interconnection Request J2966 — Withdrawn",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: withdrawn interconnection request",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced peer capacity cohort or percentile is provided for this interconnection request.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record does not document automated plant operations.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record identifies technology without a named capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No measured resource efficiency or comparable normalized peer cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified critical supply-chain contribution is documented for the proposed facility.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No verified project workforce training or credential outcome is published.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Interconnection disposition",
+          "value": "Withdrawn request; this does not establish site-wide project cancellation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2966",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Former requested capacity",
+          "value": "450.0 MW former requested power; not current generation or battery operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2966",
+            "publishedDate": null,
+            "quote": "\"summerNetMW\":450.0"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Request technology",
+          "value": "Solar; point of interconnection Batesville to Moon Lake ss 230kV Line.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2966",
+            "publishedDate": null,
+            "quote": "\"fuelType\":\"Solar\""
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Withdrawal status checked",
+          "value": "2026-10-30: withdrawal recorded in the opened queue. The actual withdrawal day is not published.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2966",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Withdrawal recorded in MISO queue (date checked; withdrawal day unpublished)",
+          "date": "2026-10-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2966",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17301",
+    "pinIds": {
+      "local": 17301,
+      "production": 17301
+    },
+    "title": "Gibson to Merom Energy Storage Project: 200 MW Battery Interconnection Request J2472 — Withdrawn",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: withdrawn interconnection request",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced peer capacity cohort or percentile is provided for this interconnection request.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record does not document automated plant operations.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record identifies technology without a named capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No measured resource efficiency or comparable normalized peer cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified critical supply-chain contribution is documented for the proposed facility.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No verified project workforce training or credential outcome is published.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Interconnection disposition",
+          "value": "Withdrawn request; this does not establish site-wide project cancellation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2472",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Former requested capacity",
+          "value": "200.0 MW former requested power; not current generation or battery operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2472",
+            "publishedDate": null,
+            "quote": "\"summerNetMW\":200.0"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Request technology",
+          "value": "Battery Storage; point of interconnection Gibson Sta - Merom (HED) 345.0kV.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2472",
+            "publishedDate": null,
+            "quote": "\"fuelType\":\"Battery Storage\""
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Withdrawal status checked",
+          "value": "2026-10-30: withdrawal recorded in the opened queue. The actual withdrawal day is not published.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2472",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Withdrawal recorded in MISO queue (date checked; withdrawal day unpublished)",
+          "date": "2026-10-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J2472",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "queue247-20261030-17357",
+    "pinIds": {
+      "local": 17357,
+      "production": 17357
+    },
+    "title": "Lakeover to McAdams: 188 MW Solar Interconnection Request J3049 — Withdrawn",
+    "sourceUrl": null,
+    "profile": {
+      "sector": "Energy: withdrawn interconnection request",
+      "status": "offline",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced peer capacity cohort or percentile is provided for this interconnection request.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record does not document automated plant operations.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "The grid record identifies technology without a named capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No measured resource efficiency or comparable normalized peer cohort is published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified critical supply-chain contribution is documented for the proposed facility.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No verified project workforce training or credential outcome is published.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Interconnection disposition",
+          "value": "Withdrawn request; this does not establish site-wide project cancellation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J3049",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Former requested capacity",
+          "value": "188.0 MW former requested power; not current generation or battery operation.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J3049",
+            "publishedDate": null,
+            "quote": "\"summerNetMW\":188.0"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Request technology",
+          "value": "Solar; point of interconnection LAKEOVER EHV - MCADAMS EHV 500.0kV.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J3049",
+            "publishedDate": null,
+            "quote": "\"fuelType\":\"Solar\""
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Withdrawal status checked",
+          "value": "2026-10-30: withdrawal recorded in the opened queue. The actual withdrawal day is not published.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J3049",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Withdrawal recorded in MISO queue (date checked; withdrawal day unpublished)",
+          "date": "2026-10-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO interconnection queue — J3049",
+            "publishedDate": null,
+            "quote": "\"applicationStatus\":\"Withdrawn\""
+          }
+        }
+      ]
+    }
   }
 ]

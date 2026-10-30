@@ -72,6 +72,19 @@ export default class Topics {
     return pinIds(`EXISTS (SELECT 1 FROM "PinTagView" AS "tg" WHERE "tg"."pinId" = "p"."id" AND "tg"."name" = $2::citext)`, name, now, limits, minConfidence);
   }
 
+  // The shown pins that start on a calendar day (UTC, "10-30") in any earlier
+  // year, newest first: the ids and each one's start for grouping by year.
+  static onThisDayIds(monthDay: string, before: Date, minConfidence: number | null) {
+    return db.query<{ id: number; start: string }>(
+      `
+      SELECT "p"."id", "p"."utcStartDateTime" AS "start"
+      FROM "Pin" AS "p"
+      WHERE to_char("p"."utcStartDateTime" AT TIME ZONE 'UTC', 'MM-DD') = $2 AND "p"."utcStartDateTime" < $3::timestamptz AND ${SHOWN}
+      ORDER BY "p"."utcStartDateTime" DESC, "p"."id"`,
+      [minConfidence, monthDay, before],
+    );
+  }
+
   static companyPinIds(companyId: number, now: Date, limits: { upcoming: number; past: number }, minConfidence: number | null) {
     return pinIds(`"p"."companyId" = $2::integer`, companyId, now, limits, minConfidence);
   }

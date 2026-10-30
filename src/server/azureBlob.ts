@@ -39,3 +39,10 @@ export function uploadThumb(fileName: string, buffer: Buffer, contentType: strin
 export function deleteThumb(fileName: string) {
   return getThumbContainer().getBlockBlobClient(fileName).deleteIfExists();
 }
+
+// Names of the blobs under a prefix, for pruning a folder of generated files.
+export async function listThumbNames(prefix: string): Promise<string[]> {
+  const names: string[] = [];
+  for await (const blob of getThumbContainer().listBlobsFlat({ prefix })) names.push(blob.name);
+  return names;
+}

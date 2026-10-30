@@ -14,6 +14,7 @@ import { formatLocalWeather, usesImperial } from '@/lib/weather';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import { ALERT_SOON_MINUTES } from '@/lib/alerts';
+import { formatMove, moveSubject, type MoveInfo } from '@/lib/moveAlerts';
 import { term } from '@/lib/searchTerms';
 import { useSession } from '@/lib/client/session';
 import { sunSign } from '@/lib/horoscope';
@@ -47,6 +48,9 @@ type Notification = {
   tradeBuyOtherValue: number | null;
   tradeSellOtherValue: number | null;
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
+  move: MoveInfo | null;
+  searchName: string | null;
+  searchQuery: string | null;
   utcCreatedDateTime: string;
   read: boolean;
   groupCount: number;
@@ -167,6 +171,10 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
       return { icon: 'eye', label: t('notifications.whyWatch') };
     case 'thread':
       return { icon: 'eye', label: t('notifications.whyThread') };
+    case 'move':
+      return { icon: 'eye', label: t('moveAlerts.why') };
+    case 'search':
+      return n.searchQuery ? { icon: 'search', label: t('notifications.whySearch'), href: `/search?q=${encodeURIComponent(n.searchQuery)}` } : null;
     case 'trade':
       return n.personName ? { icon: 'eye', label: t('notifications.whyTrade', { name: n.personName }), href: `${personPath(n.personName)}#trades` } : null;
     case 'company':
@@ -253,7 +261,7 @@ function useNotificationList(active: boolean) {
 function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () => void }) {
   const handle = n.actor.userName.replace(/^@+/, '');
   const face =
-    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' || n.type === 'thread' ? (
+    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' || n.type === 'thread' || n.type === 'move' || n.type === 'search' ? (
       <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
         <Icon name="target" className="size-4" />
       </span>
@@ -314,6 +322,8 @@ function sectionOf(type: string): Section {
     case 'update':
     case 'thread':
     case 'trade':
+    case 'move':
+    case 'search':
       return 'watching';
     case 'comment':
     case 'reply':
@@ -616,6 +626,18 @@ function NotificationItems({
                       <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
                         {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                       </Link>
+                    ) : n.type === 'move' && n.move ? (
+                      <Link
+                        href={n.pinId ? pinPath({ id: n.pinId, title: n.pinTitle ?? '' }) : '/'}
+                        className="block text-ink"
+                        onClick={onNavigate}
+                      >
+                        {t(n.move.to > n.move.from ? 'moveAlerts.rose' : 'moveAlerts.fell', {
+                          label: moveSubject(n.move),
+                          from: formatMove(n.move.kind, n.move.from),
+                          to: formatMove(n.move.kind, n.move.to),
+                        })}
+                      </Link>
                     ) : n.type === 'trade' && n.personName ? (
                       <Link href={`${personPath(n.personName)}#trades`} className="block text-ink" onClick={onNavigate}>
                         {t.rich('notifications.trade', {
@@ -653,6 +675,19 @@ function NotificationItems({
                         {t.rich(n.groupCount > 1 ? 'notifications.pinMany' : 'notifications.pin', {
                           count: n.groupCount,
                           actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                          pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                          n: (chunks) => (
+                            <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
+                              {chunks}
+                            </span>
+                          ),
+                        })}
+                      </PinRowLink>
+                    ) : n.type === 'search' && n.pinId ? (
+                      <PinRowLink n={n} onNavigate={onNavigate}>
+                        {t.rich(n.groupCount > 1 ? 'notifications.searchMany' : 'notifications.search', {
+                          count: n.groupCount,
+                          name: n.searchName ?? '',
                           pin: () => <span className="font-semibold">{n.pinTitle}</span>,
                           n: (chunks) => (
                             <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
@@ -940,6 +975,23 @@ function UnreadBadge({ count, className }: { count: number; className: string })
 
 const unreadLabel = (t: Translator, count: number) => (count ? t('notifications.unreadLabel', { count }) : t('notifications.title'));
 
+// A navbar panel spans from the left edge of the Timeline/Map toggle to the bar's right padding.
+function usePanelWidth(open: boolean): { width?: number } {
+  const [width, setWidth] = useState<number>();
+  useEffect(() => {
+    if (!open) return;
+    const measure = () => {
+      const left = document.querySelector('[data-view-switch]')?.getBoundingClientRect().left;
+      const edge = window.innerWidth >= 640 ? 20 : 12;
+      setWidth(left === undefined ? undefined : Math.max(0, window.innerWidth - left - edge));
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [open]);
+  return { width };
+}
+
 // A navbar panel's open state, closed by a press anywhere outside it.
 function useDropdown() {
   const [open, setOpen] = useState(false);
@@ -992,6 +1044,7 @@ const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
 // accessible even when weather or location is unavailable.
 export function WeatherButton({ className = '' }: { className?: string }) {
   const { open, setOpen, rootRef } = useDropdown();
+  const panel = usePanelWidth(open);
   const trades = usePublicTrades(open);
   const { weather } = useFormattedLocalWeather();
   const t = useT();
@@ -1002,7 +1055,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
   }
 
   return (
-    <div ref={rootRef} className={`relative ${className}`}>
+    <div ref={rootRef} className={className}>
       <button
         type="button"
         onClick={toggle}
@@ -1015,7 +1068,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
-        <div className="floating absolute end-0 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-[26rem] max-w-[calc(100vw-1rem)] flex-col overflow-hidden">
+        <div style={panel} className="floating absolute end-3 top-full sm:end-5 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-[44rem] max-w-[calc(100vw-1rem)] flex-col overflow-hidden">
           <LocalWeatherRow className="shrink-0" />
           {/* Only what is under the weather row scrolls, as under the bell's heading. */}
           <div className="min-h-0 overflow-y-auto">
@@ -1095,6 +1148,7 @@ export function DrawerWeather({ onNavigate }: { onNavigate?: () => void }) {
 // The navbar bell (lg and up), with the list in a panel under it.
 export function NotificationBell({ className = '' }: { className?: string }) {
   const { open, setOpen, rootRef } = useDropdown();
+  const panel = usePanelWidth(open);
   const count = useUnreadCount(true);
   const list = useNotificationList(open);
   const t = useT();
@@ -1108,7 +1162,7 @@ export function NotificationBell({ className = '' }: { className?: string }) {
   }
 
   return (
-    <div ref={rootRef} className={`relative ${className}`}>
+    <div ref={rootRef} className={className}>
       <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={weather ? `${t('notifications.title')} · ${weather.summary}` : t('notifications.title')} className="group/nav flex h-9 items-center gap-0.5 rounded-lg px-2 text-muted hover:bg-raised hover:text-ink">
         <WeatherPeek />
         <span className="relative flex">
@@ -1117,7 +1171,7 @@ export function NotificationBell({ className = '' }: { className?: string }) {
         </span>
       </button>
       {open ? (
-        <div className="floating absolute end-0 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-[26rem] max-w-[calc(100vw-1rem)] overflow-y-auto">
+        <div style={panel} className="floating absolute end-3 top-full sm:end-5 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-[44rem] max-w-[calc(100vw-1rem)] overflow-y-auto">
           <LocalWeatherRow className="border-b border-line" />
           <HoroscopeRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <PremiumRow className="border-b border-line" onNavigate={() => setOpen(false)} />

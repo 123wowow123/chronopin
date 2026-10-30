@@ -644,7 +644,7 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       )}
       SELECT 'tag' AS "field", "tg"."name"::text AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
       FROM "hits"
-        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND ("tg"."kind" = 'reserved' OR "tg"."name" IN ('Proposed'::citext, 'In Progress'::citext, 'Completed'::citext)) AND "tg"."name" <> '${PREDICTED_TAG}'::citext
+        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND ("tg"."kind" = 'reserved' OR "tg"."name" IN ('Proposed'::citext, 'In Progress'::citext, 'Completed'::citext, 'Withdrawn'::citext)) AND "tg"."name" <> '${PREDICTED_TAG}'::citext
       GROUP BY "tg"."name"
       UNION ALL
       SELECT 'tag' AS "field", '${PREDICTED_TAG}' AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"

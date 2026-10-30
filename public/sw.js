@@ -10,7 +10,8 @@ self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim(
 function show(alert) {
   return self.registration.showNotification(alert.title, {
     body: alert.body,
-    icon: '/favicon.ico',
+    icon: '/icons/icon-192.png',
+    badge: '/icons/badge-96.png',
     image: alert.image || undefined,
     // The same alert from a push and from an open page replaces itself.
     tag: alert.tag,

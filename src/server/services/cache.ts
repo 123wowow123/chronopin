@@ -4,6 +4,7 @@
 import { revalidateTag } from 'next/cache';
 import { DEFAULT_MULTILINGUAL, type OtherLocale } from '@/lib/multilingual';
 import { getMultilingual } from '../model/appSetting';
+import { pruneShareCard } from './shareCardAssets';
 
 export const TAGS = {
   industryForecasts: 'industry-forecasts',
@@ -70,6 +71,8 @@ export function invalidatePin(id: number | string) {
   safeRevalidateTag(TAGS.pin(id), { expire: 0 });
   safeRevalidateTag(TAGS.timeline, 'max');
   safeRevalidateTag(TAGS.sitemap, 'max');
+  // Share-card files the edit made stale go now, not at the card's next request.
+  void pruneShareCard(Number(id));
 }
 
 // Only the pin's own page changed (a comment's score, say): the timeline and

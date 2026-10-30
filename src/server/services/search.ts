@@ -60,6 +60,16 @@ export async function searchPinIds(searchText: string, options: SearchOptions = 
   return (await Pins.rankSearch(filter, { sort: 'date', direction: 'next' }, null)).map((r) => r.id);
 }
 
+// The pins created since an instant that a search matches, newest first, for
+// saved searches (services/searchAlerts.ts): a search that asks for nothing
+// matches nothing. Capped, so a query matching everything cannot flood a reader.
+export async function searchPinIdsCreatedSince(searchText: string, since: Date, limit: number, options: SearchOptions = {}): Promise<number[]> {
+  const query = parseSearchQuery(searchText);
+  if (asksForNothing(query, options)) return [];
+  const filter = { ...(await searchFilter(query, options)), createdSince: since };
+  return (await Pins.rankSearch(filter, { sort: 'date', direction: 'previous', after: null }, limit)).map((r) => r.id);
+}
+
 // Every pin a search matches - for the map, which plots them all, and for a
 // caller that named no sort. Free text is ranked by relevance: the semantic
 // pool is wide, so ordering it by event date buries the pins that actually

@@ -6,15 +6,17 @@ import { PostedTime } from '@/components/ui/LocalTime';
 import { useT } from '@/lib/client/i18n';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn, formatPosted, money } from '@/lib/format';
+import { delayLabel } from '@/lib/delay';
 import { changedDay, type PinChange, type PinUpdateJson, type PinUpdateReference } from '@/lib/pinUpdates';
+import { diffCounts, type DiffSegment } from '@/lib/textDiff';
 import { pinPath } from '@/lib/seo';
 import type { Translator } from '@/lib/i18n/translate';
 import { formatDay, formatDayRange } from './DateRanges';
 import { ConfidenceBadge, confidenceClass } from './PinConfidence';
 import { RefineLink } from './RefineLink';
 
-// Updates shown before the rest fold away.
-const SHOWN = 3;
+// Updates shown before the rest fold away: just the latest.
+const SHOWN = 1;
 
 function hostname(url: string) {
   try {
@@ -127,7 +129,28 @@ function ChangeRow({ change, timeZone: serverTimeZone }: { change: PinChange; ti
   const timeZone = useTimeZone(serverTimeZone);
   const label = <dt className="text-subtle">{t(`updates.${change.field}`)}</dt>;
 
-  // Long text: that it was rewritten, with what it said before a tap away.
+  // Long text, rewritten: the words it lost and gained, a tap away.
+  if (change.diff && (change.field === 'longFormSummary' || change.field === 'description')) {
+    const { added, removed } = diffCounts(change.diff);
+    return (
+      <>
+        {label}
+        <dd className="min-w-0 text-muted">
+          <details>
+            <summary className="cursor-pointer hover:text-ink">
+              {t('updates.rewritten')} <span className="text-xs text-subtle tabular-nums">{t('updates.words', { added, removed })}</span>
+            </summary>
+            <p className="mt-1.5 border-s-2 border-line ps-3 text-[13px] leading-relaxed" lang="en">
+              <DiffText segments={change.diff} />
+            </p>
+          </details>
+        </dd>
+      </>
+    );
+  }
+
+  // Long text with no earlier version to compare: that it was rewritten, with
+  // what it said before a tap away.
   if (change.field === 'longFormSummary' || change.field === 'description') {
     return (
       <>
@@ -145,6 +168,17 @@ function ChangeRow({ change, timeZone: serverTimeZone }: { change: PinChange; ti
           ) : (
             t('updates.rewritten')
           )}
+        </dd>
+      </>
+    );
+  }
+
+  if (change.diff && change.field === 'title') {
+    return (
+      <>
+        {label}
+        <dd className="min-w-0" lang="en">
+          <DiffText segments={change.diff} />
         </dd>
       </>
     );
@@ -169,8 +203,46 @@ function ChangeRow({ change, timeZone: serverTimeZone }: { change: PinChange; ti
         <span className="font-medium text-ink" lang={change.field === 'title' ? 'en' : undefined}>
           {show(change.after)}
         </span>
+        <MovedBy change={change} />
       </dd>
     </>
+  );
+}
+
+// Removed words struck in red, added ones in green, the rest as written.
+function DiffText({ segments }: { segments: DiffSegment[] }) {
+  return segments.map((segment, i) =>
+    segment.op === 'del' ? (
+      <del key={i} className="rounded-sm bg-danger/10 text-danger-soft decoration-danger/50">
+        {segment.text}
+      </del>
+    ) : segment.op === 'ins' ? (
+      <ins key={i} className="rounded-sm bg-success/10 text-success-soft no-underline">
+        {segment.text}
+      </ins>
+    ) : (
+      <span key={i}>{segment.text}</span>
+    ),
+  );
+}
+
+// How far a start moved: "3 weeks later", "5 days earlier". Only for starts,
+// and by whole UTC days, as a delay is counted (delay.ts).
+function MovedBy({ change }: { change: PinChange }) {
+  const t = useT();
+  if (change.field !== 'start') return null;
+  const from = changedDay(change.before, change.allDay, 'start');
+  const to = changedDay(change.after, change.allDay, 'start');
+  if (!from || !to) return null;
+  const a = dayKeyIn(from, 'UTC');
+  const b = dayKeyIn(to, 'UTC');
+  if (a === b) return null;
+  const later = b > a;
+  const span = later ? delayLabel(a, b, t.locale) : delayLabel(b, a, t.locale);
+  return (
+    <span className={`ms-2 text-xs font-medium ${later ? 'text-danger-soft' : 'text-success-soft'}`}>
+      {t(later ? 'updates.later' : 'updates.earlier', { span })}
+    </span>
   );
 }
 

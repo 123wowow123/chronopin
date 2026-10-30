@@ -4,7 +4,8 @@ import Anchor from '@/components/ui/Anchor';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
-import { pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
+import { marketRefKey, parseMarketUrl, pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
+import { MoveAlertButton } from '@/components/pin/MoveAlertButton';
 import type { PinJson } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
 import { compactUsd, dateFormat } from '@/lib/format';
@@ -96,7 +97,7 @@ export function PinOdds({ pinId }: { pinId: number }) {
         {t('odds.heading')}
       </h2>
       {visible.map((market) => (
-        <Market key={market.url} market={market} />
+        <Market key={market.url} market={market} pinId={pinId} />
       ))}
     </section>
   );
@@ -197,7 +198,8 @@ function LiveDot({ fetchedAt }: { fetchedAt: string }) {
   return <span aria-hidden title={t('odds.updated', { time: updatedTime(t.locale).format(new Date(fetchedAt)) })} className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none" />;
 }
 
-function Market({ market }: { market: MarketOdds }) {
+function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
+  const ref = parseMarketUrl(market.url);
   const shown = market.outcomes.slice(0, SHOWN_OUTCOMES);
   const listRef = useRef<HTMLUListElement>(null);
   const t = useT();
@@ -230,6 +232,7 @@ function Market({ market }: { market: MarketOdds }) {
         {market.outcomes.length > SHOWN_OUTCOMES ? <span>{t('odds.moreOutcomes', { count: market.outcomes.length - SHOWN_OUTCOMES })}</span> : null}
         {market.volume ? <span>{t('odds.traded', { amount: compactUsd(t.locale).format(market.volume) })}</span> : null}
         {market.closeTime && !market.closed ? <span>{t('odds.closes', { date: closeDate(t.locale).format(new Date(market.closeTime)) })}</span> : null}
+        {ref && !market.closed ? <MoveAlertButton pinId={pinId} kind="market" subject={marketRefKey(ref)} /> : null}
         <Anchor href={market.url} target="_blank" rel="noopener nofollow" className="ms-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
           {t('odds.viewOn', { source: market.source })}
           <Icon name="external" className="size-3" />

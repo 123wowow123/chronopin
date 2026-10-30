@@ -60,7 +60,7 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
     { href: `/map${query(toMap)}`, key: 'map', label: t('nav.map'), icon: 'map', current: pathname.startsWith('/map') },
   ] as const;
   return (
-    <div className={`relative grid auto-cols-fr grid-flow-col rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
+    <div data-view-switch className={`relative grid auto-cols-fr grid-flow-col rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
       {/* The highlight is one pill that slides between the two views, rather
           than each link swapping its own background. */}
       <span

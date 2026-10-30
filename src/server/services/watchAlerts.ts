@@ -45,13 +45,13 @@ const loaders: Record<Locale, () => Promise<{ default: Messages }>> = {
   id: () => import('@/lib/i18n/messages/id'),
 };
 
-async function translatorFor(locale: Locale): Promise<Translator> {
+export async function translatorFor(locale: Locale): Promise<Translator> {
   const [messages, en] = await Promise.all([loaders[locale](), loaders.en()]);
   return createTranslator(messages.default, locale, en.default);
 }
 
 // The language each user reads in, when they have chosen one.
-async function localesOf(userIds: number[]): Promise<Map<number, Locale>> {
+export async function localesOf(userIds: number[]): Promise<Map<number, Locale>> {
   const rows = await db.query(`SELECT "id", "localePreference" FROM "User" WHERE "id" = ANY($1)`, [userIds]);
   return new Map(rows.map((row) => [Number(row.id), localeOr(row.localePreference)]));
 }

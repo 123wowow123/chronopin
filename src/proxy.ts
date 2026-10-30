@@ -4,6 +4,7 @@ import { isLandingPath, isReload, landingReferrerPath, pinIdOfPath, referrerSour
 import { isOffered } from '@/lib/multilingual';
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
+import { isMonthDay } from '@/lib/onThisDay';
 import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
 import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
@@ -385,7 +386,7 @@ export const config = {
   // Everything but route handlers, build assets and the files in public/.
   // robots.txt and sitemap.xml are let in for the bot count and nothing else.
   matcher: [
-    '/((?!_next/|auth/|logout|og/|embed/|upload/|pin-not-found|sw\\.js|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|ads/|platforms/|restaurant-images/|privacy\\.html|termsofservice\\.html).*)',
+    '/((?!_next/|auth/|logout|og/|embed/|upload/|pin-not-found|sw\\.js|manifest\\.webmanifest|icons/|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|ads/|platforms/|restaurant-images/|privacy\\.html|termsofservice\\.html).*)',
   ],
 };
 
@@ -419,6 +420,11 @@ function topicSlugs(): Promise<TopicSlugs> {
 // Tag and company URLs, the way pin URLs are checked above: a 308 to the
 // slug's one spelling (/tag/Anime -> /tag/anime), or a real 404.
 async function checkTopicPath(request: NextRequest, path: string, locale: Locale): Promise<NextResponse | null> {
+  // /on-this-day/13-40 is no day: a real 404, not a streamed not-found.
+  const day = /^\/on-this-day\/([^/]+)\/?$/.exec(path);
+  if (day) {
+    return isMonthDay(day[1]) ? null : NextResponse.rewrite(new URL(`/pin-not-found?lang=${locale}&page`, request.url), { status: 404 });
+  }
   const match = /^\/(tag|company|person)\/([^/]+)\/?$/.exec(path);
   if (!match) {
     return null;

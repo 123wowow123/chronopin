@@ -13,10 +13,14 @@ import { usesImperial } from '@/lib/weather';
 import { RestaurantOfferMenu } from './RestaurantOfferMenu';
 import styles from './RestaurantGuide.module.css';
 
+const DRINKS = /drink|happy hour|cocktail|\bwine\b|\bbeer\b|\bsake\b|\bbar\b|beverage|spirits|highball/i;
+
 export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: ScheduledRestaurantOffer; origin?: ViewerPlace; sort: RestaurantSort; timeZone: string }) {
   const id = useId();
   const [selected, setSelected] = useState<string | null>(null);
-  const offers = deduplicateRestaurantOffers(card.offers ?? [card]);
+  // Food (lunch) menus lead the tabs, so they sit on the left and open selected; drinks go last, on the right.
+  const rank = (offer: ScheduledRestaurantOffer) => offer.special.kind === 'lunch' ? 0 : DRINKS.test(`${offer.special.title}`) && !/\bfood\b/i.test(offer.special.title) ? 2 : 1;
+  const offers = deduplicateRestaurantOffers(card.offers ?? [card]).sort((a, b) => rank(a) - rank(b));
   const offer = offers.find((item) => item.id === selected) ?? offers[0];
   const index = offers.indexOf(offer);
   const pinId = Number(/^\/pin\/(\d+)\//.exec(card.restaurantHref)?.[1]) || null;

@@ -76,6 +76,27 @@ async function follow(userId: number, at: { latitude: number; longitude: number 
   }
 }
 
+// Asks the browser for the position where permission is still undecided, once
+// per page load however many callers ask. A prior refusal is left alone.
+let asked: Promise<ViewerPlace | null> | null = null;
+
+export function askViewerPlace(): Promise<ViewerPlace | null> {
+  asked ??= (async () => {
+    try {
+      if (!navigator.geolocation) return null;
+      if ((await navigator.permissions.query({ name: 'geolocation' })).state !== 'prompt') return null;
+      const coords = await new Promise<GeolocationCoordinates>((resolve, reject) =>
+        navigator.geolocation.getCurrentPosition((p) => resolve(p.coords), reject, { maximumAge: 15 * 60 * 1000, timeout: 15000 }),
+      );
+      forgetViewerPlace();
+      return { latitude: Math.round(coords.latitude * 100) / 100, longitude: Math.round(coords.longitude * 100) / 100, name: null, source: 'device' as const };
+    } catch {
+      return null;
+    }
+  })();
+  return asked;
+}
+
 // The browser's own position, but only where it costs no prompt.
 async function grantedPosition(): Promise<{ latitude: number; longitude: number } | null> {
   if (typeof navigator === 'undefined' || !navigator.geolocation) return null;

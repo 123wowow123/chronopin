@@ -9,7 +9,7 @@ beforeEach(() => {
 });
 
 describe('stored construction site tags', () => {
-  it.each(['Proposed', 'In Progress', 'Completed'])('retains %s during an ordinary tag edit without storing derived Thread', async (status) => {
+  it.each(['Proposed', 'In Progress', 'Completed', 'Withdrawn'])('retains %s during an ordinary tag edit without storing derived Thread', async (status) => {
     await PinTag.setUserTags(42, ['Thread', status, 'Solar']);
     const insert = vi.mocked(db.query).mock.calls.find(([sql]) => sql.includes('INSERT INTO "PinTag"'));
     expect(insert?.[1]).toEqual([42, [status, 'Solar'], ['topic', 'topic'], 'user']);

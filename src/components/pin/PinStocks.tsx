@@ -2,6 +2,7 @@
 
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useState } from 'react';
+import { MoveAlertButton } from '@/components/pin/MoveAlertButton';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
@@ -103,7 +104,7 @@ function TickerPill({ stock, open, onToggle }: { stock: PinStock; open: boolean;
 // which designs the PlayStation 5 processor."), and its price when posted and
 // on each start date against the live one, a search for the pins of the
 // company listed under it ($NKE), and the ticker on Yahoo.
-function TickerDetails({ stock }: { stock: PinStock }) {
+function TickerDetails({ stock, pinId }: { stock: PinStock; pinId: number }) {
   const quote = useStockQuote(stock.symbol);
   const t = useT();
   const live = quote?.price ?? null;
@@ -124,7 +125,7 @@ function TickerDetails({ stock }: { stock: PinStock }) {
           live={live}
         />
       ))}
-      <div className="mt-1 flex items-center gap-3 text-xs">
+      <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
         <RefineLink field="ticker" value={stock.symbol} title={t('stocks.searchPins', { symbol: stock.symbol })} className="text-link hover:underline">
           {t('stocks.searchPins', { symbol: stock.symbol })}
         </RefineLink>
@@ -137,6 +138,7 @@ function TickerDetails({ stock }: { stock: PinStock }) {
           {t('stocks.onYahoo', { symbol: stock.symbol })}
           <Icon name="external" className="size-3" />
         </Anchor>
+        <MoveAlertButton pinId={pinId} kind="stock" subject={stock.symbol} />
       </div>
     </div>
   );
@@ -200,7 +202,7 @@ export function PinStocks({ pinId }: { pinId: number }) {
           </div>
         ) : null;
       })}
-      {opened ? <TickerDetails stock={opened} /> : null}
+      {opened ? <TickerDetails stock={opened} pinId={pinId} /> : null}
       <QuoteNote symbol={stocks[0].symbol} />
     </section>
   );

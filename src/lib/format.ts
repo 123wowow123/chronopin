@@ -258,7 +258,7 @@ export function lunarDate(dayKey: string, locale: Locale = 'en'): { text: string
 }
 
 // A year as people write it: "2026", "79", "2561 BC".
-function yearLabel(year: number, locale: Locale = 'en'): string {
+export function yearLabel(year: number, locale: Locale = 'en'): string {
   return year > 0 ? String(year) : fillWords(FORMAT_WORDS[locale].bc, { year: String(1 - year) });
 }
 

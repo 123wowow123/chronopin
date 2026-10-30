@@ -8,8 +8,9 @@ import { INTL_LOCALES, type Locale } from './i18n/config';
 import type { PinJson } from './types';
 
 export type PinDelay = {
-  // The day first promised.
+  // The day first promised, and the day the start stands at now.
   from: string;
+  to: string;
   days: number;
   // "3 weeks", "8 months", "2.5 years".
   label: string;
@@ -67,7 +68,7 @@ export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateT
   if (compareDayKeys(pin.originalStartDate, now) >= 0) {
     return null;
   }
-  return { from: pin.originalStartDate, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now, locale), search: delaySearch(pin.originalStartDate, now) };
+  return { from: pin.originalStartDate, to: now, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now, locale), search: delaySearch(pin.originalStartDate, now) };
 }
 
 const DELAY_REASONING_MAX = 2000;

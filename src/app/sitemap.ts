@@ -15,6 +15,7 @@ import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/conf
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { MIN_INDEXED_RANKINGS, musicRankings } from '@/server/services/music';
 import { ACTIVITY_CITIES } from '@/lib/activities';
+import { allMonthDays, onThisDayPath } from '@/lib/onThisDay';
 
 // Google reads at most 50,000 URLs from one sitemap. Chronopin is far below
 // that; past it, split this file with generateSitemaps. Each entry is the
@@ -35,7 +36,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...(await personIndex()).map((p) => personPath(p.name)),
   ];
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 16 - ACTIVITY_CITIES.length - topics.length - RESTAURANT_REGIONS.length, (await hideThinPins()).enabled);
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 16 - ACTIVITY_CITIES.length - topics.length - RESTAURANT_REGIONS.length - allMonthDays().length, (await hideThinPins()).enabled);
   const musicIndexed = (await musicRankings()).length >= MIN_INDEXED_RANKINGS;
   const industries = [...new Set((await forecastPanels()).map((f) => industrySlug(f.industry)))];
   const inEveryLanguage = (path: string) => {
@@ -69,6 +70,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     { url: absoluteUrl('/advertise'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/advertise') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },
     { url: absoluteUrl('/people'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/people') },
+    ...allMonthDays().map((day) => ({ url: absoluteUrl(onThisDayPath(day)), changeFrequency: 'daily' as const, priority: 0.5, alternates: inEveryLanguage(onThisDayPath(day)) })),
     ...topics.map((path) => ({ url: absoluteUrl(path), alternates: inEveryLanguage(path), changeFrequency: 'daily' as const, priority: 0.7 })),
     ...pins.map((pin) => ({
       url: absoluteUrl(pinPath(pin)),
