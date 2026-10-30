@@ -700,6 +700,7 @@ const vi: Messages = {
     posted: 'Đã đăng <time></time>',
     openSource: 'Mở nguồn',
     cost: 'Chi phí',
+    costEstimate: 'Chi phí ước tính',
     // The price of a pin about one product: the maker's list price.
     msrp: 'Giá đề xuất',
     buyOnHeading: 'Mua tại',

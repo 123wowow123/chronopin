@@ -771,6 +771,7 @@ const ar: Messages = {
     posted: 'نُشر <time></time>',
     openSource: 'فتح المصدر',
     cost: 'التكلفة',
+    costEstimate: 'التكلفة التقديرية',
     msrp: 'السعر الموصى به',
     buyOnHeading: 'اشترِ من',
     moreStores: 'متاجر أخرى',

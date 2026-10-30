@@ -701,6 +701,7 @@ const ms: Messages = {
     posted: 'Disiarkan <time></time>',
     openSource: 'Buka sumber',
     cost: 'Kos',
+    costEstimate: 'Anggaran kos',
     // The price of a pin about one product: the maker's list price.
     msrp: 'MSRP',
     buyOnHeading: 'Beli di',

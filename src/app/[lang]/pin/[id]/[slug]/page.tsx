@@ -1,5 +1,5 @@
 import { PinFactoryBuildout } from '@/components/pin/PinFactoryBuildout';
-import { hasFactoryBuildout, hasFactoryRubric } from '@/lib/pinFactory';
+import { hasEstimatedCost, hasFactoryBuildout, hasFactoryRubric } from '@/lib/pinFactory';
 import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
@@ -245,7 +245,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} autoplay={autoplay} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} autoplay={autoplay} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -378,6 +378,7 @@ async function PinBody({
   candidates,
   competitors,
   isHotel,
+  costEstimated,
   autoplay,
 }: {
   pin: PinJson;
@@ -391,6 +392,7 @@ async function PinBody({
   candidates?: PinCandidateJson[];
   competitors?: PinCompetitorJson[];
   isHotel?: boolean;
+  costEstimated?: boolean;
   autoplay?: boolean;
 }) {
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
@@ -678,7 +680,7 @@ async function PinBody({
           {pin.price ? (
             <>
               <span className="text-subtle">
-                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : t('pin.cost'))}
+                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : costEstimated ? t('pin.costEstimate') : t('pin.cost'))}
               </span>{' '}
               <span className="font-semibold text-success tabular-nums">{bothMoney(pin.price, pin.priceCurrency, t.locale).stated}</span>
               {bothMoney(pin.price, pin.priceCurrency, t.locale).local ? <span className="text-sm text-muted tabular-nums"> ({bothMoney(pin.price, pin.priceCurrency, t.locale).local})</span> : null}

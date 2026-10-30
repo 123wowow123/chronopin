@@ -697,6 +697,7 @@ const de: Messages = {
     posted: 'Gepostet <time></time>',
     openSource: 'Quelle öffnen',
     cost: 'Kosten',
+    costEstimate: 'Geschätzte Kosten',
     msrp: 'UVP',
     buyOnHeading: 'Kaufen bei',
     moreStores: 'Weitere Shops',

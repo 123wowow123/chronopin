@@ -698,6 +698,7 @@ const zh: Messages = {
     posted: '发布于 <time></time>',
     openSource: '打开来源',
     cost: '价格',
+    costEstimate: '预估成本',
     msrp: '建议零售价',
     buyOnHeading: '购买',
     moreStores: '更多商店',

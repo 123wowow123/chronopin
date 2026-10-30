@@ -700,6 +700,7 @@ const hi: Messages = {
     posted: 'पोस्ट किया गया <time></time>',
     openSource: 'सोर्स खोलें',
     cost: 'कीमत',
+    costEstimate: 'अनुमानित लागत',
     msrp: 'एमआरपी',
     buyOnHeading: 'यहां खरीदें',
     moreStores: 'और स्टोर',

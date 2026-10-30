@@ -701,6 +701,7 @@ const en = {
     posted: 'Posted <time></time>',
     openSource: 'Open the source',
     cost: 'Cost',
+    costEstimate: 'Cost estimate',
     // The price of a pin about one product: the maker's list price.
     msrp: 'MSRP',
     buyOnHeading: 'Buy on',

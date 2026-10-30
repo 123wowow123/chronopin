@@ -697,6 +697,7 @@ const ko: Messages = {
     posted: '게시 <time></time>',
     openSource: '출처 열기',
     cost: '비용',
+    costEstimate: '예상 비용',
     msrp: '권장 소비자가',
     buyOnHeading: '구매',
     moreStores: '더 많은 스토어',

@@ -694,6 +694,7 @@ const th: Messages = {
     posted: 'โพสต์เมื่อ <time></time>',
     openSource: 'เปิดแหล่งที่มา',
     cost: 'ราคา',
+    costEstimate: 'ประมาณการค่าใช้จ่าย',
     msrp: 'ราคาแนะนำ',
     buyOnHeading: 'ซื้อที่',
     moreStores: 'ร้านค้าอื่น ๆ',

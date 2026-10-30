@@ -15,7 +15,21 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
 ## 1. Cost (`price`, `priceCurrency`)
 - Use the currency the source states; **no FX conversion**.
 - Match the figure to the pin's own event (a phase takes the phase cost) and use the most recent estimate.
-- Collapses, demolitions, rescues, approvals with no budget, and anything with no published cost stay **null**.
+- Collapses, demolitions, rescues and approvals with no budget stay **null**.
+- **Estimated price (owner instruction, 2026-10-30):** a build with no published cost still gets an estimate, the
+  way Google's "price estimate" answers do. Take a published benchmark for the building type and region (per unit,
+  per sq ft or per MW; trade-press or cost-consultant page you opened, not a guess), multiply by the project's own
+  sourced quantity (units, floor area, capacity), and save the midpoint as `price`/`priceCurrency`. Always label it:
+  - a `PinFactory` `investment` metric whose label **begins with "Estimated"** ("Estimated construction cost"); the
+    pin page then shows "Cost estimate" instead of "Cost" (`hasEstimatedCost`, `pin.costEstimate`), stating the range, the formula, that it is
+    an estimate and not a published budget, and what it excludes (land, soft costs, financing), with the benchmark's
+    verbatim quote as its source;
+  - an "Estimated cost" section in `longFormSummary` citing the benchmark, plus the benchmark page in `references`.
+  Show the **breakdown of its parts** in both places, never a bare total: the quantity and where it came from, the
+  per-unit benchmark (low, high, midpoint), the low and high totals, the figure used for the price, and what is
+  excluded, each as its own cited line in the summary and spelled out in the metric value.
+  A published budget always replaces the estimate. Land prices and permit figures are not construction cost. Use a
+  local-market row when the source has one; if no benchmark covers the type and region, leave `price` null.
 - Record the source in references or wiki. The extraction prompt `src/server/extract/systemPrompt.ts` carries the same rule.
 
 ## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`, `Withdrawn`

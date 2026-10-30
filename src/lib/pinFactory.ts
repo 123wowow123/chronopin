@@ -84,3 +84,8 @@ export function factoryBuildoutMetrics(p: FactoryProfile): (FactoryMetric & { ke
 }
 export const hasFactoryBuildout = (p: FactoryProfile | null | undefined): boolean =>
   !!p && factoryBuildoutMetrics(p).length >= 3;
+
+// Whether the pin's cost is an estimate rather than a published budget: its profile's investment metric says so.
+export function hasEstimatedCost(p: FactoryProfile | null | undefined): boolean {
+  return !!p?.metrics.some((m) => m.key === 'investment' && /^estimated\b/i.test(m.label));
+}

@@ -706,6 +706,7 @@ const ru: Messages = {
     posted: 'Опубликовано <time></time>',
     openSource: 'Открыть источник',
     cost: 'Стоимость',
+    costEstimate: 'Ориентировочная стоимость',
     msrp: 'Рекомендованная цена',
     buyOnHeading: 'Купить в',
     moreStores: 'Другие магазины',

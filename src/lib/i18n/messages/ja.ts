@@ -697,6 +697,7 @@ const ja: Messages = {
     posted: '投稿 <time></time>',
     openSource: '出典を開く',
     cost: '価格',
+    costEstimate: '推定費用',
     msrp: '希望小売価格',
     buyOnHeading: '購入',
     moreStores: 'その他のストア',

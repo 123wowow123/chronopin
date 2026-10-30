@@ -695,6 +695,7 @@ const pt: Messages = {
     posted: 'Publicado <time></time>',
     openSource: 'Abrir a fonte',
     cost: 'Custo',
+    costEstimate: 'Custo estimado',
     msrp: 'Preço sugerido',
     buyOnHeading: 'Comprar em',
     moreStores: 'Mais lojas',
