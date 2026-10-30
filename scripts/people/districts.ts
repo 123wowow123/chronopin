@@ -1,5 +1,5 @@
 // Draws each sitting member of Congress's seat on their person page: the
-// House district (Census TIGERweb, 119th Congress) or, for a senator, the
+// House district (Census TIGERweb, 119th Congress until 3 Jan 2027, then the 120th) or, for a senator, the
 // state. The seat comes from Person.office ("United States Representative
 // from Florida's 28th congressional district"); anyone whose office names no
 // seat (a leader's title, a delegate) is skipped and listed.
@@ -23,9 +23,14 @@ const { values: flags } = parseArgs({
 });
 
 const ROOT = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb';
-const DISTRICTS = `${ROOT}/Legislative/MapServer/4`; // 119th Congressional Districts
+// The 119th Congress sits until 3 January 2027, the 120th after (TIGERweb layers
+// 4 and 0). Switching by date means a re-run in January needs no code change,
+// but Person.office must first hold the new members (npm run people:apply).
+const NEW_CONGRESS = Date.now() >= Date.UTC(2027, 0, 3);
+const DISTRICTS = `${ROOT}/Legislative/MapServer/${NEW_CONGRESS ? 0 : 4}`;
+const VINTAGE = NEW_CONGRESS ? '120th Congress (2027-2029)' : '119th Congress (2025-2027)';
 const STATES = `${ROOT}/State_County/MapServer/0`;
-const PAGE = 'https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.119th_Congress.html';
+const PAGE = `https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.${NEW_CONGRESS ? '120th' : '119th'}_Congress.html`;
 
 async function query(layer: string, where: string, fields: string, tol = Number(flags.tol)): Promise<{ properties: Record<string, string>; geometry: { type: string; coordinates: unknown } }[]> {
   const url = `${layer}/query?where=${encodeURIComponent(where)}&outFields=${fields}&outSR=4326&maxAllowableOffset=${tol}&geometryPrecision=4&f=geojson`;
@@ -63,7 +68,7 @@ async function build(): Promise<{ slug: string; row: PersonDistrictJson }[]> {
     const hit = found;
     if (hit.length !== 1) { skipped.push(`${p.name}: ${found.length} districts for ${seat.state} ${code}`); continue; }
     const label = seat.district ? `${seat.state} ${seat.district}` : `${seat.state} at-large`;
-    out.push({ slug: p.slug, row: { label, vintage: '119th Congress (2025-2027)', source: 'U.S. Census Bureau TIGERweb', sourceUrl: PAGE, geojson: { type: 'FeatureCollection', features: [{ type: 'Feature', properties: { name: label, geoid: hit[0].properties.GEOID }, geometry: hit[0].geometry }] } } });
+    out.push({ slug: p.slug, row: { label, vintage: VINTAGE, source: 'U.S. Census Bureau TIGERweb', sourceUrl: PAGE, geojson: { type: 'FeatureCollection', features: [{ type: 'Feature', properties: { name: label, geoid: hit[0].properties.GEOID }, geometry: hit[0].geometry }] } } });
   }
   for (const s of skipped) console.log(`skipped ${s}`);
   return out;
