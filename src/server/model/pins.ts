@@ -35,6 +35,9 @@ const RELATED_MAX_TAG_PINS = 1500;
 // Restaurants one. tag:Curated searches it (the card's CURATED pill).
 const CURATED = `(EXISTS (SELECT 1 FROM "ProductBlurb" AS "b" WHERE "b"."pinId" = "Pin"."id") OR EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "Pin"."id" AND "t"."name" = 'Top Restaurants'))`;
 
+// How far from a storm track a pin still counts as under within:pin:<storm>.
+const WITHIN_TRACK_M = 300_000;
+
 export type PinSearchFilters = {
   userNames: string[];
   ids: number[];
@@ -51,6 +54,7 @@ export type PinSearchFilters = {
   tags: string[];
   excludeTags: string[];
   places: string[];
+  within: string[];
   platforms: string[];
   rated: string[];
   tastes: TasteTerm[];
@@ -1199,6 +1203,23 @@ export function searchClauses(filter: SearchFilter) {
     // Any of these places: a US state under either its name or its code.
     if (filter.places.length) {
       where.push(addressMatches(placePatterns(filter.places)));
+    }
+    // within:person:<slug> / within:pin:<id>: the pin stands inside that member
+    // of Congress's seat, or that pin's outline (a flood, wildfire or district
+    // shape), or within WITHIN_TRACK_M of its storm track. The shape is built
+    // once per query (an uncorrelated subquery), then the geography index on
+    // "location" does the work. ST_Collect, not ST_Union: a simplified outline
+    // can be invalid and union would throw, while intersects only needs the parts.
+    for (const ref of filter.within) {
+      const [kind, key] = [ref.slice(0, ref.indexOf(':')), ref.slice(ref.indexOf(':') + 1)];
+      if (kind === 'person') {
+        where.push(`ST_Intersects("Pin"."location", (SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PersonDistrict" AS "d" JOIN "Person" AS "pe" ON "pe"."id" = "d"."personId", jsonb_array_elements("d"."geojson" -> 'features') AS "f" WHERE "pe"."slug" = ${add(key)})::geography)`);
+      } else {
+        const id = add(Number(key));
+        where.push(`ST_Intersects("Pin"."location", COALESCE(
+          (SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PinSiteShape" AS "s", jsonb_array_elements("s"."geojson" -> 'features') AS "f" WHERE "s"."pinId" = ${id} AND "f"."value" -> 'properties' ->> 'kind' IN ('flood', 'wildfire', 'district', 'site'))::geography,
+          (SELECT ST_Buffer(ST_MakeLine(ARRAY(SELECT ST_SetSRID(ST_MakePoint(("t"."p" ->> 1)::float8, ("t"."p" ->> 0)::float8), 4326)::geometry FROM jsonb_array_elements("fp"."points") WITH ORDINALITY AS "t"("p", "i") ORDER BY "t"."i"))::geography, ${WITHIN_TRACK_M}) FROM "PinFlightPath" AS "fp" WHERE "fp"."pinId" = ${id} AND jsonb_array_length("fp"."points") > 1)))`);
+      }
     }
     // A game on any of these platforms (platform:), or rated any of these
     // (rated:, the board then its label), from PinGameInfo.

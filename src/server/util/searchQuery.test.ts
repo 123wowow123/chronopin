@@ -120,6 +120,7 @@ describe('parseSearchQuery', () => {
       tags: ['software'],
       excludeTags: [],
       places: [],
+      within: [],
       platforms: [],
       rated: [],
       tastes: [],

@@ -233,6 +233,10 @@ export type SearchQuery = {
   excludeTags: string[];
   // Places an address must name: cities, states, postal codes, countries.
   places: string[];
+  // Areas a pin must stand inside: within:person:susan-collins (that member of
+  // Congress's seat), within:pin:20630 (the outline or storm track of that pin).
+  // Stored as 'person:<slug>' or 'pin:<id>'; every one must hold.
+  within: string[];
   // A game's platforms (platform:ps5, platform:"Xbox Series X|S"), as the
   // keys of src/lib/gameInfo.ts; a pin on any of them matches.
   platforms: string[];
@@ -295,7 +299,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -315,7 +319,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -519,6 +523,7 @@ function readParts(parts: QueryPart[]): SearchQuery {
     tags: [],
     excludeTags: [],
     places: [],
+    within: [],
     platforms: [],
     rated: [],
     tastes: [],
@@ -577,6 +582,10 @@ function readParts(parts: QueryPart[]): SearchQuery {
       }
     } else if (part.field === 'place') {
       addUnique(query.places, part.value);
+    } else if (part.field === 'within') {
+      // A reference nobody can resolve is left out rather than matching nothing.
+      const ref = withinRef(part.value);
+      if (ref) addUnique(query.within, ref);
     } else if (part.field === 'platform') {
       // A name nobody ships on is left out rather than matching nothing.
       const key = platformFromName(part.value) ?? (isPlatformKey(part.value.toLowerCase()) ? part.value.toLowerCase() : undefined);
@@ -682,6 +691,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.tags.length ||
     query.excludeTags.length ||
     query.places.length ||
+    query.within.length ||
     query.platforms.length ||
     query.rated.length ||
     query.tastes.length ||
@@ -939,4 +949,15 @@ function addUnique(list: string[], value: string) {
 // A Postgres regex (~*) matching text at the start of any word, the text taken literally.
 export function wordStartPattern(text: string): string {
   return `(^|[^[:alnum:]])${text.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`;
+}
+
+// within:person:susan-collins or within:pin:20630 -> 'person:susan-collins' /
+// 'pin:20630'. A person is named by slug or by name (spaces and case folded
+// the way the person page's own URL is); anything else is not an area.
+export function withinRef(value: string): string | null {
+  const m = /^(person|pin):\s*(.+)$/i.exec(value.trim());
+  if (!m) return null;
+  if (m[1].toLowerCase() === 'pin') return /^\d+$/.test(m[2].trim()) ? `pin:${Number(m[2])}` : null;
+  const slug = m[2].trim().toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
+  return slug ? `person:${slug}` : null;
 }

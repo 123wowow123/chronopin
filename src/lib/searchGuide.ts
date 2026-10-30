@@ -42,6 +42,11 @@ export const SEARCH_GUIDE: SearchGuideGroup[] = [
     heading: 'Where',
     entries: [
       { term: 'place:', what: 'Anything a pin’s address names: a city, state, postal code or country. US states match by name or two-letter code.', examples: ['place:Chicago', 'place:Texas', 'place:60601', 'place:"New York"'] },
+      {
+        term: 'within:',
+        what: 'Pins standing inside an area drawn on the map. within:person:<slug> is the seat a sitting member of Congress holds: their House district, or the whole state for a senator (the outline on their person page). within:pin:<id> is the outline of another pin (a flood extent, wildfire perimeter or election district), or, for a storm pin, everything within 300 km of its track. Use the person’s page name in lowercase with hyphens, or quote the whole term to write the name with spaces. Combine with other terms to narrow: within:… tag:Restaurants.',
+        examples: ['within:person:susan-collins', 'within:"person:Susan Collins" tag:Restaurants', 'within:pin:20624', 'within:pin:20630 date:2026-09'],
+      },
     ],
   },
   {
