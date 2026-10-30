@@ -256,7 +256,7 @@ function clientBudget(store: string, burst: number, perSecond: number, clientId:
 // different addresses are let in per minute between them. An address already
 // admitted this minute carries on; a new one past the limit is told to wait for
 // the next minute. A minute is a fixed window, kept in memory like the buckets.
-export const CHINA_VISITORS_PER_MINUTE = 80;
+export const CHINA_VISITORS_PER_MINUTE = 60;
 const CHINA_WINDOW_MS = 60_000;
 
 let chinaV6: [bigint, bigint][] | null = null;
