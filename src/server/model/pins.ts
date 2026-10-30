@@ -37,6 +37,8 @@ const CURATED = `(EXISTS (SELECT 1 FROM "ProductBlurb" AS "b" WHERE "b"."pinId" 
 
 // How far from a storm track a pin still counts as under within:pin:<storm>.
 const WITHIN_TRACK_M = 300_000;
+// ...and from a pin with no outline or track, of the pin itself.
+const WITHIN_POINT_M = 50_000;
 
 export type PinSearchFilters = {
   userNames: string[];
@@ -55,6 +57,7 @@ export type PinSearchFilters = {
   excludeTags: string[];
   places: string[];
   within: string[];
+  radiusM: number | null;
   platforms: string[];
   rated: string[];
   tastes: TasteTerm[];
@@ -1206,19 +1209,24 @@ export function searchClauses(filter: SearchFilter) {
     }
     // within:person:<slug> / within:pin:<id>: the pin stands inside that member
     // of Congress's seat, or that pin's outline (a flood, wildfire or district
-    // shape), or within WITHIN_TRACK_M of its storm track. The shape is built
-    // once per query (an uncorrelated subquery), then the geography index on
-    // "location" does the work. ST_Collect, not ST_Union: a simplified outline
-    // can be invalid and union would throw, while intersects only needs the parts.
+    // shape), else within 300 km of its storm track, else within 50 km of the
+    // pin itself; radius: widens any of them. The shape is an uncorrelated
+    // subquery, built once per query, and the geography index on "location"
+    // does the filtering. ST_Collect, not ST_Union: a simplified outline can be
+    // invalid and union would throw, while distance only needs the parts.
     for (const ref of filter.within) {
       const [kind, key] = [ref.slice(0, ref.indexOf(':')), ref.slice(ref.indexOf(':') + 1)];
+      const radius = filter.radiusM != null ? add(filter.radiusM) : null;
       if (kind === 'person') {
-        where.push(`ST_Intersects("Pin"."location", (SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PersonDistrict" AS "d" JOIN "Person" AS "pe" ON "pe"."id" = "d"."personId", jsonb_array_elements("d"."geojson" -> 'features') AS "f" WHERE "pe"."slug" = ${add(key)})::geography)`);
+        const seat = `(SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PersonDistrict" AS "d" JOIN "Person" AS "pe" ON "pe"."id" = "d"."personId", jsonb_array_elements("d"."geojson" -> 'features') AS "f" WHERE "pe"."slug" = ${add(key)})::geography`;
+        where.push(`ST_DWithin("Pin"."location", ${seat}, ${radius ?? '0'}::float8)`);
       } else {
         const id = add(Number(key));
-        where.push(`ST_Intersects("Pin"."location", COALESCE(
-          (SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PinSiteShape" AS "s", jsonb_array_elements("s"."geojson" -> 'features') AS "f" WHERE "s"."pinId" = ${id} AND "f"."value" -> 'properties' ->> 'kind' IN ('flood', 'wildfire', 'district', 'site'))::geography,
-          (SELECT ST_Buffer(ST_MakeLine(ARRAY(SELECT ST_SetSRID(ST_MakePoint(("t"."p" ->> 1)::float8, ("t"."p" ->> 0)::float8), 4326)::geometry FROM jsonb_array_elements("fp"."points") WITH ORDINALITY AS "t"("p", "i") ORDER BY "t"."i"))::geography, ${WITHIN_TRACK_M}) FROM "PinFlightPath" AS "fp" WHERE "fp"."pinId" = ${id} AND jsonb_array_length("fp"."points") > 1)))`);
+        const shapes = `SELECT 1 AS "rank", 0 AS "reach", (SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PinSiteShape" AS "s", jsonb_array_elements("s"."geojson" -> 'features') AS "f" WHERE "s"."pinId" = ${id} AND "f"."value" -> 'properties' ->> 'kind' IN ('flood', 'wildfire', 'district', 'site'))::geography AS "shape"
+          UNION ALL SELECT 2, ${WITHIN_TRACK_M}, (SELECT ST_MakeLine(ARRAY(SELECT ST_SetSRID(ST_MakePoint(("t"."p" ->> 1)::float8, ("t"."p" ->> 0)::float8), 4326)::geometry FROM jsonb_array_elements("fp"."points") WITH ORDINALITY AS "t"("p", "i") ORDER BY "t"."i"))::geography FROM "PinFlightPath" AS "fp" WHERE "fp"."pinId" = ${id} AND jsonb_array_length("fp"."points") > 1)
+          UNION ALL SELECT 3, ${WITHIN_POINT_M}, (SELECT "pp"."location" FROM "Pin" AS "pp" WHERE "pp"."id" = ${id})`;
+        const first = (column: string) => `(SELECT "u".${column} FROM (${shapes}) AS "u" WHERE "u"."shape" IS NOT NULL ORDER BY "u"."rank" LIMIT 1)`;
+        where.push(`ST_DWithin("Pin"."location", ${first('"shape"')}, ${radius ? `${radius}::float8` : `${first('"reach"')}::float8`})`);
       }
     }
     // A game on any of these platforms (platform:), or rated any of these

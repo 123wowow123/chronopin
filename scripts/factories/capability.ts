@@ -10,7 +10,7 @@ const { values } = parseArgs({ options: { apply: { type: 'boolean', default: fal
 const base = values.base!.replace(/\/$/, '');
 const environment = base === 'https://www.chronopin.com' ? 'production' : 'local';
 if (!['http://127.0.0.1:3000', 'http://localhost:3000', 'https://www.chronopin.com'].includes(base)) throw Error('Use the known local or production API; credentials are never sent to another host.');
-type Entry = { key: string; pinIds: { local: number; production: number }; title: string; sourceUrl: string; profile: FactoryProfile };
+type Entry = { key: string; pinIds: { local: number; production: number }; title: string; sourceUrl: string | null; profile: FactoryProfile };
 const entries: Entry[] = JSON.parse(readFileSync(new URL('./capability.json', import.meta.url), 'utf8'));
 let token: string | undefined;
 async function call(method: string, path: string, body?: unknown) {
@@ -27,7 +27,7 @@ async function run() {
     if (typeof profile === 'string') throw Error(`${e.key}: ${profile}`);
     const id = e.pinIds[environment];
     const pin = await call('GET', `/api/pins/${id}`);
-    if (pin.title !== e.title || pin.sourceUrl !== e.sourceUrl) throw Error(`${e.key}: pin identity changed; refusing write.`);
+    if (pin.title !== e.title || (pin.sourceUrl ?? null) !== e.sourceUrl) throw Error(`${e.key}: pin identity changed; refusing write.`);
     const cited = new Set([pin.sourceUrl, ...pin.references.map((r: { url: string }) => r.url)]);
     for (const source of [...Object.values(profile.axes).flatMap(a => [...a.sources, ...(a.benchmark?.sources ?? [])]), ...profile.metrics.map(m => m.source), ...(profile.milestones ?? []).map(m => m.source)]) {
       if (!cited.has(source.url)) throw Error(`${e.key}: scoring source must first be added to the pin references/wiki: ${source.url}`);

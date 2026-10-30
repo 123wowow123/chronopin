@@ -1,0 +1,466 @@
+[
+  {
+    "id": 17116,
+    "megawatts": 200,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 200 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2030-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17125,
+    "megawatts": 300,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 300 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2030-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17126,
+    "megawatts": 261,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 261 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2030-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17346,
+    "megawatts": 230,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 230 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2029-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17164,
+    "megawatts": 250,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 250 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2029-01; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18174,
+    "megawatts": 250,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 250 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2028-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18108,
+    "megawatts": 100,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 100 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2028-05; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18046,
+    "megawatts": 190,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 190 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2028-03; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17334,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 200 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2028-02; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18415,
+    "megawatts": 600,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 600 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-11 / 2027-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18071,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 200 MW electrical generation nameplate; separate battery power 200 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18073,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 200 MW electrical generation nameplate; separate battery power 200 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18094,
+    "megawatts": 100,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 100 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17127,
+    "megawatts": 250,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 250 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-11; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17331,
+    "megawatts": 80,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 80 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-10; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18074,
+    "megawatts": 150,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 150 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-09; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17118,
+    "megawatts": 225,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 225 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-06; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17322,
+    "megawatts": 450,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 450 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-06; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17138,
+    "megawatts": 400,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 400 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-06; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18050,
+    "megawatts": 160,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 160 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-06; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18143,
+    "megawatts": 196,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 196 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-04; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17152,
+    "megawatts": 300,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 300 MW electrical generation nameplate; separate battery power 300 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-04; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18312,
+    "megawatts": 100,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 100 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-04; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17150,
+    "megawatts": 300,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 300 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-10; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17141,
+    "megawatts": 300,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 300 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-10; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18089,
+    "megawatts": 100,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 100 MW electrical generation nameplate; separate battery power 100 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18086,
+    "megawatts": 100,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 100 MW electrical generation nameplate; separate battery power 100 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18178,
+    "megawatts": 140,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 140 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18146,
+    "megawatts": 90,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 90 MW electrical generation nameplate; separate battery power 68 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17114,
+    "megawatts": 250,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 250 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17124,
+    "megawatts": 335,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 335 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-10; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18095,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 200 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18380,
+    "megawatts": 70,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 70 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-10; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 16322,
+    "megawatts": 300,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 300 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-03; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 15655,
+    "megawatts": 600,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 600 MW electrical generation nameplate; separate battery power 350 MW, no MWh inferred in September 2026 preliminary inventory. Not operating capacity. Planned operation 2029-01; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18416,
+    "megawatts": 200,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 200 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-04; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 15766,
+    "megawatts": 5,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 5 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2028-03; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 17092,
+    "megawatts": 500,
+    "kind": "storage",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 500 MW battery charge/discharge power in September 2026 preliminary inventory. Not operating capacity. Planned operation 2026-12; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 18488,
+    "megawatts": 74.9,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+    "note": "September 2026 EIA preliminary inventory. 74.9 MW electrical generation nameplate in September 2026 preliminary inventory. Not operating capacity. Planned operation 2027-04; survey estimate, not a capacity commitment or achieved operation."
+  },
+  {
+    "id": 2623,
+    "megawatts": 3600,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Rogun_Dam",
+    "note": "Planned full Rogun hydropower station: six 600 MW units, not current installed or delivered output. Active construction documented August 2025; completion not inferred. Published full-build annual generation forecast: 17 TWh; not measured current production."
+  },
+  {
+    "id": 5514,
+    "megawatts": 4500,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.nsenergybusiness.com/news/homer-city-coal-plant-repurposed-data-centre-hub/",
+    "note": "Homer City redevelopment design: up to 4,500 MW gas-fired generation, separate from data-center IT load. Under construction; partial generation forecast 2027 is not achieved output."
+  },
+  {
+    "id": 5490,
+    "megawatts": 5200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://reglobal.org/masdar-reaches-financial-close-for-6-1-billion-rtc-project-in-abu-dhabi/",
+    "note": "Under construction. 5,200 MW solar PV design and separate 19 GWh storage; intended continuous supply is 1,000 MW, not additional generation. Planned operation 2027."
+  },
+  {
+    "id": 19762,
+    "megawatts": 683,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.world-nuclear-news.org/Articles/Embalse-plant-returns-to-service",
+    "note": "Embalse refurbishment completed 2019: published 683 MWe following 6% uprate. Source does not specify net/gross; not incremental 683 MW added by refurbishment."
+  },
+  {
+    "id": 19726,
+    "megawatts": 1065,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://clui.org/ludb/site/browns-ferry-nuclear-power-plant",
+    "note": "Historical Browns Ferry Unit 1 restoration output reported as 1,065 MW electrical in 2007 account. Commercial return August 1, 2007; not a claim about later uprated capacity."
+  },
+  {
+    "id": 19694,
+    "megawatts": 819,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+    "note": "Historical TMI-1 net electrical rating 819 MWe in shutdown inventory. Original commercial operation 1974; shutdown 2019. No present output or completion of Crane restart asserted."
+  },
+  {
+    "id": 19695,
+    "megawatts": 906,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+    "note": "Historical TMI-2 design net electrical capacity 906 MWe. Commercial operation 1978, permanent shutdown March 1979; not current generation."
+  },
+  {
+    "id": 19708,
+    "megawatts": 760,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.michiganbuildingtrades.org/newspaper/nuke-plants-an-important-source-of-energy-employment",
+    "note": "Historical Palisades original-build account: 760 MW electrical, commercial generation December 31, 1971. Net/gross unspecified in cited account; no completion of modern restart asserted."
+  },
+  {
+    "id": 15879,
+    "megawatts": 400,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html",
+    "note": "Planned up-to-400 MW solar generation at High Spring. December 2027 operation schedule remains forecast; not operating power."
+  },
+  {
+    "id": 18175,
+    "megawatts": 270,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.southripleysolar.com/",
+    "note": "Planned 270 MW South Ripley solar generation. Proposed project with Q4 2027 operation forecast, not current operating capacity."
+  },
+  {
+    "id": 18169,
+    "megawatts": 250,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://us.boralex.com/en/projects-and-sites/solar-fort-covington",
+    "note": "Proposed Fort Covington 250 MW solar generation. Developer page has conflicting June 2028, Q4 2028 and legacy 2027 forecasts; exact commissioning date unresolved."
+  },
+  {
+    "id": 18172,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.garnetenergycenter.com/faqs-about-the-garnet-energy-center",
+    "note": "Proposed Garnet 200 MW solar generation. Latest application describes 1,054.1-acre site and 901.6-acre fenced footprint. Not operating capacity."
+  },
+  {
+    "id": 14049,
+    "megawatts": 200,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://public-inspection.federalregister.gov/2026-00570.pdf",
+    "note": "Approximately 200 MW proposed new Allen aeroderivative generation: six GE LM2500 turbines. Excludes existing units 19 and 20; September 2025 decision alone does not prove physical work."
+  },
+  {
+    "id": 19749,
+    "megawatts": 789,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Shimane-2",
+    "note": "Shimane Unit 2: 789 MWe net (820 MWe gross), not incremental capacity from safety upgrades. Commercial operation resumed January 10, 2025."
+  },
+  {
+    "id": 19741,
+    "megawatts": 825,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.tohoku-epco.co.jp/english/press/__icsFiles/afieldfile/2024/12/26/1246004.pdf",
+    "note": "Onagawa Unit 2: 825 MW BWR rating; net/gross not specified in operator restart notice. Commercial operation resumed December 26, 2024; not incremental upgrade capacity."
+  },
+  {
+    "id": 6112,
+    "megawatts": 22500,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.powermag.com/topplantthree-gorges-dam-yangtze-river-hubei-province-china/",
+    "note": "Three Gorges: 22,500 MW total including 32 main 700 MW and two 50 MW auxiliaries; full commercial operation 2012. Cited 2012 engineering account projects more than 100 TWh/year at full build; forecast generation, not measured annual output or site consumption."
+  },
+  {
+    "id": 2628,
+    "megawatts": 835,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.world-nuclear-news.org/articles/constellation-seeks-regulators-help-for-2027-plant-restart",
+    "note": "Crane restart proposal: 835 MW restored nuclear generation, not current operating output. Under refurbishment; latest opened operator forecast 2027, dependent on NRC review and permits."
+  },
+  {
+    "id": 15940,
+    "megawatts": 650,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://www.permits.performance.gov/fast-41-covered-projects-postings-agencies-silver-star-solar-0",
+    "note": "Silver Star federal 2024 initiation notice: 650 MW AC solar proposal. Separate battery 650 MW in project description versus 500 MW in objectives; battery final sizing unresolved. No MWh inferred."
+  },
+  {
+    "id": 19755,
+    "megawatts": 1464,
+    "kind": "generation",
+    "source": "hand",
+    "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-1",
+    "note": "Historical original design net ratings: Units 1 and 2 each 732 MWe, combined 1,464 MWe. Not current uprated output or incremental restart capacity. Both returned in 2012. Unit 2 corroboration: https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-2"
+  }
+]

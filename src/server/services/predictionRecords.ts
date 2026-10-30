@@ -115,9 +115,39 @@ export async function syncAllRecords({ apply = true, limit = 200 } = {}): Promis
 
 export type Backfill = { pins: number; markets: number; recorded: number; noHistory: number; open: number };
 
-// Scores markets that settled before they were ever recorded, on their price
-// HISTORICAL_DAYS before they closed (basis 'historical'). Markets without a
-// price history that far back are skipped, and Polymarket US keeps none.
+export type HistoricalRecord = {
+  source: string;
+  question: string;
+  outcomes: OutcomeOdds[];
+  volume: number | null;
+  closeTime: string;
+  status: 'resolved' | 'void';
+  finalOutcomes: OutcomeOdds[];
+  // When the recorded odds were taken, unix seconds.
+  at: number;
+};
+
+// A market that has closed, scored on its price HISTORICAL_DAYS before it
+// closed; 'open' while it still trades, 'noHistory' when the exchange has no
+// price that far back (Polymarket US keeps none), null when it is not found.
+export async function historicalRecord(ref: MarketRef): Promise<HistoricalRecord | 'open' | 'noHistory' | null> {
+  const odds = await oddsFor(ref);
+  if (!odds) return null;
+  if (!odds.closed) return 'open';
+  if (!odds.closeTime) return null;
+  const at = Math.floor(Date.parse(odds.closeTime) / 1000) - HISTORICAL_DAYS * 86_400;
+  const final = outcomesOf(odds);
+  const before: OutcomeOdds[] = [];
+  for (const o of odds.outcomes.slice(0, MAX_OUTCOMES)) {
+    const probability = o.history ? await priceAt(o.history, at).catch(() => null) : null;
+    if (probability != null) before.push({ label: o.label, probability });
+  }
+  if (!before.length) return 'noHistory';
+  return { source: odds.source, question: odds.title, outcomes: before, volume: odds.volume ?? null, closeTime: odds.closeTime, status: settlement(final), finalOutcomes: final, at };
+}
+
+// Scores markets that settled before they were ever recorded
+// (basis 'historical', see historicalRecord).
 export async function backfillHistoricalRecords({ apply = true, limit = 1000 } = {}): Promise<Backfill> {
   const pins = await db.query<PinLinks>(
     `SELECT "p"."id", "p"."sourceUrl",
@@ -139,32 +169,21 @@ export async function backfillHistoricalRecords({ apply = true, limit = 1000 } =
       try {
         const [existing] = await db.query(`SELECT 1 FROM "PredictionRecord" WHERE "pinId" = $1 AND "marketUrl" = $2`, [pin.id, ref.url]);
         if (existing) continue;
-        const odds = await oddsFor(ref);
-        if (!odds?.closed || !odds.closeTime) {
-          if (odds && !odds.closed) tally.open++;
-          continue;
+        const rec = await historicalRecord(ref);
+        if (rec === 'open') tally.open++;
+        else if (rec === 'noHistory') (tally.markets++, tally.noHistory++);
+        else if (rec) {
+          tally.markets++;
+          if (apply) {
+            await db.query(
+              `INSERT INTO "PredictionRecord" ("pinId", "marketUrl", "source", "question", "outcomes", "volume", "closeTime", "status",
+                                               "finalOutcomes", "basis", "utcSnapshotDateTime", "utcResolvedDateTime")
+               VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, 'historical', to_timestamp($10), $7) ON CONFLICT ("pinId", "marketUrl") DO NOTHING`,
+              [pin.id, ref.url, rec.source, rec.question, JSON.stringify(rec.outcomes), rec.volume, rec.closeTime, rec.status, JSON.stringify(rec.finalOutcomes), rec.at],
+            );
+          }
+          tally.recorded++;
         }
-        tally.markets++;
-        const at = Math.floor(Date.parse(odds.closeTime) / 1000) - HISTORICAL_DAYS * 86_400;
-        const final = outcomesOf(odds);
-        const before: OutcomeOdds[] = [];
-        for (const o of odds.outcomes.slice(0, MAX_OUTCOMES)) {
-          const probability = o.history ? await priceAt(o.history, at).catch(() => null) : null;
-          if (probability != null) before.push({ label: o.label, probability });
-        }
-        if (!before.length) {
-          tally.noHistory++;
-          continue;
-        }
-        if (apply) {
-          await db.query(
-            `INSERT INTO "PredictionRecord" ("pinId", "marketUrl", "source", "question", "outcomes", "volume", "closeTime", "status",
-                                             "finalOutcomes", "basis", "utcSnapshotDateTime", "utcResolvedDateTime")
-             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, 'historical', to_timestamp($10), $7) ON CONFLICT ("pinId", "marketUrl") DO NOTHING`,
-            [pin.id, ref.url, odds.source, odds.title, JSON.stringify(before), odds.volume ?? null, odds.closeTime, settlement(final), JSON.stringify(final), at],
-          );
-        }
-        tally.recorded++;
       } catch (err) {
         log.warn(`historical record for pin ${pin.id} (${ref.url}) failed:`, (err as Error).message);
       }

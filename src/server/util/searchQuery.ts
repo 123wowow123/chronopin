@@ -237,6 +237,10 @@ export type SearchQuery = {
   // Congress's seat), within:pin:20630 (the outline or storm track of that pin).
   // Stored as 'person:<slug>' or 'pin:<id>'; every one must hold.
   within: string[];
+  // How far from the within: areas still counts (radius:50km, radius:30mi), in
+  // metres; null leaves each area its own reach (an outline none, a storm track
+  // 300 km, a bare pin 50 km). The last radius: written wins.
+  radiusM: number | null;
   // A game's platforms (platform:ps5, platform:"Xbox Series X|S"), as the
   // keys of src/lib/gameInfo.ts; a pin on any of them matches.
   platforms: string[];
@@ -299,7 +303,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|radius|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -319,7 +323,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'radius' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -524,6 +528,7 @@ function readParts(parts: QueryPart[]): SearchQuery {
     excludeTags: [],
     places: [],
     within: [],
+    radiusM: null,
     platforms: [],
     rated: [],
     tastes: [],
@@ -586,6 +591,9 @@ function readParts(parts: QueryPart[]): SearchQuery {
       // A reference nobody can resolve is left out rather than matching nothing.
       const ref = withinRef(part.value);
       if (ref) addUnique(query.within, ref);
+    } else if (part.field === 'radius') {
+      const metres = radiusMetres(part.value);
+      if (metres != null) query.radiusM = metres;
     } else if (part.field === 'platform') {
       // A name nobody ships on is left out rather than matching nothing.
       const key = platformFromName(part.value) ?? (isPlatformKey(part.value.toLowerCase()) ? part.value.toLowerCase() : undefined);
@@ -743,6 +751,13 @@ const DAY_RANGE = new RegExp(`^${DAY}\\.\\.${DAY}$`);
 // comparison or range is boundaries, and anything else sets nothing.
 export function dayBounds(value: string): { days: string[]; bounds: DayBound[] } {
   const text = value.trim();
+  // A bare month (date:2026-10) is every day of it.
+  const month = /^(\d{4})-(0[1-9]|1[0-2])$/.exec(text);
+  if (month) {
+    const [year, m] = [Number(month[1]), Number(month[2])];
+    const next = m === 12 ? `${String(year + 1).padStart(4, '0')}-01-01` : `${month[1]}-${String(m + 1).padStart(2, '0')}-01`;
+    return { days: [], bounds: [{ op: '>=', day: `${month[1]}-${month[2]}-01` }, { op: '<', day: next }] };
+  }
   const range = DAY_RANGE.exec(text);
   if (range) {
     const [low, high] = [range[1], range[2]].sort(compareDayKeys);
@@ -960,4 +975,14 @@ export function withinRef(value: string): string | null {
   if (m[1].toLowerCase() === 'pin') return /^\d+$/.test(m[2].trim()) ? `pin:${Number(m[2])}` : null;
   const slug = m[2].trim().toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
   return slug ? `person:${slug}` : null;
+}
+
+// radius:50km, radius:"30 mi", radius:2000m, a bare number being kilometres;
+// anything else (zero, negative, over 5,000 km) sets nothing.
+export function radiusMetres(value: string): number | null {
+  const m = /^(\d+(?:\.\d+)?)\s*(km|mi|miles?|m)?$/i.exec(value.trim());
+  if (!m) return null;
+  const unit = (m[2] ?? 'km').toLowerCase();
+  const metres = Number(m[1]) * (unit === 'm' ? 1 : unit.startsWith('mi') ? 1609.344 : 1000);
+  return metres > 0 && metres <= 5_000_000 ? Math.round(metres) : null;
 }

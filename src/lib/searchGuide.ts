@@ -31,7 +31,7 @@ export const SEARCH_GUIDE: SearchGuideGroup[] = [
     heading: 'When',
     intro: 'Days are written YYYY-MM-DD (a BC year keeps its leading minus). Comparisons use >, >=, <, <=, = and a range with two dots. today and yesterday stand for the viewer’s own days.',
     entries: [
-      { term: 'date:', what: 'Pins starting on a day, as the timeline places them (all-day pins by UTC date, timed pins by your time zone).', examples: ['date:2026-09-08', 'date:>=2026-09-01', 'date:2026-09-01..2026-09-30'] },
+      { term: 'date:', what: 'Pins starting on a day or in a whole month (date:2026-10), as the timeline places them (all-day pins by UTC date, timed pins by your time zone).', examples: ['date:2026-09-08', 'date:2026-10', 'date:>=2026-09-01', 'date:2026-09-01..2026-09-30'] },
       { term: 'posted:', what: 'Pins posted on a day or in a span.', examples: ['posted:today', 'posted:>=2026-10-01'] },
       { term: 'updated:', what: 'Pins with an update (an edit, a newer reference, a rewrite) on a day or in a span.', examples: ['updated:yesterday', 'updated:>=2026-10-17'] },
       { term: 'holiday:', what: 'Pins starting on any day of a holiday or special day, in every year the site works out, including solstices and equinoxes.', examples: ['holiday:Halloween', 'holiday:"Mid-Autumn Festival"', 'holiday:"Winter Solstice"'] },
@@ -44,8 +44,13 @@ export const SEARCH_GUIDE: SearchGuideGroup[] = [
       { term: 'place:', what: 'Anything a pin’s address names: a city, state, postal code or country. US states match by name or two-letter code.', examples: ['place:Chicago', 'place:Texas', 'place:60601', 'place:"New York"'] },
       {
         term: 'within:',
-        what: 'Pins standing inside an area drawn on the map. within:person:<slug> is the seat a sitting member of Congress holds: their House district, or the whole state for a senator (the outline on their person page). within:pin:<id> is the outline of another pin (a flood extent, wildfire perimeter or election district), or, for a storm pin, everything within 300 km of its track. Use the person’s page name in lowercase with hyphens, or quote the whole term to write the name with spaces. Combine with other terms to narrow: within:… tag:Restaurants.',
+        what: 'Pins standing inside an area drawn on the map. within:person:<slug> is the seat a sitting member of Congress holds: their House district, or the whole state for a senator (the outline on their person page). within:pin:<id> is the outline of another pin (a flood extent, wildfire perimeter or election district), or, for a storm pin, everything within 300 km of its track; a pin with neither means everything within 50 km of the pin itself. Use the person’s page name in lowercase with hyphens, or quote the whole term to write the name with spaces. Combine with other terms to narrow: within:… tag:Restaurants.',
         examples: ['within:person:susan-collins', 'within:"person:Susan Collins" tag:Restaurants', 'within:pin:20624', 'within:pin:20630 date:2026-08-01..2026-09-30'],
+      },
+      {
+        term: 'radius:',
+        what: 'Widens every within: area by a distance, in km (the default), mi or m. radius:50km around a storm pin narrows its 300 km reach to 50 km; radius:30mi around a district also finds pins just outside it; around a pin with no outline it replaces the 50 km default. It does nothing without a within: term, and if you write it twice the last one wins.',
+        examples: ['within:pin:20624 radius:50km', 'within:pin:3155 radius:30mi', 'within:person:susan-collins radius:100km', 'within:pin:20624 radius:500km tag:Restaurants'],
       },
     ],
   },

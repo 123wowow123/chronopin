@@ -121,6 +121,7 @@ describe('parseSearchQuery', () => {
       excludeTags: [],
       places: [],
       within: [],
+      radiusM: null,
       platforms: [],
       rated: [],
       tastes: [],
