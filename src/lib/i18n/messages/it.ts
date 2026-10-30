@@ -92,6 +92,7 @@ const it: Messages = {
     groupPeople: 'Persone',
     groupHolidays: 'Festività',
     groupTags: 'Tag',
+    related: 'Ricerche correlate',
     groupPins: 'Pin',
     fields: {
       company: 'azienda',

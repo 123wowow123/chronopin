@@ -18,9 +18,9 @@ import { DRAG_QUERY_EVENT, queryLabel, queryNamedBy, saveQueryName, takeName, us
 import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { CLOUD_QUERY_EVENT, HELD_QUERY_EVENT, isTagCloudOpen, TAG_CLOUD_EVENT } from '@/lib/client/tagCloudOpen';
 import { ADD_TERM_EVENT, DRAG_TERM_EVENT } from '@/components/timeline/WordCloud';
-import { reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
+import { isStoredSiteTag, reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
-import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
+import { joinSearchQuery, parseSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
 import { categoryLabel, tagLabel } from '@/lib/i18n/labels';
 import type { MessageKey, Translator } from '@/lib/i18n/translate';
@@ -216,6 +216,10 @@ export function SearchBox() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
+  // Tags that usually come with the pills in the box (what the results share),
+  // asked for once the box is focused, so the strip under it can offer them.
+  const [focused, setFocused] = useState(false);
+  const [related, setRelated] = useState<{ key: string; tags: TagCount[] } | null>(null);
   // What a drag through the box has selected, if anything. A selection that
   // reaches past the field cannot be the browser's own - the query is items,
   // not one run of text - so the box keeps it and draws it itself. It only
@@ -247,6 +251,26 @@ export function SearchBox() {
   const committed = (text = draft, from = items, at = editAt) => [...from.slice(0, at), ...toItems(text), ...from.slice(at)];
   const query = (text = draft) => joinSearchQuery(committed(text));
   const wholeKey = joinSearchQuery(items);
+  const hasPills = items.some(isPill);
+  const relatedFor = related?.key === wholeKey ? related.tags : null;
+  useEffect(() => {
+    if (!focused || !hasPills || related?.key === wholeKey) return;
+    let stale = false;
+    api
+      .get<TagCount[]>(`/api/pins/tag-counts?q=${encodeURIComponent(wholeKey)}&related=1&limit=40`)
+      .then((tags) => {
+        if (stale) return;
+        const have = new Set(parseSearchQuery(wholeKey).tags.map((name) => name.toLowerCase()));
+        setRelated({ key: wholeKey, tags: tags.filter((tag) => (tag.kind !== 'reserved' || isStoredSiteTag(tag.name)) && tag.count > 0 && !have.has(tag.name.toLowerCase())).sort((a, b) => b.count - a.count).slice(0, 10) });
+      })
+      .catch(() => !stale && setRelated({ key: wholeKey, tags: [] }));
+    return () => {
+      stale = true;
+    };
+  }, [focused, hasPills, wholeKey, related?.key]);
+  // The related row sits at the top of the suggestions: alone while the field
+  // is empty, above the typed suggestions otherwise.
+  const showRelated = focused && hasPills && (!relatedFor || relatedFor.length > 0);
   const namedWhole = items.length > 1 && !draft && openedFor !== wholeKey ? queryNames[wholeKey] : undefined;
 
   // Follow the URL (back/forward, label clicks).
@@ -755,6 +779,7 @@ export function SearchBox() {
       value={draft}
       onChange={(event) => suggest(event.target.value)}
       onFocus={() => {
+        setFocused(true);
         revealCaret();
         setOpen(suggestions.length > 0 && !!draft);
       }}
@@ -763,7 +788,10 @@ export function SearchBox() {
       onMouseUp={revealCaret}
       // Leaving the field: what it holds goes back as items, and the field
       // waits after them.
-      onBlur={() => moveField(Number.MAX_SAFE_INTEGER, '', null)}
+      onBlur={() => {
+        setFocused(false);
+        moveField(Number.MAX_SAFE_INTEGER, '', null);
+      }}
       // A copy or cut from the context menu, when the field does hold text:
       // it takes the whole query rather than that text. The keys are caught in
       // onKeyDown instead, as the field is usually empty and a browser raises
@@ -1194,13 +1222,43 @@ export function SearchBox() {
 
       {/* On phones the search box is too narrow for titles, so the list spans
           the screen under the header, like the notifications panel. */}
-      {open ? (
+      {open || showRelated ? (
         <ul
           id="search-suggestions"
           role="listbox"
           className="floating fixed inset-x-3 top-[60px] z-50 max-h-[min(28rem,calc(100dvh-5rem))] overflow-auto p-1.5 sm:absolute sm:inset-x-0 sm:top-full sm:mt-2"
         >
-          {suggestions.map((suggestion, index) => {
+          {showRelated ? (
+            <li role="presentation" className="px-3 pt-1 pb-2">
+              <span className="flex items-center gap-2 pb-1 text-[11px] font-semibold tracking-wide text-faint uppercase">
+                {t('search.related')}
+                {!relatedFor ? <span role="status" aria-label={t('search.related')} className="size-3 animate-spin rounded-full border-2 border-current border-t-transparent" /> : null}
+              </span>
+              {/* Most relevant first, left to right; the row scrolls sideways. */}
+              <span className="flex gap-1.5 overflow-x-auto pb-1">
+                {relatedFor?.map((tag) => (
+                  <button
+                    key={tag.name}
+                    type="button"
+                    // Colored as the pin page's tags are.
+                    className={`inline-flex shrink-0 items-center rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
+                      isStoredSiteTag(tag.name)
+                        ? 'border-dashed border-construction/50 bg-construction/10 text-construction hover:border-construction hover:bg-construction/20'
+                        : 'border-line bg-field text-muted hover:bg-raised hover:text-ink'
+                    }`}
+                    // Keeps the box focused, so more can be picked.
+                    onMouseDown={(event) => {
+                      event.preventDefault();
+                      addTerm.current(term('tag', tag.name));
+                    }}
+                  >
+                    {tagLabel(t, tag)}
+                  </button>
+                ))}
+              </span>
+            </li>
+          ) : null}
+          {(open ? suggestions : []).map((suggestion, index) => {
             const key = suggestion.kind === 'pin' ? `pin:${suggestion.pin.id}` : `${suggestion.kind}:${suggestion.name}`;
             const header = index === 0 || GROUP_LABEL[suggestions[index - 1].kind] !== GROUP_LABEL[suggestion.kind];
             return (

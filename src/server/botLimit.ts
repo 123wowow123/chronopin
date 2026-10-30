@@ -251,3 +251,74 @@ function clientBudget(store: string, burst: number, perSecond: number, clientId:
   }
   return Math.ceil((cost - bucket.tokens) / perSecond);
 }
+
+// Chinese address ranges (owner, 2026-10-30): at most CHINA_VISITORS_PER_MINUTE
+// different addresses are let in per minute between them. An address already
+// admitted this minute carries on; a new one past the limit is told to wait for
+// the next minute. A minute is a fixed window, kept in memory like the buckets.
+export const CHINA_VISITORS_PER_MINUTE = 120;
+const CHINA_WINDOW_MS = 60_000;
+
+let chinaV6: [bigint, bigint][] | null = null;
+
+// Whether the first number at or below `n` in the sorted [start, end, ...] pairs
+// covers it.
+function inFlatRanges(ranges: number[], n: number): boolean {
+  let lo = 0;
+  let hi = ranges.length / 2 - 1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (n < ranges[mid * 2]) hi = mid - 1;
+    else if (n > ranges[mid * 2 + 1]) lo = mid + 1;
+    else return true;
+  }
+  return false;
+}
+
+function v6Top(address: string): bigint | null {
+  const [head, tail = ''] = address.toLowerCase().split('%')[0].split('::');
+  const left = head ? head.split(':') : [];
+  const right = address.includes('::') && tail ? tail.split(':') : [];
+  if (!address.includes('::') && left.length !== 8) return null;
+  const groups = address.includes('::') ? [...left, ...Array(8 - left.length - right.length).fill('0'), ...right] : left;
+  if (groups.length !== 8 || groups.some((g) => !/^[0-9a-f]{1,4}$/.test(g))) return null;
+  let top = 0n;
+  for (let i = 0; i < 4; i++) top = (top << 16n) | BigInt(parseInt(groups[i], 16));
+  return top;
+}
+
+export async function isChineseAddress(address: string): Promise<boolean> {
+  const { CHINA_V4, CHINA_V6 } = await import('./chinaRanges');
+  const mapped = address.replace(/^::ffff:/i, '');
+  const v4 = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/.exec(mapped);
+  if (v4) return inFlatRanges(CHINA_V4, v4.slice(1).reduce((n, o) => n * 256 + Number(o), 0));
+  if (!address.includes(':')) return false;
+  const top = v6Top(address);
+  if (top == null) return false;
+  chinaV6 ??= CHINA_V6.map((r) => r.split('-').map((h) => BigInt(`0x${h}`)) as [bigint, bigint]);
+  let lo = 0;
+  let hi = chinaV6.length - 1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (top < chinaV6[mid][0]) hi = mid - 1;
+    else if (top > chinaV6[mid][1]) lo = mid + 1;
+    else return true;
+  }
+  return false;
+}
+
+// Null when the address may go on, else the seconds until the next window.
+export function chinaRetryAfter(address: string, now = Date.now()): number | null {
+  const g = globalThis as unknown as { __chronopinChina?: { windowStart: number; seen: Set<string> } };
+  const state = (g.__chronopinChina ??= { windowStart: now, seen: new Set() });
+  if (now - state.windowStart >= CHINA_WINDOW_MS) {
+    state.windowStart = now;
+    state.seen.clear();
+  }
+  if (state.seen.has(address)) return null;
+  if (state.seen.size < CHINA_VISITORS_PER_MINUTE) {
+    state.seen.add(address);
+    return null;
+  }
+  return Math.max(1, Math.ceil((state.windowStart + CHINA_WINDOW_MS - now) / 1000));
+}

@@ -91,6 +91,7 @@ const fr: Messages = {
     groupPeople: 'Personnes',
     groupHolidays: 'Jours fériés',
     groupTags: 'Tags',
+    related: 'Recherches associées',
     groupPins: 'Épingles',
     fields: {
       company: 'entreprise',

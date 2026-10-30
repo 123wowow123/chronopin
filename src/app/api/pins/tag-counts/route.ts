@@ -10,6 +10,7 @@ import { requestTimeZone } from '@/server/viewer';
 // `limit`, so the cloud offers the same few whatever else is busy today.
 // GET /api/pins/tag-counts?created_within=1w                    the timeline
 // GET /api/pins/tag-counts?q=anime tag:Artemis&f=watch          a search (the terms the cloud writes are ignored)
+// &related=1 keeps the query's tag: terms in the filter: the tags that come with the search as it stands.
 // Either takes created_since=ISO in place of created_within, and limit=N
 // (default 60, at most 200) for how many tags.
 export const GET = route(async (request: NextRequest) => {
@@ -25,5 +26,5 @@ export const GET = route(async (request: NextRequest) => {
   }
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
-  return json(await searchPageTagCounts(params.get('q') || '', user?.id ?? null, onlyWatched && !!user, created, requestTimeZone(request), limit));
+  return json(await searchPageTagCounts(params.get('q') || '', user?.id ?? null, onlyWatched && !!user, created, requestTimeZone(request), limit, params.get('related') === '1'));
 });

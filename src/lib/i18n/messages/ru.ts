@@ -98,6 +98,7 @@ const ru: Messages = {
     groupPeople: 'Люди',
     groupHolidays: 'Праздники',
     groupTags: 'Теги',
+    related: 'Похожие запросы',
     groupPins: 'Пины',
     fields: {
       company: 'компания',

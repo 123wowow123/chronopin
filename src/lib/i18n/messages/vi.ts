@@ -91,6 +91,7 @@ const vi: Messages = {
     groupPeople: 'Nhân vật',
     groupHolidays: 'Ngày lễ',
     groupTags: 'Thẻ',
+    related: 'Tìm kiếm liên quan',
     groupPins: 'Ghim',
     fields: {
       company: 'công ty',

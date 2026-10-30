@@ -92,6 +92,7 @@ const zh: Messages = {
     groupPeople: '人物',
     groupHolidays: '节日',
     groupTags: '标签',
+    related: '相关搜索',
     groupPins: '图钉',
     fields: {
       company: '公司',

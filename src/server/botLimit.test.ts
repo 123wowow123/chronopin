@@ -214,3 +214,23 @@ describe('locale mismatch cohort', () => {
     expect(mismatchRetryAfter(now, false)).toBeNull();
   });
 });
+
+import { chinaRetryAfter, isChineseAddress, CHINA_VISITORS_PER_MINUTE } from './botLimit';
+
+describe('Chinese address limit', () => {
+  beforeEach(() => {
+    delete (globalThis as unknown as { __chronopinChina?: unknown }).__chronopinChina;
+  });
+  it('recognises Chinese and other addresses', async () => {
+    expect(await isChineseAddress('114.114.114.114')).toBe(true);
+    expect(await isChineseAddress('8.8.8.8')).toBe(false);
+    expect(await isChineseAddress('2400:3200::1')).toBe(true);
+    expect(await isChineseAddress('2001:4860:4860::8888')).toBe(false);
+  });
+  it('admits 120 addresses a minute, keeps those, refuses new ones, then resets', () => {
+    for (let i = 0; i < CHINA_VISITORS_PER_MINUTE; i++) expect(chinaRetryAfter(`1.0.0.${i}`, 1_000)).toBeNull();
+    expect(chinaRetryAfter('1.0.0.0', 2_000)).toBeNull();
+    expect(chinaRetryAfter('1.0.1.0', 2_000)).toBe(59);
+    expect(chinaRetryAfter('1.0.1.0', 61_000)).toBeNull();
+  });
+});

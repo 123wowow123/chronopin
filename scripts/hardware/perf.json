@@ -8470,5 +8470,3020 @@
         }
       }
     ]
+  },
+  {
+    "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+    "tables": [
+      {
+        "title": "Claude Opus 5.5",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "Anthropic"
+          ],
+          [
+            "Release",
+            "2026-09-22"
+          ],
+          [
+            "Context",
+            "1,000,000 tokens"
+          ],
+          [
+            "Maximum output",
+            "128,000 tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text and images / text"
+          ],
+          [
+            "Access at launch",
+            "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+          ],
+          [
+            "API price (input / output)",
+            "USD 4 / 20 · 1M tokens"
+          ]
+        ],
+        "note": "Launch pricing; API limits from current documentation.",
+        "sourceUrl": "https://platform.claude.com/docs/en/models/overview",
+        "i18n": {
+          "es": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Anthropic"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Salida máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto e imágenes / texto"
+              ],
+              [
+                "Acceso inicial",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Precio API (entrada / salida)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Precios de lanzamiento; límites API de la documentación actual."
+          },
+          "fr": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "Anthropic"
+              ],
+              [
+                "Sortie",
+                "2026-09-22"
+              ],
+              [
+                "Contexte",
+                "1,000,000 tokens"
+              ],
+              [
+                "Sortie maximale",
+                "128,000 tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte et images / texte"
+              ],
+              [
+                "Accès au lancement",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Prix API (entrée / sortie)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Tarifs au lancement ; limites API de la documentation actuelle."
+          },
+          "de": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "Anthropic"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-22"
+              ],
+              [
+                "Kontext",
+                "1,000,000 tokens"
+              ],
+              [
+                "Maximale Ausgabe",
+                "128,000 tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text und Bilder / Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API-Preis (Eingabe / Ausgabe)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Preise zum Start; API-Grenzen laut aktueller Dokumentation."
+          },
+          "ja": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Anthropic"
+              ],
+              [
+                "公開日",
+                "2026-09-22"
+              ],
+              [
+                "コンテキスト",
+                "1,000,000 tokens"
+              ],
+              [
+                "最大出力",
+                "128,000 tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト・画像／テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API料金（入力／出力）",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "公開時の料金。API上限は現在の文書による。"
+          },
+          "zh": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Anthropic"
+              ],
+              [
+                "发布日期",
+                "2026-09-22"
+              ],
+              [
+                "上下文",
+                "1,000,000 tokens"
+              ],
+              [
+                "最大输出",
+                "128,000 tokens"
+              ],
+              [
+                "输入／输出",
+                "文本和图像／文本"
+              ],
+              [
+                "发布时访问方式",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API价格（输入／输出）",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "发布时价格；API限制来自当前文档。"
+          },
+          "ko": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Anthropic"
+              ],
+              [
+                "출시일",
+                "2026-09-22"
+              ],
+              [
+                "컨텍스트",
+                "1,000,000 tokens"
+              ],
+              [
+                "최대 출력",
+                "128,000 tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 및 이미지 / 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API 가격 (입력 / 출력)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "출시 가격. API 한도는 현재 문서 기준."
+          },
+          "hi": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "Anthropic"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-22"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1,000,000 tokens"
+              ],
+              [
+                "अधिकतम आउटपुट",
+                "128,000 tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "टेक्स्ट और चित्र / टेक्स्ट"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "API कीमत (इनपुट / आउटपुट)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "लॉन्च कीमतें; API सीमाएँ वर्तमान दस्तावेज़ों से।"
+          },
+          "ar": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Anthropic"
+              ],
+              [
+                "الإصدار",
+                "2026-09-22"
+              ],
+              [
+                "السياق",
+                "1,000,000 tokens"
+              ],
+              [
+                "الحد الأقصى للمخرجات",
+                "128,000 tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص وصور / نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "سعر API (مدخلات / مخرجات)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "أسعار الإطلاق؛ حدود API من الوثائق الحالية."
+          },
+          "th": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Anthropic"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-22"
+              ],
+              [
+                "บริบท",
+                "1,000,000 tokens"
+              ],
+              [
+                "เอาต์พุตสูงสุด",
+                "128,000 tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความและภาพ / ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "ราคา API (อินพุต / เอาต์พุต)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "ราคาเปิดตัว; ขีดจำกัด API จากเอกสารปัจจุบัน"
+          },
+          "it": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "Anthropic"
+              ],
+              [
+                "Rilascio",
+                "2026-09-22"
+              ],
+              [
+                "Contesto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Output massimo",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Testo e immagini / testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Prezzo API (input / output)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Prezzi al lancio; limiti API dalla documentazione attuale."
+          },
+          "ru": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Anthropic"
+              ],
+              [
+                "Выпуск",
+                "2026-09-22"
+              ],
+              [
+                "Контекст",
+                "1,000,000 tokens"
+              ],
+              [
+                "Максимальный вывод",
+                "128,000 tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст и изображения / текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Цена API (ввод / вывод)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Цены запуска; лимиты API из текущей документации."
+          },
+          "pt": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Anthropic"
+              ],
+              [
+                "Lançamento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Saída máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto e imagens / texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Preço API (entrada / saída)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Preços no lançamento; limites API da documentação atual."
+          },
+          "ms": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Anthropic"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,000,000 tokens"
+              ],
+              [
+                "Output maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Teks dan imej / teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Harga API (input / output)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Harga pelancaran; had API daripada dokumentasi semasa."
+          },
+          "vi": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Anthropic"
+              ],
+              [
+                "Phát hành",
+                "2026-09-22"
+              ],
+              [
+                "Ngữ cảnh",
+                "1,000,000 tokens"
+              ],
+              [
+                "Đầu ra tối đa",
+                "128,000 tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản và hình ảnh / văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Giá API (đầu vào / đầu ra)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Giá lúc ra mắt; giới hạn API từ tài liệu hiện tại."
+          },
+          "id": {
+            "title": "Claude Opus 5.5",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Anthropic"
+              ],
+              [
+                "Rilis",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,000,000 tokens"
+              ],
+              [
+                "Keluaran maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks dan gambar / teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Claude API; Amazon Bedrock; Google Cloud; Microsoft Azure"
+              ],
+              [
+                "Harga API (masukan / keluaran)",
+                "USD 4 / 20 · 1M tokens"
+              ]
+            ],
+            "note": "Harga peluncuran; batas API dari dokumentasi saat ini."
+          }
+        }
+      }
+    ],
+    "charts": [
+      {
+        "title": "GDPval-AA v2.1",
+        "unit": "Elo",
+        "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+        "bars": [
+          {
+            "label": "Claude Opus 5",
+            "value": 1708
+          },
+          {
+            "label": "Claude Fable 5.1",
+            "value": 1735
+          },
+          {
+            "label": "Claude Opus 5.5",
+            "value": 1846,
+            "highlight": true
+          }
+        ],
+        "note": "Anthropic launch table; production safeguards enabled.",
+        "i18n": {
+          "es": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Tabla de lanzamiento de Anthropic; salvaguardas de producción activadas."
+          },
+          "fr": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Tableau de lancement Anthropic ; protections de production activées."
+          },
+          "de": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Anthropic-Starttabelle; produktive Schutzmaßnahmen aktiviert."
+          },
+          "ja": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Anthropic公開時の表。運用時の安全対策を有効化。"
+          },
+          "zh": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Anthropic发布时表格；生产防护已启用。"
+          },
+          "ko": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Anthropic 출시 표. 운영 안전장치 활성화."
+          },
+          "hi": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Anthropic लॉन्च तालिका; उत्पादन सुरक्षा उपाय सक्षम।"
+          },
+          "ar": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "جدول إطلاق Anthropic؛ وسائل حماية الإنتاج مفعّلة."
+          },
+          "th": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "ตารางเปิดตัว Anthropic; เปิดใช้มาตรการป้องกันในการใช้งานจริง"
+          },
+          "it": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Tabella Anthropic al lancio; protezioni di produzione attive."
+          },
+          "ru": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Таблица Anthropic при запуске; защиты рабочей версии включены."
+          },
+          "pt": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Tabela Anthropic no lançamento; proteções de produção ativadas."
+          },
+          "ms": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Jadual pelancaran Anthropic; perlindungan produksi diaktifkan."
+          },
+          "vi": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Bảng ra mắt Anthropic; bật biện pháp bảo vệ sản xuất."
+          },
+          "id": {
+            "title": "GDPval-AA v2.1",
+            "unit": "Elo",
+            "note": "Tabel peluncuran Anthropic; perlindungan produksi diaktifkan."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://mimo.xiaomi.com/mimo-v2-6",
+    "tables": [
+      {
+        "title": "MiMo-V2.6-Pro-RL",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "Xiaomi"
+          ],
+          [
+            "Release",
+            "2026-09-22"
+          ],
+          [
+            "Context",
+            "1,000,000 tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text / Image / Video / Audio → Text"
+          ],
+          [
+            "Access at launch",
+            "MIT · Hugging Face · SGLang · vLLM"
+          ]
+        ],
+        "note": "Maker-published model card; launch API price not established.",
+        "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+        "i18n": {
+          "es": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Xiaomi"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto / Imagen / Vídeo / Audio → Texto"
+              ],
+              [
+                "Acceso inicial",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Ficha publicada por el fabricante; precio API de lanzamiento no confirmado."
+          },
+          "fr": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "Xiaomi"
+              ],
+              [
+                "Sortie",
+                "2026-09-22"
+              ],
+              [
+                "Contexte",
+                "1,000,000 tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte / Image / Vidéo / Audio → Texte"
+              ],
+              [
+                "Accès au lancement",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Fiche du fabricant ; tarif API au lancement non établi."
+          },
+          "de": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "Xiaomi"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-22"
+              ],
+              [
+                "Kontext",
+                "1,000,000 tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text / Bild / Video / Audio → Text"
+              ],
+              [
+                "Zugang zum Start",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Modellkarte des Herstellers; API-Startpreis nicht belegt."
+          },
+          "ja": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Xiaomi"
+              ],
+              [
+                "公開日",
+                "2026-09-22"
+              ],
+              [
+                "コンテキスト",
+                "1,000,000 tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト / 画像 / 動画 / 音声 → テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "メーカー公開のモデルカード。公開時のAPI料金は未確認。"
+          },
+          "zh": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Xiaomi"
+              ],
+              [
+                "发布日期",
+                "2026-09-22"
+              ],
+              [
+                "上下文",
+                "1,000,000 tokens"
+              ],
+              [
+                "输入／输出",
+                "文本 / 图像 / 视频 / 音频 → 文本"
+              ],
+              [
+                "发布时访问方式",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "厂商模型卡；发布时API价格未核实。"
+          },
+          "ko": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Xiaomi"
+              ],
+              [
+                "출시일",
+                "2026-09-22"
+              ],
+              [
+                "컨텍스트",
+                "1,000,000 tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 / 이미지 / 동영상 / 오디오 → 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "제조사 모델 카드. 출시 API 가격은 확인되지 않음."
+          },
+          "hi": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "Xiaomi"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-22"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1,000,000 tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "पाठ / छवि / वीडियो / ऑडियो → पाठ"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "निर्माता का मॉडल कार्ड; लॉन्च API मूल्य स्थापित नहीं है।"
+          },
+          "ar": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Xiaomi"
+              ],
+              [
+                "الإصدار",
+                "2026-09-22"
+              ],
+              [
+                "السياق",
+                "1,000,000 tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص / صورة / فيديو / صوت → نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "بطاقة النموذج من الشركة؛ سعر API عند الإطلاق غير مثبت."
+          },
+          "th": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Xiaomi"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-22"
+              ],
+              [
+                "บริบท",
+                "1,000,000 tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความ / ภาพ / วิดีโอ / เสียง → ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "การ์ดโมเดลจากผู้ผลิต; ยังไม่ยืนยันราคา API ตอนเปิดตัว"
+          },
+          "it": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "Xiaomi"
+              ],
+              [
+                "Rilascio",
+                "2026-09-22"
+              ],
+              [
+                "Contesto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Testo / Immagine / Video / Audio → Testo"
+              ],
+              [
+                "Accesso al lancio",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Scheda del produttore; prezzo API al lancio non accertato."
+          },
+          "ru": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Xiaomi"
+              ],
+              [
+                "Выпуск",
+                "2026-09-22"
+              ],
+              [
+                "Контекст",
+                "1,000,000 tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст / Изображение / Видео / Аудио → Текст"
+              ],
+              [
+                "Доступ при запуске",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Карточка производителя; цена API при запуске не установлена."
+          },
+          "pt": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Xiaomi"
+              ],
+              [
+                "Lançamento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto / Imagem / Vídeo / Áudio → Texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Ficha do fabricante; preço API no lançamento não confirmado."
+          },
+          "ms": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Xiaomi"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,000,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Teks / Imej / Video / Audio → Teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Kad model pengeluar; harga API pelancaran belum disahkan."
+          },
+          "vi": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Xiaomi"
+              ],
+              [
+                "Phát hành",
+                "2026-09-22"
+              ],
+              [
+                "Ngữ cảnh",
+                "1,000,000 tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản / Hình ảnh / Video / Âm thanh → Văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Thẻ mô hình của hãng; chưa xác minh giá API lúc ra mắt."
+          },
+          "id": {
+            "title": "MiMo-V2.6-Pro-RL",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Xiaomi"
+              ],
+              [
+                "Rilis",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,000,000 tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks / Gambar / Video / Audio → Teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "MIT · Hugging Face · SGLang · vLLM"
+              ]
+            ],
+            "note": "Kartu model produsen; harga API saat peluncuran belum dipastikan."
+          }
+        }
+      },
+      {
+        "title": "MiMo-V2.6-Flash",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "Xiaomi"
+          ],
+          [
+            "Release",
+            "2026-09-22"
+          ],
+          [
+            "Context",
+            "1,000,000 tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text / Image / Video / Audio → Text"
+          ],
+          [
+            "Access at launch",
+            "Xiaomi MiMo API"
+          ]
+        ],
+        "note": "Maker-published model card; launch API price not established.",
+        "sourceUrl": "https://mimo.mi.com/models/en-US/mimo-v2.6-flash",
+        "i18n": {
+          "es": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Xiaomi"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto / Imagen / Vídeo / Audio → Texto"
+              ],
+              [
+                "Acceso inicial",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Ficha publicada por el fabricante; precio API de lanzamiento no confirmado."
+          },
+          "fr": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "Xiaomi"
+              ],
+              [
+                "Sortie",
+                "2026-09-22"
+              ],
+              [
+                "Contexte",
+                "1,000,000 tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte / Image / Vidéo / Audio → Texte"
+              ],
+              [
+                "Accès au lancement",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Fiche du fabricant ; tarif API au lancement non établi."
+          },
+          "de": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "Xiaomi"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-22"
+              ],
+              [
+                "Kontext",
+                "1,000,000 tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text / Bild / Video / Audio → Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Modellkarte des Herstellers; API-Startpreis nicht belegt."
+          },
+          "ja": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "Xiaomi"
+              ],
+              [
+                "公開日",
+                "2026-09-22"
+              ],
+              [
+                "コンテキスト",
+                "1,000,000 tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト / 画像 / 動画 / 音声 → テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "メーカー公開のモデルカード。公開時のAPI料金は未確認。"
+          },
+          "zh": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "Xiaomi"
+              ],
+              [
+                "发布日期",
+                "2026-09-22"
+              ],
+              [
+                "上下文",
+                "1,000,000 tokens"
+              ],
+              [
+                "输入／输出",
+                "文本 / 图像 / 视频 / 音频 → 文本"
+              ],
+              [
+                "发布时访问方式",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "厂商模型卡；发布时API价格未核实。"
+          },
+          "ko": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "Xiaomi"
+              ],
+              [
+                "출시일",
+                "2026-09-22"
+              ],
+              [
+                "컨텍스트",
+                "1,000,000 tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 / 이미지 / 동영상 / 오디오 → 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "제조사 모델 카드. 출시 API 가격은 확인되지 않음."
+          },
+          "hi": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "Xiaomi"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-22"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1,000,000 tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "पाठ / छवि / वीडियो / ऑडियो → पाठ"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "निर्माता का मॉडल कार्ड; लॉन्च API मूल्य स्थापित नहीं है।"
+          },
+          "ar": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "Xiaomi"
+              ],
+              [
+                "الإصدار",
+                "2026-09-22"
+              ],
+              [
+                "السياق",
+                "1,000,000 tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص / صورة / فيديو / صوت → نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "بطاقة النموذج من الشركة؛ سعر API عند الإطلاق غير مثبت."
+          },
+          "th": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "Xiaomi"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-22"
+              ],
+              [
+                "บริบท",
+                "1,000,000 tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความ / ภาพ / วิดีโอ / เสียง → ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "การ์ดโมเดลจากผู้ผลิต; ยังไม่ยืนยันราคา API ตอนเปิดตัว"
+          },
+          "it": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "Xiaomi"
+              ],
+              [
+                "Rilascio",
+                "2026-09-22"
+              ],
+              [
+                "Contesto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Testo / Immagine / Video / Audio → Testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Scheda del produttore; prezzo API al lancio non accertato."
+          },
+          "ru": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "Xiaomi"
+              ],
+              [
+                "Выпуск",
+                "2026-09-22"
+              ],
+              [
+                "Контекст",
+                "1,000,000 tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст / Изображение / Видео / Аудио → Текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Карточка производителя; цена API при запуске не установлена."
+          },
+          "pt": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "Xiaomi"
+              ],
+              [
+                "Lançamento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,000,000 tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto / Imagem / Vídeo / Áudio → Texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Ficha do fabricante; preço API no lançamento não confirmado."
+          },
+          "ms": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "Xiaomi"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,000,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Teks / Imej / Video / Audio → Teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Kad model pengeluar; harga API pelancaran belum disahkan."
+          },
+          "vi": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "Xiaomi"
+              ],
+              [
+                "Phát hành",
+                "2026-09-22"
+              ],
+              [
+                "Ngữ cảnh",
+                "1,000,000 tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản / Hình ảnh / Video / Âm thanh → Văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Thẻ mô hình của hãng; chưa xác minh giá API lúc ra mắt."
+          },
+          "id": {
+            "title": "MiMo-V2.6-Flash",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "Xiaomi"
+              ],
+              [
+                "Rilis",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,000,000 tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks / Gambar / Video / Audio → Teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Xiaomi MiMo API"
+              ]
+            ],
+            "note": "Kartu model produsen; harga API saat peluncuran belum dipastikan."
+          }
+        }
+      }
+    ],
+    "charts": [
+      {
+        "title": "DeepSWE v1.1",
+        "unit": "%",
+        "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+        "bars": [
+          {
+            "label": "MiMo-V2.5 Pro",
+            "value": 19.0
+          },
+          {
+            "label": "MiMo-V2.6 Flash",
+            "value": 67.9,
+            "highlight": true
+          },
+          {
+            "label": "MiMo-V2.6 Pro",
+            "value": 71.9,
+            "highlight": true
+          }
+        ],
+        "note": "Maker-published model card; launch API price not established.",
+        "i18n": {
+          "es": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Ficha publicada por el fabricante; precio API de lanzamiento no confirmado."
+          },
+          "fr": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Fiche du fabricant ; tarif API au lancement non établi."
+          },
+          "de": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Modellkarte des Herstellers; API-Startpreis nicht belegt."
+          },
+          "ja": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "メーカー公開のモデルカード。公開時のAPI料金は未確認。"
+          },
+          "zh": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "厂商模型卡；发布时API价格未核实。"
+          },
+          "ko": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "제조사 모델 카드. 출시 API 가격은 확인되지 않음."
+          },
+          "hi": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "निर्माता का मॉडल कार्ड; लॉन्च API मूल्य स्थापित नहीं है।"
+          },
+          "ar": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "بطاقة النموذج من الشركة؛ سعر API عند الإطلاق غير مثبت."
+          },
+          "th": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "การ์ดโมเดลจากผู้ผลิต; ยังไม่ยืนยันราคา API ตอนเปิดตัว"
+          },
+          "it": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Scheda del produttore; prezzo API al lancio non accertato."
+          },
+          "ru": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Карточка производителя; цена API при запуске не установлена."
+          },
+          "pt": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Ficha do fabricante; preço API no lançamento não confirmado."
+          },
+          "ms": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Kad model pengeluar; harga API pelancaran belum disahkan."
+          },
+          "vi": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Thẻ mô hình của hãng; chưa xác minh giá API lúc ra mắt."
+          },
+          "id": {
+            "title": "DeepSWE v1.1",
+            "unit": "%",
+            "note": "Kartu model produsen; harga API saat peluncuran belum dipastikan."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    "tables": [
+      {
+        "title": "GPT-6 Sol",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "OpenAI"
+          ],
+          [
+            "Release",
+            "2026-09-22"
+          ],
+          [
+            "Context",
+            "1,050,000 tokens"
+          ],
+          [
+            "Maximum output",
+            "128,000 tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text and images / text"
+          ],
+          [
+            "Access at launch",
+            "Responses API; Chat Completions API"
+          ],
+          [
+            "API price (input / output)",
+            "USD 2 / 10 · 1M tokens"
+          ]
+        ],
+        "note": "Standard launch prices: prompts ≤272K input tokens, USD per 1M tokens. API limits are from the current model card; no comparable launch benchmark graph was established from these API docs.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+        "i18n": {
+          "es": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "OpenAI"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Salida máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto e imágenes / texto"
+              ],
+              [
+                "Acceso inicial",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Precio API (entrada / salida)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Precios estándar de lanzamiento: solicitudes de ≤272K tokens de entrada, USD por 1M tokens. Límites de API de la ficha actual; estas fuentes no establecen un gráfico de pruebas comparable al lanzamiento."
+          },
+          "fr": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "OpenAI"
+              ],
+              [
+                "Sortie",
+                "2026-09-22"
+              ],
+              [
+                "Contexte",
+                "1,050,000 tokens"
+              ],
+              [
+                "Sortie maximale",
+                "128,000 tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte et images / texte"
+              ],
+              [
+                "Accès au lancement",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Prix API (entrée / sortie)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Tarifs standard au lancement : requêtes ≤272K tokens en entrée, USD par 1M tokens. Limites API de la fiche actuelle ; ces documents ne permettent pas de graphique de tests comparable au lancement."
+          },
+          "de": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "OpenAI"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-22"
+              ],
+              [
+                "Kontext",
+                "1,050,000 tokens"
+              ],
+              [
+                "Maximale Ausgabe",
+                "128,000 tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text und Bilder / Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API-Preis (Eingabe / Ausgabe)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Standardpreise zum Start: Anfragen mit ≤272K Eingabetokens, USD je 1M Tokens. API-Grenzen laut aktueller Modellkarte; kein vergleichbarer Start-Benchmark aus diesen API-Dokumenten belegt."
+          },
+          "ja": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "OpenAI"
+              ],
+              [
+                "公開日",
+                "2026-09-22"
+              ],
+              [
+                "コンテキスト",
+                "1,050,000 tokens"
+              ],
+              [
+                "最大出力",
+                "128,000 tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト・画像／テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API料金（入力／出力）",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "公開時の標準料金：入力が272Kトークン以下、100万トークン当たりUSD。API上限は現在のモデルカードによる。このAPI文書からは公開時の比較可能なベンチマークグラフを確認できなかった。"
+          },
+          "zh": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "OpenAI"
+              ],
+              [
+                "发布日期",
+                "2026-09-22"
+              ],
+              [
+                "上下文",
+                "1,050,000 tokens"
+              ],
+              [
+                "最大输出",
+                "128,000 tokens"
+              ],
+              [
+                "输入／输出",
+                "文本和图像／文本"
+              ],
+              [
+                "发布时访问方式",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API价格（输入／输出）",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "发布时标准价格：输入不超过272K词元，每百万词元以USD计价。API限制来自当前模型卡；这些API文档未提供可比的发布时基准图。"
+          },
+          "ko": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "OpenAI"
+              ],
+              [
+                "출시일",
+                "2026-09-22"
+              ],
+              [
+                "컨텍스트",
+                "1,050,000 tokens"
+              ],
+              [
+                "최대 출력",
+                "128,000 tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 및 이미지 / 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API 가격 (입력 / 출력)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "출시 당시 표준 가격: 입력 ≤272K 토큰, 100만 토큰당 USD. API 한도는 현재 모델 카드 기준이며, 이 API 문서에서 비교 가능한 출시 벤치마크 그래프는 확인되지 않았다."
+          },
+          "hi": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "OpenAI"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-22"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1,050,000 tokens"
+              ],
+              [
+                "अधिकतम आउटपुट",
+                "128,000 tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "टेक्स्ट और चित्र / टेक्स्ट"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API कीमत (इनपुट / आउटपुट)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "मानक लॉन्च कीमतें: ≤272K इनपुट टोकन वाले अनुरोध, प्रति 1M टोकन USD। API सीमाएँ वर्तमान मॉडल कार्ड से हैं; इन API दस्तावेज़ों से तुलनीय लॉन्च बेंचमार्क ग्राफ़ स्थापित नहीं हुआ।"
+          },
+          "ar": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "OpenAI"
+              ],
+              [
+                "الإصدار",
+                "2026-09-22"
+              ],
+              [
+                "السياق",
+                "1,050,000 tokens"
+              ],
+              [
+                "الحد الأقصى للمخرجات",
+                "128,000 tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص وصور / نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "سعر API (مدخلات / مخرجات)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "أسعار الإطلاق القياسية: طلبات بمدخلات ≤272K رمزًا، بالدولار لكل مليون رمز. حدود API من بطاقة النموذج الحالية؛ لم تثبت هذه الوثائق رسمًا مرجعيًا مقارنًا عند الإطلاق."
+          },
+          "th": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "OpenAI"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-22"
+              ],
+              [
+                "บริบท",
+                "1,050,000 tokens"
+              ],
+              [
+                "เอาต์พุตสูงสุด",
+                "128,000 tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความและภาพ / ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "ราคา API (อินพุต / เอาต์พุต)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "ราคาเปิดตัวมาตรฐาน: คำขออินพุต ≤272K โทเคน, USD ต่อ 1M โทเคน ขีดจำกัด API จากการ์ดโมเดลปัจจุบัน; เอกสาร API เหล่านี้ไม่ยืนยันกราฟเบนช์มาร์กเปิดตัวที่เปรียบเทียบกันได้"
+          },
+          "it": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "OpenAI"
+              ],
+              [
+                "Rilascio",
+                "2026-09-22"
+              ],
+              [
+                "Contesto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Output massimo",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Testo e immagini / testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Prezzo API (input / output)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Prezzi standard al lancio: richieste con input ≤272K token, USD per 1M token. Limiti API dalla scheda attuale; questi documenti non stabiliscono un grafico di benchmark comparabile al lancio."
+          },
+          "ru": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "OpenAI"
+              ],
+              [
+                "Выпуск",
+                "2026-09-22"
+              ],
+              [
+                "Контекст",
+                "1,050,000 tokens"
+              ],
+              [
+                "Максимальный вывод",
+                "128,000 tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст и изображения / текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Цена API (ввод / вывод)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Стандартные цены запуска: запросы с входом ≤272K токенов, USD за 1M токенов. Лимиты API взяты из текущей карточки; сопоставимый график тестов при запуске этими документами не подтверждён."
+          },
+          "pt": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "OpenAI"
+              ],
+              [
+                "Lançamento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Saída máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto e imagens / texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Preço API (entrada / saída)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Preços padrão no lançamento: solicitações com entrada ≤272K tokens, USD por 1M tokens. Limites API da ficha atual; estes documentos não estabelecem um gráfico de benchmark comparável no lançamento."
+          },
+          "ms": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "OpenAI"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,050,000 tokens"
+              ],
+              [
+                "Output maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Teks dan imej / teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Harga API (input / output)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Harga pelancaran standard: permintaan input ≤272K token, USD bagi 1M token. Had API daripada kad model semasa; dokumen ini tidak mengesahkan graf penanda aras pelancaran yang setanding."
+          },
+          "vi": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "OpenAI"
+              ],
+              [
+                "Phát hành",
+                "2026-09-22"
+              ],
+              [
+                "Ngữ cảnh",
+                "1,050,000 tokens"
+              ],
+              [
+                "Đầu ra tối đa",
+                "128,000 tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản và hình ảnh / văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Giá API (đầu vào / đầu ra)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Giá tiêu chuẩn khi ra mắt: yêu cầu đầu vào ≤272K token, USD trên 1M token. Giới hạn API từ thẻ mô hình hiện tại; tài liệu API này chưa xác lập biểu đồ chuẩn ra mắt có thể so sánh."
+          },
+          "id": {
+            "title": "GPT-6 Sol",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "OpenAI"
+              ],
+              [
+                "Rilis",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,050,000 tokens"
+              ],
+              [
+                "Keluaran maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks dan gambar / teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Harga API (masukan / keluaran)",
+                "USD 2 / 10 · 1M tokens"
+              ]
+            ],
+            "note": "Harga standar peluncuran: permintaan masukan ≤272K token, USD per 1M token. Batas API dari kartu model saat ini; dokumen ini tidak menetapkan grafik tolok ukur peluncuran yang sebanding."
+          }
+        }
+      },
+      {
+        "title": "GPT-6 Luna",
+        "columns": [
+          "Field",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "OpenAI"
+          ],
+          [
+            "Release",
+            "2026-09-22"
+          ],
+          [
+            "Context",
+            "1,050,000 tokens"
+          ],
+          [
+            "Maximum output",
+            "128,000 tokens"
+          ],
+          [
+            "Inputs / output",
+            "Text and images / text"
+          ],
+          [
+            "Access at launch",
+            "Responses API; Chat Completions API"
+          ],
+          [
+            "API price (input / output)",
+            "USD 0.10 / 0.50 · 1M tokens"
+          ]
+        ],
+        "note": "Standard launch prices: prompts ≤272K input tokens, USD per 1M tokens. API limits are from the current model card; no comparable launch benchmark graph was established from these API docs.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+        "i18n": {
+          "es": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "OpenAI"
+              ],
+              [
+                "Lanzamiento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Salida máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / salida",
+                "Texto e imágenes / texto"
+              ],
+              [
+                "Acceso inicial",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Precio API (entrada / salida)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Precios estándar de lanzamiento: solicitudes de ≤272K tokens de entrada, USD por 1M tokens. Límites de API de la ficha actual; estas fuentes no establecen un gráfico de pruebas comparable al lanzamiento."
+          },
+          "fr": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Champ",
+              "Valeur publiée"
+            ],
+            "rows": [
+              [
+                "Fabricant",
+                "OpenAI"
+              ],
+              [
+                "Sortie",
+                "2026-09-22"
+              ],
+              [
+                "Contexte",
+                "1,050,000 tokens"
+              ],
+              [
+                "Sortie maximale",
+                "128,000 tokens"
+              ],
+              [
+                "Entrées / sortie",
+                "Texte et images / texte"
+              ],
+              [
+                "Accès au lancement",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Prix API (entrée / sortie)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Tarifs standard au lancement : requêtes ≤272K tokens en entrée, USD par 1M tokens. Limites API de la fiche actuelle ; ces documents ne permettent pas de graphique de tests comparable au lancement."
+          },
+          "de": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Feld",
+              "Veröffentlichter Wert"
+            ],
+            "rows": [
+              [
+                "Hersteller",
+                "OpenAI"
+              ],
+              [
+                "Veröffentlichung",
+                "2026-09-22"
+              ],
+              [
+                "Kontext",
+                "1,050,000 tokens"
+              ],
+              [
+                "Maximale Ausgabe",
+                "128,000 tokens"
+              ],
+              [
+                "Eingaben / Ausgabe",
+                "Text und Bilder / Text"
+              ],
+              [
+                "Zugang zum Start",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API-Preis (Eingabe / Ausgabe)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Standardpreise zum Start: Anfragen mit ≤272K Eingabetokens, USD je 1M Tokens. API-Grenzen laut aktueller Modellkarte; kein vergleichbarer Start-Benchmark aus diesen API-Dokumenten belegt."
+          },
+          "ja": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "項目",
+              "公表値"
+            ],
+            "rows": [
+              [
+                "開発元",
+                "OpenAI"
+              ],
+              [
+                "公開日",
+                "2026-09-22"
+              ],
+              [
+                "コンテキスト",
+                "1,050,000 tokens"
+              ],
+              [
+                "最大出力",
+                "128,000 tokens"
+              ],
+              [
+                "入力／出力",
+                "テキスト・画像／テキスト"
+              ],
+              [
+                "公開時の提供方法",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API料金（入力／出力）",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "公開時の標準料金：入力が272Kトークン以下、100万トークン当たりUSD。API上限は現在のモデルカードによる。このAPI文書からは公開時の比較可能なベンチマークグラフを確認できなかった。"
+          },
+          "zh": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "项目",
+              "公布值"
+            ],
+            "rows": [
+              [
+                "开发商",
+                "OpenAI"
+              ],
+              [
+                "发布日期",
+                "2026-09-22"
+              ],
+              [
+                "上下文",
+                "1,050,000 tokens"
+              ],
+              [
+                "最大输出",
+                "128,000 tokens"
+              ],
+              [
+                "输入／输出",
+                "文本和图像／文本"
+              ],
+              [
+                "发布时访问方式",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API价格（输入／输出）",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "发布时标准价格：输入不超过272K词元，每百万词元以USD计价。API限制来自当前模型卡；这些API文档未提供可比的发布时基准图。"
+          },
+          "ko": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "항목",
+              "공개 값"
+            ],
+            "rows": [
+              [
+                "개발사",
+                "OpenAI"
+              ],
+              [
+                "출시일",
+                "2026-09-22"
+              ],
+              [
+                "컨텍스트",
+                "1,050,000 tokens"
+              ],
+              [
+                "최대 출력",
+                "128,000 tokens"
+              ],
+              [
+                "입력 / 출력",
+                "텍스트 및 이미지 / 텍스트"
+              ],
+              [
+                "출시 당시 접근",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API 가격 (입력 / 출력)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "출시 당시 표준 가격: 입력 ≤272K 토큰, 100만 토큰당 USD. API 한도는 현재 모델 카드 기준이며, 이 API 문서에서 비교 가능한 출시 벤치마크 그래프는 확인되지 않았다."
+          },
+          "hi": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "क्षेत्र",
+              "प्रकाशित मान"
+            ],
+            "rows": [
+              [
+                "निर्माता",
+                "OpenAI"
+              ],
+              [
+                "रिलीज़",
+                "2026-09-22"
+              ],
+              [
+                "कॉन्टेक्स्ट",
+                "1,050,000 tokens"
+              ],
+              [
+                "अधिकतम आउटपुट",
+                "128,000 tokens"
+              ],
+              [
+                "इनपुट / आउटपुट",
+                "टेक्स्ट और चित्र / टेक्स्ट"
+              ],
+              [
+                "लॉन्च पर उपलब्धता",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "API कीमत (इनपुट / आउटपुट)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "मानक लॉन्च कीमतें: ≤272K इनपुट टोकन वाले अनुरोध, प्रति 1M टोकन USD। API सीमाएँ वर्तमान मॉडल कार्ड से हैं; इन API दस्तावेज़ों से तुलनीय लॉन्च बेंचमार्क ग्राफ़ स्थापित नहीं हुआ।"
+          },
+          "ar": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "الحقل",
+              "القيمة المنشورة"
+            ],
+            "rows": [
+              [
+                "المطور",
+                "OpenAI"
+              ],
+              [
+                "الإصدار",
+                "2026-09-22"
+              ],
+              [
+                "السياق",
+                "1,050,000 tokens"
+              ],
+              [
+                "الحد الأقصى للمخرجات",
+                "128,000 tokens"
+              ],
+              [
+                "المدخلات / المخرجات",
+                "نص وصور / نص"
+              ],
+              [
+                "الوصول عند الإطلاق",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "سعر API (مدخلات / مخرجات)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "أسعار الإطلاق القياسية: طلبات بمدخلات ≤272K رمزًا، بالدولار لكل مليون رمز. حدود API من بطاقة النموذج الحالية؛ لم تثبت هذه الوثائق رسمًا مرجعيًا مقارنًا عند الإطلاق."
+          },
+          "th": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "รายการ",
+              "ค่าที่เผยแพร่"
+            ],
+            "rows": [
+              [
+                "ผู้พัฒนา",
+                "OpenAI"
+              ],
+              [
+                "วันเผยแพร่",
+                "2026-09-22"
+              ],
+              [
+                "บริบท",
+                "1,050,000 tokens"
+              ],
+              [
+                "เอาต์พุตสูงสุด",
+                "128,000 tokens"
+              ],
+              [
+                "อินพุต / เอาต์พุต",
+                "ข้อความและภาพ / ข้อความ"
+              ],
+              [
+                "การเข้าถึงเมื่อเปิดตัว",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "ราคา API (อินพุต / เอาต์พุต)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "ราคาเปิดตัวมาตรฐาน: คำขออินพุต ≤272K โทเคน, USD ต่อ 1M โทเคน ขีดจำกัด API จากการ์ดโมเดลปัจจุบัน; เอกสาร API เหล่านี้ไม่ยืนยันกราฟเบนช์มาร์กเปิดตัวที่เปรียบเทียบกันได้"
+          },
+          "it": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Campo",
+              "Valore pubblicato"
+            ],
+            "rows": [
+              [
+                "Produttore",
+                "OpenAI"
+              ],
+              [
+                "Rilascio",
+                "2026-09-22"
+              ],
+              [
+                "Contesto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Output massimo",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Testo e immagini / testo"
+              ],
+              [
+                "Accesso al lancio",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Prezzo API (input / output)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Prezzi standard al lancio: richieste con input ≤272K token, USD per 1M token. Limiti API dalla scheda attuale; questi documenti non stabiliscono un grafico di benchmark comparabile al lancio."
+          },
+          "ru": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Поле",
+              "Опубликованное значение"
+            ],
+            "rows": [
+              [
+                "Разработчик",
+                "OpenAI"
+              ],
+              [
+                "Выпуск",
+                "2026-09-22"
+              ],
+              [
+                "Контекст",
+                "1,050,000 tokens"
+              ],
+              [
+                "Максимальный вывод",
+                "128,000 tokens"
+              ],
+              [
+                "Вход / выход",
+                "Текст и изображения / текст"
+              ],
+              [
+                "Доступ при запуске",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Цена API (ввод / вывод)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Стандартные цены запуска: запросы с входом ≤272K токенов, USD за 1M токенов. Лимиты API взяты из текущей карточки; сопоставимый график тестов при запуске этими документами не подтверждён."
+          },
+          "pt": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Campo",
+              "Valor publicado"
+            ],
+            "rows": [
+              [
+                "Fabricante",
+                "OpenAI"
+              ],
+              [
+                "Lançamento",
+                "2026-09-22"
+              ],
+              [
+                "Contexto",
+                "1,050,000 tokens"
+              ],
+              [
+                "Saída máxima",
+                "128,000 tokens"
+              ],
+              [
+                "Entradas / saída",
+                "Texto e imagens / texto"
+              ],
+              [
+                "Acesso no lançamento",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Preço API (entrada / saída)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Preços padrão no lançamento: solicitações com entrada ≤272K tokens, USD por 1M tokens. Limites API da ficha atual; estes documentos não estabelecem um gráfico de benchmark comparável no lançamento."
+          },
+          "ms": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Medan",
+              "Nilai diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pembangun",
+                "OpenAI"
+              ],
+              [
+                "Pelancaran",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,050,000 tokens"
+              ],
+              [
+                "Output maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Input / output",
+                "Teks dan imej / teks"
+              ],
+              [
+                "Akses semasa pelancaran",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Harga API (input / output)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Harga pelancaran standard: permintaan input ≤272K token, USD bagi 1M token. Had API daripada kad model semasa; dokumen ini tidak mengesahkan graf penanda aras pelancaran yang setanding."
+          },
+          "vi": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Mục",
+              "Giá trị công bố"
+            ],
+            "rows": [
+              [
+                "Nhà phát triển",
+                "OpenAI"
+              ],
+              [
+                "Phát hành",
+                "2026-09-22"
+              ],
+              [
+                "Ngữ cảnh",
+                "1,050,000 tokens"
+              ],
+              [
+                "Đầu ra tối đa",
+                "128,000 tokens"
+              ],
+              [
+                "Đầu vào / đầu ra",
+                "Văn bản và hình ảnh / văn bản"
+              ],
+              [
+                "Truy cập khi ra mắt",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Giá API (đầu vào / đầu ra)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Giá tiêu chuẩn khi ra mắt: yêu cầu đầu vào ≤272K token, USD trên 1M token. Giới hạn API từ thẻ mô hình hiện tại; tài liệu API này chưa xác lập biểu đồ chuẩn ra mắt có thể so sánh."
+          },
+          "id": {
+            "title": "GPT-6 Luna",
+            "columns": [
+              "Kolom",
+              "Nilai yang diterbitkan"
+            ],
+            "rows": [
+              [
+                "Pengembang",
+                "OpenAI"
+              ],
+              [
+                "Rilis",
+                "2026-09-22"
+              ],
+              [
+                "Konteks",
+                "1,050,000 tokens"
+              ],
+              [
+                "Keluaran maksimum",
+                "128,000 tokens"
+              ],
+              [
+                "Masukan / keluaran",
+                "Teks dan gambar / teks"
+              ],
+              [
+                "Akses saat peluncuran",
+                "Responses API; Chat Completions API"
+              ],
+              [
+                "Harga API (masukan / keluaran)",
+                "USD 0.10 / 0.50 · 1M tokens"
+              ]
+            ],
+            "note": "Harga standar peluncuran: permintaan masukan ≤272K token, USD per 1M token. Batas API dari kartu model saat ini; dokumen ini tidak menetapkan grafik tolok ukur peluncuran yang sebanding."
+          }
+        }
+      }
+    ]
   }
 ]

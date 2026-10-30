@@ -92,6 +92,7 @@ const pt: Messages = {
     groupPeople: 'Pessoas',
     groupHolidays: 'Feriados',
     groupTags: 'Tags',
+    related: 'Pesquisas relacionadas',
     groupPins: 'Pins',
     fields: {
       company: 'empresa',

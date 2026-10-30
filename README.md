@@ -474,3 +474,8 @@ build span chart display for construction pins with a timeline and show
 earthquakes should have running thread per year.
 use main thread for each year and have sub thread to link all pins in the year.
 https://www.chronopin.com/pin/20607/m6-4-earthquake-strikes-southeast-of-easter-island-on-october-29
+
+
+
+creat this graph dynamically for each person's holdings
+https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the?utm_source=post-email-title&publication_id=6819723&post_id=219082855&utm_campaign=email-post-title&isFreemail=false&r=3eoc7b&triedRedirect=true&utm_medium=email

@@ -560,7 +560,9 @@ export async function searchPageTagCounts(
   created: CreatedQuery,
   timeZone: string,
   limit = TAG_CLOUD_SIZE,
+  related = false,
 ): Promise<TagCount[]> {
+  if (related) return cachedRelatedTagCounts(joinSearchQuery(splitSearchQuery(query)), created, zoneFor(query, timeZone), limit, userId, onlyWatched);
   // The counts leave out the terms the cloud writes (searchTagCounts), so they
   // are cached without them too: every pick in the cloud then reads the same
   // counts, rather than a snapshot of its own taken minutes apart, whose
@@ -570,6 +572,21 @@ export async function searchPageTagCounts(
   return onlyWatched && userId
     ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
     : cachedTagCounts(counted, created, zone, limit);
+}
+// Kept for an hour: the tags that come with a search as it stands.
+async function cachedRelatedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number, userId: number | null, onlyWatched: boolean): Promise<TagCount[]> {
+  'use cache';
+  cacheTag(TAGS.timeline);
+  try {
+    const watched = onlyWatched && userId ? { userId, onlyWatched: true } : { userId: null, onlyWatched: false };
+    const counts = await withTagCountSlot(() => searchTagCounts(query, limit, { ...watched, timeZone, createdSince: resolveCreatedSince(created), related: true }));
+    cacheLife('hours');
+    return counts;
+  } catch (error) {
+    if (!(error instanceof TagCountBusy)) throw error;
+    cacheLife('seconds');
+    return [];
+  }
 }
 const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
 

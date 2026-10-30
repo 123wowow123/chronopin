@@ -91,6 +91,7 @@ const de: Messages = {
     groupPeople: 'Personen',
     groupHolidays: 'Feiertage',
     groupTags: 'Tags',
+    related: 'Ähnliche Suchen',
     groupPins: 'Pins',
     fields: {
       company: 'Firma',

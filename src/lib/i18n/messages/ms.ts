@@ -92,6 +92,7 @@ const ms: Messages = {
     groupPeople: 'Tokoh',
     groupHolidays: 'Cuti',
     groupTags: 'Teg',
+    related: 'Carian berkaitan',
     groupPins: 'Pin',
     fields: {
       company: 'syarikat',

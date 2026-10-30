@@ -92,6 +92,7 @@ const hi: Messages = {
     groupPeople: 'लोग',
     groupHolidays: 'छुट्टियाँ',
     groupTags: 'टैग',
+    related: 'संबंधित खोजें',
     groupPins: 'पिन',
     fields: {
       company: 'कंपनी',

@@ -92,6 +92,7 @@ const id: Messages = {
     groupPeople: 'Tokoh',
     groupHolidays: 'Hari libur',
     groupTags: 'Tag',
+    related: 'Pencarian terkait',
     groupPins: 'Pin',
     fields: {
       company: 'perusahaan',

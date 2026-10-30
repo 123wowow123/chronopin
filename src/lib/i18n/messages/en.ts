@@ -92,6 +92,7 @@ const en = {
     groupPeople: 'People',
     groupHolidays: 'Holidays',
     groupTags: 'Tags',
+    related: 'Related searches',
     groupPins: 'Pins',
     fields: {
       company: 'company',

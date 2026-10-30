@@ -1250,3 +1250,7 @@ drivers and limits; the earlier standalone `ad-translations` entry is removed.
 
 No pin creation or pin edit is needed. Each successful save is recorded in the
 job's action log. Completed languages are skipped, so rerunning only fills gaps.
+
+## Latest manual news run — October 30, 2026 morning
+
+[Run 35 report](news-2026-10-30-am.md): four new pins; Hoodini identity and Gaylord public-opening repairs; 40 event readings; model specifications, trade/ad synchronization and production translation verification. Follow-up gaps include building-specific primary sources, Hoodini permit/queue reconciliation, Senate eFD response format and prediction-record selection before market filtering.

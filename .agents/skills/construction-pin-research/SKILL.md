@@ -26,6 +26,10 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   not alone prove completion. **Never infer completion from an elapsed target date.**
 - Exclude non-construction accidents, closures, sales and monitored storage. For cancelled/halted/unsupported
   status, document it rather than forcing a tag.
+- EIA-860M is preliminary: check the pin's existing operator/regulator references for commissioning evidence
+  before replacing a Completed tag or treating a planned-inventory row as the current physical stage. An
+  explicit owner in-service report takes precedence over a conflicting preliminary inventory entry; retain
+  the conflict in the research record and use the owner evidence in the profile.
 
 ## 3. Power plants: `PinPower` (`kind: 'generation'`)
 - Save via `PUT /api/pins/:id/power`, verify locally and in production.

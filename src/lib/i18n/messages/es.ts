@@ -91,6 +91,7 @@ const es: Messages = {
     groupPeople: 'Personas',
     groupHolidays: 'Festivos',
     groupTags: 'Etiquetas',
+    related: 'Búsquedas relacionadas',
     groupPins: 'Pines',
     fields: {
       company: 'empresa',

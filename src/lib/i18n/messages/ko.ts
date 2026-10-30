@@ -91,6 +91,7 @@ const ko: Messages = {
     groupPeople: '인물',
     groupHolidays: '기념일',
     groupTags: '태그',
+    related: '관련 검색',
     groupPins: '핀',
     fields: {
       company: '기업',

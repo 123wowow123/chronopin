@@ -207,8 +207,11 @@ function searchLink(request: SearchRequest, direction: 'previous' | 'next', last
 export async function searchTagCounts(
   searchText: string,
   limit: number,
-  options: SearchOptions & { createdSince?: Date | null } = {},
+  options: SearchOptions & { createdSince?: Date | null; related?: boolean } = {},
 ): Promise<TagCount[]> {
+  // related: the tags that come with the search as it stands (the search box's
+  // suggested pills), so the picked tags stay in the filter.
+  if (options.related) return Pins.countSearchTags({ ...(await searchFilter(parseSearchQuery(searchText), options)), createdSince: options.createdSince }, limit);
   // The cloud counts the pins its own picks would narrow, so it leaves out
   // the terms it writes: the tag: and -tag: ones, and the confidence: levels
   // and bands its reserved filters stand for. Otherwise a pick would zero out

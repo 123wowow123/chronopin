@@ -10,7 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
-import { bareSearchRetryAfter, botRetryAfter, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, searchRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { bareSearchRetryAfter, botRetryAfter, chinaRetryAfter, isChineseAddress, ipRetryAfter, localeMismatch, mismatchRetryAfter, pinRetryAfter, searchRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -218,7 +218,14 @@ export async function proxy(request: NextRequest) {
     }
   }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
-    const key = session ? `u:${session.id}` : `ip:${request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? ''}`;
+    const address = request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? '';
+    // Signed-out visitors from Chinese address ranges: 120 different addresses a
+    // minute between them (botLimit.chinaRetryAfter).
+    if (!session && address && (await isChineseAddress(address))) {
+      const china = chinaRetryAfter(address);
+      if (china != null) return tooManyRequests(request, china, false);
+    }
+    const key = session ? `u:${session.id}` : `ip:${address}`;
     const light = session ? await HeavyUserPlan.isActive(session.id).catch(() => false) : false;
     const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
     const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1);

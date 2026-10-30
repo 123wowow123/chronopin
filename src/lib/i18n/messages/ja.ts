@@ -91,6 +91,7 @@ const ja: Messages = {
     groupPeople: '人物',
     groupHolidays: '祝日・記念日',
     groupTags: 'タグ',
+    related: '関連する検索',
     groupPins: 'ピン',
     fields: {
       company: '企業',

@@ -91,6 +91,7 @@ const th: Messages = {
     groupPeople: 'บุคคล',
     groupHolidays: 'วันสำคัญ',
     groupTags: 'แท็ก',
+    related: 'การค้นหาที่เกี่ยวข้อง',
     groupPins: 'หมุด',
     fields: {
       company: 'บริษัท',

@@ -99,6 +99,7 @@ const ar: Messages = {
     groupPeople: 'الأشخاص',
     groupHolidays: 'العطلات',
     groupTags: 'الوسوم',
+    related: 'عمليات بحث ذات صلة',
     groupPins: 'الدبابيس',
     fields: {
       company: 'الشركة',
