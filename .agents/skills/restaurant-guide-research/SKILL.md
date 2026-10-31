@@ -81,6 +81,9 @@ Retrying unmatched venues (2026-10-30): Yelp's own search misses names with a lo
 chain. Yelp answers 403 (bot check) after a fast burst; the user clears it in the tab, then pace requests ~5 s apart (one venue ~1 min).
 Drop matches whose caption is a different or multi-dish photo (check the caption, not just the tokens). The admin token in
 `.scrape/admin.token` expires after ~2 h: re-sign in with `ADMIN_PASSWORD` from `.env.local` (email in `feedback_admin_email_in_scripts`).
+Never shorten a Yelp slug when listing candidates (a trimmed `-san-diego` gave 'page not found' and looked like 'no photos'); if a slug
+returns 0 photos try inserting or appending `-san-diego`. The loose pass (caption words a subset of the item, or two-thirds of its
+words) finds ~3x more photos but needs a by-eye review: drop captions naming several dishes, combos, or a different dish.
 Restaurant sites and Instagram rarely name dishes in alt text, so they gave ~no matches; not worth the per-photo credit work.
 
 ## Saving
