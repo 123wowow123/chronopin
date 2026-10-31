@@ -1,6 +1,7 @@
 import type { Translator } from '@/lib/i18n/translate';
 import { factoryBuildoutMetrics, hasFactoryBuildout, type FactoryBreakdownLine, type PinFactoryJson } from '@/lib/pinFactory';
 import { FactorySource } from './FactorySource';
+import { PinCapacityChart } from './PinCapacityChart';
 
 const STAGES = ['announced', 'construction', 'commissioning', 'production'] as const;
 
@@ -163,6 +164,7 @@ export function PinFactoryBuildout({ factory, t, className = '' }: { factory: Pi
             </div>
           ))}
         </dl>
+        <PinCapacityChart points={factory.capacityPoints} t={t} className="mt-5" />
         {factory.milestones?.length ? (
           <div className="mt-5">
             <h3 className="text-xs font-semibold tracking-wide text-muted uppercase">{t('pin.factory.projectTimeline')}</h3>

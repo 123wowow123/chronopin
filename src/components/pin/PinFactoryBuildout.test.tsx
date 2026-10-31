@@ -70,4 +70,17 @@ describe('factual factory buildout display', () => {
     expect(html).toContain('https://www.bayer.com/');
     expect(html).not.toContain('data-testid="radar"');
   });
+  it('draws a capacity-over-time graph only from two or more sourced points', () => {
+    const p = profile();
+    const source = { url: 'https://example.com/a', title: 'Source', publishedDate: '2026-01-01', quote: 'Quote' };
+    expect(render(p)).not.toContain('Capacity over time');
+    p.capacityPoints = [{ date: '2025-10-19', mw: 239, kind: 'it', basis: 'demonstrated', label: 'First cluster', source }];
+    expect(render(p)).not.toContain('Capacity over time');
+    p.capacityPoints.push({ date: '2027-02-25', mw: 1531, kind: 'it', basis: 'planned', label: 'Projected', source });
+    const html = render(p);
+    expect(html).toContain('Capacity over time');
+    expect(html).toContain('1.53 GW');
+    expect(html).toContain('stroke-dasharray');
+  });
 });
+

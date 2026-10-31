@@ -1,5 +1,5 @@
 import * as db from '../db';
-import { FACTORY_KEYS, FACTORY_METRIC_KEYS, FACTORY_RUBRIC_YEAR, FACTORY_STATUSES, isFactoryScore, type FactoryBreakdownLine, type FactoryEvidence, type FactoryMetricKey, type FactoryProfile, type PinFactoryJson } from '@/lib/pinFactory';
+import { FACTORY_CAPACITY_KINDS, FACTORY_KEYS, FACTORY_METRIC_KEYS, FACTORY_RUBRIC_YEAR, FACTORY_STATUSES, isFactoryScore, type FactoryBreakdownLine, type FactoryCapacityPoint, type FactoryEvidence, type FactoryMetricKey, type FactoryProfile, type PinFactoryJson } from '@/lib/pinFactory';
 
 const day = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v)) && new Date(v).toISOString().slice(0, 10) === v;
 const text = (v: unknown, max: number): v is string => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
@@ -76,7 +76,22 @@ export function factoryProblem(input: unknown): FactoryProfile | string {
       milestones.push({ label: m.label, date: m.date, basis: m.basis as 'planned' | 'demonstrated', source: m.source });
     }
   }
-  return { sector: input.sector.trim(), status: input.status as FactoryProfile['status'], assessmentDate: input.assessmentDate, rubricYear: input.rubricYear, source: input.source as FactoryProfile['source'], axes, metrics, ...(milestones ? { milestones } : {}) };
+  let capacityPoints: FactoryProfile['capacityPoints'];
+  if (input.capacityPoints !== undefined) {
+    if (!Array.isArray(input.capacityPoints) || input.capacityPoints.length < 2 || input.capacityPoints.length > 12) return 'capacityPoints needs 2-12 sourced readings.';
+    capacityPoints = [];
+    for (const c of input.capacityPoints) {
+      if (!record(c) || !text(c.label, 100) || !text(c.date, 100) || !['planned', 'demonstrated'].includes(String(c.basis)) || !evidence(c.source)) return 'Each capacity point needs a label, date, basis and source.';
+      if (typeof c.mw !== 'number' || !Number.isFinite(c.mw) || c.mw <= 0 || c.mw > 100000) return 'A capacity point mw must be a positive number of megawatts.';
+      if (!FACTORY_CAPACITY_KINDS.includes(c.kind as FactoryCapacityPoint['kind'])) return 'A capacity point kind must be it, utility or generation.';
+      if (c.kind !== (input.capacityPoints[0] as Record<string, unknown>).kind) return 'All capacity points must share one kind so the line compares like with like.';
+      if (/^\d{4}-\d{2}-\d{2}$/.test(c.date) && !day(c.date)) return 'A capacity point day must be a real YYYY-MM-DD date.';
+      if (c.basis === 'demonstrated' && /^\d{4}-\d{2}-\d{2}$/.test(c.date) && c.date > assessmentDate) return 'A demonstrated capacity point cannot be in the future.';
+      if (c.source.publishedDate && c.source.publishedDate > assessmentDate) return 'Capacity evidence cannot postdate the assessment.';
+      capacityPoints.push({ date: c.date, mw: c.mw, kind: c.kind as FactoryCapacityPoint['kind'], basis: c.basis as 'planned' | 'demonstrated', label: c.label, source: c.source });
+    }
+  }
+  return { sector: input.sector.trim(), status: input.status as FactoryProfile['status'], assessmentDate: input.assessmentDate, rubricYear: input.rubricYear, source: input.source as FactoryProfile['source'], axes, metrics, ...(milestones ? { milestones } : {}), ...(capacityPoints ? { capacityPoints } : {}) };
 }
 
 export async function factoryForPin(pinId: number): Promise<PinFactoryJson | null> {

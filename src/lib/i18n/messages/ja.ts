@@ -776,6 +776,7 @@ const ja: Messages = {
     factory: {
       buildoutHeading: "工場建設計画",
       projectTimeline: "事業スケジュール",
+      capacityHeading: "容量の推移",
       timelineMore: "さらに{count}件を表示",
       timelineEarlier: "以前の{count}件を表示",
       costBreakdown: "この見積もりの算出方法",

@@ -773,6 +773,7 @@ const th: Messages = {
     factory: {
       buildoutHeading: "โครงการโรงงาน",
       projectTimeline: "กำหนดการโครงการ",
+      capacityHeading: "กำลังการผลิตตามช่วงเวลา",
       timelineMore: "แสดงเพิ่มอีก {count}",
       timelineEarlier: "แสดง {count} รายการก่อนหน้า",
       costBreakdown: "วิธีคำนวณค่าประมาณนี้",

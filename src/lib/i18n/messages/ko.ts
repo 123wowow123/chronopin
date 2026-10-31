@@ -776,6 +776,7 @@ const ko: Messages = {
     factory: {
       buildoutHeading: "공장 건설 현황",
       projectTimeline: "사업 일정",
+      capacityHeading: "시간에 따른 용량",
       timelineMore: "{count}개 더 보기",
       timelineEarlier: "이전 {count}개 보기",
       costBreakdown: "이 추정치의 산출 과정",

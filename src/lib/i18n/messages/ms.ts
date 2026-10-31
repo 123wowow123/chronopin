@@ -781,6 +781,7 @@ const ms: Messages = {
     factory: {
       buildoutHeading: "Projek kilang",
       projectTimeline: "Jadual projek",
+      capacityHeading: "Kapasiti dari masa ke masa",
       timelineMore: "Tunjukkan {count} lagi",
       timelineEarlier: "Tunjukkan {count} terdahulu",
       costBreakdown: "Cara anggaran ini dikira",

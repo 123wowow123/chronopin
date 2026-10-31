@@ -785,6 +785,7 @@ const ru: Messages = {
     factory: {
       buildoutHeading: "Строительство завода",
       projectTimeline: "График проекта",
+      capacityHeading: "Мощность во времени",
       timelineMore: "Показать ещё {count}",
       timelineEarlier: "Показать {count} более ранних",
       costBreakdown: "Как рассчитана эта оценка",

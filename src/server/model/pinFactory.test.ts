@@ -105,4 +105,19 @@ describe('factory evidence contract', () => {
     p.axes.technical.sources[0].publishedDate = null; p.axes.technical.sources[0].quote = 'x'.repeat(301);
     expect(factoryProblem(p)).toMatch(/300/);
   });
+  it('validates capacity points: two or more, one kind, positive MW, no future observations', () => {
+    const source = { url: 'https://example.com/a', title: 'Source', publishedDate: null, quote: 'Quote' };
+    const pts = () => [
+      { date: '2025-10-19', mw: 239, kind: 'it', basis: 'demonstrated', label: 'First cluster', source },
+      { date: '2027-02-25', mw: 1531, kind: 'it', basis: 'planned', label: 'Projected', source },
+    ];
+    const p = valid() as Record<string, unknown>;
+    p.capacityPoints = pts();
+    expect(factoryProblem(p)).toEqual(p);
+    p.capacityPoints = pts().slice(0, 1); expect(factoryProblem(p)).toMatch(/2-12/);
+    p.capacityPoints = pts(); (p.capacityPoints as { kind: string }[])[1].kind = 'utility'; expect(factoryProblem(p)).toMatch(/one kind/);
+    p.capacityPoints = pts(); (p.capacityPoints as { mw: number }[])[0].mw = -5; expect(factoryProblem(p)).toMatch(/positive/);
+    p.capacityPoints = pts(); (p.capacityPoints as { date: string }[])[0].date = '2099-01-01'; expect(factoryProblem(p)).toMatch(/future/);
+  });
 });
+

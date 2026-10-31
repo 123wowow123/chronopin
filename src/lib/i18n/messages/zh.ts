@@ -777,6 +777,7 @@ const zh: Messages = {
     factory: {
       buildoutHeading: "工厂建设概况",
       projectTimeline: "项目时间线",
+      capacityHeading: "容量随时间变化",
       timelineMore: "再显示 {count} 项",
       timelineEarlier: "显示更早的 {count} 项",
       costBreakdown: "该估算的计算过程",

@@ -51,6 +51,18 @@ export type FactoryMilestone = {
   basis: 'planned' | 'demonstrated';
   source: FactoryEvidence;
 };
+// A dated, sourced capacity reading or target for the "Capacity over time" graph. One `kind` per profile so the
+// line compares like with like (IT power, utility/grid power, or on-site generation), all in megawatts.
+export const FACTORY_CAPACITY_KINDS = ['it', 'utility', 'generation'] as const;
+export type FactoryCapacityPoint = {
+  // Same precision rules as a milestone date.
+  date: string;
+  mw: number;
+  kind: (typeof FACTORY_CAPACITY_KINDS)[number];
+  basis: 'planned' | 'demonstrated';
+  label: string;
+  source: FactoryEvidence;
+};
 export type FactoryProfile = {
   sector: string;
   status: FactoryStatus;
@@ -61,6 +73,7 @@ export type FactoryProfile = {
   // Raw figures with units/conditions, separate from scores. E.g. annual capacity, area, jobs.
   metrics: FactoryMetric[];
   milestones?: FactoryMilestone[];
+  capacityPoints?: FactoryCapacityPoint[];
 };
 export type PinFactoryJson = FactoryProfile & { checkedAt: string };
 export const isFactoryScore = (v: unknown): v is number =>
@@ -124,6 +137,13 @@ export function milestoneTime(date: string): number | null {
   const year = /^(\d{4})$/.exec(text);
   return year ? Date.UTC(+year[1], 11, 31) : null;
 }
+
+// The graphable points: placeable dates only, oldest first.
+export const capacitySeries = (points: FactoryCapacityPoint[] | undefined): (FactoryCapacityPoint & { at: number })[] =>
+  (points ?? []).flatMap((pt) => {
+    const at = milestoneTime(pt.date);
+    return at == null ? [] : [{ ...pt, at }];
+  }).sort((a, b) => a.at - b.at);
 
 export type BuildMark = { at: number; label: string; date: string };
 export const buildMarks = (milestones: FactoryMilestone[] | undefined): BuildMark[] =>

@@ -780,6 +780,7 @@ const vi: Messages = {
     factory: {
       buildoutHeading: "Dự án nhà máy",
       projectTimeline: "Tiến độ dự án",
+      capacityHeading: "Công suất theo thời gian",
       timelineMore: "Xem thêm {count}",
       timelineEarlier: "Xem {count} mốc trước",
       costBreakdown: "Cách tính ước tính này",
