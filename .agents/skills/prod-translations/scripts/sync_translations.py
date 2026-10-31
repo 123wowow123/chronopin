@@ -128,12 +128,17 @@ def fetch_due_pins(
 
     return due_pins[:limit] if limit else due_pins
 
+HTML_FIELDS = ('description', 'longFormSummary')
+
 def target_fields_for(pin: dict, locale: str) -> List[str]:
     """
-    Returns all present fields on the pin. Unchanged fragments hit the local disk cache
-    in 0ms, while validating and re-sending all fields ensures no previously stored
-    untranslated or mangled field is carried forward on an outdated pin.
+    Returns the edited fields for an outdated translation when known (changed),
+    or all present fields on the pin when missing/incomplete.
     """
+    state = (pin.get('states') or {}).get(locale)
+    changed = (pin.get('changed') or {}).get(locale)
+    if state == 'outdated' and isinstance(changed, list) and changed:
+        return [f for f in FIELDS if f in changed and pin.get(f)]
     return [f for f in FIELDS if pin.get(f)]
 
 def record_wiki_tracking(ids: List[int]):
@@ -447,6 +452,25 @@ def has_words(value: Optional[str]) -> bool:
         return False
     return any(c.isalnum() for c in value)
 
+ENGLISH_STOPWORDS = re.compile(r'\b(?:the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\b', re.I)
+NON_LATIN_LOCALES = ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th')
+
+def looks_english(text: str) -> bool:
+    """True when text contains common English function words (mirrors the SQL stopword rule)."""
+    return bool(ENGLISH_STOPWORDS.search(text))
+
+def acceptable(locale: str, en: str, tr: Optional[str]) -> bool:
+    """
+    whole_translation() plus a per-locale guard: a >= 80 char fragment that comes back as pure
+    ASCII in a non-Latin-script locale was left in English (a partial-English bullet) unless the
+    English source itself is not English.
+    """
+    if not whole_translation(en, tr, is_fragment=True):
+        return False
+    if locale in NON_LATIN_LOCALES and tr and len(en) >= 80 and looks_english(en) and all(ord(c) < 128 for c in tr):
+        return False
+    return True
+
 def whole_translation(english: Optional[str], translated: Optional[str], is_fragment: bool = False) -> bool:
     """
     Python equivalent of wholeTranslation() in src/server/model/pinTranslation.ts,
@@ -459,10 +483,11 @@ def whole_translation(english: Optional[str], translated: Optional[str], is_frag
     en_s = english.strip()
     tr_s = translated.strip()
     en_prose = re.sub(r'<[^>]*>', '', en_s).strip()
-    if not is_fragment and len(en_prose) > 40 and ' ' in en_prose and (tr_s == en_s or html.unescape(tr_s) == html.unescape(en_s)):
-        if not (en_prose.startswith("detik: 'Putusan banding") or en_prose.startswith('detik: "Putusan banding')):
-            return False
-    if '&amp;;' in tr_s or '&amp;amp;' in tr_s:
+    # Identical-to-English output is only an error when the English itself is English prose;
+    # a pin that quotes a non-English source (e.g. an Indonesian headline) legitimately keeps it.
+    if not is_fragment and len(en_prose) > 40 and ' ' in en_prose and looks_english(en_prose) and (tr_s == en_s or html.unescape(tr_s) == html.unescape(en_s)):
+        return False
+    if re.search(r'(&amp;(?:amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|(?<![&a-zA-Z])(?:amp|quot);|＆amp;|&#39;|&#x27;)', tr_s):
         return False
     if not (is_fragment and len(en_s) <= 3) and not has_words(translated[:200]):
         return False
@@ -492,7 +517,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
         except Exception:
             pass
 
-    missing = [t for t in locale_texts if t not in cache or not whole_translation(t, cache.get(t), is_fragment=True)]
+    missing = [t for t in locale_texts if t not in cache or not acceptable(locale, t, cache.get(t))]
     batches: List[List[str]] = []
     cur_batch: List[str] = []
     cur_chars = 0
@@ -511,6 +536,9 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
         for src_core, tr in res.items():
             if locale == 'th':
                 tr = fix_thai_years(src_core, tr)
+            if not acceptable(locale, src_core, tr):
+                print(f"[{locale}] Rejected untranslated/partial-English fragment: {src_core[:60]!r}")
+                continue
             cache[src_core] = tr
         if idx % 5 == 0 or idx == len(batches):
             cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -529,12 +557,13 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
             src = p.get(f)
             if not src:
                 continue
-            parts = re.split(r'(<[^>]*>)', src)
+            is_html = f in HTML_FIELDS
+            parts = re.split(r'(<[^>]*>)', src) if is_html else [src]
             out_parts: List[str] = []
 
             for part in parts:
-                if part.startswith('<') or not part.strip() or not any(c.isalpha() for c in part):
-                    out_parts.append(part)
+                if (is_html and part.startswith('<')) or not part.strip() or not any(c.isalpha() for c in html.unescape(part)):
+                    out_parts.append(part if is_html else html.unescape(part))
                     continue
 
                 leading_ws = part[:len(part) - len(part.lstrip())]
@@ -542,7 +571,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
                 core = html.unescape(part.strip())
 
                 tr_core = cache.get(core)
-                if tr_core is None or not whole_translation(core, tr_core, is_fragment=True):
+                if tr_core is None or not acceptable(locale, core, tr_core):
                     tr_core = cache.get(part.strip())
                     if tr_core is not None:
                         tr_core = html.unescape(tr_core.strip())
@@ -558,10 +587,9 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
                 if locale == 'th':
                     tr_core = fix_thai_years(core, tr_core)
 
-                # Escape & (for HTML fields) and literal < or > inside text nodes
-                if f in ('description', 'longFormSummary'):
-                    tr_core = tr_core.replace('&', '&amp;')
-                tr_core = tr_core.replace('<', '&lt;').replace('>', '&gt;')
+                # Escape &, <, > strictly for HTML fields; keep plain-text fields unescaped
+                if is_html:
+                    tr_core = tr_core.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
                 out_parts.append(f"{leading_ws}{tr_core}{trailing_ws}")
 
             if not valid:
@@ -570,11 +598,11 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
             val = ''.join(out_parts)
 
             # Safety validations: tag parity, citation parity, and wholeTranslation completeness
-            if re.findall(r'<[^>]*>', src) != re.findall(r'<[^>]*>', val):
+            if is_html and re.findall(r'<[^>]*>', src) != re.findall(r'<[^>]*>', val):
                 print(f"[{locale}] Tag mismatch in pin {p['id']} field {f}: {re.findall(r'<[^>]*>', src)} vs {re.findall(r'<[^>]*>', val)}")
                 valid = False
                 break
-            if re.findall(r'data-ref="([^"]*)"', src) != re.findall(r'data-ref="([^"]*)"', val):
+            if is_html and re.findall(r'data-ref="([^"]*)"', src) != re.findall(r'data-ref="([^"]*)"', val):
                 print(f"[{locale}] data-ref mismatch in pin {p['id']} field {f}")
                 valid = False
                 break
@@ -585,7 +613,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
 
             row[f] = val
 
-        if valid and row.get('title'):
+        if valid and len(row) > 3:
             rows.append(row)
         else:
             print(f"[{locale}] Skipped invalid translation for pin {p['id']}")
@@ -615,33 +643,6 @@ def push_translations(token: str, all_rows: List[dict]) -> int:
                 print(f"  Sample skipped reasons: {skipped[:3]}")
     return total_saved
 
-def main():
-    parser = argparse.ArgumentParser(description="Synchronize production translations.")
-    parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
-    parser.add_argument('--pin', type=int, help="Translate a specific pin id")
-    parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
-    parser.add_argument('--dry-run', action='store_true', help="Only display due pins without translating")
-    args = parser.parse_args()
-
-    token = ensure_admin_token()
-    due_pins = fetch_due_pins(token, pin_id=args.pin, limit=args.limit, locale=args.locale)
-    print(f"Found {len(due_pins)} pin(s) due for translation.")
-    if not due_pins:
-        print("All matching pins are already up to date!")
-        return
-
-    if args.dry_run:
-        sample = [
-            {
-                'id': p['id'],
-                'locales': p.get('locales', []),
-                'states': p.get('states', {}),
-            }
-            for p in due_pins[:20]
-        ]
-        print(f"Dry-run sample (up to 20):\n{json.dumps(sample, indent=2)}")
-        return
-
 def sync_pin_chunk(due_pins: List[dict]) -> int:
     # Group pins and needed text fragments per locale
     pins_by_locale: Dict[str, List[dict]] = {loc: [] for loc in LOCALES}
@@ -656,8 +657,10 @@ def sync_pin_chunk(due_pins: List[dict]) -> int:
                 src = p.get(f)
                 if not src:
                     continue
-                for part in re.split(r'(<[^>]*>)', src):
-                    if not part.startswith('<') and part.strip() and any(c.isalpha() for c in part):
+                is_html = f in HTML_FIELDS
+                parts = re.split(r'(<[^>]*>)', src) if is_html else [src]
+                for part in parts:
+                    if not (is_html and part.startswith('<')) and part.strip() and any(c.isalpha() for c in html.unescape(part)):
                         texts_by_locale[loc].add(html.unescape(part.strip()))
 
     active_locales = [loc for loc in LOCALES if pins_by_locale[loc]]
@@ -688,6 +691,97 @@ def sync_pin_chunk(due_pins: List[dict]) -> int:
     print(f"Successfully saved {saved} / {len(all_rows)} translation rows on production.")
     return saved
 
+def prepare_mangled_rows_for_repair(pin_id: Optional[int] = None):
+    """
+    Automatically repairs plain-text HTML entities in place and marks any PinTranslation rows
+    that have untranslated English prose, mangled HTML entities, delimiter leaks, or missing
+    native script with sourceHash='repair' (and fieldHashes updated per broken field) so
+    fetch_due_pins() picks them up and re-translates only the affected fields.
+    """
+    pin_filter = f"AND p.id = {int(pin_id)}" if pin_id else ""
+    sql = f"""
+-- 1. Unescape raw HTML entities in plain-text fields (title, dateConfidenceReasoning, delayReasoning)
+UPDATE "PinTranslation" pt
+SET
+  title = replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(
+    pt.title,
+    '&amp;', '&'), '&#x27;', chr(39)), '&#39;', chr(39)), '&quot;', chr(34)), '&nbsp;', ' '),
+    '&ldquo;', '“'), '&rdquo;', '”'), '&laquo;', '«'), '&raquo;', '»'), '&ndash;', '–'), '&atilde;', 'ã'),
+  "dateConfidenceReasoning" = CASE WHEN pt."dateConfidenceReasoning" IS NULL THEN NULL ELSE
+    replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(
+      pt."dateConfidenceReasoning",
+      '&amp;', '&'), '&#x27;', chr(39)), '&#39;', chr(39)), '&quot;', chr(34)), '&nbsp;', ' '),
+      '&ldquo;', '“'), '&rdquo;', '”'), '&laquo;', '«'), '&raquo;', '»'), '&ndash;', '–'), '&atilde;', 'ã')
+  END,
+  "delayReasoning" = CASE WHEN pt."delayReasoning" IS NULL THEN NULL ELSE
+    replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(
+      pt."delayReasoning",
+      '&amp;', '&'), '&#x27;', chr(39)), '&#39;', chr(39)), '&quot;', chr(34)), '&nbsp;', ' '),
+      '&ldquo;', '“'), '&rdquo;', '”'), '&laquo;', '«'), '&raquo;', '»'), '&ndash;', '–'), '&atilde;', 'ã')
+  END
+FROM "Pin" p
+WHERE p.id = pt."pinId"
+  AND p."utcDeletedDateTime" IS NULL
+  {pin_filter}
+  AND (
+    coalesce(pt.title, '') ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+|ldquo|rdquo|laquo|raquo|ndash|atilde);'
+    OR coalesce(pt."dateConfidenceReasoning", '') ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+|ldquo|rdquo|laquo|raquo|ndash|atilde);'
+    OR coalesce(pt."delayReasoning", '') ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+|ldquo|rdquo|laquo|raquo|ndash|atilde);'
+  );
+
+-- 2. Mark rows with untranslated prose, mangled HTML entities, delimiter leaks, or missing native script for per-field repair
+UPDATE "PinTranslation" pt
+SET
+  "sourceHash" = 'repair',
+  "fieldHashes" = jsonb_strip_nulls(
+    pt."fieldHashes"
+    || CASE WHEN coalesce(pt.title, '') ~ '[⟦⟧]' THEN '{{"title": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
+    || CASE WHEN (
+         (length(regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g')) > 40 AND pt.description = p.description AND regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+         OR coalesce(pt.description, '') ~ '(&amp;(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|([^&a-zA-Z]|^)(amp|quot);|＆amp;|[⟦⟧])'
+         OR (pt.locale IN ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th') AND length(regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g')) > 40 AND regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')
+       ) THEN '{{"description": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
+    || CASE WHEN (
+         (length(regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND pt."longFormSummary" = p."longFormSummary" AND regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+         OR coalesce(pt."longFormSummary", '') ~ '(&amp;(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|([^&a-zA-Z]|^)(amp|quot);|＆amp;|[⟦⟧])'
+         OR (pt.locale IN ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th') AND ((length(regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]') OR regexp_replace(coalesce(pt."longFormSummary", ''), '<cite[^>]*></cite>', '', 'g') ~ '<li>[\\x20-\\x7E]{{80,}}</li>'))
+       ) THEN '{{"longFormSummary": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
+    || CASE WHEN (
+         (length(coalesce(p."dateConfidenceReasoning", '')) > 40 AND pt."dateConfidenceReasoning" = p."dateConfidenceReasoning" AND coalesce(p."dateConfidenceReasoning", '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+         OR coalesce(pt."dateConfidenceReasoning", '') ~ '[⟦⟧]'
+       ) THEN '{{"dateConfidenceReasoning": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
+    || CASE WHEN (
+         (length(coalesce(p."delayReasoning", '')) > 40 AND pt."delayReasoning" = p."delayReasoning" AND coalesce(p."delayReasoning", '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+         OR coalesce(pt."delayReasoning", '') ~ '[⟦⟧]'
+       ) THEN '{{"delayReasoning": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
+  )
+FROM "Pin" p
+WHERE p.id = pt."pinId"
+  AND p."utcDeletedDateTime" IS NULL
+  {pin_filter}
+  AND (
+    (length(regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g')) > 40 AND pt.description = p.description AND regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+    OR (length(regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND pt."longFormSummary" = p."longFormSummary" AND regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+    OR (length(coalesce(p."dateConfidenceReasoning", '')) > 40 AND pt."dateConfidenceReasoning" = p."dateConfidenceReasoning" AND coalesce(p."dateConfidenceReasoning", '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+    OR (length(coalesce(p."delayReasoning", '')) > 40 AND pt."delayReasoning" = p."delayReasoning" AND coalesce(p."delayReasoning", '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+    OR coalesce(pt.description, '') ~ '(&amp;(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|([^&a-zA-Z]|^)(amp|quot);|＆amp;)'
+    OR coalesce(pt."longFormSummary", '') ~ '(&amp;(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|([^&a-zA-Z]|^)(amp|quot);|＆amp;)'
+    OR coalesce(pt.title, '') ~ '[⟦⟧]'
+    OR coalesce(pt.description, '') ~ '[⟦⟧]'
+    OR coalesce(pt."longFormSummary", '') ~ '[⟦⟧]'
+    OR coalesce(pt."dateConfidenceReasoning", '') ~ '[⟦⟧]'
+    OR coalesce(pt."delayReasoning", '') ~ '[⟦⟧]'
+    OR (
+      pt.locale IN ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th')
+      AND (
+        (length(regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]' OR regexp_replace(coalesce(pt."longFormSummary", ''), '<cite[^>]*></cite>', '', 'g') ~ '<li>[\\x20-\\x7E]{{80,}}</li>')
+        OR (length(regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g')) > 40 AND regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')
+      )
+    )
+  );
+"""
+    run_prod_sql(sql)
+
 def main():
     parser = argparse.ArgumentParser(description="Synchronize production translations.")
     parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
@@ -696,6 +790,9 @@ def main():
     parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
     parser.add_argument('--dry-run', action='store_true', help="Only display due pins without translating")
     args = parser.parse_args()
+
+    if not args.dry_run:
+        prepare_mangled_rows_for_repair(pin_id=args.pin)
 
     token = ensure_admin_token()
     due_pins = fetch_due_pins(token, pin_id=args.pin, limit=args.limit, locale=args.locale)

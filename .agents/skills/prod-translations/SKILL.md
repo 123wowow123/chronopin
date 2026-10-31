@@ -26,8 +26,11 @@ This skill provides the automated workflow, validation checks, and operational g
 
 ## Subagent Delegation (`flash` Model)
 
-- **Always delegate translation rounds to a `flash` subagent:** When running this skill from a parent conversation, invoke a `self` subagent with `Model: 'flash'` (`invoke_subagent`) to execute the health check, synchronization, and verification steps.
-- **Audit the `flash` subagent's work:** After the `flash` subagent finishes, inspect its transcript and output to verify that `check_translations.py` reports `0` due pins (`100.0%` current & complete), `0` skipped rows, and `0` content leaks.
+- **Always delegate translation rounds to a `flash` subagent:** When running this skill from a parent conversation, invoke a `self` subagent with `Model: 'flash'` (`invoke_subagent`) to execute the health check, synchronization, and verification steps. Reuse an existing `flash` subagent via `send_message` across subsequent rounds in the same conversation.
+- **Audit the `flash` subagent's work:** After the `flash` subagent finishes, inspect its transcript and output to verify that `check_translations.py` reports:
+  - `0` due pins (`100.0%` current & complete)
+  - `0` untranslated/mangled rows (no untranslated English prose, no partial-English `<li>` bullets of 80+ ASCII chars in `ja`/`zh`/`ko`/`ru`/`ar`/`hi`/`th`, no raw HTML entities in plain-text fields, no mangled/double-escaped entities in HTML fields, no `[⟦⟧]` delimiter leaks, and no non-Latin locales missing native script). Identical-to-English text is allowed only when the English source is itself non-English (see [Untranslated-English Detection Rules](./references/locales_and_hashing.md)).
+  - `0` skipped rows and `0` content leaks
 
 ---
 
@@ -39,7 +42,7 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 |:---|:---|
 | **Health Check** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
 | **Check JSON Output** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --json` |
-| **Sync All Due Pins** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py` |
+| **Sync All Due Pins (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
 | **Sync with Batch Limit** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --limit 50` |
 | **Sync Specific Pin** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
 | **Sync Specific Locale** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --locale de` |
@@ -73,16 +76,18 @@ This queries both the production PostgreSQL database (`scripts/prod-sql.sh`) and
 ### Step 2: Execute Sync
 Run the automated synchronization script:
 ```bash
-python3 .agents/skills/prod-translations/scripts/sync_translations.py
+python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25
 ```
 The script automatically:
-1. Queries `GET /api/admin/translations` to identify pins with `missing`, `outdated`, or `incomplete` translations, and translates only the due locales and edited fields (`changed`).
-2. Extracts English text fragments while preserving HTML structure, inline tag surrounding whitespace (`<strong>`, `<em>`, `<a>`, `<cite>`), and `<cite data-ref="...">` citations.
-3. Records model tracking metadata into the backing `SourceWiki` records (and never pin content) without marking unbuilt sources as `ready` or bumping `wikiVersion` from `0`.
-4. Translates via HTTP `POST` across due locales with caching in `.scrape/translations-cache/`, never falling back to untranslated English on failure.
-5. Fixes Thai Buddhist era years back to the Gregorian calendar (`+543` offset fix).
-6. Escapes literal `<` and `>` inside text nodes (`&lt;` / `&gt;`) and validates `wholeTranslation` completeness before queueing.
-7. Pushes translations in batches of 150 to `POST /api/admin/translations` using the authenticated admin token (refreshed automatically via `/auth/local` from `.env.local`).
+1. Runs `prepare_mangled_rows_for_repair()` to unescape any raw HTML entities in plain-text fields (`title`, `dateConfidenceReasoning`, `delayReasoning`) and mark any row with untranslated English prose, mangled HTML entities (`&amp;amp;`, ` amp;`, `＆amp;`, `&amp;#39;`), delimiter leaks (`[⟦⟧]`), or missing native script in non-Latin locales for per-field repair (`sourceHash = 'repair'` + `fieldHashes` updated for the affected field).
+2. Queries `GET /api/admin/translations` to identify pins with `missing`, `outdated`, or `incomplete` translations, and translates only the due locales and edited fields (`changed`).
+3. Distinguishes **HTML fields** (`description`, `longFormSummary`) from **plain-text fields** (`title`, `dateConfidenceReasoning`, `delayReasoning`):
+   - Only HTML fields are split by `<[^>]*>` and have `&`, `<`, `>` escaped on output (`&amp;`, `&lt;`, `&gt;`), while preserving inline tag surrounding whitespace (`<strong>`, `<em>`, `<a>`, `<cite>`) and `<cite data-ref="...">` citations.
+   - Plain-text fields are never split on `<[^>]*>` and never HTML-escaped on output (preventing literal `&amp;` or `&#x27;` in React text nodes).
+   - All English text fragments are decoded via `html.unescape()` before translation so entities like `&amp;` or `&#39;` never split sentences mid-clause.
+4. Records model tracking metadata into the backing `SourceWiki` records (and never pin content) without marking unbuilt sources as `ready` or bumping `wikiVersion` from `0`.
+5. Translates in outer chunks (`--chunk-size 25`) using multi-RPC `batchexecute` (`MkEWBc`) HTTP `POST` across due locales with caching in `.scrape/translations-cache/`, never falling back to untranslated English on failure.
+6. Fixes Thai Buddhist era years back to the Gregorian calendar (`+543` offset fix) and validates `wholeTranslation` completeness before pushing each chunk in batches of 150 to `POST /api/admin/translations`.
 
 ### Step 3: Verification & Read-Back
 1. **Database Check:**

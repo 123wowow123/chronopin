@@ -63,10 +63,13 @@ for (const id of files) {
     if (!pin || pin.title !== d.title) { log.push([id, 'skip', `identity mismatch or missing in ${base}`]); continue; }
     if (!STATUS.includes(d.status)) throw Error('bad status');
     // verify every quote first
-    for (const [i, m] of (d.factory?.milestones ?? []).entries()) await verify(m.source, `milestone ${i}`);
-    for (const [i, m] of (d.factory?.metrics ?? []).entries()) await verify(m.source, `metric ${i}`);
-    for (const [i, r] of (d.reviews ?? []).entries()) await verify(r, `review ${i}`);
-    if (d.price) await verify(d.price.source, 'price');
+    // --drop-unverified: an item whose quote cannot be found on the live page (blocked site, changed text) is left out instead of holding the pin.
+    const dropped = [];
+    const keep = async (list, get, what) => { const out = []; for (const [i, x] of (list ?? []).entries()) { try { await verify(get(x), `${what} ${i}`); out.push(x); } catch (e) { if (!args.includes('--drop-unverified')) throw e; dropped.push(e.message.slice(0, 90)); } } return out; };
+    if (d.factory) { d.factory.milestones = await keep(d.factory.milestones, (m) => m.source, 'milestone'); d.factory.metrics = await keep(d.factory.metrics, (m) => m.source, 'metric'); }
+    d.reviews = await keep(d.reviews, (r) => r, 'review');
+    if (d.price) { try { await verify(d.price.source, 'price'); } catch (e) { if (!args.includes('--drop-unverified')) throw e; dropped.push(e.message.slice(0, 90)); d.price = null; } }
+    if (dropped.length) log.push([id, 'dropped', `${dropped.length} unverifiable item(s)`]);
     const milestones = d.factory?.milestones ?? [];
     if (!milestones.length) { log.push([id, 'hold', 'no milestones drafted']); continue; }
 

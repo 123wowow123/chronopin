@@ -94,11 +94,22 @@ For each active pin (`utcDeletedDateTime IS NULL`) and each of the 15 locales:
 - Preserve leading and trailing whitespace (`leading_ws` / `trailing_ws`) on text nodes between HTML tags so inline elements (`<strong>`, `<em>`, `<a>`, `<cite>`) never lose surrounding spaces.
 - All `<cite data-ref="...">` attributes must match the source verbatim. Do not translate URLs or citation IDs.
 
-### 2. Escaping Literal `<` and `>` Inside Text Nodes
-- Because HTML tags are split out via `re.split(r'(<[^>]*>)', src)` before translation, any `<` or `>` appearing inside a translated text node (such as `<3` in song titles like Olivia Rodrigo *U + Me = <3*, or `< 5%` / `> 100`) is literal text, not an HTML tag.
-- Always escape `<` as `&lt;` and `>` as `&gt;` on translated text fragments before rejoining with the HTML tag tokens.
+### 2. Plain-Text Fields vs. HTML Fields & Entity Handling
+- **HTML Fields (`description`, `longFormSummary`):**
+  - Split out HTML tags via `re.split(r'(<[^>]*>)', src)` before translation.
+  - Always decode HTML entities (`html.unescape()`) on text fragments **before** sending them to the translator. Sending raw `&amp;` or `&#39;` causes translation models to treat `;` as a clause terminator, producing artifacts like ` और amp;` (`hi`), ` et amp;` (`fr`), `＆amp;` (`ja`), or mid-sentence clause inversions.
+  - After translation, unescape any entities returned by the translator (`html.unescape()`) and re-escape `&` as `&amp;`, `<` as `&lt;`, and `>` as `&gt;` strictly on HTML-field text nodes before rejoining with the HTML tag tokens.
+  - When checking whether an HTML field has prose length (`> 40` or `> 60` chars), strip `<[^>]*>` tags first so media-only fields (`<figure><img ...></figure>`) are not mistaken for untranslated English prose.
+- **Plain-Text Fields (`title`, `dateConfidenceReasoning`, `delayReasoning`):**
+  - Rendered directly as React text nodes (not HTML).
+  - Never split plain-text fields on `<[^>]*>` and never HTML-escape `&`, `<`, or `>` on output (otherwise `&amp;` or `&#x27;` renders literally on the page).
 
-### 3. Thai (`th`) Buddhist Era Year Normalization
+### 3. Untranslated-English Detection Rules
+- **Identical-to-English output** (`pt.field = p.field`, prose longer than 40/60 chars after stripping tags) is flagged only when the English text itself looks like English: it contains common function words (`the, and, of, to, is, in, for, on, with, by, that, was, are, from, has, have, not, this, be, it`). A pin that quotes a non-English source (for example an Indonesian headline in `dateConfidenceReasoning`) legitimately stays identical in every locale. This rule is shared by `check_translations.py` (SQL `~*` stopword test) and `sync_translations.py` (`looks_english()`); never hardcode a per-pin or per-language exception.
+- **Partial-English bullets:** in `ja`, `zh`, `ko`, `ru`, `ar`, `hi`, `th` a `<li>` of 80+ printable-ASCII characters (after removing empty `<cite>` tags) was left in English. `check_translations.py` counts these rows, `prepare_mangled_rows_for_repair()` marks the `longFormSummary` for repair, and `acceptable()` rejects/evicts such fragments from the local cache so the retry hits the translator again instead of re-reading the English.
+- **Delimiter leaks:** any `⟦` or `⟧` in a translated field is a batch-delimiter leak and is repaired the same way.
+
+### 4. Thai (`th`) Buddhist Era Year Normalization
 - Translation engines (e.g. Google Translate) automatically convert 4-digit Gregorian years (e.g., 2026) to the Thai Buddhist Era (`2569`, which is year + 543) and prepend `พ.ศ.`.
 - Chronopin requires consistent Gregorian calendar dates across all locales.
 - The post-processor must replace `str(year + 543)` back with `str(year)`, and replace `พ.ศ.` with `ค.ศ.`.
