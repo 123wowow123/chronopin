@@ -19,6 +19,8 @@ import subprocess
 import sys
 import urllib.request
 
+sys.dont_write_bytecode = True
+
 BASE = 'https://www.chronopin.com'
 LOCALES = ['es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt', 'ms', 'vi', 'id']
 
@@ -129,14 +131,25 @@ counts AS (
     )) AS pins_with_content_tracking,
     (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL AND EXISTS (
       SELECT 1 FROM leak_patterns lp WHERE pt."longFormSummary" ILIKE lp.pat OR pt.description ILIKE lp.pat
-    )) AS translations_with_content_tracking
+    )) AS translations_with_content_tracking,
+    (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL AND (
+      (length(regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g')) > 40 AND pt.description = p.description)
+      OR (length(regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND pt."longFormSummary" = p."longFormSummary")
+      OR (length(coalesce(p."dateConfidenceReasoning", '')) > 40 AND pt."dateConfidenceReasoning" = p."dateConfidenceReasoning" AND (p."dateConfidenceReasoning" NOT LIKE '%Putusan banding%' OR pt.locale != 'id'))
+      OR (length(coalesce(p."delayReasoning", '')) > 40 AND pt."delayReasoning" = p."delayReasoning")
+      OR pt."longFormSummary" LIKE '%&amp;;%'
+      OR pt."longFormSummary" LIKE '%&amp;amp;%'
+      OR pt.description LIKE '%&amp;;%'
+      OR pt.description LIKE '%&amp;amp;%'
+    )) AS untranslated_or_mangled_rows
 )
 SELECT json_build_object(
   'active_pins', active_pins,
   'total_translation_rows', total_translation_rows,
   'orphaned_translation_rows', orphaned_translation_rows,
   'pins_with_content_tracking', pins_with_content_tracking,
-  'translations_with_content_tracking', translations_with_content_tracking
+  'translations_with_content_tracking', translations_with_content_tracking,
+  'untranslated_or_mangled_rows', untranslated_or_mangled_rows
 )::text
 FROM counts;
 """
@@ -183,6 +196,7 @@ FROM counts;
         'due_pins_count': len(due_pins),
         'pins_with_content_tracking': db_data['pins_with_content_tracking'],
         'translations_with_content_tracking': db_data['translations_with_content_tracking'],
+        'untranslated_or_mangled_rows': db_data['untranslated_or_mangled_rows'],
         'percent_current': pct_current,
     }
 
@@ -202,6 +216,7 @@ FROM counts;
         print(f"Missing (never done):      {data['missing_rows']:,}")
         print(f"Pins Due for Translation:  {data['due_pins_count']:,}")
         print("-" * 60)
+        print(f"Untranslated/Mangled Rows:                  {data['untranslated_or_mangled_rows']:,}")
         print(f"Prohibited Tracking in Pin Content:         {data['pins_with_content_tracking']:,}")
         print(f"Prohibited Tracking in Translation Content: {data['translations_with_content_tracking']:,}")
         print("=" * 60)
@@ -209,6 +224,10 @@ FROM counts;
         if data['pins_with_content_tracking'] > 0 or data['translations_with_content_tracking'] > 0:
             print("❌ Prohibited tracking text found in public content!")
             print("   Run .agents/skills/prod-translations/scripts/audit_and_clean_content.py --apply to fix.")
+            sys.exit(1)
+
+        if data['untranslated_or_mangled_rows'] > 0:
+            print(f"❌ {data['untranslated_or_mangled_rows']} row(s) contain untranslated English prose or mangled HTML entities!")
             sys.exit(1)
 
         if data['due_pins_count'] > 0:

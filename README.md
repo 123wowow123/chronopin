@@ -501,3 +501,28 @@ merge with progress bar
 http://localhost:3000/pin/20640/perry-s-cafe-redevelopment-project
 
 use groundbreak and complete in label
+
+
+
+
+
+any graph forcast we can use here and expand on it?
+https://epoch.ai/publications/ai-energy
+
+
+
+
+this is missing timeline and etc
+https://www.chronopin.com/pin/18978/xai-colossus-2-memphis-supercluster-946-mw-555-000-nvidia-gpu-frontier-ai-data-c
+
+
+
+
+are all these datacenter pined and spec graph added
+https://epoch.ai/data/ai-data-centers
+
+
+http://localhost:3000/pin/20683/grok-voice-3-0-tops-speech-to-speech-index-at-86-9-for-the-same-0-08-a-minute
+
+Started 17d ago
+should be released. add varients to this based on pin show me full list of varients

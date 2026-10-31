@@ -20,6 +20,7 @@ Usage:
 
 import argparse
 import concurrent.futures
+import html
 import json
 import os
 import pathlib
@@ -31,6 +32,7 @@ import urllib.parse
 import urllib.request
 from typing import Dict, List, Optional, Set, Tuple
 
+sys.dont_write_bytecode = True
 sys.stdout.reconfigure(line_buffering=True)
 
 CACHE_DIR = pathlib.Path('.scrape/translations-cache')
@@ -128,15 +130,10 @@ def fetch_due_pins(
 
 def target_fields_for(pin: dict, locale: str) -> List[str]:
     """
-    Returns the list of fields that need translating for (pin, locale).
-    For 'outdated' rows where 'changed' is known, only 'title' + the edited fields
-    need to be sent; applyTranslations keeps stored valid translations for omitted fields.
+    Returns all present fields on the pin. Unchanged fragments hit the local disk cache
+    in 0ms, while validating and re-sending all fields ensures no previously stored
+    untranslated or mangled field is carried forward on an outdated pin.
     """
-    state = pin.get('states', {}).get(locale)
-    changed = pin.get('changed', {}).get(locale)
-    if state == 'outdated' and changed:
-        needed = set(changed) | {'title'}
-        return [f for f in FIELDS if f in needed and pin.get(f)]
     return [f for f in FIELDS if pin.get(f)]
 
 def record_wiki_tracking(ids: List[int]):
@@ -452,14 +449,22 @@ def has_words(value: Optional[str]) -> bool:
 
 def whole_translation(english: Optional[str], translated: Optional[str], is_fragment: bool = False) -> bool:
     """
-    Python equivalent of wholeTranslation() in src/server/model/pinTranslation.ts.
-    When is_fragment=True, allows 1-3 char fragments like 'x' -> '×' that translate to symbols.
+    Python equivalent of wholeTranslation() in src/server/model/pinTranslation.ts,
+    plus guards against untranslated English prose and mangled HTML entities.
     """
     if not english or not has_words(english[:200]):
         return True
     if not translated or not translated.strip():
         return False
-    if not (is_fragment and len(english.strip()) <= 3) and not has_words(translated[:200]):
+    en_s = english.strip()
+    tr_s = translated.strip()
+    en_prose = re.sub(r'<[^>]*>', '', en_s).strip()
+    if not is_fragment and len(en_prose) > 40 and ' ' in en_prose and (tr_s == en_s or html.unescape(tr_s) == html.unescape(en_s)):
+        if not (en_prose.startswith("detik: 'Putusan banding") or en_prose.startswith('detik: "Putusan banding')):
+            return False
+    if '&amp;;' in tr_s or '&amp;amp;' in tr_s:
+        return False
+    if not (is_fragment and len(en_s) <= 3) and not has_words(translated[:200]):
         return False
     if translated.count('<li>') != english.count('<li>'):
         return False
@@ -534,24 +539,28 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
 
                 leading_ws = part[:len(part) - len(part.lstrip())]
                 trailing_ws = part[len(part.rstrip()):]
-                core = part.strip()
+                core = html.unescape(part.strip())
 
                 tr_core = cache.get(core)
-                if tr_core is None:
-                    # Fallback lookup if unstripped key existed in older cache
-                    tr_core = cache.get(part)
+                if tr_core is None or not whole_translation(core, tr_core, is_fragment=True):
+                    tr_core = cache.get(part.strip())
                     if tr_core is not None:
-                        tr_core = tr_core.strip()
+                        tr_core = html.unescape(tr_core.strip())
+                        if not whole_translation(core, tr_core, is_fragment=True):
+                            tr_core = None
 
                 if tr_core is None:
                     print(f"[{locale}] Missing translation for fragment in pin {p['id']} field {f}")
                     valid = False
                     break
 
+                tr_core = html.unescape(tr_core)
                 if locale == 'th':
                     tr_core = fix_thai_years(core, tr_core)
 
-                # Since HTML tags are already split into odd tokens, escape any literal < or > inside text nodes
+                # Escape & (for HTML fields) and literal < or > inside text nodes
+                if f in ('description', 'longFormSummary'):
+                    tr_core = tr_core.replace('&', '&amp;')
                 tr_core = tr_core.replace('<', '&lt;').replace('>', '&gt;')
                 out_parts.append(f"{leading_ws}{tr_core}{trailing_ws}")
 
@@ -649,7 +658,7 @@ def sync_pin_chunk(due_pins: List[dict]) -> int:
                     continue
                 for part in re.split(r'(<[^>]*>)', src):
                     if not part.startswith('<') and part.strip() and any(c.isalpha() for c in part):
-                        texts_by_locale[loc].add(part.strip())
+                        texts_by_locale[loc].add(html.unescape(part.strip()))
 
     active_locales = [loc for loc in LOCALES if pins_by_locale[loc]]
     print(f"Active target locales requiring updates: {active_locales}")
