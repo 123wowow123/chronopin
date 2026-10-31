@@ -22,7 +22,7 @@ function Lightbox({ images, start, onClose }: { images: RestaurantDishImage[]; s
   return (
     <div className={styles.lightbox} role="dialog" aria-modal="true" aria-label={image.caption} onClick={onClose}>
       <figure className={styles.lightboxFigure} onClick={(event) => event.stopPropagation()}>
-        <Image key={image.src} src={image.src} alt={image.caption} width={image.width ?? 1200} height={image.height ?? 900} sizes="90vw" className={styles.lightboxImg} />
+        <Image key={image.src} src={image.src} alt={image.caption} width={image.width ?? 1200} height={image.height ?? 900} sizes="90vw" loading="eager" className={styles.lightboxImg} />
         <figcaption className={styles.lightboxCaption}>
           <strong>{image.caption}</strong>
           <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer">Photo: {image.credit} ↗</a>
