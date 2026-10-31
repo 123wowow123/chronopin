@@ -83,12 +83,12 @@ for (const id of files) {
     // keep only sections whose cites point at the pin's references or a kept ref
     const okUrls = new Set([...have, ...newRefs.map((r) => r.url)]);
     const section = (d.summarySectionsHtml ?? '').replace(/<cite data-ref="([^"]+)"><\/cite>/g, (m, u) => (okUrls.has(u) ? m : ''));
-    const summary = (pin.longFormSummary ?? '') + section;
+    const summary = section && (pin.longFormSummary ?? '').includes(section.slice(0, 200)) ? pin.longFormSummary : (pin.longFormSummary ?? '') + section; // re-runs do not append twice
 
     const factory = { sector: d.factory.sector ?? 'Data center', status: FSTATUS[d.status], assessmentDate: ASSESSED, rubricYear: 2026, source: 'session', axes: axes(),
-      metrics: d.factory.metrics.slice(0, 12).filter((m) => METRIC_KEYS.includes(m.key)).map((m) => ({ key: m.key, label: m.label, value: m.value, basis: FSTATUS[d.status] === 'announced' ? 'planned' : m.basis, source: ev(m.source) })),
-      milestones: milestones.slice(0, 12).map((m) => ({ label: m.label, date: m.date, basis: m.basis, source: ev(m.source) })) };
-    if (d.capacityPoints.length >= 2 && new Set(d.capacityPoints.map((c) => c.kind)).size === 1) factory.capacityPoints = d.capacityPoints.slice(0, 12).map((c) => ({ date: c.date, mw: c.mw, kind: c.kind, basis: c.basis, label: c.label, source: ev(c.source) }));
+      metrics: d.factory.metrics.slice(0, 12).filter((m) => METRIC_KEYS.includes(m.key)).map((m) => ({ key: m.key, label: clip(m.label, 100), value: clip(m.value, 500), basis: FSTATUS[d.status] === 'announced' ? 'planned' : m.basis, source: ev(m.source) })),
+      milestones: milestones.slice(0, 12).map((m) => ({ label: clip(m.label, 100), date: m.date, basis: m.basis, source: ev(m.source) })) };
+    if (d.capacityPoints.length >= 2 && new Set(d.capacityPoints.map((c) => c.kind)).size === 1) factory.capacityPoints = d.capacityPoints.slice(0, 12).map((c) => ({ date: c.date, mw: c.mw, kind: c.kind, basis: c.basis, label: clip(c.label, 100), source: ev(c.source) }));
 
     const { rows: tags } = await call('GET', `/api/admin/db/PinTag?pinId=${id}&limit=200`);
     const stale = tags.filter((t) => STATUS.some((s) => s.toLowerCase() === t.name.toLowerCase()) && t.name !== d.status);
