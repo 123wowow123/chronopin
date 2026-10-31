@@ -86,6 +86,34 @@ returns 0 photos try inserting or appending `-san-diego`. The loose pass (captio
 words) finds ~3x more photos but needs a by-eye review: drop captions naming several dishes, combos, or a different dish.
 Restaurant sites and Instagram rarely name dishes in alt text, so they gave ~no matches; not worth the per-photo credit work.
 
+### Reviewed saves and ordinary menus (October 30 follow-up)
+
+Use `scripts/restaurants/yelpDishes/applyReviewed.py` for new batches: its header describes the reviewed JSON
+manifest and upload JSONL. It supports both `kind: "specials"` and `kind: "content"`, matches the exact branch
+source, menu label and item name, preserves existing photos, checks the public Azure URL, uses the latest
+revision and compares full profile readbacks. Run dry first, then `--apply`; keep manifests, source captions,
+before snapshots and readbacks in `.scrape/`. A caption match alone is insufficient: visually inspect every
+candidate before marking it reviewed. Reject wrong portions/variants, table-wide ambiguous shots and retail
+products presented as plated dishes.
+
+`restaurant-content` already calls `parseSpecialVenue` for `profile.menu`, so it validates and retains item
+images. **Specials menus override ordinary menus with the same label.** Check for that second record before
+concluding a content save failed to render; attach the same verified image to its matching item there as well.
+Never copy images between branches. Verify on the native pin after hydration, including the Food photos strip,
+item thumbnail, enlarged picture and source credit.
+
+To map a venue to a backing pin, read `/api/admin/db/Pin?sourceUrl=<encoded exact source>`; if empty, search
+`title.ilike` and check branch identity. Some saved specials profiles have no backing pin at all (Café Sevilla,
+Islands Mira Mesa and Yard House Mission Valley in the October 30 follow-up). A saved photo does not establish
+that it is visible on a pin or guide card. Record missing pins and opening-date evidence gaps explicitly.
+
+Yelp photo search can find named dishes beyond the first gallery pages. Lionfish **does** have labelled
+Bang Bang Shrimp photos: the old matcher split the alt on `" - "` and took segment 1, which was `San Diego`
+inside the business name. `matcher.browser.js` now removes the full business name from the gallery's h1
+before extracting the caption, and stops when the gallery heading is missing. Do not classify a venue as
+having no named photos based on the old parser's empty results. Del Lusso's saved branch is indeed Carlsbad,
+6021 Innovation Way Suite 120; its Carlsbad Yelp gallery is appropriate.
+
 ## Saving
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then

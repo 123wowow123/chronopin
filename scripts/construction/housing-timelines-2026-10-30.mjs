@@ -22,7 +22,8 @@ const call = async (method, p, body, soft) => {
   return t ? JSON.parse(t) : null;
 };
 const clip = (s, n) => (s.length <= n ? s : s.slice(0, n - 1) + '…');
-const norm = (s) => s.replace(/&#8217;|&#039;|&#x27;|&rsquo;|[’‘]/g, "'").replace(/&#8220;|&#8221;|&ldquo;|&rdquo;|[“”]/g, '"').replace(/&amp;/g, '&').replace(/&#8211;|&#8212;|&ndash;|&mdash;|[–—]/g, '-').replace(/&nbsp;|&#160;| /g, ' ').replace(/\s+/g, ' ').replace(/" /g, '"').replace(/ "/g, '"').toLowerCase().trim();
+const dec = (x) => x.replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16))).replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replace(/&(amp|nbsp|rsquo|lsquo|ldquo|rdquo|ndash|mdash|quot|apos);/g, (_, n) => ({ amp: '&', nbsp: ' ', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', ndash: '–', mdash: '—', quot: '"', apos: "'" })[n]);
+const norm = (s) => dec(s).replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, '-').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').replace(/" /g, '"').replace(/ "/g, '"').toLowerCase().trim();
 const pages = new Map();
 async function pageText(url) {
   if (pages.has(url)) return pages.get(url);
@@ -43,10 +44,11 @@ async function verify(s, where) {
   if (s?.url?.startsWith('http://')) s.url = s.url.replace('http://', 'https://');
   if (!s?.url?.startsWith('https://')) throw Error(`${where}: source needs an https url`);
   const t = await pageText(s.url);
-  for (const p of s.quote.split('...').map((x) => norm(x).replace(/^[,. ]+|[,. ]+$/g, ''))) if (!t.includes(p)) throw Error(`${where}: quote not found on ${s.url}: ${p.slice(0, 70)}`);
+  for (const p of s.quote.split(/\.\.\.|…/).map((x) => norm(x).replace(/^[,. ]+|[,. ]+$/g, ''))) if (!t.includes(p)) throw Error(`${where}: quote not found on ${s.url}: ${p.slice(0, 70)}`);
   if (s.quote.length > 300) throw Error(`${where}: quote over 300 chars`);
 }
-const ev = (s) => ({ url: s.url, title: clip(s.title, 1000), publishedDate: s.publishedDate ?? null, quote: s.quote });
+const pd = (x) => (/^\d{4}-\d{2}-\d{2}$/.test(x ?? '') && x <= ASSESSED ? x : null); // year-only or retrieval-day dates become null
+const ev = (s) => ({ url: s.url, title: clip(s.title, 1000), publishedDate: pd(s.publishedDate), quote: s.quote });
 const FSTATUS = { Proposed: 'announced', Withdrawn: 'announced', 'In Progress': 'construction', Completed: 'production' };
 const STATUS = Object.keys(FSTATUS);
 const NA = 'Not scored: a single housing development is not a manufacturing facility, and no capability evidence was published.';
@@ -72,13 +74,13 @@ for (const id of files) {
     const newRefs = (d.refs ?? []).filter((r) => !refs.has(r.url));
     for (const r of newRefs) refs.add(r.url);
     const evRefs = [...(d.factory.metrics ?? []).map((m) => m.source), ...milestones.map((m) => m.source), ...(d.price ? [d.price.source] : [])];
-    for (const s of evRefs) if (!refs.has(s.url)) { refs.add(s.url); newRefs.push({ url: s.url, title: clip(s.title, 500), publishedDate: s.publishedDate ?? null, reasoning: `Source: “${clip(s.quote, 250)}”` }); }
+    for (const s of evRefs) if (!refs.has(s.url)) { refs.add(s.url); newRefs.push({ url: s.url, title: clip(s.title, 500), publishedDate: pd(s.publishedDate), reasoning: `Source: “${clip(s.quote, 250)}”` }); }
     for (const m of d.summarySectionsHtml?.matchAll(/data-ref="([^"]+)"/g) ?? []) if (!refs.has(m[1])) throw Error(`summary cites a URL not in refs: ${m[1]}`);
 
     const have = await call('GET', `/api/pins/${id}/factory`, undefined, true);
     // A published budget replaces an earlier estimate (investment metric labelled "Estimated ...").
     const estMetric = have?.metrics?.find((m) => m.key === 'investment' && /^estimated/i.test(m.label));
-    const replaceEstimate = !!(d.price && pin.price != null && pin.price !== d.price.amount && estMetric);
+    const replaceEstimate = !!(d.price && estMetric);
     const price = d.price && (pin.price == null || replaceEstimate) ? d.price : null;
     if (d.price && pin.price != null && pin.price !== d.price.amount && !estMetric) log.push([id, 'note', `kept existing price ${pin.price}; draft says ${d.price.amount}`]);
 
@@ -108,7 +110,7 @@ for (const id of files) {
     log.push([id, apply ? 'applying' : 'dry', `${d.status}${stale.length ? ` (was ${stale.map((t) => t.name)})` : ''} ms ${milestones.length} reviews ${(d.reviews ?? []).length} refs+${newRefs.length} tags+${addTags.length} price ${price ? price.amount : '-'}`]);
     if (!apply) continue;
 
-    for (const r of newRefs) await call('POST', '/api/admin/db/PinReference', { pinId: id, url: r.url, title: r.title, publishedDate: r.publishedDate ?? null, reasoning: r.reasoning ?? 'Cited in the project timeline.', confidence: 90, addedByUserId: pin.user?.id ?? pin.userId });
+    for (const r of newRefs) await call('POST', '/api/admin/db/PinReference', { pinId: id, url: r.url, title: r.title, publishedDate: pd(r.publishedDate), reasoning: r.reasoning ?? 'Cited in the project timeline.', confidence: 90, addedByUserId: pin.user?.id ?? pin.userId });
     if (stale.length) await call('DELETE', `/api/admin/db/PinTag?id.in=${stale.map((t) => t.id).join(',')}`);
     if (addTags.length) await call('POST', '/api/admin/db/PinTag', addTags.map((name) => ({ pinId: id, name, kind: 'topic', source: 'user' })));
     const { rows: [row] } = await call('GET', `/api/admin/db/Pin?id=${id}`);
@@ -120,7 +122,7 @@ for (const id of files) {
     const { rows: done } = await call('PATCH', `/api/admin/db/Pin?${qs}`, patch);
     if (done.length !== 1) throw Error('concurrent edit');
     await call('PUT', `/api/pins/${id}/factory`, factory);
-    if (d.reviews?.length) await call('PUT', `/api/pins/${id}/critic-reviews`, { reviews: d.reviews.map(({ url, title, publishedDate, quote, sentiment }) => ({ url, title, publishedDate, quote, sentiment })), source: 'session', basis: 'Editorial estimate of each quoted reaction’s tone toward the project; quotes are verbatim from the cited pages.', sourceUrl: pin.sourceUrl });
+    if (d.reviews?.length) await call('PUT', `/api/pins/${id}/critic-reviews`, { reviews: d.reviews.map(({ url, title, publishedDate, quote, sentiment }) => ({ url, title, publishedDate: pd(publishedDate), quote, sentiment })), source: 'session', basis: 'Editorial estimate of each quoted reaction’s tone toward the project; quotes are verbatim from the cited pages.', sourceUrl: pin.sourceUrl });
     const after = await call('GET', `/api/pins/${id}`);
     const f = await call('GET', `/api/pins/${id}/factory`);
     if (after.user.id !== pin.user.id || after.title !== pin.title || f.milestones?.length !== factory.milestones.length) throw Error('readback mismatch');

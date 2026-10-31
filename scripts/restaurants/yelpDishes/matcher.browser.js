@@ -17,11 +17,16 @@ window.getPh = async slug => {
     let r; try { r = await fetch('/biz_photos/' + slug + '?tab=food&start=' + s); } catch (e) { continue; }
     if (r.status !== 200) { window.PR2.stop = true; window.PR2.err = slug + ' ' + r.status; break; } // bot check: ask the user to clear it
     const d = new DOMParser().parseFromString(await r.text(), 'text/html'); let n = 0;
+    const heading = d.querySelector('h1')?.textContent?.trim() || '';
+    // Business names can contain " - " (Lionfish ... - San Diego). Splitting
+    // the whole alt at segment 1 silently treated the city as the caption.
+    if (!heading.startsWith('Photos and videos for ')) { window.PR2.stop = true; window.PR2.err = slug + ' missing photo-gallery heading'; break; }
+    const prefix = heading.slice('Photos and videos for '.length) + ' - ';
     for (const i of d.querySelectorAll('img')) {
       const src = i.src || '';
-      if (!src.includes('/bphoto/') || !i.alt.includes(' - ')) continue;
+      if (!src.includes('/bphoto/') || !i.alt.startsWith(prefix)) continue;
       const id = src.split('/bphoto/')[1].split('/')[0];
-      if (!seen[id]) { seen[id] = i.alt.split(' - ')[1]; n++; } // alt = "<biz> - <caption> - tags - category Near Me - city"
+      if (!seen[id]) { seen[id] = i.alt.slice(prefix.length).split(' - ')[0]; n++; } // Remove the complete business name before reading the caption.
     }
     await window.sl(2200 + Math.random() * 1500);
     if (n < 5) break;

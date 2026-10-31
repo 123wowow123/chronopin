@@ -486,3 +486,18 @@ restaurant pins should hve food image with captions of what they are on pin
 
 
 the restaurant landing page pins should have reviews on their menu items tiles shown as a icon
+
+
+Start
+Nov 19, 2025
+50% CONFIDENCE
+source
+End
+Feb 15, 2028
+50% CONFIDENCE
+source
+
+merge with progress bar
+http://localhost:3000/pin/20640/perry-s-cafe-redevelopment-project
+
+use groundbreak and complete in label

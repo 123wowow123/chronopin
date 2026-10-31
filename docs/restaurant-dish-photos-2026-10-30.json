@@ -1,0 +1,883 @@
+{
+  "checkedAt": "2026-10-30",
+  "addedDistinctPhotos": 18,
+  "addedItemAttachments": 22,
+  "removedAttachments": [
+    {
+      "venueId": 1026,
+      "name": "Tajima Ramen - Mercury",
+      "item": "Edamame",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/tajima-ramen-mercury-san-diego-5/cHLCN_g7kJq6A3ChsMpAYg-ecb832117c510d2c.webp",
+        "width": 1000,
+        "credit": "Yelp reviewer photo, Tajima Ramen - Mercury",
+        "height": 665,
+        "caption": "Edamame, Tajima Ramen - Mercury",
+        "sourceUrl": "https://www.yelp.com/biz_photos/tajima-ramen-mercury-san-diego-5?select=cHLCN_g7kJq6A3ChsMpAYg"
+      }
+    },
+    {
+      "venueId": 1064,
+      "name": "Fogo de Chão - San Diego",
+      "item": "Lobster Mac & Cheese",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/fogo-de-ch%25C3%25A3o-san-diego-3/nCOyQ9rzlNyxX-LyMBGbWQ-252684c8703eb5a4.webp",
+        "width": 750,
+        "credit": "Yelp reviewer photo, Fogo de Chão - San Diego",
+        "height": 1000,
+        "caption": "Lobster Mac & Cheese, Fogo de Chão - San Diego",
+        "sourceUrl": "https://www.yelp.com/biz_photos/fogo-de-ch%C3%A3o-san-diego-3?select=nCOyQ9rzlNyxX-LyMBGbWQ"
+      }
+    },
+    {
+      "venueId": 1065,
+      "name": "STK Steakhouse - San Diego",
+      "item": "Mushroom Arancini",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/stk-steakhouse-san-diego-san-diego/ghOyqnE2-Y50thoLFAhS2Q-fd2c5743f98bfaeb.webp",
+        "width": 750,
+        "credit": "Yelp reviewer photo, STK Steakhouse - San Diego",
+        "height": 1000,
+        "caption": "Mushroom Arancini, STK Steakhouse - San Diego",
+        "sourceUrl": "https://www.yelp.com/biz_photos/stk-steakhouse-san-diego-san-diego?select=ghOyqnE2-Y50thoLFAhS2Q"
+      }
+    },
+    {
+      "venueId": 968,
+      "name": "Café Sevilla",
+      "item": "Lamb Sliders (2)",
+      "reason": "Photo shows one square sandwich, not the two named sliders.",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/cafe-sevilla-san-diego/5tOaDb5BnPNnPS28wMDtpw-450ffd2dde621245.webp",
+        "width": 750,
+        "credit": "Yelp reviewer photo, Café Sevilla",
+        "height": 1000,
+        "caption": "Lamb Sliders (2), Café Sevilla",
+        "sourceUrl": "https://www.yelp.com/biz_photos/cafe-sevilla-san-diego?select=5tOaDb5BnPNnPS28wMDtpw"
+      }
+    },
+    {
+      "venueId": 980,
+      "name": "Islands Restaurant - Mira Mesa",
+      "item": "Tiki Tenders & Fries",
+      "reason": "Photo shows tenders with celery and carrots; no fries.",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/islands-restaurant-san-diego-7/f3G6hhsg18CxcaResV5tIA-7fcfdfa63fd2e0ed.webp",
+        "width": 1000,
+        "credit": "Yelp reviewer photo, Islands Restaurant - Mira Mesa",
+        "height": 760,
+        "caption": "Tiki Tenders & Fries, Islands Restaurant - Mira Mesa",
+        "sourceUrl": "https://www.yelp.com/biz_photos/islands-restaurant-san-diego-7?select=f3G6hhsg18CxcaResV5tIA"
+      }
+    }
+  ],
+  "additions": [
+    {
+      "kind": "specials",
+      "id": 79,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/43216",
+      "menuLabel": "Happy hour",
+      "itemName": "Crispy Calamari",
+      "caption": "Crispy Calamari, The Smoke House",
+      "credit": "Yelp reviewer photo, The Smoke House",
+      "sourceUrl": "https://www.yelp.com/biz_photos/smoke-house-burbank-6?select=Z9k_dvS2SaUHNUy3Hj6e1g",
+      "sourceCaption": "Fried Calamari",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/smoke-house-burbank-6/Z9k_dvS2SaUHNUy3Hj6e1g-b071d86531017581.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 79,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/43216",
+      "menuLabel": "Happy hour",
+      "itemName": "Spinach & Artichoke Dip",
+      "caption": "Spinach & Artichoke Dip, The Smoke House",
+      "credit": "Yelp reviewer photo, The Smoke House",
+      "sourceUrl": "https://www.yelp.com/biz_photos/smoke-house-burbank-6?select=EXgLaCJdMPfoLwWCfZjc0Q",
+      "sourceCaption": "Spinach & Artichoke Dip",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/smoke-house-burbank-6/EXgLaCJdMPfoLwWCfZjc0Q-d6f76bd39c5061ad.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 162,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1381195",
+      "menuLabel": "Happy hour",
+      "itemName": "White Truffle Garlic Bread",
+      "caption": "White Truffle Garlic Bread, North Italia - Cerritos",
+      "credit": "Yelp reviewer photo, North Italia - Cerritos",
+      "sourceUrl": "https://www.yelp.com/biz_photos/north-italia-cerritos?select=nEHDeJyQjIJuUoXm3EUo8w",
+      "sourceCaption": "White Truffle Garlic Bread",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/north-italia-cerritos/nEHDeJyQjIJuUoXm3EUo8w-5f96a8a2cb466fea.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 162,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1381195",
+      "menuLabel": "Happy hour",
+      "itemName": "Zucca Chips",
+      "caption": "Zucca Chips, North Italia - Cerritos",
+      "credit": "Yelp reviewer photo, North Italia - Cerritos",
+      "sourceUrl": "https://www.yelp.com/biz_photos/north-italia-cerritos?select=R602lde07WpfWCrNO4xurg",
+      "sourceCaption": "Zucca Chips",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/north-italia-cerritos/R602lde07WpfWCrNO4xurg-f3ff305d0c2ffba6.webp",
+        "width": 752,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "content",
+      "id": 12,
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "menuLabel": "Food menu",
+      "itemName": "Wagyu Empanadas",
+      "caption": "Wagyu Empanadas, Telefèric Barcelona - La Jolla",
+      "credit": "Yelp reviewer photo, Telefèric Barcelona - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/teleferic-barcelona-san-diego-2?select=S4dV29LdUG6lzejF6Zdw2g",
+      "sourceCaption": "Wagyu empanadas",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/teleferic-barcelona-san-diego-2/S4dV29LdUG6lzejF6Zdw2g-3a3467e17b441018.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "content",
+      "id": 12,
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "menuLabel": "Food menu",
+      "itemName": "Patatas Bravas",
+      "caption": "Patatas Bravas, Telefèric Barcelona - La Jolla",
+      "credit": "Yelp reviewer photo, Telefèric Barcelona - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/teleferic-barcelona-san-diego-2?select=gpNAjpHFNtk_b-S1kUNMIg",
+      "sourceCaption": "Potatas Bravas",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/teleferic-barcelona-san-diego-2/gpNAjpHFNtk_b-S1kUNMIg-2a234292d6ae76d0.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "content",
+      "id": 12,
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "menuLabel": "Food menu",
+      "itemName": "Paella Mixta",
+      "caption": "Paella Mixta, Telefèric Barcelona - La Jolla",
+      "credit": "Yelp reviewer photo, Telefèric Barcelona - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/teleferic-barcelona-san-diego-2?select=roqNaU7XZf2462igGJUnJA",
+      "sourceCaption": "Paella mixta",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/teleferic-barcelona-san-diego-2/roqNaU7XZf2462igGJUnJA-974b6d09eccc0a2c.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 172,
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "menuLabel": "Food menu",
+      "itemName": "Wagyu Empanadas",
+      "caption": "Wagyu Empanadas, Telefèric Barcelona - La Jolla",
+      "credit": "Yelp reviewer photo, Telefèric Barcelona - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/teleferic-barcelona-san-diego-2?select=S4dV29LdUG6lzejF6Zdw2g",
+      "sourceCaption": "Wagyu empanadas",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/teleferic-barcelona-san-diego-2/S4dV29LdUG6lzejF6Zdw2g-3a3467e17b441018.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 172,
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "menuLabel": "Food menu",
+      "itemName": "Patatas Bravas",
+      "caption": "Patatas Bravas, Telefèric Barcelona - La Jolla",
+      "credit": "Yelp reviewer photo, Telefèric Barcelona - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/teleferic-barcelona-san-diego-2?select=gpNAjpHFNtk_b-S1kUNMIg",
+      "sourceCaption": "Potatas Bravas",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/teleferic-barcelona-san-diego-2/gpNAjpHFNtk_b-S1kUNMIg-2a234292d6ae76d0.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 172,
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "menuLabel": "Food menu",
+      "itemName": "Paella Mixta",
+      "caption": "Paella Mixta, Telefèric Barcelona - La Jolla",
+      "credit": "Yelp reviewer photo, Telefèric Barcelona - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/teleferic-barcelona-san-diego-2?select=roqNaU7XZf2462igGJUnJA",
+      "sourceCaption": "Paella mixta",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/teleferic-barcelona-san-diego-2/roqNaU7XZf2462igGJUnJA-974b6d09eccc0a2c.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "content",
+      "id": 16,
+      "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+      "menuLabel": "Food menu",
+      "itemName": "Tuna Tartare",
+      "caption": "Tuna Tartare, Ciccia Osteria",
+      "credit": "Yelp reviewer photo, Ciccia Osteria",
+      "sourceUrl": "https://www.yelp.com/biz_photos/ciccia-osteria-san-diego?select=KJryJ8uhXU59WuofMtV9Rw",
+      "sourceCaption": "Tuna Tartare",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/ciccia-osteria-san-diego/KJryJ8uhXU59WuofMtV9Rw-d55d2d06de3f1ff5.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "content",
+      "id": 16,
+      "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+      "menuLabel": "Food menu",
+      "itemName": "Mushroom Flan",
+      "caption": "Mushroom Flan, Ciccia Osteria",
+      "credit": "Yelp reviewer photo, Ciccia Osteria",
+      "sourceUrl": "https://www.yelp.com/biz_photos/ciccia-osteria-san-diego?select=OtuzIVTgHX6CpH3KiROAGw",
+      "sourceCaption": "Mushroom Flan. I did not get to taste it because my wife ate it all!",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/ciccia-osteria-san-diego/OtuzIVTgHX6CpH3KiROAGw-ebc2969273e99e69.webp",
+        "width": 1000,
+        "height": 719
+      }
+    },
+    {
+      "kind": "content",
+      "id": 16,
+      "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+      "menuLabel": "Food menu",
+      "itemName": "Sombreri",
+      "caption": "Sombreri, Ciccia Osteria",
+      "credit": "Yelp reviewer photo, Ciccia Osteria",
+      "sourceUrl": "https://www.yelp.com/biz_photos/ciccia-osteria-san-diego?select=MqCPUsjida3dqL0GH7UIdA",
+      "sourceCaption": "Sombreri",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/ciccia-osteria-san-diego/MqCPUsjida3dqL0GH7UIdA-461411e021714e1d.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1163,
+      "pinSourceUrl": "https://dellussopizza.com/menu",
+      "menuLabel": "Happy hour",
+      "itemName": "L'Americano",
+      "caption": "L'Americano, Del Lusso Napoletana Pizzeria",
+      "credit": "Yelp reviewer photo, Del Lusso Napoletana Pizzeria",
+      "sourceUrl": "https://www.yelp.com/biz_photos/del-lusso-carlsbad?select=9lMQ5uklGWygSOKbvjwEtQ",
+      "sourceCaption": "L'Americano",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/del-lusso-carlsbad/9lMQ5uklGWygSOKbvjwEtQ-412c2b7f038be652.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1163,
+      "pinSourceUrl": "https://dellussopizza.com/menu",
+      "menuLabel": "Lunch specials",
+      "itemName": "Spaghetti Bolognese",
+      "caption": "Spaghetti Bolognese, Del Lusso Napoletana Pizzeria",
+      "credit": "Yelp reviewer photo, Del Lusso Napoletana Pizzeria",
+      "sourceUrl": "https://www.yelp.com/biz_photos/del-lusso-carlsbad?select=wE6BOX3BAu5TCEzSKgvn9A",
+      "sourceCaption": "Spaghetti bolognese",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/del-lusso-carlsbad/wE6BOX3BAu5TCEzSKgvn9A-148ff0cb949b8ea8.webp",
+        "width": 1000,
+        "height": 830
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1163,
+      "pinSourceUrl": "https://dellussopizza.com/menu",
+      "menuLabel": "Happy hour",
+      "itemName": "Margherita",
+      "caption": "Margherita, Del Lusso Napoletana Pizzeria",
+      "credit": "Yelp reviewer photo, Del Lusso Napoletana Pizzeria",
+      "sourceUrl": "https://www.yelp.com/biz_photos/del-lusso-carlsbad?select=e9u8nVBtAkqkIi8m_TacoA",
+      "sourceCaption": "Margherita",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/del-lusso-carlsbad/e9u8nVBtAkqkIi8m_TacoA-41b684644c690a7c.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 37,
+      "pinSourceUrl": "https://www.lionfishsd.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Bang Bang Shrimp",
+      "caption": "Bang Bang Shrimp, Lionfish at Pendry San Diego",
+      "credit": "Yelp reviewer photo, Lionfish at Pendry San Diego",
+      "sourceUrl": "https://www.yelp.com/biz_photos/lionfish-modern-coastal-cuisine-san-diego-san-diego?select=-7G3Lj9qbjh2_2qZ2Kmujg",
+      "sourceCaption": "Bang bang shrimp (Happy hour)",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/lionfish-modern-coastal-cuisine-san-diego-san-diego/-7G3Lj9qbjh2_2qZ2Kmujg-d622978ac0d5bda8.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 37,
+      "pinSourceUrl": "https://www.lionfishsd.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Peking Duck Bao Buns",
+      "caption": "Peking Duck Bao Buns, Lionfish at Pendry San Diego",
+      "credit": "Yelp reviewer photo, Lionfish at Pendry San Diego",
+      "sourceUrl": "https://www.yelp.com/biz_photos/lionfish-modern-coastal-cuisine-san-diego-san-diego?select=94zV07_m9vti-wIHw6UQ5Q",
+      "sourceCaption": "Peking duck bao buns",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/lionfish-modern-coastal-cuisine-san-diego-san-diego/94zV07_m9vti-wIHw6UQ5Q-dbfefd49ed8ececc.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 974,
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "menuLabel": "Lunch specials",
+      "itemName": "Flying Pig (tonkotsu broth, pork chashu, brussels sprouts, fried garlic)",
+      "caption": "Flying Pig, Harumama Little Italy",
+      "credit": "Yelp reviewer photo, Harumama Little Italy",
+      "sourceUrl": "https://www.yelp.com/biz_photos/harumama-ramen-sushi-little-italy-san-diego?select=1VrepvlTzU5cEN7I9TUMdg",
+      "sourceCaption": "The Flying Pig",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/harumama-ramen-sushi-little-italy-san-diego/1VrepvlTzU5cEN7I9TUMdg-7a3e815df2b256ef.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 974,
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "menuLabel": "Lunch specials",
+      "itemName": "Garden Party (vegetable broth, broccoli, corn, deep-fried tofu, kale noodles, black garlic oil)",
+      "caption": "Garden Party, Harumama Little Italy",
+      "credit": "Yelp reviewer photo, Harumama Little Italy",
+      "sourceUrl": "https://www.yelp.com/biz_photos/harumama-ramen-sushi-little-italy-san-diego?select=UdBctOu59gcBGUvpKyxL3Q",
+      "sourceCaption": "Garden Party, vegan ramen",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/harumama-ramen-sushi-little-italy-san-diego/UdBctOu59gcBGUvpKyxL3Q-a436bd69b563ef52.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 974,
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "menuLabel": "Lunch specials",
+      "itemName": "Seaweed salad",
+      "caption": "Seaweed salad, Harumama Little Italy",
+      "credit": "Yelp reviewer photo, Harumama Little Italy",
+      "sourceUrl": "https://www.yelp.com/biz_photos/harumama-ramen-sushi-little-italy-san-diego?select=AWza9Gd1r_LZXtR3-hpKhg",
+      "sourceCaption": "Seaweed Salad",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/harumama-ramen-sushi-little-italy-san-diego/AWza9Gd1r_LZXtR3-hpKhg-e8945ff139512a11.webp",
+        "width": 1000,
+        "height": 666
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 974,
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "menuLabel": "Happy hour",
+      "itemName": "Seaweed salad",
+      "caption": "Seaweed salad, Harumama Little Italy",
+      "credit": "Yelp reviewer photo, Harumama Little Italy",
+      "sourceUrl": "https://www.yelp.com/biz_photos/harumama-ramen-sushi-little-italy-san-diego?select=AWza9Gd1r_LZXtR3-hpKhg",
+      "sourceCaption": "Seaweed Salad",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/harumama-ramen-sushi-little-italy-san-diego/AWza9Gd1r_LZXtR3-hpKhg-e8945ff139512a11.webp",
+        "width": 1000,
+        "height": 666
+      }
+    }
+  ],
+  "remainingItemsInResearchedVenues": [
+    {
+      "kind": "content",
+      "id": 12,
+      "name": "teleferic",
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Food menu",
+          "items": [
+            "Crab Croquetas",
+            "Pan con Tomate",
+            "Jamón Ibérico de Bellota",
+            "Iberian Oyster",
+            "Ham Croquetas",
+            "Fresh Hummus",
+            "Spanish Albóndigas",
+            "El Ceviche",
+            "Pulpo Telefèric",
+            "Tuna Tacos",
+            "Salmon Tartare",
+            "Gambas al Ajillo",
+            "Burrata Bowl",
+            "Mediterranean Fresh Tuna Salad",
+            "Telefèric Market Salad",
+            "Cali-Flower",
+            "Bruselas",
+            "Ribeye Chuletón",
+            "Prime Wellington",
+            "Chicken Kebab",
+            "Grilled Salmon",
+            "Churros",
+            "Torrija",
+            "Orange Mochi",
+            "Trio Selection",
+            "Lobster Paella",
+            "Paella Negra",
+            "Ibérico Paella",
+            "Veggie Paella",
+            "Our Famous Fiesta Paella"
+          ]
+        },
+        {
+          "menuLabel": "Drinks & cocktails",
+          "items": [
+            "Pine-Apple Inception",
+            "Fancy a Carrot?",
+            "Red Velvet milk punch",
+            "Al-Andalus Sour",
+            "La Paloma",
+            "The Tourist",
+            "Carajillo",
+            "Gothic Mojito",
+            "Bryan's Legacy",
+            "La Flaca",
+            "Ibiza G&T",
+            "Catalan G&T",
+            "Galician G&T",
+            "Telefèric Sangria",
+            "Barceloneta Sangria",
+            "Spicy Sangria",
+            "Rebujito Spritz",
+            "Sangria Flight",
+            "Lychee's & Cream",
+            "Sierra Sunset",
+            "Mule Picón"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": 16,
+      "name": "Ciccia Osteria",
+      "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Food menu",
+          "items": [
+            "Prosciutto di Parma",
+            "Breaded Zucchini",
+            "Fritto Misto",
+            "Antipasto Misto",
+            "Vegetariano",
+            "Barley Salad",
+            "Tricolore Salad",
+            "Mista",
+            "Roasted Vegetable Salad",
+            "Ubriaca",
+            "Mafalde Ragu dell'Aia",
+            "Pappardelle",
+            "Spaghetti Pomodoro",
+            "Orzotto",
+            "Frutti di Mare",
+            "Bottoni",
+            "Ravioli",
+            "Mezzaluna",
+            "Cappelli",
+            "Fettuccine",
+            "Lasagna",
+            "Conchiglie",
+            "Gnocchi al Pesto",
+            "Ciccio",
+            "Pollo",
+            "Branzino",
+            "Milanese",
+            "Peperonata di Nonna Elvira",
+            "Seasonal Veggies",
+            "Roasted Potatoes",
+            "Oven Roasted Vegetables",
+            "Truffle Mushrooms",
+            "Pasta with Bolognese, Meatballs, Pomodoro or Butter & Parmesan",
+            "Espresso",
+            "Decaf Espresso",
+            "Macchiato",
+            "Americano",
+            "Cappuccino",
+            "Decaf Cappuccino",
+            "Latte",
+            "Hot Tea"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "specials",
+      "id": 37,
+      "name": "Lionfish at Pendry San Diego",
+      "pinSourceUrl": "https://www.lionfishsd.com/",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Edamame",
+            "Truffle Togarashi Fries",
+            "Korean-Style Chicken Wings",
+            "Baked Dynamite Roll",
+            "Kumiai Baja Oysters",
+            "Baked Crab Hand Roll",
+            "Bang Bang Shrimp Hand Roll",
+            "Spicy Tuna Hand Roll",
+            "Veggie Hand Roll",
+            "Wine by the glass",
+            "Pale Ale",
+            "Elyx Mule",
+            "Smoky Margarita",
+            "Well Spirit Cocktails"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "specials",
+      "id": 79,
+      "name": "The Smoke House",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/43216",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Wines by Glass",
+            "All Beers on Tap",
+            "Garlic Cheese Bread - Half Order"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "specials",
+      "id": 162,
+      "name": "North Italia - Cerritos",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1381195",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Cacio e Pepe Arancini",
+            "Garlic Knot Sliders",
+            "Sicilian Meatballs",
+            "Grilled Mortadella Skewers",
+            "Margherita Flatbread",
+            "Double Pepperoni Flatbread",
+            "Smoked Salmon Avocado Toast",
+            "Fritto Misto",
+            "Prosciutto di Parma",
+            "Baked Burrata alla Diavola",
+            "Spritz & Snacks",
+            "Sangria Social",
+            "Grillo, Feudo Montoni 'Timpa', Sicilia (glass)",
+            "Greco di Tufo, Villa Matilde, Campania (glass)",
+            "Barbera, Marchesi di Gresy, Asti (glass)",
+            "Negroamaro, Li Veli 'Pezzo Morgana', Salice Salentino Riserva (glass)",
+            "Sicilian Margarita",
+            "Pomegranate Mule",
+            "Diavolo",
+            "Espresso Martini",
+            "Turino Old Fashioned",
+            "New Italian",
+            "Meet Me in Capri",
+            "Hugo",
+            "Pink Slip",
+            "Faux Me Twice",
+            "Phony Negroni",
+            "NA Sparkling Wine",
+            "Sauvignon Blanc 0.0",
+            "All beers"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "specials",
+      "id": 172,
+      "name": "teleferic",
+      "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Food menu",
+          "items": [
+            "Crab Croquetas",
+            "Pan con Tomate",
+            "Jamón Ibérico de Bellota",
+            "Iberian Oyster",
+            "Ham Croquetas",
+            "Fresh Hummus",
+            "Spanish Albóndigas",
+            "El Ceviche",
+            "Pulpo Telefèric",
+            "Tuna Tacos",
+            "Salmon Tartare",
+            "Gambas al Ajillo",
+            "Burrata Bowl",
+            "Mediterranean Fresh Tuna Salad",
+            "Telefèric Market Salad",
+            "Cali-Flower",
+            "Bruselas",
+            "Ribeye Chuletón",
+            "Prime Wellington",
+            "Chicken Kebab",
+            "Grilled Salmon",
+            "Churros",
+            "Torrija",
+            "Orange Mochi",
+            "Trio Selection",
+            "Lobster Paella",
+            "Paella Negra",
+            "Ibérico Paella",
+            "Veggie Paella",
+            "Our Famous Fiesta Paella"
+          ]
+        },
+        {
+          "menuLabel": "Drinks & cocktails",
+          "items": [
+            "Pine-Apple Inception",
+            "Fancy a Carrot?",
+            "Red Velvet milk punch",
+            "Al-Andalus Sour",
+            "La Paloma",
+            "The Tourist",
+            "Carajillo",
+            "Gothic Mojito",
+            "Bryan's Legacy",
+            "La Flaca",
+            "Ibiza G&T",
+            "Catalan G&T",
+            "Galician G&T",
+            "Telefèric Sangria",
+            "Barceloneta Sangria",
+            "Spicy Sangria",
+            "Rebujito Spritz",
+            "Sangria Flight",
+            "Lychee's & Cream",
+            "Sierra Sunset",
+            "Mule Picón"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "specials",
+      "id": 974,
+      "name": "Harumama Noodles + Buns - Little Italy",
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Pick 2 Lunch: one ramen + one side",
+            "Haru (tonkotsu broth, chicken chashu, fried tofu, kale, bamboo shoots)",
+            "Fat Duck (tonkotsu broth, duck chashu, bok choy, miso, fried garlic)",
+            "Me So Hot! (tonkotsu broth, spicy miso, ground pork, brussels sprouts, 1/2 ramen egg, bean sprouts, peanuts)",
+            "High Noon (chicken broth, chicken chashu, bamboo shoots, 1/2 ramen egg, shiitake mushroom)",
+            "Edamame",
+            "Vegetable potstickers (3pc)",
+            "Pork potstickers (3pc)",
+            "Cali roll (4pc)",
+            "Spicy tuna roll (4pc)",
+            "Pig bun (1pc)",
+            "Chicken bun (1pc)",
+            "Kurobuta bao bao (1pc)",
+            "Pork belly bao bao (1pc)",
+            "Duck bao bao (1pc)",
+            "Spam bao bao (1pc)",
+            "Karaage chicken bao bao (1pc)",
+            "Fried eggplant bao bao (1pc)"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Sapporo (draft)",
+            "Modern Times Orderville Hazy IPA (draft)",
+            "Lucky Dog Session IPA (bottle)",
+            "Tsingtao Classic (bottle)",
+            "Asahi Super Dry (bottle)",
+            "Blue Moon (bottle)",
+            "805 Original (bottle)",
+            "Rotating bottled beers",
+            "J Pop White Peach",
+            "J Pop Lychee",
+            "Boochcraft Hard Kombucha",
+            "Classic Hot Sake",
+            "Suigei Tokubetsu Junmai",
+            "Dassai 45 Daiginjo",
+            "Choya Umeshu Plum Sake",
+            "Harumama house wine (single glass)",
+            "Veggie egg rolls",
+            "Fried pork potstickers",
+            "Crispy crab wontons",
+            "Karaage",
+            "Pork bao bao buns",
+            "California roll",
+            "Spicy tuna roll",
+            "Red Dragon roll",
+            "Crunchy salmon roll"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "specials",
+      "id": 1163,
+      "name": "Del Lusso Napoletana Pizzeria",
+      "pinSourceUrl": "https://dellussopizza.com/menu",
+      "itemsWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Caesar with Grilled Chicken",
+            "Mediterranean with Grilled Chicken",
+            "Hot Italian with Side Salad",
+            "Chicken Parm with Side Salad",
+            "Chicken Caesar Wrap with Side Salad",
+            "Sun Dried Tomato & Grilled Chicken Pasta",
+            "Marinara Pasta",
+            "Pasta Carbonara",
+            "Fettucine Alfredo",
+            "Penne Arrabbiata",
+            "Pizza of the Week"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "All draft beers (16oz & 20oz)",
+            "Bottled beers",
+            "Wine by the glass",
+            "Funghi",
+            "Marinara",
+            "Sausage & Mushroom",
+            "Slow Roasted Pork Poutine",
+            "Lusso Meatballs",
+            "Stacked Caprese",
+            "Pan Con Tomate",
+            "Truffle Fries",
+            "Cheesy Flatbread"
+          ]
+        }
+      ]
+    }
+  ],
+  "missingBackingPins": [
+    {
+      "kind": "specials",
+      "id": 79,
+      "name": "The Smoke House",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/43216"
+    },
+    {
+      "kind": "specials",
+      "id": 162,
+      "name": "North Italia - Cerritos",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1381195"
+    },
+    {
+      "kind": "specials",
+      "id": 968,
+      "name": "Café Sevilla",
+      "pinSourceUrl": "https://www.cafesevilla.com/menu/happy-hour-san-diego/"
+    },
+    {
+      "kind": "specials",
+      "id": 980,
+      "name": "Islands Restaurant - Mira Mesa",
+      "pinSourceUrl": "https://www.islandsrestaurants.com/locations/mira-mesa"
+    },
+    {
+      "kind": "specials",
+      "id": 1163,
+      "name": "Del Lusso Napoletana Pizzeria",
+      "pinSourceUrl": "https://dellussopizza.com/menu"
+    },
+    {
+      "kind": "specials",
+      "id": 1175,
+      "name": "Yard House Mission Valley",
+      "pinSourceUrl": "https://www.yardhouse.com/locations/ca/san-diego/san-diego-mission-valley-mall/8363"
+    }
+  ],
+  "existingPhotoAudit": {
+    "checked": 42,
+    "removed": 5,
+    "reviewedVenueIds": [
+      125,
+      968,
+      980,
+      1175,
+      1064,
+      1065
+    ],
+    "note": "Also checked all three Tajima edamame photos. This was a targeted sample, not the entire catalogue."
+  }
+}

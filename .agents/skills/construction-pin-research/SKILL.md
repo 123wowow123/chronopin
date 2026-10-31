@@ -137,6 +137,10 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   and timeline (start, estimated completion), and cost (or the statement that none is published and what the
   only published figure, such as land price, is). Every claim comes from a page you read; add each cited URL
   (and the rendering's source page) to `references`.
+- **No "Rendering"/"Images"/"Photos" section in `longFormSummary`.** The rendering's credit lives on the media row and
+  its source page in `references`; a section saying "the lead image is X's rendering" only repeats that, and its trailing
+  `<cite>` outside the `<p>` renders as a stray `[n]` on its own line (pin 20640, removed 2026-10-31). Keep every `<cite>`
+  inside the `<li>`/`<p>` it supports.
 - **Tags (every development pin):** exactly one status tag (section 2) plus `Under Construction` while building, the
   place (neighbourhood/city), and topic tags that fit. Housing pins also carry **`Housing`** alongside `Affordable
   Housing` etc., and tags for who it serves (`Veterans`, `Supportive Housing`, `Homelessness`). Keep existing tags.
@@ -145,6 +149,12 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   (`scripts/construction/rose-creek-village-2026-10-30.mjs`, owner request 2026-10-30/31). Its sources also showed
   conflicting completion years (developer Fall 2026, County 2027): keep the developer's target as the pin date, add
   both as planned milestones and say so in `dateConfidenceReasoning`. Fetch SDHC pages without a browser User-Agent.
+- **Batch timelines (2026-10-30, 27 housing pins with a status tag but no profile):** lanes of 3 pins draft
+  `.tmp/housing-timeline/<id>.json` (brief: `.tmp/housing-timeline/BRIEF.md`, quote checker `check_quote.py`), then
+  `scripts/construction/housing-timelines-2026-10-30.mjs` re-verifies every quote and saves refs, summary sections,
+  status tag (a source-backed change, e.g. Proposed -> In Progress/Completed/Withdrawn), published price (replacing an
+  earlier "Estimated" metric), profile with milestones and reaction excerpts, on prod and local. Year-only or
+  retrieval-day `publishedDate`s are saved as null. Image candidates in the drafts (`mediaCandidates`) are not uploaded yet.
 - Ongoing: the 06:00/18:00 news job's `review_research_gaps` `construction` list refreshes excerpts and sentiment as a
   project nears completion or local news appears (`docs/okf/scraping/daily-jobs.md#sentiment`).
 - **Map (every development pin):** a pin needs `latitude`/`longitude` or it shows no map; an `address` alone is not
