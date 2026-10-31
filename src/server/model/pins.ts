@@ -563,6 +563,7 @@ const MAP_SELECT = `
     ST_Y("p"."location"::geometry) AS "latitude",
     ST_X("p"."location"::geometry) AS "longitude",
     "p"."price", "p"."priceCurrency", "p"."sourceUrl",
+    (SELECT "bt"."name"::text FROM "PinTag" AS "bt" WHERE "bt"."pinId" = "p"."id" AND "bt"."name" IN ('Proposed', 'In Progress', 'Completed', 'Withdrawn') LIMIT 1) AS "buildStatus",
     (SELECT "pw"."megawatts"::float8 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "megawatts",
     (SELECT "pw"."kind" FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "powerKind",
     "dc"."waterGallonsPerDay"::float8 AS "waterGallonsPerDay",

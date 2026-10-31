@@ -85,7 +85,11 @@ function stretchTitle(part: Stretch, t: Translator) {
 // A live countdown to a pin's start, with a bar filling over the span from
 // when it was posted. Once started it says how long ago. A delayed pin's bar
 // is cut into the stretches of the wait, each slipped one its own shade.
-export function CountdownMeter({ start, since, allDay, originalStart }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null }) {
+//
+// A construction pin (end given: its completion) runs the bar over the build
+// itself, groundbreaking to completion, with any slip of the start in front
+// of it in its own shade.
+export function CountdownMeter({ start, since, allDay, originalStart, end, marks = [] }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; end?: string | null; marks?: { at: number; label: string; date: string }[] }) {
   const tick = useNow(SECOND);
   const t = useT();
   const now = tick || null;
@@ -106,8 +110,16 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
   // bar opens on the first promise rather than on posting.
   const from = delayed ? Math.min(originalMs, isNaN(sinceMs) ? originalMs : sinceMs) : sinceMs;
   const span = startMs - from;
-  const percent = started ? 100 : !isNaN(from) && span > 0 ? Math.min(100, Math.max(0, ((now - from) / span) * 100)) : 0;
-  const parts = delayed && span > 0 ? stretches(from, startMs, [originalMs, sinceMs]) : [];
+  const endMs = end ? localStart(end, allDay) - (allDay ? DAY : 0) : NaN;
+  const build = !isNaN(endMs) && endMs > startMs;
+  const percent = build ? Math.min(100, Math.max(0, ((now - startMs) / (endMs - startMs)) * 100)) : started ? 100 : !isNaN(from) && span > 0 ? Math.min(100, Math.max(0, ((now - from) / span) * 100)) : 0;
+  let parts = delayed && span > 0 ? stretches(from, startMs, [originalMs, sinceMs]) : [];
+  if (build) {
+    parts = [
+      ...(delayed ? [{ from: originalMs, to: startMs, late: true, tone: 0 }] : []),
+      { from: startMs, to: endMs, late: false, tone: 0 },
+    ];
+  }
   const fillClass = started ? 'bg-past' : 'bg-future';
   // A day or more on, the exact years and days ("1y 9d") rather than a
   // rounded "last year"; under a day, the nearest hour or minute.
@@ -119,14 +131,16 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
           span: [gone.years > 0 ? t('countdown.years', { count: gone.years }) : '', t('countdown.days', { count: goneDays })].filter(Boolean).join(' '),
         })
       : t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) });
+  const completes = build ? t('countdown.completes', { when: formatDayKey(keyOf(endMs), t.locale) }) : '';
 
   return (
     <div className={`my-3 flex items-center gap-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-past/30 bg-past/10' : 'border-future/30 bg-future/10'}`}>
+      {build && started ? <span className="text-subtle">{agoLabel}</span> : null}
       {!started ? <span className="font-bold tracking-wider text-future uppercase">{t('countdown.startsIn')}</span> : null}
-      <div className="flex h-1.5 flex-1 gap-0.5" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? t('countdown.started') : t('countdown.elapsed')}>
+      <div className="relative flex h-1.5 flex-1 gap-0.5" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? t('countdown.started') : t('countdown.elapsed')}>
         {parts.length ? (
           parts.map((part) => (
-            <div key={part.from} className={`relative overflow-hidden rounded-full ${part.late ? LATE_TONES[part.tone].track : 'bg-raised-2'}`} style={{ flexGrow: part.to - part.from, flexBasis: 0, minWidth: 3 }} title={stretchTitle(part, t)}>
+            <div key={part.from} className={`relative overflow-hidden rounded-full ${part.late ? LATE_TONES[part.tone].track : 'bg-raised-2'}`} style={{ flexGrow: part.to - part.from, flexBasis: 0, minWidth: 3 }} title={build && !part.late ? completes : stretchTitle(part, t)}>
               <div
                 className={`absolute inset-y-0 start-0 rounded-full ${part.late ? LATE_TONES[part.tone].fill : fillClass}`}
                 style={{ width: `${Math.min(100, Math.max(0, ((now - part.from) / (part.to - part.from)) * 100))}%` }}
@@ -138,9 +152,22 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
             <div className={`absolute inset-y-0 start-0 rounded-full ${fillClass}`} style={{ width: `${percent}%` }} />
           </div>
         )}
+        {build
+          ? marks.map((mark) => {
+              const at = ((mark.at - parts[0].from) / (endMs - parts[0].from)) * 100;
+              return at > 1 && at < 99 ? (
+                <span key={`${mark.label}${mark.at}`} tabIndex={0} className="group absolute top-1/2 flex size-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center outline-none" style={{ insetInlineStart: `${at}%` }}>
+                  <span className={`size-2.5 rounded-full border-2 border-panel ${mark.at <= now ? 'bg-past' : 'bg-subtle'}`} />
+                  <span role="tooltip" className="pointer-events-none absolute bottom-full z-10 mb-1 hidden rounded-md border border-line bg-popover px-2 py-1 text-xs whitespace-nowrap text-ink shadow-lg group-hover:block group-focus:block">
+                    {mark.label}: {mark.date}
+                  </span>
+                </span>
+              ) : null;
+            })
+          : null}
       </div>
       {started ? (
-        <span className="text-subtle">{agoLabel}</span>
+        <span className="text-subtle">{build ? completes : agoLabel}</span>
       ) : (
         <span className="font-mono text-sm text-future tabular-nums">
           {years > 0 ? <b className="me-1">{t('countdown.years', { count: years })}</b> : null}

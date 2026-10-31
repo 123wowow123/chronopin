@@ -100,3 +100,34 @@ export const hasFactoryBuildout = (p: FactoryProfile | null | undefined): boolea
 export function hasEstimatedCost(p: FactoryProfile | null | undefined): boolean {
   return !!p?.metrics.some((m) => m.key === 'investment' && /^estimated\b/i.test(m.label));
 }
+
+// The pin's price is a published figure for the whole project, larger than the part this pin covers: its profile's
+// investment metric is labelled "Whole-project cost".
+export function hasWholeProjectCost(p: FactoryProfile | null | undefined): boolean {
+  return !!p?.metrics.some((m) => m.key === 'investment' && /^whole[- ]project\b/i.test(m.label));
+}
+
+const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
+// When a milestone's date, kept at the source's precision, falls: a day, "October 2025",
+// "Q3 2027" start at the period's first day, a bare year at its last day (a "2027" forecast means by then). Null for a
+// date it cannot place ("early 2028", "H2").
+export function milestoneTime(date: string): number | null {
+  const text = date.trim();
+  const day = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text);
+  if (day) return Date.UTC(+day[1], +day[2] - 1, +day[3]);
+  const quarter = /^Q([1-4])\s+(\d{4})$/i.exec(text);
+  if (quarter) return Date.UTC(+quarter[2], (+quarter[1] - 1) * 3, 1);
+  const month = /^([A-Za-z]{3})[a-z]*\.?\s+(\d{4})$/.exec(text);
+  const index = month ? MONTHS.indexOf(month[1].toLowerCase()) : -1;
+  if (month && index >= 0) return Date.UTC(+month[2], index, 1);
+  const year = /^(\d{4})$/.exec(text);
+  return year ? Date.UTC(+year[1], 11, 31) : null;
+}
+
+export type BuildMark = { at: number; label: string; date: string };
+export const buildMarks = (milestones: FactoryMilestone[] | undefined): BuildMark[] =>
+  (milestones ?? []).flatMap((m) => {
+    const at = milestoneTime(m.date);
+    return at == null ? [] : [{ at, label: m.label, date: m.date }];
+  });

@@ -1,5 +1,5 @@
 import { PinFactoryBuildout } from '@/components/pin/PinFactoryBuildout';
-import { hasEstimatedCost, hasFactoryBuildout, hasFactoryRubric } from '@/lib/pinFactory';
+import { buildMarks, type FactoryMilestone, hasEstimatedCost, hasWholeProjectCost, hasFactoryBuildout, hasFactoryRubric } from '@/lib/pinFactory';
 import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
@@ -135,6 +135,8 @@ async function loadPin(params: Props['params']) {
   return Number.isInteger(id) && id > 0 ? pinById(id, await getLocale()) : null;
 }
 
+const BUILD_STATUSES = ['Proposed', 'In Progress', 'Completed', 'Withdrawn'];
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
   if (!pin) return { title: t('meta.pinNotFound'), robots: { index: false } };
@@ -245,7 +247,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} autoplay={autoplay} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -379,7 +381,9 @@ async function PinBody({
   competitors,
   isHotel,
   costEstimated,
+  costWholeProject,
   autoplay,
+  buildMilestones,
 }: {
   pin: PinJson;
   timeZone: string;
@@ -393,7 +397,9 @@ async function PinBody({
   competitors?: PinCompetitorJson[];
   isHotel?: boolean;
   costEstimated?: boolean;
+  costWholeProject?: boolean;
   autoplay?: boolean;
+  buildMilestones?: FactoryMilestone[];
 }) {
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   // A datacenter figure searches for the pins at least that size (mw:>=100).
@@ -550,7 +556,7 @@ async function PinBody({
       ) : null}
       {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} /> : null}
 
-      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} /> : null}
+      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} end={pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={buildMarks(buildMilestones)} /> : null}
 
       {/* Above the title: on a pin you can walk into, what the place scores
           and whether it is open now is the first thing worth knowing, and the
@@ -680,7 +686,7 @@ async function PinBody({
           {pin.price ? (
             <>
               <span className="text-subtle">
-                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : costEstimated ? t('pin.costEstimate') : t('pin.cost'))}
+                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : costEstimated ? t('pin.costEstimate') : costWholeProject ? t('pin.costWholeProject') : t('pin.cost'))}
               </span>{' '}
               <span className="font-semibold text-success tabular-nums">{bothMoney(pin.price, pin.priceCurrency, t.locale).stated}</span>
               {bothMoney(pin.price, pin.priceCurrency, t.locale).local ? <span className="text-sm text-muted tabular-nums"> ({bothMoney(pin.price, pin.priceCurrency, t.locale).local})</span> : null}

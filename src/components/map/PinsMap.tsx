@@ -269,7 +269,7 @@ const WIDE = '(width >= 80rem)';
 // does not fetch every pin's picture up front. A standalone popup ignores the
 // icon's popupAnchor: offset is Leaflet's default [0, 7] plus the 32px up to
 // the pin's head.
-function pinPopup(pin: MapPinJson, options: L.PopupOptions = {}) {
+function pinPopup(pin: MapPinJson, t: Translator, options: L.PopupOptions = {}) {
   return L.popup({
     autoPan: false,
     closeButton: false,
@@ -280,7 +280,7 @@ function pinPopup(pin: MapPinJson, options: L.PopupOptions = {}) {
     ...options,
   })
     .setLatLng([pin.latitude!, pin.longitude!])
-    .setContent(() => popupContent(pin));
+    .setContent(() => popupContent(pin, t));
 }
 
 // Opens a pin's popup to stay, replacing the last one that did: a marker
@@ -292,9 +292,10 @@ function stickPopup(
   stickyRef: { current: { popup: L.Popup; pinId: number } | null },
   pin: MapPinJson,
   at: L.LatLng,
+  t: Translator,
 ) {
   if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
-  const sticky = pinPopup(pin, { autoClose: false }).setLatLng(at);
+  const sticky = pinPopup(pin, t, { autoClose: false }).setLatLng(at);
   sticky.on('remove', () => {
     if (stickyRef.current?.popup !== sticky) return;
     stickyRef.current = null;
@@ -345,7 +346,7 @@ function popupDates(pin: MapPinJson): string {
   return last && last !== first ? `${first} - ${last}` : first;
 }
 
-function popupContent(pin: MapPinJson) {
+function popupContent(pin: MapPinJson, t: Translator) {
   const content = document.createElement('div');
   const href = localizeHere(pin.restaurantHref ?? pinPath(pin));
   const dates = popupDates(pin);
@@ -358,7 +359,7 @@ function popupContent(pin: MapPinJson) {
   content.innerHTML =
     `<div class="px-2.5 pt-1.5 pb-2"><a href="${escapeHtml(href)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
     `${pin.specialLabel ? `<div class="mt-1 text-subtle">${escapeHtml(pin.specialLabel)}</div>` : ''}` +
-    `${dates || price ? `<div class="mt-1 flex items-baseline justify-between gap-2">${dates ? `<span class="text-subtle">${escapeHtml(dates)}</span>` : ''}${price}</div>` : ''}</div>`;
+    `${dates || price ? `<div class="mt-1 flex items-baseline justify-between gap-2">${dates ? `<span class="text-subtle">${pin.buildStatus ? `${escapeHtml(t(pin.buildStatus === 'Withdrawn' ? 'map.withdrawn' : 'map.groundbreak'))} ` : ''}${escapeHtml(dates)}</span>` : ''}${price}</div>` : ''}</div>`;
   const sources = pictureSources(pin);
   if (!sources.length) return content;
 
@@ -527,7 +528,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     setStep(index);
     const at = L.latLng(stop.pin.latitude, stop.pin.longitude + 360 * nearestOffset(stop.pin.longitude, map.getCenter().lng));
     map.flyTo(at, Math.max(map.getZoom(), 8));
-    stickPopup(map, stickyRef, stop.pin, at);
+    stickPopup(map, stickyRef, stop.pin, at, t);
   };
   // What the plotted, category-visible pins add up to: dollars of cost (only
   // USD ones - there is no FX anywhere, so currencies never mix) and the
@@ -787,7 +788,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     const seen = new Set<number>();
     const markerLabels = pinMarkerLabels(fetchQuery);
 
-    const stick = (pin: MapPinJson, at: L.LatLng) => stickPopup(map, stickyRef, pin, at);
+    const stick = (pin: MapPinJson, at: L.LatLng) => stickPopup(map, stickyRef, pin, at, t);
 
     const plot = (pins: MapPinJson[]) => {
       for (const pin of pins) {
@@ -803,7 +804,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
           // onto the popup so its link can be clicked. Not bindPopup: its click
           // handler toggles, which would close a hover-opened popup (and a tap's
           // emulated mouseover). No autoPan: panning under the pointer ends the hover.
-          const popup = pinPopup(pin).setLatLng(marker.getLatLng());
+          const popup = pinPopup(pin, t).setLatLng(marker.getLatLng());
           let closeTimer: ReturnType<typeof setTimeout> | undefined;
           const open = () => {
             clearTimeout(closeTimer);

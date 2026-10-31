@@ -40,6 +40,11 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   a summarizing fetcher, so their quotes are not verbatim. Before saving, curl each cited page, strip tags and check the
   quote (split on "...") appears; hold any entry that fails, plus phases/towers/rehabs/proposals the benchmark row does
   not fit. A benchmark row's quote is the row label + range + first note sentence as the page prints it.
+- Non-housing batch (2026-10-31, `scripts/construction/other-estimates-2026-10-31.mjs`): agents verify each quote with
+  `.tmp/check_quote.py` (raw page, not a summarizing fetch) before writing it. Published budget first, in its own currency (no
+  FX). Hold figures that cover a larger scope than the pin (whole airport vs first runway, whole ensemble vs one tower),
+  constant-currency or floor figures, and unresolved source conflicts. Few non-housing buildings have a citable per-unit
+  benchmark, so most stayed null rather than forced.
 - Record the source in references or wiki. The extraction prompt `src/server/extract/systemPrompt.ts` carries the same rule.
 
 ## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`, `Withdrawn`
@@ -49,6 +54,14 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
 - An announcement, loan or approval does not complete construction. A first coil, criticality or grid test does
   not alone prove completion. **Never infer completion from an elapsed target date.**
 - Owner instruction (2026-10-30): a verified withdrawn project or interconnection request carries `Withdrawn` and a sourced withdrawal milestone on its project timeline. If the withdrawal date is unpublished, show the dated source observation explicitly; never invent the withdrawal day. A withdrawn queue request does not establish cancellation of every project at the site.
+- How the status and dates show (2026-10-31): the map popup labels the date `Groundbreak:` (`Withdrawn:` for a
+  Withdrawn pin, whose own start is the withdrawal day, so set it to that day). The pin page's progress bar runs from
+  the pin's start to its completion (`utcEndDateTime`), so give every construction pin a sourced completion; a slipped
+  start (`originalStartDate`) shows as a coloured segment before the build. Profile `milestones` strictly between the
+  two become hoverable dots on the bar: a bare year is read as its last day (a "2027" forecast is the completion, so it
+  gets no dot) and a month or quarter as its first day, so keep milestone dates at the source's precision and label a
+  real intermediate stage (commissioning, first production) rather than repeating the completion. No original
+  completion date is stored, so a slipped completion cannot be drawn yet.
 - Exclude non-construction accidents, closures, sales and monitored storage. For cancelled/halted/unsupported
   status, document it rather than forcing a tag.
 - EIA-860M is preliminary: check the pin's existing operator/regulator references for commissioning evidence
@@ -124,6 +137,14 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   and timeline (start, estimated completion), and cost (or the statement that none is published and what the
   only published figure, such as land price, is). Every claim comes from a page you read; add each cited URL
   (and the rendering's source page) to `references`.
+- **Tags (every development pin):** exactly one status tag (section 2) plus `Under Construction` while building, the
+  place (neighbourhood/city), and topic tags that fit. Housing pins also carry **`Housing`** alongside `Affordable
+  Housing` etc., and tags for who it serves (`Veterans`, `Supportive Housing`, `Homelessness`). Keep existing tags.
+  Add through `POST /api/admin/db/PinTag` (`[{pinId, name, kind: 'topic', source: 'user'}]`) in both environments,
+  skipping names the pin already has. Worked example: pin 7019 Rose Creek Village
+  (`scripts/construction/rose-creek-village-2026-10-30.mjs`, owner request 2026-10-30/31). Its sources also showed
+  conflicting completion years (developer Fall 2026, County 2027): keep the developer's target as the pin date, add
+  both as planned milestones and say so in `dateConfidenceReasoning`. Fetch SDHC pages without a browser User-Agent.
 - Ongoing: the 06:00/18:00 news job's `review_research_gaps` `construction` list refreshes excerpts and sentiment as a
   project nears completion or local news appears (`docs/okf/scraping/daily-jobs.md#sentiment`).
 - **Map (every development pin):** a pin needs `latitude`/`longitude` or it shows no map; an `address` alone is not

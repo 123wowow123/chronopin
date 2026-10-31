@@ -248,6 +248,8 @@ export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories'
   media?: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[];
   // Curated restaurant specials may have no database pin yet.
   restaurantHref?: string;
+  // Something built: its Proposed/In Progress/Completed/Withdrawn tag. Its start is the groundbreaking, or the withdrawal.
+  buildStatus?: string | null;
   specialLabel?: string;
   // Megawatts its title states ("500 MW", "1 GW" -> 1000), for the map's totals.
   megawatts?: number | null;
