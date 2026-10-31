@@ -3,7 +3,7 @@ name: construction-pin-research
 description: >-
   Use this skill when researching or repairing pins about things being built or opened: pipelines, power
   plants, dams, bridges, tunnels, railways, terminals, towers, stadiums, data centres, factories and fabs.
-  Covers construction price, status tag, power generation fields and the PinFactory buildout profile.
+  Covers construction price, status tag, power generation fields, the PinFactory buildout profile and sourced GeoJSON.
 ---
 
 # Construction and energy project pins
@@ -103,7 +103,9 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   confirm it shows this project, and credit the source. Site and "before" photos follow it.
 - The main image is the pin's lowest media id (the readback order is by id, not by the order you send). To make a
   later-found rendering the main image, PUT media with only the rendering, then PUT again with the rendering
-  first and the rest after it. Round-trip the whole pin (GET, change `media`, PUT) locally first and diff the
+  first and the rest after it. Reinserted media can lose attribution during thumbnail processing: retain the
+  original URL-to-credit mapping, restore `authorName`/`authorUrl` as needed and verify every readback credit.
+  Round-trip the whole pin (GET, change `media`, PUT) locally first and diff the
   readback, then on prod.
 - Timeline: `PinFactory.milestones` (section 4) with verbatim quotes; leave out dates you could not read yourself.
   Always include the **estimated completion** milestone (`basis: "planned"`, published precision such as
@@ -123,3 +125,21 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   whole-pin PUT them on (GET, set `latitude`/`longitude`, PUT, diff the readback), locally and on prod. If the
   coverage gives no street address, use the named site's published coordinates and say so in the summary; never
   use a city centroid.
+
+
+## 7. GeoJSON when available
+Owner instruction (2026-10-30): research and add available project GeoJSON alongside the map point.
+- Prefer operator/regulator GIS, municipal parcels or planning layers, then reviewed OpenStreetMap, Epoch AI or
+  Data Center Tracker geometry. Open the source, match the exact site and phase, and retain its URL, attribution
+  and observation/vintage. A nearby polygon or similarly named project is not a match.
+- Store a WGS84 `FeatureCollection` with `[longitude, latitude]` coordinates in `PinSiteShape`, using supported
+  `properties.kind` values (`site`, `building`, `substation`, `power`, etc.; `src/lib/siteShape.ts`). Use the
+  authenticated `/api/admin/db/PinSiteShape?upsert=1` API in both environments; `/api/pins/:id/site-shape` is GET-only.
+  Merge existing features and preserve their source metadata; do not overwrite hand-reviewed boundaries.
+- Verify valid closed polygon rings, finite coordinate ranges, plausible extent and the project's component
+  scope. A programme/campus outline is not an individual building boundary; label shared context explicitly.
+  Do not fabricate rectangles, circles or parcel outlines from a point, acreage, screenshot or unreferenced plan.
+- Read back the stored row and public `/api/pins/:id/site-shape` in both environments; check alignment with the
+  point/map. Keep sourced geometry and replay metadata with the research catalog. If no reliable geometry is
+  published or a service is inaccessible, record that specific gap and retain the verified point.
+See `docs/okf/scraping/routes.md` and `scripts/power/siteShapes.ts` for existing importers and shape kinds.

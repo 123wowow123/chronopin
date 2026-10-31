@@ -119019,7 +119019,7 @@
       "local": 20648,
       "production": 20648
     },
-    "title": "ERCOR Triboro: Seven Data Centers Proposed in Olyphant",
+    "title": "ERCOR Triboro: Sitework Underway as Olyphant Considers Settlement",
     "sourceUrl": null,
     "profile": {
       "axes": {
@@ -119062,7 +119062,7 @@
       },
       "sector": "Infrastructure: data centers",
       "source": "session",
-      "status": "announced",
+      "status": "construction",
       "metrics": [
         {
           "key": "siteArea",
@@ -119071,9 +119071,9 @@
           "value": "Nearly 471 acres in the June 26 report; earlier transaction reported as 500 acres",
           "source": {
             "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+            "quote": "nearly 471 acres",
             "title": "June 26 ERCOR site scope",
-            "publishedDate": "2026-06-26",
-            "quote": "nearly 471 acres"
+            "publishedDate": "2026-06-26"
           }
         },
         {
@@ -119083,9 +119083,9 @@
           "value": "Seven two-story data centers and a substation; June 26 revised layout",
           "source": {
             "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+            "quote": "seven buildings",
             "title": "June 26 revised ERCOR project layout",
-            "publishedDate": "2026-06-26",
-            "quote": "seven buildings"
+            "publishedDate": "2026-06-26"
           }
         },
         {
@@ -119098,6 +119098,18 @@
             "quote": "applied to change its land use",
             "title": "Project owner / public authority project evidence",
             "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Reported proposed electricity use",
+          "value": "1 GW proposed demand in October 30 reporting; not committed or operating IT capacity. Developer brochure separately markets phased capacity up to 1.25 GW.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/",
+            "title": "Opened dated ERCOR Triboro evidence",
+            "quote": "1 gigawatt",
+            "publishedDate": "2026-10-30"
           }
         }
       ],
@@ -119114,14 +119126,58 @@
           }
         },
         {
-          "label": "Seven-building layout and hearing lawsuit reported; final outcome unverified",
           "date": "2026-06-26",
           "basis": "demonstrated",
+          "label": "Seven-building layout and hearing lawsuit reported; final outcome unverified",
           "source": {
             "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+            "quote": "June 26, 2026",
             "title": "June 26 ERCOR lawsuit report",
-            "publishedDate": "2026-06-26",
-            "quote": "June 26, 2026"
+            "publishedDate": "2026-06-26"
+          }
+        },
+        {
+          "label": "Marketed Phase I delivery target; not approval or utility commitment",
+          "date": "Q1 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf",
+            "title": "Opened project-specific evidence",
+            "publishedDate": null,
+            "quote": "300 MW · Q1 2028"
+          }
+        },
+        {
+          "label": "Marketed Phase II delivery target; not approval or utility commitment",
+          "date": "Q2 2029",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf",
+            "title": "Opened project-specific evidence",
+            "publishedDate": null,
+            "quote": "700–950 MW · Q2 2029."
+          }
+        },
+        {
+          "label": "Photographed sitework; building approvals remain pending",
+          "date": "2026-10-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/",
+            "title": "Opened dated ERCOR Triboro evidence",
+            "quote": "Sitework is underway",
+            "publishedDate": "2026-10-30"
+          }
+        },
+        {
+          "label": "Scheduled council consideration of settlement and community-benefits agreement",
+          "date": "2026-11-05",
+          "basis": "planned",
+          "source": {
+            "url": "https://olyphantboro.com/site/wp-content/uploads/2026/10/Special-Meeting-11-5-2026.pdf",
+            "title": "Opened dated ERCOR Triboro evidence",
+            "quote": "November 5, 2026",
+            "publishedDate": null
           }
         }
       ],
@@ -119378,6 +119434,157 @@
             "title": "Opened project-specific primary evidence",
             "publishedDate": null,
             "quote": "Q2 2027"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "final68-followup-18964",
+    "pinIds": {
+      "local": 18964,
+      "production": 18964
+    },
+    "title": "Project Gold: Revised Six-Building Data Center Proposal in Clifton and Covington",
+    "sourceUrl": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+    "profile": {
+      "sector": "Data center campus",
+      "status": "announced",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored capability supports a radar value.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored capability supports a radar value.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored capability supports a radar value.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored capability supports a radar value.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored capability supports a radar value.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No published peer cohort or scored capability supports a radar value.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Developer-estimated campus investment",
+          "value": "USD 18 billion; developer estimate reported August 2026, not a committed construction contract",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-21",
+            "quote": "$18 billion investment"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Revised proposed buildings",
+          "value": "Six single-story data centers: four in Covington Township and two in Clifton Township",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-21",
+            "quote": "six"
+          }
+        },
+        {
+          "key": "siteArea",
+          "label": "Reported revised campus site",
+          "value": "998.8 acres across two townships; approximate mapped outline is not the cadastral acreage",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-21",
+            "quote": "998.8 acres"
+          }
+        },
+        {
+          "key": "floorArea",
+          "label": "Reported revised building area",
+          "value": "Just over 2.5 million square feet; single-story buildings",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-21",
+            "quote": "2.5 million"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Requested grid-service scope",
+          "value": "2.2 GW requested/planned grid service; not committed IT load or operating capacity",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-21",
+            "quote": "2.2 gigawatts"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Revised six-building application reported",
+          "date": "2026-08-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-21",
+            "quote": "six"
+          }
+        },
+        {
+          "label": "Township acknowledges receipt of conditional-use application",
+          "date": "2026-08-24",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://covingtontwp.org/conditional-use-application-received/",
+            "title": "Opened project-specific evidence",
+            "publishedDate": "2026-08-24",
+            "quote": "Conditional Use Application Received"
+          }
+        },
+        {
+          "label": "Hearing dates tabled while township seeks hearing officer",
+          "date": "2026-09-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://covingtontwp.org/wp-content/uploads/2026/10/2026-09-29-BOS-Work-Session.pdf",
+            "title": "Opened project-specific evidence",
+            "publishedDate": null,
+            "quote": "Since there is no hearing officer at this time"
           }
         }
       ]

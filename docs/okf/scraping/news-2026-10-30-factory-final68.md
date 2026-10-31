@@ -1,14 +1,14 @@
 ---
 type: Log
 title: "Factory priced queue: final 68 review, October 30, 2026"
-description: "Reviewed the exact final 68 candidates, repaired 45 original pins, created eight threaded project pins and added 27 sourced profiles in both environments. Fourteen project evidence holds remain explicit."
+description: "Reviewed the exact final 68 candidates, repaired 45 original pins, created eight threaded project pins and added 27 sourced profiles in both environments. Later follow-ups add GeoJSON and further enrichment; thirteen evidence holds and seven child follow-ups remain explicit."
 tags: [scraping, factory-profiles, construction, withdrawn]
 generated: { by: process:factory-profile-research, at: 2026-10-30T18:52:57Z }
 ---
 
 # Exact final 68 review
 
-**Follow-up:** the later section below records eleven further pin updates, resolves the SpaceX evidence hold and narrows Yellow Pine III’s hold. Current remaining work is **13 project evidence holds plus eight supplemental child holds**. The original batch figures below remain its historical snapshot.
+**Latest follow-up:** two later rounds resolve the SpaceX identity hold, add Project Gold’s profile and approximate GeoJSON, and improve child media/reactions. Current remaining work is **13 project evidence holds plus seven supplemental child follow-ups**; only three children still need media or reactions. Other child gaps concern verified locations or the pending November 5 ERCOR decision. Earlier batch figures below are historical snapshots.
 
 This is the follow-up to [the original 247-candidate batch](news-2026-10-30-factory-queue247.md), using its frozen remaining manifest. Every one of the 68 original records was reviewed. This is **not** a claim of 68 new profiles or zero unresolved evidence gaps.
 
@@ -104,7 +104,7 @@ The owner requested work on the remaining items. Eleven pins were updated throug
 
 This follow-up added **two profiles**, **nine media links per environment** (four distinct image assets), and **ten attributed reaction entries across six pins**, of which **nine are dated and scored**. Radar scores remain null. The media attribution fields are `authorName` and `authorUrl`; all fifteen media entries on the five enriched three-image children have credited native readbacks. Public Azure blobs were downloaded before changing references.
 
-### Current remaining work
+### Remaining work after the first follow-up
 
 **Thirteen project evidence holds remain:** the original table except SpaceX 6426. Yellow Pine III’s identity/scope gap is narrowed to investment reconciliation, correct final order, physical-stage and commissioning evidence. Stonebridge’s hold is narrowed to written decisions and subsequent outcomes. The other eleven holds retain their specific identity, component, allocation or current-funding gaps.
 
@@ -115,3 +115,34 @@ The follow-up research also checked Aurora, Newberry, Sardis–Clarksdale, Snow 
 Replay updates: `scripts/factories/resolutions-2026-10-30-final68-followup.json` and `capability.json` (now **1,006 profiles**). The follow-up takes precedence over earlier corrective payloads. Detailed source downloads, visual checks, readbacks, translations, research audit and queue verification are in ignored `.tmp/factory-final68-followup/`. Durable follow-up **JobRun 37** records the work in both environments; only the resolved SpaceX final68 evidence mark is closed. No production deployment occurred.
 
 Final verification: all **330 translation rows across both environments** match their current source hash and complete field shapes; **21 unresolved revisit pins per environment** match the thirteen evidence and eight supplemental holds. All fifteen thumbnail URLs on the five media-enriched children download from each environment’s own serving store (local Azurite versus public production Azure). **Eight rendered public page responses** show the updated project/timeline text. `npx vitest run src/lib/okfLint.test.ts` passed all nine checks.
+
+
+## Second follow-up: GeoJSON, reactions and October decisions
+
+Nine pins were updated through native APIs in both environments: **20641–20645, 20647–20648, 18964 and 19026**. Eighteen pin readbacks preserved authors, parent threads, stocks and existing references. Their English changes have **135 complete, current translations per environment** across all 15 locales. This round adds **one profile**, updates ERCOR’s profile, links **four new image assets per environment**, and adds **17 dated, scored reaction entries**. The replay catalog now contains **1,007 profiles**.
+
+### Available GeoJSON
+
+- **Project Gold 18964:** added Data Center Tracker’s published approximate MultiPolygon and corrected the map point to its published location, **41.258696, −75.512147**. PostGIS confirms valid geometry and that the point lies inside it. The geodesic outline measures about **967.74 acres**, distinct from the application’s reported **998.8 acres**; it is explicitly labelled approximate crowdsourced campus context, not an approved site plan or cadastral survey. Source and observation/vintage metadata are retained in the replay and stored shape.
+- **Triboro parent 19008:** verified and preserved its existing tracker outline in both environments. Its approximately **511.27-acre** geometry is described by the tracker as the relevant Triboro Industrial Park LLC parcel. That does not establish a boundary for the withdrawn western Commerce Park proposal or ERCOR’s revised 470.6-acre project, so it was not copied to either child.
+- **Stonebridge 19026:** its existing tracker shape is also preserved; all three available outlines agree across environments. The shape inventory covered the thirteen held projects, eight children and Triboro parent. No reliable additional component geometry was found: historical Al Faisaliyah/Shuaibah ESIA corners have a different design scope, BLM PLSS sections are not solar lease boundaries, and the attempted public Overpass endpoints returned errors or timed out. No boundary was drawn from a point, acreage or image.
+
+The construction research skill now includes **GeoJSON when available**: exact site/phase matching, preferred GIS sources, WGS84 geometry and metadata, audited `PinSiteShape` writes, preservation of reviewed features and bilateral stored/public readbacks.
+
+### Pin changes
+
+- **Pecos 20641–20643:** each now has three dated reaction URLs: Pacifico’s January permit announcement, the Whitehouse/Heinrich/Van Hollen March oversight letter, and Amazon’s August energy statement reported by DCD. Each is labelled **shared campus energy context**, not a review of an individual building. Together with the existing three official campus renderings, this completes the media/reaction portion. Exact building points remain unverified: the 95.33-score street geocode was inconsistent with the campus location and was rejected.
+- **Shuaibah 20644–20645:** Swiss Energy’s June 2023 programme mobilization statement gives Shuaibah 1 a second dated reaction. Shuaibah 2 now has three distinct dated reaction URLs, adding PIF’s power-purchase milestone and China Energy’s Sungrow partnership response. Two visually verified Sungrow Shuaibah 2 assets bring it to three media; its official conceptual rendering is main, followed by the existing programme illustration and aerial site photograph. These 2.1 GW case-study images were not assigned to the separate 600 MW Shuaibah 1 plant. **Shuaibah 2’s supplemental hold is resolved.**
+- **Triboro Commerce Park 20647:** added two earlier dated procedural reactions, from the developer’s reported April filing and borough solicitor’s May comments. It now has three reaction URLs and three meeting photographs. The withdrawn project’s own rendering and verified location remain gaps.
+- **ERCOR 20648:** added Emergent’s official Project Triboro marketing rendering as main, a credited October 29 sitework photograph, and July/October resident reactions. It now has **five media and four dated reaction URLs**. The brochure’s up-to-14-shell, phased-up-to-1.25-GW concept and Q1 2028/Q2 2029 targets are distinguished from the seven-building planning proposal. [October 30 reporting](https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/) documents sitework and reported 1 GW planned demand. The status is **In Progress for sitework**, without implying data-center building approval or operation. The [official November 5 notice](https://olyphantboro.com/site/wp-content/uploads/2026/10/Special-Meeting-11-5-2026.pdf) confirms a scheduled settlement/CBA vote. The proposed **USD 101 million community-benefits payment is not construction cost**. A revisit remains for the actual vote, executed agreement, approvals and exact child map location.
+- **Project Gold 18964:** [August 21 reporting](https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/) supplies a revised six-building proposal, just over 2.5 million square feet, 998.8 acres and a **developer-estimated USD 18 billion investment**. The **2.2 GW requested grid service** is not committed or operating IT capacity. Added a sourced profile with null radar scores, full summary, one owner reaction and the approximate map evidence. Covington’s receipt notice, September 29 minutes and October 27 agenda establish an ongoing conditional-use process. The underlying full application, definitive approvals/court outcomes, delivery schedule and additional media/reactions remain open.
+- **Stonebridge 19026:** dated New Castle News reporting establishes the previously missing **Mahoning September 15, 2–0 appeal denial** and corroborates **North Beaver’s 4–0 denial**. The cited written rulings and later court position remain unverified; neither denial is treated as voluntary withdrawal.
+- **Resilient 20646:** retained prior sourced content. A newly inspected server-rack/site-gate collage was excluded because it was not a project or meeting photograph. Its official rendering and three verified media remain unavailable.
+
+### Remaining and verification
+
+**Thirteen project evidence holds remain**, with Project Gold and Stonebridge narrowed to the specific gaps above. **Seven child follow-ups remain:** three Pecos location gaps; Shuaibah 1, Resilient and Commerce Park media/reaction or rendering gaps; and ERCOR’s pending decision/location gap. Only **20644, 20646 and 20647** still have incomplete child media/reaction requirements. The queue does not claim that campus reactions establish individual building designs or that future votes have occurred.
+
+Durable **JobRun 38** and its twenty unresolved revisit pins were verified in both environments; the Shuaibah 2 final68 mark is resolved. All **270 translation rows** match their current English hashes and complete shapes. The 21 media entries on the seven enriched children have source credits and downloadable thumbnails in each environment’s serving store. Eight rendered public-page responses show the new content. The skill validator and all nine OKF lint checks pass.
+
+Replay: `scripts/factories/resolutions-2026-10-30-final68-round2.json` takes precedence over earlier final68 payloads; `capability.json` and `final68-review-2026-10-30.json` are synchronized. Ignored `.tmp/factory-final68-round2/` contains opened sources, inspected assets, shape inventory, bilateral readbacks, translation/queue verification and research gaps. No production deployment occurred.

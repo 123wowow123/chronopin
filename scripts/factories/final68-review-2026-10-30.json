@@ -116,7 +116,7 @@
     },
     {
       "pinId": 540,
-      "originalTitle": "Bogotá Metro Line 1 Targets 2028 Opening",
+      "originalTitle": "Bogot\u00e1 Metro Line 1 Targets 2028 Opening",
       "sourceUrl": "https://www.youtube.com/watch?v=wCi6-u0cOBY",
       "outcome": "canonical-profile-verified",
       "canonicalPinIds": {
@@ -313,7 +313,7 @@
     },
     {
       "pinId": 14052,
-      "originalTitle": "Al Kahfah PV — operational",
+      "originalTitle": "Al Kahfah PV \u2014 operational",
       "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000830898",
       "outcome": "profile-and-factual-repair",
       "changedFields": [
@@ -337,7 +337,7 @@
     },
     {
       "pinId": 14053,
-      "originalTitle": "Al Shuaibah 1 and 2 solar complex — operational",
+      "originalTitle": "Al Shuaibah 1 and 2 solar complex \u2014 operational",
       "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000809136",
       "outcome": "programme-split-parent-repaired",
       "changedFields": [
@@ -366,7 +366,7 @@
     },
     {
       "pinId": 14072,
-      "originalTitle": "Lower Yarlung Zangbo five-station hydropower complex — under construction",
+      "originalTitle": "Lower Yarlung Zangbo five-station hydropower complex \u2014 under construction",
       "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000601028",
       "outcome": "programme-reviewed-component-evidence-gap",
       "changedFields": [
@@ -507,7 +507,7 @@
         "delayReasoning",
         "sourceUrl"
       ],
-      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reason": "A project-specific operator or regulator document has not established this record\u2019s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
       "profileAdded": false
     },
     {
@@ -529,7 +529,7 @@
         "delayReasoning",
         "sourceUrl"
       ],
-      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reason": "A project-specific operator or regulator document has not established this record\u2019s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
       "profileAdded": false
     },
     {
@@ -551,7 +551,7 @@
         "delayReasoning",
         "sourceUrl"
       ],
-      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reason": "A project-specific operator or regulator document has not established this record\u2019s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
       "profileAdded": false
     },
     {
@@ -573,7 +573,7 @@
         "delayReasoning",
         "sourceUrl"
       ],
-      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reason": "A project-specific operator or regulator document has not established this record\u2019s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
       "profileAdded": false
     },
     {
@@ -725,7 +725,7 @@
         "delayReasoning",
         "sourceUrl"
       ],
-      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reason": "A project-specific operator or regulator document has not established this record\u2019s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
       "profileAdded": false
     },
     {
@@ -747,7 +747,7 @@
         "delayReasoning",
         "sourceUrl"
       ],
-      "reason": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reason": "A project-specific operator or regulator document has not established this record\u2019s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
       "profileAdded": false
     },
     {
@@ -1287,5 +1287,46 @@
     "remainingEvidenceHolds": 13,
     "remainingSupplementalChildHolds": 8,
     "replay": "scripts/factories/resolutions-2026-10-30-final68-followup.json"
+  },
+  "round2": {
+    "checkedAt": "2026-10-30",
+    "pinsUpdated": [
+      20641,
+      20642,
+      20643,
+      20644,
+      20645,
+      20647,
+      20648,
+      18964,
+      19026
+    ],
+    "profilesAdded": 1,
+    "geometryAddedPinIds": [
+      18964
+    ],
+    "geometryPreservedPinIds": [
+      19008,
+      19026
+    ],
+    "reactionEntriesAdded": 17,
+    "datedReactionEntriesAdded": 17,
+    "mediaLinksAddedPerEnvironment": 4,
+    "resolvedSupplementalPinIds": [
+      20645
+    ],
+    "remainingEvidenceHolds": 13,
+    "remainingSupplementalChildHolds": 7,
+    "incompleteChildMediaReactionPinIds": [
+      20644,
+      20646,
+      20647
+    ],
+    "currentTranslationsPerEnvironment": 135,
+    "jobRunIds": {
+      "local": 38,
+      "production": 38
+    },
+    "replay": "scripts/factories/resolutions-2026-10-30-final68-round2.json"
   }
 }

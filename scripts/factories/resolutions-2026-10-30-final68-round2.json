@@ -1,0 +1,1034 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Second final68 evidence/media/reaction pass plus available GeoJSON",
+  "preserveShapePinIds": [
+    19008,
+    19026
+  ],
+  "edits": [
+    {
+      "id": 20641,
+      "patch": {
+        "longFormSummary": "<h3>Site and filed scope</h3><ul><li>Building A is registered at 6000 TX-18, Fort Stockton, Pecos County, Texas. Its accessibility filing lists 189,060 square feet. The record does not establish the previous use of the individual building footprint.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul><h3>Construction and timeline</h3><ul><li>The filing lists August 1 to December 1, 2026 as the scheduled construction window. Completed accessibility review does not verify completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul><h3>Cost</h3><ul><li>The Building A filing estimates USD 300 million for its own scope. This is a published filing estimate, not an allocation of the entire campus investment.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul><h3>Campus imagery</h3><ul><li>Pacifico Energy supplies the shared GW Ranch campus renderings. These illustrate the overall campus and do not identify Building A or prove that it is complete. The renderings are shared campus context.<cite data-ref=\"https://www.pacificoenergy.com/gw-ranch\"></cite></li></ul><h3>Shared-campus reactions</h3><ul><li>Pacifico welcomed the GW Ranch generation permit in January. These are campus energy-platform reactions, not assessments of this individual building or confirmation of its opening.<cite data-ref=\"https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project\"></cite></li></ul><h3>Energy oversight</h3><ul><li>Senators Sheldon Whitehouse, Martin Heinrich and Chris Van Hollen questioned the gas-generation plan in a March 13 letter. Their criticism concerns the shared power campus.<cite data-ref=\"https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve\"></cite></li></ul><h3>Owner response</h3><ul><li>Amazon told DCD in August that it would pay the full cost of powering its planned Pecos County campus. That statement does not allocate power or construction cost to this building.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project",
+        "https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve",
+        "https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/"
+      ],
+      "reviews": [
+        {
+          "url": "https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project",
+          "title": "Nate Franklin, Pacifico Energy — shared GW Ranch power campus",
+          "publishedDate": "2026-01-26",
+          "quote": "We’re really excited to reach this precedent-setting milestone at GW Ranch",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve",
+          "title": "Whitehouse, Heinrich and Van Hollen — shared-campus gas-generation oversight",
+          "publishedDate": "2026-03-13",
+          "quote": "Pacifico’s actions seem inconsistent with these claimed goals.",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/",
+          "title": "Amazon spokesperson — shared Pecos campus energy statement, reported by DCD",
+          "publishedDate": "2026-08-10",
+          "quote": "Amazon believes in paying the full costs of powering our operations.",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "id": 20642,
+      "patch": {
+        "longFormSummary": "<h3>Site and filed scope</h3><ul><li>Building B is registered at 6000 TX-18, Fort Stockton, Pecos County, Texas. Its accessibility filing lists 189,060 square feet. The record does not establish the previous use of the individual building footprint.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul><h3>Construction and timeline</h3><ul><li>The filing lists August 1 to December 1, 2026 as the scheduled construction window. Completed accessibility review does not verify completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul><h3>Cost</h3><ul><li>The Building B filing estimates USD 300 million for its own scope. This is a published filing estimate, not an allocation of the entire campus investment.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul><h3>Campus imagery</h3><ul><li>Pacifico Energy supplies the shared GW Ranch campus renderings. These illustrate the overall campus and do not identify Building B or prove that it is complete. The renderings are shared campus context.<cite data-ref=\"https://www.pacificoenergy.com/gw-ranch\"></cite></li></ul><h3>Shared-campus reactions</h3><ul><li>Pacifico welcomed the GW Ranch generation permit in January. These are campus energy-platform reactions, not assessments of this individual building or confirmation of its opening.<cite data-ref=\"https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project\"></cite></li></ul><h3>Energy oversight</h3><ul><li>Senators Sheldon Whitehouse, Martin Heinrich and Chris Van Hollen questioned the gas-generation plan in a March 13 letter. Their criticism concerns the shared power campus.<cite data-ref=\"https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve\"></cite></li></ul><h3>Owner response</h3><ul><li>Amazon told DCD in August that it would pay the full cost of powering its planned Pecos County campus. That statement does not allocate power or construction cost to this building.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project",
+        "https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve",
+        "https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/"
+      ],
+      "reviews": [
+        {
+          "url": "https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project",
+          "title": "Nate Franklin, Pacifico Energy — shared GW Ranch power campus",
+          "publishedDate": "2026-01-26",
+          "quote": "We’re really excited to reach this precedent-setting milestone at GW Ranch",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve",
+          "title": "Whitehouse, Heinrich and Van Hollen — shared-campus gas-generation oversight",
+          "publishedDate": "2026-03-13",
+          "quote": "Pacifico’s actions seem inconsistent with these claimed goals.",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/",
+          "title": "Amazon spokesperson — shared Pecos campus energy statement, reported by DCD",
+          "publishedDate": "2026-08-10",
+          "quote": "Amazon believes in paying the full costs of powering our operations.",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "id": 20643,
+      "patch": {
+        "longFormSummary": "<h3>Site and filed scope</h3><ul><li>Building C is registered at 6000 TX-18, Fort Stockton, Pecos County, Texas. Its accessibility filing lists 189,060 square feet. The record does not establish the previous use of the individual building footprint.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul><h3>Construction and timeline</h3><ul><li>The filing lists August 1 to December 1, 2026 as the scheduled construction window. Completed accessibility review does not verify completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul><h3>Cost</h3><ul><li>The Building C filing estimates USD 300 million for its own scope. This is a published filing estimate, not an allocation of the entire campus investment.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul><h3>Campus imagery</h3><ul><li>Pacifico Energy supplies the shared GW Ranch campus renderings. These illustrate the overall campus and do not identify Building C or prove that it is complete. The renderings are shared campus context.<cite data-ref=\"https://www.pacificoenergy.com/gw-ranch\"></cite></li></ul><h3>Shared-campus reactions</h3><ul><li>Pacifico welcomed the GW Ranch generation permit in January. These are campus energy-platform reactions, not assessments of this individual building or confirmation of its opening.<cite data-ref=\"https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project\"></cite></li></ul><h3>Energy oversight</h3><ul><li>Senators Sheldon Whitehouse, Martin Heinrich and Chris Van Hollen questioned the gas-generation plan in a March 13 letter. Their criticism concerns the shared power campus.<cite data-ref=\"https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve\"></cite></li></ul><h3>Owner response</h3><ul><li>Amazon told DCD in August that it would pay the full cost of powering its planned Pecos County campus. That statement does not allocate power or construction cost to this building.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project",
+        "https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve",
+        "https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/"
+      ],
+      "reviews": [
+        {
+          "url": "https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project",
+          "title": "Nate Franklin, Pacifico Energy — shared GW Ranch power campus",
+          "publishedDate": "2026-01-26",
+          "quote": "We’re really excited to reach this precedent-setting milestone at GW Ranch",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve",
+          "title": "Whitehouse, Heinrich and Van Hollen — shared-campus gas-generation oversight",
+          "publishedDate": "2026-03-13",
+          "quote": "Pacifico’s actions seem inconsistent with these claimed goals.",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/",
+          "title": "Amazon spokesperson — shared Pecos campus energy statement, reported by DCD",
+          "publishedDate": "2026-08-10",
+          "quote": "Amazon believes in paying the full costs of powering our operations.",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "id": 20644,
+      "patch": {
+        "longFormSummary": "<h3>Plant and programme</h3><ul><li>Al Shuaibah 1 is a solar photovoltaic plant in Makkah Province, Saudi Arabia. Its 600 MW plant rating is separate from the combined two-plant programme.<cite data-ref=\"https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf\"></cite></li></ul><h3>Operation and timeline</h3><ul><li>ACWA’s 2025 prospectus records commercial operation in November 2024. The month is the stated precision, not a verified exact opening day.<cite data-ref=\"https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf\"></cite></li></ul><h3>Cost and ownership</h3><ul><li>The plants are jointly owned through ACWA Power, Badeel and SAPCO. The combined financing announcement does not publish a plant-specific construction budget; no share of that programme total is assigned here.<cite data-ref=\"https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/\"></cite></li></ul><h3>Public reaction</h3><ul><li>The owner welcomed the financing milestone as progress toward Saudi renewable-energy goals. This is an attributed programme reaction shared by both plants, not an independent assessment of this plant’s operation.<cite data-ref=\"https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/\"></cite></li></ul><h3>Contractor reaction</h3><ul><li>Swiss Energy reported starting work with CEEC on the 2.6 GW Al Shuaibah programme in June 2023. This is shared programme context; a separately identified Al Shuaibah 1 rendering remains unavailable.<cite data-ref=\"https://swissenergy-group.com/en/news/2.6-GW-Al-Shuaibah-Solar-PV-Project\"></cite></li></ul>"
+      },
+      "references": [
+        "https://swissenergy-group.com/en/news/2.6-GW-Al-Shuaibah-Solar-PV-Project"
+      ],
+      "reviews": [
+        {
+          "url": "https://swissenergy-group.com/en/news/2.6-GW-Al-Shuaibah-Solar-PV-Project",
+          "title": "Swiss Energy — shared two-plant programme mobilization",
+          "publishedDate": "2023-06-11",
+          "quote": "We announced that we have started a new project",
+          "sentiment": 0.5
+        }
+      ],
+      "mediaCredits": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000809136-media-1-984876269aef739363f1.webp",
+          "authorName": "ACWA Power — shared Al Shuaibah programme illustration; capture date unpublished",
+          "authorUrl": "https://www.acwapower.com/en/what-we-do/projects/shuaibah-pv-ipp/"
+        }
+      ]
+    },
+    {
+      "id": 20645,
+      "patch": {
+        "longFormSummary": "<h3>Plant and programme</h3><ul><li>Al Shuaibah 2 is a solar photovoltaic plant in Makkah Province, Saudi Arabia. Its 2,060 MW plant rating is separate from the combined two-plant programme.<cite data-ref=\"https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf\"></cite></li></ul><h3>Operation and timeline</h3><ul><li>ACWA’s 2025 prospectus records commercial operation in February 2025. The month is the stated precision, not a verified exact opening day.<cite data-ref=\"https://portalvhds1fxb0jchzgjph.blob.core.windows.net/press-releases-attachments./3890780/543_21852_2362_2025-07-02_16-35-18_en.pdf\"></cite></li></ul><h3>Cost and ownership</h3><ul><li>The plants are jointly owned through ACWA Power, Badeel and SAPCO. The combined financing announcement does not publish a plant-specific construction budget; no share of that programme total is assigned here.<cite data-ref=\"https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/\"></cite></li></ul><h3>Public reaction</h3><ul><li>The owner welcomed the financing milestone as progress toward Saudi renewable-energy goals. This is an attributed programme reaction shared by both plants, not an independent assessment of this plant’s operation.<cite data-ref=\"https://www.acwapower.com/en/media-center/latest-news/consortium-of-acwa-power-pif-subsidiary-badeel-and-aramco-subsidiary-sapco-reach-financial-close-for-al-shuaibah-1-and-al-shuaibah-2-solar-pv-projects/\"></cite></li></ul><h3>Owner and EPC reactions</h3><ul><li>PIF welcomed the Shuaibah 2 power-purchase milestone in November 2022. China Energy’s project manager welcomed its Sungrow partnership in May 2023; both are attributed participant reactions.<cite data-ref=\"https://www.pif.gov.sa/en/news-and-insights/newswire/2022/middle-easts-biggest-solar-energy-plant-to-be-built-in-saudi-arabia/\"></cite></li></ul><h3>Plant imagery</h3><ul><li>Sungrow’s 2.1 GW Al Shuaibah case study supplies a conceptual project rendering and an aerial site photograph. These are Shuaibah 2 imagery, separate from the existing shared programme photograph.<cite data-ref=\"https://official-overseas-aks-de.sungrowpower.com/en/cases/utility-scale/world-largest-stand-alone-pv-plant-2-1gw-saudi-arabia\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.pif.gov.sa/en/news-and-insights/newswire/2022/middle-easts-biggest-solar-energy-plant-to-be-built-in-saudi-arabia/",
+        "https://www.sungrowpower.com/us/en/newsdetail/3780",
+        "https://official-overseas-aks-de.sungrowpower.com/en/cases/utility-scale/world-largest-stand-alone-pv-plant-2-1gw-saudi-arabia"
+      ],
+      "reviews": [
+        {
+          "url": "https://www.pif.gov.sa/en/news-and-insights/newswire/2022/middle-easts-biggest-solar-energy-plant-to-be-built-in-saudi-arabia/",
+          "title": "Yazeed Al-Humied, PIF — Shuaibah 2 power-purchase milestone",
+          "publishedDate": "2022-11-30",
+          "quote": "This marks a key achievement",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.sungrowpower.com/us/en/newsdetail/3780",
+          "title": "Xiong Gaoxia, China Energy — Shuaibah 2 inverter partnership",
+          "publishedDate": "2023-05-17",
+          "quote": "We are delighted to partner with Sungrow",
+          "sentiment": 0.8
+        }
+      ],
+      "addMedia": [
+        {
+          "type": "1",
+          "thumbName": "construction/final68-round2-20261030/7f1adda99da78a7bba6c2338.webp",
+          "thumbWidth": 1600,
+          "thumbHeight": 900,
+          "originalUrl": "https://official-oversears-file.sungrowpower.com/page-assets/502fe7d0-41bc-4c1b-b24d-f48b3f810ac1.jpg",
+          "originalWidth": 1600,
+          "originalHeight": 900,
+          "authorName": "Sungrow — Al Shuaibah 2 project rendering",
+          "authorUrl": "https://official-overseas-aks-de.sungrowpower.com/en/cases/utility-scale/world-largest-stand-alone-pv-plant-2-1gw-saudi-arabia"
+        },
+        {
+          "type": "1",
+          "thumbName": "construction/final68-round2-20261030/66d0af6623eadb5d9f2c387b.webp",
+          "thumbWidth": 1600,
+          "thumbHeight": 889,
+          "originalUrl": "https://official-oversears-file.sungrowpower.com/page-assets/dad58026-477c-40fe-b784-405af88e3d03.png",
+          "originalWidth": 1600,
+          "originalHeight": 889,
+          "authorName": "Sungrow — Al Shuaibah 2 project site photograph",
+          "authorUrl": "https://official-overseas-aks-de.sungrowpower.com/en/cases/utility-scale/world-largest-stand-alone-pv-plant-2-1gw-saudi-arabia"
+        }
+      ],
+      "mainImage": "https://official-oversears-file.sungrowpower.com/page-assets/502fe7d0-41bc-4c1b-b24d-f48b3f810ac1.jpg",
+      "mediaCredits": [
+        {
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000809136-media-1-984876269aef739363f1.webp",
+          "authorName": "ACWA Power — shared Al Shuaibah programme illustration; capture date unpublished",
+          "authorUrl": "https://www.acwapower.com/en/what-we-do/projects/shuaibah-pv-ipp/"
+        }
+      ]
+    },
+    {
+      "id": 20647,
+      "patch": {
+        "longFormSummary": "<h3>Site and distinct proposals</h3><ul><li>Triboro Commerce Park’s withdrawn seven-building proposal and Sansone Group’s ERCOR Triboro proposal are separate projects. The June 10 report describes the commerce park’s property as more than 400 acres and ERCOR’s purchase as 500 acres.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul><h3>Withdrawal and zoning</h3><ul><li>The borough engineer confirmed withdrawal of the commerce park’s seven-building plans in the June 10 report. The underlying withdrawal date is unpublished. The June 9 zoning settlement regulated data-center uses; it did not approve construction.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul><h3>Cost and public response</h3><ul><li>No project-specific construction budget or electrical capacity is established by these reports. The USD 80 million land transaction is not construction cost.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li><li>Residents opposed data-center expansion at the June 9 council meeting. The accompanying photographs show that meeting and shared zoning debate; they are not project renderings or proof of construction.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul><h3>Earlier legal reactions</h3><ul><li>April coverage quoted Triboro Commerce Park’s filing challenging borough zoning action. In May, borough solicitor John Brazil defended continuing the curative-amendment process alongside litigation. These procedural positions predate the June withdrawal report.<cite data-ref=\"https://www.thetimes-tribune.com/2026/05/13/companies-tied-to-denaples-missouri-firm-apply-for-16-olyphant-data-centers/\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.thetimes-tribune.com/2026/05/13/companies-tied-to-denaples-missouri-firm-apply-for-16-olyphant-data-centers/",
+        "https://www.thetimes-tribune.com/2026/04/29/firm-linked-to-denaples-challenges-olyphant-over-data-center-zoning/"
+      ],
+      "reviews": [
+        {
+          "url": "https://www.thetimes-tribune.com/2026/04/29/firm-linked-to-denaples-challenges-olyphant-over-data-center-zoning/",
+          "title": "Triboro Commerce Park legal filing — zoning challenge, reported by The Times-Tribune",
+          "publishedDate": "2026-04-29",
+          "quote": "directly and substantially affected",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://www.thetimes-tribune.com/2026/05/13/companies-tied-to-denaples-missouri-firm-apply-for-16-olyphant-data-centers/",
+          "title": "John Brazil, borough solicitor — shared zoning process",
+          "publishedDate": "2026-05-13",
+          "quote": "it doesn’t hurt to have the curative amendment process",
+          "sentiment": 0.1
+        }
+      ]
+    },
+    {
+      "id": 20648,
+      "patch": {
+        "longFormSummary": "<h3>Site and distinct proposals</h3><ul><li>Triboro Commerce Park’s withdrawn seven-building proposal and Sansone Group’s ERCOR Triboro proposal are separate projects. The June 10 report describes the commerce park’s property as more than 400 acres and ERCOR’s purchase as 500 acres.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul><h3>Revised layout and legal process</h3><ul><li>The June 26 report describes seven two-story buildings, each with a 204,500-square-foot footprint, and a substation across nearly 471 acres. This later layout replaces the nine-building account in the June 10 report; footprint and total floor area are distinct.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/\"></cite></li><li>ERCOR sued to obtain a zoning permit without conditional-use hearings, arguing that earlier warehouse approvals protected its application. That is the developer’s legal argument, not a verified court ruling approving data-center construction.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/\"></cite></li></ul><h3>Cost and public response</h3><ul><li>No project-specific construction budget or electrical capacity is established by these reports. The USD 80 million land transaction is not construction cost.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li><li>Residents opposed data-center expansion at the June 9 council meeting. The accompanying photographs show that meeting and shared zoning debate; they are not project renderings or proof of construction.<cite data-ref=\"https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/\"></cite></li></ul><h3>Continuing opposition</h3><ul><li>July 29 reporting quotes resident Eva Rappenglueck organizing opposition while describing ERCOR’s lawsuit over its seven-building proposal. It does not establish the lawsuit’s final disposition.<cite data-ref=\"https://www.thetimes-tribune.com/2026/07/29/a-fighting-chance-olyphant-data-center-opponents-to-hold-info-night/\"></cite></li></ul><h3>Developer marketing concept</h3><ul><li>Emergent Data Centers markets Project Triboro at 3 &amp; 4 Triboro Industrial Park on 470.6 acres, with up to 14 powered shells, phased capacity up to 1.25 GW and delivery targets in Q1 2028 and Q2 2029. The official marketing rendering illustrates that concept; its shell count differs from the seven-building June planning report. Neither the marketing schedule nor a summer-2026 groundbreaking target verifies approval, a utility commitment or physical construction.<cite data-ref=\"https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf\"></cite></li></ul><h3>October sitework and reported scope</h3><ul><li>October 30 reporting and photographs dated October 29 document sitework at ERCOR’s campus off Marshwood Road. The report describes seven 80-foot buildings and 1 GW of planned electricity use; neither is a verified operating capacity. Data-center building approvals remain pending. The proposed USD 101 million community-benefits payment over 15 years is not a construction budget.<cite data-ref=\"https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/\"></cite></li></ul><h3>Scheduled settlement vote</h3><ul><li>The borough’s official notice schedules a November 5, 2026 special meeting at 6 p.m. at the Regal Room to consider resolving ERCOR’s lawsuit and approving a community-benefits agreement. This is a future vote, not an executed settlement or final construction approval.<cite data-ref=\"https://olyphantboro.com/site/wp-content/uploads/2026/10/Special-Meeting-11-5-2026.pdf\"></cite></li></ul>",
+        "title": "ERCOR Triboro: Sitework Underway as Olyphant Considers Settlement",
+        "description": "ERCOR Triboro proposes seven data centers and a substation on about 470.6 acres in Olyphant. October 29 photographs document sitework while building approvals remain unresolved. A proposed USD 101 million community-benefits agreement accompanies a settlement scheduled for a November 5 council vote. That payment is not the campus construction budget, and the vote remains pending.",
+        "statusTag": "In Progress"
+      },
+      "references": [
+        "https://www.thetimes-tribune.com/2026/07/29/a-fighting-chance-olyphant-data-center-opponents-to-hold-info-night/",
+        "https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf",
+        "https://www.emergentdatacenters.com/home",
+        "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/",
+        "https://olyphantboro.com/site/wp-content/uploads/2026/10/Special-Meeting-11-5-2026.pdf"
+      ],
+      "reviews": [
+        {
+          "url": "https://www.thetimes-tribune.com/2026/07/29/a-fighting-chance-olyphant-data-center-opponents-to-hold-info-night/",
+          "title": "Eva Rappenglueck, Olyphant resident — opposition to ERCOR proposal",
+          "publishedDate": "2026-07-29",
+          "quote": "We have a fighting chance, but we need to band together as a community",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/",
+          "title": "Natalia Berjashi, Olyphant resident — proposed ERCOR settlement",
+          "publishedDate": "2026-10-30",
+          "quote": "This is literally selling us out",
+          "sentiment": -0.9
+        }
+      ],
+      "addMedia": [
+        {
+          "type": "1",
+          "thumbName": "construction/final68-round2-20261030/2d31a85f6058cbff359a3e9e.webp",
+          "thumbWidth": 1600,
+          "thumbHeight": 900,
+          "originalUrl": "https://images.squarespace-cdn.com/content/v1/6970f5e1e1187035b2437d0c/7ce33d8f-8df9-4db1-a6d4-7444387957be/EDC-Rendered-Building.png",
+          "originalWidth": 1600,
+          "originalHeight": 900,
+          "authorName": "Emergent Data Centers — Project Triboro marketing rendering; conceptual, not approval evidence",
+          "authorUrl": "https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf"
+        },
+        {
+          "type": "1",
+          "thumbName": "construction/final68-round2-20261030/639ad5bff8ca63a72ca5d74e.webp",
+          "thumbWidth": 1600,
+          "thumbHeight": 1066,
+          "originalUrl": "https://www.thetimes-tribune.com/wp-content/uploads/2026/10/STT-L-SETTLEMENT-1031-03.jpg",
+          "originalWidth": 1600,
+          "originalHeight": 1066,
+          "authorName": "Sean McKeag / The Times-Tribune — ERCOR Triboro sitework photographed October 29, 2026",
+          "authorUrl": "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/"
+        }
+      ],
+      "mainImage": "https://images.squarespace-cdn.com/content/v1/6970f5e1e1187035b2437d0c/7ce33d8f-8df9-4db1-a6d4-7444387957be/EDC-Rendered-Building.png",
+      "expectedProfile": {
+        "axes": {
+          "scale": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile."
+          },
+          "technical": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark."
+          },
+          "workforce": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes."
+          },
+          "automation": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities."
+          },
+          "efficiency": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort."
+          },
+          "supplyChain": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief."
+          }
+        },
+        "sector": "Infrastructure: data centers",
+        "source": "session",
+        "status": "announced",
+        "metrics": [
+          {
+            "key": "siteArea",
+            "basis": "planned",
+            "label": "Reported property scope",
+            "value": "Nearly 471 acres in the June 26 report; earlier transaction reported as 500 acres",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+              "quote": "nearly 471 acres",
+              "title": "June 26 ERCOR site scope",
+              "publishedDate": "2026-06-26"
+            }
+          },
+          {
+            "key": "products",
+            "basis": "planned",
+            "label": "Proposed campus layout",
+            "value": "Seven two-story data centers and a substation; June 26 revised layout",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+              "quote": "seven buildings",
+              "title": "June 26 revised ERCOR project layout",
+              "publishedDate": "2026-06-26"
+            }
+          },
+          {
+            "key": "stage",
+            "basis": "planned",
+            "label": "Reported planning status",
+            "value": "Separate pending proposal; zoning settlement is not project approval",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "quote": "applied to change its land use",
+              "title": "Project owner / public authority project evidence",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2026-06-10",
+            "basis": "demonstrated",
+            "label": "Separate proposal reported; not construction approval",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "quote": "June 10, 2026",
+              "title": "Project owner / public authority project evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "date": "2026-06-26",
+            "basis": "demonstrated",
+            "label": "Seven-building layout and hearing lawsuit reported; final outcome unverified",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+              "quote": "June 26, 2026",
+              "title": "June 26 ERCOR lawsuit report",
+              "publishedDate": "2026-06-26"
+            }
+          }
+        ],
+        "rubricYear": 2026,
+        "assessmentDate": "2026-10-30"
+      },
+      "profile": {
+        "axes": {
+          "scale": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish a comparable facility cohort and percentile."
+          },
+          "technical": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish a scored sector capability benchmark."
+          },
+          "workforce": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish measured credential or training outcomes."
+          },
+          "automation": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish documented operational automation capabilities."
+          },
+          "efficiency": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish measured resource efficiency with a normalized peer cohort."
+          },
+          "supplyChain": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "The cited project materials do not publish quantified supply-chain bottleneck relief."
+          }
+        },
+        "sector": "Infrastructure: data centers",
+        "source": "session",
+        "status": "construction",
+        "metrics": [
+          {
+            "key": "siteArea",
+            "basis": "planned",
+            "label": "Reported property scope",
+            "value": "Nearly 471 acres in the June 26 report; earlier transaction reported as 500 acres",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+              "quote": "nearly 471 acres",
+              "title": "June 26 ERCOR site scope",
+              "publishedDate": "2026-06-26"
+            }
+          },
+          {
+            "key": "products",
+            "basis": "planned",
+            "label": "Proposed campus layout",
+            "value": "Seven two-story data centers and a substation; June 26 revised layout",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+              "quote": "seven buildings",
+              "title": "June 26 revised ERCOR project layout",
+              "publishedDate": "2026-06-26"
+            }
+          },
+          {
+            "key": "stage",
+            "basis": "planned",
+            "label": "Reported planning status",
+            "value": "Separate pending proposal; zoning settlement is not project approval",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "quote": "applied to change its land use",
+              "title": "Project owner / public authority project evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "capacity",
+            "label": "Reported proposed electricity use",
+            "value": "1 GW proposed demand in October 30 reporting; not committed or operating IT capacity. Developer brochure separately markets phased capacity up to 1.25 GW.",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/",
+              "title": "Opened dated ERCOR Triboro evidence",
+              "quote": "1 gigawatt",
+              "publishedDate": "2026-10-30"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2026-06-10",
+            "basis": "demonstrated",
+            "label": "Separate proposal reported; not construction approval",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/",
+              "quote": "June 10, 2026",
+              "title": "Project owner / public authority project evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "date": "2026-06-26",
+            "basis": "demonstrated",
+            "label": "Seven-building layout and hearing lawsuit reported; final outcome unverified",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/06/26/olyphant-data-center-developer-claims-public-hearings-an-unnecessary-delay/",
+              "quote": "June 26, 2026",
+              "title": "June 26 ERCOR lawsuit report",
+              "publishedDate": "2026-06-26"
+            }
+          },
+          {
+            "label": "Marketed Phase I delivery target; not approval or utility commitment",
+            "date": "Q1 2028",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf",
+              "title": "Opened project-specific evidence",
+              "publishedDate": null,
+              "quote": "300 MW · Q1 2028"
+            }
+          },
+          {
+            "label": "Marketed Phase II delivery target; not approval or utility commitment",
+            "date": "Q2 2029",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.emergentdatacenters.com/s/Triboro-Brochure-62026.pdf",
+              "title": "Opened project-specific evidence",
+              "publishedDate": null,
+              "quote": "700–950 MW · Q2 2029."
+            }
+          },
+          {
+            "label": "Photographed sitework; building approvals remain pending",
+            "date": "2026-10-29",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/10/30/olyphant-considers-agreement-to-settle-data-center-lawsuit-for-101-million/",
+              "title": "Opened dated ERCOR Triboro evidence",
+              "quote": "Sitework is underway",
+              "publishedDate": "2026-10-30"
+            }
+          },
+          {
+            "label": "Scheduled council consideration of settlement and community-benefits agreement",
+            "date": "2026-11-05",
+            "basis": "planned",
+            "source": {
+              "url": "https://olyphantboro.com/site/wp-content/uploads/2026/10/Special-Meeting-11-5-2026.pdf",
+              "title": "Opened dated ERCOR Triboro evidence",
+              "quote": "November 5, 2026",
+              "publishedDate": null
+            }
+          }
+        ],
+        "rubricYear": 2026,
+        "assessmentDate": "2026-10-30"
+      },
+      "mediaCredits": [
+        {
+          "originalUrl": "https://www.thetimes-tribune.com/wp-content/uploads/2026/07/STT-L-OLYPHANT-0611-1.jpg",
+          "authorName": "Frank Wilkes Lesnefsky / The Times-Tribune — June 9, 2026 Olyphant zoning meeting",
+          "authorUrl": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/"
+        },
+        {
+          "originalUrl": "https://www.thetimes-tribune.com/wp-content/uploads/2026/06/STT-L-OLYPHANT-0611-2.jpg?w=620",
+          "authorName": "Frank Wilkes Lesnefsky / The Times-Tribune — June 9, 2026 Olyphant zoning meeting",
+          "authorUrl": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/"
+        },
+        {
+          "originalUrl": "https://www.thetimes-tribune.com/wp-content/uploads/2026/10/STT-L-OLYPHANT-0611-5.jpg?w=620",
+          "authorName": "Frank Wilkes Lesnefsky / The Times-Tribune — June 9, 2026 Olyphant zoning meeting",
+          "authorUrl": "https://www.thetimes-tribune.com/2026/06/10/olyphant-settles-denaples-lawsuit-and-confirms-data-center-regulations/"
+        }
+      ]
+    },
+    {
+      "id": 18964,
+      "patch": {
+        "title": "Project Gold: Revised Six-Building Data Center Proposal in Clifton and Covington",
+        "description": "Project Gold’s revised August 2026 application proposes six single-story data centers across Clifton and Covington townships. The developer estimates USD 18 billion on 998.8 acres and requests 2.2 GW of grid service. Covington has acknowledged the application; hearing preparations remain documented in later township records. Approval, physical construction and a delivery date remain unverified.",
+        "longFormSummary": "<h3>Revised proposal</h3><ul><li>August 21 reporting describes Quantm Group’s revised Project Gold application: six single-story data centers, four in Covington and two in Clifton, totalling just over 2.5 million square feet on 998.8 acres. The developer estimates an USD 18 billion investment. The requested 2.2 GW grid service is a proposed supply requirement, not committed IT capacity.<cite data-ref=\"https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/\"></cite></li></ul><h3>Site and design</h3><ul><li>The proposed campuses straddle Interstate 380 near Dorantown Road and Clifton Beach Road. The revised design uses closed-loop cooling; the developer describes grid-connected battery support and 18 life-safety generators rather than the earlier extensive backup-generator design. Prior site use and an exact construction/completion schedule remain unverified.<cite data-ref=\"https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/\"></cite></li></ul><h3>Public process</h3><ul><li>Covington acknowledged receipt of the conditional-use application on August 24. Receipt does not establish approval.<cite data-ref=\"https://covingtontwp.org/conditional-use-application-received/\"></cite></li></ul><h3>Hearing status</h3><ul><li>September 29 minutes record that the planning commission needed additional review time and that hearing dates were tabled while the township sought a hearing officer.<cite data-ref=\"https://covingtontwp.org/wp-content/uploads/2026/10/2026-09-29-BOS-Work-Session.pdf\"></cite></li></ul><h3>Latest published agenda</h3><ul><li>The October 27 work-session agenda still lists discussion of a hearing officer and hearing dates for Anthony Maras / Quantm Group. An agenda is not a decision or a final court ruling.<cite data-ref=\"https://covingtontwp.org/wp-content/uploads/2026/10/2026-10-27-BOS-Work-Session-Agenda.pdf\"></cite></li></ul><h3>Map evidence</h3><ul><li>The map point and MultiPolygon follow Data Center Tracker’s published approximate Project Gold location. The outline is crowdsourced campus context, not an approved site plan or cadastral survey; it does not certify the stated acreage, power or approval.<cite data-ref=\"https://trackdatacenters.com/usa/pennsylvania#project-gold\"></cite></li></ul>",
+        "price": 18000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "statusTag": "Proposed",
+        "latitude": 41.258696,
+        "longitude": -75.512147
+      },
+      "references": [
+        "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+        "https://covingtontwp.org/conditional-use-application-received/",
+        "https://covingtontwp.org/wp-content/uploads/2026/10/2026-09-29-BOS-Work-Session.pdf",
+        "https://covingtontwp.org/wp-content/uploads/2026/10/2026-10-27-BOS-Work-Session-Agenda.pdf",
+        "https://trackdatacenters.com/usa/pennsylvania#project-gold"
+      ],
+      "profile": {
+        "sector": "Data center campus",
+        "status": "announced",
+        "assessmentDate": "2026-10-30",
+        "rubricYear": 2026,
+        "source": "session",
+        "axes": {
+          "scale": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No published peer cohort or scored capability supports a radar value.",
+            "sources": []
+          },
+          "automation": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No published peer cohort or scored capability supports a radar value.",
+            "sources": []
+          },
+          "technical": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No published peer cohort or scored capability supports a radar value.",
+            "sources": []
+          },
+          "efficiency": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No published peer cohort or scored capability supports a radar value.",
+            "sources": []
+          },
+          "supplyChain": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No published peer cohort or scored capability supports a radar value.",
+            "sources": []
+          },
+          "workforce": {
+            "score": null,
+            "basis": "unknown",
+            "reasoning": "No published peer cohort or scored capability supports a radar value.",
+            "sources": []
+          }
+        },
+        "metrics": [
+          {
+            "key": "investment",
+            "label": "Developer-estimated campus investment",
+            "value": "USD 18 billion; developer estimate reported August 2026, not a committed construction contract",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-21",
+              "quote": "$18 billion investment"
+            }
+          },
+          {
+            "key": "products",
+            "label": "Revised proposed buildings",
+            "value": "Six single-story data centers: four in Covington Township and two in Clifton Township",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-21",
+              "quote": "six"
+            }
+          },
+          {
+            "key": "siteArea",
+            "label": "Reported revised campus site",
+            "value": "998.8 acres across two townships; approximate mapped outline is not the cadastral acreage",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-21",
+              "quote": "998.8 acres"
+            }
+          },
+          {
+            "key": "floorArea",
+            "label": "Reported revised building area",
+            "value": "Just over 2.5 million square feet; single-story buildings",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-21",
+              "quote": "2.5 million"
+            }
+          },
+          {
+            "key": "capacity",
+            "label": "Requested grid-service scope",
+            "value": "2.2 GW requested/planned grid service; not committed IT load or operating capacity",
+            "basis": "planned",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-21",
+              "quote": "2.2 gigawatts"
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "label": "Revised six-building application reported",
+            "date": "2026-08-21",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-21",
+              "quote": "six"
+            }
+          },
+          {
+            "label": "Township acknowledges receipt of conditional-use application",
+            "date": "2026-08-24",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://covingtontwp.org/conditional-use-application-received/",
+              "title": "Opened project-specific evidence",
+              "publishedDate": "2026-08-24",
+              "quote": "Conditional Use Application Received"
+            }
+          },
+          {
+            "label": "Hearing dates tabled while township seeks hearing officer",
+            "date": "2026-09-29",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://covingtontwp.org/wp-content/uploads/2026/10/2026-09-29-BOS-Work-Session.pdf",
+              "title": "Opened project-specific evidence",
+              "publishedDate": null,
+              "quote": "Since there is no hearing officer at this time"
+            }
+          }
+        ]
+      },
+      "siteShape": {
+        "geojson": {
+          "type": "FeatureCollection",
+          "features": [
+            {
+              "type": "Feature",
+              "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                  [
+                    [
+                      [
+                        -75.516721,
+                        41.258788
+                      ],
+                      [
+                        -75.51656,
+                        41.256765
+                      ],
+                      [
+                        -75.516002,
+                        41.255981
+                      ],
+                      [
+                        -75.515257,
+                        41.255656
+                      ],
+                      [
+                        -75.514432,
+                        41.25553
+                      ],
+                      [
+                        -75.513903,
+                        41.252356
+                      ],
+                      [
+                        -75.515578,
+                        41.250499
+                      ],
+                      [
+                        -75.514699,
+                        41.247283
+                      ],
+                      [
+                        -75.513223,
+                        41.248554
+                      ],
+                      [
+                        -75.512427,
+                        41.248854
+                      ],
+                      [
+                        -75.511316,
+                        41.249066
+                      ],
+                      [
+                        -75.509609,
+                        41.2503
+                      ],
+                      [
+                        -75.508278,
+                        41.251569
+                      ],
+                      [
+                        -75.507283,
+                        41.25223
+                      ],
+                      [
+                        -75.507463,
+                        41.253026
+                      ],
+                      [
+                        -75.509637,
+                        41.253142
+                      ],
+                      [
+                        -75.510394,
+                        41.253822
+                      ],
+                      [
+                        -75.511046,
+                        41.256887
+                      ],
+                      [
+                        -75.50586,
+                        41.258321
+                      ],
+                      [
+                        -75.506005,
+                        41.25869
+                      ],
+                      [
+                        -75.505494,
+                        41.258867
+                      ],
+                      [
+                        -75.505683,
+                        41.259373
+                      ],
+                      [
+                        -75.506061,
+                        41.260163
+                      ],
+                      [
+                        -75.507479,
+                        41.258808
+                      ],
+                      [
+                        -75.510807,
+                        41.260461
+                      ],
+                      [
+                        -75.50719,
+                        41.264236
+                      ],
+                      [
+                        -75.50726,
+                        41.265174
+                      ],
+                      [
+                        -75.508409,
+                        41.265149
+                      ],
+                      [
+                        -75.508345,
+                        41.266471
+                      ],
+                      [
+                        -75.507331,
+                        41.26645
+                      ],
+                      [
+                        -75.507337,
+                        41.266854
+                      ],
+                      [
+                        -75.511056,
+                        41.268551
+                      ],
+                      [
+                        -75.517207,
+                        41.262673
+                      ],
+                      [
+                        -75.516721,
+                        41.258788
+                      ]
+                    ]
+                  ],
+                  [
+                    [
+                      [
+                        -75.517457,
+                        41.256471
+                      ],
+                      [
+                        -75.518097,
+                        41.261118
+                      ],
+                      [
+                        -75.518348,
+                        41.263359
+                      ],
+                      [
+                        -75.518703,
+                        41.265798
+                      ],
+                      [
+                        -75.519284,
+                        41.268368
+                      ],
+                      [
+                        -75.519996,
+                        41.270723
+                      ],
+                      [
+                        -75.521377,
+                        41.271971
+                      ],
+                      [
+                        -75.522395,
+                        41.274841
+                      ],
+                      [
+                        -75.522301,
+                        41.278044
+                      ],
+                      [
+                        -75.52252,
+                        41.280658
+                      ],
+                      [
+                        -75.523236,
+                        41.282646
+                      ],
+                      [
+                        -75.524371,
+                        41.285027
+                      ],
+                      [
+                        -75.52972,
+                        41.284853
+                      ],
+                      [
+                        -75.528168,
+                        41.260983
+                      ],
+                      [
+                        -75.52079,
+                        41.261155
+                      ],
+                      [
+                        -75.520079,
+                        41.250415
+                      ],
+                      [
+                        -75.53082,
+                        41.249935
+                      ],
+                      [
+                        -75.529383,
+                        41.244891
+                      ],
+                      [
+                        -75.524024,
+                        41.243286
+                      ],
+                      [
+                        -75.523403,
+                        41.242935
+                      ],
+                      [
+                        -75.522994,
+                        41.242714
+                      ],
+                      [
+                        -75.522566,
+                        41.243006
+                      ],
+                      [
+                        -75.521632,
+                        41.243504
+                      ],
+                      [
+                        -75.520395,
+                        41.243905
+                      ],
+                      [
+                        -75.520491,
+                        41.247163
+                      ],
+                      [
+                        -75.515818,
+                        41.248504
+                      ],
+                      [
+                        -75.516187,
+                        41.249893
+                      ],
+                      [
+                        -75.516875,
+                        41.252789
+                      ],
+                      [
+                        -75.517457,
+                        41.256471
+                      ]
+                    ]
+                  ]
+                ]
+              },
+              "properties": {
+                "kind": "site",
+                "name": "Project Gold — approximate proposed campus outline; not an approved survey",
+                "observedAt": "2026-10-30",
+                "vintage": "2026-10-2",
+                "source": "Data Center Tracker; crowdsourced, approximate location",
+                "sourceUrl": "https://trackdatacenters.com/usa/pennsylvania#project-gold"
+              }
+            }
+          ]
+        },
+        "source": "Data Center Tracker — approximate proposed campus outline",
+        "sourceUrl": "https://trackdatacenters.com/usa/pennsylvania#project-gold"
+      },
+      "reviews": [
+        {
+          "url": "https://www.thetimes-tribune.com/2026/08/21/project-gold-data-center-campus-in-north-pocono-radically-changes-plans/",
+          "title": "Anthony Maras, Quantm Group — revised Project Gold design",
+          "publishedDate": "2026-08-21",
+          "quote": "We’re proud of that.",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "id": 19026,
+      "patch": {
+        "longFormSummary": "<p>Stonebridge Associates proposed a 16-building campus on the 569-acre Powder Mills site across North Beaver and Mahoning townships. A July 2026 report attributed an investment of more than USD 15 billion to the developer.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/data-center-campus-proposed-at-former-dynamite-factory-site-in-lawrence-county-pennsylvania/\"></cite></p><p>The reported proposal does not establish IT-load capacity, construction commencement or final municipal approval. The current approval and appeal position requires a dated municipal or court decision.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/data-center-campus-proposed-at-former-dynamite-factory-site-in-lawrence-county-pennsylvania/\"></cite></p><h3>September zoning and appeal record</h3><ul><li>Mahoning Township’s September 3 notice identifies SS Penn LLC’s appeal of the June 4 zoning letter for Powder Mill Works property at 3478 Howard Drive and 152 McClelland Road, and schedules a September 15 hearing. The notice does not report the outcome.<cite data-ref=\"https://mahoningtownship.net/notices/notice-of-public-hearing/\"></cite></li><li>WKBN reporting republished by AOL on September 11 says North Beaver Township’s board unanimously denied Stonebridge Associates’ appeal. This is a reported appeal decision, not voluntary withdrawal or proof of construction. The written decisions and any later court appeal remain unverified.<cite data-ref=\"https://www.aol.com/articles/zoning-board-denies-appeal-data-230724000.html\"></cite></li></ul><h3>Reported September outcomes</h3><ul><li>The New Castle News reported on September 11 that North Beaver’s zoning board voted 4–0 to deny the appeal. This corroborates the earlier broadcast account; it does not establish voluntary withdrawal.<cite data-ref=\"https://www.ncnewsonline.com/news/local_news/north-beaver-zoning-board-nixes-data-appeal/article_6491e892-b90b-4595-846a-e17d6a72ad18.html\"></cite></li></ul><h3>Mahoning appeal</h3><ul><li>September 17 coverage reports that Mahoning’s board voted 2–0 on September 15 to reject the appeal of the incomplete-application determination. This supplies the previously missing reported outcome. Written rulings and subsequent court proceedings remain research gaps.<cite data-ref=\"https://www.ncnewsonline.com/news/local_news/mahoning-zoning-board-denies-data-center-application-appeal/article_b6ecd3de-1dfd-476b-ae2a-716e063961a7.html\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.ncnewsonline.com/news/local_news/north-beaver-zoning-board-nixes-data-appeal/article_6491e892-b90b-4595-846a-e17d6a72ad18.html",
+        "https://www.ncnewsonline.com/news/local_news/mahoning-zoning-board-denies-data-center-application-appeal/article_b6ecd3de-1dfd-476b-ae2a-716e063961a7.html"
+      ]
+    }
+  ]
+}
