@@ -22,8 +22,11 @@ const LINE_BADGE = {
 // The working behind an estimated figure: every input is tagged as sourced, an assumption, or the result.
 function CostBreakdown({ lines, t }: { lines: FactoryBreakdownLine[]; t: Translator }) {
   return (
-    <div className="mt-3 border-t border-raised-2 pt-3">
-      <h3 className="text-[11px] font-semibold tracking-wide text-muted uppercase">{t('pin.factory.costBreakdown')}</h3>
+    <details className="group mt-3 border-t border-raised-2 pt-3">
+      <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[11px] font-semibold tracking-wide text-link uppercase [&::-webkit-details-marker]:hidden">
+        <span aria-hidden className="inline-block transition-transform group-open:rotate-90 rtl:-scale-x-100">▸</span>
+        {t('pin.factory.costBreakdown')}
+      </summary>
       <ol className="mt-2 space-y-2 text-xs">
         {lines.map((line, i) => (
           <li key={i} className={`rounded-md px-3 py-2 ${line.kind === 'result' ? 'bg-raised-2' : 'bg-raised/60'}`}>
@@ -35,7 +38,7 @@ function CostBreakdown({ lines, t }: { lines: FactoryBreakdownLine[]; t: Transla
                   {t(`pin.factory.breakdown${line.kind === 'sourced' ? 'Sourced' : line.kind === 'assumption' ? 'Assumption' : 'Result'}`)}
                 </span>
               </span>
-              <span className="font-medium tabular-nums">{line.value}</span>
+              <span className={`font-medium tabular-nums ${line.kind === 'result' ? 'text-success' : ''}`}>{line.value}</span>
             </div>
             {line.note ? <p className="mt-1 ps-6 text-muted">{line.note}</p> : null}
             {line.source ? (
@@ -47,8 +50,15 @@ function CostBreakdown({ lines, t }: { lines: FactoryBreakdownLine[]; t: Transla
           </li>
         ))}
       </ol>
-    </div>
+    </details>
   );
+}
+
+// Estimated figures lead with the headline range ("About $63.5 million (range ...)"), shown in the price colour.
+function MetricValue({ value, estimated }: { value: string; estimated: boolean }) {
+  const m = estimated ? /^(.+?\))(.*)$/s.exec(value) : null;
+  if (!m) return <p className="font-medium leading-snug">{value}</p>;
+  return <p className="font-medium leading-snug"><span className="font-semibold text-success">{m[1]}</span>{m[2]}</p>;
 }
 
 export function PinFactoryBuildout({ factory, t, className = '' }: { factory: PinFactoryJson; t: Translator; className?: string }) {
@@ -85,7 +95,7 @@ export function PinFactoryBuildout({ factory, t, className = '' }: { factory: Pi
                 <BasisBadge basis={metric.basis} label={t(`pin.factory.${metric.basis}`)} />
               </dt>
               <dd className="mt-1.5 break-words">
-                <p className="font-medium leading-snug">{metric.value}</p>
+                <MetricValue value={metric.value} estimated={!!metric.breakdown?.length} />
                 <details className="mt-2 text-xs">
                   <summary className="cursor-pointer text-link">{t('pin.factory.source')}</summary>
                   <FactorySource source={metric.source} />
