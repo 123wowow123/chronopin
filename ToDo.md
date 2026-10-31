@@ -1,5 +1,19 @@
 # To Do
 
+## Housing build timelines (October 31, 2026)
+
+**Done, on production and local:** every Housing-tagged pin that is a real build now has one status tag, a `PinFactory` profile with a sourced project timeline, reaction excerpts and the pin's published cost where one exists: 27 status-tagged pins (Oct 30), 38 untagged pins dated 2026 or later, and 103 of 106 older untagged pins. Each quote was re-verified against the live page before saving (`--drop-unverified` drops an item whose page blocks the checker). Government figures win when sources conflict (rule added to `construction-pin-research`). Scripts: `scripts/construction/housing-timelines-2026-10-30.mjs` (apply), `housing-media-2026-10-30.mjs` (pictures), drafts in `.tmp/housing-timeline/`.
+
+- [x] **Pictures for the older pins:** 61 reviewed pictures added to 36 pins on production and local (2026-10-31), each credited and read back; the server dropped 5 duplicates of pictures the pins already had.
+- [ ] **Three held pins:** 7136 Bernice Arms and 7192 Trinity House have no quotable dated milestone; 7146 Faison Mews lost three quotes to blocked pages (only 2 metric keys left). Find a HUD/housing-authority page for each, then re-run the apply script with `--only`.
+- [ ] **Thin pins:** 7140, 7112, 7145, 7163, 7166, 7170, 7173, 7186, 7195 and 7215 have 0-1 milestones and 0-1 reactions (older buildings, little coverage).
+- [ ] **Still short of 3 pictures (prod):** 7044, 7045, 7046, 7049, 7061, 7063, 7108, 7109, 7118, 7121, 7128, 7229 have 2; 7119 has 1; also 7047, 7059, 7203, 7222, 7112 from the first batch. These need more sourced pictures.
+- [ ] **Judgement calls to confirm:** 7182 uses $124.9M (the 279 apartments), not the $174M whole-redevelopment figure; 7221 Neumann North is Completed with its 2025 rehab shown as a metric (In Progress is arguable); 7214 Hildebrand Commons' $33.5M is derived from the city's "60% of cost" statement; 3180 uses the city release's 105 units (Mayor's quote says 112).
+- [ ] **Open facts:** 7205 Bourne & Kenney (financing/construction start unconfirmed); 7238 Warner & Swasey (June 1 vs 2 groundbreaking, whether $64M is Phase I only).
+- [ ] **Non-build Housing pins:** 2923, 3266, 3525, 3614, 3622, 3654, 5993, 5999, 6038 (layoffs, budgets, acquisitions, court rulings) intentionally have no timeline.
+- [ ] **Translations:** the new summary sections and cost/timeline text are English-only; left to the translation agent (owner instruction 2026-10-30).
+- [ ] **Nothing committed:** the scripts, skill edits and this file are uncommitted.
+
 ## Construction map popup and progress bar (October 31, 2026)
 
 **Done and on production (deployed `b55393d`):** map popups label the date `Groundbreak:` (`Withdrawn:` for Withdrawn pins); the pin-page bar runs from start to completion with the start slip in front, `Started …` on the left, `Completes …` on the right, and hoverable milestone dots. Perry's Café (20640) now has a sourced best-estimate end of Feb 15, 2028 on production. `POST /api/admin/pins/expire` is documented in [pin-expire.md](docs/okf/api/pin-expire.md) and both pin skills call it after updates that skip the pin API. Only load-checked on production, not looked at.

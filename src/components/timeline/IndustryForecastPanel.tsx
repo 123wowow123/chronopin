@@ -133,6 +133,41 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
   );
 }
 
+// A projection of a few years (no series behind it) reads as bars: a line
+// needs two points, and a dashed stub says little.
+function Bars({ forecast, large }: { forecast: IndustryForecastJson; large: boolean }) {
+  const { VIEW, PAD, PLOT } = dims(large);
+  const points = forecast.projection?.points ?? [];
+  const hi = Math.max(...points.map((p) => p.value)) * 1.15 || 1;
+  const slot = PLOT.w / points.length;
+  const barW = Math.min(slot * 0.6, large ? 90 : 60);
+  return (
+    <svg viewBox={`0 0 ${VIEW.w} ${VIEW.h}`} className="h-auto w-full" role="img" aria-label={`${forecast.title}: ${forecast.industry}`}>
+      <line x1={PAD.left} x2={VIEW.w - PAD.right} y1={PAD.top + PLOT.h} y2={PAD.top + PLOT.h} className="stroke-line" strokeWidth="1" />
+      {points.map((p, i) => {
+        const h = (p.value / hi) * PLOT.h;
+        const cx = PAD.left + slot * (i + 0.5);
+        return (
+          <g key={p.x}>
+            <rect x={cx - barW / 2} y={PAD.top + PLOT.h - h} width={barW} height={h} rx="2" className="fill-accent" opacity="0.8">
+              <title>{`${p.x}: ${formatForecastValue(forecast, p.value)}`}</title>
+            </rect>
+            <text x={cx} y={PAD.top + PLOT.h - h - 5} textAnchor="middle" className="fill-current text-[13px] font-semibold text-ink tabular-nums">{formatForecastValue(forecast, p.value)}</text>
+            <text x={cx} y={VIEW.h - 6} textAnchor="middle" className="fill-current text-[13px] text-faint">{p.x}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+// The chart a panel gets: bars for a short projection, lines otherwise.
+export function ForecastGraph({ forecast, large = false }: { forecast: IndustryForecastJson; large?: boolean }) {
+  const projected = forecast.projection?.points ?? [];
+  const barsOnly = projected.length > 0 && projected.length <= 6 && forecast.lines.every((l) => l.points.length < 2) && forecast.earlier.length === 0;
+  return barsOnly ? <Bars forecast={forecast} large={large} /> : <Chart forecast={forecast} large={large} />;
+}
+
 function Body({ forecast, large = false }: { forecast: IndustryForecastJson; large?: boolean }) {
   const t = useT();
   const latest = forecast.lines.map((l) => ({ label: l.label, p: l.points.at(-1) })).filter((l): l is { label: string; p: { x: string; value: number } } => !!l.p);
@@ -142,7 +177,7 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
   const shown = expanded ? projected : projected.slice(0, PROJECTED_SHOWN);
   return (
     <>
-      <Chart forecast={forecast} large={large} />
+      <ForecastGraph forecast={forecast} large={large} />
       <ul className={`mt-2 flex flex-wrap gap-x-4 gap-y-1 tabular-nums text-muted ${large ? 'text-sm' : 'text-xs'}`}>
         {latest.map(({ label, p }, i) => (
           <li key={label}>

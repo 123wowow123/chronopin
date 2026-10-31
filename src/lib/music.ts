@@ -318,6 +318,7 @@ export interface CountryGroup {
   countryCode: string;
   countryFlag: string;
   chartName: string;
+  chartNames: string[];
   chartAuthority: string;
   longitude: number;
   rankings: MusicRankingEntry[];
@@ -686,6 +687,7 @@ export function filterAndGroupMusicRankings(
         countryCode: o.code,
         countryFlag: o.flag,
         chartName: charts.join(' · '),
+        chartNames: charts,
         chartAuthority: authorities.join(' · '),
         longitude,
         rankings: list,

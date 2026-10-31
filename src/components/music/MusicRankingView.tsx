@@ -647,9 +647,22 @@ export function MusicRankingView({
                           {gm('musicHere')}
                         </span>
                       </div>
-                      <span className="rounded-md border border-[var(--rule)] bg-[var(--paper-raised)] px-2.5 py-1 text-xs text-[var(--soft)]">
-                        {gm('chartedOn')} <strong className="font-semibold text-[var(--text)]">{countryGroup.chartName}</strong>
-                      </span>
+                      <details className="max-w-full rounded-md border border-[var(--rule)] bg-[var(--paper-raised)] px-2.5 py-1 text-xs text-[var(--soft)]">
+                        <summary className="cursor-pointer">
+                          {gm('chartedOn')}{' '}
+                          <strong className="font-semibold text-[var(--text)]">
+                            {countryGroup.chartNames[0]}
+                            {countryGroup.chartNames.length > 1 ? ` +${countryGroup.chartNames.length - 1}` : ''}
+                          </strong>
+                        </summary>
+                        {countryGroup.chartNames.length > 1 ? (
+                          <ul className="mt-1.5 list-disc space-y-0.5 pl-4">
+                            {countryGroup.chartNames.map((n) => (
+                              <li key={n}>{n}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </details>
                     </div>
 
                     {/* Grid of Editorial Music Ranking Cards */}

@@ -528,10 +528,3 @@ Started 17d ago
 should be released. add varients to this based on pin show me full list of varients
 
 
-all bottom text blob should be in tile form
-https://www.chronopin.com/forecasts/ai
-
-
-unreadable text blob
-https://www.chronopin.com/music#continent=North+America&country=United+States
-Charted on: Luminate Midyear 2026 Top Songs (U.S. on-demand streams) · GfK Top 100 Singles (H1 2026, year to date) · The Official Singapore Chart (RIAS) · Billboard Canadian Hot 100 (year-to-date points, Acharts.co) · Billboard Year-End Hot 100 · Official Charts UK Singles · Circle Digital Chart (year-end) · PROMUSICAE Top 100 Canciones (annual, year-end) · Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) · Billboard Hot 100 · Monitor Latino Mexico Top 100 (annual General) · Singapore Top 30 Digital Streaming (RIAS) · Billboard Canadian Hot 100 · ARIA Top 100 Singles (year-end 2020) · SNEP Top Singles (year-end) · Sverigetopplistan Årslista Singlar · Spotify Singapore Most Streamed Tracks 2017

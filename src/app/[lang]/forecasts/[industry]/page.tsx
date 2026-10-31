@@ -8,7 +8,7 @@ import { LandingMark } from '@/components/ui/LandingMark';
 import Link from '@/components/ui/Link';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 import { siteName } from '@/lib/appConfig';
-import { formatForecastValue, industrySlug, type IndustryForecastJson } from '@/lib/industryForecast';
+import { industrySlug, type IndustryForecastJson } from '@/lib/industryForecast';
 import { alternates, getT } from '@/lib/i18n/server';
 import { localizePath } from '@/lib/i18n/config';
 import { absoluteUrl } from '@/lib/seo';
@@ -112,30 +112,6 @@ async function IndustryForecasts({ params }: Pick<Props, 'params'>) {
           <div className="grid gap-4 [--color-line:var(--rule)] [--color-panel:var(--paper-raised)] md:grid-cols-2 xl:grid-cols-3">
             {page.items.map((f) => <ForecastCard key={f.slug} forecast={f} />)}
           </div>
-        </section>
-        {/* The figures and sources as plain text, so they are in the page whether or not a chart draws. */}
-        <section className={styles.section}>
-          <ul className="space-y-4 text-sm">
-            {page.items.map((f) => {
-              const points = [...(f.projection?.points ?? []), ...f.lines.flatMap((l) => l.points)];
-              return (
-                <li key={f.slug}>
-                  <h2 className="font-medium">{f.title}</h2>
-                  {points.length ? <p className="font-serif text-(--green) tabular-nums">{points.map((p) => `${formatForecastValue(f, p.value)}${p.x ? ` (${p.x})` : ''}`).join(' → ')}</p> : null}
-                  {f.note ? <p className="mt-1 text-(--soft)">{f.note}</p> : null}
-                  <ul className="mt-1 space-y-1 text-xs">
-                    {f.sources.map((s) => (
-                      <li key={s.url}>
-                        <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{s.label}</a>
-                        {s.date ? <span className="text-(--soft)"> · {s.date}</span> : null}
-                        {s.quote ? <span className="text-(--soft) italic"> “{s.quote}”</span> : null}
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            })}
-          </ul>
         </section>
       </div>
     </main>
