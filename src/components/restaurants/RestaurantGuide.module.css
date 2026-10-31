@@ -43,6 +43,7 @@
 .offerMenu { list-style:none; padding:0; margin:10px 0; }
 .offerMenu li { display:flex; justify-content:space-between; gap:16px; font-size:12px; line-height:1.5; padding:8px 0; border-bottom:1px solid var(--rule); }
 .offerMenu strong { text-align:right; flex-shrink:0; max-width:45%; }
+.offerMenuDish { display:flex; align-items:center; gap:10px; min-width:0; }
 .offerMenu small { display:block; color:var(--soft); }
 .offerMenuBlock { margin:16px 0; }
 .offerMenuHeading { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:11px; }

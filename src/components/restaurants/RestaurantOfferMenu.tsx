@@ -3,6 +3,7 @@
 import { useId, useState } from 'react';
 import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
+import { MenuDishPhoto } from '@/components/pin/MenuDishPhoto';
 import { restaurantMenuAmount, restaurantMenuCategories, type RestaurantMenu } from '@/lib/restaurantMenus';
 import styles from './RestaurantGuide.module.css';
 
@@ -15,6 +16,8 @@ export function RestaurantOfferMenu({ menu, restaurant, specials = true }: { men
   const category = categories.find((category) => category === selected) ?? categories[0];
   const items = menu.items.filter((item) => (item.category || 'Menu') === category);
   const shown = expanded ? items : items.slice(0, 6);
+  const gallery = shown.flatMap((item) => item.image ? [item.image] : []);
+  let photoIndex = 0;
   const amount = (price: number) => restaurantMenuAmount(price, menu.currency);
   const source = menu.documentUrl || menu.url;
 
@@ -28,7 +31,7 @@ export function RestaurantOfferMenu({ menu, restaurant, specials = true }: { men
     </div>}
     {shown.length > 0 ? <>
       <ul id={id} className={styles.offerMenu} aria-label={`${restaurant} ${category} ${specials ? 'specials' : 'items'}`}>
-        {shown.map((item, index) => <li key={`${item.name}-${index}`}><span>{item.name}{item.note && <small>{item.note}</small>}</span><strong>{item.priceLabel ?? (item.price != null ? amount(item.price) : 'Price not published')}</strong></li>)}
+        {shown.map((item, index) => <li key={`${item.name}-${index}`}><div className={styles.offerMenuDish}>{item.image && <MenuDishPhoto name={item.name} gallery={gallery} index={photoIndex++} />}<span>{item.name}{item.note && <small>{item.note}</small>}</span></div><strong>{item.priceLabel ?? (item.price != null ? amount(item.price) : 'Price not published')}</strong></li>)}
       </ul>
       {items.length > 6 && <button type="button" className={styles.offerMenuExpand} aria-expanded={expanded} aria-controls={id} onClick={() => setExpanded((expanded) => !expanded)}>{expanded ? 'Show fewer items' : `Show all ${items.length} items`}</button>}
     </> : menu.pages?.length ? <div className={styles.offerMenuPages}>

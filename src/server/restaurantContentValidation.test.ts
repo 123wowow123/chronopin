@@ -18,6 +18,14 @@ describe('restaurant content validation', () => {
     profile.menu!.menus[0].currency = 'invalid';
     expect(() => parseRestaurantContent({ profile })).toThrow('currency');
   });
+  it('retains credited dish photos and rejects incomplete photo evidence', () => {
+    const profile = structuredClone(mume);
+    const item = profile.menu!.menus[0].items[0];
+    item.image = { src: 'https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/mume/dish.webp', caption: item.name, credit: 'MUME', sourceUrl: 'https://mume.tw/menu' };
+    expect(parseRestaurantContent({ profile }).profile.menu!.menus[0].items[0].image).toEqual(item.image);
+    item.image.credit = '';
+    expect(() => parseRestaurantContent({ profile })).toThrow('menu item image');
+  });
   it('requires photo credits, source evidence and Azure storage', () => {
     const profile = structuredClone(mume);
     profile.tile!.image = 'https://mume.tw/images/gallery/02.jpg';

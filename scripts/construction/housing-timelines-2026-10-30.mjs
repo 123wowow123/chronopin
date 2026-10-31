@@ -26,28 +26,28 @@ const norm = (s) => s.replace(/&#8217;|&#039;|&#x27;|&rsquo;|[’‘]/g, "'").re
 const pages = new Map();
 async function pageText(url) {
   if (pages.has(url)) return pages.get(url);
-  let out = '';
+  let all = '';
   for (const ua of ['Mozilla/5.0', null]) {
     try {
       const r = await fetch(url, { headers: ua ? { 'User-Agent': ua } : {}, signal: AbortSignal.timeout(40000) });
       const buf = Buffer.from(await r.arrayBuffer());
       if (buf.subarray(0, 4).toString() === '%PDF') {
         const f = path.join(os.tmpdir(), `q${Date.now()}.pdf`); fs.writeFileSync(f, buf);
-        out = execFileSync('pdftotext', ['-layout', f, '-'], { maxBuffer: 1 << 28 }).toString(); fs.unlinkSync(f);
-      } else out = buf.toString('utf8').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, '').replace(/<[^>]+>/g, ' ');
-    } catch { out = ''; }
-    if (out) break;
+        all += ' ' + execFileSync('pdftotext', ['-layout', f, '-'], { maxBuffer: 1 << 28 }).toString(); fs.unlinkSync(f);
+      } else all += ' ' + buf.toString('utf8').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, '').replace(/<[^>]+>/g, ' ');
+    } catch { /* try the other agent */ }
   }
-  pages.set(url, norm(out)); return pages.get(url);
+  pages.set(url, norm(all)); return pages.get(url);
 }
 async function verify(s, where) {
+  if (s?.url?.startsWith('http://')) s.url = s.url.replace('http://', 'https://');
   if (!s?.url?.startsWith('https://')) throw Error(`${where}: source needs an https url`);
   const t = await pageText(s.url);
   for (const p of s.quote.split('...').map((x) => norm(x).replace(/^[,. ]+|[,. ]+$/g, ''))) if (!t.includes(p)) throw Error(`${where}: quote not found on ${s.url}: ${p.slice(0, 70)}`);
   if (s.quote.length > 300) throw Error(`${where}: quote over 300 chars`);
 }
 const ev = (s) => ({ url: s.url, title: clip(s.title, 1000), publishedDate: s.publishedDate ?? null, quote: s.quote });
-const FSTATUS = { Proposed: 'announced', 'In Progress': 'construction', Completed: 'production' };
+const FSTATUS = { Proposed: 'announced', Withdrawn: 'announced', 'In Progress': 'construction', Completed: 'production' };
 const STATUS = Object.keys(FSTATUS);
 const NA = 'Not scored: a single housing development is not a manufacturing facility, and no capability evidence was published.';
 const axes = () => Object.fromEntries(['scale', 'technical', 'workforce', 'automation', 'efficiency', 'supplyChain'].map((k) => [k, { basis: 'unknown', score: null, sources: [], reasoning: NA }]));
@@ -75,20 +75,26 @@ for (const id of files) {
     for (const s of evRefs) if (!refs.has(s.url)) { refs.add(s.url); newRefs.push({ url: s.url, title: clip(s.title, 500), publishedDate: s.publishedDate ?? null, reasoning: `Source: “${clip(s.quote, 250)}”` }); }
     for (const m of d.summarySectionsHtml?.matchAll(/data-ref="([^"]+)"/g) ?? []) if (!refs.has(m[1])) throw Error(`summary cites a URL not in refs: ${m[1]}`);
 
-    const sum0 = pin.longFormSummary ?? '';
+    const have = await call('GET', `/api/pins/${id}/factory`, undefined, true);
+    // A published budget replaces an earlier estimate (investment metric labelled "Estimated ...").
+    const estMetric = have?.metrics?.find((m) => m.key === 'investment' && /^estimated/i.test(m.label));
+    const replaceEstimate = !!(d.price && pin.price != null && pin.price !== d.price.amount && estMetric);
+    const price = d.price && (pin.price == null || replaceEstimate) ? d.price : null;
+    if (d.price && pin.price != null && pin.price !== d.price.amount && !estMetric) log.push([id, 'note', `kept existing price ${pin.price}; draft says ${d.price.amount}`]);
+
+    let sum0 = pin.longFormSummary ?? '';
+    if (replaceEstimate) sum0 = sum0.replace(/<h3>Estimated cost<\/h3>[\s\S]*?(?=<h3>|$)/, '');
     const firstH3 = d.summarySectionsHtml?.match(/<h3>[^<]+<\/h3>/)?.[0];
     const summary = d.summarySectionsHtml && !(firstH3 && sum0.includes(firstH3)) ? sum0 + d.summarySectionsHtml : sum0;
-    const price = pin.price == null && d.price ? d.price : null;
-
-    const have = await call('GET', `/api/pins/${id}/factory`, undefined, true);
     const factory = have ?? { sector: d.factory.sector ?? 'Residential construction', status: FSTATUS[d.status], assessmentDate: ASSESSED, rubricYear: 2026, source: 'session', axes: axes(), metrics: [] };
     delete factory.checkedAt;
     factory.status = FSTATUS[d.status]; factory.assessmentDate = ASSESSED;
+    if (replaceEstimate) factory.metrics = factory.metrics.filter((m) => m !== estMetric && !(m.key === 'investment' && /^estimated/i.test(m.label)));
     const keys = new Set(factory.metrics.map((m) => m.key));
     for (const m of d.factory.metrics ?? []) {
       if (m.key && keys.has(m.key)) continue;
       keys.add(m.key);
-      factory.metrics.push({ key: m.key, label: m.label, value: m.value, basis: d.status === 'Proposed' ? 'planned' : m.basis, source: ev(m.source) });
+      factory.metrics.push({ key: m.key, label: m.label, value: m.value, basis: FSTATUS[d.status] === 'announced' ? 'planned' : m.basis, source: ev(m.source) });
     }
     factory.metrics = factory.metrics.slice(0, 12);
     factory.milestones = milestones.slice(0, 12).map((m) => ({ label: m.label, date: m.date, basis: m.basis, source: ev(m.source) }));
