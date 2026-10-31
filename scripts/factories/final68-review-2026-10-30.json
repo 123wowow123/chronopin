@@ -1328,5 +1328,32 @@
       "production": 38
     },
     "replay": "scripts/factories/resolutions-2026-10-30-final68-round2.json"
+  },
+  "round3": {
+    "checkedAt": "2026-10-30",
+    "pinsUpdated": [
+      18097
+    ],
+    "profilesAdded": 0,
+    "milestonesAdded": 2,
+    "newResolvedHoldPinIds": [],
+    "remainingEvidenceHolds": 13,
+    "incompleteChildMediaReactionPinIds": [
+      20644,
+      20646,
+      20647
+    ],
+    "remainingLocationDecisionFollowups": [
+      20641,
+      20642,
+      20643,
+      20648
+    ],
+    "jobRunIds": {
+      "local": 39,
+      "production": 39
+    },
+    "translations": "left to separate agent per new AGENTS.md owner instruction; no generated round3 rows published",
+    "replay": "scripts/factories/resolutions-2026-10-30-final68-round3.json"
   }
 }

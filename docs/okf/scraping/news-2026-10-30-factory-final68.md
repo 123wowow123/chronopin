@@ -8,7 +8,7 @@ generated: { by: process:factory-profile-research, at: 2026-10-30T18:52:57Z }
 
 # Exact final 68 review
 
-**Latest follow-up:** two later rounds resolve the SpaceX identity hold, add Project Gold’s profile and approximate GeoJSON, and improve child media/reactions. Current remaining work is **13 project evidence holds plus seven supplemental child follow-ups**; only three children still need media or reactions. Other child gaps concern verified locations or the pending November 5 ERCOR decision. Earlier batch figures below are historical snapshots.
+**Latest follow-up:** three later rounds resolve the SpaceX identity hold, add Project Gold’s profile and approximate GeoJSON, and improve child media/reactions. Current remaining work is **13 project evidence holds plus seven supplemental child follow-ups**; only three children still need media or reactions. Other child gaps concern verified locations or the pending November 5 ERCOR decision. Earlier batch figures below are historical snapshots.
 
 This is the follow-up to [the original 247-candidate batch](news-2026-10-30-factory-queue247.md), using its frozen remaining manifest. Every one of the 68 original records was reviewed. This is **not** a claim of 68 new profiles or zero unresolved evidence gaps.
 
@@ -146,3 +146,18 @@ The construction research skill now includes **GeoJSON when available**: exact s
 Durable **JobRun 38** and its twenty unresolved revisit pins were verified in both environments; the Shuaibah 2 final68 mark is resolved. All **270 translation rows** match their current English hashes and complete shapes. The 21 media entries on the seven enriched children have source credits and downloadable thumbnails in each environment’s serving store. Eight rendered public-page responses show the new content. The skill validator and all nine OKF lint checks pass.
 
 Replay: `scripts/factories/resolutions-2026-10-30-final68-round2.json` takes precedence over earlier final68 payloads; `capability.json` and `final68-review-2026-10-30.json` are synchronized. Ignored `.tmp/factory-final68-round2/` contains opened sources, inspected assets, shape inventory, bilateral readbacks, translation/queue verification and research gaps. No production deployment occurred.
+
+
+## Third follow-up: executed Yellow Pine III records
+
+A further targeted pass found the correct-project [executed abatement agreement](https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-abatement-agreement_yellow-pine-solar-iii-llc---executed.pdf) and [eligibility certificate](https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-coe_yellow-pine-solar-iii-llc---jh-signed.pdf). Agreement page 4 was visually checked: director James Humm signed **June 4, 2026**, and the owner signed **June 5**. The certificate is signed and effective **June 4**. These confirm the tax-abatement record for **AFN 26-0401SPV**, independently of the index’s wrong-project Legal Order hyperlink.
+
+**Yellow Pine III 18097** now has the cited executed records in its summary and two additional profile milestones. Native pin and profile readbacks passed locally and in production, preserving the author, thread parent, stocks, location and null price. The records do **not** reconcile the application’s USD 583.6 million investment with the hearing’s USD 149.9 million figure, supply the missing correct-project findings/order, or prove physical construction or commissioning. Those specific holds remain.
+
+Other targeted checks produced no safe additional location or media updates. EPA ECHO returned zero Texas facilities for both GW Ranch and Pacifico GW, so no regulator point was substituted for the Pecos children. The Shreveport/Caddo planning endpoints remained inaccessible. CEEC’s June 18 Shuaibah article identifies a 600 MW construction package within a larger programme, which does not uniquely establish the separate Shuaibah 1 plant. DOE’s current mine-land programme page and generic award-termination announcement did not establish Nicholas County’s current funding status. No future November 5 ERCOR outcome was inferred.
+
+**No hold was fully resolved in this pass:** **13 evidence holds, three child media/reaction gaps and four location/decision follow-ups** remain. Durable **JobRun 39** records the work in both environments; all twenty unresolved revisit pins were read back, and Yellow Pine’s reason was narrowed to the remaining questions. The replay catalog remains at **1,007 profiles**.
+
+During this pass, a new owner instruction appeared in `AGENTS.md`, assigning translations to a separate agent unless requested in the conversation. The in-progress translation generation was stopped before any generated rows were published. **Translations for this latest Yellow Pine edit are left to that agent.** Earlier rounds’ translation checks above describe their historical snapshots.
+
+Replay: `scripts/factories/resolutions-2026-10-30-final68-round3.json`, with synchronized `capability.json` and review manifest. Opened documents, the signature-page visual check, research findings and bilateral readbacks are in ignored `.tmp/factory-final68-round3/`. All nine OKF lint checks pass. No production deployment occurred.

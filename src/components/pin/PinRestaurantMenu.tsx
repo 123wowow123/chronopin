@@ -16,13 +16,15 @@ function MenuContent({ menu }: { menu: RestaurantMenu }) {
   const amount = (value: number) => restaurantMenuAmount(value, menu.currency);
   const categoryTabs = categories.map((category) => {
     const items = menu.items.filter((item) => (item.category || 'Menu') === category);
+    const gallery = items.flatMap((item) => (item.image ? [item.image] : []));
+    let photoIndex = 0;
     return { label: category, content: <div className={styles.menuItems} tabIndex={0} aria-label={`${category} items`}>
       <section className={styles.category}>
         <div className={styles.categoryHeading}><h4 className={styles.categoryTitle}>{category}</h4><span className={styles.categoryCount} aria-label={`${items.length} items`}>{items.length.toString().padStart(2, '0')}</span></div>
         <dl>{items.map((item, index) => (
           <div key={`${item.name}-${index}`} className={styles.item}>
             <dt className={styles.dish}>
-              <span className={styles.dishLine}>{item.image ? <MenuDishPhoto name={item.name} image={item.image} /> : null}<span className={styles.dishName}>{item.name}</span><span className={styles.leader} aria-hidden="true" /></span>
+              <span className={styles.dishLine}>{item.image ? <MenuDishPhoto name={item.name} gallery={gallery} index={photoIndex++} /> : null}<span className={styles.dishName}>{item.name}</span><span className={styles.leader} aria-hidden="true" /></span>
               {item.note ? <span className={styles.dishNote}>{item.note}</span> : null}
             </dt>
             <dd className={styles.price}>{item.price != null ? amount(item.price) : item.priceLabel || 'Price not published'}</dd>

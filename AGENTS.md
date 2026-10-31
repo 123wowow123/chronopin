@@ -41,6 +41,8 @@ In the 06:00 and 18:00 news job, create `Predicted` pins (`dateConfidence: 'esti
 
 Owner instruction, 2026-10-29: keep active production pins translated across all 15 supported non-English locales (`es`, `fr`, `de`, `ja`, `zh`, `ko`, `hi`, `ar`, `th`, `it`, `ru`, `pt`, `ms`, `vi`, `id`) with matching `sourceHash` and complete `wholeTranslation` shapes (`title`, `description`, `longFormSummary`, `dateConfidenceReasoning`, `delayReasoning`). Never place model tracking notes (such as `Translations completed using Gemini 3.8 Flash.`) in public pin or translation content (`Pin.longFormSummary`, `Pin.description`, or `PinTranslation.*`); record translation attribution strictly in the backing `SourceWiki` without mutating `Source.status` or `Source.wikiVersion` on unbuilt sources. Use `.agents/skills/prod-translations/` to check coverage, synchronize due pins, and audit content for leaks.
 
+Owner instruction, 2026-10-30: in pin research, creation and editing sessions (development/construction pins, enrichment, etc.), do **not** run pin translations (`sync_translations.py`, `/api/admin/translations`, or hand translation) unless the owner asks for them in that conversation. A different agent handles translations. Save the pin and say translations are left to that agent.
+
 ## Project skills
 
 Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.

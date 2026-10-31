@@ -1,0 +1,276 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Third final68 follow-up: executed Yellow Pine III primary records and remaining-gap audit",
+  "signatureVerification": "Agreement p4 visually checked: James Humm June4; owner Christine Seal June5. Certificate p1 text signed/effectiveJune4.",
+  "edits": [
+    {
+      "id": 18097,
+      "patch": {
+        "description": "Yellow Pine Solar III’s 2026 Nevada application describes 100 MWac of solar and 225 MW of storage on 1,008.94 acres. It targets Q2 2026 construction and Q2 2027 operation. Nevada approved tax abatements June 3; a June 4 eligibility certificate and June 4–5 signatures confirm the agreement. Conflicting investment scopes and the actual construction stage remain unresolved.",
+        "longFormSummary": "<h3>Phase-specific filing</h3><ul><li>Yellow Pine Solar III LLC’s 2026 Nevada application describes a 100 MWac solar facility co-located with 225 MW of battery storage in Clark County. The site is 1,008.94 acres at 6901 Tecopa Road. Solar generation and storage power are separate ratings; no storage duration is inferred.<cite data-ref=\"https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf\"></cite></li></ul><h3>Schedule and regulatory process</h3><ul><li>The application anticipates construction beginning in Q2 2026 and commercial operation in Q2 2027. The June 3 tax-abatement hearing does not verify that physical construction has started or that the facility is operational.<cite data-ref=\"https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf\"></cite></li><li>Nevada’s June 3 hearing minutes identify this application as AFN 26-0401SPV and record approval of the partial tax-abatement application. No public comments were made at either public-comment period.<cite data-ref=\"https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/hearing-minutes-yellow-pine-solar-iii-llc.pdf\"></cite></li></ul><h3>Cost conflict</h3><ul><li>The application lists USD 583.6 million total capital investment, with 25% expended in Nevada. The hearing minutes instead record approximately USD 149.9 million investment in the facility. These are not treated as interchangeable construction budgets; price remains unpublished pending reconciliation of the scope and final agreement.<cite data-ref=\"https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf\"></cite></li><li>The state index’s link labelled Legal Order opens a Libra Solar order rather than a Yellow Pine III order. The wrong-project document is excluded from this profile.<cite data-ref=\"https://www.energy.nv.gov/programs/renewable-energy-tax-abatement-reta-program/renewable-energy-tax-abatement-projects-2026/\"></cite></li></ul><h3>Executed tax-abatement records</h3><ul><li>The executed agreement identifies Yellow Pine Solar III and application AFN 26-0401SPV, made June 3, 2026. Its signature page shows the state director signing June 4 and the owner signing June 5. It authorizes partial tax abatements; it does not establish physical construction, commissioning or a reconciled construction budget.<cite data-ref=\"https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-abatement-agreement_yellow-pine-solar-iii-llc---executed.pdf\"></cite></li><li>The eligibility certificate is signed and effective June 4, 2026. This is the correct project’s tax-eligibility record, separate from the state index’s wrong-project Legal Order hyperlink.<cite data-ref=\"https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-coe_yellow-pine-solar-iii-llc---jh-signed.pdf\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-abatement-agreement_yellow-pine-solar-iii-llc---executed.pdf",
+        "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-coe_yellow-pine-solar-iii-llc---jh-signed.pdf"
+      ],
+      "expectedProfile": {
+        "axes": {
+          "scale": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "technical": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "workforce": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "automation": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "efficiency": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "supplyChain": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          }
+        },
+        "sector": "Energy: solar and battery storage",
+        "source": "session",
+        "status": "announced",
+        "metrics": [
+          {
+            "key": "capacity",
+            "basis": "planned",
+            "label": "Filed solar and storage scope",
+            "value": "100 MWac solar; 225 MW battery power; duration unpublished",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "100 MW",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "siteArea",
+            "basis": "planned",
+            "label": "Filed facility land",
+            "value": "1,008.94 acres",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "1,008.94",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "basis": "planned",
+            "label": "Filed commercial operation target",
+            "value": "Q2 2027, planned",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "Q2 2027",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "date": "Q2 2026",
+            "basis": "planned",
+            "label": "Filed anticipated construction start",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "Q2 2026",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "date": "2026-06-03",
+            "basis": "demonstrated",
+            "label": "Tax-abatement hearing and approval",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/hearing-minutes-yellow-pine-solar-iii-llc.pdf",
+              "quote": "June 3, 2026",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "date": "Q2 2027",
+            "basis": "planned",
+            "label": "Filed commercial operation target",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "Q2 2027",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          }
+        ],
+        "rubricYear": 2026,
+        "assessmentDate": "2026-10-30"
+      },
+      "profile": {
+        "axes": {
+          "scale": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "technical": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "workforce": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "automation": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "efficiency": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          },
+          "supplyChain": {
+            "basis": "unknown",
+            "score": null,
+            "sources": [],
+            "reasoning": "No published peer cohort or scored project capability supports a radar value."
+          }
+        },
+        "sector": "Energy: solar and battery storage",
+        "source": "session",
+        "status": "announced",
+        "metrics": [
+          {
+            "key": "capacity",
+            "basis": "planned",
+            "label": "Filed solar and storage scope",
+            "value": "100 MWac solar; 225 MW battery power; duration unpublished",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "100 MW",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "siteArea",
+            "basis": "planned",
+            "label": "Filed facility land",
+            "value": "1,008.94 acres",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "1,008.94",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "key": "timeline",
+            "basis": "planned",
+            "label": "Filed commercial operation target",
+            "value": "Q2 2027, planned",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "Q2 2027",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          }
+        ],
+        "milestones": [
+          {
+            "date": "Q2 2026",
+            "basis": "planned",
+            "label": "Filed anticipated construction start",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "Q2 2026",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "date": "2026-06-03",
+            "basis": "demonstrated",
+            "label": "Tax-abatement hearing and approval",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/hearing-minutes-yellow-pine-solar-iii-llc.pdf",
+              "quote": "June 3, 2026",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "date": "Q2 2027",
+            "basis": "planned",
+            "label": "Filed commercial operation target",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/yps3-reta-redacted.pdf",
+              "quote": "Q2 2027",
+              "title": "Opened project-specific primary evidence",
+              "publishedDate": null
+            }
+          },
+          {
+            "label": "Eligibility certificate signed and effective",
+            "date": "2026-06-04",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-coe_yellow-pine-solar-iii-llc---jh-signed.pdf",
+              "title": "Visually verified executed Yellow Pine III tax record",
+              "publishedDate": null,
+              "quote": "SIGNED AND EFFECTIVE this 4th day of June, 2026."
+            }
+          },
+          {
+            "label": "Owner signs abatement agreement after June 4 state signature",
+            "date": "2026-06-05",
+            "basis": "demonstrated",
+            "source": {
+              "url": "https://www.energy.nv.gov/contentassets/ecb91b2330d345a1bc872bc879534cbd/final-abatement-agreement_yellow-pine-solar-iii-llc---executed.pdf",
+              "title": "Visually verified executed Yellow Pine III tax record",
+              "publishedDate": null,
+              "quote": "Yellow Pine Solar III, LLC"
+            }
+          }
+        ],
+        "rubricYear": 2026,
+        "assessmentDate": "2026-10-30"
+      }
+    }
+  ]
+}
