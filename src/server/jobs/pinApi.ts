@@ -143,6 +143,12 @@ export async function updatePin(id: number, patch: PinPatch): Promise<PinJson> {
   return saved;
 }
 
+// Drops the cached pages of pins written by a route that does not expire them (direct SQL,
+// the admin table API), on the host the run writes to. Admin endpoint, 1-200 ids.
+export async function expirePins(ids: number[]): Promise<{ expired: number[] }> {
+  return call<{ expired: number[] }>('POST', '/api/admin/pins/expire', { token: await adminToken('pin cache expiry'), body: { ids } });
+}
+
 // The two below replay local readings through their dedicated endpoints as
 // the pin's author, without rewriting the rest of the pin. They do
 // nothing unless the run writes to production, and a failure is logged by the

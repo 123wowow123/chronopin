@@ -36,6 +36,9 @@ Five column lists in `src/server/model/user.ts`; user-editable fields must join 
 - Throwaway accounts: sign up, test, then delete rows by SQL. `scripts/data/e2eAdmin.ts` promotes an e2e account.
 - **PUT is a whole-pin write**: GET omits null fields, so round-trip carefully and never send partial bodies.
 - Admin tables: `/api/admin/db` CRUD (audited).
+- **Force a pin's cache refresh**: `POST /api/admin/pins/expire {ids:[...]}` (admin, `docs/okf/api/pin-expire.md`). Pin pages
+  are cached for hours; call it after every update that skipped the pin API (SQL, `/api/admin/db`, side tables), on
+  each host written, then reload the page. `expirePins(ids)` in `src/server/jobs/pinApi.ts` does it for jobs.
 
 ## Posting pins to prod
 Only when asked. Log in as the vertical's curator, check duplicates via `GET /api/pins/search?q=`, validate drafts,

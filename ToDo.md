@@ -1,5 +1,16 @@
 # To Do
 
+## Construction cost estimates (October 31, 2026)
+
+**Done and on production (deployed `98fcccc`):** 69 pins priced: 15 estimates with a "How this estimate was built" breakdown, 42 published costs and 11 whole-project figures labelled "Whole-project cost". Each was read back on the live site. Details, held pins and lessons: [docs/construction-cost-estimates-2026-10-31.md](docs/construction-cost-estimates-2026-10-31.md).
+
+- [ ] **Translations:** the new Cost section and breakdown text on these ~70 pins is English-only. Left to the translation agent (owner instruction 2026-10-30); run `prod-translations` when asked.
+- [ ] **Held pins (~55):** a figure exists but covers a larger scope, is stale or conflicts (e.g. 529 BER, 524 Senna Tower, 583 Line 15, 683 40 Leadenhall); list in the doc. Decide per pin: keep null, label as whole-project, or find a better source.
+- [ ] **2235 Singapore Eastern General Hospital:** currently the midpoint (S$1.605B) of two aggregator figures for one tender. Find the primary GeBIZ or MOH award notice (base offer vs optional offers) and replace the estimate with the real figure.
+- [ ] **Stadiums, hospitals, hotels, campuses (no estimate possible from open sources):** 685, 2209, 2221, 2244, 2211, 2270, 2197, 3117, 735, 15279. Needs a purchased per-seat, per-bed or per-key benchmark (HVS, Arcadis, Turner & Townsend) or a sourced seat or area count.
+- [ ] **Energy and data-center pins (~1,000 unpriced, untouched):** per-MW or per-kWh estimates are feasible for solar and storage, but many are Withdrawn or Planned queue requests with no real project. Needs Ian's go-ahead on scope first.
+- [ ] **Cosmetic:** for a single published per-unit figure (pin 2166) the breakdown still shows a "Cost range" line with the same number twice.
+
 ## Restaurant dish photos (updated October 30, 2026)
 
 **Latest pass:** 18 new visually reviewed photographs saved in 22 menu-item attachments across seven restaurants; five unsuitable attachments removed after checking 42 existing photos. Azure uploads and full API readbacks verified. San Diego specials now have photos on **189/280 saved venue profiles (970 item attachments)**; these are storage counts, not a claim that every profile has a backing pin or visible guide card. [Report and remaining gaps](docs/restaurant-dish-photos-2026-10-30.md); [photo evidence and per-item gaps](docs/restaurant-dish-photos-2026-10-30.json).

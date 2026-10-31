@@ -69,6 +69,12 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   explicit owner in-service report takes precedence over a conflicting preliminary inventory entry; retain
   the conflict in the research record and use the owner evidence in the profile.
 
+## Expire the cache after every update
+After any pin update (dates, price, status tag, profile, media, timeline), expire its cached page on each host you
+wrote: `POST /api/admin/pins/expire {"ids":[<id>]}` (admin; local and production), then confirm the page shows the
+change. The pin API already expires on a normal save; direct SQL, `/api/admin/db` and side-table writes do not, and the
+page keeps the old reading for hours. Docs: `docs/okf/api/pin-expire.md`.
+
 ## 3. Power plants: `PinPower` (`kind: 'generation'`)
 - Save via `PUT /api/pins/:id/power`, verify locally and in production.
 - Match capacity to the unit, phase and period. Distinguish net/gross electrical MW from thermal MW, and annual

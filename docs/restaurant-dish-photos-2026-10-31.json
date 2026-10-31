@@ -1,0 +1,4304 @@
+{
+  "checkedAt": "2026-10-31",
+  "addedPhotos": 53,
+  "addedAttachments": 53,
+  "newlyCoveredVenues": 44,
+  "sanDiegoBefore": {
+    "venues": 280,
+    "withPhotos": 189,
+    "attachments": 970
+  },
+  "sanDiegoAfter": {
+    "venues": 280,
+    "withPhotos": 233,
+    "attachments": 1023
+  },
+  "allSpecialsAfter": {
+    "venues": 1547,
+    "withPhotos": 236,
+    "attachments": 1030
+  },
+  "resolvedNativePins": 22,
+  "withoutExactSourcePin": [
+    121,
+    955,
+    964,
+    973,
+    1014,
+    1021,
+    1024,
+    1030,
+    1045,
+    1058,
+    1066,
+    1075,
+    1083,
+    1101,
+    1102,
+    1116,
+    1121,
+    1128,
+    1131,
+    1133,
+    1138,
+    1165
+  ],
+  "profilesReviewed": 91,
+  "targetedPhotoSearches": 45,
+  "fieldPreservationVerified": true,
+  "publicAzureCurlChecks": 53,
+  "nativeBrowserChecks": [
+    {
+      "pinId": 20490,
+      "name": "Gravity Heights Sorrento Valley",
+      "stripPhotos": 3,
+      "itemThumbnails": 3,
+      "lightboxImageLoaded": true,
+      "lightboxCreditVerified": true,
+      "loading": "eager"
+    },
+    {
+      "pinId": 20549,
+      "name": "Bonchon - Convoy",
+      "stripPhotos": 1,
+      "itemThumbnails": 1,
+      "lightboxImageLoaded": true,
+      "lightboxCreditVerified": true,
+      "loading": "eager"
+    },
+    {
+      "pinId": 20582,
+      "name": "Sura Korean BBQ - Chula Vista",
+      "stripPhotos": 1,
+      "itemThumbnails": 1,
+      "lightboxImageLoaded": true,
+      "lightboxCreditVerified": true,
+      "loading": "eager"
+    }
+  ],
+  "additions": [
+    {
+      "kind": "specials",
+      "id": 26,
+      "pinSourceUrl": "https://www.gravityheights.com/sorrento-mesa",
+      "menuLabel": "Tapa the Hour",
+      "itemName": "Patatas bravas",
+      "caption": "Patatas bravas, Gravity Heights Sorrento Valley",
+      "credit": "Photo via Yelp, Gravity Heights Sorrento Valley",
+      "sourceUrl": "https://www.yelp.com/biz_photos/gravity-heights-sorrento-valley-san-diego-2?select=vhZL3jT4wncCza21_ntaEQ",
+      "sourceCaption": "Patatas Bravas. Golden crispy and coated with smoky harissa mayo.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/gravity-heights-sorrento-valley-san-diego-2/vhZL3jT4wncCza21_ntaEQ-0249159faaae3d8b.webp",
+        "width": 1000,
+        "height": 667
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 26,
+      "pinSourceUrl": "https://www.gravityheights.com/sorrento-mesa",
+      "menuLabel": "Tapa the Hour",
+      "itemName": "Tinga tacos",
+      "caption": "Tinga tacos, Gravity Heights Sorrento Valley",
+      "credit": "Photo via Yelp, Gravity Heights Sorrento Valley",
+      "sourceUrl": "https://www.yelp.com/biz_photos/gravity-heights-sorrento-valley-san-diego-2?select=oyv1m4ZoNsbxHb7sQiXYBQ",
+      "sourceCaption": "Tinga Tacos. Tender chicken, great flavors.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/gravity-heights-sorrento-valley-san-diego-2/oyv1m4ZoNsbxHb7sQiXYBQ-8a29aaf31dabc35f.webp",
+        "width": 1000,
+        "height": 667
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 26,
+      "pinSourceUrl": "https://www.gravityheights.com/sorrento-mesa",
+      "menuLabel": "Tapa the Hour",
+      "itemName": "La pizza",
+      "caption": "La pizza, Gravity Heights Sorrento Valley",
+      "credit": "Photo via Yelp, Gravity Heights Sorrento Valley",
+      "sourceUrl": "https://www.yelp.com/biz_photos/gravity-heights-sorrento-valley-san-diego-2?select=I99jNG9Us3Ya4Y7HeaCUjA",
+      "sourceCaption": "La Pizza (Pepperoni). Personal-sized with crispy little pepperoni cups and a soft chewy crust.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/gravity-heights-sorrento-valley-san-diego-2/I99jNG9Us3Ya4Y7HeaCUjA-7cfbc0f599250718.webp",
+        "width": 1000,
+        "height": 667
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 165,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1826",
+      "menuLabel": "Weekday lunch menu",
+      "itemName": "Jamaican Jerk Pork Belly",
+      "caption": "Jamaican Jerk Pork Belly, NINE-TEN",
+      "credit": "Photo via Yelp, NINE-TEN",
+      "sourceUrl": "https://www.yelp.com/biz_photos/nine-ten-la-jolla-6?select=1UylXPkpZ2o3QwhulumNOA",
+      "sourceCaption": "Jamaican Jerk Pork Belly",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/nine-ten-la-jolla-6/1UylXPkpZ2o3QwhulumNOA-7b8d1cc7ae08bb43.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 165,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1826",
+      "menuLabel": "Weekday lunch menu",
+      "itemName": "Smoked Salmon & Avocado Toast",
+      "caption": "Smoked Salmon & Avocado Toast, NINE-TEN",
+      "credit": "Photo via Yelp, NINE-TEN",
+      "sourceUrl": "https://www.yelp.com/biz_photos/nine-ten-la-jolla-6?select=wa_cEFub62BqzOhvgDCwMA",
+      "sourceCaption": "Smoked salmon & avocado toast",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/nine-ten-la-jolla-6/wa_cEFub62BqzOhvgDCwMA-52c46d80e9bab8e9.webp",
+        "width": 1000,
+        "height": 751
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 973,
+      "pinSourceUrl": "https://www.thefishmarket.com/location/san-diego/",
+      "menuLabel": "Happy hour",
+      "itemName": "Cheesy Garlic Bread",
+      "caption": "Cheesy Garlic Bread, The Fish Market San Diego",
+      "credit": "Photo via Yelp, The Fish Market San Diego",
+      "sourceUrl": "https://www.yelp.com/biz_photos/the-fish-market-san-diego-san-diego-2?select=rXK7WoeHI6wlnHrVJy2hNg",
+      "sourceCaption": "Cheesy garlic bread",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/the-fish-market-san-diego-san-diego-2/rXK7WoeHI6wlnHrVJy2hNg-0c69324a9cbde210.webp",
+        "width": 1000,
+        "height": 615
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 987,
+      "pinSourceUrl": "https://www.herbandsea.com",
+      "menuLabel": "Happy hour",
+      "itemName": "Oysters (6)",
+      "caption": "Oysters (6), Herb & Sea",
+      "credit": "Photo via Yelp, Herb & Sea",
+      "sourceUrl": "https://www.yelp.com/biz_photos/herb-and-sea-encinitas-2?select=KVEtvOLr6-B9ZJhD7fkbvQ",
+      "sourceCaption": "Half Dozen Oysters (East Coast / West Coast)",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/herb-and-sea-encinitas-2/KVEtvOLr6-B9ZJhD7fkbvQ-3d9a8da0eeb27731.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1021,
+      "pinSourceUrl": "https://kalaveras.com/chula-vista/",
+      "menuLabel": "Happy hour",
+      "itemName": "Loaded Asada Fries HH",
+      "caption": "Loaded Asada Fries HH, Kalaveras - Chula Vista",
+      "credit": "Photo via Yelp, Kalaveras - Chula Vista",
+      "sourceUrl": "https://www.yelp.com/biz_photos/kalaveras-chula-vista?select=Axdk7Vs4XECg0-AF9dVobA",
+      "sourceCaption": "Loaded Asada Fries HH",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/kalaveras-chula-vista/Axdk7Vs4XECg0-AF9dVobA-7797afda3c053c0e.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1116,
+      "pinSourceUrl": "https://www.islandsrestaurants.com/locations/chula-vista/",
+      "menuLabel": "Happy Hour",
+      "itemName": "Deep Blue Sea",
+      "caption": "Deep Blue Sea, Islands Restaurant - Eastlake",
+      "credit": "Photo via Yelp, Islands Restaurant - Eastlake",
+      "sourceUrl": "https://www.yelp.com/biz_photos/islands-restaurant-chula-vista-2?select=1Ld7ihm1w3ebSOubb7fDeg",
+      "sourceCaption": "Deep blue sea cocktail",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/islands-restaurant-chula-vista-2/1Ld7ihm1w3ebSOubb7fDeg-0b208ba5358822fb.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1142,
+      "pinSourceUrl": "https://www.abcuisine.com/",
+      "menuLabel": "Lunch special",
+      "itemName": "Chicken Shawarma - marinated chicken cooked on a spit, thinly sliced",
+      "caption": "Chicken Shawarma - marinated chicken cooked on a spit, thinly sliced, Ali Baba Mediterranean Cuisine - Escondido",
+      "credit": "Photo via Yelp, Ali Baba Mediterranean Cuisine - Escondido",
+      "sourceUrl": "https://www.yelp.com/biz_photos/ali-baba-mediterranean-cuisine-of-escondido-escondido-3?select=MJS10mnSv-_Zb9oMpUFfmg",
+      "sourceCaption": "Chicken Shawarma Plate",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/ali-baba-mediterranean-cuisine-of-escondido-escondido-3/MJS10mnSv-_Zb9oMpUFfmg-5e56180473ae56e4.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1142,
+      "pinSourceUrl": "https://www.abcuisine.com/",
+      "menuLabel": "Lunch special",
+      "itemName": "Chicken Tikka - marinated grilled chicken breast",
+      "caption": "Chicken Tikka - marinated grilled chicken breast, Ali Baba Mediterranean Cuisine - Escondido",
+      "credit": "Photo via Yelp, Ali Baba Mediterranean Cuisine - Escondido",
+      "sourceUrl": "https://www.yelp.com/biz_photos/ali-baba-mediterranean-cuisine-of-escondido-escondido-3?select=P7H71opiEY7oAfJeJHl3Pw",
+      "sourceCaption": "Chicken Tikka Kabob",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/ali-baba-mediterranean-cuisine-of-escondido-escondido-3/P7H71opiEY7oAfJeJHl3Pw-24cfa89b7a80e080.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 967,
+      "pinSourceUrl": "https://www.greystonesteakhouse.com/menus/happy-hour/",
+      "menuLabel": "Happy hour",
+      "itemName": "Greystone's Lobster Rolls",
+      "caption": "Greystone's Lobster Rolls, Greystone Prime Steakhouse & Seafood",
+      "credit": "Photo via Yelp, Greystone Prime Steakhouse & Seafood",
+      "sourceUrl": "https://www.yelp.com/biz_photos/greystone-prime-steakhouse-and-seafood-san-diego-3?select=txqJPZfqy1zxZqfLZ8HRmw",
+      "sourceCaption": "Lobster Rolls",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/greystone-prime-steakhouse-and-seafood-san-diego-3/txqJPZfqy1zxZqfLZ8HRmw-430a999c23122eb3.webp",
+        "width": 1000,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 967,
+      "pinSourceUrl": "https://www.greystonesteakhouse.com/menus/happy-hour/",
+      "menuLabel": "Happy hour",
+      "itemName": "Point Reyes Blue Cheese Baby Iceberg Wedge Salad",
+      "caption": "Point Reyes Blue Cheese Baby Iceberg Wedge Salad, Greystone Prime Steakhouse & Seafood",
+      "credit": "Photo via Yelp, Greystone Prime Steakhouse & Seafood",
+      "sourceUrl": "https://www.yelp.com/biz_photos/greystone-prime-steakhouse-and-seafood-san-diego-3?select=lTlhc69wteapY86fP9bk3w",
+      "sourceCaption": "Point Reyes Blue Cheese Baby Iceberg Wedge Salad",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/greystone-prime-steakhouse-and-seafood-san-diego-3/lTlhc69wteapY86fP9bk3w-d2c9b8da18b039e3.webp",
+        "width": 667,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1058,
+      "pinSourceUrl": "https://thehangoutrestaurantandbar.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Wings",
+      "caption": "Wings, The Hangout Restaurant and Bar",
+      "credit": "Photo via Yelp, The Hangout Restaurant and Bar",
+      "sourceUrl": "https://www.yelp.com/biz_photos/the-hangout-san-diego?select=Nvq-jcX9uHWXA6mL0dA5zQ",
+      "sourceCaption": "These wings are chonkyyyy! $1 each on HH. Minimum 6. Th-Sun 3pm-6pm.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/the-hangout-san-diego/Nvq-jcX9uHWXA6mL0dA5zQ-7a577055e742d19a.webp",
+        "width": 1000,
+        "height": 455
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1101,
+      "pinSourceUrl": "https://understorybar.com/happy-hour-menu/",
+      "menuLabel": "Happy hour",
+      "itemName": "Olive Sunbird Dirty Martini",
+      "caption": "Olive Sunbird Dirty Martini, Understory Bar",
+      "credit": "Photo via Yelp, Understory Bar",
+      "sourceUrl": "https://www.yelp.com/biz_photos/understory-bar-san-diego?select=2otu8tQScR-Wzj3T6cGsqQ",
+      "sourceCaption": "The Olive Sunbird {Dirty Martini}",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/understory-bar-san-diego/2otu8tQScR-Wzj3T6cGsqQ-e47d7d7c486cd52f.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 955,
+      "pinSourceUrl": "https://www.sandbarsportsgrill.com/specials/",
+      "menuLabel": "Daily specials",
+      "itemName": "Wings",
+      "caption": "Wings, Sandbar Sports Grill",
+      "credit": "Photo via Yelp, Sandbar Sports Grill",
+      "sourceUrl": "https://www.yelp.com/biz_photos/sandbar-sports-bar-and-grill-san-diego?select=aKHLXJ5947aVyR3K79Mh_Q",
+      "sourceCaption": "Wings!",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sandbar-sports-bar-and-grill-san-diego/aKHLXJ5947aVyR3K79Mh_Q-1bb727de66fc1da1.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 995,
+      "pinSourceUrl": "https://waraiisushi.com/",
+      "menuLabel": "Lunch specials",
+      "itemName": "Special roll combo",
+      "caption": "Special roll combo, Waraii Sushi",
+      "credit": "Photo via Yelp, Waraii Sushi",
+      "sourceUrl": "https://www.yelp.com/biz_photos/waraii-sushi-oceanside?select=-MblAfcgRrTefFkfhAlbYQ",
+      "sourceCaption": "Special Roll Lunch Combos",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/waraii-sushi-oceanside/-MblAfcgRrTefFkfhAlbYQ-b610565d1a47b9e7.webp",
+        "width": 1000,
+        "height": 701
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1038,
+      "pinSourceUrl": "https://barellapb.com/best-happy-hour-san-diego/",
+      "menuLabel": "Nightly specials",
+      "itemName": "Oysters",
+      "caption": "Oysters, bar Ella",
+      "credit": "Photo via Yelp, bar Ella",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bar-ella-pacific-beach-san-diego?select=tfqn43SaPsq8PzhkuWf7pA",
+      "sourceCaption": "Oysters",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bar-ella-pacific-beach-san-diego/tfqn43SaPsq8PzhkuWf7pA-37041e904731949f.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1128,
+      "pinSourceUrl": "https://powaypub.com/menu.html",
+      "menuLabel": "Daily lunch specials",
+      "itemName": "12 Wings",
+      "caption": "12 Wings, Poway's Irish Pub",
+      "credit": "Photo via Yelp, Poway's Irish Pub",
+      "sourceUrl": "https://www.yelp.com/biz_photos/poways-irish-pub-poway?select=8p__6PDSOZ8oz9IxyycYdg",
+      "sourceCaption": "Wings deal on Wednesday. 12 wings 10$",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/poways-irish-pub-poway/8p__6PDSOZ8oz9IxyycYdg-cf40aebf13b54bb7.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1131,
+      "pinSourceUrl": "https://downtowncafe-ec.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Cheese Burger",
+      "caption": "Cheese Burger, Downtown Cafe Bar & Grill",
+      "credit": "Photo via Yelp, Downtown Cafe Bar & Grill",
+      "sourceUrl": "https://www.yelp.com/biz_photos/downtown-cafe-bar-and-grill-el-cajon?select=OwF4jaSxiRRGczG3twyG-A",
+      "sourceCaption": "Happy hour cheeseburger snd a side of fries",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/downtown-cafe-bar-and-grill-el-cajon/OwF4jaSxiRRGczG3twyG-A-8e8ffb06fabb8425.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1045,
+      "pinSourceUrl": "https://chefjun.com/menu-bayho",
+      "menuLabel": "Lunch specials",
+      "itemName": "Lunch Sashimi Special",
+      "caption": "Lunch Sashimi Special, Chef JUN – Bay Ho",
+      "credit": "Photo via Yelp, Chef JUN – Bay Ho",
+      "sourceUrl": "https://www.yelp.com/biz_photos/chef-jun-bay-ho-san-diego-4?select=DxDHnAdosYk58CyAJefmcw",
+      "sourceCaption": "Lunch Sashimi Special",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/chef-jun-bay-ho-san-diego-4/DxDHnAdosYk58CyAJefmcw-130b75a38f8856c0.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1014,
+      "pinSourceUrl": "https://www.sushiloungesd.com/menu/sushi-lounge-point-loma",
+      "menuLabel": "Chronic Mondays",
+      "itemName": "Chronic Roll",
+      "caption": "Chronic Roll, Sushi Lounge - Point Loma",
+      "credit": "Photo via Yelp, Sushi Lounge - Point Loma",
+      "sourceUrl": "https://www.yelp.com/biz_photos/sushi-lounge-point-loma-2?select=eRIVLt0oK-xtPK40DDjHuA",
+      "sourceCaption": "Chronic Roll- half off on Mondays",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sushi-lounge-point-loma-2/eRIVLt0oK-xtPK40DDjHuA-30b8f3a651b39a31.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 31,
+      "pinSourceUrl": "https://www.brigantine.com/locations/portside-pier/",
+      "menuLabel": "Happy hour",
+      "itemName": "Clam chowder",
+      "caption": "Clam chowder, Brigantine Portside Pier",
+      "credit": "Photo via Yelp, Brigantine Portside Pier",
+      "sourceUrl": "https://www.yelp.com/biz_photos/brigantine-portside-pier-san-diego?select=BdjUAjn7uFFkR2R_ZaesXw",
+      "sourceCaption": "Clam chowder",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/brigantine-portside-pier-san-diego/BdjUAjn7uFFkR2R_ZaesXw-47ba460c1e9dfcd3.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 27,
+      "pinSourceUrl": "https://www.gravityheights.com/mission-valley",
+      "menuLabel": "Tapa the Hour",
+      "itemName": "Tinga tacos",
+      "caption": "Tinga tacos, Gravity Heights Mission Valley",
+      "credit": "Photo via Yelp, Gravity Heights Mission Valley",
+      "sourceUrl": "https://www.yelp.com/biz_photos/gravity-heights-mission-valley-san-diego?select=LShu8ANZi-t0XjLEvnmUUA",
+      "sourceCaption": "Happy Hour Chicken Tinga Tacos",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/gravity-heights-mission-valley-san-diego/LShu8ANZi-t0XjLEvnmUUA-f6e7b6e5ea4acdee.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1138,
+      "pinSourceUrl": "https://osullivansescondido.com/specials",
+      "menuLabel": "Happy hour",
+      "itemName": "Curry Chips",
+      "caption": "Curry Chips, O'Sullivan's Irish Pub - Escondido",
+      "credit": "Photo via Yelp, O'Sullivan's Irish Pub - Escondido",
+      "sourceUrl": "https://www.yelp.com/biz_photos/o-sullivans-irish-pub-escondido?select=De-ZqRZWyZWtWvDjIYDrNA",
+      "sourceCaption": "Curry fries",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/o-sullivans-irish-pub-escondido/De-ZqRZWyZWtWvDjIYDrNA-59bf7067492805ea.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1121,
+      "pinSourceUrl": "http://fasttimessd.com/san-diego-fast-times-happy-hours-specials",
+      "menuLabel": "Weekday food specials",
+      "itemName": "Wings",
+      "caption": "Wings, Fast Times",
+      "credit": "Photo via Yelp, Fast Times",
+      "sourceUrl": "https://www.yelp.com/biz_photos/fast-times-san-diego?select=2bEW9y1t-28opgewL1MyvQ",
+      "sourceCaption": "Wings",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/fast-times-san-diego/2bEW9y1t-28opgewL1MyvQ-2fd8b8febd67f033.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1100,
+      "pinSourceUrl": "https://cafelunasd.com/san-diego-northeastern-san-diego-cafe-luna-happy-hours-specials",
+      "menuLabel": "Saturday special",
+      "itemName": "Pork Osso Bucco",
+      "caption": "Pork Osso Bucco, Cafe Luna",
+      "credit": "Photo via Yelp, Cafe Luna",
+      "sourceUrl": "https://www.yelp.com/biz_photos/cafe-luna-san-diego?select=x9g-Ohcw_5PmJ-AsvEHgEA",
+      "sourceCaption": "Pork Ossobuco with mashed potatoes",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/cafe-luna-san-diego/x9g-Ohcw_5PmJ-AsvEHgEA-d3194b095f793d5a.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1102,
+      "pinSourceUrl": "https://eurekarestaurantgroup.com/locations/san-diego-utc",
+      "menuLabel": "Weekly specials",
+      "itemName": "Double Smash Burger & Fries",
+      "caption": "Double Smash Burger & Fries, Eureka! - San Diego (UTC)",
+      "credit": "Photo via Yelp, Eureka! - San Diego (UTC)",
+      "sourceUrl": "https://www.yelp.com/biz_photos/eureka-san-diego-9?select=bNNCW8mfc1ja-X-sihh4Gw",
+      "sourceCaption": "Double smash burger and fries",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/eureka-san-diego-9/bNNCW8mfc1ja-X-sihh4Gw-5f5d77225513c7bc.webp",
+        "width": 563,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1028,
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/mission-valley",
+      "menuLabel": "Happy hour",
+      "itemName": "Chips & housemade guacamole + salsa",
+      "caption": "Chips & housemade guacamole + salsa, BJ's Restaurant & Brewhouse - Mission Valley",
+      "credit": "Photo via Yelp, BJ's Restaurant & Brewhouse - Mission Valley",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-san-diego-2?select=j_NFXrnCSi8a8QeqNKeqRg",
+      "sourceCaption": "Housemade Guacamole And Chips",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bjs-restaurant-and-brewhouse-san-diego-2/j_NFXrnCSi8a8QeqNKeqRg-b29c8b377da60ad3.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1029,
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/carlsbad",
+      "menuLabel": "Happy hour",
+      "itemName": "Chips & housemade guacamole + salsa",
+      "caption": "Chips & housemade guacamole + salsa, BJ's Restaurant & Brewhouse - Carlsbad",
+      "credit": "Photo via Yelp, BJ's Restaurant & Brewhouse - Carlsbad",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-carlsbad-2?select=uwOULpXNt8IKg9GgYgzIqA",
+      "sourceCaption": "Chips & Housemade Guacamole Salsa",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bjs-restaurant-and-brewhouse-carlsbad-2/uwOULpXNt8IKg9GgYgzIqA-c308cd27b644f3ac.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1030,
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/chula-vista",
+      "menuLabel": "Happy hour",
+      "itemName": "Chips & housemade guacamole + salsa",
+      "caption": "Chips & housemade guacamole + salsa, BJ's Restaurant & Brewhouse - Chula Vista",
+      "credit": "Photo via Yelp, BJ's Restaurant & Brewhouse - Chula Vista",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-chula-vista?select=adAzRhRfrQmCs6NQU3qvpg",
+      "sourceCaption": "1.7.20 Housemade Guacamole, Fire Roasted Salsa and Chips... highly recommend!",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bjs-restaurant-and-brewhouse-chula-vista/adAzRhRfrQmCs6NQU3qvpg-74ae81309cc4e170.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1031,
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/escondido",
+      "menuLabel": "Happy hour",
+      "itemName": "Chips & housemade guacamole + salsa",
+      "caption": "Chips & housemade guacamole + salsa, BJ's Restaurant & Brewhouse - Escondido",
+      "credit": "Photo via Yelp, BJ's Restaurant & Brewhouse - Escondido",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-escondido?select=liiLezxq4jOI3sP6YmPQJA",
+      "sourceCaption": "Chips & Housemade Guacamole Salsa",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bjs-restaurant-and-brewhouse-escondido/liiLezxq4jOI3sP6YmPQJA-b16fa568e2222b21.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1032,
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/la-jolla",
+      "menuLabel": "Happy hour",
+      "itemName": "Chips & housemade guacamole + salsa",
+      "caption": "Chips & housemade guacamole + salsa, BJ's Restaurant & Brewhouse - La Jolla",
+      "credit": "Photo via Yelp, BJ's Restaurant & Brewhouse - La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-la-jolla-4?select=qvgn1Wnw6qdTgDcXNTxMzA",
+      "sourceCaption": "Chips & Housemade Guacamole Salsa",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bjs-restaurant-and-brewhouse-la-jolla-4/qvgn1Wnw6qdTgDcXNTxMzA-9a2ce7278bc53815.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 121,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1427722",
+      "menuLabel": "Happy hour",
+      "itemName": "Margarita",
+      "caption": "Margarita, Origen",
+      "credit": "Photo via Yelp, Origen",
+      "sourceUrl": "https://www.yelp.com/biz_photos/origen-san-diego-2?select=e1VuVff6_OkX-YzgWaGXWA",
+      "sourceCaption": "Margarita",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/origen-san-diego-2/e1VuVff6_OkX-YzgWaGXWA-58c9b13ccea0c744.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 128,
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1432870",
+      "menuLabel": "Happy hour",
+      "itemName": "Sweet Shishito Pepper Calamari",
+      "caption": "Sweet Shishito Pepper Calamari, Dive Coronado",
+      "credit": "Photo via Yelp, Dive Coronado",
+      "sourceUrl": "https://www.yelp.com/biz_photos/dive-coronado-2?select=xenP9IQBfad3CMkU6rrzZA",
+      "sourceCaption": "Calamari",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/dive-coronado-2/xenP9IQBfad3CMkU6rrzZA-f02f349071f84560.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1164,
+      "pinSourceUrl": "https://romescomexmed.com/page/happy-hour",
+      "menuLabel": "Happy hour",
+      "itemName": "Beef Short Rib Torta Slider",
+      "caption": "Beef Short Rib Torta Slider, Romesco Mexiterranean Bistro (three pictured)",
+      "credit": "Photo via Yelp, Romesco Mexiterranean Bistro",
+      "sourceUrl": "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?select=rMDdED5zmAzhcTNDA3OAFQ",
+      "sourceCaption": "Short rib sliders are so moist and full of flavor! A must try!",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/romesco-mexiterranean-bistro-bonita-3/rMDdED5zmAzhcTNDA3OAFQ-641dce41775f8dc2.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1075,
+      "pinSourceUrl": "http://www.coronadotavern.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Mini Brussels Sprouts",
+      "caption": "Mini Brussels Sprouts, Tavern",
+      "credit": "Photo via Yelp, Tavern",
+      "sourceUrl": "https://www.yelp.com/biz_photos/tavern-coronado-2?select=R3cFOJ2E5MGnHNH3joG-qw",
+      "sourceCaption": "Mini Brussels Sprouts (happy hour menu)",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/tavern-coronado-2/R3cFOJ2E5MGnHNH3joG-qw-b2f1689b9285a85a.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1075,
+      "pinSourceUrl": "http://www.coronadotavern.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Mini Mac 'n Cheese",
+      "caption": "Mini Mac 'n Cheese, Tavern",
+      "credit": "Photo via Yelp, Tavern",
+      "sourceUrl": "https://www.yelp.com/biz_photos/tavern-coronado-2?select=S13D82RV29s9klaY-MIvMw",
+      "sourceCaption": "Mini Mac n Cheese (happy hour)",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/tavern-coronado-2/S13D82RV29s9klaY-MIvMw-85bec9bbb8083d14.webp",
+        "width": 1000,
+        "height": 666
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1144,
+      "pinSourceUrl": "https://www.harrysfallbrook.com/specials",
+      "menuLabel": "Happy hour",
+      "itemName": "Loaded Chili Cheese Fries",
+      "caption": "Loaded Chili Cheese Fries, Harry's Sports Bar & Grill",
+      "credit": "Photo via Yelp, Harry's Sports Bar & Grill",
+      "sourceUrl": "https://www.yelp.com/biz_photos/harrys-sports-bar-and-grill-fallbrook?select=Yz9e8B7O0iOVzi001jUNHw",
+      "sourceCaption": "Chili Cheese Fries",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/harrys-sports-bar-and-grill-fallbrook/Yz9e8B7O0iOVzi001jUNHw-6cc3919deef05ceb.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1066,
+      "pinSourceUrl": "http://garagekitchenbar.com/",
+      "menuLabel": "Bottomless mimosas",
+      "itemName": "Bottomless Mimosas",
+      "caption": "Bottomless Mimosas, GARAGE Kitchen + Bar",
+      "credit": "Photo via Yelp, GARAGE Kitchen + Bar",
+      "sourceUrl": "https://www.yelp.com/biz_photos/garage-kitchen-bar-san-diego-4?select=-xHbNyAY7KCO4swC1N-q4Q",
+      "sourceCaption": "Bottomless mimosa",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/garage-kitchen-bar-san-diego-4/-xHbNyAY7KCO4swC1N-q4Q-b53a5d0e5b1d3a10.webp",
+        "width": 562,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1133,
+      "pinSourceUrl": "https://mainstreampoway.net/poway-mainstream-bar-and-grill-happy-hours-specials",
+      "menuLabel": "Sunday Funday",
+      "itemName": "Mimosas",
+      "caption": "Mimosas, Mainstream Bar & Grill - Poway",
+      "credit": "Photo via Yelp, Mainstream Bar & Grill - Poway",
+      "sourceUrl": "https://www.yelp.com/biz_photos/mainstream-bar-and-grill-poway?select=ujWwo7_3wprvTSQ1i6f4dA",
+      "sourceCaption": "Bottomless mimosas!",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/mainstream-bar-and-grill-poway/ujWwo7_3wprvTSQ1i6f4dA-84af59507c4609c8.webp",
+        "width": 562,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1002,
+      "pinSourceUrl": "https://www.casadebandini.com/cantina",
+      "menuLabel": "Happy hour",
+      "itemName": "House margaritas",
+      "caption": "House margaritas, Casa de Bandini",
+      "credit": "Photo via Yelp, Casa de Bandini",
+      "sourceUrl": "https://www.yelp.com/biz_photos/casa-de-bandini-at-the-forum-carlsbad?select=f7HR9qIftORUrnUf9EehMw",
+      "sourceCaption": "Med House Margarita",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/casa-de-bandini-at-the-forum-carlsbad/f7HR9qIftORUrnUf9EehMw-31bdc7d1e9e2a1f9.webp",
+        "width": 563,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1169,
+      "pinSourceUrl": "https://www.nozomisushilajolla.com/",
+      "menuLabel": "Sake bomb Wednesdays & Thursdays",
+      "itemName": "Sake bomb",
+      "caption": "Sake bomb, Nozomi Sushi & BBQ La Jolla",
+      "credit": "Photo via Yelp, Nozomi Sushi & BBQ La Jolla",
+      "sourceUrl": "https://www.yelp.com/biz_photos/nozomi-la-jolla?select=gyNz42ADRNqLhQ0rjBEg7Q",
+      "sourceCaption": "Sake Bombers!",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/nozomi-la-jolla/gyNz42ADRNqLhQ0rjBEg7Q-d01a784f1732071c.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1083,
+      "pinSourceUrl": "https://www.avantrestaurant.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Parker House Roll",
+      "caption": "Parker House Roll, AVANT Restaurant at Rancho Bernardo Inn",
+      "credit": "Photo via Yelp, AVANT Restaurant at Rancho Bernardo Inn",
+      "sourceUrl": "https://www.yelp.com/biz_photos/avant-restaurant-san-diego-2?select=WduQcp8BPimGwdZopjyB3A",
+      "sourceCaption": "parker house roll",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/avant-restaurant-san-diego-2/WduQcp8BPimGwdZopjyB3A-c00f237844e052b3.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1083,
+      "pinSourceUrl": "https://www.avantrestaurant.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Local blue fin tuna",
+      "caption": "Local blue fin tuna, AVANT Restaurant at Rancho Bernardo Inn (pictured as bluefin tuna crudo)",
+      "credit": "Photo via Yelp, AVANT Restaurant at Rancho Bernardo Inn",
+      "sourceUrl": "https://www.yelp.com/biz_photos/avant-restaurant-san-diego-2?select=1evG4GzTIYfvTHBHpsW01A",
+      "sourceCaption": "Blue Fin Tuna Crudo",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/avant-restaurant-san-diego-2/1evG4GzTIYfvTHBHpsW01A-068026ff6c97b8d5.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1024,
+      "pinSourceUrl": "https://tajimaramen.com/tajima-crown-point/",
+      "menuLabel": "Happy hour",
+      "itemName": "Chicken katsu bun",
+      "caption": "Chicken katsu bun, Tajima Ramen - Crown Point",
+      "credit": "Photo via Yelp, Tajima Ramen - Crown Point",
+      "sourceUrl": "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?select=-vnhY4IiJF7t6qDl5dAEoA",
+      "sourceCaption": "Chicken Katsu Bun",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/tajima-ramen-crown-point-san-diego-11/-vnhY4IiJF7t6qDl5dAEoA-feda75d72a29a860.webp",
+        "width": 1000,
+        "height": 751
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1024,
+      "pinSourceUrl": "https://tajimaramen.com/tajima-crown-point/",
+      "menuLabel": "Happy hour",
+      "itemName": "Edamame",
+      "caption": "Edamame, Tajima Ramen - Crown Point (two bowls pictured)",
+      "credit": "Photo via Yelp, Tajima Ramen - Crown Point",
+      "sourceUrl": "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?select=v05oyQ5t4tMweR_JfotENQ",
+      "sourceCaption": "Salted Edamame.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/tajima-ramen-crown-point-san-diego-11/v05oyQ5t4tMweR_JfotENQ-2484f2bda01c4e04.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1024,
+      "pinSourceUrl": "https://tajimaramen.com/tajima-crown-point/",
+      "menuLabel": "Happy hour",
+      "itemName": "Karaage",
+      "caption": "Karaage, Tajima Ramen - Crown Point",
+      "credit": "Photo via Yelp, Tajima Ramen - Crown Point",
+      "sourceUrl": "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?select=sPJJuGz_Bicd5Z7JBme6gA",
+      "sourceCaption": "Karaage.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/tajima-ramen-crown-point-san-diego-11/sPJJuGz_Bicd5Z7JBme6gA-ef0065c5a38bb81b.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 964,
+      "pinSourceUrl": "https://lapuertasd.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Quesadillas",
+      "caption": "Quesadillas, La Puerta Mission Hills",
+      "credit": "Photo via Yelp, La Puerta Mission Hills",
+      "sourceUrl": "https://www.yelp.com/biz_photos/la-puerta-san-diego-3?select=F1G1nyr5wFGri_ITvu1Nzw",
+      "sourceCaption": "Weekend HH Quesadillas (half off)",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/la-puerta-san-diego-3/F1G1nyr5wFGri_ITvu1Nzw-2053ab8eb0813287.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1062,
+      "pinSourceUrl": "https://keyandcleaver.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Wings",
+      "caption": "Wings, Key and Cleaver",
+      "credit": "Photo via Yelp, Key and Cleaver",
+      "sourceUrl": "https://www.yelp.com/biz_photos/key-and-cleaver-san-diego?select=WzTUMZuFHWz6R6uRYywRlg",
+      "sourceCaption": "Wings",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/key-and-cleaver-san-diego/WzTUMZuFHWz6R6uRYywRlg-73cf614fed80d911.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1165,
+      "pinSourceUrl": "https://ilpostosd.com/",
+      "menuLabel": "Happy hour",
+      "itemName": "Aperol Spritz",
+      "caption": "Aperol Spritz, Il Posto (two pictured)",
+      "credit": "Photo via Yelp, Il Posto",
+      "sourceUrl": "https://www.yelp.com/biz_photos/il-posto-san-diego-3?select=KNkKx1HeJ_F034B0YbVCeA",
+      "sourceCaption": "Aperol spritz",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/il-posto-san-diego-3/KNkKx1HeJ_F034B0YbVCeA-e2daac6ea418ea48.webp",
+        "width": 750,
+        "height": 1000
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1110,
+      "pinSourceUrl": "https://surakbbqsd.com/menus/",
+      "menuLabel": "Lunch special",
+      "itemName": "Bento box - take-out only",
+      "caption": "Bento box - take-out only, Sura Korean BBQ - Chula Vista",
+      "credit": "Photo via Yelp, Sura Korean BBQ - Chula Vista",
+      "sourceUrl": "https://www.yelp.com/biz_photos/sura-kbbq-chula-vista?select=SNxE7m0nY5DASgMi217f-Q",
+      "sourceCaption": "BENTO BOX",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sura-kbbq-chula-vista/SNxE7m0nY5DASgMi217f-Q-863ddd0e61ffcbd1.webp",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 985,
+      "pinSourceUrl": "https://restaurants.bonchon.com/locations/ca/san-diego/4690-convoy-st-suite-102",
+      "menuLabel": "Dine-in daily special",
+      "itemName": "$1 Wings Special",
+      "caption": "$1 Wings Special, Bonchon - Convoy",
+      "credit": "Photo via Yelp, Bonchon - Convoy",
+      "sourceUrl": "https://www.yelp.com/biz_photos/bonchon-san-diego-2?select=GQXGDyLn8UlOUtR8uKJnxg",
+      "sourceCaption": "$1 Chicken Wings :)",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/bonchon-san-diego-2/GQXGDyLn8UlOUtR8uKJnxg-877674a44dcba044.webp",
+        "width": 750,
+        "height": 1000
+      }
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "kind": "specials",
+      "id": 1020,
+      "pinSourceUrl": "https://thesearchbareastlake.com/page/happy-hour",
+      "menuLabel": "Taco Tuesday",
+      "itemName": "Tri tip or pollo asado tacos (3)",
+      "caption": "Tri tip or pollo asado tacos (3), The Search Bar & Restaurant - EastLake",
+      "credit": "Yelp reviewer photo, The Search Bar & Restaurant - EastLake",
+      "sourceUrl": "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?select=SFhigi4wSkV5vnpLNpkTyg",
+      "sourceCaption": "Tri Tip Tacos",
+      "reviewed": false,
+      "reason": "The photograph shows two tacos; the menu explicitly specifies three. Branch street-name discrepancy also needs verification."
+    },
+    {
+      "kind": "specials",
+      "id": 1010,
+      "pinSourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-santee/",
+      "menuLabel": "Lunch specials",
+      "itemName": "Two-piece fish n' chips",
+      "caption": "Two-piece fish n' chips, Oggi's Sports | Brewhouse | Pizza - Santee",
+      "credit": "Yelp reviewer photo, Oggi's Sports | Brewhouse | Pizza - Santee",
+      "sourceUrl": "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?select=VQdX8ePOs81S0Q9CN_6Abg",
+      "sourceCaption": "Fish and Chips. Nom nom nom!",
+      "reviewed": false,
+      "reason": "This photograph shows three fish pieces; the menu explicitly specifies two."
+    },
+    {
+      "sourceUrl": "https://www.yelp.com/biz_photos/eureka-san-diego-9?select=YUHhpipGML3mHAb85LM_Dg",
+      "sourceCaption": "$9 double smash burger and fries every Wednesday",
+      "reason": "The photograph shows a sidewalk sign, not the dish. Replaced by an actual labelled burger-and-fries photo before saving."
+    }
+  ],
+  "venueOutcomes": [
+    {
+      "venueId": 26,
+      "name": "Gravity Heights Sorrento Valley",
+      "address": "9920 Pacific Heights Boulevard, San Diego, CA 92121",
+      "pinSourceUrl": "https://www.gravityheights.com/sorrento-mesa",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/gravity-heights-sorrento-valley-san-diego-2"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 3,
+      "nativePin": {
+        "id": 20490,
+        "title": "Gravity Heights Sorrento Valley — San Diego restaurant guide",
+        "href": "/pin/20490/gravity-heights-sorrento-valley-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Tapa the Hour",
+          "items": [
+            "Full pours of house beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 27,
+      "name": "Gravity Heights Mission Valley",
+      "address": "525 Camino De La Reina, Suite 101, San Diego, CA 92108",
+      "pinSourceUrl": "https://www.gravityheights.com/mission-valley",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/gravity-heights-mission-valley-san-diego",
+        "https://www.yelp.com/biz_photos/gravity-heights-mission-valley-san-diego?search=tinga"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "tinga",
+          "url": "https://www.yelp.com/biz_photos/gravity-heights-mission-valley-san-diego?search=tinga",
+          "matchingCaptions": [
+            "Tinga Tacos",
+            "Tinga Tacos",
+            "Tinga Tacos. Ig @mel_foodie_ventures",
+            "HH chicken tinga tacos",
+            "Happy Hour Chicken Tinga Tacos",
+            "Tinga tacos & spring fling spritz",
+            "Tinga Tacos: chicken, aji verde, onion, cilantro",
+            "Chicken Tinga Tacos ( On Happy Hour)  aji verde crema, onions, cilantro",
+            "island nectar, stop and smell the roses, la pizza (cheese), and tinga tacos",
+            "Tinga Tacos were delicious. Almost forgot to take a photo. Pairs nicely with a pint of Undertow hazy DIPA."
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20491,
+        "title": "Gravity Heights Mission Valley — San Diego restaurant guide",
+        "href": "/pin/20491/gravity-heights-mission-valley-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Tapa the Hour",
+          "items": [
+            "Patatas bravas",
+            "La pizza",
+            "Full pours of house beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 31,
+      "name": "Brigantine Portside Pier",
+      "address": "1360 North Harbor Drive, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.brigantine.com/locations/portside-pier/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/brigantine-portside-pier-san-diego?search=clam+chowder",
+        "https://www.yelp.com/biz_photos/brigantine-portside-pier-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "clam chowder",
+          "url": "https://www.yelp.com/biz_photos/brigantine-portside-pier-san-diego?search=clam+chowder",
+          "matchingCaptions": [
+            "Clam chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam Chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam Chowder",
+            "clam chowder",
+            "Clam Chowder",
+            "Clam chowder",
+            "Clam Chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam chowder",
+            "Clam Chowder",
+            "Clam chowder",
+            "Clam chowder"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20501,
+        "title": "Brigantine Portside Pier — San Diego restaurant guide",
+        "href": "/pin/20501/brigantine-portside-pier-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "3 oysters on the half shell",
+            "2 oyster shooters",
+            "Calamari strips",
+            "Potato skins",
+            "Napa Valley nachos",
+            "Flatbread",
+            "House salad",
+            "Sliders: ahi tuna, wagyu beef, fried fish, pulled pork or free bird chicken",
+            "Draft beers",
+            "Glass of house red or white wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 35,
+      "name": "Queenstown Public House",
+      "address": "1557 Columbia Street, San Diego, CA 92101",
+      "pinSourceUrl": "https://queenstownpublichouse.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/queenstown-public-house-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Bites",
+            "House wines",
+            "Sangrias",
+            "Select cocktails",
+            "Two 12 oz beers"
+          ]
+        },
+        {
+          "menuLabel": "No Tariff Mondays",
+          "items": [
+            "Well cocktails",
+            "Select appetizers",
+            "Select entrees"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 121,
+      "name": "Origen",
+      "address": "3831 Park Blvd, San Diego, CA 92103-3609",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1427722",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/origen-san-diego-2?search=margarita",
+        "https://www.yelp.com/biz_photos/origen-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "margarita",
+          "url": "https://www.yelp.com/biz_photos/origen-san-diego-2?search=margarita",
+          "matchingCaptions": [
+            "Margaritas",
+            "Margarita",
+            "Margaritas",
+            "Margarita",
+            "Margarita",
+            "Margarita",
+            "Mock Margarita",
+            "Spicy Margarita",
+            "margarita with tajin rim (mezcal)",
+            "Margarita",
+            "Margarita & Mezcalina",
+            "Paloma, margarita",
+            "Aguachile and margarita",
+            "HH margarita and mezcalina",
+            "Margarita and Carajillo",
+            "Paloma, margaritas, salmon crudo, guacamole mango ceviche, aquachile",
+            "PeeEing our pantz at a proud baritone singer. Banana dessert, free margaritas"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Mezcalina",
+            "Michelada",
+            "House Red",
+            "House White"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 128,
+      "name": "Dive Coronado",
+      "address": "1417 Orange Ave, Coronado, CA 92118-2948",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1432870",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/dive-coronado-2",
+        "https://www.yelp.com/biz_photos/dive-coronado-2?search=calamari",
+        "https://www.yelp.com/biz_photos/dive-coronado-2?search=chicken",
+        "https://www.yelp.com/biz_photos/dive-coronado-2?search=clams"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "chicken",
+          "url": "https://www.yelp.com/biz_photos/dive-coronado-2?search=chicken",
+          "matchingCaptions": []
+        },
+        {
+          "term": "clams",
+          "url": "https://www.yelp.com/biz_photos/dive-coronado-2?search=clams",
+          "matchingCaptions": []
+        },
+        {
+          "term": "calamari",
+          "url": "https://www.yelp.com/biz_photos/dive-coronado-2?search=calamari",
+          "matchingCaptions": [
+            "Calamari"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20540,
+        "title": "Dive Coronado — San Diego restaurant guide",
+        "href": "/pin/20540/dive-coronado-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Guacamole and House Made Salsa",
+            "Bower Clams",
+            "Chicken Street Tacos",
+            "Baja Shrimp Tostada",
+            "Grilled Achiote Octopus",
+            "Argyle Pinot Noir",
+            "Fremont Brewing Golden Pilsner",
+            "Stone Brewing Buenaveza",
+            "Coronado Brewing Aloha Warrior IPA",
+            "Squealing Pig Pinot Grigio",
+            "Modern Times Orderville Hazy IPA"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 165,
+      "name": "NINE-TEN",
+      "address": "910 Prospect St., San Diego, CA 92037",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1826",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/nine-ten-la-jolla-6",
+        "https://www.yelp.com/biz_photos/nine-ten-la-jolla-6?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 2,
+      "nativePin": {
+        "id": 20518,
+        "title": "NINE-TEN — San Diego restaurant guide",
+        "href": "/pin/20518/nine-ten-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Wine Down Wednesday",
+          "items": [
+            "Any bottle of wine on the wine list"
+          ]
+        },
+        {
+          "menuLabel": "Weekday lunch menu",
+          "items": [
+            "House-Made Sourdough Country Bread",
+            "Gluten-Free Olive & Rosemary Bread",
+            "Blistered Shishito Peppers",
+            "Tuna Crudo",
+            "Hamachi Sashimi",
+            "Baby Lettuce \"Caesar\" Salad",
+            "Kale Salad",
+            "Farro Salad",
+            "Grilled Adobada Shrimp Tacos",
+            "Reuben Sandwich",
+            "Black Bean Ravioli",
+            "Grilled Spanish Octopus",
+            "Nine-Ten Burger",
+            "Pan Seared Salmon",
+            "Pavlova",
+            "Half-Baked Chocolate Cake",
+            "Seasonal Sorbet"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 170,
+      "name": "Brigantine Poway",
+      "address": "13445 Poway Road, Poway, CA 92064",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/11161",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Brig Blonde (can)",
+            "Blue Moon (bottle)",
+            "Modelo Especial (bottle)",
+            "Corona (bottle)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 770,
+      "name": "The Plot",
+      "address": "1733 S Coast Hwy, Oceanside, 92054",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1062841",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-plot-oceanside-3?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Lunch Tasting Menu (three courses, seasonal, per person, prepaid)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 955,
+      "name": "Sandbar Sports Grill",
+      "address": "718 Ventura Place, San Diego, CA 92109",
+      "pinSourceUrl": "https://www.sandbarsportsgrill.com/specials/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/sandbar-sports-bar-and-grill-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Daily specials",
+          "items": [
+            "Featured shots",
+            "Tequila",
+            "Los Cuernos wine",
+            "Well drinks",
+            "Sandbar Bacon Cheeseburger + beer",
+            "Teremana tequila",
+            "Fireball",
+            "Modelo draft",
+            "Corona Premier or Sun Cruiser bucket",
+            "Bud Light or Estrella Jalisco draft",
+            "Michelob Ultra or Sun Cruiser bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 962,
+      "name": "Mister A's",
+      "address": "2550 Fifth Ave, 12th Floor, San Diego, CA 92103",
+      "pinSourceUrl": "https://www.asrestaurant.com/",
+      "status": "branch_or_access_gap",
+      "reason": "Yelp detail remained in its loading state; branch address and item photographs could not be verified there.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/mister-as-san-diego?osq=Mister+A%27s",
+        "https://www.yelp.com/biz/mister-mailbox-san-diego?osq=Mister+A%27s"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Aperitif menu",
+          "items": [
+            "Sunday roast: 12 oz prime rib",
+            "Maine Lobster Monday: A's lobster roll",
+            "Tuesday Toast: duo or trio of A's classics",
+            "Wagyu Wednesday: Wagyu burger with vanilla milkshake or AleSmith .394",
+            "Cluckin' Bubbles Thursday: triple-dipped Jidori fried chicken",
+            "Bar Pre-Fixe (Fri & Sat)",
+            "Tiramisu mini"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 963,
+      "name": "Gossip Grill",
+      "address": "1220 University Ave, San Diego, CA 92103",
+      "pinSourceUrl": "https://gossipgrill.com/menu/happy-hour/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/gossip-grill-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Food menu items",
+            "Bottled & canned beers, house wines & bubbles, seltzers & ciders, well spirits, draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 964,
+      "name": "La Puerta Mission Hills",
+      "address": "4020 Goldfinch St, San Diego, CA 92103",
+      "pinSourceUrl": "https://lapuertasd.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/la-puerta-san-diego-3"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Appetizers",
+            "Entire bar (cocktails, margaritas, drinks)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 965,
+      "name": "Sycamore Den",
+      "address": "3391 Adams Avenue, San Diego, CA 92116",
+      "pinSourceUrl": "https://sycamoreden.com/happy-hour",
+      "status": "menu_evidence_gap",
+      "reason": "The saved menus have no item entries. Obtain the branch-specific itemized menu before attaching dish photographs.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 967,
+      "name": "Greystone Prime Steakhouse & Seafood",
+      "address": "658 Fifth Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.greystonesteakhouse.com/menus/happy-hour/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/greystone-prime-steakhouse-and-seafood-san-diego-3"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 2,
+      "nativePin": {
+        "id": 20459,
+        "title": "Greystone Prime Steakhouse & Seafood — San Diego restaurant guide",
+        "href": "/pin/20459/greystone-prime-steakhouse-seafood-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Mango Bellini",
+            "Butterfly",
+            "Blackberry Smash Mule",
+            "San Diego Sunset",
+            "Midway",
+            "It's Bourbon Honey",
+            "Stone Old Fashioned",
+            "Bottled beer",
+            "House red, glass",
+            "House white, glass",
+            "Bubbles, flute",
+            "Adult Happy Meal",
+            "Colossal Baja Shrimp Cocktail",
+            "Baja Oysters on the Half Shell",
+            "Truffle Mac and Cheese",
+            "Spicy Calamari",
+            "Beef Satays",
+            "Wagyu Smash Burger",
+            "Prime 21-Day Dry-Aged New York Steak Frites",
+            "Blistered Brussels Sprouts",
+            "Parmesan Truffle Fries"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 971,
+      "name": "Gaslamp Tavern",
+      "address": "868 5th Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.gaslamptavern.com/san-diego-central-san-diego-gaslamp-tavern-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named tots results depict topped variants or multiple dishes; no unambiguous match to the stored Tots item accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/gaslamp-tavern-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beers",
+            "Wine",
+            "Cocktails",
+            "Well drinks",
+            "Shareables"
+          ]
+        },
+        {
+          "menuLabel": "Daily specials",
+          "items": [
+            "Monday Mules",
+            "Taco Tuesday: 2 tacos + Mexican lager",
+            "Wing Wednesday",
+            "Mystery beer",
+            "Flatbreads",
+            "Tito's",
+            "Tallboys",
+            "Tots",
+            "Pitchers of beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 972,
+      "name": "Union Kitchen & Tap - Gaslamp",
+      "address": "333 Fifth Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.gaslampunion.com/happenings/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/union-kitchen-and-tap-gaslamp-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "Call drinks",
+            "Signature cocktails"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 973,
+      "name": "The Fish Market San Diego",
+      "address": "750 N Harbor Dr, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.thefishmarket.com/location/san-diego/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-fish-market-san-diego-san-diego-2"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Ahi Poke Tacos",
+            "Baja Style Ceviche",
+            "Bowl of Chowder",
+            "Caesar Salad",
+            "Maryland Style Crabcake",
+            "Shrimp Cocktail",
+            "Three Oysters",
+            "Draft beers",
+            "El Jimador Blanco Margarita",
+            "Glass of white or red wine",
+            "Well cocktails"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 975,
+      "name": "Isola Pizza & Pasta - Little Italy",
+      "address": "1526 India St, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.isolapizzabar.com/little-italy",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/isola-pizza-bar-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Takeout Tuesday",
+          "items": [
+            "Favorite Isola pizza + Pizza of the Day"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Select bottles of wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 976,
+      "name": "NOIR Sushi & Sake Fusion Lounge",
+      "address": "926 Fifth Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.noirsushi.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/noir-sushi-and-sake-fusion-lounge-san-diego-11?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lucky 7 happy hour",
+          "items": [
+            "Seven signature bites (rolls and appetizers)",
+            "Beer, wine and sake specials"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 985,
+      "name": "Bonchon - Convoy",
+      "address": "4690 Convoy St, Suite 102, San Diego, CA 92111",
+      "pinSourceUrl": "https://restaurants.bonchon.com/locations/ca/san-diego/4690-convoy-st-suite-102",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bonchon-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "wings",
+          "url": "https://www.yelp.com/biz_photos/bonchon-san-diego-2?search=wings",
+          "matchingCaptions": [],
+          "outcome": "accepted"
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20549,
+        "title": "Bonchon - Convoy — San Diego restaurant guide",
+        "href": "/pin/20549/bonchon-convoy-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 986,
+      "name": "Rakiraki Ramen & Tsukemen - Convoy",
+      "address": "4646 Convoy St, Suite 102, San Diego, CA 92111",
+      "pinSourceUrl": "https://rakirakiramen.com/locations/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/rakiraki-ramen-and-tsukemen-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "beer tower",
+          "url": "https://www.yelp.com/biz_photos/rakiraki-ramen-and-tsukemen-san-diego?search=beer+tower",
+          "matchingCaptions": [],
+          "outcome": "No caption matched the specified search."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer Tower (84 oz Sapporo)",
+            "Sapporo Draft (16 oz)",
+            "Sho Chiku Bai Hot Sake (extra dry)",
+            "Flavored Soju (375 ml)",
+            "Hana Awaka (250 ml, sparkling mix berry or peach)",
+            "Suigei \"Drunken Whale\" sake (300 ml)",
+            "Harajuku Float",
+            "Arnold Palmer (lemon, peach or matcha)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 987,
+      "name": "Herb & Sea",
+      "address": "131 W D St, Encinitas, CA 92024",
+      "pinSourceUrl": "https://www.herbandsea.com",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/herb-and-sea-encinitas-2",
+        "https://www.yelp.com/biz_photos/herb-and-sea-encinitas-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20542,
+        "title": "Herb & Sea — San Diego restaurant guide",
+        "href": "/pin/20542/herb-sea-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Happy Meal",
+            "Oysters (12)",
+            "Smash burger",
+            "Frites",
+            "It's About Time (cocktail)",
+            "H&S Old Fashioned",
+            "Brut Cava",
+            "Chenin Blanc",
+            "Barbeta",
+            "Pure Project Diamond Dust",
+            "Burgeon Carlsbad Crush",
+            "Societe The Harlot"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 995,
+      "name": "Waraii Sushi",
+      "address": "4225 Oceanside Blvd, Oceanside, CA 92056",
+      "pinSourceUrl": "https://waraiisushi.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/waraii-sushi-oceanside?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20464,
+        "title": "Waraii Sushi — San Diego restaurant guide",
+        "href": "/pin/20464/waraii-sushi-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "House roll + specialty roll combination",
+            "Sushi combo",
+            "Sashimi combo",
+            "Combination (one item) - lunch",
+            "Combination (two item) - lunch"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1002,
+      "name": "Casa de Bandini",
+      "address": "1901 Calle Barcelona, Carlsbad, CA 92009",
+      "pinSourceUrl": "https://www.casadebandini.com/cantina",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/casa-de-bandini-at-the-forum-carlsbad?search=margarita",
+        "https://www.yelp.com/biz_photos/casa-de-bandini-at-the-forum-carlsbad?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "margarita",
+          "url": "https://www.yelp.com/biz_photos/casa-de-bandini-at-the-forum-carlsbad?search=margarita",
+          "matchingCaptions": [
+            "Skinny Margarita",
+            "Skinny margarita",
+            "Margarita and Skinny Margarita",
+            "Giant mango margaritas! On point!",
+            "Skinny margarita",
+            "Strawberry margaritas",
+            "Flavorful House margaritas.",
+            "Skinny Margarita",
+            "Cadillac margarita",
+            "Strawberry margarita",
+            "Med House Margarita",
+            "Skinny Margarita",
+            "Skinny margarita",
+            "Strawberry margarita",
+            "Strawberry margarita",
+            "Strawberry margarita",
+            "Mango margarita",
+            "Mango margarita",
+            "Mango margarita",
+            "Mango margarita"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20465,
+        "title": "Casa de Bandini — San Diego restaurant guide",
+        "href": "/pin/20465/casa-de-bandini-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Ranch Water"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1010,
+      "name": "Oggi's Sports | Brewhouse | Pizza - Santee",
+      "address": "9828 Mission Gorge Rd Suite A, Santee, CA 92071",
+      "pinSourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-santee/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named fish-and-chips photograph shows three pieces, but the lunch item specifies two. Stix results did not establish the specified half order.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?search=stix",
+        "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "stix",
+          "url": "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?search=stix",
+          "matchingCaptions": [
+            "Oggi Stix",
+            "Oggi's Stix",
+            "Buffalo chicken Oggi Stix",
+            "Lack of bread on 1/2 of OGGI STIX and best of all that part was burnt (had to throw away--too hard to eat/enjoy)"
+          ]
+        },
+        {
+          "term": "fish",
+          "url": "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?search=fish",
+          "matchingCaptions": [],
+          "outcome": "Three-piece photograph rejected for a two-piece menu item."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Half Oggi's Stix",
+            "Choice of half flatbread",
+            "Cup of soup and half salad (garden or Caesar)",
+            "Choice of half sandwich",
+            "Two-piece fish n' chips",
+            "Choice of half salad",
+            "10\" one-topping pizza",
+            "10\" choose-your-own specialty pizza",
+            "Cheese burger",
+            "Lunch portion chicken fettuccine Alfredo"
+          ]
+        },
+        {
+          "menuLabel": "Daily specials",
+          "items": [
+            "Monday Madness: medium, large and XL pizzas",
+            "Monday Madness: pitcher of Oggi's beer",
+            "Taco Tuesday: 2 tacos, grilled fish, fried fish or chicken",
+            "Taco Tuesday: house margaritas",
+            "Wing Wednesday: wings",
+            "Wing Wednesday: Oggi's beer pints",
+            "Thursday Flatbread Feast: flatbreads",
+            "Saturday Shot-O-Clock: El Jimador Blanco, Three Olives, Fireball",
+            "Saturday Shot-O-Clock: Jack Daniel's, Hornitos, Captain Morgan",
+            "Sunday Funday: California Gold blonde ale",
+            "Sunday Funday: Three Olives Bloody Mary",
+            "Sunday Funday: Opera Prima champagne bottle with juice caddy"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1014,
+      "name": "Sushi Lounge - Point Loma",
+      "address": "1304 Rosecrans St, San Diego, CA 92106",
+      "pinSourceUrl": "https://www.sushiloungesd.com/menu/sushi-lounge-point-loma",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/sushi-lounge-point-loma-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1015,
+      "name": "Sushi Lounge - Poway",
+      "address": "12622 Poway Rd, Poway, CA 92064",
+      "pinSourceUrl": "https://www.sushiloungesd.com/menu/sushi-lounge-poway",
+      "status": "menu_evidence_gap",
+      "reason": "The saved menus have no item entries. Obtain the branch-specific itemized menu before attaching dish photographs.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1016,
+      "name": "Sammy's Woodfired Pizza - La Jolla",
+      "address": "702 Pearl St, La Jolla, CA 92037",
+      "pinSourceUrl": "https://sammyspizza.com/Location-Details/client/la-jolla",
+      "status": "menu_evidence_gap",
+      "reason": "The saved menus have no item entries. Obtain the branch-specific itemized menu before attaching dish photographs.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1020,
+      "name": "The Search Bar & Restaurant - EastLake",
+      "address": "881 District Pl Ste 100, Chula Vista, CA 91914",
+      "pinSourceUrl": "https://thesearchbareastlake.com/page/happy-hour",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named tri-tip photograph shows two tacos, but the menu item specifies three. Yelp lists 881 Showroom Place while the saved profile says 881 District Place; verify the street-name discrepancy.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?search=tacos",
+        "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "tacos",
+          "url": "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?search=tacos",
+          "matchingCaptions": [
+            "Trio tacos",
+            "Fish tacos",
+            "Shrimp Tacos",
+            "Fish Tacos",
+            "Tri Tip Tacos",
+            "food, tacos",
+            "food, tacos",
+            "Happy hour tacos",
+            "interior, tacos"
+          ]
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Margaritas",
+            "Well drinks",
+            "Draft beer and wine",
+            "Bites menu"
+          ]
+        },
+        {
+          "menuLabel": "Taco Tuesday",
+          "items": [
+            "Tri tip or pollo asado tacos (3)",
+            "Margaritas"
+          ]
+        },
+        {
+          "menuLabel": "Wing Wednesday",
+          "items": [
+            "8 wings, fries and a drink"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1021,
+      "name": "Kalaveras - Chula Vista",
+      "address": "340 3rd Ave, Chula Vista, CA 91910",
+      "pinSourceUrl": "https://kalaveras.com/chula-vista/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/kalaveras-chula-vista"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Buffalo Wings HH"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1024,
+      "name": "Tajima Ramen - Crown Point",
+      "address": "3782 Ingraham St, San Diego, CA 92109",
+      "pinSourceUrl": "https://tajimaramen.com/tajima-crown-point/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11",
+        "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?search=edamame",
+        "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?search=karaage"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "edamame",
+          "url": "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?search=edamame",
+          "matchingCaptions": [
+            "Garlic Edamame.",
+            "Garlic Edamame.",
+            "Salted Edamame.",
+            "Karaage, Edamame & Vegan Ramen",
+            "Moon prism, crispy, rice, Crispy Rice Spicy Tuna, chicken karaage, Edamame. Tajima Ramen. Crunchy Cucumber Salad."
+          ]
+        },
+        {
+          "term": "karaage",
+          "url": "https://www.yelp.com/biz_photos/tajima-ramen-crown-point-san-diego-11?search=karaage",
+          "matchingCaptions": [
+            "Karaage.",
+            "Chicken karaage",
+            "Karaage.",
+            "Karaage, Edamame & Vegan Ramen",
+            "Tebaski Wings and Karaage",
+            "Moon prism, crispy, rice, Crispy Rice Spicy Tuna, chicken karaage, Edamame. Tajima Ramen. Crunchy Cucumber Salad."
+          ]
+        }
+      ],
+      "newPhotos": 3,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer",
+            "Wine",
+            "Small hot sake",
+            "Filtered flavored sake",
+            "Matcha refresher"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1028,
+      "name": "BJ's Restaurant & Brewhouse - Mission Valley",
+      "address": "1370 Frazee Rd, San Diego, CA 92108",
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/mission-valley",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-san-diego-2?search=guacamole",
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "guacamole",
+          "url": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-san-diego-2?search=guacamole",
+          "matchingCaptions": [
+            "Housemade Guacamole And Chips",
+            "The guacamole burger",
+            "Guacamole Burger",
+            "Bacon Bacon-Guacamole Deluxe Burger",
+            "Bacon-Guacamole Deluxe Burger",
+            "Bacon guacamole deluxe hamburger",
+            "Bacon-Guacamole Deluxe Burger*",
+            "Bacon-guacamole deluxe burger with thin cut fries"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20559,
+        "title": "BJ's Restaurant & Brewhouse - Mission Valley — San Diego restaurant guide",
+        "href": "/pin/20559/bj-s-restaurant-brewhouse-mission-valley-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Domestic bottles",
+            "BJ's handcrafted signature beers",
+            "Dark Horse wines (Cabernet Sauvignon, Chardonnay)",
+            "Brewhouse margarita",
+            "Call drinks",
+            "Select appetizers",
+            "Personal deep dish pizza",
+            "BJ's seasonal and guest draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1029,
+      "name": "BJ's Restaurant & Brewhouse - Carlsbad",
+      "address": "5613 Paseo Del Norte, Carlsbad, CA 92008",
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/carlsbad",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-carlsbad-2?search=guacamole",
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-carlsbad-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "guacamole",
+          "url": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-carlsbad-2?search=guacamole",
+          "matchingCaptions": [
+            "Chips & Housemade Guacamole Salsa",
+            "Guacamole, $5. On the small plates menu. SOOO good!",
+            "Happy hour sliders and chips with guacamole",
+            "Bacon guacamole Burger"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20560,
+        "title": "BJ's Restaurant & Brewhouse - Carlsbad — San Diego restaurant guide",
+        "href": "/pin/20560/bj-s-restaurant-brewhouse-carlsbad-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Domestic bottles",
+            "BJ's handcrafted signature beers",
+            "Dark Horse wines (Cabernet Sauvignon, Chardonnay)",
+            "Brewhouse margarita",
+            "Call drinks",
+            "Select appetizers",
+            "Personal deep dish pizza",
+            "BJ's seasonal and guest draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1030,
+      "name": "BJ's Restaurant & Brewhouse - Chula Vista",
+      "address": "555 Broadway Ste 1019, Chula Vista, CA 91910",
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/chula-vista",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-chula-vista?search=guacamole",
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-chula-vista?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "guacamole",
+          "url": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-chula-vista?search=guacamole",
+          "matchingCaptions": [
+            "1.7.20 Housemade Guacamole, Fire Roasted Salsa and Chips... highly recommend!",
+            "Guacamole Eggrolls",
+            "Jalapeño guacamole burger solid"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Domestic bottles",
+            "BJ's handcrafted signature beers",
+            "Dark Horse wines (Cabernet Sauvignon, Chardonnay)",
+            "Brewhouse margarita",
+            "Call drinks",
+            "Select appetizers",
+            "Personal deep dish pizza",
+            "BJ's seasonal and guest draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1031,
+      "name": "BJ's Restaurant & Brewhouse - Escondido",
+      "address": "204 E Via Rancho Pkwy, Escondido, CA 92025",
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/escondido",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-escondido?search=guacamole",
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-escondido?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "guacamole",
+          "url": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-escondido?search=guacamole",
+          "matchingCaptions": [
+            "Chips & Housemade Guacamole Salsa",
+            "Housemade Guacamole and Chips",
+            "Guacamole Bacon Burger",
+            "Bacon-Guacamole Deluxe Burger*",
+            "Bacon guacamole deluxe burger"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20561,
+        "title": "BJ's Restaurant & Brewhouse - Escondido — San Diego restaurant guide",
+        "href": "/pin/20561/bj-s-restaurant-brewhouse-escondido-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Domestic bottles",
+            "BJ's handcrafted signature beers",
+            "Dark Horse wines (Cabernet Sauvignon, Chardonnay)",
+            "Brewhouse margarita",
+            "Call drinks",
+            "Select appetizers",
+            "Personal deep dish pizza",
+            "BJ's seasonal and guest draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1032,
+      "name": "BJ's Restaurant & Brewhouse - La Jolla",
+      "address": "8785 Villa La Jolla Dr, San Diego, CA 92037",
+      "pinSourceUrl": "https://www.bjsrestaurants.com/locations/ca/la-jolla",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/bjs-restaurant-and-brewhouse-san-diego-2?osq=BJ%27s+Restaurant+%26+Brewhouse",
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-la-jolla-4?search=guacamole",
+        "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-la-jolla-4?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "guacamole",
+          "url": "https://www.yelp.com/biz_photos/bjs-restaurant-and-brewhouse-la-jolla-4?search=guacamole",
+          "matchingCaptions": [
+            "Chips & Housemade Guacamole Salsa",
+            "happy hour chips and Chips & Housemade Guacamole Salsa",
+            "Chips and dip trio, question, guacamole,  and spinach artichoke dip. Great snack!",
+            "Wings, Housemade Guacamole, Fire Roasted Salsa and Chips",
+            "Chips & Housemade Guacamole Salsa",
+            "Bacon Guacamole Deluxe Burger",
+            "Bacon Bacon-Guacamole Deluxe Burger*"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20562,
+        "title": "BJ's Restaurant & Brewhouse - La Jolla — San Diego restaurant guide",
+        "href": "/pin/20562/bj-s-restaurant-brewhouse-la-jolla-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Domestic bottles",
+            "BJ's handcrafted signature beers",
+            "Dark Horse wines (Cabernet Sauvignon, Chardonnay)",
+            "Brewhouse margarita",
+            "Call drinks",
+            "Select appetizers",
+            "Personal deep dish pizza",
+            "BJ's seasonal and guest draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1038,
+      "name": "bar Ella",
+      "address": "1030 Garnet Avenue, San Diego, CA 92109",
+      "pinSourceUrl": "https://barellapb.com/best-happy-hour-san-diego/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bar-ella-pacific-beach-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20564,
+        "title": "bar Ella — San Diego restaurant guide",
+        "href": "/pin/20564/bar-ella-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Michelob Ultra",
+            "Line 39 Cabernet",
+            "Line 39 Chardonnay",
+            "House sparkling wine",
+            "Wells",
+            "Coors Light",
+            "Stella N/A",
+            "Pacifico",
+            "Corona",
+            "High Noon",
+            "Surfside Hard Tea",
+            "Mocktails",
+            "bE Classics (incl. Espresso Martini)",
+            "Drafts",
+            "Drylands Sauvignon Blanc",
+            "bE Creative Cocktails",
+            "Caymus Suisun Valley Red Blend",
+            "Rotating small bites"
+          ]
+        },
+        {
+          "menuLabel": "Nightly specials",
+          "items": [
+            "Wine by the glass",
+            "Aperol Spritz",
+            "Rotating pasta special",
+            "Martinis",
+            "Hot dogs",
+            "Weenie tower",
+            "Surfside Hard Tea",
+            "A la carte sliders"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1040,
+      "name": "Harbor Town Pub",
+      "address": "1125 Rosecrans Street, San Diego, CA 92106",
+      "pinSourceUrl": "https://harbortownpub.com/happy-hour-point-loma",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/harbor-town-pub-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Well drinks",
+            "Select drafts",
+            "Cocktails",
+            "Bar bites (burgers, tacos, wings, sliders from the full kitchen)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1041,
+      "name": "Sidecar Bar",
+      "address": "1310 Morena Boulevard, San Diego, CA 92110",
+      "pinSourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+      "status": "gallery_extraction_gap",
+      "reason": "No caption records were extracted from the inspected gallery; this does not establish that no photographs exist. Check alternate gallery categories and the operator.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/sidecar-san-diego-7?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour & specials",
+          "items": [
+            "Bottled & canned beer",
+            "Well drinks",
+            "Draft beer",
+            "Well mules",
+            "Wing Wednesday: four wings"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1042,
+      "name": "Johnny Mañana's (Ocean Beach)",
+      "address": "4888 Newport Avenue, San Diego, CA 92107",
+      "pinSourceUrl": "https://johnnymananas.com/specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "Michelada and street-taco results name multiple food/drink subjects; no isolated item match accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?search=michelada",
+        "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "michelada",
+          "url": "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?search=michelada",
+          "matchingCaptions": [
+            "Crispy Fish Taco and michelada"
+          ]
+        },
+        {
+          "term": "street tacos",
+          "url": "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?search=street+tacos",
+          "matchingCaptions": [],
+          "outcome": "Result names carne asada street tacos together with a fish taco; composite not accepted."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Weekly specials",
+          "items": [
+            "Johnny's World Famous Margarita",
+            "Street tacos",
+            "Wine special",
+            "Michelada"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1044,
+      "name": "Harland Brewing – Bay Park",
+      "address": "4112 Napier Street, San Diego, CA 92110",
+      "pinSourceUrl": "https://harlandbeer.com/pages/copy-of-bay-park-tasting-room-menu",
+      "status": "gallery_extraction_gap",
+      "reason": "No caption records were extracted from the inspected gallery; this does not establish that no photographs exist. Check alternate gallery categories and the operator.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/harland-brewing-bay-park-san-diego-3?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft pints"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1045,
+      "name": "Chef JUN – Bay Ho",
+      "address": "4033 Avati Drive, San Diego, CA 92117",
+      "pinSourceUrl": "https://chefjun.com/menu-bayho",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/chef-jun-point-loma-san-diego-5?osq=Chef+JUN",
+        "https://www.yelp.com/biz_photos/chef-jun-bay-ho-san-diego-4?search=takoyaki",
+        "https://www.yelp.com/biz_photos/chef-jun-bay-ho-san-diego-4?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "takoyaki",
+          "url": "https://www.yelp.com/biz_photos/chef-jun-bay-ho-san-diego-4?search=takoyaki",
+          "matchingCaptions": []
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Lunch Sushi Special",
+            "Ramen + Salad",
+            "Chicken Lunch Special"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "House sake",
+            "Edamame",
+            "Fried gyoza",
+            "Stuffed jalapeno",
+            "Takoyaki",
+            "Spicy tuna cracker"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1052,
+      "name": "Pretzels & Pints",
+      "address": "3812 Ray Street, San Diego, CA 92104",
+      "pinSourceUrl": "https://pretzelsandpints.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/pretzels-and-pints-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "Wine"
+          ]
+        },
+        {
+          "menuLabel": "Thursday pint and food",
+          "items": [
+            "Pint with any pretzel, pizza or sandwich purchase"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1054,
+      "name": "Piacere Mio - South Park",
+      "address": "1947 Fern Street, San Diego, CA 92102",
+      "pinSourceUrl": "https://southpark.piaceremiosd.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Pinot Grigio result also names salmon salad and bread; no isolated wine image accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/piacere-mio-south-park-san-diego-7?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Le Contesse Prosecco",
+            "Chardonnay",
+            "Pinot Grigio",
+            "Malbec",
+            "Cabernet Sauvignon",
+            "Dolomiti Beer (lager or dark)",
+            "Piacere Spritz"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1055,
+      "name": "Counterpoint",
+      "address": "830 25th Street, San Diego, CA 92102",
+      "pinSourceUrl": "https://counterpointsd.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/counterpoint-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "boilermaker",
+          "url": "https://www.yelp.com/biz_photos/counterpoint-san-diego?search=boilermaker",
+          "matchingCaptions": [],
+          "outcome": "No caption matched the specified search."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "House cocktails",
+            "Rose",
+            "Draft beers",
+            "Boilermaker (whiskey and Modelo)",
+            "Whiskey, tequila or mezcal shots"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1058,
+      "name": "The Hangout Restaurant and Bar",
+      "address": "2736 Adams Ave, San Diego, CA 92116",
+      "pinSourceUrl": "https://thehangoutrestaurantandbar.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-hangout-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Slider",
+            "Seasonal Flatbread",
+            "Fried Sampler Platter",
+            "Potato Cake",
+            "Craft cocktails",
+            "Draft beer",
+            "Bottle beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1062,
+      "name": "Key and Cleaver",
+      "address": "4727 University Ave, San Diego, CA 92105",
+      "pinSourceUrl": "https://keyandcleaver.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/key-and-cleaver-san-diego?search=wings",
+        "https://www.yelp.com/biz_photos/key-and-cleaver-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "wings",
+          "url": "https://www.yelp.com/biz_photos/key-and-cleaver-san-diego?search=wings",
+          "matchingCaptions": [
+            "Best Chicken Wings in Town",
+            "Buffalo wings",
+            "Wings",
+            "Buffalo wings",
+            "Classic Wings",
+            "Wings w/wing sauce",
+            "chicken wings and fried chicken, chicken, fried chicken, fried chicken wings, chicken wings, poultry, bbq chicken, food, bbq wings",
+            "bbq wings, chicken wings, bbq chicken, food, chicken wings and fried chicken, fried chicken wings, is duplicate, fried chicken, chicken, poultry",
+            "chicken, chicken wings and fried chicken, food, fried chicken, bbq chicken, bbq wings, chicken wings, fried chicken wings, poultry",
+            "food, bbq wings, bbq chicken, chicken, poultry, fried chicken, chicken wings and fried chicken, fried chicken wings, chicken wings",
+            "Smash Burger, Blu Cheese Buffalo Chicken Wings, Grilled Cheese Sandwich",
+            "Serrano Garlic Classic Wings, Swiss Mushroom burger, Black and Blue Burger",
+            "food, chicken wings, fried chicken, chicken wings and fried chicken, bbq wings, chicken, poultry, bbq chicken, fried chicken wings"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20571,
+        "title": "Key and Cleaver — San Diego restaurant guide",
+        "href": "/pin/20571/key-and-cleaver-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beers",
+            "Specialty cocktails",
+            "Well drinks"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1066,
+      "name": "GARAGE Kitchen + Bar",
+      "address": "655 Fourth Avenue, San Diego, CA 92101",
+      "pinSourceUrl": "http://garagekitchenbar.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/garage-kitchen-bar-san-diego-4?search=mimosa",
+        "https://www.yelp.com/biz_photos/garage-kitchen-bar-san-diego-4?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "mimosa",
+          "url": "https://www.yelp.com/biz_photos/garage-kitchen-bar-san-diego-4?search=mimosa",
+          "matchingCaptions": [
+            "Mimosas",
+            "Mimosas",
+            "Mimosa",
+            "Bottomless mimosa",
+            "$8 mimosas!",
+            "Mimosas, orange juice and cranberry juice",
+            "Girlfriends and mimosas!",
+            "Champagne + orange juice = mimosas",
+            "Mimosaas!!",
+            "mimosas!",
+            "$8 mimosa which is a great deal!",
+            "Mimosas, a bottle was $8 on Sundays! Tasted so good",
+            "Mimosas",
+            "$22 Bottomless Mimosas",
+            "Mimosas!",
+            "Bottle of champagne and orange juice (Mimosa) served on the weekdays",
+            "Mimosa",
+            "4/$16 mimosas",
+            "Mimosas are great! I upgraded my bottle so don't expect this if you get what's on the menu."
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1070,
+      "name": "Dobson's Bar & Restaurant",
+      "address": "956 Broadway Circle, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.dobsonsrestaurant.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/dobsons-bar-and-restaurant-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "House wine",
+            "Well drinks",
+            "Draft beer"
+          ]
+        },
+        {
+          "menuLabel": "Monday dinner special",
+          "items": [
+            "Filet mignon and wild lobster tail dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1073,
+      "name": "Waterfront Bar & Grill",
+      "address": "2044 Kettner Boulevard, San Diego, CA 92101",
+      "pinSourceUrl": "https://waterfrontbarandgrill.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-waterfront-bar-and-grill-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Craft drafts and domestic beer",
+            "Well drinks and house cocktails",
+            "House red and white wine by the glass",
+            "Rotating bar-food specials (wings, tots, sliders)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1075,
+      "name": "Tavern",
+      "address": "1310 Orange Avenue, Coronado, CA 92118",
+      "pinSourceUrl": "http://www.coronadotavern.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/tavern-coronado-2",
+        "https://www.yelp.com/biz_photos/tavern-coronado-2?search=mini",
+        "https://www.yelp.com/biz_photos/tavern-coronado-2?search=slider"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "slider",
+          "url": "https://www.yelp.com/biz_photos/tavern-coronado-2?search=slider",
+          "matchingCaptions": [
+            "Phenomenal braised beef short rib slider!!",
+            "Sliders",
+            "Coronado Golden Braised Short Rib Sliders",
+            "Sliders",
+            "Coronado Golden Braised Short Rib Slider",
+            "Happy hour beef rib slider",
+            "Happy hour slider",
+            "Angus Sliders",
+            "Angus Beef Sliders",
+            "Amazing beef in these sliders!",
+            "Amazing beef in these sliders!",
+            "Short rib slider.",
+            "Sliders and pot pie",
+            "Amazing beef in these sliders!",
+            "Angus Sliders",
+            "Medium cook on the sliders...PERFECT!",
+            "Beef sliders",
+            "The chicken sliders are AMAZING!",
+            "Slider & Mac n cheese"
+          ]
+        },
+        {
+          "term": "mini",
+          "url": "https://www.yelp.com/biz_photos/tavern-coronado-2?search=mini",
+          "matchingCaptions": [
+            "Mini Brussels Sprouts",
+            "Mini Mac n Cheese",
+            "Lil mini braised bbq sami",
+            "Mini Brussels Sprouts (happy hour menu)",
+            "Mini Mac n Cheese (happy hour)",
+            "Happy Hour mini mac n cheese",
+            "Mini Mac N' Cheese (happy hour menu)",
+            "Portions are mini during happy hour",
+            "Mini Brussels! Made with balsamic reduction & shaved Parmesan.",
+            "Happy hour menu! Even the minis had a very generous serving size.",
+            "Mini Brussels sprouts with shaved Parmesan from happy hour menu",
+            "Mini mac and cheese, chicken crispy wings and vodka strawberry lemonade",
+            "local IPA, double cheeseburger with onion rings and fries, mini Mac n cheese & flat iron steak taco",
+            "On top of this bountiful pile of fries...rested a mini-burger the diameter of a cucumber slice."
+          ]
+        }
+      ],
+      "newPhotos": 2,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Angus Beef Slider",
+            "Snake River Farms Wagyu Taco",
+            "House Wines (Chardonnay, Cabernet Sauvignon, Merlot)",
+            "Draft Beers (Fiesta Island Pilsner & Robot Panda Hazy IPA)",
+            "Sangria",
+            "Lavender Lemonade",
+            "Blueberry Bourbon Smash"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1079,
+      "name": "The Hills Pub",
+      "address": "8758 La Mesa Blvd, La Mesa, CA 91942",
+      "pinSourceUrl": "https://www.thehillspub.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-hills-pub-la-mesa?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Beers n Bingo Taco Tuesday",
+          "items": [
+            "Tacos"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1080,
+      "name": "Mastiff Kitchen La Mesa",
+      "address": "4253 Palm Ave, La Mesa, CA 91941",
+      "pinSourceUrl": "https://mastiffkitchen.com/la-mesa-mastiff-kitchen-la-mesa-daily-deals",
+      "status": "item_photo_evidence_gap",
+      "reason": "Stored Salad is unspecified; captions identify Caesar, kale or tomato variants, without evidence identifying the lunch salad.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mastiff-kitchen-la-mesa-la-mesa?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Pizza slices",
+            "Sandwich",
+            "Salad"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "Pizza slices, sandwich or salad"
+          ]
+        },
+        {
+          "menuLabel": "Pizza-Par-Tuesday",
+          "items": [
+            "Whole pizza and beer"
+          ]
+        },
+        {
+          "menuLabel": "Wine-Down Wednesday",
+          "items": [
+            "Wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1081,
+      "name": "Karl Strauss Brewing Company - 4S Ranch",
+      "address": "10448 Reserve Dr, San Diego, CA 92127",
+      "pinSourceUrl": "https://www.karlstrauss.com/location/4s-ranch/menu",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/karl-strauss-brewing-company-san-diego-6?osq=Karl+Strauss+Brewing+Company",
+        "https://www.yelp.com/biz/karl-strauss-brewing-company-san-diego-7?osq=Karl+Strauss+Brewing+Company",
+        "https://www.yelp.com/biz_photos/karl-strauss-brewing-company-san-diego-8?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Happy hour beers",
+            "Happy hour appetizers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1082,
+      "name": "Veranda Bar at Rancho Bernardo Inn",
+      "address": "17550 Bernardo Oaks Dr, San Diego, CA 92128",
+      "pinSourceUrl": "https://www.ranchobernardoinn.com/dine",
+      "status": "item_photo_evidence_gap",
+      "reason": "Beer match is a burger-and-beer meal, not an isolated identified menu drink.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-bar-at-rancho-bernardo-inn-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer",
+            "Wine",
+            "Bites (variety)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1083,
+      "name": "AVANT Restaurant at Rancho Bernardo Inn",
+      "address": "17550 Bernardo Oaks Dr, San Diego, CA 92128",
+      "pinSourceUrl": "https://www.avantrestaurant.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/avant-restaurant-san-diego-2?search=parker",
+        "https://www.yelp.com/biz_photos/avant-restaurant-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "parker",
+          "url": "https://www.yelp.com/biz_photos/avant-restaurant-san-diego-2?search=parker",
+          "matchingCaptions": [
+            "parker house roll",
+            "parker house roll",
+            "Parker House Roll",
+            "Parker House Roll",
+            "parker house roll",
+            "parker house roll",
+            "Parker house roll 5/5",
+            "Parker house rolls and wagyu beef tartar",
+            "Parker house rolls. The best thing we ate.",
+            "Parker house roll  5/5 especially with the white butter",
+            "Parker House roll with seasonal butter, Woodfired Waggy beef steers and popcorn.",
+            "The FAB Parker house roll w/ crème fraiche : get in my belly!!!!",
+            "parker house roll niman ranch pork chop foraged mushrooms crispy brussel sprouts mishimi wagyu new york pave",
+            "Four Course West Coast Oysters Hamachi Lobster Bisque Burrata & Beets SRF Black Label NY Strip Grilled Whole Branzino Parker House Roll",
+            "Parker roll",
+            "Parker Dinner Rolls with two types of butter"
+          ]
+        }
+      ],
+      "newPhotos": 2,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Sommelier-selected wines",
+            "Seasonal draft beer",
+            "Daily punch"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1084,
+      "name": "McGregor's Bar and Grill",
+      "address": "10475 San Diego Mission Rd, San Diego, CA 92108",
+      "pinSourceUrl": "https://www.mcgregorssandiego.com/menu",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mcgregors-bar-and-grill-san-diego-3?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Well drinks and wines",
+            "Select draft beer",
+            "Bar bites"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1085,
+      "name": "Himalayan Cuisine",
+      "address": "7918 El Cajon Blvd P, La Mesa, CA 91942",
+      "pinSourceUrl": "https://himalayancuisineone.com/",
+      "status": "menu_evidence_gap",
+      "reason": "The saved menus have no item entries. Obtain the branch-specific itemized menu before attaching dish photographs.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1087,
+      "name": "Jose's Courtroom",
+      "address": "1037 Prospect St, La Jolla, CA 92037",
+      "pinSourceUrl": "https://joses.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Margarita result also depicts chips and does not establish house versus premium selection.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/joses-courtroom-la-jolla-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Margarita Mondays",
+          "items": [
+            "House margarita (glass)",
+            "House margarita pitcher",
+            "Premium margarita pitcher"
+          ]
+        },
+        {
+          "menuLabel": "Taco Tuesday",
+          "items": [
+            "Street tacos"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Bottles of wine"
+          ]
+        },
+        {
+          "menuLabel": "Thirsty Thursday",
+          "items": [
+            "Beer pitchers"
+          ]
+        },
+        {
+          "menuLabel": "Fajita Friday",
+          "items": [
+            "Fajita plates"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1089,
+      "name": "Wheat & Water",
+      "address": "5737 La Jolla Blvd, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.wheatandwater.com/la-jolla-la-jolla-wheat-and-water-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "The cheese-board caption is explicitly uncertain. No labelled named cocktail or verified combo image accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/wheat-and-water-la-jolla-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "cheese board",
+          "url": "https://www.yelp.com/biz_photos/wheat-and-water-la-jolla-2?search=cheese+board",
+          "matchingCaptions": [],
+          "outcome": "The sole caption questions whether the subject is the cheese board; not accepted."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Wines by the glass",
+            "Beers",
+            "Spirits",
+            "Food specials"
+          ]
+        },
+        {
+          "menuLabel": "Ladies Night",
+          "items": [
+            "Cheese board",
+            "La Jolla Rose",
+            "Cadillac Sangria",
+            "Bird Rock Blush"
+          ]
+        },
+        {
+          "menuLabel": "Burger & Beer Night",
+          "items": [
+            "Any burger and a beer"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Any bottle of wine"
+          ]
+        },
+        {
+          "menuLabel": "Thursday apps",
+          "items": [
+            "Appetizers"
+          ]
+        },
+        {
+          "menuLabel": "Aloha Friday",
+          "items": [
+            "Aloha pizza and a mai tai"
+          ]
+        },
+        {
+          "menuLabel": "Tacos & Margs",
+          "items": [
+            "Any taco plate and house margarita"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1094,
+      "name": "Isola Pizza & Pasta - La Jolla",
+      "address": "7734 Girard Ave, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.isolapizzabar.com/la-jolla/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/isola-pizza-bar-la-jolla?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Happy hour food and drink"
+          ]
+        },
+        {
+          "menuLabel": "Takeout Tuesday",
+          "items": [
+            "Favorite Isola pizza plus the Pizza of the Day"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Select bottles of wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1099,
+      "name": "Pazza Market & Cucina",
+      "address": "4577 La Jolla Village Dr, San Diego, CA 92122",
+      "pinSourceUrl": "https://pazzamarket.com/happy-hour/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/pazza-market-and-cucina-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Glass of wine",
+            "Beer",
+            "Antipasti"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1100,
+      "name": "Cafe Luna",
+      "address": "11040 Rancho Carmel Dr #2, San Diego, CA 92128",
+      "pinSourceUrl": "https://cafelunasd.com/san-diego-northeastern-san-diego-cafe-luna-happy-hours-specials",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/cafe-luna-san-diego?search=osso",
+        "https://www.yelp.com/biz_photos/cafe-luna-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "osso",
+          "url": "https://www.yelp.com/biz_photos/cafe-luna-san-diego?search=osso",
+          "matchingCaptions": [
+            "Ossobuco!!",
+            "Pork Ossobuco with mashed potatoes",
+            "Osso Bucco...super tender and savory!",
+            "Pork Ossobuco with mashed potatoes! There is no way to improve on this. It's perfect."
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20476,
+        "title": "Cafe Luna — San Diego restaurant guide",
+        "href": "/pin/20476/cafe-luna-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Handcrafted cocktails",
+            "Italian wine bottles",
+            "House white or red by the glass",
+            "Chef-crafted small plates"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1101,
+      "name": "Understory Bar",
+      "address": "12841 El Camino Real Suite 209-210, San Diego, CA 92130",
+      "pinSourceUrl": "https://understorybar.com/happy-hour-menu/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/understory-bar-san-diego"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Old Oak Old Fashioned",
+            "Colugo Gin Martini",
+            "Mourning Cloak Negroni",
+            "Scarlet Tanager Manhattan",
+            "Monarch Butterfly Aperol Spritz",
+            "Night Owl Espresso Martini",
+            "Sunwing Tommy's Margarita",
+            "Chardonnay, Pinot Noir, Sauvignon Blanc",
+            "Beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1102,
+      "name": "Eureka! - San Diego (UTC)",
+      "address": "4353 La Jolla Village Dr, San Diego, CA 92122",
+      "pinSourceUrl": "https://eurekarestaurantgroup.com/locations/san-diego-utc",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/eureka-san-diego-9?search=smash",
+        "https://www.yelp.com/biz_photos/eureka-san-diego-9?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "smash",
+          "url": "https://www.yelp.com/biz_photos/eureka-san-diego-9?search=smash",
+          "matchingCaptions": [
+            "Double Smash",
+            "Double Smash",
+            "Blackberry smash",
+            "Double Smash",
+            "Double Smash",
+            "Smash burger",
+            "Double Smash",
+            "Double Smash",
+            "Double Smash",
+            "Double Smash",
+            "Double Smash ($18)",
+            "Double Smash with Truffle Fries",
+            "Double smash burger and fries",
+            "Double Smash with a side of Broccolini",
+            "Left: Bbq Bacon Burger, Right: Double Smash",
+            "Double Smash Burger with upgraded Truffle Cheese Fries",
+            "$9 double smash burger and fries every Wednesday",
+            "A double smash with truffle fries. Not to bad a bit to much bun and needed a bit more garlic aioli. Would get again."
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Weekly specials",
+          "items": [
+            "Martinis",
+            "Wine",
+            "Buffalo Trace Old Fashioned",
+            "Bloody Marys & Mimosas"
+          ]
+        },
+        {
+          "menuLabel": "Hoppy Hour",
+          "items": [
+            "Hoppy Hour food and drinks"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1103,
+      "name": "Amuse Lounge and Patio (San Diego Marriott La Jolla)",
+      "address": "4240 La Jolla Village Dr, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.marriott.com/en-us/hotels/sanlj-san-diego-marriott-la-jolla/dining",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Drinks",
+            "\"5\" and \"10\" menu items"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1110,
+      "name": "Sura Korean BBQ - Chula Vista",
+      "address": "1960 Optima St, Chula Vista, CA 91915",
+      "pinSourceUrl": "https://surakbbqsd.com/menus/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/sura-kbbq-chula-vista?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "bento",
+          "url": "https://www.yelp.com/biz_photos/sura-kbbq-chula-vista?search=bento",
+          "matchingCaptions": [],
+          "outcome": "accepted"
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20582,
+        "title": "Sura Korean BBQ - Chula Vista — San Diego restaurant guide",
+        "href": "/pin/20582/sura-korean-bbq-chula-vista-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch special",
+          "items": [
+            "Lunch special - dine-in all-you-can-eat"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour drinks",
+          "items": [
+            "Soju (Chum-Churum or flavored soju)",
+            "Bottled beer (Terra or Asahi)",
+            "Wine by the glass (6 oz)",
+            "Wine by the bottle",
+            "Draft beer pint (16 oz) - Sapporo or Kirin",
+            "Draft beer pitcher (60 oz) - Sapporo or Kirin",
+            "Draft beer tower (100 oz) - Sapporo or Kirin"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1116,
+      "name": "Islands Restaurant - Eastlake",
+      "address": "2255 Otay Lakes Rd, Chula Vista, CA 91915",
+      "pinSourceUrl": "https://www.islandsrestaurants.com/locations/chula-vista/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/islands-restaurant-chula-vista-2"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch Break",
+          "items": [
+            "Double Stack Burger",
+            "The Wedge (BLT)",
+            "Islands Classic Patty Melt",
+            "Soup and Salad",
+            "Northshore Tacos",
+            "Mainlander Salad",
+            "Pacific Rim Bowl",
+            "Baja Tacos",
+            "Endless mug add-on"
+          ]
+        },
+        {
+          "menuLabel": "Happy Hour",
+          "items": [
+            "Mai Tai",
+            "Big Island Iced Tea",
+            "Moscow Mule",
+            "Margaritas (rocks or frozen)",
+            "Mangorita",
+            "Frozen Strawberry Margarita",
+            "Well rocks and mixed drinks",
+            "Coors Light draft (16 oz / 22 oz)",
+            "Domestic bottled beer",
+            "Islands house beer",
+            "Copper Ridge Cabernet / Chardonnay",
+            "Chips and Salsa",
+            "Cheddar Fries",
+            "Onion Rings",
+            "Beachside Sliders",
+            "Street Tacos",
+            "Spinach Artichoke Dip",
+            "Boneless Wings & Fries",
+            "Quesadilla",
+            "Tempura Green Beans",
+            "Tiki Tenders & Fries",
+            "Islands Nachitos"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1121,
+      "name": "Fast Times",
+      "address": "3065 Clairemont Dr, San Diego, CA 92117",
+      "pinSourceUrl": "http://fasttimessd.com/san-diego-fast-times-happy-hours-specials",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/fast-times-san-diego",
+        "https://www.yelp.com/biz_photos/fast-times-san-diego?search=wings"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "wings",
+          "url": "https://www.yelp.com/biz_photos/fast-times-san-diego?search=wings",
+          "matchingCaptions": [
+            "Wings"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour drinks",
+          "items": [
+            "Specialty drinks",
+            "Select beer and wine",
+            "Pizza Port Chronic Ale (pint)",
+            "Second Chance Tabula Rasa (pint)",
+            "Eppig 1866 Lager (pint)",
+            "Honoro Vera Cab (glass)",
+            "Honoro Vera Rose (glass)",
+            "Benvolio Pinot Grigio (glass)"
+          ]
+        },
+        {
+          "menuLabel": "Weekday food specials",
+          "items": [
+            "Mussels",
+            "Carne asada street tacos",
+            "Flatbreads"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1128,
+      "name": "Poway's Irish Pub",
+      "address": "13314 Poway Rd, Poway, CA 92064",
+      "pinSourceUrl": "https://powaypub.com/menu.html",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/poways-irish-pub-poway?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Daily lunch specials",
+          "items": [
+            "Pub Cheese Burger & Beer (Craft)",
+            "2 Tacos w/ Fries",
+            "BLT w/ Avocado or Egg & Soup or Salad",
+            "1/2 Fish N Chips"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer",
+            "Select liquor",
+            "Appetizers - choose 3 for $12"
+          ]
+        },
+        {
+          "menuLabel": "Burger deal",
+          "items": [
+            "Buy 1 Burger, Get 1 Half Off"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1131,
+      "name": "Downtown Cafe Bar & Grill",
+      "address": "182 E Main St, El Cajon, CA 92020",
+      "pinSourceUrl": "https://downtowncafe-ec.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/downtown-cafe-bar-and-grill-el-cajon?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "All appetizers",
+            "Domestic drafts",
+            "Imported drafts",
+            "Margaritas",
+            "Long Island Iced Tea"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1132,
+      "name": "Buckboard's BBQ & Brew",
+      "address": "975 Greenfield Dr, El Cajon, CA 92021",
+      "pinSourceUrl": "https://www.buckboardsbbq.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/buckboards-barbecue-and-brew-el-cajon?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer, wine and appetizers",
+            "Pitchers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1133,
+      "name": "Mainstream Bar & Grill - Poway",
+      "address": "13385 Poway Rd, Poway, CA 92064",
+      "pinSourceUrl": "https://mainstreampoway.net/poway-mainstream-bar-and-grill-happy-hours-specials",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mainstream-bar-and-grill-poway?search=mimosa",
+        "https://www.yelp.com/biz_photos/mainstream-bar-and-grill-poway?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "mimosa",
+          "url": "https://www.yelp.com/biz_photos/mainstream-bar-and-grill-poway?search=mimosa",
+          "matchingCaptions": [
+            "Bottomless mimosas!",
+            "Bottomless Mimosas with some wonderful Fam!!",
+            "Bottomless Mimosas for our Anniversary !!",
+            "$5 bottomless mimosas and awesome food! Cat is the best server A* service!",
+            "Dani and Katie and a mimosa!"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1135,
+      "name": "MexicanBar - Poway",
+      "address": "12213 Poway Rd, Poway, CA 92064",
+      "pinSourceUrl": "https://themexicanbar.com/menu/mexicanbar-12213-poway-road",
+      "status": "item_photo_evidence_gap",
+      "reason": "Margarita match is promotional multi-dish text naming sopes and tacos; not accepted as a specific drink image.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mexicanbar-poway?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beers",
+            "DIPA draft",
+            "Wine",
+            "Margaritas",
+            "Starters"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1138,
+      "name": "O'Sullivan's Irish Pub - Escondido",
+      "address": "118 E Grand Ave, Escondido, CA 92025",
+      "pinSourceUrl": "https://osullivansescondido.com/specials",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/o-sullivans-irish-pub-escondido",
+        "https://www.yelp.com/biz_photos/o-sullivans-irish-pub-escondido?search=corned+beef+egg+rolls",
+        "https://www.yelp.com/biz_photos/o-sullivans-irish-pub-escondido?search=curry"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "corned beef egg rolls",
+          "url": "https://www.yelp.com/biz_photos/o-sullivans-irish-pub-escondido?search=corned+beef+egg+rolls",
+          "matchingCaptions": []
+        },
+        {
+          "term": "curry",
+          "url": "https://www.yelp.com/biz_photos/o-sullivans-irish-pub-escondido?search=curry",
+          "matchingCaptions": [
+            "Curry fries",
+            "Curry fries. Very classic Irish curry taste.",
+            "Curry chips, Guinness bangers, and fresh salad. Best date night ever!"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "1/2 Corned Beef Quesadilla",
+            "1/2 Chicken Tenders",
+            "Corned Beef Egg Rolls",
+            "Well Drinks",
+            "All Beers",
+            "Tipsy Clover Shots"
+          ]
+        },
+        {
+          "menuLabel": "Early bird",
+          "items": [
+            "Fish & Chips, Guinness Beef Stew or Shepherd's Pie"
+          ]
+        },
+        {
+          "menuLabel": "Weekly specials",
+          "items": [
+            "Chicken, Corned Beef or Grilled/Fried Fish Taco",
+            "Mexican Candy Shots",
+            "Shepherd's Pie + 16 oz draft beer",
+            "Wing Night wings"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1139,
+      "name": "SETS Kitchen & Bar",
+      "address": "1628 San Elijo Rd S, San Marcos, CA 92078",
+      "pinSourceUrl": "https://setskitchenandbar.com/san-marcos-san-elijo-hills-sets-kitchen-and-bar-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named burger photo is Smokehouse Burger, not the stored lettuce/tomato/onion/cheese special; wine result is a slider-and-wine meal.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/sets-kitchen-and-bar-san-marcos?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Weekly specials",
+          "items": [
+            "Burger (lettuce, tomato, onion, cheese; fries, sweet fries or tots)",
+            "Draft beer add-on",
+            "Glass of wine",
+            "Bottles of wine",
+            "All Specialty Cocktails"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1141,
+      "name": "Barn Door Public House",
+      "address": "2500 S Escondido Blvd, Escondido, CA 92025",
+      "pinSourceUrl": "https://barndoorpublic.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/barn-door-public-house-escondido?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Pint of draft beer (26 taps)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1142,
+      "name": "Ali Baba Mediterranean Cuisine - Escondido",
+      "address": "201 W Mission Ave, Escondido, CA 92025",
+      "pinSourceUrl": "https://www.abcuisine.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/ali-baba-mediterranean-cuisine-of-escondido-escondido-3"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 2,
+      "nativePin": {
+        "id": 20482,
+        "title": "Ali Baba Mediterranean Cuisine - Escondido — San Diego restaurant guide",
+        "href": "/pin/20482/ali-baba-mediterranean-cuisine-escondido-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch special",
+          "items": [
+            "Beef Kofta Kabob - ground beef, onions, parsley, spices",
+            "Beef Shawarma - marinated beef cooked on a spit, thinly sliced",
+            "Lamb Kofta Kabob - ground lamb, onions, parsley, spices",
+            "Lamb Tikka - marinated grilled chunks of lamb",
+            "Chicken Kofta Kabob - ground chicken, onions, parsley, spices",
+            "Chicken Schnitzel - seasoned breaded chicken breast, deep fried",
+            "Veggie Patty - mix of vegetables and spices, deep fried",
+            "Falafel - ground spiced chickpea croquettes, deep fried"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1143,
+      "name": "Karl Strauss Brewing Company - Sorrento Mesa",
+      "address": "9675 Scranton Rd, San Diego, CA 92121",
+      "pinSourceUrl": "https://karlstrauss.com/location/sorrento-mesa/menu/",
+      "status": "gallery_extraction_gap",
+      "reason": "No caption records were extracted from the inspected gallery; this does not establish that no photographs exist. Check alternate gallery categories and the operator.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/karl-strauss-brewing-company-san-diego-7?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Karl beers",
+            "Select appetizers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1144,
+      "name": "Harry's Sports Bar & Grill",
+      "address": "125 S Main Ave, Fallbrook, CA 92028",
+      "pinSourceUrl": "https://www.harrysfallbrook.com/specials",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/harrys-sports-bar-and-grill-fallbrook?search=fries",
+        "https://www.yelp.com/biz_photos/harrys-sports-bar-and-grill-fallbrook?search=mozzarella",
+        "https://www.yelp.com/biz_photos/harrys-sports-bar-and-grill-fallbrook?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "mozzarella",
+          "url": "https://www.yelp.com/biz_photos/harrys-sports-bar-and-grill-fallbrook?search=mozzarella",
+          "matchingCaptions": []
+        },
+        {
+          "term": "fries",
+          "url": "https://www.yelp.com/biz_photos/harrys-sports-bar-and-grill-fallbrook?search=fries",
+          "matchingCaptions": [
+            "Carne Assad fries sub chicken and no pico",
+            "Chili Cheese Fries"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20483,
+        "title": "Harry's Sports Bar & Grill — San Diego restaurant guide",
+        "href": "/pin/20483/harry-s-sports-bar-grill-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lucky 11 lunch specials",
+          "items": [
+            "Half sandwich with fries or salad",
+            "Two chicken tacos with small basket of chips and salsa"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Chips & Salsa",
+            "Mozzarella Sticks",
+            "Pot Stickers with Sweet Chili Sauce",
+            "Carne Asada Fries",
+            "Loaded Nachos",
+            "All drafts, wine and well liquor",
+            "Bottles and cans"
+          ]
+        },
+        {
+          "menuLabel": "Weekday evening specials",
+          "items": [
+            "BOGO Burger",
+            "1 lb of wings",
+            "All small plates"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1145,
+      "name": "The Coal Bunker",
+      "address": "232 S Main Ave, Fallbrook, CA 92028",
+      "pinSourceUrl": "https://www.thecoalbunker.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-coal-bunker-fallbrook?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "All drinks, beer & wine",
+            "Bottles of wine",
+            "Almost any beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1146,
+      "name": "Craft House Sky Deck",
+      "address": "12841 El Camino Real Ste 202, San Diego, CA 92130",
+      "pinSourceUrl": "https://crafthouseskydeck.com/del-mar-craft-house-sky-deck-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/craft-house-at-sky-deck-del-mar-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Specials",
+          "items": [
+            "Tacos",
+            "Glass of wine",
+            "Bottle of wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1147,
+      "name": "Mediterraneo Italian Restaurant - Alpine",
+      "address": "1347 Tavern Rd, Alpine, CA 91901",
+      "pinSourceUrl": "https://mediterraneobistro.com/alpine-mediterraneo-happy-hours-specials",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Classics & pizzas",
+            "House wine & signature cocktails",
+            "Draft beers & well cocktails",
+            "Bottled beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1161,
+      "name": "Ernie's Craft Deli & Wine Bar",
+      "address": "114 N El Camino Real, Encinitas, CA 92024",
+      "pinSourceUrl": "https://erniesdeliandwine.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/ernies-craft-deli-and-wine-bar-encinitas-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Any 6 oz wine pour",
+            "All draft beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1164,
+      "name": "Romesco Mexiterranean Bistro",
+      "address": "4346 Bonita Rd, Bonita, CA 91902",
+      "pinSourceUrl": "https://romescomexmed.com/page/happy-hour",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3",
+        "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?search=mussels",
+        "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?search=quesadilla",
+        "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?search=slider"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "quesadilla",
+          "url": "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?search=quesadilla",
+          "matchingCaptions": [
+            "Huitlacoche Quesadillas",
+            "Huitlacoche quesadilla",
+            "Huitlacoche quesadilla",
+            "Huitlacoche Quesadilla...looks more like an empanada."
+          ]
+        },
+        {
+          "term": "mussels",
+          "url": "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?search=mussels",
+          "matchingCaptions": []
+        },
+        {
+          "term": "slider",
+          "url": "https://www.yelp.com/biz_photos/romesco-mexiterranean-bistro-bonita-3?search=slider",
+          "matchingCaptions": [
+            "Sliders",
+            "Short rib sliders",
+            "Short rib sliders are so moist and full of flavor! A must try!",
+            "Short rib sliders...these were delicious"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20593,
+        "title": "Romesco Mexiterranean Bistro — San Diego restaurant guide",
+        "href": "/pin/20593/romesco-mexiterranean-bistro-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Well drinks",
+            "Glass of red or white wine",
+            "Sangrias",
+            "Margaritas",
+            "All draft beers",
+            "Cochinita Torta Slider",
+            "Arrachera Quesadilla",
+            "Shrimp Quesadilla",
+            "Montadito de Boquerones",
+            "Green Lipped-Mussels",
+            "Salmon Crab Cakes"
+          ]
+        },
+        {
+          "menuLabel": "Weekly tapas bar specials",
+          "items": [
+            "Tapas (Tuesdays)",
+            "Wine Down Wednesdays: select wine bottles",
+            "Wine Down Wednesdays: charcuterie board",
+            "Martini Thursdays: house martinis",
+            "Saturday Fun Day: house margaritas & martinis",
+            "Sundays: sparkling wine",
+            "Sundays: paella & sangria pitcher"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1165,
+      "name": "Il Posto",
+      "address": "2145 Fern St, San Diego, CA 92104",
+      "pinSourceUrl": "https://ilpostosd.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/il-posto-san-diego-3",
+        "https://www.yelp.com/biz_photos/il-posto-san-diego-3?search=montanara",
+        "https://www.yelp.com/biz_photos/il-posto-san-diego-3?search=polpette"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "montanara",
+          "url": "https://www.yelp.com/biz_photos/il-posto-san-diego-3?search=montanara",
+          "matchingCaptions": []
+        },
+        {
+          "term": "polpette",
+          "url": "https://www.yelp.com/biz_photos/il-posto-san-diego-3?search=polpette",
+          "matchingCaptions": [
+            "Spaghetti con Polpette",
+            "Spaghetti con Polpette",
+            "Spaghetti con Polpette",
+            "Spaghetti con Polpette",
+            "Panuozzo con Polpette Happy Hour"
+          ]
+        },
+        {
+          "term": "spritz",
+          "url": "https://www.yelp.com/biz_photos/il-posto-san-diego-3?search=spritz",
+          "matchingCaptions": [],
+          "outcome": "accepted"
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Focaccia Malanzana",
+            "Focaccia Friariello",
+            "Focaccia Italiana",
+            "Trio alla 'Italiana'",
+            "Polpette Della Nonna",
+            "Montanara Fresca",
+            "Montanara Classica",
+            "Moscow Mule",
+            "Espressottini",
+            "Americano",
+            "Negroni",
+            "House red, white or rose wine",
+            "Draft beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1166,
+      "name": "Bacari North Park",
+      "address": "3823 30th St, San Diego, CA 92104",
+      "pinSourceUrl": "https://www.eatwithbacari.com/north-park",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bacari-north-park-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Cold, hot and pizza food items (food menu)",
+            "House wine, 5 oz",
+            "House wine, 8 oz",
+            "House wine, liter",
+            "Sangria, glass",
+            "Sangria, liter",
+            "Well cocktails",
+            "Spirit-free drinks",
+            "House beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1169,
+      "name": "Nozomi Sushi & BBQ La Jolla",
+      "address": "4150 Regents Park Row Suite 190, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.nozomisushilajolla.com/",
+      "status": "photos_added",
+      "reason": "Reviewed photos uploaded and complete profile readbacks verified.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/nozomi-la-jolla?search=sake+bomb",
+        "https://www.yelp.com/biz_photos/nozomi-la-jolla?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "sake bomb",
+          "url": "https://www.yelp.com/biz_photos/nozomi-la-jolla?search=sake+bomb",
+          "matchingCaptions": [
+            "Sake Bombers!"
+          ]
+        }
+      ],
+      "newPhotos": 1,
+      "nativePin": {
+        "id": 20484,
+        "title": "Nozomi Sushi & BBQ La Jolla — San Diego restaurant guide",
+        "href": "/pin/20484/nozomi-sushi-bbq-la-jolla-san-diego-restaurant-guide"
+      },
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1172,
+      "name": "Lamppost Pizza & Backstreet Brewery - Vista",
+      "address": "15 Main St Suite B100, Vista, CA 92083",
+      "pinSourceUrl": "https://www.lamppostpizzaofvista.com/",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "#1 Pizza & Beverage Lunch",
+            "#2 Sandwich & Beverage Lunch",
+            "#3 Salad, Pizza & Beverage Lunch",
+            "#4 Pizza Lunch",
+            "#5 Pizza & Beverage Lunch",
+            "#6 Salad, Pasta & Beverage Lunch",
+            "#7 Pizza Bread & Beverage Lunch",
+            "#8 Salad, Pizza & Beverage Lunch"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1173,
+      "name": "Knotty Barrel East Village",
+      "address": "844 Market St, San Diego, CA 92101",
+      "pinSourceUrl": "https://ev.knottybarrel.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Prior exact-branch search returned no Oklahoma captions. Do not substitute an unidentified smashburger for single/double Oklahoma variants.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/knotty-barrel-san-diego-2"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Oklahoma Smash Burger (single)",
+            "Double Oklahoma Smashburger",
+            "Selected apps",
+            "14oz draft beers",
+            "Wells liquor",
+            "House red and house white wine",
+            "Specialty shots"
+          ]
+        },
+        {
+          "menuLabel": "Weekday midday specials",
+          "items": [
+            "Burger + Fries + 14oz draft beer",
+            "Rotating wrap special",
+            "Half off bottles of wine"
+          ]
+        },
+        {
+          "menuLabel": "Weekend brunch drinks",
+          "items": [
+            "Bottomless mimosas",
+            "Seltzer buckets (5 cans of NUTRL or Surfside)",
+            "Tall boys",
+            "Bloody Mary",
+            "Specialty Bloody Marys"
+          ]
+        }
+      ]
+    }
+  ]
+}
