@@ -37,5 +37,13 @@ Check official galleries and linked photo pages, including restaurant sites. Add
 pin details and use a representative one on the landing card. Distinguish venue photos from collaboration or
 other-branch photos. Record inaccessible galleries and remaining gaps in the research notes.
 
+## Source link is a PDF (fact sheets, site information sheets)
+Check the `sourceUrl` before concluding a pin has no media: Meta's data-center pages
+(`datacenters.atmeta.com/asset/<site>/`) are PDFs, so scraping HTML finds nothing. `curl -sL` it, confirm it starts
+with `%PDF`, then `pdfimages -list` and `pdfimages -all file.pdf out/p` (poppler) and view the candidates. Drop
+logos, icons and soft masks (the `smask` rows); keep real photos, rotating any that are sideways. Credit "<operator>
+site information sheet" with the PDF as `authorUrl`. Template: `scripts/construction/meta-los-lunas-media-2026-10-31.mjs`
+(Azure upload, PUT with media, restore credits, expire, readback).
+
 ## After uploading
 Read the pin back, confirm each media URL loads, and note undownloadable images (the apply script drops them).
