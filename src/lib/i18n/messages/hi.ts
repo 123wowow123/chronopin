@@ -1074,6 +1074,7 @@ const hi: Messages = {
   },
   dateRanges: {
     theSource: 'सोर्स',
+    source: 'सोर्स',
     used: 'इस्तेमाल की गई',
     mostConfident: 'यह तारीख देने वाले {count} सोर्स में से सबसे भरोसेमंद',
     newest: 'यह तारीख देने वाले {count} सोर्स में से सबसे नया, जो पिन पोस्ट होने के बाद आया',

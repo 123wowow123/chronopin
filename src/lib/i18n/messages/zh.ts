@@ -1063,6 +1063,7 @@ const zh: Messages = {
   },
   dateRanges: {
     theSource: '来源',
+    source: '来源',
     used: '已采用',
     mostConfident: '给出此日期的 {count} 个来源中可信度最高的一个',
     newest: '给出此日期的 {count} 个来源中最新的一个，在标记之后才出现',

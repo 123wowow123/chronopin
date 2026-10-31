@@ -1068,6 +1068,7 @@ const vi: Messages = {
   },
   dateRanges: {
     theSource: 'nguồn',
+    source: 'nguồn',
     used: 'được dùng',
     mostConfident: 'Nguồn có độ tin cậy cao nhất trong {count} nguồn nêu ngày này',
     newest: 'Nguồn mới nhất trong {count} nguồn nêu ngày này, xuất hiện sau khi ghim được đăng',

@@ -1063,6 +1063,7 @@ const ko: Messages = {
   },
   dateRanges: {
     theSource: '출처',
+    source: '출처',
     used: '사용됨',
     mostConfident: '이 날짜를 제시하는 자료 {count}건 중 신뢰도가 가장 높은 것',
     newest: '이 날짜를 제시하는 자료 {count}건 중 핀 게시 이후에 나온 가장 최신 자료',

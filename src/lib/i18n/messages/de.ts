@@ -1069,6 +1069,7 @@ const de: Messages = {
   },
   dateRanges: {
     theSource: 'der Quelle',
+    source: 'Quelle',
     used: 'verwendet',
     mostConfident: 'Die sicherste der {count} Quellen mit diesem Datum',
     newest: 'Die neueste der {count} Quellen mit diesem Datum, nach dem Pinnen hinzugekommen',

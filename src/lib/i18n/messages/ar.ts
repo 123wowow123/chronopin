@@ -1195,6 +1195,7 @@ const ar: Messages = {
   },
   dateRanges: {
     theSource: 'المصدر',
+    source: 'المصدر',
     used: 'المستخدم',
     mostConfident: 'الأعلى ثقة بين {count} مصادر تذكر هذا التاريخ',
     newest: 'الأحدث بين {count} مصادر تذكر هذا التاريخ، وقد ظهر بعد نشر الدبوس',

@@ -1063,6 +1063,7 @@ const ja: Messages = {
   },
   dateRanges: {
     theSource: '出典',
+    source: '出典',
     used: '採用',
     mostConfident: 'この日付を示す {count} 件の資料のうち最も確度が高いもの',
     newest: 'この日付を示す {count} 件の資料のうち、ピン留め後に届いた最新のもの',

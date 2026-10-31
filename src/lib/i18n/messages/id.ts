@@ -1069,6 +1069,7 @@ const id: Messages = {
   },
   dateRanges: {
     theSource: 'sumbernya',
+    source: 'sumber',
     used: 'digunakan',
     mostConfident: 'Yang paling meyakinkan dari {count} sumber yang menyebut tanggal ini',
     newest: 'Yang terbaru dari {count} sumber yang menyebut tanggal ini, yang muncul setelah pin diposting',

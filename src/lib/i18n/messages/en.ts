@@ -1069,6 +1069,7 @@ const en = {
   },
   dateRanges: {
     theSource: 'the source',
+    source: 'source',
     used: 'used',
     mostConfident: 'The most confident of the {count} sources giving this date',
     newest: 'The newest of the {count} sources giving this date, which came after the pin was posted',

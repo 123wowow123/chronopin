@@ -1060,6 +1060,7 @@ const pt: Messages = {
   },
   dateRanges: {
     theSource: 'a fonte',
+    source: 'fonte',
     used: 'usada',
     mostConfident: 'A mais confiável das {count} fontes que dão esta data',
     newest: 'A mais recente das {count} fontes que dão esta data, que veio depois da publicação do pin',

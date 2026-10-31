@@ -1069,6 +1069,7 @@ const ms: Messages = {
   },
   dateRanges: {
     theSource: 'sumber',
+    source: 'sumber',
     used: 'digunakan',
     mostConfident: 'Yang paling yakin daripada {count} sumber yang memberikan tarikh ini',
     newest: 'Yang terbaharu daripada {count} sumber yang memberikan tarikh ini, yang datang selepas pin disiarkan',

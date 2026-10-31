@@ -51,10 +51,10 @@ function Range({ label, range, linked }: { label: string; range: DateRange; link
   const { locale } = t;
   const { best } = range;
   const spread = range.earliest !== range.latest;
-  const from = t('dateRanges.from', { who: best.isSource ? t('dateRanges.theSource') : hostname(best.url || '') });
+  const from = best.isSource ? t('dateRanges.source') : hostname(best.url || '');
   const refId = refIdOf(best, linked);
   return (
-    <>
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5">
       <dt className="text-subtle">{label}</dt>
       <dd className="flex flex-wrap items-center gap-x-2 gap-y-0.5" title={range.claims.map((c) => `${formatDay(c.day, locale)} (${whose(c, t)})${c.used ? ` - ${t('dateRanges.used')}` : ''}`).join('\n')}>
         <span className="font-medium text-muted tabular-nums">{formatDay(best.day, locale)}</span>
@@ -78,7 +78,7 @@ function Range({ label, range, linked }: { label: string; range: DateRange; link
           {spread ? <> · {t('dateRanges.possible', { range: formatDayRange(range.earliest, range.latest, locale) })}</> : null}
         </span>
       </dd>
-    </>
+    </div>
   );
 }
 
@@ -92,7 +92,7 @@ export function DateRanges({ start, end, evidence = [] }: { start?: DateRange; e
     return null;
   }
   return (
-    <dl className="mt-1.5 grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-1 text-xs">
+    <dl className="mt-1.5 flex flex-wrap items-center justify-between gap-x-6 gap-y-1 text-xs">
       {start ? <Range label={t('dateRanges.start')} range={start} linked={linked} /> : null}
       {end ? <Range label={t('dateRanges.end')} range={end} linked={linked} /> : null}
     </dl>
