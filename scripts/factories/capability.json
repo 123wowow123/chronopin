@@ -41190,112 +41190,113 @@
     "title": "Jeddah Tower Nears Completion",
     "sourceUrl": "https://www.youtube.com/watch?v=vVfEs9wrW98",
     "profile": {
-      "sector": "Real estate: supertall mixed-use tower",
-      "status": "construction",
-      "assessmentDate": "2026-10-29",
-      "rubricYear": 2026,
-      "source": "session",
       "axes": {
         "scale": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established.",
-          "sources": []
-        },
-        "automation": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "No sourced project-specific automation process supporting a score was established.",
-          "sources": []
+          "sources": [],
+          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established."
         },
         "technical": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No scored process capability against a documented sector baseline was established.",
-          "sources": []
-        },
-        "efficiency": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established.",
-          "sources": []
-        },
-        "supplyChain": {
-          "score": null,
-          "basis": "unknown",
-          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established.",
-          "sources": []
+          "sources": [],
+          "reasoning": "No scored process capability against a documented sector baseline was established."
         },
         "workforce": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established.",
-          "sources": []
+          "score": null,
+          "sources": [],
+          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced project-specific automation process supporting a score was established."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established."
         }
       },
+      "sector": "Real estate: supertall mixed-use tower",
+      "source": "session",
+      "status": "construction",
       "metrics": [
         {
           "key": "investment",
+          "basis": "planned",
           "label": "Published investment and scope",
           "value": "USD 1.2 billion published tower cost; district development cost excluded.",
-          "basis": "planned",
           "source": {
             "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+            "quote": "Cost US$ 1.2 billion",
             "title": "Jeddah Tower - Wikipedia",
-            "publishedDate": null,
-            "quote": "Cost US$ 1.2 billion"
+            "publishedDate": null
           }
         },
         {
           "key": "capacity",
+          "basis": "planned",
           "label": "Published capacity and scope",
           "value": "Architectural height at least 1,008 m at design completion.",
-          "basis": "planned",
           "source": {
             "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+            "quote": "At least 1,008 m",
             "title": "Jeddah Tower - Wikipedia",
-            "publishedDate": null,
-            "quote": "At least 1,008 m"
+            "publishedDate": null
           }
         },
         {
           "key": "stage",
+          "basis": "demonstrated",
           "label": "Reported current project stage",
           "value": "Construction reported above floor 118 and over 470 m on October 9, 2026.",
-          "basis": "demonstrated",
           "source": {
             "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+            "quote": "9 October 2026",
             "title": "Jeddah Tower - Wikipedia",
-            "publishedDate": null,
-            "quote": "9 October 2026"
+            "publishedDate": null
           }
         },
         {
           "key": "timeline",
-          "label": "Published project schedule",
-          "value": "Completion expected August 2028, not achieved.",
+          "label": "Latest construction completion target",
+          "value": "Late 2028; target, not a published exact completion day.",
           "basis": "planned",
           "source": {
-            "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
-            "title": "Jeddah Tower - Wikipedia",
-            "publishedDate": null,
-            "quote": "completion August 2028"
+            "url": "https://gulfnews.com/amp/story/business%2Fproperty%2Fjeddah-tower-crosses-116-floors-completion-timeline-moves-1.500699924",
+            "title": "Jeddah Tower crosses 116 floors, completion by late 2028",
+            "publishedDate": "2026-10-06",
+            "quote": "Fabien Toscano said Jeddah Tower is targeting construction completion in late 2028."
           }
         }
       ],
       "milestones": [
         {
-          "label": "Completion target",
-          "date": "August 2028",
+          "label": "Latest construction completion target",
+          "date": "Late 2028",
           "basis": "planned",
           "source": {
-            "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
-            "title": "Jeddah Tower - Wikipedia",
-            "publishedDate": null,
-            "quote": "completion August 2028"
+            "url": "https://gulfnews.com/amp/story/business%2Fproperty%2Fjeddah-tower-crosses-116-floors-completion-timeline-moves-1.500699924",
+            "title": "Jeddah Tower crosses 116 floors, completion by late 2028",
+            "publishedDate": "2026-10-06",
+            "quote": "Fabien Toscano said Jeddah Tower is targeting construction completion in late 2028."
           }
         }
-      ]
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-30",
+      "checkedAt": "2026-10-30T03:26:06.152Z"
     }
   },
   {
@@ -51252,112 +51253,148 @@
     "title": "Rogun Dam Targets Completion as World's Tallest",
     "sourceUrl": "https://www.youtube.com/watch?v=nv22uPAHgCw",
     "profile": {
-      "sector": "Energy: hydroelectric dam",
-      "status": "construction",
-      "assessmentDate": "2026-10-29",
-      "rubricYear": 2026,
-      "source": "session",
       "axes": {
         "scale": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established.",
-          "sources": []
-        },
-        "automation": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "No sourced project-specific automation process supporting a score was established.",
-          "sources": []
+          "sources": [],
+          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established."
         },
         "technical": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No scored process capability against a documented sector baseline was established.",
-          "sources": []
-        },
-        "efficiency": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established.",
-          "sources": []
-        },
-        "supplyChain": {
-          "score": null,
-          "basis": "unknown",
-          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established.",
-          "sources": []
+          "sources": [],
+          "reasoning": "No scored process capability against a documented sector baseline was established."
         },
         "workforce": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established.",
-          "sources": []
+          "score": null,
+          "sources": [],
+          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced project-specific automation process supporting a score was established."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established."
         }
       },
+      "sector": "Energy: hydroelectric dam",
+      "source": "session",
+      "status": "construction",
       "metrics": [
         {
-          "key": "capacity",
-          "label": "Published capacity and scope",
-          "value": "3,600 MW full hydroelectric design, not current installed output.",
-          "basis": "planned",
-          "source": {
-            "url": "https://en.wikipedia.org/wiki/Rogun_Dam",
-            "title": "Rogun Dam - Wikipedia",
-            "publishedDate": null,
-            "quote": "3,600 MW (planned)"
-          }
-        },
-        {
-          "key": "products",
-          "label": "Project design and equipment",
-          "value": "Six 600 MW design generating units.",
-          "basis": "planned",
-          "source": {
-            "url": "https://en.wikipedia.org/wiki/Rogun_Dam",
-            "title": "Rogun Dam - Wikipedia",
-            "publishedDate": null,
-            "quote": "6 x 600 MW"
-          }
-        },
-        {
           "key": "siteArea",
+          "basis": "planned",
           "label": "Project land and footprint",
           "value": "335-metre design dam height.",
-          "basis": "planned",
           "source": {
             "url": "https://www.webuildgroup.com/en/media/press-notes/webuild-rogun-dam-tallest-dam-world-takes-shape-tajikistan/",
+            "quote": "335 metres in height",
             "title": "Webuild: Rogun dam, the tallest dam in the world, takes shape in Tajikistan | Webuild Group",
-            "publishedDate": null,
-            "quote": "335 metres in height"
+            "publishedDate": null
           }
         },
         {
           "key": "stage",
+          "basis": "demonstrated",
           "label": "Reported current project stage",
           "value": "Contractor reports presidential visit to active construction site August 2025.",
-          "basis": "demonstrated",
           "source": {
             "url": "https://www.webuildgroup.com/en/media/press-notes/webuild-rogun-dam-tallest-dam-world-takes-shape-tajikistan/",
+            "quote": "August 28, 2025",
             "title": "Webuild: Rogun dam, the tallest dam in the world, takes shape in Tajikistan | Webuild Group",
-            "publishedDate": null,
-            "quote": "August 28, 2025"
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "basis": "planned",
+          "label": "Projected completed capacity",
+          "value": "3,780 MW; full-project design, not current generation.",
+          "source": {
+            "url": "https://www.worldbank.org/en/programs/rogun-hydropower-plant-project/faqs",
+            "quote": "projected installed capacity of 3,780 megawatts upon completion in 2033",
+            "title": "World Bank: Rogun FAQ",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Projected annual generation",
+          "value": "14,400 GWh/year at full project scope.",
+          "source": {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/06/30/advancing-energy-security-and-jobs-through-the-transformative-rogun-hydropower-project",
+            "quote": "14,400 gigawatt-hours",
+            "title": "World Bank: advancing energy security and jobs",
+            "publishedDate": "2026-06-30"
+          }
+        },
+        {
+          "key": "employment",
+          "basis": "planned",
+          "label": "Projected direct and indirect jobs",
+          "value": "More than 30,000; not a current on-site workforce count.",
+          "source": {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/06/30/advancing-energy-security-and-jobs-through-the-transformative-rogun-hydropower-project",
+            "quote": "over 30,000 direct and indirect jobs",
+            "title": "World Bank: advancing energy security and jobs",
+            "publishedDate": "2026-06-30"
+          }
+        },
+        {
+          "key": "timeline",
+          "basis": "planned",
+          "label": "Full-operation target",
+          "value": "2033; separate from initial units and dam-height milestones.",
+          "source": {
+            "url": "https://www.worldbank.org/en/programs/rogun-hydropower-plant-project/faqs",
+            "quote": "projected installed capacity of 3,780 megawatts upon completion in 2033",
+            "title": "World Bank: Rogun FAQ",
+            "publishedDate": null
           }
         }
       ],
       "milestones": [
         {
-          "label": "Active construction reported",
           "date": "2025-08-28",
           "basis": "demonstrated",
+          "label": "Active construction reported",
           "source": {
             "url": "https://www.webuildgroup.com/en/media/press-notes/webuild-rogun-dam-tallest-dam-world-takes-shape-tajikistan/",
+            "quote": "August 28, 2025",
             "title": "Webuild: Rogun dam, the tallest dam in the world, takes shape in Tajikistan | Webuild Group",
-            "publishedDate": null,
-            "quote": "August 28, 2025"
+            "publishedDate": null
+          }
+        },
+        {
+          "date": "2033",
+          "basis": "planned",
+          "label": "Full project completion target",
+          "source": {
+            "url": "https://www.worldbank.org/en/programs/rogun-hydropower-plant-project/faqs",
+            "quote": "projected installed capacity of 3,780 megawatts upon completion in 2033",
+            "title": "World Bank: Rogun FAQ",
+            "publishedDate": null
           }
         }
-      ]
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-10-30",
+      "checkedAt": "2026-10-31T02:39:04.069Z"
     }
   },
   {

@@ -1,0 +1,1702 @@
+{
+  "localRunId": 42,
+  "slot": "manual:2026-10-31T02:09:21.020Z",
+  "status": "ok",
+  "finished": "2026-10-31T02:48:13.252190+00:00",
+  "newPins": [
+    20656,
+    20657
+  ],
+  "pinTranslationRowsSaved": 0,
+  "pinTranslations": "Owner directed handoff to translation agent; no coverage audit run.",
+  "translationHandoff": [
+    20656,
+    20657,
+    5496,
+    3542,
+    2623,
+    219,
+    448,
+    540,
+    2212,
+    20627,
+    16017
+  ],
+  "modelPanelLocalizationHandoff": [
+    4808,
+    15128,
+    4812
+  ],
+  "tests": {
+    "okfLint": "9/9 passed",
+    "whitespace": "passed",
+    "catalogJSON": "passed"
+  },
+  "native": [
+    {
+      "local": true,
+      "sentimentRowsVerified": 179,
+      "held": [
+        17091,
+        17324,
+        17325,
+        17326,
+        17344,
+        17350,
+        18096,
+        18179
+      ]
+    },
+    {
+      "local": false,
+      "sentimentRowsVerified": 179,
+      "held": [
+        17091,
+        17324,
+        17325,
+        17326,
+        17344,
+        17350,
+        18096,
+        18179
+      ]
+    },
+    {
+      "local": true,
+      "pinId": 20656,
+      "author": 276,
+      "verified": true
+    },
+    {
+      "local": true,
+      "pinId": 20657,
+      "author": 324,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 20656,
+      "author": 276,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 20657,
+      "author": 324,
+      "verified": true
+    }
+  ],
+  "events": [
+    {
+      "id": 4903,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4879,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4352,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6512,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3538,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2498,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5028,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4402,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5445,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2499,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4706,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4906,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4907,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2500,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2501,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3434,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6660,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5035,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2503,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2485,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2484,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4881,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2379,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2505,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4882,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3325,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4886,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5030,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2508,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6513,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2076,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 4616,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2073,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 2074,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 251,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 5851,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 6355,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3609,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3409,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    },
+    {
+      "id": 3542,
+      "source": "hand",
+      "preservedFieldsReplayed": [],
+      "verified": true
+    }
+  ],
+  "models": [
+    {
+      "pinId": 4808,
+      "author": 438,
+      "tables": 2,
+      "charts": 1,
+      "reviewCount": 5,
+      "media": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/f6d1d6c4-82f6-4dee-8b72-b2a06e887591.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/3518b67b-a3ea-47aa-91a0-78e8aa6e5df9.png",
+          "status": 200
+        }
+      ],
+      "verified": true
+    },
+    {
+      "pinId": 15128,
+      "author": 438,
+      "tables": 2,
+      "charts": 0,
+      "reviewCount": 3,
+      "media": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/210c3586-f5da-4bc4-b8c2-4abbf0911aa0.jpeg",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/f1702443-9d7c-4e78-9a65-2f8250554e26.png",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/54397214-defb-471a-bb3a-1fc6338e01da.jpeg",
+          "status": 200
+        }
+      ],
+      "verified": true
+    },
+    {
+      "pinId": 4812,
+      "author": 438,
+      "tables": 2,
+      "charts": 1,
+      "reviewCount": 4,
+      "media": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/3f51733b-91a1-4e89-88dc-8cb191317720.png",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/806bf42f-8911-4893-84ed-1f49024b335c.png",
+          "status": 200
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/7f5d92d4-08d1-482d-bd85-2d20dac4ad07.jpeg",
+          "status": 200
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "modelReviewSources": [
+    {
+      "pinId": 4808,
+      "url": "https://decrypt.co/378824/xai-launches-grok-4-7",
+      "quote": "but still short of Fable 5.1, which wins at every price point",
+      "title": "xAI Launches Grok 4.7. It's Bigger, But Late to the AI Frontier Party",
+      "sentiment": 0.3,
+      "publishedDate": "2026-09-21",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "xAI Launches Grok 4.7. It's Bigger, But Late to the AI Frontier Party - Decrypt"
+    },
+    {
+      "pinId": 4808,
+      "url": "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/",
+      "quote": "On Terminal-Bench 4.0, Grok 4.7 hits just 26 percent, versus 60 percent for GPT-6 Astra and 55 percent for Claude Fable 5.1",
+      "title": "xAI launches Grok 4.7 at bargain prices, but benchmarks reveal a wide gap to Claude and GPT-6",
+      "sentiment": -0.1,
+      "publishedDate": "2026-09-21",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "xAI launches Grok 4.7 at bargain prices, but benchmarks reveal a wide gap to Claude and GPT-6"
+    },
+    {
+      "pinId": 4808,
+      "url": "https://www.mindstudio.ai/blog/grok-4-7-hands-on-test",
+      "quote": "Grok 4.7 found and fixed a real, unscripted bug in a containerized full-stack app",
+      "title": "Grok 4.7 Hands-On: xAI's New Model Tested on Real Bugs, Circuits, Law",
+      "sentiment": 0.5,
+      "publishedDate": "2026-09-22",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "Grok 4.7 Hands-On: xAI's New Model Tested on Real Bugs, Circuits, Law | MindStudio"
+    },
+    {
+      "pinId": 4808,
+      "url": "https://www.eesel.ai/blog/grok-4-7-review",
+      "quote": "it is the best price-performance model I have tested this quarter, but not the smartest one on the board.",
+      "title": "Grok 4.7 review: is xAI's cheap frontier model actually good?",
+      "sentiment": 0.5,
+      "publishedDate": "2026-09-23",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "Grok 4.7 review: is xAI's cheap frontier model good? | eesel AI"
+    },
+    {
+      "pinId": 4808,
+      "url": "https://developer.puter.com/blog/grok-4-7-review/",
+      "quote": "On those three tasks, at default settings, we found no measurable difference in self-checking between Grok 4.7 and Grok 4.6",
+      "title": "Grok 4.7 Review: xAI's Self-Checking Model",
+      "sentiment": 0.4,
+      "publishedDate": "2026-09-25",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "Grok 4.7 Review: xAI's Self-Checking Model"
+    },
+    {
+      "pinId": 15128,
+      "url": "https://artificialanalysis.ai/models/step-5",
+      "quote": "It's also notably fast, however somewhat verbose.",
+      "title": "Step 5 Preview - Intelligence, Performance & Price Analysis",
+      "publishedDate": null,
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "Step 5 Preview - Intelligence, Performance & Price Analysis | Artificial Analysis"
+    },
+    {
+      "pinId": 15128,
+      "url": "https://runtimewire.com/article/stepfun-step-5-preview-600b-agent-model-pricing",
+      "quote": "StepFun is pairing open-weight models with a proprietary flagship, using low agent costs as its wedge while its own benchmarks still show a capability gap.",
+      "title": "StepFun launches a 600B agent model at $1 per million input tokens",
+      "sentiment": 0,
+      "publishedDate": "2026-09-20",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "StepFun launches a 600B agent model at $1 per million input tokens"
+    },
+    {
+      "pinId": 15128,
+      "url": "https://aitoolsreview.co.uk/insights/stepfun-step-5-preview",
+      "quote": "We have not run Step 5 ourselves.",
+      "title": "StepFun Step 5 Preview: Specs, Pricing & Verdict",
+      "sentiment": 0,
+      "publishedDate": "2026-10-10",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "StepFun Step 5 Preview: Specs, Pricing & Verdict (October 2026) - AIToolsReview"
+    },
+    {
+      "pinId": 4812,
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+      "quote": "It's also notably fast, however very verbose.",
+      "title": "DeepSeek V4.1 Flash (max) - Intelligence, Performance & Price Analysis",
+      "publishedDate": null,
+      "status": 200,
+      "quoteMatched": false,
+      "pageTitle": "DeepSeek V4.1 Flash (max) - Intelligence, Performance & Price Analysis | Artificial Analysis",
+      "quoteMatchedRendered": false,
+      "reason": "Current rendered page is deprecated after October17 revision and no longer includes the prior verbosity sentence; historical review preserved pending dated archived evidence."
+    },
+    {
+      "pinId": 4812,
+      "url": "https://thenextweb.com/news/deepseek-v4-1-flash-launch-v4-pro-retired-price-cut",
+      "quote": "The open question is whether DeepSeek's benchmarks hold up in independent testing, and what V4.1-Pro costs when it arrives.",
+      "title": "DeepSeek launches V4.1-Flash and retires V4-Pro, its flagship model",
+      "sentiment": 0,
+      "publishedDate": "2026-09-10",
+      "status": 200,
+      "quoteMatched": false,
+      "pageTitle": "DeepSeek launches V4.1-Flash and retires V4-Pro, its flagship model",
+      "quoteMatchedNormalized": true,
+      "reason": "Apostrophe typography differs; words match."
+    },
+    {
+      "pinId": 4812,
+      "url": "https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/",
+      "quote": "V4.1-Flash scored 90.6 on Terminal-Bench 2.1, narrowly ahead of Opus 5 at 89.1 and GPT-5.6 Sol at 88.8.",
+      "title": "DeepSeek releases V4.1-Flash, says it outperforms flagship V4-Pro",
+      "sentiment": 0.7,
+      "publishedDate": "2026-09-10",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "DeepSeek releases V4.1-Flash, says it outperforms flagship V4-Pro - SiliconANGLE"
+    },
+    {
+      "pinId": 4812,
+      "url": "https://www.buildfastwithai.com/blogs/deepseek-v4-1-flash-review",
+      "quote": "V4.1 Flash is one of the strongest value-focused models for coding agents, multimodal developer workflows and high-volume API use.",
+      "title": "DeepSeek V4.1 Flash Review: Benchmarks, Price, Speed & Is It Worth It? (2026)",
+      "sentiment": 0.7,
+      "publishedDate": "2026-09-10",
+      "status": 200,
+      "quoteMatched": true,
+      "pageTitle": "DeepSeek V4.1 Flash Review: Benchmarks, Price, Speed & Is It Worth It? (2026)"
+    }
+  ],
+  "publicPages": [
+    {
+      "pinId": 20656,
+      "url": "https://www.chronopin.com/pin/20656/doordash-agrees-to-buy-instacart-in-17-billion-deal",
+      "status": 200
+    },
+    {
+      "pinId": 20657,
+      "url": "https://www.chronopin.com/pin/20657/california-billionaire-tax-market-prices-passage-at-22-5-before-vote",
+      "status": 200
+    },
+    {
+      "pinId": 5496,
+      "url": "https://www.chronopin.com/pin/5496/australian-motogp-2026-sunday-activities-cancelled-at-phillip-island",
+      "status": 200
+    },
+    {
+      "pinId": 5200,
+      "url": "https://www.chronopin.com/pin/5200/spiel-essen-2026-fills-all-eight-halls-of-messe-essen-on-22-25-october",
+      "status": 200
+    },
+    {
+      "pinId": 216,
+      "url": "https://www.chronopin.com/pin/216/western-sydney-international-airport-opens",
+      "status": 200
+    },
+    {
+      "pinId": 4808,
+      "url": "https://www.chronopin.com/pin/4808/grok-4-7-released",
+      "status": 200
+    },
+    {
+      "pinId": 15128,
+      "url": "https://www.chronopin.com/pin/15128/step-5-preview-released",
+      "status": 200
+    },
+    {
+      "pinId": 4812,
+      "url": "https://www.chronopin.com/pin/4812/deepseek-v4-1-flash-released",
+      "status": 200
+    },
+    {
+      "pinId": 15107,
+      "url": "https://www.chronopin.com/pin/15107/deepseek-v3-2-and-deepseek-v3-2-speciale-released",
+      "status": 200
+    },
+    {
+      "pinId": 20627,
+      "url": "https://www.chronopin.com/pin/20627/super-typhoon-in-fa-peaks-at-130-knots",
+      "status": 200
+    },
+    {
+      "pinId": 16017,
+      "url": "https://www.chronopin.com/pin/16017/brent-crude-oil-price-october-2026",
+      "status": 200
+    },
+    {
+      "pinId": 2623,
+      "url": "https://www.chronopin.com/pin/2623/rogun-dam-targets-completion-as-world-s-tallest",
+      "status": 200
+    },
+    {
+      "pinId": 540,
+      "url": "https://www.chronopin.com/pin/540/bogota-metro-line-1-targets-2028-opening",
+      "status": 200
+    },
+    {
+      "pinId": 2212,
+      "url": "https://www.chronopin.com/pin/2212/the-athletics-las-vegas-ballpark-opens-on-the-tropicana-site",
+      "status": 200
+    },
+    {
+      "pinId": 219,
+      "url": "https://www.chronopin.com/pin/219/jeddah-tower-completion",
+      "status": 200
+    },
+    {
+      "pinId": 448,
+      "url": "https://www.chronopin.com/pin/448/jeddah-tower-nears-completion",
+      "status": 200
+    },
+    {
+      "pinId": 3542,
+      "url": "https://www.chronopin.com/pin/3542/salesforce-cancels-world-tour-essentials-paris-on-november-5-2026",
+      "status": 200
+    }
+  ],
+  "gaps": [
+    {
+      "pinId": 17333,
+      "local": true,
+      "reason": "Oct30 evening: original Silicon Ranch project page returns404 and generic Alabama PSC page does not identify SR Hope Hull. Need exact operator/permit identity, sourced capex or applicable cost benchmark, physical stage and operating target before a buildout profile; inherited USD120m/80MW claims not independently established.",
+      "verified": true
+    },
+    {
+      "pinId": 17333,
+      "local": false,
+      "reason": "Oct30 evening: original Silicon Ranch project page returns404 and generic Alabama PSC page does not identify SR Hope Hull. Need exact operator/permit identity, sourced capex or applicable cost benchmark, physical stage and operating target before a buildout profile; inherited USD120m/80MW claims not independently established.",
+      "verified": true
+    },
+    {
+      "pinId": 540,
+      "local": true,
+      "reason": "Oct30 evening: saved operator-sourced 16-station/23.96km profile and latest manager March14,2028 target, retaining March15 conflict. Need current same-scope budget evidence for inherited USD4bn, exact line/station map anchor and reviewed GIS from IDECA station dataset; no line geometry fabricated. Official rendering plus 3 relevant media and three dated independent project reactions remain unfilled.",
+      "verified": true
+    },
+    {
+      "pinId": 540,
+      "local": false,
+      "reason": "Oct30 evening: saved operator-sourced 16-station/23.96km profile and latest manager March14,2028 target, retaining March15 conflict. Need current same-scope budget evidence for inherited USD4bn, exact line/station map anchor and reviewed GIS from IDECA station dataset; no line geometry fabricated. Official rendering plus 3 relevant media and three dated independent project reactions remain unfilled.",
+      "verified": true
+    },
+    {
+      "pinId": 2212,
+      "local": true,
+      "reason": "Oct30 evening: current USD2.1bn budget and four sourced buildout fields saved. Need credited official rendering as lead and 3 relevant media, reviewed exact site geometry and three dated public project reactions. Existing historic Tropicana photo preserved; Feb29 construction completion is distinct from public opening at start of 2028 baseball season.",
+      "verified": true
+    },
+    {
+      "pinId": 2212,
+      "local": false,
+      "reason": "Oct30 evening: current USD2.1bn budget and four sourced buildout fields saved. Need credited official rendering as lead and 3 relevant media, reviewed exact site geometry and three dated public project reactions. Existing historic Tropicana photo preserved; Feb29 construction completion is distinct from public opening at start of 2028 baseball season.",
+      "verified": true
+    },
+    {
+      "pinId": 4812,
+      "local": true,
+      "reason": "Oct30 evening: Artificial Analysis current rendered DeepSeek V4.1 Flash original-model page is marked deprecated after1017 revision and no longer contains stored verbosity sentence. Need dated archived launch-review evidence or a dated replacement review. Retained historical quote; no fabricated publication day or current revalidation.",
+      "verified": true
+    },
+    {
+      "pinId": 4812,
+      "local": false,
+      "reason": "Oct30 evening: Artificial Analysis current rendered DeepSeek V4.1 Flash original-model page is marked deprecated after1017 revision and no longer contains stored verbosity sentence. Need dated archived launch-review evidence or a dated replacement review. Retained historical quote; no fabricated publication day or current revalidation.",
+      "verified": true
+    },
+    {
+      "pinId": 16017,
+      "local": true,
+      "reason": "Oct30 evening: all30 October KXBRENTMON thresholds are closed, but exchange API expiration_value and result remain blank. Need finalized realized settlement before adding result or prediction-accuracy explanation; zero-bid/one-dollar-ask empty book is not a forecast.",
+      "verified": true
+    },
+    {
+      "pinId": 16017,
+      "local": false,
+      "reason": "Oct30 evening: all30 October KXBRENTMON thresholds are closed, but exchange API expiration_value and result remain blank. Need finalized realized settlement before adding result or prediction-accuracy explanation; zero-bid/one-dollar-ask empty book is not a forecast.",
+      "verified": true
+    }
+  ],
+  "adsAndHoroscope": [
+    {
+      "table": "PinAd",
+      "localId": 1,
+      "productionId": 1,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 3,
+      "productionId": 3,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 5,
+      "productionId": 5,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 8,
+      "productionId": 8,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 9,
+      "productionId": 9,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 10,
+      "productionId": 10,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 11,
+      "productionId": 11,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 12,
+      "productionId": 12,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 15,
+      "productionId": 15,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 17,
+      "productionId": 17,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 18,
+      "productionId": 18,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 31,
+      "productionId": 31,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 34,
+      "productionId": 34,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 35,
+      "productionId": 35,
+      "status": "broken",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 36,
+      "productionId": 36,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 37,
+      "productionId": 37,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 38,
+      "productionId": 38,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 39,
+      "productionId": 39,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 40,
+      "productionId": 40,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 41,
+      "productionId": 41,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 42,
+      "productionId": 42,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 43,
+      "productionId": 43,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 45,
+      "productionId": 45,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 46,
+      "productionId": 46,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 47,
+      "productionId": 47,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 50,
+      "productionId": 50,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 51,
+      "productionId": 51,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 52,
+      "productionId": 52,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 53,
+      "productionId": 53,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 54,
+      "productionId": 54,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 56,
+      "productionId": 56,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 57,
+      "productionId": 57,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 63,
+      "productionId": 63,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "PinAd",
+      "localId": 64,
+      "productionId": 64,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 1,
+      "productionId": 1,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 3,
+      "productionId": 3,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 6,
+      "productionId": 6,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 7,
+      "productionId": 7,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 8,
+      "productionId": 8,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 9,
+      "productionId": 9,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 10,
+      "productionId": 10,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 11,
+      "productionId": 11,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 12,
+      "productionId": 12,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 13,
+      "productionId": 13,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 14,
+      "productionId": 14,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 15,
+      "productionId": 15,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 16,
+      "productionId": 16,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 17,
+      "productionId": 17,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 18,
+      "productionId": 18,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 19,
+      "productionId": 19,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 20,
+      "productionId": 20,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 21,
+      "productionId": 21,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 22,
+      "productionId": 22,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 23,
+      "productionId": 23,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 24,
+      "productionId": 24,
+      "status": "broken",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 25,
+      "productionId": 25,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 26,
+      "productionId": 26,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 27,
+      "productionId": 27,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 28,
+      "productionId": 28,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 29,
+      "productionId": 29,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 30,
+      "productionId": 30,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 31,
+      "productionId": 31,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 32,
+      "productionId": 32,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 33,
+      "productionId": 33,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 34,
+      "productionId": 34,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 36,
+      "productionId": 36,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 37,
+      "productionId": 37,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 38,
+      "productionId": 38,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "ProductAd",
+      "localId": 39,
+      "productionId": 39,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 18,
+      "productionId": 18,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 19,
+      "productionId": 19,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 20,
+      "productionId": 20,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 22,
+      "productionId": 22,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 27,
+      "productionId": 27,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 46,
+      "productionId": 46,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 47,
+      "productionId": 47,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 54,
+      "productionId": 54,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 59,
+      "productionId": 59,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 60,
+      "productionId": 60,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 66,
+      "productionId": 66,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 74,
+      "productionId": 74,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 85,
+      "productionId": 85,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 93,
+      "productionId": 93,
+      "status": "broken",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 97,
+      "productionId": 97,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 105,
+      "productionId": 105,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 106,
+      "productionId": 106,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 108,
+      "productionId": 108,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 111,
+      "productionId": 111,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 116,
+      "productionId": 116,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 125,
+      "productionId": 125,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 153,
+      "productionId": 153,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 154,
+      "productionId": 154,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 160,
+      "productionId": 160,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 161,
+      "productionId": 161,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 175,
+      "productionId": 175,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 178,
+      "productionId": 178,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 181,
+      "productionId": 181,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "localId": 202,
+      "productionId": 202,
+      "status": "ok",
+      "verified": true
+    },
+    {
+      "table": "HolidayAd",
+      "id": 203,
+      "removed": true,
+      "reason": "Unknown-brand generic pool blaster; trusted-brand XSHOT alternative retained."
+    },
+    {
+      "table": "TransitHoroscope",
+      "day": "2026-11-01",
+      "verified": true
+    }
+  ],
+  "holidayHeadlines": [
+    {
+      "local": false,
+      "ads": 1,
+      "translations": 15,
+      "verified": true
+    },
+    {
+      "local": true,
+      "ads": 1,
+      "translations": 15,
+      "verified": true
+    }
+  ],
+  "profiles": [
+    {
+      "pinId": 2212,
+      "local": true,
+      "metrics": 4,
+      "verified": true
+    },
+    {
+      "pinId": 2212,
+      "local": false,
+      "metrics": 4,
+      "verified": true
+    },
+    {
+      "pinId": 540,
+      "local": true,
+      "metrics": 3,
+      "verified": true
+    },
+    {
+      "pinId": 540,
+      "local": false,
+      "metrics": 3,
+      "verified": true
+    }
+  ],
+  "rogun": [
+    {
+      "local": true,
+      "pinId": 2623,
+      "authorPreserved": true,
+      "metrics": 6,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 2623,
+      "authorPreserved": true,
+      "metrics": 6,
+      "verified": true
+    }
+  ],
+  "rogunPower": [
+    {
+      "local": true,
+      "power": {
+        "megawatts": 3780,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.worldbank.org/en/programs/rogun-hydropower-plant-project/faqs",
+        "note": "Projected completed Rogun design: 3,780 MW; full operation targeted in 2033, not current output. World Bank June 30, 2026 release projects 14,400 GWh/year, not measured present generation.",
+        "checkedAt": "2026-10-31T02:39:59.489Z"
+      }
+    },
+    {
+      "local": false,
+      "power": {
+        "megawatts": 3780,
+        "kind": "generation",
+        "source": "hand",
+        "sourceUrl": "https://www.worldbank.org/en/programs/rogun-hydropower-plant-project/faqs",
+        "note": "Projected completed Rogun design: 3,780 MW; full operation targeted in 2033, not current output. World Bank June 30, 2026 release projects 14,400 GWh/year, not measured present generation.",
+        "checkedAt": "2026-10-31T02:39:59.921Z"
+      }
+    }
+  ],
+  "jeddah": [
+    {
+      "pinId": 219,
+      "local": true,
+      "verified": true
+    },
+    {
+      "pinId": 219,
+      "local": false,
+      "verified": true
+    },
+    {
+      "pinId": 448,
+      "local": true,
+      "verified": true
+    },
+    {
+      "pinId": 448,
+      "local": false,
+      "verified": true
+    }
+  ],
+  "airportReactions": {
+    "basis": "Three attributable project reactions from opened pages: official support, a resident’s pre-opening noise/process concerns, and an arrival passenger’s experience. Dates are original publication days, not later updates. Sentiment is an editorial estimate of each excerpt’s tone toward this airport, not a measured satisfaction survey. Stored as critic reactions, never reader comments.",
+    "reviews": [
+      {
+        "url": "https://www.destinationnsw.com.au/newsroom/western-sydney-to-open-to-passengers-on-25-october-2026",
+        "title": "Chris Bowen — official opening announcement — Western Sydney International Airport to open to passengers in October",
+        "publishedDate": "2026-06-10",
+        "quote": "Western Sydney’s gateway to the world is opening soon, and it will open ready to support Sustainable Aviation Fuel.",
+        "sentiment": 0.7
+      },
+      {
+        "url": "https://www.abc.net.au/news/2026-10-24/western-sydney-international-airport-80-years-of-protests-debate/107298012",
+        "title": "Resident Ms Wong — community concerns reported by ABC — New Western Sydney International Airport opens after 80 years of debate and protests",
+        "publishedDate": "2026-10-24",
+        "quote": "It's such a kick in the guts that they are opening it without addressing any of the community's concerns.",
+        "sentiment": -0.8
+      },
+      {
+        "url": "https://www.abc.net.au/news/2026-10-26/nsw-wsi-western-sydney-airport-confusion-travellers-open/107308302",
+        "title": "Passenger Julie Lundmark — arrival confusion reported by ABC — Opening of new Western Sydney airport causes confusion for some travellers",
+        "publishedDate": "2026-10-26",
+        "quote": "We landed here and looked out of the window and had no idea where we were,",
+        "sentiment": -0.4
+      }
+    ],
+    "readbacks": [
+      {
+        "local": true,
+        "pinId": 216,
+        "datedReactions": 3,
+        "verified": true
+      },
+      {
+        "local": false,
+        "pinId": 216,
+        "datedReactions": 3,
+        "verified": true
+      }
+    ]
+  },
+  "frontier": [
+    {
+      "pinId": 15107,
+      "local": true,
+      "verified": true
+    },
+    {
+      "pinId": 15107,
+      "local": false,
+      "verified": true
+    }
+  ],
+  "storms": [
+    {
+      "pinId": 20627,
+      "points": 29,
+      "media": 3,
+      "localAndProductionVerified": true
+    }
+  ],
+  "parisCancellation": [
+    {
+      "pinId": 3542,
+      "local": true,
+      "verified": true
+    },
+    {
+      "pinId": 3542,
+      "local": false,
+      "verified": true
+    }
+  ],
+  "parisTickets": [
+    {
+      "local": true,
+      "cancellationTicketCleared": true
+    },
+    {
+      "local": false,
+      "cancellationTicketCleared": true
+    }
+  ],
+  "brent": [
+    {
+      "local": true,
+      "pinId": 16017,
+      "status": "closed-unfinalized",
+      "contractVolume": 262218.52,
+      "verified": true
+    },
+    {
+      "local": false,
+      "pinId": 16017,
+      "status": "closed-unfinalized",
+      "contractVolume": 262218.52,
+      "verified": true
+    }
+  ],
+  "newDoorDash": {
+    "pinId": 20656,
+    "author": 276,
+    "bothVerified": true,
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/bc3ab60e-bed4-4ef7-be3d-256fc1b72c57.png",
+        "status": 200,
+        "credit": "Convequity; Instacart and DoorDash logos"
+      }
+    ]
+  },
+  "newCalifornia": {
+    "pinId": 20657,
+    "author": 324,
+    "bothVerified": true,
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/8d6a107e-d9ea-4a3f-9f50-992390715fa5.jpeg",
+        "status": 200,
+        "credit": "KQED Election 2026 voter guide"
+      }
+    ]
+  },
+  "revisits": [
+    {
+      "pinId": 5496,
+      "local": true,
+      "author": 428,
+      "datePreserved": true,
+      "verified": true
+    },
+    {
+      "pinId": 5200,
+      "local": true,
+      "soldOut": true,
+      "pricesPreserved": true,
+      "verified": true
+    },
+    {
+      "pinId": 5496,
+      "local": false,
+      "author": 428,
+      "datePreserved": true,
+      "verified": true
+    },
+    {
+      "pinId": 5200,
+      "local": false,
+      "soldOut": true,
+      "pricesPreserved": true,
+      "verified": true
+    }
+  ],
+  "pendingSentimentLocal": [
+    {
+      "id": 17091,
+      "textHash": "78fb4380cbde"
+    },
+    {
+      "id": 17324,
+      "textHash": "53d1c8a1c01e"
+    },
+    {
+      "id": 17325,
+      "textHash": "ec1320dc1a0e"
+    },
+    {
+      "id": 17326,
+      "textHash": "af45d421d75c"
+    },
+    {
+      "id": 17344,
+      "textHash": "c5937fea7196"
+    },
+    {
+      "id": 17350,
+      "textHash": "33bc713e211e"
+    },
+    {
+      "id": 18096,
+      "textHash": "e21c76f73670"
+    },
+    {
+      "id": 18179,
+      "textHash": "83eef023837c"
+    }
+  ],
+  "pendingSentimentProduction": [
+    {
+      "id": 17091,
+      "textHash": "78fb4380cbde"
+    },
+    {
+      "id": 17324,
+      "textHash": "53d1c8a1c01e"
+    },
+    {
+      "id": 17325,
+      "textHash": "ec1320dc1a0e"
+    },
+    {
+      "id": 17326,
+      "textHash": "af45d421d75c"
+    },
+    {
+      "id": 17344,
+      "textHash": "c5937fea7196"
+    },
+    {
+      "id": 17350,
+      "textHash": "33bc713e211e"
+    },
+    {
+      "id": 18096,
+      "textHash": "e21c76f73670"
+    },
+    {
+      "id": 18179,
+      "textHash": "83eef023837c"
+    }
+  ],
+  "productionRunId": 42
+}

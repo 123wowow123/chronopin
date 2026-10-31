@@ -1,0 +1,29 @@
+[
+  {
+    "pinId": 216,
+    "basis": "Three attributable project reactions from opened pages: official support, a resident’s pre-opening noise/process concerns, and an arrival passenger’s experience. Dates are original publication days, not later updates. Sentiment is an editorial estimate of each excerpt’s tone toward this airport, not a measured satisfaction survey. Stored as critic reactions, never reader comments.",
+    "reviews": [
+      {
+        "url": "https://www.destinationnsw.com.au/newsroom/western-sydney-to-open-to-passengers-on-25-october-2026",
+        "title": "Chris Bowen — official opening announcement — Western Sydney International Airport to open to passengers in October",
+        "publishedDate": "2026-06-10",
+        "quote": "Western Sydney’s gateway to the world is opening soon, and it will open ready to support Sustainable Aviation Fuel.",
+        "sentiment": 0.7
+      },
+      {
+        "url": "https://www.abc.net.au/news/2026-10-24/western-sydney-international-airport-80-years-of-protests-debate/107298012",
+        "title": "Resident Ms Wong — community concerns reported by ABC — New Western Sydney International Airport opens after 80 years of debate and protests",
+        "publishedDate": "2026-10-24",
+        "quote": "It's such a kick in the guts that they are opening it without addressing any of the community's concerns.",
+        "sentiment": -0.8
+      },
+      {
+        "url": "https://www.abc.net.au/news/2026-10-26/nsw-wsi-western-sydney-airport-confusion-travellers-open/107308302",
+        "title": "Passenger Julie Lundmark — arrival confusion reported by ABC — Opening of new Western Sydney airport causes confusion for some travellers",
+        "publishedDate": "2026-10-26",
+        "quote": "We landed here and looked out of the window and had no idea where we were,",
+        "sentiment": -0.4
+      }
+    ]
+  }
+]

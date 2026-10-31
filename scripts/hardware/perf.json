@@ -11485,5 +11485,273 @@
         }
       }
     ]
+  },
+  {
+    "sourceUrl": "https://x.ai/news/grok-4-7",
+    "tables": [
+      {
+        "title": "Grok 4.7 — launch terms",
+        "sourceUrl": "https://x.ai/news/grok-4-7",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "SpaceXSI / xAI"
+          ],
+          [
+            "Released",
+            "September 21, 2026"
+          ],
+          [
+            "API base input / output",
+            "USD 2 / USD 6 per million tokens"
+          ],
+          [
+            "Access at launch",
+            "Cursor, Grok Build, API, routers and cloud platforms"
+          ],
+          [
+            "Fast variant",
+            "Twice the output speed at twice the price"
+          ]
+        ],
+        "note": "Launch announcement. Base prices; higher-context charges are separate."
+      },
+      {
+        "title": "Grok 4.7 — current API limits",
+        "sourceUrl": "https://docs.x.ai/developers/models/grok-4.7",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Model ID",
+            "grok-4.7"
+          ],
+          [
+            "Context",
+            "500,000 tokens"
+          ],
+          [
+            "Input → output",
+            "Text and image → text"
+          ],
+          [
+            "Cached input",
+            "USD 0.50 per million tokens"
+          ],
+          [
+            "Reasoning efforts",
+            "low, medium, high, xhigh; default high"
+          ],
+          [
+            "Long context pricing",
+            "Higher input pricing above 200K context"
+          ]
+        ],
+        "note": "Documentation checked October 30, 2026; current limits are not asserted as historical launch limits."
+      }
+    ],
+    "charts": [
+      {
+        "title": "CursorBench 4.0 — maker launch comparison",
+        "sourceUrl": "https://x.ai/news/grok-4-7",
+        "unit": "%",
+        "bars": [
+          {
+            "label": "Grok 4.6 High",
+            "value": 40.4
+          },
+          {
+            "label": "Grok 4.7 xHigh",
+            "value": 46.3,
+            "highlight": true
+          }
+        ],
+        "note": "Same maker launch table, different stated reasoning effort. Vendor-reported results, not an independent test."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
+    "tables": [
+      {
+        "title": "Step 5 Preview — documented model limits",
+        "sourceUrl": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "StepFun"
+          ],
+          [
+            "Model ID",
+            "step-5-preview"
+          ],
+          [
+            "Context / maximum input",
+            "1M tokens / 1M tokens"
+          ],
+          [
+            "Maximum output",
+            "64K tokens"
+          ],
+          [
+            "Input → output",
+            "Text, images and video → text"
+          ],
+          [
+            "Images per request",
+            "Up to 60"
+          ],
+          [
+            "Access",
+            "StepFun Open Platform API; application-provided tools"
+          ]
+        ],
+        "note": "Current maker documentation checked October 30, 2026. Exact launch-day limits and a comparable numerical launch graph are not established by this page."
+      },
+      {
+        "title": "Step 5 Preview — current API pricing",
+        "sourceUrl": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Billing unit",
+            "USD per 1M tokens"
+          ],
+          [
+            "Input cache miss / cache hit",
+            "USD 1.00 / USD 0.10"
+          ],
+          [
+            "Output",
+            "USD 2.70"
+          ],
+          [
+            "Output billing scope",
+            "Reasoning process and final answer"
+          ],
+          [
+            "Cache-miss billing",
+            "Includes writing new content to cache"
+          ]
+        ],
+        "note": "Current October 30 documentation; not presented as independently verified launch pricing."
+      }
+    ],
+    "charts": []
+  },
+  {
+    "sourceUrl": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+    "tables": [
+      {
+        "title": "DeepSeek-V4.1-Flash — model architecture",
+        "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Maker",
+            "DeepSeek"
+          ],
+          [
+            "Backbone parameters",
+            "552B"
+          ],
+          [
+            "Active parameters",
+            "8B prefill / 16B decode"
+          ],
+          [
+            "Context",
+            "Up to 1M tokens"
+          ],
+          [
+            "Input → output",
+            "Images and text → text"
+          ],
+          [
+            "Architecture",
+            "40-layer causal encoder–decoder; MoE"
+          ],
+          [
+            "License",
+            "MIT; model card and weights"
+          ]
+        ],
+        "note": "Maker model card checked October 30, 2026. Backbone count is distinct from total repository tensor parameters."
+      },
+      {
+        "title": "DeepSeek Flash — current API version and rates",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Served version",
+            "DeepSeek-V4.1-Flash-1017"
+          ],
+          [
+            "Model ID",
+            "deepseek-flash"
+          ],
+          [
+            "Context / maximum output",
+            "1M / 384K tokens"
+          ],
+          [
+            "Peak cache miss / cache hit input",
+            "USD 0.30 / USD 0.006 per 1M tokens"
+          ],
+          [
+            "Peak output",
+            "USD 1.20 per 1M tokens"
+          ],
+          [
+            "Off-peak rates",
+            "50% of corresponding peak rates"
+          ]
+        ],
+        "note": "Current October 30 documentation describes the October17 API version. These limits/rates are not attributed to the initial September10 release."
+      }
+    ],
+    "charts": [
+      {
+        "title": "DeepSWE v1.1 — DeepSeek model-card comparison",
+        "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "unit": "%",
+        "bars": [
+          {
+            "label": "DeepSeek-V4-Flash",
+            "value": 54.4
+          },
+          {
+            "label": "DeepSeek-V4-Pro",
+            "value": 62.7
+          },
+          {
+            "label": "DeepSeek-V4.1-Flash",
+            "value": 74.2,
+            "highlight": true
+          }
+        ],
+        "note": "Resolved %, maximum reasoning effort. Same maker table: mini-SWE harness, 1M context, temperature1.0/top_p0.95. Vendor-reported; not an independent comparison."
+      }
+    ]
   }
 ]

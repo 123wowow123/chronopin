@@ -1,0 +1,235 @@
+[
+  {
+    "key": "news42-2212",
+    "pinIds": {
+      "local": 2212,
+      "production": 2212
+    },
+    "title": "The Athletics' Las Vegas Ballpark Opens on the Tropicana Site",
+    "sourceUrl": "https://ballparkexperience.athletics.com/",
+    "profile": {
+      "sector": "Sports venue construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No scored process capability against a documented sector baseline was established."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced project-specific automation process supporting a score was established."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established."
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported construction budget",
+          "value": "USD 2.1 billion, September 2026 estimate; includes parking garage and central utility plant, not the wider Bally’s development.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.reviewjournal.com/?p=3892693",
+            "title": "When will the A’s tap into public funding for now $2.1B Las Vegas stadium construction?",
+            "quote": "price of the stadium rises to $2.1 billion",
+            "publishedDate": "2026-09-29"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Designed attendance capacity",
+          "value": "33,000 seats, project design.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thorntontomasetti.com/project/las-vegas-ballpark",
+            "title": "A’s Las Vegas Ballpark | Thornton Tomasetti",
+            "quote": "33,000",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Long-span roof design",
+          "value": "Roof arch trusses span 700 feet; design specification, not measured operating performance.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thorntontomasetti.com/project/las-vegas-ballpark",
+            "title": "A’s Las Vegas Ballpark | Thornton Tomasetti",
+            "quote": "700-foot span arch trusses",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Public opening target",
+          "value": "Start of the 2028 baseball season; exact public opening day unpublished.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thorntontomasetti.com/project/las-vegas-ballpark",
+            "title": "A’s Las Vegas Ballpark | Thornton Tomasetti",
+            "quote": "start of the 2028 baseball season",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Construction completion target; distinct from public opening",
+          "date": "2028-02-29",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.reviewjournal.com/?p=3892693",
+            "title": "When will the A’s tap into public funding for now $2.1B Las Vegas stadium construction?",
+            "quote": "Feb. 29, 2028 completion date",
+            "publishedDate": "2026-09-29"
+          }
+        },
+        {
+          "label": "Public opening target",
+          "date": "Start of 2028 baseball season",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.thorntontomasetti.com/project/las-vegas-ballpark",
+            "title": "A’s Las Vegas Ballpark | Thornton Tomasetti",
+            "quote": "start of the 2028 baseball season",
+            "publishedDate": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "news42-540",
+    "pinIds": {
+      "local": 540,
+      "production": 540
+    },
+    "title": "Bogotá Metro Line 1 Targets 2028 Opening",
+    "sourceUrl": "https://www.youtube.com/watch?v=wCi6-u0cOBY",
+    "profile": {
+      "sector": "Elevated urban railway construction",
+      "status": "construction",
+      "assessmentDate": "2026-10-30",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No scored process capability against a documented sector baseline was established."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced project-specific automation process supporting a score was established."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established."
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Planned station count",
+          "value": "16 stations on the first metro line.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.metro1.com.co/alcance_del_proyecto.html",
+            "title": "Alcance del proyecto",
+            "quote": "dieciséis (16) estaciones y 23,96 km",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "products",
+          "label": "Line extent and design",
+          "value": "23.96 km, entirely elevated; first-line scope.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.metro1.com.co/alcance_del_proyecto.html",
+            "title": "Alcance del proyecto",
+            "quote": "dieciséis (16) estaciones y 23,96 km",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "Operator opening target",
+          "value": "March 14, 2028, stated by the metro manager in October 9 reporting. Conflicts by one day with September mayor reporting; remains a target.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tropicanafm.com/2026/gerente-del-metro-de-bogota-confirmo-la-fecha-de-inauguracion-del-sistema-de-transporte-477865.html",
+            "title": "Gerente del Metro de Bogotá confirmó la fecha de inauguración del sistema de transporte",
+            "quote": "14 de marzo de 2028, esa fecha no se ha cambiado",
+            "publishedDate": "2026-10-09"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Manager’s passenger-operation target; one-day source conflict retained",
+          "date": "2028-03-14",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.tropicanafm.com/2026/gerente-del-metro-de-bogota-confirmo-la-fecha-de-inauguracion-del-sistema-de-transporte-477865.html",
+            "title": "Gerente del Metro de Bogotá confirmó la fecha de inauguración del sistema de transporte",
+            "quote": "14 de marzo de 2028, esa fecha no se ha cambiado",
+            "publishedDate": "2026-10-09"
+          }
+        }
+      ]
+    }
+  }
+]

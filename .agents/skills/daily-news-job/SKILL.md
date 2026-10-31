@@ -48,6 +48,8 @@ run limits. State the reason. **Never queue because of an allowlist mismatch alo
 
 ## Guardrails
 
+- Owner instruction (2026-10-30): leave pin translations to the translation agent unless explicitly requested in this conversation. Do not run `sync_translations.py`, `/api/admin/translations` or hand pin translations as part of research/editing; report the handoff.
+
 - Keep scraping docs current after every run (living docs).
 - Posting load: gate on the homepage response time and pause between posts; see the `posting-pins-to-prod` memory note.
 - Do not delete token files after use; other sessions reuse them.

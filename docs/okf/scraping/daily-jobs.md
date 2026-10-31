@@ -15,6 +15,8 @@ fixes existing ones through the real API. The owner asked for them on
 2026-09-22; this page is their standing guidance, and every run reads it
 into its instructions, so changing this page changes the next run.
 
+Owner update, October30,2026: research/editing runs leave pin translations to the translation agent unless explicitly requested in that conversation. Report the changed pin IDs and model-panel localization handoff; do not run translation synchronization or claim current coverage. The [October30 evening run](news-2026-10-30-pm.md) records this procedure.
+
 # The jobs
 
 | Job | Default time | Tasks | New pins / updates per run |

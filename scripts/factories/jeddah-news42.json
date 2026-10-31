@@ -1,0 +1,112 @@
+{
+  "pinId": 448,
+  "profile": {
+    "axes": {
+      "scale": {
+        "basis": "unknown",
+        "score": null,
+        "sources": [],
+        "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established."
+      },
+      "technical": {
+        "basis": "unknown",
+        "score": null,
+        "sources": [],
+        "reasoning": "No scored process capability against a documented sector baseline was established."
+      },
+      "workforce": {
+        "basis": "unknown",
+        "score": null,
+        "sources": [],
+        "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established."
+      },
+      "automation": {
+        "basis": "unknown",
+        "score": null,
+        "sources": [],
+        "reasoning": "No sourced project-specific automation process supporting a score was established."
+      },
+      "efficiency": {
+        "basis": "unknown",
+        "score": null,
+        "sources": [],
+        "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established."
+      },
+      "supplyChain": {
+        "basis": "unknown",
+        "score": null,
+        "sources": [],
+        "reasoning": "No sourced manufacturing bottleneck-relief assessment was established."
+      }
+    },
+    "sector": "Real estate: supertall mixed-use tower",
+    "source": "session",
+    "status": "construction",
+    "metrics": [
+      {
+        "key": "investment",
+        "basis": "planned",
+        "label": "Published investment and scope",
+        "value": "USD 1.2 billion published tower cost; district development cost excluded.",
+        "source": {
+          "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+          "quote": "Cost US$ 1.2 billion",
+          "title": "Jeddah Tower - Wikipedia",
+          "publishedDate": null
+        }
+      },
+      {
+        "key": "capacity",
+        "basis": "planned",
+        "label": "Published capacity and scope",
+        "value": "Architectural height at least 1,008 m at design completion.",
+        "source": {
+          "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+          "quote": "At least 1,008 m",
+          "title": "Jeddah Tower - Wikipedia",
+          "publishedDate": null
+        }
+      },
+      {
+        "key": "stage",
+        "basis": "demonstrated",
+        "label": "Reported current project stage",
+        "value": "Construction reported above floor 118 and over 470 m on October 9, 2026.",
+        "source": {
+          "url": "https://en.wikipedia.org/wiki/Jeddah_Tower",
+          "quote": "9 October 2026",
+          "title": "Jeddah Tower - Wikipedia",
+          "publishedDate": null
+        }
+      },
+      {
+        "key": "timeline",
+        "label": "Latest construction completion target",
+        "value": "Late 2028; target, not a published exact completion day.",
+        "basis": "planned",
+        "source": {
+          "url": "https://gulfnews.com/amp/story/business%2Fproperty%2Fjeddah-tower-crosses-116-floors-completion-timeline-moves-1.500699924",
+          "title": "Jeddah Tower crosses 116 floors, completion by late 2028",
+          "publishedDate": "2026-10-06",
+          "quote": "Fabien Toscano said Jeddah Tower is targeting construction completion in late 2028."
+        }
+      }
+    ],
+    "milestones": [
+      {
+        "label": "Latest construction completion target",
+        "date": "Late 2028",
+        "basis": "planned",
+        "source": {
+          "url": "https://gulfnews.com/amp/story/business%2Fproperty%2Fjeddah-tower-crosses-116-floors-completion-timeline-moves-1.500699924",
+          "title": "Jeddah Tower crosses 116 floors, completion by late 2028",
+          "publishedDate": "2026-10-06",
+          "quote": "Fabien Toscano said Jeddah Tower is targeting construction completion in late 2028."
+        }
+      }
+    ],
+    "rubricYear": 2026,
+    "assessmentDate": "2026-10-30",
+    "checkedAt": "2026-10-30T03:26:06.152Z"
+  }
+}
