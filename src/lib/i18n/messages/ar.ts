@@ -850,6 +850,8 @@ const ar: Messages = {
     factory: {
       buildoutHeading: "مشروع المصنع",
       projectTimeline: "الجدول الزمني للمشروع",
+      timelineMore: "عرض {count} أخرى",
+      timelineEarlier: "عرض {count} أقدم",
       costBreakdown: "كيف جرى حساب هذا التقدير",
       breakdownSourced: "موثّق",
       breakdownAssumption: "افتراض",

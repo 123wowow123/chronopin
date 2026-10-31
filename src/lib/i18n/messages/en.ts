@@ -781,6 +781,8 @@ const en = {
     factory: {
       buildoutHeading: "Factory buildout",
       projectTimeline: "Project timeline",
+      timelineMore: "Show {count} more",
+      timelineEarlier: "Show {count} earlier",
       costBreakdown: "How this estimate was built",
       breakdownSourced: "Sourced",
       breakdownAssumption: "Assumption",

@@ -61,6 +61,64 @@ function MetricValue({ value, estimated }: { value: string; estimated: boolean }
   return <p className="font-medium leading-snug"><span className="font-semibold text-success">{m[1]}</span>{m[2]}</p>;
 }
 
+type Milestone = NonNullable<PinFactoryJson['milestones']>[number];
+
+function MilestoneItem({ milestone, t }: { milestone: Milestone; t: Translator }) {
+  return (
+    <li className="relative pb-4 ps-5 text-xs last:pb-0">
+      <span aria-hidden className={`absolute -start-[7px] top-0.5 size-3 rounded-full border-2 border-link ${milestone.basis === 'demonstrated' ? 'bg-link' : 'bg-raised'}`} />
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span className="text-sm font-semibold tabular-nums">{milestone.date}</span>
+        <BasisBadge basis={milestone.basis} label={t(`pin.factory.${milestone.basis}`)} />
+      </div>
+      <p className="mt-0.5 text-sm">{milestone.label}</p>
+      <details className="mt-1">
+        <summary className="cursor-pointer text-link">{t('pin.factory.source')}</summary>
+        <FactorySource source={milestone.source} />
+      </details>
+    </li>
+  );
+}
+
+const TIMELINE_VISIBLE = 4;
+
+function MoreMilestones({ items, label, t }: { items: Milestone[]; label: string; t: Translator }) {
+  return (
+    <li className="pb-4 ps-5 text-xs">
+      <details className="group">
+        <summary className="flex cursor-pointer list-none items-center gap-1.5 font-semibold text-link [&::-webkit-details-marker]:hidden">
+          <span aria-hidden className="inline-block transition-transform group-open:rotate-90 rtl:-scale-x-100">▸</span>
+          {label}
+        </summary>
+        <ol className="mt-3 -ms-5 ps-0">
+          {items.map((m, i) => <MilestoneItem key={i} milestone={m} t={t} />)}
+        </ol>
+      </details>
+    </li>
+  );
+}
+
+// Past four points: show the latest completed one and the next three; the rest sit behind "show more".
+function MilestoneTimeline({ milestones, t }: { milestones: Milestone[]; t: Translator }) {
+  let start = 0;
+  if (milestones.length > TIMELINE_VISIBLE) {
+    for (let i = milestones.length - 1; i >= 0; i--) {
+      if (milestones[i].basis === 'demonstrated') { start = i; break; }
+    }
+    start = Math.min(start, milestones.length - TIMELINE_VISIBLE);
+  }
+  const earlier = milestones.slice(0, start);
+  const shown = milestones.slice(start, start + TIMELINE_VISIBLE);
+  const later = milestones.slice(start + TIMELINE_VISIBLE);
+  return (
+    <ol className="mt-3 ms-1.5 border-s-2 border-raised-2">
+      {earlier.length ? <MoreMilestones items={earlier} label={t('pin.factory.timelineEarlier', { count: earlier.length })} t={t} /> : null}
+      {shown.map((m, i) => <MilestoneItem key={i} milestone={m} t={t} />)}
+      {later.length ? <MoreMilestones items={later} label={t('pin.factory.timelineMore', { count: later.length })} t={t} /> : null}
+    </ol>
+  );
+}
+
 export function PinFactoryBuildout({ factory, t, className = '' }: { factory: PinFactoryJson; t: Translator; className?: string }) {
   if (!hasFactoryBuildout(factory)) return null;
   const metrics = factoryBuildoutMetrics(factory);
@@ -108,22 +166,7 @@ export function PinFactoryBuildout({ factory, t, className = '' }: { factory: Pi
         {factory.milestones?.length ? (
           <div className="mt-5">
             <h3 className="text-xs font-semibold tracking-wide text-muted uppercase">{t('pin.factory.projectTimeline')}</h3>
-            <ol className="mt-3 ms-1.5 border-s-2 border-raised-2">
-              {factory.milestones.map((milestone, i) => (
-                <li key={i} className="relative pb-4 ps-5 text-xs last:pb-0">
-                  <span aria-hidden className={`absolute -start-[7px] top-0.5 size-3 rounded-full border-2 border-link ${milestone.basis === 'demonstrated' ? 'bg-link' : 'bg-raised'}`} />
-                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span className="text-sm font-semibold tabular-nums">{milestone.date}</span>
-                    <BasisBadge basis={milestone.basis} label={t(`pin.factory.${milestone.basis}`)} />
-                  </div>
-                  <p className="mt-0.5 text-sm">{milestone.label}</p>
-                  <details className="mt-1">
-                    <summary className="cursor-pointer text-link">{t('pin.factory.source')}</summary>
-                    <FactorySource source={milestone.source} />
-                  </details>
-                </li>
-              ))}
-            </ol>
+            <MilestoneTimeline milestones={factory.milestones} t={t} />
           </div>
         ) : null}
       </div>

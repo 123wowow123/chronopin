@@ -781,6 +781,8 @@ const id: Messages = {
     factory: {
       buildoutHeading: "Proyek pabrik",
       projectTimeline: "Jadwal proyek",
+      timelineMore: "Tampilkan {count} lagi",
+      timelineEarlier: "Tampilkan {count} sebelumnya",
       costBreakdown: "Cara perkiraan ini dihitung",
       breakdownSourced: "Bersumber",
       breakdownAssumption: "Asumsi",

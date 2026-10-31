@@ -776,6 +776,8 @@ const es: Messages = {
     factory: {
       buildoutHeading: "Proyecto de fábrica",
       projectTimeline: "Cronograma del proyecto",
+      timelineMore: "Mostrar {count} más",
+      timelineEarlier: "Mostrar {count} anteriores",
       costBreakdown: "Cómo se calculó esta estimación",
       breakdownSourced: "Con fuente",
       breakdownAssumption: "Supuesto",

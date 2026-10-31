@@ -779,6 +779,8 @@ const hi: Messages = {
     factory: {
       buildoutHeading: "कारखाना परियोजना",
       projectTimeline: "परियोजना की समयरेखा",
+      timelineMore: "{count} और दिखाएँ",
+      timelineEarlier: "{count} पहले के दिखाएँ",
       costBreakdown: "यह अनुमान कैसे लगाया गया",
       breakdownSourced: "स्रोत सहित",
       breakdownAssumption: "मान्यता",

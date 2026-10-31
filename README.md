@@ -512,12 +512,6 @@ https://epoch.ai/publications/ai-energy
 
 
 
-this is missing timeline and etc
-https://www.chronopin.com/pin/18978/xai-colossus-2-memphis-supercluster-946-mw-555-000-nvidia-gpu-frontier-ai-data-c
-
-
-
-
 are all these datacenter pined and spec graph added
 https://epoch.ai/data/ai-data-centers
 

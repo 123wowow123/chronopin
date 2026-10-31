@@ -776,6 +776,8 @@ const de: Messages = {
     factory: {
       buildoutHeading: "Fabrikprojekt",
       projectTimeline: "Projektzeitplan",
+      timelineMore: "{count} weitere anzeigen",
+      timelineEarlier: "{count} frühere anzeigen",
       costBreakdown: "So wurde diese Schätzung berechnet",
       breakdownSourced: "Belegt",
       breakdownAssumption: "Annahme",
