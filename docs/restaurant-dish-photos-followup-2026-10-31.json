@@ -1,0 +1,2997 @@
+{
+  "checkedAt": "2026-10-31",
+  "newPhotos": 4,
+  "specialsAttachmentsAdded": 3,
+  "ordinaryAttachmentsAdded": 1,
+  "ordinaryMenuItemsAdded": 17,
+  "publicCurlChecks": [
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-followup-2026-10-31/sidecar-blind-pig-b7b2967313372491.webp",
+      "bytes": 66508,
+      "sha256": "b7b2967313372491a7e72654e499d02a89bd9186d1079afc2a65a89c7de5dc20"
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-followup-2026-10-31/harland-lager-b2706ac2ebe11069.webp",
+      "bytes": 58166,
+      "sha256": "b2706ac2ebe11069e07d5eea1d1f8a361e81c3488e2022a6c2f63f9e5ecacc15"
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-followup-2026-10-31/karl-mosaic-876e4115215155b4.webp",
+      "bytes": 37826,
+      "sha256": "876e4115215155b4568be69d0eefb15acbbc04143dbd145ae25c93c292b0134d"
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sycamore-den-san-diego/sycamore-wolf-ticket-03f3d375efc633a3.webp",
+      "bytes": 52220,
+      "sha256": "03f3d375efc633a3e5c482d0a40b273dca39079c5066248b009285dd23d4bb98"
+    }
+  ],
+  "allFullReadbacksVerified": true,
+  "allUnrelatedProfileFieldsPreserved": true,
+  "sanDiego": {
+    "total": 280,
+    "specialsProfilesWithPhotos": 236,
+    "specialsAttachments": 1026,
+    "combinedSourcesWithPhotos": 237
+  },
+  "specialsProfilesWithoutPhotos": 44,
+  "venuesWithoutPhotosAcrossSpecialsAndOrdinary": 43,
+  "associationChecksCompleted": 22,
+  "associationChecks": [
+    {
+      "venueId": 121,
+      "name": "Origen",
+      "address": "3831 Park Blvd, San Diego, CA 92103-3609",
+      "source": "https://www.opentable.com/restaurant/profile/1427722",
+      "pattern": "%Origen%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 121,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%3831 %"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "Conflicting operating-status evidence for 3831 Park Boulevard: closure reports and operator listings require reconciliation before publication."
+    },
+    {
+      "venueId": 955,
+      "name": "Sandbar Sports Grill",
+      "address": "718 Ventura Place, San Diego, CA 92109",
+      "source": "https://www.sandbarsportsgrill.com/specials/",
+      "pattern": "%Sandbar%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 955,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%718 %"
+          },
+          "total": 1,
+          "pins": [
+            {
+              "id": 7060,
+              "title": "Rose Apartments (Venice) — Los Angeles affordable housing",
+              "sourceUrl": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+              "address": "718 Rose Avenue, Venice, Los Angeles, CA 90291",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 955,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%sandbarsportsgrill.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 964,
+      "name": "La Puerta Mission Hills",
+      "address": "4020 Goldfinch St, San Diego, CA 92103",
+      "source": "https://lapuertasd.com/",
+      "pattern": "%Puerta%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 964,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%4020 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 964,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%lapuertasd.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 973,
+      "name": "The Fish Market San Diego",
+      "address": "750 N Harbor Dr, San Diego, CA 92101",
+      "source": "https://www.thefishmarket.com/location/san-diego/",
+      "pattern": "%Fish%Market%",
+      "total": 2,
+      "pins": [
+        {
+          "id": 38,
+          "title": "Open-Air Fish Market Coming to San Diego",
+          "sourceUrl": "http://www.nbcsandiego.com/news/local/Open-Air-Fish-Market-San-Diego-Tuna-Harbor-Fresh-Catch-267440101.html",
+          "address": null,
+          "deleted": null,
+          "date": "2014-08-02T15:00:00.000Z"
+        },
+        {
+          "id": 2272,
+          "title": "New Sydney Fish Market Opens at Blackwattle Bay",
+          "sourceUrl": "https://www.infrastructure.nsw.gov.au/news/new-sydney-fish-market-grand-opening/",
+          "address": "Blackwattle Bay, Glebe, Sydney, New South Wales, Australia",
+          "deleted": null,
+          "date": "2026-01-19T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 973,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%750 %"
+          },
+          "total": 11,
+          "pins": [
+            {
+              "id": 6437,
+              "title": "Serpent & Stone Opens Greek Restaurant and Speakeasy Downtown",
+              "sourceUrl": "https://serpentandstonesd.com/",
+              "address": "750 Front Street, Suite 2, San Diego, CA 92101",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7075,
+              "title": "Arbora Court — Seattle affordable housing",
+              "sourceUrl": "https://www.bellwetherhousing.org/properties/arbora-court",
+              "address": "4750 15th Avenue NE, Seattle, WA 98105",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 10491,
+              "title": "TX Dallas 7750 Dynasty Drive — construction complete; commissioning pending (Aug 2026 inventory)",
+              "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-66516",
+              "address": "TX Dallas 7750 Dynasty Drive, Dallas County, TX, United States",
+              "utcDeletedDateTime": "2026-10-12T03:30:08.072Z"
+            },
+            {
+              "id": 17521,
+              "title": "Mill City Farmers Market — Minneapolis seasonal activity",
+              "sourceUrl": "https://www.millcityfarmersmarket.org/",
+              "address": "750 S 2nd St, Minneapolis, MN 55401",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 17637,
+              "title": "Sweetwater Creek State Park — Atlanta seasonal activity",
+              "sourceUrl": "https://gastateparks.org/SweetwaterCreek",
+              "address": "1750 Mount Vernon Rd, Lithia Springs, GA 30122",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 17971,
+              "title": "Kabuki Springs and Spa — San Francisco seasonal activity",
+              "sourceUrl": "https://www.kabukisprings.com",
+              "address": "1750 Geary Blvd, San Francisco, CA 94115",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 19935,
+              "title": "Three Floyds Brews Dreadnaught, Its 'First Imperial IPA East of the Mississippi'",
+              "sourceUrl": "https://www.3floyds.com/",
+              "address": "Three Floyds Brewing, 9750 Indiana Parkway, Munster, Indiana, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20511,
+              "title": "Monello — San Diego restaurant guide",
+              "sourceUrl": "https://www.opentable.com/restaurant/profile/95860",
+              "address": "750 W. Fir St., Suite 103B, San Diego, CA 92101",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20514,
+              "title": "Bencotto Italian Kitchen — San Diego restaurant guide",
+              "sourceUrl": "https://www.opentable.com/restaurant/profile/44860",
+              "address": "750 W Fir Street, San Diego, CA 92101",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20538,
+              "title": "Cutwater Spirits Tasting Room & Kitchen — San Diego restaurant guide",
+              "sourceUrl": "https://www.opentable.com/restaurant/profile/1040164",
+              "address": "9750 Distribution Ave, San Diego, CA 92121-2310",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20541,
+              "title": "Phil's BBQ - Point Loma — San Diego restaurant guide",
+              "sourceUrl": "https://philsbbq.com/san-diego-point-loma-phil-s-bbq-food-menu",
+              "address": "3750 Sports Arena Blvd, San Diego, CA 92110",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 973,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%thefishmarket.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1014,
+      "name": "Sushi Lounge - Point Loma",
+      "address": "1304 Rosecrans St, San Diego, CA 92106",
+      "source": "https://www.sushiloungesd.com/menu/sushi-lounge-point-loma",
+      "pattern": "%Sushi%Lounge%",
+      "total": 1,
+      "pins": [
+        {
+          "id": 20530,
+          "title": "NOIR Sushi & Sake Fusion Lounge — San Diego restaurant guide",
+          "sourceUrl": "https://www.noirsushi.com/",
+          "address": "926 Fifth Ave, San Diego, CA 92101",
+          "deleted": null,
+          "date": "2025-10-11T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1014,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%1304 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1014,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%sushiloungesd.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1021,
+      "name": "Kalaveras - Chula Vista",
+      "address": "340 3rd Ave, Chula Vista, CA 91910",
+      "source": "https://kalaveras.com/chula-vista/",
+      "pattern": "%Kalaveras%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1021,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%340 %"
+          },
+          "total": 1,
+          "pins": [
+            {
+              "id": 18352,
+              "title": "Rippon Solar Project: 99 MW Solar Facility in Jefferson County, West Virginia",
+              "sourceUrl": "https://torchcleanenergy.com/projects/rippon-solar/",
+              "address": "Wheatland Road & Route 340 Corridor, Rippon Area, Jefferson County, WV 25441",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 1021,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%kalaveras.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1024,
+      "name": "Tajima Ramen - Crown Point",
+      "address": "3782 Ingraham St, San Diego, CA 92109",
+      "source": "https://tajimaramen.com/tajima-crown-point/",
+      "pattern": "%Tajima%",
+      "total": 3,
+      "pins": [
+        {
+          "id": 20556,
+          "title": "Tajima Ramen - College Heights — San Diego restaurant guide",
+          "sourceUrl": "https://tajimaramen.com/tajima-college-heights/",
+          "address": "6061 El Cajon Blvd #2, San Diego, CA 92115",
+          "deleted": null,
+          "date": "2020-12-31T00:00:00.000Z"
+        },
+        {
+          "id": 20557,
+          "title": "Tajima Ramen - East Village — San Diego restaurant guide",
+          "sourceUrl": "https://tajimaramen.com/tajima-east-village/",
+          "address": "901 E St, San Diego, CA 92101",
+          "deleted": null,
+          "date": "2016-12-31T00:00:00.000Z"
+        },
+        {
+          "id": 20558,
+          "title": "Tajima Ramen - Mercury — San Diego restaurant guide",
+          "sourceUrl": "https://tajimaramen.com/tajima-mercury/",
+          "address": "4411 Mercury St Ste 110, San Diego, CA 92111",
+          "deleted": null,
+          "date": "2006-12-31T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1024,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%3782 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1024,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%tajimaramen.com%"
+          },
+          "total": 3,
+          "pins": [
+            {
+              "id": 20556,
+              "title": "Tajima Ramen - College Heights — San Diego restaurant guide",
+              "sourceUrl": "https://tajimaramen.com/tajima-college-heights/",
+              "address": "6061 El Cajon Blvd #2, San Diego, CA 92115",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20557,
+              "title": "Tajima Ramen - East Village — San Diego restaurant guide",
+              "sourceUrl": "https://tajimaramen.com/tajima-east-village/",
+              "address": "901 E St, San Diego, CA 92101",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20558,
+              "title": "Tajima Ramen - Mercury — San Diego restaurant guide",
+              "sourceUrl": "https://tajimaramen.com/tajima-mercury/",
+              "address": "4411 Mercury St Ste 110, San Diego, CA 92111",
+              "utcDeletedDateTime": null
+            }
+          ]
+        }
+      ],
+      "status": "native_pin_created",
+      "nextEvidenceNeeded": null,
+      "nativePinId": 20680,
+      "opening": {
+        "day": "2025-01-12",
+        "precision": "day",
+        "dateConfidence": "confirmed",
+        "reason": "The January 22, 2025 YS Food corporate announcement identifies the Crown Point branch at 3782 Ingraham Street and explicitly records its opening on January 12, 2025. This is the branch opening date.",
+        "sourceUrl": "https://ys-food.jp/wps/wp-content/uploads/2025/01/%E3%80%8CTajima-Ramen%E3%80%8D%E3%82%B9%E3%83%BC%E3%83%97%E3%81%AE%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%E3%82%92%E5%85%BC%E3%81%AD%E3%81%9F%E6%96%B0%E5%BA%97%E8%88%97%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%A7.pdf",
+        "sourceTitle": "YS Food: Tajima Ramen Crown Point new-store opening announcement, January 22, 2025",
+        "quote": "開店日：2025 年1 月12 日（日）; 所在地：3782 Ingraham St, San Diego, CA 92109",
+        "openedAt": "2026-10-31"
+      }
+    },
+    {
+      "venueId": 1030,
+      "name": "BJ's Restaurant & Brewhouse - Chula Vista",
+      "address": "555 Broadway Ste 1019, Chula Vista, CA 91910",
+      "source": "https://www.bjsrestaurants.com/locations/ca/chula-vista",
+      "pattern": "%BJ%Chula%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1030,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%555 %"
+          },
+          "total": 41,
+          "pins": [
+            {
+              "id": 395,
+              "title": "Street Fighter Reboot Set for October Release",
+              "sourceUrl": "https://www.imdb.com/title/tt27419420/",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 400,
+              "title": "Scream 7 Opens in Theaters",
+              "sourceUrl": "https://www.imdb.com/title/tt27047903/",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 407,
+              "title": "PAW Patrol: The Dino Movie Opens in Theaters",
+              "sourceUrl": "https://www.rottentomatoes.com/m/paw_patrol_the_dino_movie",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 408,
+              "title": "Scary Movie Reboot Opens in Theaters",
+              "sourceUrl": "https://www.rottentomatoes.com/m/scary_movie_2026",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1873,
+              "title": "Children of Blood and Bone Opens in Theaters January 15",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Children_of_Blood_and_Bone_(film)",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1890,
+              "title": "Sonic the Hedgehog (2020) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(film)",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1891,
+              "title": "Sonic the Hedgehog 2 (2022) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2_(film)",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1892,
+              "title": "Sonic the Hedgehog 3 (2024) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_3_(film)",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1893,
+              "title": "Sonic the Hedgehog 4 Opens in Theaters March 19",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_4_(film)",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1921,
+              "title": "A Quiet Place (2018) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/A_Quiet_Place",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1922,
+              "title": "A Quiet Place Part II (2021) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/A_Quiet_Place_Part_II",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1923,
+              "title": "A Quiet Place: Day One (2024) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/A_Quiet_Place:_Day_One",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1924,
+              "title": "A Quiet Place Part III Opens in Theaters July 30",
+              "sourceUrl": "https://en.wikipedia.org/wiki/A_Quiet_Place_Part_III",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1926,
+              "title": "Teenage Mutant Ninja Turtles: Mutant Mayhem (2023) Opens in Theaters",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles:_Mutant_Mayhem",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 1927,
+              "title": "Teenage Mutant Ninja Turtles: Mutant Mayhem 2 Opens in Theaters August 13",
+              "sourceUrl": "https://en.wikipedia.org/wiki/Untitled_Teenage_Mutant_Ninja_Turtles:_Mutant_Mayhem_sequel",
+              "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 2167,
+              "title": "Kindred Affordable Apartments Completes in Cortez Hill",
+              "sourceUrl": "https://bridgehousing.com/properties/kindred/",
+              "address": "1555 Sixth Avenue, San Diego, CA 92101",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5973,
+              "title": "Berkshire Hathaway Cash Pile Hits a Record US$381.7 Billion in Q3 2025",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312525262260/d22917dex991.htm",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5974,
+              "title": "Buffett's Thanksgiving Letter Gives US$1.3 Billion and Says He Is 'Going Quiet'",
+              "sourceUrl": "https://www.berkshirehathaway.com/news/nov1025.pdf",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5975,
+              "title": "Berkshire Names Geico CEO and New CFO as Todd Combs Leaves for JPMorgan",
+              "sourceUrl": "https://www.berkshirehathaway.com/news/dec0825.pdf",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5977,
+              "title": "Greg Abel Becomes Berkshire Hathaway CEO as Warren Buffett Stays Chairman",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526004727/d32284d8ka.htm",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5979,
+              "title": "Berkshire Hathaway Completes US$9.7 Billion Purchase of OxyChem",
+              "sourceUrl": "https://www.berkshirehathaway.com/news/jan0226.pdf",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5981,
+              "title": "Greg Abel's First Berkshire Letter Pledges Patience as 2025 Profit Falls to US$67 Billion",
+              "sourceUrl": "https://www.berkshirehathaway.com/letters/2025ltr.pdf",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5982,
+              "title": "Berkshire Hathaway Resumes Share Buybacks for the First Time Since May 2024",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526092557/d82599d8k.htm",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5993,
+              "title": "Berkshire Hathaway Agrees to Buy Homebuilder Taylor Morrison for US$8.5 Billion",
+              "sourceUrl": "https://www.berkshirehathaway.com/news/may3126.pdf",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5995,
+              "title": "Berkshire Hathaway Invests US$10 Billion in Alphabet's AI Funding Round",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526257724/d83560d8k.htm",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5999,
+              "title": "Berkshire Hathaway Completes Taylor Morrison Acquisition, Forming No. 4 U.S. Homebuilder",
+              "sourceUrl": "https://www.berkshirehathaway.com/news/jul2426.pdf",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 6001,
+              "title": "Berkshire Q2 2026 Operating Earnings Reach US$13 Billion as Buybacks Hit US$4.5 Billion",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526344495/d159922dex991.htm",
+              "address": "3555 Farnam Street, Omaha, Nebraska, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 6820,
+              "title": "Barley Swine — Austin restaurant guide",
+              "sourceUrl": "https://www.barleyswine.com/",
+              "address": "6555 Burnet Rd Suite 400, Austin, TX 78757",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 6883,
+              "title": "Il Terrazzo — Victoria restaurant guide",
+              "sourceUrl": "https://www.ilterrazzo.com/",
+              "address": "555 Johnson Street, Victoria, BC V8W 0B2",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 6945,
+              "title": "Bar Cecil — Palm Springs restaurant guide",
+              "sourceUrl": "https://guide.michelin.com/us/en/california/palm-springs/restaurant/bar-cecil",
+              "address": "1555 S Palm Canyon Dr, Suite H-104, Palm Springs, CA 92264",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 6985,
+              "title": "Category 10 Las Vegas Opens in Flamingo (Strip)",
+              "sourceUrl": "https://www.category10.com/lasvegas/",
+              "address": "3555 S Las Vegas Blvd, Las Vegas, NV 89109",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7074,
+              "title": "Nia Apartments — San Francisco affordable housing",
+              "sourceUrl": "https://www.mercyhousing.org/california/nia/",
+              "address": "1555 Sunnydale Avenue, San Francisco, CA 94134",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7517,
+              "title": "Shang Palace — Harbin — Harbin restaurant guide",
+              "sourceUrl": "https://www.shangri-la.com/harbin/shangrila/dining/restaurants/shang-palace/",
+              "address": "Shangri-La Harbin, 555 Youyi Road, Daoli District, Harbin, Heilongjiang, China",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7518,
+              "title": "Coffee Garden — Harbin restaurant guide",
+              "sourceUrl": "https://www.shangri-la.com/harbin/shangrila/dining/restaurants/coffee-garden/",
+              "address": "Shangri-La Harbin, 555 Youyi Road, Daoli District, Harbin, Heilongjiang, China",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 15192,
+              "title": "Coffee Garden — Shangri-La Harbin — official dining guide",
+              "sourceUrl": "https://www.shangri-la.com/restaurants-bars/harbin/shangrila/coffee-garden/",
+              "address": "1/F, 555 Youyi Road, Harbin",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 17034,
+              "title": "BioXcel Files Chapter 11 With Teva as US$57.5 Million Stalking-Horse Bidder",
+              "sourceUrl": "https://www.fiercebiotech.com/biotech/teva-saddles-stalking-horse-bidder-bankrupt-bioxcels-neuroscience-portfolio",
+              "address": "555 Long Wharf Drive, New Haven, Connecticut, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 17484,
+              "title": "Illuminate at the San Antonio Botanical Garden — San Antonio seasonal activity",
+              "sourceUrl": "https://sabgtx.org/event/family-night-at-illuminate/",
+              "address": "555 Funston Pl, San Antonio, TX 78209",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 17543,
+              "title": "Cactus League Spring Training — Phoenix seasonal activity",
+              "sourceUrl": "https://cactusleague.com/",
+              "address": "7555 N. Pima Rd., Scottsdale, AZ 85258",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 18363,
+              "title": "Mattaniah Solar Project: 52 MW Solar Facility in Polk County, Florida",
+              "sourceUrl": "https://www.tampaelectric.com/company/solar-energy/mattaniah-solar/",
+              "address": "State Road 60 & County Road 555 Corridor, Bartow Area, Polk County, FL 33830",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20521,
+              "title": "Il Fornaio - Del Mar — San Diego restaurant guide",
+              "sourceUrl": "https://www.opentable.com/restaurant/profile/3973",
+              "address": "1555 Camino Del Mar, Del Mar, CA 92014",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20536,
+              "title": "Pacifica Del Mar — San Diego restaurant guide",
+              "sourceUrl": "https://www.opentable.com/restaurant/profile/583",
+              "address": "1555 Camino del Mar, Del Mar, CA 92014",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 1030,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%bjsrestaurants.com%"
+          },
+          "total": 4,
+          "pins": [
+            {
+              "id": 20559,
+              "title": "BJ's Restaurant & Brewhouse - Mission Valley — San Diego restaurant guide",
+              "sourceUrl": "https://www.bjsrestaurants.com/locations/ca/mission-valley",
+              "address": "1370 Frazee Rd, San Diego, CA 92108",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20560,
+              "title": "BJ's Restaurant & Brewhouse - Carlsbad — San Diego restaurant guide",
+              "sourceUrl": "https://www.bjsrestaurants.com/locations/ca/carlsbad",
+              "address": "5613 Paseo Del Norte, Carlsbad, CA 92008",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20561,
+              "title": "BJ's Restaurant & Brewhouse - Escondido — San Diego restaurant guide",
+              "sourceUrl": "https://www.bjsrestaurants.com/locations/ca/escondido",
+              "address": "204 E Via Rancho Pkwy, Escondido, CA 92025",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20562,
+              "title": "BJ's Restaurant & Brewhouse - La Jolla — San Diego restaurant guide",
+              "sourceUrl": "https://www.bjsrestaurants.com/locations/ca/la-jolla",
+              "address": "8785 Villa La Jolla Dr, San Diego, CA 92037",
+              "utcDeletedDateTime": null
+            }
+          ]
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1045,
+      "name": "Chef JUN – Bay Ho",
+      "address": "4033 Avati Drive, San Diego, CA 92117",
+      "source": "https://chefjun.com/menu-bayho",
+      "pattern": "%Chef%Jun%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1045,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%4033 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1045,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%chefjun.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1058,
+      "name": "The Hangout Restaurant and Bar",
+      "address": "2736 Adams Ave, San Diego, CA 92116",
+      "source": "https://thehangoutrestaurantandbar.com/",
+      "pattern": "%Hangout%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1058,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%2736 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1058,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%thehangoutrestaurantandbar.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1066,
+      "name": "GARAGE Kitchen + Bar",
+      "address": "655 Fourth Avenue, San Diego, CA 92101",
+      "source": "http://garagekitchenbar.com/",
+      "pattern": "%Garage%",
+      "total": 1,
+      "pins": [
+        {
+          "id": 10490,
+          "title": "Verizon Comms Garage Top Solar Project — recently operational (Aug 2026 inventory)",
+          "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-65507",
+          "address": "Verizon Comms Garage Top Solar Project, Santa Clara County, CA, United States",
+          "deleted": "2026-10-12T03:30:08.072Z",
+          "date": "2025-09-30T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1066,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%655 %"
+          },
+          "total": 6,
+          "pins": [
+            {
+              "id": 2211,
+              "title": "National Western Center Targets Early 2027 Start for Its Equestrian Center",
+              "sourceUrl": "https://nationalwestern.com/press-release-future-betty-knoebel-arena-celebrated-at-ceremonial-groundbreaking/",
+              "address": "National Western Center, 4655 Humboldt Street, Denver, CO",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 6686,
+              "title": "Holbox — Los Angeles restaurant guide",
+              "sourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+              "address": "3655 S Grand Ave, Los Angeles, CA 90007",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7037,
+              "title": "Las Dahlias (East Los Angeles) — Los Angeles affordable housing",
+              "sourceUrl": "https://nationalcore.org/communities/las-dahlias/",
+              "address": "4655 East 3rd Street, East Los Angeles, CA 90022",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7122,
+              "title": "Soria — East Greenwich affordable housing",
+              "sourceUrl": "https://www.pennrose.com/apartments/rhode-island/soria/",
+              "address": "655 Frenchtown Road, East Greenwich, RI 02818",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7146,
+              "title": "Faison Mews — Camden affordable housing",
+              "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/faison-mews/",
+              "address": "1655 Park Boulevard,  Camden,  NJ 08103",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 17538,
+              "title": "National Western Stock Show — Denver seasonal activity",
+              "sourceUrl": "https://nationalwestern.com/",
+              "address": "4655 Humboldt St., Denver, CO 80216",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 1066,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%garagekitchenbar.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1075,
+      "name": "Tavern",
+      "address": "1310 Orange Avenue, Coronado, CA 92118",
+      "source": "http://www.coronadotavern.com/",
+      "pattern": "%Tavern%",
+      "total": 8,
+      "pins": [
+        {
+          "id": 6699,
+          "title": "Gibsons Tavern Plans an Opening in Fulton Market",
+          "sourceUrl": "https://chicago.eater.com/restaurant-news/169239/anticipated-new-chicago-restaurants-opening-fall-2026#gibsons-tavern",
+          "address": "925 W Fulton Market, Chicago, IL 60607",
+          "deleted": null,
+          "date": "2026-11-30T00:00:00.000Z"
+        },
+        {
+          "id": 15903,
+          "title": "The Tavern — Grill & Lounge, Andaz Tokyo — Tokyo restaurant guide",
+          "sourceUrl": "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "address": "51F Andaz Tokyo, Toranomon Hills Mori Tower, 1-23-4 Toranomon, Minato-ku, Tokyo",
+          "deleted": null,
+          "date": "2026-10-15T00:00:00.000Z"
+        },
+        {
+          "id": 18022,
+          "title": "C&O Canal Towpath at Great Falls Tavern — Washington, DC seasonal activity",
+          "sourceUrl": "https://www.nps.gov/choh/index.htm",
+          "address": "11710 MacArthur Blvd, Potomac, MD 20854",
+          "deleted": null,
+          "date": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "id": 20481,
+          "title": "Belching Beaver Brewery Tavern & Grill - Vista — San Diego restaurant guide",
+          "sourceUrl": "https://tavern.belchingbeaver.com/vista-belching-beaver-brewery-tavern-and-grill-happy-hours-specials",
+          "address": "302 E Broadway, Vista, CA 92084",
+          "deleted": null,
+          "date": "2016-12-31T00:00:00.000Z"
+        },
+        {
+          "id": 20516,
+          "title": "Jimmy's Famous American Tavern — San Diego restaurant guide",
+          "sourceUrl": "https://www.opentable.com/restaurant/profile/93823",
+          "address": "4990 North Harbor Drive, San Diego, CA 92106",
+          "deleted": null,
+          "date": "2010-12-31T00:00:00.000Z"
+        },
+        {
+          "id": 20523,
+          "title": "Green Dragon Tavern & Museum — San Diego restaurant guide",
+          "sourceUrl": "https://www.opentable.com/restaurant/profile/116512",
+          "address": "6115 Paseo del Norte, Carlsbad, 92011",
+          "deleted": null,
+          "date": "2014-12-31T00:00:00.000Z"
+        },
+        {
+          "id": 20584,
+          "title": "Bay Hill Tavern — San Diego restaurant guide",
+          "sourceUrl": "http://www.bayhilltavernsd.com/",
+          "address": "3010 Clairemont Dr, San Diego, CA 92117",
+          "deleted": null,
+          "date": "2019-12-31T00:00:00.000Z"
+        },
+        {
+          "id": 20600,
+          "title": "Uptown Tavern — San Diego restaurant guide",
+          "sourceUrl": "https://uptowntavernsd.com/",
+          "address": "1236 University Ave, San Diego, CA 92103",
+          "deleted": null,
+          "date": "2012-12-31T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1075,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%1310 %"
+          },
+          "total": 3,
+          "pins": [
+            {
+              "id": 5957,
+              "title": "Constellation Completes Its Calpine Acquisition, Creating a 55 GW Power Producer",
+              "sourceUrl": "https://www.constellationenergy.com/news/2026/01/constellation-completes-calpine-transaction-powering-americas-clean-energy-future.html",
+              "address": "Constellation Energy, 1310 Point Street, Baltimore, Maryland, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 5961,
+              "title": "Constellation Reports Q2 2026 Results and Raises Full-Year Guidance",
+              "sourceUrl": "https://www.constellationenergy.com/news/2026/08/constellation-reports-second-quarter-2026-results.html",
+              "address": "Constellation Energy, 1310 Point Street, Baltimore, Maryland, United States",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 20467,
+              "title": "Sidecar Bar — San Diego restaurant guide",
+              "sourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+              "address": "1310 Morena Boulevard, San Diego, CA 92110",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 1075,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%coronadotavern.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1083,
+      "name": "AVANT Restaurant at Rancho Bernardo Inn",
+      "address": "17550 Bernardo Oaks Dr, San Diego, CA 92128",
+      "source": "https://www.avantrestaurant.com/",
+      "pattern": "%AVANT%",
+      "total": 7,
+      "pins": [
+        {
+          "id": 1522,
+          "title": "Kubikiri Cycle: The Blue Savant and the Nonsense User Premieres",
+          "sourceUrl": "https://myanimelist.net/anime/33263/Kubikiri_Cycle__Aoiro_Savant_to_Zaregotozukai",
+          "address": "Kami-Igusa, Suginami, Japan",
+          "deleted": null,
+          "date": "2016-10-26T00:00:00.000Z"
+        },
+        {
+          "id": 15696,
+          "title": "Avantus Arida Solar Center: 1B USD, 370 MW Solar Project in Laughlin, Nevada, Targeted for 2028",
+          "sourceUrl": "https://www.kdminer.com/news/massive-arida-solar-center-project-moves-ahead-in-laughlin/article_f7db761e-2c9d-58e8-868d-6c8f9282c10b.html",
+          "address": "Southlands area, near Laughlin, Clark County, Nevada, United States",
+          "deleted": null,
+          "date": "2028-01-01T00:00:00.000Z"
+        },
+        {
+          "id": 15706,
+          "title": "Avantus Aratina 1: 200 MW Solar and 500 MWh Battery Storage Online in Kern County, California",
+          "sourceUrl": "https://www.solarpowerworldonline.com/2026/07/avantus-completes-1st-phase-of-aratina-solar-storage-project-in-california/",
+          "address": "Aratina Solar Center, near Boron, eastern Kern County, California, United States",
+          "deleted": null,
+          "date": "2026-07-01T00:00:00.000Z"
+        },
+        {
+          "id": 15707,
+          "title": "Avantus Aratina 2: 150 MW Solar and 452 MWh Battery Storage Under Construction in Kern County, California",
+          "sourceUrl": "https://avantus.com/news/avantus-secures-tax-equity-commitment-for-aratina2",
+          "address": "Aratina Solar Center, near Boron, eastern Kern County, California, United States",
+          "deleted": null,
+          "date": "2026-12-01T00:00:00.000Z"
+        },
+        {
+          "id": 15935,
+          "title": "Avant Prairie ESS Battery: 16-201.72 MW in Freestone County, Texas, Planned for 2028-2029",
+          "sourceUrl": "https://freestonecountytimesonline.com/commissioners-court-roundup-county-jail-repair-needs-discussed/",
+          "address": "Freestone County, Texas (EIA-860M site point near the Big Brown-Jewett 345 kV line)",
+          "deleted": null,
+          "date": "2029-04-16T00:00:00.000Z"
+        },
+        {
+          "id": 16678,
+          "title": "Avant Prairie ESS: 200 MW EIA Plan, 2029 Queue Target",
+          "sourceUrl": null,
+          "address": "Freestone County, Texas; retained rounded EIA 68349 reporting point, not a surveyed parcel",
+          "deleted": null,
+          "date": "2029-04-16T00:00:00.000Z"
+        },
+        {
+          "id": 19909,
+          "title": "Audi Unveils the B9 S4 and S4 Avant at Frankfurt With a 354 hp Turbo V6",
+          "sourceUrl": "https://www.chasingcars.com.au/news/new-car-prices/next-gen-2016-audi-s4-launched-at-frankfurt/",
+          "address": "Messe Frankfurt, Ludwig-Erhard-Anlage 1, Frankfurt am Main, Germany",
+          "deleted": null,
+          "date": "2015-09-15T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1083,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%17550 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1083,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%avantrestaurant.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1101,
+      "name": "Understory Bar",
+      "address": "12841 El Camino Real Suite 209-210, San Diego, CA 92130",
+      "source": "https://understorybar.com/happy-hour-menu/",
+      "pattern": "%Understory%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1101,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%12841 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1101,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%understorybar.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1102,
+      "name": "Eureka! - San Diego (UTC)",
+      "address": "4353 La Jolla Village Dr, San Diego, CA 92122",
+      "source": "https://eurekarestaurantgroup.com/locations/san-diego-utc",
+      "pattern": "%Eureka%",
+      "total": 2,
+      "pins": [
+        {
+          "id": 10036,
+          "title": "Eureka South Solar — recently operational (Aug 2026 inventory)",
+          "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-66041",
+          "address": "Eureka South Solar, Oneida County, NY, United States",
+          "deleted": "2026-10-12T03:30:04.604Z",
+          "date": "2026-05-31T00:00:00.000Z"
+        },
+        {
+          "id": 10336,
+          "title": "Eureka North Solar — recently operational (Aug 2026 inventory)",
+          "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-66042",
+          "address": "Eureka North Solar, Oneida County, NY, United States",
+          "deleted": "2026-10-12T03:30:07.095Z",
+          "date": "2026-05-31T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1102,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%4353 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1102,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%eurekarestaurantgroup.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1116,
+      "name": "Islands Restaurant - Eastlake",
+      "address": "2255 Otay Lakes Rd, Chula Vista, CA 91915",
+      "source": "https://www.islandsrestaurants.com/locations/chula-vista/",
+      "pattern": "%Islands%",
+      "total": 7,
+      "pins": [
+        {
+          "id": 10,
+          "title": "Five Pacific islands lost to rising seas as climate change hits",
+          "sourceUrl": "http://iopscience.iop.org/article/10.1088/1748-9326/11/5/054011",
+          "address": null,
+          "deleted": null,
+          "date": "2014-01-01T00:00:00.000Z"
+        },
+        {
+          "id": 582,
+          "title": "Faroe Islands Open the Sandoy Undersea Tunnel",
+          "sourceUrl": "https://www.youtube.com/watch?v=EruSZNI4th4",
+          "address": "Skopun, Sandoy, Faroe Islands",
+          "deleted": null,
+          "date": "2023-12-21T00:00:00.000Z"
+        },
+        {
+          "id": 836,
+          "title": "Tropical Islands Resort Opens Inside the World's Largest Free-Standing Hall",
+          "sourceUrl": "https://www.youtube.com/watch?v=lAYl-qp6Ngc",
+          "address": "Tropical-Islands-Allee 1, 15910 Krausnick-Halbe, Germany",
+          "deleted": null,
+          "date": "2004-12-19T00:00:00.000Z"
+        },
+        {
+          "id": 4648,
+          "title": "Trump Opens the Pacific Remote Islands Marine Monument to Commercial Fishing",
+          "sourceUrl": "https://www.federalregister.gov/documents/2025/04/22/2025-07060/unleashing-american-commercial-fishing-in-the-pacific",
+          "address": "White House, 1600, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20500, United States",
+          "deleted": null,
+          "date": "2025-04-17T00:00:00.000Z"
+        },
+        {
+          "id": 17372,
+          "title": "Boston Harbor Islands ferries and island parks — Boston seasonal activity",
+          "sourceUrl": "https://www.nps.gov/boha/index.htm",
+          "address": "Long Wharf, 66 Long Wharf, Boston, MA 02110",
+          "deleted": null,
+          "date": "2026-05-01T00:00:00.000Z"
+        },
+        {
+          "id": 17799,
+          "title": "Channel Islands National Park — Los Angeles seasonal activity",
+          "sourceUrl": "https://www.nps.gov/chis/index.htm",
+          "address": "1901 Spinnaker Dr, Ventura, CA 93001",
+          "deleted": null,
+          "date": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "id": 19804,
+          "title": "M 6.5 Earthquake Strikes the Bonin Islands Region of Japan",
+          "sourceUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4r9",
+          "address": "Bonin Islands region, Japan (offshore epicentre)",
+          "deleted": null,
+          "date": "2026-10-25T02:09:23.818Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1116,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%2255 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1116,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%islandsrestaurants.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1121,
+      "name": "Fast Times",
+      "address": "3065 Clairemont Dr, San Diego, CA 92117",
+      "source": "http://fasttimessd.com/san-diego-fast-times-happy-hours-specials",
+      "pattern": "%Fast%Times%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1121,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%3065 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1121,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%fasttimessd.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1128,
+      "name": "Poway's Irish Pub",
+      "address": "13314 Poway Rd, Poway, CA 92064",
+      "source": "https://powaypub.com/menu.html",
+      "pattern": "%Poway%Irish%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1128,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%13314 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1128,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%powaypub.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1131,
+      "name": "Downtown Cafe Bar & Grill",
+      "address": "182 E Main St, El Cajon, CA 92020",
+      "source": "https://downtowncafe-ec.com/",
+      "pattern": "%Downtown%Cafe%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1131,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%182 %"
+          },
+          "total": 1,
+          "pins": [
+            {
+              "id": 10065,
+              "title": "NY FONDA 182 BOSHART RD - Montgomery 1 — recently operational (Aug 2026 inventory)",
+              "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-67679",
+              "address": "NY FONDA 182 BOSHART RD - Montgomery 1, Montgomery County, NY, United States",
+              "utcDeletedDateTime": "2026-10-12T03:30:04.604Z"
+            }
+          ]
+        },
+        {
+          "venueId": 1131,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%downtowncafe-ec.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1133,
+      "name": "Mainstream Bar & Grill - Poway",
+      "address": "13385 Poway Rd, Poway, CA 92064",
+      "source": "https://mainstreampoway.net/poway-mainstream-bar-and-grill-happy-hours-specials",
+      "pattern": "%Mainstream%",
+      "total": 1,
+      "pins": [
+        {
+          "id": 20670,
+          "title": "Intel 8th and 9th-Gen Core (Coffee Lake): Mainstream Desktops Reach 6 Then 8 Cores",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Coffee_Lake",
+          "address": "Intel Corporation, 2200 Mission College Boulevard, Santa Clara, California, 95054, United States",
+          "deleted": null,
+          "date": "2017-10-05T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1133,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%13385 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1133,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%mainstreampoway.net%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1138,
+      "name": "O'Sullivan's Irish Pub - Escondido",
+      "address": "118 E Grand Ave, Escondido, CA 92025",
+      "source": "https://osullivansescondido.com/specials",
+      "pattern": "%Sullivan%",
+      "total": 4,
+      "pins": [
+        {
+          "id": 18500,
+          "title": "Sullivan Solar Project: 300 MW Clean Energy in Sullivan County, Missouri",
+          "sourceUrl": "https://dnr.mo.gov/",
+          "address": "MO-6 & Route BB, Milan, Sullivan County, MO 63556",
+          "deleted": null,
+          "date": "2029-11-01T00:00:00.000Z"
+        },
+        {
+          "id": 18783,
+          "title": "Sullivan Clean Energy Solar Project: 300 MWac Solar in Sullivan County, Missouri",
+          "sourceUrl": "https://milanmo.gov/",
+          "address": "Milan, Sullivan County, Missouri",
+          "deleted": null,
+          "date": "2028-10-01T00:00:00.000Z"
+        },
+        {
+          "id": 18820,
+          "title": "Kearsarge Grissom Solar Project: 4 MWac Solar in Sullivan County, New Hampshire",
+          "sourceUrl": "https://www.claremontnh.com/",
+          "address": "Claremont, Sullivan County, New Hampshire",
+          "deleted": null,
+          "date": "2026-09-01T00:00:00.000Z"
+        },
+        {
+          "id": 19403,
+          "title": "Sullivan Clean Compute Campus: 200 MW Hyperscale Data Infrastructure",
+          "sourceUrl": "https://sullivancounty-pa.us/",
+          "address": "Laporte, Sullivan County, PA",
+          "deleted": "2026-10-23T05:55:00.561Z",
+          "date": "2027-12-01T00:00:00.000Z"
+        }
+      ],
+      "aliasChecks": [
+        {
+          "venueId": 1138,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%118 %"
+          },
+          "total": 3,
+          "pins": [
+            {
+              "id": 6876,
+              "title": "Bouillon Plans an Opening in Södermalm",
+              "sourceUrl": "https://thatsup.se/stockholm/restaurang/bouillon",
+              "address": "Söderhallarna, Medborgarplatsen, 118 26 Stockholm, Sweden",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 7549,
+              "title": "Cang Qiao Mian Jie — Zhenming Road — Ningbo restaurant guide",
+              "sourceUrl": "https://you.ctrip.com/food/ningbo83/10385727.html",
+              "address": "118 Zhenming Road, Haishu District, Ningbo, Zhejiang, China",
+              "utcDeletedDateTime": null
+            },
+            {
+              "id": 15459,
+              "title": "Roan Kikunoi — restored Japan guide",
+              "sourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+              "address": "118 Saito-cho, Kiyamachi-dori Shijo-sagaru, Shimogyo-ku, Kyoto, Japan",
+              "utcDeletedDateTime": null
+            }
+          ]
+        },
+        {
+          "venueId": 1138,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%osullivansescondido.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The exact branch opening date remains unverified. Operator-page research is recorded below; independent opening reporting, relocation checks and date precision must be verified before creating a native pin. Do not substitute the menu-check date or the parent brand’s founding."
+    },
+    {
+      "venueId": 1165,
+      "name": "Il Posto",
+      "address": "2145 Fern St, San Diego, CA 92104",
+      "source": "https://ilpostosd.com/",
+      "pattern": "%Il%Posto%",
+      "total": 0,
+      "pins": [],
+      "aliasChecks": [
+        {
+          "venueId": 1165,
+          "kind": "address",
+          "query": {
+            "address.ilike": "%2145 %"
+          },
+          "total": 0,
+          "pins": []
+        },
+        {
+          "venueId": 1165,
+          "kind": "source-host",
+          "query": {
+            "sourceUrl.ilike": "%ilpostosd.com%"
+          },
+          "total": 0,
+          "pins": []
+        }
+      ],
+      "status": "no_matching_native_pin_found",
+      "nextEvidenceNeeded": "The March 2023 lease/preview report does not confirm the actual first-service date."
+    }
+  ],
+  "extraLookups": [
+    {
+      "query": {
+        "sourceUrl.ilike": "%1427722%"
+      },
+      "total": 0,
+      "pins": []
+    },
+    {
+      "query": {
+        "title.ilike": "%Harland%"
+      },
+      "total": 0,
+      "pins": []
+    },
+    {
+      "query": {
+        "title.ilike": "%Karl%Strauss%"
+      },
+      "total": 1,
+      "pins": [
+        {
+          "id": 20577,
+          "title": "Karl Strauss Brewing Company - 4S Ranch — San Diego restaurant guide",
+          "sourceUrl": "https://www.karlstrauss.com/location/4s-ranch/menu",
+          "address": "10448 Reserve Dr, San Diego, CA 92127",
+          "utcDeletedDateTime": null
+        }
+      ]
+    }
+  ],
+  "newPin": {
+    "id": 20680,
+    "sourceUrl": "https://tajimaramen.com/tajima-crown-point/",
+    "author": "@FoodDesk",
+    "opening": {
+      "day": "2025-01-12",
+      "precision": "day",
+      "dateConfidence": "confirmed",
+      "reason": "The January 22, 2025 YS Food corporate announcement identifies the Crown Point branch at 3782 Ingraham Street and explicitly records its opening on January 12, 2025. This is the branch opening date.",
+      "sourceUrl": "https://ys-food.jp/wps/wp-content/uploads/2025/01/%E3%80%8CTajima-Ramen%E3%80%8D%E3%82%B9%E3%83%BC%E3%83%97%E3%81%AE%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%E3%82%92%E5%85%BC%E3%81%AD%E3%81%9F%E6%96%B0%E5%BA%97%E8%88%97%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%A7.pdf",
+      "sourceTitle": "YS Food: Tajima Ramen Crown Point new-store opening announcement, January 22, 2025",
+      "quote": "開店日：2025 年1 月12 日（日）; 所在地：3782 Ingraham St, San Diego, CA 92109",
+      "openedAt": "2026-10-31"
+    },
+    "coordinates": {
+      "latitude": 32.7885117,
+      "longitude": -117.2376928,
+      "sourceUrl": "https://maps.app.goo.gl/brCiJZXCM7KsZRNTA",
+      "operatorLinkPage": "https://tajimaramen.com/tajima-crown-point/",
+      "specialsProfileLocationSynchronized": true
+    },
+    "nativeGuideTitleAndImageLinksVerified": true,
+    "sourceWikiReadbackVerified": true
+  },
+  "additions": [
+    {
+      "kind": "specials",
+      "id": 1041,
+      "pinSourceUrl": "https://sidecarbarsd.com/san-diego-bay-park-san-diego-sidecar-bar-happy-hours-specials",
+      "menuLabel": "Happy hour & specials",
+      "itemName": "Draft beer",
+      "caption": "Draft beer at Sidecar Bar (Blind Pig photographed)",
+      "credit": "Photo via Yelp, Sidecar",
+      "sourceUrl": "https://www.yelp.com/biz_photos/sidecar-san-diego-7?select=5zNxe28_nOwZ9K6dZDCD4A",
+      "sourceCaption": "Blind Pig",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-followup-2026-10-31/sidecar-blind-pig-b7b2967313372491.webp",
+        "width": 750,
+        "height": 1000
+      },
+      "nativePinId": 20467
+    },
+    {
+      "kind": "specials",
+      "id": 1044,
+      "pinSourceUrl": "https://harlandbeer.com/pages/copy-of-bay-park-tasting-room-menu",
+      "menuLabel": "Happy hour",
+      "itemName": "Draft pints",
+      "caption": "Draft pint at Harland Brewing Bay Park (Japanese Lager photographed)",
+      "credit": "Ryan F. via Yelp, Harland Brewing - Bay Park",
+      "sourceUrl": "https://www.yelp.com/biz_photos/harland-brewing-bay-park-san-diego-3?select=2b5GG3kmiFV-KmtSRmam3w",
+      "sourceCaption": "Japanese Lager",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-followup-2026-10-31/harland-lager-b2706ac2ebe11069.webp",
+        "width": 750,
+        "height": 1000
+      },
+      "nativePinId": null
+    },
+    {
+      "kind": "specials",
+      "id": 1143,
+      "pinSourceUrl": "https://karlstrauss.com/location/sorrento-mesa/menu/",
+      "menuLabel": "Happy hour",
+      "itemName": "Karl beers",
+      "caption": "Karl beer at Karl Strauss Sorrento Mesa (Mosaic IPA photographed)",
+      "credit": "Photo via Yelp, Karl Strauss Brewing Company - Sorrento Mesa",
+      "sourceUrl": "https://www.yelp.com/biz_photos/karl-strauss-brewing-company-san-diego-7?select=lNYZqI-cKlnSgtfyAGTkxw",
+      "sourceCaption": "Mosaic IPA. Tropical vibes, grapefruit zing, and citrus punch in every sip.",
+      "reviewed": true,
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-followup-2026-10-31/karl-mosaic-876e4115215155b4.webp",
+        "width": 667,
+        "height": 1000
+      },
+      "nativePinId": null
+    },
+    {
+      "kind": "content",
+      "id": 1962,
+      "specialsVenueId": 965,
+      "nativePinId": 20458,
+      "pinSourceUrl": "https://sycamoreden.com/happy-hour",
+      "menuLabel": "Drinks menu (ordinary menu)",
+      "itemName": "Wolf Ticket",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sycamore-den-san-diego/sycamore-wolf-ticket-03f3d375efc633a3.webp",
+        "width": 1000,
+        "credit": "Photo via Yelp, Sycamore Den",
+        "height": 1000,
+        "caption": "Wolf Ticket, Sycamore Den",
+        "sourceUrl": "https://www.yelp.com/biz_photos/sycamore-den-san-diego?select=QazqHmoR5MDUstOyhoF5CA"
+      },
+      "sourceCaption": "Wolf ticket",
+      "reviewed": true
+    }
+  ],
+  "nativeBrowserChecks": [
+    {
+      "pinId": 20680,
+      "stripPhotos": 3,
+      "itemThumbnails": 3,
+      "lightboxLoaded": true,
+      "creditVerified": true
+    },
+    {
+      "pinId": 20458,
+      "stripPhotos": 1,
+      "itemThumbnails": 1,
+      "ordinaryMenuItems": 17,
+      "lightboxLoaded": true,
+      "creditVerified": true
+    },
+    {
+      "pinId": 20467,
+      "stripPhotos": 1,
+      "itemThumbnails": 1
+    }
+  ],
+  "remainingPhotoGaps": [
+    {
+      "venueId": 35,
+      "name": "Queenstown Public House",
+      "address": "1557 Columbia Street, San Diego, CA 92101",
+      "pinSourceUrl": "https://queenstownpublichouse.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/queenstown-public-house-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Bites",
+            "House wines",
+            "Sangrias",
+            "Select cocktails",
+            "Two 12 oz beers"
+          ]
+        },
+        {
+          "menuLabel": "No Tariff Mondays",
+          "items": [
+            "Well cocktails",
+            "Select appetizers",
+            "Select entrees"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 170,
+      "name": "Brigantine Poway",
+      "address": "13445 Poway Road, Poway, CA 92064",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/11161",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Brig Blonde (can)",
+            "Blue Moon (bottle)",
+            "Modelo Especial (bottle)",
+            "Corona (bottle)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 770,
+      "name": "The Plot",
+      "address": "1733 S Coast Hwy, Oceanside, 92054",
+      "pinSourceUrl": "https://www.opentable.com/restaurant/profile/1062841",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-plot-oceanside-3?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Lunch Tasting Menu (three courses, seasonal, per person, prepaid)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 962,
+      "name": "Mister A's",
+      "address": "2550 Fifth Ave, 12th Floor, San Diego, CA 92103",
+      "pinSourceUrl": "https://www.asrestaurant.com/",
+      "status": "branch_or_access_gap",
+      "reason": "Yelp detail remained in its loading state; branch address and item photographs could not be verified there.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/mister-as-san-diego?osq=Mister+A%27s",
+        "https://www.yelp.com/biz/mister-mailbox-san-diego?osq=Mister+A%27s"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Aperitif menu",
+          "items": [
+            "Sunday roast: 12 oz prime rib",
+            "Maine Lobster Monday: A's lobster roll",
+            "Tuesday Toast: duo or trio of A's classics",
+            "Wagyu Wednesday: Wagyu burger with vanilla milkshake or AleSmith .394",
+            "Cluckin' Bubbles Thursday: triple-dipped Jidori fried chicken",
+            "Bar Pre-Fixe (Fri & Sat)",
+            "Tiramisu mini"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 963,
+      "name": "Gossip Grill",
+      "address": "1220 University Ave, San Diego, CA 92103",
+      "pinSourceUrl": "https://gossipgrill.com/menu/happy-hour/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/gossip-grill-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Food menu items",
+            "Bottled & canned beers, house wines & bubbles, seltzers & ciders, well spirits, draft beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 971,
+      "name": "Gaslamp Tavern",
+      "address": "868 5th Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.gaslamptavern.com/san-diego-central-san-diego-gaslamp-tavern-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named tots results depict topped variants or multiple dishes; no unambiguous match to the stored Tots item accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/gaslamp-tavern-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beers",
+            "Wine",
+            "Cocktails",
+            "Well drinks",
+            "Shareables"
+          ]
+        },
+        {
+          "menuLabel": "Daily specials",
+          "items": [
+            "Monday Mules",
+            "Taco Tuesday: 2 tacos + Mexican lager",
+            "Wing Wednesday",
+            "Mystery beer",
+            "Flatbreads",
+            "Tito's",
+            "Tallboys",
+            "Tots",
+            "Pitchers of beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 972,
+      "name": "Union Kitchen & Tap - Gaslamp",
+      "address": "333 Fifth Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.gaslampunion.com/happenings/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/union-kitchen-and-tap-gaslamp-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "Call drinks",
+            "Signature cocktails"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 975,
+      "name": "Isola Pizza & Pasta - Little Italy",
+      "address": "1526 India St, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.isolapizzabar.com/little-italy",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/isola-pizza-bar-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Takeout Tuesday",
+          "items": [
+            "Favorite Isola pizza + Pizza of the Day"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Select bottles of wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 976,
+      "name": "NOIR Sushi & Sake Fusion Lounge",
+      "address": "926 Fifth Ave, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.noirsushi.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/noir-sushi-and-sake-fusion-lounge-san-diego-11?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lucky 7 happy hour",
+          "items": [
+            "Seven signature bites (rolls and appetizers)",
+            "Beer, wine and sake specials"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 986,
+      "name": "Rakiraki Ramen & Tsukemen - Convoy",
+      "address": "4646 Convoy St, Suite 102, San Diego, CA 92111",
+      "pinSourceUrl": "https://rakirakiramen.com/locations/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/rakiraki-ramen-and-tsukemen-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "beer tower",
+          "url": "https://www.yelp.com/biz_photos/rakiraki-ramen-and-tsukemen-san-diego?search=beer+tower",
+          "matchingCaptions": [],
+          "outcome": "No caption matched the specified search."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer Tower (84 oz Sapporo)",
+            "Sapporo Draft (16 oz)",
+            "Sho Chiku Bai Hot Sake (extra dry)",
+            "Flavored Soju (375 ml)",
+            "Hana Awaka (250 ml, sparkling mix berry or peach)",
+            "Suigei \"Drunken Whale\" sake (300 ml)",
+            "Harajuku Float",
+            "Arnold Palmer (lemon, peach or matcha)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1010,
+      "name": "Oggi's Sports | Brewhouse | Pizza - Santee",
+      "address": "9828 Mission Gorge Rd Suite A, Santee, CA 92071",
+      "pinSourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-santee/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named fish-and-chips photograph shows three pieces, but the lunch item specifies two. Stix results did not establish the specified half order.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?search=stix",
+        "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "stix",
+          "url": "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?search=stix",
+          "matchingCaptions": [
+            "Oggi Stix",
+            "Oggi's Stix",
+            "Buffalo chicken Oggi Stix",
+            "Lack of bread on 1/2 of OGGI STIX and best of all that part was burnt (had to throw away--too hard to eat/enjoy)"
+          ]
+        },
+        {
+          "term": "fish",
+          "url": "https://www.yelp.com/biz_photos/oggis-sports-brewhouse-pizza-santee?search=fish",
+          "matchingCaptions": [],
+          "outcome": "Three-piece photograph rejected for a two-piece menu item."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Half Oggi's Stix",
+            "Choice of half flatbread",
+            "Cup of soup and half salad (garden or Caesar)",
+            "Choice of half sandwich",
+            "Two-piece fish n' chips",
+            "Choice of half salad",
+            "10\" one-topping pizza",
+            "10\" choose-your-own specialty pizza",
+            "Cheese burger",
+            "Lunch portion chicken fettuccine Alfredo"
+          ]
+        },
+        {
+          "menuLabel": "Daily specials",
+          "items": [
+            "Monday Madness: medium, large and XL pizzas",
+            "Monday Madness: pitcher of Oggi's beer",
+            "Taco Tuesday: 2 tacos, grilled fish, fried fish or chicken",
+            "Taco Tuesday: house margaritas",
+            "Wing Wednesday: wings",
+            "Wing Wednesday: Oggi's beer pints",
+            "Thursday Flatbread Feast: flatbreads",
+            "Saturday Shot-O-Clock: El Jimador Blanco, Three Olives, Fireball",
+            "Saturday Shot-O-Clock: Jack Daniel's, Hornitos, Captain Morgan",
+            "Sunday Funday: California Gold blonde ale",
+            "Sunday Funday: Three Olives Bloody Mary",
+            "Sunday Funday: Opera Prima champagne bottle with juice caddy"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1015,
+      "name": "Sushi Lounge - Poway",
+      "address": "12622 Poway Rd, Poway, CA 92064",
+      "pinSourceUrl": "https://www.sushiloungesd.com/menu/sushi-lounge-poway",
+      "status": "menu_evidence_gap",
+      "reason": "The saved menus have no item entries. Obtain the branch-specific itemized menu before attaching dish photographs.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1016,
+      "name": "Sammy's Woodfired Pizza - La Jolla",
+      "address": "702 Pearl St, La Jolla, CA 92037",
+      "pinSourceUrl": "https://sammyspizza.com/Location-Details/client/la-jolla",
+      "status": "menu_evidence_gap",
+      "reason": "The saved menus have no item entries. Obtain the branch-specific itemized menu before attaching dish photographs.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1020,
+      "name": "The Search Bar & Restaurant - EastLake",
+      "address": "881 District Pl Ste 100, Chula Vista, CA 91914",
+      "pinSourceUrl": "https://thesearchbareastlake.com/page/happy-hour",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named tri-tip photograph shows two tacos, but the menu item specifies three. Yelp lists 881 Showroom Place while the saved profile says 881 District Place; verify the street-name discrepancy.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?search=tacos",
+        "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "tacos",
+          "url": "https://www.yelp.com/biz_photos/the-search-bar-chula-vista?search=tacos",
+          "matchingCaptions": [
+            "Trio tacos",
+            "Fish tacos",
+            "Shrimp Tacos",
+            "Fish Tacos",
+            "Tri Tip Tacos",
+            "food, tacos",
+            "food, tacos",
+            "Happy hour tacos",
+            "interior, tacos"
+          ]
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Margaritas",
+            "Well drinks",
+            "Draft beer and wine",
+            "Bites menu"
+          ]
+        },
+        {
+          "menuLabel": "Taco Tuesday",
+          "items": [
+            "Tri tip or pollo asado tacos (3)",
+            "Margaritas"
+          ]
+        },
+        {
+          "menuLabel": "Wing Wednesday",
+          "items": [
+            "8 wings, fries and a drink"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1040,
+      "name": "Harbor Town Pub",
+      "address": "1125 Rosecrans Street, San Diego, CA 92106",
+      "pinSourceUrl": "https://harbortownpub.com/happy-hour-point-loma",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/harbor-town-pub-san-diego-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Well drinks",
+            "Select drafts",
+            "Cocktails",
+            "Bar bites (burgers, tacos, wings, sliders from the full kitchen)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1042,
+      "name": "Johnny Mañana's (Ocean Beach)",
+      "address": "4888 Newport Avenue, San Diego, CA 92107",
+      "pinSourceUrl": "https://johnnymananas.com/specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "Michelada and street-taco results name multiple food/drink subjects; no isolated item match accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?search=michelada",
+        "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "michelada",
+          "url": "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?search=michelada",
+          "matchingCaptions": [
+            "Crispy Fish Taco and michelada"
+          ]
+        },
+        {
+          "term": "street tacos",
+          "url": "https://www.yelp.com/biz_photos/johnny-ma%C3%B1anas-ocean-beach-san-diego?search=street+tacos",
+          "matchingCaptions": [],
+          "outcome": "Result names carne asada street tacos together with a fish taco; composite not accepted."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Weekly specials",
+          "items": [
+            "Johnny's World Famous Margarita",
+            "Street tacos",
+            "Wine special",
+            "Michelada"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1052,
+      "name": "Pretzels & Pints",
+      "address": "3812 Ray Street, San Diego, CA 92104",
+      "pinSourceUrl": "https://pretzelsandpints.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/pretzels-and-pints-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "Wine"
+          ]
+        },
+        {
+          "menuLabel": "Thursday pint and food",
+          "items": [
+            "Pint with any pretzel, pizza or sandwich purchase"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1054,
+      "name": "Piacere Mio - South Park",
+      "address": "1947 Fern Street, San Diego, CA 92102",
+      "pinSourceUrl": "https://southpark.piaceremiosd.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Pinot Grigio result also names salmon salad and bread; no isolated wine image accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/piacere-mio-south-park-san-diego-7?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Le Contesse Prosecco",
+            "Chardonnay",
+            "Pinot Grigio",
+            "Malbec",
+            "Cabernet Sauvignon",
+            "Dolomiti Beer (lager or dark)",
+            "Piacere Spritz"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1055,
+      "name": "Counterpoint",
+      "address": "830 25th Street, San Diego, CA 92102",
+      "pinSourceUrl": "https://counterpointsd.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/counterpoint-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "boilermaker",
+          "url": "https://www.yelp.com/biz_photos/counterpoint-san-diego?search=boilermaker",
+          "matchingCaptions": [],
+          "outcome": "No caption matched the specified search."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "House cocktails",
+            "Rose",
+            "Draft beers",
+            "Boilermaker (whiskey and Modelo)",
+            "Whiskey, tequila or mezcal shots"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1070,
+      "name": "Dobson's Bar & Restaurant",
+      "address": "956 Broadway Circle, San Diego, CA 92101",
+      "pinSourceUrl": "https://www.dobsonsrestaurant.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/dobsons-bar-and-restaurant-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "House wine",
+            "Well drinks",
+            "Draft beer"
+          ]
+        },
+        {
+          "menuLabel": "Monday dinner special",
+          "items": [
+            "Filet mignon and wild lobster tail dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1073,
+      "name": "Waterfront Bar & Grill",
+      "address": "2044 Kettner Boulevard, San Diego, CA 92101",
+      "pinSourceUrl": "https://waterfrontbarandgrill.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-waterfront-bar-and-grill-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Craft drafts and domestic beer",
+            "Well drinks and house cocktails",
+            "House red and white wine by the glass",
+            "Rotating bar-food specials (wings, tots, sliders)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1079,
+      "name": "The Hills Pub",
+      "address": "8758 La Mesa Blvd, La Mesa, CA 91942",
+      "pinSourceUrl": "https://www.thehillspub.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-hills-pub-la-mesa?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Beers n Bingo Taco Tuesday",
+          "items": [
+            "Tacos"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1080,
+      "name": "Mastiff Kitchen La Mesa",
+      "address": "4253 Palm Ave, La Mesa, CA 91941",
+      "pinSourceUrl": "https://mastiffkitchen.com/la-mesa-mastiff-kitchen-la-mesa-daily-deals",
+      "status": "item_photo_evidence_gap",
+      "reason": "Stored Salad is unspecified; captions identify Caesar, kale or tomato variants, without evidence identifying the lunch salad.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mastiff-kitchen-la-mesa-la-mesa?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "Pizza slices",
+            "Sandwich",
+            "Salad"
+          ]
+        },
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beer",
+            "Pizza slices, sandwich or salad"
+          ]
+        },
+        {
+          "menuLabel": "Pizza-Par-Tuesday",
+          "items": [
+            "Whole pizza and beer"
+          ]
+        },
+        {
+          "menuLabel": "Wine-Down Wednesday",
+          "items": [
+            "Wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1081,
+      "name": "Karl Strauss Brewing Company - 4S Ranch",
+      "address": "10448 Reserve Dr, San Diego, CA 92127",
+      "pinSourceUrl": "https://www.karlstrauss.com/location/4s-ranch/menu",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/karl-strauss-brewing-company-san-diego-6?osq=Karl+Strauss+Brewing+Company",
+        "https://www.yelp.com/biz/karl-strauss-brewing-company-san-diego-7?osq=Karl+Strauss+Brewing+Company",
+        "https://www.yelp.com/biz_photos/karl-strauss-brewing-company-san-diego-8?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Happy hour beers",
+            "Happy hour appetizers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1082,
+      "name": "Veranda Bar at Rancho Bernardo Inn",
+      "address": "17550 Bernardo Oaks Dr, San Diego, CA 92128",
+      "pinSourceUrl": "https://www.ranchobernardoinn.com/dine",
+      "status": "item_photo_evidence_gap",
+      "reason": "Beer match is a burger-and-beer meal, not an isolated identified menu drink.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-bar-at-rancho-bernardo-inn-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer",
+            "Wine",
+            "Bites (variety)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1084,
+      "name": "McGregor's Bar and Grill",
+      "address": "10475 San Diego Mission Rd, San Diego, CA 92108",
+      "pinSourceUrl": "https://www.mcgregorssandiego.com/menu",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mcgregors-bar-and-grill-san-diego-3?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Well drinks and wines",
+            "Select draft beer",
+            "Bar bites"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1085,
+      "name": "Himalayan Cuisine",
+      "address": "7918 El Cajon Blvd P, La Mesa, CA 91942",
+      "pinSourceUrl": "https://himalayancuisineone.com/",
+      "status": "menu_evidence_gap",
+      "reason": "The operator’s itemized regular ordering menu is readable at the exact 7918 El Cajon Boulevard branch, with prices and named menu photographs. It does not establish the saved lunch special’s composition or prices. No exact-source backing pin resolved. Transcribe regular menu separately after resolving native-pin identity/opening evidence; do not label these regular dishes as the lunch offer.",
+      "sourcePagesChecked": [
+        "https://himalayancuisineone.com/menu"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": []
+    },
+    {
+      "venueId": 1087,
+      "name": "Jose's Courtroom",
+      "address": "1037 Prospect St, La Jolla, CA 92037",
+      "pinSourceUrl": "https://joses.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Margarita result also depicts chips and does not establish house versus premium selection.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/joses-courtroom-la-jolla-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Margarita Mondays",
+          "items": [
+            "House margarita (glass)",
+            "House margarita pitcher",
+            "Premium margarita pitcher"
+          ]
+        },
+        {
+          "menuLabel": "Taco Tuesday",
+          "items": [
+            "Street tacos"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Bottles of wine"
+          ]
+        },
+        {
+          "menuLabel": "Thirsty Thursday",
+          "items": [
+            "Beer pitchers"
+          ]
+        },
+        {
+          "menuLabel": "Fajita Friday",
+          "items": [
+            "Fajita plates"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1089,
+      "name": "Wheat & Water",
+      "address": "5737 La Jolla Blvd, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.wheatandwater.com/la-jolla-la-jolla-wheat-and-water-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "The cheese-board caption is explicitly uncertain. No labelled named cocktail or verified combo image accepted.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/wheat-and-water-la-jolla-2?tab=food"
+      ],
+      "targetedPhotoSearches": [
+        {
+          "term": "cheese board",
+          "url": "https://www.yelp.com/biz_photos/wheat-and-water-la-jolla-2?search=cheese+board",
+          "matchingCaptions": [],
+          "outcome": "The sole caption questions whether the subject is the cheese board; not accepted."
+        }
+      ],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Wines by the glass",
+            "Beers",
+            "Spirits",
+            "Food specials"
+          ]
+        },
+        {
+          "menuLabel": "Ladies Night",
+          "items": [
+            "Cheese board",
+            "La Jolla Rose",
+            "Cadillac Sangria",
+            "Bird Rock Blush"
+          ]
+        },
+        {
+          "menuLabel": "Burger & Beer Night",
+          "items": [
+            "Any burger and a beer"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Any bottle of wine"
+          ]
+        },
+        {
+          "menuLabel": "Thursday apps",
+          "items": [
+            "Appetizers"
+          ]
+        },
+        {
+          "menuLabel": "Aloha Friday",
+          "items": [
+            "Aloha pizza and a mai tai"
+          ]
+        },
+        {
+          "menuLabel": "Tacos & Margs",
+          "items": [
+            "Any taco plate and house margarita"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1094,
+      "name": "Isola Pizza & Pasta - La Jolla",
+      "address": "7734 Girard Ave, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.isolapizzabar.com/la-jolla/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/isola-pizza-bar-la-jolla?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Happy hour food and drink"
+          ]
+        },
+        {
+          "menuLabel": "Takeout Tuesday",
+          "items": [
+            "Favorite Isola pizza plus the Pizza of the Day"
+          ]
+        },
+        {
+          "menuLabel": "Wine Wednesday",
+          "items": [
+            "Select bottles of wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1099,
+      "name": "Pazza Market & Cucina",
+      "address": "4577 La Jolla Village Dr, San Diego, CA 92122",
+      "pinSourceUrl": "https://pazzamarket.com/happy-hour/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/pazza-market-and-cucina-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Glass of wine",
+            "Beer",
+            "Antipasti"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1103,
+      "name": "Amuse Lounge and Patio (San Diego Marriott La Jolla)",
+      "address": "4240 La Jolla Village Dr, La Jolla, CA 92037",
+      "pinSourceUrl": "https://www.marriott.com/en-us/hotels/sanlj-san-diego-marriott-la-jolla/dining",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Drinks",
+            "\"5\" and \"10\" menu items"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1132,
+      "name": "Buckboard's BBQ & Brew",
+      "address": "975 Greenfield Dr, El Cajon, CA 92021",
+      "pinSourceUrl": "https://www.buckboardsbbq.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/buckboards-barbecue-and-brew-el-cajon?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Beer, wine and appetizers",
+            "Pitchers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1135,
+      "name": "MexicanBar - Poway",
+      "address": "12213 Poway Rd, Poway, CA 92064",
+      "pinSourceUrl": "https://themexicanbar.com/menu/mexicanbar-12213-poway-road",
+      "status": "item_photo_evidence_gap",
+      "reason": "Margarita match is promotional multi-dish text naming sopes and tacos; not accepted as a specific drink image.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/mexicanbar-poway?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Draft beers",
+            "DIPA draft",
+            "Wine",
+            "Margaritas",
+            "Starters"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1139,
+      "name": "SETS Kitchen & Bar",
+      "address": "1628 San Elijo Rd S, San Marcos, CA 92078",
+      "pinSourceUrl": "https://setskitchenandbar.com/san-marcos-san-elijo-hills-sets-kitchen-and-bar-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "Named burger photo is Smokehouse Burger, not the stored lettuce/tomato/onion/cheese special; wine result is a slider-and-wine meal.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/sets-kitchen-and-bar-san-marcos?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Weekly specials",
+          "items": [
+            "Burger (lettuce, tomato, onion, cheese; fries, sweet fries or tots)",
+            "Draft beer add-on",
+            "Glass of wine",
+            "Bottles of wine",
+            "All Specialty Cocktails"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1141,
+      "name": "Barn Door Public House",
+      "address": "2500 S Escondido Blvd, Escondido, CA 92025",
+      "pinSourceUrl": "https://barndoorpublic.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/barn-door-public-house-escondido?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Pint of draft beer (26 taps)"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1145,
+      "name": "The Coal Bunker",
+      "address": "232 S Main Ave, Fallbrook, CA 92028",
+      "pinSourceUrl": "https://www.thecoalbunker.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/the-coal-bunker-fallbrook?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "All drinks, beer & wine",
+            "Bottles of wine",
+            "Almost any beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1146,
+      "name": "Craft House Sky Deck",
+      "address": "12841 El Camino Real Ste 202, San Diego, CA 92130",
+      "pinSourceUrl": "https://crafthouseskydeck.com/del-mar-craft-house-sky-deck-happy-hours-specials",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/craft-house-at-sky-deck-del-mar-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Specials",
+          "items": [
+            "Tacos",
+            "Glass of wine",
+            "Bottle of wine"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1147,
+      "name": "Mediterraneo Italian Restaurant - Alpine",
+      "address": "1347 Tavern Rd, Alpine, CA 91901",
+      "pinSourceUrl": "https://mediterraneobistro.com/alpine-mediterraneo-happy-hours-specials",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Classics & pizzas",
+            "House wine & signature cocktails",
+            "Draft beers & well cocktails",
+            "Bottled beers"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1161,
+      "name": "Ernie's Craft Deli & Wine Bar",
+      "address": "114 N El Camino Real, Encinitas, CA 92024",
+      "pinSourceUrl": "https://erniesdeliandwine.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/ernies-craft-deli-and-wine-bar-encinitas-2?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Any 6 oz wine pour",
+            "All draft beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1166,
+      "name": "Bacari North Park",
+      "address": "3823 30th St, San Diego, CA 92104",
+      "pinSourceUrl": "https://www.eatwithbacari.com/north-park",
+      "status": "item_photo_evidence_gap",
+      "reason": "No sufficiently identified photo accepted from the inspected gallery and listed searches. Generic entries, bundles, named variants and portion constraints need stronger item-level evidence.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz_photos/bacari-north-park-san-diego?tab=food"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Cold, hot and pizza food items (food menu)",
+            "House wine, 5 oz",
+            "House wine, 8 oz",
+            "House wine, liter",
+            "Sangria, glass",
+            "Sangria, liter",
+            "Well cocktails",
+            "Spirit-free drinks",
+            "House beer"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1172,
+      "name": "Lamppost Pizza & Backstreet Brewery - Vista",
+      "address": "15 Main St Suite B100, Vista, CA 92083",
+      "pinSourceUrl": "https://www.lamppostpizzaofvista.com/",
+      "status": "branch_or_access_gap",
+      "reason": "Search did not yield a verified branch detail in this pass; resolve its exact branch/gallery before selecting images.",
+      "sourcePagesChecked": [],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Lunch specials",
+          "items": [
+            "#1 Pizza & Beverage Lunch",
+            "#2 Sandwich & Beverage Lunch",
+            "#3 Salad, Pizza & Beverage Lunch",
+            "#4 Pizza Lunch",
+            "#5 Pizza & Beverage Lunch",
+            "#6 Salad, Pasta & Beverage Lunch",
+            "#7 Pizza Bread & Beverage Lunch",
+            "#8 Salad, Pizza & Beverage Lunch"
+          ]
+        }
+      ]
+    },
+    {
+      "venueId": 1173,
+      "name": "Knotty Barrel East Village",
+      "address": "844 Market St, San Diego, CA 92101",
+      "pinSourceUrl": "https://ev.knottybarrel.com/",
+      "status": "item_photo_evidence_gap",
+      "reason": "Prior exact-branch search returned no Oklahoma captions. Do not substitute an unidentified smashburger for single/double Oklahoma variants.",
+      "sourcePagesChecked": [
+        "https://www.yelp.com/biz/knotty-barrel-san-diego-2"
+      ],
+      "targetedPhotoSearches": [],
+      "newPhotos": 0,
+      "nativePin": null,
+      "itemsStillWithoutPhotos": [
+        {
+          "menuLabel": "Happy hour",
+          "items": [
+            "Oklahoma Smash Burger (single)",
+            "Double Oklahoma Smashburger",
+            "Selected apps",
+            "14oz draft beers",
+            "Wells liquor",
+            "House red and house white wine",
+            "Specialty shots"
+          ]
+        },
+        {
+          "menuLabel": "Weekday midday specials",
+          "items": [
+            "Burger + Fries + 14oz draft beer",
+            "Rotating wrap special",
+            "Half off bottles of wine"
+          ]
+        },
+        {
+          "menuLabel": "Weekend brunch drinks",
+          "items": [
+            "Bottomless mimosas",
+            "Seltzer buckets (5 cans of NUTRL or Surfside)",
+            "Tall boys",
+            "Bloody Mary",
+            "Specialty Bloody Marys"
+          ]
+        }
+      ]
+    }
+  ],
+  "remainingGapCounts": {
+    "item_photo_evidence_gap": 35,
+    "branch_or_access_gap": 5,
+    "menu_evidence_gap": 3
+  },
+  "translations": "Left to the separate translation agent; not run.",
+  "deployment": false
+}

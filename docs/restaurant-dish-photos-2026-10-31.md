@@ -1,5 +1,7 @@
 # San Diego dish-photo coverage — October 31, 2026
 
+**Follow-up:** [Four more photos, 237/280 combined venue coverage, and completed native-pin checks](restaurant-dish-photos-followup-2026-10-31.md). The figures below describe the preceding pass.
+
 **53 reviewed photographs were added to 44 previously uncovered restaurant profiles.** San Diego storage coverage increased from **189/280 to 233/280 profiles (83.2%)**. The uncovered count fell from **91 to 47**. This continues the [October 30 pass](restaurant-dish-photos-2026-10-30.md).
 
 All 91 previously uncovered profiles were triaged. Verified branch galleries were inspected where available, with 45 targeted dish searches beyond the first gallery pages. The remaining 47 profiles have specific item, branch/access, empty-menu or gallery-extraction gaps; they are not declared to have no photographs. Other-city expansion and full per-item coverage remain unfinished.

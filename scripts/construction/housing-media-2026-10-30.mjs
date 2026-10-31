@@ -12,7 +12,9 @@ if (!['http://127.0.0.1:3000', 'https://www.chronopin.com'].includes(base)) thro
 const apply = args.includes('--apply');
 const token = fs.readFileSync(base.startsWith('https') ? '.scrape/admin.token' : '.scrape/admin-local.token', 'utf8').trim();
 // pin id -> candidate indexes that were viewed and kept (7059's two renderings show the superseded 15-story design and are left out)
-const KEEP = { 3238: [0], 7030: [0, 1, 2], 7032: [0], 7040: [0, 1], 7047: [0], 7059: [2], 7069: [0, 1, 2], 7203: [0], 7222: [0] };
+const val = (f) => (args.includes(f) ? args[args.indexOf(f) + 1] : undefined);
+const DIR = val('--dir') ?? '.tmp/housing-media'; // downloaded candidates + uploaded.json cache
+const KEEP = val('--keep') ? JSON.parse(fs.readFileSync(val('--keep'), 'utf8')) : { 3238: [0], 7030: [0, 1, 2], 7032: [0], 7040: [0, 1], 7047: [0], 7059: [2], 7069: [0, 1, 2], 7203: [0], 7222: [0] };
 const call = async (method, p, body) => {
   const r = await fetch(base + p, { method, headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, ...(body === undefined ? {} : { body: JSON.stringify(body) }), redirect: 'error' });
   const t = await r.text(); if (!r.ok) throw Error(`${method} ${p}: ${r.status} ${t.slice(0, 300)}`); return t ? JSON.parse(t) : null;
@@ -32,7 +34,7 @@ async function credit(id, add) {
 }
 const key = execFileSync('az', ['storage', 'account', 'keys', 'list', '--subscription', '9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5', '-n', 'chronopin', '--query', '[0].value', '-o', 'tsv'], { encoding: 'utf8' }).trim();
 const container = new BlobServiceClient('https://chronopin.blob.core.windows.net', new StorageSharedKeyCredential('chronopin', key)).getContainerClient('thumb');
-const cache = '.tmp/housing-media/uploaded.json';
+const cache = `${DIR}/uploaded.json`;
 const uploaded = fs.existsSync(cache) ? JSON.parse(fs.readFileSync(cache, 'utf8')) : {};
 for (const [id, idx] of Object.entries(KEEP)) {
   const cands = JSON.parse(fs.readFileSync(`.tmp/housing-timeline/${id}.json`, 'utf8')).mediaCandidates;
@@ -40,7 +42,7 @@ for (const [id, idx] of Object.entries(KEEP)) {
   for (const i of idx) {
     const c = cands[i], k = `${id}-${i}`;
     if (!uploaded[k]) {
-      const raw = fs.readFileSync(`.tmp/housing-media/${k}`);
+      const raw = fs.readFileSync(`${DIR}/${k}`);
       const jpg = await sharp(raw).rotate().resize({ width: 2000, withoutEnlargement: true }).jpeg({ quality: 88 }).toBuffer();
       const hash = crypto.createHash('sha256').update(jpg).digest('hex').slice(0, 16);
       const blob = container.getBlockBlobClient(`housing/usa-${id}-${i}-${hash}.jpg`);

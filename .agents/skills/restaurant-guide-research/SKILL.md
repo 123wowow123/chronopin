@@ -145,6 +145,16 @@ became 233/280 profiles; 47 specific gaps remain in `docs/restaurant-dish-photos
 the 44 updated profiles resolved a native pin by exact source URL. Report stored-profile coverage separately
 from verified public-page coverage, and check aliases/titles before declaring a backing pin absent.
 
+### Association and gallery follow-up (October 31)
+
+- Check the gallery’s actual category tabs. Harland Bay Park and Karl Strauss Sorrento Mesa expose All and Videos, without a Food tab; their All galleries contain named beer photos. Sidecar’s Drink tab also contains labelled drafts. An unsupported Food filter produced misleading empty extractions.
+- A labelled photograph can illustrate an unrestricted beer category (all drafts/pints/Karl beers) when the photograph clearly shows that category. Preserve the specific photographed beer in the caption; do not assert current rotating availability or use this approach for unspecified **select** appetizers/drinks.
+- Count specials-profile images separately from ordinary-menu images, then join enabled ordinary content by normalized source when reporting distinct venues. Sycamore’s 17-item ordinary menu and Wolf Ticket photo resolve its venue gap without adding dishes to an unspecified select-drink discount.
+- After exact-source checks, check title, source host, street address and numeric source identity where relevant. The 22 pending checks found no matching branch pins. Tajima Crown Point was then created as pin 20680 using the January 22, 2025 YS Food announcement’s explicit January 12, 2025 opening at 3782 Ingraham Street. Remaining 21 need specific opening/status evidence; do not substitute other Tajima/BJ’s branches or similarly named non-restaurants.
+- Read back coordinates on a newly created pin. If the profile lacks `location`, `repairSpecialPins.ts` can omit them. Use the actual place coordinates from the map linked by the operator, preserve authors/dates, and expire the pin after an audited update. Keep the specials profile’s `location` synchronized too; its validator also requires `sourceUrl` and `checkedAt`, and guide-map bounds use that profile location.
+
+Current follow-up evidence: `docs/restaurant-dish-photos-followup-2026-10-31.json`; 236/280 specials profiles with photos, 237/280 venues including ordinary menus, 43 remaining photo gaps. Storage counts still do not imply public native-pin coverage.
+
 ## Saving
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then
