@@ -154,7 +154,17 @@ counts AS (
           OR (length(regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g')) > 40 AND regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')
         )
       )
-    )) AS untranslated_or_mangled_rows
+    )) AS untranslated_or_mangled_rows,
+    (SELECT count(*) FROM (SELECT DISTINCT b."pinId", b.locale FROM (
+  SELECT pt."pinId", pt.locale,
+         regexp_replace(e.li, '<[^>]*>', '', 'g') AS en_li,
+         regexp_replace(t.li, '<[^>]*>', '', 'g') AS tr_li
+  FROM "PinTranslation" pt
+  JOIN "Pin" p ON p.id = pt."pinId" AND p."utcDeletedDateTime" IS NULL
+  CROSS JOIN LATERAL regexp_split_to_table(coalesce(p."longFormSummary", ''), '</li>') WITH ORDINALITY AS e(li, n)
+  JOIN LATERAL (SELECT li, n FROM regexp_split_to_table(coalesce(pt."longFormSummary", ''), '</li>') WITH ORDINALITY AS x(li, n)) t ON t.n = e.n
+  WHERE p."longFormSummary" ~ '<li>'
+) b WHERE length(en_li) >= 60 AND en_li = tr_li AND en_li !~ '[^\\x00-\\x7F]' AND en_li ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M') x) AS identical_english_bullet_rows
 )
 SELECT json_build_object(
   'active_pins', active_pins,
@@ -162,7 +172,8 @@ SELECT json_build_object(
   'orphaned_translation_rows', orphaned_translation_rows,
   'pins_with_content_tracking', pins_with_content_tracking,
   'translations_with_content_tracking', translations_with_content_tracking,
-  'untranslated_or_mangled_rows', untranslated_or_mangled_rows
+  'untranslated_or_mangled_rows', untranslated_or_mangled_rows,
+  'identical_english_bullet_rows', identical_english_bullet_rows
 )::text
 FROM counts;
 """
@@ -209,7 +220,8 @@ FROM counts;
         'due_pins_count': len(due_pins),
         'pins_with_content_tracking': db_data['pins_with_content_tracking'],
         'translations_with_content_tracking': db_data['translations_with_content_tracking'],
-        'untranslated_or_mangled_rows': db_data['untranslated_or_mangled_rows'],
+        'untranslated_or_mangled_rows': db_data['untranslated_or_mangled_rows'] + db_data['identical_english_bullet_rows'],
+        'identical_english_bullet_rows': db_data['identical_english_bullet_rows'],
         'percent_current': pct_current,
     }
 

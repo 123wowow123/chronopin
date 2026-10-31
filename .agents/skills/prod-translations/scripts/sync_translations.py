@@ -467,6 +467,8 @@ def acceptable(locale: str, en: str, tr: Optional[str]) -> bool:
     """
     if not whole_translation(en, tr, is_fragment=True):
         return False
+    if tr and len(en) >= 60 and looks_english(en) and all(ord(c) < 128 for c in en) and html.unescape(tr.strip()) == en.strip():
+        return False
     if locale in NON_LATIN_LOCALES and tr and len(en) >= 80 and looks_english(en) and all(ord(c) < 128 for c in tr):
         return False
     return True
@@ -781,6 +783,29 @@ WHERE p.id = pt."pinId"
   );
 """
     run_prod_sql(sql)
+
+    # 3. Rows whose summary still holds an English <li> bullet identical to the source (any locale)
+    pin_filter_pt = f'AND pt."pinId" = {int(pin_id)}' if pin_id else ''
+    bullet_sql = f"""
+UPDATE "PinTranslation" pt
+SET "sourceHash" = 'repair',
+    "fieldHashes" = jsonb_set(pt."fieldHashes", '{{longFormSummary}}', '"repair"')
+FROM (
+  SELECT DISTINCT b."pinId", b.locale FROM (
+  SELECT pt."pinId", pt.locale,
+         regexp_replace(e.li, '<[^>]*>', '', 'g') AS en_li,
+         regexp_replace(t.li, '<[^>]*>', '', 'g') AS tr_li
+  FROM "PinTranslation" pt
+  JOIN "Pin" p ON p.id = pt."pinId" AND p."utcDeletedDateTime" IS NULL
+  CROSS JOIN LATERAL regexp_split_to_table(coalesce(p."longFormSummary", ''), '</li>') WITH ORDINALITY AS e(li, n)
+  JOIN LATERAL (SELECT li, n FROM regexp_split_to_table(coalesce(pt."longFormSummary", ''), '</li>') WITH ORDINALITY AS x(li, n)) t ON t.n = e.n
+  WHERE p."longFormSummary" ~ '<li>'
+  ) b
+  WHERE length(en_li) >= 60 AND en_li = tr_li AND en_li !~ '[^\\x00-\\x7F]' AND en_li ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M'
+) bad
+WHERE pt."pinId" = bad."pinId" AND pt.locale = bad.locale {pin_filter_pt};
+"""
+    run_prod_sql(bullet_sql)
 
 def main():
     parser = argparse.ArgumentParser(description="Synchronize production translations.")
