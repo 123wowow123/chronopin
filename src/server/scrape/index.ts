@@ -250,11 +250,21 @@ export async function launchBrowser() {
   return puppeteer.launch({
     executablePath: config.chromiumPath,
     // Chromium's sandbox needs privileges the container does not grant.
-    args: ['--no-sandbox'],
+    // No crashpad handler: it is a child process that outlives Chromium.
+    args: ['--no-sandbox', '--disable-breakpad'],
     acceptInsecureCerts: true,
     headless: true,
     defaultViewport: { width: 1280, height: 1200 },
   });
+}
+
+// Closes a browser from launchBrowser and makes sure it is gone: a close that
+// hangs or throws would otherwise leave Chromium (and its helpers) running, or
+// replace the error the caller is already handling.
+export async function closeBrowser(browser: Awaited<ReturnType<typeof launchBrowser>>) {
+  const proc = browser.process();
+  await Promise.race([browser.close(), new Promise((resolve) => setTimeout(resolve, 30000))]).catch(() => undefined);
+  if (proc && proc.exitCode === null && !proc.killed) proc.kill('SIGKILL');
 }
 
 async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLink[]>): Promise<{
@@ -348,7 +358,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
     console.error((err as Error).message);
     throw { err: (err as Error).message };
   } finally {
-    await browser.close();
+    await closeBrowser(browser);
   }
 
   // Kept for the page's wiki, written once a pin cites it, so that need not

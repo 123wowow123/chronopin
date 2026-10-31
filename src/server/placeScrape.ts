@@ -46,7 +46,7 @@ export async function scrapeGooglePlace(placeId: string): Promise<ScrapedPlace |
   if (!placeId) {
     return null;
   }
-  const { launchBrowser } = await import('./scrape');
+  const { launchBrowser, closeBrowser } = await import('./scrape');
   const browser = await launchBrowser();
   try {
     const [page] = await browser.pages();
@@ -79,7 +79,7 @@ export async function scrapeGooglePlace(placeId: string): Promise<ScrapedPlace |
     }
     return readPlace(read);
   } finally {
-    await browser.close().catch(() => {});
+    await closeBrowser(browser);
   }
 }
 

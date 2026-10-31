@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { tweetText, twitterMedium, youtubeMedium, launchBrowser } from '.';
+import { tweetText, twitterMedium, youtubeMedium, launchBrowser, closeBrowser } from '.';
 import { AUDIO_PATH, sourceKind, type SourceKind } from '@/lib/sourceKind';
 import { clinicalTrialsId, fetchClinicalTrial } from './clinicalTrials';
 import { fetchPdfText, looksLikePdf } from './pdfText';
@@ -190,7 +190,7 @@ async function renderedText(url: string): Promise<SourceText> {
     }
     return { title: await page.title().catch(() => undefined), text };
   } finally {
-    await browser.close();
+    await closeBrowser(browser);
   }
 }
 

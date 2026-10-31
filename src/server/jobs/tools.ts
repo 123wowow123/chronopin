@@ -708,7 +708,7 @@ export const TOOLS: JobTool[] = [
       const pins = await eventPins({ hours: EVENT_INFO_HOURS, limit: int(input.limit, 2, 1, 4) });
       const due = (await eventPins({ hours: EVENT_INFO_HOURS, limit: 1000 })).length;
       if (!pins.length) return { rules: EVENT_INFO_PROMPT, pins: [], remaining: 0 };
-      const { launchBrowser } = await import('../scrape');
+      const { launchBrowser, closeBrowser } = await import('../scrape');
       const browser = await launchBrowser();
       try {
         const read = [];
@@ -719,7 +719,7 @@ export const TOOLS: JobTool[] = [
         }
         return { rules: EVENT_INFO_PROMPT, answerShape: EVENT_INFO_SCHEMA, pins: read, remaining: Math.max(0, due - pins.length) };
       } finally {
-        await browser.close();
+        await closeBrowser(browser);
       }
     },
   },

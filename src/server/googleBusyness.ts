@@ -171,7 +171,7 @@ function breakerOpen(): boolean {
 async function scrape(placeId: string): Promise<PlaceBusy | null> {
   // Imported here, not at the top: puppeteer is heavy and most pins never
   // reach this file at all.
-  const { launchBrowser } = await import('./scrape');
+  const { launchBrowser, closeBrowser } = await import('./scrape');
   const browser = await launchBrowser();
   try {
     const [page] = await browser.pages();
@@ -192,7 +192,7 @@ async function scrape(placeId: string): Promise<PlaceBusy | null> {
     }));
     return readBusyness(read);
   } finally {
-    await browser.close().catch(() => {});
+    await closeBrowser(browser);
   }
 }
 
