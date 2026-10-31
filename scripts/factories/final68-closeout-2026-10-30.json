@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-10-31T01:47:21.138456+00:00",
+  "scope": "Owner-requested closeout of final68 remaining todo",
+  "ownerInstruction": "complete remainder and remove from todo",
+  "closureMeaning": "Research tasks removed from active todo after supported repairs and explicit source-limited dispositions. This does not certify missing evidence, official renderings or future decisions as complete.",
+  "activeTodoCount": 0,
+  "closedTasks": 17,
+  "unsupportedIdentityExclusions": 8,
+  "sourceLimitedProjectReviews": 5,
+  "mediaReviewsWithRenderingLimit": 3,
+  "futureDecisionWatches": 1,
+  "records": [
+    {
+      "pinId": 14072,
+      "title": "Lower Yarlung Zangbo Five-Station Hydropower Programme Begins Construction",
+      "disposition": "reviewed-with-source-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Current sourced facts and explicit conflicts retained. Missing evidence is archived below; no unsupported allocation, construction status or future outcome was added.",
+      "archivedEvidenceGap": "Programme has five stations; only Mainling is named in opened primary source. No invented plant allocations or 60GW primary claim.",
+      "reopenWhen": "New primary source answering the archived evidence gap; unchanged pages are not a new research task.",
+      "watchOn": null
+    },
+    {
+      "pinId": 17091,
+      "title": "Aurora Energy Storage Center: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 17324,
+      "title": "Newberry Clean Energy Storage Complex: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 17325,
+      "title": "Sardis to Clarksdale Clean Energy Storage Center: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 17326,
+      "title": "Snow Hill Clean Energy Storage Facility: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 17344,
+      "title": "Killdeer Clean Solar Facility: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "MISO J2553 and J2811 are competing county/capacity matches. Neither establishes the claimed Killdeer / Alliant identity; no arbitrary applicant was selected.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 17350,
+      "title": "Byron Clean Energy Storage Center: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "MISO J1898 and J2840 are competing Olmsted storage matches. No unique link to the claimed Byron / Xcel identity is established.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 18096,
+      "title": "Monte Cristo Solar 2 Energy Project: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "A project-specific operator or regulator document has not established this record’s developer, capacity, budget and milestone. The cited link is missing, generic or does not establish the claimed scope.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 18097,
+      "title": "Yellow Pine Solar III: 100 MW Solar and 225 MW Storage Filing",
+      "disposition": "reviewed-with-source-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Current sourced facts and explicit conflicts retained. Missing evidence is archived below; no unsupported allocation, construction status or future outcome was added.",
+      "archivedEvidenceGap": "AFN26-0401SPV phase verified:100MWac solar,225MW storage,1008.94acres,Q2 2027target. Executedagreement confirmedJune4state/June5owner signatures andJune4eligibilitycertificate. Remaining:reconcileUSD583.6Mapplication versusUSD149.9Mhearinginvestment; obtaincorrectfindings/order; verifyphysicalstartandcommissioning. Taxrecordsnotconstructionevidence.",
+      "reopenWhen": "New primary source answering the archived evidence gap; unchanged pages are not a new research task.",
+      "watchOn": null
+    },
+    {
+      "pinId": 18179,
+      "title": "South Heart Clean Energy Storage Facility: Project Details Unconfirmed",
+      "disposition": "excluded-unverified-identity",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Earlier unsupported owner, capacity, budget, dates and physical-stage claims remain removed. No unique identity was established; excluded from construction enrichment until a matching primary filing is published.",
+      "archivedEvidenceGap": "SPP SR6 and SR7 are competing Stark County storage matches. No unique operator mapping or project budget is established.",
+      "reopenWhen": "Matching operator or regulator filing uniquely identifying this project and scope.",
+      "watchOn": null
+    },
+    {
+      "pinId": 18351,
+      "title": "Nicholas County and Deep Lake: Coal-to-Solar Demonstration Plan",
+      "disposition": "reviewed-with-source-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Current sourced facts and explicit conflicts retained. Missing evidence is archived below; no unsupported allocation, construction status or future outcome was added.",
+      "archivedEvidenceGap": "USD129M federal share is not total capex; own-site capacity/current funding/physical stage require follow-up. Deep Lake separately supported by PSC24-0311.",
+      "reopenWhen": "New primary source answering the archived evidence gap; unchanged pages are not a new research task.",
+      "watchOn": null
+    },
+    {
+      "pinId": 18964,
+      "title": "Project Gold: Revised Six-Building Data Center Proposal in Clifton and Covington",
+      "disposition": "reviewed-with-source-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Current sourced facts and explicit conflicts retained. Missing evidence is archived below; no unsupported allocation, construction status or future outcome was added.",
+      "archivedEvidenceGap": "Revised August21 ProjectGold reporting now establishes attributed18B developer estimate,6buildings,998.8acres and requested2.2GW; municipal receipt/minutes confirm ongoing process. Profile and approximate trackerGeoJSON saved. Still need underlying current full application/siteplan, definitive hearing/approval and court outcomes, physical start/delivery target, and official rendering/3media/3reactions.",
+      "reopenWhen": "New primary source answering the archived evidence gap; unchanged pages are not a new research task.",
+      "watchOn": null
+    },
+    {
+      "pinId": 19026,
+      "title": "Stonebridge Powder Mills: 16-Building Campus Proposal in Lawrence County",
+      "disposition": "reviewed-with-source-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Current sourced facts and explicit conflicts retained. Missing evidence is archived below; no unsupported allocation, construction status or future outcome was added.",
+      "archivedEvidenceGap": "NorthBeaver4-0 and Mahoning2-0 September appeal denials now established by datedNewCastleNews reports. Municipal hearing notice retained. Need written rulings and subsequent court/approval position; reported denials are not voluntary withdrawal.",
+      "reopenWhen": "New primary source answering the archived evidence gap; unchanged pages are not a new research task.",
+      "watchOn": null
+    },
+    {
+      "pinId": 20644,
+      "title": "Al Shuaibah 1: 600 MW Solar Plant in Commercial Operation",
+      "disposition": "enriched-with-rendering-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Available subject-specific media/reactions retained or enriched. A separately identified official rendering remains unavailable; no substitute is labelled as that rendering.",
+      "archivedEvidenceGap": "2dated reactions including shared-programme SwissEnergy mobilization; one shared programme photograph. Need at least one more genuine distinct reaction and two plant-specific media including official rendering. Sungrow2.1GW case applies toShuaibah2, not this600MWplant. Historical2018AlFaisaliyah ESIA is not confirmed current phase boundary; no inventedGeoJSON.",
+      "reopenWhen": "New project-specific official rendering or source that resolves the cited media/location limitation.",
+      "watchOn": null
+    },
+    {
+      "pinId": 20646,
+      "title": "Amazon Resilient Technology Park: Third Louisiana Campus Announced",
+      "disposition": "enriched-with-rendering-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Available subject-specific media/reactions retained or enriched. A separately identified official rendering remains unavailable; no substitute is labelled as that rendering.",
+      "archivedEvidenceGap": "Prior4reactions and reported2027first-building target retained. Need3subject-specific media including official rendering and reliable published site boundary. KEELcollage inspected:stockserverrack/sitegate,notmeetingphoto;excluded. No reliableGeoJSON found.",
+      "reopenWhen": "New project-specific official rendering or source that resolves the cited media/location limitation.",
+      "watchOn": null
+    },
+    {
+      "pinId": 20647,
+      "title": "Triboro Commerce Park: Seven-Building Proposal Withdrawn",
+      "disposition": "enriched-with-rendering-limit",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "Available subject-specific media/reactions retained or enriched. A separately identified official rendering remains unavailable; no substitute is labelled as that rendering.",
+      "archivedEvidenceGap": "3meetingphotos and3dated reactions now saved; official rendering of withdrawn westernCommercePark proposal remains unavailable. Need verified point and exactsiteGeoJSON if published. Trackerparentoutline is relevantTriboroIndustrialParkLLC parcel511acres,not verified withdrawn400-acre westernproposal; not copied.",
+      "reopenWhen": "New project-specific official rendering or source that resolves the cited media/location limitation.",
+      "watchOn": null
+    },
+    {
+      "pinId": 20648,
+      "title": "ERCOR Triboro: Sitework Underway as Olyphant Considers Settlement",
+      "disposition": "future-decision-watch",
+      "researchTaskClosed": true,
+      "projectFactsFullyVerified": false,
+      "closure": "November 5, 2026 is future at this October 30 review. Settlement vote, executed agreement and exact child parcel remain unverified. Recorded for a November 6 evidence check; this is a dated watch record, not an automatically scheduled task.",
+      "archivedEvidenceGap": "Media/reaction follow-up completed:officialEmergentTriboro concept render main,3meetingphotos,October29siteworkphoto;4dated reactionURLs. Updatedsitework stage,reported1GW and pendingNov5settlement/CBA vote usingofficialnotice. Revisit afterNov5foractualvote/executedsettlement,building/utility approvals. Exactchildpoint/parcelgeometry remainsunverified; parentoutline preservednotcopied. Brochure1.25GW/14shellconcept distinctfromreportedsevenbuildings;101Mcommunitypaymentnotconstructionbudget.",
+      "reopenWhen": "Published November 5 council minutes, executed ERCOR agreement or later primary parcel/approval record.",
+      "watchOn": "2026-11-06"
+    }
+  ],
+  "enrichmentReplay": "scripts/factories/resolutions-2026-10-30-final68-closeout.json",
+  "translations": "Left to separate translation agent; no translation synchronization run.",
+  "verification": [
+    {
+      "environment": "local",
+      "jobRunId": 41,
+      "closedMarkIds": [
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        188,
+        190,
+        191,
+        192
+      ],
+      "activeTodoCount": 0,
+      "pinChecks": [
+        {
+          "pinId": 14072,
+          "sourceHash": "3787c027fb832398f5b43addd882ab71d40c8e30",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 17091,
+          "sourceHash": "2a8d8f4545751c5aa3d95a6bd5d66105995af186",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17324,
+          "sourceHash": "d7d80b183cfcae89d1088f4a838910da5eb864d5",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17325,
+          "sourceHash": "eb0b57522ea8394715662660462dce01fc94bb79",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17326,
+          "sourceHash": "4299cd39dd664e762efa2ed54c54d303d730e385",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17344,
+          "sourceHash": "68f6080784fffb5fab56aea30dc235bbdd451bd3",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17350,
+          "sourceHash": "e2d38b053604f49a77d9d7fca2ff4b0533372a5c",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 18096,
+          "sourceHash": "83b51d640731520633ef128416d5c30ed4c5f02f",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 18097,
+          "sourceHash": "10e1a145c255c27c95a9dc9378186f0c4f885c29",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 18179,
+          "sourceHash": "6467c57989ff7029e70e60e5a46dd7c481bb09a1",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 18351,
+          "sourceHash": "5126f2333cff065c177f025079fe4d26064b6f40",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 18964,
+          "sourceHash": "be7e1c2452f2ab7deb81dcb0ca0d694a48d319dd",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 19026,
+          "sourceHash": "975a30fb24abe4899e18b1ceca375a61d0787aa6",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 20644,
+          "sourceHash": "31aea89772f8efba6437e7746f83c277a8e9377f",
+          "disposition": "enriched-with-rendering-limit"
+        },
+        {
+          "pinId": 20646,
+          "sourceHash": "cea358f994428b9553258da41a584363e278cf6d",
+          "disposition": "enriched-with-rendering-limit"
+        },
+        {
+          "pinId": 20647,
+          "sourceHash": "3e85e2a4ba6611e6d370fb4599fdbad980e12a7a",
+          "disposition": "enriched-with-rendering-limit"
+        },
+        {
+          "pinId": 20648,
+          "sourceHash": "37cedb135335c53b21f8c5089048a8049851b67a",
+          "disposition": "future-decision-watch"
+        }
+      ],
+      "mediaPublicDownloadsVerified": true
+    },
+    {
+      "environment": "production",
+      "jobRunId": 41,
+      "closedMarkIds": [
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        188,
+        190,
+        191,
+        192
+      ],
+      "activeTodoCount": 0,
+      "pinChecks": [
+        {
+          "pinId": 14072,
+          "sourceHash": "3787c027fb832398f5b43addd882ab71d40c8e30",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 17091,
+          "sourceHash": "2a8d8f4545751c5aa3d95a6bd5d66105995af186",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17324,
+          "sourceHash": "d7d80b183cfcae89d1088f4a838910da5eb864d5",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17325,
+          "sourceHash": "eb0b57522ea8394715662660462dce01fc94bb79",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17326,
+          "sourceHash": "4299cd39dd664e762efa2ed54c54d303d730e385",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17344,
+          "sourceHash": "68f6080784fffb5fab56aea30dc235bbdd451bd3",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 17350,
+          "sourceHash": "e2d38b053604f49a77d9d7fca2ff4b0533372a5c",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 18096,
+          "sourceHash": "83b51d640731520633ef128416d5c30ed4c5f02f",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 18097,
+          "sourceHash": "10e1a145c255c27c95a9dc9378186f0c4f885c29",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 18179,
+          "sourceHash": "6467c57989ff7029e70e60e5a46dd7c481bb09a1",
+          "disposition": "excluded-unverified-identity"
+        },
+        {
+          "pinId": 18351,
+          "sourceHash": "5126f2333cff065c177f025079fe4d26064b6f40",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 18964,
+          "sourceHash": "be7e1c2452f2ab7deb81dcb0ca0d694a48d319dd",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 19026,
+          "sourceHash": "975a30fb24abe4899e18b1ceca375a61d0787aa6",
+          "disposition": "reviewed-with-source-limit"
+        },
+        {
+          "pinId": 20644,
+          "sourceHash": "31aea89772f8efba6437e7746f83c277a8e9377f",
+          "disposition": "enriched-with-rendering-limit"
+        },
+        {
+          "pinId": 20646,
+          "sourceHash": "cea358f994428b9553258da41a584363e278cf6d",
+          "disposition": "enriched-with-rendering-limit"
+        },
+        {
+          "pinId": 20647,
+          "sourceHash": "3e85e2a4ba6611e6d370fb4599fdbad980e12a7a",
+          "disposition": "enriched-with-rendering-limit"
+        },
+        {
+          "pinId": 20648,
+          "sourceHash": "37cedb135335c53b21f8c5089048a8049851b67a",
+          "disposition": "future-decision-watch"
+        }
+      ],
+      "mediaPublicDownloadsVerified": true
+    }
+  ]
+}

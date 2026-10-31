@@ -772,6 +772,10 @@ const th: Messages = {
     factory: {
       buildoutHeading: "โครงการโรงงาน",
       projectTimeline: "กำหนดการโครงการ",
+      costBreakdown: "วิธีคำนวณค่าประมาณนี้",
+      breakdownSourced: "มีแหล่งที่มา",
+      breakdownAssumption: "สมมติฐาน",
+      breakdownResult: "ผลลัพธ์",
       checked: "ตรวจสอบ {date}",
       source: "แหล่งข้อมูล",
       buildoutNote: "เน้นเฉพาะขั้นตอนที่มีรายงาน ตัวเลขและวันที่แยกแผนออกจากผลที่พิสูจน์แล้ว",

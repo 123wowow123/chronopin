@@ -778,6 +778,10 @@ const hi: Messages = {
     factory: {
       buildoutHeading: "कारखाना परियोजना",
       projectTimeline: "परियोजना की समयरेखा",
+      costBreakdown: "यह अनुमान कैसे लगाया गया",
+      breakdownSourced: "स्रोत सहित",
+      breakdownAssumption: "मान्यता",
+      breakdownResult: "परिणाम",
       checked: "जाँच {date}",
       source: "स्रोत",
       buildoutNote: "केवल रिपोर्ट किए गए चरण को दिखाया गया है। आँकड़ों और तारीखों में योजना और प्रमाणित स्थिति अलग रखी गई है।",

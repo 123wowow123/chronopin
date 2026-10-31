@@ -849,6 +849,10 @@ const ar: Messages = {
     factory: {
       buildoutHeading: "مشروع المصنع",
       projectTimeline: "الجدول الزمني للمشروع",
+      costBreakdown: "كيف جرى حساب هذا التقدير",
+      breakdownSourced: "موثّق",
+      breakdownAssumption: "افتراض",
+      breakdownResult: "النتيجة",
       checked: "تم التحقق {date}",
       source: "المصدر",
       buildoutNote: "تُبرز المرحلة المعلنة فقط. تميز الأرقام والتواريخ بين المخطط والمثبت.",

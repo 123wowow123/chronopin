@@ -779,6 +779,10 @@ const vi: Messages = {
     factory: {
       buildoutHeading: "Dự án nhà máy",
       projectTimeline: "Tiến độ dự án",
+      costBreakdown: "Cách tính ước tính này",
+      breakdownSourced: "Có nguồn",
+      breakdownAssumption: "Giả định",
+      breakdownResult: "Kết quả",
       checked: "Kiểm tra {date}",
       source: "Nguồn",
       buildoutNote: "Chỉ giai đoạn được báo cáo được đánh dấu. Số liệu và ngày tháng phân biệt kế hoạch với kết quả đã chứng minh.",

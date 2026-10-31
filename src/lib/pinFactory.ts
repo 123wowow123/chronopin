@@ -25,6 +25,15 @@ export type FactoryAssessment = {
 };
 export const FACTORY_METRIC_KEYS = ['investment', 'employment', 'floorArea', 'siteArea', 'capacity', 'timeline', 'stage', 'products'] as const;
 export type FactoryMetricKey = (typeof FACTORY_METRIC_KEYS)[number];
+// One line of a cost estimate's working: a sourced input, a stated assumption, or a computed result.
+export type FactoryBreakdownLine = {
+  kind: 'sourced' | 'assumption' | 'result';
+  label: string;
+  value: string;
+  // Sourced lines cite a page; assumptions and results explain themselves in `note`.
+  note?: string;
+  source?: FactoryEvidence;
+};
 export type FactoryMetric = {
   // Optional for profiles saved before the buildout display was introduced.
   key?: FactoryMetricKey;
@@ -32,6 +41,8 @@ export type FactoryMetric = {
   value: string;
   basis: 'planned' | 'demonstrated';
   source: FactoryEvidence;
+  // Step-by-step working behind an estimated figure (the "Estimated ..." investment metric).
+  breakdown?: FactoryBreakdownLine[];
 };
 export type FactoryMilestone = {
   label: string;

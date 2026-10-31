@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Pecos children map follow-ups and same-campus parent point repair",
+  "sourceEvidence": {
+    "url": "https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf",
+    "attachment": "1-396366-tc.pdf",
+    "page": 769,
+    "printedPage": "Core Data Form page 2 of 3",
+    "quote": "31.171",
+    "longitudeQuote": "-102.895",
+    "corroboration": "Attachment pages 2 and 17 publish regulator LocationMapper marker=-102.895,31.171 as general facility location.",
+    "coordinateScope": "Published energy-campus site point; not building footprints",
+    "visualVerified": true
+  },
+  "resolvedSupplementalPinIds": [
+    20641,
+    20642,
+    20643
+  ],
+  "edits": [
+    {
+      "id": 15796,
+      "patch": {
+        "latitude": 31.171,
+        "longitude": -102.895,
+        "longFormSummary": "<p>Amazon Data Services filed three Pecos County data-center buildings at 6000 TX-18, each estimated at USD 300 million and 189,060 square feet. The filings list planned work from August 1 to December 1, 2026.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></p><p>TDLR’s “Review Complete” refers to accessibility review, not completed construction. The filings do not establish an IT-load rating or prove their scheduled construction dates were achieved.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></p><h3>Map location and scope</h3><ul><li>The map uses the GW Ranch Energy Center’s published site coordinates, 31.171, −102.895, from the TCEQ application’s core-data form. The source locates the energy campus approximately 17 miles north of Fort Stockton, west of Highway 18. This is shared campus context for the Pecos County buildings, not a surveyed marker for an individual building footprint. No individual building boundary is established by this point.<cite data-ref=\"https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf"
+      ]
+    },
+    {
+      "id": 20641,
+      "patch": {
+        "latitude": 31.171,
+        "longitude": -102.895,
+        "longFormSummary": "<h3>Site and filed scope</h3><ul><li>Building A is registered at 6000 TX-18, Fort Stockton, Pecos County, Texas. Its accessibility filing lists 189,060 square feet. The record does not establish the previous use of the individual building footprint.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul><h3>Construction and timeline</h3><ul><li>The filing lists August 1 to December 1, 2026 as the scheduled construction window. Completed accessibility review does not verify completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul><h3>Cost</h3><ul><li>The Building A filing estimates USD 300 million for its own scope. This is a published filing estimate, not an allocation of the entire campus investment.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026954\"></cite></li></ul><h3>Campus imagery</h3><ul><li>Pacifico Energy supplies the shared GW Ranch campus renderings. These illustrate the overall campus and do not identify Building A or prove that it is complete. The renderings are shared campus context.<cite data-ref=\"https://www.pacificoenergy.com/gw-ranch\"></cite></li></ul><h3>Shared-campus reactions</h3><ul><li>Pacifico welcomed the GW Ranch generation permit in January. These are campus energy-platform reactions, not assessments of this individual building or confirmation of its opening.<cite data-ref=\"https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project\"></cite></li></ul><h3>Energy oversight</h3><ul><li>Senators Sheldon Whitehouse, Martin Heinrich and Chris Van Hollen questioned the gas-generation plan in a March 13 letter. Their criticism concerns the shared power campus.<cite data-ref=\"https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve\"></cite></li></ul><h3>Owner response</h3><ul><li>Amazon told DCD in August that it would pay the full cost of powering its planned Pecos County campus. That statement does not allocate power or construction cost to this building.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/\"></cite></li></ul><h3>Map location and scope</h3><ul><li>The map uses the GW Ranch Energy Center’s published site coordinates, 31.171, −102.895, from the TCEQ application’s core-data form. The source locates the energy campus approximately 17 miles north of Fort Stockton, west of Highway 18. This is shared campus context for the Pecos County buildings, not a surveyed marker for an individual building footprint. No individual building boundary is established by this point.<cite data-ref=\"https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf"
+      ]
+    },
+    {
+      "id": 20642,
+      "patch": {
+        "latitude": 31.171,
+        "longitude": -102.895,
+        "longFormSummary": "<h3>Site and filed scope</h3><ul><li>Building B is registered at 6000 TX-18, Fort Stockton, Pecos County, Texas. Its accessibility filing lists 189,060 square feet. The record does not establish the previous use of the individual building footprint.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul><h3>Construction and timeline</h3><ul><li>The filing lists August 1 to December 1, 2026 as the scheduled construction window. Completed accessibility review does not verify completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul><h3>Cost</h3><ul><li>The Building B filing estimates USD 300 million for its own scope. This is a published filing estimate, not an allocation of the entire campus investment.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026955\"></cite></li></ul><h3>Campus imagery</h3><ul><li>Pacifico Energy supplies the shared GW Ranch campus renderings. These illustrate the overall campus and do not identify Building B or prove that it is complete. The renderings are shared campus context.<cite data-ref=\"https://www.pacificoenergy.com/gw-ranch\"></cite></li></ul><h3>Shared-campus reactions</h3><ul><li>Pacifico welcomed the GW Ranch generation permit in January. These are campus energy-platform reactions, not assessments of this individual building or confirmation of its opening.<cite data-ref=\"https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project\"></cite></li></ul><h3>Energy oversight</h3><ul><li>Senators Sheldon Whitehouse, Martin Heinrich and Chris Van Hollen questioned the gas-generation plan in a March 13 letter. Their criticism concerns the shared power campus.<cite data-ref=\"https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve\"></cite></li></ul><h3>Owner response</h3><ul><li>Amazon told DCD in August that it would pay the full cost of powering its planned Pecos County campus. That statement does not allocate power or construction cost to this building.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/\"></cite></li></ul><h3>Map location and scope</h3><ul><li>The map uses the GW Ranch Energy Center’s published site coordinates, 31.171, −102.895, from the TCEQ application’s core-data form. The source locates the energy campus approximately 17 miles north of Fort Stockton, west of Highway 18. This is shared campus context for the Pecos County buildings, not a surveyed marker for an individual building footprint. No individual building boundary is established by this point.<cite data-ref=\"https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf"
+      ]
+    },
+    {
+      "id": 20643,
+      "patch": {
+        "latitude": 31.171,
+        "longitude": -102.895,
+        "longFormSummary": "<h3>Site and filed scope</h3><ul><li>Building C is registered at 6000 TX-18, Fort Stockton, Pecos County, Texas. Its accessibility filing lists 189,060 square feet. The record does not establish the previous use of the individual building footprint.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul><h3>Construction and timeline</h3><ul><li>The filing lists August 1 to December 1, 2026 as the scheduled construction window. Completed accessibility review does not verify completed construction or an operational opening.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul><h3>Cost</h3><ul><li>The Building C filing estimates USD 300 million for its own scope. This is a published filing estimate, not an allocation of the entire campus investment.<cite data-ref=\"https://www.tdlr.texas.gov/TABS/Projects/TABS2026026959\"></cite></li></ul><h3>Campus imagery</h3><ul><li>Pacifico Energy supplies the shared GW Ranch campus renderings. These illustrate the overall campus and do not identify Building C or prove that it is complete. The renderings are shared campus context.<cite data-ref=\"https://www.pacificoenergy.com/gw-ranch\"></cite></li></ul><h3>Shared-campus reactions</h3><ul><li>Pacifico welcomed the GW Ranch generation permit in January. These are campus energy-platform reactions, not assessments of this individual building or confirmation of its opening.<cite data-ref=\"https://www.pacificoenergy.com/post/pacifico-energy-secures-7-65-gw-power-generation-permit-for-gw-ranch-project\"></cite></li></ul><h3>Energy oversight</h3><ul><li>Senators Sheldon Whitehouse, Martin Heinrich and Chris Van Hollen questioned the gas-generation plan in a March 13 letter. Their criticism concerns the shared power campus.<cite data-ref=\"https://www.epw.senate.gov/public/index.cfm?File_id=ED1BCBB3-F37F-4302-9578-79946EC1A881&a=files.serve\"></cite></li></ul><h3>Owner response</h3><ul><li>Amazon told DCD in August that it would pay the full cost of powering its planned Pecos County campus. That statement does not allocate power or construction cost to this building.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/amazon-acquires-8000-acre-site-in-pecos-texas-for-natural-gas-powered-behind-the-meter-data-center-report/\"></cite></li></ul><h3>Map location and scope</h3><ul><li>The map uses the GW Ranch Energy Center’s published site coordinates, 31.171, −102.895, from the TCEQ application’s core-data form. The source locates the energy campus approximately 17 miles north of Fort Stockton, west of Highway 18. This is shared campus context for the Pecos County buildings, not a surveyed marker for an individual building footprint. No individual building boundary is established by this point.<cite data-ref=\"https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf\"></cite></li></ul>"
+      },
+      "references": [
+        "https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf"
+      ]
+    }
+  ]
+}

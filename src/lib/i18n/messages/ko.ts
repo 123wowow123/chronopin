@@ -775,6 +775,10 @@ const ko: Messages = {
     factory: {
       buildoutHeading: "공장 건설 현황",
       projectTimeline: "사업 일정",
+      costBreakdown: "이 추정치의 산출 과정",
+      breakdownSourced: "출처 있음",
+      breakdownAssumption: "가정",
+      breakdownResult: "결과",
       checked: "확인일 {date}",
       source: "출처",
       buildoutNote: "확인된 단계만 강조합니다. 수치와 날짜는 계획과 입증된 상태를 구분합니다.",

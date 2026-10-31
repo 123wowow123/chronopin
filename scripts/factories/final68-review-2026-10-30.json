@@ -1355,5 +1355,68 @@
     },
     "translations": "left to separate agent per new AGENTS.md owner instruction; no generated round3 rows published",
     "replay": "scripts/factories/resolutions-2026-10-30-final68-round3.json"
+  },
+  "round4": {
+    "checkedAt": "2026-10-30",
+    "pinsUpdated": [
+      15796,
+      20641,
+      20642,
+      20643
+    ],
+    "resolvedSupplementalPinIds": [
+      20641,
+      20642,
+      20643
+    ],
+    "publishedCampusPoint": {
+      "latitude": 31.171,
+      "longitude": -102.895,
+      "scope": "Shared energy-campus context; not individual building footprints"
+    },
+    "geometryAddedPinIds": [],
+    "remainingEvidenceHolds": 13,
+    "incompleteChildMediaReactionPinIds": [
+      20644,
+      20646,
+      20647
+    ],
+    "remainingLocationDecisionFollowups": [
+      20648
+    ],
+    "remainingSupplementalChildHolds": 4,
+    "remainingRevisitPinsPerEnvironment": 17,
+    "jobRunIds": {
+      "local": 40,
+      "production": 40
+    },
+    "translations": "left to separate agent",
+    "replay": "scripts/factories/resolutions-2026-10-30-final68-round4.json"
+  },
+  "closeout": {
+    "status": "closed-with-documented-limitations",
+    "checkedAt": "2026-10-30",
+    "ownerInstruction": "complete remainder and remove from todo",
+    "activeTodoCount": 0,
+    "closedResearchTasks": 17,
+    "unsupportedIdentityExclusions": 8,
+    "sourceLimitedProjectReviews": 5,
+    "mediaReviewsWithRenderingLimit": 3,
+    "futureDecisionWatches": 1,
+    "projectFactsFullyVerified": false,
+    "pinsEnriched": [
+      20644,
+      20646,
+      18351
+    ],
+    "mediaAssetsAdded": 5,
+    "datedReactionsAdded": 1,
+    "jobRunIds": {
+      "local": 41,
+      "production": 41
+    },
+    "dispositions": "scripts/factories/final68-closeout-2026-10-30.json",
+    "replay": "scripts/factories/resolutions-2026-10-30-final68-closeout.json",
+    "translations": "left to separate agent"
   }
 }

@@ -1,5 +1,5 @@
 import type { Translator } from '@/lib/i18n/translate';
-import { factoryBuildoutMetrics, hasFactoryBuildout, type PinFactoryJson } from '@/lib/pinFactory';
+import { factoryBuildoutMetrics, hasFactoryBuildout, type FactoryBreakdownLine, type PinFactoryJson } from '@/lib/pinFactory';
 import { FactorySource } from './FactorySource';
 
 const STAGES = ['announced', 'construction', 'commissioning', 'production'] as const;
@@ -11,6 +11,44 @@ const BASIS_STYLE = {
 
 function BasisBadge({ basis, label }: { basis: 'planned' | 'demonstrated'; label: string }) {
   return <span className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold leading-none ${BASIS_STYLE[basis]}`}>{label}</span>;
+}
+
+const LINE_BADGE = {
+  sourced: 'bg-link text-raised',
+  assumption: 'border border-dashed border-muted text-muted',
+  result: 'bg-success text-raised',
+} as const;
+
+// The working behind an estimated figure: every input is tagged as sourced, an assumption, or the result.
+function CostBreakdown({ lines, t }: { lines: FactoryBreakdownLine[]; t: Translator }) {
+  return (
+    <div className="mt-3 border-t border-raised-2 pt-3">
+      <h3 className="text-[11px] font-semibold tracking-wide text-muted uppercase">{t('pin.factory.costBreakdown')}</h3>
+      <ol className="mt-2 space-y-2 text-xs">
+        {lines.map((line, i) => (
+          <li key={i} className={`rounded-md px-3 py-2 ${line.kind === 'result' ? 'bg-raised-2' : 'bg-raised/60'}`}>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+              <span className="flex items-center gap-2">
+                <span className="w-4 text-muted tabular-nums">{i + 1}</span>
+                <span className="font-semibold">{line.label}</span>
+                <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold leading-none ${LINE_BADGE[line.kind]}`}>
+                  {t(`pin.factory.breakdown${line.kind === 'sourced' ? 'Sourced' : line.kind === 'assumption' ? 'Assumption' : 'Result'}`)}
+                </span>
+              </span>
+              <span className="font-medium tabular-nums">{line.value}</span>
+            </div>
+            {line.note ? <p className="mt-1 ps-6 text-muted">{line.note}</p> : null}
+            {line.source ? (
+              <details className="mt-1 ps-6">
+                <summary className="cursor-pointer text-link">{t('pin.factory.source')}</summary>
+                <FactorySource source={line.source} />
+              </details>
+            ) : null}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
 }
 
 export function PinFactoryBuildout({ factory, t, className = '' }: { factory: PinFactoryJson; t: Translator; className?: string }) {
@@ -41,7 +79,7 @@ export function PinFactoryBuildout({ factory, t, className = '' }: { factory: Pi
         <p className="mt-3 text-[11px] text-muted">{t('pin.factory.buildoutNote')}</p>
         <dl className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           {metrics.map(metric => (
-            <div key={metric.key} className="min-w-0 rounded-lg bg-raised-2/40 p-3">
+            <div key={metric.key} className={`min-w-0 rounded-lg bg-raised-2/40 p-3 ${metric.breakdown?.length ? 'sm:col-span-2' : ''}`}>
               <dt className="flex items-center justify-between gap-2 text-[11px] font-semibold tracking-wide text-muted uppercase">
                 <span>{t(`pin.factory.metric.${metric.key}`)}</span>
                 <BasisBadge basis={metric.basis} label={t(`pin.factory.${metric.basis}`)} />
@@ -52,6 +90,7 @@ export function PinFactoryBuildout({ factory, t, className = '' }: { factory: Pi
                   <summary className="cursor-pointer text-link">{t('pin.factory.source')}</summary>
                   <FactorySource source={metric.source} />
                 </details>
+                {metric.breakdown?.length ? <CostBreakdown lines={metric.breakdown} t={t} /> : null}
               </dd>
             </div>
           ))}

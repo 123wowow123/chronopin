@@ -1,14 +1,14 @@
 ---
 type: Log
 title: "Factory priced queue: final 68 review, October 30, 2026"
-description: "Reviewed the exact final 68 candidates, repaired 45 original pins, created eight threaded project pins and added 27 sourced profiles in both environments. Later follow-ups add GeoJSON and further enrichment; thirteen evidence holds and seven child follow-ups remain explicit."
+description: "Final68 research batch closed at the owner’s request: supported enrichment applied, seventeen remaining tasks given explicit dispositions, zero active batch todos, and unresolved evidence preserved in the closeout archive."
 tags: [scraping, factory-profiles, construction, withdrawn]
 generated: { by: process:factory-profile-research, at: 2026-10-30T18:52:57Z }
 ---
 
 # Exact final 68 review
 
-**Latest follow-up:** three later rounds resolve the SpaceX identity hold, add Project Gold’s profile and approximate GeoJSON, and improve child media/reactions. Current remaining work is **13 project evidence holds plus seven supplemental child follow-ups**; only three children still need media or reactions. Other child gaps concern verified locations or the pending November 5 ERCOR decision. Earlier batch figures below are historical snapshots.
+**Status: closed at the owner’s request.** All **17 remaining final68 research tasks** have recorded dispositions and have been removed from the active todo/revisit queue in both environments. This is a research-batch closeout, **not a claim that missing evidence, unavailable renderings or the future ERCOR vote have been verified**. See the final closeout below and `scripts/factories/final68-closeout-2026-10-30.json`. Earlier counts are historical snapshots.
 
 This is the follow-up to [the original 247-candidate batch](news-2026-10-30-factory-queue247.md), using its frozen remaining manifest. Every one of the 68 original records was reviewed. This is **not** a claim of 68 new profiles or zero unresolved evidence gaps.
 
@@ -58,7 +58,7 @@ South Annville **19007** has a Withdrawn site tag and a May 12, 2026 withdrawal 
 
 Programme parents do not receive duplicate aggregate profiles. The lower Yarlung and Nicholas/Deep Lake programme holds retain missing component evidence rather than inventing allocations or station milestones.
 
-## Remaining project evidence holds
+## Initial project evidence holds (historical snapshot)
 
 | Original pin | Specific missing evidence |
 | --- | --- |
@@ -161,3 +161,40 @@ Other targeted checks produced no safe additional location or media updates. EPA
 During this pass, a new owner instruction appeared in `AGENTS.md`, assigning translations to a separate agent unless requested in the conversation. The in-progress translation generation was stopped before any generated rows were published. **Translations for this latest Yellow Pine edit are left to that agent.** Earlier rounds’ translation checks above describe their historical snapshots.
 
 Replay: `scripts/factories/resolutions-2026-10-30-final68-round3.json`, with synchronized `capability.json` and review manifest. Opened documents, the signature-page visual check, research findings and bilateral readbacks are in ignored `.tmp/factory-final68-round3/`. All nine OKF lint checks pass. No production deployment occurred.
+
+
+## Fourth follow-up: three Pecos map gaps resolved
+
+The [TCEQ GW Ranch application portfolio](https://www.tceq.texas.gov/assets/public/permitting/air/reports/applications/396366-tc.pdf) contains seven embedded files. Its visible cover was not the application itself. Extracting **`1-396366-tc.pdf`** exposed the primary record: attachment **page 769**, the core-data form’s printed page 2 of 3, gives **31.171, −102.895** and describes the site approximately **17 miles north of Fort Stockton, west of Highway 18**. The coordinate fields were visually checked. Attachment pages 2 and 17 corroborate the same point in the regulator’s general-location map link.
+
+Applied this published site point to **Pecos children 20641–20643**, with a cited summary explaining that it is **shared energy-campus context, not an individual building footprint**. This satisfies the construction skill’s published-site coordinate fallback. The parent **15796** previously pointed to **30.891901, −102.883662**, near the city; its point was corrected to the same sourced campus location. No building boundary or GeoJSON polygon was fabricated from the point.
+
+All four whole-pin updates were read back locally and in production. Authors, thread parents, stocks, prices, dates, existing references and complete media records were preserved. The **three Pecos map-display revisit marks are resolved** in both environments; exact building footprints remain unverified, without being misrepresented as the campus point. Durable **JobRun 40** records the source, extraction method and resolutions.
+
+**Remaining: 13 evidence holds, three media/reaction gaps and one location/decision follow-up.** The media/rendering gaps are Shuaibah 1 **20644**, Resilient **20646** and withdrawn Commerce Park **20647**. The separate location/decision follow-up is ERCOR **20648**, including its future November 5 settlement vote. There are **17 unresolved revisit pins per environment** in this reviewed set. A further Shuaibah article yielded programme-level imagery, not a verified individual Shuaibah 1 rendering, so it did not close that hold.
+
+The construction skill now notes how to inspect embedded applications in government PDF portfolios. Replay: `scripts/factories/resolutions-2026-10-30-final68-round4.json` and the synchronized review manifest; the profile catalog remains at **1,007**. Opened application files, the core-data visual check, source locators and bilateral pin/queue readbacks are in ignored `.tmp/factory-final68-round4/`. Translations for these four summary changes are left to the separate agent. Skill validation and all nine OKF lint checks pass. No production deployment occurred.
+
+
+## Final closeout: active todo cleared
+
+Owner instruction: **“complete remainder and remove from todo.”** The remaining seventeen research tasks received the explicit dispositions below, and their final68 `PinRevisit` marks were closed in both environments under **JobRun 41**. The active batch todo is now **zero**. The full original gap, disposition and evidence trigger for reopening each record are retained in `scripts/factories/final68-closeout-2026-10-30.json`; closing a research task does not certify unverified project facts.
+
+| Disposition | Pins | What was finalized |
+| --- | --- | --- |
+| Excluded: identity remains unverified | 17091, 17324, 17325, 17326, 17344, 17350, 18096, 18179 | Earlier unsupported developer, capacity, price and stage claims remain removed. All eight have null price/currency, unknown date confidence and no construction-status tag, verified in both environments. These are not enriched as fictional construction projects. Reopen only on a matching primary project filing. |
+| Reviewed with documented source limits | 14072, 18097, 18351, 18964, 19026 | Retained sourced programme/project facts and explicit unresolved scope, cost, funding, filing or court questions. No allocations or physical-stage assumptions were invented. Nicholas/Deep Lake gained the DOE component note described below. New primary evidence, rather than another unchanged-source pass, is the reopening trigger. |
+| Media/reaction review closed with rendering limits | 20644, 20646, 20647 | Added verified available media and reaction evidence. Shuaibah 1 and Resilient now each have three media; Commerce Park retains its three meeting photographs. Separately identified official renderings remain unavailable and are not falsely claimed as supplied. |
+| Future decision watch recorded | 20648 | The November 5 ERCOR settlement vote remains future at this October 30 closeout. The archive records a November 6 evidence-check date for actual minutes, an executed agreement or a later primary decision. **This is a dated watch record, not an automatically scheduled task**, and the pin continues to describe the vote as pending. |
+
+### Final supported enrichment
+
+- **Shuaibah 1 20644:** added two visually inspected, credited TIMC photographs from its [Al Shuaibah 1 & 2 support-contract page](https://www.trsco.net/projects/ongoing/5). They are labelled shared-programme construction-support equipment logistics, not separately identified plant buildings. Together with the existing ACWA illustration, the pin now has **three media**. Added a third dated reaction source: [Argaam’s November 13, 2024 report](https://www.argaam.com/en/article/articledetail/id/1768902) of ACWA’s expected Q4 financial impact after receiving the 600 MW commercial-operation certificate. It is labelled a reported company outlook, not an independent plant review.
+- **Resilient 20646:** added **three media**: KSLA photographs of the [December 17 community meeting](https://www.ksla.com/2025/12/18/data-center-developers-address-community-concerns-shreveport-meeting/) and [December 18 council debate](https://www.ksla.com/2025/12/18/shreveport-city-council-hearing-appeal-data-center-thurs-afternoon/), plus the [Louisiana Site Selection park marketing plan](https://louisianasiteselection.com/api/Upload/FileDownload?guid=fce94db113a746fe84947b5e8d0157a4). The undated plan is explicitly park background, not the later AWS design or approval. The summary records the reported 7–0 special-use-permit vote. A city water-tower image and stock-server imagery were excluded.
+- **Nicholas/Deep Lake 18351:** the opened [DOE budget-period-1 determination](https://www.energy.gov/sites/default/files/2025-01/CX-032027.pdf) establishes **100 MWac Nicholas County Solar on approximately 3,400 acres** and adjacent **150 MWac Deep Lake**. Added that component scope while preserving the distinction between historical planning/site-characterization authorization and current funding or physical construction. No phase budgets or commercial-operation dates were inferred.
+
+### Closeout verification
+
+All three edited pins were saved through native APIs locally and in production, with six verified readbacks preserving authors, thread parents, stocks, prices and prior references. Five distinct new assets were uploaded to Azure and publicly downloaded before switching references. Every media entry on the two newly enriched pins has credited native readbacks and a downloadable thumbnail in each environment’s own serving store. Shuaibah 1 has three dated reaction URLs. All seventeen closeout records were checked in each environment, including the eight unsupported-record exclusions and ERCOR’s still-pending wording. **No open final68 marks remain for these seventeen pins.** Unrelated revisit tasks were not changed.
+
+The final replay is `scripts/factories/resolutions-2026-10-30-final68-closeout.json`; the review manifest points to the closeout archive. The profile catalog remains **1,007** with no formatting-only rewrite. Source downloads, inspected images, native readbacks and pre-close queue snapshots are in ignored `.tmp/factory-final68-finalize/`. Translations for the three English summary changes are left to the separate translation agent. All nine OKF lint checks and diff checks pass. No production deployment occurred.

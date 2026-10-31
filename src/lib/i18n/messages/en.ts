@@ -780,6 +780,10 @@ const en = {
     factory: {
       buildoutHeading: "Factory buildout",
       projectTimeline: "Project timeline",
+      costBreakdown: "How this estimate was built",
+      breakdownSourced: "Sourced",
+      breakdownAssumption: "Assumption",
+      breakdownResult: "Result",
       checked: "Checked {date}",
       source: "Source",
       buildoutNote: "Only the reported stage is highlighted. Figures and dates retain their planned or demonstrated status.",

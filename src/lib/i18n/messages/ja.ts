@@ -775,6 +775,10 @@ const ja: Messages = {
     factory: {
       buildoutHeading: "工場建設計画",
       projectTimeline: "事業スケジュール",
+      costBreakdown: "この見積もりの算出方法",
+      breakdownSourced: "出典あり",
+      breakdownAssumption: "仮定",
+      breakdownResult: "結果",
       checked: "確認日 {date}",
       source: "出典",
       buildoutNote: "確認された段階のみ強調しています。数値と日付は計画と実証済みを区別しています。",

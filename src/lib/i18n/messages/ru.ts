@@ -784,6 +784,10 @@ const ru: Messages = {
     factory: {
       buildoutHeading: "Строительство завода",
       projectTimeline: "График проекта",
+      costBreakdown: "Как рассчитана эта оценка",
+      breakdownSourced: "С источником",
+      breakdownAssumption: "Допущение",
+      breakdownResult: "Результат",
       checked: "Проверено {date}",
       source: "Источник",
       buildoutNote: "Выделен только подтверждённый этап. Показатели и даты различают планы и подтверждённые результаты.",

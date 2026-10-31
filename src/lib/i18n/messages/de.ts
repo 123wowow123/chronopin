@@ -775,6 +775,10 @@ const de: Messages = {
     factory: {
       buildoutHeading: "Fabrikprojekt",
       projectTimeline: "Projektzeitplan",
+      costBreakdown: "So wurde diese Schätzung berechnet",
+      breakdownSourced: "Belegt",
+      breakdownAssumption: "Annahme",
+      breakdownResult: "Ergebnis",
       checked: "Geprüft am {date}",
       source: "Quelle",
       buildoutNote: "Nur die gemeldete Phase ist hervorgehoben. Angaben und Termine unterscheiden geplante und nachgewiesene Zustände.",

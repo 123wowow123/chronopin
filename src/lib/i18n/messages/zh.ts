@@ -776,6 +776,10 @@ const zh: Messages = {
     factory: {
       buildoutHeading: "工厂建设概况",
       projectTimeline: "项目时间线",
+      costBreakdown: "该估算的计算过程",
+      breakdownSourced: "有来源",
+      breakdownAssumption: "假设",
+      breakdownResult: "结果",
       checked: "核查日期 {date}",
       source: "来源",
       buildoutNote: "仅突出显示已报告的阶段。数据和日期区分规划与已验证状态。",

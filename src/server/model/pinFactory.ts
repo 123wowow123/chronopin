@@ -1,5 +1,5 @@
 import * as db from '../db';
-import { FACTORY_KEYS, FACTORY_METRIC_KEYS, FACTORY_RUBRIC_YEAR, FACTORY_STATUSES, isFactoryScore, type FactoryEvidence, type FactoryMetricKey, type FactoryProfile, type PinFactoryJson } from '@/lib/pinFactory';
+import { FACTORY_KEYS, FACTORY_METRIC_KEYS, FACTORY_RUBRIC_YEAR, FACTORY_STATUSES, isFactoryScore, type FactoryBreakdownLine, type FactoryEvidence, type FactoryMetricKey, type FactoryProfile, type PinFactoryJson } from '@/lib/pinFactory';
 
 const day = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v)) && new Date(v).toISOString().slice(0, 10) === v;
 const text = (v: unknown, max: number): v is string => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
@@ -49,7 +49,19 @@ export function factoryProblem(input: unknown): FactoryProfile | string {
     const key = m.key as FactoryMetricKey | undefined;
     if (key && metricKeys.has(key)) return `Duplicate factory metric: ${key}. Combine figures with the same scope in one field.`;
     if (key) metricKeys.add(key);
-    metrics.push({ ...(key ? { key } : {}), label: m.label, value: m.value, basis: m.basis as 'planned' | 'demonstrated', source: m.source });
+    let breakdown: FactoryBreakdownLine[] | undefined;
+    if (m.breakdown !== undefined) {
+      const b = m.breakdown;
+      if (!Array.isArray(b) || b.length < 2 || b.length > 16) return 'A metric breakdown needs 2-16 lines.';
+      for (const l of b) {
+        if (!record(l) || !['sourced', 'assumption', 'result'].includes(String(l.kind)) || !text(l.label, 100) || !text(l.value, 200)) return 'Each breakdown line needs a kind, label and value.';
+        if (l.note !== undefined && !text(l.note, 500)) return 'A breakdown note must be 1-500 characters.';
+        if (l.kind === 'sourced' ? !evidence(l.source) : l.source !== undefined && !evidence(l.source)) return 'Sourced breakdown lines need HTTPS evidence.';
+        if (l.kind !== 'sourced' && !l.note) return 'Assumptions and results need a note explaining them.';
+      }
+      breakdown = b as FactoryBreakdownLine[];
+    }
+    metrics.push({ ...(key ? { key } : {}), label: m.label, value: m.value, basis: m.basis as 'planned' | 'demonstrated', source: m.source, ...(breakdown ? { breakdown } : {}) });
   }
   let milestones: FactoryProfile['milestones'];
   if (input.milestones !== undefined) {

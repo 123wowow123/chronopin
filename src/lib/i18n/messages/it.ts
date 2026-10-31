@@ -773,6 +773,10 @@ const it: Messages = {
     factory: {
       buildoutHeading: "Progetto della fabbrica",
       projectTimeline: "Calendario del progetto",
+      costBreakdown: "Come è stata calcolata questa stima",
+      breakdownSourced: "Con fonte",
+      breakdownAssumption: "Ipotesi",
+      breakdownResult: "Risultato",
       checked: "Verificato il {date}",
       source: "Fonte",
       buildoutNote: "È evidenziata solo la fase riportata. Cifre e date distinguono i piani dai risultati dimostrati.",

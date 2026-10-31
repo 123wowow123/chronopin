@@ -25,14 +25,17 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
     an estimate and not a published budget, and what it excludes (land, soft costs, financing), with the benchmark's
     verbatim quote as its source;
   - an "Estimated cost" section in `longFormSummary` citing the benchmark, plus the benchmark page in `references`.
+  Put the working in the metric's structured `breakdown` (lines of `kind` sourced / assumption / result, each with
+  label, value, note, and a source for sourced lines); the pin page renders it as "How this estimate was built".
+  An input with no published figure (e.g. average unit size) is an `assumption` line, never dressed as sourced.
   Show the **breakdown of its parts** in both places, never a bare total: the quantity and where it came from, the
   per-unit benchmark (low, high, midpoint), the low and high totals, the figure used for the price, and what is
   excluded, each as its own cited line in the summary and spelled out in the metric value.
   A published budget always replaces the estimate. Land prices and permit figures are not construction cost. Use a
   local-market row when the source has one. A national row for the exact building type may stand in when there is
   no regional row, but the metric and summary must say it is national and may understate the cost (Brucker: mass
-  timber, 2026-10-30). If no benchmark covers the type, or the project has no sourced quantity or design (NAVWAR,
-  Millennium Mission Valley), leave `price` null and say why.
+  timber, 2026-10-30). Millennium Mission Valley (pin 20653, owner request 2026-10-30) has units but no published area:
+  area is an assumption line, and the 2016 San Diego $/SF quotes bracket the range (`scripts/construction/estimate-mission-valley-2026-10-30.mjs`). If no benchmark covers the type, or the project has no sourced quantity or design (NAVWAR), leave `price` null and say why.
 - Record the source in references or wiki. The extraction prompt `src/server/extract/systemPrompt.ts` carries the same rule.
 
 ## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`, `Withdrawn`
@@ -142,4 +145,7 @@ Owner instruction (2026-10-30): research and add available project GeoJSON along
 - Read back the stored row and public `/api/pins/:id/site-shape` in both environments; check alignment with the
   point/map. Keep sourced geometry and replay metadata with the research catalog. If no reliable geometry is
   published or a service is inaccessible, record that specific gap and retain the verified point.
+- Government PDF portfolios may expose only a cover page to text extraction. Inspect embedded files
+  (`pdfdetach -list`, then extract the relevant application) before concluding site coordinates are unpublished.
+  Distinguish a published general facility point from surveyed building footprints.
 See `docs/okf/scraping/routes.md` and `scripts/power/siteShapes.ts` for existing importers and shape kinds.

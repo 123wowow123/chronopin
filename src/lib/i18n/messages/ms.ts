@@ -780,6 +780,10 @@ const ms: Messages = {
     factory: {
       buildoutHeading: "Projek kilang",
       projectTimeline: "Jadual projek",
+      costBreakdown: "Cara anggaran ini dikira",
+      breakdownSourced: "Bersumber",
+      breakdownAssumption: "Andaian",
+      breakdownResult: "Keputusan",
       checked: "Disemak {date}",
       source: "Sumber",
       buildoutNote: "Hanya peringkat yang dilaporkan diserlahkan. Angka dan tarikh membezakan rancangan daripada hasil dibuktikan.",
