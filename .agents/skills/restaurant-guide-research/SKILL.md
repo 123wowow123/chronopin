@@ -73,6 +73,12 @@ page hang, so show the result in the DOM, read it with `get_page_text` or save i
 `https://s3-media0.fl.yelpcdn.com/bphoto/<id>/o.jpg`, upload with `uploadDishPhotos.ts auto` (one folder per venue slug) and PUT
 each venue. San Diego: 276 venues -> 142 with photos, 731 dish photos; 48 venues had no Yelp match. A 12-photo visual spot check
 found ~10 right, 1 wrong (photo showed a different dish) and 1 ambiguous, so expect ~10% errors; remove an image by PUT without it.
+Retrying unmatched venues (2026-10-30): Yelp's own search misses names with a location suffix, so find the page with Google
+(`fetch('/search?q=yelp <name> <city>')` from a google.com tab, regex `yelp.com/biz/<slug>`) or take the second search hit for a
+chain. Yelp answers 403 (bot check) after a fast burst; the user clears it in the tab, then pace requests ~5 s apart (one venue ~1 min).
+Drop matches whose caption is a different or multi-dish photo (check the caption, not just the tokens). The admin token in
+`.scrape/admin.token` expires after ~2 h: re-sign in with `ADMIN_PASSWORD` from `.env.local` (email in `feedback_admin_email_in_scripts`).
+Restaurant sites and Instagram rarely name dishes in alt text, so they gave ~no matches; not worth the per-photo credit work.
 
 ## Saving
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
