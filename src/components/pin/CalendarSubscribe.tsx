@@ -38,10 +38,10 @@ export function CalendarSubscribe({ kind, slug, thread = false }: { kind: 'tag' 
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className="inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-field px-2.5 py-1 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:bg-raised hover:text-ink"
+        className="inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-field px-2 py-1.5 text-xs sm:px-2.5 sm:py-1 font-medium text-muted ring-1 ring-line ring-inset hover:bg-raised hover:text-ink"
       >
         <Icon name="calendar" className="size-3.5" />
-        {t(thread ? 'calendar.subscribeThread' : 'calendar.subscribe')}
+        <span className="sr-only sm:not-sr-only">{t(thread ? 'calendar.subscribeThread' : 'calendar.subscribe')}</span>
       </button>
       {open ? (
         <div role="menu" className="surface absolute start-0 top-full z-30 mt-2 w-64 p-1.5 shadow-lg">

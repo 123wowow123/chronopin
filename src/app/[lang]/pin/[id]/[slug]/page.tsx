@@ -477,12 +477,12 @@ async function PinBody({
           </span>
         ) : null}
         {pin.user?.userName ? (
-          <>
+          <span className="hidden sm:contents">
             <span className="px-1.5 text-faint" aria-hidden>·</span>
             <RefineLink field="user" value={pin.user.userName} className="text-inherit hover:text-ink hover:no-underline">
               {pin.user.userName}
             </RefineLink>
-          </>
+          </span>
         ) : null}
         <div className="ms-auto flex flex-wrap items-center justify-end gap-2">
           {restaurantRegion ? <Link href={`/restaurants/${restaurantRegion.slug}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-curated/15 px-2.5 py-0.5 font-luxe text-xs font-semibold text-curated ring-1 ring-curated/40 ring-inset transition-colors hover:bg-curated/25 hover:no-underline active:ring-curated/70">

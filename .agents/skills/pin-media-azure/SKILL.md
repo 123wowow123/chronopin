@@ -19,6 +19,11 @@ description: >-
   on the pin, then round-trip the pin through its native API to refresh its page and feed.
 - Never skip a picture over unclear licensing: credit and store it. Don't restrict to Wikimedia Commons; try the
   brand newsroom or press kit first.
+- **Media need not come from Wikimedia Commons** (owner instruction, 2026-10-30). A scrape of a Wikipedia source
+  returns only that page's Commons images, which are often off-subject (a different SKU, a Xeon, a facility, a
+  diagram, a video screenshot). Treat them as the last resort: look first for the maker's newsroom or press kit
+  release for the exact product or event (Intel's scene7 images, for example), then review and launch coverage,
+  and only then Commons. Replace a stand-in that does not show the subject, and credit whichever source is used.
 - Aim for three media per scraped pin. No picture twice (CDN size suffixes + difference hash dedupe).
 - Age-gated YouTube videos are refused; a second video can come from Dailymotion/Vimeo.
 

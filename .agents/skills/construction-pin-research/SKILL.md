@@ -36,6 +36,10 @@ research/replay catalogs synchronized. A construction pin runs groundbreaking to
   no regional row, but the metric and summary must say it is national and may understate the cost (Brucker: mass
   timber, 2026-10-30). Millennium Mission Valley (pin 20653, owner request 2026-10-30) has units but no published area:
   area is an assumption line, and the 2016 San Diego $/SF quotes bracket the range (`scripts/construction/estimate-mission-valley-2026-10-30.mjs`). If no benchmark covers the type, or the project has no sourced quantity or design (NAVWAR), leave `price` null and say why.
+- Batch estimates (2026-10-31, `scripts/construction/housing-estimates-2026-10-31.mjs`): research agents read pages through
+  a summarizing fetcher, so their quotes are not verbatim. Before saving, curl each cited page, strip tags and check the
+  quote (split on "...") appears; hold any entry that fails, plus phases/towers/rehabs/proposals the benchmark row does
+  not fit. A benchmark row's quote is the row label + range + first note sentence as the page prints it.
 - Record the source in references or wiki. The extraction prompt `src/server/extract/systemPrompt.ts` carries the same rule.
 
 ## 2. Status tag: exactly one of `Proposed`, `In Progress`, `Completed`, `Withdrawn`

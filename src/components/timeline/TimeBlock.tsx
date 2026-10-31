@@ -97,9 +97,9 @@ function tagLines(label: string, min: TagLines = 2): TagLines {
   }
   return Math.min(5, Math.max(min, lines)) as TagLines;
 }
-// A tag of n lines is 26px of padding and gap plus 14 a line (a date marker's
-// two lines are 54, the specialty day's three 68).
-const tagHeight = (lines: number) => 26 + 14 * lines;
+// A tag of n lines is 14px of padding and gap plus 20 a line, the line height
+// (a date marker's two lines are 54, the specialty day's three 74).
+const tagHeight = (lines: number) => 14 + 20 * lines;
 
 // Beside the rail, a `wrap` tag wraps evenly to two lines (the 54px a date
 // marker is allowed) instead of cutting off, in the same type as the rest; a
@@ -636,9 +636,9 @@ export function TodayMarker({ day, specialtyDays, culturalDays = [] }: { day: st
     <div data-day={day} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
       <div className="today-dot absolute top-[7px] start-[140px] z-10 -ms-[7px] hidden size-3.5 rounded-full lg:block" />
       <div ref={tagRowRef} className={tagRow}>
-        <div id="today-marker" className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>
+        <Link id="today-marker" href={onThisDayPath(monthDayOf(day))} prefetch={false} title={t('onThisDay.hub')} className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider hover:no-underline lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>
           {t('controls.today')}
-        </div>
+        </Link>
         <HolidayTags days={culturalDays} />
         {specialtyDays.length ? <SpecialtyTag days={specialtyDays} /> : null}
         <SpecialtyTraditions days={specialtyDays} />
