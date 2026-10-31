@@ -114,6 +114,37 @@ before extracting the caption, and stops when the gallery heading is missing. Do
 having no named photos based on the old parser's empty results. Del Lusso's saved branch is indeed Carlsbad,
 6021 Innovation Way Suite 120; its Carlsbad Yelp gallery is appropriate.
 
+### Wider San Diego pass (October 31)
+
+Review all uncovered profiles before widening again. Empty menus and generic entries such as "selected
+appetizers" are menu-evidence gaps, not permission to invent dish names. Record the exact unphotographed
+items, checked branch/gallery URLs, targeted searches and rejected candidates in the research report.
+
+- Search within a verified gallery for the dish, not only its first page. In the October 31 pass, 45 targeted
+  searches recovered many photos absent from the first gallery page (including all five BJ's guacamole dishes).
+- Yelp can interpret branch suffixes as another city even with `find_loc` set: "Crown Point" produced Indiana
+  results, and "Mission Hills" produced Los Angeles results. Use the brand in Find and its exact street address
+  in Near, or follow the operator's branch-specific Yelp link. Chef JUN's official Bay Ho booking link resolves
+  the correct branch, distinct from Point Loma. Verify the displayed street address before using its photos.
+- A loading skeleton or an empty extraction is not evidence that there are no photos. Wait for the address and
+  actual photo records. Check whether Food versus Drink is the appropriate gallery category.
+- `matcher.browser.js` normalizes whitespace in the complete business-name prefix (Yelp uses `IL  Posto` in
+  some image alts), and keeps "house" significant so a shrimp-and-crab salad cannot satisfy "House salad".
+  Regression fixtures live in `matcher.test.ts`. Matches remain candidates requiring visual review.
+- Reject signage, uncertain captions, unlabelled variants and explicit portion mismatches. A labelled Eureka
+  result was a sidewalk sign; Oggi's showed three fish pieces for a two-piece item, and The Search Bar showed
+  two tacos for a three-taco item. Check the photograph, not just its caption. State multiple pictured units in
+  the caption when a menu item has no explicit unit count; never imply a photographed group is one priced unit.
+- When the individual uploader is not established, use an accurate source credit such as "Photo via Yelp"
+  with the direct selected-photo URL; do not invent photographer names or claim an operator upload is a review.
+- Re-sign in if the admin token expires. After network failures, rerun the idempotent reviewed save and verify
+  readbacks; an Azure preflight failure may happen before any pending record is written.
+
+The pass reviewed 91 previously uncovered profiles and saved 53 photographs on 44 of them. Storage coverage
+became 233/280 profiles; 47 specific gaps remain in `docs/restaurant-dish-photos-2026-10-31.json`. Only 22 of
+the 44 updated profiles resolved a native pin by exact source URL. Report stored-profile coverage separately
+from verified public-page coverage, and check aliases/titles before declaring a backing pin absent.
+
 ## Saving
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then

@@ -5,11 +5,16 @@
 //      .map(([k,v])=>k+'|'+v.slug+'|'+Object.entries(v.m).map(([i,[p,c]])=>i+'='+p+'~~'+c).join(';;')).join('\n')
 //    then read it with get_page_text. Review the captions: drop any that name a different or several dishes, then
 //    remove the '~~caption' parts and save as the dump file for download.py / apply.py.
-const SW = new Set('the and with a of de la el en y al in on for pc add plus gf v our house served du des le'.split(' '));
+const SW = new Set('the and with a of de la el en y al in on for pc add plus gf v our served du des le'.split(' '));
 window.toks = s => (s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9 ]/g, ' ')
   .split(/\s+/).filter(w => w && !SW.has(w) && !/^\d+$/.test(w)).map(w => (w.length > 3 && w.endsWith('s') && !w.endsWith('ss') ? w.slice(0, -1) : w)));
 window.R = {}; window.PR2 = { done: 0, stop: false, cur: '' };
 window.sl = ms => new Promise(r => setTimeout(r, ms));
+window.photoCaption = (business, alt) => {
+  const prefix = new RegExp('^' + business.trim().split(/\s+/).map(part => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\s+') + '\\s+-\\s+', 'i');
+  const matched = alt.match(prefix);
+  return matched ? alt.slice(matched[0].length).split(' - ')[0] : null;
+};
 window.getPh = async slug => {
   const seen = {};
   for (let s = 0; s <= 180; s += 30) {
@@ -21,12 +26,13 @@ window.getPh = async slug => {
     // Business names can contain " - " (Lionfish ... - San Diego). Splitting
     // the whole alt at segment 1 silently treated the city as the caption.
     if (!heading.startsWith('Photos and videos for ')) { window.PR2.stop = true; window.PR2.err = slug + ' missing photo-gallery heading'; break; }
-    const prefix = heading.slice('Photos and videos for '.length) + ' - ';
+    const business = heading.slice('Photos and videos for '.length);
     for (const i of d.querySelectorAll('img')) {
       const src = i.src || '';
-      if (!src.includes('/bphoto/') || !i.alt.startsWith(prefix)) continue;
+      const caption = window.photoCaption(business, i.alt);
+      if (!src.includes('/bphoto/') || caption === null) continue;
       const id = src.split('/bphoto/')[1].split('/')[0];
-      if (!seen[id]) { seen[id] = i.alt.slice(prefix.length).split(' - ')[0]; n++; } // Remove the complete business name before reading the caption.
+      if (!seen[id]) { seen[id] = caption; n++; }
     }
     await window.sl(2200 + Math.random() * 1500);
     if (n < 5) break;

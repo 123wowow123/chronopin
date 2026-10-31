@@ -51,6 +51,8 @@ services:
         condition: service_healthy
       faiss:
         condition: service_started
+    # tini as PID 1 reaps the orphaned Chromium children the scraper leaves.
+    init: true
     restart: unless-stopped
 
   # The standby for zero-downtime deploys (scripts/deploy-image.sh): started on
@@ -68,6 +70,7 @@ services:
       faiss:
         condition: service_started
     profiles: [next]
+    init: true
     restart: 'no'
 
   # A shared cache for the regional anonymous API answers (Docker/edgecache).
