@@ -155,6 +155,13 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   status tag (a source-backed change, e.g. Proposed -> In Progress/Completed/Withdrawn), published price (replacing an
   earlier "Estimated" metric), profile with milestones and reaction excerpts, on prod and local. Year-only or
   retrieval-day `publishedDate`s are saved as null. Image candidates in the drafts (`mediaCandidates`) are not uploaded yet.
+- **Conflicting facts: use the government reference (owner instruction, 2026-10-30).** When sources disagree on a
+  unit count, cost, date or status, the pin states the figure from the government / housing-agency page (city,
+  county, state HFA, HUD, housing authority), makes that page the quote source for the metric, and names the
+  conflicting figure and its source in the summary and the research gaps. Read the whole government page first: a
+  release can contradict itself (Sophie Maxwell, pin 3180: the city release says 105 units in its text but 112 in the
+  Mayor's quoted remarks, so the pin uses 105 and notes the 112). If the government page is itself split, say so
+  rather than picking the larger number.
 - Ongoing: the 06:00/18:00 news job's `review_research_gaps` `construction` list refreshes excerpts and sentiment as a
   project nears completion or local news appears (`docs/okf/scraping/daily-jobs.md#sentiment`).
 - **Map (every development pin):** a pin needs `latitude`/`longitude` or it shows no map; an `address` alone is not

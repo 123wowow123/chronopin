@@ -24,6 +24,13 @@ This skill provides the automated workflow, validation checks, and operational g
 
 ---
 
+## Subagent Delegation (`flash` Model)
+
+- **Always delegate translation rounds to a `flash` subagent:** When running this skill from a parent conversation, invoke a `self` subagent with `Model: 'flash'` (`invoke_subagent`) to execute the health check, synchronization, and verification steps.
+- **Audit the `flash` subagent's work:** After the `flash` subagent finishes, inspect its transcript and output to verify that `check_translations.py` reports `0` due pins (`100.0%` current & complete), `0` skipped rows, and `0` content leaks.
+
+---
+
 ## Quick Reference Commands
 
 From the workspace root (`/Users/ianflynn/chronopin`):
