@@ -20,6 +20,10 @@ export type Fundamentals = {
   debt: number | null;
   equity: number | null;
   shares: number | null;
+  // The currency the filer reports in (every money field above is in it), and whether
+  // it files a 20-F/40-F (a foreign private issuer) rather than a 10-K.
+  currency: string;
+  foreign: boolean;
 };
 
 const REVENUE = ['Revenues', 'RevenueFromContractWithCustomerExcludingAssessedTax', 'SalesRevenueNet', 'RevenueFromContractWithCustomerIncludingAssessedTax'];
@@ -33,6 +37,52 @@ const SHORT_DEBT = ['LongTermDebtCurrent', 'ShortTermBorrowings', 'DebtCurrent']
 
 const days = (a: string, b: string) => (Date.parse(b) - Date.parse(a)) / 864e5;
 
+// Annual reports: a US 10-K, or a foreign private issuer's 20-F or 40-F.
+const ANNUAL_FORM = /^(10-K|20-F|40-F)/;
+// A fiscal year older than this (in days) is a stale filer, not a current one. A
+// foreign private issuer files later and reaches these facts later, so it is allowed longer.
+const MAX_AGE_DAYS = 610;
+const MAX_AGE_DAYS_FOREIGN = 730;
+
+// A foreign filer that tags in IFRS carries its statements under 'ifrs-full'. Its
+// concepts are read through the US GAAP names used here: each IFRS tag is copied
+// under the matching name when the filer has not tagged that name itself.
+const IFRS_ALIASES: Record<string, string> = {
+  ProfitLossAttributableToOwnersOfParent: 'NetIncomeLoss',
+  Revenue: 'Revenues',
+  CostOfSales: 'CostOfRevenue',
+  AdjustmentsForSharebasedPayments: 'ShareBasedCompensation',
+  CashAndCashEquivalents: 'CashAndCashEquivalentsAtCarryingValue',
+  Borrowings: 'LongTermDebt',
+  EquityAttributableToOwnersOfParent: 'StockholdersEquity',
+  Equity: 'StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest',
+};
+export function withIfrsAliases(facts: CompanyFacts): CompanyFacts {
+  const ifrs = facts.facts?.['ifrs-full'];
+  if (!ifrs) return facts;
+  const usGaap = { ...(facts.facts?.['us-gaap'] ?? {}) };
+  for (const [from, to] of Object.entries(IFRS_ALIASES)) if (ifrs[from] && !usGaap[to]) usGaap[to] = ifrs[from];
+  // Same-name concepts (ProfitLoss, GrossProfit, ResearchAndDevelopmentExpense) are taken as they are.
+  for (const [tag, v] of Object.entries(ifrs)) if (!usGaap[tag]) usGaap[tag] = v;
+  return { facts: { ...facts.facts, 'us-gaap': usGaap } };
+}
+
+// The currency a filer reports its income in: the money unit that reaches the
+// newest annual net income (US dollars when a filer gives them for that same
+// year, as some foreign filers do alongside their own currency). USD when none is found.
+function reportingCurrency(facts: CompanyFacts): string {
+  const newest = new Map<string, string>();
+  for (const tag of ['NetIncomeLoss', 'ProfitLoss']) {
+    for (const [unit, rows] of Object.entries(facts.facts?.['us-gaap']?.[tag]?.units ?? {})) {
+      if (unit === 'shares' || unit === 'pure') continue;
+      for (const r of rows) if (r.start && ANNUAL_FORM.test(r.form) && days(r.start, r.end) >= 340 && days(r.start, r.end) <= 390 && r.end > (newest.get(unit) ?? '')) newest.set(unit, r.end);
+    }
+  }
+  const latest = [...newest.values()].sort().pop();
+  if (!latest) return 'USD';
+  return newest.get('USD') === latest ? 'USD' : [...newest].find(([, end]) => end === latest)![0];
+}
+
 // One value per fiscal year end, newest filing winning, for a duration concept
 // that spans about a year (a quarter's or a cumulative stub is not a year). A
 // filer can move to a different tag in a later year, so of the candidate tags the
@@ -44,7 +94,7 @@ function annual(facts: CompanyFacts, tags: string[], unit = 'USD'): Map<string, 
     const rows = facts.facts?.['us-gaap']?.[tag]?.units?.[unit] ?? [];
     const out = new Map<string, { val: number; filed: string }>();
     for (const r of rows) {
-      if (!r.start || !/^10-K/.test(r.form) || days(r.start, r.end) < 340 || days(r.start, r.end) > 390) continue;
+      if (!r.start || !ANNUAL_FORM.test(r.form) || days(r.start, r.end) < 340 || days(r.start, r.end) > 390) continue;
       const hit = out.get(r.end);
       if (!hit || r.filed > hit.filed) out.set(r.end, { val: r.val, filed: r.filed });
     }
@@ -58,9 +108,9 @@ function annual(facts: CompanyFacts, tags: string[], unit = 'USD'): Map<string, 
 }
 
 // A balance-sheet value at a date, from the first concept that reports it.
-function at(facts: CompanyFacts, tags: string[], end: string): number | null {
+function at(facts: CompanyFacts, tags: string[], end: string, unit = 'USD'): number | null {
   for (const tag of tags) {
-    const rows = (facts.facts?.['us-gaap']?.[tag]?.units?.USD ?? []).filter(r => r.end === end && /^10-K/.test(r.form));
+    const rows = (facts.facts?.['us-gaap']?.[tag]?.units?.[unit] ?? []).filter(r => r.end === end && ANNUAL_FORM.test(r.form));
     if (rows.length) return rows.reduce((a, b) => (b.filed > a.filed ? b : a)).val;
   }
   return null;
@@ -85,34 +135,50 @@ function shareCount(facts: CompanyFacts, end: string): number | null {
   return annual(facts, ['WeightedAverageNumberOfDilutedSharesOutstanding', 'WeightedAverageNumberOfSharesOutstandingBasic'], 'shares').get(end) ?? null;
 }
 
-export function extractFundamentals(facts: CompanyFacts): Fundamentals | null {
-  const income = annual(facts, ['NetIncomeLoss', 'ProfitLoss']);
+export function extractFundamentals(raw: CompanyFacts, today: Date = new Date()): Fundamentals | null {
+  const facts = withIfrsAliases(raw);
+  const currency = reportingCurrency(facts);
+  const income = annual(facts, ['NetIncomeLoss', 'ProfitLoss'], currency);
   const end = [...income.keys()].sort().pop();
   if (!end) return null;
-  const revenue = annual(facts, REVENUE);
+  const money = (tags: string[]) => annual(facts, tags, currency);
+  const revenue = money(REVENUE);
   const ends = [...revenue.keys()].sort();
   const newest = revenue.get(end) ?? null;
   // Three-year compound growth when the history is there.
   const back = ends.filter(e => e < end).slice(-3);
   const oldest = back.length === 3 ? revenue.get(back[0]) : null;
   const revenueGrowth = newest != null && oldest != null && oldest > 0 && newest > 0 ? (newest / oldest) ** (1 / 3) - 1 : null;
-  const sum = (tags: string[]) => at(facts, tags, end);
+  const sum = (tags: string[]) => at(facts, tags, end, currency);
   const cash = sum(CASH);
   const securities = sum(SECURITIES) ?? 0;
   const debt = (sum(DEBT) ?? 0) + (sum(SHORT_DEBT) ?? 0);
+  // The form the year's net income came in on: a 20-F or 40-F marks a foreign filer.
+  const form = ['NetIncomeLoss', 'ProfitLoss'].flatMap(t => facts.facts?.['us-gaap']?.[t]?.units?.[currency] ?? []).find(r => r.end === end && ANNUAL_FORM.test(r.form))?.form ?? '10-K';
+  const foreign = !/^10-K/.test(form);
+  if (days(end, today.toISOString().slice(0, 10)) > (foreign ? MAX_AGE_DAYS_FOREIGN : MAX_AGE_DAYS)) return null;
   return {
     fiscalYearEnd: end,
     netIncome: income.get(end) ?? null,
-    stockComp: annual(facts, ['ShareBasedCompensation', 'AllocatedShareBasedCompensationExpense']).get(end) ?? 0,
+    stockComp: money(['ShareBasedCompensation', 'AllocatedShareBasedCompensationExpense']).get(end) ?? 0,
     revenue: newest,
     revenueGrowth,
-    grossProfit: annual(facts, GROSS_PROFIT).get(end) ?? (newest != null && annual(facts, COST_OF_REVENUE).get(end) != null ? newest - annual(facts, COST_OF_REVENUE).get(end)! : null),
-    researchAndDevelopment: annual(facts, RESEARCH).get(end) ?? null,
+    grossProfit: money(GROSS_PROFIT).get(end) ?? (newest != null && money(COST_OF_REVENUE).get(end) != null ? newest - money(COST_OF_REVENUE).get(end)! : null),
+    researchAndDevelopment: money(RESEARCH).get(end) ?? null,
     cash: cash != null ? cash + securities : null,
     debt,
     equity: sum(['StockholdersEquity', 'StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest']),
     shares: shareCount(facts, end),
+    currency,
+    foreign,
   };
+}
+
+// The same fundamentals in US dollars, given how many units of the filer's
+// currency one dollar buys. Ratios (growth) and counts (shares) are unchanged.
+export function toUsd(f: Fundamentals, perUsd: number): Fundamentals {
+  const usd = (v: number | null) => (v == null ? null : v / perUsd);
+  return { ...f, netIncome: usd(f.netIncome), stockComp: usd(f.stockComp), revenue: usd(f.revenue), grossProfit: usd(f.grossProfit), researchAndDevelopment: usd(f.researchAndDevelopment), cash: usd(f.cash), debt: usd(f.debt), equity: usd(f.equity), currency: 'USD' };
 }
 
 // Net debt above this many years of owners' earnings marks a company whose debt

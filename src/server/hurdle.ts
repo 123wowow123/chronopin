@@ -1,7 +1,7 @@
 import { cScore, cTier } from '@/lib/cTier';
 import { hurdlePrice, type HurdleResult } from '@/lib/hurdlePrice';
 import type { Tier } from '@/lib/iv15Map';
-import { extractFundamentals, hurdleInputs, nameKey, type CompanyFacts, type Fundamentals } from '@/lib/secFundamentals';
+import { extractFundamentals, hurdleInputs, nameKey, toUsd, type CompanyFacts, type Fundamentals } from '@/lib/secFundamentals';
 import { fetchMarketCap, identify, identifyCached } from './stocks';
 import log from './util/log';
 
@@ -29,6 +29,10 @@ export type Hurdle = {
   leveraged: boolean;
   // The share count came from market value ÷ price, not from the filings.
   sharesFromMarketCap: boolean;
+  // A foreign private issuer (20-F/40-F), and the currency its statements were
+  // converted from at the current rate (null when they were already in dollars).
+  foreign: boolean;
+  convertedFrom: string | null;
   // Chronopin's own tier (null: Unrated) and 0-100 score, by rule from the filings (src/lib/cTier.ts).
   tier: Tier | null;
   score: number;
@@ -57,7 +61,7 @@ async function sec<T>(url: string): Promise<T | null> {
 type Listed = { cik_str: number; ticker: string; title: string };
 const tickers = () => once('tickers2', () => sec<Record<string, Listed>>('https://www.sec.gov/files/company_tickers.json').then(r => new Map(Object.values(r ?? {}).map(l => [l.ticker.toUpperCase(), l] as const))));
 
-const factsFor = (cik: number) => once(`fundamentals2|${cik}`, async () => {
+const factsFor = (cik: number) => once(`fundamentals4|${cik}`, async () => {
   // Only the extracted numbers are kept: the raw facts run to several MB a filer.
   const facts = await sec<CompanyFacts>(`https://data.sec.gov/api/xbrl/companyfacts/CIK${String(cik).padStart(10, '0')}.json`);
   return facts && extractFundamentals(facts);
@@ -102,6 +106,17 @@ const sicFor = (cik: number) => once(`sic|${cik}`, async () => {
   return Number.isFinite(sic) && sic > 0 ? sic : null;
 });
 
+// How many units of a currency one US dollar buys, today (the ECB's rates through
+// Frankfurter, keyless); null for a currency it does not list (TWD, ARS, RUB), and
+// the stock is then not valued rather than guessed. A year of statements is
+// converted at today's rate: a rough conversion, said so in the tooltip.
+const perUsd = (currency: string): Promise<number | null> => currency === 'USD' ? Promise.resolve(1) : once(`fx|${currency}`, async () => {
+  const res = await fetch(`https://api.frankfurter.dev/v1/latest?base=USD&symbols=${encodeURIComponent(currency)}`, { signal: AbortSignal.timeout(10_000), cache: 'no-store' });
+  if (!res.ok) return null;
+  const rate = ((await res.json()) as { rates?: Record<string, number> }).rates?.[currency];
+  return rate && rate > 0 ? rate : null;
+});
+
 // Nasdaq lists a dash-class ticker with a dot (BRK-B is BRK.B).
 async function quoteFor(symbol: string) {
   return (await identifyCached(symbol).then(q => q ?? identify(symbol))) ?? (symbol.includes('-') ? identify(symbol.replace('-', '.')) : null);
@@ -115,8 +130,16 @@ export async function loadHurdle(symbol: string): Promise<Hurdle | null> {
     const [found, quote] = await Promise.all([loadFundamentals(symbol), quoteFor(symbol)]);
     if (!found || !quote) return null;
     const price = quote.quote.price;
-    // Without a usable count in the filings, the share count is market value over price.
-    let shares = found.fundamentals.shares;
+    let f = found.fundamentals;
+    const convertedFrom = f.currency !== 'USD' ? f.currency : null;
+    if (convertedFrom) {
+      const rate = await perUsd(convertedFrom);
+      if (!rate) return null;
+      f = toUsd(f, rate);
+    }
+    // Without a usable count in the filings, the share count is market value over price. A
+    // foreign filer's count is of ordinary shares, not of the ADRs that trade here, so it always is.
+    let shares = f.foreign ? null : f.shares;
     let sharesFromMarketCap = false;
     if (shares == null) {
       const cap = await fetchMarketCap(quote.quote.symbol ?? symbol, quote.assetClass).catch(() => null);
@@ -126,10 +149,9 @@ export async function loadHurdle(symbol: string): Promise<Hurdle | null> {
       }
     }
     for (const stockCompWeight of [1, FALLBACK_STOCK_COMP_WEIGHT]) {
-      const inputs = hurdleInputs(found.fundamentals, stockCompWeight, shares);
+      const inputs = hurdleInputs(f, stockCompWeight, shares);
       const hurdle = inputs && hurdlePrice(inputs);
       if (inputs && hurdle) {
-        const f = found.fundamentals;
         const sic = await sicFor(found.cik).catch(() => null);
         const ratio = price / hurdle.price;
         const grossMargin = f.grossProfit != null && f.revenue ? f.grossProfit / f.revenue : null;
@@ -137,7 +159,7 @@ export async function loadHurdle(symbol: string): Promise<Hurdle | null> {
         const rdIntensity = f.revenue && f.researchAndDevelopment != null ? f.researchAndDevelopment / f.revenue : null;
         const tier = cTier({ sic, roic: inputs.roic, grossMargin, rdIntensity, profitableAfterStockPay: stockCompWeight === 1 });
         const score = cScore({ ownersEarnings: inputs.ownersEarnings, netIncome: f.netIncome, tier, grossMargin, roic: inputs.roic, ratio });
-        return { symbol, price, hurdle, ratio, growth: inputs.growth, roic: inputs.roic, fiscalYearEnd: f.fiscalYearEnd, cik: found.cik, stockCompWeight, leveraged: inputs.leveraged, sharesFromMarketCap, tier, score, sic };
+        return { symbol, price, hurdle, ratio, growth: inputs.growth, roic: inputs.roic, fiscalYearEnd: f.fiscalYearEnd, cik: found.cik, stockCompWeight, leveraged: inputs.leveraged, sharesFromMarketCap, foreign: f.foreign, convertedFrom, tier, score, sic };
       }
     }
     return null;

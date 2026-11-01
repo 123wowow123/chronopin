@@ -37,6 +37,9 @@ A run left open past 3 hours is cut off as abandoned.
 
 - Follow the prepared prompt, then `.agents/skills/daily-news-job/SKILL.md` for the standing authorizations,
   revisit/sentiment procedure and what to queue. Read the matching section of `daily-jobs.md` before each task.
+- Work **every** task `begin_job` lists, drain the revisit and event-info queues, and write the run note +
+  okfLint before closing (owner, 2026-11-01; see "Always complete the whole run" in `daily-news-job`).
+  Never `finish_job` after a partial pass.
 - 06:00 / 18:00 also create `Predicted` pins and the Brent/WTI threads: `.agents/skills/prediction-market-pins/`.
 - `create_pin` returns `needs`: act on every item before the run ends or list it in the report.
 - Do not run pin translations (owner, 2026-10-30); report the handoff.

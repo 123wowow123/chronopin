@@ -36,7 +36,7 @@ export async function buildValuationMaps(holdings: HoldingsSnapshot[], name: str
     price: published.find(q => q.symbol === h.symbol)?.price ?? h.price, iv15Low: h.hurdle.price, iv15High: null, score: h.score, held: held.includes(h.symbol), asOf: h.fiscalYearEnd,
     sourceUrl: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${h.cik}&type=10-K`,
     // What was done differently for this stock, shown in the tooltip.
-    note: [h.stockCompWeight < 1 ? `${Math.round(h.stockCompWeight * 100)}% stock pay` : '', h.leveraged ? 'debt not deducted' : '', h.sharesFromMarketCap ? 'shares from market cap' : ''].filter(Boolean).join(', ') || null,
+    note: [h.stockCompWeight < 1 ? `${Math.round(h.stockCompWeight * 100)}% stock pay` : '', h.leveraged ? 'debt not deducted' : '', h.sharesFromMarketCap ? 'shares from market cap' : '', h.convertedFrom ? `converted from ${h.convertedFrom}` : '', Date.now() - Date.parse(h.fiscalYearEnd) > 456 * 864e5 ? `latest filing: year ended ${h.fiscalYearEnd}` : ''].filter(Boolean).join(', ') || null,
   }] : []);
   const maps = candidates
     .map(p => ({ key: p.key, name: p.name, ...placeHoldings(p.holdings.map(holding => ({ holding, ratio: ratios.get(holding.symbol) ?? null }))) }))

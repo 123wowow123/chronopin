@@ -51,7 +51,8 @@ type RadarAxis = { key: string; ja?: string };
 // axis's label is a link: it searches for the products that score that axis
 // strongly (taste:bitterness, carperf:range), added to the search already
 // showing on the search page. A null score (a spec nobody published) is drawn
-// at the centre with an n/a label, and the shape skips it.
+// at the centre with an n/a label and no dot, and the shape skips it: its
+// neighbours join directly.
 export function TasteRadar({
   scores,
   labels,
@@ -167,7 +168,7 @@ export function TasteRadar({
           const [x, y] = point(i, R);
           return <line key={axis.key} x1={CX} y1={CY} x2={x} y2={y} className="stroke-raised-2" strokeWidth={1} />;
         })}
-        <polygon points={fmt(axes.map((_, i) => point(i, radiusOf(i))))} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
+        <polygon points={fmt(axes.flatMap((_, i) => (scoreOf(i) == null ? [] : [point(i, radiusOf(i))])))} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
         {/* The whole spoke is a hover target, drawn under the vertices: a score
             of 0 puts a vertex on the centre, where several share one point and
             the last drawn would win, so each axis stays reachable along its
@@ -194,6 +195,7 @@ export function TasteRadar({
               onBlur={() => setFocused((current) => (current === i ? null : current))}
             >
               <circle cx={x} cy={y} r={14} fill="transparent" />
+              {scoreOf(i) == null ? null : (
               <circle
                 cx={x}
                 cy={y}
@@ -202,6 +204,7 @@ export function TasteRadar({
                 className={`origin-center stroke-panel transition [transform-box:fill-box] ${active === i ? 'scale-125 opacity-100' : 'opacity-0'}`}
                 strokeWidth={1.5}
               />
+              )}
             </g>
           );
         })}

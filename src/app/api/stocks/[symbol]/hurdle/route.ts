@@ -11,7 +11,7 @@ type Ctx = RouteContext<'/api/stocks/[symbol]/hurdle'>;
 // C-IV15, Chronopin's 15%-hurdle price, for a US-listed filer: the price at which
 // 15% a year would be returned for 15 years on the stock's owners' earnings. It is
 // an estimate made from SEC filings and default assumptions.
-// GET /api/stocks/:symbol/hurdle   { formula, copyright, symbol, price, hurdlePrice, ratio, growth, roic, stockCompWeight, leveraged, sharesFromMarketCap, tier, score, sic, fiscalYearEnd, assumptions }
+// GET /api/stocks/:symbol/hurdle   { formula, copyright, symbol, price, hurdlePrice, ratio, growth, roic, stockCompWeight, leveraged, sharesFromMarketCap, foreign, convertedFrom, tier, score, sic, fiscalYearEnd, assumptions }
 // 403 without Premium; 404 when there are no 10-K facts, the earnings are a loss, or the price is unknown.
 export const GET = route(async (request: NextRequest, ctx: Ctx) => {
   // C-IV15 is a Premium feature: readers without Premium (and admins aside) get 403.
@@ -35,6 +35,8 @@ export const GET = route(async (request: NextRequest, ctx: Ctx) => {
     stockCompWeight: h.stockCompWeight,
     leveraged: h.leveraged,
     sharesFromMarketCap: h.sharesFromMarketCap,
+    foreign: h.foreign,
+    convertedFrom: h.convertedFrom,
     tier: h.tier,
     score: h.score,
     sic: h.sic,

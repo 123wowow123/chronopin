@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { extractFundamentals, hurdleInputs, nameKey, type CompanyFacts, type Fundamentals } from './secFundamentals';
+import { extractFundamentals, hurdleInputs, nameKey, toUsd, withIfrsAliases, type CompanyFacts, type Fundamentals } from './secFundamentals';
 
 const yr = (end: string, val: number, filed = `${end.slice(0, 4)}-12-31`) => ({ start: `${Number(end.slice(0, 4)) - 1}${end.slice(4)}`, end, val, form: '10-K', filed });
 const bal = (end: string, val: number) => ({ end, val, form: '10-K', filed: `${end.slice(0, 4)}-12-31` });
@@ -80,7 +80,7 @@ describe('stale share counts', () => {
 });
 
 describe('leveraged treatment', () => {
-  const base: Fundamentals = { fiscalYearEnd: '2026-12-31', netIncome: 100, stockComp: 0, revenue: null, revenueGrowth: null, grossProfit: null, researchAndDevelopment: null, cash: 10, debt: 20, equity: 500, shares: 10 };
+  const base: Fundamentals = { fiscalYearEnd: '2026-12-31', netIncome: 100, stockComp: 0, revenue: null, revenueGrowth: null, grossProfit: null, researchAndDevelopment: null, currency: 'USD', foreign: false, cash: 10, debt: 20, equity: 500, shares: 10 };
   it('takes net debt off the value for an ordinary balance sheet', () => {
     const i = hurdleInputs(base)!;
     expect(i.leveraged).toBe(false);
@@ -101,5 +101,63 @@ describe('nameKey', () => {
     expect(nameKey('ExxonMobil Holdings Corp')).toBe(nameKey('EXXON MOBIL CORP'));
     expect(nameKey('Apple Inc.')).toBe('apple');
     expect(nameKey('The Coca-Cola Company')).toBe('cocacola');
+  });
+});
+
+// A foreign private issuer: IFRS tags, a 20-F, income in another currency.
+const ifrsYear = (end: string, val: number, unit = 'TWD', form = '20-F') => ({ start: `${Number(end.slice(0, 4)) - 1}${end.slice(4)}`, end, val, form, filed: `${end.slice(0, 4)}-12-31` });
+const foreignFacts: CompanyFacts = {
+  facts: {
+    dei: {},
+    'ifrs-full': {
+      ProfitLossAttributableToOwnersOfParent: { units: { TWD: [ifrsYear('2026-06-30', 1000)] } },
+      Revenue: { units: { TWD: [ifrsYear('2026-06-30', 5000), ifrsYear('2025-06-30', 4000), ifrsYear('2024-06-30', 3000), ifrsYear('2023-06-30', 2000)] } },
+      GrossProfit: { units: { TWD: [ifrsYear('2026-06-30', 2500)] } },
+      ResearchAndDevelopmentExpense: { units: { TWD: [ifrsYear('2026-06-30', 400)] } },
+      CashAndCashEquivalents: { units: { TWD: [{ end: '2026-06-30', val: 3000, form: '20-F', filed: '2026-12-31' }] } },
+      Borrowings: { units: { TWD: [{ end: '2026-06-30', val: 1000, form: '20-F', filed: '2026-12-31' }] } },
+      EquityAttributableToOwnersOfParent: { units: { TWD: [{ end: '2026-06-30', val: 9000, form: '20-F', filed: '2026-12-31' }] } },
+    },
+  },
+};
+
+describe('a foreign private issuer (20-F, IFRS)', () => {
+  const today = new Date('2026-11-01');
+  it('reads IFRS tags in the filer\'s currency and marks the filer foreign', () => {
+    const f = extractFundamentals(foreignFacts, today)!;
+    expect(f.currency).toBe('TWD');
+    expect(f.foreign).toBe(true);
+    expect(f.netIncome).toBe(1000);
+    expect(f.revenue).toBe(5000);
+    expect(f.grossProfit).toBe(2500);
+    expect(f.researchAndDevelopment).toBe(400);
+    expect(f.cash).toBe(3000);
+    expect(f.debt).toBe(1000);
+    expect(f.equity).toBe(9000);
+    expect(f.revenueGrowth).toBeCloseTo((5000 / 2000) ** (1 / 3) - 1, 6);
+  });
+  it('does not overwrite a US GAAP tag the filer has itself', () => {
+    const both: CompanyFacts = { facts: { 'us-gaap': { NetIncomeLoss: { units: { USD: [{ start: '2025-01-01', end: '2025-12-31', val: 7, form: '20-F', filed: '2026-03-01' }] } } }, 'ifrs-full': foreignFacts.facts!['ifrs-full'] } };
+    expect(withIfrsAliases(both).facts!['us-gaap'].NetIncomeLoss.units!.USD[0].val).toBe(7);
+  });
+  it('converts every money field to dollars and leaves ratios and counts alone', () => {
+    const f = toUsd({ ...extractFundamentals(foreignFacts, today)!, shares: 50 }, 10);
+    expect(f.currency).toBe('USD');
+    expect(f.netIncome).toBe(100);
+    expect(f.cash).toBe(300);
+    expect(f.debt).toBe(100);
+    expect(f.shares).toBe(50);
+  });
+  it('treats a filer whose last annual report is too old as stale, a foreign one later than a US one', () => {
+    expect(extractFundamentals(foreignFacts, new Date('2028-08-01'))).toBeNull();
+    // About 22 months after the year end: stale for a 10-K filer, still allowed for a 20-F filer.
+    expect(extractFundamentals(foreignFacts, new Date('2028-04-20'))).not.toBeNull();
+    expect(extractFundamentals(facts, new Date('2028-10-30'))).toBeNull();
+  });
+  it('prefers US dollars when the filer gives them for the newest year too', () => {
+    const both: CompanyFacts = { facts: { ...foreignFacts.facts, 'ifrs-full': { ...foreignFacts.facts!['ifrs-full'], ProfitLossAttributableToOwnersOfParent: { units: { TWD: [ifrsYear('2026-06-30', 1000)], USD: [ifrsYear('2026-06-30', 31, 'USD')] } } } } };
+    const f = extractFundamentals(both, new Date('2026-11-01'))!;
+    expect(f.currency).toBe('USD');
+    expect(f.netIncome).toBe(31);
   });
 });

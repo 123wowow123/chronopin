@@ -23,6 +23,24 @@ Job pins and edits must reach production (www.chronopin.com), not only local.
   **both environments**, then verify readbacks and pending queues.
 - This covers content maintenance only. **Production deployment is a separate explicit request.**
 
+## Always complete the whole run (owner, 2026-11-01)
+
+A news run is not done until every task `begin_job` returns has been worked. Never close it after only
+sentiment and a sample. All of these are mandatory every run:
+
+- **Revisits:** research every queued item from opened pages and fix or resolve it (queue only a specific evidence gap).
+- **Event info:** drain the whole `pending_event_info` queue, batch after batch, until `remaining` is 0
+  (or the run limits in `begin_job` are hit; then say how many remain and why).
+- **Every other task in the list** (weekReview, freshSources, pinAds, holidayAds, adTranslations, personTrades,
+  traderPositions, threadPredicted, productLifecycle, productCompetitors, factoryProfiles, breakingNews,
+  predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,
+  modelRubrics, horoscopes, industryForecasts, sentiment).
+- **Housekeeping:** create/update pins as the tasks require, write the `docs/okf/scraping/news-YYYY-MM-DD-{am,pm}.md`
+  run note and pass `npx vitest run src/lib/okfLint.test.ts` before `finish_job`.
+
+If a task truly cannot be done (API failure, run limit, session limit), name that task and the reason in the
+`finish_job` report. "Ran out of time" or "too large" is not an acceptable skip; keep working.
+
 ## Procedure
 
 1. Work the revisit queue first. For each item, research from opened pages (not search snippets).
