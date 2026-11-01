@@ -363,7 +363,7 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     const negated = written.startsWith('-');
     const unsigned = written.replace(/^-/, '');
     const field = (AXIS_ALIASES[unsigned] ?? unsigned) as TermField;
-    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length), ...(negated ? { negated } : {}) });
+    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length).replace(/^(['"]?)(-?[^:'"]+):/, (_, quote: string, name: string) => `${quote}${name.toLowerCase()}:`), ...(negated ? { negated } : {}) });
     from = match.index + match[0].length;
   }
   addText(normalized.slice(from));

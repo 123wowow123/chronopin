@@ -168,6 +168,8 @@ export function TasteRadar({
           return <line key={axis.key} x1={CX} y1={CY} x2={x} y2={y} className="stroke-raised-2" strokeWidth={1} />;
         })}
         <polygon points={fmt(axes.map((_, i) => point(i, radiusOf(i))))} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
+        {/* A null score sits on the centre, so the shape is drawn from the centre. */}
+        <circle cx={CX} cy={CY} r={4} fill="#f59e0b" className="stroke-panel pointer-events-none" strokeWidth={1.5} />
         {/* The whole spoke is a hover target, drawn under the vertices: a score
             of 0 puts a vertex on the centre, where several share one point and
             the last drawn would win, so each axis stays reachable along its

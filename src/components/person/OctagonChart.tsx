@@ -147,22 +147,22 @@ export function OctagonChart({ phases, refs }: { phases: PersonPhase[]; refs: Re
             {/* The diffusion: each shape's colour, blurred, spreading past its edge. */}
             <g style={{ mixBlendMode: 'screen' }} filter={`url(#${uid}-glow)`} aria-hidden>
               {shown.map(({ phase, color }) => {
-                const scored = octagonPoints(phase.axes, SIZE, RADIUS).filter((p) => p.score != null);
-                return scored.length >= 3 ? (
-                  <polygon key={phase.label} points={scored.map((p) => `${p.x},${p.y}`).join(' ')} fill={color} fillOpacity={overlap ? 0.5 : 0.6} />
+                // Unscored axes sit on the centre, so the shape is drawn from the centre.
+                const all = octagonPoints(phase.axes, SIZE, RADIUS);
+                return all.some((p) => p.score != null) ? (
+                  <polygon key={phase.label} points={all.map((p) => `${p.x},${p.y}`).join(' ')} fill={color} fillOpacity={overlap ? 0.5 : 0.6} />
                 ) : null;
               })}
             </g>
             <g style={{ mixBlendMode: 'screen' }}>
               {shown.map(({ phase, color }) => {
-                const scored = octagonPoints(phase.axes, SIZE, RADIUS).filter((p) => p.score != null);
-                const path = scored.map((p) => `${p.x},${p.y}`).join(' ');
+                const all = octagonPoints(phase.axes, SIZE, RADIUS);
+                const path = all.map((p) => `${p.x},${p.y}`).join(' ');
                 return (
                   <g key={phase.label}>
-                    {scored.length >= 3 ? (
+                    {all.some((p) => p.score != null) ? (
                       <polygon points={path} fill={`url(#${uid}-${phases.indexOf(phase)})`} stroke={color} strokeWidth={1.75} strokeLinejoin="round" />
                     ) : null}
-                    {scored.length === 2 ? <polyline points={path} fill="none" stroke={color} strokeWidth={2} /> : null}
                   </g>
                 );
               })}

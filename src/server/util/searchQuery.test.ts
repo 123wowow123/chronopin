@@ -9,7 +9,7 @@ describe('splitSearchQuery', () => {
       { kind: 'text', raw: ' ' },
       { kind: 'term', field: 'user', value: '@ThePinGang', raw: '@ThePinGang' },
       { kind: 'text', raw: ' ' },
-      { kind: 'term', field: 'category', value: 'software', raw: 'Category:software' },
+      { kind: 'term', field: 'category', value: 'software', raw: 'category:software' },
       { kind: 'text', raw: ' trailer' },
     ]);
   });
@@ -462,5 +462,13 @@ describe('AND between tags', () => {
     const q = parseSearchQuery('tag:A AND tag:B OR tag:C');
     expect(q.alternatives?.[0].tags).toEqual(['A', 'B']);
     expect(q.alternatives?.[1].tags).toEqual(['C']);
+  });
+});
+
+describe('directive case', () => {
+  it('writes a term\'s directive in lowercase and keeps its value as typed', () => {
+    const parts = splitSearchQuery('TAG:Anime -Tag:"Foo Bar" "Company:Apple" Place:Tokyo hello');
+    expect(parts.filter((p) => p.kind === 'term').map((p) => p.raw)).toEqual(['tag:Anime', '-tag:"Foo Bar"', '"company:Apple"', 'place:Tokyo']);
+    expect(parseSearchQuery('TAG:Anime').tags).toEqual(['Anime']);
   });
 });
