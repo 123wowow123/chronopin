@@ -477,12 +477,12 @@ https://www.chronopin.com/pin/20607/m6-4-earthquake-strikes-southeast-of-easter-
 
 
 
-creat this graph dynamically for each person's holdings
+creat this 'The All-Map' graph dynamically for each person's holdings
 https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the?utm_source=post-email-title&publication_id=6819723&post_id=219082855&utm_campaign=email-post-title&isFreemail=false&r=3eoc7b&triedRedirect=true&utm_medium=email
 
 
 
-restaurant pins should hve food image with captions of what they are on pin
+restaurant pins should have food image with captions of what they are on pin
 
 
 the restaurant landing page pins should have reviews on their menu items tiles shown as a icon

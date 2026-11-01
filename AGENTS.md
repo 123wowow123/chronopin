@@ -45,4 +45,4 @@ Owner instruction, 2026-10-30: in pin research, creation and editing sessions (d
 
 ## Project skills
 
-Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.
+Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.
