@@ -286,6 +286,10 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
             </div>
           ) : null}
 
+          <Suspense fallback={null}>
+            <Thread pin={pin} />
+          </Suspense>
+
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
@@ -329,10 +333,6 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
 
           <Suspense fallback={null}>
             <Duplicates pin={pin} />
-          </Suspense>
-
-          <Suspense fallback={null}>
-            <Thread pin={pin} />
           </Suspense>
 
           {isReviewable(pin.categories) ? <PinReviews pinId={pin.id} /> : null}
