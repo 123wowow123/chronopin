@@ -41,6 +41,24 @@ sentiment and a sample. All of these are mandatory every run:
 If a task truly cannot be done (API failure, run limit, session limit), name that task and the reason in the
 `finish_job` report. "Ran out of time" or "too large" is not an acceptable skip; keep working.
 
+### Split across sessions (owner, 2026-11-01)
+
+One session cannot do all 24 tasks at full depth, so a news run is worked in lanes, one lane per session,
+until every lane is done for that 06:00 / 18:00 slot. Lanes:
+
+1. **Maintenance:** revisits (every mark, including AI-model rubric/review marks), weekReview, freshSources.
+2. **Event info:** drain `pending_event_info` to 0, batch after batch.
+3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, earthquakes,
+   stormTracks, layoffs, hiringJobCreation.
+4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, sentiment.
+5. **Ads and products:** pinAds, holidayAds, adTranslations, personTrades, traderPositions, productLifecycle,
+   productCompetitors, factoryProfiles.
+
+Each session names its lane in the run note (`news-YYYY-MM-DD-{am,pm}.md`, one section per lane) and lists the
+lanes still open at the top, so the next session starts there. Do not start a new run for a lane; add to the
+slot's note. Only one run may be open at a time, and a run left open past 3 hours is cut off, so close the run
+at the end of each lane and open the next with `npm run jobs:run -- --job news --prepare`.
+
 ## Procedure
 
 1. Work the revisit queue first. For each item, research from opened pages (not search snippets).
