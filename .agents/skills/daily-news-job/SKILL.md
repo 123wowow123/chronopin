@@ -59,8 +59,7 @@ until every lane is done for that 06:00 / 18:00 slot. Lanes:
 
 Each session names its lane in the run note (`news-YYYY-MM-DD-{am,pm}.md`, one section per lane) and lists the
 lanes still open at the top, so the next session starts there. Do not start a new run for a lane; add to the
-slot's note. Only one run may be open at a time, and a run left open past 3 hours is cut off, so close the run
-at the end of each lane and open the next with `npm run jobs:run -- --job news --prepare`.
+slot's note. Only one run may be open at a time and a run left open past 3 hours is cut off. Prefer working the lanes inside one open run (no MCP reconnect needed, because the tools are bound to the run); only when the run nears 3 hours close it and open the next with `npm run jobs:run -- --job news --prepare`, then reconnect `chronopin` in the MCP panel.
 
 ## Procedure
 

@@ -10165,7 +10165,7 @@
         "bars": [
           {
             "label": "MiMo-V2.5 Pro",
-            "value": 19.0
+            "value": 19
           },
           {
             "label": "MiMo-V2.6 Flash",
@@ -11751,6 +11751,111 @@
           }
         ],
         "note": "Resolved %, maximum reasoning effort. Same maker table: mini-SWE harness, 1M context, temperature1.0/top_p0.95. Vendor-reported; not an independent comparison."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://wccftech.com/tesla-ai5-ai-chip-tape-out-elon-musk-shares-first-pictures-confirms-ai6-dojo3-in-work/",
+    "charts": [
+      {
+        "title": "Tesla's stated AI5 gains over AI4",
+        "unit": "× AI4 (AI4 = 1)",
+        "note": "Musk's earlier comparison as reported by Wccftech (40x overall, 8x raw compute, 9x memory); Tesla has not published a full AI5 datasheet.",
+        "sourceUrl": "https://wccftech.com/tesla-ai5-ai-chip-tape-out-elon-musk-shares-first-pictures-confirms-ai6-dojo3-in-work/",
+        "bars": [
+          {
+            "label": "AI4 baseline",
+            "value": 1
+          },
+          {
+            "label": "AI5 raw compute",
+            "value": 8,
+            "highlight": true
+          },
+          {
+            "label": "AI5 memory",
+            "value": 9,
+            "highlight": true
+          },
+          {
+            "label": "AI5 overall performance",
+            "value": 40,
+            "highlight": true
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "title": "Tesla self-driving computers by generation",
+        "columns": [
+          "Generation",
+          "Launch",
+          "Maker / node",
+          "Compute",
+          "Memory",
+          "Basis"
+        ],
+        "rows": [
+          [
+            "HW3 (FSD Computer)",
+            "Apr 2019",
+            "Samsung 14nm",
+            "144 TOPS per computer (72 per chip)",
+            "LPDDR4, 68 GB/s peak",
+            "Tesla claim (Autonomy Day)"
+          ],
+          [
+            "AI4 (HW4)",
+            "Early 2023",
+            "Samsung; node not confirmed",
+            "50 TOPS in one table; ~500 TOPS in another; unpublished",
+            "16 GB per SoC (32 GB total)",
+            "Estimates; sources disagree"
+          ],
+          [
+            "AI5 (HW5)",
+            "Vehicles expected late 2027",
+            "TSMC and Samsung (2nm reported for Samsung)",
+            "~2,000-2,500 TOPS target; 8x AI4 compute (Musk)",
+            "~144 GB per chip reported; 9x AI4 (Musk)",
+            "Targets and reports, not a datasheet"
+          ]
+        ],
+        "note": "TOPS are not like-for-like across generations: precision and per-chip vs per-computer counting differ, which is why only the multiples are charted.",
+        "sourceUrl": "https://www.notateslaapp.com/news/3521/how-teslas-fsd-hardware-has-changed-over-years"
+      },
+      {
+        "title": "AI5 production status",
+        "columns": [
+          "Item",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Design tape-out",
+            "Announced by Musk, Apr 15, 2026",
+            "Wccftech"
+          ],
+          [
+            "Samsung version",
+            "Tape-out confirmed by a Samsung Foundry engineer, 2nm, Taylor TX (reported Jul 12, 2026)",
+            "Drive Tesla Canada"
+          ],
+          [
+            "Volume production",
+            "Still expected in 2027",
+            "Drive Tesla Canada"
+          ],
+          [
+            "First uses",
+            "Optimus and AI clusters; cars late 2027",
+            "Drive Tesla Canada / Not a Tesla App"
+          ]
+        ],
+        "note": "Process node is disputed: some reports say 3nm for both foundries.",
+        "sourceUrl": "https://driveteslacanada.ca/?p=118925"
       }
     ]
   }

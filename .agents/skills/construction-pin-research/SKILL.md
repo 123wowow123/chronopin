@@ -197,3 +197,23 @@ Owner instruction (2026-10-30): research and add available project GeoJSON along
   (`pdfdetach -list`, then extract the relevant application) before concluding site coordinates are unpublished.
   Distinguish a published general facility point from surveyed building footprints.
 See `docs/okf/scraping/routes.md` and `scripts/power/siteShapes.ts` for existing importers and shape kinds.
+
+## 8. AI cluster / supercomputer pins from a press reveal (2026-11-01, Tesla Cortex 20697/20698)
+A "show me the supercluster" request is a construction pin, not a news item: it needs the status tag, a dated project
+timeline, 3+ media, reaction excerpts and a map point (sections 2, 4 and 6), and each successive cluster is its own pin
+threaded under the first (`parentId`; Cortex 2 = 20698 under 20697). The first draft of 20697 skipped all of that and
+had to be repaired, so do it in one pass.
+- **Source choice:** a vendor/accessory-shop blog is not a source (the handed basenor URL was only an example; Ian asked
+  for a better one). Date the pin to the event the best independent or primary source reports, and put Tesla's own deck
+  (`assets-ir.tesla.com`) first for a later stage.
+- **Workflow:** `create_pin` posts to **production**. Write the draft to `.tmp/dc-timeline/<id>.json`, then run
+  `scripts/construction/data-center-timelines-2026-10-31.mjs --base https://www.chronopin.com --only <ids> --drop-unverified`
+  (dry run first, then `--apply`). It re-checks every quote, sets status tag, factory profile, milestones and reaction
+  excerpts. The default base is local and skips with "identity mismatch" for prod-only pins.
+- **Reaction excerpts** for a corporate cluster come from trade press and analyst notes; name the outlet in the title and
+  mark fan sites (Tesla Oracle) as such. Score tone honestly (a "less than 3% built" note is slightly negative).
+- **Quote checks:** use `python3 -I .tmp/check_quote.py <url> "<quote>"` with a function, not an unquoted variable (zsh
+  does not word-split). A PDF table row that wraps across lines fails; quote the press page that restates it instead.
+  Cloudflare-fronted pages (DatacenterDynamics) cannot be read, so do not cite them.
+- **Cost:** Tesla publishes none per cluster. Leave `price` null and say why; company-wide capex or hardware spend is a
+  larger scope, not the pin's price. No GeoJSON was sought for Cortex; record that as a gap.
