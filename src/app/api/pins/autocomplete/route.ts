@@ -44,13 +44,19 @@ export const GET = route(async (request: NextRequest) => {
   // (misconduct:>3) as a filter on the people themselves; a person: term
   // supplies the name too.
   const typed = parseSearchQuery(q);
+  // A directive being typed (Tag:, tag:ani, company:"Ap") asks for that
+  // field's values, in any case: they are looked up by what follows the colon.
+  const directive = /^-?(tag|category|company|user):["']?(.*?)["']?$/i.exec(q.trim());
+  const field = directive?.[1].toLowerCase();
+  const wanted = directive ? directive[2] : q;
+  const forTags = !field || field === 'tag' || field === 'category';
   const personName = [...typed.people, typed.text].join(' ').trim();
   const [pins, tags, named, companies, users, people] = await Promise.all([
     SearchPins.querySearchPin(q, q, 10),
-    PinTag.suggest(q, 6),
-    categoriesNamed(q).then((names) => PinTag.counted(names)),
-    Company.suggest(q, 4),
-    Users.suggest(q, 4),
+    forTags ? PinTag.suggest(wanted, 6) : [],
+    forTags ? categoriesNamed(wanted).then((names) => PinTag.counted(names)) : [],
+    !field || field === 'company' ? Company.suggest(wanted, field ? 8 : 4) : [],
+    !field || field === 'user' ? Users.suggest(wanted, field ? 8 : 4) : [],
     Person.suggest(personName, typed.personAxes, 5),
   ]);
   const zone = requestTimeZone(request);
@@ -58,7 +64,7 @@ export const GET = route(async (request: NextRequest) => {
   const holidays = suggestHolidays(q, locale, dayKeyIn(new Date(), zone), 4, zone);
   const body = toJson<{ pins: PinJson[]; queryCount: number }>(pins);
   await localizePins(body.pins, locale);
-  const reserved: TagCount[] = reservedSuggestions(q).map((filter) => ({ name: filter.name, kind: 'reserved', count: 0 }));
+  const reserved: TagCount[] = reservedSuggestions(wanted).map((filter) => ({ name: filter.name, kind: 'reserved', count: 0 }));
   const seen = new Set(tags.map((tag) => tag.name.toLowerCase()));
   const translated = named.filter((tag) => !seen.has(tag.name.toLowerCase())).slice(0, 6);
   return json({ ...body, tags: [...reserved, ...translated, ...tags].slice(0, reserved.length + 6), companies, users, people, holidays });
