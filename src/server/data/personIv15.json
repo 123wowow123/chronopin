@@ -1,0 +1,128 @@
+{
+  "checkedAt": "2026-10-31",
+  "definition": "IV15 is the stock price that would give a 15% annualized return 15 or more years out, from the analyst's own conservative owners'-earnings forecast. P/IV15 is the price divided by it. Tiers are the analyst's AI Competitive Threat (AICT) classes. Defined in https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+  "people": [
+    {
+      "name": "Michael Burry",
+      "points": [
+        {
+          "symbol": "BBW",
+          "name": "Build-A-Bear Workshop",
+          "tier": "Castle",
+          "price": 25,
+          "iv15Low": 23,
+          "iv15High": 32,
+          "score": null,
+          "held": true,
+          "asOf": "2026-10-29",
+          "sourceUrl": "https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the",
+          "note": "Rated low Castle, perhaps high Chapel; a full 6% position in the low-mid $20s."
+        },
+        {
+          "symbol": "PAYC",
+          "name": "Paycom Software",
+          "tier": "Stone",
+          "price": 134.9,
+          "iv15Low": 91.38,
+          "iv15High": null,
+          "score": 58.0,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": null
+        },
+        {
+          "symbol": "FRSH",
+          "name": "Freshworks",
+          "tier": "Chapel",
+          "price": 8.2,
+          "iv15Low": 5.65,
+          "iv15High": null,
+          "score": 55.8,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": null
+        },
+        {
+          "symbol": "HUBS",
+          "name": "HubSpot",
+          "tier": "Stone",
+          "price": 179,
+          "iv15Low": 39.94,
+          "iv15High": null,
+          "score": 15.9,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": null
+        },
+        {
+          "symbol": "PCTY",
+          "name": "Paylocity",
+          "tier": "Chapel",
+          "price": 104.33,
+          "iv15Low": 29.47,
+          "iv15High": null,
+          "score": 42.3,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": null
+        },
+        {
+          "symbol": "MNDY",
+          "name": "monday.com",
+          "tier": "Stone",
+          "price": 71.99,
+          "iv15Low": 55.21,
+          "iv15High": null,
+          "score": 34.4,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": "The post's header prints 1.23x; its price and IV15 give 1.30x, which its body text also states."
+        },
+        {
+          "symbol": "CRM",
+          "name": "Salesforce",
+          "tier": "Chapel",
+          "price": 165.84,
+          "iv15Low": 69.81,
+          "iv15High": null,
+          "score": 45.0,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": null
+        },
+        {
+          "symbol": "NOW",
+          "name": "ServiceNow",
+          "tier": "Chapel",
+          "price": 93.59,
+          "iv15Low": 43.56,
+          "iv15High": null,
+          "score": 32.2,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": "Printed as 2.00x, but its price and IV15 give 2.15x; plotted from the price and IV15 (price is post-split)."
+        },
+        {
+          "symbol": "WDAY",
+          "name": "Workday",
+          "tier": "Stone",
+          "price": 116.5,
+          "iv15Low": 21.37,
+          "iv15High": null,
+          "score": 11.3,
+          "held": false,
+          "asOf": "2026-05-15",
+          "sourceUrl": "https://michaeljburry.substack.com/p/dai-of-the-triffids-office-software",
+          "note": "The ranking header misprints the ratio as 5..45x; the text's price and IV15 give 5.45x."
+        }
+      ]
+    }
+  ]
+}

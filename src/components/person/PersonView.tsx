@@ -50,6 +50,8 @@ import type { CampaignCycle } from '@/lib/campaigns';
 import type { PersonDistrictJson } from '@/lib/personDistrict';
 import { DistrictSection } from '@/components/person/DistrictSection';
 import { HoldingsSection } from '@/components/person/HoldingsSection';
+import { hasValuationMaps } from '@/server/valuationMaps';
+import { PremiumMaps } from '@/components/person/PremiumMaps';
 import type { HoldingsSnapshot } from '@/lib/holdings';
 
 const PILL = 'inline-flex items-center rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-ink ring-1 ring-inset ring-line';
@@ -329,6 +331,7 @@ export function PersonView({
         ) : null}
 
         <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="personal" />
+        {hasValuationMaps(holdings, profile.name) ? <PremiumMaps slug={topicSlug(profile.name)} name={profile.name} /> : null}
         <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} />
         {premiumMoves ? <PremiumTrades slug={topicSlug(profile.name)} name={profile.name} count={premiumMoves} /> : null}
         {holdings.some(p => p.scope !== 'personal') ? <HoldingsSection portfolios={holdings} today={todayKey} t={t} view="related" /> : null}
