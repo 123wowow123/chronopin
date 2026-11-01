@@ -41,8 +41,10 @@ async function pageText(url) {
   pages.set(url, norm(all)); return pages.get(url);
 }
 async function verify(s, where) {
-  if (s?.url?.startsWith('http://')) s.url = s.url.replace('http://', 'https://');
-  if (!s?.url?.startsWith('https://')) throw Error(`${where}: source needs an https url`);
+  // --http-host camdenredevelopment.org: a source host that only serves plain http keeps its http URL (page opened and quote checked verbatim).
+  const httpHost = val('--http-host');
+  if (s?.url?.startsWith('http://') && !(httpHost && new URL(s.url).host === httpHost)) s.url = s.url.replace('http://', 'https://');
+  if (!s?.url?.startsWith('https://') && !s?.url?.startsWith('http://')) throw Error(`${where}: source needs an https url`);
   const t = await pageText(s.url);
   for (const p of s.quote.split(/\.\.\.|…/).map((x) => norm(x).replace(/^[,. ]+|[,. ]+$/g, ''))) if (!t.includes(p)) throw Error(`${where}: quote not found on ${s.url}: ${p.slice(0, 70)}`);
   if (s.quote.length > 300) throw Error(`${where}: quote over 300 chars`);

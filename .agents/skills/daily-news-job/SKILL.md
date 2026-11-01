@@ -88,6 +88,18 @@ run limits. State the reason. **Never queue because of an allowlist mismatch alo
 
 - Owner instruction (2026-10-30): leave pin translations to the translation agent unless explicitly requested in this conversation. Do not run `sync_translations.py`, `/api/admin/translations` or hand pin translations as part of research/editing; report the handoff.
 
+- Citations in `longFormSummary` are `<cite data-ref="URL"></cite>` tags (rendered as numbered references), never
+  `<a href>` links labelled with the site name ("Wccftech") and never literal `[1]` text. When you touch a pin whose
+  summary has site-name links, convert them (same URL, put the tag after the sentence's period, one tag per source).
+  The URL must match one of the pin's references (owner, 2026-11-01, pin 20696); if an anchor's URL is not a
+  reference yet, add it as one (`addReferences`) and cite it. Unwrap `(<a>…</a>)` parentheses too. Labelled
+  non-citation links (data tables, "Source and gallery", application pages, "See the snack guide") are deliberate
+  and stay. To find leftovers: `GET /api/admin/db/Pin?longFormSummary.like=%<a href%` on prod.
+- Media: a pin made from article sources carries the images those pages offer (og:image plus body images of each
+  cited page, deduped), not just one. Add them with `update_pin` `addMedia` `[{type: 1, originalUrl}]`, skip logos,
+  avatars and unrelated sidebar thumbnails, use the full-size file rather than a `-232x232` crop, and when a source
+  blocks fetching (VentureBeat 429) take images from the other cited sources. See `pin-media-azure`.
+- Fixing one pin of a thread means checking the whole thread (follow `parentId` up and down) for the same defect.
 - Keep scraping docs current after every run (living docs).
 - Posting load: gate on the homepage response time and pause between posts; see the `posting-pins-to-prod` memory note.
 - Do not delete token files after use; other sessions reuse them.
