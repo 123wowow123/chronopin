@@ -178,7 +178,14 @@ export async function importTrades({
   }
 
   if (senate) {
-    for (const f of await fetchSenateFilings(days, { skip: skipStored ? (id) => PersonTrade.has('senate', id) : undefined })) {
+    // One source failing must not lose the others: report it and carry on.
+    let senateFilings: Awaited<ReturnType<typeof fetchSenateFilings>> = [];
+    try {
+      senateFilings = await fetchSenateFilings(days, { skip: skipStored ? (id) => PersonTrade.has('senate', id) : undefined });
+    } catch (err) {
+      result.failed.push(`Senate eFD: ${(err as Error).message.split('\n')[0]}`);
+    }
+    for (const f of senateFilings) {
       const person = matchSenator(people, f.first, f.last);
       if (!person) {
         unmatched.add(`${f.first} ${f.last}`);

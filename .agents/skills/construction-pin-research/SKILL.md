@@ -217,3 +217,20 @@ had to be repaired, so do it in one pass.
   Cloudflare-fronted pages (DatacenterDynamics) cannot be read, so do not cite them.
 - **Cost:** Tesla publishes none per cluster. Leave `price` null and say why; company-wide capex or hardware spend is a
   larger scope, not the pin's price. No GeoJSON was sought for Cortex; record that as a gap.
+- **Specs a data-center pin must carry (gap found 2026-11-01, Cortex 2 pin 20698; Ian asked for MW and water):**
+  - **MW:** one `capacity` metric plus `capacityPoints` (`kind: "it"`, 2+ dated points so the "Capacity over time" graph
+    draws) from the operator's own deck. Tesla lists MW of compute per cluster in its quarterly update
+    (`assets-ir.tesla.com/tesla-contents/IR/TSLA-Q<n>-2026-Update.pdf`, "Supporting Infrastructure": Cortex 1 >90 MW then
+    >105 MW, Cortex 2 >115 MW then >120 MW). Compute MW is not the grid connection; a 2024 plan (130 MW to 500 MW) is a
+    plan, and a social-post permit reading (200 MW) is not a source. Q1 2026 gave H100-equivalents, not MW, so do not mix.
+  - **Cooling and water:** a "Cooling and water" section in `longFormSummary` even when the answer is "no figure
+    published". Cite the cooling design, any operator water statement, and whole-site utility data (KUT: Giga Texas 556M
+    gallons in 2025) labelled as site-wide. There is no water metric key (`FACTORY_METRIC_KEYS` in `src/lib/pinFactory.ts`);
+    adding one is a code change (model, page, every `messages/*.ts` locale).
+  - **Status:** use the operator's own status word. Tesla's "Production" means Completed here, even while it keeps ramping;
+    drop the stale `Under Construction` tag (`DELETE /api/admin/db/PinTag?id=`) and re-run the script with an updated draft.
+  - **Quote checks on investor decks:** SEC pages reject the script's plain curl, so quote the operator's PDF instead. The
+    script reads PDFs with `pdftotext -layout`, where a table row interleaves with the neighbouring column: quote only
+    the row (`Cortex 2 >120 MW Production`) and split a wrapped sentence with `...`.
+- **Rule for this skill:** whenever a request exposes something a pin of this kind should have carried (a spec, a field, a
+  source type, a script trap), add it here in the same session, as the bullets above do. Ian asked for this on 2026-11-01.

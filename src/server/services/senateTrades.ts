@@ -83,7 +83,10 @@ export async function fetchSenateFilings(days: number, { skip }: { skip?: (filin
       start: String(offset), length: '100', report_types: '[11]', filer_types: '[]', submitted_start_date: start, submitted_end_date: '',
       candidate_state: '', senator_state: '', office_id: '', first_name: '', last_name: '', csrfmiddlewaretoken: csrf,
     }).toString();
-    const res = JSON.parse(curl(['-e', 'https://efdsearch.senate.gov/search/', '-H', `X-CSRFToken: ${csrf}`, '-d', body, 'https://efdsearch.senate.gov/search/report/data/']));
+    const raw = curl(['-e', 'https://efdsearch.senate.gov/search/', '-H', `X-CSRFToken: ${csrf}`, '-d', body, 'https://efdsearch.senate.gov/search/report/data/']);
+    // The site sits behind a bot filter that can answer "Access Denied" HTML instead of JSON. That is a block, not a bug to route around.
+    if (!raw.trimStart().startsWith('{')) throw new Error(/access denied/i.test(raw) ? 'Senate eFD refused this client (Access Denied from its bot filter); Senate filings are skipped until it allows automated reads' : 'Senate eFD answered something other than JSON');
+    const res = JSON.parse(raw);
     rows.push(...res.data);
     if (offset + 100 >= res.recordsFiltered) break;
   }

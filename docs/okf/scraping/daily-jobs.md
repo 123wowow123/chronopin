@@ -628,6 +628,7 @@ when the run writes to production (`JOBS_PROD_BASE`), sends the filings filed in
 last 21 days to `POST /api/admin/person-trades` as the admin. A filing is stored once
 (a unique line per trade) and a watcher is told once per filing, so the twice-daily run
 and the 21-day resend never double up.
+A source that fails does not stop the others: the Senate eFD site sits behind a bot filter and since 2026-11-01 answers "Access Denied" (403) to this client, which now lands in `failed` as "Senate eFD: ..." while House and executive filings still import. Do not spoof a browser to get past it; Senate filings stay skipped until the site allows automated reads (or the owner picks another source).
 **Does** check `unmatched` (members with no person page: add the page with
 `people:import`, then the next run picks their filings up) and `failed` (a PDF that did
 not read - open it; `parsePtrText` in `src/lib/trades.ts` may need a new layout case).
