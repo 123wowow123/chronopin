@@ -27,6 +27,11 @@ export async function awardsOfPin(pin: AwardedPin): Promise<AwardEntry[]> {
   if (isScreenCategory(pin.categories)) return awardsFor([pin.workTitle, pin.title]);
   const game = hasCategory(pin.categories, GAME_CATEGORIES);
   if (!game && !pin.productName?.trim()) return [];
+  // A song or chart-position pin names its song as the product, but Wikidata
+  // never matches it by title: findWorkAwards skips items described as a song,
+  // so only a homonym could pass (the town Sète for "SETE", a vocal track for
+  // "Dance Monkey"). Music has no award lookup of its own, so it gets none.
+  if (!game && hasCategory(pin.categories, ['Music'])) return [];
   const titles = [pin.productName, pin.workTitle, ...titleCandidates({ pinTitle: pin.title })].filter((t): t is string => !!t?.trim());
   return findWorkAwards({ titles: [...new Set(titles)], year: pin.year, game });
 }

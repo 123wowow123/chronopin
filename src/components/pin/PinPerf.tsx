@@ -1,3 +1,5 @@
+import { CitedText } from '@/components/pin/CitedText';
+import type { Evidence } from '@/lib/referenceConfidence';
 import type { Translator } from '@/lib/i18n/translate';
 import { formatPerfValue, type PerfChart, type PerfTable, type PinPerfJson } from '@/lib/pinPerf';
 
@@ -10,14 +12,14 @@ import { formatPerfValue, type PerfChart, type PerfTable, type PinPerfJson } fro
 // pin's own part wears the accent token, both redefined per theme in
 // globals.css. Bars start at zero and scale to the longest, so lengths are
 // honest. Every block names its source page.
-export function PinPerf({ perf, t, locale, className = '' }: { perf: PinPerfJson; t: Translator; locale: string; className?: string }) {
+export function PinPerf({ perf, t, locale, evidence = [], className = '' }: { perf: PinPerfJson; t: Translator; locale: string; evidence?: Evidence[]; className?: string }) {
   return (
     <section className={`flex flex-col gap-4 text-sm ${className}`} aria-label={t('pin.perf.heading')}>
       {perf.charts.map((chart) => (
         <Chart key={chart.title} chart={chart} t={t} locale={locale} />
       ))}
       {perf.tables.map((table) => (
-        <Table key={table.title} table={table} t={t} locale={locale} />
+        <Table key={table.title} table={table} t={t} locale={locale} evidence={evidence} />
       ))}
     </section>
   );
@@ -96,7 +98,7 @@ function Tiles({ table, t }: { table: PerfTable; t: Translator }) {
   );
 }
 
-function Table({ table: base, t, locale }: { table: PerfTable; t: Translator; locale: string }) {
+function Table({ table: base, t, locale, evidence }: { table: PerfTable; t: Translator; locale: string; evidence: Evidence[] }) {
   const table = { ...base, ...base.i18n?.[locale] };
   if (base.display === 'tiles' && table.columns.length === 3) return <Tiles table={table} t={t} />;
   return (
@@ -123,7 +125,7 @@ function Table({ table: base, t, locale }: { table: PerfTable; t: Translator; lo
                     </th>
                   ) : (
                     <td key={i} className="py-1 pe-2 text-end tabular-nums">
-                      {cell}
+                      <CitedText text={cell} evidence={evidence} label />
                     </td>
                   ),
                 )}

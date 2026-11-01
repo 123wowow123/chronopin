@@ -98,6 +98,10 @@ rivals, the award, the service center and a timeline that sources did cover.
   award page, the Clark County record cited by the outlet) and cite it first; the outlet is the second reference.
 - **Verify before saving**: every quote must be found in the fetched page text (curly apostrophes included).
   Table columns each need a heading (an empty first header is rejected with 400).
+- **Source cells become numbered links**: `PinPerf` renders each non-first table cell through `CitedText label`, so a
+  cell like "Wccftech" or "Drive Tesla Canada / Not a Tesla App" shows `[n]` links to the pin's References panel
+  (`#ref-n`). Matching is by site name (up to four words), so write the outlet's name as the site is known and
+  make sure the pin has that reference (`references`); a cell naming no reference stays plain text.
 - **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
   lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then
   `POST /api/admin/pins/expire`. Mirror to local by `sourceUrl` when the local app has the pin.

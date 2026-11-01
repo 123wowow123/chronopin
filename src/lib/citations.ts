@@ -78,8 +78,9 @@ const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // ("per macrumors.com") or its site name in words ("Gear Patrol's roundup",
 // "per Wikipedia"); "the source" names the source. Reasoning that names none
 // is read as coming from the source and cites it at the end - unless it rests
-// on the pin description, which is not a link.
-export function citeReasoning(text: string, ordered: Evidence[]): CitationSegment[] {
+// on the pin description, which is not a link. fallbackToSource false skips
+// both source assumptions, for a short label such as a table cell.
+export function citeReasoning(text: string, ordered: Evidence[], fallbackToSource = true): CitationSegment[] {
   const cites = new Map<number, Set<number>>(); // end offset -> reference numbers
   const cited = new Set<number>();
   const add = (end: number, n: number) => {
@@ -103,7 +104,7 @@ export function citeReasoning(text: string, ordered: Evidence[]): CitationSegmen
     if (site.name.length < 3) return;
     for (let i = 0; i < words.length; i++) {
       let joined = '';
-      for (let j = i; j < Math.min(i + 3, words.length); j++) {
+      for (let j = i; j < Math.min(i + 4, words.length); j++) {
         if (j > i && !/^[ -]$/.test(text.slice(words[j - 1].end, words[j].start))) break;
         joined += words[j].word;
         if (joined === site.name) {
@@ -117,7 +118,7 @@ export function citeReasoning(text: string, ordered: Evidence[]): CitationSegmen
   });
 
   const sourceNumber = ordered.findIndex((e) => e.isSource) + 1;
-  if (sourceNumber) {
+  if (sourceNumber && fallbackToSource) {
     const theSource = /\bthe source\b/i.exec(text);
     if (theSource) {
       add(theSource.index + theSource[0].length, sourceNumber);
