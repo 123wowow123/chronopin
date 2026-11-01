@@ -2801,11 +2801,11 @@
   },
   {
     "pinId": 440,
-    "sentiment": 0.3,
-    "textHash": "accc629e2920f7e71e1d2df61dc5f528cf57af92b8a9e04b25798dc75ca04ea0",
-    "utcScoredDateTime": "2026-09-23T04:28:35.367Z",
-    "product": "Seine-Nord Europe Canal",
-    "productHash": "accc629e2920f7e71e1d2df61dc5f528cf57af92b8a9e04b25798dc75ca04ea0"
+    "sentiment": -0.2,
+    "textHash": "ba36aba5c4305618bb2a3b28cf4778e5cbaba7053423dd9aa496be5a07f131b0",
+    "utcScoredDateTime": "2026-10-30T01:01:02.683Z",
+    "product": null,
+    "productHash": "ba36aba5c4305618bb2a3b28cf4778e5cbaba7053423dd9aa496be5a07f131b0"
   },
   {
     "pinId": 442,
@@ -3097,11 +3097,11 @@
   },
   {
     "pinId": 503,
-    "sentiment": -0.2,
-    "textHash": "140df73a16aaa8920ddc0995758686c9dc35315356c399699f776e99178f9b44",
-    "utcScoredDateTime": "2026-09-23T04:28:35.394Z",
-    "product": "Ryugyong Hotel",
-    "productHash": "140df73a16aaa8920ddc0995758686c9dc35315356c399699f776e99178f9b44"
+    "sentiment": 0,
+    "textHash": "1d3226231e8f0b2ac59052f69270803d1ac680fe67c34f42bdc569df185a9723",
+    "utcScoredDateTime": "2026-10-31T02:18:35.467Z",
+    "product": null,
+    "productHash": "1d3226231e8f0b2ac59052f69270803d1ac680fe67c34f42bdc569df185a9723"
   },
   {
     "pinId": 506,
@@ -3466,10 +3466,10 @@
   {
     "pinId": 590,
     "sentiment": 0.3,
-    "textHash": "9c0fecde29d61a73971e3ecc226e11520acd9d67525b057be0fcdaff307525b6",
-    "utcScoredDateTime": "2026-09-23T04:28:35.426Z",
-    "product": "Oosterweel Link",
-    "productHash": "9c0fecde29d61a73971e3ecc226e11520acd9d67525b057be0fcdaff307525b6"
+    "textHash": "ce108c080a1c9538a204db8a919d81bf59e1988c3d3adf1babd58e66ec32a339",
+    "utcScoredDateTime": "2026-10-30T01:01:04.737Z",
+    "product": null,
+    "productHash": "ce108c080a1c9538a204db8a919d81bf59e1988c3d3adf1babd58e66ec32a339"
   },
   {
     "pinId": 592,
@@ -14233,11 +14233,11 @@
   },
   {
     "pinId": 2212,
-    "sentiment": 0.5,
-    "textHash": "0898f85815ec0d84e6cdb7e7bfafd5611c7b5f0aa297a6fab3d1aa1dd2fd86aa",
-    "utcScoredDateTime": "2026-09-23T04:28:36.428Z",
-    "product": "Las Vegas Ballpark",
-    "productHash": "0898f85815ec0d84e6cdb7e7bfafd5611c7b5f0aa297a6fab3d1aa1dd2fd86aa"
+    "sentiment": 0.3,
+    "textHash": "6a46d11d95b466185ebcda95e95e574fdc9c085af5526b6d17d44376ea60472e",
+    "utcScoredDateTime": "2026-10-31T02:42:08.172Z",
+    "product": null,
+    "productHash": "6a46d11d95b466185ebcda95e95e574fdc9c085af5526b6d17d44376ea60472e"
   },
   {
     "pinId": 2214,
@@ -18882,10 +18882,10 @@
   {
     "pinId": 2960,
     "sentiment": 0.5,
-    "textHash": "f2b96e666b5cc2f8328d663debe3a0edc70f249fbc11da4a9eec861bc8f39168",
-    "utcScoredDateTime": "2026-09-23T13:36:57.748Z",
+    "textHash": "bc1ac87eb2dcbc2facfde6455fd0985a44e2e4e7068bcb634677e86363739e63",
+    "utcScoredDateTime": "2026-10-31T02:18:37.991Z",
     "product": null,
-    "productHash": "f2b96e666b5cc2f8328d663debe3a0edc70f249fbc11da4a9eec861bc8f39168"
+    "productHash": "bc1ac87eb2dcbc2facfde6455fd0985a44e2e4e7068bcb634677e86363739e63"
   },
   {
     "pinId": 2961,
@@ -22233,11 +22233,11 @@
   },
   {
     "pinId": 3395,
-    "sentiment": 0.6,
-    "textHash": "19383e414ab79da02221dc84346dc775d7227b2a064fca252b1e0c7886c44ea8",
-    "utcScoredDateTime": "2026-09-30T19:49:18.678Z",
+    "sentiment": 0,
+    "textHash": "68ad2a525ad1fb738f99e170c6ee9012d1566c3958bc19808e5f39da52e9dd79",
+    "utcScoredDateTime": "2026-10-31T02:18:40.444Z",
     "product": null,
-    "productHash": "19383e414ab79da02221dc84346dc775d7227b2a064fca252b1e0c7886c44ea8"
+    "productHash": "68ad2a525ad1fb738f99e170c6ee9012d1566c3958bc19808e5f39da52e9dd79"
   },
   {
     "pinId": 3396,
@@ -23353,11 +23353,11 @@
   },
   {
     "pinId": 3542,
-    "sentiment": 0.3,
-    "textHash": "37f5c83a29ffe6fce4a29bbb0e82320bef3ab981ae5b2c4a988655b97397e38c",
-    "utcScoredDateTime": "2026-09-30T19:50:04.950Z",
-    "product": "Agentforce",
-    "productHash": "37f5c83a29ffe6fce4a29bbb0e82320bef3ab981ae5b2c4a988655b97397e38c"
+    "sentiment": -0.5,
+    "textHash": "2e29c604ede7bb132631f4858c8cc71b228b0efe1d317d9f6f53d8d272ac150f",
+    "utcScoredDateTime": "2026-10-31T02:44:31.892Z",
+    "product": null,
+    "productHash": "2e29c604ede7bb132631f4858c8cc71b228b0efe1d317d9f6f53d8d272ac150f"
   },
   {
     "pinId": 3543,
@@ -34305,11 +34305,11 @@
   },
   {
     "pinId": 4940,
-    "sentiment": 0.4,
-    "textHash": "94eedad40d929585b23c72c69221f24f8f6b5f758c691414ee47a86730e1bab9",
-    "utcScoredDateTime": "2026-09-30T19:53:35.789Z",
+    "sentiment": 0,
+    "textHash": "d5e51f9e17fd85e9919c06095f43f8d8853c8498c8353c2d7a22b018f9117aa3",
+    "utcScoredDateTime": "2026-10-31T02:18:42.764Z",
     "product": null,
-    "productHash": "94eedad40d929585b23c72c69221f24f8f6b5f758c691414ee47a86730e1bab9"
+    "productHash": "d5e51f9e17fd85e9919c06095f43f8d8853c8498c8353c2d7a22b018f9117aa3"
   },
   {
     "pinId": 4941,
@@ -38657,11 +38657,11 @@
   },
   {
     "pinId": 5496,
-    "sentiment": 0.5,
-    "textHash": "4d890a1a83e865b64b2ad9fc6c92375985803f6ec0df571b4499fa79cbae99ea",
-    "utcScoredDateTime": "2026-10-03T22:15:54.477Z",
+    "sentiment": -0.5,
+    "textHash": "a028dcb98273574b92dd90ad65cc888a4f1b46d2189b8ea08eb107aec95b64b8",
+    "utcScoredDateTime": "2026-10-31T02:38:08.286Z",
     "product": "MotoGP",
-    "productHash": "4d890a1a83e865b64b2ad9fc6c92375985803f6ec0df571b4499fa79cbae99ea"
+    "productHash": "a028dcb98273574b92dd90ad65cc888a4f1b46d2189b8ea08eb107aec95b64b8"
   },
   {
     "pinId": 5497,
@@ -46089,11 +46089,11 @@
   },
   {
     "pinId": 6426,
-    "sentiment": 0.5,
-    "textHash": "884918e63f6586e1ffec92e9a5bfb8a3fcde8b7e3df8c0d4ab4b3ac77a2669e3",
-    "utcScoredDateTime": "2026-10-07T14:11:58.722Z",
+    "sentiment": 0.3,
+    "textHash": "17b568550dfebb15e22bac5170c603afbf902c61dcbd752314e62485eac41319",
+    "utcScoredDateTime": "2026-10-31T02:18:44.833Z",
     "product": null,
-    "productHash": "884918e63f6586e1ffec92e9a5bfb8a3fcde8b7e3df8c0d4ab4b3ac77a2669e3"
+    "productHash": "17b568550dfebb15e22bac5170c603afbf902c61dcbd752314e62485eac41319"
   },
   {
     "pinId": 6427,
@@ -52313,11 +52313,11 @@
   },
   {
     "pinId": 7204,
-    "sentiment": 0.15,
-    "textHash": "5ddc018c5967e2bec3c835c255085a7baa36a2c59a28e74604c25dbc4edbd45e",
-    "utcScoredDateTime": "2026-10-11T05:50:21.143Z",
+    "sentiment": -0.5,
+    "textHash": "6aa4c74d43014fb3004b08707d68dacedecf1e0a038e501f802b49fd7f161d96",
+    "utcScoredDateTime": "2026-10-31T23:33:26.154Z",
     "product": null,
-    "productHash": "5ddc018c5967e2bec3c835c255085a7baa36a2c59a28e74604c25dbc4edbd45e"
+    "productHash": "6aa4c74d43014fb3004b08707d68dacedecf1e0a038e501f802b49fd7f161d96"
   },
   {
     "pinId": 7205,
@@ -60217,11 +60217,11 @@
   },
   {
     "pinId": 15690,
-    "sentiment": 0.4,
-    "textHash": "68324b45a020426ea7f327b364af69c4975c5927f439953d17d417a2683c8fe8",
-    "utcScoredDateTime": "2026-10-17T04:37:59.904Z",
-    "product": "Atlas VIII",
-    "productHash": "68324b45a020426ea7f327b364af69c4975c5927f439953d17d417a2683c8fe8"
+    "sentiment": 0,
+    "textHash": "f048a9c3a1b049ddf730666d29742d3c9a8be136470e31bbf322c88c303ebfeb",
+    "utcScoredDateTime": "2026-10-31T02:18:47.798Z",
+    "product": null,
+    "productHash": "f048a9c3a1b049ddf730666d29742d3c9a8be136470e31bbf322c88c303ebfeb"
   },
   {
     "pinId": 15691,
@@ -60273,11 +60273,11 @@
   },
   {
     "pinId": 15697,
-    "sentiment": 0.3,
-    "textHash": "e52d346a3612e4a350d576ce236e16fe667610f2c4e0f633edafe822cc0c9c48",
-    "utcScoredDateTime": "2026-10-17T04:18:23.979Z",
-    "product": "Armadillo Solar",
-    "productHash": "e52d346a3612e4a350d576ce236e16fe667610f2c4e0f633edafe822cc0c9c48"
+    "sentiment": 0,
+    "textHash": "5a059285df043009a678ea7373431c06d277b9b1c7a30426a9c5ec3c91fe921d",
+    "utcScoredDateTime": "2026-10-31T02:18:49.948Z",
+    "product": null,
+    "productHash": "5a059285df043009a678ea7373431c06d277b9b1c7a30426a9c5ec3c91fe921d"
   },
   {
     "pinId": 15698,
@@ -60313,11 +60313,11 @@
   },
   {
     "pinId": 15702,
-    "sentiment": 0.4,
-    "textHash": "f0b735cbad73d6864c0129671cf687be1a26a8e8c98744193a51a30294fbf09e",
-    "utcScoredDateTime": "2026-10-17T04:41:35.778Z",
-    "product": "Atlas Energy Park",
-    "productHash": "f0b735cbad73d6864c0129671cf687be1a26a8e8c98744193a51a30294fbf09e"
+    "sentiment": 0.5,
+    "textHash": "c9b23f60d78cf86a3a80970c5564475f2ea5a6bf29535464d89685f9a3803368",
+    "utcScoredDateTime": "2026-10-31T02:18:52.004Z",
+    "product": null,
+    "productHash": "c9b23f60d78cf86a3a80970c5564475f2ea5a6bf29535464d89685f9a3803368"
   },
   {
     "pinId": 15703,
@@ -60434,18 +60434,18 @@
   {
     "pinId": 15717,
     "sentiment": 0,
-    "textHash": "ddce49a5e264c368e6b2c69949123e261aafe4ddfae1c4bd446eebb3ac2a2c77",
-    "utcScoredDateTime": "2026-10-17T05:05:32.025Z",
-    "product": "Accalia Point Solar",
-    "productHash": "ddce49a5e264c368e6b2c69949123e261aafe4ddfae1c4bd446eebb3ac2a2c77"
+    "textHash": "1f006f5675d6970bf4a2a6361ecf512f64dbc8ba4c3efaf04fa00ad383a9e531",
+    "utcScoredDateTime": "2026-10-31T02:18:54.174Z",
+    "product": null,
+    "productHash": "1f006f5675d6970bf4a2a6361ecf512f64dbc8ba4c3efaf04fa00ad383a9e531"
   },
   {
     "pinId": 15718,
-    "sentiment": 0.5,
-    "textHash": "5bd28669ed40b1a29078bb0c5479d3979a6ff73137aa74d0cde9c0dc3143f09f",
-    "utcScoredDateTime": "2026-10-17T05:14:28.246Z",
-    "product": "Fleming Solar Farm",
-    "productHash": "5bd28669ed40b1a29078bb0c5479d3979a6ff73137aa74d0cde9c0dc3143f09f"
+    "sentiment": 0,
+    "textHash": "d947a24150d08b0c2f8fa64b69b204216fc40a4f372b8012aba75579cf9c682d",
+    "utcScoredDateTime": "2026-10-31T02:18:56.288Z",
+    "product": null,
+    "productHash": "d947a24150d08b0c2f8fa64b69b204216fc40a4f372b8012aba75579cf9c682d"
   },
   {
     "pinId": 15719,
@@ -60473,27 +60473,27 @@
   },
   {
     "pinId": 15722,
-    "sentiment": 0.2,
-    "textHash": "456d4fbe14bf137b2a6e7f701f5c9c012dfa39db29621943188fb0d9d1378eba",
-    "utcScoredDateTime": "2026-10-17T05:28:30.952Z",
-    "product": "Alberta Solar",
-    "productHash": "456d4fbe14bf137b2a6e7f701f5c9c012dfa39db29621943188fb0d9d1378eba"
+    "sentiment": 0,
+    "textHash": "9a46e85263bb3fcda78339881fc16af7c9a9b356d6d86acaa06d5bc9ef6055e6",
+    "utcScoredDateTime": "2026-10-31T02:18:58.393Z",
+    "product": null,
+    "productHash": "9a46e85263bb3fcda78339881fc16af7c9a9b356d6d86acaa06d5bc9ef6055e6"
   },
   {
     "pinId": 15723,
-    "sentiment": 0.3,
-    "textHash": "4ed86bd6753480ac14af6137f48b8619edabefb5adcc8a873b2fc12315e59bc2",
-    "utcScoredDateTime": "2026-10-17T05:37:52.019Z",
-    "product": "Alfred Oaks Solar",
-    "productHash": "4ed86bd6753480ac14af6137f48b8619edabefb5adcc8a873b2fc12315e59bc2"
+    "sentiment": 0,
+    "textHash": "c9a3ff2393aabfdbd12a8eceeb64d06b094df3eb7b3c47840ffb90b961fbe096",
+    "utcScoredDateTime": "2026-10-31T02:19:00.480Z",
+    "product": null,
+    "productHash": "c9a3ff2393aabfdbd12a8eceeb64d06b094df3eb7b3c47840ffb90b961fbe096"
   },
   {
     "pinId": 15724,
-    "sentiment": 0.4,
-    "textHash": "06c59b1aad6917864db435f0ce4678262d5694c5ec4a2c4eca4cd1e8462858c7",
-    "utcScoredDateTime": "2026-10-17T05:46:30.690Z",
-    "product": "Alligator Creek Solar",
-    "productHash": "06c59b1aad6917864db435f0ce4678262d5694c5ec4a2c4eca4cd1e8462858c7"
+    "sentiment": 0,
+    "textHash": "a35b8fda2d1bf99bbe4938f3faa95c88a9e92cb07da79d235ce9e69b400e9d0e",
+    "utcScoredDateTime": "2026-10-31T02:19:02.595Z",
+    "product": null,
+    "productHash": "a35b8fda2d1bf99bbe4938f3faa95c88a9e92cb07da79d235ce9e69b400e9d0e"
   },
   {
     "pinId": 15725,
@@ -60505,11 +60505,11 @@
   },
   {
     "pinId": 15726,
-    "sentiment": 0.3,
-    "textHash": "58ab783139779cb9ca291de07637c892a0034e56f3e6d3600c5e33e1e77cf1d0",
-    "utcScoredDateTime": "2026-10-17T06:12:58.205Z",
-    "product": "American Kings Solar",
-    "productHash": "58ab783139779cb9ca291de07637c892a0034e56f3e6d3600c5e33e1e77cf1d0"
+    "sentiment": 0.5,
+    "textHash": "76122bf603c29355f5f560d6becbcc9394ef00cd7c90e721349fac6b5f6e897c",
+    "utcScoredDateTime": "2026-10-31T02:19:04.678Z",
+    "product": null,
+    "productHash": "76122bf603c29355f5f560d6becbcc9394ef00cd7c90e721349fac6b5f6e897c"
   },
   {
     "pinId": 15727,
@@ -60761,19 +60761,19 @@
   },
   {
     "pinId": 15758,
-    "sentiment": 0.4,
-    "textHash": "80f4ea721a14da548aee0eaf9e285bfc36fe6768a1b19e49500907b614e926ad",
-    "utcScoredDateTime": "2026-10-17T04:14:59.689Z",
-    "product": "Albemarle Beach Solar",
-    "productHash": "80f4ea721a14da548aee0eaf9e285bfc36fe6768a1b19e49500907b614e926ad"
+    "sentiment": 0.5,
+    "textHash": "8e98c8acbe0072935b7ff53db3ff5a482ded3643769c56a91fe3021806418cbc",
+    "utcScoredDateTime": "2026-10-31T02:19:06.798Z",
+    "product": null,
+    "productHash": "8e98c8acbe0072935b7ff53db3ff5a482ded3643769c56a91fe3021806418cbc"
   },
   {
     "pinId": 15759,
-    "sentiment": 0.2,
-    "textHash": "efb54fa28b8f14e6c11bff59f4a816e068dead8aa0191bb1e5745bf22ed78979",
-    "utcScoredDateTime": "2026-10-17T07:44:18.197Z",
-    "product": "Alina Energy",
-    "productHash": "efb54fa28b8f14e6c11bff59f4a816e068dead8aa0191bb1e5745bf22ed78979"
+    "sentiment": 0,
+    "textHash": "8ec27db8c53fc9ab53352f7f302ec9d10680b5939d0821cae0190f449b14ce8a",
+    "utcScoredDateTime": "2026-10-31T02:19:09.036Z",
+    "product": null,
+    "productHash": "8ec27db8c53fc9ab53352f7f302ec9d10680b5939d0821cae0190f449b14ce8a"
   },
   {
     "pinId": 15760,
@@ -61065,11 +61065,11 @@
   },
   {
     "pinId": 15796,
-    "sentiment": -0.2,
-    "textHash": "0c5e84caf622bb5052b8c8c0df0c0120778faf054ba4643b3690fa8ec23efcdd",
-    "utcScoredDateTime": "2026-10-17T01:50:03.627Z",
-    "product": "GW Ranch",
-    "productHash": "0c5e84caf622bb5052b8c8c0df0c0120778faf054ba4643b3690fa8ec23efcdd"
+    "sentiment": 0,
+    "textHash": "468c4c67069245796c6f1f65c7b78d6feb77276d49a41a5f26ca73097c61bed6",
+    "utcScoredDateTime": "2026-10-31T02:19:11.093Z",
+    "product": null,
+    "productHash": "468c4c67069245796c6f1f65c7b78d6feb77276d49a41a5f26ca73097c61bed6"
   },
   {
     "pinId": 15797,
@@ -61538,10 +61538,10 @@
   {
     "pinId": 15863,
     "sentiment": -0.5,
-    "textHash": "d9f153b8e8a9c9254f9c1778ab4b8e1f57ec42ed5d5d8d6508e1d0caa2c19062",
-    "utcScoredDateTime": "2026-10-17T01:41:58.137Z",
-    "product": "Janesville GM Plant Data Center",
-    "productHash": "d9f153b8e8a9c9254f9c1778ab4b8e1f57ec42ed5d5d8d6508e1d0caa2c19062"
+    "textHash": "a2d78a9a40fdefe527fb8015c943275c6ab22c39eb04ea2be24034f3aa5c97ca",
+    "utcScoredDateTime": "2026-10-31T02:19:13.148Z",
+    "product": null,
+    "productHash": "a2d78a9a40fdefe527fb8015c943275c6ab22c39eb04ea2be24034f3aa5c97ca"
   },
   {
     "pinId": 15864,
@@ -61825,11 +61825,11 @@
   },
   {
     "pinId": 15934,
-    "sentiment": 0.3,
-    "textHash": "cbd48a5648bb03d7e69fea59ec72d62d80f89a3fbedbe93fd20f122300ecca0d",
-    "utcScoredDateTime": "2026-10-17T01:40:12.511Z",
-    "product": "Asheville Energy Complex",
-    "productHash": "cbd48a5648bb03d7e69fea59ec72d62d80f89a3fbedbe93fd20f122300ecca0d"
+    "sentiment": 0.5,
+    "textHash": "9f2a58da4efd24a354f7ceef66e3f366d9f6a5686ac02c33d4d7e699b68f3d64",
+    "utcScoredDateTime": "2026-10-31T02:19:15.276Z",
+    "product": null,
+    "productHash": "9f2a58da4efd24a354f7ceef66e3f366d9f6a5686ac02c33d4d7e699b68f3d64"
   },
   {
     "pinId": 15935,
@@ -64209,11 +64209,11 @@
   },
   {
     "pinId": 16313,
-    "sentiment": -0.7,
-    "textHash": "ced8f5499cad2cec639d1b23e309757a7ea21ece87fc58e29f8da972a29117c2",
-    "utcScoredDateTime": "2026-10-24T03:48:09.920Z",
+    "sentiment": -0.5,
+    "textHash": "5830df41b4a65654d416c63169aeabdcaea17ceeb08dbb459681304b856af438",
+    "utcScoredDateTime": "2026-10-31T02:19:17.336Z",
     "product": null,
-    "productHash": "ced8f5499cad2cec639d1b23e309757a7ea21ece87fc58e29f8da972a29117c2"
+    "productHash": "5830df41b4a65654d416c63169aeabdcaea17ceeb08dbb459681304b856af438"
   },
   {
     "pinId": 16314,
@@ -64465,11 +64465,11 @@
   },
   {
     "pinId": 16350,
-    "sentiment": 0.25,
-    "textHash": "f67d8f3dffc6c271c9ad8c4fdc68fedf4c9c0983c714171c4e3cce58ec28a25f",
-    "utcScoredDateTime": "2026-10-24T03:48:17.356Z",
+    "sentiment": 0,
+    "textHash": "7322b8debdfb45526e51b81ba9dedd2121f1b991b0411242d9890221eacab23c",
+    "utcScoredDateTime": "2026-10-31T02:19:19.643Z",
     "product": null,
-    "productHash": "f67d8f3dffc6c271c9ad8c4fdc68fedf4c9c0983c714171c4e3cce58ec28a25f"
+    "productHash": "7322b8debdfb45526e51b81ba9dedd2121f1b991b0411242d9890221eacab23c"
   },
   {
     "pinId": 16351,
@@ -64945,11 +64945,11 @@
   },
   {
     "pinId": 16412,
-    "sentiment": 0.4,
-    "textHash": "fef7643e0f228a562d41f0d67eabdf90309e4fd1d802f06f599e8a90b72e107c",
-    "utcScoredDateTime": "2026-10-24T03:48:28.208Z",
+    "sentiment": 0.5,
+    "textHash": "c0be4518daf3a6693864f46233f3b5b099662a00f7dfc1a72e9f36cebfadb48c",
+    "utcScoredDateTime": "2026-10-31T02:19:21.717Z",
     "product": null,
-    "productHash": "fef7643e0f228a562d41f0d67eabdf90309e4fd1d802f06f599e8a90b72e107c"
+    "productHash": "c0be4518daf3a6693864f46233f3b5b099662a00f7dfc1a72e9f36cebfadb48c"
   },
   {
     "pinId": 16413,
@@ -70209,19 +70209,19 @@
   },
   {
     "pinId": 17080,
-    "sentiment": 0.25,
-    "textHash": "e75bbc4a51549219b9fa88984bb074568f8f6eda64c73817fa3b2a9b8d793b8b",
-    "utcScoredDateTime": "2026-10-18T14:24:07.130Z",
+    "sentiment": 0,
+    "textHash": "5d6fab9045bd5f8543ba9dfebd606b6017178d652103f675168488d107c44052",
+    "utcScoredDateTime": "2026-10-31T02:19:24.009Z",
     "product": null,
-    "productHash": "e75bbc4a51549219b9fa88984bb074568f8f6eda64c73817fa3b2a9b8d793b8b"
+    "productHash": "5d6fab9045bd5f8543ba9dfebd606b6017178d652103f675168488d107c44052"
   },
   {
     "pinId": 17081,
-    "sentiment": 0.25,
-    "textHash": "2451303a3e16eaaf7115e393fe17e67cdc4bddd3defb2a78137f01eb10de2f21",
-    "utcScoredDateTime": "2026-10-18T14:24:07.454Z",
+    "sentiment": 0,
+    "textHash": "e09982bc187d28b8294992354526064733245ca3e08dd03f9f235ac2a834564f",
+    "utcScoredDateTime": "2026-10-31T02:19:26.080Z",
     "product": null,
-    "productHash": "2451303a3e16eaaf7115e393fe17e67cdc4bddd3defb2a78137f01eb10de2f21"
+    "productHash": "e09982bc187d28b8294992354526064733245ca3e08dd03f9f235ac2a834564f"
   },
   {
     "pinId": 17082,
@@ -70233,11 +70233,11 @@
   },
   {
     "pinId": 17084,
-    "sentiment": 0.25,
-    "textHash": "1e34482dda41fd3143381ca7e7aad8c26a46d927fd84b5867a748b9e57038641",
-    "utcScoredDateTime": "2026-10-18T14:24:16.691Z",
+    "sentiment": 0,
+    "textHash": "90e674e18d22a34cb0f5cbb1feaeaa741c87e45fe838ca870504e7ae87888548",
+    "utcScoredDateTime": "2026-10-31T02:19:28.278Z",
     "product": null,
-    "productHash": "1e34482dda41fd3143381ca7e7aad8c26a46d927fd84b5867a748b9e57038641"
+    "productHash": "90e674e18d22a34cb0f5cbb1feaeaa741c87e45fe838ca870504e7ae87888548"
   },
   {
     "pinId": 17085,
@@ -70281,11 +70281,11 @@
   },
   {
     "pinId": 17090,
-    "sentiment": 0.25,
-    "textHash": "f84e7ba06ade79eb645b4339d120630b4f3949e7d842bca6f8923dcfb4286bdf",
-    "utcScoredDateTime": "2026-10-18T14:24:17.075Z",
+    "sentiment": 0,
+    "textHash": "e330a3fceda3abc10ed80464cb468d33739099cf4eba0030ea649ad27524610f",
+    "utcScoredDateTime": "2026-10-31T02:19:30.368Z",
     "product": null,
-    "productHash": "f84e7ba06ade79eb645b4339d120630b4f3949e7d842bca6f8923dcfb4286bdf"
+    "productHash": "e330a3fceda3abc10ed80464cb468d33739099cf4eba0030ea649ad27524610f"
   },
   {
     "pinId": 17091,
@@ -70305,67 +70305,67 @@
   },
   {
     "pinId": 17093,
-    "sentiment": 0.25,
-    "textHash": "7bd731ac9f83eb4b1dc26e992f5a229e23106e92d0aabb77342005982d1cec38",
-    "utcScoredDateTime": "2026-10-18T14:24:23.434Z",
+    "sentiment": 0,
+    "textHash": "482927b4c50c38c24ae1a9503953253c4bfb3132a78bc96a7f1e5374805e80f3",
+    "utcScoredDateTime": "2026-10-31T02:19:32.658Z",
     "product": null,
-    "productHash": "7bd731ac9f83eb4b1dc26e992f5a229e23106e92d0aabb77342005982d1cec38"
+    "productHash": "482927b4c50c38c24ae1a9503953253c4bfb3132a78bc96a7f1e5374805e80f3"
   },
   {
     "pinId": 17094,
-    "sentiment": 0.25,
-    "textHash": "ebb6961f1d8399a47161ee3f660a6eeed4ae898835b52abb56d41321824e90db",
-    "utcScoredDateTime": "2026-10-18T14:24:23.439Z",
+    "sentiment": 0,
+    "textHash": "18532f9ea21e64df1d3f51bf25124e529b73996030f9032f4f530fcb5c5416fb",
+    "utcScoredDateTime": "2026-10-31T02:19:34.724Z",
     "product": null,
-    "productHash": "ebb6961f1d8399a47161ee3f660a6eeed4ae898835b52abb56d41321824e90db"
+    "productHash": "18532f9ea21e64df1d3f51bf25124e529b73996030f9032f4f530fcb5c5416fb"
   },
   {
     "pinId": 17095,
-    "sentiment": 0.25,
-    "textHash": "e79da3ac0803f688126122f95ce4fb9f2ed3e7284dbc76f06eaf746f5da6297e",
-    "utcScoredDateTime": "2026-10-18T14:24:23.442Z",
+    "sentiment": 0,
+    "textHash": "943571e15c820eec7fb4734334f250ce4e6fcba91b57fc5328208107f12e5413",
+    "utcScoredDateTime": "2026-10-31T02:19:36.811Z",
     "product": null,
-    "productHash": "e79da3ac0803f688126122f95ce4fb9f2ed3e7284dbc76f06eaf746f5da6297e"
+    "productHash": "943571e15c820eec7fb4734334f250ce4e6fcba91b57fc5328208107f12e5413"
   },
   {
     "pinId": 17096,
-    "sentiment": 0.25,
-    "textHash": "35cb7fdfc1a04489e72188299ca4eda5e3ea422d32c03d7c446eb67f6f75d884",
-    "utcScoredDateTime": "2026-10-18T14:24:23.445Z",
+    "sentiment": 0,
+    "textHash": "f53b9b7ad30be13bc91b66a968aeb72ccd7aedb6136a989c9a6350bc99eb8241",
+    "utcScoredDateTime": "2026-10-31T02:19:41.755Z",
     "product": null,
-    "productHash": "35cb7fdfc1a04489e72188299ca4eda5e3ea422d32c03d7c446eb67f6f75d884"
+    "productHash": "f53b9b7ad30be13bc91b66a968aeb72ccd7aedb6136a989c9a6350bc99eb8241"
   },
   {
     "pinId": 17097,
-    "sentiment": 0.25,
-    "textHash": "7a231237fc01b4ded6dade7a43f1e29d706f273782d7aae40841a5d0c50aa2e8",
-    "utcScoredDateTime": "2026-10-18T14:24:23.448Z",
+    "sentiment": 0,
+    "textHash": "c5f05416eb1fcf2003f8075ba7bde7eec19603800b918a0e39b0fdf83d82f342",
+    "utcScoredDateTime": "2026-10-31T02:19:44.201Z",
     "product": null,
-    "productHash": "7a231237fc01b4ded6dade7a43f1e29d706f273782d7aae40841a5d0c50aa2e8"
+    "productHash": "c5f05416eb1fcf2003f8075ba7bde7eec19603800b918a0e39b0fdf83d82f342"
   },
   {
     "pinId": 17098,
-    "sentiment": 0.25,
-    "textHash": "3747fdc8acc242ce3642557f832a68a4ee28f432c7d82d926af30a5a9c78a811",
-    "utcScoredDateTime": "2026-10-18T14:24:23.451Z",
+    "sentiment": 0,
+    "textHash": "851de2fcb5c4d97bca530320680d42b893201344c35e38cabdb1728373897b31",
+    "utcScoredDateTime": "2026-10-31T02:19:46.874Z",
     "product": null,
-    "productHash": "3747fdc8acc242ce3642557f832a68a4ee28f432c7d82d926af30a5a9c78a811"
+    "productHash": "851de2fcb5c4d97bca530320680d42b893201344c35e38cabdb1728373897b31"
   },
   {
     "pinId": 17099,
-    "sentiment": 0.25,
-    "textHash": "a656eef52c219bd69d6e5ebebccf9f1bfcd1746455b79ed51573b33dbf8a90a0",
-    "utcScoredDateTime": "2026-10-18T14:24:23.455Z",
+    "sentiment": 0,
+    "textHash": "cac8b65e6931ecce98c31036a7f7fc556f015bffc1aa6e8c2c922a31e02a59d0",
+    "utcScoredDateTime": "2026-10-31T02:19:48.972Z",
     "product": null,
-    "productHash": "a656eef52c219bd69d6e5ebebccf9f1bfcd1746455b79ed51573b33dbf8a90a0"
+    "productHash": "cac8b65e6931ecce98c31036a7f7fc556f015bffc1aa6e8c2c922a31e02a59d0"
   },
   {
     "pinId": 17100,
-    "sentiment": 0.25,
-    "textHash": "09013a2a9d98238643407aec4bc7301f9c899eca4aac3c4da397665dd1bc37ba",
-    "utcScoredDateTime": "2026-10-18T14:24:23.458Z",
+    "sentiment": 0,
+    "textHash": "1eb58fb464e6a9b1b890b16cd5860188ce4e61663d9748b2595a0fff86742417",
+    "utcScoredDateTime": "2026-10-31T02:19:51.142Z",
     "product": null,
-    "productHash": "09013a2a9d98238643407aec4bc7301f9c899eca4aac3c4da397665dd1bc37ba"
+    "productHash": "1eb58fb464e6a9b1b890b16cd5860188ce4e61663d9748b2595a0fff86742417"
   },
   {
     "pinId": 17101,
@@ -70401,11 +70401,11 @@
   },
   {
     "pinId": 17117,
-    "sentiment": 0.25,
-    "textHash": "faf7f15930232f09c2d2b61dc99a665c5193366a100b332932fee216cf0d7148",
-    "utcScoredDateTime": "2026-10-19T14:02:35.831Z",
+    "sentiment": 0.5,
+    "textHash": "3f0cf53da73dfa69bbc93fdd5d3981169760a34bc76dc9a3d055e885da6c1ee1",
+    "utcScoredDateTime": "2026-10-31T02:19:53.204Z",
     "product": null,
-    "productHash": "faf7f15930232f09c2d2b61dc99a665c5193366a100b332932fee216cf0d7148"
+    "productHash": "3f0cf53da73dfa69bbc93fdd5d3981169760a34bc76dc9a3d055e885da6c1ee1"
   },
   {
     "pinId": 17118,
@@ -70417,35 +70417,35 @@
   },
   {
     "pinId": 17119,
-    "sentiment": 0.25,
-    "textHash": "6cf3610fd60b1aac97c718fbd120c345746301becdc58a6ab46b95125d2346e5",
-    "utcScoredDateTime": "2026-10-19T14:02:35.838Z",
+    "sentiment": 0,
+    "textHash": "ca21e59ccb2680d6e0bb1c8d393b13fc857b984ba81b956f156b87b458fee928",
+    "utcScoredDateTime": "2026-10-31T02:19:55.282Z",
     "product": null,
-    "productHash": "6cf3610fd60b1aac97c718fbd120c345746301becdc58a6ab46b95125d2346e5"
+    "productHash": "ca21e59ccb2680d6e0bb1c8d393b13fc857b984ba81b956f156b87b458fee928"
   },
   {
     "pinId": 17121,
-    "sentiment": 0.25,
-    "textHash": "3298452748028bef63384a3ddd8c2e739e3294983c581e8729b450c32ef72a18",
-    "utcScoredDateTime": "2026-10-19T14:02:35.842Z",
+    "sentiment": 0,
+    "textHash": "59bc9aac14664a97e17e8ef5d1bea7f159464e00922a0416ad76502977ec54ce",
+    "utcScoredDateTime": "2026-10-31T02:19:57.349Z",
     "product": null,
-    "productHash": "3298452748028bef63384a3ddd8c2e739e3294983c581e8729b450c32ef72a18"
+    "productHash": "59bc9aac14664a97e17e8ef5d1bea7f159464e00922a0416ad76502977ec54ce"
   },
   {
     "pinId": 17122,
-    "sentiment": 0.25,
-    "textHash": "2ca810162f367026c479a5db1ab05ce2591556d108cedbd2336ee0220eb719c0",
-    "utcScoredDateTime": "2026-10-19T14:02:37.986Z",
+    "sentiment": -0.5,
+    "textHash": "0152d5ca97eea4713d4ae5063baccd30ecf9cfa6ca289dd1184143089e48f008",
+    "utcScoredDateTime": "2026-10-31T02:19:59.400Z",
     "product": null,
-    "productHash": "2ca810162f367026c479a5db1ab05ce2591556d108cedbd2336ee0220eb719c0"
+    "productHash": "0152d5ca97eea4713d4ae5063baccd30ecf9cfa6ca289dd1184143089e48f008"
   },
   {
     "pinId": 17123,
-    "sentiment": 0.25,
-    "textHash": "29ca6cd62617b0834b9a79e253da9a4388bf5842896be75061492311f26cd11e",
-    "utcScoredDateTime": "2026-10-19T14:02:38.061Z",
+    "sentiment": 0,
+    "textHash": "4b609e7487bcee5e2081cf88c15bf63f6515986ec2c9679bfb8d492943ffcd37",
+    "utcScoredDateTime": "2026-10-31T02:20:01.454Z",
     "product": null,
-    "productHash": "29ca6cd62617b0834b9a79e253da9a4388bf5842896be75061492311f26cd11e"
+    "productHash": "4b609e7487bcee5e2081cf88c15bf63f6515986ec2c9679bfb8d492943ffcd37"
   },
   {
     "pinId": 17124,
@@ -70513,35 +70513,35 @@
   },
   {
     "pinId": 17134,
-    "sentiment": 0.25,
-    "textHash": "c3a077fa653df97af6aca953cf7950d97bf26e75e2267e0da18d63afc90d5ae1",
-    "utcScoredDateTime": "2026-10-19T14:02:41.744Z",
+    "sentiment": 0,
+    "textHash": "f0382699ba3f6ca4de8e8b1bdb86228f92224252b284c554550cc743a10aef39",
+    "utcScoredDateTime": "2026-10-31T02:20:34.029Z",
     "product": null,
-    "productHash": "c3a077fa653df97af6aca953cf7950d97bf26e75e2267e0da18d63afc90d5ae1"
+    "productHash": "f0382699ba3f6ca4de8e8b1bdb86228f92224252b284c554550cc743a10aef39"
   },
   {
     "pinId": 17135,
-    "sentiment": 0.25,
-    "textHash": "816ef56fc35c5026ee5b5d568ebf6ef4db6eda1d9bcc8f649e3b02b4deb57bef",
-    "utcScoredDateTime": "2026-10-19T14:02:41.771Z",
+    "sentiment": 0,
+    "textHash": "cf9b49751511464727cb7c2d9d3a1dd0804763197c8a3cc58eaa2c1fa8f9e957",
+    "utcScoredDateTime": "2026-10-31T02:21:06.453Z",
     "product": null,
-    "productHash": "816ef56fc35c5026ee5b5d568ebf6ef4db6eda1d9bcc8f649e3b02b4deb57bef"
+    "productHash": "cf9b49751511464727cb7c2d9d3a1dd0804763197c8a3cc58eaa2c1fa8f9e957"
   },
   {
     "pinId": 17136,
-    "sentiment": 0.25,
-    "textHash": "bfc5698ddfc69f71466c71e6a2bfd2930db9b97c7f11dee966066e6ff5019581",
-    "utcScoredDateTime": "2026-10-19T14:02:41.785Z",
+    "sentiment": 0,
+    "textHash": "17b2a4bd6aaeb0e9583631cddd2844c0115168d565bd4ad9247ae863b94b20aa",
+    "utcScoredDateTime": "2026-10-31T02:21:08.515Z",
     "product": null,
-    "productHash": "bfc5698ddfc69f71466c71e6a2bfd2930db9b97c7f11dee966066e6ff5019581"
+    "productHash": "17b2a4bd6aaeb0e9583631cddd2844c0115168d565bd4ad9247ae863b94b20aa"
   },
   {
     "pinId": 17137,
-    "sentiment": 0.25,
-    "textHash": "9fc915b6ea273adb4dab577af21c17ee91dc6511e729863ab6fbcd6cf34577ee",
-    "utcScoredDateTime": "2026-10-19T14:02:41.790Z",
+    "sentiment": 0,
+    "textHash": "611a7b03b3b8af3b86c2d34f15c8f098026442aa433233ced064c652fda2e4f0",
+    "utcScoredDateTime": "2026-10-31T02:21:10.933Z",
     "product": null,
-    "productHash": "9fc915b6ea273adb4dab577af21c17ee91dc6511e729863ab6fbcd6cf34577ee"
+    "productHash": "611a7b03b3b8af3b86c2d34f15c8f098026442aa433233ced064c652fda2e4f0"
   },
   {
     "pinId": 17138,
@@ -70593,11 +70593,11 @@
   },
   {
     "pinId": 17144,
-    "sentiment": 0.25,
-    "textHash": "fd7be850a8215336f8fcafe50578729999653ea293b047452d4eb246cbbf6f08",
-    "utcScoredDateTime": "2026-10-19T14:02:43.960Z",
+    "sentiment": 0.5,
+    "textHash": "a5c8215930c449bb75d65f568947b0600e379a94964f78cdc47f97f758f2ea40",
+    "utcScoredDateTime": "2026-10-31T02:21:13.182Z",
     "product": null,
-    "productHash": "fd7be850a8215336f8fcafe50578729999653ea293b047452d4eb246cbbf6f08"
+    "productHash": "a5c8215930c449bb75d65f568947b0600e379a94964f78cdc47f97f758f2ea40"
   },
   {
     "pinId": 17145,
@@ -70609,35 +70609,35 @@
   },
   {
     "pinId": 17146,
-    "sentiment": 0.25,
-    "textHash": "ba867ed7fce9d497c4110813c321f90ea6e61cc7651d780f1661101f704fedb9",
-    "utcScoredDateTime": "2026-10-19T14:02:43.977Z",
+    "sentiment": 0,
+    "textHash": "117c3f0a7aeaaff2e6ee50e706af0fc9a7f36520a3e2a433064fd69fc527cb63",
+    "utcScoredDateTime": "2026-10-31T02:21:15.251Z",
     "product": null,
-    "productHash": "ba867ed7fce9d497c4110813c321f90ea6e61cc7651d780f1661101f704fedb9"
+    "productHash": "117c3f0a7aeaaff2e6ee50e706af0fc9a7f36520a3e2a433064fd69fc527cb63"
   },
   {
     "pinId": 17147,
-    "sentiment": 0.25,
-    "textHash": "aeb91dbf872b23a802f13f30c83a564f28d16a409bb4d628e93eb4ad7032565a",
-    "utcScoredDateTime": "2026-10-19T14:02:43.983Z",
+    "sentiment": 0,
+    "textHash": "74a6103b2acab7f27f6ff777a82d90ccc765f58d46bbe875a85e4323fad186a4",
+    "utcScoredDateTime": "2026-10-31T02:21:17.324Z",
     "product": null,
-    "productHash": "aeb91dbf872b23a802f13f30c83a564f28d16a409bb4d628e93eb4ad7032565a"
+    "productHash": "74a6103b2acab7f27f6ff777a82d90ccc765f58d46bbe875a85e4323fad186a4"
   },
   {
     "pinId": 17148,
-    "sentiment": 0.25,
-    "textHash": "52a130fe5ab1bfe19fb0d3d2ee6048dca819ed2dbe1bda9d5a8d474e5da4ca70",
-    "utcScoredDateTime": "2026-10-19T14:02:43.994Z",
+    "sentiment": 0,
+    "textHash": "d37c8f4c18c90706d97227dd4c7858c6f2e8f2b37a307e3345cd018bbb4483a8",
+    "utcScoredDateTime": "2026-10-31T02:21:19.524Z",
     "product": null,
-    "productHash": "52a130fe5ab1bfe19fb0d3d2ee6048dca819ed2dbe1bda9d5a8d474e5da4ca70"
+    "productHash": "d37c8f4c18c90706d97227dd4c7858c6f2e8f2b37a307e3345cd018bbb4483a8"
   },
   {
     "pinId": 17149,
-    "sentiment": 0.25,
-    "textHash": "fedded90cd1a6105a38b2e9be7cc7bb13a204581eddeafc3dd2dc39d7abc2f3a",
-    "utcScoredDateTime": "2026-10-19T14:02:44.001Z",
+    "sentiment": 0,
+    "textHash": "af7fb9546af1b9c34d498eb4248148d9226b7a10edc616855aecd86f3d4d9385",
+    "utcScoredDateTime": "2026-10-31T02:21:21.619Z",
     "product": null,
-    "productHash": "fedded90cd1a6105a38b2e9be7cc7bb13a204581eddeafc3dd2dc39d7abc2f3a"
+    "productHash": "af7fb9546af1b9c34d498eb4248148d9226b7a10edc616855aecd86f3d4d9385"
   },
   {
     "pinId": 17150,
@@ -70649,11 +70649,11 @@
   },
   {
     "pinId": 17151,
-    "sentiment": 0.25,
-    "textHash": "e9f2c78101387903cd2bf96264fa5a58ece7d23bb67dc445e9e706b4570c8d4b",
-    "utcScoredDateTime": "2026-10-19T14:02:44.018Z",
+    "sentiment": -0.2,
+    "textHash": "76f404a92627d3dd45427c3e21bdba17d28bc2b6baf2ea491d8b45455e2b6a5b",
+    "utcScoredDateTime": "2026-10-30T14:01:28.310Z",
     "product": null,
-    "productHash": "e9f2c78101387903cd2bf96264fa5a58ece7d23bb67dc445e9e706b4570c8d4b"
+    "productHash": "76f404a92627d3dd45427c3e21bdba17d28bc2b6baf2ea491d8b45455e2b6a5b"
   },
   {
     "pinId": 17152,
@@ -70705,35 +70705,35 @@
   },
   {
     "pinId": 17158,
-    "sentiment": 0.25,
-    "textHash": "a03dd973dc42e15ef3795621df26c795185e632448e2982c4d1763b813b95e5d",
-    "utcScoredDateTime": "2026-10-19T14:02:46.442Z",
+    "sentiment": 0,
+    "textHash": "ec5a3794ccfa78c9cc580d36a9859c6f7e5178bac327cd4e7b651b871862fc1e",
+    "utcScoredDateTime": "2026-10-31T02:38:08.290Z",
     "product": null,
-    "productHash": "a03dd973dc42e15ef3795621df26c795185e632448e2982c4d1763b813b95e5d"
+    "productHash": "ec5a3794ccfa78c9cc580d36a9859c6f7e5178bac327cd4e7b651b871862fc1e"
   },
   {
     "pinId": 17159,
-    "sentiment": 0.25,
-    "textHash": "d19a15ed63451063db3ad26dae73ffebb54cc8f908dcce184aebe4b2c522aee7",
-    "utcScoredDateTime": "2026-10-19T14:02:46.450Z",
+    "sentiment": 0,
+    "textHash": "be34d82a5ffe45736dcd8ee89592736ea3eb2c37e24464ab3b24611761ce8522",
+    "utcScoredDateTime": "2026-10-31T02:38:08.293Z",
     "product": null,
-    "productHash": "d19a15ed63451063db3ad26dae73ffebb54cc8f908dcce184aebe4b2c522aee7"
+    "productHash": "be34d82a5ffe45736dcd8ee89592736ea3eb2c37e24464ab3b24611761ce8522"
   },
   {
     "pinId": 17160,
-    "sentiment": 0.25,
-    "textHash": "552cfc0608a4901cfd3e6f14c96ac8355fbc505e0dc047e016d94da2c72d307b",
-    "utcScoredDateTime": "2026-10-19T14:02:46.455Z",
+    "sentiment": 0,
+    "textHash": "54b6ed2a09e853feda3a62580f31a685b6e707dae1a12db3e9e8575dcc6cf82b",
+    "utcScoredDateTime": "2026-10-31T02:38:08.296Z",
     "product": null,
-    "productHash": "552cfc0608a4901cfd3e6f14c96ac8355fbc505e0dc047e016d94da2c72d307b"
+    "productHash": "54b6ed2a09e853feda3a62580f31a685b6e707dae1a12db3e9e8575dcc6cf82b"
   },
   {
     "pinId": 17161,
-    "sentiment": 0.25,
-    "textHash": "5a267a0e7b2dd34ea3e6a6df42e86c0c421b409f251a2e61c2b24c0307ff99e2",
-    "utcScoredDateTime": "2026-10-19T14:02:46.461Z",
+    "sentiment": 0.3,
+    "textHash": "5bbd198d62232a6a4ec69d7189d1b9e55c3741a817f3bbfaa2175059e2bcd1e7",
+    "utcScoredDateTime": "2026-10-31T02:38:08.299Z",
     "product": null,
-    "productHash": "5a267a0e7b2dd34ea3e6a6df42e86c0c421b409f251a2e61c2b24c0307ff99e2"
+    "productHash": "5bbd198d62232a6a4ec69d7189d1b9e55c3741a817f3bbfaa2175059e2bcd1e7"
   },
   {
     "pinId": 17162,
@@ -70801,35 +70801,35 @@
   },
   {
     "pinId": 17291,
-    "sentiment": 0.25,
-    "textHash": "fb80245d943fff8cae246683be51f8f0bd9f272ce9e77cd2da61abf110c42d5a",
-    "utcScoredDateTime": "2026-10-19T14:02:48.771Z",
+    "sentiment": 0,
+    "textHash": "c9ac456a12b356b7522bd8d42d119dda9806d2797ea0667215e62626f06d6279",
+    "utcScoredDateTime": "2026-10-31T02:38:08.302Z",
     "product": null,
-    "productHash": "fb80245d943fff8cae246683be51f8f0bd9f272ce9e77cd2da61abf110c42d5a"
+    "productHash": "c9ac456a12b356b7522bd8d42d119dda9806d2797ea0667215e62626f06d6279"
   },
   {
     "pinId": 17292,
-    "sentiment": 0.25,
-    "textHash": "6844682ff7670c9052f4734311beb4ee431c858962f037f43ec9a3084befdbbc",
-    "utcScoredDateTime": "2026-10-19T14:02:48.776Z",
+    "sentiment": 0,
+    "textHash": "961b292f19f229a176bbd1656579023c1827d00961f8583c05ab17ddc412a858",
+    "utcScoredDateTime": "2026-10-31T02:38:08.304Z",
     "product": null,
-    "productHash": "6844682ff7670c9052f4734311beb4ee431c858962f037f43ec9a3084befdbbc"
+    "productHash": "961b292f19f229a176bbd1656579023c1827d00961f8583c05ab17ddc412a858"
   },
   {
     "pinId": 17293,
-    "sentiment": 0.25,
-    "textHash": "ab229813dfc361b677a506c7b550759c7c877762f7aa8c8e95b0504cbec75129",
-    "utcScoredDateTime": "2026-10-19T14:02:48.780Z",
+    "sentiment": 0,
+    "textHash": "01fb45f1e46bbe0be05fe90285aa0c56c4d080526e0258deda546c94b1f7dcc6",
+    "utcScoredDateTime": "2026-10-31T02:38:08.321Z",
     "product": null,
-    "productHash": "ab229813dfc361b677a506c7b550759c7c877762f7aa8c8e95b0504cbec75129"
+    "productHash": "01fb45f1e46bbe0be05fe90285aa0c56c4d080526e0258deda546c94b1f7dcc6"
   },
   {
     "pinId": 17294,
-    "sentiment": 0.25,
-    "textHash": "b2e20e382c72247fbf610b34060ade4234e958700b651d957839e80cff2f554b",
-    "utcScoredDateTime": "2026-10-19T14:02:48.783Z",
+    "sentiment": 0,
+    "textHash": "1ee47a91743052e65c9506c54de4f3e962b6510ecd4cbd2889c19c5e51390952",
+    "utcScoredDateTime": "2026-10-31T02:38:08.324Z",
     "product": null,
-    "productHash": "b2e20e382c72247fbf610b34060ade4234e958700b651d957839e80cff2f554b"
+    "productHash": "1ee47a91743052e65c9506c54de4f3e962b6510ecd4cbd2889c19c5e51390952"
   },
   {
     "pinId": 17295,
@@ -70841,11 +70841,11 @@
   },
   {
     "pinId": 17296,
-    "sentiment": 0.25,
-    "textHash": "29d1d3b89ad475b988ab277e37c3ab3c5e9a7f3f47449c34dddaf60e8d489b48",
-    "utcScoredDateTime": "2026-10-19T14:02:50.842Z",
+    "sentiment": 0,
+    "textHash": "e0bd3d0670171e65164d280c9e50885261a14677445eca693bc1b001353babc5",
+    "utcScoredDateTime": "2026-10-31T02:38:08.328Z",
     "product": null,
-    "productHash": "29d1d3b89ad475b988ab277e37c3ab3c5e9a7f3f47449c34dddaf60e8d489b48"
+    "productHash": "e0bd3d0670171e65164d280c9e50885261a14677445eca693bc1b001353babc5"
   },
   {
     "pinId": 17297,
@@ -70897,35 +70897,35 @@
   },
   {
     "pinId": 17303,
-    "sentiment": 0.25,
-    "textHash": "b42b8b86cbd55965f4a338f31cac435fe95190449819a53cdaf016a1f3fde21a",
-    "utcScoredDateTime": "2026-10-19T14:02:50.867Z",
+    "sentiment": 0,
+    "textHash": "7d416bf122c172c0b900f4c79f63ba775da601f7f399f745e371970963f7463e",
+    "utcScoredDateTime": "2026-10-31T02:38:10.774Z",
     "product": null,
-    "productHash": "b42b8b86cbd55965f4a338f31cac435fe95190449819a53cdaf016a1f3fde21a"
+    "productHash": "7d416bf122c172c0b900f4c79f63ba775da601f7f399f745e371970963f7463e"
   },
   {
     "pinId": 17304,
-    "sentiment": 0.25,
-    "textHash": "0bc404012476047ce76679b34d210d467d5731e223c234e7bb0f3bdb9c017450",
-    "utcScoredDateTime": "2026-10-19T14:02:50.871Z",
+    "sentiment": 0,
+    "textHash": "b3defd83122134bea684106792373df1343b86ddfa68348bba4dff6c443c9c78",
+    "utcScoredDateTime": "2026-10-31T02:38:10.788Z",
     "product": null,
-    "productHash": "0bc404012476047ce76679b34d210d467d5731e223c234e7bb0f3bdb9c017450"
+    "productHash": "b3defd83122134bea684106792373df1343b86ddfa68348bba4dff6c443c9c78"
   },
   {
     "pinId": 17305,
-    "sentiment": 0.25,
-    "textHash": "3e47c30d2812b7d5133e387c776fbeba027b23a4f57b7e3c07a1bd9153651d08",
-    "utcScoredDateTime": "2026-10-19T14:02:52.922Z",
+    "sentiment": 0,
+    "textHash": "5b7413c9d3addc485d918897e57c9b76e928d0354b15027705836ef7023c6e2b",
+    "utcScoredDateTime": "2026-10-31T02:38:10.801Z",
     "product": null,
-    "productHash": "3e47c30d2812b7d5133e387c776fbeba027b23a4f57b7e3c07a1bd9153651d08"
+    "productHash": "5b7413c9d3addc485d918897e57c9b76e928d0354b15027705836ef7023c6e2b"
   },
   {
     "pinId": 17306,
-    "sentiment": 0.25,
-    "textHash": "8acc585bbcfd23d3ac0de40124b1bc9271c7e95a618ca91451eb741c1e31d1a5",
-    "utcScoredDateTime": "2026-10-19T14:02:52.926Z",
+    "sentiment": 0,
+    "textHash": "7051bf30aff708d2b6b9f247c933ab792873d50622ecb69a7e6614d8bbfe7fec",
+    "utcScoredDateTime": "2026-10-31T02:38:10.818Z",
     "product": null,
-    "productHash": "8acc585bbcfd23d3ac0de40124b1bc9271c7e95a618ca91451eb741c1e31d1a5"
+    "productHash": "7051bf30aff708d2b6b9f247c933ab792873d50622ecb69a7e6614d8bbfe7fec"
   },
   {
     "pinId": 17307,
@@ -70985,43 +70985,43 @@
   },
   {
     "pinId": 17314,
-    "sentiment": 0.25,
-    "textHash": "c6b9110d127b22377230c84e929c638955ce86617c1e1f2d980a15c843412076",
-    "utcScoredDateTime": "2026-10-19T14:02:52.954Z",
+    "sentiment": 0,
+    "textHash": "21a1163ec0fa50e583a09d7b9923fd3fd192f81cba3645aa50a35e6646baae4c",
+    "utcScoredDateTime": "2026-10-31T02:38:10.821Z",
     "product": null,
-    "productHash": "c6b9110d127b22377230c84e929c638955ce86617c1e1f2d980a15c843412076"
+    "productHash": "21a1163ec0fa50e583a09d7b9923fd3fd192f81cba3645aa50a35e6646baae4c"
   },
   {
     "pinId": 17315,
-    "sentiment": 0.25,
-    "textHash": "db99aadf882df998a257d2c8b59ee364a953f84bfc5dc510c0e674d31615151f",
-    "utcScoredDateTime": "2026-10-19T14:02:55.151Z",
+    "sentiment": 0,
+    "textHash": "840c2e3247f8546b383a80a64a650b2fba36db700ad55cf3d9ecfe3de9cbfeef",
+    "utcScoredDateTime": "2026-10-31T02:38:10.825Z",
     "product": null,
-    "productHash": "db99aadf882df998a257d2c8b59ee364a953f84bfc5dc510c0e674d31615151f"
+    "productHash": "840c2e3247f8546b383a80a64a650b2fba36db700ad55cf3d9ecfe3de9cbfeef"
   },
   {
     "pinId": 17316,
-    "sentiment": 0.25,
-    "textHash": "db74ae9c14b4c09708eca828d0d9ca0943dda275585760860b3930586f052b60",
-    "utcScoredDateTime": "2026-10-19T14:02:55.222Z",
+    "sentiment": 0,
+    "textHash": "c4923364fcdc431fe8fb822b15f32cdac962df992f02ffb21a3ee78413a6b159",
+    "utcScoredDateTime": "2026-10-31T02:38:10.828Z",
     "product": null,
-    "productHash": "db74ae9c14b4c09708eca828d0d9ca0943dda275585760860b3930586f052b60"
+    "productHash": "c4923364fcdc431fe8fb822b15f32cdac962df992f02ffb21a3ee78413a6b159"
   },
   {
     "pinId": 17317,
-    "sentiment": 0.25,
-    "textHash": "267e8593a2f0cfbe9c8a6fc6a7f1faaa69e7ec12812ad359a6e75825e5cc1778",
-    "utcScoredDateTime": "2026-10-19T14:02:55.378Z",
+    "sentiment": 0,
+    "textHash": "8f1f7cc7e0f848ccd2f23a7e81d84311bd2b882bfd5b7df21f6dc26c22109d72",
+    "utcScoredDateTime": "2026-10-31T02:38:10.831Z",
     "product": null,
-    "productHash": "267e8593a2f0cfbe9c8a6fc6a7f1faaa69e7ec12812ad359a6e75825e5cc1778"
+    "productHash": "8f1f7cc7e0f848ccd2f23a7e81d84311bd2b882bfd5b7df21f6dc26c22109d72"
   },
   {
     "pinId": 17318,
-    "sentiment": 0.25,
-    "textHash": "83493177bbd7e6992a5a40e44750e842b805064b8ad40943dc217745bdc6ff5c",
-    "utcScoredDateTime": "2026-10-19T14:02:55.440Z",
+    "sentiment": 0,
+    "textHash": "4af1e2659897bed41fa596ea563771593b28c8a2bcae0af709368fd891325b55",
+    "utcScoredDateTime": "2026-10-31T02:38:10.833Z",
     "product": null,
-    "productHash": "83493177bbd7e6992a5a40e44750e842b805064b8ad40943dc217745bdc6ff5c"
+    "productHash": "4af1e2659897bed41fa596ea563771593b28c8a2bcae0af709368fd891325b55"
   },
   {
     "pinId": 17319,
@@ -71089,35 +71089,35 @@
   },
   {
     "pinId": 17327,
-    "sentiment": 0.25,
-    "textHash": "a244febef13b90cafd1cad71ab75fce8cf7665feadb4fcfcb8a0da630eae3793",
-    "utcScoredDateTime": "2026-10-19T14:02:57.761Z",
+    "sentiment": 0,
+    "textHash": "e5392a5929eee9495586b021e5585a577f9809c843563adcdffdba7c0d44f2e9",
+    "utcScoredDateTime": "2026-10-31T02:38:10.836Z",
     "product": null,
-    "productHash": "a244febef13b90cafd1cad71ab75fce8cf7665feadb4fcfcb8a0da630eae3793"
+    "productHash": "e5392a5929eee9495586b021e5585a577f9809c843563adcdffdba7c0d44f2e9"
   },
   {
     "pinId": 17328,
-    "sentiment": 0.25,
-    "textHash": "bc5c29071d4e39f2883d2c939a78f908666ccea3a7e4235834dbfd6b702d1e89",
-    "utcScoredDateTime": "2026-10-19T14:02:57.764Z",
+    "sentiment": 0,
+    "textHash": "6fe9f8274c89da5858e3a4903f8db294528d35f163de7a8bdb962b808a611c04",
+    "utcScoredDateTime": "2026-10-31T02:38:13.151Z",
     "product": null,
-    "productHash": "bc5c29071d4e39f2883d2c939a78f908666ccea3a7e4235834dbfd6b702d1e89"
+    "productHash": "6fe9f8274c89da5858e3a4903f8db294528d35f163de7a8bdb962b808a611c04"
   },
   {
     "pinId": 17329,
-    "sentiment": 0.25,
-    "textHash": "24570bb3bbef434fb37a090e9340ddc78e4e1aea1fdca537459b8de08f46973b",
-    "utcScoredDateTime": "2026-10-19T14:02:57.769Z",
+    "sentiment": 0,
+    "textHash": "002c799928007d10e1a0c59f3bdf55a95f80e6f5c4e4940fb53f4d7a02387097",
+    "utcScoredDateTime": "2026-10-31T02:38:13.155Z",
     "product": null,
-    "productHash": "24570bb3bbef434fb37a090e9340ddc78e4e1aea1fdca537459b8de08f46973b"
+    "productHash": "002c799928007d10e1a0c59f3bdf55a95f80e6f5c4e4940fb53f4d7a02387097"
   },
   {
     "pinId": 17330,
-    "sentiment": 0.25,
-    "textHash": "69a26397561d6824428836f8b97149a943a676571d030cbbb9485476d6d47a4a",
-    "utcScoredDateTime": "2026-10-19T14:02:57.772Z",
+    "sentiment": 0,
+    "textHash": "76eb709db771c0196fe8e5e78a15025352f7c981523fe331dd1c34dc0ee04842",
+    "utcScoredDateTime": "2026-10-31T02:38:13.158Z",
     "product": null,
-    "productHash": "69a26397561d6824428836f8b97149a943a676571d030cbbb9485476d6d47a4a"
+    "productHash": "76eb709db771c0196fe8e5e78a15025352f7c981523fe331dd1c34dc0ee04842"
   },
   {
     "pinId": 17331,
@@ -71185,35 +71185,35 @@
   },
   {
     "pinId": 17339,
-    "sentiment": 0.25,
-    "textHash": "cc680317fa76b0cff6f4c59d9ee8faa8c71f23094bbf7583e3efad4f7b465b14",
-    "utcScoredDateTime": "2026-10-19T14:02:59.849Z",
+    "sentiment": 0,
+    "textHash": "63cc22d50c3a660babca01d6929a4c0001c2a1ca0e36b71d3465e12c6b3ddbe5",
+    "utcScoredDateTime": "2026-10-31T02:38:13.160Z",
     "product": null,
-    "productHash": "cc680317fa76b0cff6f4c59d9ee8faa8c71f23094bbf7583e3efad4f7b465b14"
+    "productHash": "63cc22d50c3a660babca01d6929a4c0001c2a1ca0e36b71d3465e12c6b3ddbe5"
   },
   {
     "pinId": 17340,
-    "sentiment": 0.25,
-    "textHash": "1e3d7f778e964795ad0060f4195980d31e4471e32f8c6a45ee49fab595c0294c",
-    "utcScoredDateTime": "2026-10-19T14:02:59.853Z",
+    "sentiment": 0,
+    "textHash": "a15eff0f296fe4539dffbc2ac3540bf31180b0561f8f2c342250d3455ca4e710",
+    "utcScoredDateTime": "2026-10-31T02:38:13.163Z",
     "product": null,
-    "productHash": "1e3d7f778e964795ad0060f4195980d31e4471e32f8c6a45ee49fab595c0294c"
+    "productHash": "a15eff0f296fe4539dffbc2ac3540bf31180b0561f8f2c342250d3455ca4e710"
   },
   {
     "pinId": 17341,
-    "sentiment": 0.25,
-    "textHash": "bb547d2e1b1afd0919f68b984f0c4600a3995358eef9e820c65114f7cd6d7ad3",
-    "utcScoredDateTime": "2026-10-19T14:02:59.856Z",
+    "sentiment": 0,
+    "textHash": "700c3eec348431d596dc5223a6b429839aae4cec1a497d6d5339fdf026edf1bf",
+    "utcScoredDateTime": "2026-10-31T02:38:13.166Z",
     "product": null,
-    "productHash": "bb547d2e1b1afd0919f68b984f0c4600a3995358eef9e820c65114f7cd6d7ad3"
+    "productHash": "700c3eec348431d596dc5223a6b429839aae4cec1a497d6d5339fdf026edf1bf"
   },
   {
     "pinId": 17342,
-    "sentiment": 0.25,
-    "textHash": "a7deb62cf93382188b7cd6b52675f5a422028d30cba972b33b8ffafaf23f3206",
-    "utcScoredDateTime": "2026-10-19T14:02:59.859Z",
+    "sentiment": 0,
+    "textHash": "2b8071f5ebea82269f06ce5eee3cfc4ee0b75fb21c3e2f65c2d0adc50cadcf0a",
+    "utcScoredDateTime": "2026-10-31T02:38:13.169Z",
     "product": null,
-    "productHash": "a7deb62cf93382188b7cd6b52675f5a422028d30cba972b33b8ffafaf23f3206"
+    "productHash": "2b8071f5ebea82269f06ce5eee3cfc4ee0b75fb21c3e2f65c2d0adc50cadcf0a"
   },
   {
     "pinId": 17343,
@@ -71281,35 +71281,35 @@
   },
   {
     "pinId": 17351,
-    "sentiment": 0.25,
-    "textHash": "5f6cb5c84a891f2581451fb8a63e636020eb9ac5ebb826de4fc621966e88e33e",
-    "utcScoredDateTime": "2026-10-19T14:03:01.938Z",
+    "sentiment": 0,
+    "textHash": "b65291199d69eff11d18b2c19ca9abc9c429ccbc8b2b103a9e66848704adf712",
+    "utcScoredDateTime": "2026-10-31T02:38:13.172Z",
     "product": null,
-    "productHash": "5f6cb5c84a891f2581451fb8a63e636020eb9ac5ebb826de4fc621966e88e33e"
+    "productHash": "b65291199d69eff11d18b2c19ca9abc9c429ccbc8b2b103a9e66848704adf712"
   },
   {
     "pinId": 17352,
-    "sentiment": 0.25,
-    "textHash": "7a4f1047993d0d82bc7fb5fb2dc6ec21228dacf49d6faa37194279b8ec11c667",
-    "utcScoredDateTime": "2026-10-19T14:03:01.941Z",
+    "sentiment": 0,
+    "textHash": "ad3d7ebf24e90c2cfaf0d574f2657ad5a18a3806d99052cbee6aa3da5e92d4b8",
+    "utcScoredDateTime": "2026-10-31T02:38:13.174Z",
     "product": null,
-    "productHash": "7a4f1047993d0d82bc7fb5fb2dc6ec21228dacf49d6faa37194279b8ec11c667"
+    "productHash": "ad3d7ebf24e90c2cfaf0d574f2657ad5a18a3806d99052cbee6aa3da5e92d4b8"
   },
   {
     "pinId": 17353,
-    "sentiment": 0.25,
-    "textHash": "e6514a309ff344eab9e470529f3c1ac6cadb171959570c24e202a1dbd1fef619",
-    "utcScoredDateTime": "2026-10-19T14:03:01.945Z",
+    "sentiment": 0,
+    "textHash": "b8bdbecd3f8604358990e5f18830eb14a3f47e17951507f37cc650ef269c67ca",
+    "utcScoredDateTime": "2026-10-31T02:38:13.177Z",
     "product": null,
-    "productHash": "e6514a309ff344eab9e470529f3c1ac6cadb171959570c24e202a1dbd1fef619"
+    "productHash": "b8bdbecd3f8604358990e5f18830eb14a3f47e17951507f37cc650ef269c67ca"
   },
   {
     "pinId": 17354,
-    "sentiment": 0.25,
-    "textHash": "0c81bc9b72cfd92efb79cc9149553a61fe019c6198d5a392dd00a794765dc9d3",
-    "utcScoredDateTime": "2026-10-19T14:03:01.948Z",
+    "sentiment": 0,
+    "textHash": "558634dad607a74ef3a369c7f6978e8af63e550536f3860443a519358a3a8fae",
+    "utcScoredDateTime": "2026-10-31T02:38:15.634Z",
     "product": null,
-    "productHash": "0c81bc9b72cfd92efb79cc9149553a61fe019c6198d5a392dd00a794765dc9d3"
+    "productHash": "558634dad607a74ef3a369c7f6978e8af63e550536f3860443a519358a3a8fae"
   },
   {
     "pinId": 17355,
@@ -76641,35 +76641,35 @@
   },
   {
     "pinId": 18037,
-    "sentiment": 0.25,
-    "textHash": "71b396d52a56faa28cf5acabb12eb1a1149b6daf6ed8a55b730215de0825073c",
-    "utcScoredDateTime": "2026-10-19T14:46:38.997Z",
+    "sentiment": 0,
+    "textHash": "726adb751f0816231c11f26bca6d784390dedb2bd298efe1e4e7942cc0605695",
+    "utcScoredDateTime": "2026-10-31T02:38:15.639Z",
     "product": null,
-    "productHash": "71b396d52a56faa28cf5acabb12eb1a1149b6daf6ed8a55b730215de0825073c"
+    "productHash": "726adb751f0816231c11f26bca6d784390dedb2bd298efe1e4e7942cc0605695"
   },
   {
     "pinId": 18038,
-    "sentiment": 0.25,
-    "textHash": "0992387718848a4b729f9730fc7f7e06adc9669b7d3b76a4230bfaac52b69b53",
-    "utcScoredDateTime": "2026-10-19T14:46:39.082Z",
+    "sentiment": 0,
+    "textHash": "2494b36009c5506360e2b8ecbd36a0ee819112792a06ef916acdb4b6552bd3dd",
+    "utcScoredDateTime": "2026-10-31T02:38:15.642Z",
     "product": null,
-    "productHash": "0992387718848a4b729f9730fc7f7e06adc9669b7d3b76a4230bfaac52b69b53"
+    "productHash": "2494b36009c5506360e2b8ecbd36a0ee819112792a06ef916acdb4b6552bd3dd"
   },
   {
     "pinId": 18039,
-    "sentiment": 0.25,
-    "textHash": "ffc587fd8fc7526c0529d18b39b55c024543a51305cde66b5339ba685e8a09b9",
-    "utcScoredDateTime": "2026-10-19T14:46:39.158Z",
+    "sentiment": 0,
+    "textHash": "e572dcbb4f3f289b7d1b7c626537ffd488be57a78db54564a571bc976202baee",
+    "utcScoredDateTime": "2026-10-31T02:38:15.645Z",
     "product": null,
-    "productHash": "ffc587fd8fc7526c0529d18b39b55c024543a51305cde66b5339ba685e8a09b9"
+    "productHash": "e572dcbb4f3f289b7d1b7c626537ffd488be57a78db54564a571bc976202baee"
   },
   {
     "pinId": 18040,
-    "sentiment": 0.25,
-    "textHash": "8bed59a693de9854e9fb6579c8a55607623184e8cdb8aa0752306b12da53728d",
-    "utcScoredDateTime": "2026-10-19T14:46:39.237Z",
+    "sentiment": 0,
+    "textHash": "730326ec0141f9ea2fc64869960eb2cd6664c51489097dc78e5cd7f5b0881858",
+    "utcScoredDateTime": "2026-10-31T02:38:15.647Z",
     "product": null,
-    "productHash": "8bed59a693de9854e9fb6579c8a55607623184e8cdb8aa0752306b12da53728d"
+    "productHash": "730326ec0141f9ea2fc64869960eb2cd6664c51489097dc78e5cd7f5b0881858"
   },
   {
     "pinId": 18041,
@@ -76681,11 +76681,11 @@
   },
   {
     "pinId": 18042,
-    "sentiment": 0.25,
-    "textHash": "81eca441f35693ac3777ab914b17f8d97349af214336f045df677bacb1f4e81f",
-    "utcScoredDateTime": "2026-10-19T14:46:39.298Z",
+    "sentiment": 0,
+    "textHash": "6b802889da9f79638b5b0cbac28ea6b99a6da87daa6a542536a5cdad45910d9c",
+    "utcScoredDateTime": "2026-10-31T02:38:15.650Z",
     "product": null,
-    "productHash": "81eca441f35693ac3777ab914b17f8d97349af214336f045df677bacb1f4e81f"
+    "productHash": "6b802889da9f79638b5b0cbac28ea6b99a6da87daa6a542536a5cdad45910d9c"
   },
   {
     "pinId": 18046,
@@ -76737,35 +76737,35 @@
   },
   {
     "pinId": 18066,
-    "sentiment": 0.25,
-    "textHash": "c36a81530dff409f33030cfb84c5a4aff65bf0ec8ccb2054155dc1e4c5daef30",
-    "utcScoredDateTime": "2026-10-19T14:48:04.086Z",
+    "sentiment": 0,
+    "textHash": "72713ea71e2d44d459d924fab40934d7456e48f55d5cd29e38381e7b3e42b9a8",
+    "utcScoredDateTime": "2026-10-31T02:38:15.653Z",
     "product": null,
-    "productHash": "c36a81530dff409f33030cfb84c5a4aff65bf0ec8ccb2054155dc1e4c5daef30"
+    "productHash": "72713ea71e2d44d459d924fab40934d7456e48f55d5cd29e38381e7b3e42b9a8"
   },
   {
     "pinId": 18067,
-    "sentiment": 0.25,
-    "textHash": "0b6a279c66c30d215a030cd2121a5412769e091d0edeae088287da85d1010557",
-    "utcScoredDateTime": "2026-10-19T14:48:04.089Z",
+    "sentiment": 0,
+    "textHash": "9401a4c9997f444c8abadc90262132f0d8442ef8a9bb8593fd3c4a1bc9bff538",
+    "utcScoredDateTime": "2026-10-31T02:38:15.657Z",
     "product": null,
-    "productHash": "0b6a279c66c30d215a030cd2121a5412769e091d0edeae088287da85d1010557"
+    "productHash": "9401a4c9997f444c8abadc90262132f0d8442ef8a9bb8593fd3c4a1bc9bff538"
   },
   {
     "pinId": 18068,
-    "sentiment": 0.25,
-    "textHash": "7fae69f5ac3ca5d90a546f929b556d7f3777ea8942eb741471f8b0c96f2973fc",
-    "utcScoredDateTime": "2026-10-19T14:48:04.092Z",
+    "sentiment": 0,
+    "textHash": "3019ff71d72eeb4813aca482fa5257aa61bb277a9188afe71207ce908bcd503c",
+    "utcScoredDateTime": "2026-10-31T02:38:15.660Z",
     "product": null,
-    "productHash": "7fae69f5ac3ca5d90a546f929b556d7f3777ea8942eb741471f8b0c96f2973fc"
+    "productHash": "3019ff71d72eeb4813aca482fa5257aa61bb277a9188afe71207ce908bcd503c"
   },
   {
     "pinId": 18069,
-    "sentiment": 0.25,
-    "textHash": "1692b0745c51a2fa9d33dbd7b372822b11375cd88f1c3c874d5d6743d204be8f",
-    "utcScoredDateTime": "2026-10-19T14:48:04.095Z",
+    "sentiment": 0,
+    "textHash": "d43ce643a0b134cd176be15a88791e79efb6ed2793026dfae79046901f8089f8",
+    "utcScoredDateTime": "2026-10-31T02:38:15.663Z",
     "product": null,
-    "productHash": "1692b0745c51a2fa9d33dbd7b372822b11375cd88f1c3c874d5d6743d204be8f"
+    "productHash": "d43ce643a0b134cd176be15a88791e79efb6ed2793026dfae79046901f8089f8"
   },
   {
     "pinId": 18070,
@@ -76809,59 +76809,59 @@
   },
   {
     "pinId": 18075,
-    "sentiment": 0.25,
-    "textHash": "f66942904be96107242f8589c5ee35a774acc43841ff459893f34ab5fd0ca153",
-    "utcScoredDateTime": "2026-10-19T14:50:58.427Z",
+    "sentiment": 0,
+    "textHash": "8f49159e196ce320b24879e283047d9f9f3d27d9ccd2c8d239d945e0a615e0cc",
+    "utcScoredDateTime": "2026-10-31T02:38:18.055Z",
     "product": null,
-    "productHash": "f66942904be96107242f8589c5ee35a774acc43841ff459893f34ab5fd0ca153"
+    "productHash": "8f49159e196ce320b24879e283047d9f9f3d27d9ccd2c8d239d945e0a615e0cc"
   },
   {
     "pinId": 18076,
-    "sentiment": 0.25,
-    "textHash": "0e96c4b07eb5b77b8d2d0c27ef3a471f35cff0b8fec89d4e405698e2b9be0790",
-    "utcScoredDateTime": "2026-10-19T14:50:58.431Z",
+    "sentiment": 0,
+    "textHash": "5e6e392039f59a307df7a4aec714ab7944d952eee1d122029bd2230fa3335da8",
+    "utcScoredDateTime": "2026-10-31T02:38:18.059Z",
     "product": null,
-    "productHash": "0e96c4b07eb5b77b8d2d0c27ef3a471f35cff0b8fec89d4e405698e2b9be0790"
+    "productHash": "5e6e392039f59a307df7a4aec714ab7944d952eee1d122029bd2230fa3335da8"
   },
   {
     "pinId": 18077,
-    "sentiment": 0.25,
-    "textHash": "0235ada2903c5e3aa56a10ac079627ba8ca492497c343360a826440b51aad268",
-    "utcScoredDateTime": "2026-10-19T14:50:58.434Z",
+    "sentiment": 0,
+    "textHash": "04a92fc35eebcea01f1e48cc2171fde997ddc7d1e6e198aac4cf3680592329c5",
+    "utcScoredDateTime": "2026-10-31T02:38:18.063Z",
     "product": null,
-    "productHash": "0235ada2903c5e3aa56a10ac079627ba8ca492497c343360a826440b51aad268"
+    "productHash": "04a92fc35eebcea01f1e48cc2171fde997ddc7d1e6e198aac4cf3680592329c5"
   },
   {
     "pinId": 18078,
-    "sentiment": 0.25,
-    "textHash": "843f2b78560fca4d63aa03989fcd2f5a2dc36d1ae52cda8889bcfed2726277cb",
-    "utcScoredDateTime": "2026-10-19T14:50:58.437Z",
+    "sentiment": 0,
+    "textHash": "1e09ca36830747869c86f1600395c349a3d98f4cd5a9e7174314f70d27a56d4e",
+    "utcScoredDateTime": "2026-10-31T02:38:18.066Z",
     "product": null,
-    "productHash": "843f2b78560fca4d63aa03989fcd2f5a2dc36d1ae52cda8889bcfed2726277cb"
+    "productHash": "1e09ca36830747869c86f1600395c349a3d98f4cd5a9e7174314f70d27a56d4e"
   },
   {
     "pinId": 18079,
-    "sentiment": 0.25,
-    "textHash": "cb9321d7d66516043374a8554778ea369840fb4cfd512d252f0d95c1d25b8608",
-    "utcScoredDateTime": "2026-10-19T14:50:58.441Z",
+    "sentiment": 0.5,
+    "textHash": "db2c8db7e58f2d9a245fcf9a83c0eb09819ccc7e1d44b2ebbdc75f2a4f881b52",
+    "utcScoredDateTime": "2026-10-31T02:39:06.018Z",
     "product": null,
-    "productHash": "cb9321d7d66516043374a8554778ea369840fb4cfd512d252f0d95c1d25b8608"
+    "productHash": "db2c8db7e58f2d9a245fcf9a83c0eb09819ccc7e1d44b2ebbdc75f2a4f881b52"
   },
   {
     "pinId": 18080,
-    "sentiment": 0.25,
-    "textHash": "1f332b255a126ca0ba0ca071b6a2dbc4de1a84d32760c6d0979b68571f4c2c8b",
-    "utcScoredDateTime": "2026-10-19T14:50:58.444Z",
+    "sentiment": 0,
+    "textHash": "8f862eef4440cb9b1e54f765108b31ae498d2d7b19b8bc56e7ba4adf18743638",
+    "utcScoredDateTime": "2026-10-31T02:39:06.074Z",
     "product": null,
-    "productHash": "1f332b255a126ca0ba0ca071b6a2dbc4de1a84d32760c6d0979b68571f4c2c8b"
+    "productHash": "8f862eef4440cb9b1e54f765108b31ae498d2d7b19b8bc56e7ba4adf18743638"
   },
   {
     "pinId": 18081,
-    "sentiment": 0.25,
-    "textHash": "c6f06ae72cdebdd226e90f4bcdbc0d0d16824303ce366b016fe8d59d3088d70c",
-    "utcScoredDateTime": "2026-10-19T14:50:58.447Z",
+    "sentiment": 0,
+    "textHash": "332901bff02b084d942962700c30874742ebffe2833bcb1b882b99bc6855fbcd",
+    "utcScoredDateTime": "2026-10-31T02:39:06.078Z",
     "product": null,
-    "productHash": "c6f06ae72cdebdd226e90f4bcdbc0d0d16824303ce366b016fe8d59d3088d70c"
+    "productHash": "332901bff02b084d942962700c30874742ebffe2833bcb1b882b99bc6855fbcd"
   },
   {
     "pinId": 18082,
@@ -76929,35 +76929,35 @@
   },
   {
     "pinId": 18090,
-    "sentiment": 0.25,
-    "textHash": "ce594bf4556ad92ce4b6a8db790cacaa976fc9c1167bb143a0fe83b2594569fa",
-    "utcScoredDateTime": "2026-10-19T14:51:10.629Z",
+    "sentiment": 0,
+    "textHash": "c5635f9974cf28a9cb36beb23bc98ccddc21a0604c21490e25ad8cb429b2a3d9",
+    "utcScoredDateTime": "2026-10-31T02:39:06.080Z",
     "product": null,
-    "productHash": "ce594bf4556ad92ce4b6a8db790cacaa976fc9c1167bb143a0fe83b2594569fa"
+    "productHash": "c5635f9974cf28a9cb36beb23bc98ccddc21a0604c21490e25ad8cb429b2a3d9"
   },
   {
     "pinId": 18091,
-    "sentiment": 0.25,
-    "textHash": "0b5065066b0d0c610daca46b4f9f018b16c6244022bb381269f3cb48049b15bc",
-    "utcScoredDateTime": "2026-10-19T14:51:10.633Z",
+    "sentiment": 0,
+    "textHash": "828ff5f80b93574e6e6f8834d6caaeca51b1d2a073c237d9678d4ff0aa704ad4",
+    "utcScoredDateTime": "2026-10-31T02:39:06.083Z",
     "product": null,
-    "productHash": "0b5065066b0d0c610daca46b4f9f018b16c6244022bb381269f3cb48049b15bc"
+    "productHash": "828ff5f80b93574e6e6f8834d6caaeca51b1d2a073c237d9678d4ff0aa704ad4"
   },
   {
     "pinId": 18092,
-    "sentiment": 0.25,
-    "textHash": "2d5a9c0e751d30a4dd6960e3555705d0018e03dd6064523543c974e20b58385e",
-    "utcScoredDateTime": "2026-10-19T14:51:10.636Z",
+    "sentiment": 0.3,
+    "textHash": "ed7e7552a738576ad437d2282913d4f60bcebc87c45b326460b10f9aa42cccde",
+    "utcScoredDateTime": "2026-10-31T02:39:06.086Z",
     "product": null,
-    "productHash": "2d5a9c0e751d30a4dd6960e3555705d0018e03dd6064523543c974e20b58385e"
+    "productHash": "ed7e7552a738576ad437d2282913d4f60bcebc87c45b326460b10f9aa42cccde"
   },
   {
     "pinId": 18093,
-    "sentiment": 0.25,
-    "textHash": "5baf886ea5940109663e3b3777aa1fdd181f5d620aa55481fae79537385ddb77",
-    "utcScoredDateTime": "2026-10-19T14:51:22.782Z",
+    "sentiment": 0,
+    "textHash": "ccc839e11249f49b1d4895ce7497a83513cac9d8f9f3183e93cecca79a8a325b",
+    "utcScoredDateTime": "2026-10-31T02:39:06.089Z",
     "product": null,
-    "productHash": "5baf886ea5940109663e3b3777aa1fdd181f5d620aa55481fae79537385ddb77"
+    "productHash": "ccc839e11249f49b1d4895ce7497a83513cac9d8f9f3183e93cecca79a8a325b"
   },
   {
     "pinId": 18094,
@@ -76985,11 +76985,11 @@
   },
   {
     "pinId": 18097,
-    "sentiment": 0.25,
-    "textHash": "545f8cab62518e77ad840601624ae756e2eeff22385b12c06ed6627c672a2fba",
-    "utcScoredDateTime": "2026-10-19T14:51:22.797Z",
+    "sentiment": 0,
+    "textHash": "8ad497522ee487d2265a51469c6e559c681ec3332e6917fba5efbc1fbaf8982e",
+    "utcScoredDateTime": "2026-10-31T02:39:06.092Z",
     "product": null,
-    "productHash": "545f8cab62518e77ad840601624ae756e2eeff22385b12c06ed6627c672a2fba"
+    "productHash": "8ad497522ee487d2265a51469c6e559c681ec3332e6917fba5efbc1fbaf8982e"
   },
   {
     "pinId": 18106,
@@ -77001,11 +77001,11 @@
   },
   {
     "pinId": 18107,
-    "sentiment": 0.25,
-    "textHash": "1ae9e55f8d47b96dff3065fa40f0420fc168a9d821b416f9602908f6dc1c525a",
-    "utcScoredDateTime": "2026-10-19T14:51:22.804Z",
+    "sentiment": 0,
+    "textHash": "8786a00f3656cd4dd6cd88b1c5658449dd9d3e45d03c6846762c8bfd07208a41",
+    "utcScoredDateTime": "2026-10-31T02:39:06.095Z",
     "product": null,
-    "productHash": "1ae9e55f8d47b96dff3065fa40f0420fc168a9d821b416f9602908f6dc1c525a"
+    "productHash": "8786a00f3656cd4dd6cd88b1c5658449dd9d3e45d03c6846762c8bfd07208a41"
   },
   {
     "pinId": 18108,
@@ -77017,43 +77017,43 @@
   },
   {
     "pinId": 18109,
-    "sentiment": 0.25,
-    "textHash": "c0bd8c2dffbf7de419b61849ad92fa30501ddc006e36bb01d6ed3fd1a929fdc3",
-    "utcScoredDateTime": "2026-10-19T14:51:22.813Z",
+    "sentiment": 0,
+    "textHash": "82c023454b83a43ccf98081270d34f1c72759f26935aff4e136ab0b686558513",
+    "utcScoredDateTime": "2026-10-31T02:39:06.099Z",
     "product": null,
-    "productHash": "c0bd8c2dffbf7de419b61849ad92fa30501ddc006e36bb01d6ed3fd1a929fdc3"
+    "productHash": "82c023454b83a43ccf98081270d34f1c72759f26935aff4e136ab0b686558513"
   },
   {
     "pinId": 18110,
-    "sentiment": 0.25,
-    "textHash": "3ed725ec842ebaad06153e76cc80fd1dd474c182c2716ee4a0960f43db769bb8",
-    "utcScoredDateTime": "2026-10-19T14:51:22.817Z",
+    "sentiment": 0,
+    "textHash": "db4ba70f6068e7a81a77f175048adbd077c87a57728d2f91850aac96689e82c1",
+    "utcScoredDateTime": "2026-10-31T02:39:08.509Z",
     "product": null,
-    "productHash": "3ed725ec842ebaad06153e76cc80fd1dd474c182c2716ee4a0960f43db769bb8"
+    "productHash": "db4ba70f6068e7a81a77f175048adbd077c87a57728d2f91850aac96689e82c1"
   },
   {
     "pinId": 18111,
-    "sentiment": 0.25,
-    "textHash": "0c6d17f3bf0ed24aac9f6aa51543b6ce6983e8047460ad96691bd5b0ae4a19f7",
-    "utcScoredDateTime": "2026-10-19T14:52:04.764Z",
+    "sentiment": 0,
+    "textHash": "08ca0af0b741fcea29f0fd6db44a2f3ebe625336c8e0704dc770210e02bafaa1",
+    "utcScoredDateTime": "2026-10-31T02:39:08.524Z",
     "product": null,
-    "productHash": "0c6d17f3bf0ed24aac9f6aa51543b6ce6983e8047460ad96691bd5b0ae4a19f7"
+    "productHash": "08ca0af0b741fcea29f0fd6db44a2f3ebe625336c8e0704dc770210e02bafaa1"
   },
   {
     "pinId": 18112,
-    "sentiment": 0.25,
-    "textHash": "8da2488a45c893fc4397a746d6feca87df7aed3f582288090d871f145e2e8abf",
-    "utcScoredDateTime": "2026-10-19T14:52:07.060Z",
+    "sentiment": 0,
+    "textHash": "ff5b0aad3d65ec750a58f45a528ef7297e703cdfa5564b0e7ec8e701cb97807e",
+    "utcScoredDateTime": "2026-10-31T02:39:08.576Z",
     "product": null,
-    "productHash": "8da2488a45c893fc4397a746d6feca87df7aed3f582288090d871f145e2e8abf"
+    "productHash": "ff5b0aad3d65ec750a58f45a528ef7297e703cdfa5564b0e7ec8e701cb97807e"
   },
   {
     "pinId": 18113,
-    "sentiment": 0.25,
-    "textHash": "9051c120d9a06092bc528537d26a4a091acd0c2385e3354610aaa68f16d5ef30",
-    "utcScoredDateTime": "2026-10-19T14:52:08.142Z",
+    "sentiment": 0,
+    "textHash": "2f5898631217896f497e95d714fb1f9b265ad5fa9926a87358887fcc82ffc00b",
+    "utcScoredDateTime": "2026-10-31T02:39:08.588Z",
     "product": null,
-    "productHash": "9051c120d9a06092bc528537d26a4a091acd0c2385e3354610aaa68f16d5ef30"
+    "productHash": "2f5898631217896f497e95d714fb1f9b265ad5fa9926a87358887fcc82ffc00b"
   },
   {
     "pinId": 18114,
@@ -77089,67 +77089,67 @@
   },
   {
     "pinId": 18126,
-    "sentiment": 0.25,
-    "textHash": "369bc4c6f6bb536d88d297e0bed47712a71c1d997f1806a8c47c1a24be2b09b4",
-    "utcScoredDateTime": "2026-10-19T14:52:08.786Z",
+    "sentiment": 0,
+    "textHash": "848be5207192bcbafd485cdc6bc9fad6269d43505cef9ede80022af029144e71",
+    "utcScoredDateTime": "2026-10-31T02:39:08.593Z",
     "product": null,
-    "productHash": "369bc4c6f6bb536d88d297e0bed47712a71c1d997f1806a8c47c1a24be2b09b4"
+    "productHash": "848be5207192bcbafd485cdc6bc9fad6269d43505cef9ede80022af029144e71"
   },
   {
     "pinId": 18127,
-    "sentiment": 0.25,
-    "textHash": "d74a101da2c76228b9b432ab629da4420641621f11b552bb21bf2ea273acfc61",
-    "utcScoredDateTime": "2026-10-19T14:52:08.793Z",
+    "sentiment": 0,
+    "textHash": "ecf972002fd11ab073629e81aece38c830ecafdc8fd066c79d8b176e2c3b4d5c",
+    "utcScoredDateTime": "2026-10-31T02:39:08.597Z",
     "product": null,
-    "productHash": "d74a101da2c76228b9b432ab629da4420641621f11b552bb21bf2ea273acfc61"
+    "productHash": "ecf972002fd11ab073629e81aece38c830ecafdc8fd066c79d8b176e2c3b4d5c"
   },
   {
     "pinId": 18128,
-    "sentiment": 0.25,
-    "textHash": "ebf618f49da5989b48f8e1d1f5960c8ce867b2fb37a0065664bba0c4233e11f2",
-    "utcScoredDateTime": "2026-10-19T14:52:08.797Z",
+    "sentiment": 0,
+    "textHash": "7835edf306f01b720895a61443d3f59bf03e72e71b00438d74fdecb8157e01eb",
+    "utcScoredDateTime": "2026-10-31T02:39:08.602Z",
     "product": null,
-    "productHash": "ebf618f49da5989b48f8e1d1f5960c8ce867b2fb37a0065664bba0c4233e11f2"
+    "productHash": "7835edf306f01b720895a61443d3f59bf03e72e71b00438d74fdecb8157e01eb"
   },
   {
     "pinId": 18129,
-    "sentiment": 0.25,
-    "textHash": "abbac18cf6742fb08fd6390aa7e72bbe0dbb33b81dd0b299a188e317150502d9",
-    "utcScoredDateTime": "2026-10-19T14:52:20.989Z",
+    "sentiment": 0,
+    "textHash": "d649a1fa865c700b1df1f71fed237f328cedc6f5abc0646017cc78f883b0813d",
+    "utcScoredDateTime": "2026-10-31T02:39:08.605Z",
     "product": null,
-    "productHash": "abbac18cf6742fb08fd6390aa7e72bbe0dbb33b81dd0b299a188e317150502d9"
+    "productHash": "d649a1fa865c700b1df1f71fed237f328cedc6f5abc0646017cc78f883b0813d"
   },
   {
     "pinId": 18130,
-    "sentiment": 0.25,
-    "textHash": "6b600efa271e511d19ba9f897bb6b4fced1a50396e05be8bf51116981b86d7f2",
-    "utcScoredDateTime": "2026-10-19T14:52:20.993Z",
+    "sentiment": 0,
+    "textHash": "bcb662e36ebc136c6165c93a02d28cf4325f15a8f54ae49350ac4749b7f6058b",
+    "utcScoredDateTime": "2026-10-31T02:39:08.608Z",
     "product": null,
-    "productHash": "6b600efa271e511d19ba9f897bb6b4fced1a50396e05be8bf51116981b86d7f2"
+    "productHash": "bcb662e36ebc136c6165c93a02d28cf4325f15a8f54ae49350ac4749b7f6058b"
   },
   {
     "pinId": 18131,
-    "sentiment": 0.25,
-    "textHash": "cbcc199c74ca2a9d30e7493f77ca4bd64e6dc87968ea5a65fb5396c7c529ddef",
-    "utcScoredDateTime": "2026-10-19T14:52:20.999Z",
+    "sentiment": 0,
+    "textHash": "8f3d148c64ee87b331754c5aca015462cacf0f9076ca6212b7e102ed15e44a65",
+    "utcScoredDateTime": "2026-10-31T02:39:08.611Z",
     "product": null,
-    "productHash": "cbcc199c74ca2a9d30e7493f77ca4bd64e6dc87968ea5a65fb5396c7c529ddef"
+    "productHash": "8f3d148c64ee87b331754c5aca015462cacf0f9076ca6212b7e102ed15e44a65"
   },
   {
     "pinId": 18139,
-    "sentiment": 0.25,
-    "textHash": "bffbee80be86e22ee61fc3e3c9ca18c177727eca66c44ada70f5871b2c96aa08",
-    "utcScoredDateTime": "2026-10-19T14:52:21.002Z",
+    "sentiment": 0,
+    "textHash": "bd25ea7be7b07c8661a5c743c10ea60ffb7591d5f0b4b6de9b6324853f073194",
+    "utcScoredDateTime": "2026-10-31T02:39:11.009Z",
     "product": null,
-    "productHash": "bffbee80be86e22ee61fc3e3c9ca18c177727eca66c44ada70f5871b2c96aa08"
+    "productHash": "bd25ea7be7b07c8661a5c743c10ea60ffb7591d5f0b4b6de9b6324853f073194"
   },
   {
     "pinId": 18142,
-    "sentiment": 0.25,
-    "textHash": "2aa713da8c9e53394d67f4faac325aced486e7706dd0ef4ba207d105456c3c76",
-    "utcScoredDateTime": "2026-10-19T14:52:21.006Z",
+    "sentiment": 0,
+    "textHash": "eb7148982566f46cf470882ca66cbd32956d0619a62bbdac3ea4ba76fcc07666",
+    "utcScoredDateTime": "2026-10-31T02:39:11.013Z",
     "product": null,
-    "productHash": "2aa713da8c9e53394d67f4faac325aced486e7706dd0ef4ba207d105456c3c76"
+    "productHash": "eb7148982566f46cf470882ca66cbd32956d0619a62bbdac3ea4ba76fcc07666"
   },
   {
     "pinId": 18143,
@@ -77185,27 +77185,27 @@
   },
   {
     "pinId": 18159,
-    "sentiment": 0.25,
-    "textHash": "28cb686ac7ace58cdd4d2e9e0690ec1b24cd5ecd1bfbe120d7c564fbbe3d7620",
-    "utcScoredDateTime": "2026-10-19T14:52:21.026Z",
+    "sentiment": 0,
+    "textHash": "52e4058d0aa7069f66a1759cd0be09b45a12e67b7782a2b26b01b501d280aec9",
+    "utcScoredDateTime": "2026-10-31T02:39:11.017Z",
     "product": null,
-    "productHash": "28cb686ac7ace58cdd4d2e9e0690ec1b24cd5ecd1bfbe120d7c564fbbe3d7620"
+    "productHash": "52e4058d0aa7069f66a1759cd0be09b45a12e67b7782a2b26b01b501d280aec9"
   },
   {
     "pinId": 18160,
-    "sentiment": 0.25,
-    "textHash": "75603f039669f11dab1a466b5b610933fb43600b31ba9010909ee48345c85cd9",
-    "utcScoredDateTime": "2026-10-19T14:52:50.371Z",
+    "sentiment": 0,
+    "textHash": "a813d23357c07d6e795d55acb9b5be33b25716bb8da7b312a27859ce8ece2394",
+    "utcScoredDateTime": "2026-10-31T02:39:11.021Z",
     "product": null,
-    "productHash": "75603f039669f11dab1a466b5b610933fb43600b31ba9010909ee48345c85cd9"
+    "productHash": "a813d23357c07d6e795d55acb9b5be33b25716bb8da7b312a27859ce8ece2394"
   },
   {
     "pinId": 18161,
-    "sentiment": 0.25,
-    "textHash": "362c3c9b35beeb79b2977d965987d0fb837a528431981cb3a38f4a9cd47324be",
-    "utcScoredDateTime": "2026-10-19T14:52:51.723Z",
+    "sentiment": 0,
+    "textHash": "4518340762ea0bbc670ddf1f2060e14161696322eb5fb76fc41fca215508bcd9",
+    "utcScoredDateTime": "2026-10-31T02:39:11.038Z",
     "product": null,
-    "productHash": "362c3c9b35beeb79b2977d965987d0fb837a528431981cb3a38f4a9cd47324be"
+    "productHash": "4518340762ea0bbc670ddf1f2060e14161696322eb5fb76fc41fca215508bcd9"
   },
   {
     "pinId": 18162,
@@ -77217,35 +77217,35 @@
   },
   {
     "pinId": 18163,
-    "sentiment": 0.25,
-    "textHash": "2f146592072f8f1bab0777037d94f4bf857dcbfd74ecb100337827c50cf9ac8a",
-    "utcScoredDateTime": "2026-10-19T14:52:52.178Z",
+    "sentiment": 0.3,
+    "textHash": "ead8c00e73c1636ab3d07e26ea01e492fb2e8c921d81b15239b4aabea52fffaf",
+    "utcScoredDateTime": "2026-10-31T02:39:11.081Z",
     "product": null,
-    "productHash": "2f146592072f8f1bab0777037d94f4bf857dcbfd74ecb100337827c50cf9ac8a"
+    "productHash": "ead8c00e73c1636ab3d07e26ea01e492fb2e8c921d81b15239b4aabea52fffaf"
   },
   {
     "pinId": 18164,
-    "sentiment": 0.25,
-    "textHash": "cefc629af446ab21bd882915f540edc83ddbe6c07f38b6379da9d71042cea188",
-    "utcScoredDateTime": "2026-10-19T14:52:52.198Z",
+    "sentiment": 0,
+    "textHash": "51f8ea9915d5289dc35455dcbf48f1551cd09a826d8ed97a07a2e7cce04fe80f",
+    "utcScoredDateTime": "2026-10-31T02:39:11.105Z",
     "product": null,
-    "productHash": "cefc629af446ab21bd882915f540edc83ddbe6c07f38b6379da9d71042cea188"
+    "productHash": "51f8ea9915d5289dc35455dcbf48f1551cd09a826d8ed97a07a2e7cce04fe80f"
   },
   {
     "pinId": 18165,
-    "sentiment": 0.25,
-    "textHash": "75683b1e5048376369ba5efbdad769343419376fdbcb149bc36e80dda1f8bc64",
-    "utcScoredDateTime": "2026-10-19T14:52:52.209Z",
+    "sentiment": 0,
+    "textHash": "8c39b3eff22a52ff7f3fb855a4e79f84c2acefe03e8d86bf76f643a3b929fa8e",
+    "utcScoredDateTime": "2026-10-31T02:39:11.185Z",
     "product": null,
-    "productHash": "75683b1e5048376369ba5efbdad769343419376fdbcb149bc36e80dda1f8bc64"
+    "productHash": "8c39b3eff22a52ff7f3fb855a4e79f84c2acefe03e8d86bf76f643a3b929fa8e"
   },
   {
     "pinId": 18167,
-    "sentiment": 0.25,
-    "textHash": "048b038463ee04cc2e42365078fa3467b74c72761bff4ff9dd580cbe9e1bc386",
-    "utcScoredDateTime": "2026-10-19T14:52:52.219Z",
+    "sentiment": 0,
+    "textHash": "98f51bc698f2e23f6dded7d1ba6f830b87a73178231c7905ae9a418606df8e4e",
+    "utcScoredDateTime": "2026-10-31T02:39:11.193Z",
     "product": null,
-    "productHash": "048b038463ee04cc2e42365078fa3467b74c72761bff4ff9dd580cbe9e1bc386"
+    "productHash": "98f51bc698f2e23f6dded7d1ba6f830b87a73178231c7905ae9a418606df8e4e"
   },
   {
     "pinId": 18169,
@@ -77313,59 +77313,59 @@
   },
   {
     "pinId": 18181,
-    "sentiment": 0.25,
-    "textHash": "1829cedaa4713673ce7ecefb05198fc56c948561896c9a52ae2fcdaed87fd6ea",
-    "utcScoredDateTime": "2026-10-19T14:53:04.587Z",
+    "sentiment": 0,
+    "textHash": "673fd20918f17bed74b30fbf51f895382d8faff7f482e0c621339ac9ac65616e",
+    "utcScoredDateTime": "2026-10-31T02:39:11.229Z",
     "product": null,
-    "productHash": "1829cedaa4713673ce7ecefb05198fc56c948561896c9a52ae2fcdaed87fd6ea"
+    "productHash": "673fd20918f17bed74b30fbf51f895382d8faff7f482e0c621339ac9ac65616e"
   },
   {
     "pinId": 18182,
-    "sentiment": 0.25,
-    "textHash": "c4c2b4ffa99061921dd59776c8ee5b630a9eecac5ac42f2df05fe8b842818890",
-    "utcScoredDateTime": "2026-10-19T14:53:04.596Z",
+    "sentiment": 0,
+    "textHash": "a15278970be8093a0cd09bfd2c0ea41677afa044e9f357f914321cf37dc5b199",
+    "utcScoredDateTime": "2026-10-31T02:39:13.617Z",
     "product": null,
-    "productHash": "c4c2b4ffa99061921dd59776c8ee5b630a9eecac5ac42f2df05fe8b842818890"
+    "productHash": "a15278970be8093a0cd09bfd2c0ea41677afa044e9f357f914321cf37dc5b199"
   },
   {
     "pinId": 18183,
-    "sentiment": 0.25,
-    "textHash": "f94e2ba147f44c59fa3b883f9cfbe64dd03ab82246169900cb3b11203d9aaad9",
-    "utcScoredDateTime": "2026-10-19T14:53:04.602Z",
+    "sentiment": 0,
+    "textHash": "7cf8166b4d50bb4b363d1e0c919c8f65523ec798a4f491bc26128cbf92bb2b65",
+    "utcScoredDateTime": "2026-10-31T02:39:13.620Z",
     "product": null,
-    "productHash": "f94e2ba147f44c59fa3b883f9cfbe64dd03ab82246169900cb3b11203d9aaad9"
+    "productHash": "7cf8166b4d50bb4b363d1e0c919c8f65523ec798a4f491bc26128cbf92bb2b65"
   },
   {
     "pinId": 18184,
-    "sentiment": 0.25,
-    "textHash": "b20c2cf4e88bb82b034748acb6f6224c4283259d4a9dacba2350cfac9fa7ac61",
-    "utcScoredDateTime": "2026-10-19T14:53:04.607Z",
+    "sentiment": 0,
+    "textHash": "6519a619ea258eba6737ac398ffb073efd90513632ddfb8791ab8205c2703fea",
+    "utcScoredDateTime": "2026-10-31T02:39:13.623Z",
     "product": null,
-    "productHash": "b20c2cf4e88bb82b034748acb6f6224c4283259d4a9dacba2350cfac9fa7ac61"
+    "productHash": "6519a619ea258eba6737ac398ffb073efd90513632ddfb8791ab8205c2703fea"
   },
   {
     "pinId": 18185,
-    "sentiment": 0.25,
-    "textHash": "308d65af37eeaffd56d3577da157cb9cc97a03895fcb4b46badd953d653e326e",
-    "utcScoredDateTime": "2026-10-19T14:53:04.611Z",
+    "sentiment": 0,
+    "textHash": "6396b7c39ea26d849dbda718805bab5e0fd7f5439fcd26eda547da814528d70e",
+    "utcScoredDateTime": "2026-10-31T02:39:13.626Z",
     "product": null,
-    "productHash": "308d65af37eeaffd56d3577da157cb9cc97a03895fcb4b46badd953d653e326e"
+    "productHash": "6396b7c39ea26d849dbda718805bab5e0fd7f5439fcd26eda547da814528d70e"
   },
   {
     "pinId": 18186,
-    "sentiment": 0.25,
-    "textHash": "73ab4eaf820da4bbb6e9c61d9f556753ab3a8881ce0df3407176bbb11d96c9c4",
-    "utcScoredDateTime": "2026-10-19T14:53:16.834Z",
+    "sentiment": 0,
+    "textHash": "01f7cccac2adbd0bea72e3deb9dec8044de7b9eff2b53c33a0c1c0f2a916f84e",
+    "utcScoredDateTime": "2026-10-31T02:39:13.629Z",
     "product": null,
-    "productHash": "73ab4eaf820da4bbb6e9c61d9f556753ab3a8881ce0df3407176bbb11d96c9c4"
+    "productHash": "01f7cccac2adbd0bea72e3deb9dec8044de7b9eff2b53c33a0c1c0f2a916f84e"
   },
   {
     "pinId": 18187,
-    "sentiment": 0.25,
-    "textHash": "18034665bfc9af55a1fe0c51969410f6fe35edccc4859a78d78754bf53a0dcfe",
-    "utcScoredDateTime": "2026-10-19T14:53:16.845Z",
+    "sentiment": 0,
+    "textHash": "20e5d69da1b8308911232d6c6e1fe3ed2af58089a69e84cff67a5e74cfe97620",
+    "utcScoredDateTime": "2026-10-31T02:39:13.632Z",
     "product": null,
-    "productHash": "18034665bfc9af55a1fe0c51969410f6fe35edccc4859a78d78754bf53a0dcfe"
+    "productHash": "20e5d69da1b8308911232d6c6e1fe3ed2af58089a69e84cff67a5e74cfe97620"
   },
   {
     "pinId": 18188,
@@ -77666,10 +77666,10 @@
   {
     "pinId": 18254,
     "sentiment": 0.5,
-    "textHash": "acd1ad3c4125f9d68151aa698e28150810cfd8be15b24700f0ad08329f8c1fe7",
-    "utcScoredDateTime": "2026-10-19T21:54:16.655Z",
-    "product": "Mt. Holly",
-    "productHash": "acd1ad3c4125f9d68151aa698e28150810cfd8be15b24700f0ad08329f8c1fe7"
+    "textHash": "a96d136c094e388c908e51a06aae0ceb3daf977a0cc68d8b8974e56ed175497d",
+    "utcScoredDateTime": "2026-10-31T02:39:13.634Z",
+    "product": null,
+    "productHash": "a96d136c094e388c908e51a06aae0ceb3daf977a0cc68d8b8974e56ed175497d"
   },
   {
     "pinId": 18255,
@@ -77817,11 +77817,11 @@
   },
   {
     "pinId": 18284,
-    "sentiment": 0.25,
-    "textHash": "225f8bbfbd77811a8145e2d5288d308e562174bfba9a03bf80b2eb9d4d0cb92f",
-    "utcScoredDateTime": "2026-10-20T15:16:47.811Z",
+    "sentiment": 0.5,
+    "textHash": "e4369f2a050ac5fb31deef1d5d1a9ce7d1e37c0b994898ccfef51092c21972ee",
+    "utcScoredDateTime": "2026-10-31T02:39:13.638Z",
     "product": null,
-    "productHash": "225f8bbfbd77811a8145e2d5288d308e562174bfba9a03bf80b2eb9d4d0cb92f"
+    "productHash": "e4369f2a050ac5fb31deef1d5d1a9ce7d1e37c0b994898ccfef51092c21972ee"
   },
   {
     "pinId": 18285,
@@ -77873,11 +77873,11 @@
   },
   {
     "pinId": 18297,
-    "sentiment": 0.25,
-    "textHash": "7eaecbc88afb158493bd892b6d04d39555f0921e1166a735d64a4203582028a6",
-    "utcScoredDateTime": "2026-10-20T15:16:50.378Z",
+    "sentiment": 0,
+    "textHash": "ddfe30873566b466362c972379a35006741c56a1499b3155571aad4c9e784dc1",
+    "utcScoredDateTime": "2026-10-31T02:39:13.640Z",
     "product": null,
-    "productHash": "7eaecbc88afb158493bd892b6d04d39555f0921e1166a735d64a4203582028a6"
+    "productHash": "ddfe30873566b466362c972379a35006741c56a1499b3155571aad4c9e784dc1"
   },
   {
     "pinId": 18298,
@@ -77945,11 +77945,11 @@
   },
   {
     "pinId": 18313,
-    "sentiment": 0.25,
-    "textHash": "e7b074f3373b741015949ec6b65158177e574dfddc8f008d516e2cc65c2eb0a7",
-    "utcScoredDateTime": "2026-10-20T15:16:50.415Z",
+    "sentiment": 0,
+    "textHash": "69fd48a1d2f19346bff5b7b0c501dce6a68a946aae24412c83907b50747cae24",
+    "utcScoredDateTime": "2026-10-31T02:39:13.643Z",
     "product": null,
-    "productHash": "e7b074f3373b741015949ec6b65158177e574dfddc8f008d516e2cc65c2eb0a7"
+    "productHash": "69fd48a1d2f19346bff5b7b0c501dce6a68a946aae24412c83907b50747cae24"
   },
   {
     "pinId": 18314,
@@ -77969,11 +77969,11 @@
   },
   {
     "pinId": 18316,
-    "sentiment": 0.35,
-    "textHash": "bc592f3d127a99b4522bcb731a278c20c82c7fbb1228f1265a96400998efec45",
-    "utcScoredDateTime": "2026-10-20T15:16:53.004Z",
+    "sentiment": 0,
+    "textHash": "c100d3a161e9fb3ef7769c784a2fa4b06cb0a2c1a8e0b600bfbac93d8faf92f6",
+    "utcScoredDateTime": "2026-10-31T02:39:15.937Z",
     "product": null,
-    "productHash": "bc592f3d127a99b4522bcb731a278c20c82c7fbb1228f1265a96400998efec45"
+    "productHash": "c100d3a161e9fb3ef7769c784a2fa4b06cb0a2c1a8e0b600bfbac93d8faf92f6"
   },
   {
     "pinId": 18317,
@@ -78217,11 +78217,11 @@
   },
   {
     "pinId": 18347,
-    "sentiment": 0.25,
-    "textHash": "ae8e1ba1688628e91545099fb30a2da4154bcf46cca323bf560bd57a98bc6017",
-    "utcScoredDateTime": "2026-10-20T15:17:00.746Z",
+    "sentiment": 0.5,
+    "textHash": "476c7c340338e75120d84f61e92f29d6552e4ba7cce3c74fa842141821f62383",
+    "utcScoredDateTime": "2026-10-31T02:39:15.943Z",
     "product": null,
-    "productHash": "ae8e1ba1688628e91545099fb30a2da4154bcf46cca323bf560bd57a98bc6017"
+    "productHash": "476c7c340338e75120d84f61e92f29d6552e4ba7cce3c74fa842141821f62383"
   },
   {
     "pinId": 18348,
@@ -78233,11 +78233,11 @@
   },
   {
     "pinId": 18349,
-    "sentiment": 0.25,
-    "textHash": "51beecb7ea2858cd8ed67e9a029db9d5e969688c22349267f0622132163ab4ab",
-    "utcScoredDateTime": "2026-10-20T15:17:00.754Z",
+    "sentiment": 0,
+    "textHash": "8b6d6f095ef8311b5259f057c9107b14af5c17d40390084c21fcc6a09554efa7",
+    "utcScoredDateTime": "2026-10-31T02:40:16.731Z",
     "product": null,
-    "productHash": "51beecb7ea2858cd8ed67e9a029db9d5e969688c22349267f0622132163ab4ab"
+    "productHash": "8b6d6f095ef8311b5259f057c9107b14af5c17d40390084c21fcc6a09554efa7"
   },
   {
     "pinId": 18350,
@@ -78249,11 +78249,11 @@
   },
   {
     "pinId": 18351,
-    "sentiment": 0.25,
-    "textHash": "790068a4d6a1a2f2ed9cc2e6e01fde00bc71bfca472947f98c0d96e9819a49c1",
-    "utcScoredDateTime": "2026-10-20T15:17:00.760Z",
+    "sentiment": 0,
+    "textHash": "409bd2ae1211676d8b3534df749f283c16fa805ba98568308ba1033863cf76b5",
+    "utcScoredDateTime": "2026-10-31T02:40:16.746Z",
     "product": null,
-    "productHash": "790068a4d6a1a2f2ed9cc2e6e01fde00bc71bfca472947f98c0d96e9819a49c1"
+    "productHash": "409bd2ae1211676d8b3534df749f283c16fa805ba98568308ba1033863cf76b5"
   },
   {
     "pinId": 18352,
@@ -78353,11 +78353,11 @@
   },
   {
     "pinId": 18364,
-    "sentiment": 0.25,
-    "textHash": "5a6661848bcdd1654671f46a54a37788de82358dbfcb4bfab68aff05720d60ce",
-    "utcScoredDateTime": "2026-10-20T15:17:05.894Z",
+    "sentiment": 0,
+    "textHash": "7d89df9875ba98a494c51a7572f8c958de126f64dc1b9849ab58fbb2eac4a559",
+    "utcScoredDateTime": "2026-10-31T02:40:16.754Z",
     "product": null,
-    "productHash": "5a6661848bcdd1654671f46a54a37788de82358dbfcb4bfab68aff05720d60ce"
+    "productHash": "7d89df9875ba98a494c51a7572f8c958de126f64dc1b9849ab58fbb2eac4a559"
   },
   {
     "pinId": 18365,
@@ -78417,11 +78417,11 @@
   },
   {
     "pinId": 18372,
-    "sentiment": 0.25,
-    "textHash": "8fed2ddd7af9c243042890ce3f4eeeabe494dcf7e8904554a02f4968a3e4b077",
-    "utcScoredDateTime": "2026-10-20T15:17:05.920Z",
+    "sentiment": 0,
+    "textHash": "97320656b835522e38facf579fa467f29748d9b1c83be57f0e92f0931838be15",
+    "utcScoredDateTime": "2026-10-31T02:40:16.797Z",
     "product": null,
-    "productHash": "8fed2ddd7af9c243042890ce3f4eeeabe494dcf7e8904554a02f4968a3e4b077"
+    "productHash": "97320656b835522e38facf579fa467f29748d9b1c83be57f0e92f0931838be15"
   },
   {
     "pinId": 18373,
@@ -78449,11 +78449,11 @@
   },
   {
     "pinId": 18376,
-    "sentiment": 0.25,
-    "textHash": "0b2a28d9f30d179eb795477078f39fb496ece3e01043a6b8c36988e8529825e5",
-    "utcScoredDateTime": "2026-10-20T15:17:08.479Z",
+    "sentiment": 0.5,
+    "textHash": "c599f742ae7d3b4cc886f0dd2bd259fbe98e9cb694aede8e569be631b45178b1",
+    "utcScoredDateTime": "2026-10-31T02:40:16.809Z",
     "product": null,
-    "productHash": "0b2a28d9f30d179eb795477078f39fb496ece3e01043a6b8c36988e8529825e5"
+    "productHash": "c599f742ae7d3b4cc886f0dd2bd259fbe98e9cb694aede8e569be631b45178b1"
   },
   {
     "pinId": 18377,
@@ -78593,11 +78593,11 @@
   },
   {
     "pinId": 18394,
-    "sentiment": 0.25,
-    "textHash": "272c08ca379e635cf1fd693e973e22b7e2637d82d9fbaedcba5e2e90601cac92",
-    "utcScoredDateTime": "2026-10-20T15:17:13.692Z",
+    "sentiment": 0,
+    "textHash": "2fa87a2e9e3f0eece9872c584e3bc5f5d86b4d43860e746f300c521309954043",
+    "utcScoredDateTime": "2026-10-31T02:40:16.818Z",
     "product": null,
-    "productHash": "272c08ca379e635cf1fd693e973e22b7e2637d82d9fbaedcba5e2e90601cac92"
+    "productHash": "2fa87a2e9e3f0eece9872c584e3bc5f5d86b4d43860e746f300c521309954043"
   },
   {
     "pinId": 18395,
@@ -78681,11 +78681,11 @@
   },
   {
     "pinId": 18405,
-    "sentiment": 0.25,
-    "textHash": "9327fc399514784f305bfe25a1ed8e02653826dc980321a9ee32d143e3ae2bb9",
-    "utcScoredDateTime": "2026-10-20T15:17:16.322Z",
+    "sentiment": 0.5,
+    "textHash": "5610578c26ac51a46c1b2d3fb63695bba49c1e1d66cedbdf274823b37c2333fe",
+    "utcScoredDateTime": "2026-10-31T02:40:16.822Z",
     "product": null,
-    "productHash": "9327fc399514784f305bfe25a1ed8e02653826dc980321a9ee32d143e3ae2bb9"
+    "productHash": "5610578c26ac51a46c1b2d3fb63695bba49c1e1d66cedbdf274823b37c2333fe"
   },
   {
     "pinId": 18406,
@@ -78705,11 +78705,11 @@
   },
   {
     "pinId": 18408,
-    "sentiment": 0.25,
-    "textHash": "20f083d7361daa08a68518860c2a904e6fb2055ef3f5ab7e8f83b651cd4e8d71",
-    "utcScoredDateTime": "2026-10-20T15:17:16.331Z",
+    "sentiment": 0,
+    "textHash": "4c1ed0c0857ad7b43f35b21c04a8a8de6024abdbf083bf3fefde92bd0ad8ac40",
+    "utcScoredDateTime": "2026-10-31T02:40:16.825Z",
     "product": null,
-    "productHash": "20f083d7361daa08a68518860c2a904e6fb2055ef3f5ab7e8f83b651cd4e8d71"
+    "productHash": "4c1ed0c0857ad7b43f35b21c04a8a8de6024abdbf083bf3fefde92bd0ad8ac40"
   },
   {
     "pinId": 18409,
@@ -78793,11 +78793,11 @@
   },
   {
     "pinId": 18423,
-    "sentiment": 0.25,
-    "textHash": "91063658d11ceb67f6667c6b626f445189fe1c8c5b4fe6c563f8fc36e9167a17",
-    "utcScoredDateTime": "2026-10-20T15:17:19.180Z",
+    "sentiment": 0,
+    "textHash": "345ba187b3bc3b25f0ca232f478eeb3376a675b97740cc87ebd773e560ea0919",
+    "utcScoredDateTime": "2026-10-31T02:40:16.828Z",
     "product": null,
-    "productHash": "91063658d11ceb67f6667c6b626f445189fe1c8c5b4fe6c563f8fc36e9167a17"
+    "productHash": "345ba187b3bc3b25f0ca232f478eeb3376a675b97740cc87ebd773e560ea0919"
   },
   {
     "pinId": 18425,
@@ -78817,11 +78817,11 @@
   },
   {
     "pinId": 18427,
-    "sentiment": 0.25,
-    "textHash": "8e64da9cf4d60d2b7ecfae1a370c726e46b4d577de28ad11fd2837903feb7c6c",
-    "utcScoredDateTime": "2026-10-20T15:17:19.189Z",
+    "sentiment": 0,
+    "textHash": "7c13ecdcacefaac5de3e412676049631a41e2ce26acc7b9c127db7f3bdcb9ad2",
+    "utcScoredDateTime": "2026-10-31T02:40:16.831Z",
     "product": null,
-    "productHash": "8e64da9cf4d60d2b7ecfae1a370c726e46b4d577de28ad11fd2837903feb7c6c"
+    "productHash": "7c13ecdcacefaac5de3e412676049631a41e2ce26acc7b9c127db7f3bdcb9ad2"
   },
   {
     "pinId": 18428,
@@ -78857,11 +78857,11 @@
   },
   {
     "pinId": 18432,
-    "sentiment": 0.25,
-    "textHash": "f1f90758ddf27eab41c80ca0cedc3ff725012dcc282a2bf54644163961f49507",
-    "utcScoredDateTime": "2026-10-20T15:17:21.837Z",
+    "sentiment": 0,
+    "textHash": "e8c645cde08fc18910703b76e78d09a4d3d539d17e085445646985eecb916056",
+    "utcScoredDateTime": "2026-10-31T02:40:19.211Z",
     "product": null,
-    "productHash": "f1f90758ddf27eab41c80ca0cedc3ff725012dcc282a2bf54644163961f49507"
+    "productHash": "e8c645cde08fc18910703b76e78d09a4d3d539d17e085445646985eecb916056"
   },
   {
     "pinId": 18433,
@@ -78913,11 +78913,11 @@
   },
   {
     "pinId": 18439,
-    "sentiment": 0.25,
-    "textHash": "e485ee9a003ceffb34830c81874eea6229c0799c95e785e2559217e485813943",
-    "utcScoredDateTime": "2026-10-20T15:17:24.408Z",
+    "sentiment": 0.5,
+    "textHash": "fe41515ca8a7267b1fd86335858b5fe79a11e3e4e622a77319cec693e8f4c33e",
+    "utcScoredDateTime": "2026-10-31T02:40:19.218Z",
     "product": null,
-    "productHash": "e485ee9a003ceffb34830c81874eea6229c0799c95e785e2559217e485813943"
+    "productHash": "fe41515ca8a7267b1fd86335858b5fe79a11e3e4e622a77319cec693e8f4c33e"
   },
   {
     "pinId": 18440,
@@ -78969,11 +78969,11 @@
   },
   {
     "pinId": 18452,
-    "sentiment": 0.25,
-    "textHash": "1b40fb1b5d20ecf20e4e7d199f60753445a6e980f5d86397e75307f247666327",
-    "utcScoredDateTime": "2026-10-20T15:17:26.987Z",
+    "sentiment": 0.5,
+    "textHash": "1b49b4685db2e071d376c97a585b4e9441907971f932fb8b31ce544bf61d43a3",
+    "utcScoredDateTime": "2026-10-31T02:40:19.224Z",
     "product": null,
-    "productHash": "1b40fb1b5d20ecf20e4e7d199f60753445a6e980f5d86397e75307f247666327"
+    "productHash": "1b49b4685db2e071d376c97a585b4e9441907971f932fb8b31ce544bf61d43a3"
   },
   {
     "pinId": 18453,
@@ -79297,11 +79297,11 @@
   },
   {
     "pinId": 18494,
-    "sentiment": 0.25,
-    "textHash": "db26f120392c8db95fdae72e1d609e8c2a957e5194acb4a9bb9ca2707c19ee41",
-    "utcScoredDateTime": "2026-10-20T15:17:34.925Z",
+    "sentiment": 0,
+    "textHash": "2427b17373b606d5ab7ebfd462ad9339ca1a3e44bbd120b9c2f02d5d68696655",
+    "utcScoredDateTime": "2026-10-31T02:40:19.227Z",
     "product": null,
-    "productHash": "db26f120392c8db95fdae72e1d609e8c2a957e5194acb4a9bb9ca2707c19ee41"
+    "productHash": "2427b17373b606d5ab7ebfd462ad9339ca1a3e44bbd120b9c2f02d5d68696655"
   },
   {
     "pinId": 18495,
@@ -79825,11 +79825,11 @@
   },
   {
     "pinId": 18566,
-    "sentiment": 0.2,
-    "textHash": "4b0f030343badd68c7782e0d1cbbed40afc9a0fc339ad124b10436a4c9f45517",
-    "utcScoredDateTime": "2026-10-21T15:26:17.753Z",
+    "sentiment": 0,
+    "textHash": "7e79dfd1575689b243480677ded54183b8fc880c758c7f198c50c617071e0986",
+    "utcScoredDateTime": "2026-10-31T02:40:19.234Z",
     "product": null,
-    "productHash": "4b0f030343badd68c7782e0d1cbbed40afc9a0fc339ad124b10436a4c9f45517"
+    "productHash": "7e79dfd1575689b243480677ded54183b8fc880c758c7f198c50c617071e0986"
   },
   {
     "pinId": 18567,
@@ -79849,11 +79849,11 @@
   },
   {
     "pinId": 18569,
-    "sentiment": 0.2,
-    "textHash": "8dace77adf066fa13170070eb124f3be38496936a1d42fae1a479a119258c376",
-    "utcScoredDateTime": "2026-10-21T15:26:17.871Z",
+    "sentiment": 0,
+    "textHash": "b046ba3931a1bd91d53a081b71922eb9d1278a2b6f2a75d3cd196e2029042c90",
+    "utcScoredDateTime": "2026-10-31T02:40:19.238Z",
     "product": null,
-    "productHash": "8dace77adf066fa13170070eb124f3be38496936a1d42fae1a479a119258c376"
+    "productHash": "b046ba3931a1bd91d53a081b71922eb9d1278a2b6f2a75d3cd196e2029042c90"
   },
   {
     "pinId": 18570,
@@ -79921,11 +79921,11 @@
   },
   {
     "pinId": 18578,
-    "sentiment": 0.2,
-    "textHash": "abb4fcdb15596f68d4952ef522a715ff78727f9d0af447362acf0ebdab9c82a3",
-    "utcScoredDateTime": "2026-10-21T15:26:42.418Z",
+    "sentiment": 0.5,
+    "textHash": "ba924674817357ef33bf82a11e51f272c8a4f1fadebc87aefb04b10624ea244c",
+    "utcScoredDateTime": "2026-10-31T02:40:19.241Z",
     "product": null,
-    "productHash": "abb4fcdb15596f68d4952ef522a715ff78727f9d0af447362acf0ebdab9c82a3"
+    "productHash": "ba924674817357ef33bf82a11e51f272c8a4f1fadebc87aefb04b10624ea244c"
   },
   {
     "pinId": 18579,
@@ -79985,11 +79985,11 @@
   },
   {
     "pinId": 18586,
-    "sentiment": 0.2,
-    "textHash": "6c3b6942a1103ebd32b3ea989144620d2bd3d2258104dedc809df18fbfb8a718",
-    "utcScoredDateTime": "2026-10-21T15:27:06.800Z",
+    "sentiment": 0,
+    "textHash": "223128612bb79747bce9b3cb4d645662fa97711f4d3afdf5158b3038c5ba188b",
+    "utcScoredDateTime": "2026-10-31T02:40:19.246Z",
     "product": null,
-    "productHash": "6c3b6942a1103ebd32b3ea989144620d2bd3d2258104dedc809df18fbfb8a718"
+    "productHash": "223128612bb79747bce9b3cb4d645662fa97711f4d3afdf5158b3038c5ba188b"
   },
   {
     "pinId": 18587,
@@ -80057,11 +80057,11 @@
   },
   {
     "pinId": 18595,
-    "sentiment": 0.2,
-    "textHash": "8213e6f69e32bb9ea7f55907ffbbb040c9a3a1b9a41fbaf3b94edbe0fc9cd8b8",
-    "utcScoredDateTime": "2026-10-21T15:27:31.207Z",
+    "sentiment": 0,
+    "textHash": "91f87b94397faff9793472d3fc7642cbad269759a97e682c7ef0d374baab61a9",
+    "utcScoredDateTime": "2026-10-31T02:40:19.250Z",
     "product": null,
-    "productHash": "8213e6f69e32bb9ea7f55907ffbbb040c9a3a1b9a41fbaf3b94edbe0fc9cd8b8"
+    "productHash": "91f87b94397faff9793472d3fc7642cbad269759a97e682c7ef0d374baab61a9"
   },
   {
     "pinId": 18596,
@@ -80201,11 +80201,11 @@
   },
   {
     "pinId": 18613,
-    "sentiment": 0.2,
-    "textHash": "518b8017c4f59eb8beeee3dea32d11c60c149ac6ace2d80e1e043ce6d22180b6",
-    "utcScoredDateTime": "2026-10-21T15:28:12.938Z",
+    "sentiment": 0,
+    "textHash": "c06a35ac85a8c3026d7a91f776c41da507bdf5e55b7440889e237b7c337803fe",
+    "utcScoredDateTime": "2026-10-31T02:40:19.254Z",
     "product": null,
-    "productHash": "518b8017c4f59eb8beeee3dea32d11c60c149ac6ace2d80e1e043ce6d22180b6"
+    "productHash": "c06a35ac85a8c3026d7a91f776c41da507bdf5e55b7440889e237b7c337803fe"
   },
   {
     "pinId": 18614,
@@ -80353,11 +80353,11 @@
   },
   {
     "pinId": 18632,
-    "sentiment": 0.2,
-    "textHash": "5cc4c4a7e24693b7d692a16a983d79e20352922223620aac0925e885b6e3a56d",
-    "utcScoredDateTime": "2026-10-21T15:29:02.946Z",
+    "sentiment": 0.5,
+    "textHash": "3de930111da46a53cbb07a6b1ef70f9a122abb26a78e717cbba26357c77368df",
+    "utcScoredDateTime": "2026-10-31T02:40:21.618Z",
     "product": null,
-    "productHash": "5cc4c4a7e24693b7d692a16a983d79e20352922223620aac0925e885b6e3a56d"
+    "productHash": "3de930111da46a53cbb07a6b1ef70f9a122abb26a78e717cbba26357c77368df"
   },
   {
     "pinId": 18633,
@@ -80649,11 +80649,11 @@
   },
   {
     "pinId": 18669,
-    "sentiment": 0.2,
-    "textHash": "31dda657c807ec682ba1b8b6ddcde2931a6c3c91869227c3bc4fd08451a63030",
-    "utcScoredDateTime": "2026-10-21T15:30:18.116Z",
+    "sentiment": 0.5,
+    "textHash": "9add5c52195e15468080919ac0cbb75e2ed77bef9706f044e9bcfd60bd86d6ba",
+    "utcScoredDateTime": "2026-10-31T02:40:21.643Z",
     "product": null,
-    "productHash": "31dda657c807ec682ba1b8b6ddcde2931a6c3c91869227c3bc4fd08451a63030"
+    "productHash": "9add5c52195e15468080919ac0cbb75e2ed77bef9706f044e9bcfd60bd86d6ba"
   },
   {
     "pinId": 18670,
@@ -80745,11 +80745,11 @@
   },
   {
     "pinId": 18681,
-    "sentiment": 0.2,
-    "textHash": "d6842c9643f9fe6be3474eee750191c2a02caefe05780e571caac408a97e9f03",
-    "utcScoredDateTime": "2026-10-21T15:30:54.634Z",
+    "sentiment": 0,
+    "textHash": "082d5ef99f164770bdb4df9231c353a1db1d510b45b5c4a7b4b095d411d54c3d",
+    "utcScoredDateTime": "2026-10-31T02:40:21.665Z",
     "product": null,
-    "productHash": "d6842c9643f9fe6be3474eee750191c2a02caefe05780e571caac408a97e9f03"
+    "productHash": "082d5ef99f164770bdb4df9231c353a1db1d510b45b5c4a7b4b095d411d54c3d"
   },
   {
     "pinId": 18682,
@@ -80777,11 +80777,11 @@
   },
   {
     "pinId": 18685,
-    "sentiment": 0.2,
-    "textHash": "aac0bf944bd380fbb33feb5d25f4a5bc5c17138c960d384164a4a3f24a263706",
-    "utcScoredDateTime": "2026-10-21T15:31:43.400Z",
+    "sentiment": 0.5,
+    "textHash": "9801bd0781177b75359521548d5e35595db8f0f3cfbb9931c9d60f52f3124984",
+    "utcScoredDateTime": "2026-10-31T02:40:21.698Z",
     "product": null,
-    "productHash": "aac0bf944bd380fbb33feb5d25f4a5bc5c17138c960d384164a4a3f24a263706"
+    "productHash": "9801bd0781177b75359521548d5e35595db8f0f3cfbb9931c9d60f52f3124984"
   },
   {
     "pinId": 18686,
@@ -80825,11 +80825,11 @@
   },
   {
     "pinId": 18691,
-    "sentiment": 0.2,
-    "textHash": "8f6af71092849291f58f6becd10180c732ae8c23dd2297899fc489741c9161dc",
-    "utcScoredDateTime": "2026-10-21T15:31:43.438Z",
+    "sentiment": 0,
+    "textHash": "fc501b0223db49b36ac3c2d2ecd2c7609967dec784fd452c1eb1c8336203baee",
+    "utcScoredDateTime": "2026-10-31T02:40:21.717Z",
     "product": null,
-    "productHash": "8f6af71092849291f58f6becd10180c732ae8c23dd2297899fc489741c9161dc"
+    "productHash": "fc501b0223db49b36ac3c2d2ecd2c7609967dec784fd452c1eb1c8336203baee"
   },
   {
     "pinId": 18692,
@@ -80841,11 +80841,11 @@
   },
   {
     "pinId": 18693,
-    "sentiment": 0.2,
-    "textHash": "786984ab82f3c0c41eece131332980a2769a8f85217363782fc830216b8a994d",
-    "utcScoredDateTime": "2026-10-21T15:32:32.582Z",
+    "sentiment": 0,
+    "textHash": "e20ac2e8c25c6ce62f0ee4d782d11e60b1a0868a2b5ca9d9c5a6a1fbc1208417",
+    "utcScoredDateTime": "2026-10-31T02:40:21.751Z",
     "product": null,
-    "productHash": "786984ab82f3c0c41eece131332980a2769a8f85217363782fc830216b8a994d"
+    "productHash": "e20ac2e8c25c6ce62f0ee4d782d11e60b1a0868a2b5ca9d9c5a6a1fbc1208417"
   },
   {
     "pinId": 18694,
@@ -80905,11 +80905,11 @@
   },
   {
     "pinId": 18701,
-    "sentiment": 0.2,
-    "textHash": "45dac800bbf225b69699257d5a5baf0800c9e1e4bd552a74567a29b4fc39342a",
-    "utcScoredDateTime": "2026-10-21T15:32:32.606Z",
+    "sentiment": 0.5,
+    "textHash": "66fa8f969da620d365583ad3c3e55f619c94efb619656d487b31290ec10afde9",
+    "utcScoredDateTime": "2026-10-31T02:40:21.769Z",
     "product": null,
-    "productHash": "45dac800bbf225b69699257d5a5baf0800c9e1e4bd552a74567a29b4fc39342a"
+    "productHash": "66fa8f969da620d365583ad3c3e55f619c94efb619656d487b31290ec10afde9"
   },
   {
     "pinId": 18702,
@@ -81353,11 +81353,11 @@
   },
   {
     "pinId": 18759,
-    "sentiment": 0.2,
-    "textHash": "452f5e06f2c8b4208d803b31033451d4fec656710875b4a8692a61344d6418e5",
-    "utcScoredDateTime": "2026-10-21T15:36:31.040Z",
+    "sentiment": 0.5,
+    "textHash": "859d7f710d1c17c8385af9cb51cdcd6a6f326fac99409816ebcd1e08644688af",
+    "utcScoredDateTime": "2026-10-31T02:40:21.781Z",
     "product": null,
-    "productHash": "452f5e06f2c8b4208d803b31033451d4fec656710875b4a8692a61344d6418e5"
+    "productHash": "859d7f710d1c17c8385af9cb51cdcd6a6f326fac99409816ebcd1e08644688af"
   },
   {
     "pinId": 18760,
@@ -81441,11 +81441,11 @@
   },
   {
     "pinId": 18770,
-    "sentiment": 0.2,
-    "textHash": "3c6f612706a743f17a1eef18d027106564b9ecfec45cdb8e3079a16187a95a26",
-    "utcScoredDateTime": "2026-10-21T15:36:55.869Z",
+    "sentiment": 0,
+    "textHash": "060c2a03fde1c7ea7c85806de0f838447088f2eb61ae4493338d5c6b0b340440",
+    "utcScoredDateTime": "2026-10-31T02:40:21.792Z",
     "product": null,
-    "productHash": "3c6f612706a743f17a1eef18d027106564b9ecfec45cdb8e3079a16187a95a26"
+    "productHash": "060c2a03fde1c7ea7c85806de0f838447088f2eb61ae4493338d5c6b0b340440"
   },
   {
     "pinId": 18771,
@@ -81457,11 +81457,11 @@
   },
   {
     "pinId": 18772,
-    "sentiment": 0.2,
-    "textHash": "3e25a351d3d19ee15333c06c613f354766713f2bbf225601ea925ed4fc08ab14",
-    "utcScoredDateTime": "2026-10-21T15:36:55.876Z",
+    "sentiment": 0,
+    "textHash": "f8f51f4fc223926e11c49172a646da6d32d22dc032a761c265737d863b6ca188",
+    "utcScoredDateTime": "2026-10-31T02:40:21.804Z",
     "product": null,
-    "productHash": "3e25a351d3d19ee15333c06c613f354766713f2bbf225601ea925ed4fc08ab14"
+    "productHash": "f8f51f4fc223926e11c49172a646da6d32d22dc032a761c265737d863b6ca188"
   },
   {
     "pinId": 18773,
@@ -81633,11 +81633,11 @@
   },
   {
     "pinId": 18794,
-    "sentiment": 0.2,
-    "textHash": "20d2987aea5bfba73042ba2ebe6b877149c8b133b6db6c521fdc14624a69a317",
-    "utcScoredDateTime": "2026-10-21T15:38:54.690Z",
+    "sentiment": 0,
+    "textHash": "c7b9364e1d699a01a5d450b508dd7f63755dbc30053f363d7447e97a375e0413",
+    "utcScoredDateTime": "2026-10-31T02:40:25.006Z",
     "product": null,
-    "productHash": "20d2987aea5bfba73042ba2ebe6b877149c8b133b6db6c521fdc14624a69a317"
+    "productHash": "c7b9364e1d699a01a5d450b508dd7f63755dbc30053f363d7447e97a375e0413"
   },
   {
     "pinId": 18795,
@@ -81729,11 +81729,11 @@
   },
   {
     "pinId": 18806,
-    "sentiment": 0.2,
-    "textHash": "e13245109f2f7ecec9647bc1f24d412e552724ac16e608971345d20abc74c92b",
-    "utcScoredDateTime": "2026-10-21T15:39:34.864Z",
+    "sentiment": 0,
+    "textHash": "1b61e944f76a6495a17bbfe736f81097d5d552d4be6eeb3ee5842c1e8b690e4e",
+    "utcScoredDateTime": "2026-10-31T02:40:25.064Z",
     "product": null,
-    "productHash": "e13245109f2f7ecec9647bc1f24d412e552724ac16e608971345d20abc74c92b"
+    "productHash": "1b61e944f76a6495a17bbfe736f81097d5d552d4be6eeb3ee5842c1e8b690e4e"
   },
   {
     "pinId": 18807,
@@ -81833,19 +81833,19 @@
   },
   {
     "pinId": 18820,
-    "sentiment": 0.2,
-    "textHash": "ded1e8ed109fcdea37f37724d5fbaffc6eaeb3d8f86d8c85cbdfe3fdce49d7d9",
-    "utcScoredDateTime": "2026-10-21T15:40:03.703Z",
+    "sentiment": 0.5,
+    "textHash": "ba070f03fd03aba3cd434a7244d0b1765cb4cf1e989b0ae2a5bf290d1f7410cc",
+    "utcScoredDateTime": "2026-10-31T02:40:25.252Z",
     "product": null,
-    "productHash": "ded1e8ed109fcdea37f37724d5fbaffc6eaeb3d8f86d8c85cbdfe3fdce49d7d9"
+    "productHash": "ba070f03fd03aba3cd434a7244d0b1765cb4cf1e989b0ae2a5bf290d1f7410cc"
   },
   {
     "pinId": 18821,
-    "sentiment": 0.2,
-    "textHash": "98daf1bc2040dc8a192013761776a1de11efe3aeb59c16c0807657a1cd8ee4e3",
-    "utcScoredDateTime": "2026-10-21T15:40:03.731Z",
+    "sentiment": 0.5,
+    "textHash": "86a59fbe4a3eb2a67ec179389ab3b30412c8e009208123b91125c6b2a0ec7e58",
+    "utcScoredDateTime": "2026-10-31T02:40:25.319Z",
     "product": null,
-    "productHash": "98daf1bc2040dc8a192013761776a1de11efe3aeb59c16c0807657a1cd8ee4e3"
+    "productHash": "86a59fbe4a3eb2a67ec179389ab3b30412c8e009208123b91125c6b2a0ec7e58"
   },
   {
     "pinId": 18822,
@@ -91726,5 +91726,245 @@
     "utcScoredDateTime": "2026-10-29T16:06:14.154Z",
     "product": null,
     "productHash": "043abf8c1af2d5b2629ca1491e5175652d425b234d6a7d66c1d08b6b9c4ecacd"
+  },
+  {
+    "pinId": 20629,
+    "sentiment": 0.5,
+    "textHash": "e4d0d977867f06861cfa61c8a9ba83b3e8757ea2beb3285e46918efaa2ecee9b",
+    "utcScoredDateTime": "2026-10-30T01:04:43.819Z",
+    "product": null,
+    "productHash": "e4d0d977867f06861cfa61c8a9ba83b3e8757ea2beb3285e46918efaa2ecee9b"
+  },
+  {
+    "pinId": 20636,
+    "sentiment": -0.5,
+    "textHash": "9ef6dbb2529845b68d74278ad7496882b8e657d79406b22413b4ecd51c0f37c8",
+    "utcScoredDateTime": "2026-10-30T14:01:30.976Z",
+    "product": null,
+    "productHash": "9ef6dbb2529845b68d74278ad7496882b8e657d79406b22413b4ecd51c0f37c8"
+  },
+  {
+    "pinId": 20637,
+    "sentiment": 0.5,
+    "textHash": "21b0769b581e07b0e64c5c6b114ec60e8542b05e1330c0343252f072af04b56b",
+    "utcScoredDateTime": "2026-10-30T14:01:33.424Z",
+    "product": null,
+    "productHash": "21b0769b581e07b0e64c5c6b114ec60e8542b05e1330c0343252f072af04b56b"
+  },
+  {
+    "pinId": 20638,
+    "sentiment": -1,
+    "textHash": "60a66fcb0d37857b841aa85fd35657d63049008a1208069d36105fd702c8f3f5",
+    "utcScoredDateTime": "2026-10-30T14:01:35.586Z",
+    "product": null,
+    "productHash": "60a66fcb0d37857b841aa85fd35657d63049008a1208069d36105fd702c8f3f5"
+  },
+  {
+    "pinId": 20640,
+    "sentiment": 0,
+    "textHash": "5ce02e2e648c013f6e5e26c7e6d6c55595308b0e0c063eae41a9741435ce4178",
+    "utcScoredDateTime": "2026-10-31T02:44:31.625Z",
+    "product": null,
+    "productHash": "5ce02e2e648c013f6e5e26c7e6d6c55595308b0e0c063eae41a9741435ce4178"
+  },
+  {
+    "pinId": 20649,
+    "sentiment": -1,
+    "textHash": "15897e9d5f3f5bb05399731bd9c56271a5690fbe9fba915a87fbba558577ac33",
+    "utcScoredDateTime": "2026-10-31T02:40:25.430Z",
+    "product": null,
+    "productHash": "15897e9d5f3f5bb05399731bd9c56271a5690fbe9fba915a87fbba558577ac33"
+  },
+  {
+    "pinId": 20650,
+    "sentiment": 0,
+    "textHash": "0c4644d9d698604179955fb08f8c51ac21cea9bff5ea3b12b4bb9976ed842ca6",
+    "utcScoredDateTime": "2026-10-31T02:40:25.475Z",
+    "product": null,
+    "productHash": "0c4644d9d698604179955fb08f8c51ac21cea9bff5ea3b12b4bb9976ed842ca6"
+  },
+  {
+    "pinId": 20651,
+    "sentiment": -0.5,
+    "textHash": "a71b03c183f20876d7446ab79c09db66fd108cba5a17d724546fc0bd2eab937b",
+    "utcScoredDateTime": "2026-10-31T02:40:25.532Z",
+    "product": null,
+    "productHash": "a71b03c183f20876d7446ab79c09db66fd108cba5a17d724546fc0bd2eab937b"
+  },
+  {
+    "pinId": 20652,
+    "sentiment": 0.5,
+    "textHash": "43e7b8ab0d4ba710fd217bc08777f6c4e9aecf47163a1b9338ba63f04e2d9a07",
+    "utcScoredDateTime": "2026-10-31T02:40:25.579Z",
+    "product": null,
+    "productHash": "43e7b8ab0d4ba710fd217bc08777f6c4e9aecf47163a1b9338ba63f04e2d9a07"
+  },
+  {
+    "pinId": 20653,
+    "sentiment": 0.5,
+    "textHash": "374a4d1e4d64722548d92f096145a53753e1d236b2e4f5825a18b7138e7eb418",
+    "utcScoredDateTime": "2026-10-31T02:40:25.600Z",
+    "product": null,
+    "productHash": "374a4d1e4d64722548d92f096145a53753e1d236b2e4f5825a18b7138e7eb418"
+  },
+  {
+    "pinId": 20654,
+    "sentiment": 0.3,
+    "textHash": "8f07eed840485133e8469dc63025e89d2dbd3800291d02ddf06a4c3d756e2cbd",
+    "utcScoredDateTime": "2026-10-31T02:40:25.613Z",
+    "product": null,
+    "productHash": "8f07eed840485133e8469dc63025e89d2dbd3800291d02ddf06a4c3d756e2cbd"
+  },
+  {
+    "pinId": 20655,
+    "sentiment": -0.5,
+    "textHash": "21265b82a24773da7ebf109474699fd69a29c07ee02e1d7bec8035fc6751d0cf",
+    "utcScoredDateTime": "2026-10-31T02:40:28.290Z",
+    "product": null,
+    "productHash": "21265b82a24773da7ebf109474699fd69a29c07ee02e1d7bec8035fc6751d0cf"
+  },
+  {
+    "pinId": 20656,
+    "sentiment": 0.5,
+    "textHash": "fd276634525f0f235a33c325d25dd7bd1577901e73143df1245928ae6ee64e14",
+    "utcScoredDateTime": "2026-10-31T02:42:08.176Z",
+    "product": null,
+    "productHash": "fd276634525f0f235a33c325d25dd7bd1577901e73143df1245928ae6ee64e14"
+  },
+  {
+    "pinId": 20663,
+    "sentiment": 0.5,
+    "textHash": "b67b095173415ee878823ecae06f11021fb377fe6037bac8e0d6703d230250b5",
+    "utcScoredDateTime": "2026-10-31T23:33:28.255Z",
+    "product": "Core i7",
+    "productHash": "b67b095173415ee878823ecae06f11021fb377fe6037bac8e0d6703d230250b5"
+  },
+  {
+    "pinId": 20664,
+    "sentiment": 0.2,
+    "textHash": "21a7e7ce8fb5d5460ed04621bdf085bb3150b60cea9d9d51a92e3d2962fb74de",
+    "utcScoredDateTime": "2026-10-31T23:33:30.317Z",
+    "product": "Core i7",
+    "productHash": "21a7e7ce8fb5d5460ed04621bdf085bb3150b60cea9d9d51a92e3d2962fb74de"
+  },
+  {
+    "pinId": 20665,
+    "sentiment": 0.5,
+    "textHash": "2e0c620e79a3c6f6b62fb907e1306d547935df5a90b49cbbb1c59c53c005e34e",
+    "utcScoredDateTime": "2026-10-31T23:33:32.443Z",
+    "product": "Core i7",
+    "productHash": "2e0c620e79a3c6f6b62fb907e1306d547935df5a90b49cbbb1c59c53c005e34e"
+  },
+  {
+    "pinId": 20666,
+    "sentiment": 0.3,
+    "textHash": "ff9f51a81646e59ede4894fd39da1d236415b36f75ee8934f75ee8936c640307",
+    "utcScoredDateTime": "2026-10-31T23:33:34.613Z",
+    "product": "Core i7",
+    "productHash": "ff9f51a81646e59ede4894fd39da1d236415b36f75ee8934f75ee8936c640307"
+  },
+  {
+    "pinId": 20667,
+    "sentiment": -0.3,
+    "textHash": "7327b0172b65a341e2a9e0affe748ebd231759d40e9b2def8f577fb03687bba2",
+    "utcScoredDateTime": "2026-10-31T23:33:36.670Z",
+    "product": "Core i7",
+    "productHash": "7327b0172b65a341e2a9e0affe748ebd231759d40e9b2def8f577fb03687bba2"
+  },
+  {
+    "pinId": 20668,
+    "sentiment": 0.4,
+    "textHash": "6e50a98ee2e551c3ab616fc48e0a15e086c90cf7fac14519c6ff86050b65a719",
+    "utcScoredDateTime": "2026-10-31T23:33:38.717Z",
+    "product": "Core i7",
+    "productHash": "6e50a98ee2e551c3ab616fc48e0a15e086c90cf7fac14519c6ff86050b65a719"
+  },
+  {
+    "pinId": 20669,
+    "sentiment": 0.2,
+    "textHash": "ccf2251f2fa86904de40f844e5de02cb4cd0d2c825636bf047a36401941a7e79",
+    "utcScoredDateTime": "2026-10-31T23:33:40.773Z",
+    "product": "Core i7",
+    "productHash": "ccf2251f2fa86904de40f844e5de02cb4cd0d2c825636bf047a36401941a7e79"
+  },
+  {
+    "pinId": 20670,
+    "sentiment": 0.6,
+    "textHash": "f70346450a52c177c2f5de1858d38a2f2c937ad69f28c4162ce1e73f64749a65",
+    "utcScoredDateTime": "2026-10-31T23:33:42.889Z",
+    "product": "Core i7",
+    "productHash": "f70346450a52c177c2f5de1858d38a2f2c937ad69f28c4162ce1e73f64749a65"
+  },
+  {
+    "pinId": 20671,
+    "sentiment": 0.2,
+    "textHash": "c8adca05f1a77f26605e755005bd37bde0b5ee701949361a829001905e32bdb9",
+    "utcScoredDateTime": "2026-10-31T23:33:44.942Z",
+    "product": "Core i7",
+    "productHash": "c8adca05f1a77f26605e755005bd37bde0b5ee701949361a829001905e32bdb9"
+  },
+  {
+    "pinId": 20672,
+    "sentiment": -0.2,
+    "textHash": "a59870c1cc93f8cae8e6d7edc601d0c890d0069e10351eaab38ac6885697de63",
+    "utcScoredDateTime": "2026-10-31T23:33:47.751Z",
+    "product": "Core i7",
+    "productHash": "a59870c1cc93f8cae8e6d7edc601d0c890d0069e10351eaab38ac6885697de63"
+  },
+  {
+    "pinId": 20673,
+    "sentiment": 0.7,
+    "textHash": "7f68498611424e13f4b6f09fb1a5ef2c5ba0c0a017a2ba4477f1db5031c33840",
+    "utcScoredDateTime": "2026-10-31T23:33:50.153Z",
+    "product": "Core i7",
+    "productHash": "7f68498611424e13f4b6f09fb1a5ef2c5ba0c0a017a2ba4477f1db5031c33840"
+  },
+  {
+    "pinId": 20674,
+    "sentiment": -0.6,
+    "textHash": "b19122906f29bf34d2d218cb3405c4d3f2d9cbaf3f73a9258592005c36aad051",
+    "utcScoredDateTime": "2026-10-31T23:33:52.785Z",
+    "product": "Core i7",
+    "productHash": "b19122906f29bf34d2d218cb3405c4d3f2d9cbaf3f73a9258592005c36aad051"
+  },
+  {
+    "pinId": 20675,
+    "sentiment": 0.3,
+    "textHash": "92ccb9abe66714b4c3d1ec05565e7996327ff362940c131cfa9a10891f5070c0",
+    "utcScoredDateTime": "2026-10-31T23:33:58.442Z",
+    "product": "Core Ultra",
+    "productHash": "92ccb9abe66714b4c3d1ec05565e7996327ff362940c131cfa9a10891f5070c0"
+  },
+  {
+    "pinId": 20676,
+    "sentiment": 0.4,
+    "textHash": "ef76b93ce6fa6538e41f85577abde8c6e477454ee0e959ab7a0729c2b6f29cb3",
+    "utcScoredDateTime": "2026-10-31T23:34:01.234Z",
+    "product": "Core Ultra",
+    "productHash": "ef76b93ce6fa6538e41f85577abde8c6e477454ee0e959ab7a0729c2b6f29cb3"
+  },
+  {
+    "pinId": 20677,
+    "sentiment": -0.3,
+    "textHash": "77fd4b8ed64e2464109e7ee2c8204af8f811991499c2b6c3d4c4e332071837bc",
+    "utcScoredDateTime": "2026-10-31T23:34:03.924Z",
+    "product": "Core Ultra",
+    "productHash": "77fd4b8ed64e2464109e7ee2c8204af8f811991499c2b6c3d4c4e332071837bc"
+  },
+  {
+    "pinId": 20678,
+    "sentiment": 0.6,
+    "textHash": "35d6f7f85644337f3f99e3279a75e2a696bf713a6329f345f3d84ebf8ffa0ff6",
+    "utcScoredDateTime": "2026-10-31T23:34:06.332Z",
+    "product": "Core Ultra",
+    "productHash": "35d6f7f85644337f3f99e3279a75e2a696bf713a6329f345f3d84ebf8ffa0ff6"
+  },
+  {
+    "pinId": 20679,
+    "sentiment": 0,
+    "textHash": "5f8fec34ed4bab0472730ff270e78b77bdfeb265cedacc2c9199ec03f96edc2c",
+    "utcScoredDateTime": "2026-10-31T23:34:08.466Z",
+    "product": null,
+    "productHash": "5f8fec34ed4bab0472730ff270e78b77bdfeb265cedacc2c9199ec03f96edc2c"
   }
 ]
