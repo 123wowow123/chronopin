@@ -34,7 +34,7 @@ const SHED_ON = { loopMs: 1_000, loadPerCore: 2 };
 const SHED_OFF = { loopMs: 300, loadPerCore: 1.5 };
 export const SHED_RETRY_AFTER = 300;
 // All of Google's crawlers share this while the server is shedding.
-export const GOOGLE_PER_MINUTE = 10;
+export const GOOGLE_PER_MINUTE = 60;
 
 type Shed = { on: boolean; at: number; hist: ReturnType<typeof monitorEventLoopDelay> | null };
 

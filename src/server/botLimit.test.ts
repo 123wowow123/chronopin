@@ -8,21 +8,21 @@ describe('botRetryAfter', () => {
     delete (globalThis as unknown as { __chronopinShed?: unknown }).__chronopinShed;
   });
 
-  it('holds Google\'s crawlers to 10 requests a minute while the server is slow, and not before', () => {
+  it('holds Google\'s crawlers to 60 requests a minute while the server is slow, and not before', () => {
     const google = { name: 'Googlebot', kind: 'search' as const };
     const image = { name: 'Googlebot-Image', kind: 'search' as const };
     // Not slow: no limit at all.
     expect(shedding(10_000, () => ({ loopMs: 0, loadPerCore: 0.1 }))).toBe(false);
     for (let i = 0; i < GOOGLE_PER_MINUTE * 5; i++) expect(botRetryAfter(google, 10_001)).toBeNull();
-    // Slow: ten between all Google crawlers, then they are told to wait.
+    // Slow: sixty between all Google crawlers, then they are told to wait.
     expect(shedding(20_000, () => ({ loopMs: 3_000, loadPerCore: 0.1 }))).toBe(true);
     for (let i = 0; i < GOOGLE_PER_MINUTE / 2; i++) expect(botRetryAfter(google, 20_001)).toBeNull();
     for (let i = 0; i < GOOGLE_PER_MINUTE / 2; i++) expect(botRetryAfter(image, 20_001)).toBeNull();
-    expect(botRetryAfter(google, 20_001)).toBe(6);
-    expect(botRetryAfter(image, 20_001)).toBe(6);
-    // One request every six seconds thereafter.
-    expect(botRetryAfter(google, 26_001)).toBeNull();
-    expect(botRetryAfter(google, 26_001)).not.toBeNull();
+    expect(botRetryAfter(google, 20_001)).toBe(1);
+    expect(botRetryAfter(image, 20_001)).toBe(1);
+    // One request a second thereafter.
+    expect(botRetryAfter(google, 21_001)).toBeNull();
+    expect(botRetryAfter(google, 21_001)).not.toBeNull();
   });
 
   it('turns AI crawlers and scrapers away while the server is slow, but not Google outright', () => {

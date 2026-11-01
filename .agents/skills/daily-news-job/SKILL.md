@@ -29,8 +29,12 @@ A news run is not done until every task `begin_job` returns has been worked. Nev
 sentiment and a sample. All of these are mandatory every run:
 
 - **Revisits:** research every queued item from opened pages and fix or resolve it (queue only a specific evidence gap).
-- **Event info:** drain the whole `pending_event_info` queue, batch after batch, until `remaining` is 0
-  (or the run limits in `begin_job` are hit; then say how many remain and why).
+- **Event info:** read 40 pins per run (the doc's cap), two per `pending_event_info` call, comparing each against
+  its saved row. Rows set by hand (`source: hand`) are never replaced by `record_event_info` and so stay at the head
+  of the queue: compare them with the pages, correct supported facts, and advance `checkedAt` with
+  `PUT /api/pins/:id/event-info` (`source: "hand"`, current `checkedAt`) on local and production. Sign in with
+  `ADMIN_PASSWORD` from `.env.local`; the token is in the `Set-Cookie` header, saved to `.scrape/admin.token`
+  (prod) and `.scrape/admin-local.token`. Never print it.
 - **Every other task in the list** (weekReview, freshSources, pinAds, holidayAds, adTranslations, personTrades,
   traderPositions, threadPredicted, productLifecycle, productCompetitors, factoryProfiles, breakingNews,
   predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,
@@ -47,7 +51,7 @@ One session cannot do all 24 tasks at full depth, so a news run is worked in lan
 until every lane is done for that 06:00 / 18:00 slot. Lanes:
 
 1. **Maintenance:** revisits (every mark, including AI-model rubric/review marks), weekReview, freshSources.
-2. **Event info:** drain `pending_event_info` to 0, batch after batch.
+2. **Event info:** 40 pins (20 calls), hand-set rows handled by the admin PUT above.
 3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, earthquakes,
    stormTracks, layoffs, hiringJobCreation.
 4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, sentiment.

@@ -200,7 +200,7 @@ export async function proxy(request: NextRequest) {
   BotVisit.record(bot, userAgent, pathname);
   // AI crawlers, scrapers and Applebot have per-bot and shared rate limits
   // (src/server/botLimit.ts), and are turned away while the server is
-  // struggling; Google's crawlers are held to 10 a minute then. Other search
+  // struggling; Google's crawlers are held to 60 a minute then. Other search
   // engines pass through. robots.txt stays open to
   // them - it is where they read the Crawl-delay - and so does llms.txt, the
   // one page written for them.
