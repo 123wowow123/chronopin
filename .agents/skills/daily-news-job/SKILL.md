@@ -32,9 +32,8 @@ sentiment and a sample. All of these are mandatory every run:
 - **Event info:** read 40 pins per run (the doc's cap), two per `pending_event_info` call, comparing each against
   its saved row. Rows set by hand (`source: hand`) are never replaced by `record_event_info` and so stay at the head
   of the queue: compare them with the pages, correct supported facts, and advance `checkedAt` with
-  `PUT /api/pins/:id/event-info` (`source: "hand"`, current `checkedAt`) on local and production. Sign in with
-  `ADMIN_PASSWORD` from `.env.local`; the token is in the `Set-Cookie` header, saved to `.scrape/admin.token`
-  (prod) and `.scrape/admin-local.token`. Never print it.
+  `PUT /api/pins/:id/event-info` (`source: "hand"`, current `checkedAt`) on local and production. Refresh the tokens with the `admin-login-refresh` skill
+  (saved to `.scrape/admin.token` for prod and `.scrape/admin-local.token`). Never print them.
 - **Every other task in the list** (weekReview, freshSources, pinAds, holidayAds, adTranslations, personTrades,
   traderPositions, threadPredicted, productLifecycle, productCompetitors, factoryProfiles, breakingNews,
   predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,

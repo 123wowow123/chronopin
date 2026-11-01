@@ -1,3 +1,10 @@
+---
+type: API Endpoint
+title: Expire a pin's cache
+description: Drop the cached page, event info and other cached reads of given pins through the admin API, needed after writes that bypass the pin API.
+resource: "../../../src/app/api/admin/pins/expire/route.ts"
+tags: [api, admin, cache]
+---
 # Expire a pin's cache
 
 `POST /api/admin/pins/expire` (admin only) drops the cached page, event info and other cached reads of the given
