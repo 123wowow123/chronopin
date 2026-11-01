@@ -78,3 +78,27 @@ relevant section of `docs/okf/scraping/daily-jobs.md`.
 - Translations are left to the translation agent (AGENTS.md, 2026-10-30), so `PinPerf` is saved without `i18n`.
 - Media: one credited picture is the floor when no video or press image was opened; record the gap (here: no verified
   Autonomy Day / AI5 video) instead of padding.
+
+## Be as complete as the information allows (owner instruction, 2026-11-01, Tesla Semi thread)
+When a pin or thread is requested, do every part that published information supports in the same pass; do not
+stop at the first pin and list the rest as "not done". Ian asked for this after the first Semi pass skipped
+rivals, the award, the service center and a timeline that sources did cover.
+- **Sweep the subject for sibling events first** (web search "<subject> news <month>"), then pin each distinct event
+  (fire, award, permit, order, launch) and thread them **in date order**, re-parenting top-down with `update_pin`.
+  Pin 2828-style chains: factory -> service center -> incident -> award -> next-year deliveries.
+- **Every pin gets what its kind needs**: product pins get 3-5 competitors (each opened, with a verbatim-figure source)
+  and a `PinPerf` comparison table; every pin gets 1+ critic-review/reaction excerpt (primary source, e.g. the
+  award giver's own page, rather than a re-report), 3+ media and a map point; things being built get a status
+  tag and a `PinFactory` profile with milestones and (`stage`/`timeline`) metrics; a product's company history
+  (unveil, first deliveries, spec release, first production) can go on the factory pin's `milestones`.
+- **Rivals**: cover every maker the coverage names (Mercedes, Volvo, MAN, Scania, DAF, Renault...). Search each maker's
+  own spec page; if it is blocked (Cloudflare/403) use another trade page that was opened, and label show-truck or
+  older-generation specs as such. Name only makers you found a figure for; record the rest as a gap.
+- **Primary source over re-report**: for an award, permit or filing, find the giver's / agency's own page (Top Gear's
+  award page, the Clark County record cited by the outlet) and cite it first; the outlet is the second reference.
+- **Verify before saving**: every quote must be found in the fetched page text (curly apostrophes included).
+  Table columns each need a heading (an empty first header is rejected with 400).
+- **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
+  lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then
+  `POST /api/admin/pins/expire`. Mirror to local by `sourceUrl` when the local app has the pin.
+- Only state remaining gaps that are real (no published figure, page unreadable), each with its reason.

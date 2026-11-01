@@ -111,3 +111,24 @@ export async function fetchSenateFilings(days: number, { skip }: { skip?: (filin
   }
   return out;
 }
+
+// Filings from a browser export (the eFD search page run in a person's own Chrome, which the
+// site allows while it refuses this server): a JSON array of { first, last, filed, href, html },
+// html being the report page's <tbody>. Same shape and parser as the live reader.
+export function senateFilingsFromExport(json: string, { skip }: { skip?: (filingId: string) => Promise<boolean> | boolean } = {}): SenateFiling[] {
+  const out: SenateFiling[] = [];
+  for (const e of JSON.parse(json) as { first: string; last: string; filed: string; href: string; html: string }[]) {
+    if (!e.href?.includes('/view/ptr/') || !e.html) continue;
+    const filingId = e.href.split('/').filter(Boolean).pop()!;
+    out.push({
+      first: e.first.replace(/\s+[A-Z]\.?$/, ''),
+      last: e.last.replace(/,?\s+(Jr|Sr|II|III|IV)\.?$/i, ''),
+      state: null,
+      filingId,
+      filedDate: iso(e.filed),
+      sourceUrl: `https://efdsearch.senate.gov${e.href}`,
+      trades: parseSenateReport(e.html),
+    });
+  }
+  return out;
+}

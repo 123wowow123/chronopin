@@ -1,12 +1,12 @@
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync } from 'node:fs';
+import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { isOge278TFile, ogeReportId, parseOge278T } from '@/lib/oge';
 import { parsePtrText } from '@/lib/trades';
 import * as db from '../db';
 import PersonTrade, { type TradeFiling } from '../model/personTrade';
-import { fetchSenateFilings } from './senateTrades';
+import { fetchSenateFilings, senateFilingsFromExport } from './senateTrades';
 import { storeFiling } from './personTrades';
 
 // Reads the stock trades members of Congress disclose - the House Clerk's
@@ -123,6 +123,7 @@ export async function importTrades({
   log = () => {},
   save = (personId: number, filing: TradeFiling) => storeFiling(personId, filing),
   skipStored = true,
+  senateFile,
 }: {
   house?: boolean;
   senate?: boolean;
@@ -134,6 +135,8 @@ export async function importTrades({
   // How a filing is stored; the CLI's --dry-run and --prod swap it.
   save?: (personId: number, filing: TradeFiling, person: Candidate) => Promise<number>;
   skipStored?: boolean;
+  // A JSON export of the Senate eFD reports made in a real browser; read instead of the live site.
+  senateFile?: string;
 }): Promise<ImportResult> {
   const people = await db.query<Candidate>(`SELECT "id", "name", "bioguideId", "jurisdiction", "role" FROM "Person" WHERE "role" IN ('representative', 'senator', 'cabinet', 'governor', 'vice-president', 'president', 'other')`);
   const result: ImportResult = { filings: 0, trades: 0, unmatched: [], failed: [] };
@@ -181,7 +184,10 @@ export async function importTrades({
     // One source failing must not lose the others: report it and carry on.
     let senateFilings: Awaited<ReturnType<typeof fetchSenateFilings>> = [];
     try {
-      senateFilings = await fetchSenateFilings(days, { skip: skipStored ? (id) => PersonTrade.has('senate', id) : undefined });
+      senateFilings = senateFile
+        ? senateFilingsFromExport(readFileSync(senateFile, 'utf8'))
+        : await fetchSenateFilings(days, { skip: skipStored ? (id) => PersonTrade.has('senate', id) : undefined });
+      if (senateFile && skipStored) senateFilings = (await Promise.all(senateFilings.map(async (f) => ((await PersonTrade.has('senate', f.filingId)) ? null : f)))).filter((f): f is NonNullable<typeof f> => f != null);
     } catch (err) {
       result.failed.push(`Senate eFD: ${(err as Error).message.split('\n')[0]}`);
     }

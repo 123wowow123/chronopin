@@ -5,6 +5,9 @@
 //       the House Clerk's index + each report's PDF (pdftotext must be installed)
 //   npm run people:trades -- --senate [--days 365]
 //       the Senate's eFD search (the "I agree" step is done with a cookie jar)
+//   npm run people:trades -- --senate --senate-file <export.json>
+//       the same reports from a browser export, for when eFD refuses this server (see the
+//       person-trades notes in docs/okf/scraping/daily-jobs.md)
 //   npm run people:trades -- --executive
 //       OGE 278-T reports (president, VP, cabinet, appointees) from OGE's PAS index
 //   --replace
@@ -37,6 +40,7 @@ const { values: flags } = parseArgs({
     prod: { type: 'boolean', default: false },
     base: { type: 'string', default: 'https://www.chronopin.com' },
     'token-file': { type: 'string' },
+    'senate-file': { type: 'string' },
   },
 });
 
@@ -54,6 +58,7 @@ async function main() {
     executive: flags.executive,
     year: flags.year ? Number(flags.year) : undefined,
     days: Number(flags.days),
+    senateFile: flags['senate-file'],
     limit: flags.limit ? Number(flags.limit) : undefined,
     skipStored: !flags.prod && !flags['dry-run'] && !flags.replace,
     log: console.log,
