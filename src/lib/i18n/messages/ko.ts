@@ -779,6 +779,7 @@ const ko: Messages = {
       capacityHeading: "시간에 따른 용량",
       timelineMore: "{count}개 더 보기",
       timelineEarlier: "이전 {count}개 보기",
+      timelineLess: "접기",
       costBreakdown: "이 추정치의 산출 과정",
       breakdownSourced: "출처 있음",
       breakdownAssumption: "가정",

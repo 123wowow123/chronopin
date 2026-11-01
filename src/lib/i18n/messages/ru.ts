@@ -788,6 +788,7 @@ const ru: Messages = {
       capacityHeading: "Мощность во времени",
       timelineMore: "Показать ещё {count}",
       timelineEarlier: "Показать {count} более ранних",
+      timelineLess: "Показать меньше",
       costBreakdown: "Как рассчитана эта оценка",
       breakdownSourced: "С источником",
       breakdownAssumption: "Допущение",

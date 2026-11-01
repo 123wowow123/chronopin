@@ -783,6 +783,7 @@ const vi: Messages = {
       capacityHeading: "Công suất theo thời gian",
       timelineMore: "Xem thêm {count}",
       timelineEarlier: "Xem {count} mốc trước",
+      timelineLess: "Thu gọn",
       costBreakdown: "Cách tính ước tính này",
       breakdownSourced: "Có nguồn",
       breakdownAssumption: "Giả định",

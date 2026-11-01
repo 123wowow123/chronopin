@@ -853,6 +853,7 @@ const ar: Messages = {
       capacityHeading: "السعة عبر الزمن",
       timelineMore: "عرض {count} أخرى",
       timelineEarlier: "عرض {count} أقدم",
+      timelineLess: "عرض أقل",
       costBreakdown: "كيف جرى حساب هذا التقدير",
       breakdownSourced: "موثّق",
       breakdownAssumption: "افتراض",

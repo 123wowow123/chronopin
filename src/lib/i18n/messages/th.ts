@@ -776,6 +776,7 @@ const th: Messages = {
       capacityHeading: "กำลังการผลิตตามช่วงเวลา",
       timelineMore: "แสดงเพิ่มอีก {count}",
       timelineEarlier: "แสดง {count} รายการก่อนหน้า",
+      timelineLess: "แสดงน้อยลง",
       costBreakdown: "วิธีคำนวณค่าประมาณนี้",
       breakdownSourced: "มีแหล่งที่มา",
       breakdownAssumption: "สมมติฐาน",

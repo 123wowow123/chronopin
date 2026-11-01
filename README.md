@@ -518,7 +518,6 @@ https://epoch.ai/data/ai-data-centers
 
 http://localhost:3000/pin/20683/grok-voice-3-0-tops-speech-to-speech-index-at-86-9-for-the-same-0-08-a-minute
 
-Started 17d ago
+are all these datacenter pined and spec graph added
+https://epoch.ai/data/ai-data-centers
 should be released. add varients to this based on pin show me full list of varients
-
-

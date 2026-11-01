@@ -89,7 +89,8 @@ function MoreMilestones({ items, label, t }: { items: Milestone[]; label: string
       <details className="group">
         <summary className="flex cursor-pointer list-none items-center gap-1.5 font-semibold text-link [&::-webkit-details-marker]:hidden">
           <span aria-hidden className="inline-block transition-transform group-open:rotate-90 rtl:-scale-x-100">▸</span>
-          {label}
+          <span className="group-open:hidden">{label}</span>
+          <span className="hidden group-open:inline">{t('pin.factory.timelineLess')}</span>
         </summary>
         <ol className="mt-3 -ms-5 ps-0">
           {items.map((m, i) => <MilestoneItem key={i} milestone={m} t={t} />)}

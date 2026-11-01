@@ -251,6 +251,11 @@
 
   body {
     @apply bg-page font-sans text-muted antialiased;
+    /* Nothing may widen the page: one overflowing child (a chart, a map, a
+       long unbroken string) otherwise lets the whole page slide sideways.
+       `clip` rather than `hidden`, so it makes no scroll container and the
+       sticky navbar keeps working. */
+    overflow-x: clip;
   }
 
   ::selection {

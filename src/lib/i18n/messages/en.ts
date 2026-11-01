@@ -784,6 +784,7 @@ const en = {
       capacityHeading: "Capacity over time",
       timelineMore: "Show {count} more",
       timelineEarlier: "Show {count} earlier",
+      timelineLess: "Show less",
       costBreakdown: "How this estimate was built",
       breakdownSourced: "Sourced",
       breakdownAssumption: "Assumption",

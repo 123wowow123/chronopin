@@ -779,6 +779,7 @@ const ja: Messages = {
       capacityHeading: "容量の推移",
       timelineMore: "さらに{count}件を表示",
       timelineEarlier: "以前の{count}件を表示",
+      timelineLess: "表示を減らす",
       costBreakdown: "この見積もりの算出方法",
       breakdownSourced: "出典あり",
       breakdownAssumption: "仮定",

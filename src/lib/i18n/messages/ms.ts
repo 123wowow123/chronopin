@@ -784,6 +784,7 @@ const ms: Messages = {
       capacityHeading: "Kapasiti dari masa ke masa",
       timelineMore: "Tunjukkan {count} lagi",
       timelineEarlier: "Tunjukkan {count} terdahulu",
+      timelineLess: "Tunjukkan kurang",
       costBreakdown: "Cara anggaran ini dikira",
       breakdownSourced: "Bersumber",
       breakdownAssumption: "Andaian",

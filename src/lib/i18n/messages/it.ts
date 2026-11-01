@@ -777,6 +777,7 @@ const it: Messages = {
       capacityHeading: "Capacità nel tempo",
       timelineMore: "Mostra altri {count}",
       timelineEarlier: "Mostra {count} precedenti",
+      timelineLess: "Mostra meno",
       costBreakdown: "Come è stata calcolata questa stima",
       breakdownSourced: "Con fonte",
       breakdownAssumption: "Ipotesi",

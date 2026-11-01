@@ -780,6 +780,7 @@ const zh: Messages = {
       capacityHeading: "容量随时间变化",
       timelineMore: "再显示 {count} 项",
       timelineEarlier: "显示更早的 {count} 项",
+      timelineLess: "收起",
       costBreakdown: "该估算的计算过程",
       breakdownSourced: "有来源",
       breakdownAssumption: "假设",

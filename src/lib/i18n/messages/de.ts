@@ -779,6 +779,7 @@ const de: Messages = {
       capacityHeading: "Kapazität im Zeitverlauf",
       timelineMore: "{count} weitere anzeigen",
       timelineEarlier: "{count} frühere anzeigen",
+      timelineLess: "Weniger anzeigen",
       costBreakdown: "So wurde diese Schätzung berechnet",
       breakdownSourced: "Belegt",
       breakdownAssumption: "Annahme",
