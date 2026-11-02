@@ -2051,6 +2051,51 @@
             ]
           }
         }
+      },
+      {
+        "title": "Vera Rubin production timeline",
+        "display": "timeline",
+        "stages": [
+          "Silicon back",
+          "Full production",
+          "Shipping",
+          "Cloud availability"
+        ],
+        "current": 2,
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jan 5, 2026",
+            "Rubin launched at CES: chips back from the fab and systems in bring-up; production hardware due to partners in the second half of 2026",
+            "Demonstrated",
+            "ServeTheHome"
+          ],
+          [
+            "May 31, 2026",
+            "GTC Taipei: platform ramping into full production, with Taiwan's server makers building systems at scale",
+            "Demonstrated",
+            "GCN"
+          ],
+          [
+            "Jul 21, 2026",
+            "NVIDIA confirms Vera Rubin systems shipping to customers including OpenAI, CoreWeave, Google Cloud, Microsoft Azure, Meta and Dell",
+            "Demonstrated",
+            "GCN"
+          ],
+          [
+            "2026",
+            "AWS, Google Cloud, Microsoft and OCI among the first public clouds to deploy Vera Rubin instances",
+            "Planned",
+            "ServeTheHome"
+          ]
+        ],
+        "note": "Earlier reports gave a fall 2026 shipping start; the July 21 briefing says systems are already shipping.",
+        "sourceUrl": "https://gcn.com/nvidia-vera-rubin-chips-begin-shipping/20421/"
       }
     ]
   },
@@ -11875,6 +11920,63 @@
         ],
         "note": "Process node is disputed: some reports say 3nm for both foundries.",
         "sourceUrl": "https://driveteslacanada.ca/?p=118925"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-foundry-gathers-customers-partners-outlines-priorities.html",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Intel 14A production timeline",
+        "display": "timeline",
+        "stages": [
+          "Lead customers",
+          "Design kit",
+          "Risk production",
+          "High-volume"
+        ],
+        "current": 1,
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 29, 2025",
+            "Intel engages lead customers on 14A; early PDK shared and several customers plan test-chip tape-outs",
+            "Demonstrated",
+            "Tom's Hardware"
+          ],
+          [
+            "Jul 2026",
+            "PDK 0.5 available; Intel commits to a 2028 high-volume ramp (earlier target was 2029)",
+            "Demonstrated",
+            "Digital Citizen"
+          ],
+          [
+            "Oct 2026",
+            "PDK 0.9 expected",
+            "Planned",
+            "Digital Citizen"
+          ],
+          [
+            "H2 2027",
+            "Risk production on Intel's internal products",
+            "Planned",
+            "Digital Citizen"
+          ],
+          [
+            "2028",
+            "High-volume manufacturing",
+            "Planned",
+            "Digital Citizen"
+          ]
+        ],
+        "note": "Schedule depends on yields, design readiness and customer commitments; Intel has not named its major 14A customers.",
+        "sourceUrl": "https://www.digitalcitizen.life/intel-moves-14a-high-volume-production-forward-to-2028/"
       }
     ]
   }

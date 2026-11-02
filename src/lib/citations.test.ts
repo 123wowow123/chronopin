@@ -54,3 +54,10 @@ describe('citeReasoning', () => {
     expect(citeReasoning('Per wikipedians elsewhere', [wiki])).toEqual(['Per wikipedians elsewhere']);
   });
 });
+
+describe('citeReasoning apostrophes in site names', () => {
+  it("matches \"Tom's Hardware\" to tomshardware.com", () => {
+    const tom = { url: 'https://www.tomshardware.com/x', isSource: false } as never;
+    expect(citeReasoning("Tom's Hardware", [tom])).toEqual(["Tom's Hardware", { cite: [1] }]);
+  });
+});

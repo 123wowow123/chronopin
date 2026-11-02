@@ -105,7 +105,7 @@ export function citeReasoning(text: string, ordered: Evidence[], fallbackToSourc
     for (let i = 0; i < words.length; i++) {
       let joined = '';
       for (let j = i; j < Math.min(i + 4, words.length); j++) {
-        if (j > i && !/^[ -]$/.test(text.slice(words[j - 1].end, words[j].start))) break;
+        if (j > i && !/^[ '’-]$/.test(text.slice(words[j - 1].end, words[j].start))) break;
         joined += words[j].word;
         if (joined === site.name) {
           const possessive = /^['’]s\b/.exec(text.slice(words[j].end));
