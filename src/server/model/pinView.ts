@@ -1,7 +1,7 @@
 import * as db from '../db';
 import { cityOf } from '@/lib/city';
 import { locateUnlocated } from './ipPlaces';
-import { pinConfidenceOf } from './pins';
+import { clearsBar } from './pins';
 
 // Pin page views, counted once per viewer per UTC day (see 0014).
 export default class PinView {
@@ -186,7 +186,7 @@ export default class PinView {
        ) AS "t"
          JOIN "Pin" AS "p" ON "p"."id" = "t"."pinId" AND "p"."utcDeletedDateTime" IS NULL
        WHERE "t"."views" > "t"."previousViews"
-         AND ($3::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $3) >= $3)
+         AND ${clearsBar('p', '$3')}
        ORDER BY "t"."views" DESC, "t"."views" - "t"."previousViews" DESC, "p"."id" DESC
        LIMIT $2`,
       [days, limit, minConfidence],

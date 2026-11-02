@@ -21,6 +21,16 @@ export const SOURCE_CONFIDENCE: Record<string, number> = {
   unknown: 25,
 };
 
+// The most a pin can score whatever its references say, by its date confidence:
+// an estimated, delayed or unknown date is never high confidence, however well
+// its references are rated, and falls under TIMELINE_MIN_CONFIDENCE. Mirrored
+// in "pinConfidence" (0238).
+export const DATE_CONFIDENCE_CAP: Record<string, number> = {
+  estimated: 65,
+  delayed: 55,
+  unknown: 40,
+};
+
 // Below this a pin's score reads as low, and at or above HIGH_CONFIDENCE as
 // high: the bars its badge changes colour at (confidenceClass in
 // PinConfidence.tsx, whose amber and red both read as low), and LOW_CONFIDENCE
@@ -60,24 +70,27 @@ export const isConfidenceBand = (value: string): value is ConfidenceBand => CONF
 export const confidenceBandRange = (band: ConfidenceBand) => CONFIDENCE_BANDS.find((b) => b.band === band) ?? CONFIDENCE_BANDS[0];
 
 // A reference, or the pin's source standing in as one.
-export type Evidence = Omit<PinReferenceJson, 'confidence'> & { confidence?: number; isSource?: boolean };
+export type Evidence = Omit<PinReferenceJson, 'confidence'> & { confidence?: number; isSource?: boolean; scoreCap?: number };
 
-type Weighable = Pick<Evidence, 'confidence' | 'publishedDate' | 'utcCreatedDateTime'>;
+type Weighable = Pick<Evidence, 'confidence' | 'publishedDate' | 'utcCreatedDateTime' | 'scoreCap'>;
 
 // Everything backing a pin: its source first (dated when the pin was posted),
 // then its references. A reference that repeats the source stands in for it.
 export function pinEvidence(
   pin: Pick<PinJson, 'sourceUrl' | 'dateConfidence' | 'utcCreatedDateTime' | 'references'>,
 ): Evidence[] {
+  // Every item carries the pin's date-confidence cap, which pinConfidence applies.
+  const scoreCap = DATE_CONFIDENCE_CAP[(pin.dateConfidence || '').toLowerCase()];
+  const capped = (items: Evidence[]): Evidence[] => (scoreCap === undefined ? items : items.map((item) => ({ ...item, scoreCap })));
   const references: Evidence[] = pin.references || [];
   const sourceUrl = pin.sourceUrl?.trim();
   if (!sourceUrl) {
-    return references;
+    return capped(references);
   }
   // A reference that repeats the source is the source, listed first.
   const repeated = references.find((r) => r.url === sourceUrl);
   if (repeated) {
-    return [{ ...repeated, isSource: true }, ...references.filter((r) => r !== repeated)];
+    return capped([{ ...repeated, isSource: true }, ...references.filter((r) => r !== repeated)]);
   }
   const source: Evidence = {
     url: sourceUrl,
@@ -85,7 +98,7 @@ export function pinEvidence(
     confidence: SOURCE_CONFIDENCE[(pin.dateConfidence || '').toLowerCase()],
     utcCreatedDateTime: pin.utcCreatedDateTime,
   };
-  return [source, ...references];
+  return capped([source, ...references]);
 }
 
 // When the reference was published, or failing that when it was added.
@@ -116,5 +129,7 @@ export function pinConfidence<T extends Weighable>(references: T[] | undefined):
   if (!weighed.length) {
     return undefined;
   }
-  return Math.round(weighed.reduce((sum, { reference, share }) => sum + Number(reference.confidence) * share, 0));
+  const average = Math.round(weighed.reduce((sum, { reference, share }) => sum + Number(reference.confidence) * share, 0));
+  const caps = (references || []).map((r) => r.scoreCap).filter((cap): cap is number => cap !== undefined);
+  return caps.length ? Math.min(average, ...caps) : average;
 }

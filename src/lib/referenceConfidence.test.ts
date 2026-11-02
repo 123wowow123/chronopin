@@ -32,6 +32,22 @@ describe('pinConfidence', () => {
   });
 });
 
+describe('date confidence cap', () => {
+  const references = [{ url: 'https://a.example', confidence: 80 }, { url: 'https://b.example', confidence: 80 }];
+  const score = (dateConfidence: string) => pinConfidence(pinEvidence({ sourceUrl: '', dateConfidence, utcCreatedDateTime: '2026-10-20T00:00:00Z', references } as never));
+
+  it('caps an estimated, delayed or unknown date under the timeline bar', () => {
+    expect(score('estimated')).toBe(65);
+    expect(score('delayed')).toBe(55);
+    expect(score('unknown')).toBe(40);
+  });
+
+  it('leaves a confirmed or scheduled date uncapped', () => {
+    expect(score('confirmed')).toBe(80);
+    expect(score('scheduled')).toBe(80);
+  });
+});
+
 describe('weighReferences', () => {
   it('gives shares that sum to one, newest largest', () => {
     const weighed = weighReferences([

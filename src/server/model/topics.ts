@@ -1,12 +1,12 @@
 import * as db from '../db';
-import { pinConfidenceOf } from './pins';
+import { clearsBar } from './pins';
 
 // Tags and companies as subjects of their own: what the /tag and /company
 // landing pages list and show. Every query keeps to live pins the timeline
 // would show - minConfidence is its floor (null for none) - so a page never
 // counts a pin it does not list.
 
-const SHOWN = `"p"."utcDeletedDateTime" IS NULL AND ($1::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $1) >= $1)`;
+const SHOWN = `"p"."utcDeletedDateTime" IS NULL AND ${clearsBar('p', '$1')}`;
 
 // How many pins of a subject start from now on and in all, and the ids of
 // the soonest upcoming ones and the latest past ones.

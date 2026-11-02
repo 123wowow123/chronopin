@@ -184,9 +184,9 @@ export default class Pins extends BasePins<Pin> {
       WHERE "p"."utcStartDateTime" >= $1::timestamptz AND "p"."utcStartDateTime" < $2::timestamptz
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
-        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
+        AND ${clearsBar('p', '$4')}
         AND ${withinRing('p', 5, 6)}
-        AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $3) AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('timelineOther')}, $4) >= $4) AND ${withinRing('timelineOther', 5, 6)}`)}`,
+        AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $3) AND ${clearsBar('timelineOther', '$4')} AND ${withinRing('timelineOther', 5, 6)}`)}`,
       [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null, timeZone],
     );
   }
@@ -359,7 +359,7 @@ export default class Pins extends BasePins<Pin> {
       [
         '"Pin"."utcDeletedDateTime" IS NULL',
         '($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)',
-        `($2::integer IS NULL OR COALESCE(${pinConfidenceOf('Pin')}, $2) >= $2)`,
+        `${clearsBar('Pin', '$2')}`,
       ],
       [createdSince || null, minConfidence],
       limit,
@@ -399,7 +399,7 @@ export default class Pins extends BasePins<Pin> {
          JOIN "Pin" ON "Pin"."id" = "pp"."pinId"
        WHERE "Pin"."utcDeletedDateTime" IS NULL
          AND ($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)
-         AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('Pin')}, $2) >= $2)`;
+         AND ${clearsBar('Pin', '$2')}`;
     const shape = (rows: { name: string; country: string | null; count: string; lat: number | null; lon: number | null }[]) =>
       rows.map((r) => ({ ...r, count: Number(r.count) }));
     const params = [createdSince || null, minConfidence, limit];
@@ -465,7 +465,7 @@ export default class Pins extends BasePins<Pin> {
         ARRAY(SELECT "r"."url" FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id") AS "referenceUrls"
       FROM "Pin" AS "p"
       WHERE "p"."utcDeletedDateTime" IS NULL
-        AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $2) >= $2)
+        AND ${clearsBar('p', '$2')}
       ORDER BY "p"."utcCreatedDateTime" DESC, "p"."id" DESC
       LIMIT $1`,
       [limit, minConfidence],
@@ -483,7 +483,7 @@ export default class Pins extends BasePins<Pin> {
       FROM "Pin" AS "p"
       WHERE "p"."utcDeletedDateTime" IS NULL
         AND "p"."utcStartDateTime" >= $1::timestamptz
-        AND ($3::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $3) >= $3)
+        AND ${clearsBar('p', '$3')}
       ORDER BY "p"."utcStartDateTime", "p"."id"
       LIMIT $2`,
       [from, limit, minConfidence],
@@ -509,7 +509,7 @@ export default class Pins extends BasePins<Pin> {
       ${MAP_SELECT}
       WHERE ${MAP_WHERE}
         AND ($5::integer IS NULL OR "p"."id" IN (${watchedPinIdsOf('$5')}))
-        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
+        AND ${clearsBar('p', '$4')}
       ORDER BY "p"."utcStartDateTime", "p"."id"`,
       [bounds.from, bounds.to, bounds.createdSince, bounds.minConfidence, bounds.favoriteUserId, bounds.restaurantsOnly ?? false],
     );
@@ -766,6 +766,12 @@ const withinRing = (as: string, point: number, meters: number) =>
 const predictedPinOf = (as: string) =>
   `EXISTS (SELECT 1 FROM "PinTagView" AS "pt" WHERE "pt"."pinId" = "${as}"."id" AND ("pt"."name" = 'Predicted'::citext OR ("${as}"."dateConfidence" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext)))`;
 
+// Whether pin "as" clears the timeline's confidence bar at parameter "param"
+// (null for no bar). A predicted pin always does: its date is an estimate by
+// design, which the date-confidence cap (0238) would otherwise score under it.
+export const clearsBar = (as: string, param: string) =>
+  `(${param}::integer IS NULL OR COALESCE(${pinConfidenceOf(as)}, ${param}) >= ${param} OR ${predictedPinOf(as)})`;
+
 // Every pin id a user's Watch view shows: the pins they watch directly, plus
 // (unless excludePredicted is true) predicted pins of companies they follow.
 const watchedPinIdsOf = (userParam: string, excludePredicted = false) =>
@@ -913,9 +919,9 @@ function queryPage(
         AND "p"."utcDeletedDateTime" IS NULL
         ${onlyFavorites ? `AND "p"."id" IN (${watchedPinIdsOf('$1')})` : ''}
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
-        AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
+        AND ${clearsBar('p', '$6')}
         AND ${withinRing('p', 7, 8)}
-        ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $4) AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('timelineOther')}, $6) >= $6) AND ${withinRing('timelineOther', 7, 8)}`)})`}
+        ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $4) AND ${clearsBar('timelineOther', '$6')} AND ${withinRing('timelineOther', 7, 8)}`)})`}
       ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
       LIMIT $5))
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
@@ -938,7 +944,7 @@ function queryBetween(start: Date, end: Date, userId: number, limit: number, cre
       WHERE "p"."utcStartDateTime" >= $2::timestamptz AND "p"."utcStartDateTime" < $3::timestamptz
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
-        AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
+        AND ${clearsBar('p', '$6')}
         AND ${withinRing('p', 7, 8)}
       ORDER BY "p"."utcStartDateTime", "p"."id"
       LIMIT $5))
