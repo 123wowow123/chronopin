@@ -244,14 +244,14 @@ const STORED_LEVEL: Record<string, string> = { unverified: 'unknown' };
 // in, which is their own and not their counts'.
 export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
+  // Only for a signed-in viewer (the cloud shows it to them alone, uncounted): it reads their own history.
+  { key: 'notSeen', name: 'Not seen', field: 'seen', value: 'no', icon: 'eye-off' },
   ...CONSTRUCTION_STATUS_TAGS.map((name): ReservedTag => ({ key: name === 'In Progress' ? 'inProgress' : name.toLowerCase(), name, field: 'tag', value: name, icon: 'tag', stored: true })),
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
   { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },
   ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
   ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
-  // Only for a signed-in viewer (the cloud shows it to them alone, uncounted): it reads their own history.
-  { key: 'notSeen', name: 'Not seen', field: 'seen', value: 'no', icon: 'eye-off' },
   // Size: the electrical capacity PinPower records and the cost in US dollars.
   // Power a pin's facility makes against power it draws.
   { key: 'powerGeneration', name: 'Power generation', field: 'power', value: 'generation', icon: 'bolt' },
