@@ -113,7 +113,12 @@ rivals, the award, the service center and a timeline that sources did cover.
   The pin's start meter (the bar under the Start date) follows the timeline too: it runs from the pin's start to the
   latest placeable row, with a dot per dated row, instead of a full "started Nd ago" bar. Write dates the parser
   places ("Apr 15, 2026", "Jul 2026", "Q3 2027", "Late 2027", "2027" = year end); "early"/"H2" rows get no dot.
-  Needs two or more placeable rows. Such a pin's Start/End labels read Announced / Commercialization (construction
+  Needs two or more placeable rows. Research traps: WebFetch is 403'd or truncated by Tom's Hardware and Digital Citizen, so read them in Chrome
+  (`get_page_text`, never reuse a stale tab; a page that redirects fails the domain check, re-read the tab and retry).
+  Add each opened page as a reference (`POST /api/pins/:id/references`) so its Source cell links; use the outlet's
+  name ("Tom's Hardware" matches tomshardware.com). A standard or spec with no sourced product dates (JEDEC LPDDR6)
+  gets no timeline: record the gap instead of a two-row table. `PUT performance` replaces everything, so re-send the
+  pin's existing charts and tables with the new timeline table. Such a pin's Start/End labels read Announced / Commercialization (construction
   pins read Groundbreaking / Completion); the wording per kind lives in `src/lib/pinDateKind.ts` with strings in every
   `messages/*.ts` locale, so a new category's wording is added there.
 - **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
